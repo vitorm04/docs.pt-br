@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Hospedando um controle Win32 no WPF'
+title: 'Passo a passo: hospedar um controle Win32 no WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160687"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Passo a passo: Hospedando um controle Win32 no WPF
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Passo a passo: hospedar um controle Win32 no WPF
 Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação de aplicativos. No entanto, quando você tem um investimento substancial em código Win32, pode ser mais eficiente reutilizar pelo menos parte desse código em seu aplicativo WPF em vez de reescrevê-lo completamente. O WPF fornece um mecanismo simples para hospedar uma janela do Win32, em uma página do WPF.  
   
  Este tópico orienta você por meio de um aplicativo [hospedando um controle Win32 ListBox no WPF de exemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), que hosts de controle de uma caixa de listagem do Win32. Esse procedimento geral pode ser estendido para hospedar qualquer janela Win32.  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Requisitos  
  Este tópico pressupõe uma familiaridade básica com programação WPF e a API do Windows. Para obter uma introdução básica à programação WPF, consulte [Introdução ao](../getting-started/index.md). Para obter uma introdução à programação de API do Windows, consulte qualquer um dos vários livros sobre o assunto, em particular *Programming Windows* por Charles Petzold.  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação 
  Por fim, defina `handled` para `true` para indicar que a mensagem foi tratada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Interop.HwndHost>
-- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
 - [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

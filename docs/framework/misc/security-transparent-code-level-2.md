@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156072"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente de segurança, nível 2
 <a name="top"></a>
@@ -44,13 +44,13 @@ ms.locfileid: "54567016"
   
  Esse tópico contém as seguintes seções:  
   
--   [Exemplos de uso e comportamentos](#examples)  
+-   [Exemplos de Uso e Comportamentos](#examples)  
   
--   [Substituir padrões](#override)  
+-   [Substituir Padrões](#override)  
   
--   [Regras de herança](#inheritance)  
+-   [Regras de Herança](#inheritance)  
   
--   [Informações adicionais e regras](#additional)  
+-   [Informações Adicionais e Regras](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Exemplos de Uso e Comportamentos  
@@ -192,5 +192,6 @@ ms.locfileid: "54567016"
  O <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> é de propriedade `false` por padrão, portanto, a propriedade deve ser definida como `true` para ignorar a verificação. Isso deve ser feito para apenas para fins de otimização. Você deve garantir que o código transparente no assembly é verificável usando o `transparent` opção de [ferramenta PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Código transparente de segurança, nível 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Alterações de segurança](../../../docs/framework/security/security-changes.md)

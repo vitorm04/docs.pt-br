@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158425"
 ---
 # <a name="inheritsfrom-function"></a>Função InheritsFrom
 Determina se a classe ou instância atual é derivada de uma classe pai especificada.
@@ -57,7 +57,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | O objeto atual herda `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | O objeto atual não herda de `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` é `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` is `null`. |
   
 ## <a name="remarks"></a>Comentários
 
@@ -71,4 +71,5 @@ Essa função encapsula uma chamada para o [IWbemClassObject::InheritsFrom](/win
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167499"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Como: Exibir certificados com o snap-in do MMC
 Quando você cria um cliente seguro ou serviço, você pode usar um [certificado](working-with-certificates.md) como a credencial. Por exemplo, um tipo comum de credencial é o certificado X.509, que você criar com o <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> método. 
@@ -22,7 +22,6 @@ Há três tipos diferentes de repositórios de certificados que você pode exami
 
 - Conta de serviço: O armazenamento é local para um serviço específico no dispositivo.
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>Exibir certificados no snap-in do MMC 
 
 O procedimento a seguir demonstra como examinar os repositórios em seu dispositivo local para localizar um certificado apropriado: 
@@ -57,7 +56,6 @@ O procedimento a seguir demonstra como examinar os repositórios em seu disposit
 8. Para exibir os certificados no snap-in do MMC, selecione **raiz do Console** no painel esquerdo, expanda **certificados (computador Local)**.
 
     É exibida uma lista de diretórios para cada tipo de certificado. Cada diretório de certificado, você pode exibir, exportar, importar e excluir seus certificados.
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>Exibir certificados com a ferramenta de Gerenciador de certificados
 
@@ -79,8 +77,8 @@ Você também pode exibir, exportar, importar e excluir certificados usando a fe
   
 2. Para exibir os certificados, em **certificados - usuário atual** no painel esquerdo, expanda o diretório para o tipo de certificado que você deseja exibir.
 
-  
 ## <a name="see-also"></a>Consulte também
+
 - [Trabalhando com certificados](working-with-certificates.md)
 - [Como: Criar certificados temporários para uso durante o desenvolvimento](how-to-create-temporary-certificates-for-use-during-development.md)
 - [Como: Recuperar a impressão digital de um certificado](how-to-retrieve-the-thumbprint-of-a-certificate.md)

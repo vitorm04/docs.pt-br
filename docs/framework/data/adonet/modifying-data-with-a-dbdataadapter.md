@@ -1,18 +1,18 @@
 ---
-title: Modificando dados com um DbDataAdapter
+title: Modificar dados com um DbDataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158867"
 ---
-# <a name="modifying-data-with-a-dbdataadapter"></a>Modificando dados com um DbDataAdapter
+# <a name="modifying-data-with-a-dbdataadapter"></a>Modificar dados com um DbDataAdapter
 O <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> método de um <xref:System.Data.Common.DbProviderFactory> objeto lhe dá um <xref:System.Data.Common.DbDataAdapter> objeto fortemente tipado para o provedor de dados subjacente especificado no momento em que você cria a fábrica. Você pode usar um <xref:System.Data.Common.DbCommandBuilder> para criar comandos para inserir, atualizar e excluir dados de um <xref:System.Data.DataSet> para uma fonte de dados.  
   
 ## <a name="retrieving-data-with-a-dbdataadapter"></a>Recuperação de dados com um DbDataAdapter  
@@ -21,7 +21,7 @@ O <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> método de um
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/VB/source.vb#1)]  
   
-## <a name="modifying-data-with-a-dbdataadapter"></a>Modificando dados com um DbDataAdapter  
+## <a name="modifying-data-with-a-dbdataadapter"></a>Modificar dados com um DbDataAdapter  
  Este exemplo demonstra como modificar dados em um `DataTable` usando um <xref:System.Data.Common.DbDataAdapter> usando um <xref:System.Data.Common.DbCommandBuilder> para gerar os comandos necessários para a atualização de dados na fonte de dados. O <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> do `DbDataAdapter` é definido para recuperar o CustomerID e CompanyName da tabela Customers. O <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> método é usado para definir o <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> propriedade, o <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> método é usado para definir a <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> propriedade e o <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> método é usado para definir o <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> propriedade. O código adiciona uma nova linha à tabela clientes e atualiza a fonte de dados. O código, em seguida, localiza a linha adicionada pesquisando em CustomerID, que é a chave primária definida para a tabela Customers. Ele altera o CompanyName e atualiza a fonte de dados. Por fim, o código exclui a linha.  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/CS/source.cs#1)]
@@ -43,7 +43,8 @@ O <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> método de um
 >  Evitar parâmetros específicos do provedor completamente usando concatenação de cadeia de caracteres para construir instruções diretas do SQL não é recomendável por razões de segurança. Usando a concatenação de cadeia de caracteres em vez de parâmetros vulnerável a ataques de injeção de SQL de seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Obtendo um DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

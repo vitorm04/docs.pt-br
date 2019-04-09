@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6327c9d7dee548957a569b587faefe3d6d9cb1b9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bf78ded62f11b336d9f5fe0f3a205275ae37189b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157398"
 ---
 # <a name="createassemblycache-function"></a>Função CreateAssemblyCache
 Obtém um ponteiro para um novo [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instância que representa o cache de assembly global.  
@@ -54,6 +54,7 @@ HRESULT CreateAssemblyCache (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
 - [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)
+- [Cache de assemblies global](../../../../docs/framework/app-domains/gac.md)

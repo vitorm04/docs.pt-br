@@ -2,12 +2,12 @@
 title: Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160661"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 Este tópico descreve o formato dos dados de rastreamento, como exibir e abordagens que usam o Visualizador de rastreamento de serviço para solucionar problemas de seu aplicativo.  
@@ -169,8 +169,7 @@ A imagem a seguir mostra as atividades do cliente WCF listadas por hora de cria�
  A imagem a seguir mostra um modo de exibição de gráfico de atividades de serviço do WCF:   
 
  ![Captura de tela do Visualizador de rastreamento que mostra uma lista de atividades de serviço do WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  Captura de tela a seguir mostra as atividades para o cliente e o serviço e realça a atividade de ação do processo de adicionar entre processos (laranja). As setas estão relacionados as mensagens de solicitação e resposta enviados e recebidos pelo cliente e serviço. Os rastreamentos de ação de processo são separados entre processos no gráfico, mas mostrados como parte da mesma atividade no painel superior direito. Neste painel, podemos ver rastreamentos de cliente para mensagens enviadas, seguidos de rastreamentos de serviço para mensagens recebidas e processadas.  
   
  As imagens a seguir mostra uma exibição de gráfico de ambas as atividades de cliente e o serviço do WCF  
@@ -189,8 +188,7 @@ Correlação de erro entre cliente e de serviço
   
   A imagem a seguir mostra como selecionar uma atividade de vermelha ou amarela para localizar a raiz do problema.   
  ![Captura de tela de atividades de vermelhas ou amarelas para localizar a raiz do problema.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  No painel à direita superior, você pode examinar os rastreamentos para a atividade selecionada à esquerda. Em seguida, você pode examinar os rastreamentos de vermelhos ou amarelos nesse painel e ver como elas são correlacionadas. No gráfico anterior, podemos ver rastreamentos de aviso para o cliente e o serviço na mesma atividade de ação de processo.  
   
  Se esses rastreamentos não fornecem a você a causa do erro, você pode utilizar o gráfico clicando duas vezes a atividade selecionada no painel à esquerda (ação de processo aqui). O gráfico com atividades relacionadas é exibido. Em seguida, você pode expandir atividades relacionadas (clicando nos sinais de "+") para localizar o primeiro rastreamento emitido em vermelho ou amarelo em uma atividade relacionada. Manter expandindo as atividades que ocorreram antes do rastreamento de vermelho ou amarelo de interesse, seguindo as transferências de atividades relacionadas ou fluxos de mensagens entre pontos de extremidade, até que você acompanhar a causa raiz do problema.  
@@ -207,6 +205,7 @@ Expandindo as atividades para acompanhar a causa raiz de um problema
 Para iniciar a solução de problemas, você também pode escolher um rastreamento de mensagem de vermelho ou amarelo e clique duas vezes para acompanhar a causa raiz.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

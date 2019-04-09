@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0aa75fe4812553ecbf00542da37f232aca32c1a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157438"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Associações de interoperabilidade fornecidas pelo sistema oferece suporte para protocolos de serviços Web
 Windows Communication Foundation (WCF) foi criada para interoperar com serviços da Web que dão suporte a um conjunto de especificações, conhecido como especificações de serviços da Web. Para simplificar a configuração de serviço para as práticas recomendadas de interoperabilidade, o WCF apresenta três associações fornecidas pelo sistema interoperáveis: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, e <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Para interoperabilidade com a organização para os padrões de avanço dos Structured Information Standards (OASIS), o WCF inclui uma associação fornecida pelo sistema interoperável: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Para a publicação de metadados, o WCF inclui duas associações fornecidas pelo sistema interoperáveis: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) e [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Este tópico lista as especificações que dão suporte a associações de interoperabilidade fornecidas pelo sistema.  
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) foi criada para interoperar com serviços
   
 |Categoria|Protocolo|Especificação e uso|  
 |--------------|--------------|-----------------------------|  
-|Mensagens|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo associação HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Mensagens|SOAP 1.2|[Instruções elementares](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo associação HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Mensagens|2005 do WS-Addressing/08|[1.0 - Core endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> O `wsHttpBinding`, `ws2007HttpBinding`, e `wsDualHttpBinding` implementar a recomendação do World Wide Web Consortium (W3C) WS-Addressing para habilitar o sistema de mensagens assíncrono, correlação de mensagem e mecanismos de endereçamento de transporte neutro.<br /><br /> O WCF não oferece suporte a criptografia de cabeçalhos de WS-Addressing Embora isso é permitido por WS-* especificações.|  
 |Mensagens|WS-Addressing 1.0 - metadados|[WS-Addressing 1.0 metadados](https://www.w3.org/2007/05/addressing/metadata) suporte para esse protocolo é habilitado definindo a versão da diretiva de comportamento de ServiceMetadata - com policyversion="1.0 definido como 1.2 (o padrão), a descrição de wsdl está em conformidade com wsdl WS-Addressing, com policyversion="1.0 definido para 1.5, a descrição de wsdl está em conformidade com os metadados de ws-addressing.<br /><br /> O WCF não oferece suporte a criptografia de cabeçalhos de WS-Addressing Embora isso é permitido por WS-* especificações.|  
 |Segurança|Segurança de mensagem SOAP do WSS 1.0|[Segurança de mensagem SOAP do WSS 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Usado quando o `securityMode` atributo é definido como "wsSecurityOverHttp" (padrão) e os parâmetros são configurados usando um `wsSecurity` elemento filho.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) foi criada para interoperar com serviços
 |Categoria|Protocolo|Especificação e uso|  
 |--------------|--------------|-----------------------------|  
 |Transporte|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)|  
-|Mensagens|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo associação HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Mensagens|SOAP 1.2|[Instruções elementares](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo associação HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Mensagens|2005 do WS-Addressing/08|[1.0 - Core endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Metadados|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> O WCF implementa o WS-MetadataExchange para recuperar o esquema XML, WSDL e WS-Policy.|  
   
@@ -104,11 +104,12 @@ Windows Communication Foundation (WCF) foi criada para interoperar com serviços
 |Categoria|Protocolo|Especificação e uso|  
 |--------------|--------------|-----------------------------|  
 |Transporte|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Segurança de transporte está habilitada.|  
-|Mensagens|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo associação HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Mensagens|SOAP 1.2|[Instruções elementares](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo associação HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Mensagens|2005 do WS-Addressing/08|[1.0 - Core endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Metadados|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> O WCF implementa o WS-MetadataExchange para recuperar o esquema XML, WSDL e WS-Policy.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

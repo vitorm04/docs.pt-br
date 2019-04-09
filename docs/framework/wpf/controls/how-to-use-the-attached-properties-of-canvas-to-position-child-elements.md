@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar as propriedades anexas de tela para posicionar elementos filho'
+title: 'Como: Usar as propriedades anexadas da tela para posicionar elementos filho'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: a34bac644bd0fa4c15d76d72d0502b311c49d018
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 347c8502bd4c5fafcde7a142327f85bfb75b9954
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159621"
 ---
-# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Como: Usar as propriedades anexas de tela para posicionar elementos filho
+# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Como: Usar as propriedades anexadas da tela para posicionar elementos filho
 Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Controls.Canvas> para posicionar elementos filho.  
   
 ## <a name="example"></a>Exemplo  
@@ -28,6 +28,7 @@ Cada <xref:System.Windows.Controls.Button> é posicionado em relação ao pai <x
  [!code-vb[CanvasAttachedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.Canvas.Bottom%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
@@ -35,5 +36,5 @@ Cada <xref:System.Windows.Controls.Button> é posicionado em relação ao pai <x
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
 - [Visão geral de painéis](panels-overview.md)
-- [Tópicos de instruções](canvas-how-to-topics.md)
+- [Tópicos explicativos ](canvas-how-to-topics.md)
 - [Visão geral das propriedades anexadas](../advanced/attached-properties-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Obter métricas de fontes'
+title: 'Como: obter métricas de fontes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: c1701b07958509e663f0ac651471e82a60120618
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119048"
 ---
-# <a name="how-to-obtain-font-metrics"></a>Como: Obter métricas de fontes
+# <a name="how-to-obtain-font-metrics"></a>Como: obter métricas de fontes
 O <xref:System.Drawing.FontFamily> classe fornece os seguintes métodos que recuperam várias métricas de uma combinação de estilo/família específica:  
   
 -   <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
@@ -56,5 +56,6 @@ O <xref:System.Drawing.FontFamily> classe fornece os seguintes métodos que recu
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Usando fontes e texto](using-fonts-and-text.md)

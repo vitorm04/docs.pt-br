@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169241"
 ---
 # <a name="fonts-wpf"></a>Fontes (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui suporte para apresentação de texto usando rica [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes. Um pacote de exemplo do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes está incluído com o [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
@@ -20,9 +20,10 @@ ms.locfileid: "57360973"
  [Recursos de fonte OpenType](opentype-font-features.md)  
  [Empacotando fontes com aplicativos](packaging-fonts-with-applications.md)  
  [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md)  
- [Tópicos de instruções](fonts-how-to-topics.md)  
+ [Tópicos explicativos ](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
 - [Documentos no WPF](documents-in-wpf.md)

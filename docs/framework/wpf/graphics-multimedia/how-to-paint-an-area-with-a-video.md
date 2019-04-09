@@ -9,12 +9,12 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151171"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Como: Pintar uma área com um vídeo
 Este exemplo mostra como pintar uma área com mídia. Uma maneira de pintar uma área com mídia é usar um <xref:System.Windows.Controls.MediaElement> junto com um <xref:System.Windows.Media.VisualBrush>. Use o <xref:System.Windows.Controls.MediaElement> para carregar e executar a mídia e, em seguida, usá-lo para definir o <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade do <xref:System.Windows.Media.VisualBrush>. Você pode usar o <xref:System.Windows.Media.VisualBrush> para pintar uma área com a mídia carregada.  
@@ -38,6 +38,7 @@ Este exemplo mostra como pintar uma área com mídia. Uma maneira de pintar uma 
  Para obter informações sobre como adicionar um arquivo de conteúdo, como um arquivo de mídia, ao seu aplicativo, consulte [Recurso de aplicativo do WPF, conteúdo e arquivos de dados](../app-development/wpf-application-resource-content-and-data-files.md). Ao adicionar um arquivo de mídia, você deve adicioná-lo como um arquivo de conteúdo e não como um arquivo de recurso.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.VisualBrush>
 - [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)
 - [Visão geral de TileBrush](tilebrush-overview.md)

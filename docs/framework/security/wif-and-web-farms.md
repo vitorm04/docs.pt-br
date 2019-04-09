@@ -3,12 +3,12 @@ title: WIF e Web Farms
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135350"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web Farms
 Ao usar o WIF (Windows Identity Foundation) para proteger os recursos de um aplicativo RP (terceira parte confiável) implantado em uma web farm, siga etapas específicas para garantir que o WIF possa processar tokens de instâncias do aplicativo RP em execução em diferentes computadores no farm. Esse processamento inclui validação de assinaturas de token de sessão, criptografia e descriptografia de tokens de sessão, cache de tokens de sessão e detecção de tokens de segurança reproduzidos.  
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- O código a seguir mostra a implementação do serviço de cache do WCF. Neste exemplo, o padrão, o cache de token de sessão na memória implementado pelo WIF, é usado. Como alternativa, você pode implementar um cache durável com suporte de um banco de dados. `ISessionSecurityTokenCacheService` define a interface mostrada acima. Neste exemplo, nem todos os métodos necessários para implementar a interface são mostrados, para fins de brevidade.  
+ O código a seguir mostra a implementação do serviço de cache do WCF. Neste exemplo, o padrão, o cache de token de sessão na memória implementado pelo WIF, é usado. Como alternativa, você pode implementar um cache durável com suporte de um banco de dados. `ISessionSecurityTokenCacheService` Define a interface mostrada acima. Neste exemplo, nem todos os métodos necessários para implementar a interface são mostrados, para fins de brevidade.  
   
 ```  
 using System;  
@@ -251,7 +251,8 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [Gerenciamento de sessões WIF](../../../docs/framework/security/wif-session-management.md)
+- [Gerenciamento de sessões do WIF](../../../docs/framework/security/wif-session-management.md)

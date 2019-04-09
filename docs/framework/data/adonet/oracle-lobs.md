@@ -2,12 +2,12 @@
 title: Oracle LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: faf7ec75334f20742ff9d27f029d88bfaca9efd4
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135662"
 ---
 # <a name="oracle-lobs"></a>Oracle LOBs
 O provedor de dados do .NET Framework para Oracle inclui a <xref:System.Data.OracleClient.OracleLob> classe, que é usado para trabalhar com a Oracle **LOB** tipos de dados.  
@@ -23,7 +23,7 @@ O provedor de dados do .NET Framework para Oracle inclui a <xref:System.Data.Ora
  Uma **OracleLob** difere de um <xref:System.Data.OracleClient.OracleBFile> em que os dados são armazenados no servidor, em vez de em um arquivo físico no sistema operacional. Ele também pode ser um objeto de leitura / gravação, ao contrário de um **OracleBFile**, que é sempre somente leitura.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Criar, recuperar e escrever em um LOB  
- O exemplo C# a seguir demonstra como você pode criar LOBs em uma tabela do Oracle e, em seguida, recuperar e gravar na forma de **OracleLob** objetos. O exemplo demonstra como usar o <xref:System.Data.OracleClient.OracleDataReader> objeto e o **OracleLob** **leitura** e **gravar** métodos. O exemplo usa o Oracle **BLOB**, **CLOB**, e **NCLOB** tipos de dados.  
+ O exemplo c# a seguir demonstra como você pode criar LOBs em uma tabela do Oracle e, em seguida, recuperar e gravar na forma de **OracleLob** objetos. O exemplo demonstra como usar o <xref:System.Data.OracleClient.OracleDataReader> objeto e o **OracleLob** **leitura** e **gravar** métodos. O exemplo usa o Oracle **BLOB**, **CLOB**, e **NCLOB** tipos de dados.  
   
 ```csharp  
 using System;  
@@ -248,5 +248,6 @@ tx.Commit();
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

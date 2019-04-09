@@ -1,5 +1,5 @@
 ---
-title: 'Como: Organizar formulários filho MDI'
+title: 'Como: organizar formulários MDI filho'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160102"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a>Como: Organizar formulários filho MDI
+# <a name="how-to-arrange-mdi-child-forms"></a>Como: organizar formulários MDI filho
 Muitas vezes, os aplicativos terão comandos de menu para ações como Lado a lado, Em cascata e Organizar, que controlam o layout dos formulários MDI filhos abertos. Você pode usar o método <xref:System.Windows.Forms.Form.LayoutMdi%2A> com um dos valores de enumeração <xref:System.Windows.Forms.MdiLayout> para reorganizar os formulários MDI filhos em um formulário MDI pai.  
   
  Os valores de enumeração <xref:System.Windows.Forms.MdiLayout> exibem formulários filhos em cascata, lado a lado horizontal ou verticalmente, ou como ícones de formulários filhos organizados na parte inferior do formulário MDI. Esses valores possuem o mesmo efeito que os comandos do Windows **Janelas em cascata**, **Mostrar janelas lado a lado**, **Mostrar janelas empilhadas** e **Mostrar a área de trabalho**, respectivamente.  
@@ -48,8 +48,9 @@ Muitas vezes, os aplicativos terão comandos de menu para ações como Lado a la
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
-- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
-- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
-- [Como: Enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
+
+- [Aplicativos de Interface de Documentos Múltiplos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Como: criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como: criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como: determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como: enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)

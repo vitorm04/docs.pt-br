@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0379e7a0f1e82f15b2457b270760c7b8a3cf1a36
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e110f1f5ea326c232c7c96bb05913080e950083d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158893"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>Método IHostTaskManager::SetUILocale
 Notifica o host que o common language runtime (CLR) foi alterado, a localidade do usuário (UI) de interface ou cultura, a tarefa em execução no momento.  
@@ -64,6 +64,7 @@ HRESULT SetUILocale (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

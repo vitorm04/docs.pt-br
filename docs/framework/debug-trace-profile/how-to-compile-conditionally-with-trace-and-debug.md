@@ -1,5 +1,5 @@
 ---
-title: 'Como: Compilar condicionalmente com Trace e Debug'
+title: 'Como: compilar condicionalmente com Trace e Debug'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158636"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como: Compilar condicionalmente com Trace e Debug
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como: compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
   
  Os métodos de rastreamento e de depuração têm atributos condicionais associados. Por exemplo, se o atributo condicional do rastreamento for **true**, todas as instruções de rastreamento serão incluídas em um assembly (um arquivo .exe ou .dll compilado); se o atributo condicional de **Trace** for **false**, as instruções de rastreamento não serão incluídas.  
@@ -76,13 +76,13 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
     |Idioma|Instrução|Resultado|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Habilita o rastreamento|  
-    ||**#CONST TRACE = false**|Desabilita o rastreamento|  
+    ||**#CONST rastreamento = false**|Desabilita o rastreamento|  
     ||**#CONST DEBUG = true**|Habilita a depuração|  
     ||**#CONST DEBUG = false**|Desabilita a depuração|  
     |**C#**|**#define TRACE**|Habilita o rastreamento|  
-    ||**#undef TRACE**|Desabilita o rastreamento|  
+    ||**#undef rastreamento**|Desabilita o rastreamento|  
     ||**#define DEBUG**|Habilita a depuração|  
-    ||**#undef DEBUG**|Desabilita a depuração|  
+    ||**#undef depuração**|Desabilita a depuração|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>Para desabilitar o rastreamento ou a depuração  
   
@@ -96,10 +96,11 @@ Comente a diretiva do compilador.
 >  Quando você estiver pronto para compilar, escolha **Compilar** no menu **Compilar** ou use o método de linha de comando, mas sem digitar o **d:** para definir símbolos de compilação condicional.  
   
 ## <a name="see-also"></a>Consulte também
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+
+- [Rastreamento e instrumentação de aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Como: criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Como: Definir variáveis de ambiente para a linha de comando do Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Como: invocar o compilador de linha de comando](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Como: adicionar instruções de rastreamento ao código de um aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Como: configurar variáveis de ambiente para a linha de comando do Visual Studio.](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Como: Invocar o compilador de linha de comando](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

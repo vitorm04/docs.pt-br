@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14eee096c25967d321e4693b260501827d944a80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154174"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Enumeração CorValidatorModuleType
 Especifica o tipo de um módulo.  
@@ -63,4 +63,5 @@ typedef enum
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -2,12 +2,12 @@
 title: Introdução ao roteamento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158672"
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço Routing fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica de roteamento complexa que permite implementar cenários como a agregação de serviço, controle de versão do serviço, roteamento de prioridades e roteamento de multicast. O serviço de roteamento também fornece a manipulação de erros permite que você configurar as listas de pontos de extremidade de backup, ao qual as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  Usar a representação de credencial do Windows com o serviço de roteamento que você precisa configurar as credenciais e o serviço. O objeto de credenciais do cliente (<xref:System.ServiceModel.Security.WindowsClientCredential>, está acessível do <xref:System.ServiceModel.ChannelFactory>) define um <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade que deve ser definida para permitir a representação. Por fim, no serviço que você precisa configurar o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> comportamento para definir `ImpersonateCallerForAllOperations` para `true`. O serviço de roteamento usa esse sinalizador para decidir se deseja criar os clientes para encaminhamento de mensagens com a representação habilitada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Filtros de mensagem](message-filters.md)
-- [Roteando contratos](routing-contracts.md)
+- [Contratos de roteamento](routing-contracts.md)
 - [Escolhendo um filtro](choosing-a-filter.md)

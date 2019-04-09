@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: a51330e774e7e627d8719562a47c7d9da163cf5b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159829"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Padrões de Controle para Clientes de Automação de IU
 > [!NOTE]
@@ -45,11 +45,12 @@ ms.locfileid: "57673776"
  Controles que implementam os tipos de controle personalizado podem ter qualquer conjunto de padrões de controle que são necessários para representar sua funcionalidade.  
   
 ## <a name="see-also"></a>Consulte também
-- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)
-- [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md) (Padrão de texto da Automação da Interface do Usuário)
-- [Invocando um controle utilizando automação de interface do usuário](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Obter o estado de Alternância de uma caixa de seleção usando automação de interface do usuário](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [Mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+
+- [Padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [Padrão de texto de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
+- [Invocando um Controle Utilizando Automação de IU](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Obter o estado Toggle de uma caixa de seleção usando automação de interface do usuário](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Mapeamento de Padrão de Controles para Clientes de Automação de IU](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [Exemplo de inserção de TextPattern de texto](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Pesquisa de TextPattern e exemplo de seleção](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
 - [InvokePattern, ExpandCollapsePattern e TogglePattern exemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
