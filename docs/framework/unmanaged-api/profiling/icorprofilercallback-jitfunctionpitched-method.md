@@ -17,40 +17,41 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b35605b4208953ae71d7eb4ba6b6384930952b2b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c8aa46e869d50fc7aa65c1d4244ad4ff71657bad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186388"
 ---
-# <a name="icorprofilercallbackjitfunctionpitched-method"></a><span data-ttu-id="fe71a-102">Método ICorProfilerCallback::JITFunctionPitched</span><span class="sxs-lookup"><span data-stu-id="fe71a-102">ICorProfilerCallback::JITFunctionPitched Method</span></span>
-<span data-ttu-id="fe71a-103">Notifica o criador de perfil que uma função que tenha sido just-in-time (JIT)-compilado foi removido da memória.</span><span class="sxs-lookup"><span data-stu-id="fe71a-103">Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.</span></span>  
+# <a name="icorprofilercallbackjitfunctionpitched-method"></a><span data-ttu-id="ae724-102">Método ICorProfilerCallback::JITFunctionPitched</span><span class="sxs-lookup"><span data-stu-id="ae724-102">ICorProfilerCallback::JITFunctionPitched Method</span></span>
+<span data-ttu-id="ae724-103">Notifica o criador de perfil que uma função que tenha sido just-in-time (JIT)-compilado foi removido da memória.</span><span class="sxs-lookup"><span data-stu-id="ae724-103">Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe71a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fe71a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae724-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ae724-104">Syntax</span></span>  
   
 ```  
 HRESULT JITFunctionPitched(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fe71a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fe71a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ae724-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ae724-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="fe71a-106">[in] A ID da função que foi removida.</span><span class="sxs-lookup"><span data-stu-id="fe71a-106">[in] The ID of the function that was removed.</span></span>  
+ <span data-ttu-id="ae724-106">[in] A ID da função que foi removida.</span><span class="sxs-lookup"><span data-stu-id="ae724-106">[in] The ID of the function that was removed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fe71a-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="fe71a-107">Remarks</span></span>  
- <span data-ttu-id="fe71a-108">Se a função removida for chamada, o criador de perfil receberá novos eventos de compilação JIT quando a função é recompilada.</span><span class="sxs-lookup"><span data-stu-id="fe71a-108">If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled.</span></span> <span data-ttu-id="fe71a-109">Atualmente, o compilador JIT do common language runtime (CLR) não remove funções de memória, para que esse retorno de chamada não é usado atualmente e não será recebido pelo criador de perfil.</span><span class="sxs-lookup"><span data-stu-id="fe71a-109">Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae724-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="ae724-107">Remarks</span></span>  
+ <span data-ttu-id="ae724-108">Se a função removida for chamada, o criador de perfil receberá novos eventos de compilação JIT quando a função é recompilada.</span><span class="sxs-lookup"><span data-stu-id="ae724-108">If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled.</span></span> <span data-ttu-id="ae724-109">Atualmente, o compilador JIT do common language runtime (CLR) não remove funções de memória, para que esse retorno de chamada não é usado atualmente e não será recebido pelo criador de perfil.</span><span class="sxs-lookup"><span data-stu-id="ae724-109">Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.</span></span>  
   
- <span data-ttu-id="fe71a-110">O valor de `functionId` não é válida até que a função seja recompilada.</span><span class="sxs-lookup"><span data-stu-id="fe71a-110">The value of `functionId` is not valid until the function is recompiled.</span></span> <span data-ttu-id="fe71a-111">Quando a função é recompilada, os mesmos `functionId` valor será usado.</span><span class="sxs-lookup"><span data-stu-id="fe71a-111">When the function is recompiled, the same `functionId` value will be used.</span></span>  
+ <span data-ttu-id="ae724-110">O valor de `functionId` não é válida até que a função seja recompilada.</span><span class="sxs-lookup"><span data-stu-id="ae724-110">The value of `functionId` is not valid until the function is recompiled.</span></span> <span data-ttu-id="ae724-111">Quando a função é recompilada, os mesmos `functionId` valor será usado.</span><span class="sxs-lookup"><span data-stu-id="ae724-111">When the function is recompiled, the same `functionId` value will be used.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe71a-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fe71a-112">Requirements</span></span>  
- <span data-ttu-id="fe71a-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe71a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae724-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ae724-112">Requirements</span></span>  
+ <span data-ttu-id="ae724-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae724-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe71a-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fe71a-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ae724-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ae724-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fe71a-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe71a-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ae724-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ae724-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fe71a-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe71a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ae724-116">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ae724-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fe71a-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fe71a-117">See also</span></span>
-- [<span data-ttu-id="fe71a-118">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="fe71a-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ae724-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ae724-117">See also</span></span>
+
+- [<span data-ttu-id="ae724-118">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="ae724-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
