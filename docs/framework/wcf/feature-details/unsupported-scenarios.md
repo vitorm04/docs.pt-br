@@ -2,12 +2,12 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178770"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por vários motivos, o Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos, e, portanto, o WCF não oferece suporte a execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada do HTTP/HTTPS são suportados quando executados WCF em Windows XP Home Edition.  
@@ -109,9 +109,10 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
  A correção é modificar a associação diretamente no cliente depois de fazer a importação.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Ataques por repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

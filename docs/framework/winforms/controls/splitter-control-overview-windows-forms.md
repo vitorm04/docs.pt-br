@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176404"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Visão geral do controle divisor (Windows Forms)
 > [!IMPORTANT]
@@ -23,6 +23,7 @@ ms.locfileid: "57703180"
  Quando o usuário aponta o ponteiro do mouse na borda não encaixada de um controle que pode ser redimensionado por um controle splitter, o ponteiro muda de aparência para indicar que o controle pode ser redimensionado. Com o controle Splitter, o usuário pode redimensionar o controle encaixado que esteja imediatamente antes dele. Portanto, para permitir que o usuário redimensione um controle encaixado em tempo de execução, encaixe o controle a ser redimensionado em uma borda de um contêiner e, em seguida, encaixe um controle Splitter no mesmo lado do contêiner.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [Como: Encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 84381a9a71ae85baad618684ebf783039456854f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172894"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges e RejectChanges
 Depois de verificar a precisão das alterações feitas nos dados em um <xref:System.Data.DataTable>, você pode aceitar as alterações usando o <xref:System.Data.DataRow.AcceptChanges%2A> método da <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, ou <xref:System.Data.DataSet>, que definirá o **atual** linha valores a serem os **Original** valores e definirá o **RowState** propriedade a ser **inalterado**. Aceitar ou rejeitar alterações limpa qualquer **RowError** informações e define o **HasErrors** propriedade a ser **false**. Aceitar ou rejeitar alterações também pode afetar a atualização de dados na fonte de dados. Para obter mais informações, consulte [Updating Data Sources with DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
@@ -57,8 +57,9 @@ workTable.AcceptChanges();
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Manipulando dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

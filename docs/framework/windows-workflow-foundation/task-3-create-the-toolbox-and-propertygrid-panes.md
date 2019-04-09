@@ -1,15 +1,15 @@
 ---
-title: 'Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid'
+title: 'Tarefa 3: Criar os painéis de Caixa de ferramentas e PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175039"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Criar os painéis de Caixa de ferramentas e PropertyGrid
 Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
  Para referência, o código que deve estar no arquivo MainWindow.xaml.cs após concluir as três tarefas a [Rehosting o Designer de fluxo de trabalho](rehosting-the-workflow-designer.md) série de tópicos é fornecido no final deste tópico.  
@@ -213,6 +213,7 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
-- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md)
+
+- [Hospedando novamente o designer de fluxo de trabalho](rehosting-the-workflow-designer.md)
+- [Tarefa 1: Criar um aplicativo do Windows Presentation Foundation do Windows](task-1-create-a-new-wpf-app.md)
+- [Tarefa 2: Hospedar o Designer de Fluxo de Trabalho](task-2-host-the-workflow-designer.md)

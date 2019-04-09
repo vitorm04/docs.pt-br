@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173492"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  
@@ -23,7 +23,7 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
   
 -   Usando as marcas `FRAMESET` e `FRAME`, que criam janelas fixas.  
   
- -ou-  
+ - ou -  
   
 -   Usando a marca `IFRAME`, que cria uma janela flutuante que pode ser reposicionada em tempo de execução.  
   
@@ -39,5 +39,6 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
  Essa regra também se aplica a janelas abertas usando o <xref:System.Windows.Forms.HtmlWindow.Open%2A> e <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> métodos. Se a janela aberta estiver em um domínio diferente da página hospedada no <xref:System.Windows.Forms.WebBrowser> controle, você não poderá mover a janela ou examinar seu conteúdo. Essas restrições também serão aplicadas se você usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir um site da Web que é diferente do site da Web usado para implantar seu aplicativo baseado em Windows Forms. Se você usar [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] tecnologia de implantação para instalar o aplicativo do site da Web A e você usar o <xref:System.Windows.Forms.WebBrowser> para exibir o site da Web B, você não será capaz de dados de acesso do site B.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<quadro > elemento](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
-- [Usando o Modelo de Objeto do Documento HTML gerenciado](using-the-managed-html-document-object-model.md)
+- [Usando o Document Object Model HTML gerenciado](using-the-managed-html-document-object-model.md)

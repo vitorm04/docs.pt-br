@@ -11,12 +11,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 0ea53f0c9a209d9bcbcc1e758cdcf957cde095dc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177431"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Esquema de configurações de rastreamento e depuração
 As configurações de rastreamento e depuração especificam ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  
@@ -42,12 +42,13 @@ As configurações de rastreamento e depuração especificam ouvintes de rastrea
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.|  
 |[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.|  
 |[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Contém as origens de rastreamento que iniciam as mensagens de rastreamento.|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
+|[\<origem >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
 |[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contém opções de rastreamento e o nível em que as opções de rastreamento são definidas.|  
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.Debug>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132282"
 ---
 # <a name="styling-and-templating"></a>Estilo e modelagem
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] estilo e modelagem se referir a um conjunto de recursos (estilos, modelos, gatilhos e storyboards) que permitem que os desenvolvedores e designers criem efeitos visualmente atraentes e criar uma aparência consistente para seus produtos. Embora os desenvolvedores e/ou designers possam personalizar a aparência de forma ampla conforme o aplicativo, é necessário um forte modelo de estilo e modelagem para permitir a manutenção e o compartilhamento da aparência dentro dos aplicativos e entre eles. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece esse modelo.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055320"
  Caso esteja criando um tema para o controle personalizado, consulte a seção Biblioteca de controle externo da [Visão geral da criação de controle](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [URIs "pack://" no WPF](../app-development/pack-uris-in-wpf.md)
 - [Como: localizar elementos gerados por ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Localizar elementos gerados por DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

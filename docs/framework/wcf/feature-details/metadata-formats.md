@@ -2,12 +2,12 @@
 title: Formatos de metadados
 ms.date: 03/30/2017
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
-ms.openlocfilehash: 44ea084287561e13a8db217e49212ee878a26bb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55f68f4b56e50b19da19ecc941e9ec537b846006
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173817"
 ---
 # <a name="metadata-formats"></a>Formatos de metadados
 Windows Communication Foundation (WCF) oferece suporte os formatos de metadados na tabela a seguir.  
@@ -24,5 +24,6 @@ Windows Communication Foundation (WCF) oferece suporte os formatos de metadados 
 |Endereçamento de associação para WSDL de WS|[Associação de WSDL 1.0 - endereçamento de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> O WCF implementa o WS-Addressing de associação para o WSDL anexar informações de endereçamento no WSDL.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+
+- [Associações de interoperabilidade fornecidas pelo sistema oferece suporte para protocolos de serviços Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
 - [WSDL e política](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)

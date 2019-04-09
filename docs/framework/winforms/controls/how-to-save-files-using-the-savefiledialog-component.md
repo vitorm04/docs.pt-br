@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176794"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Como: Salvar arquivos usando o componente SaveFileDialog
 O <xref:System.Windows.Forms.SaveFileDialog> componente permite aos usuários navegar no sistema de arquivos e selecionar arquivos a serem salvos. A caixa de diálogo retorna o caminho e o nome do arquivo que o usuário selecionou na caixa de diálogo. No entanto, você deve escrever o código para efetivamente gravar os arquivos no disco.  
@@ -178,5 +178,6 @@ O <xref:System.Windows.Forms.SaveFileDialog> componente permite aos usuários na
     >  Alguns controles, como o <xref:System.Windows.Forms.RichTextBox> , têm a capacidade de salvar arquivos. Para obter mais informações, consulte a seção “Componente SaveFileDialog” do artigo técnico da MSDN Online Library, [Código essencial para caixas de diálogo do Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [Componente SaveFileDialog](savefiledialog-component-windows-forms.md)

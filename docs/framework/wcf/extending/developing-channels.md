@@ -2,12 +2,12 @@
 title: Canais de desenvolvimento
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175195"
 ---
 # <a name="developing-channels"></a>Canais de desenvolvimento
 Para desenvolver um canal de transporte ou protocolo que pode ser usado com o Windows Communication Foundation (WCF) a camada de aplicativo requer várias etapas. Este tópico descreve essas etapas e aponta para tópicos específicos para obter mais informações. Para entender o modelo de canal e os vários tipos que são mencionados neste tópico, consulte [visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Para obter um exemplo de canal de transporte completa, consulte [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
@@ -34,4 +34,5 @@ Para desenvolver um canal de transporte ou protocolo que pode ser usado com o Wi
 4.  Adicione uma seção de associação e o elemento de configuração de associação para expor a associação para o sistema de configuração. Para obter mais informações, consulte [configuração e suporte a metadados](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)

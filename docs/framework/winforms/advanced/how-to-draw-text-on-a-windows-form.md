@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenhar texto em um formulário do Windows'
+title: 'Como: desenhar texto em um formulário do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-ms.openlocfilehash: ed7aa89c3bd3751ed93f5bda33a26a8309d39143
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172972"
 ---
-# <a name="how-to-draw-text-on-a-windows-form"></a>Como: Desenhar texto em um formulário do Windows
+# <a name="how-to-draw-text-on-a-windows-form"></a>Como: desenhar texto em um formulário do Windows
 O exemplo de código a seguir mostra como usar o <xref:System.Drawing.Graphics.DrawString%2A> método da <xref:System.Drawing.Graphics> para desenhar texto em um formulário. Como alternativa, você pode usar <xref:System.Windows.Forms.TextRenderer> para desenhar texto em um formulário. Para obter mais informações, confira [Como: Desenhar texto com GDI](how-to-draw-text-with-gdi.md).  
   
 ## <a name="example"></a>Exemplo  
@@ -33,11 +33,12 @@ O exemplo de código a seguir mostra como usar o <xref:System.Drawing.Graphics.D
 -   A fonte Arial não está instalada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Windows.Forms.TextRenderer.DrawText%2A>
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
 - <xref:System.Drawing.StringFormatFlags>
 - <xref:System.Windows.Forms.TextFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)
-- [Como: Desenhar texto com GDI](how-to-draw-text-with-gdi.md)
+- [Introdução à programação de elementos gráficos](getting-started-with-graphics-programming.md)
+- [Como: desenhar texto com o GDI](how-to-draw-text-with-gdi.md)

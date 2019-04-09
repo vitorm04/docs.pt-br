@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a87d18b15f858b608d99a511ed9bdad73fd2b251
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f52f102102cb654035d49eea0f4b0a9061475a3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128811"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>Método IMetaDataEmit::DefineModuleRef
 Cria a assinatura de metadados para um módulo com o nome especificado.  
@@ -53,5 +53,6 @@ HRESULT DefineModuleRef (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

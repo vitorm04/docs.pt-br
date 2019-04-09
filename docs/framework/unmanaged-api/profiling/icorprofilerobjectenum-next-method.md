@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc5d36267dcadcfafd4b715127ebbe2bcb9832b2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 221752b537cd3a890ad646290a64a7022692f625
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173934"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Método ICorProfilerObjectEnum::Next
 Obtém o número especificado de objetos contíguos de uma coleção sequencial de objetos, começando na posição atual na sequência do enumerador.  
@@ -58,4 +58,5 @@ HRESULT Next (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

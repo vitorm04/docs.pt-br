@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116124"
 ---
 # <a name="windows-forms-coordinates"></a>Coordenadas do Windows Forms
 O sistema de coordenadas para um Windows Form é baseado nas coordenadas de dispositivo e a unidade básica de medida de desenho no Windows Forms é a unidade do dispositivo (normalmente, o pixel). Pontos na tela são descritos por pares de coordenadas x e y, com as coordenadas x aumentando para a direita e coordenadas y aumentando de cima para baixo. O local de origem, em relação à tela, variará dependendo se você está especificando as coordenadas de tela ou de cliente.  
@@ -29,5 +29,6 @@ O sistema de coordenadas para um Windows Form é baseado nas coordenadas de disp
  Ocasionalmente, pode ser recomendável mapear das coordenadas de tela para as coordenadas de cliente. Você pode fazer isso facilmente usando o <xref:System.Windows.Forms.Control.PointToClient%2A> e <xref:System.Windows.Forms.Control.PointToScreen%2A> métodos disponíveis no <xref:System.Windows.Forms.Control> classe. Por exemplo, o <xref:System.Windows.Forms.Control.MousePosition%2A> propriedade de <xref:System.Windows.Forms.Control> é relatada em coordenadas de tela, mas você pode convertê-los em coordenadas de cliente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

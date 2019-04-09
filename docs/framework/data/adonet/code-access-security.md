@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174103"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -27,11 +27,11 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
   
  Existem três tipos de permissões de acesso de código:  
   
--   As `Code access permissions` são derivadas da classe <xref:System.Security.CodeAccessPermission>. São necessárias permissões para acessar recursos protegidos, como arquivos e variáveis de ambiente, e executar operações protegidas, como acessar código não gerenciado.  
+-   `Code access permissions` derivar o <xref:System.Security.CodeAccessPermission> classe. São necessárias permissões para acessar recursos protegidos, como arquivos e variáveis de ambiente, e executar operações protegidas, como acessar código não gerenciado.  
   
--   As `Identity permissions` representam características que identificam um assembly. As permissões são concedidas a um assembly com base em evidências, o que pode incluir itens como uma assinatura digital ou a origem do código. As permissões de identidade também são derivadas da classe base <xref:System.Security.CodeAccessPermission>.  
+-   `Identity permissions` representam as características que identificam um assembly. As permissões são concedidas a um assembly com base em evidências, o que pode incluir itens como uma assinatura digital ou a origem do código. As permissões de identidade também são derivadas da classe base <xref:System.Security.CodeAccessPermission>.  
   
--   As `Role-based security permissions` são baseadas no fato de uma entidade de segurança ter uma identidade especificada ou ser membro de uma função especificada. A classe <xref:System.Security.Permissions.PrincipalPermission> permite verificações de permissões declarativas e imperativas na entidade de segurança ativa.  
+-   `Role-based security permissions` se baseiam em se uma entidade tem uma identidade especificada ou é um membro de uma função especificada. A classe <xref:System.Security.Permissions.PrincipalPermission> permite verificações de permissões declarativas e imperativas na entidade de segurança ativa.  
   
  Para determinar se o código está autorizado a acessar um recurso ou executar uma operação, o sistema de segurança do tempo de execução atravessa a pilha de chamadas, comparando as permissões concedidas de cada chamador com a permissão que está sendo exigida. Se algum chamador na pilha de chamadas não tiver a permissão exigida, uma <xref:System.Security.SecurityException> será gerada e o acesso será recusado.  
   
@@ -190,12 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidade com código não gerenciado  
- O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções de API do Windows são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../../docs/framework/interop/index.md).  
+ O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Windows são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../../docs/framework/interop/index.md).  
   
  O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade de COM avançadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Consulte também
-- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Segurança no código do .NET Framework e nativos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
-- [Segurança baseada em Função](../../../../docs/standard/security/role-based-security.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Segurança no código nativo e do .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Segurança baseada em função](../../../../docs/standard/security/role-based-security.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

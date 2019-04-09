@@ -1,5 +1,5 @@
 ---
-title: Elemento < System. Web > (configurações da Web)
+title: Elemento <system.web> (Configurações da Web)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: a8d0905dc64ae3e3c4977639ccf881a677de73a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131944"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System. Web > (configurações da Web)
 Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o comportamento de todo o processo.  
@@ -73,4 +73,5 @@ Contém informações sobre como a camada de hospedagem do ASP.NET gerencia o co
 |Pode ser vazio||  
   
 ## <a name="see-also"></a>Consulte também
-- [\<applicationPool> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]
+
+- [\<applicationPool > (configurações da Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

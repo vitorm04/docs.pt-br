@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-ms.openlocfilehash: 1d2e286e3ce91c722be24f059a874b9db5f2ba82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173583"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Visão geral do controle DateTimePicker (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.DateTimePicker> controle permite que o usuário selecionar um único item em uma lista de datas ou horas. Quando usado para representar uma data, ele aparece em duas partes: uma lista suspensa com uma data representada em texto e uma grade exibida ao clicar na seta para baixo ao lado da lista. A grade é semelhante a <xref:System.Windows.Forms.MonthCalendar> controle, que pode ser usado para selecionar várias datas. Para obter mais informações sobre o <xref:System.Windows.Forms.MonthCalendar> de controle, consulte [visão geral do controle MonthCalendar](monthcalendar-control-overview-windows-forms.md).  
@@ -25,5 +25,6 @@ Os formulários do Windows <xref:System.Windows.Forms.DateTimePicker> controle p
  O controle <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> e <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> propriedades determinam o intervalo de datas e horas. O <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade contém a data e hora atuais do controle é definido como. Para obter detalhes, confira [Como: Definir e retornar datas com o Windows Forms controle DateTimePicker](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Os valores podem ser exibidos em quatro formatos, que são definidos com o <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, ou <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Se um formato personalizado for selecionado, você deve definir o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade como uma cadeia de caracteres apropriada. Para obter detalhes, confira [Como: Exibir uma data em um formato personalizado com o controle DateTimePicker dos Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Exibir uma data em um formato personalizado com o controle DateTimePicker dos Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [Como: Definidas e retornar datas com o controle DateTimePicker dos Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+
+- [Como: Exibir uma data em um formato personalizado com o controle DateTimePicker do Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Como: Definir e retornar datas com o controle DateTimePicker do Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

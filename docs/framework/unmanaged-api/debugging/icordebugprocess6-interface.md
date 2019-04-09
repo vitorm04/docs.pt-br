@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c084042aa79170d46d179928956bd39a0731ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 518c6ec99e4062bf8432809d3472baa395017da3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147258"
 ---
 # <a name="icordebugprocess6-interface"></a>Interface ICorDebugProcess6
 Estende logicamente a interface ICorDebugProcess para habilitar recursos como eventos de depuração gerenciados que são codificados em eventos de depuração de exceção nativa e divisão de módulo virtual.  
@@ -40,5 +40,6 @@ Estende logicamente a interface ICorDebugProcess para habilitar recursos como ev
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

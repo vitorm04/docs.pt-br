@@ -2,12 +2,12 @@
 title: Escolhendo um filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174025"
 ---
 # <a name="choosing-a-filter"></a>Escolhendo um filtro
 Ao configurar o serviço de roteamento, é importante selecionar os filtros de mensagem correta e configurá-los para que você possa fazer as correspondências exatas nas mensagens recebidas. Se os filtros que você seleciona são excessivamente amplas em suas correspondências ou estão configurados incorretamente, mensagens são roteadas incorretamente. Se os filtros são muito restritivos, você não pode ter nenhuma rota válida disponível para algumas de suas mensagens.  
@@ -136,5 +136,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  Para obter mais informações sobre a criação de consultas XPath, consulte [sintaxe XPath](https://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Como: Usar filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Como: usar filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

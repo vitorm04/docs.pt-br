@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147245"
 ---
 # <a name="icatalogservices-interface"></a>Interface ICatalogServices
 Fornece métodos para serviços de catalogação.  
@@ -36,4 +36,5 @@ Fornece métodos para serviços de catalogação.
 |[Método NotAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Reservado apenas para uso interno.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

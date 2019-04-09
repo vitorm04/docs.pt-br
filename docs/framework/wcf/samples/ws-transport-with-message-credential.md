@@ -2,12 +2,12 @@
 title: Transporte de WS com credencial de mensagem
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3afa13b90bc4ad85eed818212d8e307fb2c5fa68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172452"
 ---
 # <a name="ws-transport-with-message-credential"></a>Transporte de WS com credencial de mensagem
 Este exemplo demonstra o uso da segurança de transporte do SSL em combinação com a credencial de cliente que está sendo executada na mensagem. Este exemplo usa o `wsHttpBinding` associação.  
@@ -96,4 +96,3 @@ Press <ENTER> to terminate client.
 3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

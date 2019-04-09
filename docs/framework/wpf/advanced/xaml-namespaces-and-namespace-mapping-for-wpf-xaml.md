@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176911"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Namespaces XAML e mapeamento de namespace para XAML WPF
 Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF. Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>O que é um Namespace de XAML?  
  Um namespace de XAML é, na verdade, uma extensão do conceito de um namespace de XML. As técnicas para especificar um namespace de XAML contam com a sintaxe do namespace de XML, a convenção do uso de URIs como identificadores de namespace, o uso de prefixos para fornecer um meio para referenciar vários namespaces com base na mesma fonte de marcação e assim por diante. O conceito principal que é adicionado à definição de XAML do namespace de XML é que um namespace de XAML implica tanto em um escopo de exclusividade para os usos de marcação como também influencia em como as entidades de marcação potencialmente contam com o suporte de namespaces específicos e assemblies referenciados do CLR. Essa última consideração também é influenciada pelo conceito de um contexto de esquema XAML. Mas, para fins de como o WPF funciona com namespaces de XAML, você geralmente pode pensar nos namespaces de XAML em termos de um namespace de XAML padrão, o namespace de linguagem XAML e quaisquer outros namespaces de XAML como mapeados pela sua marcação de XAML diretamente para namespaces e assemblies referenciados específicos com suporte do CLR.  
   
@@ -48,9 +47,9 @@ Este tópico oferece explicação adicional sobre a presença e a finalidade dos
   
  A sintaxe recebe os seguintes possíveis tokens nomeados e os seguintes valores:  
   
- `clr-namespace:` O namespace do CLR declarado dentro do assembly que contém os tipos públicos a serem expostos como elementos.  
+ `clr-namespace:` O namespace CLR declarado dentro do assembly que contém os tipos públicos a serem expostos como elementos.  
   
- `assembly=` O assembly que contém parte ou todo o namespace do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] referenciado. Esse valor é, geralmente, apenas o nome do assembly e não o caminho, e não inclui a extensão (como .dll ou .exe). O caminho para esse assembly deve ser estabelecido como uma referência de projeto no arquivo de projeto que contém o XAML que você está tentando mapear. Para incorporar o controle de versão e a assinatura de nome forte, o `assembly` valor pode ser uma cadeia de caracteres, conforme definido pelo <xref:System.Reflection.AssemblyName>, em vez do nome simples de cadeia de caracteres.  
+ `assembly=` O assembly que contém alguns ou todos referenciado [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] namespace. Esse valor é, geralmente, apenas o nome do assembly e não o caminho, e não inclui a extensão (como .dll ou .exe). O caminho para esse assembly deve ser estabelecido como uma referência de projeto no arquivo de projeto que contém o XAML que você está tentando mapear. Para incorporar o controle de versão e a assinatura de nome forte, o `assembly` valor pode ser uma cadeia de caracteres, conforme definido pelo <xref:System.Reflection.AssemblyName>, em vez do nome simples de cadeia de caracteres.  
   
  Observe que o caractere separando o token `clr-namespace` de seu valor é um dois-pontos (:) enquanto que o caractere que separa o token `assembly` de seu valor é um sinal de igual (=). O caractere a ser usado entre esses dois tokens é um ponto e vírgula. Além disso, não inclua espaços em branco em qualquer lugar na declaração.  
   
@@ -100,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>Mapeando para assemblies atuais  
- O `assembly` poderá ser omitido se o `clr-namespace` referenciado estiver sendo definido dentro do mesmo assembly como o código do aplicativo que faz referência às classes personalizadas. Ou, uma sintaxe equivalente para este caso é especificar `assembly=`, sem nenhum token de cadeia de caracteres após o sinal de igual.  
+ `assembly` pode ser omitido se o `clr-namespace` referenciado está sendo definido dentro do mesmo assembly como o código do aplicativo que faz referência as classes personalizadas. Ou, uma sintaxe equivalente para este caso é especificar `assembly=`, sem nenhum token de cadeia de caracteres após o sinal de igual.  
   
  As classes personalizadas não podem ser usadas como o elemento raiz de uma página se definidas no mesmo assembly. As classes parciais não precisam ser mapeadas. Somente as classes que não são a classe parcial da página do seu aplicativo precisam ser mapeadas se você pretende referenciá-las como elementos no XAML.  
   
@@ -113,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Namespaces de designer e outros prefixos de modelos de XAML  
  Se você estiver trabalhando com ambientes de desenvolvimento e/ou com ferramentas de design para XAML do WPF, notará que há outros namespaces/prefixos de XAML definidos na marcação XAML.  
   
- O [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa um namespace de designer que é normalmente mapeado para o prefixo `d:`. Os modelos de projeto mais recentes para WPF podem mapear previamente esse namespace de XAML para dar suporte ao intercâmbio do XAML entre o [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e outros ambientes de design. Esse namespace de XAML de design é usado para manter o estado de design durante a movimentação da interface do usuário baseada em XAML no designer. Ele também é usado para recursos como `d:IsDataSource`, que habilitam fontes de dados em tempo de execução em um designer.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa um namespace de designer que normalmente é mapeado para o prefixo `d:`. Os modelos de projeto mais recentes para WPF podem mapear previamente esse namespace de XAML para dar suporte ao intercâmbio do XAML entre o [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e outros ambientes de design. Esse namespace de XAML de design é usado para manter o estado de design durante a movimentação da interface do usuário baseada em XAML no designer. Ele também é usado para recursos como `d:IsDataSource`, que habilitam fontes de dados em tempo de execução em um designer.  
   
- Outro prefixo que talvez você veja mapeado é o `mc:`. O `mc:` é para a compatibilidade de marcação e aproveita um padrão de compatibilidade de marcação que não é, necessariamente, específico de XAML. Até certo ponto, os recursos de compatibilidade de marcação podem ser usados para a troca de XAML entre estruturas ou entre outros limites de implementação de suporte, para trabalhar entre contextos de esquema de XAML, para fornecer compatibilidade para modos limitados nos designers e assim por diante. Para obter mais informações sobre conceitos de compatibilidade de marcação e como eles se relacionam com o WPF, consulte [compatibilidade de marcação (mc:) Recursos de linguagem](markup-compatibility-mc-language-features.md).  
+ Outro prefixo que talvez você veja mapeado é o `mc:`. `mc:` é para compatibilidade de marcação e aproveita um padrão de compatibilidade de marcação que não é necessariamente específicas de XAML. Até certo ponto, os recursos de compatibilidade de marcação podem ser usados para a troca de XAML entre estruturas ou entre outros limites de implementação de suporte, para trabalhar entre contextos de esquema de XAML, para fornecer compatibilidade para modos limitados nos designers e assim por diante. Para obter mais informações sobre conceitos de compatibilidade de marcação e como eles se relacionam com o WPF, consulte [compatibilidade de marcação (mc:) Recursos de linguagem](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF e carregamento de assembly  
  O contexto do esquema XAML para WPF integra-se com o modelo de aplicativo WPF, que por sua vez, usa o conceito definido pelo CLR de <xref:System.AppDomain>. A sequência a seguir descreve como o contexto de esquema XAML interpreta como carregar assemblies ou localizar tipos em tempo de execução ou tempo de design, com base no uso do WPF do <xref:System.AppDomain> e outros fatores.  
@@ -137,5 +136,6 @@ End Namespace
  O BAML compilado (gerado por meio de PresentationBuildTask) usa todas as etapas, embora o BAML também não deva conter nomes de assembly não qualificados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Noções básicas sobre Namespaces XML](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)

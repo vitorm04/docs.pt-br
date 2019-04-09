@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d610385cfbfcb6a625e0e1893f97525f6f5430c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 358346af540c8b6b7ee1523e763bebbacf8cd2bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127810"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>Método IMetaDataImport::GetUserString
 Obtém a cadeia de caracteres literal, representada pelo token de metadados especificado.  
@@ -61,5 +61,6 @@ HRESULT GetUserString (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

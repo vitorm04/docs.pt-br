@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173089"
 ---
 # <a name="use-the-automationid-property"></a>Usar a propriedade AutomationID
 > [!NOTE]
@@ -57,6 +57,7 @@ ms.locfileid: "57674829"
 -   Em determinadas circunstâncias, como AutomationID só é garantida para ser exclusivos entre irmãos, vários elementos na árvore de automação de interface do usuário podem ter valores de propriedade AutomationID idênticos. Nessas situações os elementos podem ser identificados exclusivamente com base em um pai e, se necessário, avô. Por exemplo, um desenvolvedor pode fornecer uma barra de menus com vários itens de menu cada com filho vários itens de menu no qual os filhos são identificados com sequencial AutomationID, como "Item1", "Item2" e assim por diante. Cada item de menu, em seguida, poderia ser identificada exclusivamente por seu AutomationID junto com o AutomationID de seu pai e, se necessário, seu avô.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Visão geral da árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Localizar um elemento de automação de interface do usuário com base na condição de uma propriedade](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

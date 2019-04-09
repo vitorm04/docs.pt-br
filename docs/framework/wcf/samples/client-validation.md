@@ -2,12 +2,12 @@
 title: Validação de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 637b6bd26407feb3213503310396a20bf1c8bdcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177327"
 ---
 # <a name="client-validation"></a>Validação de cliente
 Com frequência, os serviços publicam metadados para habilitar a geração automática e a configuração de tipos de proxy de cliente. Quando o serviço não for confiável, os aplicativos cliente devem validar que os metadados estão em conformidade com a política do aplicativo cliente em relação à segurança, transações, o tipo de contrato de serviço e assim por diante. O exemplo a seguir demonstra como escrever um cliente de comportamento de ponto de extremidade que valida o ponto de extremidade de serviço para garantir que esse ponto de extremidade de serviço é seguro usar.  
@@ -64,4 +64,5 @@ Com frequência, os serviços publicam metadados para habilitar a geração auto
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do WCF que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople armazenar. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
