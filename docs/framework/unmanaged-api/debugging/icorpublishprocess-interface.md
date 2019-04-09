@@ -16,34 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19bd34f95e17094a89e4929a5b6ae936afe39885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08dfa3ddbfd9cffdb0cb88d0325e5703a854668a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182956"
 ---
-# <a name="icorpublishprocess-interface"></a><span data-ttu-id="32ee3-102">Interface ICorPublishProcess</span><span class="sxs-lookup"><span data-stu-id="32ee3-102">ICorPublishProcess Interface</span></span>
-<span data-ttu-id="32ee3-103">Fornece métodos que acessam informações a serem exibidos sobre um processo.</span><span class="sxs-lookup"><span data-stu-id="32ee3-103">Provides methods that access information to be displayed about a process.</span></span>  
+# <a name="icorpublishprocess-interface"></a><span data-ttu-id="4a46a-102">Interface ICorPublishProcess</span><span class="sxs-lookup"><span data-stu-id="4a46a-102">ICorPublishProcess Interface</span></span>
+<span data-ttu-id="4a46a-103">Fornece métodos que acessam informações a serem exibidos sobre um processo.</span><span class="sxs-lookup"><span data-stu-id="4a46a-103">Provides methods that access information to be displayed about a process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="32ee3-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="32ee3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4a46a-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="4a46a-104">Methods</span></span>  
   
-|<span data-ttu-id="32ee3-105">Método</span><span class="sxs-lookup"><span data-stu-id="32ee3-105">Method</span></span>|<span data-ttu-id="32ee3-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="32ee3-106">Description</span></span>|  
+|<span data-ttu-id="4a46a-105">Método</span><span class="sxs-lookup"><span data-stu-id="4a46a-105">Method</span></span>|<span data-ttu-id="4a46a-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="4a46a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="32ee3-107">Método EnumAppDomains</span><span class="sxs-lookup"><span data-stu-id="32ee3-107">EnumAppDomains Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|<span data-ttu-id="32ee3-108">Obtém uma [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instância que contém os domínios de aplicativo no processo de referenciada por este `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="32ee3-108">Gets an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that contains the application domains in the process referenced by this `ICorPublishProcess`.</span></span>|  
-|[<span data-ttu-id="32ee3-109">Método GetDisplayName</span><span class="sxs-lookup"><span data-stu-id="32ee3-109">GetDisplayName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|<span data-ttu-id="32ee3-110">Obtém o caminho completo do executável para o processo referenciado por este `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="32ee3-110">Gets the full path of the executable for the process referenced by this `ICorPublishProcess`.</span></span>|  
-|[<span data-ttu-id="32ee3-111">Método GetProcessID</span><span class="sxs-lookup"><span data-stu-id="32ee3-111">GetProcessID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|<span data-ttu-id="32ee3-112">Obtém o identificador de sistema operacional para o processo referenciado por este `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="32ee3-112">Gets the operating system identifier for the process referenced by this `ICorPublishProcess`.</span></span>|  
-|[<span data-ttu-id="32ee3-113">Método IsManaged</span><span class="sxs-lookup"><span data-stu-id="32ee3-113">IsManaged Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|<span data-ttu-id="32ee3-114">Obtém um valor que indica se o processo é referenciada por este `ICorPublishProcess` é conhecido por estar em execução para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="32ee3-114">Gets a value that indicates whether the process referenced by this `ICorPublishProcess` is known to be running managed code.</span></span>|  
+|[<span data-ttu-id="4a46a-107">Método EnumAppDomains</span><span class="sxs-lookup"><span data-stu-id="4a46a-107">EnumAppDomains Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|<span data-ttu-id="4a46a-108">Obtém uma [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instância que contém os domínios de aplicativo no processo de referenciada por este `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="4a46a-108">Gets an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that contains the application domains in the process referenced by this `ICorPublishProcess`.</span></span>|  
+|[<span data-ttu-id="4a46a-109">Método GetDisplayName</span><span class="sxs-lookup"><span data-stu-id="4a46a-109">GetDisplayName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|<span data-ttu-id="4a46a-110">Obtém o caminho completo do executável para o processo referenciado por este `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="4a46a-110">Gets the full path of the executable for the process referenced by this `ICorPublishProcess`.</span></span>|  
+|[<span data-ttu-id="4a46a-111">Método GetProcessID</span><span class="sxs-lookup"><span data-stu-id="4a46a-111">GetProcessID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|<span data-ttu-id="4a46a-112">Obtém o identificador de sistema operacional para o processo referenciado por este `ICorPublishProcess`.</span><span class="sxs-lookup"><span data-stu-id="4a46a-112">Gets the operating system identifier for the process referenced by this `ICorPublishProcess`.</span></span>|  
+|[<span data-ttu-id="4a46a-113">Método IsManaged</span><span class="sxs-lookup"><span data-stu-id="4a46a-113">IsManaged Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|<span data-ttu-id="4a46a-114">Obtém um valor que indica se o processo é referenciada por este `ICorPublishProcess` é conhecido por estar em execução para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="4a46a-114">Gets a value that indicates whether the process referenced by this `ICorPublishProcess` is known to be running managed code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="32ee3-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="32ee3-115">Requirements</span></span>  
- <span data-ttu-id="32ee3-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32ee3-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a46a-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4a46a-115">Requirements</span></span>  
+ <span data-ttu-id="4a46a-116">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a46a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32ee3-117">**Cabeçalho:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="32ee3-117">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="4a46a-117">**Cabeçalho:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="4a46a-117">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="32ee3-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32ee3-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a46a-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a46a-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="32ee3-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32ee3-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="4a46a-119">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="4a46a-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="32ee3-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32ee3-120">See also</span></span>
-- [<span data-ttu-id="32ee3-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="32ee3-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="32ee3-122">Coclass CorpubPublish</span><span class="sxs-lookup"><span data-stu-id="32ee3-122">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+## <a name="see-also"></a><span data-ttu-id="4a46a-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4a46a-120">See also</span></span>
+
+- [<span data-ttu-id="4a46a-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="4a46a-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="4a46a-122">Coclass CorpubPublish</span><span class="sxs-lookup"><span data-stu-id="4a46a-122">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
