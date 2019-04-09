@@ -8,12 +8,12 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: d347afb183b23410359a0972d7fd3b1f851971bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8919ee717012f8badcf7015bf8d850ed431c5943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090271"
 ---
 # <a name="declaredtypes"></a>\<declaredTypes>
 Contém tipos conhecidos de que o <xref:System.Runtime.Serialization.DataContractSerializer> usa durante a desserialização.  
@@ -89,7 +89,8 @@ Contém tipos conhecidos de que o <xref:System.Runtime.Serialization.DataContrac
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

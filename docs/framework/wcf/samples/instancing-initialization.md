@@ -2,12 +2,12 @@
 title: Inicialização de instancialização
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 553272c9059b41eac7d8807ef7a283edbfb8f791
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142370"
 ---
 # <a name="instancing-initialization"></a>Inicialização de instancialização
 Este exemplo amplia a [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemplo definindo uma interface `IObjectControl`, que personaliza a inicialização de um objeto, ativando e desativando-lo. O cliente invoca métodos que retornam o objeto para o pool e que não retornam o objeto para o pool.  
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  Este exemplo usa um atributo personalizado. Quando o <xref:System.ServiceModel.ServiceHost> é construído, ele examina os atributos usados na definição de tipo de serviço e adiciona os comportamentos disponíveis para a coleção de comportamentos da descrição do serviço.  
   
- O <xref:System.ServiceModel.Description.IServiceBehavior> interface possui três métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Esses métodos são chamados pelo WCF quando o <xref:System.ServiceModel.ServiceHost> está sendo inicializado. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> é chamado pela primeira vez; Ele permite que o serviço a ser inspecionado para detectar inconsistências. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> é chamado em seguida; Esse método só é necessário em cenários muito avançados. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> é chamado pela última vez e é responsável por configurar o tempo de execução. Os seguintes parâmetros são passados para <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ O <xref:System.ServiceModel.Description.IServiceBehavior> interface possui três métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Esses métodos são chamados pelo WCF quando o <xref:System.ServiceModel.ServiceHost> está sendo inicializado. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> é chamado pela primeira vez; Ele permite que o serviço a ser inspecionado para detectar inconsistências. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> é chamado em seguida; Esse método só é necessário em cenários muito avançados. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> é chamado pela última vez e é responsável por configurar o tempo de execução. Os seguintes parâmetros são passados para <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Esse parâmetro fornece a descrição do serviço para o serviço inteiro. Isso pode ser usado para inspecionar os dados de descrição sobre pontos de extremidade do serviço, contratos, associações e outros dados associados ao serviço.  
   
@@ -264,4 +264,3 @@ else if (pool.Count < minPoolSize)
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
-  

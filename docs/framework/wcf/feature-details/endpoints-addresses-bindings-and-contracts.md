@@ -1,19 +1,19 @@
 ---
-title: 'Pontos de extremidade: Endereços, associações e contratos'
+title: 'Pontos de extremidade: endereços, associações e contratos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207520"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>Pontos de extremidade: Endereços, associações e contratos
+# <a name="endpoints-addresses-bindings-and-contracts"></a>Pontos de extremidade: endereços, associações e contratos
 Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade de fornecem aos clientes acesso à funcionalidade oferecida por um serviço WCF.  
   
  Cada ponto de extremidade consiste em quatro propriedades:  
@@ -78,15 +78,16 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
  [Contratos](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Descreve como os contratos definem os métodos de um serviço.  
   
- [Como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Como: criar um ponto de extremidade de serviço em configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Descreve como criar um ponto de extremidade de serviço na configuração.  
   
- [Como: Criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Como: criar um ponto de extremidade de serviço em código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Descreve como criar um ponto de extremidade de serviço no código.  
   
- [Como: Use Svcutil.exe para validar o código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Como: usar Svcutil.exe para validar o código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Descreve como detectar erros em implementações de serviço e as configurações sem hospedar o serviço usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configurando serviços](../../../../docs/framework/wcf/configuring-services.md)
 - [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)

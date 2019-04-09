@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 265271cee16d203d7652281c5416b93759e66d4b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206428"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Como: Especificar a direção da associação
 Este exemplo mostra como especificar se a associação atualiza apenas a propriedade de destino da associação (destino), a propriedade de origem da associação (origem) ou a propriedade de destino e a propriedade de origem.  
@@ -40,6 +40,7 @@ Este exemplo mostra como especificar se a associação atualiza apenas a proprie
  Para <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> associações, você pode controlar o intervalo das atualizações na origem definindo o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade. Consulte <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> para obter mais informações.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Data.Binding>
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

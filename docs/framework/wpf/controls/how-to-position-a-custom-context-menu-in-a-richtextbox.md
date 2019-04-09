@@ -1,5 +1,5 @@
 ---
-title: 'Como: Posicionar um menu contextual em um RichTextBox'
+title: 'Como: Posicionar um menu de contexto personalizado em um RichTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209418"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Como: Posicionar um menu contextual em um RichTextBox
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Como: Posicionar um menu de contexto personalizado em um RichTextBox
 Este exemplo mostra como posicionar um menu de contexto personalizado para um <xref:System.Windows.Controls.RichTextBox>.  
   
  Quando você implementa um menu de contexto personalizado para um **RichTextBox**, você é responsável por lidar com o posicionamento do menu de contexto.  Por padrão, um menu de contexto personalizado é aberto no centro do **RichTextBox**.  
@@ -35,5 +35,6 @@ Este exemplo mostra como posicionar um menu de contexto personalizado para um <x
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de RichTextBox](richtextbox-overview.md)
 - [Visão geral de TextBox](textbox-overview.md)

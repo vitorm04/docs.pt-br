@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196275"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>Método ISymUnmanagedVariable::GetStartOffset
 Obtém o deslocamento do início dessa variável dentro de seu pai. Quando se trata de uma variável local dentro de um escopo, o deslocamento de início se enquadram dentro dos deslocamentos definidos para o escopo.  
@@ -45,5 +45,6 @@ HRESULT GetStartOffset(
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [Método GetEndOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

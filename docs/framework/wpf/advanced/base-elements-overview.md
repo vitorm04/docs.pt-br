@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110052"
 ---
 # <a name="base-elements-overview"></a>Visão geral de elementos base
 Um alto percentual de classes em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são derivadas de quatro classes que são normalmente referenciadas no [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] documentação como classes de elemento base. Essas classes são <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, e <xref:System.Windows.FrameworkContentElement>. O <xref:System.Windows.DependencyObject> classe também é relacionada, porque ele é uma classe base comum de ambos <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>APIs de elemento base nas Classes do WPF  
  Ambos <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> derivados <xref:System.Windows.DependencyObject>, por meio de caminhos um pouco diferentes. A divisão nesse nível lida com como uma <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> são usados em uma interface do usuário e que finalidade servem em um aplicativo. <xref:System.Windows.UIElement> também tem <xref:System.Windows.Media.Visual> na sua hierarquia de classe, que é uma classe que expõe o suporte gráfico de baixo nível subjacente a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual> Fornece um framework de renderização definindo regiões retangulares de tela independentes. Na prática, <xref:System.Windows.UIElement> é para elementos que darão suporte a um modelo de objeto maior são servem para renderização e layout em áreas que podem ser descritas como regiões retangulares de tela e, em que o modelo de conteúdo é deliberadamente mais aberto, para permitir diferentes combinações de elementos. <xref:System.Windows.ContentElement> não é derivado de <xref:System.Windows.Media.Visual>; seu modelo é que um <xref:System.Windows.ContentElement> poderia ser consumido por algo, como um leitor ou visualizador que, em seguida, interpretaria os elementos e produziria o completo <xref:System.Windows.Media.Visual> para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consumir. Determinados <xref:System.Windows.UIElement> classes devem ser hosts de conteúdo: elas fornecem hospedagem e renderização para uma ou mais <xref:System.Windows.ContentElement> classes (<xref:System.Windows.Controls.DocumentViewer> é um exemplo de tal classe). <xref:System.Windows.ContentElement> é usado como classe base para elementos com modelos de objeto um pouco menores e que focam em texto, informações ou conteúdo do documento que podem ser hospedados em um <xref:System.Windows.UIElement>.  
@@ -98,7 +97,8 @@ Um alto percentual de classes em [!INCLUDE[TLA#tla_winclient](../../../../includ
  <xref:System.Windows.Controls.Control> é a classe base para o tipo de objeto que é chamado as vezes de controle ou componente, dependendo da tecnologia. Em geral, as classes de controle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são classes que representam um controle de interface do usuário ou participam fortemente da composição de controle diretamente. A principal funcionalidade que <xref:System.Windows.Controls.Control> habilita é a modelagem de controle.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Control>
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Visão geral da criação de controle](../controls/control-authoring-overview.md)
 - [Arquitetura do WPF](wpf-architecture.md)

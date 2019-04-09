@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1118c29acd926821e3b5db31694df9935bdefb9e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f40e6bfdbebdadc41da52564348c6070c18372c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194669"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>Método IMetaDataImport::GetModuleFromScope
 Obtém os metadados de um token para o módulo referenciado no escopo atual de metadados.  
@@ -49,5 +49,6 @@ HRESULT GetModuleFromScope (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

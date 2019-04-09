@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142331"
 ---
 # <a name="establishing-the-connection"></a>Estabelecendo a conexão
 Para se conectar ao Microsoft SQL Server, use o objeto <xref:System.Data.SqlClient.SqlConnection> do provedor de dados .NET Framework para SQL Server. Para se conectar a uma fonte de dados OLE DB, use o objeto <xref:System.Data.OleDb.OleDbConnection> do provedor de dados .NET Framework para OLE DB. Para se conectar a uma fonte de dados ODBC, use o objeto <xref:System.Data.Odbc.OdbcConnection> do provedor de dados .NET Framework para ODBC. Para se conectar a uma fonte de dados Oracle, use o objeto <xref:System.Data.OracleClient.OracleConnection> do provedor de dados .NET Framework para Oracle. Para armazenar com segurança e recuperação de cadeias de conexão, consulte [protegendo informações de Conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -143,7 +143,8 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Conexão do Oracle, ODBC e OLE DB Pooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Cadeias de caracteres de conexão](../../../../docs/framework/data/adonet/connection-strings.md)
+- [OLE DB, ODBC e pool de conexões Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

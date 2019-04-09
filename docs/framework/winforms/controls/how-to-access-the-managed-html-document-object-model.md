@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acessar o modelo de objeto do documento HTML gerenciado'
+title: 'Como: Acessar o Modelo de Objeto do Documento HTML gerenciado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205011"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Como: Acessar o modelo de objeto do documento HTML gerenciado
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Como: Acessar o Modelo de Objeto do Documento HTML gerenciado
 É possível acessar o Document Object Model (DOM) do HTML gerenciado a partir de dois tipos de aplicativos:  
   
 -   Um aplicativo do Windows Forms (.exe) que hospedou o controle <xref:System.Windows.Forms.WebBrowser> gerenciado. Essas duas tecnologias se complementam entre si, com o controle <xref:System.Windows.Forms.WebBrowser> exibindo a página para o usuário e o DOM do HTML representando a estrutura lógica do documento.  
@@ -46,4 +46,5 @@ ms.locfileid: "57715939"
 1.  O aplicativo ou o <xref:System.Windows.Forms.UserControl> exigirá confiança total para acessar o DOM do HTML gerenciado. Ao implantar um aplicativo do Windows Forms usando [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], é possível solicitar confiança total usando Implantação de Aplicativo Confiável ou Elevação de Permissões; consulte [Protegendo Aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications) para obter mais detalhes.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando o Modelo de Objeto do Documento HTML gerenciado](using-the-managed-html-document-object-model.md)
+
+- [Usando o Document Object Model HTML gerenciado](using-the-managed-html-document-object-model.md)

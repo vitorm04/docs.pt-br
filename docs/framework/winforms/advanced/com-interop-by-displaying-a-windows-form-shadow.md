@@ -1,5 +1,5 @@
 ---
-title: 'Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog'
+title: 'Como: dar suporte à interoperabilidade COM exibindo um formulário do Windows com o método ShowDialog'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206441"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Como: dar suporte à interoperabilidade COM exibindo um formulário do Windows com o método ShowDialog
 Você pode resolver problemas de interoperabilidade do modelo de objeto de componente (COM) exibindo o formulário do Windows em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] loop de mensagem, que é criado usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
   
  Para fazer um formulário funcionar corretamente em um aplicativo cliente COM, você deve executá-lo em um loop de mensagem do Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
@@ -38,6 +38,7 @@ Você pode resolver problemas de interoperabilidade do modelo de objeto de compo
 -   Substitua todas as chamadas para o <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> método com chamadas para o <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> método na sua [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] componente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Expondo componentes do .NET Framework ao COM](../../interop/exposing-dotnet-components-to-com.md)
-- [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms e Aplicativos Não Gerenciados](windows-forms-and-unmanaged-applications.md)
+
+- [Expondo componentes do .NET Framework para COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Como: dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms e aplicativos não gerenciados](windows-forms-and-unmanaged-applications.md)

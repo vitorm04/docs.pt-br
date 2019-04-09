@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 13353212589f99c9ad735761af60ab3eff6c9ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206961"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Como: Escolher entre StackPanel e DockPanel
 Este exemplo mostra como escolher entre usar um <xref:System.Windows.Controls.StackPanel> ou um <xref:System.Windows.Controls.DockPanel> quando você empilhar conteúdo em um <xref:System.Windows.Controls.Panel>.  
@@ -32,6 +32,7 @@ Este exemplo mostra como escolher entre usar um <xref:System.Windows.Controls.St
  [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.DockPanel>
 - [Visão geral de painéis](panels-overview.md)

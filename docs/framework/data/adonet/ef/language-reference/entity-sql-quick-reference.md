@@ -2,12 +2,12 @@
 title: Referência rápida de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207065"
 ---
 # <a name="entity-sql-quick-reference"></a>Referência rápida de Entity SQL
 Este tópico fornece uma referência rápida às consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. As consultas neste tópico baseiam-se no modelo de vendas AdventureWorks.  
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] também fornece o construtor de linha para construir linhas arbitrárias. SELECT utiliza um ou mais elementos na projeção e resulta em um registro de dados com campos; por exemplo: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] também fornece o construtor de linhas para construir linhas arbitrárias. SELECT utiliza um ou mais elementos na projeção e resulta em um registro de dados com campos; por exemplo: `SELECT a, b, c`.  
   
  Exemplo:  
   
@@ -363,5 +363,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |TRUE|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral da Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

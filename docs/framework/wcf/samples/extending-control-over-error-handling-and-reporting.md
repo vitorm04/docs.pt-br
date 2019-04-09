@@ -2,12 +2,12 @@
 title: Controle estendido através de relatórios e tratamento de erro
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094106"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Controle estendido através de relatórios e tratamento de erro
 Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros no como um serviço do Windows Communication Foundation (WCF) usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. O exemplo se baseia o [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) com algum código adicional adicionado ao serviço para lidar com erros. O cliente força várias condições de erro. O serviço intercepta os erros e registra em log em um arquivo.  
@@ -157,4 +157,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
-  

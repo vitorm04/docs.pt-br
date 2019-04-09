@@ -6,17 +6,16 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209067"
 ---
 # <a name="treeview-overview"></a>Visão geral de TreeView
 O <xref:System.Windows.Controls.TreeView> controle fornece uma maneira para exibir informações em uma estrutura hierárquica usando nós recolhíveis. Este tópico apresenta os <xref:System.Windows.Controls.TreeView> e <xref:System.Windows.Controls.TreeViewItem> controla e fornece exemplos simples de seu uso.  
-  
-  
+
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>O que é um TreeView?  
  <xref:System.Windows.Controls.TreeView> é um <xref:System.Windows.Controls.ItemsControl> que aninha os itens usando <xref:System.Windows.Controls.TreeViewItem> controles. O exemplo a seguir cria um <xref:System.Windows.Controls.TreeView>.  
@@ -74,7 +73,8 @@ O <xref:System.Windows.Controls.TreeView> controle fornece uma maneira para exib
  [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Tópicos de instruções](treeview-how-to-topics.md)
+- [Tópicos explicativos ](treeview-how-to-topics.md)
 - [Modelo de conteúdo do WPF](wpf-content-model.md)

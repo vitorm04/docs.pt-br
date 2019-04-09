@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097168"
 ---
 # <a name="constrained-execution-regions"></a>Regiões de execução restrita
 Uma CER (região de execução restrita) faz parte de um mecanismo para a criação de código gerenciado confiável. A CER define uma área na qual o CLR (Common Language Runtime) é restrito de gerar exceções fora de banda que possam impedir que o código na área seja executado em sua totalidade. Nessa região, o código do usuário é restrito de executar um código que poderá resultar na geração de exceções fora de banda. O método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve preceder imediatamente um bloco `try` e marca os blocos `catch`, `finally` e `fault` como regiões de execução restrita. Depois de marcado como uma região restrita, o código deverá chamar apenas outro código com contratos de confiabilidade forte e o código não deverá alocar nem fazer chamadas virtuais a métodos não preparados ou não confiáveis, a menos que o código esteja preparado para manipular falhas. O CLR atrasa as anulações de thread do código que está sendo executado em uma CER.  
@@ -70,14 +70,14 @@ Uma CER (região de execução restrita) faz parte de um mecanismo para a criaç
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Em condições excepcionais, o método tem a garantia de limitar os danos ao estado na instância atual.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, em condições excepcionais, o CLR não oferece nenhuma garantia em relação à consistência de estado; ou seja, a condição pode corromper o processo.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Em condições excepcionais, o CLR não oferece garantias em relação à consistência de estado; ou seja, a condição pode corromper o processo.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Em condições excepcionais, o método tem a garantia de não corromper o estado.  
   
 ## <a name="reliability-trycatchfinally"></a>Confiabilidade try/catch/finally  
  A confiabilidade `try/catch/finally` é um mecanismo de tratamento de exceção com o mesmo nível de garantias de previsibilidade da versão não gerenciada. O bloco `catch/finally` é a CER. Os métodos no bloco exigem preparação antecipada e não devem ser interrompíveis.  
   
- No .NET Framework versão 2.0, o código informa o tempo de execução de que um try é confiável chamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> imediatamente antes de um bloco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> é membro do <xref:System.Runtime.CompilerServices.RuntimeHelpers>, uma classe de suporte do compilador. Chame <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> diretamente, pendente sua disponibilidade por meio dos compiladores.  
+ No .NET Framework versão 2.0, o código informa o tempo de execução de que um try é confiável chamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> imediatamente antes de um bloco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> é um membro da <xref:System.Runtime.CompilerServices.RuntimeHelpers>, uma classe de suporte do compilador. Chame <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> diretamente, pendente sua disponibilidade por meio dos compiladores.  
   
 ## <a name="noninterruptible-regions"></a>Regiões não interrompíveis  
  Uma região não interrompível agrupa um conjunto de instruções em uma CER.  
@@ -115,4 +115,5 @@ Uma CER (região de execução restrita) faz parte de um mecanismo para a criaç
 -   Ponteiros de função e representantes.  
   
 ## <a name="see-also"></a>Consulte também
-- [Melhores práticas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md)
+
+- [Práticas recomendadas de confiabilidade](../../../docs/framework/performance/reliability-best-practices.md)

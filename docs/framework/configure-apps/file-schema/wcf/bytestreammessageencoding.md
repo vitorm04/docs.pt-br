@@ -2,12 +2,12 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109896"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 Especifica a codificação de mensagens como um fluxo de bytes, com a opção de especificar a codificação de caracteres.  
@@ -46,11 +46,12 @@ Especifica a codificação de mensagens como um fluxo de bytes, com a opção de
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
-- [Codificação de mensagens](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Decodificador de mensagens](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [Escolhendo um codificador de mensagem](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)

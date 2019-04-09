@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 63dcfd80cca0db67dfad87c491d607506057a532
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109805"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Classificando com DataView (LINQ to DataSet)
-A capacidade de classificar dados com base em critérios específicos e apresentá-los para um cliente através de um controle da interface do usuário é um aspecto importante da vinculação de dados. O objeto <xref:System.Data.DataView> fornece várias maneiras de classificar dados e retornar linhas de dados ordenadas por critérios específicos. Além de sua cadeia de caracteres com base em recursos, de classificação <xref:System.Data.DataView> também permite que você use [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expressões para os critérios de classificação. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressões de permitem operações de classificação muito mais poderosas e complexas que a classificação baseada em cadeia de caracteres. Este tópico descreve as duas abordagens de classificação usando <xref:System.Data.DataView>.  
+A capacidade de classificar dados com base em critérios específicos e apresentá-los para um cliente através de um controle da interface do usuário é um aspecto importante da vinculação de dados. <xref:System.Data.DataView> fornece várias maneiras de classificar dados e retornar linhas de dados ordenadas por critérios específicos de ordenação. Além de sua cadeia de caracteres com base em recursos, de classificação <xref:System.Data.DataView> também permite que você use [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expressões para os critérios de classificação. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressões de permitem operações de classificação muito mais poderosas e complexas que a classificação baseada em cadeia de caracteres. Este tópico descreve as duas abordagens de classificação usando <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Criando um DataView a partir de uma consulta com informações de classificação  
  Um objeto <xref:System.Data.DataView> pode ser criado a partir de uma consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Se a consulta contiver uma <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, ou <xref:System.Linq.Enumerable.ThenByDescending%2A> cláusula as expressões nessas cláusulas são usadas como base para classificar os dados no <xref:System.Data.DataView>. Por exemplo, se a consulta contém o `Order By…`e `Then By…` cláusulas, resultante <xref:System.Data.DataView> ordenaria os dados pelas duas colunas especificadas.  
@@ -82,6 +82,7 @@ A capacidade de classificar dados com base em critérios específicos e apresent
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Associação de dados e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtrando com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Classificando Dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))
+
+- [Associação e LINQ to DataSet de dados](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Filtrar com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Classificar dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

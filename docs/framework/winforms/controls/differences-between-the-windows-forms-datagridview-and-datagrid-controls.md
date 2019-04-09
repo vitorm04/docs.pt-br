@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: b7d97431bfdbdafd5e87bfbfb9c5badd9ba273ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095666"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Diferenças entre os controles DataGridView e DataGrid dos Windows Forms
 O <xref:System.Windows.Forms.DataGridView> controle é um novo controle que substitui o <xref:System.Windows.Forms.DataGrid> controle. O <xref:System.Windows.Forms.DataGridView> controle fornece vários recursos básicos e avançados que estão faltando no <xref:System.Windows.Forms.DataGrid> controle. Além disso, a arquitetura do <xref:System.Windows.Forms.DataGridView> controle torna muito mais fácil de estender e personalizar que o <xref:System.Windows.Forms.DataGrid> controle.  
@@ -33,6 +33,7 @@ O <xref:System.Windows.Forms.DataGridView> controle é um novo controle que subs
  Porque o <xref:System.Windows.Forms.DataGridView> controle tem uma arquitetura totalmente nova, não há nenhum caminho simples de conversão que permite que você use <xref:System.Windows.Forms.DataGrid> personalizações com o <xref:System.Windows.Forms.DataGridView> controle. Muitas <xref:System.Windows.Forms.DataGrid> personalizações são desnecessárias com o <xref:System.Windows.Forms.DataGridView> controlar, no entanto, devido a recursos internos disponíveis no novo controle. Se você tiver criado tipos de coluna personalizados para o <xref:System.Windows.Forms.DataGrid> controle que você deseja usar com o <xref:System.Windows.Forms.DataGridView> controle, você precisará implementá-los novamente usando a nova arquitetura. Para obter mais informações, consulte [Personalizando o controle DataGridView dos Windows Forms](customizing-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
@@ -40,10 +41,10 @@ O <xref:System.Windows.Forms.DataGridView> controle é um novo controle que subs
 - [Controle DataGrid](datagrid-control-windows-forms.md)
 - [Componente BindingSource](bindingsource-component.md)
 - [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Modos de exibição dos dados no controle DataGridView do Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Estilos de célula no controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Modos de exibição dos dados no controle DataGridView dos Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
 - [Formatação de dados no controle DataGridView dos Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md) (Opções de dimensionamento no controle DataGridView dos Windows Forms)
+- [Dimensionando opções no controle DataGridView dos Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)
 - [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
 - [Modos de seleção no controle DataGridView dos Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)
 - [Personalizando o controle DataGridView dos Windows Forms](customizing-the-windows-forms-datagridview-control.md)

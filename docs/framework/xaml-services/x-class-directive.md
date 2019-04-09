@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199447"
 ---
 # <a name="xclass-directive"></a>Diretiva x:Class
 Configura a compilação de marcação XAML para ingressar em classes parciais entre marcação e code-behind. A classe código parcial é definida em um arquivo de código separado em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] idioma, enquanto a classe parcial de marcação é normalmente criada pela geração de código durante a compilação de XAML.  
@@ -61,6 +61,7 @@ Configura a compilação de marcação XAML para ingressar em classes parciais e
  `x:Class` para o Silverlight está documentado separadamente. Para obter mais informações, consulte [Namespace de XAML (x) Recursos de linguagem (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Diretiva x:Subclass](x-subclass-directive.md)
 - [XAML e classes personalizadas para WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Diretiva x:ClassModifier](x-classmodifier-directive.md)

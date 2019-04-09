@@ -1,5 +1,5 @@
 ---
-title: Elemento < system.Net > (configurações de rede)
+title: Elemento <system.Net> (configurações de rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: f9fbf48325c7cb5216d16041543bc53c00584ea3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095264"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net > (configurações de rede)
 Contém configurações que especificam como o .NET Framework se conecta à rede.  
@@ -43,14 +43,14 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura o servidor de proxy de protocolo HTTP (Hypertext Transfer).|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configura as opções de envio de mensagens de transporte protocolo SMTP (Simple Mail).|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla o mecanismo de cache para solicitações de rede.|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básica para classes no <xref:System.Net> e namespaces filho relacionados.|  
+|[configurações](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básica para classes no <xref:System.Net> e namespaces filho relacionados.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica os módulos para usá-lo para solicitar informações de hosts da Internet.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contém configurações para todos os namespaces.|  
+|[configuração](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contém configurações para todos os namespaces.|  
   
 ## <a name="remarks"></a>Comentários  
  O [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento contém definições de classes no <xref:System.Net> e namespaces filho relacionados. As configurações de configuram os módulos de autenticação, gerenciamento de conexão, configurações de email, o servidor proxy e módulos de solicitação de Internet para receber informações de hosts da Internet.  
@@ -93,4 +93,5 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Como: Criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST'
+title: 'Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144073"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como: Criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
 Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato não tem suporte byWCF. Este tópico discute usando o modelo de programação WCF REST para criar um serviço que recebe dados arbitrários.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   Ao compilar o ServiceModel e referência de código de ServiceModel  
   
 ## <a name="see-also"></a>Consulte também
-- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+
+- [UriTemplate and UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Visão geral de modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

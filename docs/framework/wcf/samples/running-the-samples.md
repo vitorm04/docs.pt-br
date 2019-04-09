@@ -2,12 +2,12 @@
 title: Executando os exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209210"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Executando os exemplos do Windows Communication Foundation
 Os exemplos do Windows Communication Foundation (WCF) podem ser executados em uma configuração única máquina ou várias máquinas. Como fornecidos, os exemplos estão prontos para execução em um único computador. Em uma configuração de várias máquinas, é necessário modificar o arquivo de configuração de um exemplo. Os procedimentos a seguir explicam como executar um exemplo em configurações na mesma máquina e entre computadores. Observe que há variações nas etapas para serviços hospedados no Internet Information Services (IIS) e os exemplos de auto-hospedados. A maioria dos exemplos são hospedados no IIS; Consulte as informações do Leiame do exemplo para determinar como ele está hospedado.  
@@ -80,5 +80,6 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser executados em um
 -   Se o serviço está hospedado no IIS para fins de segurança, remova a definição do diretório virtual e as permissões concedidas nas etapas de configuração quando tiver terminado com os exemplos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
+
+- [Compilando os exemplos do Windows Communication Foundation ](../../../../docs/framework/wcf/samples/building-the-samples.md)
 - [Dicas de solução de problemas para obter exemplos WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

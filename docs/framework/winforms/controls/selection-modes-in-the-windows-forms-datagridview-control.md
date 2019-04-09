@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097272"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modos de seleção no controle DataGridView dos Windows Forms
 Às vezes você deseja que seu aplicativo para executar ações com base nas seleções do usuário dentro de um <xref:System.Windows.Forms.DataGridView> controle. Dependendo das ações, você talvez queira restringir os tipos de seleção possíveis. Por exemplo, suponha que seu aplicativo possa imprimir um relatório para o registro selecionado no momento. Nesse caso, você talvez queira configurar o <xref:System.Windows.Forms.DataGridView> controle, de modo que clicar em qualquer lugar dentro de uma linha sempre seleciona a linha inteira, e então que apenas uma linha por vez pode ser selecionada.  
@@ -45,9 +45,10 @@ ms.locfileid: "57717291"
 >  Código de exemplo que demonstra o uso programático das células selecionadas pode ser encontrado na <xref:System.Windows.Forms.DataGridView> visão geral da classe.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Seleção e uso da Área de Transferência com o controle DataGridView do Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Como: Definir o modo de seleção do controle DataGridView dos Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Seleção e uso da Área de Transferência com o controle DataGridView dos Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Como: Definir o modo de seleção do controle DataGridView do Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fd9fd3a580946cda09f0c129f02cd1218a0c9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095796"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>Método ISymUnmanagedNamespace::GetVariables
 Retorna todas as variáveis definidas no escopo global dentro desse namespace.  
@@ -54,4 +54,5 @@ HRESULT GetVariables(
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

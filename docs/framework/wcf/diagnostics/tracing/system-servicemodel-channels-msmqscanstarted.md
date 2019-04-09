@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqScanStarted
 ms.date: 03/30/2017
 ms.assetid: 56046431-94fc-4b04-a0fb-4b3f3e31a26f
-ms.openlocfilehash: 5eecae4f51c38de9ff3c2c132605510f6cf181b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 927302b808cc1d7082d2e37946274adfa6948e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199603"
 ---
 # <a name="systemservicemodelchannelsmsmqscanstarted"></a>System.ServiceModel.Channels.MsmqScanStarted
 System.ServiceModel.Channels.MsmqScanStarted  
@@ -16,6 +16,7 @@ System.ServiceModel.Channels.MsmqScanStarted
  Serviço de ativação MSMQ começou a examinar para filas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

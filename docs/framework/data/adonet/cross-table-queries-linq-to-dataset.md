@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: b897be62a940f1d27e9a8cf2eb54eec460b60468
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193597"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Consultas em tabelas cruzadas (LINQ to DataSet)
 Além de consultar uma única tabela, você também pode executar consultas em tabelas cruzadas no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Isso é feito usando um *junção*. Uma junção é a associação de objetos em uma fonte de dados com objetos que compartilham um atributo comum em outra fonte de dados, como um produto ou ID de contato. Na programação orientada a objeto, as relações entre objetos são relativamente fáceis de navegar porque cada objeto tem um membro que faz referência a outro objeto. Nas tabelas de banco de dados externo, no entanto, navegar em relações não é tão simples. Tabelas de banco de dados não contêm relações internas. Nesses casos, a operação de junção pode ser usada para corresponder os elementos de cada fonte. Por exemplo, considerando duas tabelas que contêm informações de produto e de vendas, você pode usar uma operação de união para corresponder as informações de vendas e produtos para a mesma ordem de venda.  
@@ -30,8 +30,9 @@ Além de consultar uma única tabela, você também pode executar consultas em t
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Consultando DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+
+- [Consultar DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Consultas de tabela única](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
 - [Consultando DataSets tipados](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [Operações join](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))
-- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Operações de junção](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))
+- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -1,18 +1,18 @@
 ---
-title: Executar uma consulta XPath em um conjunto de dados
+title: Executar uma consulta XPath em um DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209470"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a>Executar uma consulta XPath em um conjunto de dados
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Executar uma consulta XPath em um DataSet
 A relação entre um sincronizada <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> lhe permite fazer uso do XML serviços, como a consulta XML Path Language (XPath), que acessam o **XmlDataDocument** e podem executar determinada funcionalidade modo mais conveniente do que o acesso a **conjunto de dados** diretamente. Por exemplo, em vez de usar o **selecionar** método de um <xref:System.Data.DataTable> navegar em relações com outras tabelas em um **conjunto de dados**, você pode executar uma consulta XPath em um **XmlDataDocument**  que é sincronizado com o **DataSet**, para obter uma lista de elementos XML na forma de um <xref:System.Xml.XmlNodeList>. Os nós na **XmlNodeList**, convertido como <xref:System.Xml.XmlElement> nós, em seguida, pode ser passado para o **GetRowFromElement** método da **XmlDataDocument**, para retornar a correspondência <xref:System.Data.DataRow> referências às linhas da tabela no sincronizado **conjunto de dados**.  
   
  Por exemplo, o exemplo de código a seguir executa uma consulta de XPath "neto". O **conjunto de dados** é preenchido com três tabelas: **Os clientes**, **pedidos**, e **OrderDetails**. No exemplo, uma relação pai-filho é criada entre o **clientes** e **pedidos** tabelas e entre o **pedidos** e **OrderDetails** tabelas. Uma consulta XPath é executada, em seguida, para retornar um **XmlNodeList** dos **clientes** nós onde um neto **OrderDetails** nó tem um **ProductID**nó com o valor de 43. Em essência, o exemplo está usando a consulta XPath para determinar quais clientes têm solicitou o produto que tem o **ProductID** de 43.  
@@ -102,5 +102,6 @@ foreach (XmlNode xmlNode in nodeList)
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sincronização de DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

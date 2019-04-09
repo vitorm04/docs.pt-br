@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17b9be9f08d88e2b84843331f5d1d9bd25982f22
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 328462343669b3ea6bed2d86514ea348f6ae2b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197965"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>Método IHostTaskManager::BeginDelayAbort
 Notifica o host que o código gerenciado está inserindo um período em que a tarefa atual não deve ser anulada.  
@@ -58,6 +58,7 @@ HRESULT BeginDelayAbort ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Interface IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

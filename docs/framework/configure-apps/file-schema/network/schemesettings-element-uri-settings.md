@@ -1,13 +1,13 @@
 ---
-title: Elemento <schemeSettings> (configurações de Uri)
+title: <schemeSettings> (Configurações de Uri)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094223"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > (configurações de Uri)
 Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.  
@@ -33,7 +33,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Adiciona uma configuração de esquema para um nome de esquema.|  
+|[adicionar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Adiciona uma configuração de esquema para um nome de esquema.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Limpa todas as configurações existentes do esquema.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Remove uma definição de esquema para um nome de esquema.|  
   
@@ -84,6 +84,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
 |Pode ser vazio||  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

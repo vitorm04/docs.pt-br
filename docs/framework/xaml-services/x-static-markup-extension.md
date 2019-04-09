@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207078"
 ---
 # <a name="xstatic-markup-extension"></a>Extensão de marcação x:Static
 Faz referência a qualquer entidade de código estático por-valor que é definida em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– maneira em conformidade. A propriedade estática que é referenciada pode ser usada para fornecer o valor de uma propriedade em XAML.  
@@ -69,7 +69,7 @@ Há dois outros usos XAML são tecnicamente possíveis. No entanto, esses usos s
 
 Na implementação de serviços de XAML do .NET Framework, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.Markup.StaticExtension> classe.  
 
-`x:Static` é uma extensão da marcação. Todas as extensões de marcação no uso XAML a `{` e `}` caracteres na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve fornecer um valor. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para visão geral de XAML](markup-extensions-for-xaml-overview.md).  
+`x:Static` é uma extensão de marcação. Todas as extensões de marcação no uso XAML a `{` e `}` caracteres na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve fornecer um valor. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para visão geral de XAML](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
  Namespace XAML padrão, você pode usar para a programação do WPF não contém muitas propriedades estáticas úteis, e a maioria das propriedades estáticas útil tem suporte, como conversores de tipo que facilitam o uso sem a necessidade de `{x:Static}` . Para propriedades estáticas, você deve mapear um prefixo para um namespace XAML, se uma das seguintes opções for verdadeira:  
@@ -83,5 +83,6 @@ Na implementação de serviços de XAML do .NET Framework, o tratamento para ess
  Para obter mais informações sobre como usar prefixos e namespaces XAML para WPF, consulte [Namespaces XAML e mapeamento de Namespace para XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Extensão de marcação x:Type](x-type-markup-extension.md)
 - [Tipos migrados do WPF para System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

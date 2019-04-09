@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff8891f4f296a2af5aaf6fa90851ec2fa0bdd43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 906442985ac2c5e75d794eba1a91bd90861ee2c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197406"
 ---
 # <a name="icorruntimehostdeletelogicalthreadstate-method"></a>Método ICorRuntimeHost::DeleteLogicalThreadState
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -43,4 +43,5 @@ HRESULT DeleteLogicalThreadState ( );
  **Versões do .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: <TypeParameter> (.NET Nativo)
+title: <TypeParameter> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110208"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > (.NET nativo)
 Aplica a política ao tipo representado por um argumento Type passado para um método.  
@@ -68,7 +68,7 @@ Aplica a política ao tipo representado por um argumento Type passado para um m�
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<TypeParameter>` é semelhante ao elemento [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md), exceto pelo fato que ele pode ser aplicado somente aos parâmetros do tipo <xref:System.Type>. Ele aplica a política a qualquer tipo que é representado no tempo de execução pelo argumento do tipo especificado pelo atributo `Name`.  
@@ -95,7 +95,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
  as diretivas de reflexão disponibilizam os metadados para o tipo `StockQuote` disponível para o serializador NewtonSoft JSON no tempo de execução.  
   
 ## <a name="see-also"></a>Consulte também
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

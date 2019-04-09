@@ -2,12 +2,12 @@
 title: Criando um serviço de fluxo de trabalho de execução longa
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109649"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Criando um serviço de fluxo de trabalho de execução longa
 Este tópico descreve como criar um serviço de fluxo de trabalho de longa execução. Serviços de fluxo de trabalho de longa execução pode ser executada por longos períodos de tempo. Em algum momento o fluxo de trabalho poderá ficar ocioso enquanto aguarda para obter informações adicionais. Quando isso acontece o fluxo de trabalho é mantido para um banco de dados SQL e é removido da memória. Quando as informações adicionais está disponível a instância de fluxo de trabalho é carregada para a memória e continua executando.  Nesse cenário, você está implementando um sistema de pedidos muito simplificado.  O cliente envia uma mensagem inicial para o serviço de fluxo de trabalho para iniciar a ordem. Ele retorna uma ID de pedido para o cliente. Neste ponto o serviço de fluxo de trabalho está aguardando a outra mensagem do cliente e entra no estado ocioso e é mantido para um banco de dados do SQL Server.  Quando o cliente envia a próxima mensagem a um item de ordem, o serviço de fluxo de trabalho é carregado para a memória e termina de processar o pedido. No exemplo de código, ele retorna uma cadeia de caracteres informando que o item foi adicionado ao pedido. O exemplo de código não deve ser um aplicativo do mundo real da tecnologia, mas em vez disso, um exemplo simple que ilustra os serviços de fluxo de trabalho de longa execução. Este tópico pressupõe que você sabe como criar soluções e projetos do Visual Studio 2012.
@@ -199,4 +199,5 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
     ```
 
 ## <a name="see-also"></a>Consulte também
+
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)

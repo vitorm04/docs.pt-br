@@ -2,21 +2,21 @@
 title: Conjunto de caracteres de entrada (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109707"
 ---
 # <a name="input-character-set-entity-sql"></a>Conjunto de caracteres de entrada (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] aceita os caracteres de UNICODE codificados em UTF-16.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] aceita caracteres UNICODE codificados em UTF-16.  
   
  Literais de cadeia de caracteres podem conter qualquer caractere UTF-16 colocado entre aspas simples. Por exemplo, N'文字列リテラル. Quando os literais de cadeia de caracteres são comparados, os valores de original UTF-16 são usados. Por exemplo, N'ABC é diferente em páginas de código japonesas e latinos.  
   
  Comentários podem conter qualquer caractere UTF-16.  
   
- Os identificadores escapados podem conter qualquer caractere UTF-16 entre colchetes. Por exemplo, エスケープされた識別子 []. A comparação de identificadores escapados UTF-16 não difere maiúsculas de minúsculas. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trata versões de letras que aparecem o mesmo mas é páginas diferentes de código como caracteres diferentes. Por exemplo, [ABC] é equivalente a abc [] se os caracteres correspondentes são da mesma página de código. No entanto, se os mesmos dois identificadores são páginas de código diferentes, eles não são equivalentes.  
+ Os identificadores escapados podem conter qualquer caractere UTF-16 entre colchetes. Por exemplo, エスケープされた識別子 []. A comparação de identificadores escapados UTF-16 não difere maiúsculas de minúsculas. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trata versões de letras que aparecem o mesmo, mas são diferentes das páginas de código como caracteres diferentes. Por exemplo, [ABC] é equivalente a abc [] se os caracteres correspondentes são da mesma página de código. No entanto, se os mesmos dois identificadores são páginas de código diferentes, eles não são equivalentes.  
   
  Espaço em branco é qualquer caractere de espaço em branco UTF-16.  
   
@@ -29,4 +29,5 @@ ms.locfileid: "56976753"
  Os identificadores simples só podem ser caracteres latinos. Isso evita a ambiguidade durante a comparação, porque os valores originais são comparados. Por exemplo, ABC seria diferente em páginas de código japonesas e latinos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Visão geral da Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091324"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlando o registro em log no .NET Framework
 Você pode usar o ETW (Rastreamento de Eventos para Windows) para registrar eventos de CLR (Common Language Runtime). Você pode criar e exibir rastros usando as seguintes ferramentas:  
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   O parâmetro `-p` identifica o GUID do provedor.  
   
-    -   `0x1CCBD` especifica as categorias de eventos que serão geradas.  
+    -   `0x1CCBD` Especifica as categorias de eventos que serão gerados.  
   
-    -   `0x5` define o nível do log (nesse caso, detalhado (5)).  
+    -   `0x5` Define o nível de log (nesse caso, detalhado (5)).  
   
     -   O parâmetro `-ets` instrui o Logman a enviar comandos para a seções de rastreamento de eventos.  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      Este comando faz com que XPerf despeje os eventos na forma de um arquivo de valores separados por vírgula (CSV) que você pode abrir. Porque eventos diferentes possuem campos diferentes, esse arquivo CSV contém mais de uma linha de cabeçalho antes dos dados. O primeiro campo de cada linha é o tipo de evento, que indica qual cabeçalho deve ser usado para determinar o restante dos campos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

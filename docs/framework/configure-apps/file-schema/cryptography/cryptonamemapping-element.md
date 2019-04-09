@@ -1,5 +1,5 @@
 ---
-title: Elemento <cryptoNameMapping>
+title: <cryptoNameMapping> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: ff3300f57fd4681875e2791610cc5a0d0dcba31b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bcf7894dba66736fcc1a30af9b5557549ef25e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092455"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > elemento
 Contém mapeamentos de classes para nomes amigáveis.  
@@ -75,6 +75,7 @@ Contém mapeamentos de classes para nomes amigáveis.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)

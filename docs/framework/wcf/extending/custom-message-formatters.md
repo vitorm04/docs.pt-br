@@ -2,12 +2,12 @@
 title: Custom Message Formatters
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196236"
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
 O conteúdo em uma mensagem é geralmente na forma de XML, geralmente, que não é um formato conveniente para um aplicativo. Aplicativos manipulam objetos, obter e definir suas propriedades. Windows Communication Foundation (WCF) usa o *contrato de dados* para converter um <xref:System.ServiceModel.Channels.Message> objeto em um objeto facilmente manipulado por um aplicativo. Esses processos são chamados de serialização e desserialização. Observe que esses mesmos termos são usados para descrever a serialização e desserialização feita pela camada de transporte de e para o formato de transmissão de mensagem, que é um processo não relacionado.  
@@ -33,6 +33,7 @@ O conteúdo em uma mensagem é geralmente na forma de XML, geralmente, que não 
  Para inserir o formatador personalizado no aplicativo de serviço, atribuir a <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> do objeto para o <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> propriedade usando um comportamento de operação. Para obter informações sobre comportamentos, consulte [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
 - [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

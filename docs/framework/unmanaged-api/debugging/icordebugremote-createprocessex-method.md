@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b8c72a2dde70a93b589181b0cc1bd7824b3f52d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a38812803127857281f9766fa3ed551971ec0330
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093509"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Método ICorDebugRemote::CreateProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -107,6 +107,7 @@ HRESULT CreateProcessEx (
  **Versões do .NET framework:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df3baf21de7a1e6ec0590d85719eaa40d5da489f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e77ec9de198b673bb3b5fc4dad3cd1b0316f07c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092065"
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>Interface ICorProfilerFunctionEnum
 Fornece métodos para iterar de forma sequencial por meio de uma coleção de funções no common language runtime.  
@@ -51,6 +51,7 @@ Fornece métodos para iterar de forma sequencial por meio de uma coleção de fu
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil de interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Método EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)

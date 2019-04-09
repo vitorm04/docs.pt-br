@@ -1,5 +1,5 @@
 ---
-title: 'Como: Agrupar itens em um controle ListView dos Windows Forms'
+title: 'Como: Agrupar itens em um controle ListView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: a14d4560a229e62bc0759b6b4eab8087eb53f030
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3a070db6c580f0f3798e52b1afbe0ee36947aeb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091532"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Como: Agrupar itens em um controle ListView dos Windows Forms
+# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Como: Agrupar itens em um controle ListView do Windows Forms
 Com o recurso de agrupamento a <xref:System.Windows.Forms.ListView> controle, você pode exibir conjuntos de itens relacionados em grupos. Esses grupos são separados na tela por cabeçalhos de grupo horizontal que contêm os títulos do grupo. Você pode usar <xref:System.Windows.Forms.ListView> grupos para facilitar a navegação em listas grandes agrupando itens em ordem alfabética, por data, ou por qualquer outro agrupamento lógico. A imagem a seguir mostra alguns itens agrupados.  
   
  ![Grupos de ListView](./media/listviewgroups.gif "ListViewGroups")  
@@ -57,6 +57,7 @@ Itens agrupados de ListView
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewGroup>

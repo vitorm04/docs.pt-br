@@ -1,5 +1,5 @@
 ---
-title: 'Como: Personalizar a aparência das linhas no controle DataGridView dos Windows Forms'
+title: 'Como: Personalizar a aparência de linhas no controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - rows [Windows Forms], customizing in DataGridView control
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: d40b53d2-7e7c-48c5-8570-6e79d15c3bbb
-ms.openlocfilehash: a743cda36a8bf78fafeea94b0c6af8e30c7fe15a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 107ec75257907b934412d9ee333b00d5df05a99c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110313"
 ---
-# <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>Como: Personalizar a aparência das linhas no controle DataGridView dos Windows Forms
+# <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>Como: Personalizar a aparência de linhas no controle DataGridView do Windows Forms
 Você pode controlar a aparência dos <xref:System.Windows.Forms.DataGridView> linhas manipulando uma ou ambas as <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> eventos. Esses eventos são projetados para que você pode pintar apenas o que você deseja enquanto permitindo que o <xref:System.Windows.Forms.DataGridView> controle pintará o restante. Por exemplo, se você desejar pintar um plano de fundo personalizado, você pode manipular o <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> eventos e permitem que as células individuais pintar seus próprio conteúdo em primeiro plano. Como alternativa, você pode permitir que as células se pintarem e adicione o conteúdo do primeiro plano personalizado em um manipulador para o <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> eventos. Você também pode desabilitar a pintura da célula e pintar tudo por conta própria em uma <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> manipulador de eventos.  
   
  O exemplo de código a seguir implementa manipuladores para ambos os eventos a fim de fornecer uma tela de fundo de seleção do gradiente e algum conteúdo de primeiro plano personalizado que abrange várias colunas.  
@@ -33,6 +33,7 @@ Você pode controlar a aparência dos <xref:System.Windows.Forms.DataGridView> l
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
 
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>

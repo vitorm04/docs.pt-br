@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar e remover itens de Menu com o componente do Windows Forms ContextMenu'
+title: 'Como: Adicionar e remover itens de menu com o componente ContextMenu do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094457"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Como: Adicionar e remover itens de Menu com o componente do Windows Forms ContextMenu
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Como: Adicionar e remover itens de menu com o componente ContextMenu do Windows Forms
 Explica como adicionar e remover itens de menu de atalho no Windows Forms.  
   
  Os formulários do Windows <xref:System.Windows.Forms.ContextMenu> componente fornece um menu de comandos usados com frequência que são relevantes para o objeto selecionado. Você pode adicionar itens ao menu de atalho, adicionando <xref:System.Windows.Forms.MenuItem> objetos para o <xref:System.Windows.Forms.Menu.MenuItems%2A> coleção.  
@@ -58,7 +58,7 @@ Explica como adicionar e remover itens de menu de atalho no Windows Forms.
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     -ou-  
+     - ou -  
   
 2.  Use o `Clear` método da `MenuItems` coleção do <xref:System.Windows.Forms.ContextMenu> componente para remover todos os itens de menu.  
   
@@ -75,6 +75,7 @@ Explica como adicionar e remover itens de menu de atalho no Windows Forms.
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [Componente ContextMenu](contextmenu-component-windows-forms.md)
 - [Visão geral do componente ContextMenu](contextmenu-component-overview-windows-forms.md)

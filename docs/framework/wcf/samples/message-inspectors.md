@@ -2,12 +2,12 @@
 title: Inspetores de mensagem
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e8afbc1fc85dab18d6fbd5e8d49b10847a7d230f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199798"
 ---
 # <a name="message-inspectors"></a>Inspetores de mensagem
 Este exemplo demonstra como implementar e configurar o cliente e serviço inspetores de mensagem.  
@@ -412,4 +412,3 @@ catch (Exception e)
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

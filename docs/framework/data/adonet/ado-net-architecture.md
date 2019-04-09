@@ -2,12 +2,12 @@
 title: Arquitetura do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202632"
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  
@@ -49,13 +49,14 @@ Arquitetura do ADO.NET
  O ADO.NET Entity Framework foi criado para permitir que os desenvolvedores criem aplicativos de acesso a dados programando em um modelo de aplicativo conceitual, em vez de programar diretamente em um esquema de armazenamento relacional. O objetivo é diminuir a quantidade de código e de manutenção necessários a aplicativos orientados a dados. Para obter mais informações, consulte [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] é usado para implantar serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] é usado para implantar serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML e ADO.NET  
- O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] aproveita a capacidade do XML para fornecer acesso desconectado a dados. O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] foi criado em conjunto com as classes XML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; ambos são componentes de uma única arquitetura.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] aproveita o poder do XML para fornecer acesso desconectado a dados. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] foi projetado em mãos com as classes XML no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; ambos são componentes de uma única arquitetura.  
   
- O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e as classes XML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] convergem para o objeto `DataSet`. O `DataSet` pode ser preenchido com dados de uma fonte XML, quer ele seja um arquivo ou um fluxo XML. O `DataSet` pode ser gravado como XML compatível com World-Wide Web Consortium (W3C) que inclui seu esquema como a linguagem de definição de esquema XML (XSD), independentemente da fonte dos dados no `DataSet`. Como o formato nativo de serialização do `DataSet` é XML, ele é um meio excelente para mover os dados entre as camadas, tornando o `DataSet` uma opção ideal para a comunicação remota dos dados e do contexto de esquema para e de um serviço Web XML. Para obter mais informações, consulte [Documentos e dados XML](../../../../docs/standard/data/xml/index.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e as classes XML na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] convergem o `DataSet` objeto. O `DataSet` pode ser preenchido com dados de uma fonte XML, quer ele seja um arquivo ou um fluxo XML. O `DataSet` pode ser gravado como XML compatível com World-Wide Web Consortium (W3C) que inclui seu esquema como a linguagem de definição de esquema XML (XSD), independentemente da fonte dos dados no `DataSet`. Como o formato nativo de serialização do `DataSet` é XML, ele é um meio excelente para mover os dados entre as camadas, tornando o `DataSet` uma opção ideal para a comunicação remota dos dados e do contexto de esquema para e de um serviço Web XML. Para obter mais informações, consulte [Documentos e dados XML](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Visão geral do ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

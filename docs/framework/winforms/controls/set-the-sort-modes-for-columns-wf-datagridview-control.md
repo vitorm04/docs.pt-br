@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms'
+title: 'Como: Definir os modos de classificação para colunas no controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-ms.openlocfilehash: a0ef450559a1106de635c6d3b16891c23c41b050
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096362"
 ---
-# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms
+# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Como: Definir os modos de classificação para colunas no controle DataGridView do Windows Forms
 No <xref:System.Windows.Forms.DataGridView> colunas da caixa de texto de controle, para usar a classificação automática por padrão, enquanto outros tipos de coluna não são classificados automaticamente. Às vezes, você desejará substituir esses padrões. Por exemplo, você pode exibir imagens no lugar de texto, números ou valores de célula de enumeração. Embora as imagens não possam ser classificadas, os valores subjacentes que elas representam podem ser classificados.  
   
  No <xref:System.Windows.Forms.DataGridView> controle, o <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> valor da propriedade de uma coluna determina o comportamento de classificação.  
@@ -38,8 +38,9 @@ No <xref:System.Windows.Forms.DataGridView> colunas da caixa de texto de control
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - [Classificando dados no controle DataGridView dos Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
 - [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Como: Personalizar a classificação no controle DataGridView dos Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Como: Personalizar a classificação no controle DataGridView do Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

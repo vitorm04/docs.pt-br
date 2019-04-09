@@ -2,15 +2,15 @@
 title: Métodos de System.Math
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: 45a674c86fc2f19f3e273834b8cb9d6adee5b3ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1dae31b30962505c07c198f3bd35fceb8f400efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141707"
 ---
 # <a name="systemmath-methods"></a>Métodos de System.Math
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte aos seguintes métodos de <xref:System.Math> .  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta o seguinte <xref:System.Math> métodos.  
   
 -   <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
   
@@ -23,7 +23,8 @@ ms.locfileid: "54576857"
   
  Em SQL, a função de `ROUND` vez arredondará sempre fora de 0. Portanto círculos 2,5 a 3, contrastado com o arredondamento para 2 no.NET Framework.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passa completamente a semântica do SQL `ROUND` e não tenta implementar arredondamento bancário.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passa para o SQL `ROUND` semântica e não tenta implementar arredondamento bancário.  
   
 ## <a name="see-also"></a>Consulte também
-- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
+- [Tipos de dados e funções](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

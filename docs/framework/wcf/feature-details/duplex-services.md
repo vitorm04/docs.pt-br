@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110078"
 ---
 # <a name="duplex-services"></a>Serviços de duplex
 Um contrato de serviço duplex é um padrão de troca de mensagem no qual os pontos de extremidade podem enviar mensagens para outro independentemente. Um serviço duplex, portanto, pode enviar mensagens de volta para o ponto de extremidade do cliente, fornecendo o comportamento do tipo de evento. Comunicação duplex ocorre quando um cliente se conecta a um serviço e fornece o serviço com um canal no qual o serviço pode enviar mensagens de volta ao cliente. Observe que o comportamento do tipo de evento dos serviços duplex só funciona dentro de uma sessão.  
@@ -40,9 +40,7 @@ Um contrato de serviço duplex é um padrão de troca de mensagem no qual os pon
  A configuração para o serviço deve configurar para fornecer uma associação que dá suporte à comunicação de sessão e comunicação duplex. O `wsDualHttpBinding` elemento dá suporte à comunicação de sessão e permite a comunicação duplex, fornecendo duas conexões de HTTP, um para cada direção.  
   
  No cliente, você deve configurar um endereço que o servidor pode usar para se conectar ao cliente, conforme mostrado no seguinte exemplo de configuração.  
-  
-  
-  
+
 > [!NOTE]
 >  Os clientes não-duplex que falham ao autenticar usando uma conversa segura normalmente geram um <xref:System.ServiceModel.Security.MessageSecurityException>. No entanto, se um cliente duplex que usa uma conversa segura não conseguir autenticar o cliente recebe um <xref:System.TimeoutException> em vez disso.  
   
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  O modelo de duplex não detecta automaticamente quando um serviço ou cliente fecha seu canal. Portanto, se um cliente termina inesperadamente, por padrão o serviço não será notificado, ou se um cliente termina inesperadamente, o serviço não será notificado. Os clientes e serviços podem implementar seu próprio protocolo para notificar uns aos outros, se desejarem.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
-- [Especificando o comportamento em tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Como: Criar uma fábrica de canais e usá-lo para criar e gerenciar canais](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Especificando a execução do cliente- Comportamento do tempo](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Como: criar uma fábrica de canais e usá-la para criar e gerenciar canais](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
