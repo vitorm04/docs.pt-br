@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5fff28e1c2c0d31285c9621c184a44355813a03
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5c09140488730179616d11932faa3542f704958a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123727"
 ---
-# <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="e087f-102">Método IMetaDataAssemblyEmit::SetExportedTypeProps</span><span class="sxs-lookup"><span data-stu-id="e087f-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
-<span data-ttu-id="e087f-103">Modifica especificado `ExportedType` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="e087f-103">Modifies the specified `ExportedType` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="1999d-102">Método IMetaDataAssemblyEmit::SetExportedTypeProps</span><span class="sxs-lookup"><span data-stu-id="1999d-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
+<span data-ttu-id="1999d-103">Modifica especificado `ExportedType` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="1999d-103">Modifies the specified `ExportedType` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e087f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e087f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1999d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1999d-104">Syntax</span></span>  
   
 ```  
 HRESULT SetExportedTypeProps (  
@@ -38,30 +38,31 @@ HRESULT SetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e087f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e087f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1999d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1999d-105">Parameters</span></span>  
  `ct`  
- <span data-ttu-id="e087f-106">[in] O token de metadados que especifica o `ExportedType` estrutura de metadados a ser modificado.</span><span class="sxs-lookup"><span data-stu-id="e087f-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="1999d-106">[in] O token de metadados que especifica o `ExportedType` estrutura de metadados a ser modificado.</span><span class="sxs-lookup"><span data-stu-id="1999d-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="e087f-107">[in] O token, do tipo `File`, `AssemblyRef`, ou `ExportedType`, que especifica como esse tipo é implementado.</span><span class="sxs-lookup"><span data-stu-id="e087f-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span></span>  
+ <span data-ttu-id="1999d-107">[in] O token, do tipo `File`, `AssemblyRef`, ou `ExportedType`, que especifica como esse tipo é implementado.</span><span class="sxs-lookup"><span data-stu-id="1999d-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span></span>  
   
  `tkTypeDef`  
- <span data-ttu-id="e087f-108">[in] O `TypeDef` token referenciado no arquivo de código.</span><span class="sxs-lookup"><span data-stu-id="e087f-108">[in] The `TypeDef` token referenced in the code file.</span></span>  
+ <span data-ttu-id="1999d-108">[in] O `TypeDef` token referenciado no arquivo de código.</span><span class="sxs-lookup"><span data-stu-id="1999d-108">[in] The `TypeDef` token referenced in the code file.</span></span>  
   
  `dwExportedTypeFlags`  
- <span data-ttu-id="e087f-109">[in] Uma combinação bit a bit dos valores que especificam os atributos do tipo.</span><span class="sxs-lookup"><span data-stu-id="e087f-109">[in] A bitwise combination of values that specify attributes of the type.</span></span>  
+ <span data-ttu-id="1999d-109">[in] Uma combinação bit a bit dos valores que especificam os atributos do tipo.</span><span class="sxs-lookup"><span data-stu-id="1999d-109">[in] A bitwise combination of values that specify attributes of the type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e087f-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="e087f-110">Remarks</span></span>  
- <span data-ttu-id="e087f-111">Para criar uma `ExportedType` estrutura de metadados, use o [imetadataassemblyemit:: Defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="e087f-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1999d-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="1999d-110">Remarks</span></span>  
+ <span data-ttu-id="1999d-111">Para criar uma `ExportedType` estrutura de metadados, use o [imetadataassemblyemit:: Defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="1999d-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e087f-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e087f-112">Requirements</span></span>  
- <span data-ttu-id="e087f-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e087f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1999d-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1999d-112">Requirements</span></span>  
+ <span data-ttu-id="1999d-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1999d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e087f-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e087f-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1999d-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1999d-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e087f-115">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e087f-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1999d-115">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="1999d-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e087f-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e087f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="1999d-116">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="1999d-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e087f-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e087f-117">See also</span></span>
-- [<span data-ttu-id="e087f-118">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="e087f-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1999d-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1999d-117">See also</span></span>
+
+- [<span data-ttu-id="1999d-118">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="1999d-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

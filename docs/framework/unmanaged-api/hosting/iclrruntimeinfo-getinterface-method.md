@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81f27489d554b59101f1eb181ea64f6b68da979c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2f229e421cc69f2ff45110233c4c6c36d7a1fc4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152744"
 ---
-# <a name="iclrruntimeinfogetinterface-method"></a><span data-ttu-id="b32f4-102">Método ICLRRuntimeInfo::GetInterface</span><span class="sxs-lookup"><span data-stu-id="b32f4-102">ICLRRuntimeInfo::GetInterface Method</span></span>
-<span data-ttu-id="b32f4-103">Carrega o CLR no processo atual e retorna o tempo de execução de ponteiros de interface, tais como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).</span><span class="sxs-lookup"><span data-stu-id="b32f4-103">Loads the CLR into the current process and returns runtime interface pointers, such as [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), and [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).</span></span>  
+# <a name="iclrruntimeinfogetinterface-method"></a><span data-ttu-id="5193d-102">Método ICLRRuntimeInfo::GetInterface</span><span class="sxs-lookup"><span data-stu-id="5193d-102">ICLRRuntimeInfo::GetInterface Method</span></span>
+<span data-ttu-id="5193d-103">Carrega o CLR no processo atual e retorna o tempo de execução de ponteiros de interface, tais como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).</span><span class="sxs-lookup"><span data-stu-id="5193d-103">Loads the CLR into the current process and returns runtime interface pointers, such as [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), and [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).</span></span>  
   
- <span data-ttu-id="b32f4-104">Esse método substitui todos o `CorBindTo`\* funções na [funções de hospedagem de CLR preterido](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) seção.</span><span class="sxs-lookup"><span data-stu-id="b32f4-104">This method supersedes all the `CorBindTo`\* functions in the [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) section.</span></span>  
+ <span data-ttu-id="5193d-104">Esse método substitui todos o `CorBindTo`\* funções na [funções de hospedagem de CLR preterido](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) seção.</span><span class="sxs-lookup"><span data-stu-id="5193d-104">This method supersedes all the `CorBindTo`\* functions in the [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b32f4-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b32f4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5193d-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5193d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetInterface(  
@@ -38,52 +38,53 @@ HRESULT GetInterface(
 [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b32f4-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b32f4-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5193d-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5193d-106">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="b32f4-107">[in] A interface do CLSID para coclass.</span><span class="sxs-lookup"><span data-stu-id="b32f4-107">[in] The CLSID interface for the coclass.</span></span>  
+ <span data-ttu-id="5193d-107">[in] A interface do CLSID para coclass.</span><span class="sxs-lookup"><span data-stu-id="5193d-107">[in] The CLSID interface for the coclass.</span></span>  
   
  `riid`  
- <span data-ttu-id="b32f4-108">[in] O IID da solicitada `rclsid` interface.</span><span class="sxs-lookup"><span data-stu-id="b32f4-108">[in] The IID of the requested `rclsid` interface.</span></span>  
+ <span data-ttu-id="5193d-108">[in] O IID da solicitada `rclsid` interface.</span><span class="sxs-lookup"><span data-stu-id="5193d-108">[in] The IID of the requested `rclsid` interface.</span></span>  
   
  `ppUnk`  
- <span data-ttu-id="b32f4-109">[out] Um ponteiro para a interface consultado.</span><span class="sxs-lookup"><span data-stu-id="b32f4-109">[out] A pointer to the queried interface.</span></span>  
+ <span data-ttu-id="5193d-109">[out] Um ponteiro para a interface consultado.</span><span class="sxs-lookup"><span data-stu-id="5193d-109">[out] A pointer to the queried interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b32f4-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="b32f4-110">Return Value</span></span>  
- <span data-ttu-id="b32f4-111">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="b32f4-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5193d-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="5193d-110">Return Value</span></span>  
+ <span data-ttu-id="5193d-111">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="5193d-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="b32f4-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b32f4-112">HRESULT</span></span>|<span data-ttu-id="b32f4-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="b32f4-113">Description</span></span>|  
+|<span data-ttu-id="5193d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5193d-112">HRESULT</span></span>|<span data-ttu-id="5193d-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="5193d-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b32f4-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="b32f4-114">S_OK</span></span>|<span data-ttu-id="b32f4-115">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="b32f4-115">The method completed successfully.</span></span>|  
-|<span data-ttu-id="b32f4-116">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="b32f4-116">E_POINTER</span></span>|<span data-ttu-id="b32f4-117">`ppUnk` é nulo.</span><span class="sxs-lookup"><span data-stu-id="b32f4-117">`ppUnk` is null.</span></span>|  
-|<span data-ttu-id="b32f4-118">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="b32f4-118">E_OUTOFMEMORY</span></span>|<span data-ttu-id="b32f4-119">Não há memória suficiente está disponível para tratar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="b32f4-119">Not enough memory is available to handle the request.</span></span>|  
-|<span data-ttu-id="b32f4-120">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span><span class="sxs-lookup"><span data-stu-id="b32f4-120">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span></span>|<span data-ttu-id="b32f4-121">Um tempo de execução diferente já foi associado à política de 2 de ativação de versão do CLR herdada.</span><span class="sxs-lookup"><span data-stu-id="b32f4-121">A different runtime was already bound to the legacy CLR version 2 activation policy.</span></span>|  
+|<span data-ttu-id="5193d-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="5193d-114">S_OK</span></span>|<span data-ttu-id="5193d-115">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="5193d-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="5193d-116">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5193d-116">E_POINTER</span></span>|`ppUnk` <span data-ttu-id="5193d-117">é nulo.</span><span class="sxs-lookup"><span data-stu-id="5193d-117">is null.</span></span>|  
+|<span data-ttu-id="5193d-118">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="5193d-118">E_OUTOFMEMORY</span></span>|<span data-ttu-id="5193d-119">Não há memória suficiente está disponível para tratar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="5193d-119">Not enough memory is available to handle the request.</span></span>|  
+|<span data-ttu-id="5193d-120">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span><span class="sxs-lookup"><span data-stu-id="5193d-120">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span></span>|<span data-ttu-id="5193d-121">Um tempo de execução diferente já foi associado à política de 2 de ativação de versão do CLR herdada.</span><span class="sxs-lookup"><span data-stu-id="5193d-121">A different runtime was already bound to the legacy CLR version 2 activation policy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b32f4-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="b32f4-122">Remarks</span></span>  
- <span data-ttu-id="b32f4-123">Esse método faz com que o CLR a ser carregado, mas não inicializado.</span><span class="sxs-lookup"><span data-stu-id="b32f4-123">This method causes the CLR to be loaded but not initialized.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5193d-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="5193d-122">Remarks</span></span>  
+ <span data-ttu-id="5193d-123">Esse método faz com que o CLR a ser carregado, mas não inicializado.</span><span class="sxs-lookup"><span data-stu-id="5193d-123">This method causes the CLR to be loaded but not initialized.</span></span>  
   
- <span data-ttu-id="b32f4-124">A tabela a seguir mostra as combinações com suporte para `rclsid` e `riid`.</span><span class="sxs-lookup"><span data-stu-id="b32f4-124">The following table shows the supported combinations for `rclsid` and `riid`.</span></span>  
+ <span data-ttu-id="5193d-124">A tabela a seguir mostra as combinações com suporte para `rclsid` e `riid`.</span><span class="sxs-lookup"><span data-stu-id="5193d-124">The following table shows the supported combinations for `rclsid` and `riid`.</span></span>  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="b32f4-125">CLSID_CorMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="b32f4-125">CLSID_CorMetaDataDispenser</span></span>|<span data-ttu-id="b32f4-126">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="b32f4-126">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span></span>|  
-|<span data-ttu-id="b32f4-127">CLSID_CorMetaDataDispenserRuntime</span><span class="sxs-lookup"><span data-stu-id="b32f4-127">CLSID_CorMetaDataDispenserRuntime</span></span>|<span data-ttu-id="b32f4-128">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="b32f4-128">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span></span>|  
-|<span data-ttu-id="b32f4-129">CLSID_CorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="b32f4-129">CLSID_CorRuntimeHost</span></span>|<span data-ttu-id="b32f4-130">IID_ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="b32f4-130">IID_ICorRuntimeHost</span></span>|  
-|<span data-ttu-id="b32f4-131">CLSID_CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="b32f4-131">CLSID_CLRRuntimeHost</span></span>|<span data-ttu-id="b32f4-132">IID_ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="b32f4-132">IID_ICLRRuntimeHost</span></span>|  
-|<span data-ttu-id="b32f4-133">CLSID_TypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="b32f4-133">CLSID_TypeNameFactory</span></span>|<span data-ttu-id="b32f4-134">IID_ITypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="b32f4-134">IID_ITypeNameFactory</span></span>|  
-|<span data-ttu-id="b32f4-135">CLSID_CLRDebuggingLegacy</span><span class="sxs-lookup"><span data-stu-id="b32f4-135">CLSID_CLRDebuggingLegacy</span></span>|<span data-ttu-id="b32f4-136">IID_ICorDebug</span><span class="sxs-lookup"><span data-stu-id="b32f4-136">IID_ICorDebug</span></span>|  
+|<span data-ttu-id="5193d-125">CLSID_CorMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="5193d-125">CLSID_CorMetaDataDispenser</span></span>|<span data-ttu-id="5193d-126">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="5193d-126">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span></span>|  
+|<span data-ttu-id="5193d-127">CLSID_CorMetaDataDispenserRuntime</span><span class="sxs-lookup"><span data-stu-id="5193d-127">CLSID_CorMetaDataDispenserRuntime</span></span>|<span data-ttu-id="5193d-128">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="5193d-128">IID_IMetaDataDispenser, IID_IMetaDataDispenserEx</span></span>|  
+|<span data-ttu-id="5193d-129">CLSID_CorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="5193d-129">CLSID_CorRuntimeHost</span></span>|<span data-ttu-id="5193d-130">IID_ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="5193d-130">IID_ICorRuntimeHost</span></span>|  
+|<span data-ttu-id="5193d-131">CLSID_CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="5193d-131">CLSID_CLRRuntimeHost</span></span>|<span data-ttu-id="5193d-132">IID_ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="5193d-132">IID_ICLRRuntimeHost</span></span>|  
+|<span data-ttu-id="5193d-133">CLSID_TypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="5193d-133">CLSID_TypeNameFactory</span></span>|<span data-ttu-id="5193d-134">IID_ITypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="5193d-134">IID_ITypeNameFactory</span></span>|  
+|<span data-ttu-id="5193d-135">CLSID_CLRDebuggingLegacy</span><span class="sxs-lookup"><span data-stu-id="5193d-135">CLSID_CLRDebuggingLegacy</span></span>|<span data-ttu-id="5193d-136">IID_ICorDebug</span><span class="sxs-lookup"><span data-stu-id="5193d-136">IID_ICorDebug</span></span>|  
 |||  
-|<span data-ttu-id="b32f4-137">CLSID_CLRStrongName</span><span class="sxs-lookup"><span data-stu-id="b32f4-137">CLSID_CLRStrongName</span></span>|<span data-ttu-id="b32f4-138">IID_ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="b32f4-138">IID_ICLRStrongName</span></span>|  
+|<span data-ttu-id="5193d-137">CLSID_CLRStrongName</span><span class="sxs-lookup"><span data-stu-id="5193d-137">CLSID_CLRStrongName</span></span>|<span data-ttu-id="5193d-138">IID_ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="5193d-138">IID_ICLRStrongName</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b32f4-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b32f4-139">Requirements</span></span>  
- <span data-ttu-id="b32f4-140">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b32f4-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5193d-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5193d-139">Requirements</span></span>  
+ <span data-ttu-id="5193d-140">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5193d-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b32f4-141">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="b32f4-141">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="5193d-141">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="5193d-141">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="b32f4-142">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b32f4-142">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5193d-142">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5193d-142">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b32f4-143">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b32f4-143">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="5193d-143">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="5193d-143">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b32f4-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b32f4-144">See also</span></span>
-- [<span data-ttu-id="b32f4-145">Interface ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="b32f4-145">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="b32f4-146">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="b32f4-146">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="b32f4-147">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="b32f4-147">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="5193d-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5193d-144">See also</span></span>
+
+- [<span data-ttu-id="5193d-145">Interface ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="5193d-145">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="5193d-146">Interfaces de hospedagem</span><span class="sxs-lookup"><span data-stu-id="5193d-146">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="5193d-147">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="5193d-147">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -17,24 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca4fd4a4d20627bef8f7fedd5a801ba07e8e19b
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202710"
 ---
-# <a name="couninitializecor-function"></a><span data-ttu-id="50e4e-102">Função CoUninitializeCor</span><span class="sxs-lookup"><span data-stu-id="50e4e-102">CoUninitializeCor Function</span></span>
-<span data-ttu-id="50e4e-103">`CoUninitializeCor` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="50e4e-103">`CoUninitializeCor` is obsolete.</span></span>  
+# <a name="couninitializecor-function"></a><span data-ttu-id="acf01-102">Função CoUninitializeCor</span><span class="sxs-lookup"><span data-stu-id="acf01-102">CoUninitializeCor Function</span></span>
+`CoUninitializeCor` <span data-ttu-id="acf01-103">é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="acf01-103">is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50e4e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="50e4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="acf01-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="acf01-104">Syntax</span></span>  
   
 ```  
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="50e4e-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="50e4e-105">Remarks</span></span>  
- <span data-ttu-id="50e4e-106">O common language runtime não pode ser descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="50e4e-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="50e4e-107">Para remover completamente o tempo de execução de um processo em execução, você deve desligar esse processo.</span><span class="sxs-lookup"><span data-stu-id="50e4e-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="acf01-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="acf01-105">Remarks</span></span>  
+ <span data-ttu-id="acf01-106">O common language runtime não pode ser descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="acf01-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="acf01-107">Para remover completamente o tempo de execução de um processo em execução, você deve desligar esse processo.</span><span class="sxs-lookup"><span data-stu-id="acf01-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50e4e-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="50e4e-108">See also</span></span>
-- [<span data-ttu-id="50e4e-109">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="50e4e-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="acf01-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="acf01-108">See also</span></span>
+
+- [<span data-ttu-id="acf01-109">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="acf01-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

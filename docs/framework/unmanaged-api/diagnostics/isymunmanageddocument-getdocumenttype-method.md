@@ -17,29 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154070"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="4e856-102">Método ISymUnmanagedDocument::GetDocumentType</span><span class="sxs-lookup"><span data-stu-id="4e856-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="4e856-103">Obtém o tipo de documento deste documento.</span><span class="sxs-lookup"><span data-stu-id="4e856-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="72a99-102">Método ISymUnmanagedDocument::GetDocumentType</span><span class="sxs-lookup"><span data-stu-id="72a99-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="72a99-103">Obtém o tipo de documento deste documento.</span><span class="sxs-lookup"><span data-stu-id="72a99-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e856-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4e856-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72a99-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="72a99-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4e856-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4e856-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72a99-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="72a99-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="4e856-106">[out] Ponteiro para uma variável que recebe o tipo de documento.</span><span class="sxs-lookup"><span data-stu-id="4e856-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="72a99-106">[out] Ponteiro para uma variável que recebe o tipo de documento.</span><span class="sxs-lookup"><span data-stu-id="72a99-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4e856-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="4e856-107">Return Value</span></span>  
- <span data-ttu-id="4e856-108">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="4e856-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="72a99-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="72a99-107">Return Value</span></span>  
+ <span data-ttu-id="72a99-108">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="72a99-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e856-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4e856-109">See also</span></span>
-- [<span data-ttu-id="4e856-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="4e856-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="72a99-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="72a99-109">See also</span></span>
+
+- [<span data-ttu-id="72a99-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="72a99-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
