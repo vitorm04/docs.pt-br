@@ -1,5 +1,5 @@
 ---
-title: 'Como: Preencher uma forma com uma textura de imagem'
+title: 'Como: preencher uma forma com uma textura de imagem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177314"
 ---
-# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Como: Preencher uma forma com uma textura de imagem
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Como: preencher uma forma com uma textura de imagem
 Você pode preencher uma forma fechada com uma textura usando o <xref:System.Drawing.Image> classe e o <xref:System.Drawing.TextureBrush> classe.  
   
 ## <a name="example"></a>Exemplo  
@@ -34,4 +34,5 @@ Você pode preencher uma forma fechada com uma textura usando o <xref:System.Dra
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando um pincel para preencher formas](using-a-brush-to-fill-shapes.md)

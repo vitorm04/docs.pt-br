@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir a ordem Z de controles ToolStrip encaixados'
+title: 'Como: Definir a organização Z de controles ToolStrip encaixados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 1ae7e6f63488d2dbb6b408cdf255f111f929298f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129162"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Como: Definir a ordem Z de controles ToolStrip encaixados
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Como: Definir a organização Z de controles ToolStrip encaixados
 A posição um <xref:System.Windows.Forms.ToolStrip> controle corretamente com o encaixe, você deve posicionar o controle corretamente na ordem z do formulário.  
   
 ## <a name="example"></a>Exemplo  
@@ -43,6 +43,7 @@ A posição um <xref:System.Windows.Forms.ToolStrip> controle corretamente com o
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>

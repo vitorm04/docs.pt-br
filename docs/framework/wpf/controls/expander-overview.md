@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130397"
 ---
 # <a name="expander-overview"></a>Visão geral do expansor
 Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de fornecer o conteúdo em uma área expansível que lembra uma janela e inclui um cabeçalho.  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>Criando um expansor simples  
  O exemplo a seguir mostra como criar um simples <xref:System.Windows.Controls.Expander> controle. Este exemplo cria um <xref:System.Windows.Controls.Expander> que se parece com a ilustração anterior.  
@@ -29,7 +28,7 @@ Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de forne
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Definindo a direção da área de conteúdo de expansão  
- Você pode definir a área de conteúdo de um <xref:System.Windows.Controls.Expander> controle para expandir em uma das quatro direções (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, ou <xref:System.Windows.Controls.ExpandDirection.Right>) usando o <xref:System.Windows.Controls.ExpandDirection> propriedade. Quando a área de conteúdo estiver recolhida, apenas o <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e seu botão de alternância aparecem. Um <xref:System.Windows.Controls.Button> controle que exibe uma seta direcional é usado como um botão de alternância para expandir ou recolher a área de conteúdo. Quando expandido, o <xref:System.Windows.Controls.Expander> tenta exibir todo o seu conteúdo em uma área tipo janela.  
+ Você pode definir a área de conteúdo de um <xref:System.Windows.Controls.Expander> controle para expandir em uma das quatro direções (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, ou <xref:System.Windows.Controls.ExpandDirection.Right>) usando o <xref:System.Windows.Controls.ExpandDirection> propriedade. Quando a área de conteúdo estiver recolhida, apenas o <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e seu botão de alternância aparecem. Um <xref:System.Windows.Controls.Button> controle que exibe uma seta direcional é usado como um botão de alternância para expandir ou recolher a área de conteúdo. Quando expandido, o <xref:System.Windows.Controls.Expander> tenta exibir todo o seu conteúdo em uma área tipo janela.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Controlando o tamanho de um expansor em um painel  
@@ -60,6 +59,7 @@ Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de forne
  Você pode alinhar o conteúdo, definindo o <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> e <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propriedades no <xref:System.Windows.Controls.Expander> controle. Quando você define essas propriedades, o alinhamento se aplica ao cabeçalho e também ao conteúdo expandido.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Tópicos de instruções](expander-how-to-topics.md)
+- [Tópicos explicativos ](expander-how-to-topics.md)

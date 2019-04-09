@@ -1,18 +1,18 @@
 ---
-title: 'Como: Declarar falhas em contratos de serviço'
+title: 'Como: declarar falhas em contratos de serviço'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90abb29550ce7e027244b220f30e9fe46e282ff3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129487"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>Como: Declarar falhas em contratos de serviço
+# <a name="how-to-declare-faults-in-service-contracts"></a>Como: declarar falhas em contratos de serviço
 No código gerenciado, as exceções são geradas quando ocorrem condições de erro. Em aplicativos do Windows Communication Foundation (WCF), no entanto, os contratos de serviço especificam quais informações de erro serão retornadas aos clientes por meio da declaração de falhas de SOAP no contrato de serviço. Para obter uma visão geral da relação entre exceções e falhas, consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Criar um contrato de serviço que especifica uma falha de SOAP  
@@ -45,5 +45,6 @@ No código gerenciado, as exceções são geradas quando ocorrem condições de 
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: a09cbbe8b77523184a3e75b8fd4301ca956d5cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174116"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensagens de lote em uma transação
 Aplicativos em fila usam transações para garantir a correção e entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira para melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. A compensação está entre desempenho e recuperação: conforme aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessário se as transações serão revertidas. É importante observar a diferença entre o envio em lote de mensagens em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. Para obter mais informações sobre as sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens em lote em uma transação são uma otimização que não são alterados como o aplicativo é executado.  
@@ -83,5 +83,6 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

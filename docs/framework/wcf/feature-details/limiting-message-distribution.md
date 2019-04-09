@@ -2,12 +2,12 @@
 title: Limitando a distribuição de mensagens
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130215"
 ---
 # <a name="limiting-message-distribution"></a>Limitando a distribuição de mensagens
 Canal par ocorre por design, uma malha de difusão. Modelo básico de inundação envolve a distribuição de cada mensagem enviada por qualquer membro de uma malha para todos os outros membros dessa malha. Isso é ideal em situações em que cada mensagem gerada por um membro é útil e relevante para todos os outros membros (por exemplo, uma sala de bate-papo). No entanto, muitos aplicativos têm uma necessidade ocasional para limitar a distribuição de mensagens. Por exemplo, se um novo membro une uma malha e quiser recuperar a última mensagem enviada por meio da malha, esta solicitação não precisa ser inundados para todos os membros da malha. A solicitação pode ser limitada a quase vizinhos ou mensagens geradas localmente podem ser filtradas. As mensagens também podem ser enviadas a um nó individual da malha. Este tópico discute o uso de contagem de salto, um filtro de propagação de mensagem, um filtro local ou uma conexão direta para controlar como as mensagens são encaminhadas em toda a malha e fornece diretrizes gerais para escolher uma abordagem.  
@@ -44,7 +44,7 @@ Canal par ocorre por design, uma malha de difusão. Modelo básico de inundaçã
   
  As respostas a essas perguntas podem ajudá-lo a determinar se é necessário usar um filtro de propagação de mensagem, contagem de salto, um filtro local ou uma conexão direta. Considere as seguintes diretrizes gerais:  
   
--   **Who**  
+-   **Quem**  
   
     -   *Nó individual*:  Filtro local ou conexão direta.  
   
@@ -65,4 +65,5 @@ Canal par ocorre por design, uma malha de difusão. Modelo básico de inundaçã
     -   *Baixa*:  Qualquer, conexão direta provavelmente não é necessária.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

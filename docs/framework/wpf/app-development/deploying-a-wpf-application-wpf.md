@@ -5,26 +5,25 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132347"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implantando um aplicativo do WPF (WPF)
 Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, eles precisam ser implantados. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e o .NET Framework incluem várias tecnologias de implantação. A tecnologia de implantação que é usada para implantar um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende do tipo de aplicativo. Este tópico fornece uma breve visão geral de cada tecnologia de implantação e como elas são usadas em conjunto com os requisitos de implantação de cada tipo de aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
-  
-   
+
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologias de implantação  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e o .NET Framework incluem várias tecnologias de implantação, incluindo:  
   
 -   Implantação do XCopy.  
   
--   Implantação [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+-   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] implantação.  
   
--   Implantação [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
+-   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] implantação.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Implantação do XCopy  
@@ -40,15 +39,15 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- O [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite que aplicativos sejam empacotados como executáveis independentes que podem ser distribuídos facilmente para os clientes e executados. Além disso, o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] é instalado com [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e permite integração com a área de trabalho, o menu Iniciar e o painel de controle Programas.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite que aplicativos sejam empacotados como executáveis independentes que podem ser facilmente distribuídos aos clientes e executados. Além disso, o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] é instalado com [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e permite integração com a área de trabalho, o menu Iniciar e o painel de controle Programas.  
   
- O [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica a instalação e a desinstalação de aplicativos, mas não fornece recursos para garantir que os aplicativos instalados sejam mantidos atualizados do ponto de vista do controle de versão.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica a instalação e desinstalação de aplicativos, mas ele não fornece recursos para garantir que os aplicativos instalados sejam mantidos atualizados de um ponto de vista do controle de versão.  
   
  Para obter mais informações sobre o Windows Installer, consulte [implantação do Windows Installer](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
- O [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] permite uma implantação com estilo Web da para aplicativos que não são Web. Os aplicativos são publicados e implantados de servidores Web ou de arquivos. Embora o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] não dê suporte a toda a gama de recursos de cliente a que aplicativos instalados por [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] dão, ele dá suporte a um subconjunto que inclui o seguinte:  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] permite que o estilo da Web para a implantação de aplicativos não-Web. Os aplicativos são publicados e implantados de servidores Web ou de arquivos. Embora o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] não dê suporte a toda a gama de recursos de cliente a que aplicativos instalados por [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] dão, ele dá suporte a um subconjunto que inclui o seguinte:  
   
 -   Integração com o menu Iniciar e o painel de controle Programas.  
   
@@ -88,7 +87,7 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Implantando aplicativos de navegador XAML  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] são aplicativos compilados que exigem que os três arquivos a seguir sejam implantados:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] são aplicativos compilados que exigem os três arquivos a serem implantados a seguir:  
   
 -   *ApplicationName*.exe: O arquivo de aplicativo do assembly executável.  
   
@@ -124,5 +123,6 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
  Para obter mais informações, consulte [Implantando o .NET Framework e aplicativos](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)
+
+- [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md)
 - [Segurança](../security-wpf.md)

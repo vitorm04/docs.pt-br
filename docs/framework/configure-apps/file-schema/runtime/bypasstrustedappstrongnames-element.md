@@ -1,5 +1,5 @@
 ---
-title: Elemento <bypassTrustedAppStrongNames>
+title: <bypassTrustedAppStrongNames> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c456066eb169ab63372ceded16d60e384296c779
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179134"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > elemento
 Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em uma confiança total <xref:System.AppDomain>.  
@@ -84,6 +84,7 @@ Especifica se deve ignorar a validação de nomes fortes em assemblies de confia
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Como: Desabilitar a funcionalidade de bypass de nome forte](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

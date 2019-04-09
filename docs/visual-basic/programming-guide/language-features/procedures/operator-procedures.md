@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175013"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimentos do operador (Visual Basic)
 Um procedimento de operador é uma série de instruções do Visual Basic que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu. Isso também é chamado *sobrecarga de operador*.  
@@ -78,17 +78,16 @@ Um procedimento de operador é uma série de instruções do Visual Basic que de
  O exemplo a seguir mostra uma chamada típica para o `+` operador definido no `veryLong`.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Como: Definir um operador](./how-to-define-an-operator.md)
-- [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)
-- [Como: Chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
-- [Como: Usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Como: definir um operador](./how-to-define-an-operator.md)
+- [Como: definir um operador de conversão](./how-to-define-a-conversion-operator.md)
+- [Como: chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
+- [Como: usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)

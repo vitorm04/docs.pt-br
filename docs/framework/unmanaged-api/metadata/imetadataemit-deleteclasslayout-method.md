@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f44b7e073840d4d425cfc91c3156293cee07b4ab
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a195daf2aa1b1c5a8f9c4335f7c4185f30093360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178523"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>Método IMetaDataEmit::DeleteClassLayout
 Destrói a assinatura de metadados de layout de classe para o tipo representado pelo token especificado.  
@@ -49,5 +49,6 @@ HRESULT DeleteClassLayout (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

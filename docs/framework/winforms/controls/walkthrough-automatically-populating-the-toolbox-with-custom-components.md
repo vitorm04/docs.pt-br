@@ -1,19 +1,19 @@
 ---
-title: 'Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados'
+title: 'Passo a passo: Preencher de forma automática a caixa de ferramentas com componentes personalizados'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178783"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Passo a passo: Preencher de forma automática a caixa de ferramentas com componentes personalizados
 Se seus componentes forem definidos por um projeto na solução aberta no momento, eles aparecerão automaticamente na **Caixa de Ferramentas** sem exigir que você execute nenhuma ação. Você também pode preencher manualmente a **Caixa de Ferramentas** com seus componentes personalizados usando a [Caixa de Diálogo Escolher Itens da Caixa de Ferramentas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), mas a **Caixa de Ferramentas** leva em conta itens nas saídas de build da sua solução com todas as seguintes características:  
   
 -   Implementa <xref:System.ComponentModel.IComponent>;  
@@ -94,7 +94,8 @@ Se seus componentes forem definidos por um projeto na solução aberta no moment
  Este passo a passo demonstra que a **Caixa de Ferramentas** leva em conta componentes do projeto, mas a **Caixa de Ferramentas** também leva em os controles. Experimente seus próprios controles personalizados adicionando e removendo projetos de controle de sua solução.  
   
 ## <a name="see-also"></a>Consulte também
-- [Geral, Designer de formulários do Windows, caixa de diálogo Opções](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [Geral, Windows Forms Designer, Opções da Caixa de Diálogo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Como: Manipular guias da caixa de ferramentas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
-- [Caixa de diálogo Escolher Itens da Caixa de Ferramentas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [Escolha a caixa de diálogo de itens de caixa de ferramentas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Colocando controles nos Windows Forms](putting-controls-on-windows-forms.md)

@@ -2,12 +2,12 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 595970a56e05c4fc1c9b2c0eb669ec3b3a120fe1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130618"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
 Uma coleção de portas padrão listando os pontos de extremidade de comunicação padrão que o aplicativo cliente ouve.  
@@ -49,4 +49,5 @@ Uma coleção de portas padrão listando os pontos de extremidade de comunicaç�
 |[\<useRequestHeadersForMetadataAddress>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Uma lista de portas padrão.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.DefaultPortElementCollection>

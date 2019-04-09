@@ -1,5 +1,5 @@
 ---
-title: 'Como: Implementar a Interface IListSource'
+title: 'Como: implementar a interface IListSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159777"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>Como: Implementar a Interface IListSource
+# <a name="how-to-implement-the-ilistsource-interface"></a>Como: implementar a interface IListSource
 Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma classe vinculável que não implementa <xref:System.Collections.IList> , mas em vez disso, fornece uma lista de outro local.  
   
 ## <a name="example"></a>Exemplo  
@@ -39,8 +39,9 @@ Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma 
 -   Referências aos assemblies System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)

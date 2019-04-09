@@ -1,5 +1,5 @@
 ---
-title: 'Como: Fornecer Ajuda em um aplicativo do Windows'
+title: 'Como: fornecer ajuda em um aplicativo do Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129474"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Como: Fornecer Ajuda em um aplicativo do Windows
+# <a name="how-to-provide-help-in-a-windows-application"></a>Como: fornecer ajuda em um aplicativo do Windows
 Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexar tópicos da Ajuda em um arquivo de ajuda a controles específicos em formulários do Windows. O arquivo de Ajuda pode ser HTML ou HTMLHelp 1.x ou formato maior.  
   
 > [!NOTE]
@@ -56,7 +56,8 @@ Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexa
  Você também pode usar o <xref:System.Windows.Forms.HelpProvider> componente para exibir a Ajuda pop-up, mesmo se você tiver configurado para exibir arquivos de ajuda para os controles em formulários do Windows. Para obter mais informações, confira [Como: Exibir Ajuda pop-up](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Exibir Ajuda pop-up](how-to-display-pop-up-help.md)
-- [Ajuda de Controle Usando ToolTips](control-help-using-tooltips.md)
-- [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
+
+- [Como: exibir a ajuda pop-up](how-to-display-pop-up-help.md)
+- [Ajuda de controle usando ToolTips](control-help-using-tooltips.md)
+- [Integrando a ajuda do usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

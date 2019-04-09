@@ -2,12 +2,12 @@
 title: Aplicativos cliente de camada intermediária
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 457a215274c4804ac38958d8f840e8f4100a7be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174077"
 ---
 # <a name="middle-tier-client-applications"></a>Aplicativos cliente de camada intermediária
 Este tópico aborda diversos problemas específicos de aplicativos de cliente de camada intermediária que usam o Windows Communication Foundation (WCF).  
@@ -36,4 +36,5 @@ Este tópico aborda diversos problemas específicos de aplicativos de cliente de
  Além disso, você pode aumentar o desempenho de inicialização para os clientes que usam tipos de dados que são serializados usando o <xref:System.Xml.Serialization.XmlSerializer> gerar e compilar o código de serialização para esses tipos de dados em tempo de execução, o que pode resultar em desempenho de inicialização lento. O [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pode melhorar o desempenho de inicialização para esses aplicativos, gerando o código de serialização necessários a partir de assemblies compilados para o aplicativo. Para obter mais informações, confira [Como: Melhorar o tempo de inicialização do WCF cliente aplicativos usando o XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando um cliente do WCF para acessar serviços](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)
+
+- [Usando um cliente WCF para acessar um serviço](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

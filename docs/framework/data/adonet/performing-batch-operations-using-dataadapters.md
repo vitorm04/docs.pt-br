@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178120"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Executando operações em lote usando DataAdapters
 O suporte a lotes no ADO.NET permite que um <xref:System.Data.Common.DataAdapter> agrupe operações INSERT, UPDATE e DELETE de um <xref:System.Data.DataSet> ou <xref:System.Data.DataTable> para o servidor, em vez de enviar uma operação de cada vez. A redução no número de viagens de ida e volta para o servidor costuma resultar em ganhos significativos de desempenho. Atualizações em lotes têm suporte nos provedores de dados .NET para SQL Server (<xref:System.Data.SqlClient>) e Oracle (<xref:System.Data.OracleClient>).  
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Acessando linhas atualizadas  
  Quando o processamento em lotes está desabilitado, a linha que está sendo atualizada pode ser acessada usando a propriedade <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> da classe <xref:System.Data.Common.RowUpdatedEventArgs>.  
   
- Quando o processamento em lotes está habilitado, um único evento `RowUpdated` é gerado para várias linhas. Portanto, o valor da propriedade `Row` para cada linha é nulo. Os eventos `RowUpdating` ainda são gerados para cada linha. O método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> da classe <xref:System.Data.Common.RowUpdatedEventArgs> permite que você acesse as linhas processadas copiando referências às linhas em uma matriz. Se nenhuma linha está sendo processada, `CopyToRows` gera <xref:System.ArgumentNullException>. Use a propriedade <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> para retornar o número de linhas processadas antes de chamar o método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
+ Quando o processamento em lotes está habilitado, um único evento `RowUpdated` é gerado para várias linhas. Portanto, o valor da propriedade `Row` para cada linha é nulo. `RowUpdating` ainda, os eventos são gerados para cada linha. O método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> da classe <xref:System.Data.Common.RowUpdatedEventArgs> permite que você acesse as linhas processadas copiando referências às linhas em uma matriz. Se nenhuma linha está sendo processada, `CopyToRows` gera <xref:System.ArgumentNullException>. Use a propriedade <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> para retornar o número de linhas processadas antes de chamar o método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
   
 ### <a name="handling-data-errors"></a>Manipulando erros de dados  
  A execução em lotes tem o mesmo efeito que a execução de cada instrução individual. As instruções são executadas na ordem em que elas foram adicionados ao lote. O tratamento de erros no modo em lotes é o mesmo de quando esse modo está desabilitado. Cada linha é processada separadamente. Somente linhas que foram processadas com êxito no banco de dados serão atualizadas na <xref:System.Data.DataRow> correspondente dentro da <xref:System.Data.DataTable>.  
@@ -142,7 +142,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  O provedor de dados e o servidor de banco de dados back-end determinam que construções SQL têm suporte para a execução em lotes. Uma exceção pode ser gerada quando uma instrução sem suporte é enviada para execução.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [Atualizando fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Manipulação de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

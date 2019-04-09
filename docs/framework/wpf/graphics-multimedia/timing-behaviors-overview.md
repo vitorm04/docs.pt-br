@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129581"
 ---
 # <a name="timing-behaviors-overview"></a>Visão geral dos comportamentos de tempo
 Este tópico descreve os comportamentos de temporização de animações e outros <xref:System.Windows.Media.Animation.Timeline> objetos.  
@@ -123,8 +123,9 @@ Este tópico descreve os comportamentos de temporização de animações e outro
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Especifica a porcentagem do <xref:System.Windows.Media.Animation.Timeline.Duration%2A> uma linha do tempo gasto que desacelera. Para obter um exemplo, consulte [ Acelerar ou desacelerar uma animação](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
-- [Visão geral de eventos de tempo](timing-events-overview.md)
-- [Tópicos de instruções](animation-and-timing-how-to-topics.md)
-- [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Visão geral dos eventos de tempo](timing-events-overview.md)
+- [Tópicos explicativos ](animation-and-timing-how-to-topics.md)
+- [Exemplo de comportamento de tempo de animação](https://go.microsoft.com/fwlink/?LinkID=159970)

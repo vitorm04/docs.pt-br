@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached
 ms.date: 03/30/2017
 ms.assetid: db6d8cdb-0d25-4bfb-8963-eff465733d70
-ms.openlocfilehash: 165efd02c1ab83623b13f0fcb08b2e668700bd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d0a05f1ac68a939d63802dd2bc85a55de9f3a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177184"
 ---
 # <a name="systemservicemodelchannelshttpchannelconcurrentreceivequotareached"></a>System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached
 System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached  
@@ -16,6 +16,7 @@ System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached
  Recebimento simultâneo de HTTP cota foi atingida.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

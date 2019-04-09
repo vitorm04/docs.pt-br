@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5dadbe757464b24ef532fdd8abe5457fa995348
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fb081c48abf899b44da1c1351efa3f6036f1c8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176118"
 ---
 # <a name="iceegen-interface"></a>Interface ICeeGen
 Fornece métodos para compilação de código dinâmico.  
@@ -58,4 +58,5 @@ Fornece métodos para compilação de código dinâmico.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
