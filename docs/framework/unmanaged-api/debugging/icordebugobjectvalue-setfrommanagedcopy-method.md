@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04eff6ba8b284a26b9b3ee55c7f323aef52f1208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e7684804b5f3cb71c38ee498fcc9c80003e7169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203763"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="4fbca-102">Método ICorDebugObjectValue::SetFromManagedCopy</span><span class="sxs-lookup"><span data-stu-id="4fbca-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="4fbca-103">`SetFromManagedCopy` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="4fbca-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="4fbca-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="4fbca-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="714c2-102">Método ICorDebugObjectValue::SetFromManagedCopy</span><span class="sxs-lookup"><span data-stu-id="714c2-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+`SetFromManagedCopy` <span data-ttu-id="714c2-103">é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="714c2-103">is obsolete.</span></span> <span data-ttu-id="714c2-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="714c2-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fbca-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4fbca-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="714c2-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="714c2-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -35,9 +35,7 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="4fbca-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4fbca-106">Requirements</span></span>  
- <span data-ttu-id="4fbca-107">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4fbca-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="714c2-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="714c2-106">Requirements</span></span>  
+ <span data-ttu-id="714c2-107">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="714c2-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4fbca-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4fbca-108">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="714c2-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="714c2-108">See also</span></span>
