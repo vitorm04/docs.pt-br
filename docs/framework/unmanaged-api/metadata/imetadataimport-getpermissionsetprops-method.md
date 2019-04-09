@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 806f1ebcacb9e7ad27b7370f9976b3341bf64f8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3ff91a24dec7f8507989b701ea24b569c1670c89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109701"
 ---
-# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="ca2a1-102">Método IMetaDataImport::GetPermissionSetProps</span><span class="sxs-lookup"><span data-stu-id="ca2a1-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
-<span data-ttu-id="ca2a1-103">Obtém os metadados associados a <xref:System.Security.PermissionSet?displayProperty=nameWithType> representado pelo token de permissão especificado.</span><span class="sxs-lookup"><span data-stu-id="ca2a1-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
+# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="ad7ee-102">Método IMetaDataImport::GetPermissionSetProps</span><span class="sxs-lookup"><span data-stu-id="ad7ee-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
+<span data-ttu-id="ad7ee-103">Obtém os metadados associados a <xref:System.Security.PermissionSet?displayProperty=nameWithType> representado pelo token de permissão especificado.</span><span class="sxs-lookup"><span data-stu-id="ad7ee-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca2a1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ca2a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad7ee-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ad7ee-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPermissionSetProps (  
@@ -38,29 +38,30 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ca2a1-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ca2a1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ad7ee-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ad7ee-105">Parameters</span></span>  
  `pm`  
- <span data-ttu-id="ca2a1-106">[in] O token de metadados de permissão que representa o conjunto de permissões para obter as propriedades de metadados.</span><span class="sxs-lookup"><span data-stu-id="ca2a1-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
+ <span data-ttu-id="ad7ee-106">[in] O token de metadados de permissão que representa o conjunto de permissões para obter as propriedades de metadados.</span><span class="sxs-lookup"><span data-stu-id="ad7ee-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
   
  `pdwAction`  
- <span data-ttu-id="ca2a1-107">[out] Um ponteiro para o conjunto de permissões.</span><span class="sxs-lookup"><span data-stu-id="ca2a1-107">[out] A pointer to the permission set.</span></span>  
+ <span data-ttu-id="ad7ee-107">[out] Um ponteiro para o conjunto de permissões.</span><span class="sxs-lookup"><span data-stu-id="ad7ee-107">[out] A pointer to the permission set.</span></span>  
   
  `ppvPermission`  
- <span data-ttu-id="ca2a1-108">[out] Um ponteiro para a assinatura binária de metadados do conjunto de permissões.</span><span class="sxs-lookup"><span data-stu-id="ca2a1-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
+ <span data-ttu-id="ad7ee-108">[out] Um ponteiro para a assinatura binária de metadados do conjunto de permissões.</span><span class="sxs-lookup"><span data-stu-id="ad7ee-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
   
  `pcbPermission`  
- <span data-ttu-id="ca2a1-109">[out] O tamanho em bytes do `ppvPermission`.</span><span class="sxs-lookup"><span data-stu-id="ca2a1-109">[out] The size in bytes of `ppvPermission`.</span></span>  
+ <span data-ttu-id="ad7ee-109">[out] O tamanho em bytes do `ppvPermission`.</span><span class="sxs-lookup"><span data-stu-id="ad7ee-109">[out] The size in bytes of `ppvPermission`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca2a1-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ca2a1-110">Requirements</span></span>  
- <span data-ttu-id="ca2a1-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca2a1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad7ee-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ad7ee-110">Requirements</span></span>  
+ <span data-ttu-id="ad7ee-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad7ee-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca2a1-112">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ca2a1-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ad7ee-112">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ad7ee-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ca2a1-113">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ca2a1-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ad7ee-113">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ad7ee-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ca2a1-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca2a1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="ad7ee-114">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ad7ee-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ca2a1-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca2a1-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad7ee-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ad7ee-115">See also</span></span>
+
 - <xref:System.Security.PermissionSet>
-- [<span data-ttu-id="ca2a1-116">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="ca2a1-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="ca2a1-117">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="ca2a1-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ad7ee-116">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="ad7ee-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ad7ee-117">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="ad7ee-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
