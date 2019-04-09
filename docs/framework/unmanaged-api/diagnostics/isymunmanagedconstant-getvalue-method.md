@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09a7cd3afd87653ba2b4270b32077c9946f1ce04
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 75cc16f44ddf29b161c758718b697cc2aaba8e08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204660"
 ---
-# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="baccd-102">Método ISymUnmanagedConstant::GetValue</span><span class="sxs-lookup"><span data-stu-id="baccd-102">ISymUnmanagedConstant::GetValue Method</span></span>
-<span data-ttu-id="baccd-103">Obtém o valor da constante.</span><span class="sxs-lookup"><span data-stu-id="baccd-103">Gets the value of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="50db3-102">Método ISymUnmanagedConstant::GetValue</span><span class="sxs-lookup"><span data-stu-id="50db3-102">ISymUnmanagedConstant::GetValue Method</span></span>
+<span data-ttu-id="50db3-103">Obtém o valor da constante.</span><span class="sxs-lookup"><span data-stu-id="50db3-103">Gets the value of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="baccd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="baccd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50db3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="50db3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue(  
@@ -35,17 +35,18 @@ HRESULT GetValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="baccd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="baccd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50db3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="50db3-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="baccd-106">[out] Um ponteiro para uma variável que recebe o valor.</span><span class="sxs-lookup"><span data-stu-id="baccd-106">[out] A pointer to a variable that receives the value.</span></span>  
+ <span data-ttu-id="50db3-106">[out] Um ponteiro para uma variável que recebe o valor.</span><span class="sxs-lookup"><span data-stu-id="50db3-106">[out] A pointer to a variable that receives the value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="baccd-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="baccd-107">Return Value</span></span>  
- <span data-ttu-id="baccd-108">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="baccd-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="50db3-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="50db3-107">Return Value</span></span>  
+ <span data-ttu-id="50db3-108">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="50db3-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="baccd-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="baccd-109">Requirements</span></span>  
- <span data-ttu-id="baccd-110">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="baccd-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50db3-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="50db3-109">Requirements</span></span>  
+ <span data-ttu-id="50db3-110">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="50db3-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="baccd-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="baccd-111">See also</span></span>
-- [<span data-ttu-id="baccd-112">Interface ISymUnmanagedConstant</span><span class="sxs-lookup"><span data-stu-id="baccd-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="baccd-113">Método GetName</span><span class="sxs-lookup"><span data-stu-id="baccd-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="baccd-114">Método GetSignature</span><span class="sxs-lookup"><span data-stu-id="baccd-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
+## <a name="see-also"></a><span data-ttu-id="50db3-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="50db3-111">See also</span></span>
+
+- [<span data-ttu-id="50db3-112">Interface ISymUnmanagedConstant</span><span class="sxs-lookup"><span data-stu-id="50db3-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="50db3-113">Método GetName</span><span class="sxs-lookup"><span data-stu-id="50db3-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="50db3-114">Método GetSignature</span><span class="sxs-lookup"><span data-stu-id="50db3-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
