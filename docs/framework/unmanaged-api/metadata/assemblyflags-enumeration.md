@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091415"
 ---
-# <a name="assemblyflags-enumeration"></a><span data-ttu-id="6f77e-102">Enumeração AssemblyFlags</span><span class="sxs-lookup"><span data-stu-id="6f77e-102">AssemblyFlags Enumeration</span></span>
-<span data-ttu-id="6f77e-103">Contém valores que descrevem os recursos de tempo de execução de um assembly.</span><span class="sxs-lookup"><span data-stu-id="6f77e-103">Contains values that describe run-time features of an assembly.</span></span>  
+# <a name="assemblyflags-enumeration"></a><span data-ttu-id="424c1-102">Enumeração AssemblyFlags</span><span class="sxs-lookup"><span data-stu-id="424c1-102">AssemblyFlags Enumeration</span></span>
+<span data-ttu-id="424c1-103">Contém valores que descrevem os recursos de tempo de execução de um assembly.</span><span class="sxs-lookup"><span data-stu-id="424c1-103">Contains values that describe run-time features of an assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f77e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6f77e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="424c1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="424c1-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,28 +38,29 @@ typedef enum {
 } AssemblyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6f77e-105">Membros</span><span class="sxs-lookup"><span data-stu-id="6f77e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="424c1-105">Membros</span><span class="sxs-lookup"><span data-stu-id="424c1-105">Members</span></span>  
   
-|<span data-ttu-id="6f77e-106">Membro</span><span class="sxs-lookup"><span data-stu-id="6f77e-106">Member</span></span>|<span data-ttu-id="6f77e-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="6f77e-107">Description</span></span>|  
+|<span data-ttu-id="424c1-106">Membro</span><span class="sxs-lookup"><span data-stu-id="424c1-106">Member</span></span>|<span data-ttu-id="424c1-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="424c1-107">Description</span></span>|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|<span data-ttu-id="6f77e-108">Especifica que as definições de tipo exportado implícitas dentro dos arquivos que compõem o assembly.</span><span class="sxs-lookup"><span data-stu-id="6f77e-108">Specifies that exported type definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="6f77e-109">Nas versões do .NET Framework 1.0 e 1.1, esse valor sempre deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="6f77e-109">In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
-|`afImplicitResources`|<span data-ttu-id="6f77e-110">Especifica que as definições de recurso são implícitas dentro dos arquivos que compõem o assembly.</span><span class="sxs-lookup"><span data-stu-id="6f77e-110">Specifies that resource definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="6f77e-111">No .NET Framework 1.0 e 1.1, esse valor é sempre deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="6f77e-111">In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
-|`afNonSideBySideAppDomain`|<span data-ttu-id="6f77e-112">Especifica que o assembly não seja executado com outras versões se estiverem sendo executados no mesmo domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6f77e-112">Specifies that the assembly cannot execute with other versions if they are running in the same application domain.</span></span>|  
-|`afNonSideBySideProcess`|<span data-ttu-id="6f77e-113">Especifica que o assembly não seja executado com outras versões se estiverem sendo executados no mesmo processo.</span><span class="sxs-lookup"><span data-stu-id="6f77e-113">Specifies that the assembly cannot execute with other versions if they are running in the same process.</span></span>|  
-|`afNonSideBySideMachine`|<span data-ttu-id="6f77e-114">Especifica que o assembly não seja executado com outras versões se elas estão em execução no mesmo computador.</span><span class="sxs-lookup"><span data-stu-id="6f77e-114">Specifies that the assembly cannot execute with other versions if they are running on the same computer.</span></span>|  
+|`afImplicitExportedTypes`|<span data-ttu-id="424c1-108">Especifica que as definições de tipo exportado implícitas dentro dos arquivos que compõem o assembly.</span><span class="sxs-lookup"><span data-stu-id="424c1-108">Specifies that exported type definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="424c1-109">Nas versões do .NET Framework 1.0 e 1.1, esse valor sempre deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="424c1-109">In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
+|`afImplicitResources`|<span data-ttu-id="424c1-110">Especifica que as definições de recurso são implícitas dentro dos arquivos que compõem o assembly.</span><span class="sxs-lookup"><span data-stu-id="424c1-110">Specifies that resource definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="424c1-111">No .NET Framework 1.0 e 1.1, esse valor é sempre deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="424c1-111">In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
+|`afNonSideBySideAppDomain`|<span data-ttu-id="424c1-112">Especifica que o assembly não seja executado com outras versões se estiverem sendo executados no mesmo domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="424c1-112">Specifies that the assembly cannot execute with other versions if they are running in the same application domain.</span></span>|  
+|`afNonSideBySideProcess`|<span data-ttu-id="424c1-113">Especifica que o assembly não seja executado com outras versões se estiverem sendo executados no mesmo processo.</span><span class="sxs-lookup"><span data-stu-id="424c1-113">Specifies that the assembly cannot execute with other versions if they are running in the same process.</span></span>|  
+|`afNonSideBySideMachine`|<span data-ttu-id="424c1-114">Especifica que o assembly não seja executado com outras versões se elas estão em execução no mesmo computador.</span><span class="sxs-lookup"><span data-stu-id="424c1-114">Specifies that the assembly cannot execute with other versions if they are running on the same computer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6f77e-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="6f77e-115">Remarks</span></span>  
- <span data-ttu-id="6f77e-116">Os valores entre 0x0010 e 0x0070, inclusive, são usados para descrever os recursos de compatibilidade lado a lado do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="6f77e-116">The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly.</span></span> <span data-ttu-id="6f77e-117">Se nenhum desses valores estiverem definidas, o assembly deve para ser compatível com o lado a lado.</span><span class="sxs-lookup"><span data-stu-id="6f77e-117">If none of these values are set, the assembly is assumed to be side-by-side compatible.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="424c1-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="424c1-115">Remarks</span></span>  
+ <span data-ttu-id="424c1-116">Os valores entre 0x0010 e 0x0070, inclusive, são usados para descrever os recursos de compatibilidade lado a lado do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="424c1-116">The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly.</span></span> <span data-ttu-id="424c1-117">Se nenhum desses valores estiverem definidas, o assembly deve para ser compatível com o lado a lado.</span><span class="sxs-lookup"><span data-stu-id="424c1-117">If none of these values are set, the assembly is assumed to be side-by-side compatible.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f77e-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6f77e-118">Requirements</span></span>  
- <span data-ttu-id="6f77e-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f77e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="424c1-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="424c1-118">Requirements</span></span>  
+ <span data-ttu-id="424c1-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="424c1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f77e-120">**Cabeçalho:** MsCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6f77e-120">**Header:** MsCorEE.h</span></span>  
+ <span data-ttu-id="424c1-120">**Cabeçalho:** MsCorEE.h</span><span class="sxs-lookup"><span data-stu-id="424c1-120">**Header:** MsCorEE.h</span></span>  
   
- <span data-ttu-id="6f77e-121">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="6f77e-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="424c1-121">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="424c1-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6f77e-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f77e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="424c1-122">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="424c1-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6f77e-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6f77e-123">See also</span></span>
-- [<span data-ttu-id="6f77e-124">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="6f77e-124">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="6f77e-125">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="6f77e-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="424c1-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="424c1-123">See also</span></span>
+
+- [<span data-ttu-id="424c1-124">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="424c1-124">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="424c1-125">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="424c1-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

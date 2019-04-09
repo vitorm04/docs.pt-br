@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 261d80caa43ec478d3a3a33acdebcc1bfcfde8cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148662"
 ---
-# <a name="addimport-method"></a><span data-ttu-id="6386b-102">Método AddImport</span><span class="sxs-lookup"><span data-stu-id="6386b-102">AddImport Method</span></span>
-<span data-ttu-id="6386b-103">Adiciona importações ao assembly.</span><span class="sxs-lookup"><span data-stu-id="6386b-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method"></a><span data-ttu-id="cb009-102">Método AddImport</span><span class="sxs-lookup"><span data-stu-id="cb009-102">AddImport Method</span></span>
+<span data-ttu-id="cb009-103">Adiciona importações ao assembly.</span><span class="sxs-lookup"><span data-stu-id="cb009-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6386b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6386b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb009-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="cb009-104">Syntax</span></span>  
   
 ```  
 HRESULT AddImport(  
@@ -38,26 +38,27 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6386b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6386b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb009-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="cb009-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="6386b-106">ID exclusiva do assembly a ser aumentado.</span><span class="sxs-lookup"><span data-stu-id="6386b-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="cb009-106">ID exclusiva do assembly a ser aumentado.</span><span class="sxs-lookup"><span data-stu-id="cb009-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="6386b-107">ID exclusiva, recuperados do [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), do arquivo a ser importado.</span><span class="sxs-lookup"><span data-stu-id="6386b-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="cb009-107">ID exclusiva, recuperados do [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), do arquivo a ser importado.</span><span class="sxs-lookup"><span data-stu-id="cb009-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="6386b-108">Como sinalizadores de COM+ FileDef `ffContainsNoMetaData` e `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="6386b-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="6386b-109">`dwFlags` é passado para [método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="6386b-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="cb009-108">Como sinalizadores de COM+ FileDef `ffContainsNoMetaData` e `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="cb009-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> `dwFlags` <span data-ttu-id="cb009-109">é passado para [método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="cb009-109">is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="6386b-110">Ponteiro para o token que recebe a ID para o arquivo resultante.</span><span class="sxs-lookup"><span data-stu-id="6386b-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="cb009-110">Ponteiro para o token que recebe a ID para o arquivo resultante.</span><span class="sxs-lookup"><span data-stu-id="cb009-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6386b-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="6386b-111">Return Value</span></span>  
- <span data-ttu-id="6386b-112">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="6386b-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cb009-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="cb009-111">Return Value</span></span>  
+ <span data-ttu-id="cb009-112">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="cb009-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6386b-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6386b-113">Requirements</span></span>  
- <span data-ttu-id="6386b-114">Requer alink.h</span><span class="sxs-lookup"><span data-stu-id="6386b-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb009-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cb009-113">Requirements</span></span>  
+ <span data-ttu-id="cb009-114">Requer alink.h</span><span class="sxs-lookup"><span data-stu-id="cb009-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6386b-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6386b-115">See also</span></span>
-- [<span data-ttu-id="6386b-116">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="6386b-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="6386b-117">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="6386b-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="6386b-118">API do ALink</span><span class="sxs-lookup"><span data-stu-id="6386b-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="cb009-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cb009-115">See also</span></span>
+
+- [<span data-ttu-id="cb009-116">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="cb009-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="cb009-117">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="cb009-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="cb009-118">API do ALink</span><span class="sxs-lookup"><span data-stu-id="cb009-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
