@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b45cda05a386efef320d2caad0ed241a4767b9c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: eae5b21af3bcdca911ec13067a61bb957d4ae6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092936"
 ---
-# <a name="isymunmanagedvariablegetaddresskind-method"></a><span data-ttu-id="27b40-102">Método ISymUnmanagedVariable::GetAddressKind</span><span class="sxs-lookup"><span data-stu-id="27b40-102">ISymUnmanagedVariable::GetAddressKind Method</span></span>
-<span data-ttu-id="27b40-103">Obtém o tipo de endereço dessa variável.</span><span class="sxs-lookup"><span data-stu-id="27b40-103">Gets the kind of address of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetaddresskind-method"></a><span data-ttu-id="16b09-102">Método ISymUnmanagedVariable::GetAddressKind</span><span class="sxs-lookup"><span data-stu-id="16b09-102">ISymUnmanagedVariable::GetAddressKind Method</span></span>
+<span data-ttu-id="16b09-103">Obtém o tipo de endereço dessa variável.</span><span class="sxs-lookup"><span data-stu-id="16b09-103">Gets the kind of address of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27b40-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="27b40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16b09-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="16b09-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAddressKind(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27b40-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="27b40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16b09-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="16b09-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="27b40-106">[out] Um ponteiro para um `ULONG32` que recebe o valor.</span><span class="sxs-lookup"><span data-stu-id="27b40-106">[out] A pointer to a `ULONG32` that receives the value.</span></span> <span data-ttu-id="27b40-107">Os valores possíveis são definidos na [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="27b40-107">The possible values are defined in the [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="16b09-106">[out] Um ponteiro para um `ULONG32` que recebe o valor.</span><span class="sxs-lookup"><span data-stu-id="16b09-106">[out] A pointer to a `ULONG32` that receives the value.</span></span> <span data-ttu-id="16b09-107">Os valores possíveis são definidos na [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="16b09-107">The possible values are defined in the [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="27b40-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="27b40-108">Return Value</span></span>  
- <span data-ttu-id="27b40-109">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="27b40-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="16b09-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="16b09-108">Return Value</span></span>  
+ <span data-ttu-id="16b09-109">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="16b09-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27b40-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="27b40-110">Requirements</span></span>  
- <span data-ttu-id="27b40-111">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="27b40-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16b09-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="16b09-110">Requirements</span></span>  
+ <span data-ttu-id="16b09-111">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="16b09-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27b40-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="27b40-112">See also</span></span>
-- [<span data-ttu-id="27b40-113">Interface ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="27b40-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a><span data-ttu-id="16b09-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="16b09-112">See also</span></span>
+
+- [<span data-ttu-id="16b09-113">Interface ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="16b09-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

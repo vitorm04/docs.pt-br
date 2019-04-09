@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bea6b11437367d5ba14167d9800f6c43e117d548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092377"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="8bb2a-102">Método ICorDebugCode::GetEnCRemapSequencePoints</span><span class="sxs-lookup"><span data-stu-id="8bb2a-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="8bb2a-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8bb2a-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="181f4-102">Método ICorDebugCode::GetEnCRemapSequencePoints</span><span class="sxs-lookup"><span data-stu-id="181f4-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="181f4-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="181f4-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8bb2a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8bb2a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="181f4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="181f4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,5 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8bb2a-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8bb2a-105">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="181f4-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="181f4-105">See also</span></span>

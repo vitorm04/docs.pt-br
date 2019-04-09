@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ace278e0031d3e673418f50356f173c473a4832d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 94ba607669b4b1ca68294470cf1cc4fb27464d28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097649"
 ---
-# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="ade97-102">Método IMetaDataEmit::SetFieldProps</span><span class="sxs-lookup"><span data-stu-id="ade97-102">IMetaDataEmit::SetFieldProps Method</span></span>
-<span data-ttu-id="ade97-103">Define ou atualiza o valor padrão para o campo referenciado pelo token de campo especificado.</span><span class="sxs-lookup"><span data-stu-id="ade97-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
+# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="fd4e9-102">Método IMetaDataEmit::SetFieldProps</span><span class="sxs-lookup"><span data-stu-id="fd4e9-102">IMetaDataEmit::SetFieldProps Method</span></span>
+<span data-ttu-id="fd4e9-103">Define ou atualiza o valor padrão para o campo referenciado pelo token de campo especificado.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ade97-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ade97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd4e9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fd4e9-104">Syntax</span></span>  
   
 ```  
 HRESULT SetFieldProps (  
@@ -39,31 +39,32 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ade97-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ade97-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fd4e9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fd4e9-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="ade97-106">[in] O token para o campo de destino.</span><span class="sxs-lookup"><span data-stu-id="ade97-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="fd4e9-106">[in] O token para o campo de destino.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-106">[in] The token for the target field.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="ade97-107">[in] Atributos de campo.</span><span class="sxs-lookup"><span data-stu-id="ade97-107">[in] Field attributes.</span></span> <span data-ttu-id="ade97-108">Esse é um bitmask de `CorFieldAttr` valores.</span><span class="sxs-lookup"><span data-stu-id="ade97-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="fd4e9-107">[in] Atributos de campo.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-107">[in] Field attributes.</span></span> <span data-ttu-id="fd4e9-108">Esse é um bitmask de `CorFieldAttr` valores.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="ade97-109">[in] O `ELEMENT_TYPE_` *\** para o valor da constante.</span><span class="sxs-lookup"><span data-stu-id="ade97-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="ade97-110">Esse é um `CorElementType` valor.</span><span class="sxs-lookup"><span data-stu-id="ade97-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="ade97-111">Se não estiver sendo definida uma constante, defina esse valor como `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="ade97-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="fd4e9-109">[in] O `ELEMENT_TYPE_` *\** para o valor da constante.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="fd4e9-110">Esse é um `CorElementType` valor.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="fd4e9-111">Se não estiver sendo definida uma constante, defina esse valor como `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="ade97-112">[in] O valor da constante para o campo.</span><span class="sxs-lookup"><span data-stu-id="ade97-112">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="fd4e9-112">[in] O valor da constante para o campo.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-112">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="ade97-113">[in] O tamanho, em caracteres Unicode, de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="ade97-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="fd4e9-113">[in] O tamanho, em caracteres Unicode, de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="fd4e9-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ade97-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ade97-114">Requirements</span></span>  
- <span data-ttu-id="ade97-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ade97-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd4e9-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fd4e9-114">Requirements</span></span>  
+ <span data-ttu-id="fd4e9-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd4e9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ade97-116">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ade97-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fd4e9-116">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fd4e9-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ade97-117">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ade97-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fd4e9-117">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="fd4e9-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ade97-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ade97-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="fd4e9-118">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="fd4e9-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ade97-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ade97-119">See also</span></span>
-- [<span data-ttu-id="ade97-120">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="ade97-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="ade97-121">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="ade97-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fd4e9-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fd4e9-119">See also</span></span>
+
+- [<span data-ttu-id="fd4e9-120">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="fd4e9-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="fd4e9-121">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="fd4e9-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
