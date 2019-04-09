@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: f564a4ce7fa2d9b8ea5446f2cf6bd016db054dd9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 54782c4e0460ba1ba9b8a870b8f60f08a76340b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125166"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Limitações da propriedade de intervalo do componente de temporizador dos Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.Timer> componente tem um <xref:System.Windows.Forms.Timer.Interval%2A> propriedade que especifica o número de milissegundos que passam entre um evento de temporizador e o próximo. A menos que o componente está desativado, um temporizador continua recebendo o <xref:System.Windows.Forms.Timer.Tick> evento em intervalos aproximadamente iguais de tempo.  
@@ -29,6 +29,7 @@ Os formulários do Windows <xref:System.Windows.Forms.Timer> componente tem um <
 -   A precisão do <xref:System.Windows.Forms.Timer.Interval%2A> propriedade é em milissegundos. Alguns computadores fornecem um contador de alta resolução que tem uma resolução maior do que milissegundos. A disponibilidade desse contador depende do hardware do processador do computador.
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Timer>
-- [Componente Timer](timer-component-windows-forms.md)
+- [Componente de Temporizador](timer-component-windows-forms.md)
 - [Visão geral do componente de temporizador](timer-component-overview-windows-forms.md)

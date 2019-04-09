@@ -2,12 +2,12 @@
 title: <add> De <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 1340b70cf4656b764370a14955a2f4d6f6209fe4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128694"
 ---
 # <a name="add-of-filters"></a>\<Adicionar > de \<filtros >
 Um filtro XPath que especifica o tipo de mensagem a ser registrada.  
@@ -71,6 +71,7 @@ Um filtro XPath que especifica o tipo de mensagem a ser registrada.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>

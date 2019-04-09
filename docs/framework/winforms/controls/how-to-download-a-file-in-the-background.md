@@ -1,5 +1,5 @@
 ---
-title: 'Como: Baixar um arquivo em segundo plano'
+title: 'Como: Como baixar um arquivo em segundo plano'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 57a904c5d54b0c3f68efaf017a3405786600ace7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128772"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>Como: Baixar um arquivo em segundo plano
+# <a name="how-to-download-a-file-in-the-background"></a>Como: Como baixar um arquivo em segundo plano
 Baixar um arquivo é uma tarefa comum e costuma ser útil executar esta operação potencialmente demorada em um thread separado. Use o <xref:System.ComponentModel.BackgroundWorker> componente para realizar essa tarefa com pouquíssimo código.  
   
 ## <a name="example"></a>Exemplo  
@@ -30,14 +30,14 @@ Baixar um arquivo é uma tarefa comum e costuma ser útil executar esta operaç�
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#1)]  
   
- **Baixando o arquivo**  
+ **Download do arquivo.**  
   
  O arquivo é baixado no <xref:System.ComponentModel.BackgroundWorker> thread de trabalho do componente, que executa o <xref:System.ComponentModel.BackgroundWorker.DoWork> manipulador de eventos. Esse thread é iniciado quando seu código chama o <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> método.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
   
- **Aguardando a conclusão de um BackgroundWorker**  
+ **Aguardando um BackgroundWorker concluir**  
   
  O `downloadButton_Click` manipulador de eventos demonstra como aguardar um <xref:System.ComponentModel.BackgroundWorker> componente para concluir sua tarefa assíncrona.  
   
@@ -66,6 +66,7 @@ Baixar um arquivo é uma tarefa comum e costuma ser útil executar esta operaç�
  Sempre verifique o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> propriedade em seu <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos antes de tentar acessar o <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> propriedade ou qualquer outro objeto que pode ter sido afetado pelo <xref:System.ComponentModel.BackgroundWorker.DoWork> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Como: Executar uma operação em segundo plano](how-to-run-an-operation-in-the-background.md)
 - [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)

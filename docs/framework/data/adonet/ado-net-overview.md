@@ -2,12 +2,12 @@
 title: Visão geral do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170047"
 ---
 # <a name="adonet-overview"></a>Visão geral do ADO.NET
 O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML, e a fontes de dados expostas através do OLE DB e do ODBC. Os aplicativos do consumidor de compartilhamento de dados podem usar o ADO.NET para se conectar a essas fontes de dados, e para recuperar, manipular e atualizar os dados nelas contidos.  
@@ -29,10 +29,10 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  [Opções e diretrizes da tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Descreve os produtos e as tecnologias incluídos na plataforma de dados de entidade.  
   
- [LINQ e ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [LINQ e o ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Descreve como a consulta integrada à linguagem (LINQ) é implementada no ADO.NET e fornece links para tópicos relevantes.  
   
- [Provedores de dados do .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Provedores de dados .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Fornece uma visão geral do design do provedor de dados .NET Framework e dos provedores de dados .NET Framework incluídos no ADO.NET.  
   
  [DataSets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
@@ -45,19 +45,20 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  Fornece exemplos de código que recuperam dados usando os provedores de dados ADO.NET.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [What's New in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md) (Novidades no ADO.NET)  
+ [Novidades no ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Apresenta recursos que são novos no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
+ [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Descreve práticas seguras de codificação ao usar o ADO.NET.  
   
- [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  
+ [Mapeamentos de tipos de dados no ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  Descreve os mapeamentos de tipo de dados entre os tipos de dados do .NET Framework e os provedores de dados .NET Framework.  
   
- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
+ [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Descreve como conectar-se a uma fonte de dados, recuperar dados e modificar dados. Isso inclui `DataReaders` e `DataAdapters`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

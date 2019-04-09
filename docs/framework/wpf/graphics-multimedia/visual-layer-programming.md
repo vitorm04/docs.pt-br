@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172062"
 ---
 # <a name="visual-layer-programming"></a>Programação de camada do visual
 O <xref:System.Windows.Media.Visual> objeto é um núcleo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objeto, cuja função principal é fornecer suporte a renderização. Controles de interface do usuário, como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivam o <xref:System.Windows.Media.Visual> de classe e usá-lo para persistir seus dados de renderização.  
@@ -22,12 +22,13 @@ O <xref:System.Windows.Media.Visual> objeto é um núcleo [!INCLUDE[TLA2#tla_win
 ## <a name="in-this-section"></a>Nesta seção  
  [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md)  
  [Usando objetos DrawingVisual](using-drawingvisual-objects.md)  
- [Tutorial: Hospedando objetos visuais em um aplicativo Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Tópicos de instruções](visual-layer-programming-how-to-topics.md)  
+ [Tutorial: Hospedar objetos visuais em um aplicativo Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [Tópicos explicativos ](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
-- [Elementos gráficos e multimídia](index.md)
+- [Gráficos e multimídia](index.md)

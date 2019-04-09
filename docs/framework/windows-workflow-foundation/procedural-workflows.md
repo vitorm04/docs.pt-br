@@ -2,12 +2,12 @@
 title: Fluxos de trabalho procedurais
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: fcf50296a8ce3e7e2e0631057467af8a8efd9215
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164743"
 ---
 # <a name="procedural-workflows"></a>Fluxos de trabalho procedurais
 Fluxos de trabalho procedurais usam métodos de controle de fluxo semelhantes a esses elementos encontrados em idiomas procedurais. Essas construções incluem `While` e `If`. Esses fluxos de trabalho podem ser compostos livremente usando outras atividades de controle de fluxo como <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.  
@@ -37,4 +37,5 @@ Fluxos de trabalho procedurais usam métodos de controle de fluxo semelhantes a 
 >  Se usando [!INCLUDE[dublin](../../../includes/dublin-md.md)] para hospedar fluxos de trabalho em uma Web farm, AppFabric moverá instâncias entre servidores diferentes de AppFabric. Isso requer que os recursos podem ser compartilhado entre todos os nós.  Nenhuma das atividades padrão de fluxo de trabalho de REDE 4 contêm todas as operações que acessam recursos locais. Desde que AppFabric não oferece nenhum mecanismo marcar um fluxo de trabalho ainda, como um desenvolvedor não deve criar as atividades personalizados que elas falham quando um fluxo de trabalho é movido.  
   
 ## <a name="see-also"></a>Consulte também
-- [Fluxos de trabalho de fluxograma](flowchart-workflows.md)
+
+- [Fluxos de trabalho do fluxograma](flowchart-workflows.md)

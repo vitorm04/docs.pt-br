@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166160"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Define um transporte TCP que pode ser usado por um canal transferir mensagens para uma associação personalizada.  
@@ -80,12 +80,13 @@ Define um transporte TCP que pode ser usado por um canal transferir mensagens pa
  O `tcpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte TCP. Esse transporte é otimizado para comunicação WCF-WCF.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)

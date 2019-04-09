@@ -2,12 +2,12 @@
 title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166524"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
 Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um serviço de fluxo de trabalho de rastreamento e emitir os eventos de rastreamento no evento de rastreamento para Windows (ETW). Para emitir registros de acompanhamento de fluxo de trabalho em ETW, o exemplo usa o participante de rastreamento de<xref:System.Activities.Tracking.EtwTrackingParticipant>(ETW).
@@ -20,7 +20,7 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 |Componente|Descrição|
 |---------------|-----------------|
 |Tempo de execução de rastreamento|Fornece a infraestrutura para emitir registros de rastreamento.|
-|Participantes de rastreamento|Acessa os registros de rastreamento. vem de[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] com um participante de rastreamento que grava registros de rastreamento como o rastreamento de evento para eventos do Windows (ETW).|
+|Participantes de rastreamento|Acessa os registros de rastreamento. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] é fornecido com um participante de rastreamento que grava registros de rastreamento como eventos do Event Tracing for Windows (ETW).|
 |Controlando o perfil|Um mecanismo de filtragem que permite que um participante de rastreamento assine para um subconjunto de registros de rastreamento emissores de uma instância de fluxo de trabalho.|
 
  A tabela a seguir detalha os registros de rastreamento que o tempo de execução de fluxo de trabalho se emite.
@@ -150,4 +150,5 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Consulte também
-- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,5 +1,5 @@
 ---
-title: Elemento <add> para <listeners> para <source>
+title: <add> Elemento para <listeners> para <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: ae5231f43e7c157b5250376f7ab97deccea595e5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4d2952e29b09fcf9f81624317e30caf301a61a51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165445"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<Adicionar > elemento para \<ouvintes > para \<origem >
 Adiciona um ouvinte na coleção `Listeners` de uma origem de rastreamento.  
@@ -119,6 +119,7 @@ Adiciona um ouvinte na coleção `Listeners` de uma origem de rastreamento.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

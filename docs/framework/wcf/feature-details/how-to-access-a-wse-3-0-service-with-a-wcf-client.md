@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: d9824d4fdb7ffe78da8a8abaf3bac53d5c2e7ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1b8b344c713fdd27c67cf98c51c8c69198fd508f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127447"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Como: Acessar um WSE 3.0 serviço com um cliente WCF
 Os clientes do Windows Communication Foundation (WCF) são compatíveis com nível de transmissão com aprimoramentos de WSE (Web Services) 3.0 para serviços do Microsoft .NET quando os clientes do WCF são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing. No entanto, serviços do WSE 3.0 não dão suporte o protocolo do exchange (MEX) de metadados, portanto, quando você usa o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para criar uma classe de cliente do WCF, as configurações de segurança não são aplicadas para gerado Cliente do WCF. Portanto, você deve especificar as configurações de segurança que o serviço WSE 3.0 requer depois que o cliente do WCF é gerado.  
@@ -59,9 +59,8 @@ Os clientes do Windows Communication Foundation (WCF) são compatíveis com nív
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir define uma associação personalizada que expõe propriedades que correspondem às propriedades de uma asserção de segurança pronta para uso do WSE 3.0. Essa associação personalizada, que é chamada `WseHttpBinding`, em seguida, é usado para especificar as propriedades de associação para um cliente WCF que se comunica com o exemplo de início rápido do WSSecurityAnonymous WSE 3.0.  
-  
-  
-  
+
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [Interoperação com WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

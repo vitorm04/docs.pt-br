@@ -2,12 +2,12 @@
 title: Fluxo
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e4e70a3bf4137169afa94a122225f27c25909713
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127303"
 ---
 # <a name="stream"></a>Fluxo
 O exemplo de Stream demonstra o uso de fluxo de comunicação de modo de transferência. O serviço expõe diversas operações que enviam e recebem transmissões. Este exemplo é auto-hospedado. O cliente e o serviço são programas de console.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Processamento de dados quando ele é distribuído  
  As operações `GetStream`, `UploadStream` e `EchoStream` todos lidam com o envio de dados diretamente de um arquivo ou salvar dados recebidos diretamente para um arquivo. No entanto, em alguns casos, há um requisito para enviar ou receber grandes quantidades de dados e executar algum processamento em partes dos dados enquanto ele é enviado ou recebido. Uma maneira de resolver esses cenários é gravar um fluxo personalizado (uma classe que deriva de <xref:System.IO.Stream>) que processa os dados conforme ela é lida ou gravada. O `GetReversedStream` operação e `ReverseStream` classe são um exemplo disso.  
   
- `GetReversedStream` cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre conforme o sistema lê do que `ReverseStream` objeto. O `ReverseStream.Read` implementação lê um bloco de bytes do arquivo subjacente, reverta e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo como o conteúdo está sendo lidos ou gravados de e para o fluxo.  
+ `GetReversedStream` Cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre conforme o sistema lê do que `ReverseStream` objeto. O `ReverseStream.Read` implementação lê um bloco de bytes do arquivo subjacente, reverta e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo como o conteúdo está sendo lidos ou gravados de e para o fluxo.  
   
 ```csharp
 class ReverseStream : Stream  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
-  

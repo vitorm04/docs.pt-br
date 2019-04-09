@@ -2,12 +2,12 @@
 title: Escolhendo um padrão de troca de mensagens
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157715"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens
 A primeira etapa ao escrever um transporte personalizado é decidir qual *padrões de troca de mensagem* (ou MEPs) são necessários para o canal que você está desenvolvendo. Este tópico descreve as opções disponíveis e discute os vários requisitos. Isso é a primeira tarefa na lista de tarefas de desenvolvimento canal descrita em [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -93,4 +93,5 @@ Os três padrões de troca de mensagens básicas. De cima para baixo: datagrama,
 -   Quando <xref:System.ServiceModel.ICommunicationObject.Abort%2A> é chamado em seu canal, encerrar a sessão abruptamente sem executar e/s. Novamente, isso pode significar fazendo nada ou pode envolver anular uma conexão de rede ou algum outro recurso.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+
+- [Visão geral de modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)

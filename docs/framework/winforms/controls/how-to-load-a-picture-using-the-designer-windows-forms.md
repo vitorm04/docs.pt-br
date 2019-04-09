@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: febe1fc616bd1405e699c03fa673814a45976769
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127134"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Como: Carregar uma imagem usando o Designer (Windows Forms)
 Com o Windows Forms <xref:System.Windows.Forms.PictureBox> controle, você pode carregar e exibir uma imagem em um formulário em tempo de design, definindo o <xref:System.Windows.Forms.PictureBox.Image%2A> propriedade como uma imagem válida. A tabela a seguir mostra os tipos de arquivo disponíveis.  
@@ -44,8 +44,9 @@ Com o Windows Forms <xref:System.Windows.Forms.PictureBox> controle, você pode 
 1.  Sobre o **propriedades** janela, selecione o <xref:System.Windows.Forms.PictureBox.Image%2A> propriedade e o botão direito do mouse a imagem em miniatura que aparece à esquerda do nome do objeto de imagem. Escolha **Redefinir**.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.PictureBox>
 - [Visão geral do controle PictureBox](picturebox-control-overview-windows-forms.md)
-- [Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Como: Modificar o tamanho ou o posicionamento de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Como: Definir imagens em tempo de execução](how-to-set-pictures-at-run-time-windows-forms.md)
 - [Controle PictureBox](picturebox-control-windows-forms.md)

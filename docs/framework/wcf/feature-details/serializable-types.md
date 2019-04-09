@@ -2,12 +2,12 @@
 title: Tipos serializáveis
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160843"
 ---
 # <a name="serializable-types"></a>Tipos serializáveis
 Por padrão, o <xref:System.Runtime.Serialization.DataContractSerializer> serializa todos os tipos visíveis publicamente. Todas as propriedades de leitura/gravação pública e campos do tipo são serializados.  
@@ -39,8 +39,9 @@ Por padrão, o <xref:System.Runtime.Serialization.DataContractSerializer> serial
  Tipos desmarcados (tipos sem o <xref:System.Runtime.Serialization.DataContractAttribute> atributo) podem herdar de tipos que têm esse atributo; no entanto, o inverso não é permitido: tipos com o atributo não podem herdar de tipos desmarcados. Essa regra é aplicada principalmente para garantir a compatibilidade com versões anteriores com o código escrito em versões anteriores do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Tipos com suporte fornecido pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

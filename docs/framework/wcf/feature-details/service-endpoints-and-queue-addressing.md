@@ -2,12 +2,12 @@
 title: Pontos de extremidade de serviço e endereçamento de fila
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172517"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leiam de filas e como pontos de extremidade de serviço são mapeados para as filas. Como lembrete, a ilustração a seguir mostra clássico, implantação de aplicativo na fila do Windows Communication Foundation (WCF).  
@@ -105,4 +105,5 @@ Este tópico discute como os clientes atendem serviços leiam de filas e como po
  Observe que você não pode usar net.msmq:// endereçamento com `MsmqIntegrationBinding`. Porque `MsmqIntegrationBinding` dá suporte à forma livre MSMQ formato nome endereçamento, você pode usar um serviço WCF que usa essa associação para usar recursos da lista de distribuição e de multicast no MSMQ. Especificação de uma exceção `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve ser do net.msmq:// formulário, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+
+- [Hospedando na Web um aplicativo em fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

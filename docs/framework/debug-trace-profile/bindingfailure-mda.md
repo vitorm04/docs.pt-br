@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f23c2e03966bffccc9153e18e1b54e6847987d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127602"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 O MDA (assistente para depuração gerenciada) `bindingFailure` é ativado quando um assembly falha ao ser carregado.  
@@ -48,7 +48,7 @@ O MDA (assistente para depuração gerenciada) `bindingFailure` é ativado quand
   
 -   Resolva a causa conforme a determinação anterior. As possíveis opções de resolução são as seguintes:  
   
-    -   Instale o assembly solicitado no cache de assembly global e chame o método <xref:System.Reflection.Assembly.Load%2A> para carregar o assembly por identidade.  
+    -   Instale o assembly solicitado no cache de assembly global e chame o <xref:System.Reflection.Assembly.Load%2A> método para carregar o assembly por identidade.  
   
     -   Copie o assembly solicitado para o diretório do aplicativo e chame o método <xref:System.Reflection.Assembly.Load%2A> para carregar o assembly por identidade.  
   
@@ -99,4 +99,5 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127836"
 ---
 # <a name="controls-by-category"></a>Controles por categoria
 Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamente em várias categorias. Essas categorias podem ser usadas para selecionar o controle apropriado para seu cenário, ajudando a ver quais controles têm padrões de uso ou funcionalidades semelhantes.  
@@ -140,7 +140,7 @@ Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamen
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Documentos  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] inclui vários controles para exibir documentos. Esses controles otimizam a experiência de leitura, com base no cenário do usuário de destino.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] inclui vários controles para exibição de documentos. Esses controles otimizam a experiência de leitura, com base no cenário do usuário de destino.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamen
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Mídia  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] inclui suporte integrado para hospedar conteúdo de áudio e vídeo, bem como [codecs] para os formatos de imagem mais populares.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] inclui suporte integrado para hospedar o conteúdo de áudio e vídeo, bem como [codecs] para formatos de imagem mais populares.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamen
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Biblioteca de controles](control-library.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996231ae035e6518aaceac0ba75b3de3b52a0a22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151782"
 ---
 # <a name="security-and-serialization"></a>Segurança e serialização
 Como a serialização pode permitir que outro código veja ou modifique os dados da instância de objeto de outro modo seria inacessíveis, uma permissão especial é necessária de código para executar a serialização: <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> sinalizador especificado. De acordo com a política padrão, essa permissão não é dada ao código da intranet ou baixado da Internet; somente o código no computador local recebe essa permissão.  
@@ -48,4 +48,5 @@ Como a serialização pode permitir que outro código veja ou modifique os dados
 -   O construtor especial usado para serialização também deve executar a validação completa de entrada e deve ser protegida ou privada para ajudar a proteger contra uso indevido pelo código mal-intencionado. Ele deve aplicar o mesmo verificações de segurança e as permissões necessárias para obter uma instância dessa classe por outros meios, como criar explicitamente a classe ou indiretamente criá-lo por meio de algum tipo de fábrica.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

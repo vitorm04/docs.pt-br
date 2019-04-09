@@ -1,18 +1,18 @@
 ---
-title: Gerenciando DataViews
+title: Gerenciar DataViews
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 847829f6b131a33cc5ff1ca77b10f7e756da920f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127706"
 ---
-# <a name="managing-dataviews"></a>Gerenciando DataViews
+# <a name="managing-dataviews"></a>Gerenciar DataViews
 Você pode usar um <xref:System.Data.DataViewManager> para gerenciar as configurações de exibição para todas as tabelas em um <xref:System.Data.DataView>. Se você tiver um controle que você deseja associar a várias tabelas, como uma grade que navega relações, uma **DataViewManager** é ideal.  
   
  O **DataViewManager** contém uma coleção de <xref:System.Data.DataViewSetting> objetos que são usados para definir a configuração do modo de exibição das tabelas no <xref:System.Data.DataSet>. O <xref:System.Data.DataViewSettingCollection> contém um <xref:System.Data.DataViewSetting> objeto para cada tabela em um **conjunto de dados**. Você pode definir o padrão **ApplyDefaultSort**, **classificação**, **RowFilter**, e **RowStateFilter** propriedades da tabela referenciada por usando seu **DataViewSetting**. Você pode fazer referência a **DataViewSetting** para uma tabela específica por nome ou a referência ordinal, ou passando uma referência a esse objeto de tabela específica. Você pode acessar a coleção de **DataViewSetting** objetos em um **DataViewManager** usando o **DataViewSettings** propriedade.  
@@ -120,9 +120,10 @@ grid.SetDataBinding(viewManager, "Customers");
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
