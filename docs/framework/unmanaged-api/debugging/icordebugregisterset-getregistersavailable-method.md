@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08359595dee72c272dce9ec98e464a61896f41f5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f341098268f735a576bdbc5f0cea52f1a7e14f90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156033"
 ---
-# <a name="icordebugregistersetgetregistersavailable-method"></a><span data-ttu-id="09538-102">Método ICorDebugRegisterSet::GetRegistersAvailable</span><span class="sxs-lookup"><span data-stu-id="09538-102">ICorDebugRegisterSet::GetRegistersAvailable Method</span></span>
-<span data-ttu-id="09538-103">Obtém um pouco máscara que indica que registra desta [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) estão disponíveis no momento.</span><span class="sxs-lookup"><span data-stu-id="09538-103">Gets a bit mask indicating which registers in this [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) are currently available.</span></span>  
+# <a name="icordebugregistersetgetregistersavailable-method"></a><span data-ttu-id="63eac-102">Método ICorDebugRegisterSet::GetRegistersAvailable</span><span class="sxs-lookup"><span data-stu-id="63eac-102">ICorDebugRegisterSet::GetRegistersAvailable Method</span></span>
+<span data-ttu-id="63eac-103">Obtém um pouco máscara que indica que registra desta [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) estão disponíveis no momento.</span><span class="sxs-lookup"><span data-stu-id="63eac-103">Gets a bit mask indicating which registers in this [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) are currently available.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09538-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="09538-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63eac-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="63eac-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegistersAvailable (  
@@ -35,24 +35,25 @@ HRESULT GetRegistersAvailable (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="09538-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="09538-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63eac-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="63eac-105">Parameters</span></span>  
  `pAvailable`  
- <span data-ttu-id="09538-106">[out] Uma máscara de bits que indica quais registros estão disponíveis no momento.</span><span class="sxs-lookup"><span data-stu-id="09538-106">[out] A bit mask that indicates which registers are currently available.</span></span>  
+ <span data-ttu-id="63eac-106">[out] Uma máscara de bits que indica quais registros estão disponíveis no momento.</span><span class="sxs-lookup"><span data-stu-id="63eac-106">[out] A bit mask that indicates which registers are currently available.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="09538-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="09538-107">Remarks</span></span>  
- <span data-ttu-id="09538-108">Um registro pode estar indisponível se seu valor não pode ser determinado para a determinada situação.</span><span class="sxs-lookup"><span data-stu-id="09538-108">A register may be unavailable if its value cannot be determined for the given situation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63eac-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="63eac-107">Remarks</span></span>  
+ <span data-ttu-id="63eac-108">Um registro pode estar indisponível se seu valor não pode ser determinado para a determinada situação.</span><span class="sxs-lookup"><span data-stu-id="63eac-108">A register may be unavailable if its value cannot be determined for the given situation.</span></span>  
   
- <span data-ttu-id="09538-109">A máscara retornada contém um bit para cada registro (1 << o índice do registro).</span><span class="sxs-lookup"><span data-stu-id="09538-109">The returned mask contains a bit for each register (1 << the register index).</span></span> <span data-ttu-id="09538-110">O valor de bit for 1, se o registro estiver disponível, ou 0 se não estiver disponível.</span><span class="sxs-lookup"><span data-stu-id="09538-110">The bit value is 1 if the register is available, or 0 if it is not available.</span></span>  
+ <span data-ttu-id="63eac-109">A máscara retornada contém um bit para cada registro (1 << o índice do registro).</span><span class="sxs-lookup"><span data-stu-id="63eac-109">The returned mask contains a bit for each register (1 << the register index).</span></span> <span data-ttu-id="63eac-110">O valor de bit for 1, se o registro estiver disponível, ou 0 se não estiver disponível.</span><span class="sxs-lookup"><span data-stu-id="63eac-110">The bit value is 1 if the register is available, or 0 if it is not available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09538-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="09538-111">Requirements</span></span>  
- <span data-ttu-id="09538-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09538-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63eac-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="63eac-111">Requirements</span></span>  
+ <span data-ttu-id="63eac-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63eac-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09538-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="09538-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="63eac-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="63eac-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="09538-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="09538-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="63eac-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63eac-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="09538-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09538-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="63eac-115">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="63eac-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="09538-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="09538-116">See also</span></span>
-- [<span data-ttu-id="09538-117">Interface ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="09538-117">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [<span data-ttu-id="09538-118">Interface ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="09538-118">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="63eac-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="63eac-116">See also</span></span>
+
+- [<span data-ttu-id="63eac-117">Interface ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="63eac-117">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="63eac-118">Interface ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="63eac-118">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
