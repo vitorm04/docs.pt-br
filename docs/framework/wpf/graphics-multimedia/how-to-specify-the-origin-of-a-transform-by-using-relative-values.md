@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082952"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Como: Especificar a origem de uma transformação usando valores relativos
 Este exemplo mostra como usar valores relativos para especificar a origem de um <xref:System.Windows.UIElement.RenderTransform%2A> que é aplicado a um <xref:System.Windows.FrameworkElement>.  
@@ -40,6 +40,7 @@ Uma rotação de 45 graus usando a propriedade RenderTransform com um RenderTran
  Para obter mais informações sobre como transformar <xref:System.Windows.FrameworkElement> objetos, consulte a [visão geral de transformações](transforms-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Transform>
 - [Visão geral de transformações](transforms-overview.md)
-- [Tópicos de instruções](transformations-how-to-topics.md)
+- [Tópicos explicativos ](transformations-how-to-topics.md)

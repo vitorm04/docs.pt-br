@@ -2,12 +2,12 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: dd6cf74560694e7e16103c624b33a4c590ce5d50
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102577"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Especifica as configurações de pool de canal para uma associação personalizada.  
@@ -59,6 +59,7 @@ Especifica as configurações de pool de canal para uma associação personaliza
 -   O `maxOutboundChannelsPerEndpoint` cota define limites de cache no servidor e o cliente e é usada para melhorar a confiabilidade. O valor padrão se baseia em uma forma prudente modesta alocação de recursos que é adequada para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.ChannelPoolSettings>
 - <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>

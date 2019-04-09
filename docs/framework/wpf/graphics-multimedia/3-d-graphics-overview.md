@@ -8,17 +8,16 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087983"
 ---
 # <a name="3-d-graphics-overview"></a>Visão geral de elementos gráficos 3D
-<a name="introduction"></a> A funcionalidade [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite aos desenvolvedores desenhar, transformar e animar elementos gráficos 3D na marcação e no código de procedimento. Os desenvolvedores podem combinar elementos gráficos [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] e [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] para criar controles sofisticados, fornecer ilustrações complexas de dados ou melhorar a experiência do usuário de uma interface do aplicativo. O suporte de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não foi projetado para fornecer uma plataforma completa de desenvolvimento de jogos. Este tópico fornece uma visão geral da funcionalidade [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] do sistema de elementos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
- 
-  
+<a name="introduction"></a> A funcionalidade [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite aos desenvolvedores desenhar, transformar e animar elementos gráficos 3D na marcação e no código de procedimento. Os desenvolvedores podem combinar elementos gráficos [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] e [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] para criar controles sofisticados, fornecer ilustrações complexas de dados ou melhorar a experiência do usuário de uma interface do aplicativo. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] suporte no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não foi projetado para fornecer uma plataforma de desenvolvimento de jogos completos. Este tópico fornece uma visão geral da funcionalidade [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] do sistema de elementos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>3D em um contêiner 2D  
  [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] conteúdo em de elementos gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é encapsulado em um elemento, <xref:System.Windows.Controls.Viewport3D>, que pode participar da estrutura bidimensional do elemento. O sistema de elementos gráficos trata <xref:System.Windows.Controls.Viewport3D> como um elemento visual bidimensional como muitos outros em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Controls.Viewport3D> funciona como uma janela — um visor – em uma cena tridimensional. Mais precisamente, ele é uma superfície na qual uma cena [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] é projetada.  
@@ -118,7 +117,7 @@ Projeções de perspectiva e ortográficas
   
 -   <xref:System.Windows.Media.Media3D.PointLight>: Ilumina como uma fonte de luz próxima. As PointLights têm uma posição e lançam uma luz a dessa posição. Os objetos na cena são iluminados dependendo de sua posição e distância com relação à luz. <xref:System.Windows.Media.Media3D.PointLightBase> expõe um <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> propriedade, que determina uma distância além da qual os modelos não serão iluminados pela luz. A PointLight também expõe propriedades de atenuação que determinam como a intensidade da luz diminui com a distância. Você pode especificar interpolações constantes, lineares ou quadráticas para a atenuação da luz.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: herda de <xref:System.Windows.Media.Media3D.PointLight>. Os destaques iluminam como PointLight e têm posição e direção. Eles projetam a luz em uma área em forma de cone definida pelas <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> e <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> propriedades, especificadas em graus.  
+-   <xref:System.Windows.Media.Media3D.SpotLight>: Herda de <xref:System.Windows.Media.Media3D.PointLight>. Os destaques iluminam como PointLight e têm posição e direção. Eles projetam a luz em uma área em forma de cone definida pelas <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> e <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> propriedades, especificadas em graus.  
   
  Luzes são <xref:System.Windows.Media.Media3D.Model3D> objetos, portanto, você pode transformar e animar propriedades de luz, incluindo a posição, cor, direção e intervalo.  
   
@@ -170,12 +169,13 @@ Projeções de perspectiva e ortográficas
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [Visão geral das transformações 3D](3-d-transformations-overview.md)
-- [Maximizar o desempenho 3D do WPF](maximize-wpf-3d-performance.md)
-- [Tópicos de instruções](3-d-graphics-how-to-topics.md)
+- [Visão geral de transformações 3D](3-d-transformations-overview.md)
+- [Maximizar desempenho 3D do WPF](maximize-wpf-3d-performance.md)
+- [Tópicos explicativos ](3-d-graphics-how-to-topics.md)
 - [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)

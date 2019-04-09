@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: 2631d088d677c5edb1ae73a3cb40d15bf4beb71f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186063"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Como: Manipular elementos de conteúdo de fluxo por meio da propriedade Inlines
 Estes exemplos demonstram algumas das operações mais comuns que podem ser executadas em elementos de conteúdo de fluxo embutido (e contêineres desses elementos, tais como <xref:System.Windows.Controls.TextBlock>) por meio de **Inlines** propriedade. Essa propriedade é usada para adicionar e remover itens de <xref:System.Windows.Documents.InlineCollection>. Elementos de conteúdo de fluxo com uma propriedade **Inlines** incluem:  
@@ -65,6 +65,7 @@ Estes exemplos demonstram algumas das operações mais comuns que podem ser exec
  [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

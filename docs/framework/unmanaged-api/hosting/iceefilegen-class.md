@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083564"
 ---
 # <a name="iceefilegen-class"></a>Classe ICeeFileGen
 Fornece funcionalidade para criar um arquivo executável (PE) portátil nativo. A interface normalmente será ser usada pelos compiladores para gerar a saída executável compilada.  
@@ -244,4 +244,5 @@ public:
  **Versão do .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

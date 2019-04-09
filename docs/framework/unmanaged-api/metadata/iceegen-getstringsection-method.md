@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e306ccc824910226e522bc664f8f87f828a0d52
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ef22114b582ebfc9714dedc0cb6e66594d945ca1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083784"
 ---
 # <a name="iceegengetstringsection-method"></a>Método ICeeGen::GetStringSection
 Obtém uma representação de cadeia de caracteres da seção de código referenciada pelo identificador especificado.  
@@ -51,4 +51,5 @@ HRESULT GetStringSection (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 948fd78ae2839bd24a44c8c0b806e32b1da7125f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 160e31859e3d58812861d4462e77d68fa18d6186
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079650"
 ---
 # <a name="iclrhostprotectionmanagerseteagerserializegrantsets-method"></a>Método ICLRHostProtectionManager::SetEagerSerializeGrantSets
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
@@ -54,5 +54,6 @@ HRESULT SetEagerSerializeGrantSets ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interface ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)

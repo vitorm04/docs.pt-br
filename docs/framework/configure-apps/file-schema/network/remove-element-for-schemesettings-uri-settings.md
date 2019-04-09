@@ -1,13 +1,13 @@
 ---
-title: Elemento <remove> para schemeSettings (configurações de Uri)
+title: <remove> Elemento para schemeSettings (configurações de Uri)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: fd137c86d7373947f57364c13eb3875cba46b269
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104969"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>\<Remover > elemento para schemeSettings (configurações de Uri)
 Remove uma definição de esquema para um nome de esquema.  
@@ -41,7 +41,7 @@ Remove uma definição de esquema para um nome de esquema.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
+|[\<schemeSettings > (configurações de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, o <xref:System.Uri?displayProperty=nameWithType> por cento un-escapes de classe codificado delimitadores de caminho antes de executar a compactação de caminho. Isso era implementado como um mecanismo de segurança contra ataques, como o seguinte:  
@@ -75,6 +75,7 @@ Remove uma definição de esquema para um nome de esquema.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

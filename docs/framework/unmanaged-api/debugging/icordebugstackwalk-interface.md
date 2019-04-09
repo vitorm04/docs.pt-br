@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb58040394d99ae0c5a10672946fa5a6ead5e751
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e33e9be112a6a10f89b88005496ce2e63dff2d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080677"
 ---
 # <a name="icordebugstackwalk-interface"></a>Interface ICorDebugStackWalk
 Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha de thread.  
@@ -50,5 +50,6 @@ Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha 
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

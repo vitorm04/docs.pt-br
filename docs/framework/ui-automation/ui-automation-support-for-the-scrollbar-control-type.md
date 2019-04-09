@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-ms.openlocfilehash: 554d3dd2efbd0e7b1e1cf32c8f4dd8d8f41ffd33
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b9716cd33a3d030121f738fc896d90186791ca2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081873"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ScrollBar
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "57678261"
 ## <a name="required-ui-automation-events"></a>Eventos de automação de interface do usuário necessária  
  A seguinte tabela lista o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventos devem ser suportados por todos os controles de barra de rolagem. Para obter mais informações sobre eventos, consulte [visão geral de eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Evento|Suporte/valor|Observações|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte/valor|Observações|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de propriedade alterada.|Necessária|Nenhum|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de propriedade alterada.|Necessária|Nenhum|  
@@ -82,6 +82,7 @@ ms.locfileid: "57678261"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessária|Nenhum|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Automation.ControlType.ScrollBar>
-- [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Visão Geral dos Tipos de Controle de Automação de Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Visão geral de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

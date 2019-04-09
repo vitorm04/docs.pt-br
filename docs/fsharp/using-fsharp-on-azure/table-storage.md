@@ -3,12 +3,12 @@ title: Introdução ao uso do armazenamento de tabelas do AzureF#
 description: Store dados estruturados na nuvem usando o armazenamento de tabela do Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086696"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e a API de tabela do Azure Cosmos DB usando F\#
 
@@ -35,7 +35,6 @@ Este tutorial mostra como escrever F# código para fazer algumas tarefas comuns 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account) ou [conta do Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Criar um F# Script e iniciar F# interativo
 
@@ -128,7 +127,6 @@ Agora é possível imprimir os resultados:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Recuperar um intervalo de entidades em uma partição
 
 Se não desejar consultar todas as entidades em uma partição, você pode especificar um intervalo combinando o filtro de chave de partição com um filtro de chave de linha. Aqui, você usa dois filtros para obter todas as entidades na partição "Smith" em que a chave de linha (nome) começa com uma letra anterior a "M" no alfabeto.
@@ -148,7 +146,6 @@ Você pode escrever uma consulta para recuperar uma entidade única e específic
 Agora é possível imprimir os resultados:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>Substituir uma entidade
 

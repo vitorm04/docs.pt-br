@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 459691354ec12f61c7ab321fe832d8fc802a36d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cad7b319a20bce09779821af6f50aea086880c26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187312"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>Método IHostControl::GetHostManager
 Obtém um ponteiro de interface para a implementação do host da interface com especificado `IID`.  
@@ -91,4 +91,5 @@ HRESULT GetHostManager (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

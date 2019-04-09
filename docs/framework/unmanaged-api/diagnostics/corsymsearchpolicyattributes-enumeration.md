@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a9b0f085820bac12638c0310ab23b2eafacb23b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186167"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>Enumeração CorSymSearchPolicyAttributes
 Especifica a política a ser usado ao fazer uma pesquisa por um leitor de símbolo. Essas constantes são usadas pelo [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) métodos.  
@@ -54,4 +54,5 @@ typedef enum CorSymSearchPolicyAttributes
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
-- [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+
+- [Enumerações de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

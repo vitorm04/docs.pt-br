@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c4dd73efbad5ffac47c8585facd1717d77147fa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1a288edc89029804de277484741c1895af7859b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081522"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>Método IHostSyncManager::CreateCrstWithSpinCount
 Cria um objeto de seção crítica com contagem de rotação para a sincronização.  
@@ -68,6 +68,7 @@ HRESULT CreateCrstWithSpinCount (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [Interface IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
 - [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

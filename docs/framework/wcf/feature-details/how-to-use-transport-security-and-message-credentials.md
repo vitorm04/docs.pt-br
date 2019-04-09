@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar a segurança de transporte e as credenciais de mensagem'
+title: 'Como: usar credenciais de mensagem e segurança do transporte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186804"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Como: Usar a segurança de transporte e as credenciais de mensagem
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Como: usar credenciais de mensagem e segurança do transporte
 Proteger um serviço com credenciais de transporte e de mensagem usa o melhor dos modos de segurança de transporte e de mensagem no Windows Communication Foundation (WCF). Em suma, segurança de camada de transporte fornece integridade e confidencialidade, enquanto a segurança da camada de mensagem fornece uma variedade de credenciais que não são possíveis com os mecanismos de segurança de transporte estrito. Este tópico mostra as etapas básicas para a implementação de transporte com credenciais de mensagem usando o <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> associações. Para obter mais informações sobre como definir o modo de segurança, consulte [como: Definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Ao definir o modo de segurança para `TransportWithMessageCredential`, o transporte determina o mecanismo real que fornece a segurança de nível de transporte. Para HTTP, o mecanismo é Secure Sockets Layer (SSL) sobre HTTP (HTTPS); para TCP, é SSL sobre TCP ou Windows.  
@@ -29,7 +29,7 @@ Proteger um serviço com credenciais de transporte e de mensagem usa o melhor do
   
 2.  Criar uma instância do <xref:System.ServiceModel.WSHttpBinding> de classe e defina a <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> propriedade <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Defina o <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> propriedade para um valor apropriado. (Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) O código a seguir usa o <xref:System.ServiceModel.MessageCredentialType.Certificate> valor.  
+3.  Defina a propriedade <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> com um valor apropriado. (Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) O código a seguir usa o <xref:System.ServiceModel.MessageCredentialType.Certificate> valor.  
   
 4.  Criar uma instância da <xref:System.Uri> classe com um endereço base apropriado. Observe que o endereço deve usar o esquema "HTTPS" e deve conter o nome real da máquina e o número da porta associado ao certificado SSL. (Como alternativa, você pode definir o endereço base na configuração).  
   
@@ -161,6 +161,7 @@ Proteger um serviço com credenciais de transporte e de mensagem usa o melhor do
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)
+
+- [Como: definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Serviços de segurança](../../../../docs/framework/wcf/securing-services.md)
 - [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

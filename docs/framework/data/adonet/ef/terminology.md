@@ -2,12 +2,12 @@
 title: Terminologia do Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 644c1f19c0dc87ea7a9ab5fabbbd85b63ad1d1b8
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104163"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia do Entity Framework
 Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentação. Os links são fornecidos para tópicos relevantes em que há informações adicionais disponíveis.  
@@ -44,7 +44,7 @@ Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_
 |associação independente|Uma associação entre entidades que é representada e controlada por um objeto independente.|  
 |key|O atributo de um tipo de entidade que especifica qual propriedade ou conjunto de propriedades será usado para identificar instâncias exclusivas do tipo de entidade. Representado na camada de objeto pela classe <xref:System.Data.EntityKey>.<br /><br /> Para obter mais informações, consulte [chave de elemento (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) e [chave de entidade](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |carregamento diferido|Quando os objetos são retornados por uma consulta, os objetos relacionados não são carregados ao mesmo tempo. Em vez disso, eles são carregados automaticamente quando a propriedade de navegação é acessada.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintaxe de consulta que define um conjunto de operadores de consulta que permitem operações de passagem, filtro e de projeção a ser expressa em um modo direto, declarativo em Visual C# e Visual Basic.<br /><br /> Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintaxe de consulta que define um conjunto de operadores de consulta que permitem operações de passagem, filtro e de projeção a ser expressa em um modo direto, declarativo em Visual c# e Visual Basic.<br /><br /> Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapeamento|Uma especificação das correspondências entre itens de um modelo conceitual e itens de um modelo de armazenamento.<br /><br /> Para obter mais informações, consulte [especificação de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |arquivo .msl|Um arquivo XML que contém o mapeamento entre o modelo conceitual e o modelo de armazenamento, expresso em MSL.|  
 |MSL (linguagem de especificação de mapeamento)|Uma linguagem baseada em XML usada para mapear itens definidos em um modelo conceitual para itens de um modelo de armazenamento.<br /><br /> Para obter mais informações, consulte [especificação de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -76,7 +76,8 @@ Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_
 |tabela por tipo|Um método de modelagem de uma hierarquia de tipo em um banco de dados que usa várias tabelas com relações um-para-um para modelar os vários tipos.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
+
+- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
-- [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Guia de Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [Recursos do Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)

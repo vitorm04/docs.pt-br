@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d712a46a8ddb79846e56077e9ed6283ea4d40ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b4906f988d09f7b01aee40e8f63b589da5f33d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086410"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>Enumeração CorDebugCodeInvokeKind
 Descreve como uma função exportada invocará o código gerenciado.  
@@ -57,5 +57,6 @@ typedef enum CorDebugCodeInvokeKind
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

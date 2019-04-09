@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a73982cb4cb7b6e80579714b32cf7aba620272af
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c5382341a8c0c6455438af9e8c476348ab2467a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189034"
 ---
 # <a name="ihosttasksetpriority-method"></a>Método IHostTask::SetPriority
 Solicitações que o host de ajustar a prioridade do thread de nível para a tarefa representada por atual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância.  
@@ -84,6 +84,7 @@ HRESULT SetPriority (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Threading.Thread>
 - [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

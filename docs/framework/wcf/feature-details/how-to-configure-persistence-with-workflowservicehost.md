@@ -1,15 +1,15 @@
 ---
-title: 'Como: Configurar a persistência com WorkflowServiceHost'
+title: 'Como: configurar a persistência com WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 2b340a46d10ef517d46a6e85fdb2f8e332cd0b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8485cfdfb3a8f62f04fc488ad28df86e609e17ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086657"
 ---
-# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Como: Configurar a persistência com WorkflowServiceHost
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Como: configurar a persistência com WorkflowServiceHost
 Este tópico descreve como configurar o recurso de Store de instância de fluxo de trabalho do SQL para habilitar a persistência para fluxos de trabalho hospedados em <xref:System.ServiceModel.Activities.WorkflowServiceHost> usando um arquivo de configuração. Antes de usar o recurso de Store de instância de fluxo de trabalho do SQL, você deve criar um banco de dados SQL é usado para persistir instâncias de fluxo de trabalho. Para obter mais informações, confira [Como: Habilitar a persistência do SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>Para configurar o Store de instância de fluxo de trabalho do SQL na configuração  
@@ -60,6 +60,7 @@ Este tópico descreve como configurar o recurso de Store de instância de fluxo 
      Para obter um exemplo de como configurar a persistência de forma programática, consulte [como: Ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Persistência de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
-- [Persistência de malha de aplicativos do Windows Server](https://go.microsoft.com/fwlink/?LinkId=193121)
+- [Persistência da tela de aplicativo Windows Server](https://go.microsoft.com/fwlink/?LinkId=193121)

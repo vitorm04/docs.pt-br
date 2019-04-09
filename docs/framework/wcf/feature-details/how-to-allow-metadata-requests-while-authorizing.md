@@ -1,5 +1,5 @@
 ---
-title: 'Como: Permitir solicitações de metadados durante a autorização'
+title: 'Como: permitir solicitações de metadados durante a autorização'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 820725e22c8f07c10212f434e377d5b039cc75e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082666"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Como: Permitir solicitações de metadados durante a autorização
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Como: permitir solicitações de metadados durante a autorização
 Durante a autorização personalizada, ele pode ser necessário permitir que uma solicitação de metadados a serem processados. O tópico a seguir explica as etapas para validar essa solicitação.  
   
  Para obter mais informações sobre a autorização do Windows Communication Foundation (WCF), consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -36,6 +36,7 @@ Durante a autorização personalizada, ele pode ser necessário permitir que uma
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gerenciamento de declarações e autorizações com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

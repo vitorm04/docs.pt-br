@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191447"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 Um valor nulo em um banco de dados relacional é usado quando o valor em uma coluna é desconhecido ou ausente. Um nulo não é uma cadeia de caracteres vazia (para os tipos de dados character ou datetime) nem um valor zero (para tipos de dados numéricos). A especificação ANSI SQL-92 indica que um valor nulo deve ser o mesmo para todos os tipos de dados, para que todos os nulos sejam tratados consistentemente. O namespace <xref:System.Data.SqlTypes> fornece uma semântica nula implementando a interface <xref:System.Data.SqlTypes.INullable>. Cada um dos tipos de dados no <xref:System.Data.SqlTypes> tem sua própria propriedade `IsNull` e um valor `Null` que pode ser atribuído a uma instância desse tipo de dados.  
@@ -35,7 +35,7 @@ Um valor nulo em um banco de dados relacional é usado quando o valor em uma col
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Noções básicas sobre a opção ANSI_NULLS  
- <xref:System.Data.SqlTypes> fornece a mesma semântica do que a proporcionada quando a opção ANSI_NULLS é definida no SQL Server. Todos os operadores aritméticos (+, -, *, /, %), operadores bit a bit (~, &, &#124;), e a maioria das funções de retorno nulo se qualquer um dos operandos ou argumentos for nulo, exceto para a propriedade `IsNull`.  
+ <xref:System.Data.SqlTypes> fornece a mesma semântica que quando a opção ANSI_NULLS é definida no SQL Server. Todos os operadores aritméticos (+, -, *, /, %), operadores bit a bit (~, &, &#124;), e a maioria das funções de retorno nulo se qualquer um dos operandos ou argumentos for nulo, exceto para a propriedade `IsNull`.  
   
  O padrão ANSI SQL-92 não suporta *columnName* = NULL em uma cláusula WHERE. No SQL Server, a opção ANSI_NULLS controla a nulidade padrão no banco de dados e a avaliação das comparações com valores nulos. Se ANSI_NULLS for ativado (o padrão), o operador IS NULL deverá ser usado nas expressões durante o teste de valores nulos. Por exemplo, a comparação a seguir sempre produzirá unknown quando ANSI_NULLS for ativado:  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  Não há suporte no momento para a estrutura `Nullable<T>` ou <xref:System.Nullable> no `DataSet`.  
   
 ### <a name="multiple-column-row-assignment"></a>Atribuição de várias colunas (linha)  
- `DataTable.Add`, `DataTable.LoadDataRow` ou outras APIs que aceitam um <xref:System.Data.DataRow.ItemArray%2A> que é mapeado para uma linha mapeiam 'null' para o valor padrão de DataColumn. Se um objeto na matriz contiver `DbNull.Value` ou seu equivalente fortemente tipado, as mesmas regras serão aplicadas conforme descrito acima.  
+ `DataTable.Add`, `DataTable.LoadDataRow`, ou outras APIs que aceitam um <xref:System.Data.DataRow.ItemArray%2A> que é mapeado para uma linha, 'null' para o valor padrão de DataColumn do mapa. Se um objeto na matriz contiver `DbNull.Value` ou seu equivalente fortemente tipado, as mesmas regras serão aplicadas conforme descrito acima.  
   
  Além disso, as seguintes regras se aplicam a uma instância de atribuições nulas de `DataRow.["columnName"]`:  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Comparando valores nulos com SqlTypes e os tipos CLR  
- Durante a comparação dos valores nulos, é importante compreender a diferença entre a maneira como o método `Equals` avalia os valores nulos no <xref:System.Data.SqlTypes> e a maneira como ele funciona nos tipos CLR. Todos os métodos <xref:System.Data.SqlTypes>`Equals` usam a semântica de banco de dados para avaliar valores nulos: se qualquer um ou ambos os valores forem nulos, a comparação produzirá um valor nulo. Por outro lado, o uso do método CLR `Equals` em dois <xref:System.Data.SqlTypes> produzirá verdadeiro se ambos forem nulos. Isso refletirá a diferença entre o uso de um método de instância, como o método CLR `String.Equals`, e o uso do método estático/compartilhado, `SqlString.Equals`.  
+ Durante a comparação dos valores nulos, é importante compreender a diferença entre a maneira como o método `Equals` avalia os valores nulos no <xref:System.Data.SqlTypes> e a maneira como ele funciona nos tipos CLR. Todos os <xref:System.Data.SqlTypes>`Equals` métodos usam a semântica de banco de dados para avaliar valores nulos: se um ou ambos os valores for nulo, a comparação resulta em null. Por outro lado, o uso do método CLR `Equals` em dois <xref:System.Data.SqlTypes> produzirá verdadeiro se ambos forem nulos. Isso refletirá a diferença entre o uso de um método de instância, como o método CLR `String.Equals`, e o uso do método estático/compartilhado, `SqlString.Equals`.  
   
  O exemplo a seguir mostra a diferença nos resultados entre os métodos `SqlString.Equals` e `String.Equals` quando cada um recebe um par de valores nulos e, em seguida, um par de cadeias de caracteres vazias.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server Data Types and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md) (Tipos de dados do SQL Server e o ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Tipos de dados do SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

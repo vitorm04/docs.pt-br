@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102980"
 ---
 # <a name="identityattributeblob-structure"></a>Estrutura IDENTITY_ATTRIBUTE_BLOB
 Contém informações sobre um único atributo em um assembly e consiste em três `DWORD`s. Cada `DWORD` é um deslocamento em um buffer de caracteres produzido pela `CurrentIntoBuffer` método o [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface  
@@ -243,6 +243,7 @@ Exit:
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
 - [Interface IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
 - [Estrutura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)

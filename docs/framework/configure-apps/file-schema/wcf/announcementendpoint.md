@@ -2,12 +2,12 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 8977a36d9eee48505a65fa52272a95665fea7972
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4f3cf2748acc75b0ec83732664c5f97114f3663a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195118"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
 Este elemento de configuração define um ponto de extremidade padrão com um contrato de anúncio fixo. Um serviço pode, opcionalmente, anunciar sua disponibilidade, enviando uma mensagem de comunicado online e offline, quando ele é aberto ou fechado, respectivamente. Um serviço do Windows Communication Foundation (WCF) especifica os pontos de extremidade de comunicado na [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento e usa o AnnouncementClient para executar os anúncios. Um cliente que desejarem escutar o comunicado de outro serviço, na verdade, está atuando como um serviço WCF. Portanto, você precisa configurar os pontos de extremidade de comunicado para esse cliente na [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) seção.  
@@ -79,4 +79,5 @@ Este elemento de configuração define um ponto de extremidade padrão com um co
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

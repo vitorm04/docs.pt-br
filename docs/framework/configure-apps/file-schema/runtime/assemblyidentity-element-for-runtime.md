@@ -1,5 +1,5 @@
 ---
-title: Elemento <assemblyIdentity> para <runtime>
+title: <assemblyIdentity> elemento para <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 6f05f1f395156e149e73c1081e486b5285c2b599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098689"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity > elemento para \<tempo de execução >
 Contém informações de identificação sobre o assembly.  
@@ -120,6 +120,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

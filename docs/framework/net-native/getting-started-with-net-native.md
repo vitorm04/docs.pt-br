@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081483"
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Nativo
 Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou migrando um aplicativo existente da Windows Store, siga o mesmo conjunto de procedimentos. Para criar um aplicativo [!INCLUDE[net_native](../../../includes/net-native-md.md)], siga estas etapas:  
@@ -106,17 +106,18 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
   
  Para ver alguns exemplos específicos de como lidar com exceções e outros problemas que ocorrem ao testar seu aplicativo, consulte:  
   
--   [Exemplo: Tratamento de exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Exemplo: lidar com exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Exemplo: Solução de problemas de programação dinâmica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Exemplo: solução de problemas de programação dinâmica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Exceções em tempo de execução em aplicativos do .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configuração e instalação do .NET nativa](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)
-- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Instalação e configuração do .NET Nativo](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [Compilação e .NET nativo](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Reflexão e .NET Nativo](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Serialização e metadados](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Migrando seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Migrando seu aplicativo da Windows Store para .NET Nativo](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

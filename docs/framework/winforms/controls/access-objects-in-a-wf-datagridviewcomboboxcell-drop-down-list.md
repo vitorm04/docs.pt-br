@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acessar objetos em uma lista suspensa DataGridViewComboBoxCell do Windows Forms'
+title: 'Como: Acessar objetos de acesso em uma lista suspensa DataGridViewComboBoxCell do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080781"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Como: Acessar objetos em uma lista suspensa DataGridViewComboBoxCell do Windows Forms
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Como: Acessar objetos de acesso em uma lista suspensa DataGridViewComboBoxCell do Windows Forms
 Como o <xref:System.Windows.Forms.ComboBox> controle, o <xref:System.Windows.Forms.DataGridViewComboBoxColumn> e <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipos que você possa adicionar objetos arbitrários às suas listas suspensas. Com esse recurso, você pode representar estados complexos em uma lista suspensa sem a necessidade de armazenar objetos correspondentes em uma coleção separada.  
   
  Ao contrário de <xref:System.Windows.Forms.ComboBox> controle, o <xref:System.Windows.Forms.DataGridView> tipos não têm um <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> propriedade para recuperar o objeto atualmente selecionado. Em vez disso, você deve definir a <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> propriedade para o nome de uma propriedade em seu objeto de negócios. Quando o usuário faz uma seleção, a propriedade indicada do objeto comercial define a célula <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propriedade.  
@@ -69,6 +69,7 @@ Como o <xref:System.Windows.Forms.ComboBox> controle, o <xref:System.Windows.For
 -   Referências aos assemblies Sistema e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>
@@ -80,4 +81,4 @@ Como o <xref:System.Windows.Forms.ComboBox> controle, o <xref:System.Windows.For
 - <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ComboBox>
-- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

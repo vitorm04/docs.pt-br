@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92528a2cf2227520327b9be2dca70be4c238ff61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184282"
 ---
 # <a name="opengenericcercall-mda"></a>MDA openGenericCERCall
 O Assistente de Depuração Gerenciado de `openGenericCERCall` é ativado para avisar que um gráfico de CER (região de execução restrita) com variáveis de tipo genérico no método raiz está sendo processado em tempo de compilação JIT ou tempo de geração de imagem nativa e pelo menos uma das variáveis de tipo genérico é um tipo de referência de objeto.  
@@ -107,6 +107,7 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

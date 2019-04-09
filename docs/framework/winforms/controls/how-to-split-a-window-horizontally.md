@@ -10,12 +10,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d10616e2f09eabec1209a26aabe501ea0af903cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189620"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Como: Dividir uma janela horizontalmente
 O exemplo de código a seguir torna o separador que divide o <xref:System.Windows.Forms.SplitContainer> horizontal do controle.  
@@ -56,5 +56,6 @@ O exemplo de código a seguir torna o separador que divide o <xref:System.Window
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)

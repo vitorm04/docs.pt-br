@@ -1,5 +1,5 @@
 ---
-title: 'Como: Carregar arquivos para o controle RichTextBox dos Windows Forms'
+title: 'Como: Carregar arquivos no controle RichTextBox do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: b550362571c5a4ea1fa8e6f9700ebee4ff04ddbd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0456190f160c555dcc8ce5553674eee2cb73db8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086774"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Como: Carregar arquivos para o controle RichTextBox dos Windows Forms
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Como: Carregar arquivos no controle RichTextBox do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode exibir um texto sem formatação, texto simples Unicode ou arquivo de formato Rich-Text (RTF). Para fazer isso, chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método para carregar dados de um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Para carregar um Arquivo no controle RichTextBox  
@@ -81,6 +81,7 @@ Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode
     >  Para executar esse processo, o assembly pode exigir um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)

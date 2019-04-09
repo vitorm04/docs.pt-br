@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3293c3b0d5fa4615c351949afdb1acf8cd560b5e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187285"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>Método ICorDebugInternalFrame2::GetFrameAddress
 Retorna o endereço de pilha do quadro interno.  
@@ -44,7 +44,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |-------------|-----------------|  
 |S_OK|O endereço do quadro interno foi retornado com êxito.|  
 |E_FAIL|Não foi possível retornar o endereço do quadro interno.|  
-|E_INVALIDARG|`pAddress` é `null`.|  
+|E_INVALIDARG|`pAddress` is `null`.|  
   
 ## <a name="remarks"></a>Comentários  
  O valor retornado na `pAddress` pode ser usado para determinar o local do quadro interno em relação a outros quadros na pilha. Mesmo em computadores baseados em IA-64, o quadro interno reside na pilha apenas e não há nenhum ponteiro correspondente para um armazenamento de backup.  
@@ -59,6 +59,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

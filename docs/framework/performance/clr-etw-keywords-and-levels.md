@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105736"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palavras-chave e níveis ETW no CLR
 <a name="top"></a> Os eventos ETW (rastreamento de eventos para Windows) pode ser filtrado por categoria e nível. As [palavras-chave CLR ETW](#keywords) do evento permitem a filtragem de eventos por categoria; elas são usadas em combinações para os provedores de tempo de execução e de encerramento. Os [níveis de evento](#levels) são identificados por sinalizadores.  
@@ -29,9 +29,9 @@ ms.locfileid: "54572351"
   
 -   [Palavras-chave de encerramento CLR ETW](#rundown)  
   
--   [Combinações de palavras-chave para a resolução de símbolo do provedor de tempo de execução](#runtime_combo)  
+-   [Combinações de palavra-chave para a resolução de símbolo para o provedor de tempo de execução](#runtime_combo)  
   
--   [Combinações de palavras-chave para a resolução de símbolo do provedor de encerramento](#rundown_combo)  
+-   [Combinações de palavra-chave para a resolução de símbolo para o provedor de encerramento](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>Palavras-Chave de Tempo de Execução CLR ETW  
@@ -95,12 +95,12 @@ ms.locfileid: "54572351"
   
 |Palavras-chave e sinalizadores|Domínio do aplicativo, assembly, eventos de DCStart/DCEnd do módulo|Eventos de DCStart/DCEnd do módulo (incluindo eventos de método dinâmico)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos `DCStart`.|nenhuma.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos `DCEnd`.|nenhuma.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|nenhuma.|Eventos `DCStart`.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|nenhuma.|Eventos `DCEnd`.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|nenhuma.|Eventos `DCStart`.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|nenhuma.|Eventos `DCEnd`.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` eventos.|nenhuma.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` eventos.|nenhuma.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|nenhuma.|`DCStart` eventos.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|nenhuma.|`DCEnd` eventos.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|nenhuma.|`DCStart` eventos.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|nenhuma.|`DCEnd` eventos.|  
   
  [Voltar ao início](#top)  
   
@@ -123,6 +123,7 @@ ms.locfileid: "54572351"
  0x0 – LogAlways  
   
 ## <a name="see-also"></a>Consulte também
-- [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Provedores ETW no CLR](../../../docs/framework/performance/clr-etw-providers.md)
+- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)
 - [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099775"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
@@ -147,10 +147,11 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
  Seu provedor não precisa dar suporte a todas as configurações de atributos definidos na <xref:System.Configuration?displayProperty=nameWithType> namespace, embora ele deva em um suporte mínimo <xref:System.Configuration.ApplicationScopedSettingAttribute> e <xref:System.Configuration.UserScopedSettingAttribute>e também deve dar suporte <xref:System.Configuration.DefaultSettingValueAttribute>. Para os atributos aos quais ele não oferece suporte, o provedor deve apenas falhar, sem notificação. Ele não deve lançar uma exceção. Se a classe de configurações usa uma combinação inválida de atributos, no entanto, como a aplicação <xref:System.Configuration.ApplicationScopedSettingAttribute> e <xref:System.Configuration.UserScopedSettingAttribute> à mesma configuração — seu provedor deve lançar uma exceção e interromper a operação.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
-- [Configurações do Aplicativo para Controles Personalizados](application-settings-for-custom-controls.md)
-- [O ClickOnce e as configurações de aplicativo](/visualstudio/deployment/clickonce-and-application-settings)
+- [Visão geral sobre configurações do aplicativo](application-settings-overview.md)
+- [Configurações do aplicativo para controles personalizados](application-settings-for-custom-controls.md)
+- [ClickOnce e configurações de aplicativo](/visualstudio/deployment/clickonce-and-application-settings)
 - [Esquema de configurações de aplicativo](../../configure-apps/file-schema/application-settings-schema.md)

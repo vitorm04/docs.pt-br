@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5cd0e9620250b410e60c1fd378e7525bb2917756
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba4428bad6662928ddc1830c8998dd5f5b6b9bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186570"
 ---
 # <a name="tracing-and-message-logging"></a>Registro de mensagem e rastreamento
 Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. Os rastreamentos resultantes e logs de mensagem são exibidos usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -133,5 +133,6 @@ Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. O
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

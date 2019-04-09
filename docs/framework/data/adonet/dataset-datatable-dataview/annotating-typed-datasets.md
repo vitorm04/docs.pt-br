@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085123"
 ---
 # <a name="annotating-typed-datasets"></a>Anotando DataSets tipados
 As anotações permitem que você modifique os nomes dos elementos em seu <xref:System.Data.DataSet> tipado sem modificar o esquema subjacente. Modificar os nomes dos elementos no esquema subjacente causaria tipado **conjunto de dados** para se referir a objetos que não existe na fonte de dados, bem como de perder uma referência para os objetos que existem na fonte de dados.  
@@ -69,7 +69,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
+|**Propriedade**|PropertyName|typedName|  
 |**Filho** acessador|GetChildTableNameRows|typedChildren|  
 |**Pai** acessador|TableNameRow|typedParent|  
 |**Conjunto de dados** eventos|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -223,8 +223,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Typed DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md) (DataSets tipados)
-- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [DataSets tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

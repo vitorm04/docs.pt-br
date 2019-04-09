@@ -2,12 +2,12 @@
 title: Diagnosticando aplicativos transacionais
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101706"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnosticando aplicativos transacionais
 Este tópico descreve como usar o recurso de diagnóstico e gerenciamento do Windows Communication Foundation (WCF) para solucionar problemas de um aplicativo transacional.  
@@ -95,7 +95,7 @@ Este tópico descreve como usar o recurso de diagnóstico e gerenciamento do Win
   
      Rastreamento de WS-AtomicTransaction pode ser habilitado usando o [WS-AtomicTransaction utilitário de configuração (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Esse rastreamento fornece informações sobre o estado de transações e os participantes dentro de um sistema. Para habilitar o rastreamento interno do modelo de serviço também, você pode definir as `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` chave do registro para um valor válido do <xref:System.Diagnostics.SourceLevels> enumeração. Você pode habilitar o registro em log da mesma forma que outros aplicativos do WCF de mensagem.  
   
--   `System.Transactions` Rastreamento  
+-   `System.Transactions` rastreamento  
   
      Ao usar o protocolo de OleTransactions, mensagens de protocolo não podem ser rastreadas. O suporte de rastreamento a <xref:System.Transactions> fornece infraestrutura (que usa OleTransactions) permite que os usuários visualizem eventos que ocorreram para as transações. Para habilitar o rastreamento para um <xref:System.Transactions> aplicativo, incluem o seguinte código no `App.config` arquivo de configuração.  
   
@@ -121,6 +121,7 @@ Este tópico descreve como usar o recurso de diagnóstico e gerenciamento do Win
      Isso também permite que o rastreamento do WCF, como o WCF também utiliza o <xref:System.Transactions> infraestrutura.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Administração e diagnósticos](../../../../docs/framework/wcf/diagnostics/index.md)
 - [Configurando o rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

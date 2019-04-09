@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um cliente federado'
+title: 'Como: criar um cliente federado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 457c09ec381db97bc757b9288c9d6ebc0890a305
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104319"
 ---
-# <a name="how-to-create-a-federated-client"></a>Como: Criar um cliente federado
+# <a name="how-to-create-a-federated-client"></a>Como: criar um cliente federado
 No Windows Communication Foundation (WCF), criando um cliente para um *serviço federado* consiste em três etapas principais:  
   
 1.  Configurar uma [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou associação personalizada semelhante. Para obter mais informações sobre como criar uma associação apropriada, consulte [como: Criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Como alternativa, execute as [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) contra o ponto de extremidade de metadados do serviço federado para gerar um arquivo de configuração para se comunicar com o serviço federado e um ou mais Serviços de token de segurança.  
@@ -161,10 +161,11 @@ No Windows Communication Foundation (WCF), criando um cliente para um *serviço 
 >  A ideia de cliente de certificados que têm o escopo para um determinado URI só se aplica a aplicativos que estão fazendo chamadas de saída para serviços que expõem pontos de extremidade nesses URIs. Não se aplica a certificados que são usados para assinar tokens emitidos, como aqueles configurados no servidor na coleção retornada pela <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> classe. Para obter mais informações, confira [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exemplo de federação](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Como: Desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Como: Criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Como: Configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Como: desabilitar sessões seguras em uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Como: criar uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Como: configurar credenciais em um serviço de federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: configurar um emissor local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Como: Proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

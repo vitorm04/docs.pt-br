@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9db6b83e2feedd761b95dec455213051e37366e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639cfc514d2a206f0de72db4b0bac02b53305ae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083394"
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>Interface ICorDebugVirtualUnwinder
 Fornece métodos para ajudá-lo desenrolamento de pilha.  
@@ -37,5 +37,6 @@ Fornece métodos para ajudá-lo desenrolamento de pilha.
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

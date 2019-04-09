@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
-ms.openlocfilehash: 3d43524b7141a134b9560e92da66ef2349b8119a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f84cc9336d6cce7d8c477a1feb6caf45b0662177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188468"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 A transação especificada para a operação especificada foi concluída devido a anulação assíncrona.  
@@ -19,6 +19,7 @@ A transação especificada para a operação especificada foi concluída devido 
  Se esse anulação for inesperada, verifique todos os logs de sistema para determinar o motivo real para a anulação.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

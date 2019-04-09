@@ -1,19 +1,19 @@
 ---
-title: 'Como: Ocultar ToolStripMenuItems usando o Designer'
+title: 'Como: Ocultar ToolStripMenuItems usando o designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], hiding menu items in designer
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 2af9f31360f667662d4d640b5e449ff6ee8ce381
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ddfbcbe78cdf8e5b0d126e82189589edef2be58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085682"
 ---
-# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Como: Ocultar ToolStripMenuItems usando o Designer
+# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Como: Ocultar ToolStripMenuItems usando o designer
 Ocultar itens de menu é uma maneira de controlar a interface do usuário (IU) do seu aplicativo e restringir comandos do usuário. Geralmente, é recomendável ocultar um menu inteiro quando todos os itens de menu estão indisponíveis. Isso apresenta menos distrações para o usuário. Além disso, pode ser útil ocultar e desabilitar o menu ou item de menu, visto que apenas ocultar não impede que o usuário acesse um comando de menu usando uma tecla de atalho. Para obter mais informações sobre como desabilitar itens de menu, consulte [como: Desabilitar ToolStripMenuItems usando o Designer](how-to-disable-toolstripmenuitems-using-the-designer.md).  
   
 > [!NOTE]
@@ -35,10 +35,11 @@ Ocultar itens de menu é uma maneira de controlar a interface do usuário (IU) d
      Quando você oculta um item de submenu, ele permanece visível no formulário no tempo de design para que você pode selecioná-lo facilmente para continuar trabalhando nele. Ele será ocultado efetivamente no tempo de execução.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
 - [Visão geral do controle MenuStrip](menustrip-control-overview-windows-forms.md)
-- [Como: Desabilitar ToolStripMenuItems usando o Designer](how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [Como: Desabilitar ToolStripMenuItems usando o designer](how-to-disable-toolstripmenuitems-using-the-designer.md)

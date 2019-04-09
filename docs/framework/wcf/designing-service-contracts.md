@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102733"
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve o que serviço contratos estão, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudam você a criar operações que satisfazem a requisitos do seu cenário.  
@@ -270,12 +270,13 @@ End Interface
  Um resultado disso é que, se os nomes e namespaces não forem definidos explicitamente, o uso de ofuscação de IL em assembly altera os nomes de tipo de contrato e namespaces e resulta em WSDL modificado e trocas de transmissão que normalmente falham. Se você não definir os nomes de contrato e os namespaces explicitamente, mas pretende usar ofuscação, use o <xref:System.Reflection.ObfuscationAttribute> e <xref:System.Reflection.ObfuscateAssemblyAttribute> nomes e namespaces de tipo de atributos para impedir a modificação do contrato.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar um contrato de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Como: Criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Como: Criar um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+
+- [Como: criar um contrato de resposta/solicitação](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Como: criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Como: criar um contrato duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Especificando transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Usando sessões](../../../docs/framework/wcf/using-sessions.md)
+- [Utilizando sessões](../../../docs/framework/wcf/using-sessions.md)
 - [Operações síncronas e assíncronas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Serviços confiáveis](../../../docs/framework/wcf/reliable-services.md)
 - [Serviços e transações](../../../docs/framework/wcf/services-and-transactions.md)

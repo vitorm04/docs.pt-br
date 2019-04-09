@@ -2,12 +2,12 @@
 title: <transport> De <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188793"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transporte > de \<netHttpBinding >
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
@@ -80,7 +80,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Define os recursos de segurança para o [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Define os recursos de segurança para o [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o uso da segurança de transporte SSL com a associação básica. Por padrão, a associação básica oferece suporte à comunicação HTTP.  
@@ -118,6 +118,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>

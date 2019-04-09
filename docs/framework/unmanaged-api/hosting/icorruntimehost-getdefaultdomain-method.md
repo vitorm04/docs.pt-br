@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3880c1bf9cb1417953818551f802fb78773952d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 41a6c5ee73cad77368e83792d11d455d8fb163fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106165"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>Método ICorRuntimeHost::GetDefaultDomain
 Obtém um ponteiro de interface do tipo <xref:System._AppDomain?displayProperty=nameWithType> que representa o domínio padrão para o processo atual.  
@@ -60,6 +60,7 @@ HRESULT GetDefaultDomain (
  **Versões do .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

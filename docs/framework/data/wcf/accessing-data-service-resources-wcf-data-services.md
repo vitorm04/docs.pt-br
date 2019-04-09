@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085857"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acessando recursos do serviço de dados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oferece suporte a [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor seus dados como um feed com recursos que são endereçáveis por URIs. Esses recursos são representados de acordo com as convenções de relacionamento entre entidades do [modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md). Nesse modelo, as entidades representam unidades operacionais de dados que são tipos de dados em um domínio de aplicativo, como clientes, pedidos, itens e classes. Os dados de entidades são acessados e alterados usando-se a semântica REST (transferência de estado representativo), especificamente os verbos HTTP padrão GET, PUT, POST e DELETE.  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  O URI de um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] recurso permite que você expostos pelo serviço de dados de entidade de endereço. Quando você insere um URI no campo de endereço de um navegador da Web, um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] representação de feed do recurso solicitado é retornada. Para obter mais informações, consulte o [WCF Services Data Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Embora um navegador da Web pode ser útil para testar se um recurso de serviço de dados retorna os dados esperados, serviços de dados de produção que podem criar, atualizar e excluir dados também são geralmente acessados pelo código do aplicativo ou linguagens de script em uma página da Web. Para obter mais informações, consulte [usando um serviço de dados em um aplicativo cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Site do Protocolo Open Data](https://go.microsoft.com/fwlink/?LinkID=182204)
+
+- [Site do protocolo Open Data](https://go.microsoft.com/fwlink/?LinkID=182204)

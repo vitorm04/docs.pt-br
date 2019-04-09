@@ -1,18 +1,18 @@
 ---
-title: 'Como: Navegar em relações com o operador navegar'
+title: 'Como: navegar em relações com o operador navegar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: 04114a0dd855d6543b238111d745eb386d4d2988
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e5b7ba8ab6dc0d144ea57598c38ba8d1bbd5dc1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085279"
 ---
-# <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>Como: Navegar em relações com o operador navegar
+# <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>Como: navegar em relações com o operador navegar
 Este tópico mostra como executar um comando em um modelo conceitual usando um objeto de <xref:System.Data.EntityClient.EntityCommand> , e como recuperar <xref:System.Data.Metadata.Edm.RefType> resultados usando <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para executar o código nesse exemplo  
@@ -31,5 +31,6 @@ Este tópico mostra como executar um comando em um modelo conceitual usando um o
  [!code-vb[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#navigatewithnavoperatorwithentitycommand)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Provedor EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
-- [Entity SQL Language](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) (Linguagem SQL de entidade)
+- [Linguagem Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

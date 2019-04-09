@@ -1,5 +1,5 @@
 ---
-title: 'Como: Restringir o acesso com a PrincipalPermissionAttribute Class'
+title: 'Como: restringir o acesso com a classe PrincipalPermissionAttribute'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105281"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Como: Restringir o acesso com a PrincipalPermissionAttribute Class
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Como: restringir o acesso com a classe PrincipalPermissionAttribute
 Controlando o acesso aos recursos em um computador de domínio do Windows é uma tarefa básica de segurança. Por exemplo, somente determinados usuários devem ser capazes de exibir dados confidenciais, como informações de folha de pagamento. Este tópico explica como restringir o acesso a um método exigindo que o usuário pertencer a um grupo predefinido. Para obter um exemplo funcional, consulte [autorizando o acesso a operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  A tarefa consiste em dois procedimentos separados. O primeiro cria o grupo e a preenche com os usuários. A segunda se aplica a <xref:System.Security.Permissions.PrincipalPermissionAttribute> classe para especificar o grupo.  
@@ -85,10 +85,11 @@ Controlando o acesso aos recursos em um computador de domínio do Windows é uma
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [Autorizando o acesso a operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [Autorizando o acesso às operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
 - [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)

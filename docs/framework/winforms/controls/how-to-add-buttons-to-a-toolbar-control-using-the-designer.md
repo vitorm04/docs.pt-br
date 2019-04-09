@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar botões a um controle de barra de ferramentas usando o Designer'
+title: 'Como: Adicionar botões a um controle ToolBar usando o designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084018"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Como: Adicionar botões a um controle de barra de ferramentas usando o Designer
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Como: Adicionar botões a um controle ToolBar usando o designer
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.ToolStrip> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ToolBar>, no entanto, o controle <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
@@ -48,8 +48,9 @@ ms.locfileid: "57702835"
 5.  Clique em **OK** para fechar a caixa de diálogo e criar os painéis que você especificou.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolBar>
 - [Como: Definir um ícone para um botão de barra de ferramentas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Como: Disparar eventos de Menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Visão geral do controle de barra de ferramentas](toolbar-control-overview-windows-forms.md)
-- [Controle de barra de ferramentas](toolbar-control-windows-forms.md)
+- [Como: Disparar eventos de menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Visão geral do controle ToolBar](toolbar-control-overview-windows-forms.md)
+- [Controle ToolBar](toolbar-control-windows-forms.md)

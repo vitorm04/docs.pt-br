@@ -1,18 +1,18 @@
 ---
-title: 'Como: Resolver conflitos substituindo valores de banco de dados'
+title: 'Como: resolver conflitos substituindo valores de banco de dados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 38129996949bcfbd938038743897d1db5910fdfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189112"
 ---
-# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Como: Resolver conflitos substituindo valores de banco de dados
+# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Como: resolver conflitos substituindo valores de banco de dados
 Para reconciliar diferenças entre valores esperados e reais de base de dados antes que você submeter tente novamente suas alterações, você pode usar <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> para substituir valores de base de dados. Para obter mais informações, consulte [a simultaneidade otimista: Visão geral do](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -41,4 +41,5 @@ Para reconciliar diferenças entre valores esperados e reais de base de dados an
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Como: gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

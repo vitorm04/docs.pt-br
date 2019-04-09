@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105320"
 ---
 # <a name="toolbar-overview"></a>Visão geral de ToolBar
 <xref:System.Windows.Controls.ToolBar> os controles são contêineres para um grupo de comandos ou controles que geralmente são relacionados em sua função. Um <xref:System.Windows.Controls.ToolBar> geralmente contém botões que invocam comandos.  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>Controle ToolBar  
  O <xref:System.Windows.Controls.ToolBar> controle recebe seu nome da organização de semelhante a barra de botões ou outros controles em uma única linha ou coluna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> os controles fornecem um mecanismo de estouro que coloca os itens que não cabem naturalmente em uma restrição de tamanho <xref:System.Windows.Controls.ToolBar> em uma área de estouro especial. Além disso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> controles normalmente são usados com relacionado <xref:System.Windows.Controls.ToolBarTray> controle, que fornece comportamento especial de layout, bem como suporte para iniciada pelo usuário dimensionamento e disposição de barras de ferramentas.  
@@ -41,7 +40,8 @@ ms.locfileid: "58464951"
  [Estilos e modelos de ToolBar](toolbar-styles-and-templates.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [Moldar os controles em um ToolBar](how-to-style-controls-on-a-toolbar.md)
-- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Exemplo da Galeria de controles do WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

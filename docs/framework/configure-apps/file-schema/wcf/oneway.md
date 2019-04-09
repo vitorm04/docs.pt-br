@@ -2,12 +2,12 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: 35631cc4b120169e0cadb80c6beba26ab9eafd7a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bfda2b9d7b3aa5219a3e4c344347d3b10419a7bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102408"
 ---
 # <a name="oneway"></a>\<oneWay>
 Habilita o roteamento de pacotes e o uso de métodos unidirecionais para uma associação personalizada.  
@@ -54,6 +54,7 @@ Habilita o roteamento de pacotes e o uso de métodos unidirecionais para uma ass
  Para habilitar o roteamento de pacotes, uma camada de conversão unidirecional é necessária, que fornece esse elemento. Um usuário pode criar uma ligação personalizada que esta associação de camadas em um transporte para torná-lo pacote roteável de reconhecimento de sessão ou de solicitação-resposta. Esse elemento também é útil quando você deseja expor métodos unidirecionais de forma mais nativa. Mais transformações podem ser aplicadas nessa camada, como Duplex composto e sistema de mensagens confiável.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.OneWayBindingElement>
 - <xref:System.ServiceModel.Configuration.OneWayElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

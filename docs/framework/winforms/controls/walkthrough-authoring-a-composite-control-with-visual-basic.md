@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando um controle composto com o Visual Basic'
+title: 'Passo a passo: Criar um controle composto com o Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: 5eaa92b6294ebf849f005f6e12d2dacb43fa4d6c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186102"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Passo a passo: Criando um controle composto com o Visual Basic
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Passo a passo: Criar um controle composto com o Visual Basic
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 2.  Na lista de projetos do Visual Basic, selecione a **biblioteca de controle do Windows** modelo de projeto, digite `ctlClockLib` no **nome** caixa e, em seguida, clique em **Okey**.  
   
-     O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecem componentes chamados `ctlClock`, será possível especificar o componente `ctlClock` usando `ctlClockLib.ctlClock.`  
+     O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecerem componentes chamados `ctlClock`, você pode especificar seu `ctlClock` usando o componente `ctlClockLib.ctlClock.`  
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.vb** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.vb`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.  
   
@@ -396,6 +396,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
      Este passo a passo abordou alguns dos principais conceitos. Você aprendeu a criar um controle de composição, combinando controles e componentes em um contêiner de controle de composição. Você aprendeu a adicionar propriedades ao controle e a escrever um código para implementar a funcionalidade personalizada. Na última seção, você aprendeu a estender a funcionalidade de determinado controle de composição por meio da herança e a alterar a funcionalidade dos métodos do host ao substituí-los.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
 - [Como: Criar controles compostos](how-to-author-composite-controls.md)
-- [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

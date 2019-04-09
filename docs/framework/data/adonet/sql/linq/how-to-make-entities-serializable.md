@@ -1,15 +1,15 @@
 ---
-title: 'Como: Tornar entidades serializáveis'
+title: 'Como: tornar a entidades serializáveis'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
-ms.openlocfilehash: 9b4ff81b4a779b474097de1a69e65f4864e08691
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbe40ec448bef5f62d4182d96f82c6308639e27f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086761"
 ---
-# <a name="how-to-make-entities-serializable"></a>Como: Tornar entidades serializáveis
+# <a name="how-to-make-entities-serializable"></a>Como: tornar a entidades serializáveis
 Você pode fazer entidades serializável quando você gerenciar seu código. Classes de entidade são decoradas com o atributo de <xref:System.Runtime.Serialization.DataContractAttribute> , e colunas com o atributo de <xref:System.Runtime.Serialization.DataMemberAttribute> .  
   
  Os desenvolvedores usando o Visual Studio podem usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para essa finalidade.  
@@ -28,5 +28,6 @@ sqlmetal /code:nwserializable.cs /language:csharp "c:\northwnd.mdf" /sprocs /fun
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Serialização](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)
 - [Criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)

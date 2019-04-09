@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 94a708ca33aa94c7a0143d195803d17d49be4bdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086241"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Provedor de Entity Framework (WCF Data Services)
 Como o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], o ADO.NET Entity Framework é baseado no Modelo de Dados de Entidade, que é um tipo de modelo de relação entre entidades. O Entity Framework converte operações com sua implementação do modelo de dados de entidade, que é chamado de *modelo conceitual*, em operações equivalentes em uma fonte de dados. Isso torna a Entity Framework um provedor ideal para os serviços de dados que são baseados em dados relacionais, e qualquer banco de dados que tem um provedor de dados que dá suporte a Entity Framework pode ser usado com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obter uma lista das fontes de dados que oferecem suporte ao Entity Framework, consulte [provedores de terceiros para o Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -21,6 +21,7 @@ Como o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], o ADO.NET En
  Para saber mais sobre o Entity Framework, consulte [visão geral do Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+
+- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -2,12 +2,12 @@
 title: AGRUPAR POR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081912"
 ---
 # <a name="group-by-entity-sql"></a>AGRUPAR POR (Entity SQL)
 Especifica os grupos nos quais os objetos retornados por uma consulta ([selecionar](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expressão devem ser colocados.  
@@ -20,7 +20,7 @@ Especifica os grupos nos quais os objetos retornados por uma consulta ([selecion
   
 ## <a name="arguments"></a>Arguments  
  `aliasedExpression`  
- Qualquer expressão de consulta válida em que o agrupamento for executado. `expression` pode ser uma propriedade ou uma expressão de não agregação que referencia uma propriedade retornada pela cláusula. Cada expressão em um cláusula GROUP BY deve ser avaliada como um tipo que pode ser comparado para igualdade. Esses tipos são geralmente primitivos escalares como números, cadeias de caracteres, e datas. Você não pode agrupar por uma coleção.  
+ Qualquer expressão de consulta válida em que o agrupamento for executado. `expression` pode ser uma propriedade ou uma expressão de não agregação que referencia uma propriedade retornada pela cláusula FROM. Cada expressão em um cláusula GROUP BY deve ser avaliada como um tipo que pode ser comparado para igualdade. Esses tipos são geralmente primitivos escalares como números, cadeias de caracteres, e datas. Você não pode agrupar por uma coleção.  
   
 ## <a name="remarks"></a>Comentários  
  Se as funções de agregação são incluídas na cláusula SELECT \<lista select >, GROUP BY calcula um valor resumido para cada grupo. Quando o GRUPO é especificado PERTO, ou cada nome de propriedade em qualquer expressão de nonaggregate na lista select deve ser incluído na lista GRUPO, ou o GROUP BY expressão deve coincidir exatamente com a expressão selecionar a lista.  
@@ -69,5 +69,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Expressões de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

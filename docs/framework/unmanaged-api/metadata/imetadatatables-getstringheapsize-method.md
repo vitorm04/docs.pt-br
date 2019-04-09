@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a46f7b277987df7e15eb2d534d1bbacc3250f4e1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8fe6559eca2fef1c9481c8996b19ffb8a08c6019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080027"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>Método IMetaDataTables::GetStringHeapSize
 Obtém o tamanho, em bytes, do heap de cadeia de caracteres.  
@@ -49,5 +49,6 @@ HRESULT GetStringHeapSize (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

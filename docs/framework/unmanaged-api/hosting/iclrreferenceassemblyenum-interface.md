@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9f2f2a31247bae19d3cbb3dc667007c1cbc8acb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187390"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>Interface ICLRReferenceAssemblyEnum
 Fornece métodos que permitem que o host manipular o conjunto de assemblies referenciados por um arquivo ou fluxo usando os dados de identidade do assembly que é internos para o common language runtime (CLR), sem a necessidade de criar ou entender essas identidades.  
@@ -42,6 +42,7 @@ Fornece métodos que permitem que o host manipular o conjunto de assemblies refe
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [Interface ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
