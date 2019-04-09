@@ -2,12 +2,12 @@
 title: Tipos conhecidos
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: d43cdd9fff58a7918aa98616bb4195183cf3be48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2d2818dc78829bd201aeeba9b0df1d2f3b356250
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203594"
 ---
 # <a name="known-types"></a>Tipos conhecidos
 Este exemplo demonstra como especificar informações sobre tipos derivados em um contrato de dados. Contratos de dados permitem que você passe dados estruturados para e de serviços. Na programação orientada a objeto, um tipo que herda de outro tipo pode ser usado no lugar do tipo original. Na programação orientada a serviços, esquemas, em vez de tipos são comunicados e, portanto, a relação entre tipos não é preservada. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo permite que as informações sobre tipos derivados para ser incluído no contrato de dados. Se esse mecanismo não é usado, um tipo derivado não pode ser enviado ou recebido em que um tipo base é esperado.  
@@ -170,4 +170,3 @@ No magnitude was sent from the service
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
-  

@@ -1,17 +1,17 @@
 ---
-title: 'Como: Usar gatilhos para criar itens selecionados em um ListView'
+title: 'Como: Usar gatilhos para moldar itens selecionados em um ListView'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
-ms.openlocfilehash: 8c2d4adb2471c0f1891288573ce6b6460b20151d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145399"
 ---
-# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Como: Usar gatilhos para criar itens selecionados em um ListView
+# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Como: Usar gatilhos para moldar itens selecionados em um ListView
 Este exemplo mostra como definir <xref:System.Windows.Style.Triggers%2A> para um <xref:System.Windows.Controls.ListViewItem> controle, de modo que quando um valor de propriedade de um <xref:System.Windows.Controls.ListViewItem> alterações, o <xref:System.Windows.Style> do <xref:System.Windows.Controls.ListViewItem> alterações na resposta.  
   
 ## <a name="example"></a>Exemplo  
@@ -30,9 +30,10 @@ Este exemplo mostra como definir <xref:System.Windows.Style.Triggers%2A> para um
 [!code-xaml[ListViewChkBox#ListViewItemTriggersEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#listviewitemtriggersend)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Tópicos de instruções](listview-how-to-topics.md)
+- [Tópicos explicativos ](listview-how-to-topics.md)
 - [Visão geral de ListView](listview-overview.md)
 - [Visão geral de GridView](gridview-overview.md)

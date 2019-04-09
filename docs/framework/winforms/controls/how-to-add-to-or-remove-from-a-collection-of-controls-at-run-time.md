@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar ou remover de uma coleção de controles em tempo de execução'
+title: 'Como: Adicionar a ou remover de uma coleção de controles em tempo de execução'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143137"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Como: Adicionar ou remover de uma coleção de controles em tempo de execução
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Como: Adicionar a ou remover de uma coleção de controles em tempo de execução
 Tarefas comuns no desenvolvimento de aplicativos são adicionar controles para e remover controles de qualquer controle de contêiner em formulários (como o <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> controle ou até mesmo o próprio formulário). Em tempo de design, controles podem ser arrastados diretamente para um painel ou caixa de grupo. Em tempo de execução, esses controles mantêm uma coleção `Controls`, que mantém o controle de quais controles são colocados neles.  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionar controles para e
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Panel>
 - [Controle de painel](panel-control-windows-forms.md)

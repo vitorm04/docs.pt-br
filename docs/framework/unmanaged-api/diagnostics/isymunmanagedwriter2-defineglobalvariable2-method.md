@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 067be401b793c227d8b5caa2706f84a59d3a09df
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145217"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>Método ISymUnmanagedWriter2::DefineGlobalVariable2
 Define uma única variável global.  
@@ -69,5 +69,6 @@ HRESULT DefineGlobalVariable2(
  **Cabeçalho:** CorSym.idl  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [Método DefineGlobalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

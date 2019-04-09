@@ -1,18 +1,18 @@
 ---
-title: Paginação por meio de um resultado de consulta
+title: Paginação por um resultado de consulta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 11bf7e1021c3bb65e4d736e83d2631ae05c274f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140316"
 ---
-# <a name="paging-through-a-query-result"></a>Paginação por meio de um resultado de consulta
+# <a name="paging-through-a-query-result"></a>Paginação por um resultado de consulta
 Paginação por meio de um resultado de consulta é o processo de retornar os resultados de uma consulta em subconjuntos menores de dados ou páginas. Essa é uma prática comum para exibir os resultados a um usuário em partes de pequeno e fácil de gerenciar.  
   
  O **DataAdapter** fornece um recurso para retornar apenas uma página de dados, por meio de sobrecargas da **preencher** método. No entanto, isso pode não ser a melhor opção para paginação de resultados de consultas grandes, porque, embora o **DataAdapter** preenche o destino <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> com apenas os registros solicitados, os recursos para retornar o toda consulta ainda são usados. Para retornar uma página de dados de uma fonte de dados sem o uso de recursos para retornar a consulta inteira, especifica critérios adicionais para sua consulta, o que reduz as linhas retornadas a apenas aqueles necessários.  
@@ -124,5 +124,6 @@ adapter.Fill(dataSet, "Orders");
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

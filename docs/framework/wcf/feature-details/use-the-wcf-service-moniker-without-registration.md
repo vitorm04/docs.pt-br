@@ -1,17 +1,17 @@
 ---
-title: 'Como: Use o Moniker de serviço do Windows Communication Foundation sem registro'
+title: 'Como: usar o moniker de serviço do Windows Communication Foundation sem registro'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203971"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Como: Use o Moniker de serviço do Windows Communication Foundation sem registro
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Como: usar o moniker de serviço do Windows Communication Foundation sem registro
 Para conectar e se comunicar com um serviço do Windows Communication Foundation (WCF), um aplicativo de cliente do WCF deve ter os detalhes do contrato de serviço, a configuração de associação e o endereço do serviço.  
   
  Geralmente, o moniker de serviço do WCF obtém o contrato exigido por meio do registro anterior dos tipos de atributo necessário, mas pode haver casos em que isso não é viável. No lugar do registro, o moniker pode obter a definição do contrato na forma de um documento WSDL Web Services Definition Language (), com o uso do `wsdl` parâmetro ou por meio da troca de metadados, através do uso do `mexAddress` parâmetro.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Se o moniker está mal formado ou se o serviço está indisponível, a chamada para `GetObject` retornará um erro dizendo "Sintaxe inválida". Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Registrar e configurar um Moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Como: registrar e configurar um moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

@@ -2,12 +2,12 @@
 title: Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: e590302c2bf82db2b584fcc21f94d078f7c07712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4c331465087c6910cb67a71d2153e08f82a6cd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147700"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configurando o Serviço de ativação de processos do Windows (WAS) para utilizar com o Windows Communication Foundation
 Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) no [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar o Windows Communication Foundation (WCF) protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
@@ -97,5 +97,6 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
  Para obter instruções detalhadas sobre a criação de um serviço WCF ativado pelo WAS, consulte [como: Hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Hosting in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)
-- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+
+- [Hospedagem no serviço de ativação do processo do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

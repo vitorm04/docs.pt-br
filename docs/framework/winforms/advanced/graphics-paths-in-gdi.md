@@ -1,5 +1,5 @@
 ---
-title: Caminhos de elementos gráficos no GDI+
+title: demarcadores de elementos gráficos no GDI+
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140498"
 ---
-# <a name="graphics-paths-in-gdi"></a>Caminhos de elementos gráficos no GDI+
+# <a name="graphics-paths-in-gdi"></a>demarcadores de elementos gráficos no GDI+
 Os demarcadores são formados combinando linhas, retângulos e curvas simples. Lembre-se do [visão geral de elementos gráficos vetoriais](vector-graphics-overview.md) que os seguintes blocos de construção básicos provaram para ser mais útil para desenhar imagens:  
   
 -   Linhas  
@@ -67,8 +67,9 @@ Os demarcadores são formados combinando linhas, retângulos e curvas simples. L
  ![Demarcadores](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
-- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
-- [Como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
+- [Linhas, curvas e formas](lines-curves-and-shapes.md)
+- [Como: criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
 - [Construindo e desenhando demarcadores](constructing-and-drawing-paths.md)

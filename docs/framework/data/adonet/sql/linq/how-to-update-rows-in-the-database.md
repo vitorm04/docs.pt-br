@@ -1,18 +1,18 @@
 ---
-title: 'Como: Atualizar linhas no banco de dados'
+title: 'Como: atualizar linhas no banco de dados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: bfe01c4c54ac1d73ec806fb79730882458a87dac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091182"
 ---
-# <a name="how-to-update-rows-in-the-database"></a>Como: Atualizar linhas no banco de dados
+# <a name="how-to-update-rows-in-the-database"></a>Como: atualizar linhas no banco de dados
 Você pode atualizar linhas em um banco de dados modificando valores membro dos objetos associados a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> coleção e, em seguida, enviar as alterações no banco de dados. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte suas alterações em apropriados do SQL `UPDATE` comandos.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ Você pode atualizar linhas em um banco de dados modificando valores membro dos 
  [!code-vb[System.Data.Linq.Table#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Como: gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [Realizando e enviando alterações de dados](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Fazendo e enviando alterações de dados](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

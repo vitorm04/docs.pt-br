@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar um ponto de extremidade de serviço no código'
+title: 'Como: criar um ponto de extremidade de serviço em código'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b51018a5940e01b38b00addb762fa6504495a4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139861"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Como: Criar um ponto de extremidade de serviço no código
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Como: criar um ponto de extremidade de serviço em código
 Neste exemplo, uma `ICalculator` contrato é definido para um serviço de Calculadora e, em seguida, o serviço é implementado de `CalculatorService` classe e, em seguida, seu ponto de extremidade é definido no código, onde ele é especificado que o serviço deve usar o <xref:System.ServiceModel.BasicHttpBinding> classe.  
   
  Ele geralmente é a prática recomendada para especificar declarativamente as informações de endereço e associação na configuração em vez de imperativa no código. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. De modo geral, informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar ou reimplantar o aplicativo.  
@@ -47,4 +47,5 @@ Neste exemplo, uma `ICalculator` contrato é definido para um serviço de Calcul
      Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificado](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Especificar uma associação de serviço no código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+
+- [Como: especificar uma associação de serviço no código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

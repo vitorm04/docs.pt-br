@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203620"
 ---
 # <a name="application-settings-overview"></a>Visão geral sobre configurações do aplicativo
 Este tópico discute como criar e armazenar dados de configuração em nome de seu aplicativo e seus usuários.  
@@ -48,13 +48,14 @@ Este tópico discute como criar e armazenar dados de configuração em nome de s
  Você também pode usar o <xref:System.Windows.Forms.Binding> classe para associar as configurações programaticamente a propriedades em formulários e controles.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Como: Validar configurações do aplicativo](how-to-validate-application-settings.md)
+- [Como: validar configurações de aplicativo](how-to-validate-application-settings.md)
 - [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Como: Ler configurações em tempo de execução comC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Como: ler configurações em tempo de execução com C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Usando configurações do aplicativo e configurações do usuário](using-application-settings-and-user-settings.md)
-- [Arquitetura das Configurações do Aplicativo](application-settings-architecture.md)
-- [Configurações do Aplicativo para Controles Personalizados](application-settings-for-custom-controls.md)
+- [Arquitetura das configurações do aplicativo](application-settings-architecture.md)
+- [Configurações do aplicativo para controles personalizados](application-settings-for-custom-controls.md)

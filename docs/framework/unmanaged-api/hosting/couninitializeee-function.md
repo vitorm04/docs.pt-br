@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c4e22c2e80af37177294d86c2e5775a5c296fe7
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 7b3712b4cb66facc105a03d7bfad235f09339056
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192999"
 ---
 # <a name="couninitializeee-function"></a>Função CoUninitializeEE
 `CoUninitializeEE` é obsoleto e não fornece nenhuma funcionalidade.  
@@ -39,5 +39,6 @@ void CoUninitializeEE (
  O mecanismo de execução do common language runtime não pode ser descarregado de um processo. Para desligar a chamada de mecanismo de execução [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Função CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
 - [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

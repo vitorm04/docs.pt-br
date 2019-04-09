@@ -1,18 +1,18 @@
 ---
-title: 'Como: Altere o valor de uma configuração existente em tempo de Design'
+title: 'Como: alterar o valor de uma configuração existente em tempo de design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194234"
 ---
-# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Como: Altere o valor de uma configuração existente em tempo de Design
+# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Como: alterar o valor de uma configuração existente em tempo de design
 Você pode usar o Visual Studio para editar os valores das configurações existentes em seu projeto.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Para alterar o valor de uma configuração existente em tempo de Design em C\#
@@ -32,6 +32,7 @@ Você pode usar o Visual Studio para editar os valores das configurações exist
 3.  No Settings designer, localize a configuração para o qual você deseja alterar o valor e digite o novo valor na coluna de valor.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando configurações do aplicativo e configurações do usuário](using-application-settings-and-user-settings.md)
-- [Como: Criar uma nova configuração em tempo de Design](how-to-create-a-new-setting-at-design-time.md)
-- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
+- [Como: criar uma nova configuração em tempo de design](how-to-create-a-new-setting-at-design-time.md)
+- [Visão geral sobre configurações do aplicativo](application-settings-overview.md)

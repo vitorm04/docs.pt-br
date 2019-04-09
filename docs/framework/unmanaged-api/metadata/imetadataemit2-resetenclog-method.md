@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24ecc46d1ca3ef24abd6f9bc0308fc460256c6ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bae4dccacfa092243c7e0b1a2e6daad92b51d933
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090375"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>Método IMetaDataEmit2::ResetENCLog
 Redefine o log de editar e continuar e inicia uma nova sessão.  
@@ -46,5 +46,6 @@ HRESULT ResetENCLog ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

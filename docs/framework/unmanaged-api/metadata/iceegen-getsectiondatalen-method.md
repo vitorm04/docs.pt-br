@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3983916f56e8451e7628db3902001bd13f503114
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ca01f78cf46d4f7543b949c820eb6b1971687e23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198706"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>Método ICeeGen::GetSectionDataLen
 Obtém o comprimento da seção especificada.  
@@ -58,4 +58,5 @@ HRESULT GetSectionDataLen (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

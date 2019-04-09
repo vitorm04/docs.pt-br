@@ -1,5 +1,5 @@
 ---
-title: 'Como: Habilitar a reorganização de colunas no controle DataGridView dos Windows Forms'
+title: 'Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: c34807cc1d2a569068ba82479e3a2bf230f4f2c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 625c4987a45ed3749284e7abc7b6cde6d24821ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161467"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Como: Habilitar a reorganização de colunas no controle DataGridView dos Windows Forms
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms
 Quando você habilitar a reorganização da coluna no <xref:System.Windows.Forms.DataGridView> controle, os usuários podem mover uma coluna para uma nova posição, arrastando o cabeçalho de coluna com o mouse. No <xref:System.Windows.Forms.DataGridView> controle, o <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> valor da propriedade determina se os usuários podem mover colunas em diferentes posições.  
   
  Há suporte para esta tarefa no Visual Studio.  Consulte também [como: Habilitar a reorganização da coluna em que o Windows Forms usando o Designer de controle de DataGridView](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
@@ -36,7 +36,8 @@ Quando você habilitar a reorganização da coluna no <xref:System.Windows.Forms
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Como: Congelar colunas no controle DataGridView dos Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [Funcionalidades de coluna, linha e célula básicas no controle DataGridView dos Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Como: Congelar colunas no controle DataGridView do Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

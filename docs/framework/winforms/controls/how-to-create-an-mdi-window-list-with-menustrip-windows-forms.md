@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe84ccb30b13b8232172749454bf8f3625269ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139198"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Como: Criar uma lista de janelas MDI com MenuStrip (Windows Forms)
 Use a interface MDI para criar aplicativos que podem abrir vários documentos no mesmo momento e copie e cole o conteúdo de um documento para outro.  
@@ -30,11 +30,11 @@ Use a interface MDI para criar aplicativos que podem abrir vários documentos no
   
 4.  Adicionar um item de submenu para o `&File` item de menu e defina seu <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade para `&Open`.  
   
-5.  Defina a <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade do <xref:System.Windows.Forms.MenuStrip> para o `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+5.  Defina a <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade do <xref:System.Windows.Forms.MenuStrip> para o `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 6.  Adicione um formulário ao projeto e adicionar o controle desejado, como outro <xref:System.Windows.Forms.MenuStrip>.  
   
-7.  Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+7.  Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 8.  No manipulador de eventos, insira um código semelhante ao seguinte para criar e exibir novas instâncias de `Form2` como filhos MDI de `Form1`.  
   
@@ -61,7 +61,7 @@ Use a interface MDI para criar aplicativos que podem abrir vários documentos no
     }  
     ```  
   
-9. Coloque o código semelhante ao seguinte na `&New` <xref:System.Windows.Forms.ToolStripMenuItem> para registrar o manipulador de eventos.  
+9. Coloque o código semelhante ao seguinte no `&New`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar o manipulador de eventos.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -82,6 +82,7 @@ Use a interface MDI para criar aplicativos que podem abrir vários documentos no
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Como: Criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)
+
+- [Como: criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Como: criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)
 - [Controle MenuStrip](menustrip-control-windows-forms.md)

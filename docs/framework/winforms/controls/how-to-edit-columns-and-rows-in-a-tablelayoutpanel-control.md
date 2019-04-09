@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201956"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Como: Editar colunas e linhas em um controle TableLayoutPanel
 Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutPanel> controle, chamado de **estilos de linha e coluna** caixa de diálogo para editar as linhas e colunas dos controles.  
@@ -44,5 +44,6 @@ Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutP
 8.  Para remover uma linha ou coluna, clique no botão **Remover** para excluir o item selecionado no momento na lista **Membro**.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SizeType>
 - [Controle TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

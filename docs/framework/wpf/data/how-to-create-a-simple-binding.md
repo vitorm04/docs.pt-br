@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094379"
 ---
 # <a name="how-to-create-a-simple-binding"></a>Como: Criar uma associação simples
 Este exemplo mostra como criar um simples <xref:System.Windows.Data.Binding>.  
@@ -26,5 +26,6 @@ Este exemplo mostra como criar um simples <xref:System.Windows.Data.Binding>.
  A linha realçada que contém o `<TextBlock>` , em seguida, associa um elemento de <xref:System.Windows.Controls.TextBlock> o controle para o `PersonName` propriedade. Como resultado, o <xref:System.Windows.Controls.TextBlock> aparece com o valor "Joe".  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

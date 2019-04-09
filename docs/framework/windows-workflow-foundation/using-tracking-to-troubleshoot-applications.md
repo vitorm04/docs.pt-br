@@ -2,12 +2,12 @@
 title: Usando o controle para solucionar problemas de aplicativos
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142058"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usando o controle para solucionar problemas de aplicativos
 Windows Workflow Foundation (WF) permite que você rastrear informações relacionadas ao fluxo de trabalho para fornecer detalhes de execução de um aplicativo do Windows Workflow Foundation ou o serviço. Hosts do Windows Workflow Foundation são capazes de capturar eventos de fluxo de trabalho durante a execução de uma instância de fluxo de trabalho. Se seu fluxo de trabalho gerencia falhas ou exceções, você pode usar o Windows Workflow Foundation acompanha detalhes a solucionar seu processamento.  
@@ -52,5 +52,6 @@ Windows Workflow Foundation (WF) permite que você rastrear informações relaci
  Se você estiver ativado usando o participante de rastreamento de ETW, os eventos de falha são emitidas a uma sessão de ETW. Eventos podem ser exibidos usando o visualizador de eventos do visualizador de eventos. Isso pode ser encontrado sob o nó **Visualizador de eventos -> aplicativos e Logs de serviços -> Microsoft -> Windows -> aplicativos de servidor** no canal analítico.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)

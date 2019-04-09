@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93a8c8650822c5d986e21a456d58b2dc0327f05b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bd16db8c009fe81f2674a8bf9c7ad3a2a4827777
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092845"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>Método ICorDebugNativeFrame::CanSetIP
 Obtém um HRESULT que indica se é seguro definir o ponteiro de instrução (IP) para o local de deslocamento especificado em código nativo.  
@@ -52,4 +52,3 @@ HRESULT CanSetIP (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-

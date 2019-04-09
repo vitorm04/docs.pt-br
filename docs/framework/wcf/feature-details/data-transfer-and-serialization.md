@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088399"
 ---
 # <a name="data-transfer-and-serialization"></a>Serialização e transferência de dados
 Em um sistema conectado, o serviços e clientes dependem da troca de dados para realizar qualquer tarefa. Como desenvolvedor de um serviço ou cliente, você também deve entender como o Windows Communication Foundation (WCF) trata os dados e serialização de dados para criar aplicativos que são eficientes e fáceis de manter.  
@@ -28,7 +28,7 @@ Em um sistema conectado, o serviços e clientes dependem da troca de dados para 
  [Usando a classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
  Descreve como e por que usar o <xref:System.Xml.Serialization.XmlSerializer> classe, uma alternativa para o <xref:System.Runtime.Serialization.DataContractSerializer> classe.  
   
- [Usando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
+ [Utilizando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
  Descreve como contratos de mensagem permitem que o controle refinado sobre as mensagens SOAP.  
   
  [Usando a classe de mensagens](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
@@ -40,7 +40,7 @@ Em um sistema conectado, o serviços e clientes dependem da troca de dados para 
  [Dados grandes e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  Descreve como enviar um grande bloco de dados, como um arquivo binário.  
   
- [Considerações sobre segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [Considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  Descreve os itens a serem observadas ao programar a serialização e transferência de dados.  
   
  [Visão geral da arquitetura de transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
@@ -61,5 +61,6 @@ Em um sistema conectado, o serviços e clientes dependem da troca de dados para 
  [Estendendo codificadores e serializadores](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Práticas recomendadas: Controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+
+- [Melhores práticas: Controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Controle de versão de serviço](../../../../docs/framework/wcf/service-versioning.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 7da0522dae00608ead356484a31d219a67ec4ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090557"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>Visão geral do componente ContextMenu (Windows Forms)
 > [!IMPORTANT]
@@ -27,6 +27,7 @@ ms.locfileid: "54545667"
  A propriedade de chave do <xref:System.Windows.Forms.ContextMenu> componente é o <xref:System.Windows.Forms.Menu.MenuItems%2A> propriedade. Você pode adicionar itens de menu criando programaticamente <xref:System.Windows.Forms.MenuItem> objetos e adicioná-los para o <xref:System.Windows.Forms.Menu.MenuItemCollection> no menu de atalho. Como os itens em um menu de atalho geralmente são retirados de outros menus, você provavelmente adicionará itens ao menu de atalho copiando-os.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

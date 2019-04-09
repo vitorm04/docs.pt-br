@@ -2,12 +2,12 @@
 title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 1ff59a3a1a075be4f8024a2a78921d1d50311327
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0c9848d073c799e1f97dd79b375848dfab71e99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191478"
 ---
 # <a name="metadata"></a>\<metadata>
 Especifica como os metadados de serviço podem ser processados.  
@@ -52,6 +52,7 @@ Especifica como os metadados de serviço podem ser processados.
 |[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|A seção de cliente define uma lista de pontos de extremidade que um cliente pode se conectar ao.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>

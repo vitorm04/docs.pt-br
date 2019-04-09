@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar a aparência do componente ColorDialog dos Windows Forms'
+title: 'Como: Alterar a aparência do componente ColorDialog do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d79139ac3d11d3cd9a7d1bbe1f12e14df83530e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094639"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Como: Alterar a aparência do componente ColorDialog dos Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Como: Alterar a aparência do componente ColorDialog do Windows Forms
 Você pode configurar a aparência dos formulários Windows <xref:System.Windows.Forms.ColorDialog> componente com um número de suas propriedades. A caixa de diálogo tem duas seções, uma que mostra as cores básicas e outra que permite que o usuário defina cores personalizadas.  
   
  A maioria das propriedades restringe quais cores o usuário pode selecionar da caixa de diálogo. Se o <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> estiver definida como `true`, o usuário tem permissão para definir cores personalizadas. O <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> é de propriedade `true` se a caixa de diálogo é expandida para definir cores personalizadas; caso contrário, o usuário deve clicar em um botão "Definir cores personalizadas". Quando o <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> estiver definida como `true`, a caixa de diálogo exibe todas as cores disponíveis no conjunto de cores básicas. Se o <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> estiver definida como `true`, o usuário não poderá selecionar cores pontilhadas; apenas cores sólidas estarão disponíveis para seleção.  
@@ -50,6 +50,7 @@ Você pode configurar a aparência dos formulários Windows <xref:System.Windows
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [Componente ColorDialog](colordialog-component-windows-forms.md)
 - [Visão geral do componente ColorDialog](colordialog-component-overview-windows-forms.md)

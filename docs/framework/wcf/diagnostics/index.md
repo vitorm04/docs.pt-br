@@ -2,13 +2,19 @@
 title: Administração e diagnósticos
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092274"
 ---
 # <a name="administration-and-diagnostics"></a>Administração e diagnósticos
 Windows Communication Foundation (WCF) fornece um rico conjunto de funcionalidades que podem ajudar você a monitorar os diferentes estágios de vida do aplicativo. Por exemplo, você pode usar a configuração para configurar serviços e clientes na implantação. O WCF inclui um grande conjunto de contadores de desempenho para ajudá-lo a medir o desempenho do seu aplicativo. O WCF também expõe dados de inspeção de um serviço em tempo de execução através de um provedor de instrumentação de gerenciamento do Windows (WMI) do WCF. Quando o aplicativo apresenta uma falha ou começa a se comportar incorretamente, você pode usar o Log de eventos para ver se algo significativo ocorreu. Você também pode usar a mensagem de log e rastreamento para ver quais eventos estão ponta a ponta está acontecendo em seu aplicativo. Esses recursos ajudarão os desenvolvedores e profissionais de TI para solucionar problemas de um aplicativo WCF quando ele não está se comportando corretamente.  
@@ -34,15 +40,16 @@ Windows Communication Foundation (WCF) fornece um rico conjunto de funcionalidad
  O WCF também fornece várias ferramentas de GUI e linha de comando para torná-lo mais fácil para você criar, implantar e gerenciar aplicativos do WCF. Para obter mais informações, consulte [ferramentas do Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Por exemplo, você pode usar o [ferramenta de Editor de configuração (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) para criar e editar definições de configuração do WCF usando um assistente, em vez de editar o XML diretamente. Você também pode usar o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir, agrupar e filtrar as mensagens de rastreamento para que você possa diagnosticar, reparar e verificar problemas com os serviços WCF.  
   
 ## <a name="see-also"></a>Consulte também
-- [Configurar seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
-- [Serviços de implantação](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
+
+- [Configurando seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [Implantando serviços](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Referência de exceções](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [Registro de eventos em log](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Registro em log de mensagens](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Ferramenta Configuration Editor (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Ferramenta de registro de ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando a Instrumentação de Gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Usando Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Contadores de desempenho](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Ferramentas do Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar um controle associado simples em um formulário do Windows'
+title: 'Como: criar um controle associado simples em um Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094053"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: Criar um controle associado simples em um formulário do Windows
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: criar um controle associado simples em um Windows Form
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
     >  Como controles de associação simples mostram apenas um elemento de dados, é muito comum incluir a lógica de navegação em um Windows Form com controles de associação simples.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Binding>
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)

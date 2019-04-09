@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar chaves de acesso para controles dos Windows Forms'
+title: 'Como: Criar chaves de acesso para controles do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141629"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Como: Criar chaves de acesso para controles dos Windows Forms
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Como: Criar chaves de acesso para controles do Windows Forms
 Uma *chave de acesso* é um caractere de sublinhado no texto de um menu, item de menu ou rótulo de um controle como um botão. Com uma chave de acesso, o usuário pode "clicar" um botão pressionando a tecla ALT em combinação com a chave de acesso predefinidas. Por exemplo, se um botão executa um procedimento para imprimir um formulário e, portanto, seu `Text` estiver definida como "Print", adicionando um e comercial antes que a letra "P" faz com que a letra "P" seja sublinhada no texto do botão no tempo de execução. O usuário pode executar o comando associado ao botão pressionando ALT+P. Não é possível ter uma chave de acesso para um controle que não possa receber foco.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Para criar uma chave de acesso para um controle  
@@ -53,7 +53,8 @@ Uma *chave de acesso* é um caractere de sublinhado no texto de um menu, item de
     >  Para incluir um e comercial em uma legenda sem criar uma chave de acesso, inclua duas "e" comercial (& &). Um único e comercial é exibido na legenda e caracteres não é sublinhado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Button>
-- [Como: Responder a cliques de botão do Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Como: Definir o texto exibido pelo controle de um Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Como: Responder a cliques no botão do Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Como: Definir o texto exibido por um controle do Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

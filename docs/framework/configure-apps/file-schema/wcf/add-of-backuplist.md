@@ -2,12 +2,12 @@
 title: <add> De <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: e61ee275a7e98f13370504f5f15fdbe62a8221bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089530"
 ---
 # <a name="add-of-backuplist"></a>\<Adicionar > de \<backupList >
 Representa um elemento de configuração que define um elemento de ponto de extremidade de backup.  
@@ -52,4 +52,5 @@ Representa um elemento de configuração que define um elemento de ponto de extr
 |[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Contém uma lista de pontos de extremidade que você gostaria que o serviço de roteamento use caso o ponto de extremidade primário não pode ser alcançado.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

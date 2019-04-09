@@ -1,5 +1,5 @@
 ---
-title: Interface ICorDebugAppDomain
+title: Método ICorDebugAppDomain
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2052bafb259f07370f007f699f6858c532b11d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 40619aa40f9924d94c82541eb8d30790e774a675
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141489"
 ---
-# <a name="icordebugappdomain-interface"></a>Interface ICorDebugAppDomain
+# <a name="icordebugappdomain-interface"></a>Método ICorDebugAppDomain
 
 Fornece métodos para depurar domínios de aplicativo. Essa interface é uma subclasse de ICorDebugController.  
   
@@ -57,4 +57,5 @@ Fornece métodos para depurar domínios de aplicativo. Essa interface é uma sub
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

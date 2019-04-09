@@ -2,12 +2,12 @@
 title: Duração de chamada
 ms.date: 03/30/2017
 ms.assetid: e4973ec3-3c66-4c0b-b5d0-294b62c83f7d
-ms.openlocfilehash: b5e2f11516706d6f9a30188aa874eb9d17ac8776
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5405df2511f3f5cbd1f2fcd60877f20c0b75967a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141265"
 ---
 # <a name="calls-duration"></a>Duração de chamada
 Nome do contador: Duração de chamada  
@@ -19,4 +19,5 @@ Nome do contador: Duração de chamada
 >  Quando usado em um serviço WCF assíncrono, o contador de duração de chamadas sempre retornará -1.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [PERF_AVERAGE_TIMER](https://go.microsoft.com/fwlink/?LinkId=95015)

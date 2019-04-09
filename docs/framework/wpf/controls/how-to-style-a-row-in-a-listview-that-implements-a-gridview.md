@@ -6,15 +6,15 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091454"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Como: Criar uma linha em um ListView que implemente um GridView
-Este exemplo mostra como criar uma linha em uma <xref:System.Windows.Controls.ListView> controle que implementa uma <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modo.  
+Este exemplo mostra como criar uma linha em uma <xref:System.Windows.Controls.ListView> controle que implementa um <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> modo.  
   
 ## <a name="example"></a>Exemplo  
  Você pode estilizar uma linha em uma <xref:System.Windows.Controls.ListView> controle definindo uma <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> sobre o <xref:System.Windows.Controls.ListView> controle. Definir o estilo para seus itens que são representados como <xref:System.Windows.Controls.ListViewItem> objetos. O <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> referências a <xref:System.Windows.Controls.ControlTemplate> objetos que são usados para exibir o conteúdo da linha.  
@@ -34,8 +34,9 @@ Este exemplo mostra como criar uma linha em uma <xref:System.Windows.Controls.Li
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Tópicos de instruções](listview-how-to-topics.md)
+- [Tópicos explicativos ](listview-how-to-topics.md)
 - [Visão geral de ListView](listview-overview.md)
 - [Estilo e modelagem](styling-and-templating.md)

@@ -2,12 +2,12 @@
 title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146517"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não pode processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo na fila recebe mensagens em uma transação. Anulando a transação na qual uma mensagem na fila foi recebida deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo de recebimento pode fique preso em um loop de recebimento e anulando a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
@@ -77,9 +77,7 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
 4.  Certifique-se de que seu serviço é anotado com o atributo de comportamento suspeitos.  
-  
-  
-  
+
  Além disso, se o `ReceiveErrorHandling` é definido como `Fault`, o `ServiceHost` Falha ao encontrar a mensagem suspeita. Você pode interligar o evento com falha e desligar o serviço, tome medidas corretivas e reiniciar. Por exemplo, o `LookupId` no <xref:System.ServiceModel.MsmqPoisonMessageException> propagadas para o `IErrorHandler` pode ser observado e quando as falhas de host de serviço, você pode usar o `System.Messaging` API para receber a mensagem de fila usando o `LookupId` para remover a mensagem da fila e armazenar a mensagem em algum armazenamento externo ou outra fila. Você pode reiniciar `ServiceHost` para continuar o processamento normal. O [manipulação de mensagens suspeitas no MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) demonstra esse comportamento.  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>Tempo limite da transação e mensagens suspeitas  
@@ -106,6 +104,7 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
 -   Mensagem de enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Diferenças de recursos da Fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Diferenças de recursos em fila no Windows Vista, Windows Server 2003, e no Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [Especificando e lidando com falhas em contratos e serviços](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

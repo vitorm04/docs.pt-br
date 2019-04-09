@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: c11fe4176ee770e39abcab612e26e496aa2a1457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ef00861624531e68ad5b8a3b080810040ae3ff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109467"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Chamar operações de serviço (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as operações de serviço para um serviço de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina essas operações como métodos no serviço de dados. Assim como outros recursos do serviço de dados, essas operações de serviço são endereçadas por meio de URIs. Uma operação de serviço pode retornar coleções de tipos de entidade, as instâncias de tipo de entidade única e tipos primitivos, como integer e string. Uma operação de serviço também pode retornar `null` (`Nothing` no Visual Basic). O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente pode ser usada para acessar operações de serviço que oferecem suporte a solicitações HTTP GET. Esses tipos de operações de serviço são definidos como métodos que têm o <xref:System.ServiceModel.Web.WebGetAttribute> aplicado. Para obter mais informações, consulte [operações de serviço](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -125,4 +125,5 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

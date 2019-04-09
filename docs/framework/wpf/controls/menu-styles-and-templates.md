@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: d5b170bff841369e48d082f018577ee8f6f09f39
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6818be4ac92dbdd7de0c6c6fa65109e21eadc2f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094197"
 ---
 # <a name="menu-styles-and-templates"></a>Estilos e modelos de menu
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Menu> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -71,6 +71,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)

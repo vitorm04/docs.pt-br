@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160973"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms e arquitetura de entrada da interoperabilidade do WPF
 A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requer que as duas tecnologias tenham o processamento de entrada de teclado apropriado. Este tópico descreve como essas tecnologias implementam o processamento de mensagens e teclado para permitir uma interoperação suave em aplicativos híbridos.  
@@ -94,7 +94,7 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
 -   Teclas de comando e teclas de caixa de diálogo.  
   
--   Processamento do acelerador [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] processamento do acelerador.  
   
  As seções a seguir descrevem essas partes em mais detalhes.  
   
@@ -129,10 +129,11 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
  As mensagens são enviadas somente ao <xref:System.Windows.Forms.Integration.ElementHost> controles no formulário ativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Passo a passo: hospedar um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Passo a passo: hospedar um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)

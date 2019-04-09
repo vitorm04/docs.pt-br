@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091467"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Como: Criar um evento roteado personalizado
 Para o evento personalizado dar suporte ao roteamento de eventos, você precisa registrar um <xref:System.Windows.RoutedEvent> usando o <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> método. Este exemplo demonstra as noções básicas da criação de um evento roteado personalizado.  
@@ -35,6 +35,7 @@ Para o evento personalizado dar suporte ao roteamento de eventos, você precisa 
  Para ver um exemplo de como eventos de propagação funcionam, consulte [Manipular um evento roteado](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de eventos roteados](routed-events-overview.md)
 - [Visão geral da entrada](input-overview.md)
 - [Visão geral da criação de controle](../controls/control-authoring-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097246"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementando lógica de negócios (LINQ te o SQL)
 O termo “lógica de negócios” neste tópico faz referência a todas as regras personalizadas ou testes de validação que você aplica a dados antes de eles serem inseridos, atualizados ou excluídos do banco de dados. A lógica de negócios às vezes também é conhecida como "regras de negócio" ou "lógica de domínio". Em aplicativos de n camadas ela normalmente é criada como uma camada lógica para que possa ser modificada independentemente da camada de apresentação ou da camada de acesso a dados. A lógica de negócios pode ser chamada pela camada de acesso a dados antes ou depois de qualquer atualização, inserção ou exclusão de dados no banco de dados.  
@@ -184,7 +184,8 @@ partial class Customer
  [Passo a passo: Adicionando validação a Classes de entidade](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>Consulte também
-- [Classes e métodos parciais](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
-- [Métodos Parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+
+- [Classes parciais e métodos](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Métodos parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

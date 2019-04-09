@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73218a5b63ae53ac125d3d807c1a50bdbf0d9c8a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: be5d05c34272b9fa5755b4d0e22fa9094707c5ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093872"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>Método ICorProfilerInfo3::EnumModules
 Retorna um enumerador que fornece métodos para iterar de forma sequencial por meio de uma coleção de módulos gerenciados que são carregados no aplicativo.  
@@ -49,7 +49,8 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
 - [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil de interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095718"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Visão geral de conversores de tipo para XAML
 Lógica de fornecimento de conversores de tipo para um gravador de objeto que converte uma cadeia de caracteres na marcação XAML em objetos específicos em um grafo de objeto. Nos serviços de XAML do .NET Framework, o conversor de tipo deve ser uma classe que deriva de <xref:System.ComponentModel.TypeConverter>. Além disso, alguns conversores dão suporte a XAML caminho de salvamento e podem ser usados para serializar um objeto em um formulário de cadeia de caracteres na marcação de serialização. Este tópico descreve como e quando são invocados conversores de tipo em XAML e fornece conselhos de implementação para o método substituições de <xref:System.ComponentModel.TypeConverter>.  
@@ -108,6 +108,7 @@ Lógica de fornecimento de conversores de tipo para um gravador de objeto que co
  Se você estiver trabalhando com um fluxo do nó XAML, o resultado final de um conversor de tipo ou a ação não será executado ainda. Em um caminho de carga, a cadeia de caracteres de atributo que, eventualmente, precisa ser convertido para a carga permanece como um valor de texto dentro de um membro inicial e final. O conversor de tipo que, eventualmente, é necessário para esta operação pode ser determinada usando o <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> propriedade. No entanto, como obter um valor válido de <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> se baseia em ter um contexto de esquema XAML, que pode acessar essas informações por meio de membro subjacente ou o tipo do valor do objeto que usa o membro. Invocar o comportamento de conversão de tipo também requer o contexto do esquema XAML porque que requer o mapeamento de tipo e criar uma instância do conversor.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ComponentModel.TypeConverterAttribute>
 - [Conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md)
 - [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

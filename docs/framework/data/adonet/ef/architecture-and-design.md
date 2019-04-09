@@ -2,12 +2,12 @@
 title: Arquitetura e design
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096131"
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) é implementado como um visitante na árvore de expressão que representa a árvore de comando. A geração é feita em uma única passada sobre a árvore de expressão.  
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  Para explicar o alias de entrada que redirecionem, consulte o primeiro exemplo na [gerando SQL das árvores de comando - práticas recomendadas](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Existem “a” não precisava ser redirecionado para “b” na projeção.  
   
- Quando um objeto de SqlSelectStatement é criado, a extensão é que a entrada ao nó é colocada na propriedade de SqlSelectStatement. Um símbolo (<symbol_b>) é criado com base no nome de associação de entrada (“b”) para representar a extensão e “COMO” + <symbol_b> é acrescentado à cláusula.  O símbolo também é adicionado à propriedade de FromExtents.  
+ Quando um objeto de SqlSelectStatement é criado, a extensão é que a entrada ao nó é colocada na propriedade de SqlSelectStatement. Um símbolo (< symbol_b >) é criado com base no nome de associação de entrada ("b") para representar a extensão e "Como" + < symbol_b > é acrescentado à cláusula From.  O símbolo também é adicionado à propriedade de FromExtents.  
   
- O símbolo também é adicionado à tabela de símbolo para vincular o nome de associação de entrada (“b”, <symbol_b>).  
+ O símbolo também é adicionado à tabela de símbolo para vincular o nome da associação de entrada para ele ("b", < symbol_b >).  
   
  Se reutilização subsequentes de um nó que SqlSelectStatement, ele adiciona uma entrada à tabela de símbolo para vincular o nome de associação de entrada ao símbolo. Em nosso exemplo, o DbProjectExpression com o nome da associação de entrada de "a" seria reutilizaria o SqlSelectStatement e adicionar ("a", \< symbol_b >) na tabela.  
   
- Quando as expressões no nome de associação de entrada do nó que estiver reutilizando o SqlSelectStatement, a referência é resolvida usando a tabela de símbolo redirecionado para o símbolo correto. Quando “a” de “a.x” é resolvido para visitar o DbVariableReferenceExpression que representa “a” resolvidos para o symbol_b <do símbolo.>  
+ Quando as expressões no nome de associação de entrada do nó que estiver reutilizando o SqlSelectStatement, a referência é resolvida usando a tabela de símbolo redirecionado para o símbolo correto. Quando "a" de "a. x" é resolvida para visitar o DbVariableReferenceExpression que representa "a" resolvidos para o símbolo < symbol_b >.  
   
 ### <a name="join-alias-flattening"></a>Adição a ajuste alias  
  Adição a ajuste alias é obtido quando visitar um DbPropertyExpression como descrito na seção intitulou DbPropertyExpression.  
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  Renomear a coluna ocorre ao escrever um objeto do símbolo para uma cadeia de caracteres. AddDefaultColumns na primeira etapa determinar se um determinado símbolo da coluna tem que ser renomeado. Na segunda etapa somente renomear ocorre certificar-se de que o nome gerado não está em conflito com qualquer nome usado em AllColumnNames  
   
- Para gerar nomes exclusivos para alias de extensão e para colunas, existing_name_n <>de uso onde n é o alias as menores que ainda não foram usadas. A lista global de todas as aliases aumenta a necessidade de se conectar renomear.  
+ Para gerar nomes exclusivos para alias de extensão e para colunas, use < existing_name_n > uso onde n é o alias as menores que ainda não foi usado. A lista global de todas as aliases aumenta a necessidade de se conectar renomear.  
   
 ## <a name="see-also"></a>Consulte também
-- [Geração de SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+
+- [Geração SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

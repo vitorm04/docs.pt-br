@@ -1,15 +1,15 @@
 ---
-title: 'Como: Recuperar metadados e implementar um serviço em conformidade'
+title: 'Como: recuperar metadados e implementar um serviço em conformidade'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095965"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Como: Recuperar metadados e implementar um serviço em conformidade
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Como: recuperar metadados e implementar um serviço em conformidade
 Muitas vezes, a mesma pessoa não projetar e implementar serviços. Em ambientes em que os aplicativos interoperacionais são importantes, contratos podem ser criados ou descritos na descrição de linguagem WSDL (Web Services) e um desenvolvedor deve implementar um serviço que está em conformidade com o contrato fornecido. Talvez você queira migrar um serviço existente para o Windows Communication Foundation (WCF), mas preservar o formato de conexão. Além disso, os contratos duplex exigem chamadores implementar um contrato de retorno de chamada também.  
   
  Nesses casos, você deve usar o [ferramenta Utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (ou uma ferramenta equivalente) para gerar uma interface de contrato de serviço em uma linguagem gerenciada que você pode implementar para cumprir os requisitos das contrato. Normalmente o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) é usado para adquirir um contrato de serviço que é usado com uma fábrica de canais ou um tipo de cliente do WCF, bem como com um arquivo de configuração de cliente que configura a associação correta e o endereço. Para usar o arquivo de configuração gerado, você deve alterá-lo em um arquivo de configuração de serviço. Você também precisará modificar o contrato de serviço.  
@@ -60,4 +60,5 @@ Muitas vezes, a mesma pessoa não projetar e implementar serviços. Em ambientes
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>Consulte também
-- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

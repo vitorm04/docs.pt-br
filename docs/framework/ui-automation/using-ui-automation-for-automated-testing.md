@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: e9bab754302252cdf4e4e9303ecc4a188e651ca9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183970"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
@@ -112,4 +112,5 @@ ms.locfileid: "57678381"
  Para obter informações de segurança, consulte [visão geral de segurança de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-security-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [UI Automation Fundamentals](../../../docs/framework/ui-automation/index.md) (Fundamentos da Automação da Interface do Usuário)
+
+- [Fundamentos de automação da interface do usuário](../../../docs/framework/ui-automation/index.md)

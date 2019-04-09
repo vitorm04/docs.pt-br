@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204075"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Criando um DataTable de uma consulta (LINQ to DataSet)
 A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> recebe os resultados de uma consulta e copia os dados em um <xref:System.Data.DataTable>, que podem ser usados para vinculação de dados. Quando as operações de dados tiverem sido executadas, o novo <xref:System.Data.DataTable> será mesclado de volta no <xref:System.Data.DataTable> de origem.  
@@ -75,6 +75,7 @@ A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. 
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de Programação](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [Campo genérico e métodos de SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
-- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
