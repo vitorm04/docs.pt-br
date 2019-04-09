@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168123"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista diversos problemas conhecidos, os clientes têm executado até ao desenvolver clientes WCF e serviços. Se o problema que está ocorrendo não estiver nessa lista, é recomendável que configurar o rastreamento para seu serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador do arquivo de rastreamento e obter informações detalhadas sobre exceções que possam estar ocorrendo dentro do serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [Ferramenta de Visualizador de rastreamento (SvcTraceViewer.exe) de serviço](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -134,7 +134,7 @@ public class MyServiceHost : ServiceHost
   
  Para obter mais informações sobre o protocolo Kerberos, consulte [conceitos de segurança utilizados no WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) e:  
   
--   [Depuração de erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+-   [Depurando erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
 -   [Registrando nomes da entidade de serviço Kerberos usando HTTP. sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Depuração de erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+
+- [Depurando erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

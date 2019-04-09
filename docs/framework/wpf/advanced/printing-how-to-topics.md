@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170177"
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
 Os tópicos nesta seção demonstram como usar os recursos de impressão e gerenciamento do sistema de impressão incluídas no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
@@ -44,9 +44,10 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
  Instruções para verificar se um tíquete de impressão é válido e se ele não requer nada que não tem suporte na impressora.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>
-- [Visão Geral da Impressão](printing-overview.md)
+- [Visão geral da impressão](printing-overview.md)
 - [Documentos no WPF](documents-in-wpf.md)
 - [Documentos XPS](/windows/desktop/printdocs/documents)

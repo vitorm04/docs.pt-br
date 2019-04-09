@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147518"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximizar desempenho 3D do WPF
 Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para compilar controles 3D e incluir cenas 3D em seus aplicativos, é importante considerar a otimização de desempenho. Este tópico fornece uma lista de classes 3D e propriedades que têm implicações de desempenho para o seu aplicativo, juntamente com recomendações para otimizar o desempenho ao usá-las.  
@@ -45,7 +45,7 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
 |<xref:System.Windows.Media.Media3D.Light>|Velocidade da luz (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Tente manter os tamanhos das malhas abaixo desses limites:<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20.001 <xref:System.Windows.Media.Media3D.Point3D> instâncias<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60,003 <xref:System.Int32> instâncias|  
 |<xref:System.Windows.Media.Media3D.Material>|Velocidade do material (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D não descarta pincéis invisíveis (pincéis de ambiente pretos, pincéis de limpeza, etc.) de uma maneira consistente.  Considere omiti-los da sua cena.|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D não descarta pincéis invisíveis (pincéis de ambiente pretos, pincéis de limpeza, etc.) de maneira consistente.  Considere omiti-los da sua cena.|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|Cada <xref:System.Windows.Media.Media3D.Material> em um <xref:System.Windows.Media.Media3D.MaterialGroup> faz com que outra passagem de renderização, então, incluir vários materiais, até mesmo materiais simples, pode aumentar drasticamente as demandas de preenchimento na sua GPU.  Minimizar o número de materiais em seu <xref:System.Windows.Media.Media3D.MaterialGroup>.|  
   
 ## <a name="performance-impact-low"></a>Impacto de desempenho: Baixo  
@@ -60,4 +60,5 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Para minimizar o tempo de construção de grandes coleções em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], como um MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, e <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, pré-dimensione as coleções antes de preencher o valor. Se possível, passe as estruturas de dados pré-preenchidas dos construtores das coleções como matrizes ou listas.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md)

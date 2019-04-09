@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162875"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar origens de rastreamento para emitir rastreamentos e definir níveis de rastreamento, rastreamento de atividades do conjunto e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -181,7 +181,8 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar orige
  Não é possível usar o `propagateActivity` atributo com fontes de rastreamento definidos pelo usuário. Para a propagação de ID de atividade de código de usuário, verifique se você não definir ServiceModel `ActivityTracing`, ao mesmo tempo, ServiceModel `propagateActivity` atributo definido como `true`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Como: Criar e inicializar ouvintes de rastreamento](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Como: criar e inicializar ouvintes de rastreamento](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [Criando um TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239)

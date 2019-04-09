@@ -1,15 +1,15 @@
 ---
-title: Visão geral da segurança do SQL Server
+title: Visão geral de segurança do SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148584"
 ---
-# <a name="overview-of-sql-server-security"></a>Visão geral da segurança do SQL Server
+# <a name="overview-of-sql-server-security"></a>Visão geral de segurança do SQL Server
 Uma estratégia de defesa em profundidade, com a sobreposição de camadas de segurança, é a melhor maneira de combater ameaças de segurança. SQL Server fornece uma arquitetura de segurança que foi projetada para permitir que os administradores de banco de dados e os desenvolvedores criem aplicativos de banco de dados seguro e combater ameaças. Cada versão do SQL Server tem melhorado em versões anteriores do SQL Server com a introdução de novos recursos e funcionalidades. No entanto, a segurança não é fornecido na caixa. Cada aplicativo é exclusivo em seus requisitos de segurança. Os desenvolvedores precisam entender qual combinação de recursos e funcionalidade são mais apropriados para combater as ameaças conhecidas e para prever as ameaças que podem surgir no futuro.  
   
  Uma instância do SQL Server contém uma coleção hierárquica de entidades, começando com o servidor. Cada servidor contém vários bancos de dados e cada banco de dados contém uma coleção de objetos protegíveis. Todos os protegíveis do SQL Server está associada *permissões* que podem ser concedidas a um *principal*, que é um grupo individual, ou processo concedeu acesso ao SQL Server. A estrutura de segurança do SQL Server gerencia o acesso a entidades podem ser protegidos por meio *autenticação* e *autorização*.  
@@ -24,10 +24,10 @@ Uma estratégia de defesa em profundidade, com a sobreposição de camadas de se
  [Autenticação no SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  Descreve logons e autenticação no SQL Server e fornece links para recursos adicionais.  
   
- [Servidor e funções de banco de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [Funções de servidor e banco de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  Descreve funções fixas de servidor e banco de dados, funções de banco de dados personalizado e contas internas e fornece links para recursos adicionais.  
   
- [Propriedade e separação do esquema de usuário no SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [Propriedade e separação do esquema do usuário no SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  Descreve a separação de propriedade e o esquema de usuário do objeto e fornece links para recursos adicionais.  
   
  [Autorização e permissões no SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
@@ -40,7 +40,8 @@ Uma estratégia de defesa em profundidade, com a sobreposição de camadas de se
  Fornece links para recursos de segurança de integração de CLR.  
   
 ## <a name="see-also"></a>Consulte também
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [SQL Server Security](../../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
+
+- [Protegendo aplicativos ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Segurança do SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

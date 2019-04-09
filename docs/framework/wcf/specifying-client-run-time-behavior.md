@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164366"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificando a execução do cliente- Comportamento do tempo
 Os clientes do Windows Communication Foundation (WCF), assim como serviços do Windows Communication Foundation (WCF), podem ser configurados para modificar o comportamento de tempo de execução de acordo com o aplicativo cliente. Três atributos estão disponíveis para especificar o comportamento de tempo de execução do cliente. Objetos de retorno de chamada duplex cliente podem usar o <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> atributos para modificar seu comportamento de tempo de execução. O atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, pode ser usado para separar o destino lógico de destino de rede imediato. Além disso, tipos de retorno de chamada duplex cliente podem usar alguns dos comportamentos no lado do serviço. Para obter mais informações, consulte [especificando comportamento de tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -44,4 +44,5 @@ Os clientes do Windows Communication Foundation (WCF), assim como serviços do W
  Você pode usar o <xref:System.ServiceModel.Description.ClientViaBehavior> comportamento para especificar o Uniform Resource Identifier para o qual o canal de transporte deve ser criado. Use esse comportamento quando o destino de rede imediato não é o processador pretendido da mensagem. Isso permite que vários saltos conversas quando o aplicativo de chamada não sabe, necessariamente, o destino final ou quando o destino `Via` cabeçalho não é um endereço.  
   
 ## <a name="see-also"></a>Consulte também
-- [Especificando o comportamento em tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+
+- [Especificando comportamento de tempo de execução de serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

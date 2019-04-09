@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118021"
 ---
 # <a name="data-contract-versioning"></a>Controle de versão de contrato de dados
 Como desenvolver aplicativos, você também pode ter que alterar o uso de serviços de contratos de dados. Este tópico explica como contratos de dados de versão. Este tópico descreve os mecanismos de controle de versão do contrato de dados. Para obter uma visão geral completa e diretrizes prescritivas do controle de versão, consulte [práticas recomendadas: Controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -116,6 +116,7 @@ Como desenvolver aplicativos, você também pode ter que alterar o uso de servi�
 Naturalmente, alterar o contrato de dados de conteúdo de uma coleção (por exemplo, a alteração de uma lista de inteiros para uma lista de cadeias de caracteres) é uma alteração significativa.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -125,7 +126,7 @@ Naturalmente, alterar o contrato de dados de conteúdo de uma coleção (por exe
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Retornos de chamada de serialização tolerantes à versão](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Práticas recomendadas: Controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Melhores práticas: Controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Contratos de dados compatíveis com encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

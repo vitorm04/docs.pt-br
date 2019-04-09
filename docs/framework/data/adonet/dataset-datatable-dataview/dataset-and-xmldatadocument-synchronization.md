@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164730"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronização de DataSet e XmlDataDocument
 O ADO.NET <xref:System.Data.DataSet> fornece uma representação de dados relacional. Para obter acesso a dados hierárquicos, você pode usar as classes XML disponíveis no .NET Framework. Historicamente, essas duas representações de dados foram usadas separadamente. No entanto, o .NET Framework permite acesso síncrono em tempo real às representações relacionais e hierárquicas de dados por meio de **DataSet** objeto e o <xref:System.Xml.XmlDataDocument> do objeto, respectivamente.  
@@ -90,27 +90,28 @@ O ADO.NET <xref:System.Data.DataSet> fornece uma representação de dados relaci
  Durante a sincronização de uma **DataSet** com um **XmlDataDocument**, os resultados poderão diferir dependendo se deseja ou não seu <xref:System.Data.DataRelation> objetos são aninhados. Para obter mais informações, consulte [aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Sincronizando um conjunto de dados com um XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Sincronizar um DataSet com um XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Demonstra a sincronização fortemente tipado **DataSet**, com esquema mínimo, com um **XmlDataDocument**.  
   
- [Executar uma consulta XPath em um conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [Executar uma consulta XPath em um DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Demonstra a execução de uma consulta XPath no conteúdo de um **conjunto de dados**.  
   
- [Aplicando uma transformação XSLT a um conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Aplicar uma transformação XSLT a um DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Demonstra a aplicação de uma transformação XSLT ao conteúdo de um **conjunto de dados**.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
+ [Usando XML em um DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Descreve como o **DataSet** interage com XML como uma fonte de dados, incluindo o carregamento e a persistência do conteúdo de um **conjunto de dados** como dados XML.  
   
  [Aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Descreve a importância de aninhados **DataRelation** objetos ao representar o conteúdo de um **conjunto de dados** como dados XML e descreve como criar essas relações.  
   
- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
+ [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Descreve o **conjunto de dados** e como usá-lo para gerenciar dados de aplicativo e interagir com fontes de dados, incluindo bancos de dados relacionais e XML.  
   
  <xref:System.Xml.XmlDataDocument>  
  Contém informações de referência sobre as **XmlDataDocument** classe.  
   
 ## <a name="see-also"></a>Consulte também
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

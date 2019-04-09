@@ -1,15 +1,15 @@
 ---
-title: Coleções de esquema OLE DB
+title: Coleções de esquema de OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164678"
 ---
-# <a name="ole-db-schema-collections"></a>Coleções de esquema OLE DB
+# <a name="ole-db-schema-collections"></a>Coleções de esquema de OLE DB
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Provedor Microsoft SQL Server, OLE DB  
@@ -412,4 +412,5 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INTEGRADO|Boolean|  
   
 ## <a name="see-also"></a>Consulte também
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

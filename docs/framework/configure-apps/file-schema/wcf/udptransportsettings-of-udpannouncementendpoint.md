@@ -2,12 +2,12 @@
 title: <udpTransportSettings> De <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 1e7cdff1b26afcbea94424ecad5d8d0d9438b54d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 901b7e1429c3afc19e9b609026dc632730c35024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148324"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings > de \<udpAnnouncementEndpoint >
 Este elemento de configuração expõe para as configurações de transporte UDP [ \<udpAnnouncementEndpoint >](udpannouncementendpoint.md).  
@@ -65,4 +65,5 @@ Este elemento de configuração expõe para as configurações de transporte UDP
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|Um ponto de extremidade padrão que corrigiu o anúncio de ligação de transporte de contrato e UDP.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

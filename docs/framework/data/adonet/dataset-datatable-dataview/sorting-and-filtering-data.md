@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166238"
 ---
 # <a name="sorting-and-filtering-data"></a>Classificando e filtrando dados
 O <xref:System.Data.DataView> fornece várias maneiras de classificar e filtrar dados em uma <xref:System.Data.DataTable>:  
@@ -30,13 +30,13 @@ O <xref:System.Data.DataView> fornece várias maneiras de classificar e filtrar 
     |Opções de DataViewRowState|Descrição|  
     |------------------------------|-----------------|  
     |**CurrentRows**|O **atual** versão de linha de todas as **inalterado**, **adicionado**, e **modificado** linhas. Esse é o padrão.|  
-    |**Adicionado**|O **atual** versão de linha de todas as **adicionado** linhas.|  
-    |**Excluído**|O **Original** versão de linha de todas as **Deleted** linhas.|  
+    |**Added**|O **atual** versão de linha de todas as **adicionado** linhas.|  
+    |**Deleted**|O **Original** versão de linha de todas as **Deleted** linhas.|  
     |**ModifiedCurrent**|O **atual** versão de linha de todas as **modificado** linhas.|  
     |**ModifiedOriginal**|O **Original** versão de linha de todas as **modificado** linhas.|  
     |**Nenhum**|Nenhuma linha.|  
     |**OriginalRows**|O **Original** versão de linha de todas as **inalterado**, **modificado**, e **Deleted** linhas.|  
-    |**inalterado**|O **atual** versão de linha de todas as **inalterado** linhas.|  
+    |**Unchanged**|O **atual** versão de linha de todas as **inalterado** linhas.|  
   
  Para obter mais informações sobre estados de linha e versões de linha, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
@@ -57,9 +57,10 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

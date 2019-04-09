@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af07df53c094654ab86f5e6531fd78124aded988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162144"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>Método ICorDebugObjectValue2::GetVirtualMethodAndType
 Este método ainda não foi implementado.  
@@ -41,5 +41,3 @@ HRESULT GetVirtualMethodAndType (
  Obtém a interface ponteiros para as instâncias de "ICorDebugFunction" e "ICorDebugType" que representam o método de mais derivado e o tipo para a referência de membro especificado.  
   
 ## <a name="see-also"></a>Consulte também
-
-

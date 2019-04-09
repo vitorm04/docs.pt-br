@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165432"
 ---
 # <a name="property-animation-techniques-overview"></a>Visão geral das técnicas de animação da propriedade
 Este tópico descreve as diferentes abordagens para animar propriedades: storyboards, animações locais, relógios e animações por quadro.  
@@ -56,10 +56,10 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
 |O storyboard é iniciado usando…|Por instância|Estilo|Modelo de controle|Modelo de dados|Exemplo|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade é alterado](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.EventTrigger>|Sim|Sim|Sim|Sim|[Animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e uma propriedade <xref:System.Windows.Trigger>|Não|Sim|Sim|Sim|[Disparar uma animação quando o valor de uma propriedade for alterado](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e um <xref:System.Windows.DataTrigger>|Não|Sim|Sim|Sim|[Como: Disparar uma animação quando dados forem alterados](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sim|Não|Não|Não|[Animar uma propriedade usando um storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method|Sim|Não|Não|Não|[Animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Para obter mais informações sobre <xref:System.Windows.Media.Animation.Storyboard> objetos, consulte a [visão geral de Storyboards](storyboards-overview.md).  
   
@@ -122,7 +122,8 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
  Para obter mais informações, consulte o <xref:System.Windows.Media.CompositionTarget.Rendering> página.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral de storyboards](storyboards-overview.md)
 - [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
-- [Visão geral das propriedades da dependência](../advanced/dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](../advanced/dependency-properties-overview.md)

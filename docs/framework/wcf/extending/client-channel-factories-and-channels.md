@@ -1,18 +1,18 @@
 ---
-title: 'Cliente: Fábricas de canais e canais'
+title: 'Cliente: fábricas de canais e canais'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa5d2478d5c12f16c2d9531de02e1c868eab560
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166251"
 ---
-# <a name="client-channel-factories-and-channels"></a>Cliente: Fábricas de canais e canais
+# <a name="client-channel-factories-and-channels"></a>Cliente: fábricas de canais e canais
 Este tópico aborda a criação de fábricas de canais e canais.  
   
-## <a name="channel-factories-and-channels"></a>Fábricas de canais e canais  
+## <a name="channel-factories-and-channels"></a>fábricas de canais e canais  
  Fábricas de canais são responsáveis por criar canais. Canais criados por fábricas de canais são usados para enviar mensagens. Esses canais são responsáveis por recebendo a mensagem da camada acima, executar o processamento que for necessário, em seguida, enviar a mensagem para a camada abaixo. O gráfico a seguir ilustra esse processo.  
   
  ![Canais e fábricas de cliente](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
@@ -74,4 +74,5 @@ this.socket.SendTo(
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Desenvolvimento de canais](../../../../docs/framework/wcf/extending/developing-channels.md)
+
+- [Canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md)

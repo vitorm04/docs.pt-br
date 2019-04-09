@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117917"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Como: Bloquear controles nos Windows Forms
 Ao projetar a interface do usuário do seu aplicativo do Windows, você pode bloquear os controles quando eles são posicionados corretamente, para que você não os mova nem os redimensione inadvertidamente ao configurar outras propriedades.  
@@ -47,8 +47,9 @@ Ao projetar a interface do usuário do seu aplicativo do Windows, você pode blo
 1.  Na janela **Propriedades**, clique na propriedade **Bloqueado** e selecione `false`. (Clicar duas vezes no nome alterna a configuração da propriedade.)  
   
 ## <a name="see-also"></a>Consulte também
-- [Controles dos Windows Forms](index.md)
-- [Organizando Controles nos Windows Forms](arranging-controls-on-windows-forms.md)
-- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+
+- [Controles de Windows Forms](index.md)
+- [Organizando controles nos Windows Forms](arranging-controls-on-windows-forms.md)
+- [Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

@@ -2,12 +2,12 @@
 title: Definição do esquema de DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163066"
 ---
 # <a name="datatable-schema-definition"></a>Definição do esquema de DataTable
 O esquema, ou a estrutura, de uma tabela é representado por colunas e restrições. Você define o esquema de uma <xref:System.Data.DataTable> usando objetos <xref:System.Data.DataColumn>, bem como objetos <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. As colunas em uma tabela podem ser mapeadas para colunas em uma fonte de dados, contêm valores calculados de expressões, incrementam automaticamente seus valores ou contêm valores de chave primária.  
@@ -23,18 +23,19 @@ O esquema, ou a estrutura, de uma tabela é representado por colunas e restriç�
  [Adicionando colunas a um DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Descreve como definir as colunas de uma tabela usando **DataColumn** objetos.  
   
- [Criar colunas de expressão](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Criando colunas de expressão](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
  Explica como o **expressão** propriedade de uma coluna pode ser usada para calcular valores com base nos valores de outras colunas na linha.  
   
- [Criando colunas de incremento automático](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [Criar colunas AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
  Descreve como uma coluna pode ser definida para incrementar automaticamente valores numéricos para garantir um valor de coluna exclusivo por linha.  
   
- [Definindo chaves primárias](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Definir chaves primárias](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
  Descreve como especificar a chave primária de uma tabela de um ou mais **DataColumn** objetos.  
   
  [Restrições de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Descreve como definir a chave estrangeira e restrições exclusivas para colunas em uma tabela.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

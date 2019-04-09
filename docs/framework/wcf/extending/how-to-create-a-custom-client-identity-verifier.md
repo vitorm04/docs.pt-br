@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar um verificador de identidade do cliente personalizado'
+title: 'Como: criar um verificador de identidade de cliente personalizado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c7aede448fa0a759035380c533f2a9457a534bd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165822"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Como: Criar um verificador de identidade do cliente personalizado
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Como: criar um verificador de identidade de cliente personalizado
 O *identidade* recurso do Windows Communication Foundation (WCF) permite que um cliente para especificar com antecedência a identidade esperada do serviço. Sempre que um servidor se autentica para o cliente, a identidade é verificada em relação a identidade esperada. (Para obter uma explicação de identidade e como ele funciona, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  Se necessário, a verificação pode ser personalizada usando um verificador de identidade personalizada. Por exemplo, você pode executar verificações de verificação de identidade de serviço adicional. Neste exemplo, o verificador de identidade personalizado verifica as declarações adicionais no certificado x. 509 retornada do servidor. Para um aplicativo de exemplo, consulte [exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
@@ -82,6 +82,7 @@ O *identidade* recurso do Windows Communication Foundation (WCF) permite que um 
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>

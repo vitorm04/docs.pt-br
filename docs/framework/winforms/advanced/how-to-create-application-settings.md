@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar configurações de aplicativo'
+title: 'Como: criar configurações de aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166394"
 ---
-# <a name="how-to-create-application-settings"></a>Como: Criar configurações de aplicativo
+# <a name="how-to-create-application-settings"></a>Como: criar configurações de aplicativo
 Usando código gerenciado, é possível criar novas configurações de aplicativo e associá-las a propriedades no seu formulário ou aos controles de formulário, para que essas configurações sejam carregadas e salvas automaticamente no tempo de execução.  
   
  No procedimento a seguir, você criar manualmente uma classe wrapper que deriva de <xref:System.Configuration.ApplicationSettingsBase>. Uma propriedade publicamente acessível é adicionada a essa classe para cada configuração de aplicativo que você desejar expor.  
@@ -47,7 +47,8 @@ Usando código gerenciado, é possível criar novas configurações de aplicativ
  O provedor de configurações padrão, <xref:System.Configuration.LocalFileSettingsProvider>, persiste informações para os arquivos de configuração como texto sem formatação. Isso limita a segurança à segurança de acesso aos arquivos fornecida pelo sistema operacional para o usuário atual. Por isso, é necessário ter cuidado com as informações armazenadas nos arquivos de configuração. Por exemplo, um uso comum para configurações de aplicativo é armazenar cadeias de conexão que apontam para o armazenamento de dados do aplicativo. No entanto, devido a questões de segurança, tais cadeias de caracteres não devem incluir senhas. Para obter mais informações sobre cadeias de caracteres de conexão, consulte <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
-- [Como: Validar configurações do aplicativo](how-to-validate-application-settings.md)
+- [Visão geral sobre configurações do aplicativo](application-settings-overview.md)
+- [Como: validar configurações de aplicativo](how-to-validate-application-settings.md)

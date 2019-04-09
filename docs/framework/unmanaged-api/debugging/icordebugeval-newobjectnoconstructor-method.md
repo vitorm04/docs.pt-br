@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93fff7ec315edec8b20b4149650b27e7792fb2f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6846b866fd47674ca6b5fd187b580fd28e080fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162300"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>Método ICorDebugEval::NewObjectNoConstructor
 Aloca uma nova instância de objeto do tipo especificado, sem tentar chamar um método de construtor.  
@@ -51,4 +51,5 @@ HRESULT NewObjectNoConstructor (
  **Versões do .NET framework:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Método NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

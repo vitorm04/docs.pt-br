@@ -2,12 +2,12 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: c4e9ad3845f8ceef51cd4474b5f3f61b85f12754
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e39458e7e0bac15429ad3d34c4fbba0f55d254f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166980"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
 Especifica os valores padrão usados para iniciar um serviço de conversa segura.  
@@ -57,7 +57,7 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 |`requireDerivedKeys`|Um valor booliano que especifica se chaves podem ser derivadas das chaves de prova originais. O padrão é `true`.|  
 |`requireSecurityContextCancellation`|Um valor booliano que especifica se contexto de segurança deve ser cancelado e encerrado quando não for mais necessário. O padrão é `true`.|  
 |`requireSignatureConfirmation`|Um valor booliano que especifica se a confirmação de assinatura de WS-Security está habilitada. Quando definido como `true`, as assinaturas de mensagem são confirmadas pelo respondente. O padrão é `false`.<br /><br /> Confirmação de assinatura é usada para confirmar que o serviço está respondendo no reconhecimento total de uma solicitação.|  
-|`securityHeaderLayout`|Especifica a ordenação dos elementos no cabeçalho de segurança. Os valores válidos são:<br /><br /> -Estrita. Itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".<br />-Incerta. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: Segurança de mensagem SOAP.<br />-LaxWithTimestampFirst. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: Segurança de mensagem de SOAP, exceto pelo fato de que o primeiro elemento no cabeçalho de segurança deve ser um elemento wsse: timestamp.<br />-LaxWithTimestampLast. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: Segurança de mensagem de SOAP, exceto pelo fato de que o último elemento no cabeçalho de segurança deve ser um elemento wsse: timestamp.<br /><br /> O padrão é estrito.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|`securityHeaderLayout`|Especifica a ordenação dos elementos no cabeçalho de segurança. Os valores válidos são:<br /><br /> -Estrita. Itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".<br />-Incerta. Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para o WSS: Segurança da Mensagem SOAP.<br />-LaxWithTimestampFirst. Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para o WSS: Segurança da Mensagem de SOAP, exceto pelo fato de que o primeiro elemento no cabeçalho de segurança precisa ser um elemento wsse:Timestamp.<br />-LaxWithTimestampLast. Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para o WSS: Segurança da Mensagem de SOAP, exceto pelo fato de que o último elemento no cabeçalho de segurança precisa ser um elemento wsse:Timestamp.<br /><br /> O padrão é estrito.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -71,9 +71,10 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
@@ -82,5 +83,5 @@ Especifica os valores padrão usados para iniciar um serviço de conversa segura
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

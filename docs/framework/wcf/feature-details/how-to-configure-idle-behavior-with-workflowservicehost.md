@@ -1,18 +1,18 @@
 ---
-title: 'Como: Configurar comportamento ocioso com WorkflowServiceHost'
+title: 'Como: configurar o comportamento ocioso com WorkflowServiceHost'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164015"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Como: Configurar comportamento ocioso com WorkflowServiceHost
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Como: configurar o comportamento ocioso com WorkflowServiceHost
 Fluxos de trabalho ficar ociosos quando encontra um indicador que deve ser retomado por algum estímulo externo, por exemplo, quando a instância de fluxo de trabalho está aguardando que uma mensagem seja entregue usando um <xref:System.ServiceModel.Activities.Receive> atividade. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> é um comportamento que permite que você especifique o tempo entre quando uma instância de serviço fica inativo e quando a instância é persistentes ou descarregada. Ele contém duas propriedades que permitem que você defina esses intervalos de tempo. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Especifica o período de tempo entre quando uma instância de serviço de fluxo de trabalho aparece ociosa e quando a instância do serviço de fluxo de trabalho é mantida. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Especifica o período de tempo entre quando o fluxo de trabalho de um instância de serviço fica inativo e quando a instância do serviço de fluxo de trabalho é descarregada, onde descarregar significa persistir a instância para o armazenamento de instância e removê-la da memória. Este tópico explica como configurar o <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> em um arquivo de configuração.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Para configurar WorkflowIdleBehavior  
@@ -42,6 +42,7 @@ Fluxos de trabalho ficar ociosos quando encontra um indicador que deve ser retom
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Extensibilidade de host de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+
+- [Extensibilidade de host de serviço do fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)

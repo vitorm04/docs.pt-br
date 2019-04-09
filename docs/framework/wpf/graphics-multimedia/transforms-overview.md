@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162189"
 ---
 # <a name="transforms-overview"></a>Visão geral de transformações
 Este tópico descreve como usar o [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes para girar, redimensionar, mover (transladar) e distorcer <xref:System.Windows.FrameworkElement> objetos.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>O que é uma transformação?  
  Um <xref:System.Windows.Media.Transform> define como mapear ou transformar pontos de um espaço de coordenadas para outro espaço de coordenadas. Esse mapeamento é descrito por uma transformação <xref:System.Windows.Media.Matrix>, que é uma coleção de três linhas com três colunas de <xref:System.Double> valores.  
@@ -150,7 +149,8 @@ LayoutTransform utilizado para rotacionar o botão
  Porque ele herda do <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.Transform> classe fornece várias funcionalidades especiais: <xref:System.Windows.Media.Transform> objetos podem ser declarados como [recursos](../advanced/xaml-resources.md), compartilhados entre vários objetos, somente leitura para melhorar desempenho, clonados e transformados em thread-safe. Para obter mais informações sobre os diferentes recursos que são fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte a [visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Tópicos de instruções](transformations-how-to-topics.md)
+- [Tópicos explicativos ](transformations-how-to-topics.md)
 - [Exemplo de transformações 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

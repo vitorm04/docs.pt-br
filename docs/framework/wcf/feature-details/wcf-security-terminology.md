@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158737"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada ao falar sobre segurança pode não ser familiar. Este tópico fornece explicações curtas sobre alguns dos termos de segurança, mas não se destina a fornecer uma documentação abrangente para cada item.  
@@ -182,6 +182,7 @@ Parte da terminologia usada ao falar sobre segurança pode não ser familiar. Es
  Um padrão reconhecido internacionalmente para certificados que define suas partes necessárias.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conceitos fundamentais do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

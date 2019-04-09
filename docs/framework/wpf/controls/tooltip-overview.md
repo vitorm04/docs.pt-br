@@ -8,18 +8,16 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170099"
 ---
 # <a name="tooltip-overview"></a>Visão geral de ToolTip
 Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, como por um <xref:System.Windows.Controls.Button>. Este tópico apresenta a dica de ferramenta e discute como criar e personalizar o conteúdo da dica de ferramenta.  
-  
- 
-  
+
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>O que é uma dica de ferramenta?  
  Quando um usuário move o ponteiro do mouse sobre um elemento que tem uma dica de ferramenta, aparecerá uma janela com conteúdo da dica de ferramenta (por exemplo, conteúdo de texto que descreve a função de um controle) por um período especificado. Se o usuário mover o ponteiro do mouse para fora do controle, a janela desaparecerá, pois o conteúdo da dica de ferramenta não poderá receber foco.  
@@ -76,8 +74,9 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Tópicos de instruções](tooltip-how-to-topics.md)
+- [Tópicos explicativos ](tooltip-how-to-topics.md)

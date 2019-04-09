@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164483"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Efeitos da modificação da aparência de um formulário base
 Durante o desenvolvimento de aplicativo, geralmente você precisará alterar a aparência do formulário base do qual outros formulários no projeto (ou em outros projetos) estão herdando.  
@@ -26,6 +26,7 @@ Durante o desenvolvimento de aplicativo, geralmente você precisará alterar a a
  As modificações feitas no formulário de base no tempo de execução tem afetam formulários herdados que já são instanciados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [Como: Herdar Windows Forms](how-to-inherit-windows-forms.md)
-- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)
+- [Como: herdar Windows Forms](how-to-inherit-windows-forms.md)
+- [Herança visual dos Windows Forms](windows-forms-visual-inheritance.md)

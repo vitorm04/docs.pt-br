@@ -1,13 +1,13 @@
 ---
-title: Elemento <httpDigest>
+title: <httpDigest> Elemento
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: c930efbc2cd7a6dc12795d5ac1c26ea92fc36599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165315"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > elemento
 Especifica um resumo de tipo de credencial usada para autenticar o cliente a um serviço.  
@@ -49,6 +49,7 @@ Especifica um resumo de tipo de credencial usada para autenticar o cliente a um 
  Esse recurso deve ser habilitado com o Active Directory no Windows e serviços de informações da Internet (IIS). Para obter mais informações, consulte [a autenticação Digest no IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>

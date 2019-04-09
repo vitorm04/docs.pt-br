@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148155"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Diretrizes para criar controles com estilo
 Este documento resume um conjunto de práticas recomendadas a serem consideradas ao criar um controle que você deseja que seja fácil de criar estilos e modelos. Nós chegamos a este conjunto de práticas recomendadas por meio de muitas tentativas e erros ao trabalhar nos estilos de controle de tema do conjunto de controles internos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aprendemos que uma definição de estilo bem-sucedida é tanto uma função de um modelo de objeto com um bom design quanto é do próprio estilo. O público-alvo deste documento é o autor do controle, não os autores de estilo.  
@@ -42,7 +42,7 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
     -   Minimize os contratos o máximo possível.  
   
-    -   Crie em torno da expectativa de que durante o tempo de design (ou seja, ao usar uma ferramenta de design) é comum que um modelo de controle esteja em um estado incompleto. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não oferece uma infraestrutura de estado de "composição", portanto, os controles precisam ser criados com a expectativa de que esse estado possa ser válido.  
+    -   Crie em torno da expectativa de que durante o tempo de design (ou seja, ao usar uma ferramenta de design) é comum que um modelo de controle esteja em um estado incompleto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não oferece uma infra-estrutura de estado "composição", portanto, os controles precisam ser criados com a expectativa de que tal estado pode ser válido.  
   
     -   Não lance exceções quando algum aspecto de um contrato de modelo não é seguido. Da mesma forma, os painéis não deverão lançar exceções se tiverem muitos ou poucos filhos.  
   
@@ -79,7 +79,7 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
 -   **Use a propriedade Name para sinalizar elementos em um modelo**. Um controle que precisa localizar um elemento no seu estilo para acessá-lo de forma programática deve fazer isso usando a propriedade `Name` e o paradigma `FindName`. Um controle não deve lançar uma exceção quando um elemento não for encontrado, mas desabilitar silenciosamente e cuidadosamente a funcionalidade que exigia esse elemento.  
   
--   **Use as práticas recomendadas para expressar o estado e o comportamento do controle em um estilo.** O seguinte é uma lista ordenada de práticas recomendadas para expressar alterações de estado e o comportamento do controle em um estilo. Você deve usar o primeiro item na lista que permite seu cenário.  
+-   **Use as práticas recomendadas para expressar o estado do controle e comportamento em um estilo.** O seguinte é uma lista ordenada de práticas recomendadas para expressar alterações de estado e o comportamento do controle em um estilo. Você deve usar o primeiro item na lista que permite seu cenário.  
   
     1.  Associação de propriedade. Exemplo: associação entre <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
@@ -99,9 +99,9 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
 -   **Use gatilhos de estilo (em vez de gatilhos de modelo) com moderação**. Os gatilhos que afetam propriedades em elementos de modelo devem ser declarados no modelo. Os gatilhos que afetam propriedades no controle (sem `TargetName`) podem ser declarados no estilo, a menos que você saiba que a alteração do modelo também deverá destruir o gatilho.  
   
--   **Seja consistente com os padrões de estilo existentes.** Muitas vezes existem várias maneiras de resolver um problema. Esteja atento a isso e, quando possível, consistente com os padrões existentes de definição de estilo de controle. Isso é especialmente importante para controles que derivam do mesmo tipo base (por exemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>e assim por diante).  
+-   **Seja consistente com os padrões de estilo existente.** Muitas vezes existem várias maneiras de resolver um problema. Esteja atento a isso e, quando possível, consistente com os padrões existentes de definição de estilo de controle. Isso é especialmente importante para controles que derivam do mesmo tipo base (por exemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>e assim por diante).  
   
--   **Exponha propriedades para habilitar cenários comuns de personalização sem redefinição de modelo**. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não dá suporte para partes plugáveis/personalizáveis, portanto, um usuário do controle tem apenas dois métodos de personalização: definir propriedades diretamente ou definir propriedades usando estilos. Com isso em mente, é apropriado definir um número limitado de propriedades direcionadas a cenários de personalização muito comuns e de alta prioridade que normalmente exigiriam a redefinição de modelo. Aqui estão as práticas recomendadas para quando e como habilitar cenários de personalização:  
+-   **Exponha propriedades para habilitar cenários comuns de personalização sem redefinição de modelo**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não oferece suporte a partes plugáveis/personalizáveis, portanto, um usuário de controle é deixado com apenas dois métodos de personalização: definir propriedades diretamente ou definir propriedades usando estilos. Com isso em mente, é apropriado definir um número limitado de propriedades direcionadas a cenários de personalização muito comuns e de alta prioridade que normalmente exigiriam a redefinição de modelo. Aqui estão as práticas recomendadas para quando e como habilitar cenários de personalização:  
   
     -   As personalizações muito comuns devem ser expostas como propriedades no controle e consumidas pelo modelo.  
   
@@ -119,5 +119,6 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
 -   **Os estilos de tema não precisam ter a semântica de "layout" consistente entre todos os temas**. Por exemplo, o estilo padrão não precisa garantir que um controle ocupará a mesma quantidade de tamanho em todos os temas ou garantir que um controle terá as mesmas margens de conteúdo/preenchimento em todos os temas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estilo e modelagem](styling-and-templating.md)
 - [Visão geral da criação de controle](control-authoring-overview.md)

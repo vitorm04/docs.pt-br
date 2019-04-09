@@ -2,12 +2,12 @@
 title: Rastreamento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146335"
 ---
 # <a name="sql-tracking"></a>Rastreamento de SQL
 Este exemplo demonstra como escrever um participante de rastreamento SQL personalizado, que grava registros de rastreamento em uma base de dados SQL. Windows Workflow Foundation (WF) fornece o fluxo de trabalho de acompanhamento para obter visibilidade sobre a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Para obter mais informações sobre o controle de fluxo de trabalho, consulte [fluxo de trabalho, controle e rastreamento](../workflow-tracking-and-tracing.md).
@@ -60,4 +60,5 @@ Este exemplo demonstra como escrever um participante de rastreamento SQL persona
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>Consulte também
-- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

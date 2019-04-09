@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 9d72350c472ff68d8ee623d82096bdab0c88abb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164509"
 ---
 # <a name="remote-vs-local-execution"></a>Remoto vs. Execução de local
 Você pode decidir executando remotamente (isto é, o mecanismo de base de dados executa a consulta na base de dados) ou localmente suas consultas ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executa a consulta em um cache local).  
@@ -45,7 +45,8 @@ Você pode decidir executando remotamente (isto é, o mecanismo de base de dados
  Esses dois recursos fornecem uma combinação eficiente de opções: execução remoto para grandes coleções e execução local para coleções pequenas ou onde a coleção completa é necessária. Você implementa a execução remoto com <xref:System.Linq.IQueryable>, e a execução local com uma coleção de memória de <xref:System.Collections.Generic.IEnumerable%601> . Para forçar a execução local (ou seja, <xref:System.Collections.Generic.IEnumerable%601>), consulte [converter um tipo em um IEnumerable genérico](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
   
 ### <a name="queries-against-unordered-sets"></a>Consultas em conjuntos não ordenada  
- Observe a diferença importante entre uma coleção de locais que implementa <xref:System.Collections.Generic.List%601> e uma coleção que oferece consultas remotos executados em *desordenados conjuntos* em um banco de dados relacional. os métodos de<xref:System.Collections.Generic.List%601> como aqueles que usam valores de índice requerem a semântica da lista, que normalmente não pode ser obtida com uma consulta remoto com um conjunto não ordenada. Por esse motivo, esses métodos carregam implicitamente <xref:System.Data.Linq.EntitySet%601> para permitir a execução local.  
+ Observe a diferença importante entre uma coleção de locais que implementa <xref:System.Collections.Generic.List%601> e uma coleção que oferece consultas remotos executados em *desordenados conjuntos* em um banco de dados relacional. <xref:System.Collections.Generic.List%601> métodos, como aqueles que usam valores de índice requerem a semântica da lista, que normalmente não pode ser obtida por meio de uma consulta remota em relação a um conjunto não ordenado. Por esse motivo, esses métodos carregam implicitamente <xref:System.Data.Linq.EntitySet%601> para permitir a execução local.  
   
 ## <a name="see-also"></a>Consulte também
-- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+
+- [Consulte conceitos](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

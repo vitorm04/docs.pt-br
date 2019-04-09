@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162700"
 ---
 # <a name="richtextbox-overview"></a>Visão geral de RichTextBox
 O <xref:System.Windows.Controls.RichTextBox> controle permite que você exiba ou edite o conteúdo de fluxo, incluindo parágrafos, imagens, tabelas e muito mais. Este tópico apresenta os <xref:System.Windows.Controls.TextBox> de classe e fornece exemplos de como usá-lo em ambos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e C#.  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox ou RichTextBox?  
  Ambos <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> permitir aos usuários editar texto, no entanto, os dois controles são usados em cenários diferentes. Um <xref:System.Windows.Controls.RichTextBox> é uma opção melhor quando é necessário que o usuário edite texto formatado, imagens, tabelas ou outros conteúdos avançados. Por exemplo, editar um documento, artigo ou blog que requer formatação, imagens, etc é melhor realizada usando um <xref:System.Windows.Controls.RichTextBox>. Um <xref:System.Windows.Controls.TextBox> requer menos recursos do sistema, um <xref:System.Windows.Controls.RichTextBox> e é ideal quando apenas texto sem formatação precisa ser editado (isto é, uso em formulários). Ver [visão geral de TextBox](textbox-overview.md) para obter mais informações sobre <xref:System.Windows.Controls.TextBox>. A tabela abaixo resume os principais recursos do <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox>.  
@@ -95,5 +94,6 @@ O <xref:System.Windows.Controls.RichTextBox> controle permite que você exiba ou
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Tópicos de instruções](richtextbox-how-to-topics.md)
+
+- [Tópicos explicativos ](richtextbox-how-to-topics.md)
 - [Visão geral de TextBox](textbox-overview.md)

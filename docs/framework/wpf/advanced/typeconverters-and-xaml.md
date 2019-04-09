@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164978"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters e XAML
 Este tópico apresenta a finalidade da conversão de tipo de cadeia de caracteres como um recurso de linguagem XAML geral. No .NET Framework, o <xref:System.ComponentModel.TypeConverter> classe tem uma finalidade específica como parte da implementação para uma classe personalizada gerenciada que pode ser usada como um valor de propriedade no uso do atributo XAML. Se você escrever uma classe personalizada e desejar que instâncias de sua classe a ser usado como valores de atributo configuráveis de XAML, você precisará aplicar uma <xref:System.ComponentModel.TypeConverterAttribute> à sua classe, escrever um personalizado <xref:System.ComponentModel.TypeConverter> classe, ou ambos.  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>Conceitos de conversão de tipos  
   
 ### <a name="xaml-and-string-values"></a>XAML e valores de cadeia de caracteres  
@@ -110,7 +108,8 @@ Este tópico apresenta a finalidade da conversão de tipo de cadeia de caractere
  Também é possível fornecer um conversor de tipos por propriedade. Em vez de aplicar uma [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> à definição de classe, aplicá-la a uma definição de propriedade (a definição principal, não a `get` / `set` implementações dentro dele). O tipo da propriedade deve corresponder ao tipo que é processado pelo conversor de tipos personalizado. Com esse atributo aplicado, quando um processador XAML manipula valores dessa propriedade, ele pode processar cadeias de caracteres de entrada e retornar as instâncias de objeto. A técnica de conversor de tipo por propriedade é particularmente útil se você optar por usar um tipo de propriedade do Microsoft .NET Framework ou de alguma outra biblioteca em que você não pode controlar a definição de classe e não é possível aplicar um <xref:System.ComponentModel.TypeConverterAttribute> lá.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ComponentModel.TypeConverter>
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md)

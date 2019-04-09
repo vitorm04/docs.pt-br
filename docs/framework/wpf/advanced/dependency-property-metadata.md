@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170359"
 ---
 # <a name="dependency-property-metadata"></a>Metadados de propriedade da dependência
 O sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui um sistema de relatório de metadados que vai além do que pode ser relatado sobre uma propriedade por meio de reflexão ou das características gerais do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Os metadados de uma propriedade de dependência também podem ser atribuídos exclusivamente pela classe que define uma propriedade de dependência, podem ser alterados quando a propriedade de dependência é adicionada a uma classe diferente e podem ser substituídos especificamente por todas as classes derivadas que herdam a propriedade de dependência da classe base de definição.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes em classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e leu a [Visão geral das propriedades de dependência](dependency-properties-overview.md). Para seguir os exemplos deste tópico, você também deve ter noções básicas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e saber como escrever aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -92,9 +90,10 @@ O sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
  Você pode chamar <xref:System.Windows.DependencyProperty.AddOwner%2A> para uma propriedade de dependência que é definida como uma propriedade anexada pela classe proprietária. Geralmente o motivo para isso é expor a propriedade anexada anteriormente como uma propriedade de dependência não anexada. Você vai expor a <xref:System.Windows.DependencyProperty.AddOwner%2A> retornam o valor como um `public static readonly` de campo para uso como o identificador de propriedade de dependência e definirá as propriedades do "wrapper" apropriadas para que a propriedade aparece na tabela de membros e dá suporte a uma propriedade não anexada uso em sua classe.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
-- [Metadados de propriedade de Framework](framework-property-metadata.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
+- [Metadados de propriedade de estrutura](framework-property-metadata.md)

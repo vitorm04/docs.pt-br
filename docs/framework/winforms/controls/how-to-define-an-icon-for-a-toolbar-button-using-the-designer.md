@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 2099738d5b666aa305d678c962c0b203d3ab67b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6657a9bbb850a24ae47be11854d6affd2a02f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118268"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Como: Definir um ícone para um botão de barra de ferramentas usando o Designer
 > [!NOTE]
@@ -42,7 +42,8 @@ ms.locfileid: "57717733"
 6.  No **propriedades** janela que aparece no painel à direita do **Editor de coleção ToolBarButton**, defina o <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade de cada botão de barra de ferramentas para um dos valores na lista, que é desenhada entre as imagens que você adicionou ao <xref:System.Windows.Forms.ImageList> componente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Como: Disparar eventos de Menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Controle de barra de ferramentas](toolbar-control-windows-forms.md)
+- [Como: Disparar eventos de menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Controle ToolBar](toolbar-control-windows-forms.md)
 - [Componente ImageList](imagelist-component-windows-forms.md)

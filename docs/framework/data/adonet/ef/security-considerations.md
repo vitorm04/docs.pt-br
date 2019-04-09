@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161351"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -65,13 +65,13 @@ Este tópico descreve considerações de segurança específicas para desenvolve
 #### <a name="run-applications-with-the-minimum-permissions"></a>Execute aplicativos com as permissões mínimas.  
  Quando você permite que um aplicativo gerenciado seja executado com permissão de confiança total, o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] não limita o acesso do aplicativo ao seu computador. Isso pode tornar vulnerável a segurança do seu aplicativo e comprometer o sistema inteiro. Para usar a segurança de acesso do código e outros mecanismos de segurança no [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], você deve executar aplicativos usando permissões de confiança parcial, com o conjunto mínimo de permissões necessárias para permitir o funcionamento do aplicativo. As seguintes permissões de acesso do código são as permissões mínimas que seu aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] precisa:  
   
--   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> para abrir os arquivos de metadados especificados ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> para pesquisar arquivos de metadados em um diretório.  
+-   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> para abrir os arquivos de metadados especificado ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> para pesquisar um diretório para arquivos de metadados.  
   
--   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para dar suporte a consultas LINK to Entities.  
+-   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para dar suporte a LINQ para consultas de entidades.  
   
 -   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> para se inscrever em uma <xref:System.Transactions><xref:System.Transactions.Transaction>.  
   
--   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> para serializar exceções usando a interface <xref:System.Runtime.Serialization.ISerializable>.  
+-   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> para serializar exceções usando o <xref:System.Runtime.Serialization.ISerializable> interface.  
   
 -   Permissão para abrir uma conexão de banco de dados e executar comandos no banco de dados, tais como <xref:System.Data.SqlClient.SqlClientPermission> para um banco de dados do SQL Server.  
   
@@ -94,13 +94,13 @@ Este tópico descreve considerações de segurança específicas para desenvolve
 #### <a name="prevent-sql-injection-attacks"></a>Evite ataques de injeção de SQL.  
  Os aplicativos normalmente obtêm entrada externa (de um usuário ou de outro agente externo) e executam ações com base nessa entrada. Qualquer entrada que seja derivada direta ou indiretamente do usuário ou de um agente externo pode ter conteúdo que usa a sintaxe da linguagem de destino para executar ações não autorizadas. Quando a linguagem de destino é uma linguagem SQL, como [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], essa manipulação é conhecida como um ataque de injeção de SQL. Um usuário mal-intencionado pode injetar comandos diretamente na consulta e remover uma tabela de banco de dados, causar uma negação de serviço ou alterar a natureza da operação que está sendo executada.  
   
--   Ataques de injeção de [!INCLUDE[esql](../../../../../includes/esql-md.md)]:  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] ataques de injeção:  
   
      Os ataques de injeção de SQL podem ser executados em [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornecendo entrada mal-intencionada para valores que são usados em um predicado de consulta e em nomes de parâmetro. Para evitar o risco de injeção de SQL, você nunca deve combinar a entrada do usuário com o texto de comando de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas, em vez de injetar literais de um agente externo diretamente na consulta. Você também deve considerar o uso [métodos de construtor de consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir o Entity SQL com segurança.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas aceitam parâmetros everywhere literais são aceitos. Você deve usar consultas parametrizadas, em vez de injetar literais de um agente externo diretamente na consulta. Você também deve considerar o uso [métodos de construtor de consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir o Entity SQL com segurança.  
   
--   Ataques de injeção de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ataques de injeção:  
   
      Embora a composição de consultas seja possível em [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], ela é executada por meio da API de modelo de objeto. Diferentemente [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] consultas não são compostas por meio da manipulação de cadeia de caracteres ou concatenação, e eles não são suscetíveis a tradicionais ataques de injeção de SQL.  
   
@@ -150,18 +150,19 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  Embora os valores para os quais o operador raiz (`~`) e a cadeia de caracteres de substituição `DataDirectory` são resolvidos devam permanecer constantes durante o tempo de execução do aplicativo, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não impede que o host modifique esses valores.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Verifique o comprimento do caminho antes da implantação.  
- Antes de implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], verifique se os valores do operador raiz (~) e da cadeia de caracteres de substituição `DataDirectory` não excedem os limites de comprimento de caminho no sistema operacional. Os provedores de dados [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] não garantem que o comprimento do caminho esteja dentro dos limites válidos.  
+ Antes de implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], verifique se os valores do operador raiz (~) e da cadeia de caracteres de substituição `DataDirectory` não excedem os limites de comprimento de caminho no sistema operacional. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] provedores de dados não garantem que o comprimento do caminho esteja dentro dos limites válidos.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considerações de segurança para metadados ADO.NET  
  As considerações de segurança a seguir se aplicam ao gerar e trabalhar com arquivos de modelo e de mapeamento.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Não exponha informações confidenciais em logs.  
- Os componentes do serviço de metadados [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] não registram em log informações particulares. Se houver resultados que não possam ser retornados devido às restrições de acesso, os sistemas de gerenciamento de bancos de dados e os sistemas de arquivos retornarão um número zero de resultados, em vez de gerar uma exceção que possa conter informações confidenciais.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] componentes de serviço de metadados não faça qualquer informação particular. Se houver resultados que não possam ser retornados devido às restrições de acesso, os sistemas de gerenciamento de bancos de dados e os sistemas de arquivos retornarão um número zero de resultados, em vez de gerar uma exceção que possa conter informações confidenciais.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Não aceite objetos MetadataWorkspace de fontes não confiáveis.  
  Os aplicativos não devem aceitar instâncias da classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> de fontes não confiáveis. Em vez disso, você deve construir e popular explicitamente um workspace como fonte.  
   
 ## <a name="see-also"></a>Consulte também
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+
+- [Protegendo aplicativos ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Considerações de implantação](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Considerações sobre migração](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

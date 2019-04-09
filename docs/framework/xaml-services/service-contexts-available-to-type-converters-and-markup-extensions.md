@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147791"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextos de serviço disponíveis para conversores de tipo e extensões de marcação
 Os autores dos tipos que oferecem suporte a usos de extensão de marcação e de conversor de tipo geralmente devem ter informações contextuais sobre onde um uso está localizado na marcação ou ao redor da estrutura de gráfico de objeto. Informações podem ser necessárias para que o objeto fornecido é instanciado corretamente ou para que as referências de objeto para objetos existentes no grafo de objeto podem ser feitas. Ao usar os serviços de XAML do .NET Framework, o contexto que pode ser necessário é exposto como uma série de interfaces de serviço. Código de suporte de extensão de marcação ou o conversor de tipo pode consultar um serviço usando um contexto de provedor de serviço que está disponível e é passado por meio de <xref:System.Xaml.XamlObjectWriter> ou tipos relacionados. O contexto do esquema XAML está diretamente disponível por meio de um desses serviços. Este tópico descreve como acessar os contextos de serviço de uma implementação de conversor de valor e lista os serviços geralmente disponíveis e suas funções.  
@@ -187,6 +187,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
  Para obter mais informações, consulte <xref:System.Xaml.IDestinationTypeProvider>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
 - [Visão geral das extensões de marcação para XAML](markup-extensions-for-xaml-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172114"
 ---
 # <a name="wcf-data-services-resources"></a>Recursos do WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tópicos introdutórios podem ser encontrados nos seguintes locais. Muitos desses tópicos também contêm links para tópicos relacionados que contêm informações mais detalhadas.  
@@ -17,10 +17,10 @@ ms.locfileid: "56093665"
  [Visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Apresenta uma visão geral dos recursos e da funcionalidade disponíveis no [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Introdução](../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [Guia de Introdução](../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Descreve como criar e acessar um serviço de dados usando [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], conforme ilustrado pela [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
- [Application Scenarios](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md) (Cenários de aplicativo)  
+ [Cenários de aplicativo](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Fornece uma abordagem baseada em tarefas para criar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e aplicativos que acessam [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.  
   
  [Glossário .NET](../../../standard/glossary.md)  
@@ -60,4 +60,5 @@ ms.locfileid: "56093665"
  Descreve a base para o modelo relacional-entidade que é implementada por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Escrito em 1976, este é um dos artigos citados com mais frequência em informática.  
   
 ## <a name="see-also"></a>Consulte também
-- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+
+- [Guia de Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

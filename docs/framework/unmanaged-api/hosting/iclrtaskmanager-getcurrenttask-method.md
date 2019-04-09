@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2efc8e0b47e68e53858bc949e6f0d0ca1352c7e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7db333cd97963ca8ef26673c0ba5cbf352fa331b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165302"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>Método ICLRTaskManager::GetCurrentTask
 Obtém o [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância que está sendo executado no thread do sistema operacional que originou a chamada de método.  
@@ -63,6 +63,7 @@ HRESULT GetCurrentTask (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

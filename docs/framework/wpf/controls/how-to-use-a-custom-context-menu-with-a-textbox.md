@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar um menu contextual personalizado com um TextBox'
+title: 'Como: Usar um menu de contexto personalizado com um TextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom context menus [WPF]
 - TextBox control [WPF], custom content menus
 ms.assetid: 842d3cd5-6fa0-4be4-8d90-6c7466213b1c
-ms.openlocfilehash: 805f5205a91f9b3da0c48c987f1f49f1d81892b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0507c6fa37f0f51f9e12ebe5f908c39c25b50d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129409"
 ---
-# <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Como: Usar um menu contextual personalizado com um TextBox
+# <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Como: Usar um menu de contexto personalizado com um TextBox
 Este exemplo mostra como definir e implementar um menu de contexto personalizado simples para um <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Exemplo  
@@ -36,6 +36,7 @@ Este exemplo mostra como definir e implementar um menu de contexto personalizado
  [!code-vb[TextBox_ContextMenu#_TextBox_ContextMenu](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_ContextMenu/VisualBasic/Window1.xaml.vb#_textbox_contextmenu)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usar verificação ortográfica com um menu de contexto](how-to-use-spell-checking-with-a-context-menu.md)
 - [Visão geral de TextBox](textbox-overview.md)
 - [Visão geral de RichTextBox](richtextbox-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Use com uma região de recorte'
+title: 'Como: usar recorte com uma região'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: 2ae9a99ef25c7ee5e52f5995a2d057e42e7d3127
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163729"
 ---
-# <a name="how-to-use-clipping-with-a-region"></a>Como: Use com uma região de recorte
+# <a name="how-to-use-clipping-with-a-region"></a>Como: usar recorte com uma região
 Uma das propriedades do <xref:System.Drawing.Graphics> classe é a região de recorte. Todos os desenhos feito por um determinado <xref:System.Drawing.Graphics> objeto é restrito para a região de recorte desse <xref:System.Drawing.Graphics> objeto. Você pode definir a região de recorte chamando o <xref:System.Drawing.Graphics.SetClip%2A> método.  
   
 ## <a name="example"></a>Exemplo  
@@ -32,5 +32,6 @@ Uma das propriedades do <xref:System.Drawing.Graphics> classe é a região de re
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Regiões no GDI+](regions-in-gdi.md)
 - [Usando regiões](using-regions.md)

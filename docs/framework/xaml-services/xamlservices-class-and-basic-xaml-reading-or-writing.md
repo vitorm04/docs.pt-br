@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162254"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Leitura e gravação XAML básico e de classe de serviços XAML
 <xref:System.Xaml.XamlServices> é uma classe fornecida pelo serviços de XAML do .NET Framework que pode ser usado para lidar com cenários XAML que não exigem acesso específico para o fluxo do nó XAML ou informações do sistema de tipo XAML obtido em nós. <xref:System.Xaml.XamlServices> API pode ser resumida como o seguinte: `Load` ou `Parse` para dar suporte a um caminho de carregamento XAML `Save` para dar suporte a um XAML salvar caminho, e `Transform` para fornecer uma técnica que ingressa em um caminho de carregamento e salvar caminho. `Transform` pode ser usado para alterar de um esquema XAML para outro. Este tópico resume cada uma destas classificações de API e descreve as diferenças entre sobrecargas de método específico.  
@@ -62,6 +62,7 @@ ms.locfileid: "58027134"
  Para operações que dependem de examinar cada nó em um fluxo de nó XAML, você normalmente não usa <xref:System.Xaml.XamlServices.Transform%2A>. Em vez disso, você precisará definir sua própria série de operação carga caminho salvar caminho e levantar sua própria lógica. Em um dos caminhos, use um par de gravador XAML/leitor XAML em torno de seu próprio loop de nó. Por exemplo, carregar o XAML inicial usando <xref:System.Xaml.XamlXmlReader> e intervir em nós com sucessivas <xref:System.Xaml.XamlXmlReader.Read%2A> chamadas. Operar no nível do fluxo de nó XAML que você pode agora ajustar nós individuais (tipos, membros, outros nós) para aplicar uma transformação, ou deixe o nó como-está. Em seguida, envie o nó em diante, para o relevantes `Write` API de um <xref:System.Xaml.XamlObjectWriter> e gravar o objeto. Para obter mais informações, consulte [Noções básicas sobre XAML Stream estruturas e conceitos nó](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
 - [Serviços XAML](index.md)

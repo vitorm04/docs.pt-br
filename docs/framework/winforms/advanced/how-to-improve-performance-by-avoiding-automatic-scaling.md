@@ -1,5 +1,5 @@
 ---
-title: 'Como: Melhorar o desempenho, evitando o dimensionamento automático'
+title: 'Como: melhorar o desempenho evitando o dimensionamento automático'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163575"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Como: Melhorar o desempenho, evitando o dimensionamento automático
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode ajustar a escala automaticamente de uma imagem à medida que você a desenha, o que poderia diminuir o desempenho. Como alternativa, você pode controlar a escala da imagem passando as dimensões do retângulo de destino para o <xref:System.Drawing.Graphics.DrawImage%2A> método.  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Como: melhorar o desempenho evitando o dimensionamento automático
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode dimensionar automaticamente uma imagem conforme você desenha, o que poderia diminuir o desempenho. Como alternativa, você pode controlar a escala da imagem passando as dimensões do retângulo de destino para o <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
  Por exemplo, a seguinte chamada para o <xref:System.Drawing.Graphics.DrawImage%2A> método Especifica um canto superior esquerdo de (50, 30), mas não especifica um retângulo de destino.  
   
@@ -41,5 +41,6 @@ ms.locfileid: "58653789"
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua Texture.jpg por um nome e caminho de imagem válidos no seu sistema.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,15 +1,15 @@
 ---
-title: <AttributeImplies> (.NET Nativo)
+title: <AttributeImplies> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165055"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > (.NET nativo)
 Define a política para os elementos de código ao qual o atributo recipiente é aplicado.  
@@ -60,7 +60,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<AttributeImplies>` é usado se o seu tipo recipiente for um atributo (isto é, uma classe derivada de <xref:System.Attribute?displayProperty=nameWithType>). Se o atributo for aplicado a um elemento de programa específico, a política definida pelo elemento `<AttributeImplies>` aplica-se a esse elemento de programa.  
@@ -68,7 +68,8 @@ Define a política para os elementos de código ao qual o atributo recipiente é
  Os atributos de reflexão, serialização e interoperabilidade são todos opcionais, embora pelo menos um deve estar presente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

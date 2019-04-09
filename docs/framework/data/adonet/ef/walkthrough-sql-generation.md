@@ -2,12 +2,12 @@
 title: 'Passo a passo: Geração SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164574"
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
 Este tópico ilustra como a geração de SQL ocorre na [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). A seguinte consulta SQL Entity usa o modelo que está incluído com o provedor exemplo:  
@@ -126,11 +126,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- “False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. O Var (Extenent1) é resolvido <para symbol_Extent1> após pesquisa na tabela de símbolo. Porque a instância é resolvida para um símbolo simples, como resultado de processar Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"é retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.  
+ “False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. Var (extenent1) é resolvido para < symbol_Extent1 > após uma olhada para cima na tabela de símbolo. Porque a instância é resolvida para um símbolo simples, como resultado de processar Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"é retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.  
   
  Com isso, Join1 foi processado completamente, e um escopo é aparecido da tabela de símbolo.  
   
- O controle retorna a processar Join4, o pai de Join1. Porque o filho reutilizou a instrução select, as extensões Join1 são substituídas por um único join o símbolo <joinSymbol_Join1>. Uma nova entrada também é adicionada à tabela de símbolo para associar Join1 com <o joinSymbol_Join1>.  
+ O controle retorna a processar Join4, o pai de Join1. Porque o filho reutilizou a instrução Select, as extensões Join1 são substituídas por um único Join o símbolo < joinSymbol_Join1 >. Além disso, uma nova entrada é adicionada à tabela de símbolo para associar Join1 com < joinSymbol_Join1 >.  
   
  O nó a seguir seja processado é Join3, como filhos de Join4. Porque é um filho à direita, “false” é empurrado para a pilha de IsParentAJoin. O estado do visitante é ilustrado nesse momento na figura a seguir.  
   
@@ -148,9 +148,9 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  A figura a seguir mostra o estado do visitante mesmo antes de DbPropertyExpression “Var (Join2). Extent4.OrderID” é processado.  
   
- Considere como “Var (Join2). Extent4.OrderID” é visitado. Primeiro, a propriedade “Var de instância (Join2). Extent4” é visitado, que é um outro DbPropertyExpression e está visitando seu instância Var Join2 (“”). Na parte superior a maioria de escopo na tabela de símbolo, “Join2” resolve <a joinSymbol_join2>. No método de visita para o processamento “Var de DbPropertyExpression (Join2). ” Aviso Extent4 que um símbolo do join foi retornada a visitar a instância e para ajuste é necessário.  
+ Considere como “Var (Join2). Extent4.OrderID” é visitado. Primeiro, a propriedade “Var de instância (Join2). Extent4” é visitado, que é um outro DbPropertyExpression e está visitando seu instância Var Join2 (“”). No escopo a maioria dos principais na tabela de símbolo, "Join2" resolve < joinSymbol_join2 >. No método de visita para o processamento “Var de DbPropertyExpression (Join2). ” Aviso Extent4 que um símbolo do join foi retornada a visitar a instância e para ajuste é necessário.  
   
- Desde que está aninhado joins, nós pesquisamos a propriedade “Extent4” no dicionário de NameToExtent de símbolo de adição, resolvê-lo a <symbol_Extent4> e retornar um novo SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Como um par de símbolo é retornado de processamento de instância de “Var (Join2). Extent4.OrderID”, a propriedade “OrderID” é resolvido de ColumnPart do controle do símbolo (<symbol_Extent4>), que tenha uma lista de colunas de extensão que representa. Assim, “Var (Join2). Extent4.OrderID” é resolvido { <joinSymbol_Join2>, “. ”, <symbol_OrderID>}.  
+ Desde que está aninhado joins, nós pesquisamos a propriedade “Extent4” no dicionário de NameToExtent de símbolo de adição, resolvê-lo a <symbol_Extent4> e retornar um novo SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Como um par de símbolo é retornado de processamento de instância de “Var (Join2). Extent4.OrderID”, a propriedade “OrderID” é resolvido de ColumnPart do controle do símbolo (<symbol_Extent4>), que tenha uma lista de colunas de extensão que representa. Portanto, "Var(Join2). Extent4.OrderID"é resolvido {< joinSymbol_Join2 >". ", < symbol_OrderID >}.  
   
  A condição de adição de Join4 é processada da mesma forma. O controle retorna para o método de VisitInputExpression que processou a parte superior a maioria de projeto. Examinando o FromExtents de SelectStatement0 retornado, a entrada é identificada como uma união, e remove as extensões originais e substituir-las com uma nova extensão com apenas o símbolo do join. A tabela de símbolo é atualizada e também a parte da projeção de Projeto é processada em seguida. Resolver propriedades e ajuste das extensões do join são como descrito anteriormente.  
   
@@ -195,9 +195,10 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 ### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de geração SQL: Gerando o comando de cadeia de caracteres  
  A segunda etapa gerencie nomes reais dos símbolos, e nós centramo-nos apenas sobre os símbolos que representam as colunas chamadas “OrderID”, porque nesse caso um conflito precisa ser resolvido. Esses são realçadas no SqlSelectStatement. Observe que os sufixos usados na figura são enfatizar somente essas instâncias são diferentes, não para representar os novos nomes, porque seus nomes finais (possivelmente formulário diferente os nomes originais) não foram atribuídos nesse estágio ainda.  
   
- O primeiro símbolo encontrado que precisa ser renomeado é <symbol_OrderID>. O novo nome é atribuído como “OrderID1”, 1 é marcado como o último usou o sufixo” para “OrderID e o símbolo é marcado como não precisando renomear. Em seguida, o primeiro uso <de symbol_OrderID_2> for encontrado. É renomeado para usar o sufixo disponível a OrderID2 (“”) e marcado como novamente não precisando renomear, de modo que as próximas vezes onde ela é usado não pegue renomeado. Isso é feito para <symbol_OrderID_3> muito.  
+ O primeiro símbolo encontrado que precisa ser renomeado é < symbol_OrderID >. O novo nome é atribuído como “OrderID1”, 1 é marcado como o último usou o sufixo” para “OrderID e o símbolo é marcado como não precisando renomear. Em seguida, o primeiro uso < symbol_OrderID_2 > for encontrado. É renomeado para usar o sufixo disponível a OrderID2 (“”) e marcado como novamente não precisando renomear, de modo que as próximas vezes onde ela é usado não pegue renomeado. Isso é feito muito para < symbol_OrderID_3 >.  
   
  No final da segunda etapa, a instrução SQL final é gerada.  
   
 ## <a name="see-also"></a>Consulte também
-- [Geração de SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+
+- [Geração SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

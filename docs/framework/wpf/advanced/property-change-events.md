@@ -13,15 +13,15 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166199"
 ---
 # <a name="property-change-events"></a>Eventos de alteração na propriedade
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define vários eventos que são gerados em resposta a uma alteração no valor de uma propriedade. Geralmente, a propriedade é uma propriedade de dependência. O evento propriamente dito é, às vezes, um evento roteado e, às vezes, é um evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] padrão. A definição do evento varia dependendo do cenário, porque algumas alterações de propriedades são mais adequadamente roteadas por uma árvore de elemento, enquanto outras alterações de propriedades são geralmente apenas de interesse ao objeto no qual a propriedade foi alterada.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define vários eventos que são acionados em resposta a uma alteração no valor de uma propriedade. Geralmente, a propriedade é uma propriedade de dependência. O evento propriamente dito é, às vezes, um evento roteado e, às vezes, é um evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] padrão. A definição do evento varia dependendo do cenário, porque algumas alterações de propriedades são mais adequadamente roteadas por uma árvore de elemento, enquanto outras alterações de propriedades são geralmente apenas de interesse ao objeto no qual a propriedade foi alterada.  
   
 ## <a name="identifying-a-property-change-event"></a>Identificando um evento de alteração de propriedade  
  Nem todos os eventos que reportam uma alteração de propriedade são explicitamente identificados como um evento de propriedade alterado, em virtude de um padrão de assinatura ou de um padrão de nomenclatura. Em geral, a descrição do evento na documentação [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] indica se o evento está diretamente vinculado a uma alteração de valor da propriedade e fornece referências cruzadas entre a propriedade e o evento.  
@@ -62,5 +62,6 @@ ms.locfileid: "57351986"
  Para saber mais sobre gatilhos de propriedade, consulte [Estilo e modelagem](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)

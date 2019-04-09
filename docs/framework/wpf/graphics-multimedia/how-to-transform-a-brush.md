@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: 990c82b4844ce3ca7f5b553b180280b6b37496ca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162989"
 ---
 # <a name="how-to-transform-a-brush"></a>Como: Transformar um pincel
 Este exemplo mostra como transformar <xref:System.Windows.Media.Brush> objetos usando suas duas propriedades de transformação: <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>.  
@@ -45,6 +45,7 @@ Este exemplo mostra como transformar <xref:System.Windows.Media.Brush> objetos u
  Para obter o exemplo completo, consulte [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973). Para obter mais informações sobre pincéis, consulte [Visão geral da pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da transformação de pincel](brush-transformation-overview.md)
 - [Visão geral da pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md)
 - [Visão geral de transformações](transforms-overview.md)

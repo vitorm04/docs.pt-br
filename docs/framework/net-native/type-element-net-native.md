@@ -1,15 +1,15 @@
 ---
-title: <Type> (.NET Nativo)
+title: <Type> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85c5ae85a07567305d6e7e2a57f4b5459bd647d4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162692"
 ---
 # <a name="type-element-net-native"></a>\<Tipo > (.NET nativo)
 Aplica a política de tempo de execução a um tipo específico, como uma classe ou estrutura.  
@@ -67,13 +67,13 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
 |-------------|-----------------|  
 |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Se o tipo recipiente for um atributo, ele define a política de tempo de execução para elementos de código à qual o atributo é aplicado.|  
 |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Aplica a política de reflexão a um evento pertencente a esse tipo.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Aplica a política de reflexão a um campo pertencente a esse tipo.|  
+|[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)|Aplica a política de reflexão a um campo pertencente a esse tipo.|  
 |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Aplica a política ao tipo de parâmetro de um tipo genérico.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Aplica a política a um tipo, se esta política tiver sido aplicada ao tipo representado pelo elemento `<Type>` recipiente.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão a um método pertencente a esse tipo.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica a política de reflexão a um método construído genérico pertencente a esse tipo.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Aplica a política de reflexão a uma propriedade pertencente a esse tipo.|  
-|[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|Aplica a política de tempo de execução a todas as classes herdadas do tipo recipiente.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão a um método pertencente a esse tipo.|  
+|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica a política de reflexão a um método construído genérico pertencente a esse tipo.|  
+|[\<Propriedade >](../../../docs/framework/net-native/property-element-net-native.md)|Aplica a política de reflexão a uma propriedade pertencente a esse tipo.|  
+|[\<Subtipos >](../../../docs/framework/net-native/subtypes-element-net-native.md)|Aplica a política de tempo de execução a todas as classes herdadas do tipo recipiente.|  
 |`<Type>`|Aplica a política de reflexão a um tipo aninhado.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
   
@@ -81,9 +81,9 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política de reflexão para todos os tipos em um assembly especificado.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.|  
+|[\<Aplicativo >](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução.|  
+|[\<Assembly >](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política de reflexão para todos os tipos em um assembly especificado.|  
+|[\<Biblioteca >](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica a política de reflexão a todos os tipos em um namespace.|  
 |`<Type>`|Aplica a política de reflexão a um tipo e todos os seus membros.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
@@ -132,6 +132,7 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
