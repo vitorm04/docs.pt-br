@@ -7,12 +7,12 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102343"
 ---
 # <a name="graphics"></a>Gráficos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece suporte integrado para multimídia, gráficos vetoriais, animação e composição de conteúdo, tornando mais fácil para os desenvolvedores criem interfaces de usuário e conteúdo interessantes.  
@@ -26,9 +26,10 @@ ms.locfileid: "57361151"
  [Formas](shapes.md)  
  [Transformações](transformations.md)  
  [Configurações do Registro de renderização dos elementos gráficos](graphics-rendering-registry-settings.md)  
- [Tópicos de instruções](graphics-how-to-topics.md)  
+ [Tópicos explicativos ](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -37,5 +38,5 @@ ms.locfileid: "57361151"
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
 - [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Elementos gráficos e multimídia](index.md)
+- [Gráficos e multimídia](index.md)
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)

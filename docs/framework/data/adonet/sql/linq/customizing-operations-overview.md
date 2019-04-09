@@ -1,15 +1,15 @@
 ---
-title: 'Personalizando operações: Visão geral'
+title: 'Personalizar operações: Visão geral'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-ms.openlocfilehash: 4f13bed76ad2814d669f487b57ae9acbdc08eb74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075971"
 ---
-# <a name="customizing-operations-overview"></a>Personalizando operações: Visão geral
+# <a name="customizing-operations-overview"></a>Personalizar operações: Visão geral
 Por padrão, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gerencia dinâmico SQL para inserção, atualização e operações de exclusão com base no mapeamento. No entanto, na prática você geralmente deseja adicionar sua própria lógica de negócios para fornecer segurança, validação e assim por diante.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] técnicas para personalizar essas operações incluem o seguinte.  
@@ -24,4 +24,5 @@ Por padrão, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta o uso de procedimentos armazenados e funções definidas pelo usuário. Os procedimentos armazenados são usados para personalizar operações. Para obter mais informações, consulte [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Personalizando as operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+
+- [Personalizando a inserção, atualiazação, e as operações de exclusão](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

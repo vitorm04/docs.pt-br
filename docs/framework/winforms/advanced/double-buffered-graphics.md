@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103435"
 ---
 # <a name="double-buffered-graphics"></a>Elementos gráficos em buffer duplo
 A cintilação é um problema comum na programação de gráficos. Operações gráficas que requerem várias operações de pintura complexas podem fazer as imagens renderizadas parecerem cintilar ou ter uma aparência inaceitável por outro motivo. Para resolver esses problemas, o .NET Framework dá acesso a buffer duplo.  
@@ -33,10 +33,11 @@ A cintilação é um problema comum na programação de gráficos. Operações g
  Para obter mais informações sobre como usar o <xref:System.Drawing.BufferedGraphics> classe, consulte [manualmente renderização de gráficos em buffer](how-to-manually-render-buffered-graphics.md). Para obter mais informações sobre a renderização de gráficos, consulte [Elementos gráficos e desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Como: Renderizar elementos gráficos em buffer manualmente](how-to-manually-render-buffered-graphics.md)
-- [Como: Reduzir a cintilação em elementos gráficos com buffers duplos para formulários e controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Como: Gerenciar elementos gráficos em buffer manualmente](how-to-manually-manage-buffered-graphics.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Como: renderizar elementos gráficos em buffer manualmente](how-to-manually-render-buffered-graphics.md)
+- [Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Como: gerenciar elementos gráficos em buffer manualmente](how-to-manually-manage-buffered-graphics.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)

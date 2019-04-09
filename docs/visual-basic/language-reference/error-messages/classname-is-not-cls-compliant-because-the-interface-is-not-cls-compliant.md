@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101309"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<classname >' não é compatível com CLS porque a interface '\<interfacename >' ele implementa não é compatível com CLS
 Uma classe ou interface é marcado como `<CLSCompliant(True)>` quando ela deriva de ou implementa um tipo que está marcado como `<CLSCompliant(False)>` ou não está marcado.  
@@ -32,5 +32,3 @@ Uma classe ou interface é marcado como `<CLSCompliant(True)>` quando ela deriva
 -   Se você precisar de conformidade com CLS, defina este tipo em um esquema de implementação ou hierarquia de herança diferente.  
   
 -   Se você precisar que esse tipo permaneça em seu esquema atual de implementação ou hierarquia de herança, remova os <xref:System.CLSCompliantAttribute> de sua definição ou marque-a como `<CLSCompliant(False)>`.  
-  
- 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Controlar um MediaElement usando um storyboard'
+title: 'Como: Controlar um MediaElement usando um Storyboard'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: 51d567101ee49095e27e9d440016a81cd49fa876
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100308"
 ---
-# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Como: Controlar um MediaElement usando um storyboard
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Como: Controlar um MediaElement usando um Storyboard
 Este exemplo mostra como controlar um <xref:System.Windows.Controls.MediaElement> usando um <xref:System.Windows.Media.MediaTimeline> em um <xref:System.Windows.Media.Animation.Storyboard>.  
   
 ## <a name="example"></a>Exemplo  
@@ -36,6 +36,7 @@ Este exemplo mostra como controlar um <xref:System.Windows.Controls.MediaElement
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
@@ -43,5 +44,5 @@ Este exemplo mostra como controlar um <xref:System.Windows.Controls.MediaElement
 - [Visão geral de storyboards](storyboards-overview.md)
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
 - [Visão geral da animação](animation-overview.md)
-- [Tópicos de instruções](audio-and-video-how-to-topics.md)
-- [Elementos gráficos e multimídia](index.md)
+- [Tópicos explicativos ](audio-and-video-how-to-topics.md)
+- [Gráficos e multimídia](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Imprimir no Windows Forms usando Visualizar impressão'
+title: 'Como: imprimir nos Windows Forms usando visualização de impressão'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 11f5583cc181904b17c378ac7ead4f35c539aeed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 48391465bf199f8a212a575c64227958385eeae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073605"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Como: Imprimir no Windows Forms usando Visualizar impressão
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Como: imprimir nos Windows Forms usando visualização de impressão
 É muito comum na programação do Windows Forms oferecer a visualização de impressão além dos serviços de impressão. Uma maneira fácil de adicionar serviços de visualização de impressão ao seu aplicativo é usar um <xref:System.Windows.Forms.PrintPreviewDialog> controle em combinação com o <xref:System.Drawing.Printing.PrintDocument.PrintPage> lógica de manipulação de eventos para imprimir um arquivo.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Visualizar um documento de texto com um controle PrintPreviewDialog  
@@ -65,6 +65,7 @@ ms.locfileid: "57711480"
 -   Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Imprimir um arquivo de texto de várias páginas nos Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)
+
+- [Como: imprimir um arquivo de texto de várias páginas nos Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Suporte à impressão no Windows Forms](windows-forms-print-support.md)
 - [Impressão mais segura no Windows Forms](../more-secure-printing-in-windows-forms.md)

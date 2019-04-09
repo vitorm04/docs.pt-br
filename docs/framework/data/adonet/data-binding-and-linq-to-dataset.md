@@ -2,12 +2,12 @@
 title: Associação e LINQ to DataSet de dados
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073553"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Associação e LINQ to DataSet de dados
 *Associação de dados* é o processo que estabelece uma conexão entre o aplicativo da interface do usuário e a lógica de negócios. Se a associação possui configurações corretas e os dados fornecem notificações adequadas, quando os dados mudam de valor, os elementos que são associados a dados refletem as mudanças automaticamente. <xref:System.Data.DataSet> é uma representação em memória dos dados que fornecem um modelo relacional consistente de programação, independentemente da fonte de dados que contém. O ADO.NET 2.0 <xref:System.Data.DataView> permite que você classificar e filtrar os dados armazenados em <xref:System.Data.DataTable>. Essa funcionalidade é freqüentemente usada em aplicativos de associação de dados. Usando <xref:System.Data.DataView>, você pode expor os dados em uma tabela com ordem de classificação diferentes, e você pode filtrar os dados pelo estado de linha ou baseados em uma expressão de filtro. Para obter mais informações sobre o <xref:System.Data.DataView> do objeto, consulte [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
@@ -17,23 +17,24 @@ ms.locfileid: "54655771"
  Observe que <xref:System.Data.DataView> representa a consulta própria e não é uma visualização sobre a consulta. <xref:System.Data.DataView> é associado a um controle de interface do usuário, como <xref:System.Windows.Forms.DataGrid> ou <xref:System.Windows.Forms.DataGridView>, fornecendo um modelo de associação de dados simples. <xref:System.Data.DataView> também pode ser criado de <xref:System.Data.DataTable>, fornecendo uma visualização padrão da tabela.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criando um objeto de DataView](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
+ [Criar um objeto de DataView](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
  Fornece informações sobre a criação de <xref:System.Data.DataView>.  
   
- [Filtrando com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ [Filtrar com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
  Descreve como filtragem com <xref:System.Data.DataView>.  
   
- [Classificando com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
+ [Classificar com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
  Descreve como classificar com <xref:System.Data.DataView>.  
   
  [Consultando a coleção DataRowView em um DataView](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
  Fornece informações sobre consulte a coleção de <xref:System.Data.DataRowView> expostos por <xref:System.Data.DataView>.  
   
- [Desempenho de DataView](../../../../docs/framework/data/adonet/dataview-performance.md)  
+ [Desempenho de um DataView](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Fornece informações sobre <xref:System.Data.DataView> e desempenho.  
   
- [Como: Associar um objeto de DataView a um controle de DataGridView dos Windows Forms](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [Como: associar um objeto de DataView a um controle DataGridView do Windows Forms](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  Descreve como associar um objeto de <xref:System.Data.DataView> a <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de Programação](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Como: Publicar metadados para um serviço usando um arquivo de configuração'
+title: 'Como: publicar metadados para um serviço usando um arquivo de configuração'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075197"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Como: Publicar metadados para um serviço usando um arquivo de configuração
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Como: publicar metadados para um serviço usando um arquivo de configuração
 Esse é um dos dois tópicos que demonstram os metadados de publicação para um serviço do Windows Communication Foundation (WCF). Há duas maneiras para especificar como um serviço deve publicar metadados, usando um arquivo de configuração e código. Este tópico mostra como publicar metadados para um serviço usando um arquivo de configuração.  
   
 > [!CAUTION]
@@ -93,21 +93,13 @@ namespace Metadata.Samples
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Para publicar metadados para um serviço WCF usando um arquivo de configuração de aplicativo  
   
 1.  Dentro do arquivo App. config, após o fechamento `</services>` elemento, criar um `<behaviors>` elemento.  
-  
-  
-  
+
 2.  Dentro de `<behaviors>` elemento, adicionar um `<serviceBehaviors>` elemento.  
-  
-  
-  
+
 3.  Adicionar um `<behavior>` elemento para o `<serviceBehaviors>` elemento e especifique um valor para o `name` atributo do `<behavior>` elemento.  
-  
-  
-  
+
 4.  Adicionar um `<serviceMetadata>` elemento para o `<behavior>` elemento. Defina as `httpGetEnabled` de atributo para `true` e o `policyVersion` Policy15 do atributo. `httpGetEnabled` permite que o serviço responder a solicitações de metadados feitas por uma solicitação HTTP GET. `policyVersion` instrui o serviço em conformidade com WS-Policy 1.5 durante a geração de metadados.  
-  
-  
-  
+
 5.  Adicionar um `behaviorConfiguration` de atributo para o `<service>` elemento e especifique a `name` atributo do `<behavior>` elemento adicionado na etapa 1, conforme mostrado no exemplo de código a seguir.  
   
     ```xml  
@@ -262,9 +254,10 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Auto-hospedagem](../../../../docs/framework/wcf/samples/self-host.md)
+- [Como: hospedar um serviço do WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Self-Host](../../../../docs/framework/wcf/samples/self-host.md)
 - [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Como: Publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Como: publicar metadados utilizando código para um serviço](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir Ajuda pop-up'
+title: 'Como: exibir a ajuda pop-up'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pop-up Help
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 875ed49e3a7dbe7205abb47ee1f2012d82826416
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6b6fa0c111783dcdad0387aed7d40fb54fa7b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078363"
 ---
-# <a name="how-to-display-pop-up-help"></a>Como: Exibir Ajuda pop-up
+# <a name="how-to-display-pop-up-help"></a>Como: exibir a ajuda pop-up
 Uma maneira de exibir a Ajuda no Windows Forms é por meio de **ajuda** botão, localizado no lado direito da barra de título, acessível por meio o <xref:System.Windows.Forms.Form.HelpButton%2A> propriedade. Esse tipo de exibição de Ajuda é adequado para uso com caixas de diálogo. Caixas de diálogo mostradas modalmente (com o <xref:System.Windows.Forms.Form.ShowDialog%2A> método) enfrentam dificuldades ajuda externa sistemas, como caixas de diálogo modais precisam ser fechadas antes que o foco pode alternar para outra janela. Além disso, usar o botão **Ajuda** requer que não nenhum botão **Minimizar** ou **Maximizar** seja mostrado na barra de título. Isso é uma convenção padrão de caixas de diálogo, enquanto formulários geralmente têm os botões **Minimizar** e **Maximizar**.  
   
  Lembre-se de que você também pode usar o <xref:System.Windows.Forms.HelpProvider> componente para vincular controles a arquivos em um sistema de Ajuda, mesmo se você tiver implementado Ajuda pop-up. Para obter mais informações, consulte [Fornecer ajuda em um aplicativo do Windows](how-to-provide-help-in-a-windows-application.md).  
@@ -43,6 +43,7 @@ Uma maneira de exibir a Ajuda no Windows Forms é por meio de **ajuda** botão, 
 6.  Pressione o botão **Ajuda** na barra de título e clique no controle no qual você definiu a cadeia de caracteres de Ajuda.  
   
 ## <a name="see-also"></a>Consulte também
-- [Ajuda de Controle Usando ToolTips](control-help-using-tooltips.md)
-- [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
+
+- [Ajuda de controle usando ToolTips](control-help-using-tooltips.md)
+- [Integrando a ajuda do usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

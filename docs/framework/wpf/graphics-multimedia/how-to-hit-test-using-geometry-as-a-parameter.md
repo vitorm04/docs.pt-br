@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100958"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Como: Teste de clique usando geometria como um parâmetro
 Este exemplo mostra como executar um teste de clique em um objeto visual usando um <xref:System.Windows.Media.Geometry> como um teste de clique parâmetro.  
@@ -38,5 +38,6 @@ Este exemplo mostra como executar um teste de clique em um objeto visual usando 
 >  O <xref:System.Windows.Media.HitTestResult> retorno de chamada não deve ser chamado quando o detalhe da interseção for <xref:System.Windows.Media.IntersectionDetail.Empty>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md)
 - [Teste de clique de geometria em um visual](how-to-hit-test-geometry-in-a-visual.md)

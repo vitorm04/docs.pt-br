@@ -12,24 +12,23 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074983"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Otimizando desempenho: Elementos gráficos e geração de imagens 2D
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma ampla variedade de gráficos 2D e funcionalidade de imagem que pode ser otimizada para suas necessidades de aplicativo. Este tópico fornece informações sobre otimização de desempenho nessas áreas.  
-  
-  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece uma ampla variedade de gráficos 2D e funcionalidade de imagem que pode ser otimizada para suas necessidades de aplicativo. Este tópico fornece informações sobre otimização de desempenho nessas áreas.  
+
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Desenho e formas  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece os dois <xref:System.Windows.Media.Drawing> e <xref:System.Windows.Shapes.Shape> objetos para representar o conteúdo de desenho gráfico. No entanto, <xref:System.Windows.Media.Drawing> objetos são construções mais simples que <xref:System.Windows.Shapes.Shape> objetos e fornecem melhores características de desempenho.  
   
  Um <xref:System.Windows.Shapes.Shape> permite que você desenhe uma forma gráfica na tela. Como eles são derivados de <xref:System.Windows.FrameworkElement> classe, <xref:System.Windows.Shapes.Shape> objetos podem ser usados dentro de painéis e a maioria dos controles.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece várias camadas de acesso aos elementos gráficos e serviços de renderização. Na camada superior, <xref:System.Windows.Shapes.Shape> objetos são fáceis de usar e fornecem muitos recursos úteis, como layout e manipulação de eventos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece alguns objetos de forma prontos para uso. Todos os objetos de forma herdam a <xref:System.Windows.Shapes.Shape> classe. Objetos de forma disponíveis incluem <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, e <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece várias camadas de acesso aos serviços de renderização e gráficos. Na camada superior, <xref:System.Windows.Shapes.Shape> objetos são fáceis de usar e fornecem muitos recursos úteis, como layout e manipulação de eventos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece um número de objetos de forma prontos para uso. Todos os objetos de forma herdam a <xref:System.Windows.Shapes.Shape> classe. Objetos de forma disponíveis incluem <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, e <xref:System.Windows.Shapes.Rectangle>.  
   
  <xref:System.Windows.Media.Drawing> objetos, por outro lado, não derivam de <xref:System.Windows.FrameworkElement> de classe e fornecer uma implementação mais leve para processamento de formas, imagens e texto.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "57371392"
   
 <a name="Images"></a>   
 ## <a name="images"></a>Imagens  
- Geração de imagens [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma melhoria significativa nos recursos de imagem em versões anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Recursos de imagens, como exibir um bitmap ou usar uma imagem em um controle comum foram primeiramente tratados pela interface de programação Microsoft Windows GDI (Graphics Device Interface) ou Microsoft Windows GDI+ (API). Essa API fornece a funcionalidade de linha de base de imagens, mas não têm recursos como o suporte para a extensibilidade de codec e suporte às imagens de alta fidelidade. WPF Imaging API foi remodelado para superar os defeitos do GDI e GDI+ e fornecer um novo conjunto de APIs para exibir e usar imagens em seus aplicativos.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geração de imagens fornece uma melhoria significativa nos recursos de imagem nas versões anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Recursos de imagens, como exibir um bitmap ou usar uma imagem em um controle comum foram primeiramente tratados pela interface de programação Microsoft Windows GDI (Graphics Device Interface) ou Microsoft Windows GDI+ (API). Essa API fornece a funcionalidade de linha de base de imagens, mas não têm recursos como o suporte para a extensibilidade de codec e suporte às imagens de alta fidelidade. WPF Imaging API foi remodelado para superar os defeitos do GDI e GDI+ e fornecer um novo conjunto de APIs para exibir e usar imagens em seus aplicativos.  
   
  Ao usar imagens, considere as seguintes recomendações para obter um melhor desempenho:  
   
@@ -100,9 +99,10 @@ ms.locfileid: "57371392"
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)
 - [Recursos do aplicativo](optimizing-performance-application-resources.md)

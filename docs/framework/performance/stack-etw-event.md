@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076463"
 ---
 # <a name="stack-etw-event"></a>Evento ETW de pilha
 O evento de pilha deve ser usado em conjunto com outros eventos para gerar rastreamentos de pilha depois que um evento é acionado. Ele é registrado quando o provedor de tempo de execução está habilitado. Esse é um evento de alta frequência porque é acionado sempre que outro evento de tempo de execução é acionado. Por esse motivo, recomendamos ter cautela ao usar esse evento.  
@@ -40,4 +40,5 @@ O evento de pilha deve ser usado em conjunto com outros eventos para gerar rastr
 |Pilha|win:Pointer|Colunas de ponteiros de instrução.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)

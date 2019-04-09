@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098956"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizando a aparência de um controle existente criando um ControlTemplate
 <a name="introduction"></a> Um <xref:System.Windows.Controls.ControlTemplate> Especifica a estrutura visual e o comportamento visual de um controle. Você pode personalizar a aparência de um controle, fornecendo uma nova <xref:System.Windows.Controls.ControlTemplate>. Quando você cria um <xref:System.Windows.Controls.ControlTemplate>, substitua a aparência de um controle existente sem alterar sua funcionalidade. Por exemplo, você pode tornar os botões em seu aplicativo redondos em vez da forma quadrada padrão, mas o botão ainda gerará o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
@@ -31,8 +31,7 @@ Um botão que usa um modelo de controle personalizado
   
  ![Um botão com uma borda vermelha. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Um botão que usa um modelo de controle personalizado e tem o ponteiro do mouse sobre ele  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico presume que você entenda como criar e usar controles e estilos, conforme discutido em [Controles](index.md). Os conceitos discutidos neste tópico se aplicam aos elementos que herdam de <xref:System.Windows.Controls.Control> classe, exceto para o <xref:System.Windows.Controls.UserControl>. Não é possível aplicar uma <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.UserControl>.  
@@ -257,9 +256,10 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Exemplo completo  
- O exemplo a seguir mostra todo <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> que é discutido neste tópico.  
+ O exemplo a seguir mostra todo <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> que é discutido neste tópico.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estilo e modelagem](styling-and-templating.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073839"
 ---
 # <a name="bindings-and-binding-elements"></a>Associações e elementos de associações
 Associações são coleções de elementos de configuração especial, chamados *elementos de associação*, que é avaliado no tempo de execução do serviço sempre que um cliente ou o ponto de extremidade de serviço está sendo construído. O tipo e a ordem dos elementos de associação dentro de uma associação determina a seleção e a ordem de empilhamento dos canais de transporte e protocolo na pilha de canais de um ponto de extremidade.  
@@ -23,13 +23,12 @@ Associações são coleções de elementos de configuração especial, chamados 
   
 -   Para usar um novo elemento de associação (por exemplo, um novo transporte, codificação ou elemento de associação de protocolo), você deve criar uma nova associação que inclui esse elemento de ligação. Por exemplo, se você tiver adicionado um personalizado `UdpTransportBindingElement` para transporte UDP, você precisaria criar uma nova associação para fazer uso dele. Para obter informações sobre como executar esse comportamento usando o <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> de tipo, consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
--   Para configurar os elementos de associação existente de forma que as associações fornecidas pelo sistema para não expor em propriedades públicas. Por exemplo, você deve criar uma nova associação para alterar a ordem na qual assinatura e criptografia operações são executadas. Para obter informações sobre como executar esse comportamento, consulte [como: personalizar uma associação de System-Provided](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+-   Para configurar os elementos de associação existente de forma que as associações fornecidas pelo sistema para não expor em propriedades públicas. Por exemplo, você deve criar uma nova associação para alterar a ordem na qual assinatura e criptografia operações são executadas. Para obter informações sobre como executar esse comportamento, consulte [como: Personalizar uma associação fornecida pelo sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
 -   Para estabelecer associações padrão corporativas que expõem apenas as opções de configuração específicas. Por exemplo, para criar para a sua empresa uma variante do <xref:System.ServiceModel.WSHttpBinding> para sua empresa em que a segurança não pode ser desabilitada, crie uma nova associação que se comporta como o <xref:System.ServiceModel.WSHttpBinding>, mas com a segurança sempre ativa. Para obter detalhes, consulte [Criando associações](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 -   Para executar alguma personalização de metadados, normalmente, mas não necessariamente para configurar ou usar algum elemento de associação personalizada. Para obter mais informações sobre como fornecer suporte a metadados para associações e elementos de associação, consulte [configuração e suporte a metadados](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
-  
-  
+
 ## <a name="channels-bindings-and-binding-elements"></a>Canais, associações e elementos de associação  
  Associações e elementos de associação são a conexão entre o modelo de programação de aplicativo, que inclui os atributos e comportamentos, e o modelo de canal, que inclui as fábricas e ouvintes, codificadores de mensagem e transporte e protocolo implementações. Normalmente, associações e elementos de associação são implementadas para habilitar os canais a ser usada pela camada de aplicativo.  
   

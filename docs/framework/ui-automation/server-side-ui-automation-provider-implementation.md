@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: df2c1fcd6c84b7670c53a8f06f97c2ea46b8b33d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077284"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementação do provedor de automação de interface do usuário no lado do servidor
 > [!NOTE]
@@ -42,8 +42,7 @@ ms.locfileid: "57679405"
 -   UIAutomationTypes.dll  
   
 -   WindowsBase.dll  
-  
-  
+
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>Interfaces de provedor  
  Cada [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedor deve implementar uma das seguintes interfaces.  
@@ -170,9 +169,10 @@ ms.locfileid: "57679405"
  Para fazer isso, o provedor do fragmento raiz para o rebar expõe um conjunto de filhos que representam as faixas. Cada faixa tem um único provedor que pode expor propriedades e padrões. Em sua implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, o provedor de faixa retorna o provedor de janela padrão para o controle HWND, que obtém chamando <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, passando o identificador de janela do controle. Por fim, o provedor do fragmento raiz para o rebar implementa o <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> interface e em sua implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> retorna o provedor de banda apropriado para o controle no HWND especificado.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral dos provedores de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+
+- [Visão Geral dos Provedores de Automação de Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [Expor um provedor de automação de interface do usuário do lado do servidor](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Retornar as propriedades de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Disparar eventos de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Habilitar navegação de um provedor de fragmento de automação de interface do usuário](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Retornando Propriedades de um Provedor de Automação de IU](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Disparar Eventos de um Provedor de Automação UI](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Permitir navegação em um fragmento por um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Padrões de controle de suporte em um provedor de automação da interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

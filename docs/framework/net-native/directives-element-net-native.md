@@ -1,15 +1,15 @@
 ---
-title: <Directives> (.NET Nativo)
+title: <Directives> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14eac92a2f3e5ed5d93f4e608f7d42b13849036e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100217"
 ---
 # <a name="directives-element-net-native"></a>\<Diretivas > (.NET nativo)
 O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET nativo.  
@@ -34,8 +34,8 @@ O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET na
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly cujos tipos de filho e membros de tipo necessitam de metadados no tempo de execução.|  
+|[\<Aplicativo >](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão.|  
+|[\<Biblioteca >](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly cujos tipos de filho e membros de tipo necessitam de metadados no tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
  Cada arquivo de diretivas de tempo de execução pode conter somente um elemento `<Directives>`.  
@@ -43,5 +43,6 @@ O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET na
  O elemento `<Directives>` pode conter zero ou um elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e zero, um ou mais elementos [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

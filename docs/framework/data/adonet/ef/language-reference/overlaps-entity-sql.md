@@ -2,12 +2,12 @@
 title: SOBREPÕE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 8ab2b00767aed19cff5448d811d7cdcd1871d9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74399c4c5701fcf039666ef3de19de2cf9a6b50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104190"
 ---
 # <a name="overlaps-entity-sql"></a>SOBREPÕE (Entity SQL)
 Determina se duas coleções têm elementos comuns.  
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  Qualquer expressão de consulta válida que retornar uma coleção para comparar com a coleção retornada de outra expressão de consulta. Todas as expressões devem ser do mesmo tipo ou de uma base comum ou um tipo derivado que `expression`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` se as duas coleções possuem elementos comuns; caso contrário, `false`.  
+ `true` Se as duas coleções possuem elementos comuns; Caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  OVERLAPS fornecem funcional equivalente ao seguinte:  
@@ -42,4 +42,5 @@ expression OVERLAPS expression
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

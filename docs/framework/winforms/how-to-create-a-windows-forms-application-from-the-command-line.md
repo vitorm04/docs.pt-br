@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102421"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Como: Criar um aplicativo do Windows Forms a partir da linha de comando
 Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas para criar e executar um aplicativo do Windows Forms na linha de comando. Há um suporte abrangente para esses procedimentos no Visual Studio.  Consulte também [passo a passo: Controle hospeda um Windows Forms no WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -59,11 +59,11 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
 2.  Compile o formulário.  
   
-    -   Se você estiver usando o C#, digite: `csc form1.cs`  
+    -   Se você estiver usando c#, digite: `csc form1.cs`  
   
          `-or-`  
   
-    -   Se estiver usando Visual Basic, digite: `vbc form1.vb`  
+    -   Se você estiver usando Visual Basic, digite: `vbc form1.vb`  
   
 3.  No prompt de comando, digite: `Form1.exe`  
   
@@ -114,8 +114,9 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
 -   Para compilar o código, siga as instruções no procedimento a seguir que descrevem como compilar e executar o aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Alterando a aparência dos Windows Forms](changing-the-appearance-of-windows-forms.md)
+- [Alterando a aparência do Windows Forms](changing-the-appearance-of-windows-forms.md)
 - [Aprimorando aplicativos do Windows Forms](./advanced/index.md)
 - [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)

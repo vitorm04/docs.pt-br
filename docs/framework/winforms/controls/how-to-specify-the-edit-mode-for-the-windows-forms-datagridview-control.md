@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especifique o modo de edição para o controle do Windows Forms DataGridView'
+title: 'Como: Especificar o modo de edição do controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080391"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Como: Especifique o modo de edição para o controle do Windows Forms DataGridView
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Como: Especificar o modo de edição do controle DataGridView do Windows Forms
 Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows.Forms.DataGridView> célula de caixa de texto digitando nela ou pressionando F2. Isso colocará a célula no modo de edição se todas as condições a seguir forem atendidas:  
   
 -   A fonte de dados subjacente der suporte à edição.  
@@ -45,6 +45,7 @@ Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows
 -   Referências aos assemblies <xref:System> e <xref:System.Windows.Forms>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [Entrada de Dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Entrada de dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)

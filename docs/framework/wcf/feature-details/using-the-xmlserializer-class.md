@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105437"
 ---
 # <a name="using-the-xmlserializer-class"></a>Usando a classe XmlSerializer
 Windows Communication Foundation (WCF) pode usar duas tecnologias de serialização diferentes para transformar os dados em seu aplicativo em XML que é transmitido entre clientes e serviços, um processo chamado de serialização.  
@@ -206,10 +206,11 @@ Windows Communication Foundation (WCF) pode usar duas tecnologias de serializaç
 >  O `<xmlSerializer useLegacySerializerGeneration="true"/>` switch só funciona em um computador com .NET Framework 4.5 ou versão posterior. As opções acima `appSettings` abordagem funciona em todas as versões do .NET Framework.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
 - [Especificando transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Como: Melhorar o tempo de inicialização do WCF cliente aplicativos usando o XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Como: melhorar o tempo de inicialização dos aplicativos do cliente WCF usando o XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

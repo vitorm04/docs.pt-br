@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097571"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificação de alteração na associação de dados do Windows Forms
 Um dos conceitos mais importantes do Windows Forms de vinculação de dados é *notificação de alteração*. Para garantir que sua fonte de dados e controles de ligação sempre tenham os dados mais recentes, você deve adicionar a notificação de alteração para associação de dados. Especificamente, você deseja garantir que os controles associados são notificados das alterações que foram feitas para sua fonte de dados e a fonte de dados é notificada das alterações que foram feitas para as propriedades associadas de um controle.  
@@ -33,9 +33,10 @@ Um dos conceitos mais importantes do Windows Forms de vinculação de dados é *
  Por fim, do lado do controle você deve expor uma *PropertyName*evento Changed para cada propriedade projetado para ser associado a dados. As alterações à propriedade de controle, em seguida, são propagadas para a fonte de dados associada. Para obter mais informações, confira [Como: Aplicar o padrão PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)
-- [Fontes de dados com suporte nos Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Fontes de dados com suporte do Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)

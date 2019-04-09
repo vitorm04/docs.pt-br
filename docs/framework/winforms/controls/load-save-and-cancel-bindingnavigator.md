@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator'
+title: 'Como: Adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098709"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Como: Adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms
 O <xref:System.Windows.Forms.BindingNavigator> controle é uma finalidade especial <xref:System.Windows.Forms.ToolStrip> controle que é destinado para navegar e manipular controles no formulário que estão associados aos dados.  
   
  Porque ele é um <xref:System.Windows.Forms.ToolStrip> controle, o <xref:System.Windows.Forms.BindingNavigator> componente pode ser facilmente modificado para incluir comandos adicionais ou alternativos para o usuário.  
@@ -110,6 +110,7 @@ O <xref:System.Windows.Forms.BindingNavigator> controle é uma finalidade especi
     >  O <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> está no escopo do método para a linha de dados. Salve as alterações feitas ao exibir um registro individual antes de navegar até o próximo registro.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>

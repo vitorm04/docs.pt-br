@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098774"
 ---
 # <a name="use-automatic-layout-overview"></a>Visão geral do uso de layout automático
 Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos com localizáveis [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. No passado, a localização de uma interface do usuário era um processo demorado. A interface do usuário foi adaptado para cada idioma necessário um ajuste pixel por pixel. Hoje, com o design e o direito de padrões de codificação, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser criado para que os localizadores tenham menos redimensionamento e reposicionamento. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design do aplicativo.  
@@ -107,6 +107,7 @@ Grade
  **Observação** para o exemplo de código completo, consulte [compartilhar propriedades de dimensionamento entre grades](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Globalização para WPF](globalization-for-wpf.md)
+
+- [Globalização do WPF](globalization-for-wpf.md)
 - [Usar layout automático para criar um botão](how-to-use-automatic-layout-to-create-a-button.md)
 - [Usar uma grade para layout automático](how-to-use-a-grid-for-automatic-layout.md)

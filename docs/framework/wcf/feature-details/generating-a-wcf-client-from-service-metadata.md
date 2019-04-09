@@ -2,12 +2,12 @@
 title: Gerando um cliente do WCF de metadados de serviço
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078246"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Gerando um cliente do WCF de metadados de serviço
 Este tópico descreve como usar as várias opções no Svcutil.exe para gerar os clientes de documentos de metadados.  
@@ -47,7 +47,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/language:\<language>**|Especifica a linguagem de programação a ser usada para gerar o código. Forneça um nome de linguagem registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Values: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> Para obter mais informações, consulte [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/language:\<language>**|Especifica a linguagem de programação a ser usada para gerar o código. Forneça um nome de linguagem registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Values: C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> Para obter mais informações, consulte [classe CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Escolhendo um Namespace para o cliente  
   
@@ -70,5 +70,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/noConfig**|Não gera arquivos de configuração.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
 - [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

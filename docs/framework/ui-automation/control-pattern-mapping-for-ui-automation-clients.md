@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101127"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapeamento de Padrão de Controles para Clientes de Automação de IU
 > [!NOTE]
@@ -77,4 +77,5 @@ ms.locfileid: "57679574"
 >  Se um tipo de controle não tem nenhum padrão de controle com suporte listado, mas tem um ou mais padrões de controle tem suporte condicionalmente, em seguida, um desses padrões de controle condicional terão suporte em todos os tempos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+
+- [Visão geral de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

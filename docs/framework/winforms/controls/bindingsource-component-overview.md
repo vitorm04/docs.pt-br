@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098631"
 ---
 # <a name="bindingsource-component-overview"></a>Visão geral do componente BindingSource
 O <xref:System.Windows.Forms.BindingSource> componente é projetado para simplificar o processo de associar controles a uma fonte de dados subjacente. O <xref:System.Windows.Forms.BindingSource> componente atua como um canal e uma fonte de dados para vincular a outros controles. Ele fornece uma abstração da conexão de dados do formulário enquanto passa comandos para a lista de dados subjacente. Além disso, você pode adicionar dados diretamente a ele para que o próprio componente funcione como uma fonte de dados.  
@@ -40,24 +40,25 @@ O <xref:System.Windows.Forms.BindingSource> componente é projetado para simplif
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|Propriedade <xref:System.Windows.Forms.BindingSource.Current%2A>|Obtém o item atual da fonte de dados.|  
-|Propriedade <xref:System.Windows.Forms.BindingSource.Position%2A>|Obtém ou define a posição atual na lista subjacente.|  
-|Propriedade <xref:System.Windows.Forms.BindingSource.List%2A>|Obtém a lista que é a avaliação do <xref:System.Windows.Forms.BindingSource.DataSource%2A> e <xref:System.Windows.Forms.BindingSource.DataMember%2A> avaliação. Se <xref:System.Windows.Forms.BindingSource.DataMember%2A> não estiver definido, retorna a lista especificada por <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|Método <xref:System.Windows.Forms.BindingSource.Insert%2A>|Insere um item na lista no índice especificado.|  
-|Método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|Remove o item atual da lista.|  
-|Método <xref:System.Windows.Forms.BindingSource.EndEdit%2A>|Aplica as alterações pendentes à fonte de dados subjacente.|  
-|Método <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>|Cancela a operação de edição atual.|  
-|Método <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Adiciona um novo item à lista subjacente. Se a fonte de dados implementa <xref:System.ComponentModel.IBindingList> e retorna um item do <xref:System.Windows.Forms.BindingSource.AddingNew> evento, adiciona esse item. Caso contrário, a solicitação é passada para a lista <xref:System.ComponentModel.IBindingList.AddNew%2A> método. Se a lista subjacente não é um <xref:System.ComponentModel.IBindingList>, o item é criado automaticamente por meio de seu construtor padrão público.|  
+|<xref:System.Windows.Forms.BindingSource.Current%2A> propriedade|Obtém o item atual da fonte de dados.|  
+|<xref:System.Windows.Forms.BindingSource.Position%2A> propriedade|Obtém ou define a posição atual na lista subjacente.|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> propriedade|Obtém a lista que é a avaliação do <xref:System.Windows.Forms.BindingSource.DataSource%2A> e <xref:System.Windows.Forms.BindingSource.DataMember%2A> avaliação. Se <xref:System.Windows.Forms.BindingSource.DataMember%2A> não estiver definido, retorna a lista especificada por <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|<xref:System.Windows.Forms.BindingSource.Insert%2A> method|Insere um item na lista no índice especificado.|  
+|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> method|Remove o item atual da lista.|  
+|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> method|Aplica as alterações pendentes à fonte de dados subjacente.|  
+|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> method|Cancela a operação de edição atual.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> method|Adiciona um novo item à lista subjacente. Se a fonte de dados implementa <xref:System.ComponentModel.IBindingList> e retorna um item do <xref:System.Windows.Forms.BindingSource.AddingNew> evento, adiciona esse item. Caso contrário, a solicitação é passada para a lista <xref:System.ComponentModel.IBindingList.AddNew%2A> método. Se a lista subjacente não é um <xref:System.ComponentModel.IBindingList>, o item é criado automaticamente por meio de seu construtor padrão público.|  
   
 ## <a name="sorting-and-filtering"></a>Classificando e filtrando  
  Normalmente, você deve trabalhar com uma exibição ordenada ou filtrada da fonte de dados. A tabela a seguir mostra os membros que o <xref:System.Windows.Forms.BindingSource> fornece de fonte de dados do componente.  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|Propriedade <xref:System.Windows.Forms.BindingSource.Sort%2A>|Se a fonte de dados for um <xref:System.ComponentModel.IBindingList>, obtém ou define um nome de coluna usado para classificação e informações de ordem de classificação. Se a fonte de dados for um <xref:System.ComponentModel.IBindingListView> e dá suporte à classificação, avançada obtém vários nomes de colunas usados para classificação e informações de ordem de classificação|  
-|Propriedade <xref:System.Windows.Forms.BindingSource.Filter%2A>|Se a fonte de dados for um <xref:System.ComponentModel.IBindingListView>, obtém ou define a expressão usada para filtrar quais linhas são exibidas.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> propriedade|Se a fonte de dados for um <xref:System.ComponentModel.IBindingList>, obtém ou define um nome de coluna usado para classificação e informações de ordem de classificação. Se a fonte de dados for um <xref:System.ComponentModel.IBindingListView> e dá suporte à classificação, avançada obtém vários nomes de colunas usados para classificação e informações de ordem de classificação|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> propriedade|Se a fonte de dados for um <xref:System.ComponentModel.IBindingListView>, obtém ou define a expressão usada para filtrar quais linhas são exibidas.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Arquitetura do componente BindingSource](bindingsource-component-architecture.md)

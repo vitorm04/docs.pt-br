@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d228e548255cd70f34f6609aff613789f94fe5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080820"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>Interface ICorDebugGCReferenceEnum
 Fornece um enumerador para objetos que serão coletados do lixo.  
@@ -55,4 +55,5 @@ Fornece um enumerador para objetos que serão coletados do lixo.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f95ac4e4c21a2cbaab9f91c1257a868bdce65af
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 95f00fea637b5263699779b7abe9863d266d7f19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099359"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>Função StrongNameTokenFromAssemblyEx
 Cria um token de nome forte a partir do arquivo de assembly especificado e retorna a chave pública que representa o token.  
@@ -76,6 +76,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Método StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
 - [Método StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

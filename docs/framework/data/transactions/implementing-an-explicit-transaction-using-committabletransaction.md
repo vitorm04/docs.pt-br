@@ -1,18 +1,18 @@
 ---
-title: Implementando uma transação explícita usando CommittableTransaction
+title: Implementar uma transação explícita usando CommittableTransaction
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105411"
 ---
-# <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementando uma transação explícita usando CommittableTransaction
+# <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar uma transação explícita usando CommittableTransaction
 O <xref:System.Transactions.CommittableTransaction> classe fornece um modo explícito para os aplicativos que usam uma transação, em vez de usar o <xref:System.Transactions.TransactionScope> classe implicitamente. É útil para aplicativos que deseja usar a mesma transação em várias chamadas de função ou várias chamadas de threads. Ao contrário do <xref:System.Transactions.TransactionScope> classe, o criador do aplicativo precisa chamar especificamente o <xref:System.Transactions.CommittableTransaction.Commit%2A> e <xref:System.Transactions.Transaction.Rollback%2A> métodos para confirmar ou anular a transação.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>Visão geral da classe CommittableTransaction  
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Implementando uma transação implícita, usando o escopo da transação](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
-- [Transaction Processing](../../../../docs/framework/data/transactions/index.md) (Processamento de transações)
+
+- [Implementar uma transação implícita usando o escopo da transação](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+- [Processamento de transações](../../../../docs/framework/data/transactions/index.md)

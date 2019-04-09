@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105268"
 ---
 # <a name="transport-security-overview"></a>Visão geral de segurança de transporte
 Mecanismos de segurança de transporte no Windows Communication Foundation (WCF) dependem da associação e do transporte que está sendo usado. Por exemplo, ao usar o <xref:System.ServiceModel.WSHttpBinding> classe, o transporte é HTTP, e o mecanismo principal para proteger o transporte é Secure Sockets Layer (SSL) sobre HTTP, normalmente chamado de HTTPS. Este tópico discute os mecanismos de segurança de transporte principais usados nas associações fornecidas pelo sistema de WCF.  
@@ -121,4 +121,5 @@ Mecanismos de segurança de transporte no Windows Communication Foundation (WCF)
  Para uma discussão completa de transporte de segurança com o enfileiramento de mensagens (anteriormente chamado de MSMQ), consulte [Protegendo mensagens usando segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

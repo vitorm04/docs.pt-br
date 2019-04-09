@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909e18fe9086fa954ffc389ffe1c6fe49217d2f5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 268462db51435b87194aafc374d5d8e8ec1df165
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079365"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>Método ICLRProbingAssemblyEnum::Get
 Obtém a identidade do assembly no índice especificado.  
@@ -52,7 +52,7 @@ HRESULT Get (
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`Get` retornado com êxito.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` é pequeno demais.|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` é muito pequeno.|  
 |ERROR_NO_MORE_ITEMS|A enumeração não contém mais itens.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
@@ -75,5 +75,6 @@ HRESULT Get (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)
 - [Interface ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

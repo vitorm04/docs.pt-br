@@ -9,12 +9,12 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: cfa6690db464f432c9082278627a03cd43df6834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ef0275b3cbc79f22b4fa573f41e4cbdbc3d58990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104644"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Como: Adicionar e remover itens com o controle ListView do Windows Forms
 O processo de adicionar um item em um Windows Forms <xref:System.Windows.Forms.ListView> controle consiste principalmente de especificar o item e atribuir propriedades a ele. A adição ou remoção de itens de lista pode ser feita a qualquer momento.  
@@ -34,6 +34,7 @@ O processo de adicionar um item em um Windows Forms <xref:System.Windows.Forms.L
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ListView>
 - [Controle ListView](listview-control-windows-forms.md)
 - [Visão geral do controle ListView](listview-control-overview-windows-forms.md)

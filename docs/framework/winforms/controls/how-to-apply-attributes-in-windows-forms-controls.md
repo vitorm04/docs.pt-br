@@ -1,5 +1,5 @@
 ---
-title: 'Como: Aplicar atributos em controles dos Windows Forms'
+title: 'Como: Aplicar atributos a controles do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: fd41999b1cd1cde940d182f3acc505bbb92a3aa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079585"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Como: Aplicar atributos em controles dos Windows Forms
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Como: Aplicar atributos a controles do Windows Forms
 Para desenvolver componentes e controles que interagem corretamente com o ambiente de design e são executados corretamente no tempo de execução, você precisa aplicar atributos corretamente a classes e membros.  
   
 ## <a name="example"></a>Exemplo  
@@ -78,6 +78,7 @@ Para desenvolver componentes e controles que interagem corretamente com o ambien
 -   O formulário que hospeda o `AttributesDemoControl` requer uma referência ao assembly `AttributesDemoControl` para compilar.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)

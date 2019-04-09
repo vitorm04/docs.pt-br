@@ -2,12 +2,12 @@
 title: Solução de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105476"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 As seguintes informações expostas alguns problemas que você pode encontrar em seus aplicativos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e oferece sugestões para evitar ou reduzir de outra maneira o efeito desses problemas.  
@@ -15,7 +15,7 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
  Problemas adicionais são abordados [Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Operadores padrões sem suporte de consulta  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta todos os métodos padrão de operador de consulta (por exemplo, <xref:System.Linq.Enumerable.ElementAt%2A>). Como resultado, os projetos que compilam ainda podem gerar erros em tempo de execução. Para obter mais informações, consulte [conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte a todos os métodos de operador de consulta padrão (por exemplo, <xref:System.Linq.Enumerable.ElementAt%2A>). Como resultado, os projetos que compilam ainda podem gerar erros em tempo de execução. Para obter mais informações, consulte [conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Problemas de memória  
  Se uma consulta envolve uma coleção em memória e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, a consulta pode ser executada na memória, dependendo da ordem na qual as duas coleções são especificadas. Se a consulta deve ser executada na memória, os dados da tabela de base de dados deverão ser recuperados.  
@@ -26,7 +26,7 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
  Para especificar um nome do arquivo de entrada, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Não há suporte para a inclusão do nome de arquivo na cadeia de conexão (usando a opção **/conn**). Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Projetos de biblioteca de classe  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] cria uma cadeia de conexão no arquivo de `app.config` do projeto. Em projetos de biblioteca de classes, o arquivo de `app.config` não é usado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de conexão fornecida em arquivos em tempo de design. Altere o valor em `app.config` não altera a base de dados que conecta seu aplicativo.  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] cria uma cadeia de conexão no arquivo de `app.config` do projeto. Em projetos de biblioteca de classes, o arquivo de `app.config` não é usado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de Conexão fornecido nos arquivos de tempo de design. Altere o valor em `app.config` não altera a base de dados que conecta seu aplicativo.  
   
 ## <a name="cascade-delete"></a>Excluir em cascata  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ou reconhece operações cascade-delete. Se você deseja excluir uma linha em uma tabela que possui restrições nele, você deve fazer:  
@@ -70,5 +70,6 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
  O método gerado `OnCreated()` é chamado em cada vez que o construtor do objeto é chamado, incluindo a situação em que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chama o construtor para fazer uma cópia para valores originais. Leve em conta esse comportamento se você implementar o método de `OnCreated()` em sua própria classe parcial.  
   
 ## <a name="see-also"></a>Consulte também
-- [Suporte à depuração](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+
+- [Depuração de suporte](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
 - [Perguntas frequentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

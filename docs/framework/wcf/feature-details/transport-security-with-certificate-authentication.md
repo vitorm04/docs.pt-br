@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: b31694e41e6e6568feb0cb32364b291657269488
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074528"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Segurança de transporte com autenticação de certificado
 Este tópico discute usando certificados X.509 para autenticação de cliente e servidor ao usar a segurança de transporte. Para obter mais informações sobre os certificados X.509, confira [Certificados de chave pública X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Certificados devem ser emitidos por uma autoridade de certificação, que é geralmente um emissor de terceiros de certificados. Em um domínio do Windows Server, Active Directory Certificate Services pode ser usado para emitir certificados para computadores cliente no domínio. Para obter mais informações, consulte [serviços de certificados do Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Nesse cenário, o serviço está hospedado em serviços de informações da Internet (IIS) que é configurado com Secure Sockets Layer (SSL). O serviço está configurado com um certificado SSL (X.509) para permitir que os clientes verificar a identidade do servidor. O cliente também é configurado com um certificado X.509 que permite que o serviço verificar a identidade do cliente. O certificado do servidor deve ser confiável pelo cliente e o certificado do cliente deve ser confiável pelo servidor. A mecânica real de como o serviço e o cliente verifica a identidade um do outro está além do escopo deste tópico. Para obter mais informações, consulte [Assinatura Digital na Wikipédia](https://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -138,5 +138,6 @@ cc.Close();
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

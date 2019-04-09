@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], customizing in ToolStrip controls [Windows Forms]
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
-ms.openlocfilehash: db64ee353cc71cf39516e5ee0a08cf4b9627548c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4d051085bdba41b9784d3dd7f921189c1300daf0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074897"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Como: Personalizar cores em aplicativos ToolStrip
 Você pode personalizar a aparência de sua <xref:System.Windows.Forms.ToolStrip> usando o <xref:System.Windows.Forms.ToolStripProfessionalRenderer> classe usar cores personalizadas.  
@@ -33,6 +33,7 @@ Você pode personalizar a aparência de sua <xref:System.Windows.Forms.ToolStrip
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>

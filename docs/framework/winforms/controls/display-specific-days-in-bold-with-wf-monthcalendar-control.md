@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir dias específicos em negrito com o Windows Forms controle MonthCalendar'
+title: 'Como: Exibir dias específicos em negrito com o controle MonthCalendar do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073689"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Como: Exibir dias específicos em negrito com o Windows Forms controle MonthCalendar
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Como: Exibir dias específicos em negrito com o controle MonthCalendar do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.MonthCalendar> controle pode exibir dias em negrito, como datas únicas ou em uma base de repetição. Você pode fazer isso para chamar atenção para datas especiais, como feriados e fins de semana.  
   
  Três propriedades controlam esse recurso. O <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propriedade contém datas únicas. O <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propriedade contém as datas exibidas em negrito todo ano. O <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propriedade contém as datas exibidas em negrito todo mês. Cada uma dessas propriedades contém uma matriz de <xref:System.DateTime> objetos. Para adicionar ou remover uma data de uma dessas listas, você deve adicionar ou remover um <xref:System.DateTime> objeto.  
@@ -128,7 +128,8 @@ Os formulários do Windows <xref:System.Windows.Forms.MonthCalendar> controle po
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle MonthCalendar](monthcalendar-control-windows-forms.md)
-- [Como: Selecione um intervalo de datas no controle MonthCalendar dos Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Como: Alterar a aparência do controle do Windows Forms MonthCalendar](how-to-change-monthcalendar-control-appearance.md)
-- [Como: Exibir mais de um mês no controle MonthCalendar dos Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Como: Selecionar um intervalo de datas no controle MonthCalendar do Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Como: Alterar a aparência do controle MonthCalendar do Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Como: Exibir mais de um mês no controle MonthCalendar do Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

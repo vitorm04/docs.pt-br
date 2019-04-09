@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098176"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurando um ambiente de criação de perfil
 > [!NOTE]
@@ -96,4 +96,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Essa técnica também leva a cada perfil de processo do CLR. O criador de perfis deve adicionar lógica ao seu [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) retorno de chamada para detectar se o processo atual é de interesse. Se não for, o criador de perfil poderá falhar o retorno de chamada sem executar a inicialização.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

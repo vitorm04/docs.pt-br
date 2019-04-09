@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101283"
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema Windows e podem ser examinados usando o Visualizador de eventos.  
@@ -99,11 +99,12 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 |Experiência de usuário padrão|Todos os usuários autenticados podem gravar no log de aplicativo, portanto, nenhuma etapa adicional de permissão é necessária para processos de aplicativos.|O processo de aplicativo (contexto) deve ter `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Como: Eventos de auditoria de segurança](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Programação de WCF básica](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Como: auditar eventos de segurança](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
-- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

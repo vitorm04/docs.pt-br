@@ -1,5 +1,5 @@
 ---
-title: 'Como: Listar os codificadores instalados'
+title: 'Como: listar os codificadores instalados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-ms.openlocfilehash: 492930b7d8a47db478c8fa0f282cb5f491e144ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078805"
 ---
-# <a name="how-to-list-installed-encoders"></a>Como: Listar os codificadores instalados
+# <a name="how-to-list-installed-encoders"></a>Como: listar os codificadores instalados
 Você talvez queira listar os codificadores de imagem disponíveis em um computador, para determinar se o seu aplicativo pode salvar em um formato de arquivo de imagem em particular. O <xref:System.Drawing.Imaging.ImageCodecInfo> classe fornece o <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> métodos estáticos para que você possa determinar qual imagem codificadores estão disponíveis. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Retorna uma matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  
   
 ## <a name="example"></a>Exemplo  
@@ -32,5 +32,6 @@ Você talvez queira listar os codificadores de imagem disponíveis em um computa
 -   Um <xref:System.Windows.Forms.PaintEventArgs>, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Listar os decodificadores instalados](how-to-list-installed-decoders.md)
-- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)
+
+- [Como: listar os decodificadores instalados](how-to-list-installed-decoders.md)
+- [Usando codecs de imagem no GDI+ gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)

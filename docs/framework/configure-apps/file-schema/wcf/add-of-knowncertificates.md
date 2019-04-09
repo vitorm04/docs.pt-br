@@ -2,12 +2,12 @@
 title: <add> De <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 022030489551bfaf48cffd4ba983bbd3c99abc87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077713"
 ---
 # <a name="add-of-knowncertificates"></a>\<Adicionar > de \<knownCertificates >
 Adiciona um certificado X.509 à coleção de certificados conhecidos.  
@@ -118,6 +118,7 @@ Adiciona um certificado X.509 à coleção de certificados conhecidos.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
@@ -128,5 +129,5 @@ Adiciona um certificado X.509 à coleção de certificados conhecidos.
 - [\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
 - [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: configurar credenciais em um serviço de federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

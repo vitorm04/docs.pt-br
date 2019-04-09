@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074749"
 ---
 # <a name="extending-clients"></a>Estendendo clientes
 Em um aplicativo de chamada, a camada de modelo de serviço é responsável por converter as invocações de método no código do aplicativo em mensagens de saída, enviá-los para os canais subjacentes, converter os resultados de volta em valores de retorno e parâmetros out em o código do aplicativo e retornando os resultados de volta ao chamador. Extensões do modelo de serviço modificarem ou implementam a execução ou o comportamento de comunicação e recursos que envolvem a funcionalidade de cliente ou dispatcher, comportamentos personalizados, mensagem e interceptação de parâmetro e outras funcionalidades de extensibilidade.  
@@ -115,7 +115,8 @@ Em um aplicativo de chamada, a camada de modelo de serviço é responsável por 
  Para obter exemplos que demonstram a intercepção entre um cliente WCF, consulte [como: Inspecionar ou modificar parâmetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Como: Inspecionar ou modificar as mensagens no cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Como: Inspecionar ou modificar parâmetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Como: inspecionar ou modificar mensagens no cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [Como: inspecionar ou modificar parâmetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
