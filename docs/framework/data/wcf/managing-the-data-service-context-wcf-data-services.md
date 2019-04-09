@@ -2,12 +2,12 @@
 title: Gerenciando o contexto do serviço de dados (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: d339826cabc83d2e0cecb5451ba5b950e7f02321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184737"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Gerenciando o contexto do serviço de dados (WCF Data Services)
 A classe <xref:System.Data.Services.Client.DataServiceContext> encapsula as operações que têm suporte em um serviço de dados especificado. Embora os serviços do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sejam sem estado, o contexto não é. Portanto, você pode usar o <xref:System.Data.Services.Client.DataServiceContext> classe para manter o estado no cliente entre interações com o serviço de dados para dar suporte a recursos como o gerenciamento de alterações. Essa classe também gerencia identidades e rastreia alterações.  
@@ -37,7 +37,8 @@ A classe <xref:System.Data.Services.Client.DataServiceContext> encapsula as oper
  Por padrão, o cliente envia de biblioteca criar, ler, atualizar e excluir solicitações para um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de serviço usando os métodos HTTP correspondentes de POST, GET, PUT, MERGE/PATCH e excluir. Isso mantém os princípios básicos do REST Representational State Transfer (). No entanto, nem toda implementação do servidor Web dá suporte ao conjunto completo de métodos HTTP. Em alguns casos, os métodos com suporte podem ser restritos a apenas GET e POST. Isso pode acontecer quando um intermediário, como um firewall bloqueia solicitações com determinados métodos. Porque os métodos GET e POST têm suporte com mais frequência, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prescreve uma maneira de executar métodos HTTP sem suporte por meio de uma solicitação POST. Conhecido como *método túnel* ou *túnel de POSTAGEM*, isso permite que um cliente envie uma solicitação POST com o método real especificado na personalizado `X-HTTP-Method` cabeçalho. Para habilitar o túnel de POSTAGEM para solicitações, defina as <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> propriedade no <xref:System.Data.Services.Client.DataServiceContext> da instância para `true`.  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Atualizando o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
 - [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [Operações de envio em lote](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

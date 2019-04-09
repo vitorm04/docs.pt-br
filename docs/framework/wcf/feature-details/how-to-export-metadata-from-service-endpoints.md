@@ -1,18 +1,18 @@
 ---
-title: 'Como: Exportar metadados de pontos de extremidade de serviço'
+title: 'Como: exportar metadados para pontos de extremidade de serviço'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162775"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Como: Exportar metadados de pontos de extremidade de serviço
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Como: exportar metadados para pontos de extremidade de serviço
 Este tópico explica como exportar metadados de pontos de extremidade de serviço.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Para exportar metadados de pontos de extremidade de serviço  
@@ -56,6 +56,7 @@ Este tópico explica como exportar metadados de pontos de extremidade de serviç
  Ao compilar referência Program.cs ServiceModel.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

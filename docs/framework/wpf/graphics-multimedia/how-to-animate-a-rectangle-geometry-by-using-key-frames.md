@@ -1,5 +1,5 @@
 ---
-title: 'Como: Animar uma geometria de retângulo usando quadros-chave'
+title: 'Como: Animar uma geometria de retângulo usando quadros principais'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 30bd09ac61c855e0cda81261ca652f0574aa73e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a4ba4e682ad5880e7059b1a5babe3094bd1770a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139614"
 ---
-# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Como: Animar uma geometria de retângulo usando quadros-chave
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Como: Animar uma geometria de retângulo usando quadros principais
 Este exemplo mostra como animar a <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propriedade de um <xref:System.Windows.Media.RectangleGeometry> usando quadros-chave.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,6 +35,7 @@ Este exemplo mostra como animar a <xref:System.Windows.Media.RectangleGeometry.R
  Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.RectangleGeometry>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>

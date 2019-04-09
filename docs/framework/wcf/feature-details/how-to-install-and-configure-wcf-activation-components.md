@@ -1,17 +1,17 @@
 ---
-title: 'Como: Instalar e configurar os componentes de ativação do WCF'
+title: 'Como: instalar e configurar componentes de ativação do WCF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199213"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Como: Instalar e configurar os componentes de ativação do WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Como: instalar e configurar componentes de ativação do WCF
 Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) em [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar o Windows Communication Foundation (WCF) protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
   
 -   Instalar (ou confirmar a instalação do) os componentes de ativação do WCF.  
@@ -101,7 +101,8 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
     >  Esse comando é uma única linha de texto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Ativação de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe Activation](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
-- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

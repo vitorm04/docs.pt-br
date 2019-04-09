@@ -1,15 +1,15 @@
 ---
-title: 'Como: Criar uma credencial de suporte'
+title: 'Como: criar uma credencial de suporte'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093703"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Como: Criar uma credencial de suporte
+# <a name="how-to-create-a-supporting-credential"></a>Como: criar uma credencial de suporte
 É possível ter um esquema de segurança personalizado que requer mais de uma credencial. Por exemplo, pode exigir que um serviço do cliente não apenas um nome de usuário e senha, mas também uma credencial que comprova o cliente é com mais de 18 anos. A segunda credencial é um *que dão suporte a credencial*. Este tópico explica como implementar essas credenciais em um cliente do Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -81,4 +81,5 @@ ms.locfileid: "54539799"
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

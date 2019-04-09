@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096388"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Como: Simplificar animações usando linhas do tempo filho
 Este exemplo mostra como simplificar animações usando filho <xref:System.Windows.Media.Animation.ParallelTimeline> objetos. Um <xref:System.Windows.Media.Animation.Storyboard> é um tipo de <xref:System.Windows.Media.Animation.Timeline> que fornece informações de direcionamento para as linhas do tempo que ele contém. Use um <xref:System.Windows.Media.Animation.Storyboard> para fornecer informações, incluindo informações de propriedade e o objeto de direcionamento de linha do tempo.  
@@ -26,5 +26,6 @@ Este exemplo mostra como simplificar animações usando filho <xref:System.Windo
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da animação](animation-overview.md)
-- [Especificar HandoffBehavior entre animações de storyboard](how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Especificar HandoffBehavior entre animações de Storyboard](how-to-specify-handoffbehavior-between-storyboard-animations.md)

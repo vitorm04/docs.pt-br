@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091415"
 ---
 # <a name="assemblyflags-enumeration"></a>Enumeração AssemblyFlags
 Contém valores que descrevem os recursos de tempo de execução de um assembly.  
@@ -61,5 +61,6 @@ typedef enum {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

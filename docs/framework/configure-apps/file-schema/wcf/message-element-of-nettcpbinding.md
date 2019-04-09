@@ -2,12 +2,12 @@
 title: <message> elemento de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161012"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<mensagem > elemento \<netTcpBinding >
 Define o tipo de requisitos de segurança de nível de mensagem para um ponto de extremidade configurado com o [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -74,12 +74,13 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Comentários  
  Mensagem usa a segurança de nível de mensagem para a integridade e confidencialidade da mensagem SOAP e para autenticação mútua dos pares de comunicação. Se esse modo de segurança for selecionado em uma associação, a pilha de canais está configurada com elementos de associação de segurança de mensagem e as mensagens SOAP são protegidas em conformidade com WS-Security * padrões.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

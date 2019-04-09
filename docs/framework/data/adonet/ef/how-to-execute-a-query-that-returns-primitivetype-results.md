@@ -1,18 +1,18 @@
 ---
-title: 'Como: Executar uma consulta que retorna resultados PrimitiveType'
+title: 'Como: executar uma consulta que retorna resultados de PrimitiveType'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 0b8c473171f86b569f42c75701805818d8b81c42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ca7e8363497534bd4802dad991f8affb0386334b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094470"
 ---
-# <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Como: Executar uma consulta que retorna resultados PrimitiveType
+# <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Como: executar uma consulta que retorna resultados de PrimitiveType
 Este tópico mostra como executar um comando em um modelo conceitual usando <xref:System.Data.EntityClient.EntityCommand>, e como recuperar <xref:System.Data.Metadata.Edm.PrimitiveType> resultados usando <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para executar o código nesse exemplo  
@@ -37,5 +37,6 @@ Este tópico mostra como executar um comando em um modelo conceitual usando <xre
  [!code-vb[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlprimitivetypes)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Provedor EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d149eeec545909d9d6b7413c7ad6d537c1493bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9ea9afdd2c032e99d7feee6b2935161c70c56787
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187688"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Método ICorDebugSymbolProvider::GetInstanceFieldSymbols
 Obtém a instância de símbolos de campo que correspondem a uma assinatura de typespec.  
@@ -57,6 +57,7 @@ HRESULT GetInstanceFieldSymbols(
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Método GetStaticFieldSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)
 - [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

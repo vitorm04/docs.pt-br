@@ -1,19 +1,19 @@
 ---
-title: 'Como: Criar uma Interface no estilo Explorer do Windows em um formulário do Windows'
+title: 'Como: Criar uma interface no estilo do Windows Explorer em Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 444d85265822b5dd4b3a5fd5f4329ec6cc1427f5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192128"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Como: Criar uma Interface no estilo Explorer do Windows em um formulário do Windows
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Como: Criar uma interface no estilo do Windows Explorer em Windows Forms
 O Windows Explorer é uma opção de interface do usuário comum para aplicativos devido à sua familiaridade pronta.  
   
  Windows Explorer é, essencialmente, uma <xref:System.Windows.Forms.TreeView> controle e um <xref:System.Windows.Forms.ListView> controle em painéis separados. Os painéis são redimensionáveis por um divisor. Essa disposição de controles é muito eficiente para exibir e procurar informações.  
@@ -50,8 +50,9 @@ O Windows Explorer é uma opção de interface do usuário comum para aplicativo
     >  Quando você arrasta o divisor, os painéis são redimensionados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [Como: Criar uma Interface do usuário Multipainel com Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Como: Definir redimensionamento e posicionamento de comportamento em uma janela dividida](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Como: Criar uma Interface do Usuário com Vários Painéis nos Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
 - [Como: Dividir uma janela horizontalmente](how-to-split-a-window-horizontally.md)
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)

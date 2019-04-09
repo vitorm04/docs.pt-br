@@ -1,5 +1,5 @@
 ---
-title: 'Otimizando desempenho: Usufruindo hardware'
+title: 'Otimizando desempenho: Aproveitar o hardware'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], performance
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163170"
 ---
-# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Otimizando desempenho: Usufruindo hardware
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Otimizando desempenho: Aproveitar o hardware
 A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem dois pipelines de renderização, hardware e software. Este tópico apresenta informações sobre esses pipelines de renderização para ajudá-lo a tomar decisões sobre otimizações de desempenho de seus aplicativos.  
   
 ## <a name="hardware-rendering-pipeline"></a>Pipeline de renderização de hardware  
  Um dos fatores mais importantes para determinar o desempenho de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é o limite de renderização: quanto mais pixels há para renderizar, maior o custo de desempenho. No entanto, quanto mais renderização pode ser descarregada para o [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], mais benefícios de desempenho você pode obter. O pipeline de renderização de hardware de aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aproveita todos os recursos do [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] em hardware com suporte para pelo menos [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] versão 7.0. Otimizações adicionais podem ser obtidas pelo hardware que dá suporte a [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] versão 7.0 e recursos PixelShader 2.0 +.  
   
 ## <a name="software-rendering-pipeline"></a>Pipeline de renderização de software  
- O pipeline [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de processamento de software é totalmente vinculado à CPU. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aproveita os conjuntos de instruções SSE e SSE2 na CPU para implementar um rasterizador otimizado de software com todos os recursos. Fazer fallback para o software é uma funcionalidade de aplicativo contínua disponível a qualquer momento e não pode ser renderizada usando o pipeline de renderização de hardware.  
+ O pipeline [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de processamento de software é totalmente vinculado à CPU. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Define tira proveito da instrução de SSE e SSE2 na CPU para implementar um rasterizador otimizado, com recursos completos de software. Fazer fallback para o software é uma funcionalidade de aplicativo contínua disponível a qualquer momento e não pode ser renderizada usando o pipeline de renderização de hardware.  
   
  O maior problema de desempenho que você encontrará ao renderizar no modo de software está relacionado à taxa de preenchimento, que é definida como o número de pixels que você está renderizando. Se você estiver preocupado com o desempenho no modo de renderização de software, tente minimizar o número de vezes que um pixel é redesenhado. Por exemplo, se você tiver um aplicativo com uma tela de fundo azul, que então renderiza uma imagem levemente transparente sobre ela, você renderizará todos os pixels no aplicativo duas vezes. Como resultado, levará duas vezes mais tempo para renderizar o aplicativo com a imagem que se você tivesse apenas a tela de fundo azul.  
   
 ### <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos  
  Pode ser muito difícil prever a configuração de hardware em que seu aplicativo será executado. No entanto, convém considerar um design que permita ao seu aplicativo mudar continuamente entre os recursos ao executar em hardware diferente para que possa se beneficiar totalmente de cada configuração de hardware diferente.  
   
- Para fazer isso, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece funcionalidade para determinar a capacidade gráfica de um sistema em tempo de execução. A capacidade gráfica é determinada categorizando a placa de vídeo como uma das três camadas de capacidade de renderização. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expõe um [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que permite que um aplicativo consulte a camada da capacidade de renderização. Seu aplicativo então pode adotar diferentes caminhos de código no tempo de execução, dependendo da camada de renderização que tem suporte no hardware.  
+ Para fazer isso, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece funcionalidade para determinar a capacidade gráfica de um sistema em tempo de execução. A capacidade gráfica é determinada categorizando a placa de vídeo como uma das três camadas de capacidade de renderização. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expõe um [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que permite que um aplicativo para a camada de capacidade de processamento de consulta. Seu aplicativo então pode adotar diferentes caminhos de código no tempo de execução, dependendo da camada de renderização que tem suporte no hardware.  
   
  Os recursos do hardware gráfico que mais afetam os níveis de camada de renderização são:  
   
@@ -55,8 +55,9 @@ A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
  Para obter mais informações sobre camadas de renderização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Níveis de renderização gráfica](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
+- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)

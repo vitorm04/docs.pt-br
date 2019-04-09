@@ -11,12 +11,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 46061108226feb83e821edb21dfce2a57bdd3ac7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164964"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Comportamento de AutoSize no controle TableLayoutPanel
 ## <a name="distinct-autosize-behaviors"></a>Comportamentos distintos de AutoSize  
@@ -35,5 +35,6 @@ ms.locfileid: "57708061"
 |`true`|Semelhante à interação anterior, com a exceção que <xref:System.Windows.Forms.SizeType.Percent> colunas ou linhas adquirem um aspecto de dimensionamento automático.<br /><br /> O <xref:System.Windows.Forms.TableLayoutPanel> controle se expande a coluna ou linha para criar o espaço livre adequado, para que nenhuma coluna ou linha com <xref:System.Windows.Forms.SizeType.Percent> estilo corte seu conteúdo. O <xref:System.Windows.Forms.TableLayoutPanel> controle aloca novo espaço proporcionalmente acordo com ao <xref:System.Windows.Forms.ColumnStyle.Width%2A> ou <xref:System.Windows.Forms.RowStyle.Height%2A> propriedade.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Visão geral do controle TableLayoutPanel](tablelayoutpanel-control-overview.md)

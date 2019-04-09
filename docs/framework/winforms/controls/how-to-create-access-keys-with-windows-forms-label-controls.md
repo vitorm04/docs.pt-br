@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar chaves de acesso com controles de rótulo dos Windows Forms'
+title: 'Como: Criar chaves de acesso com controles de rótulo do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171711"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Como: Criar chaves de acesso com controles de rótulo dos Windows Forms
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Como: Criar chaves de acesso com controles de rótulo do Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para definir chaves de acesso para outros controles. Ao definir uma tecla de acesso em um controle de rótulo, o usuário pode pressionar a tecla ALT mais o caractere designado para mover o foco para o controle seguinte na ordem de tabulação. Como os rótulos não podem receber o foco, este é movido automaticamente para o próximo controle na ordem de tabulação. Use essa técnica para atribuir teclas de acesso a caixas de texto, caixas de combinação, caixas de listagem e grades de dados.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Atribuir uma tecla de acesso a um controle com um rótulo  
   
 1.  Desenhe o rótulo primeiro e, em seguida, desenhe o outro controle.  
   
-     -ou-  
+     - ou -  
   
      Desenhe os controles em qualquer ordem e defina o <xref:System.Windows.Forms.Control.TabIndex%2A> propriedade do rótulo, a menos que o outro controle.  
   
@@ -64,6 +64,7 @@ Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para 
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Dimensionar um controle de rótulo do Windows Forms para ajustar seu conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Visão geral do controle Label](label-control-overview-windows-forms.md)
+
+- [Como: Dimensionar um controle de rótulo do Windows Forms para encaixar o conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Visão geral do controle de rótulo](label-control-overview-windows-forms.md)
 - [Controle de rótulo](label-control-windows-forms.md)

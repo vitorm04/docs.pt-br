@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194806"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
@@ -187,5 +187,6 @@ ms.locfileid: "58410155"
  Além disso, a simultaneidade aprimorada da sequência de download do ClickOnce melhora a hora de início em até dez por cento. Depois que o ClickOnce baixa e valida manifestos, o download do aplicativo for iniciado e a barra de progresso começa a atualizar.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configurar o Visual Studio para depurar um aplicativo de navegador XAML para chamar um serviço Web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
+- [Implantar um aplicativo WPF](deploying-a-wpf-application-wpf.md)

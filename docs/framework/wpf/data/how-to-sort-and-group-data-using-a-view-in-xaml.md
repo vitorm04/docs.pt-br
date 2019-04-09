@@ -1,5 +1,5 @@
 ---
-title: 'Como: Organizar e agrupar dados usando uma exibição em XAML'
+title: 'Como: Classificar e agrupar dados usando uma exibição em XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: 01cbd113502c3f953bd701930df6db090844fefa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144515"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Como: Organizar e agrupar dados usando uma exibição em XAML
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Como: Classificar e agrupar dados usando uma exibição em XAML
 Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Modos de exibição permitem as funcionalidades de agrupamento, classificação, filtragem e a noção de um item atual.  
   
 ## <a name="example"></a>Exemplo  
@@ -39,7 +39,8 @@ Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INC
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Data.CollectionViewSource>
 - [Obter a exibição padrão de uma coleta de dados](how-to-get-the-default-view-of-a-data-collection.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186492"
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>O que é uma ListView?  
  O <xref:System.Windows.Controls.ListView> controle é um <xref:System.Windows.Controls.ItemsControl> que é derivada de <xref:System.Windows.Controls.ListBox>. Normalmente, seus itens são membros de uma coleção de dados e são representados como <xref:System.Windows.Controls.ListViewItem> objetos. Um <xref:System.Windows.Controls.ListViewItem> é um <xref:System.Windows.Controls.ContentControl> e pode conter apenas um único elemento filho. No entanto, esse elemento filho pode ser qualquer elemento visual.  
@@ -82,10 +81,11 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
  Exibições personalizadas como <xref:System.Windows.Controls.GridView> são derivados de <xref:System.Windows.Controls.ViewBase> classe, que fornece as ferramentas para exibir itens de dados que são representados como abstrata <xref:System.Windows.Controls.ListViewItem> objetos.    
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [Visão geral de GridView](gridview-overview.md)
-- [Tópicos de instruções](listview-how-to-topics.md)
+- [Tópicos explicativos ](listview-how-to-topics.md)
 - [Controles](../advanced/optimizing-performance-controls.md)

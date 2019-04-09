@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172101"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcando eventos roteados como manipulados e tratamento de classes
 Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados do evento. Efetivamente, a manipulação do evento reduzirá a rota. A manipulação de classes é um conceito de programação com suporte nos eventos roteados. Um manipulador de classes tem a oportunidade de manipular um evento roteado específico no nível de uma classe com um manipulador que é invocado antes de qualquer manipulador de instâncias em uma instância da classe.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico fornece mais detalhes sobre os conceitos introduzidos na [Visão geral dos eventos roteados](routed-events-overview.md).  
@@ -99,6 +97,7 @@ Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados
  A segunda técnica funciona somente para eventos de entrada, nos quais as versões de túnel e de propagação do evento roteado são emparelhadas. Para esses eventos roteados, é possível adicionar manipuladores ao evento roteado de visualização/túnel equivalente. Esse evento roteado será encapsulado por meio da rota, começando na raiz, para que o código de manipulação de classes do botão não o intercepte, pressupondo que você anexou o manipulador de Visualização no nível de elemento de algum ancestral na árvore de elementos do aplicativo. Se você usar essa abordagem, tome cuidado ao marcar qualquer evento de Visualização como manipulado. Por exemplo fornecido com <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> que está sendo manipulado no elemento raiz, se você tiver marcado o evento como <xref:System.Windows.RoutedEventArgs.Handled%2A> na implementação do manipulador, você realmente deverá suprimir o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. Geralmente, esse não é um comportamento desejável.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.EventManager>
 - [Eventos de visualização](preview-events.md)
 - [Criar um evento roteado personalizado](how-to-create-a-custom-routed-event.md)

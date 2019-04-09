@@ -1,5 +1,5 @@
 ---
-title: Elemento <requestCaching> (configurações de rede)
+title: <requestCaching> (Configurações de rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: d78325438ba158c0c1d0e322d0b02d0a0a2a57f0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164847"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching > (configurações de rede)
 Controla o mecanismo de cache para solicitações de rede.  
@@ -87,5 +87,6 @@ Controla o mecanismo de cache para solicitações de rede.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

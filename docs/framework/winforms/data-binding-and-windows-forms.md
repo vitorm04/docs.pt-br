@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095484"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associação de dados e o Windows Forms
 No Windows Forms, você pode vincular não apenas a fontes de dados tradicionais, mas também a praticamente qualquer estrutura que contenha dados. Você pode vincular a uma matriz de valores que você calcula no tempo de execução, lê de um arquivo ou deriva dos valores de outros controles.  
   
  Além disso, você pode vincular qualquer propriedade de qualquer controle à fonte de dados. Na vinculação de dados tradicional, você geralmente vincula a propriedade de exibição — por exemplo, a propriedade <xref:System.Windows.Forms.Control.Text%2A> de um controle <xref:System.Windows.Forms.TextBox> — à fonte de dados. Com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você tem também a opção de definir outras propriedades por meio da vinculação. É possível usar a vinculação para realizar as seguintes tarefas:  
   
--   Definir o gráfico de um controle de imagem.  
+-   Definir o grafo de um controle de imagem.  
   
 -   Definir a cor do plano de fundo de um ou mais controles.  
   
@@ -54,7 +54,8 @@ No Windows Forms, você pode vincular não apenas a fontes de dados tradicionais
 |Tabela de pesquisa|Outro cenário comum de apresentação/manipulação de dados é a pesquisa de tabela. Geralmente, como parte de uma exibição de dados maior, um controle <xref:System.Windows.Forms.ComboBox> é usado para exibir e manipular os dados. A chave é que os dados exibidos no controle <xref:System.Windows.Forms.ComboBox> sejam diferentes dos dados gravados no banco de dados. Por exemplo, se você tiver um controle <xref:System.Windows.Forms.ComboBox> exibindo os itens disponíveis em uma mercearia, provavelmente gostaria de ver os nomes dos produtos (pão, leite, ovos). No entanto, para facilitar a recuperação de informações do banco de dados e para a normalização do banco de dados, você provavelmente armazenará as informações dos itens específicos em uma determinada ordem como números de item (nº 501, nº 603 e assim por diante). Assim, há uma conexão implícita entre o "nome amigável" do item na mercearia no controle <xref:System.Windows.Forms.ComboBox> em seu formulário e o número do item relacionado que está presente em um pedido. Essa é a essência de uma pesquisa de tabela. Para obter mais informações, confira [Como: Criar uma tabela de pesquisa com o componente BindingSource dos Windows Forms](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Binding>
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)
-- [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)

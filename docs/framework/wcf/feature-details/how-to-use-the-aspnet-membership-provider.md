@@ -1,19 +1,19 @@
 ---
-title: 'Como: Usar o provedor de associação do ASP.NET'
+title: 'Como: usar o provedor de associação do ASP.NET'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140602"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>Como: Usar o provedor de associação do ASP.NET
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Como: usar o provedor de associação do ASP.NET
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permitem aos usuários criar combinações de nome e senha de usuário exclusivo. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entrar para acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, o que exige que os usuários têm contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome/senha de usuário) pode usar o site e seus serviços.  
   
  Para um aplicativo de exemplo, consulte [provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obter informações sobre como usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recurso de provedor de função, consulte [como: Usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
@@ -155,5 +155,6 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+
+- [Como: usar o provedor de função do ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

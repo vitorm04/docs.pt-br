@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208534"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confiança
 Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web são projetados para que o acesso a recursos adicionais (como bancos de dados ou outros serviços da Web) é encapsulado na lógica de negócios do serviço Web. Esses recursos devem ser protegidos contra acesso não autorizado. A ilustração a seguir ilustra um processo de subsistema confiável.  
@@ -38,7 +38,7 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
 |Transporte|HTTP entre cliente e o serviço de subsistema confiável.<br /><br /> NET. TCP entre o serviço de subsistema confiável e o recurso (serviço de back-end).|  
-|Associação|<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Associação|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Recurso (serviço de Back-End)  
   
@@ -211,5 +211,6 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: Decodificador de mensagens
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: d797b810af5df5fc1acf31e0ab6338689da9f55c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168747"
 ---
 # <a name="message-encoding"></a>Decodificador de mensagens
 Codificação é o processo de transformar um conjunto de caracteres Unicode em uma sequência de bytes. Decodificação de é o processo inverso. Windows Communication Foundation (WCF) inclui três tipos de codificação para mensagens SOAP: Texto, binária e mecanismo de otimização de transmissão de mensagens (MTOM).  
@@ -19,6 +19,7 @@ Codificação é o processo de transformar um conjunto de caracteres Unicode em 
  O `textMessageEncoding` seção de configuração especifica um codificador de texto usado para criar mensagens baseadas em texto durante a transmissão. As mensagens geradas por esse codificador são adequadas para WS-* com base em interoperabilidade. Serviço Web ou o cliente do serviço Web geralmente pode compreender XML textual. No entanto, a transmissão de blocos grandes de dados binários como texto é o método menos eficiente para codificação de mensagens XML  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - [Associações](../../../../../docs/framework/wcf/bindings.md)

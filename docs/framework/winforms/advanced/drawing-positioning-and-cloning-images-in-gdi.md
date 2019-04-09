@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 9682c7be5956680556defd698cb97e8f4b1a7f50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188442"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Desenhando, posicionando e clonando imagens no GDI+
 Você pode usar o <xref:System.Drawing.Bitmap> classe para carregar e exibir imagens de varredura e você pode usar o <xref:System.Drawing.Imaging.Metafile> classe para carregar e exibir imagens vetoriais. O <xref:System.Drawing.Bitmap> e <xref:System.Drawing.Imaging.Metafile> classes herdam o <xref:System.Drawing.Image> classe. Para exibir uma imagem vetorial, você precisa de uma instância das <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Imaging.Metafile>. Para exibir uma imagem de varredura, você precisa de uma instância das <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Bitmap>. A instância das <xref:System.Drawing.Graphics> classe fornece a <xref:System.Drawing.Graphics.DrawImage%2A> método, que recebe o <xref:System.Drawing.Imaging.Metafile> ou <xref:System.Drawing.Bitmap> como um argumento.  
@@ -52,6 +52,7 @@ Você pode usar o <xref:System.Drawing.Bitmap> classe para carregar e exibir ima
  ![Recorte](./media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
-- [Como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Como: criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

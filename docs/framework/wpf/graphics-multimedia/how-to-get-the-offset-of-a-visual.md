@@ -10,12 +10,12 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093404"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Como: Obter o deslocamento de um visual
 Esses exemplos mostram como recuperar o valor de deslocamento de um objeto visual que é relativo a seu pai ou a qualquer ancestral ou descendente.  
@@ -66,6 +66,7 @@ TextBlock aninhados em dois StackPanels
  O deslocamento leva em consideração o <xref:System.Windows.FrameworkElement.Margin%2A> valores para todos os objetos. Nesse caso, <xref:System.Windows.Vector.X%2A> é -4, e <xref:System.Windows.Vector.Y%2A> é -4. Os valores de deslocamento são valores negativos, visto que o objeto pai é deslocado negativamente em relação ao seu objeto filho.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)

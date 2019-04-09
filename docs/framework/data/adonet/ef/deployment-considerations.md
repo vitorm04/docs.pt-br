@@ -2,12 +2,12 @@
 title: Considerações de implantação (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 683f5e9b43bceb09d6354079fd9f7fcb7ed09eac
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199590"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Considerações de implantação (Entity Framework)
 Este tópico fornece informações sobre como implantar aplicativos que usam o ADO.NET Entity Framework para acesso a dados. Para obter mais informações sobre o Entity Framework, consulte [Introdução ao](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
@@ -29,5 +29,6 @@ Este tópico fornece informações sobre como implantar aplicativos que usam o A
 -   Porque Entity Framework é um componente.NET Framework, pode ser redistribuído com o seu aplicativo como permitido pelo contrato de licença do .NET Framework.  
   
 ## <a name="see-also"></a>Consulte também
-- [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
+
+- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Considerações de desenvolvimento e implantação](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

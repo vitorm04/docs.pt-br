@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18cf59553468e2408f3898d8233bd05d453db17b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192804"
 ---
 # <a name="imetadataimportenumfields-method"></a>Método IMetaDataImport::EnumFields
 Enumera FieldDef tokens para o tipo referenciado pelo token de TypeDef especificado.  
@@ -72,5 +72,6 @@ HRESULT EnumFields (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

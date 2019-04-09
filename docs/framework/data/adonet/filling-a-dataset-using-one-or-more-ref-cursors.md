@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: fcab341d6c1e66ec8cd315c97ec5f003b12633ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e50ae171ec9733e222c55e98d1cfcfa535d4e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201475"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Preenchendo um DataSet usando um ou mais REF CURSORs
 Este exemplo do Microsoft Visual Basic executa um procedimento armazenado PL/SQL que retorna dois parâmetros de REF CURSOR e preenche um <xref:System.Data.DataSet> com as linhas que são retornadas.  
@@ -47,5 +47,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [REF CURSORs do Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

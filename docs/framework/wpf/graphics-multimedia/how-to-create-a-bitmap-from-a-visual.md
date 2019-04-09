@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um bitmap a partir de um visual'
+title: 'Como: Criar um bitmap usando um visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - bitmaps [WPF], rendering from visuals
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
-ms.openlocfilehash: 429aacc99d8ead5a18e9be7602b19a74773b419a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189866"
 ---
-# <a name="how-to-create-a-bitmap-from-a-visual"></a>Como: Criar um bitmap a partir de um visual
+# <a name="how-to-create-a-bitmap-from-a-visual"></a>Como: Criar um bitmap usando um visual
 Este exemplo mostra como você pode criar um bitmap de um <xref:System.Windows.Media.Visual>. Um <xref:System.Windows.Media.DrawingVisual> é renderizado com <xref:System.Windows.Media.FormattedText>. O <xref:System.Windows.Media.Visual> é renderizado para o <xref:System.Windows.Media.Imaging.RenderTargetBitmap> criando um bitmap do texto especificado.  
   
 ## <a name="example"></a>Exemplo  
@@ -23,6 +23,7 @@ Este exemplo mostra como você pode criar um bitmap de um <xref:System.Windows.M
  [!code-vb[ImagingSnippetGallery_procedural_snip#CreateRTBImage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample.vb#creatertbimage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.DrawingContext>
 - [Visão geral da geração de imagens](imaging-overview.md)
 - [Visão geral dos objetos de desenho](drawing-objects-overview.md)

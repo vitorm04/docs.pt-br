@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161428"
 ---
 # <a name="table-overview"></a>Visão geral da tabela
 <xref:System.Windows.Documents.Table> é um elemento de nível de bloco que suporta a apresentação baseada em grade do conteúdo do documento de fluxo. A flexibilidade deste elemento o torna muito útil, mas também o deixa mais difícil de entender e usar corretamente.  
@@ -176,6 +176,7 @@ ms.locfileid: "58410805"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral do documento de fluxo](flow-document-overview.md)
 - [Definir uma tabela com XAML](how-to-define-a-table-with-xaml.md)
 - [Documentos no WPF](documents-in-wpf.md)

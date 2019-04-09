@@ -12,17 +12,16 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139211"
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
-  
-  
+
 <a name="Drag_and_Drop_Support"></a>   
 ## <a name="drag-and-drop-support-in-wpf"></a>Suporte ao recurso do tipo "arrastar e soltar" no WPF  
  Normalmente, as operações do tipo "arrastar e soltar" envolvem duas partes: uma origem do arrasto da qual o objeto arrastado se origina e um destino de soltar que recebe o objeto solto.  A origem do arrasto e o destino de soltar podem ser elementos de interface do usuário no mesmo ou em outro aplicativo.  
@@ -217,7 +216,8 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Clipboard>
-- [Passo a passo: Habilitando arrastar e soltar em um controle de usuário](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Tópicos de instruções](drag-and-drop-how-to-topics.md)
+- [Passo a passo: habilitar arrastar e soltar em um controle de usuário](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Tópicos explicativos ](drag-and-drop-how-to-topics.md)
 - [Arrastar e soltar](drag-and-drop.md)
