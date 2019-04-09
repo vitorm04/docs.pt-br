@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 2e818f3d5a7dfa85bf361d7de0cbd5bcb2dfe63b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c63dd07686463c652c27dea8473b4d8cbe2dab71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137664"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialização de objeto (WCF Data Services)
 Quando você usa o **adicionar referência de serviço** caixa de diálogo para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed em um aplicativo cliente com base no .NET Framework, classes de dados equivalentes são geradas para cada tipo de entidade no modelo de dados exposto pelo feed. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Dados de entidade que são retornados por uma consulta são materializados em uma instância de uma dessas classes de serviço de dados do cliente gerado. Para obter informações sobre opções de mesclagem e a resolução de identidade para objetos acompanhados, consulte [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
@@ -47,5 +47,6 @@ Quando você usa o **adicionar referência de serviço** caixa de diálogo para 
 5.  A biblioteca de cliente anexa o objeto a ser o <xref:System.Data.Services.Client.DataServiceContext>. O objeto não está anexado quando o <xref:System.Data.Services.Client.MergeOption> é <xref:System.Data.Services.Client.MergeOption.NoTracking>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+
+- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Projeções de consulta](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

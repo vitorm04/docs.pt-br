@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2138dd32cf39db7b7c8989ba5827178d1a1e46c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117229"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumeração CorMethodImpl
 Contém valores que descrevem os recursos de implementação de método.  
@@ -83,4 +83,5 @@ typedef enum CorMethodImpl {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

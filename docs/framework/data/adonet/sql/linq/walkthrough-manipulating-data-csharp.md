@@ -1,15 +1,15 @@
 ---
-title: 'Passo a passo: Manipulação de dados (C#)'
+title: 'Passo a passo: Manipular dados (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143280"
 ---
-# <a name="walkthrough-manipulating-data-c"></a>Passo a passo: Manipulação de dados (C#)
+# <a name="walkthrough-manipulating-data-c"></a>Passo a passo: Manipular dados (C#)
 Essa explicação passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para adicionar, modificar e excluir dados em um banco de dados. Você usará uma cópia do banco de dados de exemplo Northwind para adicionar um cliente, alterar o nome de um cliente e excluir um pedido.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -162,4 +162,5 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 >  Depois de adicionar o novo cliente enviando as alterações, você não poderá executar esta solução novamente como está. Para executar novamente a solução, altere o nome do cliente e a ID do cliente a ser adicionada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

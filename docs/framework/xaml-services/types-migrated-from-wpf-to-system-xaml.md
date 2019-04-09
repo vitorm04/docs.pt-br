@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116474"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Tipos migrados do WPF para System.Xaml
 Na [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] e [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], ambas as [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e Windows Workflow Foundation incluído uma implementação de linguagem XAML. Muitos dos tipos públicos que forneceu a extensibilidade para a implementação de XAML WPF existiam nos assemblies PresentationFramework, PresentationCore e WindowsBase. Da mesma forma, os tipos públicos que forneceu a extensibilidade para Windows Workflow Foundation XAML existiam no assembly ComponentModel. No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], alguns dos tipos relacionados a XAML são migradas para o assembly System. XAML. Uma implementação comum do .NET Framework dos serviços de linguagem XAML habilita muitos cenários de extensibilidade XAML que foram originalmente definidos pela implementação de XAML de uma estrutura específica, mas que agora fazem parte do geral [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] suporte de linguagem XAML. Este tópico lista os tipos que são migrados e aborda questões relacionadas à migração.  
@@ -126,4 +126,5 @@ Na [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] e [!INCLUDE[ne
  Se você está incluindo referências a assemblies WPF e System. XAML, e você também estiver usando `include` instruções para ambos os <xref:System.Windows.Markup> e <xref:System.Xaml> namespaces, talvez você precise qualificar totalmente as chamadas para essas APIs para resolver os tipos sem ambiguidade.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Serviços XAML](index.md)

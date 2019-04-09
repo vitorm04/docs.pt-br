@@ -1,15 +1,15 @@
 ---
-title: 'Como: Migrar serviços Web do ASP.NET habilitado para AJAX para o WCF'
+title: 'Como: migrar serviços Web habilitados para AJAX ASP.NET para o WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142994"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Como: Migrar serviços Web do ASP.NET habilitado para AJAX para o WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Como: migrar serviços Web habilitados para AJAX ASP.NET para o WCF
 Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET AJAX a um serviço habilitado para AJAX Windows Communication Foundation (WCF) equivalente. Ele mostra como criar uma versão equivalente do WCF de um serviço ASP.NET AJAX. Os dois serviços, em seguida, podem ser usados lado a lado, ou o serviço WCF pode ser usado para substituir o serviço ASP.NET AJAX.
 
  Migrando um existente do ASP.NET AJAX serviço a um serviço WCF AJAX oferece os seguintes benefícios:
@@ -213,4 +213,5 @@ d.Add("two", 2);
 |Caracteres de escape|Sempre com um escape de barra (/). nunca permite sem escape caracteres inválidos de JSON, como "\n".|Com um escape de barra (/) para valores de data e hora.|
 
 ## <a name="see-also"></a>Consulte também
-- [Como: Usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+
+- [Como: usar a configuração para adicionar um ponto de extremidade AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

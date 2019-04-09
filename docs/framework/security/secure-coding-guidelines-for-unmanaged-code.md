@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143761"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Diretrizes de codificação segura para código não gerenciado
 Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, APIs de código nativo, assim como Win32). Visto que isso significa que sair do perímetro de segurança para código gerenciado, o devido cuidado é necessário. Se seu código é neutro em termos de segurança, seu código e qualquer outro código que o chama devem ter permissão de código não gerenciado (<xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificado).  
@@ -47,9 +47,10 @@ Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, 
   
 |Palavra-chave|Considerações sobre segurança|  
 |-------------|-----------------------------|  
-|**seguro**|É totalmente inofensivo que qualquer código, até mesmo mal-intencionado, o chame. Pode ser usado exatamente como outro código gerenciado. Por exemplo, uma função que obtém a hora do dia é normalmente segura.|  
-|**nativo**|Neutro em termos de segurança, ou seja, código não gerenciado que requer permissão de código não gerenciado para chamar. A segurança é verificada, o que impede um chamador não autorizado.|  
+|**Safe**|É totalmente inofensivo que qualquer código, até mesmo mal-intencionado, o chame. Pode ser usado exatamente como outro código gerenciado. Por exemplo, uma função que obtém a hora do dia é normalmente segura.|  
+|**nativa**|Neutro em termos de segurança, ou seja, código não gerenciado que requer permissão de código não gerenciado para chamar. A segurança é verificada, o que impede um chamador não autorizado.|  
 |**unsafe**|Ponto de entrada de código não gerenciado potencialmente perigoso com segurança suprimida. Os desenvolvedores devem ter o máximo de cuidado ao usar código não gerenciado desse tipo, verificando se outras proteções estão em vigor para evitar uma vulnerabilidade de segurança. Os desenvolvedores devem ser responsáveis, pois essa palavra-chave substitui o sistema de segurança.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

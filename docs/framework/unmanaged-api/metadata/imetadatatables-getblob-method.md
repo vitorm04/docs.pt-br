@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be7e375f2683ef7f37f2e1e141e1c8a3b00da09a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: babe098b16729cfcd41b48075a49b9ae9be7dfdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117177"
 ---
 # <a name="imetadatatablesgetblob-method"></a>Método IMetaDataTables::GetBlob
 Obtém um ponteiro para o objeto binário grande (BLOB) do índice da coluna especificada.  
@@ -57,5 +57,6 @@ HRESULT GetBlob (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar uma política de autorização personalizada'
+title: 'Como: criar uma política de autorização personalizada'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115382"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Como: Criar uma política de autorização personalizada
+# <a name="how-to-create-a-custom-authorization-policy"></a>Como: criar uma política de autorização personalizada
 A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização baseada em declarações. Declarações são extraídas de tokens, opcionalmente processadas pela diretiva de autorização personalizada e, em seguida, colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext> que pode ser examinado para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser isolada dos detalhes sobre as diferentes declarações apresentados pelos diferentes tipos de token que o WCF oferece suporte. Este tópico mostra como implementar uma política de autorização personalizados e como adicionar essa política para a coleção de políticas usado por um serviço.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Para implementar uma política de autorização personalizada  
@@ -76,7 +76,8 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Como: Comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Como: Criar um Gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Como: comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Como: criar gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)

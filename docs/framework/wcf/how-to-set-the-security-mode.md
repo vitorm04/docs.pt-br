@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir o modo de segurança'
+title: 'Como: definir o modo de segurança'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116396"
 ---
-# <a name="how-to-set-the-security-mode"></a>Como: Definir o modo de segurança
+# <a name="how-to-set-the-security-mode"></a>Como: definir o modo de segurança
 Segurança do Windows Communication Foundation (WCF) tem três modos de segurança comuns que são encontrados no associações mais predefinidas: "transporte com credencial de mensagem.", a mensagem e transporte Dois modos adicionais são específicos para duas ligações: o modo "somente credenciais transporte" encontrado na <xref:System.ServiceModel.BasicHttpBinding>e "Dois" modo, encontrado no <xref:System.ServiceModel.NetMsmqBinding>. No entanto, este tópico concentra-se em três modos comuns de segurança: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Observe que não todas as associações predefinidas dá suporte a todos os modos. Este tópico define o modo com o <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> classes e demonstra como definir o modo programaticamente e por meio da configuração.  
@@ -56,7 +56,7 @@ Segurança do Windows Communication Foundation (WCF) tem três modos de seguran�
   
 2.  Defina a propriedade `Mode` como `Transport`.  
   
-3.  Defina o `ClientCredential` propriedade para um valor apropriado. O código a seguir define a propriedade como `Windows`.  
+3.  Defina a propriedade `ClientCredential` com um valor apropriado. O código a seguir define a propriedade como `Windows`.  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
@@ -67,7 +67,7 @@ Segurança do Windows Communication Foundation (WCF) tem três modos de seguran�
   
 2.  Defina a propriedade `Mode` como `Message`.  
   
-3.  Defina o `ClientCredential` propriedade para um valor apropriado. O código a seguir define a propriedade como `Certificate`.  
+3.  Defina a propriedade `ClientCredential` com um valor apropriado. O código a seguir define a propriedade como `Certificate`.  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
@@ -114,12 +114,13 @@ Segurança do Windows Communication Foundation (WCF) tem três modos de seguran�
  Para obter mais informações, confira [Como: Usar a segurança de transporte e as credenciais de mensagem](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Configurar uma porta com um certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Como: Usar a segurança de transporte e as credenciais de mensagem](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+
+- [Como: configurar uma porta com um certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Como: usar credenciais de mensagem e segurança do transporte](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [Segurança de transporte](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Segurança de mensagem](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<segurança >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<segurança >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<segurança >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

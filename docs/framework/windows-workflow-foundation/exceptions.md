@@ -2,12 +2,12 @@
 title: Exceções
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145984"
 ---
 # <a name="exceptions"></a>Exceções
 Fluxos de trabalho podem usar a atividade de <xref:System.Activities.Statements.TryCatch> para manipular exceções que são geradas durante a execução de um fluxo de trabalho. Essas exceções podem ser tratados ou que podem ser lançadas usando a atividade de <xref:System.Activities.Statements.Rethrow> . As atividades na seção de <xref:System.Activities.Statements.TryCatch.Finally%2A> são executadas quando a seção de <xref:System.Activities.Statements.TryCatch.Try%2A> ou a seção de <xref:System.Activities.Statements.TryCatch.Catches%2A> concluírem. Fluxos de trabalho hospedados por um <xref:System.Activities.WorkflowApplication> instância também pode usar o <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador de eventos para manipular exceções que não são manipuladas por um <xref:System.Activities.Statements.TryCatch> atividade.  
@@ -32,8 +32,7 @@ Fluxos de trabalho podem usar a atividade de <xref:System.Activities.Statements.
   
 -   **Anular** -uma instância de fluxo de trabalho anuladas pode ser retomado somente se ele foi configurado para ser persistente.  Sem persistência, um fluxo de trabalho não pode ser continuado.  No ponto um fluxo de trabalho é anuladas, alguns funciona feito (na memória) como o ponto que o último de persistência será perdido. Para um fluxo de trabalho anuladas, o manipulador anuladas é chamado usando a exceção como a razão quando o processo de abort completa. No entanto, diferentemente de cancelado e de finalizado, o manipulador concluído não é chamado. Um fluxo de trabalho anuladas está em um estado anuladas.  
   
- O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. 
-  <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
   
@@ -52,6 +51,7 @@ Fluxos de trabalho podem usar a atividade de <xref:System.Activities.Statements.
  A diferença entre a manipulação de exceção e a compensação é que a manipulação de exceção ocorre durante a execução de uma atividade. A compensação ocorre após uma atividade terminou com êxito. Manipulação de exceção fornece uma oportunidade para limpar após a atividade gerencie a exceção, enquanto a compensação fornece um mecanismo por que o trabalho com êxito concluído de uma atividade anteriormente pode ser concluída desfeito. Para obter mais informações, consulte [compensação](compensation.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

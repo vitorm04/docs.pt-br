@@ -1,15 +1,15 @@
 ---
-title: <Assembly> (.NET Nativo)
+title: <Assembly> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eeaf0bd347b7aa6fe47387282a5237cf91a5f59
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137846"
 ---
 # <a name="assembly-element-net-native"></a>\<Assembly > (.NET nativo)
 Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.  
@@ -53,7 +53,7 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um as
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*assembly_name*|O nome simples do assembly, sem a extensão de arquivo. Este atributo corresponde à propriedade <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> . Por exemplo, o nome de um assembly denominado Extensions.dll é "Extensions".<br /><br /> Você também pode especificar a cadeia de caracteres literal `*Application*` para aplicar a política a todos os assemblies no pacote de aplicativos, sejam os assemblies carregados ou não. `*Application*` nunca aplica-se à política para assemblies .NET Framework.|  
+|*assembly_name*|O nome simples do assembly, sem a extensão de arquivo. Este atributo corresponde à propriedade <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> . Por exemplo, o nome de um assembly denominado Extensions.dll é "Extensions".<br /><br /> Você também pode especificar a cadeia de caracteres literal `*Application*` para aplicar a política a todos os assemblies no pacote de aplicativos, sejam os assemblies carregados ou não. `*Application*` nunca aplica a política para assemblies do .NET Framework.|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
@@ -66,15 +66,15 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um as
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace filho.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
+|[\<Aplicativo >](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
+|[\<Biblioteca >](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<Assembly>` define a política de tempo de execução para todos os tipos em um assembly. Ele é diferente do elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md), que especifica uma biblioteca, mas depende de seus elementos filho para definir a política de reflexão em tempo de execução. O elemento `<Assembly>` aplica-se a todos os tipos em um assembly, a menos que eles sejam substituídos por um elemento filho.  
@@ -92,6 +92,7 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um as
  Os atributos `Activate`, `Browse`, `Dynamic` e `Serialize` são todos opcionais. No entanto, o elemento `<Assembly>` deve conter pelo menos um desses atributos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

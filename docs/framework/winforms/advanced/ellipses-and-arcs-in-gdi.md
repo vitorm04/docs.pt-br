@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117449"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Elipses e arcos no GDI+
 É possível desenhar facilmente elipses e arcos usando o <xref:System.Drawing.Graphics.DrawEllipse%2A> e <xref:System.Drawing.Graphics.DrawArc%2A> métodos do <xref:System.Drawing.Graphics> classe.  
@@ -48,9 +48,10 @@ ms.locfileid: "57718474"
  ![Elipses e arcos](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
-- [Como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
-- [Como: Criar uma caneta](how-to-create-a-pen.md)
-- [Como: Desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)
+- [Linhas, curvas e formas](lines-curves-and-shapes.md)
+- [Como: criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
+- [Como: criar uma caneta](how-to-create-a-pen.md)
+- [Como: desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)

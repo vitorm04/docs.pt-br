@@ -2,12 +2,12 @@
 title: Participantes de persistência
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115889"
 ---
 # <a name="persistence-participants"></a>Participantes de persistência
 Um participante de persistência pode participar em uma operação de persistência (salvar) ou carregamento disparada por um aplicativo host. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vem com duas classes abstratas, **PersistenceParticipant** e **PersistenceIOParticipant**, que você pode usar para criar um participante de persistência. Um participante de persistência deriva de uma dessas classes, implementa-se os métodos de interesse, e então adiciona uma instância da classe à coleção de <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> em <xref:System.ServiceModel.Activities.WorkflowServiceHost> . O aplicativo host pode procurar essas extensões de fluxo de trabalho para manter uma instância de fluxo de trabalho e chama métodos apropriados nos participantes de persistência em momentos apropriadas.  
@@ -58,7 +58,8 @@ Um participante de persistência pode participar em uma operação de persistên
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Como: Criar um participante personalizado de persistência](how-to-create-a-custom-persistence-participant.md)  
+-   [Como: criar um participante de persistência personalizado](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Extensibilidade de repositório](store-extensibility.md)
+
+- [Extensibilidade de Store](store-extensibility.md)

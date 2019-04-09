@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4049b0ed25d4c0fda00fe9b0dad5887fa4f6996
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87f938a7119abe4a88da65bd779a5f4a02499516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117112"
 ---
 # <a name="clrdebuggingversion-structure"></a>Estrutura CLR_DEBUGGING_VERSION
 Define a versão do produto do CLR (Common Language Runtime) para fins de depuração.  
@@ -62,5 +62,6 @@ typedef struct _CLR_DEBUGGING_VERSION
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

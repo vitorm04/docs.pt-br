@@ -2,12 +2,12 @@
 title: Operações assíncronas
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116032"
 ---
 # <a name="asynchronous-operations"></a>Operações assíncronas
 Algumas operações de banco de dados, como execuções de comando, podem levar um tempo significativo para ser concluído. Nesse caso, aplicativos de thread único devem bloquear outras operações e aguarde até que o comando seja concluído antes que possa continuar suas próprias operações. Em contraste, sendo capaz de atribuir a operação de longa execução a um thread em segundo plano permite que o thread de primeiro plano permaneça ativo durante toda a operação. Em um aplicativo do Windows, por exemplo, delegando a operação de longa execução a um thread em segundo plano permite que o thread da interface do usuário continuar responsiva enquanto a operação está em execução.  
@@ -26,10 +26,11 @@ Algumas operações de banco de dados, como execuções de comando, podem levar 
  [Aplicativos ASP.NET que usam identificadores de espera](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
  Fornece um exemplo que demonstra como executar vários comandos simultâneos em uma página ASP.NET, usando os identificadores de espera para a operação após a conclusão de todos os comandos de gerenciamento.  
   
- [Sondagem em aplicativos de Console](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ [Sondagem em aplicativos de console](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Fornece um exemplo que demonstra o uso de sondagem para aguardar a conclusão de uma execução de comando assíncrono de um aplicativo de console. Essa técnica também é válida em uma biblioteca de classes ou em outro aplicativo sem uma interface do usuário.  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Chamando métodos síncronos de forma assíncrona](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

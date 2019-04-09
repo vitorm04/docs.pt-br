@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba0ff6e545a5da5d7733a157b73ddd66e717de9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 45b919d90454c9424cadb1d4dfc3b0dfb09e5053
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209444"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Método ICorDebugRemote::DebugActiveProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -71,6 +71,7 @@ HRESULT DebugActiveProcessEx (
  **Versões do .NET framework:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

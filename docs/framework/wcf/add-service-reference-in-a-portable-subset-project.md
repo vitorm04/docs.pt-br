@@ -2,12 +2,12 @@
 title: Adicione uma referência de serviço em um projeto de subconjunto portátil
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145425"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Adicione uma referência de serviço em um projeto de subconjunto portátil
 Projetos de subconjunto portáteis permitem que os programadores do assembly .NET manter uma única árvore de origem e o sistema de compilação e ainda dar suporte a várias implementações do .NET (área de trabalho, Silverlight, Windows Phone e XBOX). Projetos de subconjunto portáteis somente fazem referência a bibliotecas portáteis .NET, que são um assembly do framework .NET que pode ser usado em qualquer implementação do .NET.  
@@ -41,8 +41,9 @@ Projetos de subconjunto portáteis permitem que os programadores do assembly .NE
   
 13. O <xref:System.Runtime.Serialization.DataContractSerializer> sempre será usado para falhas.  
   
-14. O <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> não tem suporte em projetos de subconjunto portáteis.  
+14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> Não há suporte em projetos de subconjunto portátil.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Biblioteca de classes portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+
+- [Usando um cliente WCF para acessar um serviço](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

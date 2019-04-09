@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49cfa25aaf3c49c1258eb01a29b83e7eb358838a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4cf36b9e09f5e9eeb28930a6adc48426927a60e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145685"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>Método INotifySink2::OnSyncCallOut
 É invocado quando uma chamada é horizontalmente.  
@@ -55,6 +55,7 @@ HRESULT OnSyncCallOut
  **Cabeçalho:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [Interface INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [Interface INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
