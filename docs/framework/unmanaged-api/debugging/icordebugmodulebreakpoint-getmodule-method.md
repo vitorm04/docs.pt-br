@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31d4c0488adb38360d096c5827d078b0fbecc635
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 51403c52d7f8a216e83b817f157979f4af1c433a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162862"
 ---
-# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="06720-102">Método ICorDebugModuleBreakpoint::GetModule</span><span class="sxs-lookup"><span data-stu-id="06720-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
-<span data-ttu-id="06720-103">Obtém um ponteiro de interface para um "ICorDebugModule" que faz referência ao módulo no qual este ponto de interrupção está definido.</span><span class="sxs-lookup"><span data-stu-id="06720-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
+# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="648f8-102">Método ICorDebugModuleBreakpoint::GetModule</span><span class="sxs-lookup"><span data-stu-id="648f8-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
+<span data-ttu-id="648f8-103">Obtém um ponteiro de interface para um "ICorDebugModule" que faz referência ao módulo no qual este ponto de interrupção está definido.</span><span class="sxs-lookup"><span data-stu-id="648f8-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06720-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="06720-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="648f8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="648f8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -35,18 +35,17 @@ HRESULT GetModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="06720-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="06720-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="648f8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="648f8-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="06720-106">[out] Um ponteiro para o endereço de um `ICorDebugModule` interface que faz referência ao módulo no qual o ponto de interrupção está definido.</span><span class="sxs-lookup"><span data-stu-id="06720-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="648f8-106">[out] Um ponteiro para o endereço de um `ICorDebugModule` interface que faz referência ao módulo no qual o ponto de interrupção está definido.</span><span class="sxs-lookup"><span data-stu-id="648f8-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06720-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="06720-107">Requirements</span></span>  
- <span data-ttu-id="06720-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06720-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="648f8-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="648f8-107">Requirements</span></span>  
+ <span data-ttu-id="648f8-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="648f8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06720-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06720-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="648f8-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="648f8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="06720-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06720-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="648f8-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="648f8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="06720-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06720-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="648f8-111">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="648f8-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="06720-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="06720-112">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="648f8-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="648f8-112">See also</span></span>

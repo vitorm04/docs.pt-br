@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 226d9aa75d0a9e4d6cef92e2d2edacb6e98cf34e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bd1f101e2e9cf9baeb28290c7607ccab3d8d7440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178913"
 ---
-# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="e0a16-102">Método ISymUnmanagedENCUpdate::UpdateMethodLines</span><span class="sxs-lookup"><span data-stu-id="e0a16-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
-<span data-ttu-id="e0a16-103">Permite atualizar as informações de linha para um método que não foram recompilado, mas cujas linhas foram movidas de forma independente.</span><span class="sxs-lookup"><span data-stu-id="e0a16-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="e0a16-104">Um delta para cada instrução é permitido.</span><span class="sxs-lookup"><span data-stu-id="e0a16-104">A delta for each statement is allowed.</span></span>  
+# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="5aa85-102">Método ISymUnmanagedENCUpdate::UpdateMethodLines</span><span class="sxs-lookup"><span data-stu-id="5aa85-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
+<span data-ttu-id="5aa85-103">Permite atualizar as informações de linha para um método que não foram recompilado, mas cujas linhas foram movidas de forma independente.</span><span class="sxs-lookup"><span data-stu-id="5aa85-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="5aa85-104">Um delta para cada instrução é permitido.</span><span class="sxs-lookup"><span data-stu-id="5aa85-104">A delta for each statement is allowed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0a16-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e0a16-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5aa85-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5aa85-105">Syntax</span></span>  
   
 ```  
 HRESULT UpdateMethodLines(  
@@ -36,21 +36,22 @@ HRESULT UpdateMethodLines(
     [in]  ULONG        cDeltas);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0a16-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e0a16-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5aa85-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5aa85-106">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="e0a16-107">[in] Os metadados do token de método.</span><span class="sxs-lookup"><span data-stu-id="e0a16-107">[in] The metadata of the method token.</span></span>  
+ <span data-ttu-id="5aa85-107">[in] Os metadados do token de método.</span><span class="sxs-lookup"><span data-stu-id="5aa85-107">[in] The metadata of the method token.</span></span>  
   
  `pDeltas`  
- <span data-ttu-id="e0a16-108">[in] Uma matriz de `INT32` valores que indicam os deltas para cada ponto de sequência no método.</span><span class="sxs-lookup"><span data-stu-id="e0a16-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
+ <span data-ttu-id="5aa85-108">[in] Uma matriz de `INT32` valores que indicam os deltas para cada ponto de sequência no método.</span><span class="sxs-lookup"><span data-stu-id="5aa85-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
   
  `cDeltas`  
- <span data-ttu-id="e0a16-109">[in] Um `ULONG` que contém o tamanho de `pDeltas` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="e0a16-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
+ <span data-ttu-id="5aa85-109">[in] Um `ULONG` que contém o tamanho de `pDeltas` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="5aa85-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e0a16-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="e0a16-110">Return Value</span></span>  
- <span data-ttu-id="e0a16-111">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="e0a16-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5aa85-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="5aa85-110">Return Value</span></span>  
+ <span data-ttu-id="5aa85-111">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="5aa85-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0a16-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e0a16-112">Requirements</span></span>  
- <span data-ttu-id="e0a16-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e0a16-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5aa85-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5aa85-112">Requirements</span></span>  
+ <span data-ttu-id="5aa85-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5aa85-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0a16-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e0a16-114">See also</span></span>
-- [<span data-ttu-id="e0a16-115">Interface ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="e0a16-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5aa85-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5aa85-114">See also</span></span>
+
+- [<span data-ttu-id="5aa85-115">Interface ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="5aa85-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
