@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f29111fd68d9a47cd90687cc6aa2743968e727d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 442584cffe4b4ae44702892587e261d41abf4e8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150417"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="b1b1c-102">Método ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="b1b1c-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="b1b1c-103">Obtém o menor início maior final de linha para o método e de linha em um documento específico.</span><span class="sxs-lookup"><span data-stu-id="b1b1c-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="c5929-102">Método ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="c5929-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="c5929-103">Obtém o menor início maior final de linha para o método e de linha em um documento específico.</span><span class="sxs-lookup"><span data-stu-id="c5929-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1b1c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b1b1c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5929-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c5929-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceExtentInDocument(  
@@ -36,21 +36,22 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b1b1c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b1b1c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5929-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c5929-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="b1b1c-106">[in] Um ponteiro para o documento.</span><span class="sxs-lookup"><span data-stu-id="b1b1c-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="c5929-106">[in] Um ponteiro para o documento.</span><span class="sxs-lookup"><span data-stu-id="c5929-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="b1b1c-107">[out] Um ponteiro para um `ULONG32` que recebe a linha inicial.</span><span class="sxs-lookup"><span data-stu-id="b1b1c-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="c5929-107">[out] Um ponteiro para um `ULONG32` que recebe a linha inicial.</span><span class="sxs-lookup"><span data-stu-id="c5929-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="b1b1c-108">[out] Um ponteiro para um `ULONG32` que recebe a linha final.</span><span class="sxs-lookup"><span data-stu-id="b1b1c-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="c5929-108">[out] Um ponteiro para um `ULONG32` que recebe a linha final.</span><span class="sxs-lookup"><span data-stu-id="c5929-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b1b1c-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="b1b1c-109">Return Value</span></span>  
- <span data-ttu-id="b1b1c-110">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="b1b1c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c5929-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="c5929-109">Return Value</span></span>  
+ <span data-ttu-id="c5929-110">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="c5929-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1b1c-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b1b1c-111">Requirements</span></span>  
- <span data-ttu-id="b1b1c-112">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b1b1c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5929-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c5929-111">Requirements</span></span>  
+ <span data-ttu-id="c5929-112">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c5929-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1b1c-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b1b1c-113">See also</span></span>
-- [<span data-ttu-id="b1b1c-114">Interface ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="b1b1c-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c5929-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c5929-113">See also</span></span>
+
+- [<span data-ttu-id="c5929-114">Interface ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="c5929-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
