@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127446"
 ---
 # <a name="data-transfer-architectural-overview"></a>Visão geral da arquitetura de transferência de dados
 Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura de mensagens. Ele pode receber mensagens, processá-los e distribuí-los para o código de usuário para outra ação, ou pode construir mensagens de dados fornecidos pelo código do usuário e enviá-las para um destino. Este tópico, que é destinado a desenvolvedores avançados, descreve a arquitetura para lidar com mensagens e os dados contidos. Para uma exibição mais simples e orientada a tarefas de como enviar e receber dados, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -273,4 +273,5 @@ Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura 
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> e <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> responsáveis os comportamentos de operação para conexão com os formatadores de mensagem para o `DataContractSerializer` e o `XmlSerializer`, respectivamente. O <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> comportamento, na verdade, pode operar com o serializador que deriva <xref:System.Runtime.Serialization.XmlObjectSerializer>, incluindo o <xref:System.Runtime.Serialization.NetDataContractSerializer> (descrito em detalhes na serialização de stand-alone usando). O comportamento chama um do `CreateSerializer` sobrecargas de método virtual para obter o serializador. Para conectar um serializador diferente, crie um novo <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> subclasse e substituição `CreateSerializer` sobrecargas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Especificando transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
