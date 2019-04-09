@@ -2,12 +2,12 @@
 title: Protegendo aplicativos ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149377"
 ---
 # <a name="securing-adonet-applications"></a>Protegendo aplicativos ADO.NET
 Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas comuns de codificação como não validar a entrada do usuário. Um aplicativo que acessa dados tem vários pontos possíveis de falha que um invasor pode explorar para recuperar, manipular ou destruir dados confidenciais. Portanto, é importante compreender todos os aspectos de segurança, do processo de modelagem de ameaças durante a fase de projeto do aplicativo até a sua eventual implantação e manutenção contínua.  
@@ -33,7 +33,7 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  Descreve as opções de criptografia para aplicativos ADO.NET.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  
+ [Segurança do SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  Descreve os recursos de segurança do SQL Server da perspectiva de um desenvolvedor.  
   
  [Considerações sobre segurança](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
@@ -52,5 +52,6 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  Fornece links para recursos externos disponíveis online e em cópia impressa.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

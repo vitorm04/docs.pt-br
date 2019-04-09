@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172049"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Estilos para foco em controles e FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece dois mecanismos paralelos para alterar a aparência visual de um controle quando ele recebe o foco do teclado. O primeiro mecanismo é usar setters de propriedade para propriedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dentro do estilo ou modelo que é aplicado ao controle. O segundo mecanismo é fornecer um estilo separado como o valor do <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriedade; o "estilo visual de foco" cria uma árvore visual separada para um adorno que é desenhado na parte superior do controle, em vez de alterar a árvore visual do controle ou outra interface de usuário elemento ao substituí-la. Este tópico aborda os cenários em que cada um desses mecanismos é apropriado.  
-   
-  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>O objetivo do estilo visual de foco  
  O recurso de estilo visual de foco fornece um "modelo de objeto" comum para introduzir comentários visuais do usuário com base em navegação de teclado para qualquer elemento de interface do usuário. Isso é possível sem a aplicação de um novo modelo para o controle ou conhecendo a composição do modelo específico.  
@@ -77,6 +76,7 @@ ms.locfileid: "57377039"
  Se desejar que todas as possíveis causas de alteração de foco para produzir um comportamento visual, você deve basear um setter ou gatilho a <xref:System.Windows.UIElement.IsFocused%2A> propriedade de dependência, ou como alternativa na <xref:System.Windows.UIElement.GotFocus> ou <xref:System.Windows.UIElement.LostFocus> eventos utilizados para um <xref:System.Windows.EventSetter>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Estilo e modelagem](../controls/styling-and-templating.md)
 - [Visão geral do foco](focus-overview.md)

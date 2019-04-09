@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209964"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Como: Manipular grupos de linhas de uma tabela por meio da propriedade RowGroups
 Este exemplo demonstra algumas das operações mais comuns que podem ser executadas em grupos de linhas de uma tabela por meio de <xref:System.Windows.Documents.Table.RowGroups%2A> propriedade.  
@@ -84,6 +84,7 @@ Este exemplo demonstra algumas das operações mais comuns que podem ser executa
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Manipular elementos de conteúdo de fluxo por meio da propriedade Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Manipular um FlowDocument por meio da propriedade Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Manipular colunas de uma tabela por meio da propriedade Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

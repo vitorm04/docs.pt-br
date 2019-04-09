@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar uma borda em torno de um Windows Forms usando preenchimento de controle'
+title: 'Como: Criar uma borda em torno de um controle do Windows Forms usando preenchimento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: 66748eef299c9175814fb130a7eda359c5de0546
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124014"
 ---
-# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Como: Criar uma borda em torno de um Windows Forms usando preenchimento de controle
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Como: Criar uma borda em torno de um controle do Windows Forms usando preenchimento
 O exemplo de código a seguir demonstra como criar uma borda ou contorno ao redor de um <xref:System.Windows.Forms.RichTextBox> controle. O exemplo define o valor de uma <xref:System.Windows.Forms.Panel> do controle <xref:System.Windows.Forms.Padding> propriedade como 5 e define o <xref:System.Windows.Forms.Control.Dock%2A> propriedade de um filho <xref:System.Windows.Forms.RichTextBox> o controle para <xref:System.Windows.Forms.DockStyle.Fill>. O <xref:System.Windows.Forms.Control.BackColor%2A> do <xref:System.Windows.Forms.Panel> controle é definida como <xref:System.Drawing.Color.Blue%2A>, que cria uma borda azul ao redor de <xref:System.Windows.Forms.RichTextBox> controle.  
   
 ## <a name="example"></a>Exemplo  
@@ -29,5 +29,6 @@ O exemplo de código a seguir demonstra como criar uma borda ou contorno ao redo
  [!code-vb[System.Windows.Forms.Padding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Padding>
 - [Margem e preenchimento em controles dos Windows Forms](margin-and-padding-in-windows-forms-controls.md)

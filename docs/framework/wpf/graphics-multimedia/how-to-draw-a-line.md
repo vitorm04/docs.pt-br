@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: a194fad5471cafcb567aa00522a597a4186ef4af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143514"
 ---
 # <a name="how-to-draw-a-line"></a>Como: Desenhar uma linha
 Este exemplo mostra como desenhar linhas, usando o <xref:System.Windows.Shapes.Line> elemento.  
@@ -28,5 +28,6 @@ Este exemplo mostra como desenhar linhas, usando o <xref:System.Windows.Shapes.L
  Este exemplo faz parte de um exemplo maior; para ver o exemplo completo, consulte o [Exemplo de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Shapes.Line>
 - [Exemplo de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037)

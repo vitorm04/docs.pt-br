@@ -3,12 +3,12 @@ title: Ferramenta de Identidade e Acesso para o Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9216298889637780e79d1bfc7ac060458c745968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170112"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Ferramenta de Identidade e Acesso para o Visual Studio 2012
 Este tópico descreve a nova Ferramenta de Identidade e Acesso para o Visual Studio 11. Você pode baixar essa ferramenta da seguinte URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) ou diretamente do Visual Studio 11 pesquisando por "identidade" diretamente no Gerenciador de extensões.  
@@ -28,4 +28,5 @@ Este tópico descreve a nova Ferramenta de Identidade e Acesso para o Visual Stu
 -   A ferramenta usa os recursos do Windows Azure Access Control Service (ACS) com uma lista simples de caixas de seleção para todos os provedores de identidade que você deseja usar: Facebook, Google, Live ID, Yahoo!, qualquer provedor OpenID e qualquer provedor de WS-Federation. Selecione seus provedores de identidade, clique em OK e pressione F5. Seu aplicativo e o ACS serão configurados automaticamente e seu aplicativo de teste será baseado no ACS.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Recursos do WIF](../../../docs/framework/security/wif-features.md)

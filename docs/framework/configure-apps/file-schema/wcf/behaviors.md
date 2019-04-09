@@ -2,12 +2,12 @@
 title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: b9d30d7e1c9d211cd57982a0f03fe855a6b53c12
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204231"
 ---
 # <a name="behaviors"></a>\<comportamentos >
 Este elemento define duas coleções filhas nomeadas `endpointBehaviors` e `serviceBehaviors`.  Cada coleção define elementos de comportamento consumidos pelos pontos de extremidade e serviços, respectivamente. Cada elemento do comportamento é identificado por seu exclusivo `name` atributo. Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre a configuração padrão e sem nome associações e comportamentos, consulte [configuração simplificado](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -48,6 +48,7 @@ Este elemento define duas coleções filhas nomeadas `endpointBehaviors` e `serv
  Você pode usar o `<remove>` elemento do qual remover um comportamento específico da coleção. Para fazer isso, basta fornecer o nome do comportamento para remover o `name` atributo do `<remove>` elemento.  Você também pode usar o `<clear>` elemento para garantir que uma coleção de comportamentos começa vazia limpando todo o conteúdo da coleção.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>
@@ -55,6 +56,6 @@ Este elemento define duas coleções filhas nomeadas `endpointBehaviors` e `serv
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
 - [Configurando e estendendo o tempo de execução com comportamentos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
 - [Configurando comportamentos do cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [Especificando o comportamento em tempo de execução do cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Especificando o comportamento em tempo de execução do serviço](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Especificando a execução do cliente- Comportamento do tempo](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Especificando comportamento de tempo de execução de serviço](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
 - [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

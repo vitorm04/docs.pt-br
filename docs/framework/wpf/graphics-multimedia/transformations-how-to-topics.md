@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140862"
 ---
 # <a name="transformations-how-to-topics"></a>Tópicos explicativos de transformações
 Os tópicos nesta seção descrevem como aplicar diferentes transformações em objetos.  
@@ -31,7 +31,8 @@ Os tópicos nesta seção descrevem como aplicar diferentes transformações em 
  [Usar um MatrixTransform para criar transformações personalizadas](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Transform>
-- [Elementos gráficos e multimídia](index.md)
+- [Gráficos e multimídia](index.md)
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
 - [Layout](../advanced/layout.md)

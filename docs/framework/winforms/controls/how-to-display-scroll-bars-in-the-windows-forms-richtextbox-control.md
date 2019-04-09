@@ -1,19 +1,19 @@
 ---
-title: 'Como: Controle RichTextBox do exibir barras de rolagem do Windows Forms'
+title: 'Como: Exibir barras de rolagem no controle RichTextBox do Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142552"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Como: Controle RichTextBox do exibir barras de rolagem do Windows Forms
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Como: Exibir barras de rolagem no controle RichTextBox do Windows Forms
 Por padrão, os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle exibe barras de rolagem horizontal e vertical conforme necessário. Há sete valores possíveis para o <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propriedade do <xref:System.Windows.Forms.RichTextBox> controle, que são descritos na tabela a seguir.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Exibir barras de rolagem em um controle RichTextBox  
@@ -32,7 +32,7 @@ Por padrão, os formulários do Windows <xref:System.Windows.Forms.RichTextBox> 
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Sempre exibe uma barra de rolagem vertical. A barra de rolagem aparece esmaecida quando o texto não excede o tamanho do controle.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Sempre exibe uma barra de rolagem vertical. Exibe uma rolagem horizontal da barra quando o <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> estiver definida como `false`. A barra de rolagem aparece esmaecida quando o texto não excede a largura ou altura do controle.|  
   
-3.  Defina o <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> propriedade para um valor apropriado.  
+3.  Defina a propriedade <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> com um valor apropriado.  
   
     |Valor|Descrição|  
     |-----------|-----------------|  
@@ -40,6 +40,7 @@ Por padrão, os formulários do Windows <xref:System.Windows.Forms.RichTextBox> 
     |`true` (padrão)|O texto do controle é ajustado automaticamente para caber na largura do controle. A barra de rolagem horizontal não será exibida. Use esse valor se você escolher as barras de rolagem vertical ou nenhuma acima para exibir um ou mais parágrafos acima.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)

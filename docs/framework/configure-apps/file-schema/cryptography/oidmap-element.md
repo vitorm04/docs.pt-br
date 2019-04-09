@@ -1,5 +1,5 @@
 ---
-title: Elemento <oidMap>
+title: <oidMap> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146868"
 ---
 # <a name="oidmap-element"></a>\<oidMap > elemento
 Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.  
@@ -74,6 +74,7 @@ Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)

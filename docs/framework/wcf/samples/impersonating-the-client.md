@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 8338d04382e77c231232ca2080c21e8732a683b7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bd03ddb2478d8f9938a8c89c04f536a81e9e24da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202463"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
 O exemplo representação demonstra como representar o aplicativo do chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
@@ -124,4 +124,3 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
      Em seguida, você será solicitado para uma senha. Insira a senha para a conta especificada anteriormente.  
   
 5.  Quando você executa o cliente, observe a identidade de antes e depois da execução com credenciais diferentes.  
-  

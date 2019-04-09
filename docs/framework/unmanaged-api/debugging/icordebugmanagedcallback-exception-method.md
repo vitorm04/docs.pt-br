@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e985d82fcce404e15344f2277d27a6aab45f9efc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 91318ea596cc7d6c8a747901fea2749a64aa2623
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168110"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>Método ICorDebugManagedCallback::Exception
 Notifica o depurador que foi lançada uma exceção do código gerenciado.  
@@ -60,4 +60,5 @@ HRESULT Exception (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

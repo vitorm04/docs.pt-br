@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146569"
 ---
 # <a name="ialink-interface"></a>Interface IALink
 Ajuda na construção de assemblies do .NET Framework. Entre outras coisas, a interface contém métodos que ajudam a escrever manifestos de assembly para assemblies de vários módulos, assinando assemblies com nomes fortes e criação dos netmodules.  
@@ -76,6 +76,7 @@ Ajuda na construção de assemblies do .NET Framework. Entre outras coisas, a in
  [Método SetNonAssemblyFlags](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

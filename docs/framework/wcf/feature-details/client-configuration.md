@@ -2,12 +2,12 @@
 title: Configuração do cliente
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144684"
 ---
 # <a name="client-configuration"></a>Configuração do cliente
 Você pode usar a configuração de cliente do Windows Communication Foundation (WCF) para especificar o endereço, associação, comportamento e contrato, as propriedades de "ABC" do ponto de extremidade de cliente, quais clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) cujos atributos são usados para configurar o ponto de extremidade ABCs do elemento. Esses atributos são discutidos os [Configurando pontos de extremidade](#configuring-endpoints) seção.  
@@ -94,5 +94,6 @@ Você pode usar a configuração de cliente do Windows Communication Foundation 
  O [ \<metadados >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento é usado para especificar as configurações usadas para registrar metadados importar extensões. Para obter mais informações sobre como estender o sistema de metadados, consulte [estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+
+- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Configurando comportamentos do cliente](../../../../docs/framework/wcf/configuring-client-behaviors.md)

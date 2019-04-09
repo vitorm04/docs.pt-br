@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170690"
 ---
 # <a name="varieties-of-custom-controls"></a>Variedades de controles personalizados
 Com o .NET Framework, você pode desenvolver e implementar novos controles. Você pode estender a funcionalidade do controle de usuário familiar, além dos controles existentes, por herança. Você também pode escrever controles personalizados que executam suas próprias pinturas.  
@@ -107,8 +107,9 @@ Com o .NET Framework, você pode desenvolver e implementar novos controles. Voc�
  Use o <xref:System.ComponentModel.DesignerAttribute> para associar o controle a seu designer. Para obter mais informações, consulte [estendendo o suporte de tempo de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) e [como: Criar um controle de formulários do Windows que aproveita os recursos de tempo de Design do](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Como: Desenvolver um controle de formulários do Windows simples](how-to-develop-a-simple-windows-forms-control.md)
-- [Desenvolvendo um controle de composição dos Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Como: Desenvolver um controle simples do Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
+- [Desenvolvendo um controle dos Windows Forms composto](developing-a-composite-windows-forms-control.md)
+- [Estendendo o suporte para tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Como: Criar um controle de formulários do Windows que tira proveito dos recursos de tempo de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

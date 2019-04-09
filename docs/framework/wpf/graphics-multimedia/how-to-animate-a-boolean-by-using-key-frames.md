@@ -1,5 +1,5 @@
 ---
-title: 'Como: Animar um valor booliano usando quadros-chave'
+title: 'Como: Animar um valor booliano usando quadros principais'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 503e8ec8bdaf88bcba4093075b1e7216b7cd3746
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175026"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Como: Animar um valor booliano usando quadros-chave
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Como: Animar um valor booliano usando quadros principais
 Este exemplo mostra como animar o valor da propriedade booliana de uma <xref:System.Windows.Controls.Button> controle usando quadros-chave.  
   
 ## <a name="example"></a>Exemplo  
@@ -29,6 +29,7 @@ Este exemplo mostra como animar o valor da propriedade booliana de uma <xref:Sys
  Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
 - <xref:System.Windows.UIElement.IsEnabled%2A>
 - <xref:System.Windows.Controls.Button>

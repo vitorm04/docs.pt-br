@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4c7ef2beca06713c04c7e0f8e30a47b884bf5c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a01b4203145f6ffee4e3a11a3526f0b83e3dc741
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154616"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Método IMetaDataImport2::GetVersionString
 Obtém o número de versão do tempo de execução que foi usado para compilar o assembly.  
@@ -60,5 +60,6 @@ HRESULT GetVersionString (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

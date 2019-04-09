@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154070"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>Método ISymUnmanagedDocument::GetDocumentType
 Obtém o tipo de documento deste documento.  
@@ -42,4 +42,5 @@ HRESULT GetDocumentType(
  S_OK se o método for bem-sucedido.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

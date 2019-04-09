@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73898bf5f4303d677787bae587a16f2f325dee9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 67fd1a9174b04e42b53f2b866a1dfdd504362aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168383"
 ---
 # <a name="icordebugarrayvalue-interface"></a>Interface ICorDebugArrayValue
 
@@ -56,4 +56,5 @@ Uma subclasse de ICorDebugHeapValue que representa uma matriz unidimensional ou 
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

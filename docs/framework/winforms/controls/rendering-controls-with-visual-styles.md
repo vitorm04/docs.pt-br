@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146764"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderizando controles com estilos visuais
 O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à renderização de controles e outros elementos da interface do usuário do Windows usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para renderizar controles e outros elementos da interface do usuário com o estilo visual atual do sistema operacional.  
@@ -79,4 +79,5 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
 >  Se você quiser usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> para renderizar um controle ou elemento de interface do usuário quando o usuário ativa ou alterna os estilos visuais, certifique-se de que você faça isso ao lidar com o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos em vez do <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> eventos. Uma exceção será gerada se você usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> quando a manipulação de classe <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Pintura e renderização de controle personalizado](custom-control-painting-and-rendering.md)
+
+- [Pintura e renderização de controle personalizada](custom-control-painting-and-rendering.md)

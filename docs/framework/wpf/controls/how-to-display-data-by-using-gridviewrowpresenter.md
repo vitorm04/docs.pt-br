@@ -5,12 +5,12 @@ helpviewer_keywords:
 - displaying data with GridViewRowPresenter [WPF]
 - GridViewRowPresenter [WPF]
 ms.assetid: bdb785a5-a262-44d5-a517-ea14383e5f70
-ms.openlocfilehash: f05e1bd67d37d21a010562c7be5db5ca594f36db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0e471df3ab6fd10417fc58ece4cdb8ff1c457c95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149143"
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>Como: Exibir dados usando GridViewRowPresenter
 Este exemplo mostra como usar o <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objetos para exibir dados em colunas.  
@@ -21,6 +21,7 @@ Este exemplo mostra como usar o <xref:System.Windows.Controls.GridViewRowPresent
  [!code-xaml[GridViewRowPresenterSample#GridViewRowPresenter](~/samples/snippets/csharp/VS_Snippets_Wpf/GridViewRowPresenterSample/CS/Window1.xaml#gridviewrowpresenter)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewColumnCollection>

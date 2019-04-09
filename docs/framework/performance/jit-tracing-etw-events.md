@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150755"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de rastreamento JIT
 <a name="top"></a> Esses eventos coletam informações sobre o êxito ou falha de inlining JIT (Just-In-Time) e chamadas tail JIT.  
@@ -150,4 +150,5 @@ ms.locfileid: "54536640"
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)

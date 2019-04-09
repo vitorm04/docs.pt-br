@@ -4,6 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216335"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (referência de API não gerenciada)
 Oferece suporte à criação de licença Authenticode XrML e módulo de verificação.  
@@ -37,4 +43,5 @@ Oferece suporte à criação de licença Authenticode XrML e módulo de verifica
  Define as informações sobre o carimbo de data/hora do Authenticode.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de API não gerenciada](../../../../docs/framework/unmanaged-api/index.md)
