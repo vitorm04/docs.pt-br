@@ -1,13 +1,13 @@
 ---
 title: Tutoriais do C#
-description: Explore estes tutoriais do C# para aprender a criar programas em C# e conhecer os recursos da linguagem C#.
+description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214436"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
 
@@ -61,5 +61,3 @@ Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Co
 * [Trabalhar com LINQ](working-with-linq.md): demonstra muitos recursos do LINQ e os elementos de linguagem que dão suporte a ele.
 * [Usando atributos](attributes.md): demonstra como criar e usar atributos em C#.
 * O tutorial [Interpolação de cadeia de caracteres](exploration/interpolated-strings.yml) mostra como inserir valores em uma cadeia de caracteres. Você aprenderá como criar uma cadeia de caracteres interpolada com expressões de C# incorporadas e como controlar a aparência do texto dos resultados de expressão na cadeia de caracteres de resultado. Este tutorial também está disponível [para execução local no seu computador](exploration/interpolated-strings-local.md).
-
-
