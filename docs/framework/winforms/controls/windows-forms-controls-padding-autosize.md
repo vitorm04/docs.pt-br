@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Definindo o layout dos Windows Forms controles com preenchimento, margens e a propriedade AutoSize'
+title: 'Passo a passo: Definir o layout de controles do Windows Forms com preenchimento, margens e a propriedade AutoSize'
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167863"
 ---
-# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Passo a passo: Definindo o layout dos Windows Forms controles com preenchimento, margens e a propriedade AutoSize
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Passo a passo: Definir o layout de controles do Windows Forms com preenchimento, margens e a propriedade AutoSize
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O **Designer de Formulários do Windows** fornece várias ferramentas de layout para fazer isso. Três das mais importantes são as <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, e <xref:System.Windows.Forms.Control.AutoSize%2A> propriedades, que estão presentes em todos os controles de formulários do Windows.  
   
  O <xref:System.Windows.Forms.Control.Margin%2A> propriedade define o espaço em torno do controle que mantém outros controla uma distância especificada da bordas do controle.  
@@ -185,11 +185,12 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
 -   Experimente encaixar controles filho em um <xref:System.Windows.Forms.Panel> controle. O <xref:System.Windows.Forms.Control.Padding%2A> propriedade é uma realização mais geral do <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> propriedade e você pode atender à você mesmo que esse é o caso, colocando um controle filho um <xref:System.Windows.Forms.Panel> controle e configuração do controle filho <xref:System.Windows.Forms.Control.Dock%2A> propriedade a ser <xref:System.Windows.Forms.DockStyle.Fill>. Defina as <xref:System.Windows.Forms.Panel> do controle <xref:System.Windows.Forms.Control.Padding%2A> propriedade para vários valores e observe o efeito.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Passo a passo: Organizar controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

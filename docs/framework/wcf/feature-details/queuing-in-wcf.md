@@ -2,12 +2,12 @@
 title: Enfileiramento no WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128759"
 ---
 # <a name="queuing-in-wcf"></a>Enfileiramento no WCF
 Esta seção descreve como usar a comunicação em fila no Windows Communication Foundation (WCF).  
@@ -105,9 +105,9 @@ Esta seção descreve como usar a comunicação em fila no Windows Communication
 ### <a name="sample-code"></a>Código de exemplo  
  Para obter instruções passo a passo sobre como escrever o WCF, serviços que usam o MSMQ Consulte os tópicos a seguir:  
   
--   [Como: Trocar mensagens com pontos de extremidade do WCF e aplicativos do serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Como: fazer intercâmbio de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Como: Troca de mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Como: fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Para obter um exemplo de código completo ilustrando o uso do MSMQ no WCF, consulte os tópicos a seguir:  
   
@@ -115,7 +115,7 @@ Esta seção descreve como usar a comunicação em fila no Windows Communication
   
 -   [Comunicação em fila volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [Filas de mensagens de inatividade](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
 -   [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
@@ -126,5 +126,6 @@ Esta seção descreve como usar a comunicação em fila no Windows Communication
 -   [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
-- [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Hospedando na Web um aplicativo em fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um controle de DataGridView não associado do Windows Forms'
+title: 'Como: Criar um controle não associado DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-ms.openlocfilehash: da59f02c3f0465d330f73cfd5453d5bce58fca12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9bfffac3d6970aceea3842df95f4bcae970b42e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167902"
 ---
-# <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Como: Criar um controle de DataGridView não associado do Windows Forms
+# <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Como: Criar um controle não associado DataGridView do Windows Forms
 O exemplo de código a seguir demonstra como preencher um <xref:System.Windows.Forms.DataGridView> controle programaticamente sem associação a uma fonte de dados. Isso é útil quando você tem uma pequena quantidade de dados que você deseja exibir em um formato de tabela.  
   
  Para obter uma explicação completa sobre este exemplo de código, consulte [passo a passo: Criar um Windows não associado o controle DataGridView Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
@@ -33,7 +33,8 @@ O exemplo de código a seguir demonstra como preencher um <xref:System.Windows.F
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
 
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Passo a passo: Criando um Windows não associado Forms o controle DataGridView](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Modos de exibição dos dados no controle DataGridView do Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Passo a passo: Criar um controle não associado DataGridView do Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Modos de exibição dos dados no controle DataGridView dos Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

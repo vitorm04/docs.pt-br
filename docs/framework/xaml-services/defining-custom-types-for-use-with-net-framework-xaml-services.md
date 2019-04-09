@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164431"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definindo tipos personalizados para uso com serviços XAML do .NET Framework
 Quando você define tipos personalizados que são objetos de negócios ou é tipos que não têm uma dependência em estruturas específicas, há algumas melhores práticas para XAML, você pode seguir. Se você seguir essas práticas, serviços de XAML do .NET Framework e seus leitores XAML e gravadores XAML podem descobrir as características XAML de seu tipo e dê a ele representação apropriada em um fluxo de nó XAML usando o sistema de tipo XAML. Este tópico descreve as práticas recomendadas para definições de tipo, definições de membro e atribuição do CLR de tipos ou membros.  
@@ -115,5 +115,6 @@ Quando você define tipos personalizados que são objetos de negócios ou é tip
  Na terminologia do WPF XAML, uma *tipo interno* é um tipo definido pelo mesmo assembly que também inclui o XAML de referência. Um tipo pode ser mapeado por meio de um namespace XAML que omite deliberadamente o assembly = parte de um mapeamento, por exemplo, `xmlns:local="clr-namespace:WPFApplication1"`.  Se o BAML faz referência a um tipo interno e que tipo tem `internal` acessar nível, isso gera um `GeneratedInternalTypeHelper` classe para o assembly. Se você quiser evitar `GeneratedInternalTypeHelper`, você deve use `public` nível, de acesso ou deve fatorar a classe relevante em um assembly separado e fazer com que esse assembly dependente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
 - [Serviços XAML](index.md)

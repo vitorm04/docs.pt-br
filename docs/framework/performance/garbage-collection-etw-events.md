@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149728"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo
 <a name="top"></a> Esses eventos coletam informações referentes à coleta de lixo. Eles ajudam no diagnóstico e na depuração, inclusive determinando quantas vezes a coleta de lixo foi executada, a quantidade de memória liberada durante a coleta de lixo e assim por diante.  
@@ -367,4 +367,5 @@ ms.locfileid: "54685211"
  Nenhum dado do evento.  
   
 ## <a name="see-also"></a>Consulte também
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)

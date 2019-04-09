@@ -1,15 +1,15 @@
 ---
-title: 'Como: Usar o MetadataExchangeClient para recuperar metadados'
+title: 'Como: usar MetadataExchangeClient para recuperar metadados'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168610"
 ---
-# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Como: Usar o MetadataExchangeClient para recuperar metadados
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Como: usar MetadataExchangeClient para recuperar metadados
 Use o <xref:System.ServiceModel.Description.MetadataExchangeClient> classe para baixar os metadados usando o protocolo WS-MetadataExchange (MEX). Os arquivos de metadados recuperados são retornados como um <xref:System.ServiceModel.Description.MetadataSet> objeto. Retornado <xref:System.ServiceModel.Description.MetadataSet> objeto contém uma coleção de <xref:System.ServiceModel.Description.MetadataSection> objetos, cada um deles contendo um dialeto de metadados específicas e um identificador. Você pode gravar os metadados retornados em arquivos ou, se os metadados retornados contém documentos de descrição linguagem WSDL (Web Services), você pode importar os metadados usando o <xref:System.ServiceModel.Description.WsdlImporter>.  
   
  O <xref:System.ServiceModel.Description.MetadataExchangeClient> construtores que usam um endereço de usam a associação no <xref:System.ServiceModel.Description.MetadataExchangeBindings> classe estática que coincidir com o esquema de identificador de recurso uniforme (URI) do endereço. Como alternativa, você pode usar o <xref:System.ServiceModel.Description.MetadataExchangeClient> construtor que permite que você especifique explicitamente a associação a ser usada. A associação especificada é usada para resolver todas as referências de metadados.  
@@ -36,6 +36,7 @@ Use o <xref:System.ServiceModel.Description.MetadataExchangeClient> classe para 
  Para compilar este exemplo de código, você deve fazer referência ao assembly de ServiceModel e importar o <xref:System.ServiceModel.Description> namespace.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

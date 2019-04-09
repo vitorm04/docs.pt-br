@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119295"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificando dados de valores grandes (max) no ADO.NET
 Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linha máximo de 8 quilobytes (KB). O SQL Server fornece um especificador `max` para os tipos de dados `varchar`, `nvarchar` e `varbinary` para permitir o armazenamento de valores grandes como 2^32 bytes. As colunas da tabela e variáveis Transact-SQL podem especificar os tipos de dados `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. No ADO.NET, os tipos de dados `max` podem ser encontrados por `DataReader` e também podem ser especificados como valores de parâmetro de entrada e saída sem nenhuma manipulação especial. Para tipos de dados `varchar`, os dados podem ser recuperados e atualizados incrementalmente.  
@@ -19,9 +19,9 @@ Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linh
   
  A tabela a seguir fornece links para a documentação nos Manuais Online do SQL Server.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
-1.  [Usando tipos de dados de valor grande](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [Usando tipos de dados de valores grandes](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrições de tipo de valores grandes  
  As seguintes restrições aplicam-se a tipos de dados `max`, que não existem para tipos de dados menores:  
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |If|Then|  
 |--------|----------|  
 |A expressão é definida como NULL|`@Length` é ignorado e o valor em *column_name* será truncado no local especificado `@Offset`.|  
-|`@Offset` é NULL|A operação de atualização acrescentará a expressão no final da existente *column_name* valor e `@Length` será ignorado.|  
-|`@Offset` é maior do que o comprimento do valor column_name|O SQL Server retornará um erro.|  
-|`@Length` é NULL|A operação de atualização remove todos os dados de `@Offset` para o final do valor `column_name`.|  
+|`@Offset` is NULL|A operação de atualização acrescentará a expressão no final da existente *column_name* valor e `@Length` será ignorado.|  
+|`@Offset` é maior que o comprimento do valor column_name|O SQL Server retornará um erro.|  
+|`@Length` is NULL|A operação de atualização remove todos os dados de `@Offset` para o final do valor `column_name`.|  
   
 > [!NOTE]
 >  Nem `@Offset` ou `@Length` pode ser um número negativo.  
@@ -250,7 +250,8 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)
-- [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server Data Operations in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md) (Operações de dados do SQL Server no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Dados binários e de valor grande do SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Mapeamentos de tipos de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Operações de dados do SQL Server no ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Simular eventos de Mouse e teclado no código'
+title: 'Como: simular eventos de mouse e teclado no código'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123442"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Como: Simular eventos de Mouse e teclado no código
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Como: simular eventos de mouse e teclado no código
 O Windows Forms fornece várias opções para simular programaticamente entradas do mouse e do teclado. Este tópico fornece uma visão geral dessas opções.  
   
 ## <a name="simulating-mouse-input"></a>Simulando entrada do mouse  
@@ -90,4 +90,5 @@ O Windows Forms fornece várias opções para simular programaticamente entradas
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
-- [Entrada do usuário nos Windows Forms](user-input-in-windows-forms.md)
+
+- [Entrada do usuário no Windows Forms](user-input-in-windows-forms.md)

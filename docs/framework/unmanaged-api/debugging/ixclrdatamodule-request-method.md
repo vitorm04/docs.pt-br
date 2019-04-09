@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ac7ab7bf207cc1474090bab19818ca17fc068d3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a02a60668ae6caaad1940395822758331b93f550
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119789"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Método IXCLRDataModule::Request
 
@@ -66,5 +66,6 @@ O método fornecido é parte do `IXCLRDataModule` de interface e corresponde ao 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte também
+
 - [Depuração](index.md)
 - [Interface IXCLRDataModule](ixclrdatamodule-interface.md)

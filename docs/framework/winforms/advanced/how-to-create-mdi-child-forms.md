@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar formulários filho MDI'
+title: 'Como: criar formulários filho MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124521"
 ---
-# <a name="how-to-create-mdi-child-forms"></a>Como: Criar formulários filho MDI
+# <a name="how-to-create-mdi-child-forms"></a>Como: criar formulários filho MDI
 Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interface MDI](multiple-document-interface-mdi-applications.md), pois esses formulários são o centro da interação do usuário.  
   
  No procedimento a seguir, você criará um formulário filho MDI que exibe um <xref:System.Windows.Forms.RichTextBox> controle, semelhante aos aplicativos de processamento de texto. Substituindo o <xref:System.Windows.Forms> controlar com outros controles, como o <xref:System.Windows.Forms.DataGridView> controle ou uma mistura de controles permite que você crie janelas filho MDI (e, por extensão, aplicativos MDI) com diversas possibilidades.  
@@ -107,8 +107,9 @@ Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interfa
     >  Quando um formulário MDI filho tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, uma estrutura de menu de itens de menu) e ele é aberto em um formulário pai MDI que tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, uma estrutura de menu de itens de menu), o menu itens mesclará automaticamente Se você tiver definido o <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade (e, opcionalmente, o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade). Defina as <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade de ambos <xref:System.Windows.Forms.MainMenu> componentes e todos os itens de menu do formulário filho para <xref:System.Windows.Forms.MenuMerge.MergeItems>. Além disso, defina o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade para que os itens de menu de ambos os menus aparecem na ordem desejada. Além disso, tenha em mente que, quando você fecha um formulário pai MDI, cada um dos filhos MDI forms gera uma <xref:System.Windows.Forms.Form.Closing> evento antes do <xref:System.Windows.Forms.Form.Closing> é gerado para o pai da MDI. Cancelando um filho MDI <xref:System.Windows.Forms.Form.Closing> evento não impedirá que o pai MDI <xref:System.Windows.Forms.Form.Closing> evento seja gerado; no entanto, o <xref:System.ComponentModel.CancelEventArgs> argumento para o pai MDI <xref:System.Windows.Forms.Form.Closing> evento agora será definido como `true`. Você pode forçar o pai MDI e todos os filhos MDI, configurando o <xref:System.ComponentModel.CancelEventArgs> argumento para `false`.  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
-- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
-- [Como: Enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
-- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)
+
+- [Aplicativos de Interface de Documentos Múltiplos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Como: criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como: determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como: enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
+- [Como: organizar formulários MDI filho](how-to-arrange-mdi-child-forms.md)

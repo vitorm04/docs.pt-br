@@ -2,12 +2,12 @@
 title: <httpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: f529cd5290c74999a010381fadfb94ea9a4d515e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7a06772f078f9187298ad0b4b9c8b0f51c849928
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122727"
 ---
 # <a name="httptransport"></a>\<httpTransport>
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
@@ -68,12 +68,13 @@ Especifica um transporte HTTP para transmissão de mensagens SOAP para uma assoc
  O `httpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTP. O HTTP é o transporte usado para fins de interoperabilidade primário. Esse transporte é suportado pelo Windows Communication Foundation (WCF) para garantir a interoperabilidade com outras pilhas de serviços não WCF Web.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.HttpTransportElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)

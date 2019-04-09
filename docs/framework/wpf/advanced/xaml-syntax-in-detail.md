@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149299"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>Especificação da Linguagem XAML  
  A terminologia de sintaxe XAML definida aqui também é definida ou referenciada dentro da especificação da linguagem XAML. XAML é uma linguagem baseada em XML e segue ou expande regras estruturais do XML. Parte da terminologia é compartilhada com ou se baseia na terminologia usada com frequência ao descrever a linguagem XML ou o modelo de objeto do documento XML.  
@@ -304,7 +302,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label> é outra classe derivada de <xref:System.Windows.Controls.Control>, e se você tivesse especificado `Label.Background` dentro de um <xref:System.Windows.Controls.Label> elemento de objeto, esse uso teria funcionado. No entanto, porque <xref:System.Windows.Controls.Label> não é a classe ou classe base <xref:System.Windows.Controls.Button>, o comportamento do processador XAML especificado é processar `Label.Background` como uma propriedade anexada. `Label.Background` não é uma propriedade anexada disponível e esse uso falha.  
+ <xref:System.Windows.Controls.Label> é outra classe derivada de <xref:System.Windows.Controls.Control>, e se você tivesse especificado `Label.Background` dentro de um <xref:System.Windows.Controls.Label> elemento de objeto, esse uso teria funcionado. No entanto, porque <xref:System.Windows.Controls.Label> não é a classe ou classe base <xref:System.Windows.Controls.Button>, o comportamento do processador XAML especificado é processar `Label.Background` como uma propriedade anexada. `Label.Background` não é uma propriedade anexada disponível, e esse uso falha.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Elementos de propriedade baseTypeName.memberName  
  De maneira semelhante ao modo como o formulário *typeName*.*memberName* funciona para a sintaxe de atributo, uma sintaxe *baseTypeName*.*memberName* funciona para a sintaxe de elemento de propriedade. Por exemplo, a sintaxe a seguir funciona:  
@@ -316,9 +314,10 @@ Este tópico define os termos que são usados para descrever os elementos da sin
  Mas assim como o formato *typeName*.*memberName* para atributos, *baseTypeName*.*memberName* é um estilo ruim de marcação e você deve evitá-lo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Namespace de XAML (x) Recursos de linguagem](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Namespace XAML (x:) Funcionalidades de linguagem](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Extensões XAML WPF](wpf-xaml-extensions.md)
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [TypeConverters e XAML](typeconverters-and-xaml.md)
 - [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

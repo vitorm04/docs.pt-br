@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167161"
 ---
 # <a name="timing-events-overview"></a>Visão geral dos eventos de tempo
 Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> objetos.  
@@ -77,6 +77,7 @@ Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:
  Quando você se registrar para o <xref:System.Windows.Media.Animation.Timeline.Completed> evento em uma linha do tempo, por exemplo, você está realmente dizendo ao sistema para se registrar para o <xref:System.Windows.Media.Animation.Clock.Completed> eventos de cada relógio que é criado para a linha do tempo. No código, você deve registrar este evento antes do <xref:System.Windows.Media.Animation.Clock> é criado para essa linha do tempo; caso contrário, você não receberá a notificação. Isso acontece automaticamente no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; o analisador registra automaticamente para o evento antes do <xref:System.Windows.Media.Animation.Clock> é criado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral dos comportamentos de tempo](timing-behaviors-overview.md)

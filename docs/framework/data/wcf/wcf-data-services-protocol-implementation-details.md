@@ -1,15 +1,15 @@
 ---
-title: Detalhes de implementação de protocolo do WCF Data Services
+title: Detalhes de implementação do protocolo do WCF Data Services
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fcef8778707f2bac68755762143f4a7528f0bf1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152848"
 ---
-# <a name="wcf-data-services-protocol-implementation-details"></a>Detalhes de implementação de protocolo do WCF Data Services
+# <a name="wcf-data-services-protocol-implementation-details"></a>Detalhes de implementação do protocolo do WCF Data Services
 ## <a name="odata-protocol-implementation-details"></a>Detalhes de implementação do protocolo OData  
  O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] requer que um serviço de dados que implementa o protocolo forneça um determinado conjunto mínimo de funcionalidades. Essas funcionalidades são descritas nos documentos de protocolo em termos de "deve" e "deve". Outra funcionalidade opcional é descrita em termos de "maio". Este tópico descreve essas funcionalidades opcionais que não estejam atualmente implementadas pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obter mais informações, consulte [documentação do protocolo OData](https://go.microsoft.com/fwlink/?LinkID=184554).  
   
@@ -23,5 +23,6 @@ ms.locfileid: "54728746"
  Quando uma solicitação de consulta é enviada para o serviço de dados inclui um `$top` ou `$skip` opção de consulta de sistema e não inclui o `$orderby` opção de consulta do sistema, o feed retornado é classificada pelas propriedades de chave, em ordem crescente. Isso ocorre porque a ordenação é necessária para garantir a correta de paginação de resultados. Para fazer isso, o serviço de dados adiciona uma expressão de classificação na consulta. Esse comportamento também ocorre quando a paginação orientado para servidor está habilitada no serviço de dados. Para obter mais informações, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Para controlar a ordenação de feed retornado, você deve incluir `$orderby` no URI de consulta.  
   
 ## <a name="see-also"></a>Consulte também
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+
+- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162267"
 ---
 # <a name="xaml-2009-language-features"></a>Recursos de linguagem XAML 2009
 XAML 2009 é o termo de forma abreviada para novos recursos de linguagem XAML que estendem a especificação da linguagem XAML existente. XAML 2009 introduz várias novas diretivas e construções. Isso inclui o [x: argumentos diretiva](x-arguments-directive.md); o [diretiva X:factorymethod](x-factorymethod-directive.md); o [extensão de marcação X:Reference](x-reference-markup-extension.md); a [diretiva X:TypeArguments ](x-typearguments-directive.md); e tipos inseridos para primitivos de linguagem comum (por exemplo `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 é o termo de forma abreviada para novos recursos de linguagem XAML qu
  Para atributos que são apoiados por eventos, o XAML 2006 presume que a compilação de marcação está envolvida e envia os eventos de compilação de marcação. XAML 2009 dá suporte a um formulário de marcação que se parece com uma extensão de marcação, que adia a fiação de evento até o tempo de execução de análise e carregar o XAML. No entanto, aplicativos WPF e cenários XAML para WPF UI geralmente não usam esse recurso. WPF e sua implementação do XAML 2006 usa a combinação de fiação do manipulador de eventos para eventos roteados definidos no <xref:System.Windows.UIElement> nível e o compilador de marcação etapa na maior parte do seu processamento do atributo de evento. O compilador de marcação também pré-processa quaisquer atributos de evento encontrados no XAML em que as ações de build declarar que o compilador de marcação é usado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

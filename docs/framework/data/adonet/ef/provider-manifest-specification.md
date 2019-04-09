@@ -2,12 +2,12 @@
 title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169904"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -250,7 +250,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nome do atributo|Tipo de dados|Necessária|Valor padrão|Descrição|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|Cadeia de caracteres|Sim|N/D|Nome do provedor específico de tipo de dados|  
+|Nome|Cadeia de Caracteres|Sim|N/D|Nome do provedor específico de tipo de dados|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Sim|N/D|Nome do tipo de EDM|  
   
 ###### <a name="function-node"></a>Nó de função  
@@ -258,7 +258,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nome do atributo|Tipo de dados|Necessária|Valor padrão|Descrição|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|Cadeia de caracteres|Sim|N/D|Identificador/nome de função|  
+|Nome|Cadeia de Caracteres|Sim|N/D|Identificador/nome de função|  
 |Tipoderetorno|Cadeia de Caracteres|Não|Void|O tipo de retorno de EDM de função|  
 |Agregado|Boolean|Não|False|Retifique se a função é uma função agregada|  
 |Internos|Boolean|Não|verdadeiro|Retifique se a função é compilada no armazenamento de dados|  
@@ -272,7 +272,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nome do atributo|Tipo de dados|Necessária|Valor padrão|Descrição|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|Cadeia de caracteres|Sim|N/D|Identificador/nome do parâmetro.|  
+|Nome|Cadeia de Caracteres|Sim|N/D|Identificador/nome do parâmetro.|  
 |Tipo|Cadeia de Caracteres|Sim|N/D|O tipo de EDM de parâmetro.|  
 |Modo|Parâmetro<br /><br /> Direção|Sim|N/D|Direção do parâmetro:<br /><br /> -no<br />-out<br />-   inout|  
   
@@ -280,4 +280,5 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
  Cada provedor de armazenamento de dados deve definir um namespace ou um grupo de namespaces para informações definida no manifesto. Este namespace pode ser usada em consultas Entity SQL para resolver nomes das funções e tipos. Por exemplo: SqlServer. O namespace deve ser diferente de namespace canônica, EDM, definido por serviços de entidade para que as funções padrão são suportadas por Entity consultas SQL.  
   
 ## <a name="see-also"></a>Consulte também
-- [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+
+- [Escrevendo um provedor de dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

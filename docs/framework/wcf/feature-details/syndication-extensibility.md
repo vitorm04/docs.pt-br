@@ -2,12 +2,12 @@
 title: Extensibilidade de sindicalização
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170794"
 ---
 # <a name="syndication-extensibility"></a>Extensibilidade de sindicalização
 A API de distribuição foi projetado para fornecer um modelo de programação em formato neutro que permite que o conteúdo agregado a ser gravado para a transmissão em uma variedade de formatos. O modelo de dados abstrato consiste as seguintes classes:  
@@ -45,5 +45,6 @@ A API de distribuição foi projetado para fornecer um modelo de programação e
 -   Substituir <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> na classe MyExtensionFeed para instanciar um MyExtensionItem em vez do padrão <xref:System.ServiceModel.Syndication.SyndicationItem>. Uma série de métodos são definidos no <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> que pode criar <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, e <xref:System.ServiceModel.Syndication.SyndicationPerson> objetos (por exemplo, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, e <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Todos os quais podem ser substituídos para criar uma classe derivada personalizada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Arquitetura de sindicalização](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

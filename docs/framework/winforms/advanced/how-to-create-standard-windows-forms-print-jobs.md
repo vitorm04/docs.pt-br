@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar trabalhos de impressão padrão do Windows Forms'
+title: 'Como: criar trabalhos de impressão padrão do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170970"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Como: Criar trabalhos de impressão padrão do Windows Forms
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Como: criar trabalhos de impressão padrão do Windows Forms
 O fundamento da impressão nos Windows Forms é a <xref:System.Drawing.Printing.PrintDocument> componente — mais especificamente, o <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos. Escrevendo código para manipular o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento, você pode especificar o que imprimir e como imprimi-lo.  
   
 ### <a name="to-create-a-print-job"></a>Para criar um trabalho de impressão  
@@ -77,5 +77,6 @@ O fundamento da impressão nos Windows Forms é a <xref:System.Drawing.Printing.
      Para obter mais informações sobre as especificidades dos Windows Forms trabalhos de impressão, incluindo como criar um trabalho de impressão de forma programática, consulte <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)
+- [Suporte à impressão no Windows Forms](windows-forms-print-support.md)

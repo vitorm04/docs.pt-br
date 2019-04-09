@@ -1,13 +1,13 @@
 ---
-title: Elemento <synchronousReceive>
+title: '<synchronousReceive> Elemento '
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: f4a8868304ebae9a7ed5e6afbfb14fb2116afc49
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20390f747c8beaccba1cfea7a9ea0ed366037ecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166537"
 ---
 # <a name="synchronousreceive-element"></a>\<synchronousReceive > elemento
 Este elemento de configuração é usado para especificar o comportamento de tempo de execução para receber mensagens em um cliente ou serviço de aplicativo. Ele não tem nenhum atributo ou elemento filho.  
@@ -43,5 +43,6 @@ Este elemento de configuração é usado para especificar o comportamento de tem
  Use esse comportamento para instruir o ouvinte de canais para receber um síncrono de uso, em vez do padrão, assíncrono. Windows Communication Foundation (WCF) emite um novo thread para a bomba para cada canal aceito. Se houver muitos canais, há a possibilidade de falta de threads.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
 - <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

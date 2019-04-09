@@ -1,17 +1,17 @@
 ---
-title: 'Como: Recuperar a impressão digital de um certificado'
+title: 'Como: recuperar a impressão digital de um certificado'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 3b0eb6c528741ab0de0c43f5dd680dfd8ada058c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 751c75a69fb93e1ff0ba30dd3b2cfbcea0b94824
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122558"
 ---
-# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Como: Recuperar a impressão digital de um certificado
+# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Como: recuperar a impressão digital de um certificado
 Ao escrever um aplicativo do Windows Communication Foundation (WCF) que usa um certificado X.509 para autenticação, muitas vezes é necessário especificar declarações encontrados no certificado. Por exemplo, você deve fornecer uma declaração de impressão digital ao usar o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> enumeração no <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> método. Localizar o valor da declaração requer duas etapas. Primeiro, abra o snap-in do Console de gerenciamento Microsoft (MMC) para certificados. (Confira [Como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Segundo, conforme descrito aqui, localizar um certificado apropriado e copiar sua impressão digital (ou outros valores de declaração).  
   
  Se você estiver usando um certificado para autenticação de serviço, é importante observar o valor de **emitido para** coluna (a primeira coluna no console). Ao usar Secure Sockets Layer (SSL) como uma segurança de transporte, uma das verificações primeiro feitas é comparar a base de dados de endereços identificador de URI (Uniform Resource) de um serviço para o **emitido para** valor. Os valores devem coincidir ou o processo de autenticação é interrompido.  
@@ -39,8 +39,9 @@ Ao escrever um aplicativo do Windows Communication Foundation (WCF) que usa um c
 9. Copie os caracteres hexadecimais de caixa. Se essa impressão digital é usada no código para o `X509FindType`, remova os espaços entre os números hexadecimais. Por exemplo, a impressão digital "a9 09 50 2d d8 2a e4 14 f8 de 33 e6 38 86 7b de 2a de a3 77 do b0 0d 42" deve ser especificado como "a909502dd82ae41433e6f83886b00d4277a32a7b" no código.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>
-- [Como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)
-- [Como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Como: exibir certificados com o snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Como: criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
