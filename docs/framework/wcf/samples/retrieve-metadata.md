@@ -2,12 +2,12 @@
 title: Recuperar metadados
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 24fd2a7f3a511921354e43141b8384bdf55bbc65
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f35bb14b9338197828189a1d91d5653fd1680b86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208677"
 ---
 # <a name="retrieve-metadata"></a>Recuperar metadados
 Este exemplo demonstra como implementar um cliente que recupera os metadados de um serviço para escolher a comunicação com um ponto de extremidade dinamicamente. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). O serviço foi modificado para expor dois pontos de extremidade — um ponto de extremidade no endereço básico usando o `basicHttpBinding` associação e um ponto de extremidade seguro em {*baseaddress*} / proteger usando o `wsHttpBinding` associação. Em vez de configurar o cliente com as associações e endereços de ponto de extremidade, o cliente recupera dinamicamente os metadados para o serviço usando o <xref:System.ServiceModel.Description.MetadataExchangeClient> de classe e, em seguida, importa os metadados como um <xref:System.ServiceModel.Description.ServiceEndpointCollection> usando o <xref:System.ServiceModel.Description.WsdlImporter> classe.  
@@ -56,7 +56,7 @@ foreach (ServiceEndpoint ep in endpoints)
   
 1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição de C#, C++ ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição de c#, C++ ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -68,4 +68,3 @@ foreach (ServiceEndpoint ep in endpoints)
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\RetrieveMetadata`  
-  

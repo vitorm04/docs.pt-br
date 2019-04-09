@@ -1,15 +1,15 @@
 ---
-title: <Parameter> (.NET Nativo)
+title: <Parameter> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137872"
 ---
 # <a name="parameter-element-net-native"></a>\<Parâmetro > (.NET nativo)
 Aplica a política de tempo de reflexão ao tipo do argumento passado para um método.  
@@ -68,13 +68,14 @@ Aplica a política de tempo de reflexão ao tipo do argumento passado para um m�
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<Parameter>` é filho do elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) e é usado para aplicar a política a um parâmetro de método específico. O parâmetro de método específico é especificado pelo nome em vez de por tipo. Pelo menos um atributo que representa um tipo de política, como `Activate` ou `Dynamic`, deve estar presente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

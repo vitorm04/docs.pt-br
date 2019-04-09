@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135792"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funções de hospedagem CLR reprovadas
 Esta seção descreve as funções estáticas globais não gerenciadas que versões anteriores da API de hospedagem usavam.  
@@ -159,4 +159,5 @@ Esta seção descreve as funções estáticas globais não gerenciadas que vers�
  Valida imagens de módulo gerenciado e notifica o carregador do sistema operacional, depois de eles terem sido carregados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [.NET Framework 4 hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

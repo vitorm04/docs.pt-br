@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fda1964ab29287b2a3a108a15f42d1ea28a4feb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9a88adec508d80a40ec044e5011d3115e197e334
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137482"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>Função GetHashFromAssemblyFileW
 Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado. O caminho para o arquivo do assembly deve ser especificado como uma cadeia de caracteres Unicode.  
@@ -66,6 +66,7 @@ HRESULT GetHashFromAssemblyFileW (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Método GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
 - [Método GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

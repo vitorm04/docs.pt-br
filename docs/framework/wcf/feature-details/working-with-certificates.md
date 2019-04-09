@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115694"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -74,7 +74,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
  Também é possível definir a propriedade usando configuração. Os seguintes elementos são usados para especificar o modo de validação:  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<autenticação >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
@@ -171,6 +171,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
  Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>

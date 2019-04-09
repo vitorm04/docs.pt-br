@@ -1,5 +1,5 @@
 ---
-title: 'Como: Aplicativos de exibir visualização de impressão no Windows Forms'
+title: 'Como: Exibir visualização de impressão em aplicativos do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154356"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Como: Aplicativos de exibir visualização de impressão no Windows Forms
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Como: Exibir visualização de impressão em aplicativos do Windows Forms
 Você pode usar o <xref:System.Windows.Forms.PrintPreviewDialog> controle para permitir que os usuários exibam um documento, muitas vezes antes que seja a ser impresso.  
   
  Para fazer isso, você precisa especificar uma instância da <xref:System.Drawing.Printing.PrintDocument> classe; este é o documento a ser impresso. Para obter mais informações sobre como usar a visualização de impressão com o <xref:System.Drawing.Printing.PrintDocument> componente, consulte [como: Impressão no Windows Forms usando Visualizar impressão](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
@@ -82,7 +82,8 @@ Você pode usar o <xref:System.Windows.Forms.PrintPreviewDialog> controle para p
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Componente PrintDocument](printdocument-component-windows-forms.md)
 - [Controle PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
-- [Suporte à impressão nos Windows Forms](../advanced/windows-forms-print-support.md)
+- [Suporte à impressão no Windows Forms](../advanced/windows-forms-print-support.md)
 - [Windows Forms](../index.md)

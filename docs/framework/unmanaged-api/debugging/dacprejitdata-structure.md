@@ -1,5 +1,5 @@
 ---
-title: DacpReJitData Structure
+title: Estrutura DacpReJitData
 ms.date: 02/01/2019
 api.name:
 - DacpReJitData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 974b99da085a5cb969ab37cddb0f2f2c62010d14
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122792"
 ---
-# <a name="dacprejitdata-structure"></a>DacpReJitData Structure
+# <a name="dacprejitdata-structure"></a>Estrutura DacpReJitData
 
 Define as informações básicas sobre um determinado método instrumentados pelo criador de perfil.
 
@@ -55,7 +55,6 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | Um sinalizador que indica o estado atual de instrumentação do ReJit do método para a versão especificada. |
 | `NativeCodeAddr` | O endereço básico da implementação de rejitted do método.                                         |
 
-
 ## <a name="remarks"></a>Comentários
 
 Essa estrutura reside dentro do tempo de execução e não é exposta por meio de todos os cabeçalhos ou arquivos de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima. A estrutura também deve ser definida usando `ms_struct` de remessa se não estiver usando os compiladores Microsoft.
@@ -67,5 +66,6 @@ Essa estrutura reside dentro do tempo de execução e não é exposta por meio d
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte também
+
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

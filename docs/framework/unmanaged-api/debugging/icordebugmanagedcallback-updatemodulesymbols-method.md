@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70f4d61eac381ede94fd9f7369c84d9d1d210c55
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 581ea4f974bfec3961a32cd7c9985a5e45d2bddd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209977"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>Método ICorDebugManagedCallback::UpdateModuleSymbols
 Notifica o depurador para que os símbolos para um módulo de tempo de execução de linguagem comum foram alterados.  
@@ -64,4 +64,5 @@ HRESULT UpdateModuleSymbols (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

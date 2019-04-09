@@ -2,12 +2,12 @@
 title: Olá Mundo com o serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: d560a8e871846f608cc90ec2f4f298c0db710e2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b84d4dc17db5bb422ba86fbab9c25d3348be7488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120153"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Olá Mundo com o serviço de roteamento
 Este exemplo demonstra o serviço de roteamento do Windows Communication Foundation (WCF). O serviço de roteamento é um componente do WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta a amostragem de calculadora padrão do WCF para se comunicar usando o serviço de roteamento. Neste exemplo, o cliente de calculadora é configurado para enviar mensagens para um ponto de extremidade exposto pelo roteador. O serviço de roteamento está configurado para aceitar todas as mensagens enviadas a ele e encaminhá-las a um ponto de extremidade que corresponde ao serviço de calculadora. Portanto, as mensagens enviadas do cliente são recebidas pelo roteador e roteadas para o serviço da Calculadora real. Mensagens do serviço de calculadora são enviadas de volta para o roteador, que por sua vez passa de volta para o cliente de calculadora.
@@ -58,4 +58,5 @@ Este exemplo demonstra o serviço de roteamento do Windows Communication Foundat
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [Hospedagem de AppFabric e persistência Exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

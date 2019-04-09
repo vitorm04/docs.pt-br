@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbd5d04bc1a4505fd2cb75913110199080ca6323
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200253"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel
 O <xref:System.Windows.Forms.TableLayoutPanel> controlar dá suporte a <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades em seus controles filho.  
@@ -85,5 +85,6 @@ O <xref:System.Windows.Forms.TableLayoutPanel> controlar dá suporte a <xref:Sys
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Controle TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Use com uma região de teste de clique'
+title: 'Como: usar um teste de clique com uma região'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150495"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Como: Use com uma região de teste de clique
+# <a name="how-to-use-hit-testing-with-a-region"></a>Como: usar um teste de clique com uma região
 A finalidade de teste de clique é determinar se o cursor está sobre um determinado objeto, como um ícone ou um botão.  
   
 ## <a name="example"></a>Exemplo  
@@ -28,6 +28,7 @@ A finalidade de teste de clique é determinar se o cursor está sobre um determi
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Region>
 - [Regiões no GDI+](regions-in-gdi.md)
-- [Como: Use com uma região de recorte](how-to-use-clipping-with-a-region.md)
+- [Como: usar recorte com uma região](how-to-use-clipping-with-a-region.md)

@@ -2,12 +2,12 @@
 title: Validação de segurança
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202866"
 ---
 # <a name="security-validation"></a>Validação de segurança
 Este exemplo demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos. Neste exemplo, os serviços são validados pelo comportamento personalizado de verificação por meio de cada ponto de extremidade no serviço e verificando para ver se eles contêm elementos de associação de segurança. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -107,4 +107,5 @@ public void Validate(ServiceDescription serviceDescription,
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>Consulte também
-- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

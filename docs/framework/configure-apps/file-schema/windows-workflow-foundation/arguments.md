@@ -3,12 +3,12 @@ title: <arguments>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
-ms.openlocfilehash: 3e9fc4f286e7aba6406ce61910da9e614e13ffca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b0d982997ab590ce7f0fc4c482b1ddfa6bc758f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152796"
 ---
 # <a name="arguments"></a>\<arguments>
 Representa uma coleção de argumentos associados a uma consulta de estado de atividade.  
@@ -76,7 +76,8 @@ Representa uma coleção de argumentos associados a uma consulta de estado de at
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Rastreamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Controlando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

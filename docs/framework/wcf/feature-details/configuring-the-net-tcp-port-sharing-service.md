@@ -2,12 +2,12 @@
 title: Configurando o serviço de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206805"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurando o serviço de compartilhamento de porta Net.TCP
 Os serviços são hospedados que usam o transporte NET. TCP podem controlar várias configurações avançadas, como `ListenBacklog` e `MaxPendingAccepts`, que determinam o comportamento de soquete TCP subjacente usado para comunicação de rede. No entanto, essas configurações para cada soquete só se aplicam no nível de associação se a associação de transporte tiver desabilitado o compartilhamento de porta, que é habilitado por padrão.  
@@ -62,4 +62,5 @@ Os serviços são hospedados que usam o transporte NET. TCP podem controlar vár
 >  O arquivo de SMSvcHost padrão especifica um personalizado `etwProviderId` para impedir que o rastreamento SMSvcHost.exe interfira com rastreamentos de serviço.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

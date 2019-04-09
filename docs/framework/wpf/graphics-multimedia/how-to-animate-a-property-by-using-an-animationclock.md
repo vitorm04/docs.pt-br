@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201358"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Como: Animar uma propriedade usando um AnimationClock
 Este exemplo mostra como usar <xref:System.Windows.Media.Animation.Clock> objetos para animar uma propriedade.  
@@ -37,6 +37,7 @@ Este exemplo mostra como usar <xref:System.Windows.Media.Animation.Clock> objeto
  Para obter um exemplo que mostra como controlar interativamente um <xref:System.Windows.Media.Animation.Clock> depois de ter começado, consulte [controlar interativamente um relógio](how-to-interactively-control-a-clock.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Animar uma propriedade usando um storyboard](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md)
+
+- [Animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Animar uma propriedade sem usar um Storyboard](how-to-animate-a-property-without-using-a-storyboard.md)
 - [Visão geral das técnicas de animação da propriedade](property-animation-techniques-overview.md)

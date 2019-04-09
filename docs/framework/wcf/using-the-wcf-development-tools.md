@@ -2,12 +2,12 @@
 title: Utilizando as ferramentas de desenvolvimento do WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144632"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizando as ferramentas de desenvolvimento do WCF
 Esta seção descreve as ferramentas de desenvolvimento do Visual Studio que podem ajudá-lo a desenvolver seu WCFservice.  
@@ -23,7 +23,7 @@ Esta seção descreve as ferramentas de desenvolvimento do Visual Studio que pod
   
  O Host de automático de serviço do WCF (WcfSvcHost.exe) permite que você iniciar o depurador do Visual Studio (F5) para hospedar automaticamente e testar um serviço que você implementou. Em seguida, você pode testar o serviço usando o cliente de teste do WCF (wcfTestClient.exe) ou seu próprio cliente para localizar e corrigir os erros em potencial.  
   
- [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
+ [Cliente de Teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
  Cliente de teste do WCF (WcfTestClient.exe) é uma ferramenta de GUI que permite a entrada de parâmetros de tipos arbitrários, enviem essa entrada para o serviço e o modo de exibição que envia a resposta do serviço. Ele fornece um serviço perfeito experiência quando combinado com o Host de automático de serviço do WCF em teste.  
   
@@ -43,6 +43,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Para obter mais informações sobre Netsh.exe, consulte [como usar a ferramenta de Netsh.exe e as opções de linha de comando](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Modelos do Visual Studio do WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Cliente de Teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

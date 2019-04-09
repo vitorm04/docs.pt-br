@@ -1,5 +1,5 @@
 ---
-title: 'Como: Herdar da classe de controle'
+title: 'Como: Herdar da classe Control'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: cf1b3c7d7d530710c4c7e0fbd137667c3598500a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141980"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>Como: Herdar da classe de controle
+# <a name="how-to-inherit-from-the-control-class"></a>Como: Herdar da classe Control
 Se você quiser criar um controle totalmente personalizado para usar em um formulário do Windows, você deve herdar o <xref:System.Windows.Forms.Control> classe. Ao mesmo tempo, herdando o <xref:System.Windows.Forms.Control> classe requer que você realizar mais planejamento e implementação, ele também fornece a maior gama de opções. Ao herdar de <xref:System.Windows.Forms.Control>, você herdará a funcionalidade muito básica que facilita o trabalho de controles. A funcionalidade inerente a <xref:System.Windows.Forms.Control> classe manipula a entrada do usuário por meio do teclado e mouse, define os limites e o tamanho do controle, fornece um identificador do windows e fornece a manipulação de mensagens e segurança. Ela não incorpora nenhum pintura, que nesse caso é a renderização efetiva da interface gráfica do controle, nem incorpora qualquer funcionalidade de interação do usuário específica. Você deve fornecer todos esses aspectos por meio de código personalizado.  
   
 > [!NOTE]
@@ -44,9 +44,10 @@ Se você quiser criar um controle totalmente personalizado para usar em um formu
 8.  Salve e teste seu controle.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
 - [Como: Herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Como: Herdar controles de formulários do Windows existentes](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Como: Criar controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Como: Herdar de controles do Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Como: Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)
+- [Desenvolvendo controles dos Windows Forms na hora de design](developing-windows-forms-controls-at-design-time.md)

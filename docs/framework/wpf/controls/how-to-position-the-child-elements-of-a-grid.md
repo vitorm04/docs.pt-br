@@ -1,5 +1,5 @@
 ---
-title: 'Como: Posicionar os elementos filhos de uma grade'
+title: 'Como: Posicionar os elementos filho de uma grade'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 90115bc6192a33f4c27eaa75ebfe6a7c9d1458e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c508f45c1ea3d0925503d6fe5600498a0558d5ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202983"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>Como: Posicionar os elementos filhos de uma grade
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Como: Posicionar os elementos filho de uma grade
 Este exemplo mostra como usar o get e definir métodos que são definidos no <xref:System.Windows.Controls.Grid> para posicionar elementos filho.  
   
 ## <a name="example"></a>Exemplo  
@@ -31,5 +31,6 @@ Este exemplo mostra como usar o get e definir métodos que são definidos no <xr
  ![uma captura de tela mostra uma interface de usuário do WPF com duas colunas, à direita tem uma grade de 3x3 e à esquerda tem botões para mover um retângulo colorido entre as colunas e linhas de grade](././media/grid-methods-sample.png) 
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Grid>
 - [Visão geral de painéis](panels-overview.md)

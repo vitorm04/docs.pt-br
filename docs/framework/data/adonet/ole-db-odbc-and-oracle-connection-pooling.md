@@ -2,12 +2,12 @@
 title: OLE DB, ODBC e pool de conexões Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208885"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC e pool de conexões Oracle
 O pooling de conexões pode melhorar significativamente o desempenho e a escalabilidade do aplicativo. Esta seção discute o pooling de conexões para provedores de dados .NET Framework para OLE DB, ODBC e Oracle.  
@@ -69,6 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|Quando for `true`, o objeto de conexão será obtido do pool apropriado ou, se necessário, será criado e adicionado ao pool apropriado.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)
+
+- [Pool de conexões](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

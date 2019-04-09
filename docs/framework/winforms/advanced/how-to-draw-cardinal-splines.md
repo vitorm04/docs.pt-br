@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenhar splines cardinais'
+title: 'Como: desenhar splines cardinais'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204946"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Como: Desenhar splines cardinais
+# <a name="how-to-draw-cardinal-splines"></a>Como: desenhar splines cardinais
 Um spline cardinal é uma curva que passa suavemente por um determinado conjunto de pontos. Para desenhar um spline cardinal, crie uma <xref:System.Drawing.Graphics> do objeto e passar o endereço de uma matriz de pontos para o <xref:System.Drawing.Graphics.DrawCurve%2A> método.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Desenhando um spline cardinal em forma de sino  
@@ -50,5 +50,6 @@ Um spline cardinal é uma curva que passa suavemente por um determinado conjunto
  Os exemplos anteriores são projetados para uso com o Windows Forms e exigem <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
-- [Construir e Desenhar Curvas](constructing-and-drawing-curves.md)
+
+- [Linhas, curvas e formas](lines-curves-and-shapes.md)
+- [Construindo e desenhando curvas](constructing-and-drawing-curves.md)

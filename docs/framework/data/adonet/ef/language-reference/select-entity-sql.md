@@ -2,12 +2,12 @@
 title: SELECIONAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5bc3b795eb20551abda2104c2f399c8da10a962
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136006"
 ---
 # <a name="select-entity-sql"></a>SELECIONAR (Entity SQL)
 Especifica os elementos retornados por uma consulta.  
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  Também é possível usar a sintaxe JOIN (FULL, INNER, LEFT, OUTER, ON e RIGHT). ON é necessário para junções internas e não é permitido para junções cruzadas.  
   
 ## <a name="row-and-value-select-clauses"></a>Cláusulas de seleção de linha e valor  
- O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oferece suporte a duas variantes da cláusula SELECT. A primeira variante, seleção de linha, é identificada pela palavra-chave SELECT e pode ser usada para especificar um ou mais valores que devem ser projetados. Como um wrapper de linha é implicitamente adicionado ao redor dos valores retornados, o resultado da expressão de consulta é sempre um multiconjunto de linhas.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a duas variantes da cláusula SELECT. A primeira variante, seleção de linha, é identificada pela palavra-chave SELECT e pode ser usada para especificar um ou mais valores que devem ser projetados. Como um wrapper de linha é implicitamente adicionado ao redor dos valores retornados, o resultado da expressão de consulta é sempre um multiconjunto de linhas.  
   
  Cada expressão de consulta em uma seleção de linha deve especificar um alias. Se nenhum alias for especificada,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta gerar um alias usando as regras de geração de alias.  
   
@@ -101,6 +101,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+
+- [Expressões de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

@@ -1,15 +1,15 @@
 ---
-title: <Subtypes> (.NET Nativo)
+title: <Subtypes> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 712282153b79edc480ec387aa746e375ddd30d27
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208287"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtipos > (.NET nativo)
 Aplica a política de tempo de execução a todas as classes herdadas do tipo recipiente.  
@@ -60,7 +60,7 @@ Aplica a política de tempo de execução a todas as classes herdadas do tipo re
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<Subtypes>` aplica a política a todos os subtipos de seu tipo recipiente. Use-o quando desejar aplicar políticas diferentes a tipos derivados e suas classes base.  
@@ -90,7 +90,8 @@ Aplica a política de tempo de execução a todas as classes herdadas do tipo re
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

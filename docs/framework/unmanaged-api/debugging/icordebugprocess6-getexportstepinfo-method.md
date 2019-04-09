@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b60bad75cb6286bda026e5b67e0a4fa8e2347dd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 44a891e6d65d159875f5607ac33b0668414cb380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137209"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>Método ICorDebugProcess6::GetExportStepInfo
 Fornece informações sobre funções exportadas de tempo de execução para ajudar a percorrer o código gerenciado.  
@@ -36,7 +36,7 @@ HRESULT GetExportStepInfo(
 ## <a name="return-value"></a>Valor de retorno  
  O método pode retornar os valores listados na tabela a seguir.  
   
-|Valor de retorno|Descrição|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |`S_OK`|A chamada de método foi bem-sucedida.|  
 |`E_POINTER`|`pInvokeKind` ou `pInvokePurpose` está **nulo**.|  
@@ -57,5 +57,6 @@ HRESULT GetExportStepInfo(
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

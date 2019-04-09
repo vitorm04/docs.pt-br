@@ -2,12 +2,12 @@
 title: Usando as ações implementar o comportamento do lado do servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144112"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usando as ações implementar o comportamento do lado do servidor
 
@@ -17,7 +17,7 @@ As ações OData fornecem uma maneira de implementar um comportamento que age me
  Para implementar uma ação de serviço, você deve implementar o <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)), e [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) interfaces. <xref:System.IServiceProvider> permite que o WCF Data Services para obter sua implementação de [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)). [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) permite que o WCF Data Services criar, localizar, descreva e chame ações de serviço. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) permite que você invocar o código que implementa o comportamento das ações de serviço e obter os resultados, se houver. Lembre-se de que o WCF Data Services são Serviços do WCF por chamada, uma nova instância do serviço será criada cada vez que o serviço for chamado.  Verifique se nenhum trabalho desnecessário é feito quando o serviço é criado.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- O <xref:System.IServiceProvider> contém um método chamado <xref:System.IServiceProvider.GetService%2A>. Este método é chamado pelo WCF Data Services para recuperar um número de provedores de serviços, inclusive provedores de serviços de metadados e provedores de ação de serviço de dados. Quando for solicitado para um provedor de ação do serviço de dados, retornar seu [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) implementação.  
+ <xref:System.IServiceProvider> contém um método chamado <xref:System.IServiceProvider.GetService%2A>. Este método é chamado pelo WCF Data Services para recuperar um número de provedores de serviços, inclusive provedores de serviços de metadados e provedores de ação de serviço de dados. Quando for solicitado para um provedor de ação do serviço de dados, retornar seu [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) implementação.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) contém métodos que permitem que você recupere informações sobre as ações disponíveis. Quando você implementa [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) está aumentando os metadados para o serviço que é definido pela implementação do seu serviço do [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) com ações e manipulação de expedição a essas ações conforme apropriado.  
@@ -81,7 +81,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  No snippet de código acima, a classe `MoviesModel` foi gerada com o Visual Studio para Adicionar a Referência de Serviço a um WCF Data Service.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
-- [Desenvolvendo e implantando o WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Desenvolvendo e implantando WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [Provedores de serviços de dados personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

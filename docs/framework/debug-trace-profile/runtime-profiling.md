@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141382"
 ---
 # <a name="runtime-profiling"></a>Criação de perfil do tempo de execução
 Criação de perfil é um método de coleta de dados de desempenho em qualquer cenário de desenvolvimento ou de implantação. Esta seção é para desenvolvedores e administradores de sistema que desejam coletar informações sobre o desempenho do aplicativo.  
@@ -42,7 +42,7 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
   
 6.  Na caixa de listagem **Instâncias do objeto selecionado**, clique em **\<Todas as instâncias>** para especificar que você deseja monitorar o contador de desempenho para o Common Language Runtime globalmente (ou seja, em todo o sistema).  
   
-     -ou-  
+     - ou -  
   
      Na caixa de listagem **Instâncias do objeto selecionado**, clique em um nome do aplicativo para monitorar o contador de desempenho para esse aplicativo.  
   
@@ -67,4 +67,5 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Especifica a fórmula para calcular o método `NextValue` para uma `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152718"
 ---
 # <a name="row-error-information"></a>Informações de erro de linha
 Para evitar precisar responder a erros de linha durante a edição de valores em um <xref:System.Data.DataTable>, você pode adicionar as informações de erro para a linha para uso posterior. O <xref:System.Data.DataRow> objeto fornece um <xref:System.Data.DataRow.RowError%2A> propriedade em cada linha para essa finalidade. Adicionando dados a **RowError** propriedade de uma **DataRow** define o <xref:System.Data.DataRow.HasErrors%2A> propriedade do **DataRow** para **true**. Se o **DataRow** faz parte de uma **DataTable**, e **DataRow.HasErrors** é **true**, o **DataTable.HasErrors** também é de propriedade **verdadeiro**. Isso se aplica também à **DataSet** ao qual o **DataTable** pertence. Quando os testes de erros, você pode verificar a **HasErrors** propriedade para determinar se as informações de erro foi adicionadas para todas as linhas. Se **HasErrors** é **verdadeiro**, você pode usar o <xref:System.Data.DataTable.GetErrors%2A> método da **DataTable** para retornar e examinar apenas as linhas com erros, conforme mostrado no exemplo a seguir.  
@@ -78,8 +78,9 @@ protected static void OnRowChanged(
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Manipulando dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

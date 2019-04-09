@@ -2,12 +2,12 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135727"
 ---
 # <a name="backuplist"></a>\<backupList>
 Representa uma seção de configuração para definir uma lista de backup que enumera um conjunto de pontos de extremidade que você gostaria que o serviço de roteamento use caso o ponto de extremidade primário não pode ser alcançado. Se o primeiro ponto de extremidade na lista estiver inativo, o serviço de roteamento irá automaticamente failover para o próximo na lista.  Isso lhe dá uma maneira rápida de adicionar confiabilidade para seu aplicativo sem ter que ensinar o aplicativo cliente como lidar com padrões complexos ou onde todos os seus serviços são implantados.  
@@ -74,4 +74,5 @@ Representa uma seção de configuração para definir uma lista de backup que en
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

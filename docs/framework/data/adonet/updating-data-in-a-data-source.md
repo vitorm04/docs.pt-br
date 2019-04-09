@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207468"
 ---
 # <a name="updating-data-in-a-data-source"></a>Atualizando dados em uma fonte de dados
 As instruções SQL que modificam dados (como UPDATE, INSERT ou DELETE) não retornam linhas. Da mesma forma, muitos procedimentos armazenados executam uma ação, mas não retornam linhas. Para executar comandos que não retornam linhas, criar uma **comando** objeto com o comando SQL apropriado e uma **Conexão**, incluindo quaisquer **parâmetros**. Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.  
@@ -92,7 +92,8 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando os comandos para modificar dados](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+
+- [Usar os comandos para modificar dados](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Atualizando fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b7e8d0842b705a2fc8897511e1b2e01441d9c6b9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ca52b725f5fad4b591b95bf6a6dd778c7a72d235
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202022"
 ---
 # <a name="wcf-data-services-overview"></a>Visão geral do WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite a criação e consumo de serviços de dados para a Web ou uma intranet usando o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] permite que você exponha seus dados como recursos endereçáveis por URIs. Isso permite que você acesse e alterar dados usando a semântica de transferência de estado representacional (REST), especificamente os verbos HTTP padrão de GET, PUT, POSTAM e excluir. Este tópico fornece uma visão geral dos padrões e práticas definidas pela [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e também os recursos fornecidos pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aproveitar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em aplicativos baseados no .NET Framework.  
   
 ## <a name="address-data-as-resources"></a>Dados de endereço como recursos  
- O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expõe dados como recursos endereçáveis por URIs. Os caminhos de recurso são construídos com base nas convenções de relacionamento entre entidades do modelo de dados de entidade. Nesse modelo, as entidades representam unidades operacionais de dados em um domínio de aplicativo, como clientes, pedidos, itens e produtos. Para obter mais informações, consulte [modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expõe dados como recursos endereçáveis por URIs. Os caminhos de recurso são construídos com base nas convenções de relacionamento entre entidades do modelo de dados de entidade. Nesse modelo, as entidades representam unidades operacionais de dados em um domínio de aplicativo, como clientes, pedidos, itens e produtos. Para obter mais informações, consulte [modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md).  
   
  No [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você endereça recursos de entidade como um conjunto de entidades que contém instâncias de tipos de entidades. Por exemplo, o URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` retorna todos os pedidos do `Northwind` serviço de dados que estão relacionadas ao cliente com um `CustomerID` valor `ALFKI.`  
   
@@ -32,7 +32,7 @@ ms.locfileid: "58465835"
 ## <a name="storage-independence"></a>Independência de armazenamento  
  Embora os recursos sejam endereçados com base em um modelo de relação de entidade [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expor [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds, independentemente da fonte de dados subjacente. Após [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aceita uma solicitação HTTP para um recurso que identifica um URI, a solicitação é desserializada e uma representação dessa solicitação é passada para um [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] provedor. Esse provedor converte a solicitação em um formato específico de fonte de dados e executa a solicitação na fonte de dados subjacente. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Obtém a independência de armazenamento separando o modelo conceitual que endereça os recursos prescritos pelo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] do esquema específico da fonte de dados subjacente.  
   
- O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] é integrado ao ADO.NET Entity Framework para permitir a criação de serviços de dados que exponham dados relacionais. Você pode usar as ferramentas do Modelo de Dados de Entidade para criar um modelo de dados que contenha recursos endereçáveis como entidades e definir, ao mesmo tempo, o mapeamento entre esse modelo e as tabelas no banco de dados subjacente. Para obter mais informações, consulte [provedor do Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] integra-se com o ADO.NET Entity Framework para permitir que você crie serviços de dados que exponham dados relacionais. Você pode usar as ferramentas do Modelo de Dados de Entidade para criar um modelo de dados que contenha recursos endereçáveis como entidades e definir, ao mesmo tempo, o mapeamento entre esse modelo e as tabelas no banco de dados subjacente. Para obter mais informações, consulte [provedor do Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] também permite que você crie serviços de dados que expõem as estruturas de dados que retornam uma implementação do <xref:System.Linq.IQueryable%601> interface. Isso permite criar serviços de dados que expõem dados de tipos .NET Framework. Há suporte para operações de criação, atualização e exclusão quando você também implementa a interface <xref:System.Data.Services.IUpdatable>. Para obter mais informações, consulte [provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "58465835"
 ## <a name="client-libraries"></a>Bibliotecas cliente  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um conjunto de padrões uniformes para interagir com os serviços de dados. Isso fornece uma oportunidade para criar componentes reutilizáveis que se baseiam nesses serviços, como bibliotecas de cliente que o tornam mais fáceis de consumir serviços de dados.  
   
- O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui bibliotecas cliente para aplicativos cliente baseados no .NET Framework e no Silverlight. Essas bibliotecas cliente permitem interagir com serviços de dados usando objetos .NET Framework. Eles também dão suporte a consultas com base no objeto e consultas LINQ, carregando objetos relacionados, controle de alterações e resolução de identidade. Para obter mais informações, consulte [biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui bibliotecas de cliente para ambos os aplicativos cliente baseados no Silverlight e do .NET Framework. Essas bibliotecas cliente permitem interagir com serviços de dados usando objetos .NET Framework. Eles também dão suporte a consultas com base no objeto e consultas LINQ, carregando objetos relacionados, controle de alterações e resolução de identidade. Para obter mais informações, consulte [biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
  Além de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bibliotecas de cliente incluídas com o .NET Framework e Silverlight, existem outras bibliotecas de cliente que permitem consumir um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed em aplicativos cliente, como aplicativos PHP, AJAX e Java. Para obter mais informações, consulte o [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
@@ -56,9 +56,10 @@ ms.locfileid: "58465835"
  ![Captura de tela que mostra um diagrama de arquitetura do WCF Data Services.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Guia de Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Acessando recursos do serviço de dados (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) [REST (Transferência de Estado Representacional)]
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [REST (Representational State Transfer)](https://go.microsoft.com/fwlink/?LinkId=113919)

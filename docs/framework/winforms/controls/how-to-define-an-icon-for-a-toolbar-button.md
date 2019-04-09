@@ -13,12 +13,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153121"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Como: Definir um ícone para um botão de barra de ferramentas
 > [!NOTE]
@@ -116,7 +116,8 @@ ms.locfileid: "57712741"
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Como: Disparar eventos de Menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Controle de barra de ferramentas](toolbar-control-windows-forms.md)
+- [Como: Disparar eventos de menu para botões da barra de ferramentas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Controle ToolBar](toolbar-control-windows-forms.md)
 - [Componente ImageList](imagelist-component-windows-forms.md)

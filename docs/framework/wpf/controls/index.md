@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154408"
 ---
 # <a name="controls"></a>Controles
 <a name="introduction"></a>
@@ -95,10 +95,10 @@ ms.locfileid: "57363144"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>-- Alguns exemplos de classes que herdam dessa classe são <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, e <xref:System.Windows.Controls.ToolBar>.  
 
-  
  Para obter mais informações sobre essas classes base, consulte [modelo de conteúdo WPF](wpf-content-model.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estilo e modelagem](styling-and-templating.md)
 - [Controles por categoria](controls-by-category.md)
 - [Biblioteca de controles](control-library.md)
@@ -106,5 +106,5 @@ ms.locfileid: "57363144"
 - [Visão geral da vinculação de dados](../data/data-binding-overview.md)
 - [Entrada](../advanced/input-wpf.md)
 - [Habilitar um comando](../advanced/how-to-enable-a-command.md)
-- [Passo a passos: Criar um botão animado personalizado](walkthroughs-create-a-custom-animated-button.md)
+- [Instruções passo a passo: criar um botão animado personalizado](walkthroughs-create-a-custom-animated-button.md)
 - [Personalização do controle](control-customization.md)
