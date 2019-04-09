@@ -2,20 +2,21 @@
 title: System.ServiceModel.Channels.ListenerCreated
 ms.date: 03/30/2017
 ms.assetid: d4a3401c-f7f8-4761-95c2-ca92b70a503d
-ms.openlocfilehash: 24c6cc6d5bc2cd0da33a7c9afc797953fcb6abd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f184ddf66fd7218b5676e2bd9f656435b6414a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128798"
 ---
-# <a name="systemservicemodelchannelslistenercreated"></a><span data-ttu-id="2313b-102">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="2313b-102">System.ServiceModel.Channels.ListenerCreated</span></span>
-<span data-ttu-id="2313b-103">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="2313b-103">System.ServiceModel.Channels.ListenerCreated</span></span>  
+# <a name="systemservicemodelchannelslistenercreated"></a><span data-ttu-id="ad5c2-102">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="ad5c2-102">System.ServiceModel.Channels.ListenerCreated</span></span>
+<span data-ttu-id="ad5c2-103">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="ad5c2-103">System.ServiceModel.Channels.ListenerCreated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2313b-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="2313b-104">Description</span></span>  
- <span data-ttu-id="2313b-105">Ouvinte criado.</span><span class="sxs-lookup"><span data-stu-id="2313b-105">Listener created.</span></span>  
+## <a name="description"></a><span data-ttu-id="ad5c2-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="ad5c2-104">Description</span></span>  
+ <span data-ttu-id="ad5c2-105">Ouvinte criado.</span><span class="sxs-lookup"><span data-stu-id="ad5c2-105">Listener created.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2313b-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2313b-106">See also</span></span>
-- [<span data-ttu-id="2313b-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="2313b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="2313b-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="2313b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="2313b-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="2313b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ad5c2-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ad5c2-106">See also</span></span>
+
+- [<span data-ttu-id="ad5c2-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="ad5c2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="ad5c2-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="ad5c2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="ad5c2-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="ad5c2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

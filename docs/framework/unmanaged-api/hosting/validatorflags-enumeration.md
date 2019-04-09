@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127407"
 ---
-# <a name="validatorflags-enumeration"></a><span data-ttu-id="87882-102">Enumeração ValidatorFlags</span><span class="sxs-lookup"><span data-stu-id="87882-102">ValidatorFlags Enumeration</span></span>
-<span data-ttu-id="87882-103">Contém valores que indicam o tipo de validação que deve ser executada em uma chamada para o [iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="87882-103">Contains values that indicate the type of validation that should be performed in a call to the [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) method.</span></span>  
+# <a name="validatorflags-enumeration"></a><span data-ttu-id="8aeb5-102">Enumeração ValidatorFlags</span><span class="sxs-lookup"><span data-stu-id="8aeb5-102">ValidatorFlags Enumeration</span></span>
+<span data-ttu-id="8aeb5-103">Contém valores que indicam o tipo de validação que deve ser executada em uma chamada para o [iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-103">Contains values that indicate the type of validation that should be performed in a call to the [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87882-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="87882-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8aeb5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8aeb5-104">Syntax</span></span>  
   
 ```  
 enum ValidatorFlags {  
@@ -38,25 +38,26 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="87882-105">Membros</span><span class="sxs-lookup"><span data-stu-id="87882-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8aeb5-105">Membros</span><span class="sxs-lookup"><span data-stu-id="8aeb5-105">Members</span></span>  
   
-|<span data-ttu-id="87882-106">Membro</span><span class="sxs-lookup"><span data-stu-id="87882-106">Member</span></span>|<span data-ttu-id="87882-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="87882-107">Description</span></span>|  
+|<span data-ttu-id="8aeb5-106">Membro</span><span class="sxs-lookup"><span data-stu-id="8aeb5-106">Member</span></span>|<span data-ttu-id="8aeb5-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="8aeb5-107">Description</span></span>|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|<span data-ttu-id="87882-108">Especifica que somente o Microsoft intermediate language (MSIL no arquivo executável) deve ser validada.</span><span class="sxs-lookup"><span data-stu-id="87882-108">Specifies that only the Microsoft intermediate language (MSIL) in the executable file should be validated.</span></span>|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|<span data-ttu-id="87882-109">Especifica que somente o formato do arquivo executável deve ser validado.</span><span class="sxs-lookup"><span data-stu-id="87882-109">Specifies that only the format of the executable file should be validated.</span></span>|  
-|`VALIDATOR_EXTRA_VERBOSE`|<span data-ttu-id="87882-110">Especifica que todos os tipos de validação devem ser executados e relatados.</span><span class="sxs-lookup"><span data-stu-id="87882-110">Specifies that all types of validation should be performed and reported on.</span></span>|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|<span data-ttu-id="87882-111">Especifica que o formato do arquivo executável não deve ser validado.</span><span class="sxs-lookup"><span data-stu-id="87882-111">Specifies that the format of the executable file should not be validated.</span></span>|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|<span data-ttu-id="87882-112">Especifica que as mensagens de erro de validação devem incluir as linhas de código-fonte que geram erros de validação.</span><span class="sxs-lookup"><span data-stu-id="87882-112">Specifies that validation error messages should include the lines of source code that raise validation errors.</span></span> <span data-ttu-id="87882-113">Esse valor de campo não é válido no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="87882-113">This field value is not valid in the .NET Framework version 2.0.</span></span>|  
+|`VALIDATOR_CHECK_ILONLY`|<span data-ttu-id="8aeb5-108">Especifica que somente o Microsoft intermediate language (MSIL no arquivo executável) deve ser validada.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-108">Specifies that only the Microsoft intermediate language (MSIL) in the executable file should be validated.</span></span>|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|<span data-ttu-id="8aeb5-109">Especifica que somente o formato do arquivo executável deve ser validado.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-109">Specifies that only the format of the executable file should be validated.</span></span>|  
+|`VALIDATOR_EXTRA_VERBOSE`|<span data-ttu-id="8aeb5-110">Especifica que todos os tipos de validação devem ser executados e relatados.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-110">Specifies that all types of validation should be performed and reported on.</span></span>|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|<span data-ttu-id="8aeb5-111">Especifica que o formato do arquivo executável não deve ser validado.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-111">Specifies that the format of the executable file should not be validated.</span></span>|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|<span data-ttu-id="8aeb5-112">Especifica que as mensagens de erro de validação devem incluir as linhas de código-fonte que geram erros de validação.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-112">Specifies that validation error messages should include the lines of source code that raise validation errors.</span></span> <span data-ttu-id="8aeb5-113">Esse valor de campo não é válido no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="8aeb5-113">This field value is not valid in the .NET Framework version 2.0.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="87882-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="87882-114">Requirements</span></span>  
- <span data-ttu-id="87882-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87882-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8aeb5-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8aeb5-114">Requirements</span></span>  
+ <span data-ttu-id="8aeb5-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8aeb5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87882-116">**Cabeçalho:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="87882-116">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="8aeb5-116">**Cabeçalho:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="8aeb5-116">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="87882-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="87882-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="8aeb5-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8aeb5-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="87882-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87882-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="8aeb5-118">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="8aeb5-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="87882-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="87882-119">See also</span></span>
-- [<span data-ttu-id="87882-120">Interface ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="87882-120">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="87882-121">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="87882-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8aeb5-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8aeb5-119">See also</span></span>
+
+- [<span data-ttu-id="8aeb5-120">Interface ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="8aeb5-120">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="8aeb5-121">Hospedando enumerações</span><span class="sxs-lookup"><span data-stu-id="8aeb5-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
