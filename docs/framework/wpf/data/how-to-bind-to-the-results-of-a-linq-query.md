@@ -5,32 +5,33 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 9be0f95824c97456b50996f9cd6f010442b523f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185894"
 ---
-# <a name="how-to-bind-to-the-results-of-a-linq-query"></a><span data-ttu-id="faa50-102">Como: Associar aos resultados de uma consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="faa50-102">How to: Bind to the Results of a LINQ Query</span></span>
-<span data-ttu-id="faa50-103">Este exemplo demonstra como executar uma consulta LINQ e associar aos resultados.</span><span class="sxs-lookup"><span data-stu-id="faa50-103">This example demonstrates how to run a LINQ query and then bind to the results.</span></span>  
+# <a name="how-to-bind-to-the-results-of-a-linq-query"></a><span data-ttu-id="34395-102">Como: Associar aos resultados de uma consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="34395-102">How to: Bind to the Results of a LINQ Query</span></span>
+<span data-ttu-id="34395-103">Este exemplo demonstra como executar uma consulta LINQ e associar aos resultados.</span><span class="sxs-lookup"><span data-stu-id="34395-103">This example demonstrates how to run a LINQ query and then bind to the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="faa50-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="faa50-104">Example</span></span>  
- <span data-ttu-id="faa50-105">O seguinte exemplo cria duas caixas de listagem.</span><span class="sxs-lookup"><span data-stu-id="faa50-105">The following example creates two list boxes.</span></span> <span data-ttu-id="faa50-106">A primeira caixa de listagem contém três itens de lista.</span><span class="sxs-lookup"><span data-stu-id="faa50-106">The first list box contains three list items.</span></span>  
+## <a name="example"></a><span data-ttu-id="34395-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="34395-104">Example</span></span>  
+ <span data-ttu-id="34395-105">O seguinte exemplo cria duas caixas de listagem.</span><span class="sxs-lookup"><span data-stu-id="34395-105">The following example creates two list boxes.</span></span> <span data-ttu-id="34395-106">A primeira caixa de listagem contém três itens de lista.</span><span class="sxs-lookup"><span data-stu-id="34395-106">The first list box contains three list items.</span></span>  
   
  [!code-xaml[LinqExample#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml#ui)]  
   
- <span data-ttu-id="faa50-107">Selecionar um item na primeira caixa de listagem invoca o manipulador de eventos a seguir.</span><span class="sxs-lookup"><span data-stu-id="faa50-107">Selecting an item from the first list box invokes the following event handler.</span></span> <span data-ttu-id="faa50-108">Neste exemplo, `Tasks` é uma coleção de objetos `Task`.</span><span class="sxs-lookup"><span data-stu-id="faa50-108">In this example, `Tasks` is a collection of `Task` objects.</span></span> <span data-ttu-id="faa50-109">A classe `Task` tem uma propriedade chamada `Priority`.</span><span class="sxs-lookup"><span data-stu-id="faa50-109">The `Task` class has a property named `Priority`.</span></span> <span data-ttu-id="faa50-110">Esse manipulador de eventos executa uma consulta LINQ que retorna a coleção de `Task` objetos que têm o valor de prioridade selecionado e, em seguida, define que, como o <xref:System.Windows.FrameworkElement.DataContext%2A>:</span><span class="sxs-lookup"><span data-stu-id="faa50-110">This event handler runs a LINQ query that returns the collection of `Task` objects that have the selected priority value, and then sets that as the <xref:System.Windows.FrameworkElement.DataContext%2A>:</span></span>  
+ <span data-ttu-id="34395-107">Selecionar um item na primeira caixa de listagem invoca o manipulador de eventos a seguir.</span><span class="sxs-lookup"><span data-stu-id="34395-107">Selecting an item from the first list box invokes the following event handler.</span></span> <span data-ttu-id="34395-108">Neste exemplo, `Tasks` é uma coleção de objetos `Task`.</span><span class="sxs-lookup"><span data-stu-id="34395-108">In this example, `Tasks` is a collection of `Task` objects.</span></span> <span data-ttu-id="34395-109">A classe `Task` tem uma propriedade chamada `Priority`.</span><span class="sxs-lookup"><span data-stu-id="34395-109">The `Task` class has a property named `Priority`.</span></span> <span data-ttu-id="34395-110">Esse manipulador de eventos executa uma consulta LINQ que retorna a coleção de `Task` objetos que têm o valor de prioridade selecionado e, em seguida, define que, como o <xref:System.Windows.FrameworkElement.DataContext%2A>:</span><span class="sxs-lookup"><span data-stu-id="34395-110">This event handler runs a LINQ query that returns the collection of `Task` objects that have the selected priority value, and then sets that as the <xref:System.Windows.FrameworkElement.DataContext%2A>:</span></span>  
   
  [!code-csharp[LinqExample#Using](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#using)]  
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- <span data-ttu-id="faa50-111">A segunda caixa de listagem associado a essa coleção porque seu <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valor é definido como `{Binding}`.</span><span class="sxs-lookup"><span data-stu-id="faa50-111">The second list box binds to that collection because its <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> value is set to `{Binding}`.</span></span> <span data-ttu-id="faa50-112">Como resultado, ele exibe a coleção retornada (com base nas `myTaskTemplate` <xref:System.Windows.DataTemplate>).</span><span class="sxs-lookup"><span data-stu-id="faa50-112">As a result, it displays the returned collection (based on the `myTaskTemplate`<xref:System.Windows.DataTemplate>).</span></span>  
+ <span data-ttu-id="34395-111">A segunda caixa de listagem associado a essa coleção porque seu <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valor é definido como `{Binding}`.</span><span class="sxs-lookup"><span data-stu-id="34395-111">The second list box binds to that collection because its <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> value is set to `{Binding}`.</span></span> <span data-ttu-id="34395-112">Como resultado, ele exibe a coleção retornada (com base no `myTaskTemplate`<xref:System.Windows.DataTemplate>).</span><span class="sxs-lookup"><span data-stu-id="34395-112">As a result, it displays the returned collection (based on the `myTaskTemplate`<xref:System.Windows.DataTemplate>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="faa50-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="faa50-113">See also</span></span>
-- [<span data-ttu-id="faa50-114">Disponibilizar dados para associação em XAML</span><span class="sxs-lookup"><span data-stu-id="faa50-114">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
-- [<span data-ttu-id="faa50-115">Associar a uma coleção e exibir informações com base na seleção</span><span class="sxs-lookup"><span data-stu-id="faa50-115">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [<span data-ttu-id="faa50-116">Novidades no WPF versão 4.5</span><span class="sxs-lookup"><span data-stu-id="faa50-116">What's New in WPF Version 4.5</span></span>](../getting-started/whats-new.md)
-- [<span data-ttu-id="faa50-117">Visão geral da vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="faa50-117">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="faa50-118">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="faa50-118">How-to Topics</span></span>](data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="34395-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="34395-113">See also</span></span>
+
+- [<span data-ttu-id="34395-114">Disponibilizar dados para associação em XAML</span><span class="sxs-lookup"><span data-stu-id="34395-114">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
+- [<span data-ttu-id="34395-115">Associar a uma coleção e exibir informações com base na seleção</span><span class="sxs-lookup"><span data-stu-id="34395-115">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [<span data-ttu-id="34395-116">Novidades do WPF versão 4.5</span><span class="sxs-lookup"><span data-stu-id="34395-116">What's New in WPF Version 4.5</span></span>](../getting-started/whats-new.md)
+- [<span data-ttu-id="34395-117">Visão geral da vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="34395-117">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="34395-118">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="34395-118">How-to Topics</span></span>](data-binding-how-to-topics.md)

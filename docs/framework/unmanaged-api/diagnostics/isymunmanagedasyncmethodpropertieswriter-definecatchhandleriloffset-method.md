@@ -4,35 +4,36 @@ ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d000e61736f3250c677014cce50a2b7dcdecf1b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 923c85a9dff11753a338fcfd3673d3590fca607a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196743"
 ---
-# <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a><span data-ttu-id="20d2e-102">Método ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset</span><span class="sxs-lookup"><span data-stu-id="20d2e-102">ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset Method</span></span>
-<span data-ttu-id="20d2e-103">Define o deslocamento para o manipulador catch gerado pelo compilador que encapsula um método assíncrono de IL.</span><span class="sxs-lookup"><span data-stu-id="20d2e-103">Sets the IL offset for the compiler-generated catch handler that wraps an async method.</span></span>  
+# <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a><span data-ttu-id="68cb2-102">Método ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset</span><span class="sxs-lookup"><span data-stu-id="68cb2-102">ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset Method</span></span>
+<span data-ttu-id="68cb2-103">Define o deslocamento para o manipulador catch gerado pelo compilador que encapsula um método assíncrono de IL.</span><span class="sxs-lookup"><span data-stu-id="68cb2-103">Sets the IL offset for the compiler-generated catch handler that wraps an async method.</span></span>  
   
- <span data-ttu-id="20d2e-104">O deslocamento de IL de catch gerado é usado pelo depurador para tratar o problema como se fosse o código de não usuário, mesmo que ele pode ocorrer em um método de código do usuário.</span><span class="sxs-lookup"><span data-stu-id="20d2e-104">The IL offset of the generated catch is used by the debugger to handle the catch as if it were non-user code even though it might occur in a user code method.</span></span> <span data-ttu-id="20d2e-105">Em particular, ele é usado em resposta a um **CatchHandlerFound** eventos de exceção.</span><span class="sxs-lookup"><span data-stu-id="20d2e-105">In particular, it is used in response to a **CatchHandlerFound** exception event.</span></span>  
+ <span data-ttu-id="68cb2-104">O deslocamento de IL de catch gerado é usado pelo depurador para tratar o problema como se fosse o código de não usuário, mesmo que ele pode ocorrer em um método de código do usuário.</span><span class="sxs-lookup"><span data-stu-id="68cb2-104">The IL offset of the generated catch is used by the debugger to handle the catch as if it were non-user code even though it might occur in a user code method.</span></span> <span data-ttu-id="68cb2-105">Em particular, ele é usado em resposta a um **CatchHandlerFound** eventos de exceção.</span><span class="sxs-lookup"><span data-stu-id="68cb2-105">In particular, it is used in response to a **CatchHandlerFound** exception event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20d2e-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="20d2e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68cb2-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="68cb2-106">Syntax</span></span>  
   
 ```idl  
 HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20d2e-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="20d2e-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68cb2-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="68cb2-107">Parameters</span></span>  
   
-|<span data-ttu-id="20d2e-108">Parâmetro</span><span class="sxs-lookup"><span data-stu-id="20d2e-108">Parameter</span></span>|<span data-ttu-id="20d2e-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="20d2e-109">Description</span></span>|  
+|<span data-ttu-id="68cb2-108">Parâmetro</span><span class="sxs-lookup"><span data-stu-id="68cb2-108">Parameter</span></span>|<span data-ttu-id="68cb2-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="68cb2-109">Description</span></span>|  
 |---------------|-----------------|  
 |`catchHandlerOffset`||  
   
-## <a name="return-value"></a><span data-ttu-id="20d2e-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="20d2e-110">Return Value</span></span>  
- <span data-ttu-id="20d2e-111">Retorna `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="20d2e-111">Returns `HRESULT`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="68cb2-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="68cb2-110">Return Value</span></span>  
+ <span data-ttu-id="68cb2-111">Retorna `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="68cb2-111">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20d2e-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="20d2e-112">Requirements</span></span>  
- <span data-ttu-id="20d2e-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="20d2e-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68cb2-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="68cb2-112">Requirements</span></span>  
+ <span data-ttu-id="68cb2-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="68cb2-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20d2e-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="20d2e-114">See also</span></span>
-- [<span data-ttu-id="20d2e-115">Interface ISymUnmanagedAsyncMethodPropertiesWriter</span><span class="sxs-lookup"><span data-stu-id="20d2e-115">ISymUnmanagedAsyncMethodPropertiesWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="68cb2-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="68cb2-114">See also</span></span>
+
+- [<span data-ttu-id="68cb2-115">Interface ISymUnmanagedAsyncMethodPropertiesWriter</span><span class="sxs-lookup"><span data-stu-id="68cb2-115">ISymUnmanagedAsyncMethodPropertiesWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

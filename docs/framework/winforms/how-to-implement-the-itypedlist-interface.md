@@ -1,5 +1,5 @@
 ---
-title: 'Como: Implementar a Interface ITypedList'
+title: 'Como: implementar a interface ITypedList'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: df4b009ca225b4bf4290398ccd7dd252c9189915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084900"
 ---
-# <a name="how-to-implement-the-itypedlist-interface"></a><span data-ttu-id="33467-102">Como: Implementar a Interface ITypedList</span><span class="sxs-lookup"><span data-stu-id="33467-102">How to: Implement the ITypedList Interface</span></span>
-<span data-ttu-id="33467-103">Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a descoberta do esquema para uma lista vinculável.</span><span class="sxs-lookup"><span data-stu-id="33467-103">Implement the <xref:System.ComponentModel.ITypedList> interface to enable discovery of the schema for a bindable list.</span></span>  
+# <a name="how-to-implement-the-itypedlist-interface"></a><span data-ttu-id="0b715-102">Como: implementar a interface ITypedList</span><span class="sxs-lookup"><span data-stu-id="0b715-102">How to: Implement the ITypedList Interface</span></span>
+<span data-ttu-id="0b715-103">Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a descoberta do esquema para uma lista vinculável.</span><span class="sxs-lookup"><span data-stu-id="0b715-103">Implement the <xref:System.ComponentModel.ITypedList> interface to enable discovery of the schema for a bindable list.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="33467-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="33467-104">Example</span></span>  
- <span data-ttu-id="33467-105">O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.ITypedList> interface.</span><span class="sxs-lookup"><span data-stu-id="33467-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.ITypedList> interface.</span></span> <span data-ttu-id="33467-106">Um tipo genérico chamado `SortableBindingList` deriva de <xref:System.ComponentModel.BindingList%601> classe e implementa o <xref:System.ComponentModel.ITypedList> interface.</span><span class="sxs-lookup"><span data-stu-id="33467-106">A generic type named `SortableBindingList` derives from the <xref:System.ComponentModel.BindingList%601> class and implements the <xref:System.ComponentModel.ITypedList> interface.</span></span> <span data-ttu-id="33467-107">Uma classe simples denominada `Customer` fornece os dados, o que estão associados ao cabeçalho de uma <xref:System.Windows.Forms.DataGridView> controle.</span><span class="sxs-lookup"><span data-stu-id="33467-107">A simple class named `Customer` provides data, which is bound to the header of a <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b715-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="0b715-104">Example</span></span>  
+ <span data-ttu-id="0b715-105">O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.ITypedList> interface.</span><span class="sxs-lookup"><span data-stu-id="0b715-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.ITypedList> interface.</span></span> <span data-ttu-id="0b715-106">Um tipo genérico chamado `SortableBindingList` deriva de <xref:System.ComponentModel.BindingList%601> classe e implementa o <xref:System.ComponentModel.ITypedList> interface.</span><span class="sxs-lookup"><span data-stu-id="0b715-106">A generic type named `SortableBindingList` derives from the <xref:System.ComponentModel.BindingList%601> class and implements the <xref:System.ComponentModel.ITypedList> interface.</span></span> <span data-ttu-id="0b715-107">Uma classe simples denominada `Customer` fornece os dados, o que estão associados ao cabeçalho de uma <xref:System.Windows.Forms.DataGridView> controle.</span><span class="sxs-lookup"><span data-stu-id="0b715-107">A simple class named `Customer` provides data, which is bound to the header of a <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  [!code-csharp[System.ComponentModel.ITypedList#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/SortableBindingList.cs#1)]
  [!code-vb[System.ComponentModel.ITypedList#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/SortableBindingList.vb#1)]  
@@ -32,13 +32,14 @@ ms.locfileid: "57709766"
  [!code-csharp[System.ComponentModel.ITypedList#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/Form1.cs#100)]
  [!code-vb[System.ComponentModel.ITypedList#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/Form1.vb#100)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="33467-108">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="33467-108">Compiling the Code</span></span>  
- <span data-ttu-id="33467-109">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="33467-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0b715-108">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="0b715-108">Compiling the Code</span></span>  
+ <span data-ttu-id="0b715-109">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="0b715-109">This example requires:</span></span>  
   
--   <span data-ttu-id="33467-110">Referências aos assemblies System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="33467-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="0b715-110">Referências aos assemblies System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="0b715-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33467-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="33467-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b715-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0b715-111">See also</span></span>
+
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [<span data-ttu-id="33467-112">Vinculação de dados e os Windows Forms</span><span class="sxs-lookup"><span data-stu-id="33467-112">Data Binding and Windows Forms</span></span>](data-binding-and-windows-forms.md)
+- [<span data-ttu-id="0b715-112">Associação de dados e o Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0b715-112">Data Binding and Windows Forms</span></span>](data-binding-and-windows-forms.md)

@@ -2,19 +2,19 @@
 title: <add> De <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 6edf0bc2d532deb01f24450b9868bbc240bab413
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186596"
 ---
-# <a name="add-of-allowaccounts"></a><span data-ttu-id="d38ff-102">\<Adicionar > de \<allowAccounts ></span><span class="sxs-lookup"><span data-stu-id="d38ff-102">\<add> of \<allowAccounts></span></span>
-<span data-ttu-id="d38ff-103">Especifica uma conta de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.</span><span class="sxs-lookup"><span data-stu-id="d38ff-103">Specifies a user account for processes that host WCF services, and are granted connection access to the sharing service.</span></span>  
+# <a name="add-of-allowaccounts"></a><span data-ttu-id="1adf0-102">\<Adicionar > de \<allowAccounts ></span><span class="sxs-lookup"><span data-stu-id="1adf0-102">\<add> of \<allowAccounts></span></span>
+<span data-ttu-id="1adf0-103">Especifica uma conta de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.</span><span class="sxs-lookup"><span data-stu-id="1adf0-103">Specifies a user account for processes that host WCF services, and are granted connection access to the sharing service.</span></span>  
   
- <span data-ttu-id="d38ff-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="d38ff-104">\<system.serviceModel.activation></span></span>  
+ <span data-ttu-id="1adf0-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="1adf0-104">\<system.serviceModel.activation></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d38ff-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d38ff-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1adf0-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1adf0-105">Syntax</span></span>  
   
 ```xml  
 <allowAccounts>
@@ -22,26 +22,26 @@ ms.locfileid: "55259600"
 </allowAccounts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d38ff-106">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="d38ff-106">Attributes and Elements</span></span>  
- <span data-ttu-id="d38ff-107">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="d38ff-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1adf0-106">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="1adf0-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="1adf0-107">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="1adf0-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d38ff-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="d38ff-108">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1adf0-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="1adf0-108">Attributes</span></span>  
   
-|<span data-ttu-id="d38ff-109">Atributo</span><span class="sxs-lookup"><span data-stu-id="d38ff-109">Attribute</span></span>|<span data-ttu-id="d38ff-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="d38ff-110">Description</span></span>|  
+|<span data-ttu-id="1adf0-109">Atributo</span><span class="sxs-lookup"><span data-stu-id="1adf0-109">Attribute</span></span>|<span data-ttu-id="1adf0-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="1adf0-110">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d38ff-111">securityIdentifier</span><span class="sxs-lookup"><span data-stu-id="d38ff-111">securityIdentifier</span></span>|<span data-ttu-id="d38ff-112">Uma cadeia de caracteres que especifica um identificador exclusivo usado para identificar uma conta de usuário.</span><span class="sxs-lookup"><span data-stu-id="d38ff-112">A string that specifies a unique identifier used to identify a user account.</span></span> <span data-ttu-id="d38ff-113">Os valores padrão são IIS_USRS, administradores, NS, LS e LocalSystem.</span><span class="sxs-lookup"><span data-stu-id="d38ff-113">The default values are LocalSystem, Administrators, NS, LS, and IIS_USRS.</span></span>|  
+|<span data-ttu-id="1adf0-111">securityIdentifier</span><span class="sxs-lookup"><span data-stu-id="1adf0-111">securityIdentifier</span></span>|<span data-ttu-id="1adf0-112">Uma cadeia de caracteres que especifica um identificador exclusivo usado para identificar uma conta de usuário.</span><span class="sxs-lookup"><span data-stu-id="1adf0-112">A string that specifies a unique identifier used to identify a user account.</span></span> <span data-ttu-id="1adf0-113">Os valores padrão são IIS_USRS, administradores, NS, LS e LocalSystem.</span><span class="sxs-lookup"><span data-stu-id="1adf0-113">The default values are LocalSystem, Administrators, NS, LS, and IIS_USRS.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d38ff-114">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="d38ff-114">Child Elements</span></span>  
- <span data-ttu-id="d38ff-115">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="d38ff-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1adf0-114">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="1adf0-114">Child Elements</span></span>  
+ <span data-ttu-id="1adf0-115">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="1adf0-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d38ff-116">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="d38ff-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1adf0-116">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="1adf0-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="d38ff-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="d38ff-117">Element</span></span>|<span data-ttu-id="d38ff-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="d38ff-118">Description</span></span>|  
+|<span data-ttu-id="1adf0-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="1adf0-117">Element</span></span>|<span data-ttu-id="1adf0-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="1adf0-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d38ff-119">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="d38ff-119">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="d38ff-120">Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.</span><span class="sxs-lookup"><span data-stu-id="d38ff-120">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
+|[<span data-ttu-id="1adf0-119">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="1adf0-119">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="1adf0-120">Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.</span><span class="sxs-lookup"><span data-stu-id="1adf0-120">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="d38ff-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d38ff-121">Example</span></span>  
- <span data-ttu-id="d38ff-122">O exemplo de configuração a seguir adiciona os identificadores de padrão de cinco contas de usuário a essa coleção.</span><span class="sxs-lookup"><span data-stu-id="d38ff-122">The following configuration example adds the five default identifiers for user accounts to this collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="1adf0-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1adf0-121">Example</span></span>  
+ <span data-ttu-id="1adf0-122">O exemplo de configuração a seguir adiciona os identificadores de padrão de cinco contas de usuário a essa coleção.</span><span class="sxs-lookup"><span data-stu-id="1adf0-122">The following configuration example adds the five default identifiers for user accounts to this collection.</span></span>  
   
 ```xml  
 <allowAccounts>
@@ -58,7 +58,8 @@ ms.locfileid: "55259600"
 </allowAccounts>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d38ff-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d38ff-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1adf0-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1adf0-123">See also</span></span>
+
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>

@@ -1,5 +1,5 @@
 ---
-title: Elemento <GCCpuGroup>
+title: <GCCpuGroup> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GCCpuGroup element
@@ -7,61 +7,61 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090336"
 ---
-# <a name="gccpugroup-element"></a><span data-ttu-id="da2ac-102">\<GCCpuGroup > elemento</span><span class="sxs-lookup"><span data-stu-id="da2ac-102">\<GCCpuGroup> Element</span></span>
-<span data-ttu-id="da2ac-103">Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="da2ac-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  
+# <a name="gccpugroup-element"></a><span data-ttu-id="39eab-102">\<GCCpuGroup > elemento</span><span class="sxs-lookup"><span data-stu-id="39eab-102">\<GCCpuGroup> Element</span></span>
+<span data-ttu-id="39eab-103">Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="39eab-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  
   
- <span data-ttu-id="da2ac-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="da2ac-104">\<configuration></span></span>  
-<span data-ttu-id="da2ac-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="da2ac-105">\<runtime></span></span>  
-<span data-ttu-id="da2ac-106">\<GCCpuGroup></span><span class="sxs-lookup"><span data-stu-id="da2ac-106">\<GCCpuGroup></span></span>  
+ <span data-ttu-id="39eab-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="39eab-104">\<configuration></span></span>  
+<span data-ttu-id="39eab-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="39eab-105">\<runtime></span></span>  
+<span data-ttu-id="39eab-106">\<GCCpuGroup></span><span class="sxs-lookup"><span data-stu-id="39eab-106">\<GCCpuGroup></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da2ac-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="da2ac-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39eab-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="39eab-107">Syntax</span></span>  
   
 ```xml  
 <GCCpuGroup    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="da2ac-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="da2ac-108">Attributes and Elements</span></span>  
- <span data-ttu-id="da2ac-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="da2ac-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="39eab-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="39eab-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="39eab-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="39eab-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="da2ac-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="da2ac-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="39eab-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="39eab-110">Attributes</span></span>  
   
-|<span data-ttu-id="da2ac-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="da2ac-111">Attribute</span></span>|<span data-ttu-id="da2ac-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="da2ac-112">Description</span></span>|  
+|<span data-ttu-id="39eab-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="39eab-111">Attribute</span></span>|<span data-ttu-id="39eab-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="39eab-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="da2ac-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="da2ac-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="da2ac-114">Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="da2ac-114">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
+|`enabled`|<span data-ttu-id="39eab-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="39eab-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="39eab-114">Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="39eab-114">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="da2ac-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="da2ac-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="39eab-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="39eab-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="da2ac-116">Valor</span><span class="sxs-lookup"><span data-stu-id="da2ac-116">Value</span></span>|<span data-ttu-id="da2ac-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="da2ac-117">Description</span></span>|  
+|<span data-ttu-id="39eab-116">Valor</span><span class="sxs-lookup"><span data-stu-id="39eab-116">Value</span></span>|<span data-ttu-id="39eab-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="39eab-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="da2ac-118">Coleta de lixo não oferece suporte a vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="da2ac-118">Garbage collection does not support multiple CPU groups.</span></span> <span data-ttu-id="da2ac-119">Esse é o padrão.</span><span class="sxs-lookup"><span data-stu-id="da2ac-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="da2ac-120">Coleta de lixo dá suporte a vários grupos de CPU, se a coleta de lixo do servidor estiver habilitada.</span><span class="sxs-lookup"><span data-stu-id="da2ac-120">Garbage collection supports multiple CPU groups, if server garbage collection is enabled.</span></span>|  
+|`false`|<span data-ttu-id="39eab-118">Coleta de lixo não oferece suporte a vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="39eab-118">Garbage collection does not support multiple CPU groups.</span></span> <span data-ttu-id="39eab-119">Esse é o padrão.</span><span class="sxs-lookup"><span data-stu-id="39eab-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="39eab-120">Coleta de lixo dá suporte a vários grupos de CPU, se a coleta de lixo do servidor estiver habilitada.</span><span class="sxs-lookup"><span data-stu-id="39eab-120">Garbage collection supports multiple CPU groups, if server garbage collection is enabled.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="da2ac-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="da2ac-121">Child Elements</span></span>  
- <span data-ttu-id="da2ac-122">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="da2ac-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="39eab-121">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="39eab-121">Child Elements</span></span>  
+ <span data-ttu-id="39eab-122">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="39eab-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="da2ac-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="da2ac-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="39eab-123">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="39eab-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="da2ac-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="da2ac-124">Element</span></span>|<span data-ttu-id="da2ac-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="da2ac-125">Description</span></span>|  
+|<span data-ttu-id="39eab-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="39eab-124">Element</span></span>|<span data-ttu-id="39eab-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="39eab-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="da2ac-126">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="da2ac-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="da2ac-127">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="da2ac-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="39eab-126">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="39eab-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="39eab-127">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="39eab-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="da2ac-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="da2ac-128">Remarks</span></span>  
- <span data-ttu-id="da2ac-129">Quando um computador tiver vários grupos de CPU e coleta de lixo do servidor está habilitada (consulte a [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), permitindo que esse elemento se estende a coleta de lixo em todos os grupos de CPU e usa todos os núcleos em conta durante a criação e heaps de balanceamento.</span><span class="sxs-lookup"><span data-stu-id="da2ac-129">When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39eab-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="39eab-128">Remarks</span></span>  
+ <span data-ttu-id="39eab-129">Quando um computador tiver vários grupos de CPU e coleta de lixo do servidor está habilitada (consulte a [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), permitindo que esse elemento se estende a coleta de lixo em todos os grupos de CPU e usa todos os núcleos em conta durante a criação e heaps de balanceamento.</span><span class="sxs-lookup"><span data-stu-id="39eab-129">When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="da2ac-130">Esse elemento só se aplica a threads de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="da2ac-130">This element applies only to garbage collection threads.</span></span> <span data-ttu-id="da2ac-131">Para habilitar o tempo de execução distribui threads de usuário em todos os grupos de CPU, você deve habilitar também a [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="da2ac-131">To enable the runtime to distribute user threads across all CPU groups, you must also enable the [<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) element.</span></span>  
+>  <span data-ttu-id="39eab-130">Esse elemento só se aplica a threads de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="39eab-130">This element applies only to garbage collection threads.</span></span> <span data-ttu-id="39eab-131">Para habilitar o tempo de execução distribui threads de usuário em todos os grupos de CPU, você deve habilitar também a [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="39eab-131">To enable the runtime to distribute user threads across all CPU groups, you must also enable the [<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="da2ac-132">Exemplo</span><span class="sxs-lookup"><span data-stu-id="da2ac-132">Example</span></span>  
- <span data-ttu-id="da2ac-133">O exemplo a seguir mostra como habilitar a coleta de lixo para vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="da2ac-133">The following example shows how to enable garbage collection for multiple CPU groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="39eab-132">Exemplo</span><span class="sxs-lookup"><span data-stu-id="39eab-132">Example</span></span>  
+ <span data-ttu-id="39eab-133">O exemplo a seguir mostra como habilitar a coleta de lixo para vários grupos de CPU.</span><span class="sxs-lookup"><span data-stu-id="39eab-133">The following example shows how to enable garbage collection for multiple CPU groups.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,8 +72,9 @@ ms.locfileid: "55674770"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="da2ac-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="da2ac-134">See also</span></span>
-- [<span data-ttu-id="da2ac-135">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="da2ac-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="da2ac-136">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="da2ac-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="da2ac-137">Para desabilitar a coleta de lixo simultânea</span><span class="sxs-lookup"><span data-stu-id="da2ac-137">To disable concurrent garbage collection</span></span>](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [<span data-ttu-id="da2ac-138">Coleta de lixo de estação de trabalho ou de servidor</span><span class="sxs-lookup"><span data-stu-id="da2ac-138">Workstation and server garbage collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+## <a name="see-also"></a><span data-ttu-id="39eab-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="39eab-134">See also</span></span>
+
+- [<span data-ttu-id="39eab-135">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="39eab-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="39eab-136">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="39eab-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="39eab-137">Para desabilitar a coleta de lixo simultânea</span><span class="sxs-lookup"><span data-stu-id="39eab-137">To disable concurrent garbage collection</span></span>](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [<span data-ttu-id="39eab-138">Coleta de lixo de estação de trabalho ou de servidor</span><span class="sxs-lookup"><span data-stu-id="39eab-138">Workstation and server garbage collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

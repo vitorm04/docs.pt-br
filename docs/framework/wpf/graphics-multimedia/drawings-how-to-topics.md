@@ -11,26 +11,27 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197731"
 ---
-# <a name="drawings-how-to-topics"></a><span data-ttu-id="f39a5-102">Tópicos explicativos de desenhos</span><span class="sxs-lookup"><span data-stu-id="f39a5-102">Drawings How-to Topics</span></span>
-<span data-ttu-id="f39a5-103">Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing> objetos para desenhar formas, imagens ou texto.</span><span class="sxs-lookup"><span data-stu-id="f39a5-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
+# <a name="drawings-how-to-topics"></a><span data-ttu-id="b68ef-102">Tópicos explicativos de desenhos</span><span class="sxs-lookup"><span data-stu-id="b68ef-102">Drawings How-to Topics</span></span>
+<span data-ttu-id="b68ef-103">Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing> objetos para desenhar formas, imagens ou texto.</span><span class="sxs-lookup"><span data-stu-id="b68ef-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f39a5-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="f39a5-104">In This Section</span></span>  
- [<span data-ttu-id="f39a5-105">Aplicar um GuidelineSet a um desenho</span><span class="sxs-lookup"><span data-stu-id="f39a5-105">Apply a GuidelineSet to a Drawing</span></span>](how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [<span data-ttu-id="f39a5-106">Criar um desenho composto</span><span class="sxs-lookup"><span data-stu-id="f39a5-106">Create a Composite Drawing</span></span>](how-to-create-a-composite-drawing.md)  
-  [<span data-ttu-id="f39a5-107">Criar um GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="f39a5-107">Create a GeometryDrawing</span></span>](how-to-create-a-geometrydrawing.md)  
-  [<span data-ttu-id="f39a5-108">Desenhar uma imagem usando ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="f39a5-108">Draw an Image Using ImageDrawing</span></span>](how-to-draw-an-image-using-imagedrawing.md)  
-  [<span data-ttu-id="f39a5-109">Executar mídia usando um VideoDrawing</span><span class="sxs-lookup"><span data-stu-id="f39a5-109">Play Media using a VideoDrawing</span></span>](how-to-play-media-using-a-videodrawing.md)  
-  [<span data-ttu-id="f39a5-110">Usar um desenho como uma fonte de imagem</span><span class="sxs-lookup"><span data-stu-id="f39a5-110">Use a Drawing as an Image Source</span></span>](how-to-use-a-drawing-as-an-image-source.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b68ef-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="b68ef-104">In This Section</span></span>  
+ [<span data-ttu-id="b68ef-105">Aplicar um GuidelineSet a um desenho</span><span class="sxs-lookup"><span data-stu-id="b68ef-105">Apply a GuidelineSet to a Drawing</span></span>](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [<span data-ttu-id="b68ef-106">Criar um desenho composto</span><span class="sxs-lookup"><span data-stu-id="b68ef-106">Create a Composite Drawing</span></span>](how-to-create-a-composite-drawing.md)  
+  [<span data-ttu-id="b68ef-107">Criar um GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="b68ef-107">Create a GeometryDrawing</span></span>](how-to-create-a-geometrydrawing.md)  
+  [<span data-ttu-id="b68ef-108">Desenhar uma imagem usando ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="b68ef-108">Draw an Image Using ImageDrawing</span></span>](how-to-draw-an-image-using-imagedrawing.md)  
+  [<span data-ttu-id="b68ef-109">Executar mídia usando um VideoDrawing</span><span class="sxs-lookup"><span data-stu-id="b68ef-109">Play Media using a VideoDrawing</span></span>](how-to-play-media-using-a-videodrawing.md)  
+  [<span data-ttu-id="b68ef-110">Usar um desenho como uma fonte de imagem</span><span class="sxs-lookup"><span data-stu-id="b68ef-110">Use a Drawing as an Image Source</span></span>](how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f39a5-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f39a5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b68ef-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b68ef-111">See also</span></span>
+
 - <xref:System.Windows.Media.Drawing>
-- [<span data-ttu-id="f39a5-112">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="f39a5-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="f39a5-113">Visão geral de formas e desenho básico no WPF</span><span class="sxs-lookup"><span data-stu-id="f39a5-113">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="f39a5-114">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="f39a5-114">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="b68ef-112">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="b68ef-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="b68ef-113">Visão geral de formas e desenho básico no WPF</span><span class="sxs-lookup"><span data-stu-id="b68ef-113">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="b68ef-114">Gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="b68ef-114">Graphics and Multimedia</span></span>](index.md)
