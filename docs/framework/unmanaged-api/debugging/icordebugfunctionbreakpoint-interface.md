@@ -16,37 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c3c11d3b6a6daec7b35377ef24557dd5077af21
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f15b9f5961699f905e765426576bdf6f3416793
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141148"
 ---
-# <a name="icordebugfunctionbreakpoint-interface"></a><span data-ttu-id="f1456-102">Interface ICorDebugFunctionBreakpoint</span><span class="sxs-lookup"><span data-stu-id="f1456-102">ICorDebugFunctionBreakpoint Interface</span></span>
+# <a name="icordebugfunctionbreakpoint-interface"></a><span data-ttu-id="a0608-102">Interface ICorDebugFunctionBreakpoint</span><span class="sxs-lookup"><span data-stu-id="a0608-102">ICorDebugFunctionBreakpoint Interface</span></span>
 
-<span data-ttu-id="f1456-103">Estende a interface ICorDebugBreakpoint para dar suporte a pontos de interrupção em funções.</span><span class="sxs-lookup"><span data-stu-id="f1456-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
+<span data-ttu-id="a0608-103">Estende a interface ICorDebugBreakpoint para dar suporte a pontos de interrupção em funções.</span><span class="sxs-lookup"><span data-stu-id="a0608-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f1456-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="f1456-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a0608-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="a0608-104">Methods</span></span>  
   
-|<span data-ttu-id="f1456-105">Método</span><span class="sxs-lookup"><span data-stu-id="f1456-105">Method</span></span>|<span data-ttu-id="f1456-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="f1456-106">Description</span></span>|  
+|<span data-ttu-id="a0608-105">Método</span><span class="sxs-lookup"><span data-stu-id="a0608-105">Method</span></span>|<span data-ttu-id="a0608-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="a0608-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f1456-107">Método GetFunction</span><span class="sxs-lookup"><span data-stu-id="f1456-107">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="f1456-108">Obtém um ponteiro de interface para um ICorDebugFunction que faz referência à função na qual o ponto de interrupção é definido.</span><span class="sxs-lookup"><span data-stu-id="f1456-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
-|[<span data-ttu-id="f1456-109">Método GetOffset</span><span class="sxs-lookup"><span data-stu-id="f1456-109">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="f1456-110">Obtém o deslocamento do ponto de interrupção dentro da função.</span><span class="sxs-lookup"><span data-stu-id="f1456-110">Gets the offset of the breakpoint within the function.</span></span>|  
+|[<span data-ttu-id="a0608-107">Método GetFunction</span><span class="sxs-lookup"><span data-stu-id="a0608-107">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="a0608-108">Obtém um ponteiro de interface para um ICorDebugFunction que faz referência à função na qual o ponto de interrupção é definido.</span><span class="sxs-lookup"><span data-stu-id="a0608-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
+|[<span data-ttu-id="a0608-109">Método GetOffset</span><span class="sxs-lookup"><span data-stu-id="a0608-109">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="a0608-110">Obtém o deslocamento do ponto de interrupção dentro da função.</span><span class="sxs-lookup"><span data-stu-id="a0608-110">Gets the offset of the breakpoint within the function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1456-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="f1456-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0608-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="a0608-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f1456-112">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="f1456-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="a0608-112">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="a0608-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1456-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f1456-113">Requirements</span></span>  
- <span data-ttu-id="f1456-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1456-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a0608-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a0608-113">Requirements</span></span>  
+ <span data-ttu-id="a0608-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0608-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1456-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1456-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a0608-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0608-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f1456-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1456-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a0608-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0608-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1456-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1456-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="a0608-117">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a0608-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f1456-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f1456-118">See also</span></span>
-- [<span data-ttu-id="f1456-119">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="f1456-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="a0608-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a0608-118">See also</span></span>
+
+- [<span data-ttu-id="a0608-119">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="a0608-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
