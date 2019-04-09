@@ -17,47 +17,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eee75bc16f46ba5ea58fc42c570e48b09ab9a2e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 724db50285532c20132fbfd5262df26227db6742
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130020"
 ---
-# <a name="icordebugstackwalknext-method"></a><span data-ttu-id="63370-102">Método ICorDebugStackWalk::Next</span><span class="sxs-lookup"><span data-stu-id="63370-102">ICorDebugStackWalk::Next Method</span></span>
-<span data-ttu-id="63370-103">Move o [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o próximo quadro.</span><span class="sxs-lookup"><span data-stu-id="63370-103">Moves the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object to the next frame.</span></span>  
+# <a name="icordebugstackwalknext-method"></a><span data-ttu-id="99b54-102">Método ICorDebugStackWalk::Next</span><span class="sxs-lookup"><span data-stu-id="99b54-102">ICorDebugStackWalk::Next Method</span></span>
+<span data-ttu-id="99b54-103">Move o [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o próximo quadro.</span><span class="sxs-lookup"><span data-stu-id="99b54-103">Moves the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object to the next frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63370-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="63370-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99b54-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="99b54-104">Syntax</span></span>  
   
 ```  
 HRESULT Next();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="63370-105">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="63370-105">Return Value</span></span>  
- <span data-ttu-id="63370-106">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="63370-106">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="99b54-105">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="99b54-105">Return Value</span></span>  
+ <span data-ttu-id="99b54-106">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="99b54-106">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="63370-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="63370-107">HRESULT</span></span>|<span data-ttu-id="63370-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="63370-108">Description</span></span>|  
+|<span data-ttu-id="99b54-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="99b54-107">HRESULT</span></span>|<span data-ttu-id="99b54-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="99b54-108">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="63370-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="63370-109">S_OK</span></span>|<span data-ttu-id="63370-110">O tempo de execução retornou com êxito para o próximo quadro (consulte comentários).</span><span class="sxs-lookup"><span data-stu-id="63370-110">The runtime successfully unwound to the next frame (see Remarks).</span></span>|  
-|<span data-ttu-id="63370-111">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="63370-111">E_FAIL</span></span>|<span data-ttu-id="63370-112">O `ICorDebugStackWalk` objeto não pôde ser avançado.</span><span class="sxs-lookup"><span data-stu-id="63370-112">The `ICorDebugStackWalk` object could not be advanced.</span></span>|  
-|<span data-ttu-id="63370-113">CORDBG_S_AT_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="63370-113">CORDBG_S_AT_END_OF_STACK</span></span>|<span data-ttu-id="63370-114">O final da pilha foi atingido devido essa desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="63370-114">The end of the stack was reached as a result of this unwind.</span></span>|  
-|<span data-ttu-id="63370-115">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="63370-115">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="63370-116">O ponteiro de quadro já está no final da pilha; Portanto, não há quadros adicionais podem ser acessados.</span><span class="sxs-lookup"><span data-stu-id="63370-116">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
+|<span data-ttu-id="99b54-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="99b54-109">S_OK</span></span>|<span data-ttu-id="99b54-110">O tempo de execução retornou com êxito para o próximo quadro (consulte comentários).</span><span class="sxs-lookup"><span data-stu-id="99b54-110">The runtime successfully unwound to the next frame (see Remarks).</span></span>|  
+|<span data-ttu-id="99b54-111">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="99b54-111">E_FAIL</span></span>|<span data-ttu-id="99b54-112">O `ICorDebugStackWalk` objeto não pôde ser avançado.</span><span class="sxs-lookup"><span data-stu-id="99b54-112">The `ICorDebugStackWalk` object could not be advanced.</span></span>|  
+|<span data-ttu-id="99b54-113">CORDBG_S_AT_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="99b54-113">CORDBG_S_AT_END_OF_STACK</span></span>|<span data-ttu-id="99b54-114">O final da pilha foi atingido devido essa desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="99b54-114">The end of the stack was reached as a result of this unwind.</span></span>|  
+|<span data-ttu-id="99b54-115">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="99b54-115">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="99b54-116">O ponteiro de quadro já está no final da pilha; Portanto, não há quadros adicionais podem ser acessados.</span><span class="sxs-lookup"><span data-stu-id="99b54-116">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="63370-117">Exceções</span><span class="sxs-lookup"><span data-stu-id="63370-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="99b54-117">Exceções</span><span class="sxs-lookup"><span data-stu-id="99b54-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="63370-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="63370-118">Remarks</span></span>  
- <span data-ttu-id="63370-119">O `Next` avanços de método a `ICorDebugStackWalk` somente se o tempo de execução poderá desenrolar o quadro atual do objeto para o quadro de chamada.</span><span class="sxs-lookup"><span data-stu-id="63370-119">The `Next` method advances the `ICorDebugStackWalk` object to the calling frame only if the runtime can unwind the current frame.</span></span> <span data-ttu-id="63370-120">Caso contrário, o objeto avança para o próximo quadro que o tempo de execução é capaz de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="63370-120">Otherwise, the object advances to the next frame that the runtime is able to unwind.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="99b54-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="99b54-118">Remarks</span></span>  
+ <span data-ttu-id="99b54-119">O `Next` avanços de método a `ICorDebugStackWalk` somente se o tempo de execução poderá desenrolar o quadro atual do objeto para o quadro de chamada.</span><span class="sxs-lookup"><span data-stu-id="99b54-119">The `Next` method advances the `ICorDebugStackWalk` object to the calling frame only if the runtime can unwind the current frame.</span></span> <span data-ttu-id="99b54-120">Caso contrário, o objeto avança para o próximo quadro que o tempo de execução é capaz de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="99b54-120">Otherwise, the object advances to the next frame that the runtime is able to unwind.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="63370-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="63370-121">Requirements</span></span>  
- <span data-ttu-id="63370-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63370-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99b54-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="99b54-121">Requirements</span></span>  
+ <span data-ttu-id="99b54-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99b54-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="63370-123">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="63370-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="99b54-123">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="99b54-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="63370-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63370-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99b54-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99b54-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="63370-125">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63370-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="99b54-125">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="99b54-125">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="63370-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="63370-126">See also</span></span>
-- [<span data-ttu-id="63370-127">Interface ICorDebugStackWalk</span><span class="sxs-lookup"><span data-stu-id="63370-127">ICorDebugStackWalk Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [<span data-ttu-id="63370-128">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="63370-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="63370-129">Depuração</span><span class="sxs-lookup"><span data-stu-id="63370-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="99b54-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="99b54-126">See also</span></span>
+
+- [<span data-ttu-id="99b54-127">Interface ICorDebugStackWalk</span><span class="sxs-lookup"><span data-stu-id="99b54-127">ICorDebugStackWalk Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [<span data-ttu-id="99b54-128">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="99b54-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="99b54-129">Depuração</span><span class="sxs-lookup"><span data-stu-id="99b54-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
