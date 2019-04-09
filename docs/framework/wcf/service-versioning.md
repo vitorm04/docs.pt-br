@@ -2,12 +2,12 @@
 title: Controle de versão de serviço
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122402"
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e possivelmente várias vezes durante a vida, serviços (e os pontos de extremidade que expõem) podem precisar ser alterada para uma variedade de motivos, como a alteração de requisitos de tecnologia da informação, as necessidades de negócio ou aborda outros problemas. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no Windows Communication Foundation (WCF).  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  O contrato de serviço seria atualizado para incluir novas operações que são escritas em termos de `PurchaseOrderV2`. Lógica de negócios existente, escrita em termos de `IPurchaseOrderV1` continuará a funcionar para `PurchaseOrderV2` e a nova lógica de negócios que precisa de `OrderDate` propriedade seria escrita em termos de `IPurchaseOrderV2`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

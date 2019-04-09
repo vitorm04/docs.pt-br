@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125925"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>Método ICorDebugCode3::GetReturnValueLiveOffset
 Para um deslocamento especificado do IL, obtém os deslocamentos nativos onde um ponto de interrupção deve ser colocado para que o depurador possa obter o valor de retorno de uma função.  
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  A função retorna o `HRESULT` valores mostrados na tabela a seguir.  
   
-|Valor `HRESULT`|Descrição|  
+|`HRESULT` Valor |Descrição|  
 |---------------------|-----------------|  
 |`S_OK`|Êxito.|  
 |`CORDBG_E_INVALID_OPCODE`|O site de deslocamento IL determinado não é uma instrução de chamada ou a função retornará `void`.|  
@@ -79,5 +79,6 @@ HRESULT GetReturnValueLiveOffset(
  **Versões do .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Método GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
 - [Interface ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

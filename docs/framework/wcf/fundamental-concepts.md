@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122298"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 Este documento fornece uma visão geral da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço WCF e um cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender a programação de WCF, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -153,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Taquigrafia para o conjunto crescente de especificações de (WS) de serviço Web, como WS- segurança, WS - ReliableMessaging, e assim por diante, que são implementadas em windows.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Arquitetura do Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)

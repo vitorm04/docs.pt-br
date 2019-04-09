@@ -1,5 +1,5 @@
 ---
-title: 'Como: Imprimir um formulário do Windows'
+title: 'Como: imprimir um Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121960"
 ---
-# <a name="how-to-print-a-windows-form"></a>Como: Imprimir um formulário do Windows
+# <a name="how-to-print-a-windows-form"></a>Como: imprimir um Windows Form
 Como parte do processo de desenvolvimento, você geralmente desejará imprimir uma cópia do seu Windows Form. O exemplo de código a seguir mostra como imprimir uma cópia do formulário atual, usando o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método.  
   
 ## <a name="example"></a>Exemplo  
@@ -38,6 +38,7 @@ Como parte do processo de desenvolvimento, você geralmente desejará imprimir u
  Para executar este exemplo de código, você deve ter permissão para acessar a impressora que você usa com o seu computador.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)
-- [Como: Imprimir elementos gráficos nos Windows Forms](how-to-print-graphics-in-windows-forms.md)
+- [Como: renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)
+- [Como: imprimir elementos gráficos no Windows Forms](how-to-print-graphics-in-windows-forms.md)

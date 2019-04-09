@@ -1,18 +1,18 @@
 ---
-title: Especificando valores XML como parâmetros
+title: Especificar valores XML como parâmetros
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 23c594fc57b74ea4c40a95d18b060bc6ccee46ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159244"
 ---
-# <a name="specifying-xml-values-as-parameters"></a>Especificando valores XML como parâmetros
+# <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parâmetros
 Se uma consulta requer um parâmetro cujo valor é uma cadeia de caracteres XML, os desenvolvedores podem fornecer esse valor usando uma instância das **SqlXml** tipo de dados. Não há realmente nenhuma truques; Colunas XML no SQL Server aceitam valores de parâmetro exatamente da mesma maneira que outros tipos de dados.  
   
 ## <a name="example"></a>Exemplo  
@@ -160,6 +160,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Dados XML no SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

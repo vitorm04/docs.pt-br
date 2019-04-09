@@ -2,12 +2,12 @@
 title: conjunto de entidades
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126614"
 ---
 # <a name="entity-set"></a>conjunto de entidades
 Uma *conjunto de entidades* é um contêiner lógico para instâncias de uma [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) e instâncias de qualquer tipo derivado desse tipo de entidade. (Para obter informações sobre tipos derivados, consulte [modelo de dados de entidade: Herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) A relação entre um tipo de entidade e um conjunto de entidades é análoga a relação entre uma linha e uma tabela no banco de dados relacional: Como uma linha, um tipo de entidade descreve a estrutura de dados e, como uma tabela, um conjunto de entidades contém instâncias de uma determinada estrutura. Um conjunto de entidades não é um dados que modelam a compilação; não descreve a estrutura de dados. Em vez disso, um conjunto de entidades fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados do SQL Server) instâncias de tipo de entidade do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
@@ -45,5 +45,6 @@ Uma *conjunto de entidades* é um contêiner lógico para instâncias de uma [ti
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+
+- [Conceitos chave do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

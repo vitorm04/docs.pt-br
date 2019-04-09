@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: cd8aeeb1ed56acfca0d57cb3c2c56cabab184683
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126211"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco de dados: simultaneidade otimista e simultaneidade pessimista. O objeto <xref:System.Data.DataSet> é criado para incentivar o uso da simultaneidade otimista para atividades de execução longa, como a comunicação remota de dados e a interação com dados.  
@@ -207,8 +207,9 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+
+- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Atualizando fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
 - [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

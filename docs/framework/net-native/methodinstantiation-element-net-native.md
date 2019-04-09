@@ -1,15 +1,15 @@
 ---
-title: <MethodInstantiation> (.NET Nativo)
+title: <MethodInstantiation> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccc8cd22c3175a2b6456f71d9dc773ce85848949
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121687"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > (.NET nativo)
 Aplica a política de reflexão de tempo de execução a um método genérico construído.  
@@ -68,14 +68,15 @@ Aplica a política de reflexão de tempo de execução a um método genérico co
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<MethodInstantiation>` substitui a política de reflexão de tempo de execução do seu método genérico aberto correspondente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)

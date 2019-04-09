@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123234"
 ---
 # <a name="how-to-bind-to-a-method"></a>Como: Associar a um método
 O exemplo a seguir mostra como associar a um método usando <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -32,5 +32,6 @@ O exemplo a seguir mostra como associar a um método usando <xref:System.Windows
  O `InvalidationCharacterRule` é um <xref:System.Windows.Controls.ValidationRule> que verifica se há caracteres inválidos. O modelo de erro padrão, que é uma borda vermelha ao redor de <xref:System.Windows.Controls.TextBox>, é exibido para notificar os usuários quando o valor de entrada não é um valor duplo.  
   
 ## <a name="see-also"></a>Consulte também
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+
+- [Tópicos explicativos ](data-binding-how-to-topics.md)
 - [Associar a uma enumeração](how-to-bind-to-an-enumeration.md)

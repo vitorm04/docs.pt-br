@@ -9,19 +9,18 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122441"
 ---
 # <a name="annotations-overview"></a>Visão geral de anotações
 Escrever anotações ou comentários em documentos em papel é uma atividade tão comum que quase não valorizamos. Essas anotações ou comentários são "anotações" que adicionamos a um documento para sinalizar informações ou realçar itens de interesse para referência posterior. Embora gravar anotações em documentos impressos seja fácil e um lugar comum, a capacidade de adicionar comentários pessoais aos documentos eletrônicos normalmente é muito limitada, quando sequer está disponível.  
   
  Este tópico examina vários tipos comuns de anotações, especificamente Notas Autoadesivas e realces e ilustra como o [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilita esses tipos de anotações em aplicativos por meio do documento do Windows Presentation Foundation (WPF) controles de exibição.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controles de exibição de documento que dão suporte a anotações incluem <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, bem como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
-  
-  
+
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Notas autoadesivas  
  Uma nota autoadesiva típica contém informações gravadas em um pequeno pedaço de papel colorido que é então "colado" a um documento. Notas Autoadesivas digitais fornecem funcionalidade semelhante para documentos eletrônicos, mas com a flexibilidade adicional de incluir muitos outros tipos de conteúdo, como texto digitado, anotações manuscritas (por exemplo, [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] traços de "tinta") ou links da Web.  
@@ -65,6 +64,7 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
  Outro cenário de exemplo envolve aplicativos que permitem a troca de anotações e Notas Autoadesivas entre leitores de documento por email. Esse recurso permite que esses aplicativos levem o leitor para a página que contém a anotação que está sendo trocada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
@@ -73,6 +73,6 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Esquema de anotações](annotations-schema.md)
 - [Visão geral de ContextMenu](../controls/contextmenu-overview.md)
-- [Visão geral de comandos](commanding-overview.md)
+- [Visão geral dos comandos](commanding-overview.md)
 - [Visão geral do documento de fluxo](flow-document-overview.md)
 - [Como: Adicionar um comando a um MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

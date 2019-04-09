@@ -2,12 +2,12 @@
 title: Compatibilidade da funcionalidade de confiança parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124560"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidade da funcionalidade de confiança parcial
 Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado da funcionalidade quando executados em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados em torno de um conjunto específico de cenários, conforme descrito na [suporte para cenários de implantação](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tópico.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> e <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, e <xref:System.IdentityModel.Tokens>.  
   
  Não há suporte para as seguintes fontes de rastreamento:  
   
@@ -160,6 +160,7 @@ Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado
  A melhor maneira de descobrir que uma parte das informações ou ação não está disponível quando em execução em um ambiente parcialmente confiável é tentar acessar o recurso ou executar a ação dentro de um `try` bloco e, em seguida, `catch` a falha. Para evitar a saturação os arquivos de rastreamento com erros duplicados, WCF desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que uma tentativa de acessar o recurso ou executar a ação.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

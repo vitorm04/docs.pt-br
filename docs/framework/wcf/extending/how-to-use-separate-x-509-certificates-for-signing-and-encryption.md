@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar certificados X.509 separados para assinatura e criptografia'
+title: 'Como: usar certificados X.509 separados para assinatura e criptografia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160934"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Como: Usar certificados X.509 separados para assinatura e criptografia
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Como: usar certificados X.509 separados para assinatura e criptografia
 Este tópico mostra como configurar o Windows Communication Foundation (WCF) para usar certificados diferentes para assinatura e criptografia no cliente e serviço.  
   
  Para habilitar certificados separados a serem usados para assinatura e criptografia, personalizadas do cliente ou serviço credenciais (ou ambos) devem ser criados porque o WCF fornece uma API para definir vários certificados de cliente ou serviço. Além disso, uma segurança Gerenciador de token deve ser fornecido para aproveitar as informações de vários certificados e criar um provedor de token de segurança apropriadas para especificado chave direção de uso e a mensagem.  
@@ -90,9 +90,10 @@ Este tópico mostra como configurar o Windows Communication Foundation (WCF) par
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Passo a passo: criar credenciais de serviço e cliente personalizados](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

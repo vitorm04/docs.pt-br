@@ -1,18 +1,18 @@
 ---
-title: 'Como: Chamar funções de banco de dados personalizado'
+title: 'Como: Chamar funções personalizadas de banco de dados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cdb7b5c90e98f299f37cd09fc83ddfdcca31effd
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119659"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Como: Chamar funções de banco de dados personalizado
+# <a name="how-to-call-custom-database-functions"></a>Como: Chamar funções personalizadas de banco de dados
 Este tópico descreve como chamar funções personalizados que são definidas na base de dados de dentro das consultas LINQ to Entities.  
   
  Funções de base de dados que são chamadas de consultas LINQ to entidades são executadas em base de dados. Executar funções na base de dados pode melhorar o desempenho do aplicativo.  
@@ -61,5 +61,6 @@ Este tópico descreve como chamar funções personalizados que são definidas na
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

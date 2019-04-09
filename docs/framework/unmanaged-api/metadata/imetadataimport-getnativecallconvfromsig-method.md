@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1002aa9e01fedaacf80622952bbba82caa7081c1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ef1ac83b383a9f6bbee7f55441d2abfcb081afa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122740"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>Método IMetaDataImport::GetNativeCallConvFromSig
 Obtém o nativo convenção de chamada para o método que é representado pelo ponteiro de assinatura especificada.  
@@ -57,6 +57,7 @@ HRESULT GetNativeCallConvFromSig (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.CallingConvention>
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

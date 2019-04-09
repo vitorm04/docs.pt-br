@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: ad5bffdb98276864501861d36ea4353eed6860b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120718"
 ---
 # <a name="securing-services-and-clients"></a>Protegendo serviços e clientes
 As informações nesta seção se concentra na programação de segurança no Windows Communication Foundation (WCF). Em geral, isso inclui a seleção de uma associação fornecida pelo sistema apropriada, definindo as propriedades do elemento de segurança e, em seguida, definindo as propriedades dos comportamentos de serviço que determinam como as credenciais são recuperadas para uso pelo serviço ou cliente. Essas técnicas para abordar os requisitos de segurança da maioria dos usuários para a maioria dos cenários, conforme mostrado na [cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se seu cenário exigir mais recursos, consulte primeiro [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se uma solução não está aparente, consulte [estendendo segurança](../../../../docs/framework/wcf/extending/extending-security.md). Se você estiver criando (ou interoperação com) um sistema que usa rica de declarações, consulte os tópicos [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -40,7 +40,7 @@ As informações nesta seção se concentra na programação de segurança no Wi
 ## <a name="related-sections"></a>Seções relacionadas  
  [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
- [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Segurança estendida](../../../../docs/framework/wcf/extending/extending-security.md)  
   
  [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
   
@@ -48,10 +48,11 @@ As informações nesta seção se concentra na programação de segurança no Wi
   
  [Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
   
- [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Segurança estendida](../../../../docs/framework/wcf/extending/extending-security.md)  
   
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+
+- [Programação de WCF básica](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

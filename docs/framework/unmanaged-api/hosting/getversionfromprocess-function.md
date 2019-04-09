@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124079"
 ---
 # <a name="getversionfromprocess-function"></a>Função GetVersionFromProcess
 Obtém o número de versão do common language runtime (CLR) que está associado com o identificador de processo especificado.  
@@ -59,7 +59,7 @@ HRESULT GetVersionFromProcess (
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|E_INVALIDARG|`pVersion` é nulo e `cchBuffer` não for nulo, ou vice-versa.<br /><br /> -ou-<br /><br /> `hProcess` não é um identificador válido para um processo.<br /><br /> -ou-<br /><br /> O CLR não está carregado.|  
+|E_INVALIDARG|`pVersion` é nulo e `cchBuffer` não for nulo, ou vice-versa.<br /><br /> - ou -<br /><br /> `hProcess` não é um identificador válido para um processo.<br /><br /> - ou -<br /><br /> O CLR não está carregado.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` é nulo ou menor que o comprimento da cadeia de caracteres de versão.|  
 |E_NOTIMPL|Esse método não está disponível no sistema operacional Microsoft Windows 95, Microsoft Windows 98 ou Microsoft Windows Millennium Edition.|  
   
@@ -73,6 +73,7 @@ HRESULT GetVersionFromProcess (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Função GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [Função GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

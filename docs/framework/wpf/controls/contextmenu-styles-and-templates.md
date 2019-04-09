@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ContextMenu
 - states [WPF], ContextMenu
 ms.assetid: 342d1f17-c406-4f94-8f55-867c5f3ea511
-ms.openlocfilehash: be26156d74f3a3509bf150e5611512172f08a14e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6650d5a7be8ebe8fc2dcd7af7c854da669de87f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123039"
 ---
 # <a name="contextmenu-styles-and-templates"></a>Estilos e modelos ContextMenu
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ContextMenu> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -45,6 +45,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)

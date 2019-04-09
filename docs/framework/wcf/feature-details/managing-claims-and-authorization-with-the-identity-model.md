@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155084"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades tem permissão para alterar, exibir ou caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente gerentes de podem ser permitidos para acessar os arquivos de seus funcionários. Windows Communication Foundation (WCF) oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando construções de runtime (CLR) de linguagem comum existentes. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. O WCF usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidas para dar suporte a novos tipos de declaração para esquemas de autorização personalizado. Este tópico apresenta uma visão geral dos principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  
@@ -160,6 +160,7 @@ A autorização é o processo de determinar quais entidades tem permissão para 
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|A coleção de políticas de autorização personalizado especificado para o serviço. Essas políticas são avaliadas, além dessas políticas associadas às credenciais em mensagens de entrada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>
@@ -171,11 +172,11 @@ A autorização é o processo de determinar quais entidades tem permissão para 
 - <xref:System.IdentityModel.Tokens>
 - <xref:System.IdentityModel.Selectors>
 - [Declarações e tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
-- [Declarações e negar acesso a recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [Declarações e acesso negado para recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Valores de recursos e criação de declarações](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Como: Criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Como: Comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Como: Criar uma política de autorização personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [Como: Criar um Gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Como: criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Como: comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Como: criar uma política de autorização personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Como: criar gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

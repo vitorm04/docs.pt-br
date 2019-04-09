@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39728865e3c6fc676673a634cf16710f37652ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59d785178f5c97dcd8e3911a2e51b4cc12f6a70f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120829"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>Método IAssemblyCacheItem::AbortItem
 Permite que o assembly no cache de assembly global executar operações de limpeza antes do lançamento.  
@@ -41,4 +41,5 @@ HRESULT AbortItem ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

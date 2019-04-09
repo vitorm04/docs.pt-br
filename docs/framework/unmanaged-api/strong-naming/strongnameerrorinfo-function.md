@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3d7555ec5b87957ff1c8e085a4c3ac44c660b0c
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 909c283b1355153ffe1aa02acfbe8acc25a7e215
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124092"
 ---
 # <a name="strongnameerrorinfo-function"></a>Função StrongNameErrorInfo
 Obtém o último código de erro que foi gerado por uma das funções de nome forte.  
@@ -52,4 +52,3 @@ HRESULT StrongNameErrorInfo ();
  **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  

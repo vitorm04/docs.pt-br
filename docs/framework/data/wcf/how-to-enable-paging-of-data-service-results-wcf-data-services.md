@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: be5bd41494c27724a360b785b8706b618447e7de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77dbeba89b352fa470ab0523a830db9175a1a21a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122896"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Como: Habilitar a paginação de resultados do serviço de dados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você limite o número de entidades retornadas por uma consulta de serviço de dados. Limites de página são definidos no método que é chamado quando o serviço é inicializado e pode ser definido separadamente para cada conjunto de entidades.  
@@ -29,5 +29,6 @@ ms.locfileid: "54523449"
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
-- [Como: Carregar resultados paginados](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+
+- [Carregar conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
+- [Como: carregar resultados paginados](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

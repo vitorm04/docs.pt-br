@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124300"
 ---
 # <a name="overriding-the-onpaint-method"></a>Substituindo o método OnPaint
 As etapas básicas para a substituição de qualquer evento definido no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] são idênticas e são resumidas na lista a seguir.  
@@ -87,6 +87,7 @@ public class PaintEventArgs : EventArgs {
  Um controle chama seu <xref:System.Windows.Forms.Control.OnPaint%2A> método sempre que precisar alterar sua exibição visual. Esse método por sua vez dispara o <xref:System.Windows.Forms.Control.Paint> eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Eventos](../../../standard/events/index.md)
 - [Renderizando um controle dos Windows Forms](rendering-a-windows-forms-control.md)
-- [Definindo um evento](defining-an-event-in-windows-forms-controls.md)
+- [Definir um evento](defining-an-event-in-windows-forms-controls.md)

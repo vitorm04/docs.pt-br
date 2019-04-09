@@ -1,18 +1,18 @@
 ---
-title: Criando um DataReader
+title: Criar um DataReader
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: d3c20fa4394b09e9ceec332d430ed638166bed8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121999"
 ---
-# <a name="creating-a-datareader"></a>Criando um DataReader
+# <a name="creating-a-datareader"></a>Criar um DataReader
 O <xref:System.Data.DataTable> e <xref:System.Data.DataSet> classes têm uma <xref:System.Data.DataTable.CreateDataReader%2A> método que retorna o conteúdo dos <xref:System.Data.DataTable> ou o conteúdo da <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Tables%2A> coleção como um ou mais conjuntos de resultados somente leitura, somente encaminhamento.  
   
 ## <a name="example"></a>Exemplo  
@@ -31,7 +31,8 @@ O <xref:System.Data.DataTable> e <xref:System.Data.DataSet> classes têm uma <xr
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
 - [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,18 +1,18 @@
 ---
-title: Implementando uma transação implícita, usando o escopo da transação
+title: Implementar uma transação implícita usando o escopo da transação
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120972"
 ---
-# <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementando uma transação implícita, usando o escopo da transação
+# <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar uma transação implícita usando o escopo da transação
 O <xref:System.Transactions.TransactionScope> classe fornece uma maneira simples para marcar um bloco de código como participar de uma transação, sem a necessidade de interagir com a própria transação. Selecione um escopo de transação e gerenciar a transação ambiente automaticamente. Devido à sua facilidade de uso e a eficiência, é recomendável que você use o <xref:System.Transactions.TransactionScope> classe ao desenvolver um aplicativo de transação.  
   
  Além disso, você não precisa conseguir recursos explicitamente com a transação. Qualquer <xref:System.Transactions> Gerenciador de recursos (como o SQL Server 2005) pode detectar a existência de uma transação ambiente criada pelo escopo e inscrever-se automaticamente.  
@@ -87,10 +87,10 @@ void SomeMethod()
   
 |TransactionScopeOption|Transação de ambiente|O escopo faz parte do|  
 |----------------------------|-------------------------|-----------------------------|  
-|Obrigatório|Não|Nova transação (será a raiz)|  
+|Necessária|Não|Nova transação (será a raiz)|  
 |Requer novo|Não|Nova transação (será a raiz)|  
 |Suprimir|Não|Nenhuma transação|  
-|Obrigatório|Sim|Transação de ambiente|  
+|Necessária|Sim|Transação de ambiente|  
 |Requer novo|Sim|Nova transação (será a raiz)|  
 |Suprimir|Sim|Nenhuma transação|  
   
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- O exemplo mostra um bloco de código sem qualquer transação ambiente criando um novo escopo (`scope1`) com <xref:System.Transactions.TransactionScopeOption.Required>. O escopo `scope1` é um escopo de raiz quando ele cria uma nova transação (uma transação) e faz com que a transação A transação de ambiente. `Scope1`em seguida, cria três mais objetos, cada um com outro <xref:System.Transactions.TransactionScopeOption> valor. Por exemplo, `scope2` é criado com <xref:System.Transactions.TransactionScopeOption.Required>, e como há uma transação de ambiente, ele adiciona a primeira transação criada pelo `scope1`. Observe que `scope3` é o escopo da raiz de uma nova transação e que `scope4` não tem nenhuma transação de ambiente.  
+ O exemplo mostra um bloco de código sem qualquer transação ambiente criando um novo escopo (`scope1`) com <xref:System.Transactions.TransactionScopeOption.Required>. O escopo `scope1` é um escopo de raiz quando ele cria uma nova transação (uma transação) e faz com que a transação A transação de ambiente. `Scope1` em seguida, cria três mais objetos, cada um com outro <xref:System.Transactions.TransactionScopeOption> valor. Por exemplo, `scope2` é criado com <xref:System.Transactions.TransactionScopeOption.Required>, e como há uma transação de ambiente, ele adiciona a primeira transação criada pelo `scope1`. Observe que `scope3` é o escopo da raiz de uma nova transação e que `scope4` não tem nenhuma transação de ambiente.  
   
  Embora o padrão e mais comumente usado o valor de <xref:System.Transactions.TransactionScopeOption> é <xref:System.Transactions.TransactionScopeOption.Required>, cada um dos outros valores tem sua finalidade exclusiva.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress>é útil quando você quiser preservar as operações executadas pela seção de código e não desejar anular a transação ambiente se as operações de falham. Por exemplo, quando você deseja executar um log ou operações de auditoria ou quando desejar publicar eventos para assinantes, independentemente de se a transação de ambiente confirma ou anula. Esse valor permite que você tenha uma seção de código não-transacional dentro de um escopo de transação, como mostrado no exemplo a seguir.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> é útil quando você quiser preservar as operações executadas pela seção de código e não deseja anular a transação ambiente se as operações de falham. Por exemplo, quando você deseja executar um log ou operações de auditoria ou quando desejar publicar eventos para assinantes, independentemente de se a transação de ambiente confirma ou anula. Esse valor permite que você tenha uma seção de código não-transacional dentro de um escopo de transação, como mostrado no exemplo a seguir.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  
@@ -169,5 +169,6 @@ using(TransactionScope scope1 = new TransactionScope())
  Quando você cria um novo <xref:System.Transactions.TransactionScope> instância, você pode usar o <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração em um dos construtores para especificar como interagir com COM+. Para obter mais informações sobre isso, consulte [interoperabilidade com serviços da empresa e transações COM+](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

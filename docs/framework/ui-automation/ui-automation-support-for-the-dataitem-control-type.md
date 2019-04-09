@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: ebc5f9a5b50766b9a49a9772469f8ae731f3aa4c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125205"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle DataItem
 > [!NOTE]
@@ -76,7 +76,7 @@ ms.locfileid: "57679392"
 ## <a name="required-ui-automation-events"></a>Eventos de automação de interface do usuário necessária  
  A seguinte tabela lista o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventos devem ser suportados por todos os controles de item de dados. Para obter mais informações sobre eventos, consulte [visão geral de eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Evento|Suporte|Observações|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte|Observações|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessária|Nenhum|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de propriedade alterada.|Necessária|Nenhum|  
@@ -107,6 +107,7 @@ ms.locfileid: "57679392"
  Se uma grade representa uma lista de itens selecionáveis, os elementos de interface do usuário correspondentes podem ser expostos pelo tipo de controle ListItem em vez do tipo de controle DataItem. No exemplo anterior, os elementos de DataItem ("Receivable.doc contas" e "Contas Payable.doc") no grupo ("Contoso") podem ser melhorados com expô-los como tipos de controle ListItem porque esse tipo já suporta o padrão de controle SelectionItem.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Visão Geral dos Tipos de Controle de Automação de Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Visão geral de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

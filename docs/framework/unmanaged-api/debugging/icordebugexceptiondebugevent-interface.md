@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7d2407e56b029d22d25a4836f4def1c55f979ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e2a147d46412eb4feb192070ff8420cab842a6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156449"
 ---
 # <a name="icordebugexceptiondebugevent-interface"></a>Interface ICorDebugExceptionDebugEvent
 Estende o [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interface para oferecer suporte a eventos de exceção.  
@@ -46,5 +46,6 @@ Estende o [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debuggi
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

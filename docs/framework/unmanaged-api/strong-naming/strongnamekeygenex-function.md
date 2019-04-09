@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8623c69390600380d80b0292d6a75fa395f9ae7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120835"
 ---
 # <a name="strongnamekeygenex-function"></a>Função StrongNameKeyGenEx
 Gera um novo par de chaves pública/privada com o tamanho da chave especificado, para uso de nome forte.  
@@ -80,6 +80,7 @@ BOOLEAN StrongNameKeyGenEx (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Método StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
 - [Método StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
