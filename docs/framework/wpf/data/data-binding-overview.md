@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081262"
 ---
 # <a name="data-binding-overview"></a>Visão geral da vinculação de dados
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associação de dados fornece uma maneira simple e consistente para os aplicativos apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>tais como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>tais como <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> tem uma funcionalidade interna para permitir a estilização flexível de um único item de dados ou coleções de itens de dados. É possível gerar exibições com classificação, filtragem e agrupamento dos dados.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055346"
  A funcionalidade de vinculação de dados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem várias vantagens sobre modelos tradicionais, incluindo uma ampla gama de propriedades que herdam suporte a vinculação de dados, representação de dados de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] flexível e separação clara entre a lógica de negócios e a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Este tópico discute primeiramente conceitos fundamentais para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vinculação de dados e então aborda o uso da <xref:System.Windows.Data.Binding> classe e outros recursos de vinculação de dados.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>O que é a vinculação de dados?  
  Vinculação de dados é o processo que estabelece uma conexão entre a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e a lógica de negócios do aplicativo. Se a associação tiver as configurações corretas e os dados fornecerem notificações adequadas, os elementos associados aos dados refletirão automaticamente quaisquer alterações que venham a ocorrer no valor desses dados. A vinculação de dados também poderá significar que, se houver uma alteração de uma representação externa dos dados em um elemento, os dados subjacentes poderão ser atualizados automaticamente para refletir essa alteração. Por exemplo, se o usuário edita o valor em uma <xref:System.Windows.Controls.TextBox> elemento, o valor de dados subjacente é atualizado automaticamente para refletir essa alteração.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055346"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Exibições de coleção  
  Uma vez seu <xref:System.Windows.Controls.ItemsControl> está associado a uma coleção de dados, talvez você queira classificar, filtrar ou agrupar os dados. Para fazer isso, use as exibições de coleção, que são classes que implementam o <xref:System.ComponentModel.ICollectionView> interface.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>O que são exibições de coleção?  
  Uma exibição de coleção é uma camada sobre uma coleção de origem da associação que permite a você navegar e exibir a coleção de origem com base em consultas de classificação, filtragem e agrupamento, sem precisar alterar a coleção de origem subjacente. Uma exibição de coleção também mantém um ponteiro para o item atual na coleção. Se a coleção de origem implementa o <xref:System.Collections.Specialized.INotifyCollectionChanged> interface, as alterações geradas pelo <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> eventos são propagadas para os modos de exibição.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055346"
  Você pode definir a propriedade anexada <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> em um objeto associativo para receber informações sobre o status de uma associação específica.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Novidades do WPF versão 4.5](../getting-started/whats-new.md)
 - [Associar aos resultados de uma consulta LINQ](how-to-bind-to-the-results-of-a-linq-query.md)

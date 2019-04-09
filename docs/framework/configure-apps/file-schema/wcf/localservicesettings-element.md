@@ -1,13 +1,13 @@
 ---
-title: Elemento <localServiceSettings>
+title: '<localServiceSettings> Elemento '
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102629"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > elemento
 Especifica as configurações de segurança de um serviço local para esta associação.  
@@ -68,7 +68,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
 |[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -87,6 +87,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
  Em uma sessão de conversa segura, observe que ambos `inactivityTimeout` e o `receiveTimeout` atributos na associação afetam o tempo limite da sessão. O menor dos dois determina quando o tempo limite seja excedido.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
@@ -96,5 +97,5 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

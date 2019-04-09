@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: 26c9297586df18bb89d1f769c5457eae12e3b211
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077726"
 ---
 # <a name="data"></a>Dados
-A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece um mecanismo para a transferência de dados por meio de operações do tipo arrastar e soltar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associação de dados fornece uma maneira simple e consistente para os aplicativos apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece um mecanismo para a transferência de dados por meio de operações de arrastar e soltar.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Associação de dados](data-binding-wpf.md)  
@@ -39,5 +39,6 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
  [Associação de dados](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

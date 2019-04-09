@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar as bordas de formulários do Windows'
+title: 'Como: alterar as bordas do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080105"
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a>Como: Alterar as bordas de formulários do Windows
+# <a name="how-to-change-the-borders-of-windows-forms"></a>Como: alterar as bordas do Windows Forms
 Você tem vários estilos de borda para escolher quando estiver determinando a aparência e comportamento dos Windows Forms. Alterando o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> propriedade, você pode controlar o comportamento de redimensionamento do formulário. Além disso, definindo o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afeta como a barra de legenda é exibida, bem como quais botões podem aparecer nela. Para obter mais informações, consulte <xref:System.Windows.Forms.FormBorderStyle>.  
   
  Há um suporte abrangente para esta tarefa no Visual Studio.  
@@ -44,6 +44,7 @@ Você tem vários estilos de borda para escolher quando estiver determinando a a
      Além disso, se você escolheu um estilo de borda para o formulário que fornece botões opcionais **Minimizar** e **Maximizar**, é possível especificar se deseja que um ou os dois botões sejam funcionais. Esses botões são úteis quando quiser controlar de perto a experiência do usuário. Os botões **Minimizar** e **Maximizar** são habilitados por padrão e sua funcionalidade é manipulada por meio da janela **Propriedades**.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
 - [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)

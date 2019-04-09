@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir plano de fundo de um painel dos Windows Forms usando o Designer'
+title: 'Como: Definir a tela de fundo de um painel do Windows Forms usando o Designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - background colors [Windows Forms], Windows Forms Panel controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: 73b09b9240f417dbe80546e89f2fdfb1e4e4a483
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e66d8c81114a4550f0473f75a8101e79e8db2c76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103708"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Como: Definir plano de fundo de um painel dos Windows Forms usando o Designer
+# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Como: Definir a tela de fundo de um painel do Windows Forms usando o Designer
 Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor de fundo e uma imagem de plano de fundo. O <xref:System.Windows.Forms.Control.BackColor%2A> propriedade define a cor de plano de fundo de controles que estão contidos no painel, como rótulos e botões de opção. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> não está definida, o <xref:System.Windows.Forms.Control.BackColor%2A> seleção preencherá todos o painel. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> estiver definida, a imagem será exibida por trás dos controles que estão contidos no painel.  
   
  O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contenha um <xref:System.Windows.Forms.Panel> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -37,8 +37,9 @@ Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor 
 6.  Na caixa de diálogo **Abrir**, selecione o arquivo que deseja exibir.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Controle de painel](panel-control-windows-forms.md)
-- [Visão geral do controle Panel](panel-control-overview-windows-forms.md)
+- [Visão geral do controle de painel](panel-control-overview-windows-forms.md)
 - [Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer](group-controls-with-wf-panel-control-using-the-designer.md)

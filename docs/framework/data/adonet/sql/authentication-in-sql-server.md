@@ -2,12 +2,12 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084031"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.  
@@ -79,8 +79,9 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
 |[Entidades de segurança](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve logons e outras entidades de segurança no SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+
+- [Protegendo aplicativos ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Cadeias de caracteres de conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

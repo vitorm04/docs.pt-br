@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104085"
 ---
 # <a name="how-to-clone-a-printer"></a>Como: Clonar uma impressora
 A maioria das empresas comprará várias impressoras do mesmo modelo em algum momento. Normalmente, elas são instaladas com configurações praticamente idênticas. Instalar cada impressora pode ser um processo demorado e sujeito a erros. O <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> namespace e o <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe que são expostos com o Microsoft .NET Framework possibilita a instalação instantânea de qualquer número de filas de impressão adicionais que são clonadas de uma fila de impressa existente.  
@@ -56,10 +56,11 @@ A maioria das empresas comprará várias impressoras do mesmo modelo em algum mo
  [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
 - [Documentos no WPF](documents-in-wpf.md)
-- [Visão Geral da Impressão](printing-overview.md)
+- [Visão geral da impressão](printing-overview.md)

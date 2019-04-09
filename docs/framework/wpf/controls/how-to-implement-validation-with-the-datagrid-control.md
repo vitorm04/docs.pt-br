@@ -1,5 +1,5 @@
 ---
-title: 'Como: Implementar validação com o controle DataGrid'
+title: 'Como: implementar validação com o controle DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086800"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Como: Implementar validação com o controle DataGrid
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Como: implementar validação com o controle DataGrid
 O <xref:System.Windows.Controls.DataGrid> controle permite que você executar a validação no nível de linha e célula. Com a validação no nível da célula, você valida propriedades individuais de um objeto com associação de dados quando um usuário atualiza um valor. Com a validação no nível da linha, você valida objetos de dados inteiros quando um usuário confirma alterações em uma linha. Você também pode fornecer comentários visuais personalizados para erros de validação, ou usar os comentários visuais padrão que o <xref:System.Windows.Controls.DataGrid> fornece controle.  
   
  Os procedimentos a seguir descrevem como aplicar regras de validação <xref:System.Windows.Controls.DataGrid> associações e personalizar o feedback visual.  
@@ -91,6 +91,7 @@ O <xref:System.Windows.Controls.DataGrid> controle permite que você executar a 
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Associação de dados](../data/data-binding-wpf.md)

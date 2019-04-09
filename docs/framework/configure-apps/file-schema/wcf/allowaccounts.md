@@ -2,12 +2,12 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: fd3121146577122446ba82528fc6e46dadbf5033
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f9def3004b116afdc629de136cdfe0b0eb6e75c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102616"
 ---
 # <a name="allowaccounts"></a>\<allowAccounts>
 Contém uma coleção de elementos de configuração que especificam contas para processos que hospedam serviços Windows Communication Foundation (WCF) de usuário e recebem acesso de conexão para o serviço de compartilhamento.  
@@ -41,6 +41,7 @@ Contém uma coleção de elementos de configuração que especificam contas para
 |[\<NET. pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) ou [ \<NET. TCP >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Especifica as configurações para o Pipe de rede ou serviços de compartilhamento de TCP.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>

@@ -2,12 +2,12 @@
 title: Importando metadados personalizados para uma extensão do WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b99d7fbab08c5edabe3a08baf89dd267c3f9fa25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090063"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importando metadados personalizados para uma extensão do WCF
 No Windows Communication Foundation (WCF), a importação de metadados é o processo de geração de uma representação abstrata de um serviço ou seus componentes de seus metadados. Por exemplo, o WCF pode importar <xref:System.ServiceModel.Description.ServiceEndpoint> instâncias, <xref:System.ServiceModel.Channels.Binding> instâncias ou <xref:System.ServiceModel.Description.ContractDescription> instâncias de uma WSDL de documento para um serviço. Para importar metadados de serviço do WCF, use uma implementação do <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe abstrata. Tipos que derivam de <xref:System.ServiceModel.Description.MetadataImporter> classe implementar o suporte para formatos de metadados de importação que aproveitam o WS-Policy importar lógica no WCF.  
@@ -49,6 +49,7 @@ No Windows Communication Foundation (WCF), a importação de metadados é o proc
 >  Metadados inválido ou incorreto podem ser passado para o importador. Certifique-se de que importadores personalizados são robustos em todas as formas de XML.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Como: Importar asserções de política personalizada](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [Como: Escrever uma extensão para o ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+
+- [Como: importar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Como: importar declarações de política personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Como: escrever uma extensão para o ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

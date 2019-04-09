@@ -1,15 +1,15 @@
 ---
-title: <Library> (.NET Nativo)
+title: <Library> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f2de27152200ed07e5f82b5dc08613451c7aa25
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100256"
 ---
 # <a name="library-element-net-native"></a>\<Biblioteca > (.NET nativo)
 Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.  
@@ -42,23 +42,23 @@ Elemento \<Library>
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política a todos os tipos em um assembly específico.|  
+|[\<Assembly >](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política a todos os tipos em um assembly específico.|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica a política a todos os tipos em um namespace específico.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política a um tipo específico, como uma classe ou estrutura.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política a um tipo específico, como uma classe ou estrutura.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído. Por exemplo, um elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) pode ser usado para definir a política para um tipo `List<String>`.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de tempo de execução.|  
+|[\<Diretivas >](../../../docs/framework/net-native/directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) pode conter zero, um ou mais elementos `<Library>`.  
   
  O elemento `<Library>` serve como um contêiner para definir os elementos do programa cujos metadados são necessária no tempo de execução. Este elemento não expressa política. No tempo de compilação, as ferramentas do compilador pesquisam somente a biblioteca designada pelo elemento `<Library>` para os elementos do programa identificados por seus elementos filho. Em contraste, as ferramentas do compilador pesquisam todas as bibliotecas, incluindo as bibliotecas principais do .NET Framework, por elementos de programa identificados por elementos filhos do elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) elemento.  
   
- As diretivas `<Library>` podem ser utilizadas condicionalmente. Se o nome da `<Library>` elemento começa e termina com um asterisco (\*), o `<Library>` diretiva terá efeito apenas se o assembly especificado entre os asteriscos for referenciado pelo aplicativo. Por exemplo, a diretiva de tempo de execução a seguir se aplica somente se o assembly Utillities.dll for referenciado pelo aplicativo.  
+ `<Library>` as diretivas podem ser utilizadas condicionalmente. Se o nome da `<Library>` elemento começa e termina com um asterisco (\*), o `<Library>` diretiva terá efeito apenas se o assembly especificado entre os asteriscos for referenciado pelo aplicativo. Por exemplo, a diretiva de tempo de execução a seguir se aplica somente se o assembly Utillities.dll for referenciado pelo aplicativo.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -69,7 +69,8 @@ Elemento \<Library>
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<Aplicativo > elemento](../../../docs/framework/net-native/application-element-net-native.md)
-- [\<Diretivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemento \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

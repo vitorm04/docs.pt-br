@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
-ms.openlocfilehash: 1968e1b2730f08eb76670a477f1d2bdb0a9140bf
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5718912e24a0697f209669b0ab4e7f4df1765ed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076309"
 ---
 # <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Como: Especificar se um hiperlink está sublinhado
 O <xref:System.Windows.Documents.Hyperlink> objeto é um elemento de conteúdo de fluxo de nível embutido que permite hospedar hiperlinks dentro do conteúdo de fluxo. Por padrão, <xref:System.Windows.Documents.Hyperlink> usa um <xref:System.Windows.TextDecoration> objeto para exibir um sublinhado. <xref:System.Windows.TextDecoration> objetos podem ser desempenho intenso para instanciar, especialmente se você tiver muitos <xref:System.Windows.Documents.Hyperlink> objetos. Se você fizer uso extensivo de <xref:System.Windows.Documents.Hyperlink> elementos, você talvez queira considerar a mostrar um sublinhado somente ao disparar um evento, como o <xref:System.Windows.ContentElement.MouseEnter> eventos.  
@@ -20,8 +20,7 @@ O <xref:System.Windows.Documents.Hyperlink> objeto é um elemento de conteúdo d
  No exemplo a seguir, o sublinhado para o link "My MSN" é dinâmico, ou seja, ele aparece somente quando o <xref:System.Windows.ContentElement.MouseEnter> evento é disparado.  
   
   ![Hiperlinks exibindo TextDecorations](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)  
-  
-  
+
 ## <a name="example"></a>Exemplo  
  O exemplo de marcação a seguir mostra um <xref:System.Windows.Documents.Hyperlink> definido com e sem sublinhado:  
   
@@ -33,6 +32,7 @@ O <xref:System.Windows.Documents.Hyperlink> objeto é um elemento de conteúdo d
  [!code-vb[Performance#PerformanceSnippet15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/hyperlink.xaml.vb#performancesnippet15)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)

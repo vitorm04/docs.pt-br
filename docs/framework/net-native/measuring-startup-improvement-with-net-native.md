@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7435d68635e2a1066b143c28b5662364326ac8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088282"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medindo o aprimoramento da inicialização com o .NET Nativo
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] melhora significativamente o tempo de inicialização dos aplicativos. Esse aprimoramento é particularmente perceptível em dispositivos portáteis, de baixa energia e com aplicativos complexos. Este tópico ajuda você a começar a trabalhar com a instrumentação básica necessária para medir essa melhoria de inicialização.  
@@ -23,7 +23,7 @@ ms.locfileid: "54607232"
 -   Usar o PerfView para coletar tais eventos.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Usando o EventSource para emitir eventos  
- O <xref:System.Diagnostics.Tracing.EventSource> fornece uma classe base da qual criar um provedor de eventos personalizado. Em geral, você pode criar uma subclasse de <xref:System.Diagnostics.Tracing.EventSource> e os métodos `Write*` com seus próprios métodos de evento. Um padrão singleton geralmente é usado para cada <xref:System.Diagnostics.Tracing.EventSource>.  
+ <xref:System.Diagnostics.Tracing.EventSource> Fornece uma classe base da qual criar um provedor de eventos personalizado. Em geral, você pode criar uma subclasse de <xref:System.Diagnostics.Tracing.EventSource> e os métodos `Write*` com seus próprios métodos de evento. Um padrão singleton geralmente é usado para cada <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Por exemplo, a classe no exemplo a seguir pode ser usada para medir duas características de desempenho:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54607232"
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
 ```  
   
- onde:  
+ em que:  
   
  `-KernelEvents:Process`  
  Indica que você deseja saber quando o processo é iniciado e é interrompido. É necessário que o evento de início/processo para seu aplicativo para pode ser subtraído de outros tempos de eventos.  
@@ -95,7 +95,8 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Selecione todos os eventos listados no painel à esquerda (Ctrl-A) e pressione a tecla **Enter**. Agora, você poderá ver as marcações de tempo de cada evento. Essas marcações de tempo são relativas ao início do rastreamento, portanto você precisa subtrair o horário de cada evento da hora de início do processo para identificar o tempo decorrido desde a inicialização. Se você usar Ctrl+Clique para selecionar duas marcações de tempo, verá que a diferença entre eles é exibida na barra de status na parte inferior da página. Isso facilita ver o tempo decorrido entre dois eventos em exibição (incluindo o início do processo). Você pode abrir o menu de atalho para o modo de exibição e selecionar diversas opções úteis, como exportar para arquivos CSV ou abrir o Microsoft Excel para salvar ou processar os dados.  
   
- Repetindo o procedimento para seu aplicativo original e a versão que você criou usando a cadeia de ferramentas do [!INCLUDE[net_native](../../../includes/net-native-md.md)], poderá comparar a diferença de desempenho.   Os aplicativos [!INCLUDE[net_native](../../../includes/net-native-md.md)] geralmente são iniciados mais rápido que aplicativos não [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se você estiver interessado em se aprofundar-se, o PerfView também pode identificar as partes do código que estão levando mais tempo. Para obter mais informações, assista aos [tutoriais do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) ou leia a [entrada no blog de Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Repetindo o procedimento para seu aplicativo original e a versão que você criou usando a cadeia de ferramentas do [!INCLUDE[net_native](../../../includes/net-native-md.md)], poderá comparar a diferença de desempenho.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplicativos geralmente iniciar mais rápido do que o não -[!INCLUDE[net_native](../../../includes/net-native-md.md)] aplicativos. Se você estiver interessado em se aprofundar-se, o PerfView também pode identificar as partes do código que estão levando mais tempo. Para obter mais informações, assista aos [tutoriais do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) ou leia a [entrada no blog de Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.Tracing.EventSource>

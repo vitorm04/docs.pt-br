@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 9b3297acabbb05c25ae195acbb6fb9274ad02651
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096960"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Como: Criar um formulário MDI com controles ToolStripPanel
 Você pode criar um formulário de MDI (interface MDI) de vários documentos que tem <xref:System.Windows.Forms.ToolStrip> controles de delimitação de quadros nos quatro lados.  
@@ -40,6 +40,7 @@ Você pode criar um formulário de MDI (interface MDI) de vários documentos que
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
 - <xref:System.Windows.Forms.ToolStripPanel.Join%2A>

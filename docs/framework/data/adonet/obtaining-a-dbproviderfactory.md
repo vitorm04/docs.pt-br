@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 1099d8ec8e9d516b2269232857c695f9ff04d99c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097402"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtendo um DbProviderFactory
 O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar informações sobre um provedor de dados para a classe <xref:System.Data.Common.DbProviderFactories>. Com base nessas informações, o método <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> cria uma fábrica de provedor fortemente tipada. Por exemplo, para criar <xref:System.Data.SqlClient.SqlClientFactory>, você pode passar para `GetFactory` uma cadeia de caracteres com o nome do provedor especificado como “System.Data.SqlClient”. Outra sobrecarga de `GetFactory` utiliza <xref:System.Data.DataRow>. Uma vez que você criar a fábrica de provedor, poderá usar seus métodos para criar objetos adicionais. Alguns dos métodos de `SqlClientFactory` incluem <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> e <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -96,7 +96,8 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Cadeias de caracteres de conexão](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](ado-net-overview.md)

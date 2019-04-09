@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 7b6afebbf6ac2dda0f8eb9932630da9a273f972e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080079"
 ---
 # <a name="opacity-masks-overview"></a>Visão geral de máscaras da opacidade
 As máscaras de opacidade permitem que você torne partes de um elemento ou visual transparentes ou parcialmente transparentes. Para criar uma máscara de opacidade, você aplica um <xref:System.Windows.Media.Brush> para o <xref:System.Windows.UIElement.OpacityMask%2A> propriedade de um elemento ou <xref:System.Windows.Media.Visual>.  O pincel é mapeado para o elemento ou visual, e o valor de opacidade de cada pixel do pincel é usado para determinar a opacidade resultante de cada pixel correspondente do elemento ou visual.  
@@ -73,7 +73,7 @@ Exemplo de máscara de opacidade DrawingBrush
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Especificando a opacidade das cores em "XAML"  
- Em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], você usa a notação hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] para especificar a opacidade das cores individuais. A notação hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa a seguinte sintaxe:  
+ Em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], você usa a notação hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] para especificar a opacidade das cores individuais. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] a notação hexadecimal usa a seguinte sintaxe:  
   
  `#` **aa** *rrggbb*  
   
@@ -116,5 +116,6 @@ Exemplo de máscara de opacidade DrawingBrush
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)
 - [Visão geral da pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md)

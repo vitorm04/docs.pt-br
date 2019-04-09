@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abaa543299dec74d769b91ca3b21d76863624f13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081123"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>Método ICorDebugNativeFrame::GetLocalMemoryRegisterValue
 Obtém o valor de um argumento ou uma variável local, dos quais a palavra baixa e a palavra alta são armazenadas no registro especificado e o local de memória, respectivamente, para este quadro nativo.  
@@ -65,4 +65,3 @@ HRESULT GetLocalMemoryRegisterValue (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-

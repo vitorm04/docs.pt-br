@@ -1,18 +1,18 @@
 ---
-title: 'Como: Publicar metadados para um serviço usando código'
+title: 'Como: publicar metadados utilizando código para um serviço'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: ad09f49b933edfc4df107a02e124eaaa5ddd3d73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c17f5c399335a2c7cbcc6f4474982de591dd453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097997"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-code"></a>Como: Publicar metadados para um serviço usando código
+# <a name="how-to-publish-metadata-for-a-service-using-code"></a>Como: publicar metadados utilizando código para um serviço
 Esse é um dos dois tópicos que discutem os metadados de publicação para um serviço do Windows Communication Foundation (WCF). Há duas maneiras para especificar como um serviço deve publicar metadados, usando um arquivo de configuração e código. Este tópico mostra como publicar metadados para um serviço usando um código.  
   
 > [!CAUTION]
@@ -43,7 +43,7 @@ Esse é um dos dois tópicos que discutem os metadados de publicação para um s
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4.  Defina a propriedade <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> como `true.`  
+4.  Defina o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propriedade `true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -87,8 +87,9 @@ Esse é um dos dois tópicos que discutem os metadados de publicação para um s
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Auto-hospedagem](../../../../docs/framework/wcf/samples/self-host.md)
+
+- [Como: hospedar um serviço do WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Self-Host](../../../../docs/framework/wcf/samples/self-host.md)
 - [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Como: publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

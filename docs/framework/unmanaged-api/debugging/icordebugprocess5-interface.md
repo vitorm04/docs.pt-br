@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a105ca8838820b62e81dae4c0149734339bed7a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089220"
 ---
 # <a name="icordebugprocess5-interface"></a>Interface ICorDebugProcess5
 Estende a interface ICorDebugProcess para suportar o acesso para o heap gerenciado, para fornecer informações sobre a coleta de lixo de objetos gerenciados, e determinar se um depurador carrega imagens do cache de imagem nativo local do aplicativo.  
@@ -59,5 +59,6 @@ Estende a interface ICorDebugProcess para suportar o acesso para o heap gerencia
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

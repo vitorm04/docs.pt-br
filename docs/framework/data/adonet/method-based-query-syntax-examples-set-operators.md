@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe de consulta com base em método: Definir operadores (LINQ to DataSet)'
+title: 'Exemplos de sintaxe de consulta baseada em método: Definir operadores (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: 31421b1e6ece783f52021c1af22b819f8aacea66
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 48aa6044f39be93f144b6c4af5137b131dda0b30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085811"
 ---
-# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Exemplos de sintaxe de consulta com base em método: Definir operadores (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Exemplos de sintaxe de consulta baseada em método: Definir operadores (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, e <xref:System.Linq.Enumerable.Union%2A> operadores para executar operações de comparação de valor com base em conjuntos de linhas de dados.[ Carregar dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) ver [comparando DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) para obter mais informações sobre <xref:System.Data.DataRowComparer>.  
   
  O `FillDataSet` método usado nesses exemplos é especificado no [carregamento de dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -59,7 +59,8 @@ Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Di
  [!code-vb[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#union2)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+
+- [Carregando dados em um DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

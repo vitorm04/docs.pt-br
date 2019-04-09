@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139601"
 ---
 # <a name="flow-document-overview"></a>Visão geral do documento de fluxo
 Os documentos dinâmicos são projetados para otimizar a exibição e legibilidade. Em vez de serem configurados para um layout predefinido, os documentos dinâmicos ajustam e refluem seu conteúdo com base em variáveis de tempo de execução como tamanho da janela, resolução do dispositivo e preferências opcionais do usuário. Além disso, os documentos dinâmicos oferecem recursos de documento avançados, como paginação e colunas. Este tópico fornece uma visão geral dos documentos dinâmicos e como criá-los.  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>O que é um documento dinâmico  
  Um documento dinâmico é projetado para "refluir conteúdo" dependendo do tamanho da janela, resolução do dispositivo e outras variáveis de ambiente. Além disso, os documentos dinâmicos têm vários recursos internos, incluindo pesquisa, modos de exibição que otimizam a legibilidade e a capacidade de alterar o tamanho e a aparência das fontes. Os documentos dinâmicos são utilizados melhor quando a facilidade de leitura é o cenário de consumo do documento principal. Por outro lado, documentos estáticos são projetados para ter uma apresentação estática. Documentos estáticos são úteis quando fidelidade do conteúdo original é essencial. Ver [documentos no WPF](documents-in-wpf.md) para obter mais informações sobre tipos diferentes de documentos.  
@@ -98,7 +96,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
  Cada classe nessas duas categorias é descrita resumidamente abaixo.  
   
 ### <a name="block-derived-classes"></a>Classes derivadas de bloco  
- **Paragraph**  
+ **Parágrafo**  
   
  <xref:System.Windows.Documents.Paragraph> normalmente é usado para agrupar o conteúdo em um parágrafo. O uso mais simples e mais comum de Paragraph é criar um parágrafo de texto.  
   
@@ -109,7 +107,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  No entanto, você também pode conter outros elementos derivadas de embutidos, como você verá abaixo. 
   
- **Section**  
+ **Seção**  
   
  <xref:System.Windows.Documents.Section> é usado apenas para conter outros <xref:System.Windows.Documents.Block>-elementos derivados. Ela não aplica nenhuma formatação padrão aos elementos que contém. No entanto, qualquer propriedade valores definidos em um <xref:System.Windows.Documents.Section> aplica-se a seus elementos filho. Você também tem permissão para iterar programaticamente pela coleção filho de uma seção. <xref:System.Windows.Documents.Section> é usado de maneira semelhante para o \<DIV > marca no HTML.  
   
@@ -132,7 +130,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  ![Captura de tela que mostra um UIElement inserido no conteúdo de fluxo.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **List**  
+ **Lista**  
   
  <xref:System.Windows.Documents.List> é usado para criar uma lista com marcador ou numérica. Defina a <xref:System.Windows.Documents.List.MarkerStyle%2A> propriedade para um <xref:System.Windows.TextMarkerStyle> valor de enumeração para determinar o estilo da lista. O exemplo a seguir mostra como criar uma lista simples.  
   
@@ -156,7 +154,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  **Observação:**  A partir de [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], o <xref:System.Windows.Documents.Run.Text%2A> propriedade do <xref:System.Windows.Documents.Run> objeto é uma propriedade de dependência. Você pode associar o <xref:System.Windows.Documents.Run.Text%2A> propriedade aos dados de uma fonte, como um <xref:System.Windows.Controls.TextBlock>. O <xref:System.Windows.Documents.Run.Text%2A> propriedade totalmente compatível com a associação unidirecional. O <xref:System.Windows.Documents.Run.Text%2A> propriedade também dá suporte à associação bidirecional, exceto para <xref:System.Windows.Controls.RichTextBox>. Para ver um exemplo, consulte <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **Span**  
+ **SPAN**  
   
  <xref:System.Windows.Documents.Span> agrupa outros elementos de conteúdo embutido. Nenhuma renderização inerente é aplicada ao conteúdo dentro de um <xref:System.Windows.Documents.Span> elemento. No entanto, elementos que herdam de <xref:System.Windows.Documents.Span> incluindo <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> e <xref:System.Windows.Documents.Underline> aplicar formatação ao texto.  
   
@@ -196,7 +194,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  <xref:System.Windows.Documents.Figure> e <xref:System.Windows.Documents.Floater> diferem de várias maneiras e são usados para cenários diferentes.  
   
- **Figure:**  
+ **Figura:**  
   
 -   Pode ser posicionada: Você pode definir suas âncoras horizontais e verticais para encaixá-la em relação à página, conteúdo, coluna ou parágrafo. Você também pode usar sua <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> propriedades para especificar deslocamentos arbitrários.  
   
@@ -349,9 +347,10 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
  Ver [tipografia no WPF](typography-in-wpf.md) para obter mais informações sobre tipografia.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Texto](optimizing-performance-text.md)
 - [Tipografia no WPF](typography-in-wpf.md)
-- [Tópicos de instruções](flow-content-elements-how-to-topics.md)
+- [Tópicos explicativos ](flow-content-elements-how-to-topics.md)
 - [Visão geral do modelo de conteúdo TextElement](textelement-content-model-overview.md)
 - [Visão geral de RichTextBox](../controls/richtextbox-overview.md)
 - [Documentos no WPF](documents-in-wpf.md)

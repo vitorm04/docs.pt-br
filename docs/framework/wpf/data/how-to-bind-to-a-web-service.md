@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098566"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Como: Associar a um serviço Web
 Este exemplo mostra como associar a objetos retornados por chamadas de método de serviço Web.  
@@ -46,6 +46,7 @@ Este exemplo mostra como associar a objetos retornados por chamadas de método d
  Para obter informações sobre a estrutura de **getContentResponse**, consulte a [Documentação do serviço de conteúdo](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Visão geral das origens da associação](binding-sources-overview.md)
+- [Visão geral das fontes de associação](binding-sources-overview.md)
 - [Disponibilizar dados para associação em XAML](how-to-make-data-available-for-binding-in-xaml.md)

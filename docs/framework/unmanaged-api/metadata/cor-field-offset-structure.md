@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98a58c5e686a0650fa62752f6d1d50706d58e8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 820c99de1bdb108a24203a3438b1709ca54490b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078116"
 ---
 # <a name="corfieldoffset-structure"></a>Estrutura COR_FIELD_OFFSET
 Armazena o deslocamento, em uma classe, do campo especificado.  
@@ -53,6 +53,7 @@ typedef struct COR_FIELD_OFFSET {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estruturas de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

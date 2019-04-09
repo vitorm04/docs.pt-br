@@ -1,5 +1,5 @@
 ---
-title: 'Como: Tratar erros e exceções que ocorrem na associação de dados'
+title: 'Como: Como identificar erros e exceções que ocorram na associação de dados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: 8400ce602d15c195aea43f9e5a162fddb1783830
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084616"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Como: Tratar erros e exceções que ocorrem na associação de dados
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Como: Como identificar erros e exceções que ocorram na associação de dados
 Muitas vezes, erros e exceções ocorrem nos objetos de negócios subjacentes quando você os associa aos controles. Você pode interceptar esses erros e exceções e, em seguida, recuperar ou passar as informações de erro para o usuário manipulando o <xref:System.Windows.Forms.Binding.BindingComplete> eventos para um determinado <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource>, ou <xref:System.Windows.Forms.CurrencyManager> componente.  
   
 ## <a name="example"></a>Exemplo  
@@ -40,6 +40,7 @@ Muitas vezes, erros e exceções ocorrem nos objetos de negócios subjacentes qu
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
 - [Componente BindingSource](bindingsource-component.md)

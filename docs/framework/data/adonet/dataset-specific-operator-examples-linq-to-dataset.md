@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fdd64af-6ad0-46cd-91c8-dbe26620eeb1
-ms.openlocfilehash: 92daf1dff3d473016d92b359ea6f75295a9dbd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27a48b7ffe5466c52f19f15cf3c1a6cb558028b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097325"
 ---
 # <a name="dataset-specific-operator-examples-linq-to-dataset"></a>Exemplos Conjunto de dados específicos de operador (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar o método de <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> e a classe de <xref:System.Data.DataRowComparer> .  
@@ -42,5 +42,6 @@ Os exemplos neste tópico demonstram como usar o método de <xref:System.Data.Da
  [!code-csharp[DP LINQ to DataSet Examples#CompareDifferentDataRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#comparedifferentdatarows)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+
+- [Carregando dados em um DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

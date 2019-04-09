@@ -1,5 +1,5 @@
 ---
-title: Elemento <clear> para webRequestModules (configurações de rede)
+title: <clear> Elemento para webRequestModules (configurações de rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 0096c7b3426645b90e2e1609fb2427334345fd87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284148"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078974"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Limpar > elemento para webRequestModules (configurações de rede)
 Remove todos os módulos de solicitação da Web registrados do aplicativo.  
@@ -70,5 +70,6 @@ Remove todos os módulos de solicitação da Web registrados do aplicativo.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.WebRequest>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

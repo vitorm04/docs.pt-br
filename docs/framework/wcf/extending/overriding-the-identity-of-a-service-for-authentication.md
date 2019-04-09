@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082185"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Substituindo a identidade de um serviço pela autenticação
 Normalmente, você não precisa definir a identidade em um serviço, pois a seleção de um tipo de credencial de cliente determina o tipo de identidade exposto nos metadados de serviço. Por exemplo, o código de configuração a seguir usa o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento e define o `clientCredentialType` de atributo para Windows.  
-  
-  
-  
+
  O fragmento de descrição linguagem WSDL (Web Services) a seguir mostra a identidade para o ponto de extremidade definido anteriormente. Neste exemplo, o serviço é executado como um serviço auto-hospedado em uma conta de usuário específico (username@contoso.com) e, portanto, a identidade de nome principal (UPN) do usuário contém o nome da conta. O UPN é também conhecido como o nome de logon do usuário em um domínio do Windows.  
-  
-  
-  
+
  Para um aplicativo de exemplo que demonstra a configuração de identidade, consulte [exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obter mais informações sobre a identidade de serviço, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Identidade e autenticação Kerberos  
@@ -52,13 +48,9 @@ Normalmente, você não precisa definir a identidade em um serviço, pois a sele
   
 ### <a name="using-the-identity-element-in-configuration"></a>Usando o \<identidade > elemento na configuração  
  Se você alterar o tipo de credencial de cliente na associação mostrada anteriormente ao certificado`,` WSDL gerado contém uma Base64 serializada certificado x. 509 para o valor de identidade, conforme mostrado no código a seguir. Esse é o padrão para todos os tipos de credencial de cliente que não sejam Windows.  
-  
-  
-  
+
  Você pode alterar o valor de identidade do serviço padrão ou alterar o tipo de identidade usando o <`identity`> elemento na configuração ou definindo a identidade no código. O código de configuração a seguir define uma identidade do DNS (sistema) do nome de domínio com o valor `contoso.com`.  
-  
-  
-  
+
 ### <a name="setting-identity-programmatically"></a>Definindo a identidade do forma programática  
  Seu serviço não precisa especificar explicitamente uma identidade, porque o WCF determina automaticamente. No entanto, o WCF permite que você especifique uma identidade de um ponto de extremidade, se necessário. O código a seguir adiciona um novo ponto de extremidade de serviço com uma identidade específica do DNS.  
   
@@ -66,5 +58,6 @@ Normalmente, você não precisa definir a identidade em um serviço, pois a sele
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar um verificador de identidade do cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+
+- [Como: criar um verificador de identidade de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [Identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

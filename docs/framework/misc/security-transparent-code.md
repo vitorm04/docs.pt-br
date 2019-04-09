@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075932"
 ---
 # <a name="security-transparent-code"></a>Código transparente de segurança
 <a name="top"></a>
@@ -25,11 +25,11 @@ ms.locfileid: "54510111"
   
  Este tópico descreve o modelo de transparência em mais detalhes. Ele contém as seguintes seções:  
   
--   [Finalidade do modelo de transparência](#purpose)  
+-   [Finalidade do Modelo de Transparência](#purpose)  
   
--   [Especificando o nível de transparência](#level)  
+-   [Especificando o Nível de Transparência](#level)  
   
--   [Imposição de transparência](#enforcement)  
+-   [Imposição de Transparência](#enforcement)  
   
 <a name="purpose"></a>   
 ## <a name="purpose-of-the-transparency-model"></a>Finalidade do Modelo de Transparência  
@@ -107,5 +107,6 @@ ms.locfileid: "54510111"
  Regras de transparência não são impostas até que a transparência é calculada. Nesse momento, um <xref:System.InvalidOperationException> será lançada se uma regra de transparência é violada. A hora em que a transparência é calculada depende de vários fatores e não pode ser prevista. Ele é calculado mais tarde. No [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], cálculo de transparência de nível de assembly ocorre mais cedo do que no .NET Framework 2.0. A única garantia é que o cálculo de transparência ocorrerá no momento em que ela é necessária. Isso é semelhante a como o compilador just-in-time (JIT) pode alterar o ponto quando um método é compilado e quaisquer erros nesse método são detectados. Cálculo de transparência é invisível se seu código não tem nenhum erro de transparência.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Código transparente de segurança, nível 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Código transparente de segurança, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

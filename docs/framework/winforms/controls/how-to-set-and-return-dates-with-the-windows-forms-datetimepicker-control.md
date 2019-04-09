@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definidas e retornar datas com o controle DateTimePicker dos Windows Forms'
+title: 'Como: Definir e retornar datas com o controle DateTimePicker do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 73c40a48a75955d1ba44decae6b50ca641a63f7b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc4f0bdf7355cda61e6cb95f5e0b18c4f83aa62b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081535"
 ---
-# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Como: Definidas e retornar datas com o controle DateTimePicker dos Windows Forms
+# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Como: Definir e retornar datas com o controle DateTimePicker do Windows Forms
 A data atualmente selecionada ou a hora em formulários do Windows <xref:System.Windows.Forms.DateTimePicker> controle é determinado pelo <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade. Você pode definir as <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade antes do controle é exibido (por exemplo, em tempo de design ou no formulário de <xref:System.Windows.Forms.Form.Load> eventos) para determinar qual data será inicialmente selecionada no controle. Por padrão, o controle <xref:System.Windows.Forms.DateTimePicker.Value%2A> é definido como a data atual. Se você alterar o controle <xref:System.Windows.Forms.DateTimePicker.Value%2A> no código, o controle será atualizado automaticamente no formulário para refletir a nova configuração.  
   
  O <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade retorna um <xref:System.DateTime> estrutura como seu valor. Há várias propriedades do <xref:System.DateTime> estrutura que retornam informações específicas sobre a data exibida. Essas propriedades só podem ser usadas para retornar um valor; não as utilize para definir um valor.  
@@ -73,5 +73,6 @@ A data atualmente selecionada ou a hora em formulários do Windows <xref:System.
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle DateTimePicker](datetimepicker-control-windows-forms.md)
-- [Como: Exibir uma data em um formato personalizado com o controle DateTimePicker dos Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Como: Exibir uma data em um formato personalizado com o controle DateTimePicker do Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

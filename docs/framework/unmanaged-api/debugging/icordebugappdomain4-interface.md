@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14f358de02f24a304cf0d5249b0f8916c7290b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c6077f16f07c5f1fc76b6525ccb036aa1e4fa06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099294"
 ---
 # <a name="icordebugappdomain4-interface"></a>Interface ICorDebugAppDomain4
 Estende logicamente a interface ICorDebugAppDomain para obter um objeto gerenciado de um COM callable wrapper.  
@@ -32,5 +32,6 @@ Estende logicamente a interface ICorDebugAppDomain para obter um objeto gerencia
  **Versões do .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

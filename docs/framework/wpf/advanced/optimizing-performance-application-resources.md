@@ -9,15 +9,15 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139419"
 ---
 # <a name="optimizing-performance-application-resources"></a>Otimizando desempenho: Recursos do aplicativo
-O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite compartilhar recursos do aplicativo para dar suporte a um comportamento ou a uma aparência consistente entre elementos de tipos semelhantes. Este tópico dá algumas recomendações nessa área que podem ajudar a melhorar o desempenho dos seus aplicativos.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que você compartilhe recursos do aplicativo para que você pode dar suporte a um comportamento ou aparência consistente entre elementos de tipos semelhantes. Este tópico dá algumas recomendações nessa área que podem ajudar a melhorar o desempenho dos seus aplicativos.  
   
  Para obter mais informações sobre recursos, consulte [Recursos de XAML](xaml-resources.md).  
   
@@ -43,9 +43,10 @@ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)

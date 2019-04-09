@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104189"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Visão geral do controle ListBox (Windows Forms)
 Um Windows Forms <xref:System.Windows.Forms.ListBox> controle exibe uma lista da qual o usuário pode selecionar um ou mais itens. Se o número total de itens exceder o número que pode ser exibido, uma barra de rolagem é adicionada automaticamente para o <xref:System.Windows.Forms.ListBox> controle. Quando o <xref:System.Windows.Forms.ListBox.MultiColumn%2A> estiver definida como `true`, a caixa de listagem exibirá itens em várias colunas e uma barra de rolagem horizontal é exibida. Quando o <xref:System.Windows.Forms.ListBox.MultiColumn%2A> estiver definida como `false`, a caixa de listagem exibirá itens em uma única coluna e uma barra de rolagem vertical é exibida. Quando <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> é definido como `true`, a barra de rolagem é exibida, independentemente do número de itens. O <xref:System.Windows.Forms.ListBox.SelectionMode%2A> propriedade determina quantos itens de lista podem ser selecionados por vez.  
@@ -23,11 +23,12 @@ Um Windows Forms <xref:System.Windows.Forms.ListBox> controle exibe uma lista da
  Para adicionar ou excluir itens em uma <xref:System.Windows.Forms.ListBox> controlar, use o <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> ou <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> método. Como alternativa, você pode adicionar itens à lista usando o <xref:System.Windows.Forms.ListBox.Items%2A> propriedade em tempo de design.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ListBox>
-- [Como: Adicionar e remover itens de um Windows Forms ComboBox, ListBox ou CheckedListBox controle](add-and-remove-items-from-a-wf-combobox.md)
-- [Como: Classificar o conteúdo de um Windows Forms ComboBox, ListBox ou CheckedListBox controle](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Como: Associar um ComboBox dos Windows Forms ou um controle ListBox a dados](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Como: Adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Como: Classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Como: Associar um controle ComboBox ou ListBox do Windows Forms aos dados](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [Visão geral do controle ComboBox](combobox-control-overview-windows-forms.md)
 - [Visão geral do controle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
 - [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)
-- [Como: Criar uma tabela de pesquisa para um Windows Forms ComboBox, ListBox ou CheckedListBox controle](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Como: Criar uma tabela de pesquisa para um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16793cfd93ce296ba0e2bc70c59c22d598aacacd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 69e48c6c3179ced167fdc39ae4df859f161727ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077245"
 ---
 # <a name="importfile-method"></a>Método ImportFile
 Importa os assemblies e módulos não associados.  
@@ -65,6 +65,7 @@ HRESULT ImportFile(
  Requer alink.h  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

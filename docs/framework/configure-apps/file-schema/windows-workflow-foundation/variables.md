@@ -3,12 +3,12 @@ title: <variables>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
-ms.openlocfilehash: 3ff568c267331538fb9be0e6cb40eebbca44d882
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 61a786efc67f4e9afa585864e1f62b966b5cdff8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105372"
 ---
 # <a name="variables"></a>\<variables>
 Representa uma coleção de variáveis associadas a essa consulta de atividade.  
@@ -76,7 +76,8 @@ Representa uma coleção de variáveis associadas a essa consulta de atividade.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Rastreamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Controlando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

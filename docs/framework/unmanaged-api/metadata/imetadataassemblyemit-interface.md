@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02d52c5281662b8374869cf9424a6df9ee51e262
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a66ef090a205019493e099919739867e3936873
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081788"
 ---
 # <a name="imetadataassemblyemit-interface"></a>Interface IMetaDataAssemblyEmit
 Fornece métodos que suportam o modelo de autodescrição usado pelo common language runtime para resolver e consomem recursos.  
@@ -53,5 +53,6 @@ Fornece métodos que suportam o modelo de autodescrição usado pelo common lang
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

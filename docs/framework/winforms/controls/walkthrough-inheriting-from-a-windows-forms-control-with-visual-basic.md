@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic'
+title: 'Passo a passo: Herdar de um controle do Windows Forms com Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 479e1a652c442651375c687288923f8abb60fd61
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c7e4f49fa5bd4de1e15e8f3cf39b95779c33ef94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087060"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Passo a passo: Herdar de um controle do Windows Forms com Visual Basic
 Com o Visual Basic, você pode criar controles personalizados avançados por meio *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará funcionalidades do formulários padrão do Windows <xref:System.Windows.Forms.Button> controlar e exporá uma propriedade personalizada chamada `ButtonValue`.  
   
 > [!NOTE]
@@ -140,14 +140,15 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
   
 11. No menu **Depuração**, selecione **Iniciar Depuração**.  
   
-     `Form1` é exibido.  
+     `Form1` é exibida.  
   
 12. Clique em `Valuebutton1`.  
   
      O numeral "5" é exibido em `Label1`, demonstrando que a propriedade `ButtonValue` de seu controle herdado foi passada para `Label1` por meio do método `ValueButton1_Click`. Portanto, seu controle `ValueButton` herda todas as funcionalidades do botão padrão dos Windows Forms, mas expõe uma propriedade adicional personalizada.  
   
 ## <a name="see-also"></a>Consulte também
-- [Passo a passo: Criando um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+
+- [Passo a passo: Criar um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
 - [Noções básicas de herança (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Como: Disparar uma animação quando o valor de uma propriedade é alterado'
+title: 'Como: Disparar uma animação quando o valor de uma propriedade for alterado'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], starting when property values change
 - triggering animation [WPF]
 - Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
-ms.openlocfilehash: 87f7525755556301fec3f00da612fc5262f1f533
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7e3eecedf7d464eeb8e4f60f2f05fa06d2e23e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080703"
 ---
-# <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Como: Disparar uma animação quando o valor de uma propriedade é alterado
+# <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Como: Disparar uma animação quando o valor de uma propriedade for alterado
 Este exemplo mostra como usar um <xref:System.Windows.Trigger> para iniciar um <xref:System.Windows.Media.Animation.Storyboard> quando um valor da propriedade muda. Você pode usar um <xref:System.Windows.Trigger> dentro de um <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, ou <xref:System.Windows.DataTemplate>.  
   
 ## <a name="example"></a>Exemplo  
@@ -24,6 +24,7 @@ Este exemplo mostra como usar um <xref:System.Windows.Trigger> para iniciar um <
  As animações aplicadas pela propriedade <xref:System.Windows.Trigger> objetos se comportam de maneira mais complexa que <xref:System.Windows.EventTrigger> animações ou animações iniciadas usando <xref:System.Windows.Media.Animation.Storyboard> métodos.  Eles "entrega" com animações definida por outros <xref:System.Windows.Trigger> objetos, mas se compõem com <xref:System.Windows.EventTrigger> e animações disparadas por método.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Trigger>
 - [Visão geral das técnicas de animação da propriedade](property-animation-techniques-overview.md)
 - [Visão geral de storyboards](storyboards-overview.md)

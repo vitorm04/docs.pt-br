@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099846"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Como: Descobrir se um trabalho de impressão pode ser impresso a esta hora do dia
 Filas de impressão não estão sempre disponíveis 24 horas por dia. Eles têm propriedades de tempo de início e término que podem ser definidas para torná-las indisponíveis em determinados momentos do dia. Esse recurso pode ser usado, por exemplo, para reservar uma impressora para uso exclusivo de um determinado departamento após as 17h. Esse departamento teria uma fila diferente na impressora do que a que outros departamentos usam. A fila para os outros departamentos seria definida como indisponível após as 17h, enquanto a fila para o departamento favorecido poderia ser definida para estar sempre disponível.  
@@ -75,8 +75,9 @@ Filas de impressão não estão sempre disponíveis 24 horas por dia. Eles têm 
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
 - [Documentos no WPF](documents-in-wpf.md)
-- [Visão Geral da Impressão](printing-overview.md)
+- [Visão geral da impressão](printing-overview.md)

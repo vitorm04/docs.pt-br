@@ -2,12 +2,12 @@
 title: Fornecedor de token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 43a6d96716cedc6a732c350bb43ac6d34bebf969
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 386e8f81d35d820809ee51355dfb0274be2278cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084219"
 ---
 # <a name="saml-token-provider"></a>Fornecedor de token SAML
 Este exemplo demonstra como implementar uma provedor de token SAML personalizadas do cliente. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:
@@ -398,4 +398,3 @@ Este exemplo demonstra como implementar uma provedor de token SAML personalizada
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
 1.  Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
-  

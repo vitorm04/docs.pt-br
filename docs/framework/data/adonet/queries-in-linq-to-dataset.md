@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 461ff195ab4f147f98c7bc2ac83f5e8f12edc4c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102538"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas no LINQ to DataSet
-Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], você sempre trabalha com objetos de programação.  
+Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], você sempre trabalha com objetos de programação.  
   
  Uma operação de consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consiste em três ações: obter a fonte ou fontes de dados, criar a consulta e executá-la.  
   
@@ -60,7 +60,8 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de Programação](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Consultando DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [Consultar DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Introdução a LINQ em C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Introdução ao LINQ no Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução a LINQ no Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077453"
 ---
 # <a name="collection-type-dependency-properties"></a>Propriedades de dependência do tipo de coleção
 Este tópico fornece diretrizes e padrões sugeridos para como implementar uma propriedade de dependência em que o tipo da propriedade é um tipo de coleção.  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Implementando uma Propriedade de Dependência do Tipo de Coleção  
  Para uma propriedade de dependência em geral, a implementação padrão que você segue é que você define uma [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] wrapper de propriedade, em que essa propriedade é feita por um <xref:System.Windows.DependencyProperty> identificador em vez de um campo ou outro constructo. Você segue esse mesmo padrão quando implementa uma propriedade de tipo de coleção. No entanto, uma propriedade do tipo coleção apresenta alguma complexidade ao padrão sempre que o tipo que está contido dentro da coleção é em si uma <xref:System.Windows.DependencyObject> ou <xref:System.Windows.Freezable> classe derivada.  
@@ -57,9 +55,10 @@ Este tópico fornece diretrizes e padrões sugeridos para como implementar uma p
  Para habilitar a associação de subpropriedade em uma coleção de objetos de dependência, crie a propriedade de coleção como tipo <xref:System.Windows.FreezableCollection%601>, com uma restrição de tipo para essa coleção para qualquer <xref:System.Windows.DependencyObject> classe derivada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FreezableCollection%601>
 - [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)
 - [Visão geral da vinculação de dados](../data/data-binding-overview.md)
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Metadados de propriedade da dependência](dependency-property-metadata.md)

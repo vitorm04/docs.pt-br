@@ -1,5 +1,5 @@
 ---
-title: 'Como: Renderizar um elemento de estilo Visual'
+title: 'Como: Renderizar um elemento de estilo visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099827"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Como: Renderizar um elemento de estilo Visual
+# <a name="how-to-render-a-visual-style-element"></a>Como: Renderizar um elemento de estilo visual
 O <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace expõe <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> compatíveis com estilos visuais de elementos de (UI) de interface de objetos que representam o usuário do Windows. Este tópico demonstra como usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> classe para renderizar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa o **fazer logoff** e **desligar** botões do menu Iniciar.  
   
 ### <a name="to-render-a-visual-style-element"></a>Para renderizar um elemento de estilo visual  
@@ -44,4 +44,5 @@ O <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespac
 -   Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, e <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespaces.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Renderizando controles com estilos visuais](rendering-controls-with-visual-styles.md)

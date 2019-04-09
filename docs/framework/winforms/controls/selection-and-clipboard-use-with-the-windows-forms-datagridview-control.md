@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 61f3eee6f4690e9bd9141f2eeb6de330bac87550
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105840"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Seleção e uso da Área de Transferência com o controle DataGridView dos Windows Forms
 O controle `DataGridView` oferece uma variedade de opções para configurar como os usuários podem selecionar células, linhas e colunas. Por exemplo, você pode habilitar uma ou várias seleções, seleção de todas as linhas ou colunas quando os usuários clicam em células ou de todas as linhas ou colunas somente quando os usuários clicam em seus cabeçalhos, o que permite a seleção da célula também. Se você quiser fornecer sua própria interface do usuário para seleção, desabilite a seleção comum e gerencie todas as seleções de forma programática. Além disso, você pode permitir que os usuários copiem os valores selecionados para a área de transferência.  
@@ -23,13 +23,13 @@ O controle `DataGridView` oferece uma variedade de opções para configurar como
  [Modos de seleção no controle DataGridView dos Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)  
  Descreve as opções para seleção do usuário e programática no controle.  
   
- [Como: Definir o modo de seleção do controle DataGridView dos Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ [Como: Definir o modo de seleção do controle DataGridView do Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  Descreve como configurar o controle para seleção única linha quando um usuário clica em uma célula.  
   
- [Como: Obter as células selecionadas, linhas e colunas no controle DataGridView dos Windows Forms](selected-cells-rows-and-columns-datagridview.md)  
+ [Como: Obter as células, as linhas e as colunas selecionadas no controle DataGridView do Windows Forms](selected-cells-rows-and-columns-datagridview.md)  
  Descreve como trabalhar com as coleções selecionadas de célula, linha e coluna.  
   
- [Como: Permitir que os usuários para copiarem várias células na área de transferência do controle DataGridView dos Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [Como: Habilitar usuários para copiarem várias células na Área de Transferência usando o controle DataGridView do Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Descreve como habilitar o suporte à área de transferência no controle.  
   
 ## <a name="reference"></a>Referência  
@@ -52,5 +52,6 @@ O controle `DataGridView` oferece uma variedade de opções para configurar como
  Fornece documentação de referência para o <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> classe.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Tratamento de teclado e mouse padrão no controle DataGridView do Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Tratamento de teclado e mouse padrão no controle DataGridView dos Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

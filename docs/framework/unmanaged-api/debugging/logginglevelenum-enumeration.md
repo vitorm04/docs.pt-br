@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e72654dc62020e05f18c4d7d4d528617a0cd0c9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fe8e1355382273a681e927897f4a8ff5814b8de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086501"
 ---
 # <a name="logginglevelenum-enumeration"></a>Enumeração LoggingLevelEnum
 Indica o nível de severidade de uma mensagem descritiva que é escrita no log de eventos quando um thread gerenciado registrar um evento.  
@@ -77,5 +77,6 @@ typedef enum LoggingLevelEnum {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.EventLog>
 - [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

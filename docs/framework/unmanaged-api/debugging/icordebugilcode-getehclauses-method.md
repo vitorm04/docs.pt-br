@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105048"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::Método GetEHClauses
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -58,6 +58,7 @@ HRESULT GetEHClauses(
  **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
 - [Estrutura CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

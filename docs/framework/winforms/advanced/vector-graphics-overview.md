@@ -9,15 +9,15 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087957"
 ---
 # <a name="vector-graphics-overview"></a>Visão geral de gráficos vetoriais
-O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Os blocos de construção da GDI+  
  ![Gráfico vetorial](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -26,7 +26,7 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha li
   
  ![Gráfico vetorial](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Quando você usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar uma linha, um retângulo ou uma curva, fornece determinadas informações importantes sobre o item a ser desenhado. Por exemplo, você pode especificar uma linha fornecendo dois pontos e especificar um retângulo fornecendo um ponto, uma altura e uma largura. O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona em conjunto com o software de driver de vídeo para determinar quais pixels devem ser ativados para mostrar a linha, o retângulo ou a curva. A ilustração a seguir mostra os pixels que são ativados para exibir uma linha do ponto (4, 2) ao ponto (12, 8).  
+ Quando você usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar uma linha, um retângulo ou uma curva, fornece determinadas informações importantes sobre o item a ser desenhado. Por exemplo, você pode especificar uma linha fornecendo dois pontos e especificar um retângulo fornecendo um ponto, uma altura e uma largura. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona em conjunto com o software de driver de vídeo para determinar quais pixels devem ser ativados para mostrar a linha, um retângulo ou uma curva. A ilustração a seguir mostra os pixels que são ativados para exibir uma linha do ponto (4, 2) ao ponto (12, 8).  
   
  ![Gráfico vetorial](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
@@ -57,7 +57,8 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha li
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
-- [Como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
+- [Linhas, curvas e formas](lines-curves-and-shapes.md)
+- [Como: criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: f99b8626ca4a89bf94e44652e8277f8b2c147fe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091935"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportando e importando metadados
 No Windows Communication Foundation (WCF), exportação de metadados é o processo de descrever os pontos de extremidade de serviço e Projetando-os em uma representação paralela e padronizada que os clientes podem usar para entender como usar o serviço. Importação de metadados de serviço é o processo de geração <xref:System.ServiceModel.Description.ServiceEndpoint> instâncias ou partes de metadados de serviço.  
@@ -48,16 +48,16 @@ No Windows Communication Foundation (WCF), exportação de metadados é o proces
  O <xref:System.ServiceModel.Description.WsdlExporter> tipo lança novamente todas as exceções capturadas durante o processo de exportação. Essas exceções não são capturadas como erros no `Errors` propriedade. Uma vez o <xref:System.ServiceModel.Description.WsdlExporter> gera uma exceção, ele está em um estado de falha e não pode ser reutilizado. O <xref:System.ServiceModel.Description.WsdlExporter> Adicionar avisos para seu `Errors` propriedade quando uma operação não pode ser exportada porque ele usa ações de curinga e quando são encontrados nomes de associação duplicada.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Importar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Como: importar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Descreve como importar metadados baixado para objetos de descrição.  
   
- [Como: Exportar metadados de pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Como: exportar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Descreve como exportar objetos de descrição nos metadados.  
   
- [Referência WSDL e ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [ServiceDescription and WSDL Reference](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Descreve o mapeamento entre os objetos de descrição e o WSDL.  
   
- [Como: Use Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Como: usar Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Descreve o uso de Svcutil.exe para exportar metadados para os serviços, contratos e tipos de dados em assemblies compilados.  
   
  [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -69,5 +69,6 @@ No Windows Communication Foundation (WCF), exportação de metadados é o proces
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exportando metadados personalizados para uma extensão do WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
 - [Importando metadados personalizados para uma extensão do WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

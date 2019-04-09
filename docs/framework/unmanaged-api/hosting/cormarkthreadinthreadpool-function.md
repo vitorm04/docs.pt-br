@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f7141115ff0aa7431f49281bde01b38c5af4260
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a39b0f2546d84cf24a58d5367c87d0a862aead93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085071"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>Função CorMarkThreadInThreadPool
 Marca o thread do pool de threads em execução no momento para a execução de código gerenciado. Começando com o .NET Framework versão 2.0, essa função não tem efeito. Ele não é necessário e pode ser removido do seu código. Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
@@ -42,4 +42,5 @@ void CorMarkThreadInThreadPool ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+
+- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

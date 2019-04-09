@@ -2,12 +2,12 @@
 title: Rastreamento ponta a ponta
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: 4ffa97b2aa7b934a15ea676f28e527f4b8fbc8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092100"
 ---
 # <a name="end-to-end-tracing"></a>Rastreamento ponta a ponta
 Ponta a ponta (e2e) rastreamento permite aos desenvolvedores acompanhar a execução de código na infra-estrutura do Windows Communication Foundation (WCF) para investigar por que um caminho de código falhou, ou para fornecer rastreamento detalhado para análise de desempenho e planejamento de capacidade. Windows Communication Foundation (WCF) fornece três mecanismos de correlação para ajudar a diagnosticar a causa do erro: propagação, transferências e atividades.  
@@ -26,7 +26,8 @@ Ponta a ponta (e2e) rastreamento permite aos desenvolvedores acompanhar a execu�
  Fornece um resumo da atividade de todos os tipos de rastreamento  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configurando o rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - source element in event handlers [WPF]
 - event handlers [WPF], finding source element in
 ms.assetid: 85f71c5a-b714-4c65-9711-7d905c2bbe98
-ms.openlocfilehash: 8c1ff53e5af1ddfda17328291c5e22b57a8fe0e2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a49878c9ad8313903df4506796998fd43e2e749
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104553"
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a>Como: Localizar o elemento de origem em um manipulador de eventos
 Este exemplo mostra como localizar o elemento de origem em um manipulador de eventos.  
@@ -27,6 +27,7 @@ Este exemplo mostra como localizar o elemento de origem em um manipulador de eve
  [!code-vb[RoutedEventSource#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventSource/VisualBasic/default.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.RoutedEventArgs>
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Tópicos de instruções](events-how-to-topics.md)
+- [Tópicos explicativos ](events-how-to-topics.md)

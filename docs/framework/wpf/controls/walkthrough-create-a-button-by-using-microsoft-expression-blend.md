@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100113"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Passo a passo: Criar um botão usando o Microsoft Expression Blend
 Estas instruções passo a passo demonstram o processo de criação de um botão personalizado [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando o Microsoft Expression Blend.  
@@ -248,6 +248,7 @@ Estas instruções passo a passo demonstram o processo de criação de um botão
 -   Diversos: crie gradientes, adicione BitmapEffects, use transformações e defina as propriedades básicas dos objetos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criar um botão usando XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Estilo e modelagem](styling-and-templating.md)
 - [Visão geral da animação](../graphics-multimedia/animation-overview.md)

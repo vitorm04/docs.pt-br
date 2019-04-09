@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b3b3a32796b5805dbf86449921518a77e95d6b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8251d21fe535f85cc6abd0a7bc6c96ab320007f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090232"
 ---
 # <a name="prebindassemblyex-function"></a>Função PreBindAssemblyEx
 Obtém o nome de exibição de pós-política para um assembly.  
@@ -73,4 +73,5 @@ HRESULT PreBindAssemblyEx (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

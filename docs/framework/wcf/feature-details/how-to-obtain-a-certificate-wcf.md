@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: cefea47d77fef9a59234584b02b03dca4cd99ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03ee861f7eba8b2ecee6b4697c5b475eacf78c89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093898"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Como: Obter um certificado (WCF)
 Use qualquer um do Windows Communication Foundation (WCF) recursos do que usam certificados X.509, você apenas primeiro obter certificados.  
@@ -28,5 +28,6 @@ Use qualquer um do Windows Communication Foundation (WCF) recursos do que usam c
     >  Qualquer abordagem, o destinatário da solicitação SOAP que contém o certificado X.509 deve confiar no certificado de x. 509. Isso significa que o certificado X.509 ou um emissor na cadeia de certificados no repositório de certificados pessoas confiáveis e que não é o certificado X.509 no repositório de certificados não confiáveis.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Como: criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

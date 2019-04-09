@@ -2,12 +2,12 @@
 title: Using Multiple Authentication Schemes with WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 9f2c9944b424ba527fb20562706d5ad7fc3f8359
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102304"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Using Multiple Authentication Schemes with WCF
 O WCF agora permite que você especifique vários esquemas de autenticação em um único ponto de extremidade. Além disso serviços da web hospedado podem herdar as configurações de autenticação diretamente do IIS. Serviços de hospedagem interna podem especificar qual autenticação esquemas podem ser usados. Para obter mais informações sobre como definir as configurações de autenticação no IIS, consulte [autenticação IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -120,8 +120,9 @@ else
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Configurando associações fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)

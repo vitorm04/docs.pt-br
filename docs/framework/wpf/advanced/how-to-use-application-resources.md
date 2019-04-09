@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-ms.openlocfilehash: 8712f7c9c60d43cf3d0348b7c3f2f4cbee0b93b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088191"
 ---
 # <a name="how-to-use-application-resources"></a>Como: Usar recursos do aplicativo
 Esse exemplo demonstra como usar recursos do aplicativo.  
@@ -26,6 +26,7 @@ Esse exemplo demonstra como usar recursos do aplicativo.
  [!code-xaml[ResourcesApplication#ConsumingPage](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Recursos XAML](xaml-resources.md)
-- [Visão geral do gerenciamento de aplicativos](../app-development/application-management-overview.md)
-- [Tópicos de instruções](resources-how-to-topics.md)
+- [Visão geral de gerenciamento do aplicativo](../app-development/application-management-overview.md)
+- [Tópicos explicativos ](resources-how-to-topics.md)

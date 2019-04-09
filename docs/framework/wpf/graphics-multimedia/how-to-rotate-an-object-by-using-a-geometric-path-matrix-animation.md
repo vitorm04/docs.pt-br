@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 57402ba24e8dc75f3563e71329b54db9cb96aaab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087879"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Como: Girar um objeto usando um caminho geométrico (animação de matriz)
 Este exemplo mostra como usar um <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> e uma <xref:System.Windows.Media.MatrixTransform> para girar um objeto ao longo de um caminho geométrico definido por um <xref:System.Windows.Media.PathGeometry> objeto.  
@@ -32,6 +32,7 @@ Este exemplo mostra como usar um <xref:System.Windows.Media.Animation.MatrixAnim
  A versão de código do exemplo anterior usada um <xref:System.Windows.Media.Animation.Storyboard> animar o <xref:System.Windows.Media.EllipseGeometry>, mesmo que apenas uma animação foi aplicada. Uma maneira fácil de aplicar uma única animação a uma propriedade no código é usar o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da animação](animation-overview.md)
 - [Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)
 - [Exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028)

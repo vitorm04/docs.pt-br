@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHomeEnum Interface
+title: Interface ICorDebugVariableHomeEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43f63e09c654c7aab9f1da0db7587a92bee4fb79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e67e4685320f56a4a6a8be2e3eb2e6c8065ce59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080378"
 ---
-# <a name="icordebugvariablehomeenum-interface"></a>ICorDebugVariableHomeEnum Interface
+# <a name="icordebugvariablehomeenum-interface"></a>Interface ICorDebugVariableHomeEnum
 Fornece um enumerador para as variáveis locais e os argumentos em uma função.  
   
 ## <a name="methods"></a>Métodos  
@@ -47,5 +47,6 @@ Fornece um enumerador para as variáveis locais e os argumentos em uma função.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Especificar o FillBehavior para uma linha do tempo que tenha atingido fim do período ativo'
+title: 'Como: Especificar o FillBehavior para uma linha do tempo que tenha atingido o fim do período ativo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 1d6a3ec38a6488d997ce5a4734cc095446354070
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091104"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Como: Especificar o FillBehavior para uma linha do tempo que tenha atingido fim do período ativo
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Como: Especificar o FillBehavior para uma linha do tempo que tenha atingido o fim do período ativo
 Este exemplo mostra como especificar o <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> para a inativa <xref:System.Windows.Media.Animation.Timeline> de uma propriedade animada.  
   
 ## <a name="example"></a>Exemplo  
@@ -27,6 +27,7 @@ Este exemplo mostra como especificar o <xref:System.Windows.Media.Animation.Time
  Para obter o exemplo completo, consulte [Galeria de exemplo de animação](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>
 - <xref:System.Windows.Media.Animation.Timeline>

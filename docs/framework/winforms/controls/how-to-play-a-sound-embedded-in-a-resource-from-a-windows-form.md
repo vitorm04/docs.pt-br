@@ -1,5 +1,5 @@
 ---
-title: 'Como: Reproduzir um som inserido em um recurso de um formulário do Windows'
+title: 'Como: Reproduzir um som inserido em um recurso de um Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708178"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078571"
 ---
-# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Como: Reproduzir um som inserido em um recurso de um formulário do Windows
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Como: Reproduzir um som inserido em um recurso de um Windows Form
 Você pode usar o <xref:System.Media.SoundPlayer> classe para tocar um som de um recurso inserido.  
   
 ## <a name="example"></a>Exemplo  
@@ -34,6 +34,7 @@ Você pode usar o <xref:System.Media.SoundPlayer> classe para tocar um som de um
  Substituindo "\<AssemblyName >" com o nome do assembly no qual o arquivo de som é inserido. Não inclua o sufixo ". dll".  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Media.SoundPlayer>
-- [Como: Reproduzir um som de um formulário do Windows](how-to-play-a-sound-from-a-windows-form.md)
-- [Como: Loop de um som tocado em um formulário do Windows](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [Como: Reproduzir um som de um Windows Form](how-to-play-a-sound-from-a-windows-form.md)
+- [Como: Fazer Loop de um Som Tocado em um Formulário do Windows](how-to-loop-a-sound-playing-on-a-windows-form.md)

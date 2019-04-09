@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098228"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configurações da política da diretiva de tempo de execução
 > [!NOTE]
@@ -24,100 +24,100 @@ ms.locfileid: "54642562"
   
 -   Tipos de política de reflexão determinam quais metadados são disponibilizados no tempo de execução para reflexão:  
   
-    -   O `Activate` controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.  
+    -   `Activate` Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.  
   
-    -   O `Browse` controla as consultas para obter informações sobre elementos de programa.  
+    -   `Browse` Controla as consultas para obter informações sobre elementos do programa.  
   
-    -   O `Dynamic` controla o acesso de tempo de execução a todos os tipos e membros para habilitar programação dinâmica.  
+    -   `Dynamic` Controla o acesso de tempo de execução a todos os tipos e membros para habilitar dinâmico de programação.  
   
      A tabela a seguir lista os tipos de política de reflexão e os elementos do programa com o qual podem ser usados.  
   
     |Elemento|Ativar|Procure|Dinâmico|  
     |-------------|--------------|------------|-------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<Aplicativo >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<Assembly >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
+    |[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<Propriedade >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Subtipos >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 -   Os tipos de política de serialização determinam quais metadados são disponibilizado no tempo de execução para serialização e desserialização:  
   
-    -   O `Serialize` controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.  
+    -   `Serialize` Controla o acesso de tempo de execução para construtores, campos e propriedades para habilitar as instâncias do tipo a serem serializadas por bibliotecas de terceiros, como o serializador Newtonsoft JSON.  
   
-    -   O `DataContractSerializer` controla o acesso de tempo de execução a construtores, campos e propriedades, para habilitar que instâncias de tipo sejam serializadas pela classe <xref:System.Runtime.Serialization.DataContractSerializer>.  
+    -   `DataContractSerializer` Controla o acesso de tempo de execução a construtores, campos e propriedades para habilitar as instâncias do tipo a ser serializado pelo <xref:System.Runtime.Serialization.DataContractSerializer> classe.  
   
-    -   O `DataContractJsonSerializer` controla o acesso de tempo de execução a construtores, campos e propriedades, para habilitar que instâncias de tipo sejam serializadas pela classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+    -   `DataContractJsonSerializer` Controla o acesso de tempo de execução a construtores, campos e propriedades para habilitar as instâncias do tipo a ser serializado pelo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> classe.  
   
-    -   O `XmlSerializer` controla o acesso de tempo de execução a construtores, campos e propriedades, para habilitar que instâncias de tipo sejam serializadas pela classe <xref:System.Xml.Serialization.XmlSerializer>.  
+    -   `XmlSerializer` Controla o acesso de tempo de execução a construtores, campos e propriedades para habilitar as instâncias do tipo a ser serializado pelo <xref:System.Xml.Serialization.XmlSerializer> classe.  
   
      A tabela a seguir lista os tipos de política de serialização e os elementos do programa com o qual podem ser usados.  
   
     |Elemento|Serializar|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Aplicativo >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Assembly >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
+    |[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Propriedade >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Subtipos >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
 -   Os tipos de política de interoperabilidade determinam os metadados que são disponibilizados no tempo de execução para passar topos de referências, tipos de valor e apontadores de função ao COM e ao Tempo de Execução do Windows:  
   
-    -   O `MarshalObject` controla o marshaling nativo para o COM e o Tempo de Execução do Windows para tipos de referência.  
+    -   `MarshalObject` Controla o marshaling nativo para o COM e o tempo de execução do Windows para tipos de referência.  
   
-    -   O `MarshalDelegate` controla o marshaling nativo de tipos de delegados como ponteiros de função.  
+    -   `MarshalDelegate` Controla o marshaling nativo de tipos de delegados como ponteiros de função.  
   
-    -   O `MarshalStructure` controla o marshaling nativo para o COM e o Tempo de Execução do Windows para tipos de valor.  
+    -   `MarshalStructure` Controla o marshaling nativo para o COM e o tempo de execução do Windows para tipos de valor.  
   
      A tabela a seguir lista os tipos de política de interoperabilidade e os elementos do programa com o qual podem ser usados.  
   
     |Elemento|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<Aplicativo >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<Assembly >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
+    |[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<Propriedade >](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Subtipos >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 ## <a name="policy-settings"></a>Configurações de política  
  Cada tipo de política pode ser definido como um dos valores listados na tabela a seguir. Observe que elementos que representam os membros do tipo oferece suporte a um conjunto diferente de configurações de política que outros elementos.  
   
-|Configurações de política|Descrição|Elementos `Assembly`, `Namespace`, `Type` e `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` e `Property`|  
+|Configurações de política|Descrição|`Assembly`, `Namespace`, `Type`, e `TypeInstantiation` elementos|`Event`, `Field`, `Method`, `MethodInstantiation`, e `Property` elementos|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|Habilita a política para todos os tipos e membros que a cadeia de ferramentas do .NET Nativo não remover.|✓||  
-|`Auto`|Especifica que a política padrão deve ser usada para o tipo de política desse elemento de programa. Isso é idêntico a omitir uma política para esse tipo de política. O `Auto` geralmente é usado para indicar que a diretiva é herdada de um elemento pai.|✓|✓|  
+|`Auto`|Especifica que a política padrão deve ser usada para o tipo de política desse elemento de programa. Isso é idêntico a omitir uma política para esse tipo de política. `Auto` normalmente é usado para indicar que a diretiva é herdada de um elemento pai.|✓|✓|  
 |`Excluded`|Especifica que a política está desabilitada para um elemento de programa específico. Por exemplo, a diretiva de tempo de execução:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> Especifica que os metadados para a classe `BusinessClasses.Person` não estão disponíveis para busca ou para instanciar e modificar dinamicamente objetos `Person`.|✓|✓|  
 |`Included`|Habilita uma política se os metadados para o tipo de pai estiverem disponíveis.||✓|  
 |`Public`|Habilita a política para tipos públicos ou membros, a menos que a cadeia de ferramentas determine que o tipo ou membro é desnecessário e, portanto, remove-o. Essa configuração é diferente de `Required Public`, que garante que os metadados para membros e tipos públicos estão sempre disponíveis mesmo se a cadeia de ferramentas determinar que não são necessários.|✓||  
@@ -128,5 +128,6 @@ ms.locfileid: "54642562"
 |`Required All`|Necessita da cadeia de ferramentas para manter todos os tipos e membros, sejam usados ou não, e habilita a política para eles.|✓||  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

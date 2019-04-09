@@ -2,12 +2,12 @@
 title: Métodos suportados e sem suporte LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077063"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos suportados e sem suporte LINQ (LINQ to Entities)
 Esta seção fornece informações sobre os operadores padrões integrados linguagem de consulta de consulta (LINQ) que são suportados ou sem suporte em consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . Muitos dos operadores de consulta padrão LINQ têm uma versão sobrecarregada que aceita um argumento integer. O argumento integer corresponde a um índice baseado em zero na sequência que está sendo operada, uma <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Salvo indicação caso contrário, essas versões sobrecarregadas dos operadores de consulta padrão LINQ não são suportadas, e tentar usá-los irá acionar uma exceção.  
@@ -179,4 +179,5 @@ Esta seção fornece informações sobre os operadores padrões integrados lingu
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Sem suporte|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

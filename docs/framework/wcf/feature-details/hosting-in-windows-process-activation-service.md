@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082978"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedagem no serviço de ativação do processo do Windows
 O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o tempo de vida dos processos de trabalho que contêm aplicativos que hospedar serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] modelo de processo para o servidor HTTP, removendo a dependência no HTTP. Isso permite que os serviços do WCF para usar HTTP e protocolos não HTTP, como o NET. TCP, em um ambiente de hospedagem que oferece suporte à ativação baseada em mensagem e oferece a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
@@ -52,8 +52,9 @@ O serviço de ativação de processos do Windows (WAS) gerencia a ativação e o
  Aplicativos são organizados em sites para fins de endereçamento e de gerenciamento. Em tempo de execução aplicativos também são agrupados juntos em pools de aplicativos. Um pool de aplicativos pode hospedar vários aplicativos diferentes de muitos sites diferentes. Todos os aplicativos dentro de um pool de aplicativos compartilham um conjunto comum de características de tempo de execução. Por exemplo, todos são executados sob a mesma versão do common language runtime (CLR) e todas elas compartilham uma identidade comum do processo. Cada pool de aplicativos corresponde a uma instância de um processo de trabalho (w3wp.exe). Cada aplicativo gerenciado em execução dentro de um pool de aplicativos compartilhados é isolado de outros aplicativos por meio de um AppDomain do CLR.  
   
 ## <a name="see-also"></a>Consulte também
-- [Arquitetura de ativação WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Como: Instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Como: Hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+
+- [Arquitetura de ativação do WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+- [Configurar o WAS para uso com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Como: instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Como: hospedar um serviço WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Recursos de hospedagem do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -2,12 +2,12 @@
 title: <message> De <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 66e854ca9dd33b608b93dae08376caaf590bd97f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105450"
 ---
 # <a name="message-of-nethttpbinding"></a>\<mensagem > de \<netHttpBinding >
 Define as configurações de segurança em nível de mensagem do [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -120,6 +120,7 @@ Define as configurações de segurança em nível de mensagem do [ \<basicHttpBi
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

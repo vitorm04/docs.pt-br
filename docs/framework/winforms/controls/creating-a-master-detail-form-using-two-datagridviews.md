@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078870"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Passo a passo: Criando um formulário mestre/detalhes usando dois controles de Windows Forms DataGridView
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Passo a passo: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms
 Um dos cenários mais comuns para usar o <xref:System.Windows.Forms.DataGridView> controle é o *mestre/detalhes* formulário, na qual uma relação pai/filho entre duas tabelas de banco de dados é exibida. Seleção de linhas na tabela mestra faz com que a tabela de detalhes sejam atualizadas com os dados filho correspondentes.  
   
  Implementando um formulário mestre/detalhes é fácil com a interação entre o <xref:System.Windows.Forms.DataGridView> controle e o <xref:System.Windows.Forms.BindingSource> componente. Neste passo a passo, você irá criar o formulário usando duas <xref:System.Windows.Forms.DataGridView> controles e dois <xref:System.Windows.Forms.BindingSource> componentes. O formulário mostrará duas tabelas relacionadas no banco de dados de exemplo SQL Server Northwind: `Customers` e `Orders`. Quando tiver terminado, você terá um formulário que mostra todos os clientes no banco de dados no mestre <xref:System.Windows.Forms.DataGridView> e todos os pedidos do cliente selecionado no detalhe <xref:System.Windows.Forms.DataGridView>.  
@@ -76,8 +76,9 @@ Um dos cenários mais comuns para usar o <xref:System.Windows.Forms.DataGridView
 -   Personalize a aparência das células. Para obter mais informações, confira [Como: Personalizar a aparência de células no controle DataGridView dos Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) e [como: Definir estilos de célula padrão para o Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Criar um formulário mestre/detalhes usando dois controles de Windows Forms DataGridView](create-a-master-detail-form-using-two-datagridviews.md)
+- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
 - [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md)

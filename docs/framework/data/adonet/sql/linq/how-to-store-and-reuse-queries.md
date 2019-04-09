@@ -1,18 +1,18 @@
 ---
-title: 'Como: Store e consultas reutilização'
+title: 'Como: armazenar e reutilizar consultas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084187"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Como: Store e consultas reutilização
+# <a name="how-to-store-and-reuse-queries"></a>Como: armazenar e reutilizar consultas
 Quando você tiver um aplicativo que executa consultas estrutural semelhantes muitas vezes, você geralmente pode aumentar o desempenho criando a consulta uma hora e executando a várias vezes com parâmetros diferentes. Por exemplo, um aplicativo pode precisar recuperar todos os clientes que estão em uma cidade específica, onde cidade é especificada em tempo de execução pelo usuário em um formulário. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta o uso de *consultas compiladas* para essa finalidade.  
   
 > [!NOTE]
@@ -34,6 +34,7 @@ Quando você tiver um aplicativo que executa consultas estrutural semelhantes mu
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.Linq.CompiledQuery>
-- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Consulte conceitos](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Consultando o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

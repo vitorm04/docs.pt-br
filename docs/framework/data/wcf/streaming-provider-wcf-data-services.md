@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087886"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Porque o carregamento e a serialização de dados binários grandes dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ele pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -43,7 +43,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definindo uma entrada de link de mídia no modelo de dados  
  O provedor de fonte de dados determina a maneira que uma entidade é definida como uma entrada de link de mídia no modelo de dados.  
   
- **Entity Framework Provider** (Provedor de Entity Framework)  
+ **Provedor de Entity Framework**  
  Para indicar que uma entidade é uma entrada de link de mídia, adicione o atributo `HasStream` à definição de tipo de entidade no modelo conceitual, como no exemplo a seguir:  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
@@ -55,7 +55,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
  **Provedor de reflexão**  
  Para indicar que uma entidade é uma entrada de link de mídia, adicione o <xref:System.Data.Services.Common.HasStreamAttribute> à classe que define o tipo de entidade no provedor de reflexão.  
   
- **Provedor de serviços de dados personalizados**  
+ **Provedor de serviços de dados personalizado**  
  Ao usar provedores de serviços personalizados, você implementa a interface <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> para definir os metadados do serviço de dados. Para obter mais informações, consulte [provedores de serviço de dados personalizado](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Você indica que um fluxo de recurso binário pertence a um <xref:System.Data.Services.Providers.ResourceType> definindo a propriedade <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> para `true` no <xref:System.Data.Services.Providers.ResourceType> que representa o tipo de entidade, que é uma entrada de link de mídia.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implementando a interface IDataServiceStreamProvider  
@@ -81,18 +81,14 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Ativando os fluxos de binário grandes no ambiente de hospedagem  
  Quando você cria um serviço de dados em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo da Web, Windows Communication Foundation (WCF) é usado para fornecer a implementação de protocolo HTTP. Por padrão, o WCF limita o tamanho de mensagens HTTP para apenas 65 mil bytes. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:  
-  
-  
-  
+
 > [!NOTE]
 >  Você deve usar um <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferência para garantir que os dados binários nas mensagens de solicitação e resposta são transmitidos e não armazenado em buffer pelo WCF.  
   
  Para obter mais informações, consulte [transferência de mensagens de Streaming](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  Por padrão, os Serviços de Informações da Internet (IIS) também limita o tamanho das solicitações a 4 MB. Para habilitar o serviço de dados receba fluxos maiores que 4MB quando em execução no IIS, você também deve definir a `maxRequestLength` atributo do [httpRuntime Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) no `<system.web />` seção de configuração, como como mostrado no exemplo a seguir:  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>Usando fluxos de dados em um aplicativo cliente  
  A biblioteca de cliente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite a recuperação e a atualização desses recursos expostos como fluxos binários no cliente. Para obter mais informações, consulte [trabalhando com dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
@@ -130,6 +126,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
  Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+
+- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Provedores de serviços de dados personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [Trabalhando com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [Trabalhar com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

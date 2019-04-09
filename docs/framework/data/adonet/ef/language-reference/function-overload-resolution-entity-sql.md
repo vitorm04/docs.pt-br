@@ -2,12 +2,12 @@
 title: Resolução de sobrecarga de função (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e80704da9657dccfbfea548df074a95327cdc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082029"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Resolução de sobrecarga de função (Entity SQL)
 Este tópico descreve como as funções de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são resolvidas.  
@@ -31,6 +31,7 @@ Este tópico descreve como as funções de [!INCLUDE[esql](../../../../../../inc
  Para funções definidas pelo usuário, a definição de uma função in-line de consulta tem precedência mesmo quando uma função o definida existe com uma assinatura que é uma correspondência melhor para a função definida pelo usuário.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral da Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Funções](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
