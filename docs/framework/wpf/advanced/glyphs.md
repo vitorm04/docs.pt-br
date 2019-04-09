@@ -10,12 +10,12 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193142"
 ---
 # <a name="glyphs"></a>Glifos
 Glifos são uma representação de nível baixo de um caractere a ser desenhado na tela. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece acesso direto a glifos para clientes que desejam interceptar e persistir texto após a formatação.  
@@ -25,6 +25,7 @@ Glifos são uma representação de nível baixo de um caractere a ser desenhado 
   [Como: Desenhar texto usando glifos](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>

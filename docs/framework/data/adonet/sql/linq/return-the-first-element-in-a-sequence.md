@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-ms.openlocfilehash: 74280b0da0713ae089178449fd7fcd0de39e7f9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dca917b3c12b0f9923cc9ea34a2568c412a09831
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081811"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>Retornar o primeiro elemento em uma sequência
 Use o operador de <xref:System.Linq.Enumerable.First%2A> para retornar o primeiro elemento em uma sequência. Consultas que usam <xref:System.Linq.Enumerable.First%2A> é executado imediatamente.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta o operador de <xref:System.Linq.Enumerable.Last%2A> .  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte a <xref:System.Linq.Enumerable.Last%2A> operador.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir localiza o primeiro `Shipper` em uma tabela:  
@@ -37,5 +37,6 @@ Use o operador de <xref:System.Linq.Enumerable.First%2A> para retornar o primeir
  [!code-vb[DLinqQueryExamples#15](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#15)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

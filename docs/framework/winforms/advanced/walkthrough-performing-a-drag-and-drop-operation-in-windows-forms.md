@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms'
+title: 'Passo a passo: executar uma operação do tipo "arrastar e soltar" no Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189021"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Passo a passo: executar uma operação do tipo "arrastar e soltar" no Windows Forms
 Para executar operações de arrastar e soltar em aplicativos baseados em Windows no você deve lidar com uma série de eventos, mais notavelmente os <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventos. Trabalhando com as informações disponíveis no evento argumentos desses eventos, você pode facilmente orientar as operações do tipo "arrastar e soltar".  
   
 ## <a name="dragging-data"></a>Arrastando dados  
@@ -107,6 +107,7 @@ Para executar operações de arrastar e soltar em aplicativos baseados em Window
     >  Além disso, você pode trabalhar com o <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> propriedade, para que, dependendo das teclas pressionadas durante a operação de arrastar e soltar, determinados efeitos ocorram (por exemplo, ele é padrão para copiar os dados arrastados quando a tecla CTRL está pressionada).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)
-- [Como: Recuperar dados da área de transferência](how-to-retrieve-data-from-the-clipboard.md)
-- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](drag-and-drop-operations-and-clipboard-support.md)
+
+- [Como: adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)
+- [Como: recuperar dados da área de transferência](how-to-retrieve-data-from-the-clipboard.md)
+- [Operações de arrastar e soltar e suporte à área de transferência](drag-and-drop-operations-and-clipboard-support.md)

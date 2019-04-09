@@ -2,12 +2,12 @@
 title: 'Como: Atualização dinâmica'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190984"
 ---
 # <a name="how-to-dynamic-update"></a>Como: Atualização dinâmica
 Este tópico descreve as etapas básicas necessárias para criar e atualizar dinamicamente a configuração de roteamento. Neste exemplo, a configuração de roteamento inicial é obtida do arquivo de configuração e encaminha todas as mensagens para o serviço da Calculadora regularCalc; No entanto, ele é subsequentemente atualizado por meio de programação para alterar o ponto de extremidade de destino o serviço roundingCalc.  
@@ -297,4 +297,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Serviços de roteamento](../../../../docs/framework/wcf/samples/routing-services.md)

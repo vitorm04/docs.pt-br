@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189307"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
 > [!NOTE]
@@ -140,6 +140,7 @@ A ilustração a seguir mostra os objetos incluídos no controle DataGrid.
  Além do comum controlar eventos, como <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>, e <xref:System.Windows.Forms.DataGrid.Scroll>, o <xref:System.Windows.Forms.DataGrid> controle dá suporte a eventos associados à edição e navegação dentro da grade. O <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> propriedade determina qual célula está selecionada. O <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> evento é gerado quando o usuário navega para uma nova célula. Quando o usuário navega para uma nova tabela por meio de relações pai/filho, o <xref:System.Windows.Forms.DataGrid.Navigate> é gerado. O <xref:System.Windows.Forms.DataGrid.BackButtonClick> é gerado quando o usuário clica no botão Voltar quando o usuário está exibindo uma tabela filho e o <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> evento é gerado quando o ícone de linhas pai Mostrar/ocultar é clicado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle DataGrid](datagrid-control-windows-forms.md)
 - [Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

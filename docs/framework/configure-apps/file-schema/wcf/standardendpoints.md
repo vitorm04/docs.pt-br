@@ -2,12 +2,12 @@
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 1451105f210f34747aca337b3279821f72a19080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66b86647689ea2ca39ae2f569d275aff1f48cba5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190269"
 ---
 # <a name="standardendpoints"></a>\<standardEndpoints>
 Esta seção de configuração permite que você defina uma coleção de pontos de extremidade padrão que são pontos de extremidade pré-configurados reutilizáveis. Um ponto de extremidade padrão terá um ou mais do endereço, associação e atributos de contrato definido como um valor fixo. Por exemplo, o ponto de extremidade de descoberta o contrato é fixo. Você também pode usar pontos de extremidade padrão para estender o ponto de extremidade de serviço com novas propriedades semelhantes à definição de ligações personalizadas.  
@@ -50,4 +50,5 @@ Esta seção de configuração permite que você defina uma coleção de pontos 
 |\<system.ServiceModel>|O elemento raiz de todos os elementos de configuração do WCF.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Pontos de extremidade padrão](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

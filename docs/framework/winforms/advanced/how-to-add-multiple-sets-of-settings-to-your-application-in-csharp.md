@@ -1,16 +1,16 @@
 ---
-title: 'Como: Adicionar vários conjuntos de configurações para seu aplicativo noC#'
+title: 'Como: adicionar vários conjuntos de configurações a um aplicativo em C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 106e0ee0b8775f329f3ffd8babe458cac8492bd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187376"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Como: Adicionar vários conjuntos de configurações ao seu aplicativo em C\#
 Em alguns casos, convém ter vários conjuntos de configurações em um aplicativo. Por exemplo, se você estiver desenvolvendo um aplicativo no qual se supõe que um determinado grupo de configurações deve ser alterado com frequência, talvez seja mais inteligente separá-las em um único arquivo, de modo que esse arquivo possa ser substituído em massa sem que as demais configurações sejam afetadas. O Visual Studio lhe permite adicionar vários conjuntos de configurações ao projeto. Conjuntos de configurações adicionais podem ser acessados através do objeto Properties.Settings.  
@@ -26,5 +26,6 @@ Em alguns casos, convém ter vários conjuntos de configurações em um aplicati
 4.  Adicione e use configurações nesse arquivo da mesma forma que faria em qualquer outro arquivo de configurações. Você pode acessar esse grupo de configurações por intermédio do objeto Properties.Settings.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando configurações do aplicativo e configurações do usuário](using-application-settings-and-user-settings.md)
-- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
+- [Visão geral sobre configurações do aplicativo](application-settings-overview.md)

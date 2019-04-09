@@ -1,5 +1,5 @@
 ---
-title: 'Como: Cortar e dimensionar imagens'
+title: 'Como: cortar e dimensionar imagens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189870"
 ---
-# <a name="how-to-crop-and-scale-images"></a>Como: Cortar e dimensionar imagens
+# <a name="how-to-crop-and-scale-images"></a>Como: cortar e dimensionar imagens
 O <xref:System.Drawing.Graphics> classe fornece vários <xref:System.Drawing.Graphics.DrawImage%2A> métodos, alguns deles têm parâmetros de retângulo de origem e destino que você pode usar para recortar e dimensionar imagens.  
   
 ## <a name="example"></a>Exemplo  
@@ -36,5 +36,6 @@ O <xref:System.Drawing.Graphics> classe fornece vários <xref:System.Drawing.Gra
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Certifique-se de substituir `Apple.gif` por um nome de arquivo de imagem e um caminho que sejam válidos no seu sistema.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

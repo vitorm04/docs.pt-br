@@ -1,19 +1,19 @@
 ---
-title: 'Como: Implementar validação de associação'
+title: 'Como: Implementar a validação de associação'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197211"
 ---
-# <a name="how-to-implement-binding-validation"></a>Como: Implementar validação de associação
+# <a name="how-to-implement-binding-validation"></a>Como: Implementar a validação de associação
 Este exemplo mostra como usar um <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e um gatilho de estilo para fornecer comentários visuais para informar ao usuário quando um valor inválido é inserido, com base em uma regra de validação personalizada.  
   
 ## <a name="example"></a>Exemplo  
@@ -38,5 +38,6 @@ Este exemplo mostra como usar um <xref:System.Windows.Controls.Validation.ErrorT
  Observe que, se você não fornecer um personalizado <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> o modelo de erro padrão é exibido para fornecer comentários visuais para o usuário quando há um erro de validação. Consulte “Validação de dados” na [Visão geral de associação de dados](data-binding-overview.md) para obter mais informações. Além disso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma regra de validação interna que captura exceções que são geradas durante a atualização da propriedade de origem de associação. Para obter mais informações, consulte <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

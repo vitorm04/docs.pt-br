@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
-ms.openlocfilehash: d18b9bc78e011796f9d9e6d535f3dc949bd5a0f8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186375"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Como: Aplicar várias transformações a um modelo 3D
 Este exemplo mostra como usar um <xref:System.Windows.Media.Media3D.RotateTransform3D> e um <xref:System.Windows.Media.Media3D.ScaleTransform3D> para girar e alterar a escala de um modelo 3D. O código a seguir mostra como aplicar essas transformações para o <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> em XAML.  
@@ -36,4 +36,5 @@ Este exemplo mostra como usar um <xref:System.Windows.Media.Media3D.RotateTransf
  [!code-vb[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/multipletransformationsexample.vb#multiple3dtransformationscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Transformar a escala de um modelo 3D](how-to-transform-the-scale-of-a-3-d-model.md)

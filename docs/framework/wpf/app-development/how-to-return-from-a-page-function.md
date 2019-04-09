@@ -9,12 +9,12 @@ helpviewer_keywords:
 - page functions [WPF], returning from
 - functions [WPF], returning from
 ms.assetid: 87804905-7e8f-417b-b0e3-5622da686396
-ms.openlocfilehash: 60e1d9d96104a9f4160280ba7208b7fe3680c1c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8539395625ead3b71e8e50b36567c098eb13da01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198004"
 ---
 # <a name="how-to-return-from-a-page-function"></a>Como: Retornar de uma função de página
 Este exemplo mostra como retornar um resultado de uma função de página.  
@@ -29,4 +29,5 @@ Este exemplo mostra como retornar um resultado de uma função de página.
  [!code-vb[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/GetStringPageFunction.xaml.vb#pagefunctionreturnaresultcodebehind)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Navigation.PageFunction%601>

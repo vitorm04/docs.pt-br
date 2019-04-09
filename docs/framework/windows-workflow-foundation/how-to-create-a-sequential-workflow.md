@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar um fluxo de trabalho sequencial'
+title: 'Como: criar um fluxo de trabalho sequencial'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189294"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a>Como: Criar um fluxo de trabalho sequencial
+# <a name="how-to-create-a-sequential-workflow"></a>Como: criar um fluxo de trabalho sequencial
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.Sequence> atividade e atividades personalizadas do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
@@ -64,7 +64,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 ## <a name="to-add-the-workflow-activities"></a>Para adicionar as atividades de fluxo de trabalho  
   
-1.  Arraste uma **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **sequência** atividade. Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão C#** ou **insira uma expressão VB** caixa.  
+1.  Arraste uma **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **sequência** atividade. Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -111,7 +111,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     > [!NOTE]
     >  Quando você solta o **atribuir** atividade, observe como o designer de fluxo de trabalho adiciona automaticamente uma **sequência** atividade para conter o **Prompt** recém-adicionada e atividade **Atribuir** atividade.  
   
-7.  Tipo de `Turns` no **para** caixa e `Turns + 1` no **insira uma expressão C#** ou **insira uma expressão VB** caixa.  
+7.  Tipo de `Turns` no **para** caixa e `Turns + 1` no **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
   
 8.  Arraste uma **se** a atividade do **fluxo de controle** seção o **caixa de ferramentas** e solte-o no **sequência** atividade para que ela siga a adicionados recentemente **atribuir** atividade.  
   
@@ -158,10 +158,11 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
      Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md). Se você já tiver concluído o [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md) passo a passo com um estilo diferente de fluxo de trabalho e quiser executá-lo usando o fluxo de trabalho sequencial dessa etapa, pule para a [para compilar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) seção [como: Executar um fluxo de trabalho](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programação do Windows Workflow Foundation](programming.md)
 - [Criando fluxos de trabalho](designing-workflows.md)
-- [Tutorial de Introdução](getting-started-tutorial.md)
-- [Como: Criar uma atividade](how-to-create-an-activity.md)
-- [Como: Executar um fluxo de trabalho](how-to-run-a-workflow.md)
+- [Guia de introdução ao tutorial](getting-started-tutorial.md)
+- [Como: criar uma atividade](how-to-create-an-activity.md)
+- [Como: executar um fluxo de trabalho](how-to-run-a-workflow.md)

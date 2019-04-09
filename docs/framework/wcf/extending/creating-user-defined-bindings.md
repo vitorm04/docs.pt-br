@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188715"
 ---
 # <a name="creating-user-defined-bindings"></a>Criando associações definidas pelo usuário
 Há várias maneiras de criar associações não são fornecidas pelo sistema:  
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  Em vez de criar uma classe de associação completamente nova, é possível estender uma das associações fornecidas pelo sistema existentes. Muito, como no caso anterior, você deve substituir a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método e o <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Anexar um Menu de atalho a um TreeNode usando o Designer'
+title: 'Como: Anexar um menu de atalho a um TreeNode usando o designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: aa161af65b7e8e1f3636398cd02139b5623eb154
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191426"
 ---
-# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Como: Anexar um Menu de atalho a um TreeNode usando o Designer
+# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Como: Anexar um menu de atalho a um TreeNode usando o designer
 Os formulários do Windows <xref:System.Windows.Forms.TreeView> controle exibe uma hierarquia de nós, semelhantes aos arquivos e pastas exibidas no painel esquerdo do recurso Windows Explorer em sistemas de operacionais do Windows. Definindo o <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> propriedade, você pode fornecer operações sensíveis ao contexto para o usuário quando eles com o botão direito do <xref:System.Windows.Forms.TreeView> controle. Associando um <xref:System.Windows.Forms.ContextMenuStrip> componente com indivíduo <xref:System.Windows.Forms.TreeNode> itens, você pode adicionar um nível personalizado de funcionalidade do menu de atalho para seu <xref:System.Windows.Forms.TreeView> controles.  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ Os formulários do Windows <xref:System.Windows.Forms.TreeView> controle exibe u
      Além disso, você vai querer escrever código para manipular o <xref:System.Windows.Forms.ToolStripItem.Click> eventos para esses itens de menu.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle TreeView](treeview-control-windows-forms.md)
 - [Visão geral do controle TreeView](treeview-control-overview-windows-forms.md)
 - [Controle ContextMenuStrip](contextmenustrip-control.md)

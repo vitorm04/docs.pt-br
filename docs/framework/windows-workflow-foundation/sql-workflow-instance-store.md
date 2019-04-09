@@ -2,12 +2,12 @@
 title: Store instância de fluxo de trabalho do SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 926b50ee00743f6a84f48c6ccae976daf49b3d9a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086566"
 ---
 # <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] com a instância Store de fluxo de trabalho SQL, que permite que fluxos de trabalho persistam informações de estado sobre instâncias de fluxo de trabalho em uma base de dados SQL Server 2005 ou SQL Server 2008. Esse recurso é implementado primeiro na forma da classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , que deriva da classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> a estrutura de persistência. O recurso de Store de instância de fluxo de trabalho do SQL constitui um provedor de persistência SQL, que é uma implementação concreta de persistência API que um host usa para enviar comandos de persistência no armazenamento.  
@@ -22,19 +22,20 @@ Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-m
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Propriedades do repositório de instâncias de fluxo de trabalho do SQL](properties-of-sql-workflow-instance-store.md)  
+-   [Propriedades de instância Store de fluxo de trabalho do SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Como: Habilitar a persistência do SQL para fluxos de trabalho e serviços de fluxo de trabalho](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Ativação de instância](instance-activation.md)  
   
 -   [Suporte para consultas](support-for-queries.md)  
   
--   [Extensibilidade de repositório](store-extensibility.md)  
+-   [Extensibilidade de Store](store-extensibility.md)  
   
 -   [Segurança](security.md)  
   
--   [Banco de dados de persistência do SQL Server](sql-server-persistence-database.md)  
+-   [A base de dados do SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Persistência exemplos](https://go.microsoft.com/fwlink/?LinkID=177735)
+
+- [Persistência Exemplos](https://go.microsoft.com/fwlink/?LinkID=177735)

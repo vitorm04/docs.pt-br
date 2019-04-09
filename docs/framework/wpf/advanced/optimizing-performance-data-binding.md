@@ -5,20 +5,18 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087827"
 ---
 # <a name="optimizing-performance-data-binding"></a>Otimizando desempenho: Associação de dados
-A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associação de dados fornece uma maneira simple e consistente para os aplicativos apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Este tópico apresenta recomendações de desempenho de vinculação de dados.  
-  
 
-  
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## <a name="how-data-binding-references-are-resolved"></a>Como as referências de vinculação de dados são resolvidas  
  Antes de discutir os problemas de desempenho da vinculação de dados, vale a pena explorar como o mecanismo de vinculação de dados [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] resolve referências de objeto para associação.  
@@ -47,7 +45,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ## <a name="binding-to-large-clr-objects"></a>Associando a objetos CLR grandes  
  Há um impacto significativo no desempenho ao associar dados a um único objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] com milhares de propriedades. Você pode minimizar esse impacto dividindo o objeto único em vários objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] com menos propriedades. A tabela mostra os tempos de renderização e associação da vinculação de dados para um único objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] grande em comparação com vários objetos menores.  
   
-|**Vinculação de dados de mil objetos TextBlock**|**Tempo de associação (ms)**|**Tempo de renderização – inclui associação (ms)**|  
+|**Objetos de TextBlock de 1000 de associação de dados**|**Tempo de associação (ms)**|**Tempo de renderização – inclui associação (ms)**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Para um objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] com mil propriedades|950|1200|  
 |Para mil objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] com uma propriedade|115|314|  
@@ -60,7 +58,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  A tabela abaixo mostra o tempo necessário para atualizar o <xref:System.Windows.Controls.ListBox> (com virtualização de interface do usuário desativada) quando um item é adicionado. O número da primeira linha representa o tempo decorrido quando o [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objeto está associado a <xref:System.Windows.Controls.ListBox> do elemento <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. O número na segunda linha representa o tempo decorrido quando um <xref:System.Collections.ObjectModel.ObservableCollection%601> está associado a <xref:System.Windows.Controls.ListBox> do elemento <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Observe que a economia de tempo significativo usando o <xref:System.Collections.ObjectModel.ObservableCollection%601> estratégia de vinculação de dados.  
   
-|**Vinculação de dados de ItemsSource**|**Atualizar tempo para 1 item (ms)**|  
+|**O ItemsSource de vinculação de dados**|**Atualize o tempo de 1 item (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Para um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objeto|1656|  
 |Para um <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
@@ -71,12 +69,13 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Não converta objetos CLR em XML apenas para vinculação de dados.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite associar dados a conteúdo [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. No entanto, a vinculação de dados ao conteúdo [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] é mais lenta que a vinculação de dados a objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Não converta os dados de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] em XML se o único objetivo for a vinculação de dados.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite associar dados ao [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] de conteúdo; no entanto, a associação de dados para [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] conteúdo é mais lento que a vinculação de dados para [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objetos. Não converta os dados de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] em XML se o único objetivo for a vinculação de dados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)
@@ -84,4 +83,4 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 - [Texto](optimizing-performance-text.md)
 - [Outras recomendações de desempenho](optimizing-performance-other-recommendations.md)
 - [Visão geral da vinculação de dados](../data/data-binding-overview.md)
-- [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

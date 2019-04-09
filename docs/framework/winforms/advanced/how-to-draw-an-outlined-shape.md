@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desenhar uma forma delineada'
+title: 'Como: desenhar uma forma delineada'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192193"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a>Como: Desenhar uma forma delineada
+# <a name="how-to-draw-an-outlined-shape"></a>Como: desenhar uma forma delineada
 Este exemplo desenha o contorno de elipses e retângulos em um formulário.  
   
 ## <a name="example"></a>Exemplo  
@@ -41,9 +41,10 @@ Este exemplo desenha o contorno de elipses e retângulos em um formulário.
  Você sempre deve chamar <xref:System.IDisposable.Dispose%2A> em todos os objetos que consomem recursos do sistema, como <xref:System.Drawing.Pen> e <xref:System.Drawing.Graphics> objetos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
-- [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)
+- [Introdução à programação de elementos gráficos](getting-started-with-graphics-programming.md)
 - [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199577"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP fornece os elementos básicos necessários para compilar serviços WEB HTTP com WCF. Serviços WCF WEB HTTP são projetados para ser acessado por mais ampla gama de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -20,7 +20,7 @@ O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP for
   
  O modelo de programação WCF WEB HTTP amplia o alcance do WCF para cobrir os cenários de estilo da Web que incluem serviços WEB HTTP, os serviços AJAX e JSON e feeds de Sindicalização ATOM/RSS (). Para obter mais informações sobre os serviços AJAX e JSON, consulte [integração de AJAX e suporte a JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Para obter mais informações sobre a distribuição, consulte [visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Não há nenhuma restrição adicional sobre os tipos de dados que podem ser retornados de um serviço WEB HTTP. Qualquer tipo serializável pode ser retornado de uma operação de serviço WEB HTTP. Como operações de serviço WEB HTTP podem ser invocar por um navegador da web que há uma limitação sobre quais tipos podem ser especificados em uma URL de dados. Para obter mais informações sobre quais tipos são suportados por padrão, consulte a **parâmetros de cadeia de caracteres de consulta de UriTemplate e URLs do** seção abaixo. O comportamento padrão pode ser alterado, fornecendo sua própria implementação de T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica como converter os parâmetros especificados em uma URL para o tipo de parâmetro real. Para obter mais informações, consulte <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
+ Não há nenhuma restrição adicional sobre os tipos de dados que podem ser retornados de um serviço WEB HTTP. Qualquer tipo serializável pode ser retornado de uma operação de serviço WEB HTTP. Como operações de serviço WEB HTTP podem ser invocar por um navegador da web que há uma limitação sobre quais tipos podem ser especificados em uma URL de dados. Para obter mais informações sobre quais tipos são suportados por padrão, consulte a **parâmetros de cadeia de caracteres de consulta de UriTemplate e URLs do** seção abaixo. O comportamento padrão pode ser alterado, fornecendo sua própria implementação de T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica como converter os parâmetros especificados em uma URL para o tipo de parâmetro real. Para saber mais, veja <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  Serviços escritos com o modelo de programação WCF WEB HTTP não usa mensagens SOAP. Como SOAP não é usado, os recursos de segurança fornecidos pelo WCF não podem ser usados. No entanto você pode usar segurança baseada no transporte ao hospedar seu serviço com HTTPS. Para obter mais informações sobre a segurança do WCF, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -144,6 +144,7 @@ interface ICustomer
  Ao chamar o WCF WEB HTTP serviços usando um <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para criar um canal, o <xref:System.ServiceModel.Description.WebHttpBehavior> usa o <xref:System.ServiceModel.EndpointAddress> definir a configuração arquivo, mesmo se um outro <xref:System.ServiceModel.EndpointAddress> é passado para o <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
-- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

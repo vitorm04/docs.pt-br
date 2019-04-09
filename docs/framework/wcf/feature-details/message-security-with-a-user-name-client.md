@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 872283f55ae6f085b2cdf5c64c229b9d459b71f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081548"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
 A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado X.509. O cliente é autenticado usando um nome de usuário e senha.  
@@ -126,8 +126,9 @@ A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md)
-- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [Identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

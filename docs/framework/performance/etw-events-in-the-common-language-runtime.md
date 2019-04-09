@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 284b7f814f8a9355220f0da59e8fce7d79345609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191387"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventos ETW no Common Language Runtime
 O CLR (Common Language Runtime) fornece informações úteis de diagnóstico ETW (rastreamento de eventos para Windows) por meio de uma grande variedade de eventos de depuração e criação de perfil. Os eventos CLR ETW aproveitam o sistema de rastreamento ETW do Windows para ampliar o suporte existente de depuração e criação de perfil fornecido pelo Common Language Runtime.  
@@ -23,17 +23,18 @@ O CLR (Common Language Runtime) fornece informações úteis de diagnóstico ETW
  O [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ou posterior é necessário para todos os eventos descritos nos tópicos de eventos. O sistema operacional Windows Vista é o cliente com suporte mínimo e o Windows Server 2008 é o servidor com suporte mínimo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Controlando o log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
+ [Controlando o registro em log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  Descreve as ferramentas e os comandos para capturar e exibir eventos ETW.  
   
- [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)  
+ [Provedores ETW no CLR](../../../docs/framework/performance/clr-etw-providers.md)  
  Fornece informações sobre o tempo de execução e os provedores de encerramento e como usá-los para a coleta de dados ETW.  
   
- [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
+ [Palavras-chave e níveis ETW no CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
  Descreve as palavras-chave para os provedores de Tempo de Execução e Encerramento que permitem a filtragem de eventos por categoria.  
   
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)  
+ [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)  
  Fornece informações detalhadas sobre eventos CLR ETW, suas palavras-chave, níveis e dados de evento.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Eventos ETW no .NET Framework](../../../docs/framework/performance/etw-events.md)
