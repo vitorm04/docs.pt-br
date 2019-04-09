@@ -1,20 +1,20 @@
 ---
-title: 'Como: Criar um serviço que retorna dados arbitrários usando o modelo de programação WCF Web HTTP'
+title: 'Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157477"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a><span data-ttu-id="02077-102">Como: Criar um serviço que retorna dados arbitrários usando o modelo de programação WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="02077-102">How to: Create a Service That Returns Arbitrary Data Using The WCF Web HTTP Programming Model</span></span>
-<span data-ttu-id="02077-103">Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="02077-104">Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF.</span><span class="sxs-lookup"><span data-stu-id="02077-104">This is the case when a service operation must return data in a format not supported by WCF.</span></span> <span data-ttu-id="02077-105">Este tópico discute usando o modelo de programação WCF WEB HTTP para criar esse tipo de serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-105">This topic discusses using the WCF WEB HTTP Programming Model to create such a service.</span></span> <span data-ttu-id="02077-106">Esse serviço tem uma operação que retorna um fluxo.</span><span class="sxs-lookup"><span data-stu-id="02077-106">This service has one operation that returns a stream.</span></span>  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a><span data-ttu-id="37002-102">Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF</span><span class="sxs-lookup"><span data-stu-id="37002-102">How to: Create a Service That Returns Arbitrary Data Using The WCF Web HTTP Programming Model</span></span>
+<span data-ttu-id="37002-103">Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="37002-104">Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF.</span><span class="sxs-lookup"><span data-stu-id="37002-104">This is the case when a service operation must return data in a format not supported by WCF.</span></span> <span data-ttu-id="37002-105">Este tópico discute usando o modelo de programação WCF WEB HTTP para criar esse tipo de serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-105">This topic discusses using the WCF WEB HTTP Programming Model to create such a service.</span></span> <span data-ttu-id="37002-106">Esse serviço tem uma operação que retorna um fluxo.</span><span class="sxs-lookup"><span data-stu-id="37002-106">This service has one operation that returns a stream.</span></span>  
   
-### <a name="to-implement-the-service-contract"></a><span data-ttu-id="02077-107">Para implementar o contrato de serviço</span><span class="sxs-lookup"><span data-stu-id="02077-107">To implement the service contract</span></span>  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="37002-107">Para implementar o contrato de serviço</span><span class="sxs-lookup"><span data-stu-id="37002-107">To implement the service contract</span></span>  
   
-1.  <span data-ttu-id="02077-108">Defina o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-108">Define the service contract.</span></span> <span data-ttu-id="02077-109">O contrato é chamado `IImageServer` e tem um método chamado `GetImage` que retorna um <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="02077-109">The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.</span></span>  
+1.  <span data-ttu-id="37002-108">Defina o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-108">Define the service contract.</span></span> <span data-ttu-id="37002-109">O contrato é chamado `IImageServer` e tem um método chamado `GetImage` que retorna um <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="37002-109">The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.</span></span>  
   
     ```  
     [ServiceContract]  
@@ -25,9 +25,9 @@ ms.locfileid: "54576389"
         }  
     ```  
   
-     <span data-ttu-id="02077-110">Como o método retorna um <xref:System.IO.Stream>, WCF pressupõe que a operação tem controle total sobre os bytes que são retornados da operação de serviço e ele se aplica nenhuma formatação para os dados que são retornados.</span><span class="sxs-lookup"><span data-stu-id="02077-110">Because the method returns a <xref:System.IO.Stream>, WCF assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.</span></span>  
+     <span data-ttu-id="37002-110">Como o método retorna um <xref:System.IO.Stream>, WCF pressupõe que a operação tem controle total sobre os bytes que são retornados da operação de serviço e ele se aplica nenhuma formatação para os dados que são retornados.</span><span class="sxs-lookup"><span data-stu-id="37002-110">Because the method returns a <xref:System.IO.Stream>, WCF assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.</span></span>  
   
-2.  <span data-ttu-id="02077-111">Implemente o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-111">Implement the service contract.</span></span> <span data-ttu-id="02077-112">O contrato tem apenas uma operação (`GetImage`).</span><span class="sxs-lookup"><span data-stu-id="02077-112">The contract has only one operation (`GetImage`).</span></span> <span data-ttu-id="02077-113">Esse método gera um bitmap e, em seguida, salve-o em um <xref:System.IO.MemoryStream> no formato. jpg.</span><span class="sxs-lookup"><span data-stu-id="02077-113">This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format.</span></span> <span data-ttu-id="02077-114">A operação, em seguida, retorna o fluxo ao chamador.</span><span class="sxs-lookup"><span data-stu-id="02077-114">The operation then returns that stream to the caller.</span></span>  
+2.  <span data-ttu-id="37002-111">Implemente o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-111">Implement the service contract.</span></span> <span data-ttu-id="37002-112">O contrato tem apenas uma operação (`GetImage`).</span><span class="sxs-lookup"><span data-stu-id="37002-112">The contract has only one operation (`GetImage`).</span></span> <span data-ttu-id="37002-113">Esse método gera um bitmap e, em seguida, salve-o em um <xref:System.IO.MemoryStream> no formato. jpg.</span><span class="sxs-lookup"><span data-stu-id="37002-113">This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format.</span></span> <span data-ttu-id="37002-114">A operação, em seguida, retorna o fluxo ao chamador.</span><span class="sxs-lookup"><span data-stu-id="37002-114">The operation then returns that stream to the caller.</span></span>  
   
     ```  
     public class Service : IImageServer  
@@ -51,13 +51,13 @@ ms.locfileid: "54576389"
        }  
     ```  
   
-     <span data-ttu-id="02077-115">Observe o segundo a última linha do código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span><span class="sxs-lookup"><span data-stu-id="02077-115">Notice the second to last line of code: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span></span>  
+     <span data-ttu-id="37002-115">Observe o segundo a última linha do código:</span><span class="sxs-lookup"><span data-stu-id="37002-115">Notice the second to last line of code:</span></span> `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     <span data-ttu-id="02077-116">Isso define o cabeçalho de tipo de conteúdo para `"image/jpeg"`.</span><span class="sxs-lookup"><span data-stu-id="02077-116">This sets the content type header to `"image/jpeg"`.</span></span> <span data-ttu-id="02077-117">Embora este exemplo mostra como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados que são necessários, em qualquer formato.</span><span class="sxs-lookup"><span data-stu-id="02077-117">Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format.</span></span> <span data-ttu-id="02077-118">A operação deve recuperar ou gerar os dados e, em seguida, gravá-lo em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="02077-118">The operation must retrieve or generate the data and then write it to a stream.</span></span>  
+     <span data-ttu-id="37002-116">Isso define o cabeçalho de tipo de conteúdo para `"image/jpeg"`.</span><span class="sxs-lookup"><span data-stu-id="37002-116">This sets the content type header to `"image/jpeg"`.</span></span> <span data-ttu-id="37002-117">Embora este exemplo mostra como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados que são necessários, em qualquer formato.</span><span class="sxs-lookup"><span data-stu-id="37002-117">Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format.</span></span> <span data-ttu-id="37002-118">A operação deve recuperar ou gerar os dados e, em seguida, gravá-lo em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="37002-118">The operation must retrieve or generate the data and then write it to a stream.</span></span>  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="02077-119">Para hospedar o serviço</span><span class="sxs-lookup"><span data-stu-id="02077-119">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="37002-119">Para hospedar o serviço</span><span class="sxs-lookup"><span data-stu-id="37002-119">To host the service</span></span>  
   
-1.  <span data-ttu-id="02077-120">Crie um aplicativo de console para hospedar o serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-120">Create a console application to host the service.</span></span>  
+1.  <span data-ttu-id="37002-120">Crie um aplicativo de console para hospedar o serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-120">Create a console application to host the service.</span></span>  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ ms.locfileid: "54576389"
     }  
     ```  
   
-2.  <span data-ttu-id="02077-121">Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.</span><span class="sxs-lookup"><span data-stu-id="02077-121">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
+2.  <span data-ttu-id="37002-121">Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.</span><span class="sxs-lookup"><span data-stu-id="37002-121">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  <span data-ttu-id="02077-122">Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço especificando a classe de serviço e o endereço básico.</span><span class="sxs-lookup"><span data-stu-id="02077-122">Create a <xref:System.ServiceModel.ServiceHost> instance for the service specifying the service class and the base address.</span></span>  
+3.  <span data-ttu-id="37002-122">Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço especificando a classe de serviço e o endereço básico.</span><span class="sxs-lookup"><span data-stu-id="37002-122">Create a <xref:System.ServiceModel.ServiceHost> instance for the service specifying the service class and the base address.</span></span>  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  <span data-ttu-id="02077-123">Adicione um ponto de extremidade usando o <xref:System.ServiceModel.WebHttpBinding> e o <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="02077-123">Add an endpoint using the <xref:System.ServiceModel.WebHttpBinding> and the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+4.  <span data-ttu-id="37002-123">Adicione um ponto de extremidade usando o <xref:System.ServiceModel.WebHttpBinding> e o <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="37002-123">Add an endpoint using the <xref:System.ServiceModel.WebHttpBinding> and the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  <span data-ttu-id="02077-124">Abra o host do serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-124">Open the service host.</span></span>  
+5.  <span data-ttu-id="37002-124">Abra o host do serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-124">Open the service host.</span></span>  
   
     ```  
     host.Open()  
     ```  
   
-6.  <span data-ttu-id="02077-125">Aguarde até que o usuário pressiona ENTER para encerrar o serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-125">Wait until the user presses ENTER to terminate the service.</span></span>  
+6.  <span data-ttu-id="37002-125">Aguarde até que o usuário pressiona ENTER para encerrar o serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-125">Wait until the user presses ENTER to terminate the service.</span></span>  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -101,14 +101,14 @@ ms.locfileid: "54576389"
     host.Close();  
     ```  
   
-### <a name="to-call-the-raw-service-using-internet-explorer"></a><span data-ttu-id="02077-126">Para chamar o serviço bruto usando o Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="02077-126">To call the raw service using Internet Explorer</span></span>  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a><span data-ttu-id="37002-126">Para chamar o serviço bruto usando o Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="37002-126">To call the raw service using Internet Explorer</span></span>  
   
-1.  <span data-ttu-id="02077-127">Executar o serviço, você verá a seguinte saída do serviço.</span><span class="sxs-lookup"><span data-stu-id="02077-127">Run the service, you should see the following output from the service.</span></span> `Service is running Press ENTER to close the host`  
+1.  <span data-ttu-id="37002-127">Executar o serviço, você verá a seguinte saída do serviço.</span><span class="sxs-lookup"><span data-stu-id="37002-127">Run the service, you should see the following output from the service.</span></span> `Service is running Press ENTER to close the host`  
   
-2.  <span data-ttu-id="02077-128">Abra o Internet Explorer e digite `http://localhost:8000/Service/GetImage?width=50&height=40` você deverá ver um retângulo amarelo com uma linha azul diagonal por meio do centro.</span><span class="sxs-lookup"><span data-stu-id="02077-128">Open Internet Explorer and type in `http://localhost:8000/Service/GetImage?width=50&height=40` you should see a yellow rectangle with a blue diagonal line through the center.</span></span>  
+2.  <span data-ttu-id="37002-128">Abra o Internet Explorer e digite `http://localhost:8000/Service/GetImage?width=50&height=40` você deverá ver um retângulo amarelo com uma linha azul diagonal por meio do centro.</span><span class="sxs-lookup"><span data-stu-id="37002-128">Open Internet Explorer and type in `http://localhost:8000/Service/GetImage?width=50&height=40` you should see a yellow rectangle with a blue diagonal line through the center.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="02077-129">Exemplo</span><span class="sxs-lookup"><span data-stu-id="02077-129">Example</span></span>  
- <span data-ttu-id="02077-130">A seguir está uma listagem completa do código deste tópico.</span><span class="sxs-lookup"><span data-stu-id="02077-130">The following is a complete listing of the code for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="37002-129">Exemplo</span><span class="sxs-lookup"><span data-stu-id="37002-129">Example</span></span>  
+ <span data-ttu-id="37002-130">A seguir está uma listagem completa do código deste tópico.</span><span class="sxs-lookup"><span data-stu-id="37002-130">The following is a complete listing of the code for this topic.</span></span>  
   
 ```  
 using System;  
@@ -171,9 +171,10 @@ namespace RawImageService
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="02077-131">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="02077-131">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="37002-131">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="37002-131">Compiling the Code</span></span>  
   
--   <span data-ttu-id="02077-132">Quando compilar o código de exemplo faz referência ServiceModel. dll e System.</span><span class="sxs-lookup"><span data-stu-id="02077-132">When compiling the sample code reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
+-   <span data-ttu-id="37002-132">Quando compilar o código de exemplo faz referência ServiceModel. dll e System.</span><span class="sxs-lookup"><span data-stu-id="37002-132">When compiling the sample code reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02077-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="02077-133">See also</span></span>
-- [<span data-ttu-id="02077-134">Modelo de programação HTTP Web do WCF</span><span class="sxs-lookup"><span data-stu-id="02077-134">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a><span data-ttu-id="37002-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37002-133">See also</span></span>
+
+- [<span data-ttu-id="37002-134">Modelo de programação WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="37002-134">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
