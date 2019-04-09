@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072656"
 ---
-# <a name="codechunkinfo-structure"></a><span data-ttu-id="4f435-102">Estrutura CodeChunkInfo</span><span class="sxs-lookup"><span data-stu-id="4f435-102">CodeChunkInfo Structure</span></span>
+# <a name="codechunkinfo-structure"></a><span data-ttu-id="c192b-102">Estrutura CodeChunkInfo</span><span class="sxs-lookup"><span data-stu-id="c192b-102">CodeChunkInfo Structure</span></span>
 
-<span data-ttu-id="4f435-103">Representa uma única parte de código na memória.</span><span class="sxs-lookup"><span data-stu-id="4f435-103">Represents a single chunk of code in memory.</span></span>  
+<span data-ttu-id="c192b-103">Representa uma única parte de código na memória.</span><span class="sxs-lookup"><span data-stu-id="c192b-103">Represents a single chunk of code in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f435-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4f435-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c192b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c192b-104">Syntax</span></span>  
   
 ```  
 typedef struct _CodeChunkInfo {  
@@ -36,26 +36,27 @@ typedef struct _CodeChunkInfo {
 } CodeChunkInfo;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4f435-105">Membros</span><span class="sxs-lookup"><span data-stu-id="4f435-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c192b-105">Membros</span><span class="sxs-lookup"><span data-stu-id="c192b-105">Members</span></span>  
   
-|<span data-ttu-id="4f435-106">Membro</span><span class="sxs-lookup"><span data-stu-id="4f435-106">Member</span></span>|<span data-ttu-id="4f435-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="4f435-107">Description</span></span>|  
+|<span data-ttu-id="c192b-106">Membro</span><span class="sxs-lookup"><span data-stu-id="c192b-106">Member</span></span>|<span data-ttu-id="c192b-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="c192b-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddr`|<span data-ttu-id="4f435-108">Um `CORDB_ADDRESS` valor que especifica o endereço inicial da parte.</span><span class="sxs-lookup"><span data-stu-id="4f435-108">A `CORDB_ADDRESS` value that specifies the starting address of the chunk.</span></span>|  
-|`length`|<span data-ttu-id="4f435-109">O tamanho, em bytes, da parte.</span><span class="sxs-lookup"><span data-stu-id="4f435-109">The size, in bytes, of the chunk.</span></span>|  
+|`startAddr`|<span data-ttu-id="c192b-108">Um `CORDB_ADDRESS` valor que especifica o endereço inicial da parte.</span><span class="sxs-lookup"><span data-stu-id="c192b-108">A `CORDB_ADDRESS` value that specifies the starting address of the chunk.</span></span>|  
+|`length`|<span data-ttu-id="c192b-109">O tamanho, em bytes, da parte.</span><span class="sxs-lookup"><span data-stu-id="c192b-109">The size, in bytes, of the chunk.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4f435-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="4f435-110">Remarks</span></span>  
- <span data-ttu-id="4f435-111">A única parte do código é uma região de código nativo que é parte de um objeto de código, como uma função.</span><span class="sxs-lookup"><span data-stu-id="4f435-111">The single chunk of code is a region of native code that is part of a code object such as a function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c192b-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="c192b-110">Remarks</span></span>  
+ <span data-ttu-id="c192b-111">A única parte do código é uma região de código nativo que é parte de um objeto de código, como uma função.</span><span class="sxs-lookup"><span data-stu-id="c192b-111">The single chunk of code is a region of native code that is part of a code object such as a function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f435-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4f435-112">Requirements</span></span>  
- <span data-ttu-id="4f435-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f435-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c192b-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c192b-112">Requirements</span></span>  
+ <span data-ttu-id="c192b-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c192b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f435-114">**Cabeçalho:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="4f435-114">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="c192b-114">**Cabeçalho:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="c192b-114">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="4f435-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4f435-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c192b-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c192b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4f435-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f435-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c192b-116">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="c192b-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4f435-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4f435-117">See also</span></span>
-- [<span data-ttu-id="4f435-118">Método GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="4f435-118">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [<span data-ttu-id="4f435-119">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="4f435-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="4f435-120">Depuração</span><span class="sxs-lookup"><span data-stu-id="4f435-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="c192b-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c192b-117">See also</span></span>
+
+- [<span data-ttu-id="c192b-118">Método GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="c192b-118">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [<span data-ttu-id="c192b-119">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="c192b-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="c192b-120">Depuração</span><span class="sxs-lookup"><span data-stu-id="c192b-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

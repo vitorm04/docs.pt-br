@@ -17,42 +17,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 349f71691e166561d677e0ae792fa12fc5bb1fc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6521f8013bf92f073ab4b6808871c95ac2802b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072851"
 ---
-# <a name="icorruntimehoststart-method"></a><span data-ttu-id="2f878-102">Método ICorRuntimeHost::Start</span><span class="sxs-lookup"><span data-stu-id="2f878-102">ICorRuntimeHost::Start Method</span></span>
-<span data-ttu-id="2f878-103">Inicia o common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="2f878-103">Starts the common language runtime (CLR).</span></span>  
+# <a name="icorruntimehoststart-method"></a><span data-ttu-id="5edd2-102">Método ICorRuntimeHost::Start</span><span class="sxs-lookup"><span data-stu-id="5edd2-102">ICorRuntimeHost::Start Method</span></span>
+<span data-ttu-id="5edd2-103">Inicia o common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="5edd2-103">Starts the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f878-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2f878-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5edd2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5edd2-104">Syntax</span></span>  
   
 ```  
 HRESULT Start ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="2f878-105">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="2f878-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5edd2-105">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="5edd2-105">Return Value</span></span>  
   
-|<span data-ttu-id="2f878-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2f878-106">HRESULT</span></span>|<span data-ttu-id="2f878-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="2f878-107">Description</span></span>|  
+|<span data-ttu-id="5edd2-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5edd2-106">HRESULT</span></span>|<span data-ttu-id="5edd2-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="5edd2-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2f878-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="2f878-108">S_OK</span></span>|<span data-ttu-id="2f878-109">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="2f878-109">The operation was successful.</span></span>|  
-|<span data-ttu-id="2f878-110">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="2f878-110">S_FALSE</span></span>|<span data-ttu-id="2f878-111">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="2f878-111">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="2f878-112">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2f878-112">E_FAIL</span></span>|<span data-ttu-id="2f878-113">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="2f878-113">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="2f878-114">Se um método retornar E_FAIL, o CLR não é mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="2f878-114">If a method returns E_FAIL, the CLR is no longer usable in the process.</span></span> <span data-ttu-id="2f878-115">As chamadas subsequentes para todas as APIs de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="2f878-115">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="2f878-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2f878-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2f878-117">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="2f878-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5edd2-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="5edd2-108">S_OK</span></span>|<span data-ttu-id="5edd2-109">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="5edd2-109">The operation was successful.</span></span>|  
+|<span data-ttu-id="5edd2-110">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="5edd2-110">S_FALSE</span></span>|<span data-ttu-id="5edd2-111">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="5edd2-111">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="5edd2-112">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5edd2-112">E_FAIL</span></span>|<span data-ttu-id="5edd2-113">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="5edd2-113">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="5edd2-114">Se um método retornar E_FAIL, o CLR não é mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="5edd2-114">If a method returns E_FAIL, the CLR is no longer usable in the process.</span></span> <span data-ttu-id="5edd2-115">As chamadas subsequentes para todas as APIs de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5edd2-115">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5edd2-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5edd2-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5edd2-117">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="5edd2-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2f878-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="2f878-118">Remarks</span></span>  
- <span data-ttu-id="2f878-119">Normalmente não é necessário chamar o `Start` método, pois o CLR é iniciado automaticamente após a primeira solicitação para executar código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="2f878-119">It is typically not necessary to call the `Start` method, because the CLR starts automatically upon the first request to run managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5edd2-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="5edd2-118">Remarks</span></span>  
+ <span data-ttu-id="5edd2-119">Normalmente não é necessário chamar o `Start` método, pois o CLR é iniciado automaticamente após a primeira solicitação para executar código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="5edd2-119">It is typically not necessary to call the `Start` method, because the CLR starts automatically upon the first request to run managed code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2f878-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2f878-120">Requirements</span></span>  
- <span data-ttu-id="2f878-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2f878-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5edd2-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5edd2-120">Requirements</span></span>  
+ <span data-ttu-id="5edd2-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5edd2-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2f878-122">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2f878-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5edd2-122">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5edd2-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2f878-123">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="2f878-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5edd2-123">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5edd2-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2f878-124">**Versões do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="2f878-124">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="5edd2-124">**Versões do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="5edd2-124">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f878-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2f878-125">See also</span></span>
-- [<span data-ttu-id="2f878-126">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="2f878-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5edd2-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5edd2-125">See also</span></span>
+
+- [<span data-ttu-id="5edd2-126">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="5edd2-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
