@@ -1,5 +1,5 @@
 ---
-title: 'Como: Habilitar estilos visuais em um aplicativo híbrido'
+title: 'Como: habilitar estilos visuais em um aplicativo híbrido'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 9588a2e2d839af43ffe4397303c4a45cad5af2e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176365"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Como: Habilitar estilos visuais em um aplicativo híbrido
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Como: habilitar estilos visuais em um aplicativo híbrido
 Este tópico mostra como habilitar [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle hospedado em um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-com base em aplicativo.  
   
  Se o aplicativo chama o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método, a maior parte do seu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles automaticamente usará estilos visuais quando seu aplicativo é executado em [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]. Para obter mais informações, consulte [renderizando controles com estilos visuais](../../winforms/controls/rendering-controls-with-visual-styles.md).  
@@ -67,8 +67,9 @@ Este tópico mostra como habilitar [!INCLUDE[TLA#tla_winxp](../../../../includes
      O [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle é pintado com o estilo padrão do sistema.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Renderizando controles com estilos visuais](../../winforms/controls/rendering-controls-with-visual-styles.md)
-- [Passo a passo: Hospedando um controle de formulários do Windows no WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Passo a passo: hospedar um controle do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

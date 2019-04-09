@@ -2,12 +2,12 @@
 title: Dados grandes e streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176326"
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 Windows Communication Foundation (WCF) é uma infra-estrutura de comunicações baseadas em XML. Porque os dados XML geralmente são codificados no formato de texto padrão definido na [especificação XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)e conectadas arquitetos e desenvolvedores de sistemas normalmente estão preocupados a superfície eletrônica (ou tamanho) de mensagens enviadas entre a rede e a codificação baseada em texto do XML apresenta desafios para a transferência eficiente de dados binários.  
@@ -173,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -239,4 +239,5 @@ public class UploadStreamMessage
 >  A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Depois de gerar um cliente WCF para um serviço, você deve editar o arquivo de configuração para serviços que se destina a ser usado com transferências em streaming para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Habilitar o Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Como: habilitar a transmissão](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

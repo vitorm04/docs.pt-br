@@ -2,12 +2,12 @@
 title: Cenários de canal par
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147050"
 ---
 # <a name="peer-channel-scenarios"></a>Cenários de canal par
 As APIs de canal par suportam os seguintes cenários de desenvolvimento.  
@@ -25,4 +25,5 @@ As APIs de canal par suportam os seguintes cenários de desenvolvimento.
  Usando o canal de mesmo nível, os desenvolvedores de aplicativos podem criar versões sem servidor de seus jogos, onde as movimentações de jogos obterem transmitidas para e sincronizadas com outros jogadores por um mecanismo de ponto a ponto em vez de por meio de um servidor central. Para ISVs pequeno, isso ajuda a remover os custos operacionais associados à implantação, manutenção e manutenção de servidores centrais. Jogos escritos usando uma arquitetura ponto a ponto podem ser executados com a Internet ou em redes locais com ou sem fio. Atividades de jogos secundária, como lobby e bate-papo de jogos podem ser desenvolvidas usando uma rede ponto a ponto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Conceitos de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150443"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
 Ao criar um aplicativo, você geralmente deseja adiar as decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou o identificador de recurso uniforme (URI), será. Em vez de embutir um endereço, é preferível para permitir que um administrador para fazer isso depois de criar um serviço. Essa flexibilidade é realizada por meio da configuração.  
@@ -162,6 +162,7 @@ Ao criar um aplicativo, você geralmente deseja adiar as decisões para o admini
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)
 - [Associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md)
 - [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)
