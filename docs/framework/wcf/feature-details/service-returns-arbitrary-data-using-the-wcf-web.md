@@ -1,15 +1,15 @@
 ---
-title: 'Como: Criar um serviço que retorna dados arbitrários usando o modelo de programação WCF Web HTTP'
+title: 'Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157477"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: Criar um serviço que retorna dados arbitrários usando o modelo de programação WCF Web HTTP
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF
 Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute usando o modelo de programação WCF WEB HTTP para criar esse tipo de serviço. Esse serviço tem uma operação que retorna um fluxo.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
@@ -176,4 +176,5 @@ namespace RawImageService
 -   Quando compilar o código de exemplo faz referência ServiceModel. dll e System.  
   
 ## <a name="see-also"></a>Consulte também
-- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+
+- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

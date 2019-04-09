@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c6887d390ded1846e201711c9278663b9ff2888
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177483"
 ---
 # <a name="corexemain-function"></a>Função _CorExeMain
 Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho CLR do assembly executável e inicia a execução.  
@@ -54,4 +54,5 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

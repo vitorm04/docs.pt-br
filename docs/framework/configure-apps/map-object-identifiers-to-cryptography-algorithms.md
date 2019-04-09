@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: 000d5d94b19907dfed40ac03f3172b9b8449c6f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130605"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapeando identificadores de objeto para algoritmos de criptografia
 Assinaturas digitais Certifique-se de que dados não seja violados quando ela é enviada de um programa para outro. Normalmente, a assinatura digital é computada, aplicando uma função matemática para o hash dos dados a serem assinados. Ao formatar um valor de hash a ser assinada, alguns algoritmos de assinatura digital acrescentar um ASN. 1 objeto OID (identificador) como parte da operação de formatação. O OID identifica o algoritmo que foi usado para computar o hash. Você pode mapear os algoritmos para identificadores de objeto para estender o mecanismo de criptografia para usar algoritmos personalizados. O exemplo a seguir mostra como mapear um identificador de objeto para um novo algoritmo de hash.  
@@ -41,5 +41,6 @@ Assinaturas digitais Certifique-se de que dados não seja violados quando ela é
  O [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contém dois atributos. O **OID** atributo é o número de identificador de objeto. O **nome** atributo é o valor da **nome** de atributos dos [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Deve haver um mapeamento de um nome de algoritmo para uma classe antes de um identificador de objeto pode ser mapeado para um nome simples.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Configurando classes de criptografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

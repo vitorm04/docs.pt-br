@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157719"
 ---
 # <a name="events-overview-windows-forms"></a>Visão geral sobre eventos (Windows Forms)
 Um evento é uma ação a qual você pode responder ou "manipular", no código. Os eventos podem ser gerados por uma ação do usuário, como o clicar do mouse ou pressionar de uma tecla, pelo código de programa ou pelo sistema.  
@@ -44,5 +44,6 @@ Um evento é uma ação a qual você pode responder ou "manipular", no código. 
  O mecanismo de associação usado com essas classes é dinâmico: uma classe delegate pode ser associada em tempo de execução a qualquer método cuja assinatura corresponda à assinatura do manipulador de eventos. Com esse recurso, você pode configurar ou alterar o método associado de acordo com uma condição e anexar dinamicamente um manipulador de eventos a um controle.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

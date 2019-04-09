@@ -1,5 +1,5 @@
 ---
-title: Elemento <relativeBindForResources>
+title: <relativeBindForResources> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51129f9bb3a278d32a5da723dcc339f5e918c0f4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157372"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > elemento
 Otimiza o teste para assemblies satélites.  
@@ -72,6 +72,7 @@ Otimiza o teste para assemblies satélites.
 -   Ele não gere a <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Empacotando e implantando recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

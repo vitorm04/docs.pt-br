@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um controle que tenha uma tecla de acesso e disposição do texto'
+title: 'Como: Criar um controle que tenha uma chave de acesso e disposição do texto'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174038"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Como: Criar um controle que tenha uma tecla de acesso e disposição do texto
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Como: Criar um controle que tenha uma chave de acesso e disposição do texto
 Este exemplo mostra como criar um controle que tenha uma tecla de acesso e dê suporte à disposição do texto. O exemplo usa um <xref:System.Windows.Controls.Label> controle para ilustrar esses conceitos.  
   
 ## <a name="example"></a>Exemplo  
@@ -26,7 +26,7 @@ Este exemplo mostra como criar um controle que tenha uma tecla de acesso e dê s
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Adicionar uma tecla de acesso e disposição do texto ao seu rótulo**  
+ **Adicionar uma chave de acesso e disposição do texto ao seu rótulo**  
   
  Se precisar de um <xref:System.Windows.Controls.Label> que tem uma chave de acesso (mnemonic), use o <xref:System.Windows.Controls.AccessText> elemento que está dentro do <xref:System.Windows.Controls.Label>.  
   
@@ -37,4 +37,5 @@ Este exemplo mostra como criar um controle que tenha uma tecla de acesso e dê s
  [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Defina a propriedade de destino de um rótulo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

@@ -1,19 +1,19 @@
 ---
-title: Elemento <idn> (configurações de Uri)
+title: <idn> (Configurações de Uri)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129396"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > (configurações de Uri)
 Especifica se a análise de nome de domínio internacionalizado (IDN) é aplicado a um nome de domínio.  
   
 ## <a name="schema-hierarchy"></a>Hierarquia de esquema  
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuração > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI > (configurações de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -94,6 +94,7 @@ Especifica se a análise de nome de domínio internacionalizado (IDN) é aplicad
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

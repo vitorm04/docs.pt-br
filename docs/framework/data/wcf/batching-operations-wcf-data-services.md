@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: b6dfa95755cc98d30725cecb8669ae4df3aca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133590"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Operações de envio em lote (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] dá suporte ao processamento de solicitações do lote uma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviço. Para obter mais informações, consulte [OData: O processamento em lotes](https://go.microsoft.com/fwlink/?LinkId=186075). Na [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], cada operação que utiliza o <xref:System.Data.Services.Client.DataServiceContext>, como executar uma consulta ou salvar as alterações, resulta em uma solicitação separada que estão sendo enviados para o serviço de dados. Para manter um escopo lógico para conjuntos de operações, você pode definir explicitamente os lotes operacionais. Isso garante que todas as operações no lote são enviadas ao serviço de dados em uma única solicitação HTTP, permite que o servidor processar as operações de forma atômica e reduz o número de viagens de ida e volta ao serviço de dados.  
@@ -25,4 +25,5 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] dá suporte ao
  Também de forma assíncrona, você pode salvar as alterações em lote. Para obter mais informações, consulte [operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

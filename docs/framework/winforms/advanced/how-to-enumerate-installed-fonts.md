@@ -1,5 +1,5 @@
 ---
-title: 'Como: Enumerar as fontes instaladas'
+title: 'Como: enumerar as fontes instaladas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155006"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>Como: Enumerar as fontes instaladas
+# <a name="how-to-enumerate-installed-fonts"></a>Como: enumerar as fontes instaladas
 O <xref:System.Drawing.Text.InstalledFontCollection> herda o <xref:System.Drawing.Text.FontCollection> classe base abstrata. Você pode usar um <xref:System.Drawing.Text.InstalledFontCollection> objeto para enumerar as fontes instaladas no computador. O <xref:System.Drawing.Text.FontCollection.Families%2A> propriedade de um <xref:System.Drawing.Text.InstalledFontCollection> objeto é uma matriz de <xref:System.Drawing.FontFamily> objetos.  
   
 ## <a name="example"></a>Exemplo  
@@ -32,4 +32,5 @@ O <xref:System.Drawing.Text.InstalledFontCollection> herda o <xref:System.Drawin
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>. Além disso, você deve importar o <xref:System.Drawing.Text> namespace.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando fontes e texto](using-fonts-and-text.md)

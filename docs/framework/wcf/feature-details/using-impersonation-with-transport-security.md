@@ -2,12 +2,12 @@
 title: Utilizando Personificação com segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151431"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizando Personificação com segurança de transporte
 *Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para os serviços usam a representação ao validar o acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte no Windows Communication Foundation (WCF) com o recurso de representação. Para obter mais informações sobre representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -55,7 +55,8 @@ ms.locfileid: "54532702"
  Para obter mais informações sobre o transporte HTTP, consulte [escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Entendendo a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+- [Como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Noções básicas de autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

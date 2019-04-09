@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157866"
 ---
 # <a name="panels-overview"></a>Visão geral de painéis
 <xref:System.Windows.Controls.Panel> elementos são componentes que controlam a renderização de elementos – seu tamanho e as dimensões, sua posição e a disposição de seu conteúdo filho. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece uma série de predefinido <xref:System.Windows.Controls.Panel> elementos, bem como a capacidade de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
@@ -81,7 +81,7 @@ ms.locfileid: "57377062"
   
  Cada derivada <xref:System.Windows.Controls.Panel> elemento trata as restrições de dimensionamento de forma diferente. Noções básicas sobre como um <xref:System.Windows.Controls.Panel> alças restrições na direção horizontal ou vertical podem tornar o layout mais previsível.  
   
-|**Nome do Painel**|**Dimensão x**|**Dimensão y**|  
+|**Nome do painel**|**Dimensão x**|**Dimensão y**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Restrito ao conteúdo|Restrito ao conteúdo|  
 |<xref:System.Windows.Controls.DockPanel>|Restrito|Restrito|  
@@ -242,7 +242,7 @@ ms.locfileid: "57377062"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Suporte à localização/globalização  
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte a vários recursos que ajudam na criação de uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] localizável.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece suporte a vários recursos que ajudam na criação de localizáveis [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Todos os elementos de painel dão suporte nativamente a <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade, que pode ser usada para refluir o conteúdo com base nas configurações de idioma ou localidade do usuário. Para obter mais informações, consulte <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -253,10 +253,11 @@ ms.locfileid: "57377062"
  Para obter mais informações sobre como criar aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s localizáveis, consulte a [Visão geral do uso de layout automático](../advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Exemplo de galeria de layout do WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Exemplo da Galeria de Layout do WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Layout](../advanced/layout.md)
-- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Exemplo da Galeria de controles do WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Visão geral de alinhamento, margens e preenchimento](../advanced/alignment-margins-and-padding-overview.md)
 - [Criar uma amostra de painel de encapsulamento com conteúdo personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Visão geral das propriedades anexadas](../advanced/attached-properties-overview.md)

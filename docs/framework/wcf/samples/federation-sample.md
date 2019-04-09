@@ -2,12 +2,12 @@
 title: Exemplo de federação
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: e9f0c47a1bafe715a40d150a77543ca71a249920
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155201"
 ---
 # <a name="federation-sample"></a>Exemplo de federação
 Este exemplo demonstra a segurança federada.  
@@ -116,4 +116,3 @@ Este exemplo demonstra a segurança federada.
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
-  
