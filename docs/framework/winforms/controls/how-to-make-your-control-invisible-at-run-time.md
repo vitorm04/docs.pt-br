@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 52ea2336bac1ec483cb86e24114090a1b3725038
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06283a93c3b88d2febc1d64797139eee62661b42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201644"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Como: Deixar o controle invisível em tempo de execução
 Há vezes em que você quer criar um controle de usuário invisível em tempo de execução. Por exemplo, um controle que é um relógio despertador pode ser invisível, exceto quando o alarme foi acionado. Isso é facilmente realizado configurando o <xref:System.Windows.Forms.Control.Visible%2A> propriedade. Se o <xref:System.Windows.Forms.Control.Visible%2A> é de propriedade `true`, o controle será exibido como normal. Se for `false`, o controle será ocultado. Embora o código em seu controle ainda possa ser executado enquanto invisível, você não poderá interagir com o controle por meio da interface do usuário. Se quiser criar um controle invisível que ainda responde à entrada do usuário (por exemplo, cliques de mouse), você deverá criar um controle transparente. Para obter mais informações, veja [Como dar ao controle de uma tela de fundo transparente](how-to-give-your-control-a-transparent-background.md).  
@@ -40,6 +40,7 @@ Há vezes em que você quer criar um controle de usuário invisível em tempo de
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Control.Visible%2A>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Como: Dar ao controle uma tela de fundo transparente](how-to-give-your-control-a-transparent-background.md)
+- [Como: Dar ao controle um segundo plano transparente](how-to-give-your-control-a-transparent-background.md)

@@ -1,18 +1,18 @@
 ---
-title: Localizando linhas
+title: Localizar linhas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: e5a48c5caf9239e0e7b7f2e7a3ad8ab5df168ba1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206545"
 ---
-# <a name="finding-rows"></a>Localizando linhas
+# <a name="finding-rows"></a>Localizar linhas
 Você pode procurar por linhas de acordo com seus valores de chave de classificação usando o <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> métodos do <xref:System.Data.DataView>. Valores de maiusculas e minúsculas da pesquisa na **encontrar** e **FindRows** métodos é determinado pelo **CaseSensitive** propriedade subjacente <xref:System.Data.DataTable>. Valores de pesquisa devem corresponder a valores de chave de classificação existentes em sua totalidade para retornar um resultado.  
   
  O **encontrar** método retorna um inteiro com o índice do <xref:System.Data.DataRowView> que corresponde aos critérios de pesquisa. Se mais de uma linha corresponde aos critérios de pesquisa, apenas o índice da correspondência de primeira **DataRowView** é retornado. Se nenhuma correspondência for encontrada, **localizar** retornará -1.  
@@ -94,7 +94,8 @@ else
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204738"
 ---
 # <a name="how-keyboard-input-works"></a>Como a entrada do teclado funciona
 O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em resposta às mensagens do Windows. A maioria dos aplicativos Windows Forms processa a entrada do teclado exclusivamente ao manipular eventos de teclado. No entanto, você precisa entender como as mensagens do teclado funcionam para que você possa implementar cenários mais avançados de entrada do teclado, como interceptar teclas antes que elas atinjam um controle. Este tópico descreve os tipos de dados da chave que o Windows Forms reconhece e fornece uma visão geral de como as mensagens do teclado são roteadas. Para obter informações sobre eventos de teclado, consulte [Usando eventos do teclado](using-keyboard-events.md).  
@@ -63,15 +63,16 @@ O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em res
 |Tarefa|Método|  
 |----------|------------|  
 |Interceptar uma tecla de navegação e gerar um <xref:System.Windows.Forms.Control.KeyDown> eventos. Por exemplo, você deseja que as teclas TAB e Enter sejam identificadas em uma caixa de texto.|Substitua <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Observação:**  Como alternativa, você pode lidar com o <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e o conjunto <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> da <xref:System.Windows.Forms.PreviewKeyDownEventArgs> para `true` para a tecla ou teclas que você deseja.|  
-|Execute tratamento de navegação ou entrada especial em um controle. Por exemplo, você deseja usar as teclas de seta no controle de lista para alterar o item selecionado.|Override <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Execute tratamento de navegação ou entrada especial em um controle. Por exemplo, você deseja usar as teclas de seta no controle de lista para alterar o item selecionado.|Substituições <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Interceptar uma tecla de navegação e gerar um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em um controle de caixa de rotação você deseja o pressionamento de várias teclas de seta para acelerar a progressão pelos itens.|Substitua <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Executar a manipulação de navegação ou entrada especial durante um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em uma controle de lista, manter pressionada a tecla "r" ignora os itens que começam com a letra r.|Override <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Executar a manipulação de navegação ou entrada especial durante um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em uma controle de lista, manter pressionada a tecla "r" ignora os itens que começam com a letra r.|Substituições <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Execute o tratamento mnemônico personalizado. Por exemplo, você deseja manipular mnemônicos em botões desenhados pelo proprietário contidos em uma barra de ferramentas.|Substitua <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [Objeto My.Computer.Keyboard](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
-- [Acessando o Teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
+- [Acessar o teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
 - [Usando eventos do teclado](using-keyboard-events.md)

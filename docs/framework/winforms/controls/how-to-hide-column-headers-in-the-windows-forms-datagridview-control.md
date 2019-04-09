@@ -1,5 +1,5 @@
 ---
-title: 'Como: Ocultar cabeçalhos de coluna no controle DataGridView dos Windows Forms'
+title: 'Como: Ocultar cabeçalhos no controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: b9b78020a567d05ea000be97bb116b4f8353d56c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85332bfdbb80e4c49bab1ff208228a88337fbb43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115239"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Como: Ocultar cabeçalhos de coluna no controle DataGridView dos Windows Forms
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Como: Ocultar cabeçalhos no controle DataGridView do Windows Forms
 Às vezes, você desejará exibir uma <xref:System.Windows.Forms.DataGridView> sem cabeçalhos de coluna. No <xref:System.Windows.Forms.DataGridView> controle, o <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valor da propriedade determina se os cabeçalhos de coluna são exibidos.  
   
 ### <a name="to-hide-the-column-headers"></a>Para ocultar os cabeçalhos de coluna  
@@ -34,6 +34,7 @@ ms.locfileid: "57709452"
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
-- [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Funcionalidades de coluna, linha e célula básicas no controle DataGridView dos Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

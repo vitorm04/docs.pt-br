@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 414526d498b39e894c6bd3530a446f8c06f46378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113692"
 ---
 # <a name="silverlight-debugging"></a>Depuração Silverlight
 Os tópicos nesta seção descrevem o ambiente e interfaces que o common language runtime (CLR) fornece para dar suporte à depuração de aplicativos baseados no Silverlight que estão em execução no sistema operacional Windows, ou na plataforma Macintosh.  
@@ -55,6 +55,7 @@ Os tópicos nesta seção descrevem o ambiente e interfaces que o common languag
  Desliga o Gerenciador de transporte para uma conexão a uma máquina de destino remoto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando coclasses](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depurando funções estáticas globais](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

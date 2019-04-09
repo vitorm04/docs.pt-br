@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210666"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificando e lidando com falhas em contratos e serviços
 Aplicativos do Windows Communication Foundation (WCF) lidar com situações de erro, mapeando objetos de exceção gerenciada para objetos de falhas SOAP e objetos de falhas SOAP em objetos de exceção gerenciada. Os tópicos desta seção discutem como criar contratos para expor o erro condições como falhas SOAP personalizadas, como retornar essas falhas como parte da implementação de serviço e como os clientes capturar essas falhas.  
@@ -56,6 +56,7 @@ Aplicativos do Windows Communication Foundation (WCF) lidar com situações de e
  Durante a desserialização de um contrato de falha, o WCF primeiro tenta corresponder o nome do contrato de falha da mensagem SOAP com o tipo de contrato de falha. Se ele não é possível localizar uma correspondência exata, em seguida, ele pesquisará a lista de contratos de falha disponíveis em ordem alfabética para um tipo compatível. Se dois falha contratos são tipos compatíveis (uma é uma subclasse de outro, por exemplo) o tipo errado pode ser usado para desserializar a falha. Isso ocorre apenas se o contrato de falha não especificar um nome, namespace e ação. Para evitar que esse problema ocorra, sempre totalmente qualifica contratos de falha, especificando o nome, namespace e atributos de ação. Além disso, se você tiver definido um número de contratos de falha relacionadas derivadas de uma classe base compartilhada, certifique-se de marcar os novos membros com `[DataMember(IsRequired=true)]`. Para obter mais informações sobre isso `IsRequired` atributo, consulte <xref:System.Runtime.Serialization.DataMemberAttribute>. Isso impedirá que uma classe base que está sendo um tipo compatível e forçar a falha a ser desserializado no tipo derivado correto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

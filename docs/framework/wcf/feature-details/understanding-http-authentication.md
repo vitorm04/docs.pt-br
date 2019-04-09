@@ -2,12 +2,12 @@
 title: Noções básicas de autenticação HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206389"
 ---
 # <a name="understanding-http-authentication"></a>Noções básicas de autenticação HTTP
 A autenticação é o processo de identificar se um cliente está qualificado para acessar um recurso. O protocolo HTTP oferece suporte à autenticação como um meio de negociar o acesso a um recurso seguro.  
@@ -36,6 +36,7 @@ A autenticação é o processo de identificar se um cliente está qualificado pa
 -   Um servidor não deve representar (nos cabeçalhos de autenticação de WWW) qualquer esquema que não está preparada para aceitar ou que não protege o recurso protegido adequadamente. Os clientes são livres para escolher entre qualquer um dos esquemas de autenticação que o servidor apresenta. Alguns clientes usam como padrão um esquema de autenticação fraca ou o esquema de autenticação primeiro na lista do servidor.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Usando a representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Utilizando Personificação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

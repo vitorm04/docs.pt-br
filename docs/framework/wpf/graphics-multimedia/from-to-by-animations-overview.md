@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: 40a37542d6151d05910bc033657d85c6a9f5483b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209145"
 ---
 # <a name="fromtoby-animations-overview"></a>Visão geral de animações de/para/por
 Este tópico descreve como usar animações de/para/por para animar propriedades de dependência. Uma animação de/para/por cria uma transição entre dois valores.  
@@ -36,11 +36,11 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
   
  Classes de animação de/para/por pertencem ao <xref:System.Windows.Media.Animation> namespace e use a seguinte convenção de nomenclatura:  
   
- *\<Type>* `Animation`  
+ *\<tipo >* `Animation`  
   
  Em que *\<Type>* é o tipo de valor animado pela classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de/para/por a seguir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece as seguintes classes de animação de/para/por.  
   
 |Tipo de propriedade|Classe de animação De/Para/Por correspondente|  
 |-------------------|------------------------------------------------|  
@@ -141,11 +141,12 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também permite que você crie seus próprios tipos de animação personalizada. Para obter mais informações, consulte o [visão geral de animações personalizadas](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral de storyboards](storyboards-overview.md)
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
-- [Visão geral de animações de caminho](path-animations-overview.md)
+- [Visão geral de animações do caminho](path-animations-overview.md)
 - [Visão geral de animações personalizadas](custom-animations-overview.md)
-- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [De, para e por amostra de valores de destino de animação](https://go.microsoft.com/fwlink/?LinkID=159988)

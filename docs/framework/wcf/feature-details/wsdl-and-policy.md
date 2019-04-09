@@ -2,12 +2,12 @@
 title: WSDL e política
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151899"
 ---
 # <a name="wsdl-and-policy"></a>WSDL e política
 Este tópico aborda o Windows Communication Foundation (WCF) WSDL 1.1, detalhes de implementação de WS-Policy e mecanismo WS-PolicyAttachment, bem como declarações adicionais do WS-Policy e extensões WSDL 1.1 introduzidas pelo WCF.  
@@ -73,6 +73,7 @@ Este tópico aborda o Windows Communication Foundation (WCF) WSDL 1.1, detalhes 
 |mssp:RequireClientCertificate|Aninhados|Esse elemento opcional especifica um requisito para um certificado de cliente a ser fornecido como parte do protocolo TLSNEGO. Se essa declaração estiver presente, um certificado de cliente deve ser fornecido. Se essa asserção não estiver presente, um certificado de cliente não deve ser fornecido. Essa asserção não deve ser usada fora mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Consulte também
-- [Publicação de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Como: Exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Como: Importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+
+- [Publicação personalizada de WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Como: exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Como: importar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

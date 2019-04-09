@@ -1,5 +1,5 @@
 ---
-title: 'Como: Imprimir arquivos XPS de forma programática'
+title: 'Como: Imprimir arquivos XPS com programação'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114290"
 ---
-# <a name="how-to-programmatically-print-xps-files"></a>Como: Imprimir arquivos XPS de forma programática
+# <a name="how-to-programmatically-print-xps-files"></a>Como: Imprimir arquivos XPS com programação
 Você pode usar uma sobrecarga da <xref:System.Printing.PrintQueue.AddJob%2A> método para imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] arquivos sem abrir uma <xref:System.Windows.Controls.PrintDialog> ou, em princípio, qualquer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] em todos os.  
   
  Você também pode imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] de arquivos usando muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>. Para saber mais sobre isso, consulte [Imprimindo um documento XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
@@ -59,6 +59,7 @@ Você pode usar uma sobrecarga da <xref:System.Printing.PrintQueue.AddJob%2A> m�
  **Observação** para simplificar, o exemplo acima usa a presença de um \*a extensão. XPS como seu teste de um arquivo é [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. No entanto, arquivos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] não precisam ter essa extensão. O [isXPS.exe (ferramenta de conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) é uma maneira de testar a validade [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] de um arquivo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>
@@ -66,6 +67,6 @@ Você pode usar uma sobrecarga da <xref:System.Printing.PrintQueue.AddJob%2A> m�
 - [Documentos XPS](/windows/desktop/printdocs/documents)
 - [Imprimindo um documento XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
 - [Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
-- [isXPS.exe (conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [isXPS.exe (ferramenta de conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [Documentos no WPF](documents-in-wpf.md)
-- [Visão Geral da Impressão](printing-overview.md)
+- [Visão geral da impressão](printing-overview.md)

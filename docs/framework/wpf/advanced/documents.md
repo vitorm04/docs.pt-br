@@ -6,26 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206935"
 ---
 # <a name="documents"></a>Documentos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece um conjunto versátil de componentes que permitem aos desenvolvedores criar aplicativos com recursos de documento avançados e uma experiência de leitura aprimorada. Além dos recursos aprimorados e a qualidade, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece serviços de gerenciamento simplificado para empacotamento de documento, segurança e armazenamento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Documentos no WPF](documents-in-wpf.md)  
- [Serialização e armazenamento de documentos](document-serialization-and-storage.md)  
+ [Serialização e armazenamento do documento](document-serialization-and-storage.md)  
  [Anotações](annotations.md)  
  [Conteúdo de fluxo](flow-content.md)  
  [Tipografia](typography.md)  
  [Impressão e gerenciamento do sistema de impressão](printing-and-print-system-management.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>
-- [isXPS.exe (conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [isXPS.exe (ferramenta de conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

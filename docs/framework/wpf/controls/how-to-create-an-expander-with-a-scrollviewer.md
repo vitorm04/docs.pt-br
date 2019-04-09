@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-ms.openlocfilehash: 9e7c023ec371dd6695ffba3368502e5b593c4608
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114644"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Como: Criar um expansor com um ScrollViewer
 Este exemplo mostra como criar um <xref:System.Windows.Controls.Expander> controle que contém conteúdo complexo, como uma imagem e texto. O exemplo também inclui o conteúdo a <xref:System.Windows.Controls.Expander> em um <xref:System.Windows.Controls.ScrollViewer> controle.  
@@ -27,6 +27,7 @@ Este exemplo mostra como criar um <xref:System.Windows.Controls.Expander> contro
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Expander>
-- [Visão geral de Expander](expander-overview.md)
-- [Tópicos de instruções](expander-how-to-topics.md)
+- [Visão geral do expansor](expander-overview.md)
+- [Tópicos explicativos ](expander-how-to-topics.md)

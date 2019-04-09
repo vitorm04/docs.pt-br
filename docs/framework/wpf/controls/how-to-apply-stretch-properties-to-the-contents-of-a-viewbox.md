@@ -1,5 +1,5 @@
 ---
-title: 'Como: Aplicar propriedades de ampliação ao conteúdo de uma caixa de exibição'
+title: 'Como: Aplicar propriedades Stretch ao conteúdo de uma caixa de exibição'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [WPF], Viewbox
 - Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
-ms.openlocfilehash: 96d6584debe3e0dc85121cbcde5e6b4d1ac8c75c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08358ea07e0c41e3b7cdf52251a3ed4296035e2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209873"
 ---
-# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a>Como: Aplicar propriedades de ampliação ao conteúdo de uma caixa de exibição
+# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a>Como: Aplicar propriedades Stretch ao conteúdo de uma caixa de exibição
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como alterar o valor de <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> e <xref:System.Windows.Controls.Viewbox.Stretch%2A> propriedades de um <xref:System.Windows.Controls.Viewbox>.  
   
@@ -31,6 +31,7 @@ ms.locfileid: "57352471"
  [!code-vb[viewboxStretchLayoutSamp#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/viewboxStretchLayoutSamp/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.Viewbox>
 - <xref:System.Windows.Media.Stretch>
 - <xref:System.Windows.Controls.StretchDirection>

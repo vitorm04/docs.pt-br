@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3292fae0ca78615faee4cb5208aa711fea9a0a24
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1ffbe29db96cbb6162adc3b4cc77b45dcef27a46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117281"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>Método ICLRGCManager::SetGCStartupLimits
 Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração do sistema de coleta de lixo 0.  
@@ -74,7 +74,8 @@ HRESULT SetGCStartupLimits (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
-- [Coleta de lixo](../../../../docs/standard/garbage-collection/index.md)
+
+- [Gerenciamento automático de memória](../../../../docs/standard/automatic-memory-management.md)
+- [Coleta de Lixo](../../../../docs/standard/garbage-collection/index.md)
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interface ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

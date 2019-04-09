@@ -2,12 +2,12 @@
 title: Coleções de esquema comuns
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6307352cc2d976e4e9f47d1e111d40f96fc16c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209665"
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
 As coleções de esquema comuns são as coleções de esquemas que são implementadas por cada um dos provedores gerenciados .NET Framework. Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de coleções de esquema com suporte por meio da chamada a **GetSchema** método sem argumentos ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam. Essas coleções descrevem todas as colunas necessárias. Provedores são livres para adicionar colunas adicionais, se desejarem. Por exemplo, `SqlClient` e `OracleClient` Adicionar nome do parâmetro na coleção de restrições.  
@@ -95,6 +95,7 @@ As coleções de esquema comuns são as coleções de esquemas que são implemen
 |ReservedWord|cadeia de caracteres|Palavra reservada do provedor específico.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [GetSchema e coleções de esquema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

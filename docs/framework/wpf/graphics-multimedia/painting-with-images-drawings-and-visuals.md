@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204192"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Pintando com imagens, desenhos e visuais
 Este tópico descreve como usar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> objetos para pintar uma área com uma imagem, um <xref:System.Windows.Media.Drawing>, ou um <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para entender esse tópico, você deve estar familiarizado com os diferentes tipos de pincéis que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece e seus recursos básicos. Para uma introdução, consulte a [Visão geral de pincéis do WPF](wpf-brushes-overview.md).  
@@ -108,7 +107,7 @@ Objetos pintados por um DrawingBrush
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## <a name="example-create-a-reflection"></a>Exemplo: Criar um reflexo  
+## <a name="example-create-a-reflection"></a>Exemplo: Criar uma reflexão  
  O exemplo anterior mostrou como criar um novo <xref:System.Windows.Media.Visual> para uso como um plano de fundo. Você também pode usar um <xref:System.Windows.Media.VisualBrush> para exibir um visual existente; essa funcionalidade permite que você produza efeitos visuais interessantes, como reflexões e ampliações. O exemplo a seguir usa uma <xref:System.Windows.Media.VisualBrush> para criar um reflexo de um <xref:System.Windows.Controls.Border> que contém vários elementos. A ilustração a seguir mostra a saída que esse exemplo produz.  
   
  ![Um objeto Visual de refletidas](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
@@ -135,6 +134,7 @@ Componentes de um TileBrush com vários blocos
  Para obter mais informações sobre os recursos lado a lado do <xref:System.Windows.Media.TileBrush> objetos, consulte a [visão geral de TileBrush](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alinhar um texto desenhado'
+title: 'Como: alinhar um texto desenhado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: ab97ab713067af26455fa4261bbddaf900ec91b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210445"
 ---
-# <a name="how-to-align-drawn-text"></a>Como: Alinhar um texto desenhado
+# <a name="how-to-align-drawn-text"></a>Como: alinhar um texto desenhado
 Quando você executa um desenho personalizado, você geralmente deseja centralizar o texto desenhado em um formulário ou controle. Você pode facilmente alinhar texto desenhado com a <xref:System.Drawing.Graphics.DrawString%2A> ou <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos, criando o objeto de formatação correto e definindo os sinalizadores de formato apropriado.  
   
 ### <a name="to-draw-centered-text-with-gdi-drawstring"></a>Para desenhar texto com o GDI+ (DrawString) de centralizado  
@@ -33,9 +33,10 @@ Quando você executa um desenho personalizado, você geralmente deseja centraliz
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Os exemplos de código anteriores são projetados para uso com o Windows Forms e exigem <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ Os exemplos de código anteriores são projetados para uso com o Windows Forms e exigem <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Desenhar texto com GDI](how-to-draw-text-with-gdi.md)
+
+- [Como: desenhar texto com o GDI](how-to-draw-text-with-gdi.md)
 - [Usando fontes e texto](using-fonts-and-text.md)
-- [Como: Construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
+- [Como: construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)

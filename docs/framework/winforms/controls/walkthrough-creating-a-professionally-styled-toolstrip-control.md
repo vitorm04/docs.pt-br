@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando um controle ToolStrip com estilo profissional'
+title: 'Passo a passo: Criar um controle ToolStrip com estilo profissional'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115785"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Passo a passo: Criando um controle ToolStrip com estilo profissional
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Passo a passo: Criar um controle ToolStrip com estilo profissional
 Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla uma aparência e comportamento profissional escrevendo sua própria classe que deriva de <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
   
  Este passo a passo demonstra como usar <xref:System.Windows.Forms.ToolStrip> controles para criar um controle composto que se parece com o **painel de navegação** fornecidas pelo Microsoft® Outlook®. As seguintes tarefas são ilustradas nesta instrução passo a passo:  
@@ -38,7 +38,7 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para concluir este passo a passo, você precisará de:  
   
--   Permissões suficientes para poder criar e executar projetos de aplicativos do Windows Forms no computador em que o Visual Studio está instalado.  
+-   Permissões suficientes para poder criar e executar projetos de aplicativos dos Windows Forms no computador no qual Visual Studio está instalado.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Criar um projeto da Biblioteca de Controle do Windows  
  A primeira etapa é criar o projeto de biblioteca de controles.  
@@ -185,8 +185,9 @@ Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla u
 -   Criar um formulário de MDI (interface MDI) de vários documentos com encaixe <xref:System.Windows.Forms.ToolStrip> controles. Para obter mais informações, confira [Como: Criar um formulário MDI com mesclagem de Menu e controles ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [Controle ToolStrip](toolstrip-control-windows-forms.md)
-- [Como: Fornecer itens de Menu padrão para um formulário](how-to-provide-standard-menu-items-to-a-form.md)
+- [Como: Fornecer itens de menu padrão para um formulário](how-to-provide-standard-menu-items-to-a-form.md)

@@ -1,5 +1,5 @@
 ---
-title: Elemento <probing>
+title: <probing> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210263"
 ---
 # <a name="probing-element"></a>\<investigação > elemento
 Especifica os subdiretórios do aplicativo base para o common language runtime quando o carregamento de assemblies de pesquisa.  
@@ -66,6 +66,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime q
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Especificando o local de um assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)

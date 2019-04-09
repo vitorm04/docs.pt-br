@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203191"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Estrutura DacpMethodDescData
 
@@ -73,7 +73,6 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Informações do Rejit para o endereço nativo solicitado.                                             |
 | `cJittedRejitVersions`       | Número de vezes que o método foi rejitted por meio da instrumentação.                           |
 
-
 ## <a name="remarks"></a>Comentários
 
 Essa estrutura reside dentro do tempo de execução e não é exposta por meio de todos os cabeçalhos ou arquivos de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima.
@@ -85,6 +84,7 @@ Essa estrutura reside dentro do tempo de execução e não é exposta por meio d
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte também
+
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Tipos de dados comuns](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

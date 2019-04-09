@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f55a8a0ddff6c3202d15dc4704d443cabb44d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b17c7630160af78fe3163e6962b8fe085af1edc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206610"
 ---
 # <a name="icordebugilframe4-interface"></a>Interface ICorDebugILFrame4
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -45,5 +45,6 @@ ms.locfileid: "54656941"
  **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

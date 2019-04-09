@@ -2,12 +2,12 @@
 title: Transações distribuídas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150196"
 ---
 # <a name="distributed-transactions"></a>Transações distribuídas
 Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (confirmação) ou falha (anulação) como uma unidade, entre outras coisas. Um *transação distribuída* é uma transação que afeta vários recursos. Para que uma transação distribuída seja confirmada, todos os participantes devem garantir que qualquer alteração nos dados será permanente. As alterações devem persistir mesmo que haja falhas do sistema ou outros eventos imprevisíveis. Mesmo se um único participante não fizer essa garantia, a transação inteira falhará e todas as alterações aos dados dentro do escopo da transação serão revertidas.  
@@ -26,7 +26,7 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
 >  O número máximo de transações distribuídas no qual um banco de dados Oracle pode participar ao mesmo tempo é definido como 10 por padrão. Após a 10ª transação durante a conexão com um banco de dados Oracle, uma exceção é gerada. A Oracle não oferece suporte a `DDL` dentro de uma transação distribuída.  
   
 ## <a name="automatically-enlisting-in-a-distributed-transaction"></a>Automaticamente inscrevendo em uma transação distribuída  
- A inscrição automática é a maneira padrão (e preferida) de integrar conexões ADO.NET com `System.Transactions`. Um objeto de conexão se inscreverá automaticamente em uma transação atribuída existente se determinar que uma transação está ativa, o que, em termos de `System.Transaction`, significa que `Transaction.Current` não é nulo. A inscrição automática de transação ocorre quando a conexão é aberta. Isso não ocorrerá depois disso, mesmo que um comando seja executado dentro de um escopo de transação. Você pode desativar a inscrição automática em transações existentes especificando `Enlist=false` como um parâmetro de cadeia de conexão para um <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> ou `OLE DB Services=-7` como um parâmetro de cadeia de conexão para um <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A?displayProperty=nameWithType>. Para obter mais informações sobre Oracle e os parâmetros da cadeia de conexão ODBC, consulte <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A?displayProperty=nameWithType> e <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A?displayProperty=nameWithType>.  
+ A inscrição automática é a maneira padrão (e preferida) de integrar conexões ADO.NET com `System.Transactions`. Um objeto de conexão se inscreverá automaticamente em uma transação distribuída existente caso Determine que uma transação está ativa, que, na `System.Transaction` termos, significa que `Transaction.Current` não é nulo. A inscrição automática de transação ocorre quando a conexão é aberta. Isso não ocorrerá depois disso, mesmo que um comando seja executado dentro de um escopo de transação. Você pode desativar a inscrição automática em transações existentes especificando `Enlist=false` como um parâmetro de cadeia de conexão para um <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> ou `OLE DB Services=-7` como um parâmetro de cadeia de conexão para um <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A?displayProperty=nameWithType>. Para obter mais informações sobre Oracle e os parâmetros da cadeia de conexão ODBC, consulte <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A?displayProperty=nameWithType> e <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A?displayProperty=nameWithType>.  
   
 ## <a name="manually-enlisting-in-a-distributed-transaction"></a>Inscrevendo manualmente em uma transação distribuída  
  Se a inscrição automática estiver desativada ou se você precisar inscrever uma transação que foi iniciada depois que a conexão foi aberta, você poderá inscrever-se em uma transação distribuída existente usando o método `EnlistTransaction` do objeto <xref:System.Data.Common.DbConnection> para o provedor com o qual você está trabalhando. A inscrição em uma transação atribuída existente garante que, se a transação for confirmada ou revertida, as alterações feitas pelo código na fonte de dados também serão confirmadas ou revertidas.  
@@ -39,7 +39,7 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
 >  Assim que uma conexão é inscrita explicitamente em uma transação, ela não pode ter a inscrição cancelada nem ser inscrita em outra transação até a primeira transação terminar.  
   
 > [!CAUTION]
->  `EnlistTransaction` gera uma exceção se a conexão já tiver começado uma transação usando o método <xref:System.Data.Common.DbConnection.BeginTransaction%2A> da conexão. No entanto, se a transação for uma transação local iniciada na fonte de dados (por exemplo, executando a instrução BEGIN TRANSACTION explicitamente usando uma <xref:System.Data.SqlClient.SqlCommand>), o `EnlistTransaction` reverterá a transação local e se inscreverá na transação distribuída existente conforme o solicitado. Você não receberá o aviso de que a transação local foi revertida e deverá gerenciar as transações locais não iniciadas usando <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se você estiver usando o provedor de dados .NET Framework para SQL Server (`SqlClient`) com SQL Server, uma tentativa de inscrição gerará uma exceção. Todos os outros casos permanecerão despercebidos.  
+>  `EnlistTransaction` gera uma exceção se a conexão já tiver começado uma transação usando a conexão <xref:System.Data.Common.DbConnection.BeginTransaction%2A> método. No entanto, se a transação for uma transação local iniciada na fonte de dados (por exemplo, executando a instrução BEGIN TRANSACTION explicitamente usando uma <xref:System.Data.SqlClient.SqlCommand>), o `EnlistTransaction` reverterá a transação local e se inscreverá na transação distribuída existente conforme o solicitado. Você não receberá o aviso de que a transação local foi revertida e deverá gerenciar as transações locais não iniciadas usando <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se você estiver usando o provedor de dados .NET Framework para SQL Server (`SqlClient`) com SQL Server, uma tentativa de inscrição gerará uma exceção. Todos os outros casos permanecerão despercebidos.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transações passíveis de promoção no SQL Server  
  O SQL Server oferece suporte a transações passíveis de promoção nas quais uma transação leve local pode ser automaticamente promovida para uma transação distribuída somente se isso for necessário. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. Para obter mais informações e um exemplo de código, consulte [integração de System. Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
@@ -48,6 +48,7 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
  Você talvez precise habilitar o MS DTC na rede para usar transações distribuídas. Se tiver o Firewall do Windows habilitado, você deverá permitir que o serviço do MS DTC use a rede ou abra a porta do MS DTC.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Integração de System.Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
