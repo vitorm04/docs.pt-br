@@ -2,12 +2,12 @@
 title: multiplicidade da extremidade da associação
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 183bbafaf1de3adf8719c7ee562be3513832ef10
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135025"
 ---
 # <a name="association-end-multiplicity"></a>multiplicidade da extremidade da associação
 *Multiplicidade de extremidades de associação* define o número de [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) instâncias que podem estar em uma extremidade de uma [associação](../../../../docs/framework/data/adonet/association-type.md).  
@@ -32,5 +32,6 @@ ms.locfileid: "58412091"
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+
+- [Conceitos chave do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

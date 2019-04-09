@@ -1,18 +1,18 @@
 ---
-title: Modificando DataViews
+title: Modificar DataViews
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: f892a371ed23a810f71ef5a51393de4145478c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e340b9b72735598650d2eefa6e19ab40fffc2e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111547"
 ---
-# <a name="modifying-dataviews"></a>Modificando DataViews
+# <a name="modifying-dataviews"></a>Modificar DataViews
 Você pode usar o <xref:System.Data.DataView> para adicionar, excluir ou modificar linhas de dados na tabela subjacente. A capacidade de usar o **DataView** modificar os dados na tabela subjacente é controlado pela configuração de uma das três propriedades Boolianas da **DataView**. Essas propriedades são <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, e <xref:System.Data.DataView.AllowDelete%2A>. Eles são definidos como **verdadeira** por padrão.  
   
  Se **AllowNew** é **verdadeiro**, você pode usar o <xref:System.Data.DataView.AddNew%2A> método da **DataView** para criar um novo <xref:System.Data.DataRowView>. Observe que uma nova linha não é realmente adicionada às subjacente <xref:System.Data.DataTable> até que o <xref:System.Data.DataRowView.EndEdit%2A> método o **DataRowView** é chamado. Se o <xref:System.Data.DataRowView.CancelEdit%2A> método da **DataRowView** é chamado, a nova linha é descartada. Observe também que você pode editar apenas uma **DataRowView** por vez. Se você chamar o **AddNew** ou **BeginEdit** método da **DataRowView** Embora exista uma linha pendente, **EndEdit** é chamado implicitamente no linha pendente. Quando **EndEdit** é chamado, as alterações são aplicadas ao subjacente **DataTable** e que posteriormente pode ser confirmada ou rejeitada usando o **AcceptChanges** ou  **RejectChanges** métodos do **DataTable**, **DataSet**, ou **DataRow** objeto. Se **AllowNew** é **falso**, uma exceção é lançada se você chamar o **AddNew** o método da **DataRowView**.  
@@ -52,8 +52,9 @@ newDRV.EndEdit();
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

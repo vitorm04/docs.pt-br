@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 0e21f0acaf6c9bf0b0c7fc48648ad6a26876f9cb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 32fa3c2ef985de8aeb31ca8c7de8d67ee2ba4a44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133907"
 ---
 # <a name="message-security-certificate"></a>Certificado de mensagem de segurança
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X.509 v3 para o cliente e requer autenticação de servidor usando o certificado do servidor x. 509 v3. Este exemplo usa as configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Este exemplo se baseia a [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) e consiste em um programa de console do cliente e uma biblioteca de serviço hospedado pelo Internet Information Services (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -333,4 +333,3 @@ Press <ENTER> to terminate client.
   
     > [!NOTE]
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
-  

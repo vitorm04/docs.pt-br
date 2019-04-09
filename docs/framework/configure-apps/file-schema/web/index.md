@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 4bde008661e78fc85c428fa5100f81483936b460
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113055"
 ---
 # <a name="web-settings-schema"></a>Esquema de configurações Web
 As configurações de Web especificam as configurações do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET. Essas configurações são diferentes das configurações de tipo de domínio do aplicativo que são especificadas no arquivo Web.config de um aplicativo ASP.NET.  
@@ -25,11 +25,11 @@ As configurações de Web especificam as configurações do ASP.NET em nível de
   
  As configurações da Web não são usadas em nenhum outro arquivo de configuração, como o arquivo machine.config, o Web.config raiz ou os arquivos Web.config do nível do aplicativo.  
   
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuração > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<system.web> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md) [Elemento system.web> (configurações da Web)]  
+ [\<System. Web > (configurações da Web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
   
- [\<applicationPool> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]  
+ [\<applicationPool > (configurações da Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -37,4 +37,5 @@ As configurações de Web especificam as configurações do ASP.NET em nível de
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Especifica as configurações de CPU e do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

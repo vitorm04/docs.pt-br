@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111469"
 ---
 # <a name="metadata-architecture-overview"></a>Visão geral da arquitetura de metadados
 Windows Communication Foundation (WCF) fornece uma infraestrutura avançada para exportar, publicando, recuperando e importação de metadados de serviço. Os serviços WCF usam metadados para descrever como interagir com pontos de extremidade do serviço para que as ferramentas, como Svcutil.exe, podem gerar automaticamente o código do cliente para acessar o serviço.  
@@ -88,11 +88,12 @@ Windows Communication Foundation (WCF) fornece uma infraestrutura avançada para
  Você pode atualizar dinamicamente a associação que você usa para criar um canal para um ponto de extremidade de serviço, que altera a associação para o ponto de extremidade ou você deseja criar um canal para um ponto de extremidade que usa o mesmo contrato, mas tem uma associação diferente. Você pode usar o <xref:System.ServiceModel.Description.MetadataResolver> classe estática para recuperar e importar metadados em tempo de execução para pontos de extremidade de serviço que implementa um contrato específico. Você pode usar o importados <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> objetos para criar uma fábrica de canal ou de cliente para o ponto de extremidade desejado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description>
 - [Formatos de metadados](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [Exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
 - [Publicando metadados](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
 - [Recuperando metadados](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
 - [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

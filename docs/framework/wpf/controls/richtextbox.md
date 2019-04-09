@@ -7,21 +7,22 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113783"
 ---
 # <a name="richtextbox"></a>RichTextBox
 O <xref:System.Windows.Controls.RichTextBox> elemento define um controle de edição com suporte interno para recursos, como Recortar e colar, apresentação de documentos ricos e seleção de conteúdo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de RichTextBox](richtextbox-overview.md)  
- [Tópicos de instruções](richtextbox-how-to-topics.md)  
+ [Tópicos explicativos ](richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.TextBox>
 - [Documentos no WPF](../advanced/documents-in-wpf.md)
 - [Visão geral do documento de fluxo](../advanced/flow-document-overview.md)

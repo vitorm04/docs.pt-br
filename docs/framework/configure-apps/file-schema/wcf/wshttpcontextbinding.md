@@ -2,12 +2,12 @@
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: efd15b5fd7c7c5f9362999e51a5509a0f190cc48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 20d931dfd1805dd4b56aabbab778e6587caa003a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112457"
 ---
 # <a name="wshttpcontextbinding"></a>\<wsHttpContextBinding>
 Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer que o nível de proteção seja assinado.  
@@ -88,7 +88,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre pontos de extremidade de canal.|  
   
@@ -99,6 +99,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpContextBinding>
 - <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>

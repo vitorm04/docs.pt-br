@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dd7ef41cb935bf2b9808f730c288c29198720b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ba528f8545f0781f15e4479cbef0b80feeab46d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116838"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>Classe MissingRuntimeArtifactException (.NET Nativo)
-**.NET para Aplicativos da Windows Store para Windows 10, somente [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
+**.NET para aplicativos do Windows para Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] apenas**  
   
  A exceção que é acionada quando metadados de um tipo ou um membro de tipo estão disponíveis, mas sua implementação foi removida.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54687265"
   
 ## <a name="events"></a>Eventos  
   
-|Evento|Descrição|  
+|evento|Descrição|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Ocorre quando uma exceção é serializada para criar um objeto de estado de exceção que contém dados serializados sobre a exceção. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|  
   
@@ -81,5 +81,6 @@ ms.locfileid: "54687265"
  A classe `MissingRuntimeArtifactException` não contém membros exclusivos. Todos os seus membros são herdados de sua classe base, <xref:System.MemberAccessException>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

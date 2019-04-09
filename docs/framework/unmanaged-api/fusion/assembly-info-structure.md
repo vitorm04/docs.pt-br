@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bae19ec18c54eccc7aa54d2d3a006f36ba8ab762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110871"
 ---
 # <a name="assemblyinfo-structure"></a>Estrutura ASSEMBLY_INFO
 Contém informações sobre um assembly que está registrado no cache de assembly global.  
@@ -56,5 +56,6 @@ typedef struct _ASSEMBLY_INFO {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Estruturas de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)
+- [Cache de assemblies global](../../../../docs/framework/app-domains/gac.md)

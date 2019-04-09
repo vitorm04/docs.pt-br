@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: 5dc7778f43c01fd28a14489a7b4179dd851568b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8a2429049acf1a22edde8d132ece17da4e91f1db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111417"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>Quando usar um ComboBox dos Windows Forms em vez de um ListBox
 O <xref:System.Windows.Forms.ComboBox> e o <xref:System.Windows.Forms.ListBox> controles têm comportamentos semelhantes e, em alguns casos, podem ser intercambiáveis. No entanto, há vezes, em que um ou outro é mais apropriado para uma tarefa.  
@@ -26,8 +26,9 @@ O <xref:System.Windows.Forms.ComboBox> e o <xref:System.Windows.Forms.ListBox> c
  Além disso, caixas de combinação economizam espaço em um formulário. Como a lista completa não é exibida até que o usuário clique na seta para baixo, uma caixa de combinação pode se encaixar facilmente em um pequeno espaço em que uma caixa de listagem não caberia. Uma exceção é quando o <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> estiver definida como <xref:System.Windows.Forms.ComboBoxStyle.Simple>: a lista completa é exibida e a caixa de combinação ocupa mais espaço do que uma caixa de listagem.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Como: Adicionar e remover itens de um Windows Forms ComboBox, ListBox ou CheckedListBox controle](add-and-remove-items-from-a-wf-combobox.md)
-- [Como: Classificar o conteúdo de um Windows Forms ComboBox, ListBox ou CheckedListBox controle](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Como: Adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Como: Classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)

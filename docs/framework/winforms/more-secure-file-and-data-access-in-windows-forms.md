@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115759"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acesso mais seguro a arquivos e dados no Windows Forms
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  No Visual c#, certifique-se de que você adicione código para permitir que o manipulador de eventos. Ao usar o código do exemplo anterior, o código a seguir mostra como habilitar o manipulador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  No Visual c#, certifique-se de que você adicione código para permitir que o manipulador de eventos. Usando o código do exemplo anterior, o código a seguir mostra como habilitar o manipulador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Outros arquivos  
  Às vezes, você precisará ler ou gravar em arquivos que o usuário não especifica, como quando você precisa salvar as configurações do aplicativo. Na intranet local e zonas da Internet, o aplicativo não terá permissão para armazenar dados em um arquivo local. No entanto, seu aplicativo poderá armazenar dados no armazenamento isolado. Armazenamento isolado é um compartimento de dados abstrato (não um local de armazenamento específico) que contém um ou mais arquivos de armazenamento isolados, chamados de armazenamentos, que contêm os locais reais dos diretórios nos quais os dados são armazenados. As permissões de acesso, como arquivos <xref:System.Security.Permissions.FileIOPermission> não são necessários; em vez disso, o <xref:System.Security.Permissions.IsolatedStoragePermission> classe controla as permissões para o armazenamento isolado. Por padrão, os aplicativos que são executados na intranet local e zonas da Internet podem armazenar dados usando armazenamento isolado; No entanto, configurações como cota de disco podem variar. Para obter mais informações sobre armazenamento isolado, consulte [Armazenamento Isolado](../../standard/io/isolated-storage.md).  
@@ -359,9 +359,10 @@ public void Write()
  Como você não pode acessar o Registro sob confiança parcial, você precisará encontrar outros métodos para armazenar seus dados. Quando você armazena configurações do aplicativo, use o armazenamento isolado em vez de no Registro. Armazenamento isolado também pode ser usado para armazenar outros arquivos específicos do aplicativo. Você também pode armazenar informações globais do aplicativo sobre o servidor ou site de origem, porque, por padrão, um aplicativo recebe o direito de acessar o seu site de origem.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Considerações adicionais sobre segurança nos Windows Forms](additional-security-considerations-in-windows-forms.md)
-- [Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)
+- [Considerações adicionais sobre Segurança do Windows Forms](additional-security-considerations-in-windows-forms.md)
+- [Visão geral da Segurança do Windows Forms](security-in-windows-forms-overview.md)
 - [Segurança do Windows Forms](windows-forms-security.md)
-- [Mage.exe (Manifest Generation and Editing Tool)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (Ferramenta de Geração e Edição de Manifesto)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

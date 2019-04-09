@@ -1,15 +1,15 @@
 ---
-title: <GenericParameter> (.NET Nativo)
+title: <GenericParameter> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111651"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > (.NET nativo)
 Aplica a política ao tipo de parâmetro de um tipo ou método genérico.  
@@ -68,8 +68,8 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de tempo reflexão de execução a um tipo específico, como uma classe ou estrutura.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de tempo reflexão de execução a um tipo específico, como uma classe ou estrutura.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<GenericParameter>` é filho do elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) ou [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e é usado para aplicar a política a um parâmetro de tipo genérico específico, que é especificado pelo seu nome no tipo genérico ou na assinatura do método.  
@@ -87,8 +87,9 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)

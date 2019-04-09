@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114027"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Como: girar, refletir e distorcer imagens
 Você pode girar, refletir e distorcer uma imagem especificando pontos de destino para os cantos superior esquerdo, superior direito e inferior esquerdo da imagem original. Os três pontos de destino determinam uma transformação afim que mapeia a imagem retangular original para um paralelogramo.  
@@ -46,7 +46,8 @@ Você pode girar, refletir e distorcer uma imagem especificando pontos de destin
  [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `Stripes.bmp` pelo caminho até uma imagem válida no seu sistema.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `Stripes.bmp` pelo caminho até uma imagem válida no seu sistema.  
   
 ## <a name="see-also"></a>Consulte também
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

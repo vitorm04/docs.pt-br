@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar uma caixa de texto de senha com o controle TextBox dos Windows Forms'
+title: 'Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: 93be2378e812ce909adaf9b640b37f8056fc09c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110606"
 ---
-# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Como: Criar uma caixa de texto de senha com o controle TextBox dos Windows Forms
+# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms
 Uma caixa de senha é uma caixa de texto do Windows Forms que exibe caracteres de espaço reservado enquanto um usuário digita uma cadeia de caracteres.  
   
 ### <a name="to-create-a-password-text-box"></a>Criar uma caixa de texto de senha  
@@ -72,11 +72,12 @@ Uma caixa de senha é uma caixa de texto do Windows Forms que exibe caracteres d
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)
-- [Como: Controlar o ponto de inserção em um controle TextBox dos Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Como: Controlar o ponto de inserção em um controle TextBox do Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
 - [Como: Criar uma caixa de texto somente leitura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Como: Inserir aspas em uma cadeia de caracteres](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Como: Selecione o texto no controle TextBox de formulários do Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Como: Exibir várias linhas no controle TextBox de formulários do Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Como: Selecionar texto no controle TextBox do Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Como: Exibir várias linhas no controle TextBox do Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controle TextBox](textbox-control-windows-forms.md)

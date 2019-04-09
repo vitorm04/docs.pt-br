@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44716e0c763fe71fe94c8c0ec247cd37379561ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8d936ac4fca704e7e3069209d8ff75d46b044d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113666"
 ---
 # <a name="iclrtaskyieldtask-method"></a>Método ICLRTask::YieldTask
 Solicitações que o common language runtime (CLR) deixados de lado a tarefa que o atual [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância representa e tornar o tempo de processador disponíveis para outras tarefas.  
@@ -57,6 +57,7 @@ HRESULT YieldTask ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

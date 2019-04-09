@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 6cc19f7719b9cdbcd3852c99f450c1d728dc833b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112210"
 ---
 # <a name="security-considerations-in-wcf"></a>Considerações de segurança no WCF
 Os tópicos nesta seção listam vários itens relacionados à segurança a serem considerados ao projetar um aplicativo do Windows Communication Foundation (WCF).  
@@ -29,10 +29,10 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
  Discute a alteração de mensagens ou a entrega de mensagens e como resolvê-la.  
   
- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Ataques por repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  Discute o que acontece quando um invasor copia um fluxo de mensagens entre dois parceiros e repete o fluxo a um ou mais das partes e como mitigar isso.  
   
- [Considerações sobre segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ [Considerações de segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
  Discute os seguintes itens que afetam a segurança ao implementar sessões seguras.  
   
  [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
@@ -48,7 +48,8 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Orientação de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Segurança](../../../../docs/framework/wcf/feature-details/security.md)

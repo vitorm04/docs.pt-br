@@ -1,18 +1,18 @@
 ---
-title: Operações de cópia em massa único
+title: Operações únicas de cópia em massa
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 286199a595e7b34c25fcc13d37c5c913f269304d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112060"
 ---
-# <a name="single-bulk-copy-operations"></a>Operações de cópia em massa único
+# <a name="single-bulk-copy-operations"></a>Operações únicas de cópia em massa
 A abordagem mais simples para executar uma operação de cópia em massa do SQL Server é executar uma única operação em um banco de dados. Por padrão, uma operação de cópia em massa é executada como uma operação isolada: a operação de cópia ocorre de forma não transacionada, sem a oportunidade de revertê-la de volta.  
   
 > [!NOTE]
@@ -80,5 +80,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Operações de cópia em massa no SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

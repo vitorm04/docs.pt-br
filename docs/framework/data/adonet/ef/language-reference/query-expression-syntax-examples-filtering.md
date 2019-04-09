@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 3a1f88035dd242c9f92a8a08806232b36f2fd9fd
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134544"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Exemplos de sintaxe de expressão de consulta: Filtragem
 Os exemplos neste tópico demonstram como usar o `Where` e `Where…Contains` métodos para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de expressão de consulta. Observe que, em que...`Contains` não pode ser usado como parte de um [consulta compilada](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
@@ -66,4 +66,5 @@ Os exemplos neste tópico demonstram como usar o `Where` e `Where…Contains` m�
  [!code-vb[DP L2E ArraysAndListsInQueries#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: a8822c9a26db445080668b1b493803369ccbae4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113198"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Como: Inserir aspas em uma cadeia de caracteres (Windows Forms)
 Às vezes, você pode querer colocar aspas (" ") em uma cadeia de caracteres de texto. Por exemplo:  
@@ -48,7 +48,7 @@ ms.locfileid: "57714808"
        }  
     ```  
   
-     -ou-  
+     - ou -  
   
 2.  Insira o caractere ASCII ou Unicode para aspas. No Visual Basic, use o caractere ASCII (34). No Visual C#, use o caractere Unicode (\u0022).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "57714808"
     > [!NOTE]
     >  Neste exemplo, não é possível usar \u0022 porque você não pode usar um nome de caractere universal que designa um caractere no conjunto de caracteres básicos. Caso contrário, você produz C3851. Para obter mais informações, consulte [Erro do compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     -ou-  
+     - ou -  
   
 3.  Você também pode definir uma constante para o caractere e usá-la quando necessário.  
   
@@ -89,12 +89,13 @@ ms.locfileid: "57714808"
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)
-- [Como: Controlar o ponto de inserção em um controle TextBox dos Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Como: Criar uma caixa de texto de senha com o controle TextBox dos Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Como: Controlar o ponto de inserção em um controle TextBox do Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Como: Criar uma caixa de texto somente leitura](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Como: Selecione o texto no controle TextBox de formulários do Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Como: Exibir várias linhas no controle TextBox de formulários do Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Como: Selecionar texto no controle TextBox do Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Como: Exibir várias linhas no controle TextBox do Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controle TextBox](textbox-control-windows-forms.md)

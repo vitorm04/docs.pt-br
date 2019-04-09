@@ -2,12 +2,12 @@
 title: Introdução à Integração do SQL Server CLR
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: dcfc43a68fb8bcacd4a14d6b94a932d656635d55
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 2f65e8690aa52f0442b4bee3b98bb1ea86e064a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110697"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introdução à Integração do SQL Server CLR
 O CLR (Common Language Runtime) é o coração do Microsoft .NET Framework e fornece o ambiente de execução para todo o código do .NET Framework. O código que é executado dentro do CLR é conhecido como código gerenciado. O CLR fornece várias funções e serviços necessários para a execução do programa, incluindo a compilação just-in-time (JIT), alocação e gerenciamento de memória, imposição de segurança de tipo, manipulação de exceção, gerenciamento de segmento e segurança.  
@@ -18,9 +18,9 @@ O CLR (Common Language Runtime) é o coração do Microsoft .NET Framework e for
   
  Esta seção é destinada para fornecer somente as informações suficientes para começar a programar com a integração de CLR do SQL Server, e não para ser abrangente. Para obter informações detalhadas, consulte a versão dos Manuais Online do SQL Server da versão do SQL Server que você está usando.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
--   [Visão geral de integração Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115242)  
+-   [Visão geral da integração do CLR (Common Language Runtime)](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Habilitando a integração de CLR  
  O recurso de integração do CLR (Common Language Runtime) está desativado por padrão no Microsoft SQL Server e deve ser habilitado para usar os objetos que são implementados usando a integração de CLR. Para habilitar a integração de CLR usando Transact-SQL, use a opção `clr enabled` do procedimento armazenado `sp_configure` conforme mostrado:  
@@ -36,35 +36,36 @@ GO
   
  Para obter informações detalhadas, consulte a versão dos Manuais Online do SQL Server da versão do SQL Server que você está usando.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
--   [Habilitando a integração CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
+-   [Habilitando a integração de CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Implantando um assembly de CLR  
  Uma vez que os métodos de CLR foram testados e verificados no servidor de teste, eles podem ser distribuídos para servidores de produção usando um script de implantação. O script de implantação pode ser gerado manualmente ou usando o SQL Server Management Studio. Para obter informações detalhadas, consulte a versão dos Manuais Online do SQL Server da versão do SQL Server que você está usando.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
-1.  [Implantando objetos de banco de dados CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1.  [Implantando objetos de banco de dados de CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Segurança de integração de CLR  
  O modelo de segurança de integração do Microsoft SQL Server com o CLR (Common Language Runtime) do Microsoft .NET Framework gerencia e protege o acesso entre diferentes tipos de objetos CLR e não CLR que são executados no SQL Server. Esses objetos podem ser chamados por uma instrução Transact-SQL ou outro objeto CLR que é executado no servidor.  
   
  Para obter informações detalhadas, consulte a versão dos Manuais Online do SQL Server da versão do SQL Server que você está usando.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
--   [Segurança da integração CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
+-   [Segurança de integração de CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>Depurando um assembly de CLR  
  O Microsoft SQL Server fornece suporte para depurar o Transact-SQL e objetos CLR (Common Language Runtime) no banco de dados. Depurar funciona entre linguagens: os usuários podem entrar perfeitamente em objetos CLR de Transact-SQL e vice-versa.  
   
  Para obter informações detalhadas, consulte a versão dos Manuais Online do SQL Server da versão do SQL Server que você está usando.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Manuais Online do SQL Server**  
   
--   [Depurando objetos de banco de dados CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
+-   [Depurando objetos de banco de dados de CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Segurança de acesso do código e o ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

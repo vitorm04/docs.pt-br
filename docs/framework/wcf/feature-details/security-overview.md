@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136949"
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Windows Communication Foundation (WCF) é uma SOAP baseada em mensagens distribuída plataforma de programação e proteger as mensagens entre clientes e serviços é fundamental para proteger os dados. O WCF fornece uma plataforma versátil e interoperável para troca de mensagens seguras, com base na infraestrutura de segurança existente e os padrões de segurança reconhecido para mensagens SOAP.  
@@ -98,8 +98,9 @@ Windows Communication Foundation (WCF) é uma SOAP baseada em mensagens distribu
  *Auditoria* é o registro em log de eventos de segurança para o log de eventos do Windows. Você pode registrar eventos relacionados à segurança, como falhas de autenticação (ou sucessos). Para obter mais informações, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obter detalhes de programação, consulte [como: Auditar eventos de segurança](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)
+- [Serviços de segurança](../../../../docs/framework/wcf/securing-services.md)
 - [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
@@ -107,9 +108,9 @@ Windows Communication Foundation (WCF) é uma SOAP baseada em mensagens distribu
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Orientação de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Configurando serviços usando arquivos de configuração](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Segurança estendida](../../../../docs/framework/wcf/extending/extending-security.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

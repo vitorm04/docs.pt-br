@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142838"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Especifica os recursos de informações de depuração e ajuda para um serviço do Windows Communication Foundation (WCF).  
@@ -71,8 +71,9 @@ Especifica os recursos de informações de depuração e ajuda para um serviço 
  Opcional `httpHelpPageBinding` e `httpHelpPageBinding` atributos permitem que você configure as ligações usadas para acessar a página da web do serviço. Se não forem especificadas, as associações padrão (`HttpTransportBindingElement`, no caso de HTTP e `HttpsTransportBindingElement`, no caso HTTPS) são usados para acesso de página de ajuda de serviço conforme apropriado. Observe que você não pode usar esses atributos com associações do WCF internas. Somente associações com elementos de associação interna que suportam xref:System.ServiceModel.Channels.IReplyChannel > terá suporte. Além disso, o <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> propriedade da associação deve ser <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
 - [Especificando e lidando com falhas em contratos e serviços](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Tratamento de exceções e falhas](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [Lidando com exceções e falhas](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Comportamento de depuração de serviço](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

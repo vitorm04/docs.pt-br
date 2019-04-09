@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b49b63049d33c41757db1abae82ed2a4e266b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e4328b75a7f6fecc28cd620ec3ac18460316c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111131"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>Enumeração WriteableMetadataUpdateMode
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -57,5 +57,6 @@ typedef enum WriteableMetadataUpdateMode {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Método SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)

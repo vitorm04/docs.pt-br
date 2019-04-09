@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], subpaths
 - subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
-ms.openlocfilehash: 0b57d0441c1aa9d5972af1f1c6b989aacba7f87f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 286075448cd6a343f8a7b15b2b5005f840f68e1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111742"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>Como: Criar vários subcaminhos dentro de um PathGeometry
 Este exemplo mostra como criar vários subcaminhos em um <xref:System.Windows.Media.PathGeometry>. Para criar vários subcaminhos, você cria um <xref:System.Windows.Media.PathFigure> para cada subcaminho.  
@@ -28,4 +28,5 @@ Este exemplo mostra como criar vários subcaminhos em um <xref:System.Windows.Me
  (Observe que essa sintaxe de atributo na verdade cria um <xref:System.Windows.Media.StreamGeometry>, uma versão leve de um <xref:System.Windows.Media.PathGeometry>. Para obter mais informações, consulte o [sintaxe de marcação de caminho](path-markup-syntax.md) página.)  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de geometria](geometry-overview.md)
+
+- [Visão geral da geometria](geometry-overview.md)

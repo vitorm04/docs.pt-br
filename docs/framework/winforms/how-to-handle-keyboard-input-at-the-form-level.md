@@ -1,5 +1,5 @@
 ---
-title: 'Como: Manipular a entrada do teclado no nível do formulário'
+title: 'Como: manipular a entrada do teclado no nível do formulário'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: 1b458287e5becf7f8da7cab676efdb2af1ab92b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135155"
 ---
-# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Como: Manipular a entrada do teclado no nível do formulário
+# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Como: manipular a entrada do teclado no nível do formulário
 Os Windows Forms proporcionam a capacidade de manipular mensagens de teclado no nível do formulário, antes que as mensagens cheguem a um controle. Este tópico mostra como realizar essa tarefa.  
   
 ### <a name="to-handle-a-keyboard-message-at-the-form-level"></a>Como manipular uma mensagem do teclado no nível do formulário  
@@ -43,4 +43,5 @@ Os Windows Forms proporcionam a capacidade de manipular mensagens de teclado no 
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
 
 ## <a name="see-also"></a>Consulte também
-- [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+
+- [Entrada do teclado em um aplicativo do Windows Forms](keyboard-input-in-a-windows-forms-application.md)

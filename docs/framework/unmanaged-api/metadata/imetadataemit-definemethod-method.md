@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2372aac00473786df9b5deefb969fc02abd8daa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115577"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Método IMetaDataEmit::DefineMethod
 Cria uma definição para um método ou uma função global com a assinatura especificada e retorna um token para essa definição de método.  
@@ -113,5 +113,6 @@ HRESULT DefineMethod (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

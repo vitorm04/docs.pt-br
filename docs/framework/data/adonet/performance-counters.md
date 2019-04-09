@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: e60df2b576980ecd1ff92af78cef36f025b71417
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133881"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de desempenho no ADO.NET
 O ADO.NET 2.0 introduziu suporte expandido para contadores de desempenho que inclui suporte para ambos <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>. O <xref:System.Data.SqlClient> contadores de desempenho disponíveis nas versões anteriores do ADO.NET foram preteridos e substituídos por novos contadores de desempenho discutidos neste tópico. Você pode usar contadores de desempenho do ADO.NET para monitorar o status do seu aplicativo e os recursos de conexão que ele usa. Contadores de desempenho podem ser monitorados usando o Monitor de desempenho do Windows ou podem ser acessados por meio de programação usando o <xref:System.Diagnostics.PerformanceCounter> classe o <xref:System.Diagnostics> namespace.  
@@ -395,9 +395,10 @@ class Program
 ```  
 
 ## <a name="see-also"></a>Consulte também
+
 - [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Conexão do Oracle, ODBC e OLE DB Pooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [OLE DB, ODBC e pool de conexões Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [Contadores de desempenho para ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Criação de perfil do tempo de execução](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
 - [Introdução ao monitoramento de limites de desempenho](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](ado-net-overview.md)

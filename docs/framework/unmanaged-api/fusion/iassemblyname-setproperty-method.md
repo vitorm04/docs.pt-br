@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb04a97597982fdae7a68ba4f3ed4d7420b4189
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2cc2a2c7991eb4d11873ebb6a2df92ccc45cde9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113460"
 ---
 # <a name="iassemblynamesetproperty-method"></a>Método IAssemblyName::SetProperty
 Define o valor da propriedade referenciada pelo identificador de propriedade especificado.  
@@ -55,4 +55,5 @@ HRESULT SetProperty (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

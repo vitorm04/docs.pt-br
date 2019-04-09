@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3d0ee533ec0ece308f87c170846ef102bd3a3b9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113461"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Método IMetaDataImport2::GetPEKind
 Obtém um valor que identifica a natureza do código no executável portátil (PE) do arquivo, normalmente uma DLL ou EXE arquivo, que é definido no escopo atual de metadados.  
@@ -62,6 +62,7 @@ HRESULT GetPEKind (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Enumeração CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111664"
 ---
 # <a name="imaptoken-interface"></a>Interface IMapToken
 Fornece recursos de mapeamento entre assemblies.  
@@ -45,4 +45,5 @@ Fornece recursos de mapeamento entre assemblies.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11117db08d58684cc854400424d1836ec35b8c12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b494b8b776f4cb0eb534233c5a03ab2d34a698ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115616"
 ---
 # <a name="createalink-function"></a>Função CreateALink
 Cria uma instância do vinculador de Assembly e define um ponteiro para a interface especificada.  
@@ -47,4 +47,5 @@ HRESULT CreateALink (
  **Biblioteca**: ALink  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

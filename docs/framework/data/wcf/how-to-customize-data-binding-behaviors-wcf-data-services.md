@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 159326886c69a308891dbd4318aa1ac81eab9448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00f46dfd9b2d1446f2c2a1ba1fdd2e5b0405c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111003"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Como: Personalizar dados de associação de comportamentos (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode fornecer lógica personalizada que é chamada pelo <xref:System.Data.Services.Client.DataServiceCollection%601> quando um objeto é adicionado ou removido da coleção de associação ou quando for detectada uma alteração de propriedade. Essa lógica personalizada é fornecida como métodos, referenciados como <xref:System.Func%602> delegados, que retornam um valor de `false` quando o comportamento padrão deve ainda ser executado quando o método personalizado é concluído e `true` quando subsequentes de processamento da evento deve ser interrompido.  
@@ -33,4 +33,5 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode fo
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
