@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192128"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327367"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Como: Criar uma interface no estilo do Windows Explorer em Windows Forms
 O Windows Explorer é uma opção de interface do usuário comum para aplicativos devido à sua familiaridade pronta.  
@@ -25,9 +25,9 @@ O Windows Explorer é uma opção de interface do usuário comum para aplicativo
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>Para criar um Windows Form no estilo do Windows Explorer  
   
-1.  Criar um novo projeto de aplicativo do Windows (**arquivo** > **New** > **projeto** > **Visual C#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
+1. Criar um novo projeto de aplicativo do Windows (**arquivo** > **New** > **projeto** > **Visual C#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
   
-2.  Na **Caixa de Ferramentas**:  
+2. Na **Caixa de Ferramentas**:  
   
     1.  Arraste um <xref:System.Windows.Forms.SplitContainer> controle para seu formulário.  
   
@@ -35,14 +35,14 @@ O Windows Explorer é uma opção de interface do usuário comum para aplicativo
   
     3.  Arraste uma <xref:System.Windows.Forms.ListView> controlar em **SplitterPanel2** (o painel do <xref:System.Windows.Forms.SplitContainer> controle marcado **Painel2**).  
   
-3.  Selecione os três controles pressionando a tecla CTRL e clicando neles. Quando você seleciona o <xref:System.Windows.Forms.SplitContainer> de controle, clique na barra de divisão, em vez dos painéis.  
+3. Selecione os três controles pressionando a tecla CTRL e clicando neles. Quando você seleciona o <xref:System.Windows.Forms.SplitContainer> de controle, clique na barra de divisão, em vez dos painéis.  
   
     > [!NOTE]
     >  Não use o comando **Selecionar Tudo** no menu **Editar**. Se você fizer isso, a propriedade necessária na próxima etapa não aparecerá na janela **Propriedades**.  
   
-4.  No **propriedades** janela, defina as <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>.  
+4. No **propriedades** janela, defina as <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Pressione F5 para executar o aplicativo.  
+5. Pressione F5 para executar o aplicativo.  
   
      O formulário exibe uma interface do usuário de duas partes, semelhante à do Windows Explorer.  
   

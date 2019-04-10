@@ -2,12 +2,12 @@
 title: Provedor de WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 2c20fd6804761dd472a8accd25ab98f662b0292a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 519f63f8dfc558a83a98ca44f74e926beb81c190
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162287"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327224"
 ---
 # <a name="wmi-provider"></a>Provedor de WMI
 Este exemplo demonstra como coletar dados de serviços do Windows Communication Foundation (WCF) em tempo de execução, usando o provedor Windows Management Instrumentation (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
@@ -121,18 +121,18 @@ cscript EnumerateCustomObjects.js
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Verifique se você tiver executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você tiver executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Publica o esquema de serviços com o WMI, executando o InstallUtil.exe (os locais padrão de InstallUtil.exe é "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") no arquivo service.dll no diretório de hospedagem. Esta etapa só precisa ser executado quando as alterações foram feitas no arquivo service.dll.
+3. Publica o esquema de serviços com o WMI, executando o InstallUtil.exe (os locais padrão de InstallUtil.exe é "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") no arquivo service.dll no diretório de hospedagem. Esta etapa só precisa ser executado quando as alterações foram feitas no arquivo service.dll.
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Se você instalou o WCF depois de instalar o ASP.NET, você talvez precise executar "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows comunicação Foundation\servicemodelreg.exe "- r - x para dar permissão à conta ASPNET para publicar objetos WMI.  
   
-5.  Exibir dados de exemplo exibido por meio do WMI usando os comandos: `cscript EnumerateServices.js` ou `cscript EnumerateCustomObjects.js`.  
+5. Exibir dados de exemplo exibido por meio do WMI usando os comandos: `cscript EnumerateServices.js` ou `cscript EnumerateCustomObjects.js`.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

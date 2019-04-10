@@ -2,12 +2,12 @@
 title: Acessando o serviço de um navegador da Web (WCF Data Services Quickstart)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591637"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330318"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Acessando o serviço de um navegador da Web (WCF Data Services Quickstart)
 
@@ -18,16 +18,16 @@ Isso é a segunda tarefa do início rápido WCF Data Services. Nesta tarefa, ini
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Para solicitar o documento padrão de serviço usando o Internet Explorer
 
-1.  No Internet Explorer, do **ferramentas** menu, selecione **opções da Internet**, clique no **conteúdo** , clique em **configurações**e desmarque  **Ativar a exibição de feeds**.
+1. No Internet Explorer, do **ferramentas** menu, selecione **opções da Internet**, clique no **conteúdo** , clique em **configurações**e desmarque  **Ativar a exibição de feeds**.
 
      Isso garantirá que a leitura de feeds estará desabilitada. Se você não desabilitar essa funcionalidade, o navegador da Web tratará o documento codificado AtomPub retornado como um feed XML em vez de exibir os dados XML brutos.
 
     > [!NOTE]
     > Se seu navegador não puder exibir o feed como dados XML brutos, você ainda deverá ser capaz de exibir o feed como código-fonte para a página.
 
-2.  No Visual Studio, pressione a **F5** tecla para iniciar a depuração do aplicativo.
+2. No Visual Studio, pressione a **F5** tecla para iniciar a depuração do aplicativo.
 
-3.  Abra um navegador da Web no computador local. Na barra de endereços, digite a seguinte URL:
+3. Abra um navegador da Web no computador local. Na barra de endereços, digite a seguinte URL:
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ Isso é a segunda tarefa do início rápido WCF Data Services. Nesta tarefa, ini
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Para acessar os recursos do conjunto de entidades de um navegador da Web
 
-1.  Na barra de endereços do seu navegador da Web, digite a seguinte URL:
+1. Na barra de endereços do seu navegador da Web, digite a seguinte URL:
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ Isso é a segunda tarefa do início rápido WCF Data Services. Nesta tarefa, ini
 
      Isso retorna um conjunto de todos os clientes no banco de dados de exemplo Northwind.
 
-2.  Na barra de endereços do seu navegador da Web, digite a seguinte URL:
+2. Na barra de endereços do seu navegador da Web, digite a seguinte URL:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ Isso é a segunda tarefa do início rápido WCF Data Services. Nesta tarefa, ini
 
      Isso retorna uma instância de entidade para o cliente específico, `ALFKI`.
 
-3.  Na barra de endereços do seu navegador da Web, digite a seguinte URL:
+3. Na barra de endereços do seu navegador da Web, digite a seguinte URL:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ Isso é a segunda tarefa do início rápido WCF Data Services. Nesta tarefa, ini
 
      Isso percorre a relação entre clientes e pedidos para retornar um conjunto de todos os pedidos para o cliente específico `ALFKI`.
 
-4.  Na barra de endereços do seu navegador da Web, digite a seguinte URL:
+4. Na barra de endereços do seu navegador da Web, digite a seguinte URL:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
@@ -74,8 +74,8 @@ Isso é a segunda tarefa do início rápido WCF Data Services. Nesta tarefa, ini
 Você acessou com êxito o WCF Data Services em um navegador da Web, com os navegador emissoras solicitações HTTP GET para recursos especificados. Um navegador da Web fornece uma maneira fácil para experimentar a sintaxe de endereçamento de solicitações e exibir os resultados. No entanto, um serviço de dados de produção geralmente não é acessado por esse método. Normalmente, os aplicativos interagem com o serviço de dados por meio do aplicativo de código ou linguagens de script. Em seguida, você criará um aplicativo cliente que usa as bibliotecas de cliente para acessar os recursos do serviço de dados como se fossem objetos common language runtime (CLR):
 
 > [!div class="nextstepaction"]
-> [Criando o aplicativo cliente do .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+> [Criar o aplicativo cliente do .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>Consulte também
 
-- [Acessando recursos do serviço de dados](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Acessar recursos do serviço de dados](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: Exemplos de descoberta com escopos
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328082"
 ---
 # <a name="discovery-with-scopes-sample"></a>Exemplos de descoberta com escopos
 Este exemplo mostra como usar escopos para categorizar os pontos de extremidade podem ser descobertos como bem como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona para pontos de extremidade. No serviço, este exemplo mostra como personalizar a descoberta para cada ponto de extremidade, adicionando um comportamento de ponto de extremidade de descoberta e usá-lo para adicionar um escopo para o ponto de extremidade bem como controlar a capacidade de descoberta do ponto de extremidade. No cliente, a amostra passa sobre como os clientes podem criar uma <xref:System.ServiceModel.Discovery.DiscoveryClient> e ajustar parâmetros incluir escopos adicionando escopos de pesquisa a <xref:System.ServiceModel.Discovery.FindCriteria>. Este exemplo também mostra como os clientes podem restringir as respostas com a adição de um critério de término.  
@@ -20,13 +20,13 @@ Este exemplo mostra como usar escopos para categorizar os pontos de extremidade 
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Este exemplo usa pontos de extremidade HTTP e para executar este exemplo, o URL apropriado ACLs deve ser adicionado. Ver [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes. Executando o seguinte comando para um nível de privilégio elevado deve adicionar as ACLs apropriado. Você talvez queira substituir o seu domínio e nome de usuário para os argumentos a seguir, se o comando não funcionar conforme é: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Este exemplo usa pontos de extremidade HTTP e para executar este exemplo, o URL apropriado ACLs deve ser adicionado. Ver [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes. Executando o seguinte comando para um nível de privilégio elevado deve adicionar as ACLs apropriado. Você talvez queira substituir o seu domínio e nome de usuário para os argumentos a seguir, se o comando não funcionar conforme é: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Compile a solução.  
+2. Compile a solução.  
   
-3.  Execute o executável do serviço de diretório de compilação.  
+3. Execute o executável do serviço de diretório de compilação.  
   
-4.  Execute o executável do cliente. Observe que o cliente é capaz de localizar o serviço.  
+4. Execute o executável do cliente. Observe que o cliente é capaz de localizar o serviço.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

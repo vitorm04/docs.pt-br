@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209509"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326886"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Como: Adicionar e remover nós com o controle TreeView do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.TreeView> controle armazena os nós de nível superior no seu <xref:System.Windows.Forms.TreeView.Nodes%2A> coleção. Cada <xref:System.Windows.Forms.TreeNode> também tem seu próprio <xref:System.Windows.Forms.TreeNode.Nodes%2A> coleção para armazenar seus nós filho. Ambas as propriedades de coleção são do tipo <xref:System.Windows.Forms.TreeNodeCollection>, que fornece a membros de coleção padrão que permitem adicionar, remover e reordenar os nós em um único nível da hierarquia de nós.  
   
 ### <a name="to-add-nodes-programmatically"></a>Para adicionar nós de forma programática  
   
-1.  Use o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> método de exibição de árvore <xref:System.Windows.Forms.TreeView.Nodes%2A> propriedade.  
+1. Use o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> método de exibição de árvore <xref:System.Windows.Forms.TreeView.Nodes%2A> propriedade.  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -45,7 +45,7 @@ Os formulários do Windows <xref:System.Windows.Forms.TreeView> controle armazen
   
 ### <a name="to-remove-nodes-programmatically"></a>Para remover nós de forma programática  
   
-1.  Use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> método de exibição de árvore <xref:System.Windows.Forms.TreeView.Nodes%2A> propriedade para remover um único nó, ou o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> método para limpar todos os nós.  
+1. Use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> método de exibição de árvore <xref:System.Windows.Forms.TreeView.Nodes%2A> propriedade para remover um único nó, ou o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> método para limpar todos os nós.  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  

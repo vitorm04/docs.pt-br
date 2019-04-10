@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581908"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329655"
 ---
 # <a name="jsonp"></a>JSONP
 Este exemplo demonstra como dar suporte a JSON com preenchimento (JSONP) nos serviços REST do WCF. O JSONP é uma convenção usada para invocar scripts entre domínios por gerar marcações de script no documento atual. O resultado é retornado em uma função de retorno de chamada especificados. JSONP é baseado na ideia de que as marcas como `<script src="http://..." >` pode avaliar qualquer domínio de scripts e o script recuperado por essas marcas é avaliado dentro de um escopo em que as outras funções já podem ser definidas.
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>Para executar a amostra  
   
-1.  Abra a solução do exemplo JSONP.  
+1. Abra a solução do exemplo JSONP.  
   
-2.  Pressione F5 para iniciar `http://localhost:26648/JSONPClientPage.aspx` no navegador.  
+2. Pressione F5 para iniciar `http://localhost:26648/JSONPClientPage.aspx` no navegador.  
   
-3.  Observe que, depois que a página for carregada, as entradas de texto para "Name" e "Address" são preenchidas por valores.  Esses valores foram fornecidos de uma chamada para o serviço WCF depois que o navegador concluída a renderização da página.
+3. Observe que, depois que a página for carregada, as entradas de texto para "Name" e "Address" são preenchidas por valores.  Esses valores foram fornecidos de uma chamada para o serviço WCF depois que o navegador concluída a renderização da página.

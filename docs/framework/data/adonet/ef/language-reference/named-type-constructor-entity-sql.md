@@ -2,12 +2,12 @@
 title: Construtor de tipo nomeado (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: 26fb2839f0cc7d645f6ce6daea2d27e35868b63c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329460"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Construtor de tipo nomeado (Entity SQL)
 Usado para criar instâncias de tipos nominais de modelo conceitual como a entidade ou tipos complexos.  
@@ -52,9 +52,9 @@ Usado para criar instâncias de tipos nominais de modelo conceitual como a entid
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o construtor chamado de tipo para criar uma instância de um tipo de modelo conceitual. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329110"
 ---
 # <a name="service-channel-level-programming"></a>Programação de nível por canal de serviço
 Este tópico descreve como escrever um aplicativo de serviço do Windows Communication Foundation (WCF) sem usar o <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e seu modelo de objeto associado.  
@@ -18,15 +18,15 @@ Este tópico descreve como escrever um aplicativo de serviço do Windows Communi
 ## <a name="receiving-messages"></a>Recebendo mensagens  
  Para estar pronto para receber e processar mensagens, as etapas a seguir são necessárias:  
   
-1.  Crie uma associação.  
+1. Crie uma associação.  
   
-2.  Crie um ouvinte de canais.  
+2. Crie um ouvinte de canais.  
   
-3.  Abra o ouvinte de canais.  
+3. Abra o ouvinte de canais.  
   
-4.  Ler a solicitação e enviará uma resposta.  
+4. Ler a solicitação e enviará uma resposta.  
   
-5.  Feche todos os objetos de canal.  
+5. Feche todos os objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Criar uma associação  
  A primeira etapa na escutar e receber mensagens é criando uma associação. O WCF é fornecido com diversas ligações internas ou fornecido pelo sistema que podem ser usadas diretamente pela instanciação de um deles. Além disso, você também pode criar sua própria associação personalizado criando uma instância de uma classe CustomBinding que é o que faz o código na listagem 1.  

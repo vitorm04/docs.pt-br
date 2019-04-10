@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Hospedando um controle composto do WPF 3D nos Windows Forms'
+title: 'Passo a passo: hospedar um controle composto do WPF 3D nos Windows Forms'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: b1bd003c6a408e7455bb5c45e1f34a740fce67d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e5b98a33f29759a81ba1cbc1fefbd45c0e5bf736
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330162"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Passo a passo: Hospedando um controle composto do WPF 3D nos Windows Forms
+# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Passo a passo: hospedar um controle composto do WPF 3D nos Windows Forms
 
 Este passo a passo demonstra como você pode criar uma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composto controlar e hospedá-lo no [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles e formulários usando o <xref:System.Windows.Forms.Integration.ElementHost> controle.
 
@@ -38,11 +38,11 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 <a name="To_Create_the_UserControl"></a>
 ## <a name="create-the-usercontrol"></a>Criar o UserControl
 
-1.  Criar uma **biblioteca de controle de usuário do WPF** projeto chamado `HostingWpfUserControlInWf`.
+1. Criar uma **biblioteca de controle de usuário do WPF** projeto chamado `HostingWpfUserControlInWf`.
 
-2.  Abra UserControl1.xaml no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+2. Abra UserControl1.xaml no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-3.  Substitua o código gerado pelo código a seguir:
+3. Substitua o código gerado pelo código a seguir:
 
      [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
@@ -51,11 +51,11 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>Criar o projeto de host
 
-1.  Adicionar um **aplicativo WPF (.NET Framework)** projeto chamado `WpfUserControlHost` à solução. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+1. Adicionar um **aplicativo WPF (.NET Framework)** projeto chamado `WpfUserControlHost` à solução. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-2.  Na **Gerenciador de soluções**, adicione uma referência ao assembly WindowsFormsIntegration, que é chamado WindowsFormsIntegration.
+2. Na **Gerenciador de soluções**, adicione uma referência ao assembly WindowsFormsIntegration, que é chamado WindowsFormsIntegration.
 
-3.  Adicione referências aos assemblies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a seguir:
+3. Adicione referências aos assemblies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a seguir:
 
     -   PresentationCore
 
@@ -63,33 +63,33 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 
     -   WindowsBase
 
-4.  Adicione uma referência ao projeto `HostingWpfUserControlInWf`.
+4. Adicione uma referência ao projeto `HostingWpfUserControlInWf`.
 
-5.  No Gerenciador de Soluções, defina o projeto `WpfUserControlHost` como o projeto de inicialização.
+5. No Gerenciador de Soluções, defina o projeto `WpfUserControlHost` como o projeto de inicialização.
 
 <a name="To_Host_the_Windows_Presentation_Foundation"></a>
 ## <a name="host-the-usercontrol"></a>Hospedar o UserControl
 
-1.  No Designer de Formulários do Windows, abra Form1.
+1. No Designer de Formulários do Windows, abra Form1.
 
-2.  Na janela Propriedades, clique em **eventos**e, em seguida, clique duas vezes o <xref:System.Windows.Forms.Form.Load> evento para criar um manipulador de eventos.
+2. Na janela Propriedades, clique em **eventos**e, em seguida, clique duas vezes o <xref:System.Windows.Forms.Form.Load> evento para criar um manipulador de eventos.
 
      O Editor de Código abre o manipulador de eventos `Form1_Load` recém gerado.
 
-3.  Substitua o código em Form1.cs pelo código a seguir.
+3. Substitua o código em Form1.cs pelo código a seguir.
 
      O `Form1_Load` manipulador de eventos cria uma instância do `UserControl1` e a adiciona ao <xref:System.Windows.Forms.Integration.ElementHost> coleção de controles filho do controle. O <xref:System.Windows.Forms.Integration.ElementHost> controle é adicionado à coleção do formulário de controles filho.
 
      [!code-csharp[HostingWpfUserControlInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
      [!code-vb[HostingWpfUserControlInWf#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
 
-4.  Pressione **F5** para compilar e executar o aplicativo.
+4. Pressione **F5** para compilar e executar o aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Hospedando um controle composto do WPF nos exemplo do Windows Forms](https://go.microsoft.com/fwlink/?LinkID=160001)
+- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Passo a passo: hospedar um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Passo a passo: hospedar um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Hospedando um controle composto do WPF no exemplo de formulários do Windows](https://go.microsoft.com/fwlink/?LinkID=160001)

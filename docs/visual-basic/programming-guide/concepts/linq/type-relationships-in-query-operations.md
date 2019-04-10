@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327627"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacionamentos de tipo em operações de consulta (Visual Basic)
 Variáveis usadas em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operações são fortemente tipadas e devem ser compatíveis entre si. Tipagem forte é usada na fonte de dados, na própria consulta e na execução da consulta. A ilustração a seguir identifica os termos usados para descrever um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obter mais informações sobre as partes de uma consulta, consulte [operações básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Variáveis usadas em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] con
   
  As seguintes relações existem em ambos os exemplos de código anterior, se os tipos são determinados implícita ou explicitamente.  
   
-1.  O tipo dos elementos na fonte de dados, `names`, é o tipo da variável de intervalo, `name`, na consulta.  
+1. O tipo dos elementos na fonte de dados, `names`, é o tipo da variável de intervalo, `name`, na consulta.  
   
-2.  O tipo do objeto selecionado, `name`, determina o tipo da variável de consulta, `mNames`. Aqui `name` é uma cadeia de caracteres, portanto, a variável de consulta é IEnumerable (Of String) no Visual Basic.  
+2. O tipo do objeto selecionado, `name`, determina o tipo da variável de consulta, `mNames`. Aqui `name` é uma cadeia de caracteres, portanto, a variável de consulta é IEnumerable (Of String) no Visual Basic.  
   
-3.  A consulta definida na `mNames` é executado no `For Each` loop. O loop itera sobre o resultado da execução da consulta. Porque `mNames`, quando ele é executado, retornará uma sequência de cadeias de caracteres, a variável de iteração do loop, `nm`, também é uma cadeia de caracteres.  
+3. A consulta definida na `mNames` é executado no `For Each` loop. O loop itera sobre o resultado da execução da consulta. Porque `mNames`, quando ele é executado, retornará uma sequência de cadeias de caracteres, a variável de iteração do loop, `nm`, também é uma cadeia de caracteres.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Consultas que retornam um campo de elementos selecionados  
  A exemplo a seguir mostra um [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] operação que retorna uma sequência que contém apenas uma parte de cada elemento selecionado da fonte de dados de consulta. A consulta usa uma coleção de `Customer` objetos como sua fonte de dados e somente projetos de `Name` propriedade no resultado. Como o nome do cliente é uma cadeia de caracteres, a consulta produz uma sequência de cadeias de caracteres como saída.  
@@ -72,11 +72,11 @@ Next
   
  As relações entre as variáveis são como aqueles no exemplo mais simples.  
   
-1.  O tipo dos elementos na fonte de dados, `customers`, é o tipo da variável de intervalo, `cust`, na consulta. Neste exemplo, o que é do tipo `Customer`.  
+1. O tipo dos elementos na fonte de dados, `customers`, é o tipo da variável de intervalo, `cust`, na consulta. Neste exemplo, o que é do tipo `Customer`.  
   
-2.  O `Select` instrução retorna o `Name` propriedade de cada `Customer` objeto em vez de todo o objeto. Porque `Name` é uma cadeia de caracteres, a variável de consulta `custNames`, novamente será IEnumerable (Of String), não do `Customer`.  
+2. O `Select` instrução retorna o `Name` propriedade de cada `Customer` objeto em vez de todo o objeto. Porque `Name` é uma cadeia de caracteres, a variável de consulta `custNames`, novamente será IEnumerable (Of String), não do `Customer`.  
   
-3.  Porque `custNames` representa uma sequência de cadeias de caracteres, o `For Each` variável de iteração do loop, `custName`, deve ser uma cadeia de caracteres.  
+3. Porque `custNames` representa uma sequência de cadeias de caracteres, o `For Each` variável de iteração do loop, `custName`, deve ser uma cadeia de caracteres.  
   
  Sem inferência de tipo local, o exemplo anterior seria mais complicado de escrever e entender, como mostra o exemplo a seguir.  
   
@@ -110,17 +110,17 @@ Next
   
  Embora não seja possível especificar os tipos para todas as variáveis no exemplo anterior, as relações permanecem os mesmos.  
   
-1.  Novamente, o tipo dos elementos na fonte de dados é o tipo da variável de intervalo na consulta. Neste exemplo, `cust` é uma instância de `Customer`.  
+1. Novamente, o tipo dos elementos na fonte de dados é o tipo da variável de intervalo na consulta. Neste exemplo, `cust` é uma instância de `Customer`.  
   
-2.  Porque o `Select` instrução produz um tipo anônimo, a variável de consulta, `nameCityQuery`, deve ser digitada implicitamente como um tipo anônimo. Um tipo anônimo não tem nenhum nome utilizável e, portanto, não pode ser especificado explicitamente.  
+2. Porque o `Select` instrução produz um tipo anônimo, a variável de consulta, `nameCityQuery`, deve ser digitada implicitamente como um tipo anônimo. Um tipo anônimo não tem nenhum nome utilizável e, portanto, não pode ser especificado explicitamente.  
   
-3.  O tipo de variável de iteração no `For Each` loop é o tipo anônimo criado na etapa 2. Como o tipo não tem nenhum nome utilizável, o tipo da variável de iteração de loop deve ser determinado implicitamente.  
+3. O tipo de variável de iteração no `For Each` loop é o tipo anônimo criado na etapa 2. Como o tipo não tem nenhum nome utilizável, o tipo da variável de iteração de loop deve ser determinado implicitamente.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

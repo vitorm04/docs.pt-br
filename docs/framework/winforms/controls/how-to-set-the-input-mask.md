@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331462"
 ---
 # <a name="how-to-set-the-input-mask"></a>Como: Definir a máscara de entrada
 O controle de caixa de texto mascarado é um controle de caixa de texto avançado que dá suporte a uma sintaxe declarativa para aceitar ou rejeitar a entrada do usuário. Definindo a propriedade Máscara, você pode especificar a entrada do usuário permitida sem escrever qualquer lógica de validação personalizada no seu aplicativo. Para obter mais informações, consulte a seção comentários do <xref:System.Windows.Forms.MaskedTextBox> classe.  
@@ -21,18 +21,18 @@ O controle de caixa de texto mascarado é um controle de caixa de texto avançad
   
 #### <a name="to-set-the-mask-property-manually"></a>Definir a propriedade Mask manualmente  
   
-1.  Na **Design** exibição, selecione um <xref:System.Windows.Forms.MaskedTextBox>.  
+1. Na **Design** exibição, selecione um <xref:System.Windows.Forms.MaskedTextBox>.  
   
-2.  No **propriedades** janela, localize o <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade.  
+2. No **propriedades** janela, localize o <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade.  
   
-3.  Digite a máscara desejada. Por exemplo, digite `###`.  
+3. Digite a máscara desejada. Por exemplo, digite `###`.  
   
 ## <a name="using-the-input-mask-dialog-box"></a>Usando a caixa de diálogo Máscara de Entrada  
  A caixa de diálogo Máscara de Entrada fornece algumas máscaras de entrada predefinidas. Você também pode alterar as máscaras predefinidas ou inserir sua própria máscara manualmente.  
   
 #### <a name="to-open-the-input-mask-dialog-box"></a>Abrir a caixa de diálogo Máscara de Entrada  
   
-1.  Na **Design** exibição, selecione um <xref:System.Windows.Forms.MaskedTextBox>.  
+1. Na **Design** exibição, selecione um <xref:System.Windows.Forms.MaskedTextBox>.  
   
     1.  Clique na marca inteligente para abrir o painel **Tarefas de MaskedTextBox**.  
   
@@ -48,18 +48,18 @@ O controle de caixa de texto mascarado é um controle de caixa de texto avançad
   
 #### <a name="to-use-the-input-mask-dialog-box"></a>Usar a caixa de diálogo Máscara de Entrada  
   
-1.  (Opcional) Clique em uma das máscaras predefinidas na lista.  
+1. (Opcional) Clique em uma das máscaras predefinidas na lista.  
   
-2.  (Opcional) Edite a máscara predefinida na caixa **Máscara**.  
+2. (Opcional) Edite a máscara predefinida na caixa **Máscara**.  
   
-3.  (Opcional) Digite uma nova máscara na caixa **Máscara**. Ou seja, não é necessário usar uma das máscaras predefinidas.  
+3. (Opcional) Digite uma nova máscara na caixa **Máscara**. Ou seja, não é necessário usar uma das máscaras predefinidas.  
   
     > [!NOTE]
     >  A caixa visualização exibe os caracteres que o usuário vê no <xref:System.Windows.Forms.MaskedTextBox>. Esses caracteres são um guia para ajudar o usuário a inserir os dados corretamente.  
   
-4.  Selecione ou desmarque a caixa de seleção **Usar ValidatingType**. A caixa de seleção **Usar ValidatingType** especifica se um tipo de dados é usado para verificar a entrada de dados pelo usuário. Para obter mais informações, consulte a propriedade <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>.  
+4. Selecione ou desmarque a caixa de seleção **Usar ValidatingType**. A caixa de seleção **Usar ValidatingType** especifica se um tipo de dados é usado para verificar a entrada de dados pelo usuário. Para obter mais informações, consulte a propriedade <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>.  
   
-5.  Clique em **OK**.  
+5. Clique em **OK**.  
   
      A máscara é inserida na propriedade **Máscara** na janela **Propriedades**.  
   

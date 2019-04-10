@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328628"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -58,7 +58,7 @@ Para direcionar para o .NET Framework 4.7.2 no Visual Studio 2012 ou posterior, 
 
 O .NET Framework 4.7.2 inclui novos recursos nas seguintes áreas:
 
-- [Core](#core-472)
+- [Núcleo](#core-472)
 - [ASP.NET](#asp-net472)
 - [Rede](#net472)
 - [SQL](#sql472)
@@ -123,7 +123,7 @@ Using dsa = DSA.Create(2048)
 End Using
 ```
 
-**Construtores Rfc2898DeriveBytes aceitam um nome de algoritmo de hash**
+**Os construtores Rfc2898DeriveBytes aceitam um nome de algoritmo de hash**
 
 A classe <xref:System.Security.Cryptography.Rfc2898DeriveBytes> tem três novos construtores com um parâmetro <xref:System.Security.Cryptography.HashAlgorithmName> que identifica o algoritmo HMAC a ser usado na derivação de chaves. Em vez de usar o SHA-1, os desenvolvedores devem usar um HMAC baseado em SHA-2, como o SHA-256, conforme mostrado no exemplo a seguir:
 
@@ -208,12 +208,12 @@ A compatibilidade para descompactação por meio das APIs do Windows está habil
 
 O .NET Framework 4.7.2 adiciona uma série de novas APIs aos tipos <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Elas incluem:
 
-- métodos `TryGetValue`, o que estende o padrão try usado em outros tipos de coleção. Os métodos são:
+- `TryGetValue` métodos, que estende o padrão try usado em outros tipos de coleção para estes dois tipos. Os métodos são:
 
    - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
    - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
-- Métodos de extensão `Enumerable.To*`, o que converte uma coleção em <xref:System.Collections.Generic.HashSet%601>:
+- `Enumerable.To*` métodos de extensão, que converte uma coleção em <xref:System.Collections.Generic.HashSet%601>:
 
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
@@ -241,7 +241,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 #### <a name="aspnet"></a>ASP.NET
 
-**Compatibilidade com injeção de dependência no Web Forms**
+**Suporte para injeção de dependência no Web Forms**
 
 A [DI (injeção de dependência)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) separa os objetos de suas dependências para que o código do objeto não precise mais ser alterado somente porque uma dependência foi modificada. Ao desenvolver aplicativos ASP.NET direcionados para o .NET Framework 4.7.2, é possível:
 
@@ -432,8 +432,8 @@ Para o aplicativo do Windows Forms, a solução anterior de definir o reconhecim
 
 O .NET Framework 4.7.1 inclui novos recursos nas seguintes áreas:
 
-- [Core](#core471)
-- [CLR (Common language runtime)](#clr)
+- [Núcleo](#core471)
+- [CLR (Common Language Runtime)](#clr)
 - [Rede](#net471)
 - [ASP.NET](#asp-net471)
 
@@ -443,7 +443,7 @@ Além disso, um dos focos principais do .NET Framework 4.7.1 é a melhoria de ac
 
 #### <a name="core"></a>Núcleo
 
-**Compatível com o .NET Standard 2.0**
+**Suporte para .NET Standard 2.0**
 
 O [.NET Standard](~/docs/standard/net-standard.md) define um conjunto das APIs que precisam estar disponíveis em todas as implementações do .NET compatíveis com a versão do standard. O .NET Framework 4.7.1 dá suporte total ao .NET Standard 2.0 e adiciona [cerca de 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) que são definidas no .NET Standard 2.0 e não estão presentes no .NET Framework 4.6.1, 4.6.2 e 4.7. (Observe que essas versões do .NET Framework são compatíveis com o .NET Standard 2.0 somente se os arquivos de suporte do .NET Standard estiverem implantados no sistema de destino.) Para obter mais informações, consulte “BLC – Suporte ao .NET Standard 2.0” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
 
@@ -515,10 +515,10 @@ No .NET Framework 4.7 e versões anteriores, o ASP.NET permitia aos desenvolvedo
 
 O .NET Framework 4.7 inclui novos recursos nas seguintes áreas:
 
-- [Core](#Core47)
+- [Núcleo](#Core47)
 - [Rede](#net47)
 - [ASP.NET](#ASP-NET47)
-- [WCF (Windows Communication Foundation)](#wcf47)
+- [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
@@ -657,13 +657,13 @@ No [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o ASP.NET inclui os s
 
 Os validadores de anotação de dados permitem que você execute a validação adicionando um ou mais atributos a uma propriedade de classe. O elemento <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> do atributo define o texto da mensagem de erro se a validação falhar. A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o ASP.NET facilita a localização de mensagens de erro. Mensagens de erro serão localizadas se:
 
-1.  O <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> é fornecido no atributo de validação.
+1. O <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> é fornecido no atributo de validação.
 
-2.  O arquivo de recurso é armazenado na pasta App_LocalResources.
+2. O arquivo de recurso é armazenado na pasta App_LocalResources.
 
-3.  O nome do arquivo de recursos localizado tem o formato `DataAnnotation.Localization.{`*nome*`}.resx`, em que *nome* é um nome de cultura no formato *código do Idioma*`-`*Código do país/região* ou *código do Idioma*.
+3. O nome do arquivo de recursos localizado tem o formato `DataAnnotation.Localization.{`*nome*`}.resx`, em que *nome* é um nome de cultura no formato *código do Idioma*`-`*Código do país/região* ou *código do Idioma*.
 
-4.  O nome da chave do recurso é a cadeia de caracteres atribuída ao atributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> e seu valor é a mensagem de erro localizada.
+4. O nome da chave do recurso é a cadeia de caracteres atribuída ao atributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> e seu valor é a mensagem de erro localizada.
 
 Por exemplo, o atributo de anotação de dados a seguir define a mensagem de erro da cultura padrão para uma classificação inválida.
 
@@ -941,7 +941,7 @@ Os clientes podem usar uma configuração de aplicativo para determinar se a cla
 </runtime>
 ```
 
-Quando esse recurso estiver habilitado, um objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usará o tipo <xref:System.TimeZoneInfo> em vez do <xref:System.TimeZone> para desserializar dados de data e hora. O <xref:System.TimeZoneInfo> oferece suporte a várias regras de ajuste, o que possibilita o trabalho com dados históricos fuso horário; o <xref:System.TimeZone> não oferece.
+Quando esse recurso estiver habilitado, um objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usará o tipo <xref:System.TimeZoneInfo> em vez do <xref:System.TimeZone> para desserializar dados de data e hora. <xref:System.TimeZoneInfo> oferece suporte a várias regras de ajuste, o que possibilita o trabalho com dados históricos de fuso horário;   <xref:System.TimeZone> não.
 
 Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso horário, confira [Visão geral do fuso horário](../../standard/datetime/time-zone-overview.md).
 
@@ -1036,7 +1036,8 @@ No [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o Windows Workflow Fo
 
 A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o WF oferece suporte a expressões em C# no Designer do Visual Studio e em fluxos de trabalho de código. O Designer de Fluxo de Trabalho hospedado novamente é um recurso fundamental do WF que permite ao Designer de Fluxo de Trabalho estar em um aplicativo fora do Visual Studio (por exemplo, no WPF).  O Windows Workflow Foundation permite o suporte às expressões em C# e ao IntelliSense no Designer de Fluxo de Trabalho hospedado novamente. Para saber mais, confira o [blog do Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Nas versões do .NET Framework anteriores ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o IntelliSense de Designer do WF é interrompido quando um cliente recompila um projeto de fluxo de trabalho no Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros**. O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] resolve esse problema e disponibiliza o IntelliSense.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
+Nas versões do .NET Framework anteriores ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o IntelliSense de Designer do WF é interrompido quando um cliente recompila um projeto de fluxo de trabalho a partir do Visual Studio. Embora a compilação do projeto seja bem-sucedida, os tipos de fluxo de trabalho não são encontrados no designer, e surgem avisos do IntelliSense para os tipos de fluxo de trabalho ausentes na janela **Lista de Erros**. O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] resolve esse problema e disponibiliza o IntelliSense.
 
 **Agora, os aplicativos do Fluxo de Trabalho V1 com Acompanhamento de Fluxo de Trabalho ativado são executados no modo FIPS**
 
@@ -1136,7 +1137,7 @@ Agora, o ADO.NET oferece suporte ao armazenamento nativo de chaves mestras de co
 
 Os clientes precisam instalar o provedor de CSP fornecido pelo fornecedor de HSM ou provedores de armazenamento de chaves CNG em servidores de aplicativos ou computadores cliente para acessar dados do Always Encrypted protegidos com chaves mestras de coluna armazenadas em um HSM.
 
-**Comportamento de conexão <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> aprimorado para AlwaysOn**
+**Comportamento de conexão do <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> aprimorado para AlwaysOn**
 
 Agora, o SqlClient fornece automaticamente uma conexão mais rápida para um AG (Grupo de Disponibilidade) do AlwaysOn. Ele detecta de forma transparente se o seu aplicativo está se conectando a um grupo de disponibilidade (AG) do AlwaysOn em uma sub-rede diferente e descobre rapidamente o servidor ativo atual e fornece uma conexão ao servidor. Antes dessa versão, um aplicativo tinha que definir a cadeia de conexão para incluir `"MultisubnetFailover=true"` a fim de indicar que ele estava se conectando a um Grupo de disponibilidade do AlwaysOn. Sem definir a palavra-chave de conexão como `true`, um aplicativo pode enfrentar um tempo limite ao se conectar a um Grupo de disponibilidade AlwaysOn. Com esta versão, um aplicativo *não* precisa mais definir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> como `true`. Para saber mais sobre o suporte ao SqlClient para Grupos de Disponibilidade AlwaysOn, confira [Suporte do SqlClient para alta disponibilidade e recuperação de desastres](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
@@ -1146,7 +1147,7 @@ Agora, o SqlClient fornece automaticamente uma conexão mais rápida para um AG 
 
 Windows Presentation Foundation inclui diversos aprimoramentos e alterações.
 
-**Desempenho de aprimorado**
+**Desempenho aprimorado**
 
 O atraso em disparar eventos de toque foi corrigido no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Além disso, a digitação de controle <xref:System.Windows.Controls.RichTextBox> não ocupa mais o thread de renderização durante a entrada rápida.
 
@@ -1181,7 +1182,7 @@ Nas versões anteriores do WPF, os dicionários personalizados não reconheciam 
 > [!NOTE]
 > Esses novos formatos de arquivo não recebem suporte diretamente das APIs de verificação ortográfica do WPF, e os dicionários personalizados fornecidos ao WPF nos aplicativos devem continuar usando arquivos .lex.
 
-**Amostras**
+**Exemplos**
 
 Há um número de amostras WPF no repositório do GitHub [de amostras Microsoft/WPF](https://github.com/Microsoft/WPF-Samples). Ajude-nos a melhorar nossos exemplos enviando-nos uma solicitação pull ou abrindo um [problema no GitHub](https://github.com/Microsoft/WPF-Samples/issues).
 
@@ -1312,7 +1313,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
      Várias APIs novas foram adicionadas ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para habilitar cenários-chave. As seguintes alterações e adições foram incluídas:
 
-    - Implementações **IReadOnlyCollection\<T>** 
+    - **Implementações IReadOnlyCollection\<T>**
 
          As coleções adicionais implementam <xref:System.Collections.Generic.IReadOnlyCollection%601> como <xref:System.Collections.Generic.Queue%601> e <xref:System.Collections.Generic.Stack%601>.
 
@@ -1462,7 +1463,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
          O WPF no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] oferece suporte a janelas filho transparente no Windows 8.1 e versões posteriores. Isso permite a criação de janelas filho não retangulares e janelas filho transparente em suas janelas de nível superior. Você pode habilitar esse recurso configurando a propriedade <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> como `true`.
 
-- **WCF (Windows Communication Foundation)**
+- **Windows Communication Foundation (WCF)**
 
     - **Suporte a SSL**
 
@@ -1561,7 +1562,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
 - **Suporte para codificações de página de código**
 
-     O [!INCLUDE[net_core](../../../includes/net-core-md.md)] oferece suporte principalmente a codificações Unicode, e por padrão fornece suporte limitado a codificações de página de código. É possível adicionar suporte a codificações de página de código disponíveis no .NET Framework, mas não sejam suportados no [!INCLUDE[net_core](../../../includes/net-core-md.md)], ao registrar codificações de página de código com o método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obter mais informações, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] oferece suporte principalmente a codificações Unicode e suporte limitado por padrão a codificações de página de código. É possível adicionar suporte a codificações de página de código disponíveis no .NET Framework, mas não sejam suportados no [!INCLUDE[net_core](../../../includes/net-core-md.md)], ao registrar codificações de página de código com o método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obter mais informações, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Nativo**
 
@@ -1610,7 +1611,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
      Isso pode ser feito dentro do mesmo domínio do aplicativo e não requer nenhum código extra não gerado para interagir com o MSDTC para executar a promoção. O novo método pode ser chamado apenas quando há uma chamada pendente do método <xref:System.Transactions?displayProperty=nameWithType> para o <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` implementado por uma inscrição que pode ser promovida.
 
-- **Melhorias na criação de perfis** As seguintes novas APIs não gerenciadas de criação de perfis fornecem uma criação de perfil mais robusta:
+- **Aprimoramentos na criação de perfil.** As seguintes novas APIs não gerenciadas de criação de perfis fornecem uma criação de perfil mais robusta:
 
     - [Estrutura COR_PRF_ASSEMBLY_REFERENCE_INFO](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
     - [Enumeração COR_PRF_HIGH_MONITOR](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
@@ -1634,7 +1635,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
 - **Promover uma transação e convertê-la em uma inscrição durável**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> é uma nova API é adicionada ao .NET Framework 4.5.2 e 4.6:
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> é uma nova API adicionada ao .NET Framework 4.5.2 e 4.6:
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1664,7 +1665,7 @@ O .NET 2015 apresenta o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e o
 
      Para saber mais sobre essas mudanças, confira [Biblioteca de classes portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- O conjunto de conteúdo do .NET Framework agora inclui documentação para [!INCLUDE[net_native](../../../includes/net-native-md.md)], que é uma tecnologia de pré-compilação para construção e implantação dos aplicativos do Windows. Para melhorar o desempenho, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] compila seus aplicativos diretamente para o código nativo, ao invés de usar uma linguagem intermediária (IL). Para obter detalhes, confira [Compilação de aplicativos com o .NET Nativo](../net-native/index.md).
+- O conjunto de conteúdo do .NET Framework agora inclui documentação para [!INCLUDE[net_native](../../../includes/net-native-md.md)], que é uma tecnologia de pré-compilação para construção e implantação dos aplicativos do Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] compila seus aplicativos diretamente para o código nativo, em vez de usar uma linguagem intermediária (IL), para melhorar o desempenho. Para obter detalhes, confira [Compilação de aplicativos com o .NET Nativo](../net-native/index.md).
 
 - O [.NET Framework Reference Source](https://referencesource.microsoft.com/) fornece experiências de navegação e de funcionalidade, novas e aprimoradas. É possível navegar através do código-fonte online do .NET Framework, [baixar a referência](https://referencesource.microsoft.com/download.html) para visualização offline e percorrer as fontes (incluindo correções e atualizações) durante a depuração. Para saber mais, confira a postagem no blog [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/) (Um novo olhar sobre a fonte de referência do .NET).
 
@@ -1858,7 +1859,7 @@ No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os seguintes recursos f
 
 - Dicas de ferramenta do Editor de XML
 
-- Suporte ao armazenamento em cache <xref:System.ServiceModel.ChannelFactory>.
+- <xref:System.ServiceModel.ChannelFactory> suporte ao armazenamento em cache.
 
 - Suporte à compactação de codificador binário.
 
@@ -1928,7 +1929,7 @@ No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vários recursos novos 
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-Os aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] foram projetados para fatores forma específicos e aproveitam a capacidade do sistema operacional Windows. Um subconjunto do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou 4.5.1 está disponível para compilar aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para o Windows usando o C# ou o Visual Basic. Esse subconjunto é chamado de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e abordado em uma [visão geral](https://go.microsoft.com/fwlink/?LinkId=228491) no Windows Dev Center.
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Os aplicativos foram projetados para fatores forma específicos e aproveitam a capacidade do sistema operacional Windows. Um subconjunto do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou 4.5.1 está disponível para compilar aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para o Windows usando o C# ou o Visual Basic. Esse subconjunto é chamado de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e abordado em uma [visão geral](https://go.microsoft.com/fwlink/?LinkId=228491) no Windows Dev Center.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de Classe Portáteis <a name="portable" />
 

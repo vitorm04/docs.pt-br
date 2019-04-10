@@ -11,35 +11,35 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: c84ce67225b70933e65b8f88da1eaef6b1f3de99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331332"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Como: Alterar a aparência do TabControl do Windows Forms
 Você pode alterar a aparência das guias nos Windows Forms usando propriedades do <xref:System.Windows.Forms.TabControl> e o <xref:System.Windows.Forms.TabPage> objetos que compõem guias individuais no controle. Ao configurar essas propriedades, é possível exibir imagens em guias, exibir guias verticalmente em vez de horizontalmente, exibir várias linhas de guias e habilitar ou desabilitar guias com programação.  
   
 ### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Exibir um ícone na parte de rótulo de uma guia  
   
-1.  Adicionar um <xref:System.Windows.Forms.ImageList> controle ao formulário.  
+1. Adicionar um <xref:System.Windows.Forms.ImageList> controle ao formulário.  
   
-2.  Adicione imagens à lista de imagens.  
+2. Adicione imagens à lista de imagens.  
   
      Para obter mais informações sobre listas de imagens, consulte [componente ImageList](imagelist-component-windows-forms.md) e [como: Adicionar ou remover imagens com o Windows Forms componente ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
-3.  Defina a <xref:System.Windows.Forms.TabControl.ImageList%2A> propriedade do <xref:System.Windows.Forms.TabControl> para o <xref:System.Windows.Forms.ImageList> controle.  
+3. Defina a <xref:System.Windows.Forms.TabControl.ImageList%2A> propriedade do <xref:System.Windows.Forms.TabControl> para o <xref:System.Windows.Forms.ImageList> controle.  
   
-4.  Defina a <xref:System.Windows.Forms.TabPage.ImageIndex%2A> propriedade do <xref:System.Windows.Forms.TabPage> ao índice de uma imagem apropriada na lista.  
+4. Defina a <xref:System.Windows.Forms.TabPage.ImageIndex%2A> propriedade do <xref:System.Windows.Forms.TabPage> ao índice de uma imagem apropriada na lista.  
   
 ### <a name="to-create-multiple-rows-of-tabs"></a>Criar várias linhas de guias  
   
-1.  Adicione o número de páginas de guia desejado.  
+1. Adicione o número de páginas de guia desejado.  
   
-2.  Defina as <xref:System.Windows.Forms.TabControl.Multiline%2A> propriedade do <xref:System.Windows.Forms.TabControl> para `true`.  
+2. Defina as <xref:System.Windows.Forms.TabControl.Multiline%2A> propriedade do <xref:System.Windows.Forms.TabControl> para `true`.  
   
-3.  Se as guias não aparecem em várias linhas, defina as <xref:System.Windows.Forms.Control.Width%2A> propriedade do <xref:System.Windows.Forms.TabControl> para ser mais estreita que todas as guias.  
+3. Se as guias não aparecem em várias linhas, defina as <xref:System.Windows.Forms.Control.Width%2A> propriedade do <xref:System.Windows.Forms.TabControl> para ser mais estreita que todas as guias.  
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Organizar as guias na lateral do controle  
   
@@ -47,7 +47,7 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Habilitar ou desabilitar todos os controles em uma guia usando programação  
   
-1.  Defina as <xref:System.Windows.Forms.TabPage.Enabled%2A> propriedade do <xref:System.Windows.Forms.TabPage> para `true` ou `false`.  
+1. Defina as <xref:System.Windows.Forms.TabPage.Enabled%2A> propriedade do <xref:System.Windows.Forms.TabPage> para `true` ou `false`.  
   
     ```vb  
     TabPage1.Enabled = False  

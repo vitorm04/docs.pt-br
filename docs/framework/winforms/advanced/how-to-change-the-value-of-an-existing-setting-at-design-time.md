@@ -5,31 +5,31 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326548"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Como: alterar o valor de uma configuração existente em tempo de design
 Você pode usar o Visual Studio para editar os valores das configurações existentes em seu projeto.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Para alterar o valor de uma configuração existente em tempo de Design em C\#
   
-1.  Na **Gerenciador de soluções**, expanda o **propriedades** nó do projeto.  
+1. Na **Gerenciador de soluções**, expanda o **propriedades** nó do projeto.  
   
-2.  Clique duas vezes o arquivo. Settings no qual você deseja adicionar uma nova configuração. O nome padrão para esse arquivo é Settings. Settings.  
+2. Clique duas vezes o arquivo. Settings no qual você deseja adicionar uma nova configuração. O nome padrão para esse arquivo é Settings. Settings.  
   
-3.  No Settings designer, localize a configuração para o qual você deseja alterar o valor e digite o novo valor na coluna de valor.  
+3. No Settings designer, localize a configuração para o qual você deseja alterar o valor e digite o novo valor na coluna de valor.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-visual-basic"></a>Para alterar o valor de uma configuração existente em tempo de Design no Visual Basic  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito nó do seu projeto e escolha **propriedades**.  
+1. Na **Gerenciador de soluções**, clique com botão direito nó do seu projeto e escolha **propriedades**.  
   
-2.  No **propriedades** página, selecione o **configurações** guia.  
+2. No **propriedades** página, selecione o **configurações** guia.  
   
-3.  No Settings designer, localize a configuração para o qual você deseja alterar o valor e digite o novo valor na coluna de valor.  
+3. No Settings designer, localize a configuração para o qual você deseja alterar o valor e digite o novo valor na coluna de valor.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328719"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM+
 Windows Communication Foundation (WCF) fornece um ambiente avançado para criar aplicativos distribuídos. Se você já estiver usando a lógica de aplicativo baseado em componente hospedada em COM+, você pode usar o WCF para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor COM+ ou serviços corporativos lógica de negócios existentes por meio de serviços da Web.  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) fornece um ambiente avançado para criar 
   
  As etapas a seguir são necessários para expor a interface de um componente COM+ como um serviço Web sem modificar o componente:  
   
-1.  Determine se a interface do componente COM+ pode ser exposto como um serviço Web.  
+1. Determine se a interface do componente COM+ pode ser exposto como um serviço Web.  
   
-2.  Selecione um modo de hospedagem apropriado.  
+2. Selecione um modo de hospedagem apropriado.  
   
-3.  Use a ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe) para adicionar um serviço Web para a interface. Para obter mais informações sobre como usar ComSvcConfig.exe, consulte [como: Use a ferramenta de configuração de modelo de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. Use a ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe) para adicionar um serviço Web para a interface. Para obter mais informações sobre como usar ComSvcConfig.exe, consulte [como: Use a ferramenta de configuração de modelo de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Configure as configurações de serviço adicionais no arquivo de configuração do aplicativo. Para obter mais informações sobre como configurar um componente, consulte [como: Definir as configurações de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Configure as configurações de serviço adicionais no arquivo de configuração do aplicativo. Para obter mais informações sobre como configurar um componente, consulte [como: Definir as configurações de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfaces com suporte  
  Há algumas restrições sobre o tipo de interfaces que podem ser expostos como um serviço Web. Não há suporte para os seguintes tipos de interfaces:  

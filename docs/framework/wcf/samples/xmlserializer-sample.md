@@ -2,12 +2,12 @@
 title: 'Exemplo de XMLSerializer '
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: eb422e937eb0aeffbaa1ec4288001c5bdb2bdda6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 70c6eb07780296672d663c7d5b9259192b189aad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330539"
 ---
 # <a name="xmlserializer-sample"></a>Exemplo de XMLSerializer 
 Este exemplo demonstra como serializar e desserializar tipos que são compatíveis com o <xref:System.Xml.Serialization.XmlSerializer>. O formatador do Windows Communication Foundation (WCF) padrão é o <xref:System.Runtime.Serialization.DataContractSerializer> classe. O <xref:System.Xml.Serialization.XmlSerializer> classe pode ser usada para serializar e desserializar tipos quando o <xref:System.Runtime.Serialization.DataContractSerializer> classe não pode ser usado. Isso é geralmente o caso quando um controle preciso sobre o XML é necessário – por exemplo, se uma parte dos dados deve ser um atributo XML e não um elemento XML. Além disso, o <xref:System.Xml.Serialization.XmlSerializer> geralmente obtém selecionada automaticamente durante a criação de clientes para serviços WCF não.  
@@ -119,11 +119,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

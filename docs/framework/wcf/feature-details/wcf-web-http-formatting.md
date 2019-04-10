@@ -2,12 +2,12 @@
 title: Formatação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331033"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatação HTTP Web do WCF
 O modelo de programação WCF Web HTTP permite que você determinar dinamicamente o melhor formato para uma operação de serviço retornar a resposta em. Há suporte para dois métodos para determinar um formato apropriado: automático e explícito.  
@@ -15,13 +15,13 @@ O modelo de programação WCF Web HTTP permite que você determinar dinamicament
 ## <a name="automatic-formatting"></a>Formatação automática  
  Quando habilitada, a formatação automática escolhe o melhor formato no qual retornar a resposta. Ele determina o melhor formato, verificando o seguinte, em ordem:  
   
-1.  Os tipos de mídia no cabeçalho de aceitação da mensagem de solicitação.  
+1. Os tipos de mídia no cabeçalho de aceitação da mensagem de solicitação.  
   
-2.  O tipo de conteúdo da mensagem de solicitação.  
+2. O tipo de conteúdo da mensagem de solicitação.  
   
-3.  O formato padrão definindo na operação.  
+3. O formato padrão definindo na operação.  
   
-4.  O formato padrão definindo no WebHttpBehavior.  
+4. O formato padrão definindo no WebHttpBehavior.  
   
  Se a mensagem de solicitação contiver um cabeçalho Accept a infraestrutura do Windows Communication Foundation (WCF) procura por um tipo que oferece suporte a ele. Se o `Accept` cabeçalho Especifica prioridades para seus tipos de mídia, elas são consideradas. Se nenhum formato adequado for encontrado no `Accept` cabeçalho, o tipo de conteúdo da mensagem de solicitação é usado. Se nenhum tipo de conteúdo adequado for especificado, a configuração para a operação de formato de padrão é usado. O formato padrão é definido com o `ResponseFormat` parâmetro do <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos. Se nenhum formato padrão for especificado na operação, o valor da <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> propriedade é usada. Formatação automática depende o <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> propriedade. Quando essa propriedade é definida como `true`, a infraestrutura WCF determina o melhor formato para usar. Seleção automática de formato com versões anteriores é desabilitada por padrão para compatibilidade. Seleção automática de formato pode ser habilitada programaticamente ou por meio da configuração. O exemplo a seguir mostra como habilitar a seleção automática de formato no código.  
   

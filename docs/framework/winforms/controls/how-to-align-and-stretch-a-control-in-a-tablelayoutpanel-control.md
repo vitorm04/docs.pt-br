@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: c0bcf91d358d233b5b1d2e300d63112303e87a09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6f36914387519b027fcf4cb6bf1e7654e551b3eb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328017"
 ---
 # <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Como: Alinhar e alongar um controle em um controle TableLayoutPanel
 Você pode alinhar e Alongar controles em uma <xref:System.Windows.Forms.TableLayoutPanel> com o <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades.  
@@ -23,21 +23,21 @@ Você pode alinhar e Alongar controles em uma <xref:System.Windows.Forms.TableLa
   
 ### <a name="to-align-and-stretch-a-control"></a>Para alinhar e alongar um controle  
   
-1.  Arraste uma <xref:System.Windows.Forms.TableLayoutPanel> controlar do **caixa de ferramentas** para seu formulário.  
+1. Arraste uma <xref:System.Windows.Forms.TableLayoutPanel> controlar do **caixa de ferramentas** para seu formulário.  
   
-2.  Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** a célula do canto superior esquerdo do <xref:System.Windows.Forms.TableLayoutPanel> controle. O <xref:System.Windows.Forms.Button> controle é centralizado na célula.  
+2. Arraste uma <xref:System.Windows.Forms.Button> controlar do **caixa de ferramentas** a célula do canto superior esquerdo do <xref:System.Windows.Forms.TableLayoutPanel> controle. O <xref:System.Windows.Forms.Button> controle é centralizado na célula.  
   
-3.  Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Left,Right`. O <xref:System.Windows.Forms.Button> controlar alonga para corresponder à largura da célula.  
+3. Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Left,Right`. O <xref:System.Windows.Forms.Button> controlar alonga para corresponder à largura da célula.  
   
-4.  Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Top,Bottom`. O <xref:System.Windows.Forms.Button> controlar alonga para corresponder à altura da célula.  
+4. Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Top,Bottom`. O <xref:System.Windows.Forms.Button> controlar alonga para corresponder à altura da célula.  
   
-5.  Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>. O <xref:System.Windows.Forms.Button> controle se expande para preencher a célula.  
+5. Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>. O <xref:System.Windows.Forms.Button> controle se expande para preencher a célula.  
   
-6.  Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.None>. O <xref:System.Windows.Forms.Button> controle retorna ao seu tamanho original e o move para o canto superior esquerdo da célula. O **Designer de formulários do Windows** definiu o <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Top, Left`.  
+6. Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.None>. O <xref:System.Windows.Forms.Button> controle retorna ao seu tamanho original e o move para o canto superior esquerdo da célula. O **Designer de formulários do Windows** definiu o <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Top, Left`.  
   
-7.  Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Bottom,Right`. O <xref:System.Windows.Forms.Button> controle se move para o canto inferior direito da célula.  
+7. Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade `Bottom,Right`. O <xref:System.Windows.Forms.Button> controle se move para o canto inferior direito da célula.  
   
-8.  Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade <xref:System.Windows.Forms.AnchorStyles.None>. O <xref:System.Windows.Forms.Button> controle se move para o centro da célula.  
+8. Defina o valor da <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade <xref:System.Windows.Forms.AnchorStyles.None>. O <xref:System.Windows.Forms.Button> controle se move para o centro da célula.  
   
 ## <a name="see-also"></a>Consulte também
 

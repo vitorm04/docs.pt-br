@@ -2,12 +2,12 @@
 title: Provedor de tokens emitidos duráveis
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329746"
 ---
 # <a name="durable-issued-token-provider"></a>Provedor de tokens emitidos duráveis
 Este exemplo demonstra como implementar uma provedor de token emitida personalizadas do cliente.  
@@ -114,7 +114,7 @@ Este exemplo demonstra como implementar uma provedor de token emitida personaliz
   
 #### <a name="to-develop-a-custom-token-provider"></a>Para desenvolver um provedor de token personalizado  
   
-1.  Escreva um provedor de token personalizado.  
+1. Escreva um provedor de token personalizado.  
   
      O exemplo implementa um provedor de token personalizado que retorna um token de segurança recuperado de um cache.  
   
@@ -133,7 +133,7 @@ Este exemplo demonstra como implementar uma provedor de token emitida personaliz
     }  
     ```  
   
-2.  Escreva um Gerenciador de token de segurança personalizada.  
+2. Escreva um Gerenciador de token de segurança personalizada.  
   
      O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar um <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para um determinado <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> que é passado para ele no `CreateSecurityTokenProvider` método. Gerenciador de token de segurança também é usado para criar os autenticadores de token e serializadores de token, mas esses não são cobertos por este exemplo. Neste exemplo, o Gerenciador de token de segurança personalizada herda o <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe e substitui o `CreateSecurityTokenProvider` método para retornar o provedor de token personalizado quando os requisitos de token passados indicam que um token emitido é solicitado.  
   
@@ -162,7 +162,7 @@ Este exemplo demonstra como implementar uma provedor de token emitida personaliz
     }  
     ```  
   
-3.  Grave uma credencial de cliente personalizadas.  
+3. Grave uma credencial de cliente personalizadas.  
   
      Uma classe de credenciais do cliente é usada para representar as credenciais que são configuradas para o proxy de cliente e cria a segurança Gerenciador de token é usado para obter os autenticadores de token, provedores de token e serializadores de token.  
   
@@ -204,7 +204,7 @@ Este exemplo demonstra como implementar uma provedor de token emitida personaliz
     }  
     ```  
   
-4.  Implemente o cache de token. A implementação de exemplo usa uma classe base abstrata por meio dos quais os consumidores de um cache de token determinado interagem com o cache.  
+4. Implemente o cache de token. A implementação de exemplo usa uma classe base abstrata por meio dos quais os consumidores de um cache de token determinado interagem com o cache.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Este exemplo demonstra como implementar uma provedor de token emitida personaliz
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Execute o arquivo Setup. cmd para criar os certificados necessários.  
+1. Execute o arquivo Setup. cmd para criar os certificados necessários.  
   
-2.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Certifique-se de que todos os projetos na solução são criados (compartilhado, RSTRSTR, serviço, SecurityTokenService e cliente).  
+2. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Certifique-se de que todos os projetos na solução são criados (compartilhado, RSTRSTR, serviço, SecurityTokenService e cliente).  
   
-3.  Certifique-se de que Service.exe e SecurityTokenService.exe estão sendo executados com privilégios de administrador.  
+3. Certifique-se de que Service.exe e SecurityTokenService.exe estão sendo executados com privilégios de administrador.  
   
-4.  Execute Client.exe.  
+4. Execute Client.exe.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
-1.  Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+1. Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

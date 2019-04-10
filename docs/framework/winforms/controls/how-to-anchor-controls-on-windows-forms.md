@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329772"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Como: Ancorar controles nos Windows Forms
 Se você estiver criando um formulário que o usuário pode redimensionar em tempo de execução, os controles no formulário deverão redimensionados e reposicionados corretamente. Para redimensionar controles dinamicamente com o formulário, você pode usar o <xref:System.Windows.Forms.Control.Anchor%2A> propriedade dos controles dos Windows Forms. O <xref:System.Windows.Forms.Control.Anchor%2A> propriedade define uma posição de âncora para o controle. Quando um controle é ancorado a um formulário e esse formulário é redimensionado, o controle mantém a distância entre o controle e as posições de âncora. Por exemplo, se você tiver um <xref:System.Windows.Forms.TextBox> controle é ancorado a esquerda, direita e bordas na parte inferior do formulário, como o formulário é redimensionado, o <xref:System.Windows.Forms.TextBox> controle é redimensionado horizontalmente, de modo que ele mantém a mesma distância dos lados direito e esquerdos do formulário. Além disso, o controle se posiciona verticalmente para que sua localização seja sempre a mesma distância da borda inferior do formulário. Se um controle não estiver ancorado e o formulário for redimensionado, a posição do controle em relação às bordas do formulário será alterada.  
@@ -29,22 +29,22 @@ Se você estiver criando um formulário que o usuário pode redimensionar em tem
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Ancorar um controle em um formulário  
   
-1.  Selecione o controle que deseja ancorar.  
+1. Selecione o controle que deseja ancorar.  
   
     > [!NOTE]
     >  É possível ancorar vários controles simultaneamente pressionando a tecla CTRL, clicando em cada controle para selecioná-lo e, em seguida, seguindo o resto desse procedimento.  
   
-2.  No **propriedades** janela, clique na seta à direita do <xref:System.Windows.Forms.Control.Anchor%2A> propriedade.  
+2. No **propriedades** janela, clique na seta à direita do <xref:System.Windows.Forms.Control.Anchor%2A> propriedade.  
   
      Um editor será exibido e mostra uma cruz.  
   
-3.  Para definir uma âncora, clique na seção superior, esquerda, direita ou inferior da cruz.  
+3. Para definir uma âncora, clique na seção superior, esquerda, direita ou inferior da cruz.  
   
      Os controles estão ancorados na parte superior e esquerda por padrão.  
   
-4.  Para limpar um lado do controle que foi ancorado, clique nessa parte da cruz.  
+4. Para limpar um lado do controle que foi ancorado, clique nessa parte da cruz.  
   
-5.  Para fechar o <xref:System.Windows.Forms.Control.Anchor%2A> editor de propriedades, clique no <xref:System.Windows.Forms.Control.Anchor%2A> novamente o nome da propriedade.  
+5. Para fechar o <xref:System.Windows.Forms.Control.Anchor%2A> editor de propriedades, clique no <xref:System.Windows.Forms.Control.Anchor%2A> novamente o nome da propriedade.  
   
  Quando o formulário é exibido em tempo de execução, o controle é redimensionado para permanecer posicionado na mesma distância da borda do formulário. A distância da borda ancorada sempre é a mesma distância definida quando o controle é posicionado no Designer de Formulários do Windows.  
   

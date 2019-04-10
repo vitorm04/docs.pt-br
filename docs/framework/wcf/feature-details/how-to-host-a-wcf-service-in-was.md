@@ -2,12 +2,12 @@
 title: 'Como: hospedar um serviço WCF no WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195443"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326496"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Como: hospedar um serviço WCF no WAS
 Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processo do Windows (também conhecido como WAS) hospedado o serviço Windows Communication Foundation (WCF). FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. O WCF usa o adaptador de escuta para comunicar as solicitações de ativação recebidas pelos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens.  
@@ -39,15 +39,15 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>Para criar um serviço básico hospedado pelo WAS  
   
-1.  Defina um contrato de serviço para o tipo de serviço.  
+1. Defina um contrato de serviço para o tipo de serviço.  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não são especificadas dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
+2. Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não são especificadas dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Crie um arquivo Web. config para definir a <xref:System.ServiceModel.NetTcpBinding> associação a ser usada pelo `CalculatorService` pontos de extremidade.  
+3. Crie um arquivo Web. config para definir a <xref:System.ServiceModel.NetTcpBinding> associação a ser usada pelo `CalculatorService` pontos de extremidade.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,39 +64,39 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
     </configuration>  
     ```  
   
-4.  Crie um arquivo Service SVC que contém o código a seguir.  
+4. Crie um arquivo Service SVC que contém o código a seguir.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  Coloque o arquivo Service svc no diretório virtual IIS.  
+5. Coloque o arquivo Service svc no diretório virtual IIS.  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Para criar um cliente para usar o serviço  
   
-1.  Use [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar o código de metadados de serviço.  
+1. Use [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar o código de metadados de serviço.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  O cliente que é gerado contém o `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.  
+2. O cliente que é gerado contém o `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  O aplicativo de cliente gerado também contém a implementação do `ClientCalculator`. Observe que as informações de endereço e a associação não são especificadas em qualquer lugar dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
+3. O aplicativo de cliente gerado também contém a implementação do `ClientCalculator`. Observe que as informações de endereço e a associação não são especificadas em qualquer lugar dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  A configuração do cliente que usa o <xref:System.ServiceModel.NetTcpBinding> também é gerado pelo Svcutil.exe. Este arquivo deve ser nomeado no arquivo App. config ao usar o Visual Studio.  
+4. A configuração do cliente que usa o <xref:System.ServiceModel.NetTcpBinding> também é gerado pelo Svcutil.exe. Este arquivo deve ser nomeado no arquivo App. config ao usar o Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  Criar uma instância das `ClientCalculator` em um aplicativo e, em seguida, chamar as operações de serviço.  
+5. Criar uma instância das `ClientCalculator` em um aplicativo e, em seguida, chamar as operações de serviço.  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  Compile e execute o cliente.  
+6. Compile e execute o cliente.  
   
 ## <a name="see-also"></a>Consulte também
 

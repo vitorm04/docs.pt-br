@@ -2,12 +2,12 @@
 title: (Módulo) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: b08689b6f5b17950738c557e02f995fa85aeb35e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326730"
 ---
 # <a name="modulo-entity-sql"></a>(Módulo) (Entity SQL)
 Retorna o resto de uma expressão dividida por outra.  
@@ -31,9 +31,9 @@ dividend % divisor
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa os % do operador aritmético para retornar o restante de uma expressão dividida por outra. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   

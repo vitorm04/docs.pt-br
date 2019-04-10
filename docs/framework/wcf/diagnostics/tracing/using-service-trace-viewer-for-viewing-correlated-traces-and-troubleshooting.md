@@ -2,12 +2,12 @@
 title: Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329044"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 Este tópico descreve o formato dos dados de rastreamento, como exibir e abordagens que usam o Visualizador de rastreamento de serviço para solucionar problemas de seu aplicativo.  
@@ -152,17 +152,17 @@ A imagem a seguir mostra as atividades do cliente WCF listadas por hora de cria�
   
  No serviço, o modelo de atividade mapeia para os conceitos do WCF da seguinte maneira:  
   
-1.  Podemos construir e abra um ServiceHost (Isso pode criar várias atividades relacionadas ao host, por exemplo, no caso de segurança).  
+1. Podemos construir e abra um ServiceHost (Isso pode criar várias atividades relacionadas ao host, por exemplo, no caso de segurança).  
   
-2.  Podemos criar uma atividade de escuta em para cada ouvinte no ServiceHost (com transferências dentro e fora de ServiceHost aberto).  
+2. Podemos criar uma atividade de escuta em para cada ouvinte no ServiceHost (com transferências dentro e fora de ServiceHost aberto).  
   
-3.  Quando o ouvinte detecta uma solicitação de comunicação iniciada pelo cliente, ele transfere a uma atividade de "Bytes de recebimento", na qual todos os bytes enviados do cliente são processados. Essa atividade, podemos ver os erros de conexão que ocorreram durante a interação de serviço do cliente.  
+3. Quando o ouvinte detecta uma solicitação de comunicação iniciada pelo cliente, ele transfere a uma atividade de "Bytes de recebimento", na qual todos os bytes enviados do cliente são processados. Essa atividade, podemos ver os erros de conexão que ocorreram durante a interação de serviço do cliente.  
   
-4.  Para cada conjunto de bytes que é recebido que corresponde a uma mensagem, podemos processar esses bytes em uma atividade de "Processo de mensagem", onde podemos criar o objeto Message do WCF. Essa atividade, podemos ver erros relacionados a um envelope incorreto ou uma mensagem malformada.  
+4. Para cada conjunto de bytes que é recebido que corresponde a uma mensagem, podemos processar esses bytes em uma atividade de "Processo de mensagem", onde podemos criar o objeto Message do WCF. Essa atividade, podemos ver erros relacionados a um envelope incorreto ou uma mensagem malformada.  
   
-5.  Depois que a mensagem é formada, podemos transferir para uma atividade de ação de processo. Se `propagateActivity` é definido como `true` sobre o cliente e o serviço, essa atividade tem a mesma id que aquele definido no cliente e descrito anteriormente. Nesta fase, vamos começar se beneficiar de correlação direta entre os pontos de extremidade, como todos os rastreamentos emitidos no WCF que estão relacionados à solicitação estão na mesma atividade, incluindo o processamento da mensagem de resposta.  
+5. Depois que a mensagem é formada, podemos transferir para uma atividade de ação de processo. Se `propagateActivity` é definido como `true` sobre o cliente e o serviço, essa atividade tem a mesma id que aquele definido no cliente e descrito anteriormente. Nesta fase, vamos começar se beneficiar de correlação direta entre os pontos de extremidade, como todos os rastreamentos emitidos no WCF que estão relacionados à solicitação estão na mesma atividade, incluindo o processamento da mensagem de resposta.  
   
-6.  Para a ação de out-of-process, podemos criar uma atividade de "Execute código do usuário" para isolar os rastreamentos emitidos no código do usuário daqueles emitidos no WCF. No exemplo anterior, o rastreamento "Serviço envia a resposta de adicionar" é emitido na atividade de "Código de usuário Execute", não na atividade propagada pelo cliente, se aplicável.  
+6. Para a ação de out-of-process, podemos criar uma atividade de "Execute código do usuário" para isolar os rastreamentos emitidos no código do usuário daqueles emitidos no WCF. No exemplo anterior, o rastreamento "Serviço envia a resposta de adicionar" é emitido na atividade de "Código de usuário Execute", não na atividade propagada pelo cliente, se aplicável.  
   
  Na ilustração a seguir, a primeira atividade à esquerda é a atividade raiz (0000), que é a atividade padrão. As próximas três atividades são abrir o ServiceHost. A atividade na coluna 5 é o ouvinte e as atividades restantes (6 to 8) descrevem o processamento do WCF de uma mensagem, de bytes de processamento para ativação de código do usuário.  
 

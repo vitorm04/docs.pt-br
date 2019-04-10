@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330331"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement Authentication Modes
 Windows Communication Foundation (WCF) fornece vários modos pelos quais os clientes e serviços autenticam um ao outro. Você pode criar elementos de associação para esses modos de autenticação de segurança por meio de métodos estáticos no <xref:System.ServiceModel.Channels.SecurityBindingElement> classe ou por meio da configuração. Este tópico descreve resumidamente os modos de 18 autenticação.  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF) fornece vários modos pelos quais os clie
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>Para definir o modo de autenticação na configuração  
   
-1.  Para o [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento, adicionar um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Para o [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento, adicionar um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-2.  Como um elemento filho, adicione uma [ \<associação >](../../../../docs/framework/misc/binding.md) elemento para o `<customBinding>` elemento.  
+2. Como um elemento filho, adicione uma [ \<associação >](../../../../docs/framework/misc/binding.md) elemento para o `<customBinding>` elemento.  
   
-3.  Adicionar um `<security>` elemento para o `<binding>` elemento.  
+3. Adicionar um `<security>` elemento para o `<binding>` elemento.  
   
-4.  Defina o `authenticationMode` de atributo para um dos valores descritos a seguir. Por exemplo, o código a seguir define o modo como `AnonymousForCertificate`.  
+4. Defina o `authenticationMode` de atributo para um dos valores descritos a seguir. Por exemplo, o código a seguir define o modo como `AnonymousForCertificate`.  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) fornece vários modos pelos quais os clie
   
 #### <a name="to-set-the-mode-programmatically"></a>Para definir o modo de forma programática  
   
-1.  Determinar o tipo de retorno, que pode ser um dos seguintes: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, ou <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1. Determinar o tipo de retorno, que pode ser um dos seguintes: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, ou <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-2.  Chame o método estático apropriado do <xref:System.ServiceModel.Channels.SecurityBindingElement> classe. Por exemplo, o código a seguir chama o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> método.  
+2. Chame o método estático apropriado do <xref:System.ServiceModel.Channels.SecurityBindingElement> classe. Por exemplo, o código a seguir chama o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> método.  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  Use o elemento de associação para criar a associação personalizada. Para obter mais informações, consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+3. Use o elemento de associação para criar a associação personalizada. Para obter mais informações, consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="mode-descriptions"></a>Descrições de modo  
   

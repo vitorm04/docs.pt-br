@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330429"
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
 Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. O tópico define a terminologia de eventos roteados, descreve como eventos roteados são roteados por uma árvore de elementos, resume como manipular eventos roteados e apresenta como criar seus próprios eventos roteados personalizados.
@@ -204,17 +204,17 @@ Processamento de eventos de entrada por túnel e por propagação
   
  A ordem de processamento de eventos é a seguinte:  
   
-1.  `PreviewMouseDown` (túnel) no elemento raiz.  
+1. `PreviewMouseDown` (túnel) no elemento raiz.  
   
-2.  `PreviewMouseDown` (túnel) no elemento intermediário #1.  
+2. `PreviewMouseDown` (túnel) no elemento intermediário #1.  
   
-3.  `PreviewMouseDown` (túnel) no elemento origem #2.  
+3. `PreviewMouseDown` (túnel) no elemento origem #2.  
   
-4.  `MouseDown` (propagação) no elemento origem #2.  
+4. `MouseDown` (propagação) no elemento origem #2.  
   
-5.  `MouseDown` (propagação) no elemento intermediário #1.  
+5. `MouseDown` (propagação) no elemento intermediário #1.  
   
-6.  `MouseDown` (propagação) no elemento raiz.  
+6. `MouseDown` (propagação) no elemento raiz.  
   
  Um delegado do manipulador de eventos roteados fornece referências para dois objetos: o objeto que acionou o evento e o objeto em que o manipulador foi invocado. O objeto em que o manipulador foi invocado é o objeto relatado pelo parâmetro `sender`. O objeto no qual o evento foi gerado pela primeira vez é reportado pelo <xref:System.Windows.RoutedEventArgs.Source%2A> propriedade nos dados do evento. Um evento roteado ainda pode ser disparado e tratado pelo mesmo objeto, caso em que `sender` e <xref:System.Windows.RoutedEventArgs.Source%2A> são idênticos (esse é o caso com as etapas 3 e 4 a lista de exemplo de processamento de eventos).  
   

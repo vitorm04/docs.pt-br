@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164015"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330149"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Como: configurar o comportamento ocioso com WorkflowServiceHost
 Fluxos de trabalho ficar ociosos quando encontra um indicador que deve ser retomado por algum estímulo externo, por exemplo, quando a instância de fluxo de trabalho está aguardando que uma mensagem seja entregue usando um <xref:System.ServiceModel.Activities.Receive> atividade. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> é um comportamento que permite que você especifique o tempo entre quando uma instância de serviço fica inativo e quando a instância é persistentes ou descarregada. Ele contém duas propriedades que permitem que você defina esses intervalos de tempo. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Especifica o período de tempo entre quando uma instância de serviço de fluxo de trabalho aparece ociosa e quando a instância do serviço de fluxo de trabalho é mantida. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Especifica o período de tempo entre quando o fluxo de trabalho de um instância de serviço fica inativo e quando a instância do serviço de fluxo de trabalho é descarregada, onde descarregar significa persistir a instância para o armazenamento de instância e removê-la da memória. Este tópico explica como configurar o <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> em um arquivo de configuração.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Para configurar WorkflowIdleBehavior  
   
-1.  Adicionar um <`workflowIdle`> elemento a ser o <`behavior`> elemento dentro de <`serviceBehaviors`> elemento, conforme mostrado no exemplo a seguir.  
+1. Adicionar um <`workflowIdle`> elemento a ser o <`behavior`> elemento dentro de <`serviceBehaviors`> elemento, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <behaviors>  

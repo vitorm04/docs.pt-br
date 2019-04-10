@@ -2,12 +2,12 @@
 title: Personalizando permissões com representação no SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326964"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizando permissões com representação no SQL Server
 Muitos aplicativos usam procedimentos armazenados para acessar os dados, dependendo do encadeamento de propriedade para restringir o acesso a tabelas base. Você pode conceder permissões EXECUTE em procedimentos armazenados, revogando ou negando permissões nas tabelas base. O SQL Server não verifica as permissões do chamador se o procedimento armazenado e as tabelas têm o mesmo proprietário. No entanto, o encadeamento de propriedades não funcionará se os objetos tiverem proprietários diferentes ou no caso de SQL dinâmico.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Há três etapas envolvidas no uso da cláusula EXECUTE AS em um procedimento.  
   
-1.  Crie um usuário de proxy no banco de dados que não seja mapeado para um logon. Isso não é obrigatório, mas ajuda a gerenciar permissões.  
+1. Crie um usuário de proxy no banco de dados que não seja mapeado para um logon. Isso não é obrigatório, mas ajuda a gerenciar permissões.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Conceda ao usuário de proxy as permissões necessárias.  
+1. Conceda ao usuário de proxy as permissões necessárias.  
   
-2.  Adicione a cláusula EXECUTE AS no procedimento armazenado ou função definida pelo usuário.  
+2. Adicione a cláusula EXECUTE AS no procedimento armazenado ou função definida pelo usuário.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

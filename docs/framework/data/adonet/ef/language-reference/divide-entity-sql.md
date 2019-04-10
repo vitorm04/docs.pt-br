@@ -2,12 +2,12 @@
 title: '- (Divisão) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: ca63835a3be23137a1a40d6d6597083ae2128ac7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330851"
 ---
 # <a name="-divide-entity-sql"></a>/ (Divisão) (Entity SQL)
 Divide um número por outro.  
@@ -31,9 +31,9 @@ dividend / divisor
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o / aritmético operador dividir um número por outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#DIVIDE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#divide)]  
   

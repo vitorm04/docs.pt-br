@@ -2,14 +2,14 @@
 title: Designer ReHosting
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328160"
 ---
-# <a name="designer-rehosting"></a>Designer Rehosting
+# <a name="designer-rehosting"></a>Alterar a hospedagem do designer
 O designer que rehosting é um cenário comum que se refere hospedar a tela de design de fluxo de trabalho em um aplicativo personalizado. O aplicativo que hospedando a maioria de pessoas estão familiarizados com é Visual Studio entanto, há um número de cenários onde mostrar o designer de fluxo de trabalho em um aplicativo pode ser útil:  
   
 -   Monitorando aplicativos (que permitem que um usuário final visualizem o processo, bem como os dados em tempo de execução sobre o processo como o estado atualmente ativa, os dados agregados de tempo de execução, ou outras informações sobre uma instância de fluxo de trabalho).  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Usando o exemplo  
   
-1.  Abra a solução de Designerrehosting no Visual Studio 2010.  
+1. Abra a solução de Designerrehosting no Visual Studio 2010.  
   
-2.  Pressione F5 para compilar e executar o aplicativo.  
+2. Pressione F5 para compilar e executar o aplicativo.  
   
-3.  Inicia de um aplicativo de WPF com um designer rehosted.  
+3. Inicia de um aplicativo de WPF com um designer rehosted.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
