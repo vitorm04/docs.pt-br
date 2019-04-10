@@ -2,17 +2,17 @@
 title: '|| (OU) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 3ceaf33d8baba9776008cddcbe2e2d70f13fe089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297792"
 ---
-# <a name="-or-entity-sql"></a><span data-ttu-id="2801f-102">|| (OU) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2801f-102">|| (OR) (Entity SQL)</span></span>
-<span data-ttu-id="2801f-103">Combina duas expressões de `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="2801f-103">Combines two `Boolean` expressions.</span></span>  
+# <a name="-or-entity-sql"></a><span data-ttu-id="529e0-102">|| (OU) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="529e0-102">|| (OR) (Entity SQL)</span></span>
+<span data-ttu-id="529e0-103">Combina duas expressões de `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="529e0-103">Combines two `Boolean` expressions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2801f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2801f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="529e0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="529e0-104">Syntax</span></span>  
   
 ```  
 boolean_expression OR boolean_expression  
@@ -20,35 +20,35 @@ or
 boolean_expression || boolean_expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="2801f-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="2801f-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="529e0-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="529e0-105">Arguments</span></span>  
  `boolean_expression`  
- <span data-ttu-id="2801f-106">Qualquer expressão válida que retorna `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="2801f-106">Any valid expression that returns a `Boolean`.</span></span>  
+ <span data-ttu-id="529e0-106">Qualquer expressão válida que retorna `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="529e0-106">Any valid expression that returns a `Boolean`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2801f-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="2801f-107">Return Value</span></span>  
- `true` <span data-ttu-id="2801f-108">Quando uma das condições for `true`; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="2801f-108">when either of the conditions is `true`; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="529e0-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="529e0-107">Return Value</span></span>  
+ `true` <span data-ttu-id="529e0-108">Quando uma das condições for `true`; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="529e0-108">when either of the conditions is `true`; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2801f-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="2801f-109">Remarks</span></span>  
- <span data-ttu-id="2801f-110">OR é um operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="2801f-110">OR is an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] logical operator.</span></span> <span data-ttu-id="2801f-111">É usada para combinar duas condições.</span><span class="sxs-lookup"><span data-stu-id="2801f-111">It is used to combine two conditions.</span></span> <span data-ttu-id="2801f-112">Quando mais de um operador lógico é usado em uma declaração, OU de operadores são avaliados em seguida E operadores.</span><span class="sxs-lookup"><span data-stu-id="2801f-112">When more than one logical operator is used in a statement, OR operators are evaluated after AND operators.</span></span> <span data-ttu-id="2801f-113">No entanto, você pode alterar a ordem de classificação usando parênteses.</span><span class="sxs-lookup"><span data-stu-id="2801f-113">However, you can change the order of evaluation by using parentheses.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="529e0-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="529e0-109">Remarks</span></span>  
+ <span data-ttu-id="529e0-110">OR é um operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="529e0-110">OR is an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] logical operator.</span></span> <span data-ttu-id="529e0-111">É usada para combinar duas condições.</span><span class="sxs-lookup"><span data-stu-id="529e0-111">It is used to combine two conditions.</span></span> <span data-ttu-id="529e0-112">Quando mais de um operador lógico é usado em uma declaração, OU de operadores são avaliados em seguida E operadores.</span><span class="sxs-lookup"><span data-stu-id="529e0-112">When more than one logical operator is used in a statement, OR operators are evaluated after AND operators.</span></span> <span data-ttu-id="529e0-113">No entanto, você pode alterar a ordem de classificação usando parênteses.</span><span class="sxs-lookup"><span data-stu-id="529e0-113">However, you can change the order of evaluation by using parentheses.</span></span>  
   
- <span data-ttu-id="2801f-114">Barras verticais duplas (&#124;&#124;) têm a mesma funcionalidade que o operador OR.</span><span class="sxs-lookup"><span data-stu-id="2801f-114">Double vertical bars (&#124;&#124;) have the same functionality as the OR operator.</span></span>  
+ <span data-ttu-id="529e0-114">Barras verticais duplas (&#124;&#124;) têm a mesma funcionalidade que o operador OR.</span><span class="sxs-lookup"><span data-stu-id="529e0-114">Double vertical bars (&#124;&#124;) have the same functionality as the OR operator.</span></span>  
   
- <span data-ttu-id="2801f-115">A tabela a seguir mostra valores e tipos de retorno de entrada possíveis.</span><span class="sxs-lookup"><span data-stu-id="2801f-115">The following table shows possible input values and return types.</span></span>  
+ <span data-ttu-id="529e0-115">A tabela a seguir mostra valores e tipos de retorno de entrada possíveis.</span><span class="sxs-lookup"><span data-stu-id="529e0-115">The following table shows possible input values and return types.</span></span>  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|<span data-ttu-id="2801f-116">TRUE</span><span class="sxs-lookup"><span data-stu-id="2801f-116">TRUE</span></span>|<span data-ttu-id="2801f-117">TRUE</span><span class="sxs-lookup"><span data-stu-id="2801f-117">TRUE</span></span>|<span data-ttu-id="2801f-118">TRUE</span><span class="sxs-lookup"><span data-stu-id="2801f-118">TRUE</span></span>|  
-|`FALSE`|<span data-ttu-id="2801f-119">TRUE</span><span class="sxs-lookup"><span data-stu-id="2801f-119">TRUE</span></span>|<span data-ttu-id="2801f-120">FALSE</span><span class="sxs-lookup"><span data-stu-id="2801f-120">FALSE</span></span>|<span data-ttu-id="2801f-121">NULL</span><span class="sxs-lookup"><span data-stu-id="2801f-121">NULL</span></span>|  
-|`NULL`|<span data-ttu-id="2801f-122">TRUE</span><span class="sxs-lookup"><span data-stu-id="2801f-122">TRUE</span></span>|<span data-ttu-id="2801f-123">NULL</span><span class="sxs-lookup"><span data-stu-id="2801f-123">NULL</span></span>|<span data-ttu-id="2801f-124">NULL</span><span class="sxs-lookup"><span data-stu-id="2801f-124">NULL</span></span>|  
+|`TRUE`|<span data-ttu-id="529e0-116">TRUE</span><span class="sxs-lookup"><span data-stu-id="529e0-116">TRUE</span></span>|<span data-ttu-id="529e0-117">TRUE</span><span class="sxs-lookup"><span data-stu-id="529e0-117">TRUE</span></span>|<span data-ttu-id="529e0-118">TRUE</span><span class="sxs-lookup"><span data-stu-id="529e0-118">TRUE</span></span>|  
+|`FALSE`|<span data-ttu-id="529e0-119">TRUE</span><span class="sxs-lookup"><span data-stu-id="529e0-119">TRUE</span></span>|<span data-ttu-id="529e0-120">FALSE</span><span class="sxs-lookup"><span data-stu-id="529e0-120">FALSE</span></span>|<span data-ttu-id="529e0-121">NULL</span><span class="sxs-lookup"><span data-stu-id="529e0-121">NULL</span></span>|  
+|`NULL`|<span data-ttu-id="529e0-122">TRUE</span><span class="sxs-lookup"><span data-stu-id="529e0-122">TRUE</span></span>|<span data-ttu-id="529e0-123">NULL</span><span class="sxs-lookup"><span data-stu-id="529e0-123">NULL</span></span>|<span data-ttu-id="529e0-124">NULL</span><span class="sxs-lookup"><span data-stu-id="529e0-124">NULL</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="2801f-125">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2801f-125">Example</span></span>  
- <span data-ttu-id="2801f-126">A seguinte consulta SQL Entity usa o operador OR para combinar duas expressões de `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="2801f-126">The following Entity SQL query uses the OR operator to combine two `Boolean` expressions.</span></span> <span data-ttu-id="2801f-127">A consulta é baseada no modelo de vendas AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="2801f-127">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="2801f-128">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="2801f-128">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="529e0-125">Exemplo</span><span class="sxs-lookup"><span data-stu-id="529e0-125">Example</span></span>  
+ <span data-ttu-id="529e0-126">A seguinte consulta SQL Entity usa o operador OR para combinar duas expressões de `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="529e0-126">The following Entity SQL query uses the OR operator to combine two `Boolean` expressions.</span></span> <span data-ttu-id="529e0-127">A consulta é baseada no modelo de vendas AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="529e0-127">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="529e0-128">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="529e0-128">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="2801f-129">Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="2801f-129">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="529e0-129">Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="529e0-129">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="2801f-130">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="2801f-130">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="529e0-130">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="529e0-130">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
-## <a name="see-also"></a><span data-ttu-id="2801f-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2801f-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="529e0-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="529e0-131">See also</span></span>
 
-- [<span data-ttu-id="2801f-132">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="2801f-132">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="529e0-132">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="529e0-132">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
