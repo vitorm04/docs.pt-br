@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479991"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920968"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -33,7 +33,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Registro**: Um serviço que fornece acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem de vários arcos**: Para várias arquiteturas, é uma funcionalidade que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está sendo executado; por exemplo, quando um Dockerfile solicita uma imagem base **FROM microsoft/dotnet:2.2-sdk** do Registro, na verdade, ele obtém **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** ou **2.2-sdk-alpine**, dependendo do sistema operacional e da versão em que o Docker está sendo executado.
+**Imagem de vários arcos**: Para várias arquiteturas, é uma funcionalidade que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está sendo executado; por exemplo, quando um Dockerfile solicita uma imagem base **FROM mcr.microsoft.com/dotnet/core/sdk:2.2** do Registro, na verdade, ele obtém **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** ou **2.2-sdk-stretch**, dependendo do sistema operacional e da versão em que o Docker está sendo executado.
 
 **Hub do Docker**: Um registro público para fazer upload de imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 

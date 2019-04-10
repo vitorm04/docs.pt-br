@@ -1,5 +1,5 @@
 ---
-title: 'Como: Teste de clique da geometria em um visual'
+title: 'Como: Teste de clique de geometria em um visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227334"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>Como: Teste de clique da geometria em um visual
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>Como: Teste de clique de geometria em um visual
 Este exemplo mostra como executar um teste de clique em um objeto visual que é composto de um ou mais <xref:System.Windows.Media.Geometry> objetos.  
   
 ## <a name="example"></a>Exemplo  
@@ -36,5 +36,6 @@ Este exemplo mostra como executar um teste de clique em um objeto visual que é 
 >  Este exemplo não considera quaisquer transformações ou distorções que possam ser aplicadas à geometria. Além disso, este exemplo não funcionará com um controle com estilo, pois não tem desenhos diretamente associados a ele.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md)
 - [Teste de clique usando geometria como um parâmetro](how-to-hit-test-using-geometry-as-a-parameter.md)

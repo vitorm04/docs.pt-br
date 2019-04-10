@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 1c589ddbc7276ca13fc82513effd3bcae3cd61fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231572"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>O que você pode fazer com LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a todos os principais recursos que você esperaria como desenvolvedor SQL. Você pode consultar informações, e inserir, atualizar e excluir informações de tabelas.  
@@ -51,6 +51,7 @@ ms.locfileid: "54718735"
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de Programação](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
-- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Guia de Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

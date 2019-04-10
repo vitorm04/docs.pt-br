@@ -1,18 +1,18 @@
 ---
-title: 'Como: Especificar uma associação de serviço na configuração'
+title: 'Como: especificar uma associação de serviço na configuração'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5471e6d5610fd74a71a53624392d757f85304236
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229856"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Como: Especificar uma associação de serviço na configuração
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Como: especificar uma associação de serviço na configuração
 Neste exemplo, uma `ICalculator` contrato é definido para um serviço de calculadora básica, o serviço é implementado de `CalculatorService` classe e, em seguida, seu ponto de extremidade está configurado no arquivo Web. config, onde ele é especificado que o serviço usa o <xref:System.ServiceModel.BasicHttpBinding> . Para obter uma descrição de como configurar esse serviço usando o código em vez de uma configuração, consulte [como: Especificar uma associação de serviço no código](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
   
  Ele geralmente é a prática recomendada para especificar declarativamente as informações de endereço e associação na configuração em vez de imperativa no código. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. De modo geral, informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar ou reimplantar o aplicativo.  
@@ -93,5 +93,6 @@ Neste exemplo, uma `ICalculator` contrato é definido para um serviço de calcul
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Especificando um endereço de ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

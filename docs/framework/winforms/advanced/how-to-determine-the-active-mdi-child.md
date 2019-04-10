@@ -1,5 +1,5 @@
 ---
-title: 'Como: Determinar o filho MDI ativo'
+title: 'Como: determinar o filho MDI ativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229466"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>Como: Determinar o filho MDI ativo
+# <a name="how-to-determine-the-active-mdi-child"></a>Como: determinar o filho MDI ativo
 Ocasionalmente, pode ser útil fornecer um comando que opera o controle que tem o foco no formulário filho ativo no momento. Por exemplo, suponha que você deseja copiar o texto selecionado na caixa de texto do formulário filho para a área de transferência. Você criaria um procedimento que copia o texto selecionado para a área de transferência usando o <xref:System.Windows.Forms.Control.Click> evento o cópia do item de menu no menu Editar padrão.  
   
  Como um aplicativo MDI pode ter muitas instâncias do mesmo formulário filho, o procedimento precisa saber qual formulário usar. Para especificar a forma correta, use o <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> propriedade, que retorna o formulário filho que tem o foco ou que estava ativo mais recentemente.  
@@ -84,8 +84,9 @@ Ocasionalmente, pode ser útil fornecer um comando que opera o controle que tem 
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
-- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
-- [Como: Enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
-- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)
+
+- [Aplicativos de Interface de Documentos Múltiplos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Como: criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como: criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como: enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
+- [Como: organizar formulários MDI filho](how-to-arrange-mdi-child-forms.md)

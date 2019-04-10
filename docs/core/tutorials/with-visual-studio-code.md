@@ -4,12 +4,12 @@ description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# 
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788330"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890547"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
@@ -91,14 +91,14 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 ## <a name="add-a-class"></a>Adicionar uma classe
 
 1. Para adicionar uma nova classe, clique com o botão direito do mouse no VSCode Explorer e selecione **Novo Arquivo**. Isso adiciona um novo arquivo à pasta que você abriu no VSCode.
-2. Nomeie o arquivo como `Class1.cs`. Salve-o com uma extensão `.cs` no final para que ele seja reconhecido como um arquivo csharp.
+2. Nomeie o arquivo como `MyClass.cs`. Salve-o com uma extensão `.cs` no final para que ele seja reconhecido como um arquivo csharp.
 3. Adicione o código a seguir para criar sua primeira classe. Certifique-se de incluir o namespace correto, para poder fazer referência a ele no seu arquivo `Program.cs`.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }
@@ -140,5 +140,5 @@ A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar p
 
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+- [Configurar o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Depurar no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

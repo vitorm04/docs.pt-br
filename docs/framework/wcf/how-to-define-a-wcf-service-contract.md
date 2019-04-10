@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228387"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definir um contrato de serviço do Windows Communication Foundation
 
@@ -29,16 +29,15 @@ Neste tutorial, você aprenderá como:
 > - Criar uma **WCF Service Library** projeto.
 > - Defina uma interface de contrato de serviço.
 
-
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Criar um projeto de biblioteca de serviço do WCF e definir uma interface de contrato de serviço
 
-1. Abra o Visual Studio como administrador. Para fazer isso, selecione o programa Visual Studio na **inicie** menu e, em seguida, selecione **mais** > **executar como administrador** no menu de atalho.
+1. Abra o Visual Studio como um administrador. Para fazer isso, selecione o programa Visual Studio na **inicie** menu e, em seguida, selecione **mais** > **executar como administrador** no menu de atalho.
 
 2. Criar uma **WCF Service Library** projeto.
 
    1. No menu **Arquivo**, selecione **Novo** > **Projeto**.
 
-   2. No **novo projeto** caixa de diálogo, no lado esquerdo, expanda **Visual C#** ou **Visual Basic**e, em seguida, selecione o **WCF** categoria. Visual Studio exibe uma lista de modelos de projeto na seção central da janela. Selecione **WCF Service Library**.
+   2. No **novo projeto** caixa de diálogo, no lado esquerdo, expanda **Visual c#** ou **Visual Basic**e, em seguida, selecione o **WCF** categoria. Visual Studio exibe uma lista de modelos de projeto na seção central da janela. Selecione **WCF Service Library**.
 
       > [!NOTE]
       > Se você não vir as **WCF** categoria do modelo de projeto, você talvez precise instalar o **Windows Communication Foundation** componente do Visual Studio. No **novo projeto** caixa de diálogo, selecione o **abrir instalador do Visual Studio** link no lado esquerdo. Selecione o **componentes individuais** guia e, em seguida, localize e selecione **Windows Communication Foundation** sob o **atividades de desenvolvimento** categoria. Escolher **modificar** para começar a instalação do componente.
@@ -54,7 +53,6 @@ Neste tutorial, você aprenderá como:
 
       > [!NOTE]
       > Se você instalou o Visual Studio com as configurações de ambiente de desenvolvedor de Visual Basic, a solução pode estar oculto. Se esse for o caso, selecione **opções** da **ferramentas** menu, em seguida, selecione **projetos e soluções** > **geral** em o **opções** janela. Selecione **sempre mostrar solução**. Além disso, verifique **salvar novos projetos quando criados** está selecionado.
-
 
 3. Partir **Gerenciador de soluções**, abra o **IService1.cs** ou **IService1.vb** de arquivo e substitua seu código com o código a seguir:
 

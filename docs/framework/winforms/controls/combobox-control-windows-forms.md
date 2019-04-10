@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227100"
 ---
 # <a name="combobox-control-windows-forms"></a>Controle ComboBox (Windows Forms)
 Os formulários do Windows `ComboBox` controle é usado para exibir dados em uma caixa de combinação suspensa. Por padrão, o `ComboBox` controle aparece em duas partes: a parte superior é uma caixa de texto que permite ao usuário digitar um item de lista. A segunda parte é uma caixa de listagem que exibe uma lista de itens na qual o usuário pode selecionar item.  
@@ -28,7 +28,7 @@ Os formulários do Windows `ComboBox` controle é usado para exibir dados em uma
  Demonstra um desenho personalizado de texto em um `ComboBox` controle.  
   
 ## <a name="reference"></a>Referência  
- Classe <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ComboBox> classe  
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -36,4 +36,5 @@ Os formulários do Windows `ComboBox` controle é usado para exibir dados em uma
  Fornece uma lista de coisas que você pode fazer com caixas de listagem, caixas de combinação e caixas de listagem marcada.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

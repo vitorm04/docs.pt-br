@@ -1,5 +1,5 @@
 ---
-title: 'Como: Carregar e exibir metarquivos'
+title: 'Como: carregar e exibir metarquivos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 121f285a95d0169db79bdc302d80dba03b3b40c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229349"
 ---
-# <a name="how-to-load-and-display-metafiles"></a>Como: Carregar e exibir metarquivos
+# <a name="how-to-load-and-display-metafiles"></a>Como: carregar e exibir metarquivos
 O <xref:System.Drawing.Imaging.Metafile> classe, que herda o <xref:System.Drawing.Image> de classe, que fornece métodos para gravar, exibir e examinar imagens vetoriais.  
   
 ## <a name="example"></a>Exemplo  
@@ -34,4 +34,5 @@ O <xref:System.Drawing.Imaging.Metafile> classe, que herda o <xref:System.Drawin
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

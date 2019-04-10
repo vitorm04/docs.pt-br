@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354824"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839633"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabalhando com logs de aplicativo no Visual Basic
 
@@ -23,11 +23,11 @@ Primeiro, a gravidade da mensagem é verificada com a propriedade <xref:System.D
 
 O diagrama a seguir mostra como uma mensagem gravada no método `WriteEntry` é passada para os métodos `WriteLine` dos ouvintes de rastreamento do log:
 
-![Minha chamada de log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![Diagrama que mostra a chamada Meu log.](./media/working-with-application-logs/my-log-call-messages.png)
 
 É possível alterar o comportamento do log e dos ouvintes de rastreamento alterando o arquivo de configuração do aplicativo. O diagrama a seguir mostra a correspondência entre as partes do log e o arquivo de configuração.
 
-![Minha configuração de log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![Diagrama que mostra a configuração Meu log.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>Onde as mensagens são registradas em log
 

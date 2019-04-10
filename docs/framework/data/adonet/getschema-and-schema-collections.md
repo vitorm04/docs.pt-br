@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e067e5c6e108a27ecaf9e4b0e3e6a33938ad0b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230168"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema e coleções de esquema
 O **Conexão** classes em cada uma da implementação de provedores gerenciados do .NET Framework um **GetSchema** método que é usado para recuperar informações de esquema sobre o banco de dados que está conectado no momento, e as informações de esquema retornadas de **GetSchema** método vem na forma de um <xref:System.Data.DataTable>. O **GetSchema** método é um método sobrecarregado que fornece parâmetros opcionais para especificar a coleção de esquema para retornar e restringir a quantidade de informações retornadas.  
@@ -105,5 +105,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

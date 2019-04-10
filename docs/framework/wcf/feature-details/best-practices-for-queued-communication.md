@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230090"
 ---
 # <a name="best-practices-for-queued-communication"></a>Práticas recomendadas para comunicação em fila
 Este tópico fornece as práticas recomendadas para a comunicação em fila no Windows Communication Foundation (WCF). As seções a seguir discutem as práticas recomendadas de uma perspectiva de cenário.  
@@ -82,14 +82,15 @@ Este tópico fornece as práticas recomendadas para a comunicação em fila no W
 -   Com a serialização de XML, você pode especificar o tipo conhecido usando o `KnownTypes` atributo o [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que é usado para determinar como desserializar a mensagem XML.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Como: Troca de mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Como: Trocar mensagens com pontos de extremidade do WCF e aplicativos do serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Como: fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Como: fazer intercâmbio de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Agrupamento de mensagens em fila em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
-- [Mensagens em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
-- [Usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Diferenças de recursos da Fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Protegendo as mensagens com segurança de mensagem](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
-- [Solução de problemas de mensagens em fila](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+- [Mensagens de lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
+- [Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Manuseio de mensagem suspeita](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Diferenças de recursos em fila no Windows Vista, Windows Server 2003, e no Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Mensagens de segurança que usam a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Protegendo as mensagens com a segurança de mensagens](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [Mensagens em fila da solução de problemas](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

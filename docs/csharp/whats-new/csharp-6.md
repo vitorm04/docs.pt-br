@@ -2,12 +2,12 @@
 title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654569"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920669"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -106,7 +106,7 @@ As regras do operador `?.` garantem que o lado esquerdo do operador é avaliado 
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Garantir que o lado esquerdo seja avaliado apenas uma vez também permite que você use qualquer expressão, inclusive chamadas de método, no lado esquerdo do `?.`
+Garantir que o lado esquerdo seja avaliado apenas uma vez também permite que você use qualquer expressão, inclusive chamadas de método, no lado esquerdo da `?.`
 
 ## <a name="string-interpolation"></a>Interpolação de cadeias de caracteres
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Para familiarizar-se com a interpolação de cadeia de caracteres, confira o tutorial interativo [Interpolação de cadeia de caracteres em C#](../tutorials/intro-to-csharp/interpolated-strings.yml), o artigo [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres em C#](../tutorials/string-interpolation.md).
+Para familiarizar-se com a interpolação de cadeia de caracteres, confira o tutorial interativo [Interpolação de cadeia de caracteres em C#](../tutorials/exploration/interpolated-strings.yml), o artigo [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres em C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Filtros de exceção
 

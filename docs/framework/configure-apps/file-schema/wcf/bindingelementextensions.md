@@ -2,12 +2,12 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227503"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 Esta seção permite o uso de um elemento de associação personalizada de um computador ou arquivo de configuração do aplicativo. Você pode adicionar um elemento de associação personalizado a essa coleção usando o `add` palavra-chave e a configuração o `type` atributo do elemento a ser uma extensão de elemento de associação, bem como o `name` de atributo para o elemento de associação personalizada.  
@@ -44,5 +44,6 @@ Esta seção permite o uso de um elemento de associação personalizada de um co
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)

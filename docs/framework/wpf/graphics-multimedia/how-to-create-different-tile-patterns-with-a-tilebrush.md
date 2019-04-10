@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar padrões lado a lado diferentes com um TileBrush'
+title: 'Como: Criar padrões de bloco diferentes com um TileBrush'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tile patterns [WPF], creating
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-ms.openlocfilehash: 2efd070ac9ad502f2539d100fa450f95bcdddced
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227399"
 ---
-# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Como: Criar padrões lado a lado diferentes com um TileBrush
+# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Como: Criar padrões de bloco diferentes com um TileBrush
 Este exemplo mostra como usar o <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedade de um <xref:System.Windows.Media.TileBrush> para criar um padrão.  
   
  O <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedade permite que você especifique como o conteúdo de um <xref:System.Windows.Media.TileBrush> é repetido, ou seja, lado a lado para preencher uma área de saída. Para criar um padrão, defina as <xref:System.Windows.Media.TileBrush.TileMode%2A> à <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, ou <xref:System.Windows.Media.TileMode.FlipXY>. Você também deve definir a <xref:System.Windows.Media.TileBrush.Viewport%2A> do <xref:System.Windows.Media.TileBrush> para que seja menor do que a área que você está pintando; caso contrário, apenas um único bloco será produzido, independentemente que <xref:System.Windows.Media.TileBrush.TileMode%2A> configuração que você usar.  
@@ -34,5 +34,6 @@ Padrões de bloco criados com a propriedade TileMode
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Definir o tamanho de bloco um TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)
 - [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)

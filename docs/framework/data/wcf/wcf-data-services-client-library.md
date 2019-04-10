@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230194"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca de cliente do WCF Data Services
 Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-com base em serviço de dados se ele pode enviar uma solicitação HTTP e processar o [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed que um serviço de dados retorna. Esta interoperabilidade permite que você acesse [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviços em um amplo aplicativos de intervalo da Web habilitado. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui bibliotecas de cliente que fornecem uma experiência mais rica de programação quando você consome [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds a partir do .NET Framework ou aplicativos baseados no Silverlight.  
@@ -21,16 +21,16 @@ Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../inc
  Esta seção descreve como usar bibliotecas de cliente para acessar e modificar dados de um aplicativo cliente do .NET Framework. Para obter mais informações sobre como usar o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente com um aplicativo baseado no Silverlight, consulte [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Outras bibliotecas de cliente estão disponíveis que permitem consumir um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed em outros tipos de aplicativos. Para obter mais informações, consulte o [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md) (Gerando a biblioteca de clientes do serviço de dados)  
+ [Gerar a biblioteca de clientes do serviço de dados](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  Descreve como gerar uma biblioteca de cliente e classes de serviço de dados do cliente que se baseiam no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.  
   
- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)  
+ [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  Descreve como consultar um serviço de dados de um aplicativo com base no .NET Framework usando bibliotecas de cliente.  
   
- [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [Carregar conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
  Descreve como carregar o conteúdo adicional não incluído na resposta da consulta inicial.  
   
- [Atualizando o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
+ [Atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  Descreve como criar, modificar e excluir entidades e relações usando as bibliotecas de cliente.  
   
  [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
@@ -39,18 +39,19 @@ Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../inc
  [Operações de envio em lote](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  Descreve como enviar várias solicitações para o serviço de dados em um único lote usando as bibliotecas de cliente.  
   
- [Associando dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Associar dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Descreve como associar controles a um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed retornado por um serviço de dados.  
   
  [Chamar operações de serviço](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  Descreve como usar o proxy do cliente de biblioteca para chamar operações de serviço.  
   
- [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
+ [Gerenciar o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  Descreve as opções para gerenciar o comportamento da biblioteca de cliente.  
   
- [Trabalhando com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [Trabalhar com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Descreve como acessar e alterar os dados binários retornados pelo serviço de dados como um fluxo de dados.  
   
 ## <a name="see-also"></a>Consulte também
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
-- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+
+- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Guia de Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

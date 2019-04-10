@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712468"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826594"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 <a name="top"></a> No CLR (Common Language Runtime), o coletor de lixo atua como um gerenciador automático de memória. Ele oferece os seguintes benefícios:  
@@ -261,21 +261,19 @@ Coleta de lixo simultânea
   
  A coleta de lixo em segundo plano remove as restrições de alocação impostas pela coleta de lixo simultânea, pois as coletas de lixo efêmeras podem ocorrer durante a coleta de lixo em segundo plano. Isso significa que a coleta de lixo em segundo plano pode remover objetos inativos nas gerações efêmeras, e também expandir o heap durante uma coleta de lixo de geração 1, se for necessário.  
   
- A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em uma estação de trabalho.  
+A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em uma estação de trabalho:
   
- ![Coleta de lixo de estação de trabalho em segundo plano](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Coleta de lixo de estação de trabalho em segundo plano  
-  
+ ![O diagrama mostra a coleta de lixo da estação de trabalho em segundo plano.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [Voltar ao início](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Coleta de lixo de servidor em segundo plano  
  A partir do .NET Framework 4.5, a coleta de lixo de servidor em segundo plano é o modo padrão de coleta de lixo de servidor. Para escolher esse modo, defina o atributo `enabled` do [\<elemento gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) como `true` no esquema de configuração de tempo de execução. Esse modo funciona quase igual à coleta de lixo de estação de trabalho em segundo plano, descrita na seção anterior, mas há algumas diferenças. A coleta de lixo de estação de trabalho em segundo plano usa um thread dedicado de coleta de lixo em segundo plano, enquanto a coleta de lixo do servidor em segundo plano usa vários threads, um thread dedicado para cada processador lógico, normalmente. Ao contrário do thread de coleta de lixo de estação de trabalho em segundo plano, esses threads não têm tempo limite.  
   
- A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em um servidor.  
+ A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em um servidor:  
   
- ![Coleta de lixo de servidor em segundo plano](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Coleta de lixo de servidor em segundo plano  
+ ![O diagrama mostra a coleta de lixo do servidor em segundo plano.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>Consulte também
 

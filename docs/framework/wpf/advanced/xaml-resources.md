@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230012"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. Exemplos de recursos incluem pincéis e estilos. Esta visão geral descreve como usar recursos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Você também pode criar e acessar recursos por meio de código ou de forma intercambiável entre o código e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obter mais informações, consulte [recursos e código](resources-and-code.md).  
   
 > [!NOTE]
 >  Os arquivos de recurso descritos neste tópico são diferentes do que os arquivos de recurso descrito em [recurso de aplicativo do WPF, conteúdo e arquivos de dados](../app-development/wpf-application-resource-content-and-data-files.md) e diferentes dos recursos inseridos ou vinculados descritos [gerenciar Recursos de aplicativo (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>Usando recursos no XAML  
  O exemplo a seguir define uma <xref:System.Windows.Media.SolidColorBrush> como um recurso no elemento raiz de uma página. O exemplo, em seguida, faz referência ao recurso e o usa para definir as propriedades de vários elementos filho, incluindo uma <xref:System.Windows.Shapes.Ellipse>, um <xref:System.Windows.Controls.TextBlock>e um <xref:System.Windows.Controls.Button>.  
@@ -129,7 +128,7 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
 -   A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Se a propriedade deve ser suportada por um <xref:System.Windows.DependencyProperty>.  
   
--   A referência é para um valor em uma <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+-   A referência é para um valor dentro de um <xref:System.Windows.Style><xref:System.Windows.Setter>.  
   
 -   A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.Freezable> que é fornecido como um valor de uma <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> propriedade, ou um <xref:System.Windows.Setter> valor.  
   
@@ -145,7 +144,7 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Esse estilo realmente tem uma chave: a chave implícita `typeof(` <xref:System.Windows.Controls.Button> `)`. Na marcação, você pode especificar uma <xref:System.Windows.Style.TargetType%2A> diretamente, como o tipo de nome (ou, opcionalmente, você pode usar [{... x: Type}](../../xaml-services/x-type-markup-extension.md) para retornar um <xref:System.Type>.  
+ Esse estilo realmente tem uma chave: a chave implícita `typeof(`<xref:System.Windows.Controls.Button>`)`. Na marcação, você pode especificar uma <xref:System.Windows.Style.TargetType%2A> diretamente, como o tipo de nome (ou, opcionalmente, você pode usar [{... x: Type}](../../xaml-services/x-type-markup-extension.md) para retornar um <xref:System.Type>.  
   
  Por meio dos mecanismos de estilo de tema padrão usados pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], esse estilo é aplicado como o estilo de tempo de execução de um <xref:System.Windows.Controls.Button> na página, mesmo que o <xref:System.Windows.Controls.Button> não tente especificar sua <xref:System.Windows.FrameworkElement.Style%2A> propriedade ou um recurso específico fazer referência ao estilo. O estilo definido na página é encontrado anteriormente na sequência de pesquisa que o estilo de dicionário de tema, usando a mesma chave que tem o estilo de dicionário de tema. Você poderá especificar `<Button>Hello</Button>` em qualquer lugar na página e o estilo definido com <xref:System.Windows.Style.TargetType%2A> de `Button` se aplica a esse botão. Se você quiser, você pode ainda explicitamente uma chave para o estilo com o mesmo valor de tipo que <xref:System.Windows.Style.TargetType%2A>, para maior clareza na sua marcação, mas isso é opcional.  
   
@@ -154,11 +153,12 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
  <xref:System.Windows.DataTemplate> também tem uma chave implícita. A chave implícita para um <xref:System.Windows.DataTemplate> é o <xref:System.Windows.DataTemplate.DataType%2A> valor da propriedade. <xref:System.Windows.DataTemplate.DataType%2A> também pode ser especificado como o nome do tipo em vez de usar explicitamente [{... x: Type} ](../../xaml-services/x-type-markup-extension.md). Para obter detalhes, consulte [visão geral de modelagem de dados](../data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.ResourceDictionary>
 - [Recursos do aplicativo](optimizing-performance-application-resources.md)
 - [Recursos e código](resources-and-code.md)
 - [Definir e referenciar um recurso](how-to-define-and-reference-a-resource.md)
-- [Visão geral do gerenciamento de aplicativos](../app-development/application-management-overview.md)
+- [Visão geral de gerenciamento do aplicativo](../app-development/application-management-overview.md)
 - [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md)
 - [Extensão de marcação StaticResource](staticresource-markup-extension.md)
 - [Extensão de marcação DynamicResource](dynamicresource-markup-extension.md)

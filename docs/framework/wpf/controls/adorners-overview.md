@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227685"
 ---
 # <a name="adorners-overview"></a>Visão geral de adornos
 Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado para fornecer dicas visuais para um usuário. Entre outros usos, adornos podem ser usados para adicionar alças funcionais a elementos ou para fornecer informações de estado sobre um controle.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Sobre adornos  
  Uma <xref:System.Windows.Documents.Adorner> é um personalizado <xref:System.Windows.FrameworkElement> que está associado a um <xref:System.Windows.UIElement>. Adornos são renderizados em um <xref:System.Windows.Documents.AdornerLayer>, que é uma superfície de renderização que sempre está acima do elemento adornado ou uma coleção de elementos adornados. Renderização de um adorno é independente da renderização do <xref:System.Windows.UIElement> que o adorno está associado. Um adorno geralmente é posicionado em relação ao elemento ao qual ele está vinculado, usando a origem de coordenada 2D padrão localizada no canto superior esquerdo do elemento adornado.  
@@ -33,7 +31,7 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
   
 -   Visualmente mascarar ou substituir parte ou todo um <xref:System.Windows.UIElement>.  
   
- O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece uma estrutura básica para o adorno de elementos visuais. A tabela a seguir lista os tipos primários usados ao adornar objetos e sua finalidade. A seguir, são apresentados vários exemplos de uso.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece uma estrutura básica para o adorno de elementos visuais. A tabela a seguir lista os tipos primários usados ao adornar objetos e sua finalidade. A seguir, são apresentados vários exemplos de uso.  
   
 |||  
 |-|-|  
@@ -102,8 +100,9 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [Visão geral de formas e desenho básico no WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [Pintando com imagens, desenhos e visuais](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Visão geral dos objetos de desenho](../graphics-multimedia/drawing-objects-overview.md)
-- [Tópicos de instruções](adorners-how-to-topics.md)
+- [Tópicos explicativos ](adorners-how-to-topics.md)

@@ -3,12 +3,12 @@ title: Tutorial Branches e loops – introdução ao C#
 description: Neste tutorial sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677780"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920942"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
@@ -249,11 +249,11 @@ Tente você mesmo. Depois verifique como você fez. Você deve obter 63 como res
 
 Você concluiu o tutorial "branches e loops".
 
-Continue com o tutorial [Interpolação de cadeias de caracteres](interpolated-strings-local.md) em seu próprio ambiente de desenvolvimento.
+Continue com o tutorial [Matrizes e coleções](arrays-and-collections.md) em seu próprio ambiente de desenvolvimento.
 
 Saiba mais sobre esses conceitos nestes tópicos:
 
-- [Instrução If e else](../../language-reference/keywords/if-else.md)
+- [Instrução if e else](../../language-reference/keywords/if-else.md)
 - [Instrução while](../../language-reference/keywords/while.md)
-- [Instrução Do](../../language-reference/keywords/do.md)
+- [Instrução do](../../language-reference/keywords/do.md)
 - [Instrução for](../../language-reference/keywords/for.md)
