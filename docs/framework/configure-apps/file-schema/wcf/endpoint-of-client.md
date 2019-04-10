@@ -2,12 +2,12 @@
 title: <endpoint> De <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231195"
 ---
 # <a name="endpoint-of-client"></a>\<ponto de extremidade > do \<cliente >
 Especifica o contrato, associação e propriedades de endereço do ponto de extremidade de canal, que é usado pelos clientes para se conectar aos pontos de extremidade de serviço no servidor.  
@@ -72,6 +72,7 @@ Especifica o contrato, associação e propriedades de endereço do ponto de extr
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>

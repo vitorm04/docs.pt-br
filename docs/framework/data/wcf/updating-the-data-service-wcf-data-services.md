@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231286"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Atualizando o serviço de dados (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são rastreados, usando o <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla as alterações para entidades que relatam usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastrear entidades adicionadas e excluídas e também as alterações feitas aos valores de propriedade ou relações entre instâncias de entidade. Essas alterações controladas são enviadas para o serviço de dados como operações baseadas em REST, quando você chama o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método.  
@@ -94,9 +94,10 @@ Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] b
  As alterações são rastreadas no <xref:System.Data.Services.Client.DataServiceContext> da instância, mas não são enviadas para o servidor imediatamente. Depois que você tiver concluído as alterações necessárias para uma atividade especificada, chame <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> para enviar todas as alterações ao serviço de dados. Para obter mais informações, consulte [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Você também pode salvar alterações de forma assíncrona usando o <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> e <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> métodos. Para obter mais informações, consulte [operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [Operações de envio em lote](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
 - [Materialização de objetos](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+- [Gerenciar o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)

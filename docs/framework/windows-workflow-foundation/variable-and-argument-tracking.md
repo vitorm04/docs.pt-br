@@ -2,12 +2,12 @@
 title: Rastreamento de variável e argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231013"
 ---
 # <a name="variable-and-argument-tracking"></a>Rastreamento de variável e argumento
 Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair dados. Isso fornece um contexto extra para acessar uma execução de postagem de registro de rastreamento. Em [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], você pode extrair qualquer variável ou argumento visível no escopo de qualquer atividade em um fluxo de trabalho usando o rastreamento. Controlando os perfis facilitam extrair dados.  
@@ -47,5 +47,6 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
 3.  Para participantes personalizados de rastreamento certifique-se de que o código de WF não divulgue informações sigilosas que é armazenada em variáveis ou nos argumentos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)

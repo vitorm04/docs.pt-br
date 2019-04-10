@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231117"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Entender como e quando ocorrem os cálculos de layout é essencial para a criação de interfaces do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -149,6 +149,7 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
  Entender como os elementos são medidos e organizados é o primeiro passo para entender o layout. Para obter mais informações sobre como as disponíveis <xref:System.Windows.Controls.Panel> elementos, consulte [visão geral de painéis](../controls/panels-overview.md). Para compreender melhor as várias propriedades de posicionamento que podem afetar o layout, consulte [Visão geral de alinhamento, margens e preenchimento](alignment-margins-and-padding-overview.md). Para obter um exemplo de um personalizado <xref:System.Windows.Controls.Panel> elemento, consulte [Custom Panel Sample Radial](https://go.microsoft.com/fwlink/?LinkID=159982). Quando você estiver pronto para juntar tudo em um aplicativo leve, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [Visão geral de painéis](../controls/panels-overview.md)

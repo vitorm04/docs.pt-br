@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231273"
 ---
 # <a name="one-way-services"></a>Serviços unidirecionais
 O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método. Com uma operação unidirecional, apenas uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem faz o remetente espera um.  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  É recomendável, em vez disso, que você examine os vários controles no serviço, bem como no cliente e, em seguida, testar seus cenários de aplicativo para determinar a melhor configuração em ambos os lados. Por exemplo, se o uso de sessões está bloqueando o processamento de mensagens em seu serviço, você pode definir as <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade para <xref:System.ServiceModel.InstanceContextMode.PerCall> para que cada mensagem pode ser processada por uma instância de serviço diferente e definir o <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> para <xref:System.ServiceModel.ConcurrencyMode.Multiple> para permitir que mais de um thread enviar mensagens por vez. Outra abordagem é aumentar as cotas de leitura das associações de serviço e cliente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Unidirecional](../../../../docs/framework/wcf/samples/one-way.md)

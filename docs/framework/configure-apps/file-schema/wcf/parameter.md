@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230792"
 ---
 # <a name="parameter"></a>\<parameter>
 Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.  
@@ -60,7 +60,8 @@ Especifica o parâmetro genérico quando um tipo declarado é um tipo genérico.
  Este elemento de configuração não pode ter os dois atributos ao mesmo tempo. Se ambos os atributos são definidos, um <xref:System.Configuration.ConfigurationErrorsException> ocorre.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

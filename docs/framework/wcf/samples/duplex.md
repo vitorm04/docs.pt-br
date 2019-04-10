@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 1135cf211c3a858f495cd1424d3a28f3a6c37f7e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: c03398e897bae16dbe90ed2ce00b8412f47f0549
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230818"
 ---
 # <a name="duplex"></a>Duplex
 O exemplo de Duplex demonstra como definir e implementar um contrato duplex. Comunicação duplex ocorre quando um cliente estabelece uma sessão com um serviço e fornece o serviço de um canal no qual o serviço pode enviar mensagens de volta ao cliente. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). Um contrato duplex é definido como um par de interfaces — uma interface principal do cliente para o serviço e uma interface de retorno de chamada do serviço ao cliente. Neste exemplo, o `ICalculatorDuplex` interface permite que o cliente a executar operações matemáticas, calculando o resultado em uma sessão. O serviço retorna resultados sobre o `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens sendo enviadas entre o cliente e o serviço.  
@@ -165,7 +165,7 @@ client.Close();
   
 1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição de C#, C++ ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição de c#, C++ ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -193,4 +193,3 @@ client.Close();
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
-  
