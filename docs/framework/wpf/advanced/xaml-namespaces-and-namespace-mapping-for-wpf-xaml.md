@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301029"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Namespaces XAML e mapeamento de namespace para XAML WPF
 Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF. Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF e carregamento de assembly  
  O contexto do esquema XAML para WPF integra-se com o modelo de aplicativo WPF, que por sua vez, usa o conceito definido pelo CLR de <xref:System.AppDomain>. A sequência a seguir descreve como o contexto de esquema XAML interpreta como carregar assemblies ou localizar tipos em tempo de execução ou tempo de design, com base no uso do WPF do <xref:System.AppDomain> e outros fatores.  
   
-1.  Iterar por meio de <xref:System.AppDomain>, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, desde o último assembly carregado.  
+1. Iterar por meio de <xref:System.AppDomain>, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, desde o último assembly carregado.  
   
-2.  Se o nome for qualificado, chame <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> no nome qualificado.  
+2. Se o nome for qualificado, chame <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> no nome qualificado.  
   
-3.  Se o nome curto + token de chave pública de um nome qualificado corresponder ao assembly do qual a marcação foi carregada, retorne esse assembly.  
+3. Se o nome curto + token de chave pública de um nome qualificado corresponder ao assembly do qual a marcação foi carregada, retorne esse assembly.  
   
-4.  Use o nome curto + token de chave pública para chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Use o nome curto + token de chave pública para chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Se o nome não for qualificado, chame <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Se o nome não for qualificado, chame <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  O XAML livre não usa a etapa 3. Não há nenhum assembly do qual ele foi carregado.  
   

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303083"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Como: Atribuir uma matriz a outra matriz (Visual Basic)
 Como as matrizes são objetos, você pode usá-los em instruções de atribuição como outros tipos de objeto. Uma variável de matriz contém um ponteiro para os dados que constituem os elementos da matriz e as informações de classificação e o comprimento e uma atribuição copia somente esse ponteiro.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Para atribuir uma matriz a outra matriz  
   
-1.  Certifique-se de que as duas matrizes têm a mesma classificação (número de dimensões) e tipos de dados do elemento compatível.  
+1. Certifique-se de que as duas matrizes têm a mesma classificação (número de dimensões) e tipos de dados do elemento compatível.  
   
-2.  Use uma instrução de atribuição padrão para atribuir a matriz de origem para a matriz de destino. Não siga o nome da matriz com parênteses.  
+2. Use uma instrução de atribuição padrão para atribuir a matriz de origem para a matriz de destino. Não siga o nome da matriz com parênteses.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -47,4 +47,4 @@ Como as matrizes são objetos, você pode usá-los em instruções de atribuiç�
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Conversões de Matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Conversões de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

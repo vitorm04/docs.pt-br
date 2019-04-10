@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084018"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306179"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Como: Adicionar botões a um controle ToolBar usando o designer
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "59084018"
   
 ### <a name="to-add-buttons-at-design-time"></a>Adicionar botões no tempo de design  
   
-1.  Selecione o <xref:System.Windows.Forms.ToolBar> controle.  
+1. Selecione o <xref:System.Windows.Forms.ToolBar> controle.  
   
-2.  No **propriedades** janela, clique no <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriedade para selecioná-lo e clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) para abrir o **Editor de coleção ToolBarButton**.  
+2. No **propriedades** janela, clique no <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriedade para selecioná-lo e clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) para abrir o **Editor de coleção ToolBarButton**.  
   
-3.  Use o **Add** e **remover** botões Adicionar e remover botões do <xref:System.Windows.Forms.ToolBar> controle.  
+3. Use o **Add** e **remover** botões Adicionar e remover botões do <xref:System.Windows.Forms.ToolBar> controle.  
   
-4.  Configure as propriedades dos botões individuais na janela **Propriedades** que aparece no painel à direita do editor. A tabela a seguir mostra algumas propriedades importantes a considerar.  
+4. Configure as propriedades dos botões individuais na janela **Propriedades** que aparece no painel à direita do editor. A tabela a seguir mostra algumas propriedades importantes a considerar.  
   
     |Propriedade|Descrição|  
     |--------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "59084018"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|A cadeia de caracteres de texto exibida pelo botão.|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|O texto que aparece como uma ToolTip para o botão.|  
   
-5.  Clique em **OK** para fechar a caixa de diálogo e criar os painéis que você especificou.  
+5. Clique em **OK** para fechar a caixa de diálogo e criar os painéis que você especificou.  
   
 ## <a name="see-also"></a>Consulte também
 

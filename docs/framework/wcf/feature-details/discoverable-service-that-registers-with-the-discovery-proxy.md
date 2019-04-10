@@ -2,36 +2,36 @@
 title: 'Como: implementar um serviço de descoberta que registra usando o proxy de descoberta'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302173"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como: implementar um serviço de descoberta que registra usando o proxy de descoberta
 Este tópico é o segundo de quatro tópicos que discute como implementar um proxy de descoberta. No tópico anterior, [como: Implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), você implementou um proxy de descoberta. Neste tópico, você cria um serviço WCF que envia mensagens de comunicado (`Hello` e `Bye`) para o proxy de descoberta, fazendo com que ele se registrar e cancelar seu registro com o proxy de descoberta.
 
 ### <a name="to-define-the-service-contract"></a>Para definir o contrato de serviço
 
-1.  Adicionar um novo projeto de aplicativo de console para o `DiscoveryProxyExample` solução chamada `Service`.
+1. Adicionar um novo projeto de aplicativo de console para o `DiscoveryProxyExample` solução chamada `Service`.
 
-2.  Adicione referências aos assemblies a seguir:
+2. Adicione referências aos assemblies a seguir:
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  Adicione uma nova classe ao projeto chamado `CalculatorService`.
+3. Adicione uma nova classe ao projeto chamado `CalculatorService`.
 
-4.  Adicione as seguintes instruções using.
+4. Adicione as seguintes instruções using.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  Dentro do CalculatorService.cs, defina o contrato de serviço.
+5. Dentro do CalculatorService.cs, defina o contrato de serviço.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ Este tópico é o segundo de quatro tópicos que discute como implementar um pro
     }
     ```
 
-6.  Também dentro de CalculatorService.cs, implemente o contrato de serviço.
+6. Também dentro de CalculatorService.cs, implemente o contrato de serviço.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ Este tópico é o segundo de quatro tópicos que discute como implementar um pro
 
 ### <a name="to-host-the-service"></a>Para hospedar o serviço
 
-1.  Abra o arquivo Program.cs que foi gerado quando você criou o projeto.
+1. Abra o arquivo Program.cs que foi gerado quando você criou o projeto.
 
-2.  Adicione as seguintes instruções using.
+2. Adicione as seguintes instruções using.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ Este tópico é o segundo de quatro tópicos que discute como implementar um pro
     using System.ServiceModel.Discovery;
     ```
 
-3.  Dentro de `Main()` método, adicione o seguinte código:
+3. Dentro de `Main()` método, adicione o seguinte código:
 
     ```csharp
     // Define the base address of the service

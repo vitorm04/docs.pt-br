@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220481"
 ---
 # <a name="resources-in-net-apps"></a>Recursos em Aplicativos .NET
 Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um recurso é qualquer dado não executável que está implantado de modo lógico com um aplicativo. Um recurso pode ser exibido em um aplicativo como mensagens de erro ou como parte da interface do usuário. Os recursos podem conter dados em vários formatos, incluindo cadeias de caracteres, imagens e objetos persistentes. (Para gravar objetos persistentes em um arquivo de recurso, os objetos devem ser serializáveis.) Armazenar dados em um arquivo de recurso permite alterar os dados sem recompilar todo o aplicativo. Também é possível armazenar dados em um único local e eliminar a necessidade de depender de dados embutidos em código que são armazenados em vários locais.  
@@ -62,10 +62,11 @@ Você também pode localizar os recursos do seu aplicativo para culturas especí
 -   A classe <xref:System.Resources.ResXResourceSet>, que permite recuperar todos os itens em um arquivo de recurso XML na memória.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Fundamentos do aplicativo](../../../docs/standard/application-essentials.md)
-- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Criação de arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Criação de assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Recuperando recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

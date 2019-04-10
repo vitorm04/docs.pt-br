@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147544"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304396"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitando vários conjuntos de resultados ativos
 O Multiple Active Result Sets (MARS) é um recurso que funciona com o SQL Server para permitir a execução de vários lotes em uma única conexão. Quando MARS está ativado para uso com o SQL Server, cada objeto de comando usado adiciona uma sessão à conexão.  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Há três opções para tratar esse cenário:  
   
-1.  Inicie a transação após o leitor ter sido criado, de modo que não faça parte da transação. Cada atualização em seguida se torna sua própria transação.  
+1. Inicie a transação após o leitor ter sido criado, de modo que não faça parte da transação. Cada atualização em seguida se torna sua própria transação.  
   
-2.  Confirme todo o trabalho depois que o leitor for fechado. Isso tem o potencial para um lote significativo de atualizações.  
+2. Confirme todo o trabalho depois que o leitor for fechado. Isso tem o potencial para um lote significativo de atualizações.  
   
-3.  Não use MARS; em vez disso, use uma conexão separada para cada objeto de comando, da mesma forma que você faria antes do MARS.  
+3. Não use MARS; em vez disso, use uma conexão separada para cada objeto de comando, da mesma forma que você faria antes do MARS.  
   
 ### <a name="detecting-mars-support"></a>Detectando o suporte de MARS  
  Um aplicativo pode verificar o suporte de MARS lendo o valor `SqlConnection.ServerVersion`. O número principal deve ser 9 para o SQL Server 2005 e 10 para o SQL Server 2008.  

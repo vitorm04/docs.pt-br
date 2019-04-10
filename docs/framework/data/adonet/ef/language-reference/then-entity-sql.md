@@ -2,12 +2,12 @@
 title: ENTÃO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: d5f9f2b8c9d7397cbcd91fa52a95544fc66e4dce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8d2d7f9a3a1d6ff9f25db3f19bf8f39781469f9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184569"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305618"
 ---
 # <a name="then-entity-sql"></a>ENTÃO (Entity SQL)
 O resultado de QUANDO cláusula quando avaliar a `true`.  
@@ -33,9 +33,9 @@ WHEN when_expression THEN then_expression
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa a expressão de CASOS para avaliar um conjunto de expressões de `Boolean` . A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   

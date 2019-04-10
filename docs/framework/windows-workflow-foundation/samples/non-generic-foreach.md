@@ -2,17 +2,17 @@
 title: ForEach não genéricos
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303538"
 ---
 # <a name="non-generic-foreach"></a>ForEach não genéricos
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] envia na caixa de ferramentas um conjunto de atividades de fluxo de controle, incluindo <xref:System.Activities.Statements.ForEach%601>, que permita iterar através das coleções de <xref:System.Collections.Generic.IEnumerable%601> .  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] é fornecido na caixa de ferramentas, um conjunto de atividades de fluxo de controle, incluindo <xref:System.Activities.Statements.ForEach%601>, que permite iteração por meio de <xref:System.Collections.Generic.IEnumerable%601> coleções.  
   
- <xref:System.Activities.Statements.ForEach%601> requer sua propriedade de <xref:System.Activities.Statements.ForEach%601.Values%2A> ser do tipo <xref:System.Collections.Generic.IEnumerable%601>. Isso evita que usuários de iterar sobre as estruturas de dados que implementam a interface de <xref:System.Collections.Generic.IEnumerable%601> (por exemplo, <xref:System.Collections.ArrayList>). A versão não genérico de <xref:System.Activities.Statements.ForEach%601> supera esse requisito, custas de mais complexidade de tempo de execução para garantir a compatibilidade dos tipos de valores na coleção.  
+ <xref:System.Activities.Statements.ForEach%601> requer seu <xref:System.Activities.Statements.ForEach%601.Values%2A> propriedade para ser do tipo <xref:System.Collections.Generic.IEnumerable%601>. Isso evita que usuários de iterar sobre as estruturas de dados que implementam a interface de <xref:System.Collections.Generic.IEnumerable%601> (por exemplo, <xref:System.Collections.ArrayList>). A versão não genérico de <xref:System.Activities.Statements.ForEach%601> supera esse requisito, custas de mais complexidade de tempo de execução para garantir a compatibilidade dos tipos de valores na coleção.  
   
  Este exemplo mostra como implementar uma atividade não genérico de <xref:System.Activities.Statements.ForEach%601> e seu designer. Esta atividade pode ser usada para percorrer <xref:System.Collections.ArrayList>.  
   
@@ -69,7 +69,7 @@ Activity sampleUsage =
   
 |Condição|Mensagem|Severidade|Tipo de exceção|  
 |---------------|-------------|--------------|--------------------|  
-|Os valores são `null`|O valor para valores de um argumento necessário de atividade “não foi fornecido.|Erro|<xref:System.InvalidOperationException>|  
+|Valores é `null`|O valor para valores de um argumento necessário de atividade “não foi fornecido.|Erro|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Designer ForEach  
  O designer de atividade para o exemplo é semelhante a aparência ao designer fornecido para atividades interno de <xref:System.Activities.Statements.ForEach%601> . O designer aparece na caixa de ferramentas do **amostras**, **atividades não genéricas** categoria. O designer é chamado **ForEachWithBodyFactory** na caixa de ferramentas, porque a atividade expõe uma <xref:System.Activities.Presentation.IActivityTemplateFactory> na caixa de ferramentas, que cria a atividade com configurada adequadamente <xref:System.Activities.ActivityAction>.  
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>Para executar este exemplo  
   
-1.  Defina o projeto de sua escolha como o projeto inicialização de solução:  
+1. Defina o projeto de sua escolha como o projeto inicialização de solução:  
   
     1.  **CodeTestClient** mostra como usar a atividade usando código.  
   
     2.  **DesignerTestClient** mostra como usar a atividade dentro do designer.  
   
-2.  Compile e execute o projeto.  
+2. Compile e execute o projeto.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desserializar um objeto'
+title: 'Como: desserializar um objeto'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298130"
 ---
-# <a name="how-to-deserialize-an-object"></a>Como: Desserializar um objeto
+# <a name="how-to-deserialize-an-object"></a>Como: desserializar um objeto
 Quando você desserializar um objeto, o formato do transporte determina se você criará um fluxo ou objeto de arquivo. Após o formato do transporte ser determinado, você poderá chamar os métodos <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, conforme o necessário.  
   
 ### <a name="to-deserialize-an-object"></a>Para desserializar um objeto  
   
-1.  Construa um <xref:System.Xml.Serialization.XmlSerializer> usando o tipo do objeto para desserializar.  
+1. Construa um <xref:System.Xml.Serialization.XmlSerializer> usando o tipo do objeto para desserializar.  
   
-2.  Chame o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> para gerar uma réplica do objeto. Ao desserializar, você deverá converter o objeto retornado para o tipo do original, conforme mostrado no exemplo a seguir, o que desserializa o objeto em um arquivo (embora também possa ser desserializado em um fluxo).  
+2. Chame o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> para gerar uma réplica do objeto. Ao desserializar, você deverá converter o objeto retornado para o tipo do original, conforme mostrado no exemplo a seguir, o que desserializa o objeto em um arquivo (embora também possa ser desserializado em um fluxo).  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -54,4 +54,4 @@ Quando você desserializar um objeto, o formato do transporte determina se você
 ## <a name="see-also"></a>Consulte também
 
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Como: serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)

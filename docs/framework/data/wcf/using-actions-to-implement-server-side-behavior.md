@@ -2,12 +2,12 @@
 title: Usando as ações implementar o comportamento do lado do servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294932"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usando as ações implementar o comportamento do lado do servidor
 
@@ -40,11 +40,11 @@ As ações OData fornecem uma maneira de implementar um comportamento que age me
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Essa interface oferece um modo de executar uma ação do WCF Data Service. Ao implementar IDataServiceInvokable, você é responsável por 3 coisas:  
   
-1.  Capturar e potencialmente fazer o marshaling dos parâmetros  
+1. Capturar e potencialmente fazer o marshaling dos parâmetros  
   
-2.  Distribuir os parâmetros para o código que realmente implementa a Ação quando Invoke() é chamado  
+2. Distribuir os parâmetros para o código que realmente implementa a Ação quando Invoke() é chamado  
   
-3.  Armazenar os resultados de Invoke() para que eles possam ser recuperados usando GetResult()  
+3. Armazenar os resultados de Invoke() para que eles possam ser recuperados usando GetResult()  
   
  Os parâmetros podem ser passados como tokens. Isso ocorre porque é possível escrever um provedor de serviços de dados que funcione com os tokens que representam recursos. Se for esse o caso, você precisará converter (realizar marshaling) esses tokens em recursos reais antes de distribuir para a ação real. Depois que tiver sido realizado o marshaling do parâmetro, ele deverá estar em um estado editável de forma que as alterações ao recurso que ocorram quando a ação é invocada sejam salvas e gravadas em disco.  
   

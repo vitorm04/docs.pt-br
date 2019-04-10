@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 7900b010c460fd112acbe0ef35e6945939377e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304279"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Como: Determinar qual painel no controle StatusBar do Windows Forms foi clicado
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "59116578"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Para determinar qual painel foi clicado  
   
-1.  No <xref:System.Windows.Forms.StatusBar.PanelClick> manipulador de eventos, use uma `Select Case` (no Visual Basic) ou `switch case` (Visual C# ou [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) instrução para determinar qual painel foi clicado examinando o índice do painel clicado nos argumentos do evento.  
+1. No <xref:System.Windows.Forms.StatusBar.PanelClick> manipulador de eventos, use uma `Select Case` (no Visual Basic) ou `switch case` (Visual C# ou [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) instrução para determinar qual painel foi clicado examinando o índice do painel clicado nos argumentos do evento.  
   
      O exemplo de código a seguir exige a presença, no formulário, de um <xref:System.Windows.Forms.StatusBar> controle, `StatusBar1`e dois <xref:System.Windows.Forms.StatusBarPanel> objetos `StatusBarPanel1` e `StatusBarPanel2`.  
   

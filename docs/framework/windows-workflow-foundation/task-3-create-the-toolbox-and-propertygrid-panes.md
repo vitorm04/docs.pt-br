@@ -2,12 +2,12 @@
 title: 'Tarefa 3: Criar os painéis de Caixa de ferramentas e PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305995"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Criar os painéis de Caixa de ferramentas e PropertyGrid
 Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGr
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Para criar a caixa de ferramentas e adicioná-la à grade  
   
-1.  Abra o projeto de HostingApplication você obteve seguindo o procedimento descrito em [tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md).  
+1. Abra o projeto de HostingApplication você obteve seguindo o procedimento descrito em [tarefa 2: Hospedar o Designer de fluxo de trabalho](task-2-host-the-workflow-designer.md).  
   
-2.  No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
+2. No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
   
-3.  Adicionar um `GetToolboxControl` método para o `MainWindow` classe que cria um <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adiciona um novo **caixa de ferramentas** categoria para o **caixa de ferramentas**e atribui o <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipos de atividade para essa categoria.  
+3. Adicionar um `GetToolboxControl` método para o `MainWindow` classe que cria um <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adiciona um novo **caixa de ferramentas** categoria para o **caixa de ferramentas**e atribui o <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipos de atividade para essa categoria.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGr
     }  
     ```  
   
-4.  Adicionar uma privada `AddToolbox` método para o `MainWindow` classe coloca o **caixa de ferramentas** na coluna esquerda na grade.  
+4. Adicionar uma privada `AddToolbox` método para o `MainWindow` classe coloca o **caixa de ferramentas** na coluna esquerda na grade.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGr
     }  
     ```  
   
-5.  Adicione uma chamada para o método de `AddToolBox` no construtor da classe de `MainWindow()` conforme mostrado no código a seguir.  
+5. Adicione uma chamada para o método de `AddToolBox` no construtor da classe de `MainWindow()` conforme mostrado no código a seguir.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGr
     }  
     ```  
   
-6.  Pressione F5 para compilar e executar sua solução. O **caixa de ferramentas** que contém o <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> atividades devem ser exibidas.  
+6. Pressione F5 para compilar e executar sua solução. O **caixa de ferramentas** que contém o <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> atividades devem ser exibidas.  
   
 ### <a name="to-create-the-propertygrid"></a>Para criar o PropertyGrid  
   
-1.  No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
+1. No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
   
-2.  Adicione a `AddPropertyInspector` método para o `MainWindow` classe para colocar o **PropertyGrid** painel na coluna mais à direita na grade.  
+2. Adicione a `AddPropertyInspector` método para o `MainWindow` classe para colocar o **PropertyGrid** painel na coluna mais à direita na grade.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGr
     }  
     ```  
   
-3.  Adicione uma chamada para o método de `AddPropertyInspector` no construtor da classe de `MainWindow()` conforme mostrado no código a seguir.  
+3. Adicione uma chamada para o método de `AddPropertyInspector` no construtor da classe de `MainWindow()` conforme mostrado no código a seguir.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGr
     }  
     ```  
   
-4.  Pressione F5 para compilar e executar a solução. O **caixa de ferramentas**, tela de design de fluxo de trabalho, e **PropertyGrid** painéis devem todos ser exibidos, e quando você arrasta um <xref:System.Activities.Statements.Assign> atividade ou um <xref:System.Activities.Statements.Sequence> atividade na tela de design, o grade de propriedades deve atualizar dependendo da atividade realçado.  
+4. Pressione F5 para compilar e executar a solução. O **caixa de ferramentas**, tela de design de fluxo de trabalho, e **PropertyGrid** painéis devem todos ser exibidos, e quando você arrasta um <xref:System.Activities.Statements.Assign> atividade ou um <xref:System.Activities.Statements.Sequence> atividade na tela de design, o grade de propriedades deve atualizar dependendo da atividade realçado.  
   
 ## <a name="example"></a>Exemplo  
  O arquivo de MainWindow.xaml.cs agora deve conter o código a seguir.  

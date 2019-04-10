@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294919"
 ---
 # <a name="white-space-processing-in-xaml"></a>Processamento de espaço em branco em XAML
 As regras da linguagem XAML de estado que o espaço em branco significativo devem ser processado por um [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementação do processador. Este tópico documenta essas regras da linguagem XAML. Ele também documenta o tratamento de espaço em branco que é definido pela [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementação do processador XAML e o gravador XAML para serialização.  
@@ -25,15 +25,15 @@ As regras da linguagem XAML de estado que o espaço em branco significativo deve
 ## <a name="white-space-normalization"></a>Normalização de espaço em branco  
  Por padrão a normalização de espaço em branco a seguir ocorre quando um [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processos de processador um [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] arquivo:  
   
-1.  Caracteres de avanço de linha entre caracteres do Leste Asiático são removidos. Consulte a seção "Caracteres do Leste Asiático" mais adiante neste tópico para obter uma definição do termo.  
+1. Caracteres de avanço de linha entre caracteres do Leste Asiático são removidos. Consulte a seção "Caracteres do Leste Asiático" mais adiante neste tópico para obter uma definição do termo.  
   
-2.  Todos os caracteres de espaço em branco (espaço, avanço de linha, guia) são convertidos em espaços.  
+2. Todos os caracteres de espaço em branco (espaço, avanço de linha, guia) são convertidos em espaços.  
   
-3.  Todos os espaços consecutivos são excluídos e substituídos por um espaço.  
+3. Todos os espaços consecutivos são excluídos e substituídos por um espaço.  
   
-4.  Um espaço imediatamente após a marca de início é excluído.  
+4. Um espaço imediatamente após a marca de início é excluído.  
   
-5.  Um espaço imediatamente antes da marca de fim é excluído.  
+5. Um espaço imediatamente antes da marca de fim é excluído.  
   
  "Default" corresponde ao estado indicado pelo valor de padrão de [XML: space](xml-space-handling-in-xaml.md) atributo.  
   

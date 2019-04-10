@@ -10,43 +10,43 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199941"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301146"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Como: Validar e mesclar PrintTickets
 O [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema de impressão](https://go.microsoft.com/fwlink/?LinkId=186397) inclui flexíveis e extensíveis <xref:System.Printing.PrintCapabilities> e <xref:System.Printing.PrintTicket> elementos. O primeiro lista os recursos de um dispositivo de impressão e o último especifica como o dispositivo deve usar esses recursos em relação a uma sequência específica de documentos, a um documento individual ou a uma página individual.  
   
  Uma sequência de tarefas comuns de um aplicativo que dá suporte à impressão seria o seguinte.  
   
-1.  Determinar os recursos da impressora.  
+1. Determinar os recursos da impressora.  
   
-2.  Configurar um <xref:System.Printing.PrintTicket> para usar esses recursos.  
+2. Configurar um <xref:System.Printing.PrintTicket> para usar esses recursos.  
   
-3.  Validar o <xref:System.Printing.PrintTicket>.  
+3. Validar o <xref:System.Printing.PrintTicket>.  
   
  Este artigo mostra como fazer isso.  
   
 ## <a name="example"></a>Exemplo  
  No exemplo simples abaixo, interessa-nos apenas se a impressora oferece impressão em frente e verso – a duplexação. As principais etapas são as seguintes.  
   
-1.  Obter um <xref:System.Printing.PrintCapabilities> do objeto com o <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> método.  
+1. Obter um <xref:System.Printing.PrintCapabilities> do objeto com o <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> método.  
   
-2.  Teste a presença da capacidade desejada. No exemplo a seguir, podemos testar a <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> propriedade do <xref:System.Printing.PrintCapabilities> de objeto para a presença da funcionalidade de impressão nos dois lados de uma folha de papel com a ativação"página" no lado longo da folha. Uma vez que <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> é uma coleção, usamos o `Contains` método <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
+2. Teste a presença da capacidade desejada. No exemplo a seguir, podemos testar a <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> propriedade do <xref:System.Printing.PrintCapabilities> de objeto para a presença da funcionalidade de impressão nos dois lados de uma folha de papel com a ativação"página" no lado longo da folha. Uma vez que <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> é uma coleção, usamos o `Contains` método <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
     > [!NOTE]
     >  Essa etapa não é estritamente necessária. O <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método usado abaixo verificará cada solicitação no <xref:System.Printing.PrintTicket> contra os recursos da impressora. Se o recurso solicitado não é suportado pela impressora, o driver de impressora substituirá uma solicitação alternativa no <xref:System.Printing.PrintTicket> retornado pelo método.  
   
-3.  Se a impressora der suporte à duplexação, o código de exemplo cria um <xref:System.Printing.PrintTicket> que solicitará a duplexação. Mas o aplicativo não especifica todas as possíveis configurações de impressora disponíveis no <xref:System.Printing.PrintTicket> elemento. Isso seria um desperdício de tempo do programa e do programador. Em vez disso, o código define apenas a solicitação de duplexação e, em seguida, mescla este <xref:System.Printing.PrintTicket> com um existente, totalmente configurado e validado, <xref:System.Printing.PrintTicket>, nesse caso, o padrão do usuário <xref:System.Printing.PrintTicket>.  
+3. Se a impressora der suporte à duplexação, o código de exemplo cria um <xref:System.Printing.PrintTicket> que solicitará a duplexação. Mas o aplicativo não especifica todas as possíveis configurações de impressora disponíveis no <xref:System.Printing.PrintTicket> elemento. Isso seria um desperdício de tempo do programa e do programador. Em vez disso, o código define apenas a solicitação de duplexação e, em seguida, mescla este <xref:System.Printing.PrintTicket> com um existente, totalmente configurado e validado, <xref:System.Printing.PrintTicket>, nesse caso, o padrão do usuário <xref:System.Printing.PrintTicket>.  
   
-4.  Da mesma forma, o exemplo chama o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para mesclar o novo mínimo, <xref:System.Printing.PrintTicket> com o padrão do usuário <xref:System.Printing.PrintTicket>. Isso retorna um <xref:System.Printing.ValidationResult> que inclui o novo <xref:System.Printing.PrintTicket> como uma de suas propriedades.  
+4. Da mesma forma, o exemplo chama o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para mesclar o novo mínimo, <xref:System.Printing.PrintTicket> com o padrão do usuário <xref:System.Printing.PrintTicket>. Isso retorna um <xref:System.Printing.ValidationResult> que inclui o novo <xref:System.Printing.PrintTicket> como uma de suas propriedades.  
   
-5.  O exemplo, em seguida, testa se o novo <xref:System.Printing.PrintTicket> solicita a duplexação. Se isso acontecer, em seguida, o exemplo o tornará o novo tíquete de impressão padrão do usuário. Se a etapa 2 acima tivesse sido deixada de fora e a impressora não oferecesse suporte à duplexação no lado longo da folha, o teste teria resultado em `false`. (Consulte a observação acima).  
+5. O exemplo, em seguida, testa se o novo <xref:System.Printing.PrintTicket> solicita a duplexação. Se isso acontecer, em seguida, o exemplo o tornará o novo tíquete de impressão padrão do usuário. Se a etapa 2 acima tivesse sido deixada de fora e a impressora não oferecesse suporte à duplexação no lado longo da folha, o teste teria resultado em `false`. (Consulte a observação acima).  
   
-6.  A última etapa significativa é confirmar a alteração para o <xref:System.Printing.PrintQueue.UserPrintTicket%2A> propriedade do <xref:System.Printing.PrintQueue> com o <xref:System.Printing.PrintQueue.Commit%2A> método.  
+6. A última etapa significativa é confirmar a alteração para o <xref:System.Printing.PrintQueue.UserPrintTicket%2A> propriedade do <xref:System.Printing.PrintQueue> com o <xref:System.Printing.PrintQueue.Commit%2A> método.  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  

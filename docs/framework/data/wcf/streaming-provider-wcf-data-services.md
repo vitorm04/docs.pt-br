@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298871"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Porque o carregamento e a serialização de dados binários grandes dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ele pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -28,15 +28,15 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
  A configuração de um serviço de dados para oferecer suporte ao streaming de dados binários requer as seguintes etapas:  
   
-1.  Atribua uma ou mais entidades no modelo de dados como uma entrada de link de mídia. Essas entidades não devem incluir os dados binários a serem transmitidos. Todas as propriedades binárias de uma entidade sempre são retornadas na entrada como binário codificado na base 64.  
+1. Atribua uma ou mais entidades no modelo de dados como uma entrada de link de mídia. Essas entidades não devem incluir os dados binários a serem transmitidos. Todas as propriedades binárias de uma entidade sempre são retornadas na entrada como binário codificado na base 64.  
   
-2.  Implemente a interface T:System.Data.Services.Providers.IDataServiceStreamProvider.  
+2. Implemente a interface T:System.Data.Services.Providers.IDataServiceStreamProvider.  
   
-3.  Defina um serviço de dados que implemente a interface <xref:System.IServiceProvider>. O serviço de dados usa a implementação de <xref:System.IServiceProvider.GetService%2A> para acessar a implementação do provedor de dados de streaming. Esse método retorna a implementação de provedor de streaming apropriada.  
+3. Defina um serviço de dados que implemente a interface <xref:System.IServiceProvider>. O serviço de dados usa a implementação de <xref:System.IServiceProvider.GetService%2A> para acessar a implementação do provedor de dados de streaming. Esse método retorna a implementação de provedor de streaming apropriada.  
   
-4.  Ative fluxos de mensagem grandes na configuração de aplicativo Web.  
+4. Ative fluxos de mensagem grandes na configuração de aplicativo Web.  
   
-5.  Habilitar o acesso aos recursos binários no servidor ou em uma fonte de dados.  
+5. Habilitar o acesso aos recursos binários no servidor ou em uma fonte de dados.  
   
  Os exemplos neste tópico baseiam-se em uma amostra de streaming do serviço de fotos, que é abordado detalhadamente na postagem [série do provedor de Streaming dos serviços de dados: Implementando um provedor de Streaming (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). O código-fonte para este serviço de exemplo está disponível na [página de exemplo de serviço de dados de fotos de Streaming](https://go.microsoft.com/fwlink/?LinkID=198988) na Galeria de códigos do MSDN.  
   

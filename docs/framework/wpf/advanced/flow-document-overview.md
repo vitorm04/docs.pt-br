@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139601"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303486"
 ---
 # <a name="flow-document-overview"></a>Visão geral do documento de fluxo
 Os documentos dinâmicos são projetados para otimizar a exibição e legibilidade. Em vez de serem configurados para um layout predefinido, os documentos dinâmicos ajustam e refluem seu conteúdo com base em variáveis de tempo de execução como tamanho da janela, resolução do dispositivo e preferências opcionais do usuário. Além disso, os documentos dinâmicos oferecem recursos de documento avançados, como paginação e colunas. Este tópico fornece uma visão geral dos documentos dinâmicos e como criá-los.  
@@ -89,9 +89,9 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  Para fins de conteúdo dinâmico, há duas categorias importantes:  
   
-1.  **Classes derivadas de bloco**: Também chamado de "Elementos de conteúdo do bloco" ou simplesmente "elementos de bloco". Elementos que herdam de <xref:System.Windows.Documents.Block> pode ser usado para agrupar elementos sob um pai comum ou aplicar atributos comuns a um grupo.  
+1. **Classes derivadas de bloco**: Também chamado de "Elementos de conteúdo do bloco" ou simplesmente "elementos de bloco". Elementos que herdam de <xref:System.Windows.Documents.Block> pode ser usado para agrupar elementos sob um pai comum ou aplicar atributos comuns a um grupo.  
   
-2.  **Classes derivadas de embutidos**: Também chamado de "Elementos de conteúdo embutido" ou simplesmente "elementos de embutidos". Elementos que herdam de <xref:System.Windows.Documents.Inline> um estão contido dentro de um elemento de bloco ou outro elemento embutido. Elementos embutidos geralmente são usados como o contêiner direto do conteúdo que é renderizado na tela. Por exemplo, uma <xref:System.Windows.Documents.Paragraph> (elemento de bloco) pode conter um <xref:System.Windows.Documents.Run> (elemento embutido), mas o <xref:System.Windows.Documents.Run> , na verdade, contém o texto que é renderizado na tela.  
+2. **Classes derivadas de embutidos**: Também chamado de "Elementos de conteúdo embutido" ou simplesmente "elementos de embutidos". Elementos que herdam de <xref:System.Windows.Documents.Inline> um estão contido dentro de um elemento de bloco ou outro elemento embutido. Elementos embutidos geralmente são usados como o contêiner direto do conteúdo que é renderizado na tela. Por exemplo, uma <xref:System.Windows.Documents.Paragraph> (elemento de bloco) pode conter um <xref:System.Windows.Documents.Run> (elemento embutido), mas o <xref:System.Windows.Documents.Run> , na verdade, contém o texto que é renderizado na tela.  
   
  Cada classe nessas duas categorias é descrita resumidamente abaixo.  
   

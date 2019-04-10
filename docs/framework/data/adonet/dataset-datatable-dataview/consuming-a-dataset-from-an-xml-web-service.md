@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297768"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Consumir um DataSet de um serviço Web XML
 O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte para facilitar o transporte conveniente de dados pela Internet. O **DataSet** é "serializável" em que ele pode ser especificado como uma entrada ou saída do Web services XML sem qualquer codificação adicional é necessária para transmitir o conteúdo da **conjunto de dados** de um serviço Web XML para um cliente e vice-versa. O **DataSet** é convertido implicitamente em um fluxo XML usando o formato DiffGram, enviados pela rede e, em seguida, reconstruídos do fluxo XML como um **conjunto de dados** na extremidade receptora. Isso lhe oferece um método muito simples e flexível para transmitir e retornando dados relacionais usando serviços Web XML. Para obter mais informações sobre o formato DiffGram, consulte [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -22,7 +22,7 @@ O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte 
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Para criar um serviço Web XML que retorna e consome um conjunto de dados  
   
-1.  Crie o serviço Web XML.  
+1. Crie o serviço Web XML.  
   
      No exemplo, um serviço Web XML é criado que retorna dados, neste caso, uma lista de clientes da **Northwind** de banco de dados e recebe um **conjunto de dados** com as atualizações para os dados que o serviço Web XML resolve volta para a fonte de dados original.  
   
@@ -159,7 +159,7 @@ O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte 
   
      Em um cenário típico, o **UpdateCustomers** método seria escrito para detectar violações de simultaneidade otimista. Para simplificar, o exemplo não inclui isso. Para obter mais informações sobre a simultaneidade otimista, consulte [simultaneidade otimista](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
   
-2.  Crie um proxy do serviço Web XML.  
+2. Crie um proxy do serviço Web XML.  
   
      Os clientes do serviço Web XML exigem um proxy SOAP para consumir os métodos expostos. É possível fazer com que o Visual Studio gere esse proxy para você. Definindo uma referência Web para um serviço Web existente no Visual Studio, todo o comportamento descrito nesta etapa ocorre de forma transparente. Se você deseja criar a classe de proxy por conta própria, continue com esta discussão. Na maioria das circunstâncias, no entanto, usando o Visual Studio para criar a classe de proxy para o aplicativo cliente é suficiente.  
   
@@ -187,7 +187,7 @@ O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte 
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  Crie um cliente de serviço Web XML.  
+3. Crie um cliente de serviço Web XML.  
   
      Se você quiser que o Visual Studio gerar a classe de proxy do Web service para você, basta criar o projeto de cliente e, na janela Gerenciador de soluções, clique com botão direito no projeto, clique em **Add Web Reference**e selecione o serviço Web do a lista de serviços Web disponíveis (Isso pode exigir fornecendo o endereço do ponto de extremidade de serviço da Web, se o serviço Web não está disponível dentro da solução atual ou no computador atual.) Se você criar o proxy do serviço Web XML por conta própria (conforme descrito na etapa anterior), você pode importá-lo para seu código de cliente e consumir os métodos de serviço Web XML. O código de exemplo a seguir importa a biblioteca de proxy, chamadas **GetCustomers** obter uma lista de clientes, adiciona um novo cliente e, em seguida, retorna um **DataSet** com as atualizações para **UpdateCustomers** .  
   

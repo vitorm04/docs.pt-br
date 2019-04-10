@@ -2,19 +2,19 @@
 title: 'Como: configurar serviços do WCF para interoperar com clientes WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303889"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Como: configurar serviços do WCF para interoperar com clientes WSE 3.0
 Serviços Windows Communication Foundation (WCF) são compatíveis com o nível de transmissão com Web Services aprimoramentos 3.0 para clientes do Microsoft .NET (WSE) quando os serviços do WCF são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>Para habilitar um serviço WCF interoperar com clientes WSE 3.0  
   
-1.  Defina uma ligação personalizada para o serviço WCF.  
+1. Defina uma ligação personalizada para o serviço WCF.  
   
      Para especificar que a versão de agosto de 2004 da especificação WS-Addressing é usada para codificação de mensagens, uma ligação personalizada deve ser criada.  
   
@@ -44,7 +44,7 @@ Serviços Windows Communication Foundation (WCF) são compatíveis com o nível 
         > [!NOTE]
         >  Quando você estiver usando o SOAP 1.2, defina as `messageVersion` atributo <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
-2.  Especifique que o serviço usa a associação personalizada.  
+2. Especifique que o serviço usa a associação personalizada.  
   
     1.  Defina a `binding` atributo do [ \<ponto de extremidade >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento a ser `customBinding`.  
   

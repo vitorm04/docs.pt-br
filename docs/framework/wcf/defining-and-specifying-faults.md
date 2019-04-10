@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299314"
 ---
 # <a name="defining-and-specifying-faults"></a>Definindo e especificando falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de uma maneira interoperável. Este tópico discute quando e como definir o conteúdo de falha personalizado e especificar quais operações poderá retorná-los. Para obter mais informações sobre como um serviço ou cliente duplex, pode enviar essas falhas e como um aplicativo cliente ou serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em aplicativos do Windows Communication Foundation (WCF), consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -21,11 +21,11 @@ Falhas de SOAP transmitem condição informações de erro de um serviço para u
 ## <a name="overview"></a>Visão geral  
  Declarado falhas de SOAP são aquelas em que uma operação tem um <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> que especifica um tipo personalizado de falhas SOAP. Falhas SOAP não declaradas são aqueles que não são especificados no contrato para uma operação. Este tópico ajuda você a identificar essas condições de erro e criar um contrato de falha para o serviço que os clientes podem usar para lidar adequadamente com essas condições de erro quando notificado pelo falhas SOAP personalizadas. As tarefas básicas são, em ordem:  
   
-1.  Defina as condições de erro que um cliente do seu serviço deve saber sobre.  
+1. Defina as condições de erro que um cliente do seu serviço deve saber sobre.  
   
-2.  Defina o conteúdo personalizado das falhas de SOAP para essas condições de erro.  
+2. Defina o conteúdo personalizado das falhas de SOAP para essas condições de erro.  
   
-3.  Marca suas operações para que as falhas de SOAP específicas que eles geram são expostas aos clientes em WSDL.  
+3. Marca suas operações para que as falhas de SOAP específicas que eles geram são expostas aos clientes em WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definir condições de erro que os clientes devem saber sobre  
  Falhas de SOAP são descritas publicamente mensagens que carregam informações de falha de uma determinada operação. Porque eles são descritos juntamente com outras mensagens de operação no WSDL, os clientes saberem e, portanto, esperam lidar com tais falhas ao invocar uma operação. Mas, como os serviços do WCF são escritos em código gerenciado, decidir qual erro devem ser convertidas em falhas de condições em código gerenciado e retornado ao cliente fornece a oportunidade de separar as condições de erro e bugs em seu serviço de erro formal conversa com um cliente.  

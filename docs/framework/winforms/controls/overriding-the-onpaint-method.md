@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302175"
 ---
 # <a name="overriding-the-onpaint-method"></a>Substituindo o método OnPaint
 As etapas básicas para a substituição de qualquer evento definido no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] são idênticas e são resumidas na lista a seguir.  
   
 #### <a name="to-override-an-inherited-event"></a>Substituir um evento herdado  
   
-1.  Substituir o método `On`*EventName* protegido.  
+1. Substituir o método `On`*EventName* protegido.  
   
-2.  Chame o método `On`*EventName* da classe base do método `On`*EventName* substituído, de modo que delegados registrados recebam o evento.  
+2. Chame o método `On`*EventName* da classe base do método `On`*EventName* substituído, de modo que delegados registrados recebam o evento.  
   
  O <xref:System.Windows.Forms.Control.Paint> evento é discutido em detalhes aqui porque todos os controles Windows Forms devem substituir o <xref:System.Windows.Forms.Control.Paint> eventos que herda de <xref:System.Windows.Forms.Control>. A base <xref:System.Windows.Forms.Control> classe não sabe como um controle derivado deve ser desenhado e não fornece qualquer lógica de pintura no <xref:System.Windows.Forms.Control.OnPaint%2A> método. O <xref:System.Windows.Forms.Control.OnPaint%2A> método de <xref:System.Windows.Forms.Control> simplesmente despacha o <xref:System.Windows.Forms.Control.Paint> evento para receptores de evento registrados.  
   

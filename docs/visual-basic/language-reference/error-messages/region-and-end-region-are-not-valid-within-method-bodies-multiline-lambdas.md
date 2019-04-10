@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32025
 ms.assetid: 43707bf1-1c6b-4d82-b081-e5a17dca51c1
-ms.openlocfilehash: deef3de645040d7c3d95b1a6c8a25fcf10de881b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c41b95da7e3565ae7aaf332fe49361336e79f7c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303902"
 ---
 # <a name="region-and-end-region-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>As instruções '#Region' e '#End Region' não são válidas dentro dos corpos/lambdas de várias linhas do método
 O `#Region` bloco deve ser declarado em um nível de classe, módulo ou namespace. Uma região recolhível pode incluir um ou mais procedimentos, mas ele não pode começar ou terminar dentro de um procedimento.  
@@ -21,9 +21,9 @@ O `#Region` bloco deve ser declarado em um nível de classe, módulo ou namespac
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Certifique-se de que o procedimento anterior é encerrado corretamente com um `End Function` ou `End Sub` instrução.  
+1. Certifique-se de que o procedimento anterior é encerrado corretamente com um `End Function` ou `End Sub` instrução.  
   
-2.  Certifique-se de que o `#Region` e `#End Region` diretivas estão no mesmo bloco de código.  
+2. Certifique-se de que o `#Region` e `#End Region` diretivas estão no mesmo bloco de código.  
   
 ## <a name="see-also"></a>Consulte também
 

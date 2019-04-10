@@ -2,12 +2,12 @@
 title: COMO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302251"
 ---
 # <a name="like-entity-sql"></a>COMO (Entity SQL)
 Determina se um elemento `String` de caracteres corresponde a um padrão especificado.  
@@ -68,9 +68,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Exemplo  
  Os dois seguintes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consultas usam SIMILARES e operadores ESCAPE para determinar se uma cadeia de caracteres específica corresponde a um padrão especificado. A primeira consulta procura o `Name` que começa com os caracteres `Down_`. Essa consulta usa a opção ESCAPE porque o sublinhado (`_`) é um caractere curinga. Sem especificar a opção ESCAPE, a consulta pesquisaria todos `Name` valores que começam com a palavra `Down` seguido por qualquer caractere único que não seja o caractere de sublinhado. As consultas são com base no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   

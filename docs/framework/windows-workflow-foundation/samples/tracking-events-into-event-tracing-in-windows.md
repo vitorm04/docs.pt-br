@@ -2,12 +2,12 @@
 title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300639"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
 Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um serviço de fluxo de trabalho de rastreamento e emitir os eventos de rastreamento no evento de rastreamento para Windows (ETW). Para emitir registros de acompanhamento de fluxo de trabalho em ETW, o exemplo usa o participante de rastreamento de<xref:System.Activities.Tracking.EtwTrackingParticipant>(ETW).
@@ -39,33 +39,33 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2010, abra o arquivo de solução de Etwtrackingparticipantsample.
+1. Usando o Visual Studio 2010, abra o arquivo de solução de Etwtrackingparticipantsample.
 
-2.  Para criar a solução, pressione CTRL+SHIFT+B.
+2. Para criar a solução, pressione CTRL+SHIFT+B.
 
-3.  Para executar a solução, pressione F5.
+3. Para executar a solução, pressione F5.
 
      Por padrão, o serviço está escutando na porta 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra o cliente de teste de windows.
+4. Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra o cliente de teste de windows.
 
      O cliente de teste do WCF (WcfTestClient.exe) está localizado no \<pasta de instalação do Visual Studio 2010 > pasta \Common7\IDE\.
 
      A pasta de instalação do Visual Studio 2010 padrão é C:\Program Files\Microsoft Visual Studio 10,0.
 
-5.  No cliente de teste do WCF, selecione **Adicionar serviço** da **arquivo** menu.
+5. No cliente de teste do WCF, selecione **Adicionar serviço** da **arquivo** menu.
 
      Adicione o endereço do ponto de extremidade na caixa de entrada. O padrão é `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6.  Abra o aplicativo visualizador de eventos.
+6. Abra o aplicativo visualizador de eventos.
 
      Antes de invocar o serviço, iniciar o Visualizador de eventos na **inicie** menu, selecione **execute** e digite `eventvwr.exe`. Certifique-se de que o log de eventos é escutando eventos de rastreamento emissores de serviço de fluxo de trabalho.
 
-7.  Na exibição de árvore do Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, e **Microsoft**. Clique com botão direito **Microsoft** e selecione **exibição** e, em seguida, **Mostrar Logs analíticos e depuração** para habilitar o analítica e logs de depuração
+7. Na exibição de árvore do Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, e **Microsoft**. Clique com botão direito **Microsoft** e selecione **exibição** e, em seguida, **Mostrar Logs analíticos e depuração** para habilitar o analítica e logs de depuração
 
      Certifique-se de que o **Mostrar Logs analíticos e depuração** opção estiver marcada.
 
-8.  Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Habilitar Log** para habilitar o **analítico** log.
+8. Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Habilitar Log** para habilitar o **analítico** log.
 
 9. Testar o serviço usando o cliente de teste de WCF clicando duas vezes `GetData`.
 
@@ -123,13 +123,13 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 
 #### <a name="to-clean-up-optional"></a>Para limpar (opcional)
 
-1.  Visualizador de EventosAberto.
+1. Visualizador de EventosAberto.
 
-2.  Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **desabilitar Log**.
+2. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **desabilitar Log**.
 
-3.  Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Limpar Log**.
+3. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Limpar Log**.
 
-4.  Escolha o **limpar** opção para limpar os eventos.
+4. Escolha o **limpar** opção para limpar os eventos.
 
 ## <a name="known-issue"></a>Problema conhecido
 

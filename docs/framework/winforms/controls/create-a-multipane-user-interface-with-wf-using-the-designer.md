@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301289"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Como: Criar uma interface do usuário com vários painéis com o Windows Forms usando o designer
 No procedimento a seguir, você vai criar uma interface do usuário com vários painéis semelhante à que é usada no Microsoft Outlook, com uma lista **Pasta**, um painel **Mensagens** e um painel **Visualização**. Essa organização é obtida principalmente por meio de controles de encaixe com o formulário.  
@@ -27,17 +27,17 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Para criar uma interface do usuário no estilo Outlook no tempo de design  
   
-1.  Criar um novo projeto de aplicativo do Windows (**arquivo** > **New** > **projeto** > **Visual C#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
+1. Criar um novo projeto de aplicativo do Windows (**arquivo** > **New** > **projeto** > **Visual C#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
   
-2.  Arraste uma <xref:System.Windows.Forms.SplitContainer> controlar do **caixa de ferramentas** ao formulário. No **propriedades** janela, defina as <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>.  
+2. Arraste uma <xref:System.Windows.Forms.SplitContainer> controlar do **caixa de ferramentas** ao formulário. No **propriedades** janela, defina as <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-3.  Arraste uma <xref:System.Windows.Forms.TreeView> controlar do **caixa de ferramentas** para o painel esquerdo do <xref:System.Windows.Forms.SplitContainer> controle. No **propriedades** janela, defina o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Left> clicando no painel esquerdo no editor de valor mostrado quando a seta para baixo é clicada.  
+3. Arraste uma <xref:System.Windows.Forms.TreeView> controlar do **caixa de ferramentas** para o painel esquerdo do <xref:System.Windows.Forms.SplitContainer> controle. No **propriedades** janela, defina o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Left> clicando no painel esquerdo no editor de valor mostrado quando a seta para baixo é clicada.  
   
-4.  Arraste outro <xref:System.Windows.Forms.SplitContainer> controlar do **caixa de ferramentas**; coloque-o no painel direito do <xref:System.Windows.Forms.SplitContainer> controle adicionado ao seu formulário. No **propriedades** janela, defina o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade a ser <xref:System.Windows.Forms.DockStyle.Fill> e o <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade <xref:System.Windows.Forms.Orientation.Horizontal>.  
+4. Arraste outro <xref:System.Windows.Forms.SplitContainer> controlar do **caixa de ferramentas**; coloque-o no painel direito do <xref:System.Windows.Forms.SplitContainer> controle adicionado ao seu formulário. No **propriedades** janela, defina o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade a ser <xref:System.Windows.Forms.DockStyle.Fill> e o <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-5.  Arraste uma <xref:System.Windows.Forms.ListView> controlar do **caixa de ferramentas** para o painel superior do segundo <xref:System.Windows.Forms.SplitContainer> controle adicionado ao seu formulário. Defina a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade do <xref:System.Windows.Forms.ListView> o controle para <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Arraste uma <xref:System.Windows.Forms.ListView> controlar do **caixa de ferramentas** para o painel superior do segundo <xref:System.Windows.Forms.SplitContainer> controle adicionado ao seu formulário. Defina a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade do <xref:System.Windows.Forms.ListView> o controle para <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-6.  Arraste uma <xref:System.Windows.Forms.RichTextBox> controlar do **caixa de ferramentas** para o painel inferior do segundo <xref:System.Windows.Forms.SplitContainer> controle. Defina a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade do <xref:System.Windows.Forms.RichTextBox> o controle para <xref:System.Windows.Forms.DockStyle.Fill>.  
+6. Arraste uma <xref:System.Windows.Forms.RichTextBox> controlar do **caixa de ferramentas** para o painel inferior do segundo <xref:System.Windows.Forms.SplitContainer> controle. Defina a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade do <xref:System.Windows.Forms.RichTextBox> o controle para <xref:System.Windows.Forms.DockStyle.Fill>.  
   
      Neste ponto, se você pressionar F5 para executar o aplicativo, o formulário exibirá uma interface do usuário de três partes, semelhante àquela do Microsoft Outlook.  
   

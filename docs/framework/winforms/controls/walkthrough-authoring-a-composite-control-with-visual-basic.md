@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299976"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Passo a passo: Criar um controle composto com o Visual Basic
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.  
@@ -31,31 +31,31 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 #### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>Para criar a biblioteca de controles de ctlClockLib e o controle ctlClock  
   
-1.  No menu **Arquivo**, aponte para **Novo** e clique em **Projeto** para abrir a caixa de diálogo **Novo Projeto**.  
+1. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto** para abrir a caixa de diálogo **Novo Projeto**.  
   
-2.  Na lista de projetos do Visual Basic, selecione a **biblioteca de controle do Windows** modelo de projeto, digite `ctlClockLib` no **nome** caixa e, em seguida, clique em **Okey**.  
+2. Na lista de projetos do Visual Basic, selecione a **biblioteca de controle do Windows** modelo de projeto, digite `ctlClockLib` no **nome** caixa e, em seguida, clique em **Okey**.  
   
      O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecerem componentes chamados `ctlClock`, você pode especificar seu `ctlClock` usando o componente `ctlClockLib.ctlClock.`  
   
-3.  No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.vb** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.vb`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.  
+3. No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.vb** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.vb`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.  
   
     > [!NOTE]
     >  Por padrão, um controle de composição herda o <xref:System.Windows.Forms.UserControl> classe fornecida pelo sistema. O <xref:System.Windows.Forms.UserControl> classe fornece a funcionalidade requerida por todos os controles compostos e implementa propriedades e métodos padrão.  
   
-4.  No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
+4. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
   
 ## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Adicionando controles e componentes do Windows ao controle de composição  
  Uma interface visual é uma parte essencial do controle de composição. Essa interface visual é implementada pela adição de um ou mais controles do Windows à superfície do designer. Na demonstração a seguir, você incorporará controles do Windows no controle de composição e escreverá um código para implementar a funcionalidade.  
   
 #### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Para adicionar um Rótulo e um Temporizador ao controle de composição  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClock.vb** e, em seguida, clique em **Exibir Designer**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClock.vb** e, em seguida, clique em **Exibir Designer**.  
   
-2.  Na Caixa de Ferramentas, expanda o nó **Controles Comuns** e clique duas vezes em **Rótulo**.  
+2. Na Caixa de Ferramentas, expanda o nó **Controles Comuns** e clique duas vezes em **Rótulo**.  
   
      Um <xref:System.Windows.Forms.Label> controle chamado `Label1` é adicionado ao controle na superfície do designer.  
   
-3.  No designer, clique em **Label1**. Na janela Propriedades, defina as propriedades a seguir.  
+3. No designer, clique em **Label1**. Na janela Propriedades, defina as propriedades a seguir.  
   
     |Propriedade|Altere para|  
     |--------------|---------------|  
@@ -64,17 +64,17 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
-4.  Na **Caixa de Ferramentas**, expanda o nó **Componentes** e clique duas vezes em **Temporizador**.  
+4. Na **Caixa de Ferramentas**, expanda o nó **Componentes** e clique duas vezes em **Temporizador**.  
   
      Porque um <xref:System.Windows.Forms.Timer> é um componente, ele não tem representação visual em tempo de execução. Portanto, ele não é exibido com os controles na superfície do designer, mas no Designer de Componentes (uma bandeja na parte inferior da superfície do designer).  
   
-5.  No Designer de componente, clique em **Timer1**e, em seguida, defina o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade a ser `1000` e o <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade `True`.  
+5. No Designer de componente, clique em **Timer1**e, em seguida, defina o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade a ser `1000` e o <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade `True`.  
   
      O <xref:System.Windows.Forms.Timer.Interval%2A> propriedade controla a frequência de tiques do componente de temporizador. A cada tique de `Timer1`, ele executa o código no evento `Timer1_Tick`. O intervalo representa o número de milissegundos entre os tiques.  
   
-6.  No Designer de Componentes, clique duas vezes em **Timer1** para acessar o evento `Timer1_Tick` de `ctlClock`.  
+6. No Designer de Componentes, clique duas vezes em **Timer1** para acessar o evento `Timer1_Tick` de `ctlClock`.  
   
-7.  Modifique o código para que ele fique parecido com o exemplo de código a seguir. Lembre-se de alterar o modificador de acesso de `Private` para `Protected`.  
+7. Modifique o código para que ele fique parecido com o exemplo de código a seguir. Lembre-se de alterar o modificador de acesso de `Private` para `Protected`.  
   
     ```vb  
     Protected Sub Timer1_Tick(ByVal sender As Object, ByVal e As _  
@@ -86,7 +86,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
      Esse código fará com que a hora atual seja mostrada em `lblDisplay`. Como o intervalo de `Timer1` foi definido como `1000`, esse evento ocorrerá a cada vários milhares de milissegundos, atualizando a hora atual a cada segundo.  
   
-8.  Modifique o método para que ele seja substituível. Para obter mais informações, consulte a seção “Herdando de um controle de usuário” abaixo.  
+8. Modifique o método para que ele seja substituível. Para obter mais informações, consulte a seção “Herdando de um controle de usuário” abaixo.  
   
     ```vb  
     Protected Overridable Sub Timer1_Tick(ByVal sender As Object, ByVal _  
@@ -100,11 +100,11 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>Para adicionar uma propriedade ao controle de composição  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClock.vb** e, em seguida, clique em **Exibir Código**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClock.vb** e, em seguida, clique em **Exibir Código**.  
   
      O Editor de Código do controle é aberto.  
   
-2.  Localize a instrução `Public Class ctlClock`. Abaixo dela, digite o código a seguir.  
+2. Localize a instrução `Public Class ctlClock`. Abaixo dela, digite o código a seguir.  
   
     ```vb  
     Private colFColor as Color  
@@ -113,7 +113,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
      Essas instruções criam as variáveis particulares que você usará para armazenar os valores para as propriedades que está prestes a criar.  
   
-3.  Insira o código a seguir abaixo das declarações de variáveis da etapa 2.  
+3. Insira o código a seguir abaixo das declarações de variáveis da etapa 2.  
   
     ```vb  
     ' Declares the name and type of the property.  
@@ -144,24 +144,24 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
      O código anterior cria duas propriedades personalizadas, `ClockForeColor` e `ClockBackColor`, disponíveis para os próximos usuários desse controle com a invocação da instrução `Property`. As instruções `Get` e `Set` fornecem armazenamento e recuperação do valor da propriedade, bem como o código para implementar a funcionalidade apropriada para a propriedade.  
   
-4.  No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
+4. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
   
 ## <a name="testing-the-control"></a>Testando o controle  
  Controles não são projetos autônomos; eles devem ser hospedados em um contêiner. Teste o comportamento do tempo de execução do controle e exerça suas propriedades com o **Contêiner de Teste de UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Para testar o controle  
   
-1.  Pressione F5 para compilar o projeto e execute seu controle no **Contêiner de Teste de UserControl**.  
+1. Pressione F5 para compilar o projeto e execute seu controle no **Contêiner de Teste de UserControl**.  
   
-2.  Na grade de propriedades do contêiner de teste, selecione a propriedade `ClockBackColor` e, em seguida, clique na seta suspensa para exibir a paleta de cores.  
+2. Na grade de propriedades do contêiner de teste, selecione a propriedade `ClockBackColor` e, em seguida, clique na seta suspensa para exibir a paleta de cores.  
   
-3.  Escolha uma cor clicando nela.  
+3. Escolha uma cor clicando nela.  
   
      A cor da tela de fundo do controle é alterada para a cor selecionada.  
   
-4.  Use uma sequência semelhante de eventos para verificar se a propriedade `ClockForeColor` está funcionando como esperado.  
+4. Use uma sequência semelhante de eventos para verificar se a propriedade `ClockForeColor` está funcionando como esperado.  
   
-5.  Clique em **Fechar** para fechar o **Contêiner de Teste de UserControl**.  
+5. Clique em **Fechar** para fechar o **Contêiner de Teste de UserControl**.  
   
      Nesta seção e nas seções anteriores, você viu como os componentes e controles do Windows podem ser combinados com um código e empacotamento para fornecer funcionalidade personalizada na forma de um controle de composição. Você aprendeu a expor as propriedades no controle de composição e a testar o controle após sua conclusão. Na próxima seção, você aprenderá a construir um controle de composição herdado usando `ctlClock` como base.  
   
@@ -172,19 +172,19 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 #### <a name="to-create-the-inherited-control"></a>Para criar o controle herdado  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClockLib**, aponte para **Adicionar** e, em seguida, clique em **Controle de Usuário**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClockLib**, aponte para **Adicionar** e, em seguida, clique em **Controle de Usuário**.  
   
      A caixa de diálogo **Adicionar Novo Item** é aberta.  
   
-2.  Selecione o modelo **Controle de Usuário Herdado**.  
+2. Selecione o modelo **Controle de Usuário Herdado**.  
   
-3.  Na caixa **Nome**, digite `ctlAlarmClock.vb` e clique em **Adicionar**.  
+3. Na caixa **Nome**, digite `ctlAlarmClock.vb` e clique em **Adicionar**.  
   
      A caixa de diálogo **Seletor de Herança** é exibida.  
   
-4.  Em **Nome do Componente**, clique duas vezes em **ctlClock**.  
+4. Em **Nome do Componente**, clique duas vezes em **ctlClock**.  
   
-5.  No Gerenciador de Soluções, procure os projetos atuais.  
+5. No Gerenciador de Soluções, procure os projetos atuais.  
   
     > [!NOTE]
     >  Um arquivo chamado **ctlAlarmClock.vb** foi adicionado ao projeto atual.  
@@ -194,9 +194,9 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 ##### <a name="to-add-properties-to-your-composite-control"></a>Para adicionar propriedades ao controle de composição  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock** e, em seguida, clique em **Exibir Código**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock** e, em seguida, clique em **Exibir Código**.  
   
-2.  Localize a declaração de classe do controle ctlAlarmClock, que aparece como `Public Class ctlAlarmClock`.  Na declaração de classe, insira o código a seguir.  
+2. Localize a declaração de classe do controle ctlAlarmClock, que aparece como `Public Class ctlAlarmClock`.  Na declaração de classe, insira o código a seguir.  
   
     ```vb  
     Private dteAlarmTime As Date  
@@ -226,11 +226,11 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 ##### <a name="to-add-the-label-control"></a>Para adicionar o controle de rótulo  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock** e, em seguida, clique em **Exibir Designer**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock** e, em seguida, clique em **Exibir Designer**.  
   
      O designer de `ctlAlarmClock` é aberto na janela principal.  
   
-2.  Clique em `lblDisplay` (a parte de exibição do controle) e exiba a janela Propriedades.  
+2. Clique em `lblDisplay` (a parte de exibição do controle) e exiba a janela Propriedades.  
   
     > [!NOTE]
     >  Embora todas as propriedades sejam exibidas, elas ficam esmaecidas. Isso indica que essas propriedades são nativas de `lblDisplay` e não podem ser modificadas nem acessadas na janela Propriedades. Por padrão, os controles contidos em um controle de composição são `Private` e suas propriedades não são acessíveis por nenhum meio.  
@@ -238,9 +238,9 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
     > [!NOTE]
     >  Se você desejar que os próximos usuários do controle de composição tenham acesso a seus controles internos, declare-os como `Public` ou `Protected`. Isso permitirá definir e modificar as propriedades de controles contidos no controle de composição usando o código apropriado.  
   
-3.  Adicionar um <xref:System.Windows.Forms.Label> controle ao controle de composição.  
+3. Adicionar um <xref:System.Windows.Forms.Label> controle ao controle de composição.  
   
-4.  Usando o mouse, arraste o <xref:System.Windows.Forms.Label> controle imediatamente abaixo da caixa de exibição. Na janela Propriedades, defina as propriedades a seguir.  
+4. Usando o mouse, arraste o <xref:System.Windows.Forms.Label> controle imediatamente abaixo da caixa de exibição. Na janela Propriedades, defina as propriedades a seguir.  
   
     |Propriedade|Configuração|  
     |--------------|-------------|  
@@ -254,15 +254,15 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 ##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a>Para substituir o método Timer1_Tick de ctlClock  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock.vb** e, em seguida, clique em **Exibir Código**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock.vb** e, em seguida, clique em **Exibir Código**.  
   
-2.  Localize a instrução `Private blnAlarmSet As Boolean`. Imediatamente abaixo dela, adicione a instrução a seguir.  
+2. Localize a instrução `Private blnAlarmSet As Boolean`. Imediatamente abaixo dela, adicione a instrução a seguir.  
   
     ```vb  
     Dim blnColorTicker as Boolean  
     ```  
   
-3.  Localize a instrução `End Class` na parte inferior da página. Logo antes da instrução `End Class`, adicione o código a seguir.  
+3. Localize a instrução `End Class` na parte inferior da página. Logo antes da instrução `End Class`, adicione o código a seguir.  
   
     ```vb  
     Protected Overrides Sub Timer1_Tick(ByVal sender As Object, ByVal e _  
@@ -307,11 +307,11 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 ##### <a name="to-implement-the-shutoff-method"></a>Para implementar o método de desligamento  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock.vb** e, em seguida, clique em **Exibir Designer**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlAlarmClock.vb** e, em seguida, clique em **Exibir Designer**.  
   
-2.  No designer, clique duas vezes em **lblAlarm**. O **Editor de Código** é aberto na linha `Private Sub lblAlarm_Click`.  
+2. No designer, clique duas vezes em **lblAlarm**. O **Editor de Código** é aberto na linha `Private Sub lblAlarm_Click`.  
   
-3.  Modifique esse método para que ele fique parecido com o código a seguir.  
+3. Modifique esse método para que ele fique parecido com o código a seguir.  
   
     ```vb  
     Private Sub lblAlarm_Click(ByVal sender As Object, ByVal e As _  
@@ -323,7 +323,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
     End Sub  
     ```  
   
-4.  No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
+4. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Usando o controle herdado em um formulário  
  Você pode testar seu controle herdado da mesma maneira que você testou o controle de classe base, `ctlClock`: Pressione F5 para compilar o projeto e execute seu controle no **Contêiner de Teste de UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
@@ -332,23 +332,23 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 ##### <a name="to-build-and-add-your-control-to-a-test-form"></a>Para criar e adicionar o controle a um formulário de teste  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClockLib** e, em seguida, clique em **Compilar**.  
+1. No Gerenciador de Soluções, clique com o botão direito do mouse em **ctlClockLib** e, em seguida, clique em **Compilar**.  
   
-2.  No menu **Arquivo**, aponte para **Adicionar** e clique em **Novo Projeto**.  
+2. No menu **Arquivo**, aponte para **Adicionar** e clique em **Novo Projeto**.  
   
-3.  Adicione um novo projeto **Aplicativo do Windows** à solução e nomeie-o `Test`.  
+3. Adicione um novo projeto **Aplicativo do Windows** à solução e nomeie-o `Test`.  
   
      O projeto **Teste** é adicionado ao Gerenciador de Soluções.  
   
-4.  No Gerenciador de Soluções, clique com o botão direito do mouse no nó de projeto `Test` e, em seguida, clique em **Adicionar Referência** para exibir a caixa de diálogo **Adicionar Referência**.  
+4. No Gerenciador de Soluções, clique com o botão direito do mouse no nó de projeto `Test` e, em seguida, clique em **Adicionar Referência** para exibir a caixa de diálogo **Adicionar Referência**.  
   
-5.  Clique na guia rotulada como **Projetos**. O projeto **ctlClockLib** estará listado em **Nome do Projeto**. Clique duas vezes em **ctlClockLib** para adicionar a referência ao projeto de teste.  
+5. Clique na guia rotulada como **Projetos**. O projeto **ctlClockLib** estará listado em **Nome do Projeto**. Clique duas vezes em **ctlClockLib** para adicionar a referência ao projeto de teste.  
   
-6.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Testar** e, em seguida, clique em **Compilar**.  
+6. No Gerenciador de Soluções, clique com o botão direito do mouse em **Testar** e, em seguida, clique em **Compilar**.  
   
-7.  Na **Caixa de Ferramentas**, expanda o nó **Componentes de ctlClockLib**.  
+7. Na **Caixa de Ferramentas**, expanda o nó **Componentes de ctlClockLib**.  
   
-8.  Clique duas vezes em **ctlAlarmClock** para adicionar uma instância de `ctlAlarmClock` ao formulário.  
+8. Clique duas vezes em **ctlAlarmClock** para adicionar uma instância de `ctlAlarmClock` ao formulário.  
   
 9. No **caixa de ferramentas**, localize e clique duas vezes em **DateTimePicker** para adicionar um <xref:System.Windows.Forms.DateTimePicker> controle ao seu formulário e, em seguida, adicione um <xref:System.Windows.Forms.Label> controle clicando duas vezes em **rótulo**.  
   

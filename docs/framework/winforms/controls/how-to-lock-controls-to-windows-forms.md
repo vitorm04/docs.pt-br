@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301692"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Como: Bloquear controles nos Windows Forms
 Ao projetar a interface do usuário do seu aplicativo do Windows, você pode bloquear os controles quando eles são posicionados corretamente, para que você não os mova nem os redimensione inadvertidamente ao configurar outras propriedades.  
@@ -22,7 +22,7 @@ Ao projetar a interface do usuário do seu aplicativo do Windows, você pode blo
   
 ### <a name="to-lock-a-control"></a>Para bloquear um controle  
   
-1.  Na janela **Propriedades**, clique na propriedade **Bloqueado** e selecione `true`. (Clicar duas vezes no nome alterna a configuração da propriedade.)  
+1. Na janela **Propriedades**, clique na propriedade **Bloqueado** e selecione `true`. (Clicar duas vezes no nome alterna a configuração da propriedade.)  
   
      Como alternativa, clique com o botão direito do mouse no controle e escolha **Bloquear Controles**.  
   
@@ -31,20 +31,20 @@ Ao projetar a interface do usuário do seu aplicativo do Windows, você pode blo
   
 ### <a name="to-lock-all-the-controls-on-a-form"></a>Para bloquear todos os controles em um formulário  
   
-1.  No menu **Formatar**, escolha **Bloquear Controles**.  
+1. No menu **Formatar**, escolha **Bloquear Controles**.  
   
     > [!NOTE]
     >  Esse comando bloqueia também o tamanho do formulário, pois um formulário é um controle.  
   
 ### <a name="to-unlock-all-locked-controls-on-a-form"></a>Para desbloquear todos os controles bloqueados em um formulário  
   
-1.  No menu **Formatar**, escolha **Bloquear Controles**.  
+1. No menu **Formatar**, escolha **Bloquear Controles**.  
   
      Todos os controles bloqueados anteriormente no formulário agora estão desbloqueados.  
   
 ### <a name="to-unlock-locked-controls-individually"></a>Para desbloquear controles bloqueados individualmente  
   
-1.  Na janela **Propriedades**, clique na propriedade **Bloqueado** e selecione `false`. (Clicar duas vezes no nome alterna a configuração da propriedade.)  
+1. Na janela **Propriedades**, clique na propriedade **Bloqueado** e selecione `false`. (Clicar duas vezes no nome alterna a configuração da propriedade.)  
   
 ## <a name="see-also"></a>Consulte também
 

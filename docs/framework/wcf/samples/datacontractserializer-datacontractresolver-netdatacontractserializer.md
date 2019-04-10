@@ -2,12 +2,12 @@
 title: Uso de DataContractSerializer e de DataContractResolver para fornecer a funcionalidade NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 455ffe936373525f574d4401412c099d41d45f66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295140"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Uso de DataContractSerializer e de DataContractResolver para fornecer a funcionalidade NetDataContractSerializer
 Este exemplo demonstra como o uso de <xref:System.Runtime.Serialization.DataContractSerializer> com um número apropriado <xref:System.Runtime.Serialization.DataContractResolver> fornece a mesma funcionalidade que <xref:System.Runtime.Serialization.NetDataContractSerializer>. Este exemplo mostra como criar apropriado <xref:System.Runtime.Serialization.DataContractResolver> e como adicioná-lo para o <xref:System.Runtime.Serialization.DataContractSerializer>.
@@ -57,21 +57,21 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2012, abra o arquivo de solução DCRSample.sln.
+1. Usando o Visual Studio 2012, abra o arquivo de solução DCRSample.sln.
 
-2.  O arquivo de solução com o botão direito e escolha **propriedades**.
+2. O arquivo de solução com o botão direito e escolha **propriedades**.
 
-3.  No **páginas de propriedade da solução** caixa de diálogo, em **propriedades comuns**, **projeto de inicialização**, selecione **vários projetos de inicialização:**.
+3. No **páginas de propriedade da solução** caixa de diálogo, em **propriedades comuns**, **projeto de inicialização**, selecione **vários projetos de inicialização:**.
 
-4.  Ao lado de **DCSwithDCR** projeto, selecione **iniciar** do **ação** lista suspensa.
+4. Ao lado de **DCSwithDCR** projeto, selecione **iniciar** do **ação** lista suspensa.
 
-5.  Ao lado de **NetDCS** projeto, selecione **iniciar** do **ação** lista suspensa.
+5. Ao lado de **NetDCS** projeto, selecione **iniciar** do **ação** lista suspensa.
 
-6.  Clique em **Okey** para fechar a caixa de diálogo.
+6. Clique em **Okey** para fechar a caixa de diálogo.
 
-7.  Para criar a solução, pressione CTRL+SHIFT+B.
+7. Para criar a solução, pressione CTRL+SHIFT+B.
 
-8.  Para executar a solução, pressione CTRL+F5.
+8. Para executar a solução, pressione CTRL+F5.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

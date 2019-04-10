@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139211"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301393"
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
@@ -181,11 +181,11 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
  Para especificar que um elemento é um destino de soltar, defina suas <xref:System.Windows.UIElement.AllowDrop%2A> propriedade para `true`. Em seguida, os eventos de destino de soltar serão acionados no elemento, para que você possa manipulá-los. Durante uma operação do tipo "arrastar e soltar", ocorre a seguinte sequência de eventos no destino de soltar:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> ou <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> ou <xref:System.Windows.DragDrop.Drop>  
   
  O <xref:System.Windows.DragDrop.DragEnter> evento ocorre quando os dados são arrastados para limites do destino de soltar. Normalmente, esse evento é manipulado para fornecer uma visualização dos efeitos da operação do tipo "arrastar e soltar", se apropriado para o aplicativo. Não defina a <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> propriedade no <xref:System.Windows.DragDrop.DragEnter> evento, como ele será substituído no <xref:System.Windows.DragDrop.DragOver> eventos.  
   

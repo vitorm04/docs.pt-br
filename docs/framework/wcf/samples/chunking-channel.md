@@ -2,12 +2,12 @@
 title: Canal de agrupamento
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302693"
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
 Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. Uma solução possível é transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Sistema de mensagens confiável e segurança são dois exemplos de tais. Outra solução possível é dividir a mensagem grande em mensagens menores chamado partes, enviar partes de uma dessas partes por vez e reconstituir a mensagem grande no lado de recepção. O aplicativo em si pode fazer esse agrupamento e desprovisionamento de agrupamento ou use um canal personalizado para fazê-lo. O exemplo de agrupamento de canal mostra como um protocolo personalizado ou o canal em camadas pode ser usado para fazer a eliminação da divisão de mensagens arbitrariamente grandes e o agrupamento.  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  No próximo nível inferior, `ChunkingChannel` depende de vários componentes para implementar o protocolo de agrupamento. No lado do envio, o canal usa um personalizado <xref:System.Xml.XmlDictionaryWriter> chamado `ChunkingWriter` que faz o agrupamento real. `ChunkingWriter` usa o canal interno diretamente para enviar partes. Usando um personalizado `XmlDictionaryWriter` nos permite enviar partes como o corpo da mensagem original grande está sendo gravado. Isso significa que podemos não armazenar em buffer toda a mensagem original.  
   
- ![Canal de agrupamento](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Arquitetura de envio de diagrama que mostra o canal de agrupamento.](./media/chunking-channel/chunking-channel-send.gif)  
   
  No lado do recebimento, `ChunkingChannel` efetua pull das mensagens do canal interno e passa-os para um personalizado <xref:System.Xml.XmlDictionaryReader> chamado `ChunkingReader`, qual reconstitui a mensagem original das partes de entrada. `ChunkingChannel` resume isso `ChunkingReader` em um personalizado `Message` implementação chamado `ChunkingMessage` e retorna essa mensagem para a camada acima. Essa combinação de `ChunkingReader` e `ChunkingMessage` permite dividir desprovisionar o corpo da mensagem original como ele está sendo lido pela camada acima em vez de precisar armazenar em buffer o corpo da mensagem original inteira. `ChunkingReader` tem uma fila em que ele armazena em buffer partes de entrada até um máximo número configurável de partes em buffer. Quando esse limite máximo for atingido, o leitor aguarda a ser extraído da fila pela camada acima de mensagens (ou seja, lendo apenas do corpo da mensagem original) ou até que receba o máximo tempo limite for atingido.  
   
- ![Canal de agrupamento](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Diagrama que mostra o canal de agrupamento receber arquitetura.](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>Modelo de programação de agrupamento  
  Os desenvolvedores de serviço podem especificar quais mensagens devem ser em partes, aplicando o `ChunkingBehavior` de atributo para operações no contrato. O atributo expõe um `AppliesTo` propriedade que permite que o desenvolvedor Especifique se agrupamento se aplica a mensagem de entrada, a mensagem de saída ou ambos. O exemplo a seguir mostra o uso de `ChunkingBehavior` atributo:  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
+1. Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Executar Service.exe primeiro, execute Client.exe e assista a ambas as janelas do console de saída.  
+5. Executar Service.exe primeiro, execute Client.exe e assista a ambas as janelas do console de saída.  
   
  Ao executar o exemplo, a seguinte saída é esperada.  
   

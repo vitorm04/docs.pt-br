@@ -2,12 +2,12 @@
 title: 'Como: especificar uma associação de cliente na configuração'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295127"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Como: especificar uma associação de cliente na configuração
 Neste exemplo, um aplicativo de console do cliente é criado para usar um serviço de Calculadora e a associação para que o cliente é especificada declarativamente na configuração. O cliente acessa o `CalculatorService`, que implementa o `ICalculator` interface e o serviço e o cliente use o <xref:System.ServiceModel.BasicHttpBinding> classe.  
@@ -24,31 +24,31 @@ Neste exemplo, um aplicativo de console do cliente é criado para usar um servi�
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>Especificando um ligação na configuração do cliente  
   
-1.  Use Svcutil.exe da linha de comando para gerar o código de metadados de serviço.  
+1. Use Svcutil.exe da linha de comando para gerar o código de metadados de serviço.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  O cliente que é gerado contém o `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.  
+2. O cliente que é gerado contém o `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#1)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#1)]  
   
-3.  O cliente gerado também contém a implementação do `ClientCalculator`.  
+3. O cliente gerado também contém a implementação do `ClientCalculator`.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4.  Svcutil.exe também gera a configuração do cliente que usa o <xref:System.ServiceModel.BasicHttpBinding> classe. Ao usar o Visual Studio, nomeie esse arquivo App. config. Observe que o endereço e informações de associação não estão especificados em qualquer lugar dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
+4. Svcutil.exe também gera a configuração do cliente que usa o <xref:System.ServiceModel.BasicHttpBinding> classe. Ao usar o Visual Studio, nomeie esse arquivo App. config. Observe que o endereço e informações de associação não estão especificados em qualquer lugar dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             
-5.  Criar uma instância das `ClientCalculator` em um aplicativo e, em seguida, chamar as operações de serviço.  
+5. Criar uma instância das `ClientCalculator` em um aplicativo e, em seguida, chamar as operações de serviço.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/client.cs#3)]  
   
-6.  Compile e execute o cliente.  
+6. Compile e execute o cliente.  
   
 ## <a name="see-also"></a>Consulte também
 

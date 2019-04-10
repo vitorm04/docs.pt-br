@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300977"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms
 Uma caixa de senha é uma caixa de texto do Windows Forms que exibe caracteres de espaço reservado enquanto um usuário digita uma cadeia de caracteres.  
   
 ### <a name="to-create-a-password-text-box"></a>Criar uma caixa de texto de senha  
   
-1.  Defina as <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriedade do <xref:System.Windows.Forms.TextBox> controle a um caractere específico.  
+1. Defina as <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriedade do <xref:System.Windows.Forms.TextBox> controle a um caractere específico.  
   
      O <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriedade especifica o caractere exibido na caixa de texto. Por exemplo, se você quiser que asteriscos sejam exibidos na caixa de senha, especifique * para o <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propriedade na janela Propriedades. Em seguida, independentemente de qual caractere de um usuário digita na caixa de texto, será exibido um asterisco.  
   
-2.  (Opcional) Defina o <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propriedade. A propriedade determina quantos caracteres podem ser digitado na caixa de texto. Se o tamanho máximo for excedido, o sistema emitirá um aviso sonoro e a caixa de texto não aceitará mais caracteres. Observe que isso pode não ser recomendável, visto que o tamanho máximo de uma senha pode ser útil para os hackers que estão tentando adivinhá-la.  
+2. (Opcional) Defina o <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propriedade. A propriedade determina quantos caracteres podem ser digitado na caixa de texto. Se o tamanho máximo for excedido, o sistema emitirá um aviso sonoro e a caixa de texto não aceitará mais caracteres. Observe que isso pode não ser recomendável, visto que o tamanho máximo de uma senha pode ser útil para os hackers que estão tentando adivinhá-la.  
   
      O exemplo de código a seguir mostra como inicializar uma caixa de texto que aceita uma cadeia de até 14 caracteres e exibir os asteriscos no lugar da cadeia de caracteres. O `InitializeMyControl` procedimento não será executado automaticamente; ele deve ser chamado.  
   

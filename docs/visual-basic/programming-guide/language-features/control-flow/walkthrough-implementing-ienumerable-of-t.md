@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302576"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Passo a passo: Implementando IEnumerable(Of T) no Visual Basic
 O <xref:System.Collections.Generic.IEnumerable%601> interface é implementada por classes que podem retornar uma sequência de um item de valores de cada vez. A vantagem de retornar dados de um item por vez é que você não precisa carregar o conjunto completo de dados na memória para trabalhar com ela. Você só precisará usar memória suficiente para carregar um único item de dados. As classes que implementam o `IEnumerable(T)` interface pode ser usada com `For Each` loops ou consultas LINQ.  
@@ -29,13 +29,13 @@ O <xref:System.Collections.Generic.IEnumerable%601> interface é implementada po
   
 **Criar o projeto de classe enumerable**
 
-1.  No Visual Basic, sobre o **arquivo** , aponte para **New** e, em seguida, clique em **projeto**.
+1. No Visual Basic, sobre o **arquivo** , aponte para **New** e, em seguida, clique em **projeto**.
 
-1.  Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Biblioteca de Classes** no painel **Modelos**. Na caixa **Nome**, digite `StreamReaderEnumerable` e clique em **OK**. O novo projeto é exibido.
+1. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Biblioteca de Classes** no painel **Modelos**. Na caixa **Nome**, digite `StreamReaderEnumerable` e clique em **OK**. O novo projeto é exibido.
 
-1.  Na **Gerenciador de soluções**, o arquivo Class1.vb com o botão direito e clique em **Renomear**. Renomeie o arquivo como `StreamReaderEnumerable.vb` e pressione ENTER. Renomear o arquivo também renomeará a classe para `StreamReaderEnumerable`. Essa classe implementará a interface `IEnumerable(Of String)`.
+1. Na **Gerenciador de soluções**, o arquivo Class1.vb com o botão direito e clique em **Renomear**. Renomeie o arquivo como `StreamReaderEnumerable.vb` e pressione ENTER. Renomear o arquivo também renomeará a classe para `StreamReaderEnumerable`. Essa classe implementará a interface `IEnumerable(Of String)`.
 
-1.  Clique com botão direito no projeto StreamReaderEnumerable, aponte para **Add**e, em seguida, clique em **Novo Item**. Selecione o **classe** modelo. No **nome** , digite `StreamReaderEnumerator.vb` e clique em **Okey**.
+1. Clique com botão direito no projeto StreamReaderEnumerable, aponte para **Add**e, em seguida, clique em **Novo Item**. Selecione o **classe** modelo. No **nome** , digite `StreamReaderEnumerator.vb` e clique em **Okey**.
 
  A primeira classe no projeto é a classe enumerable e implementará o `IEnumerable(Of String)` interface. Essa interface genérica implementa o <xref:System.Collections.IEnumerable> interface e garantias de que os consumidores dessa classe podem acessar valores digitados como `String`.  
   
@@ -95,7 +95,7 @@ O <xref:System.Collections.Generic.IEnumerable%601> interface é implementada po
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Fluxo de controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Instrução For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

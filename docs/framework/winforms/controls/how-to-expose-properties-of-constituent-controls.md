@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106347"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294906"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Como: Expor as propriedades de controles constituintes
 Os controles que compõem um controle de composição são chamados *controles de membro*. Esses controles normalmente são declarados particulares e, portanto, não podem ser acessados pelo desenvolvedor. Se você quiser disponibilizar as propriedades desses controles para futuros usuários, deverá expô-las para o usuário. Uma propriedade de um controle de membro é exposta pela criação de uma propriedade no controle de usuário e usando os acessadores `get` e `set` dessa propriedade para efetivar a alteração na propriedade privada do controle de membro.  
@@ -51,11 +51,11 @@ public Color ButtonColor
   
 ### <a name="to-expose-a-property-of-a-constituent-control"></a>Para expor uma propriedade de um controle de membro  
   
-1.  Crie uma propriedade pública para o controle de usuário.  
+1. Crie uma propriedade pública para o controle de usuário.  
   
-2.  Na seção `get` da propriedade, escreva o código que recupera o valor da propriedade que você deseja expor.  
+2. Na seção `get` da propriedade, escreva o código que recupera o valor da propriedade que você deseja expor.  
   
-3.  Na seção `set` da propriedade, escreva o código que passa o valor da propriedade para a propriedade exposta do controle de membro.  
+3. Na seção `set` da propriedade, escreva o código que passa o valor da propriedade para a propriedade exposta do controle de membro.  
   
 ## <a name="see-also"></a>Consulte também
 

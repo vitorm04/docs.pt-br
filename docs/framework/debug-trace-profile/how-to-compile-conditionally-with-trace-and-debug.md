@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298572"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como: compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
@@ -36,9 +36,9 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Para alterar as configurações de compilação na caixa de diálogo das páginas de propriedades  
   
-1.  Clique com o botão direito do mouse no nó do projeto no **Gerenciador de Soluções**.  
+1. Clique com o botão direito do mouse no nó do projeto no **Gerenciador de Soluções**.  
   
-2.  Escolha **Propriedades** no menu de atalho.  
+2. Escolha **Propriedades** no menu de atalho.  
   
     -   No Visual Basic, clique na guia **Compilar** no painel esquerdo da página de propriedades e, em seguida, clique no botão **Opções Avançadas de Compilação** para exibir a caixa de diálogo **Configurações Avançadas do Compilador**. Marque as caixas de seleção para as configurações do compilador que você deseja habilitar. Desmarque as caixas de seleção das configurações que você deseja desabilitar.  
   
@@ -46,7 +46,7 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Para compilar um código instrumentado usando a linha de comando  
   
-1.  Defina uma opção de compilador condicional na linha de comando. O compilador incluirá o código de rastreamento ou de depuração no executável.  
+1. Defina uma opção de compilador condicional na linha de comando. O compilador incluirá o código de rastreamento ou de depuração no executável.  
   
      Por exemplo, a seguinte instrução do compilador inserida na linha de comando incluirá o código de rastreamento em um executável compilado:  
   
@@ -71,7 +71,7 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Para executar a compilação condicional usando #CONST ou #define  
   
-1.  Digite a instrução apropriada para a linguagem de programação na parte superior do arquivo de código-fonte.  
+1. Digite a instrução apropriada para a linguagem de programação na parte superior do arquivo de código-fonte.  
   
     |Idioma|Instrução|Resultado|  
     |--------------|---------------|------------|  

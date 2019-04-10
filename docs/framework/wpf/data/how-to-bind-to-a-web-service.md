@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098566"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304981"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Como: Associar a um serviço Web
 Este exemplo mostra como associar a objetos retornados por chamadas de método de serviço Web.  
@@ -24,13 +24,13 @@ Este exemplo mostra como associar a objetos retornados por chamadas de método d
   
  Antes de chamar um serviço Web, é necessário criar uma referência a ele. Para criar uma referência Web ao serviço MTPS usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], siga as etapas a seguir:  
   
-1.  Abra o projeto no [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
+1. Abra o projeto no [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
   
-2.  No menu **Projeto**, clique em **Adicionar referência Web**.  
+2. No menu **Projeto**, clique em **Adicionar referência Web**.  
   
-3.  Na caixa de diálogo, defina as **URL** à [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. Na caixa de diálogo, defina as **URL** à [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
   
-4.  Pressione **Ir** e, em seguida, **Adicionar referência**.  
+4. Pressione **Ir** e, em seguida, **Adicionar referência**.  
   
  Em seguida, chame o método de serviço Web e defina o <xref:System.Windows.FrameworkElement.DataContext%2A> do controle ou janela apropriados para o objeto retornado. O método **GetContent** do serviço MTPS utiliza uma referência para o objeto **getContentRequest**. Portanto, o exemplo a seguir primeiro define um objeto de solicitação:  
   

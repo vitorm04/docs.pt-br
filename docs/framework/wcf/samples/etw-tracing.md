@@ -2,12 +2,12 @@
 title: Rastreamento ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 964c8fbe04f61ebf7a68e1bf36f9efdaab841e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300678"
 ---
 # <a name="etw-tracing"></a>Rastreamento ETW
 Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o rastreamento de eventos para Windows (ETW) e o `ETWTraceListener` que é fornecido com este exemplo. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e inclui o rastreamento ETW.  
@@ -80,22 +80,22 @@ Logman stop Wcf
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
     >  Para usar os comandos RegisterProvider.bat, SetupETW.bat e CleanupETW.bat, você deve executar sob uma conta de administrador local. Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)] ou posterior, você também deve executar o prompt de comando com privilégios elevados. Para fazer isso, clique com botão direito no ícone do prompt de comando, clique em **executar como administrador**.  
   
-3.  Antes de executar o exemplo, execute RegisterProvider.bat no cliente e servidor. Isso configura o arquivo ETWTracingSampleLog.etl resultante para gerar rastreamentos que podem ser lido pelo Visualizador de rastreamento de serviço. Esse arquivo pode ser encontrado na pasta C:\logs. Se essa pasta não existir, ele deverá ser criado ou nenhum rastreamentos são gerados. Em seguida, execute SetupETW.bat nos computadores cliente e servidor para iniciar a sessão de rastreamento de ETW. O arquivo SetupETW.bat pode ser encontrado na pasta CS\Client.  
+3. Antes de executar o exemplo, execute RegisterProvider.bat no cliente e servidor. Isso configura o arquivo ETWTracingSampleLog.etl resultante para gerar rastreamentos que podem ser lido pelo Visualizador de rastreamento de serviço. Esse arquivo pode ser encontrado na pasta C:\logs. Se essa pasta não existir, ele deverá ser criado ou nenhum rastreamentos são gerados. Em seguida, execute SetupETW.bat nos computadores cliente e servidor para iniciar a sessão de rastreamento de ETW. O arquivo SetupETW.bat pode ser encontrado na pasta CS\Client.  
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Quando o exemplo for concluído, execute CleanupETW.bat para concluir a criação do arquivo ETWTracingSampleLog.etl.  
+5. Quando o exemplo for concluído, execute CleanupETW.bat para concluir a criação do arquivo ETWTracingSampleLog.etl.  
   
-6.  Abra o arquivo ETWTracingSampleLog.etl de dentro do Visualizador de rastreamento de serviço. Você será solicitado a salvar o arquivo binário do formatado como um arquivo. svclog.  
+6. Abra o arquivo ETWTracingSampleLog.etl de dentro do Visualizador de rastreamento de serviço. Você será solicitado a salvar o arquivo binário do formatado como um arquivo. svclog.  
   
-7.  Abra o arquivo. svclog recém-criado no Visualizador de rastreamento do serviço para exibir os rastreamentos ETW e ServiceModel.  
+7. Abra o arquivo. svclog recém-criado no Visualizador de rastreamento do serviço para exibir os rastreamentos ETW e ServiceModel.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

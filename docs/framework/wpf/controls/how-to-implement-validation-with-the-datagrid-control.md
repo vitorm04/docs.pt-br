@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305943"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Como: implementar validação com o controle DataGrid
 O <xref:System.Windows.Controls.DataGrid> controle permite que você executar a validação no nível de linha e célula. Com a validação no nível da célula, você valida propriedades individuais de um objeto com associação de dados quando um usuário atualiza um valor. Com a validação no nível da linha, você valida objetos de dados inteiros quando um usuário confirma alterações em uma linha. Você também pode fornecer comentários visuais personalizados para erros de validação, ou usar os comentários visuais padrão que o <xref:System.Windows.Controls.DataGrid> fornece controle.  
@@ -42,14 +42,14 @@ O <xref:System.Windows.Controls.DataGrid> controle permite que você executar a 
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Para validar vários valores em uma única linha  
   
-1.  Implemente um <xref:System.Windows.Controls.ValidationRule> subclasse que verifica várias propriedades do objeto de dados associado. No seu <xref:System.Windows.Controls.ValidationRule.Validate%2A> convertido da implementação do método, o `value` valor de parâmetro para um <xref:System.Windows.Data.BindingGroup> instância. Em seguida, você pode acessar o objeto de dados por meio de <xref:System.Windows.Data.BindingGroup.Items%2A> propriedade.  
+1. Implemente um <xref:System.Windows.Controls.ValidationRule> subclasse que verifica várias propriedades do objeto de dados associado. No seu <xref:System.Windows.Controls.ValidationRule.Validate%2A> convertido da implementação do método, o `value` valor de parâmetro para um <xref:System.Windows.Data.BindingGroup> instância. Em seguida, você pode acessar o objeto de dados por meio de <xref:System.Windows.Data.BindingGroup.Items%2A> propriedade.  
   
      O exemplo a seguir demonstra esse processo para validar se o valor da propriedade `StartDate` para um objeto `Course` é anterior ao valor de sua propriedade `EndDate`.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Adicionar a regra de validação para o <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> coleção. O <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propriedade fornece acesso direto à <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propriedade de um <xref:System.Windows.Data.BindingGroup> instância que agrupa todas as associações usadas pelo controle.  
+2. Adicionar a regra de validação para o <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> coleção. O <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propriedade fornece acesso direto à <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propriedade de um <xref:System.Windows.Data.BindingGroup> instância que agrupa todas as associações usadas pelo controle.  
   
      O exemplo a seguir define o <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propriedade em XAML. O <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> estiver definida como <xref:System.Windows.Controls.ValidationStep.UpdatedValue> para que a validação ocorre somente depois que o objeto de dados associada é atualizado.  
   

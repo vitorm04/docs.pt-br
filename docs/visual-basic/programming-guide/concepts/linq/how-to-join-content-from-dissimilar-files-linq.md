@@ -2,12 +2,12 @@
 title: 'Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827741"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301107"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
   
 ## <a name="to-create-the-data-files"></a>Para criar os arquivos de dados
   
-1.  Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
+1. Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copie as seguintes linhas para um arquivo chamado names.csv e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
+2. Copie as seguintes linhas para um arquivo chamado names.csv e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
   
     ```  
     Omelchenko,Svetlana,111  

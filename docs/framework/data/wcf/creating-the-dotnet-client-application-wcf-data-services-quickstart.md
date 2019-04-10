@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 2f48f9486c5d29fc0b70e4487a12a1c499235cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efea92fa5176641ac64265dfffd44a088115bb61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305930"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Criando o aplicativo cliente do .NET Framework (Início rápido do WCF Data Services)
 
@@ -21,38 +21,38 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
 
 ## <a name="to-create-the-client-application-by-using-visual-studio"></a>Para criar o aplicativo cliente usando Visual Studio
 
-1.  Na **Gerenciador de soluções**, a solução com o botão direito, clique em **Add**e, em seguida, clique em **novo projeto**.
+1. Na **Gerenciador de soluções**, a solução com o botão direito, clique em **Add**e, em seguida, clique em **novo projeto**.
 
-2.  No painel esquerdo, selecione **Installed** > [**Visual C#**  ou **Visual Basic**] > **Desktop Windows**e, em seguida, selecione o  **Aplicativo WPF** modelo.
+2. No painel esquerdo, selecione **Installed** > [**Visual C#**  ou **Visual Basic**] > **Desktop Windows**e, em seguida, selecione o  **Aplicativo WPF** modelo.
 
-3.  Insira `NorthwindClient` para o nome do projeto e clique **Okey**.
+3. Insira `NorthwindClient` para o nome do projeto e clique **Okey**.
 
-4.  Abra o arquivo MainWindow.xaml e substitua o XAML pelo seguinte código:
+4. Abra o arquivo MainWindow.xaml e substitua o XAML pelo seguinte código:
 
      [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>Para adicionar uma referência de serviço de dados ao projeto
 
-1.  Na **Gerenciador de soluções**, clique com botão direito no projeto NorthwindClient, clique em **Add** > **referência de serviço**e, em seguida, clique em **Discover** .
+1. Na **Gerenciador de soluções**, clique com botão direito no projeto NorthwindClient, clique em **Add** > **referência de serviço**e, em seguida, clique em **Discover** .
 
      Isso exibe o serviço de dados Northwind que você criou na primeira tarefa.
 
-2.  No **Namespace** caixa de texto, digite `Northwind`e, em seguida, clique em **Okey**.
+2. No **Namespace** caixa de texto, digite `Northwind`e, em seguida, clique em **Okey**.
 
      Isso adiciona um novo arquivo de código ao projeto, que contém classes de dados que são usadas para acessar e interagir com os recursos do serviço de dados como objetos. As classes de dados são criadas no namespace `NorthwindClient.Northwind`.
 
 ## <a name="to-access-data-service-data-in-the-wpf-application"></a>Para acessar dados do serviço de dados no aplicativo WPF
 
-1.  Na **Gerenciador de soluções** sob **NorthwindClient**, clique com botão direito no projeto e clique em **Add Reference**.
+1. Na **Gerenciador de soluções** sob **NorthwindClient**, clique com botão direito no projeto e clique em **Add Reference**.
 
-2.  No **adicionar referência** caixa de diálogo, clique o **.NET** guia, selecione o assembly da dll e, em seguida, clique em **Okey**.
+2. No **adicionar referência** caixa de diálogo, clique o **.NET** guia, selecione o assembly da dll e, em seguida, clique em **Okey**.
 
 3. Na **Gerenciador de soluções** sob **NorthwindClient**, abra a página de código para o arquivo MainWindow. XAML e adicione o seguinte `using` instrução (`Imports` no Visual Basic).
 
      [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
      [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]
 
-3.  Insira o código a seguir que consulta esse serviço de dados e associa o resultado a uma classe <xref:System.Data.Services.Client.DataServiceCollection%601> na classe `MainWindow`:
+3. Insira o código a seguir que consulta esse serviço de dados e associa o resultado a uma classe <xref:System.Data.Services.Client.DataServiceCollection%601> na classe `MainWindow`:
 
     > [!NOTE]
     > Você deve substituir o nome de host `localhost:12345` pelo servidor e a porta que está hospedando sua instância do serviço de dados Northwind.
@@ -60,20 +60,20 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#querycode)]
      [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]
 
-4.  Insira o seguinte código que salvar as alterações na classe `MainWindow`:
+4. Insira o seguinte código que salvar as alterações na classe `MainWindow`:
 
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]
 
 ## <a name="to-build-and-run-the-northwindclient-application"></a>Para compilar e executar o aplicativo NorthwindClient
 
-1.  Na **Gerenciador de soluções**, clique com botão direito no projeto NorthwindClient e selecione **definir como projeto de inicialização**.
+1. Na **Gerenciador de soluções**, clique com botão direito no projeto NorthwindClient e selecione **definir como projeto de inicialização**.
 
-2.  Pressione **F5** para iniciar o aplicativo.
+2. Pressione **F5** para iniciar o aplicativo.
 
      Isso compila a solução e inicia o aplicativo cliente. Os dados são solicitados do serviço e exibidos no console.
 
-3.  Editar um valor na **quantidade** coluna da grade de dados e clique **salvar**.
+3. Editar um valor na **quantidade** coluna da grade de dados e clique **salvar**.
 
      As alterações são salvas no serviço de dados.
 
@@ -88,5 +88,5 @@ Para obter mais informações sobre como acessar um OData feed de um [!INCLUDE[d
 
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Guia de Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [Recursos](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

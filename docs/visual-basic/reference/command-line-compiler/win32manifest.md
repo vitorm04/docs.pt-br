@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300792"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica um definidos pelo usuário aplicativo arquivo manifesto Win32 a ser inserido no arquivo PE (executável portátil) de um projeto.  
@@ -38,9 +38,9 @@ Identifica um definidos pelo usuário aplicativo arquivo manifesto Win32 a ser i
   
  Seu aplicativo estará sujeito à virtualização se alguma das seguintes condições for verdadeira:  
   
-1.  Você usa o `-nowin32manifest` opção e você não fornecer um manifesto em uma etapa de build posterior ou como parte de um arquivo de recurso do Windows (. res), usando o `-win32resource` opção.  
+1. Você usa o `-nowin32manifest` opção e você não fornecer um manifesto em uma etapa de build posterior ou como parte de um arquivo de recurso do Windows (. res), usando o `-win32resource` opção.  
   
-2.  Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.  
+2. Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.  
   
  O Visual Studio cria um arquivo .manifest padrão e o armazena nos diretórios de depuração e liberação juntamente com o arquivo executável. Você pode exibir ou editar o arquivo App. manifest padrão clicando **exibir configurações de UAC** sobre o **aplicativo** guia no Designer de projeto. Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   

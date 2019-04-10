@@ -2,19 +2,19 @@
 title: 'Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 6a5277e26b74ccf54af0cdc5f671516fcc7badb8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 46c9149a7cb1809bf94162649de0a35110bbc697
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294503"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)
 O exemplo a seguir mostra como classificar linhas de texto estruturado, como valores separados por vírgulas, por qualquer campo na linha. O campo pode ser especificado dinamicamente em tempo de execução. Suponha que os campos em scores.csv representam o número de ID do aluno, seguido por uma série de quatro resultados de teste.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Para criar um arquivo que contém dados  
   
-1.  Copie os dados de scores.csv do tópico [Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvá-lo em sua pasta de solução.  
+1. Copie os dados de scores.csv do tópico [Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvá-lo em sua pasta de solução.  
   
 ## <a name="example"></a>Exemplo  
   

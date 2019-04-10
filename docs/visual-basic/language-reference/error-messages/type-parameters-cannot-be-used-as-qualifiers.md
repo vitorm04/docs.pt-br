@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296349"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Não é possível usar parâmetros de tipo como qualificadores
 Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.  
@@ -34,12 +34,12 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Remover o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.  
+1. Remover o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.  
   
-2.  Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.  
+2. Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
+- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)

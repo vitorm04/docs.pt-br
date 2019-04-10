@@ -2,12 +2,12 @@
 title: ConcurrencyMode Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 15edc89934bb105772144820a07991e77d15be62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2170b029f1cb4a85a1b2688fc1143ffcd1682fe6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299812"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
 Este exemplo demonstra a necessidade e implicações do uso de Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (análogo ao `ConcurencyMode.Single`). Para garantir acesso thread-safe, o Windows Communication Foundation (WCF) bloqueia o `InstanceContext` processamento de uma mensagem para que nenhuma outra mensagem possa ser processada. No caso de modo reentrante, o `InstanceContext` é desbloqueada imediatamente antes que o serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante, conforme demonstrado no exemplo) para obter o bloqueio a próxima vez em que eles chegam ao serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e o cliente podem enviar mensagens entre si usando um contrato duplex.  
@@ -46,11 +46,11 @@ public void Pong(int ticks)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="demonstrates"></a>Demonstra  
  Para executar o exemplo, crie os projetos de cliente e servidor. Em seguida, abrir duas janelas de comando e altere os diretórios para o \<amostra > \CS\Service\bin\debug e \<exemplo > \CS\Client\bin\debug diretórios. Em seguida, inicie o serviço digitando `service.exe` e, em seguida, invoque o Client.exe com o valor inicial de tiques passado como um argumento de entrada. É mostrado um exemplo de saída para 10 tiques.  

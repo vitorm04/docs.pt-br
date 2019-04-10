@@ -1,16 +1,16 @@
 ---
-title: Como criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF
+title: 'Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF'
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302264"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Como criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -51,18 +51,18 @@ ms.locfileid: "47207148"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
   
-1.  Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
+1. Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
   
-2.  Na janela **Novo Projeto**, clique em **Aplicativo ASP.NET Web Forms**.  
+2. Na janela **Novo Projeto**, clique em **Aplicativo ASP.NET Web Forms**.  
   
-3.  Em **Nome**, insira `TestApp` e pressione **OK**.  
+3. Em **Nome**, insira `TestApp` e pressione **OK**.  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
  Nesta etapa, você adicionará entradas de configuração ao arquivo de configuração *Web.config* do aplicativo Web ASP.NET Web Forms para torná-lo baseado em declarações.  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Para configurar um aplicativo ASP.NET para autenticação baseada em declarações  
   
-1.  Adicione as seguintes entradas de seção de configuração ao arquivo de configuração *Web.config* imediatamente após o elemento de abertura **\<configuration>**:  
+1. Adicione as seguintes entradas de seção de configuração ao arquivo de configuração *Web.config* imediatamente após o elemento de abertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207148"
     </configSections>  
     ```  
   
-2.  Adicione um elemento **\<location>** que habilita o acesso aos metadados de federação do aplicativo:  
+2. Adicione um elemento **\<location>** que habilita o acesso aos metadados de federação do aplicativo:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207148"
     </location>  
     ```  
   
-3.  Adicione as seguintes entradas de configuração nos elementos **\<system.web>** para negar usuários, desabilitar a autenticação nativa e permitir que o WIF gerencie a autenticação.  
+3. Adicione as seguintes entradas de configuração nos elementos **\<system.web>** para negar usuários, desabilitar a autenticação nativa e permitir que o WIF gerencie a autenticação.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207148"
     <authentication mode="None" />  
     ```  
   
-4.  Adicione um elemento **\<system.webServer>** que define os módulos para autenticação federada. Observe que o atributo *PublicKeyToken* deve ser igual ao atributo *PublicKeyToken* das entradas **\<configSections>** adicionadas anteriormente:  
+4. Adicione um elemento **\<system.webServer>** que define os módulos para autenticação federada. Observe que o atributo *PublicKeyToken* deve ser igual ao atributo *PublicKeyToken* das entradas **\<configSections>** adicionadas anteriormente:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207148"
     </system.webServer>  
     ```  
   
-5.  Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>**, no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>**. Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
+5. Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>**, no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>**. Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207148"
     </system.identityModel.services>  
     ```  
   
-6.  Adicione uma referência ao assembly <xref:System.IdentityModel>.  
+6. Adicione uma referência ao assembly <xref:System.IdentityModel>.  
   
-7.  Compile a solução para verificar se não há erros.  
+7. Compile a solução para verificar se não há erros.  
   
 ## <a name="step-3--test-your-solution"></a>Etapa 3 – Testar a solução  
  Nesta etapa, você testará o aplicativo Web ASP.NET Web Forms configurado para a autenticação baseada em declarações. Para executar um teste básico, você adicionará um código que exibe as declarações no token emitido pelo STS (Serviço de Token de Segurança).  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Para testar o aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
   
-1.  Abra o arquivo **Default.aspx** no projeto **TestApp** e substitua sua marcação existente pela seguinte marcação:  
+1. Abra o arquivo **Default.aspx** no projeto **TestApp** e substitua sua marcação existente pela seguinte marcação:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207148"
     </html>  
     ```  
   
-2.  Salve **Default.aspx** e, depois, abra seu arquivo code-behind chamado **Default.aspx.cs**.  
+2. Salve **Default.aspx** e, depois, abra seu arquivo code-behind chamado **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** pode estar oculto sob **Default.aspx** no Gerenciador de Soluções. Se **Default.aspx.cs** não estiver visível, expanda **Default.aspx** clicando no triângulo ao lado dele.  
   
-3.  Substitua o código existente no método **Page_Load** de **Default.aspx.cs** pelo seguinte código:  
+3. Substitua o código existente no método **Page_Load** de **Default.aspx.cs** pelo seguinte código:  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207148"
     }  
     ```  
   
-4.  Salve **Default.aspx.cs** e crie a solução.  
+4. Salve **Default.aspx.cs** e crie a solução.  
   
-5.  Execute a solução pressionando a tecla **F5**.  
+5. Execute a solução pressionando a tecla **F5**.  
   
-6.  Você deverá ver a página que exibe as declarações no token que foi emitido por você pelo Serviço de Token de Segurança.
+6. Você deverá ver a página que exibe as declarações no token que foi emitido por você pelo Serviço de Token de Segurança.

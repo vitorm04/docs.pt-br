@@ -2,12 +2,12 @@
 title: Uso de pontos de extremidade padrão
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584280"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304604"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de pontos de extremidade padrão
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2012, abra o arquivo StandardEndpoints.sln.
+1. Usando o Visual Studio 2012, abra o arquivo StandardEndpoints.sln.
 
-2.  Habilite vários projetos de inicialização.
+2. Habilite vários projetos de inicialização.
 
     1.  Na **Gerenciador de soluções**, a solução de pontos de extremidade padrão com o botão direito e, em seguida, selecione **propriedades**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          Isso especifica que o projeto do cliente é executado após o projeto de serviço.
 
-3.  Para executar a solução, pressione F5.
+3. Para executar a solução, pressione F5.
 
 > [!NOTE]
 > Se essas etapas não funcionarem, em seguida, certifique-se de que seu ambiente foi corretamente configurado, usando as seguintes etapas:

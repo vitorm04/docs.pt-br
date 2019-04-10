@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298884"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
@@ -99,11 +99,11 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  O valor do atributo é preenchido por um dos seguintes, usando esta ordem de processamento:  
   
-1.  Se o processador XAML encontrar uma chave ou um elemento de objeto que deriva de <xref:System.Windows.Markup.MarkupExtension>, em seguida, a extensão de marcação referenciada é avaliada primeiro, em vez de processar o valor como uma cadeia de caracteres e o objeto retornado pela extensão de marcação é usado como o valor. Em muitos casos, o objeto retornado por uma extensão de marcação será uma referência a um objeto existente ou então uma expressão que adia a avaliação até o tempo de execução, mas não será um objeto recém-instanciado.  
+1. Se o processador XAML encontrar uma chave ou um elemento de objeto que deriva de <xref:System.Windows.Markup.MarkupExtension>, em seguida, a extensão de marcação referenciada é avaliada primeiro, em vez de processar o valor como uma cadeia de caracteres e o objeto retornado pela extensão de marcação é usado como o valor. Em muitos casos, o objeto retornado por uma extensão de marcação será uma referência a um objeto existente ou então uma expressão que adia a avaliação até o tempo de execução, mas não será um objeto recém-instanciado.  
   
-2.  Se a propriedade é declarada com um atribuído <xref:System.ComponentModel.TypeConverter>, ou o tipo de valor dessa propriedade é declarado com um atributo <xref:System.ComponentModel.TypeConverter>, o valor de cadeia de caracteres do atributo é enviado para o conversor de tipo como uma entrada de conversão e o conversor retornará uma nova instância de objeto.  
+2. Se a propriedade é declarada com um atribuído <xref:System.ComponentModel.TypeConverter>, ou o tipo de valor dessa propriedade é declarado com um atributo <xref:System.ComponentModel.TypeConverter>, o valor de cadeia de caracteres do atributo é enviado para o conversor de tipo como uma entrada de conversão e o conversor retornará uma nova instância de objeto.  
   
-3.  Se não houver nenhum <xref:System.ComponentModel.TypeConverter>, será tentada uma conversão direta para o tipo de propriedade. Esse nível final é uma conversão direta do valor nativo do analisador entre tipos primitivos de linguagem XAML ou então uma verificação de nomes de constantes nomeadas em uma enumeração (o analisador então acessa os valores correspondentes).  
+3. Se não houver nenhum <xref:System.ComponentModel.TypeConverter>, será tentada uma conversão direta para o tipo de propriedade. Esse nível final é uma conversão direta do valor nativo do analisador entre tipos primitivos de linguagem XAML ou então uma verificação de nomes de constantes nomeadas em uma enumeração (o analisador então acessa os valores correspondentes).  
   
 #### <a name="enumeration-attribute-values"></a>Valores de atributo de enumeração  
  Enumerações em XAML são processadas intrinsecamente pelos analisadores XAML e os membros de uma enumeração devem ser definidos especificando-se o nome da cadeia de caracteres de uma das constantes nomeadas da enumeração.  

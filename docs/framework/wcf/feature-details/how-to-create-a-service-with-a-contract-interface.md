@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298529"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Como: criar um serviço com interface de contrato
 É a maneira preferencial para criar um contrato do Windows Communication Foundation (WCF) usando uma interface. Esse contrato especifica a coleção e a estrutura de mensagens necessária para acessar as operações de ofertas de serviço. Essa interface define os tipos de entrada e saídos, aplicando o <xref:System.ServiceModel.ServiceContractAttribute> classe para a interface e o <xref:System.ServiceModel.OperationContractAttribute> classe para os métodos que você deseja expor.  
@@ -19,13 +19,13 @@ ms.locfileid: "59128707"
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>Criando um contrato WCF com uma interface  
   
-1.  Criar uma nova interface usando o Visual Basic, C#, ou qualquer outra linguagem do tempo de execução de linguagem comum.  
+1. Criar uma nova interface usando o Visual Basic, C#, ou qualquer outra linguagem do tempo de execução de linguagem comum.  
   
-2.  Aplique a classe <xref:System.ServiceModel.ServiceContractAttribute> à interface.  
+2. Aplique a classe <xref:System.ServiceModel.ServiceContractAttribute> à interface.  
   
-3.  Defina os métodos na interface.  
+3. Defina os métodos na interface.  
   
-4.  Aplicar o <xref:System.ServiceModel.OperationContractAttribute> classe para cada método que deve ser exposto como parte do contrato de WCF público.  
+4. Aplicar o <xref:System.ServiceModel.OperationContractAttribute> classe para cada método que deve ser exposto como parte do contrato de WCF público.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra uma interface que define um contrato de serviço.  

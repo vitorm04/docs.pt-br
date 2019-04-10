@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293749"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Como: concluir trabalhos de impressão do Windows Forms
 Frequentemente, processadores de texto e outros aplicativos que envolvem impressão fornecerão a opção para exibir uma mensagem aos usuários de que um trabalho de impressão foi concluído. Você pode fornecer essa funcionalidade em seus formulários do Windows manipulando o <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos do <xref:System.Drawing.Printing.PrintDocument> componente.  
@@ -23,7 +23,7 @@ Frequentemente, processadores de texto e outros aplicativos que envolvem impress
   
 ### <a name="to-complete-a-print-job"></a>Para concluir um trabalho de impressão  
   
-1.  Defina as <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propriedade do <xref:System.Drawing.Printing.PrintDocument> componente.  
+1. Defina as <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propriedade do <xref:System.Drawing.Printing.PrintDocument> componente.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ Frequentemente, processadores de texto e outros aplicativos que envolvem impress
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  Escrever código para manipular o <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos.  
+2. Escrever código para manipular o <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventos.  
   
      No exemplo de código a seguir, uma caixa de mensagem é exibida, indicando que o documento terminou a impressão.  
   

@@ -2,12 +2,12 @@
 title: 'Como: bloquear pontos de extremidade na empresa'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305944"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Como: bloquear pontos de extremidade na empresa
 Empresas de grandes porte geralmente exigem que os aplicativos são desenvolvidos em conformidade com políticas de segurança da empresa. O tópico a seguir discute como desenvolver e instalar um validador de ponto de extremidade do cliente que pode ser usado para validar todos os aplicativos de cliente do Windows Communication Foundation (WCF) instalados em computadores.  
@@ -25,23 +25,23 @@ Empresas de grandes porte geralmente exigem que os aplicativos são desenvolvido
   
 ### <a name="to-create-the-endpoint-validator"></a>Para criar o validador de ponto de extremidade  
   
-1.  Criar uma <xref:System.ServiceModel.Description.IEndpointBehavior> com as etapas de validação desejada no <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> método. O código a seguir fornece um exemplo. (O `InternetClientValidatorBehavior` é obtida a [validação de segurança](../../../../docs/framework/wcf/samples/security-validation.md) exemplo.)  
+1. Criar uma <xref:System.ServiceModel.Description.IEndpointBehavior> com as etapas de validação desejada no <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> método. O código a seguir fornece um exemplo. (O `InternetClientValidatorBehavior` é obtida a [validação de segurança](../../../../docs/framework/wcf/samples/security-validation.md) exemplo.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Criar um novo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registra o validador de ponto de extremidade criado na etapa 1. O exemplo de código a seguir mostra isso. (O código original para este exemplo está no [validação de segurança](../../../../docs/framework/wcf/samples/security-validation.md) exemplo.)  
+2. Criar um novo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registra o validador de ponto de extremidade criado na etapa 1. O exemplo de código a seguir mostra isso. (O código original para este exemplo está no [validação de segurança](../../../../docs/framework/wcf/samples/security-validation.md) exemplo.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Verifique se que o assembly compilado é assinado com um nome forte. Para obter detalhes, consulte o [ferramenta de nome forte (SN. EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) e os comandos do compilador para seu idioma.  
+3. Verifique se que o assembly compilado é assinado com um nome forte. Para obter detalhes, consulte o [ferramenta de nome forte (SN. EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) e os comandos do compilador para seu idioma.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Para instalar o validador para o computador de destino  
   
-1.  Instale o validador de ponto de extremidade usando o mecanismo apropriado. Em uma empresa, isso pode estar usando diretiva de grupo e o Systems Management Server (SMS).  
+1. Instale o validador de ponto de extremidade usando o mecanismo apropriado. Em uma empresa, isso pode estar usando diretiva de grupo e o Systems Management Server (SMS).  
   
-2.  Instalar o assembly de nome forte no cache de assembly global usando o [Gacutil.exe (ferramenta de Cache de Assembly Global)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Instalar o assembly de nome forte no cache de assembly global usando o [Gacutil.exe (ferramenta de Cache de Assembly Global)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Use o <xref:System.Configuration?displayProperty=nameWithType> tipos de namespace:  
+3. Use o <xref:System.Configuration?displayProperty=nameWithType> tipos de namespace:  
   
     1.  Adicionar a extensão para o [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) seção usando um nome de tipo totalmente qualificado e o elemento de bloqueio.  
   

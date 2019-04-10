@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151223"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304825"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: Chamar funções definidas por modelo como métodos de objeto
 Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Um *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas no LINQ para consultas de entidades, consulte [como: Chamar funções definidas em consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -21,19 +21,19 @@ Este tópico descreve como chamar uma função o definida como um método em um 
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Para chamar uma função o definida como um método em um objeto ObjectContext  
   
-1.  Adicione um arquivo de origem para estender a classe parcial derivada da classe de <xref:System.Data.Objects.ObjectContext> , gerado automaticamente por ferramentas de Entity Framework. Defina o stub de CLR em um arquivo de origem separado impedirá que as alterações sejam perdidas quando o arquivo for regenerado.  
+1. Adicione um arquivo de origem para estender a classe parcial derivada da classe de <xref:System.Data.Objects.ObjectContext> , gerado automaticamente por ferramentas de Entity Framework. Defina o stub de CLR em um arquivo de origem separado impedirá que as alterações sejam perdidas quando o arquivo for regenerado.  
   
-2.  Adicione um método do Common Language Runtime (CLR) a sua classe de <xref:System.Data.Objects.ObjectContext> que faz o seguinte:  
+2. Adicione um método do Common Language Runtime (CLR) a sua classe de <xref:System.Data.Objects.ObjectContext> que faz o seguinte:  
   
     -   Mapeados para a função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual, respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
   
     -   Retorna os resultados do método de <xref:System.Linq.IQueryProvider.Execute%2A> retornado pela propriedade de <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> .  
   
-3.  Chame o método como um membro em uma instância da classe de <xref:System.Data.Objects.ObjectContext> .  
+3. Chame o método como um membro em uma instância da classe de <xref:System.Data.Objects.ObjectContext> .  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>Para chamar uma função o definida como o método estático em uma classe personalizada  
   
-1.  Adicionar uma classe ao seu aplicativo com um método estático que faça o seguinte:  
+1. Adicionar uma classe ao seu aplicativo com um método estático que faça o seguinte:  
   
     -   Mapeados para a função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual, respectivamente.  
   
@@ -41,7 +41,7 @@ Este tópico descreve como chamar uma função o definida como um método em um 
   
     -   Retorna os resultados do método de <xref:System.Linq.IQueryProvider.Execute%2A> retornado pela propriedade de <xref:System.Linq.IQueryable.Provider%2A> .  
   
-2.  Chame o método como um membro um método estático na classe personalizada  
+2. Chame o método como um membro um método estático na classe personalizada  
   
 ## <a name="example"></a>Exemplo  
  **Chamando uma função o definida como um método em um objeto de ObjectContext**  

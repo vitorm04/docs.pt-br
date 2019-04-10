@@ -2,12 +2,12 @@
 title: Contexto do esquema XML padrão e contexto do esquema XAML WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295595"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto do esquema XML padrão e contexto do esquema XAML WPF
 Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma produção de XAML que usa um vocabulário específico do XAML interage com o objeto de comportamento, incluindo como resolve o mapeamento de tipo, como assemblies são carregados, como determinado leitor e gravador de gravação as configurações são interpretadas. Este tópico descreve os recursos de serviços de XAML do .NET Framework e o contexto do esquema XAML padrão associados, que se baseia no sistema de tipos CLR. Este tópico também descreve o contexto do esquema XAML que é usado para o WPF.  
@@ -46,9 +46,9 @@ Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma pr
   
 #### <a name="xaml-reader-input-loose-xaml"></a>Entrada do leitor XAML (XAML flexível)  
   
-1.  O contexto do esquema XAML itera por meio de <xref:System.AppDomain> do aplicativo, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, começando do mais recentemente assembly carregado. Se uma correspondência for encontrada, esse assembly é usado para resolução.  
+1. O contexto do esquema XAML itera por meio de <xref:System.AppDomain> do aplicativo, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, começando do mais recentemente assembly carregado. Se uma correspondência for encontrada, esse assembly é usado para resolução.  
   
-2.  Caso contrário, uma das técnicas a seguir com base em CLR <xref:System.Reflection.Assembly> API são usados para carregar um assembly:  
+2. Caso contrário, uma das técnicas a seguir com base em CLR <xref:System.Reflection.Assembly> API são usados para carregar um assembly:  
   
     -   Se o nome é qualificado no mapeamento, chame <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> no nome qualificado.  
   
@@ -61,9 +61,9 @@ Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma pr
   
  Observe que faz referência a assembly por meio de `XamlBuildTask` são sempre totalmente qualificado.  
   
-1.  Chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> no nome qualificado.  
+1. Chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> no nome qualificado.  
   
-2.  Se a etapa anterior falhar, use o nome curto (e o token de chave pública, se presente) para chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Se a etapa anterior falhar, use o nome curto (e o token de chave pública, se presente) para chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  Há dois aspectos para carregamento de assemblies para BAML: carregar o assembly inicial que contém o BAML como um componente e carregar os assemblies de suporte de tipo para qualquer tipos referenciados pela produção de BAML.  
@@ -71,16 +71,16 @@ Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma pr
 ##### <a name="assembly-load-for-initial-markup"></a>Carregamento de assembly para marcação inicial:  
  A referência ao assembly a ser carregado a marcação de sempre é não qualificada.  
   
-1.  O contexto do esquema XAML WPF itera por meio de <xref:System.AppDomain> do aplicativo WPF, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, começando do mais recentemente assembly carregado. Se uma correspondência for encontrada, esse assembly é usado para resolução.  
+1. O contexto do esquema XAML WPF itera por meio de <xref:System.AppDomain> do aplicativo WPF, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, começando do mais recentemente assembly carregado. Se uma correspondência for encontrada, esse assembly é usado para resolução.  
   
-2.  Se a etapa anterior falhar, use o nome curto (e o token de chave pública, se presente) para chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Se a etapa anterior falhar, use o nome curto (e o token de chave pública, se presente) para chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ##### <a name="assembly-references-by-baml-types"></a>Referências de assembly por tipos BAML:  
  Referências de assembly para tipos usados na produção BAML são sempre totalmente qualificadas, como uma saída de tarefa de build.  
   
-1.  O contexto do esquema XAML WPF itera por meio de <xref:System.AppDomain> do aplicativo WPF, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, começando do mais recentemente assembly carregado. Se uma correspondência for encontrada, esse assembly é usado para resolução.  
+1. O contexto do esquema XAML WPF itera por meio de <xref:System.AppDomain> do aplicativo WPF, procurando por um assembly já carregado que corresponde a todos os aspectos do nome, começando do mais recentemente assembly carregado. Se uma correspondência for encontrada, esse assembly é usado para resolução.  
   
-2.  Caso contrário, uma das técnicas a seguir é usada para carregar um assembly:  
+2. Caso contrário, uma das técnicas a seguir é usada para carregar um assembly:  
   
     -   Chamar <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> no nome qualificado.  
   

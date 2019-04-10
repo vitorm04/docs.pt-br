@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195275"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297481"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura a <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) ao usar federated autenticação por meio do protocolo WS-Federation. Configura a <xref:System.Security.Claims.ClaimsAuthorizationManager> ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe para fornecer controle de acesso baseado em declarações.  
@@ -58,13 +58,13 @@ Configura a <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
   
  Independentemente do cenário, o tempo de execução carrega a configuração de Federação do padrão. O comportamento é definido da seguinte maneira:  
   
-1.  Se não houver nenhum `<federationConfiguration>` elemento presente, o tempo de execução cria uma configuração de Federação e a preenche com valores padrão. Essa configuração de Federação padrão fará referência a configuração de identidade padrão.  
+1. Se não houver nenhum `<federationConfiguration>` elemento presente, o tempo de execução cria uma configuração de Federação e a preenche com valores padrão. Essa configuração de Federação padrão fará referência a configuração de identidade padrão.  
   
-2.  Se um único `<federationConfiguration>` elemento estiver presente, é a configuração de Federação padrão independentemente de ele é nomeado ou sem nome. Se seu `identityConfiguration` atributo for especificado, a configuração de identidade nomeado é referenciada; caso contrário, a configuração de identidade padrão é referenciada.  
+2. Se um único `<federationConfiguration>` elemento estiver presente, é a configuração de Federação padrão independentemente de ele é nomeado ou sem nome. Se seu `identityConfiguration` atributo for especificado, a configuração de identidade nomeado é referenciada; caso contrário, a configuração de identidade padrão é referenciada.  
   
-3.  Se um dispositivo sem nome `<federationConfiguration>` elemento estiver presente, ela é a configuração de Federação do padrão. Se seu `identityConfiguration` atributo for especificado, a configuração de identidade nomeado é referenciada; caso contrário, a configuração de identidade padrão é referenciada.  
+3. Se um dispositivo sem nome `<federationConfiguration>` elemento estiver presente, ela é a configuração de Federação do padrão. Se seu `identityConfiguration` atributo for especificado, a configuração de identidade nomeado é referenciada; caso contrário, a configuração de identidade padrão é referenciada.  
   
-4.  Se vários nomeado `<federationConfiguration>` elementos estão presentes e não nomeados `<federationConfiguration>` elemento estiver presente, uma exceção será lançada.  
+4. Se vários nomeado `<federationConfiguration>` elementos estão presentes e não nomeados `<federationConfiguration>` elemento estiver presente, uma exceção será lançada.  
   
  Normalmente, um único `<federationConfiguration>` seção está definida. Esta seção é a configuração de Federação do padrão. Você pode especificar vários, nomeado exclusivamente `<federationConfiguration>` elementos; no entanto, nesse caso, se você quiser carregar uma configuração de Federação diferente sem nome, você deve fornecer um manipulador para o. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> eventos e defina a <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propriedade dentro do manipulador para um <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto inicializado com os valores do apropriado `<federationConfiguration>` elemento no arquivo de configuração.  
   

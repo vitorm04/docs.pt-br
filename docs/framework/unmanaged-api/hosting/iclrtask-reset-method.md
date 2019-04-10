@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300301"
 ---
 # <a name="iclrtaskreset-method"></a>Método ICLRTask::Reset
 Informa o common language runtime (CLR) que o host tiver concluído uma tarefa e permite que o CLR para reutilizar o atual [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância para representar outra tarefa.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Comentários  
  O CLR pode ser recicladas criado anteriormente `ICLRTask` instâncias para evitar a sobrecarga de repetidamente criar novas instâncias toda vez que ele precisa de uma nova tarefa. O host habilita esse recurso chamando `ICLRTask::Reset` em vez de [iclrtask:: Exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) quando tiver concluído uma tarefa. A lista a seguir resume o ciclo de vida normal de um `ICLRTask` instância:  
   
-1.  O tempo de execução cria um novo `ICLRTask` instância.  
+1. O tempo de execução cria um novo `ICLRTask` instância.  
   
-2.  A tempo de execução chama [ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) para obter uma referência à tarefa atual do host.  
+2. A tempo de execução chama [ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) para obter uma referência à tarefa atual do host.  
   
-3.  A tempo de execução chama [ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) para associar a nova instância da tarefa de host.  
+3. A tempo de execução chama [ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) para associar a nova instância da tarefa de host.  
   
-4.  A tarefa é executada e é concluída.  
+4. A tarefa é executada e é concluída.  
   
-5.  O host destrói a tarefa chamando `ICLRTask::ExitTask`.  
+5. O host destrói a tarefa chamando `ICLRTask::ExitTask`.  
   
  `Reset` altera esse cenário de duas maneiras. Na etapa 5 acima, o host chama `Reset` para redefinir a tarefa para um estado limpo e, em seguida, separa o `ICLRTask` instância de seus associados [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância. Se desejado, o host pode também armazenar em cache o `IHostTask` instância para reutilização. Na etapa 1 acima, o tempo de execução recebe um reciclado `ICLRTask` do cache em vez de criar uma nova instância.  
   

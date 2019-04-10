@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305579"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Como: Animar um duplo usando quadros principais
 Este exemplo mostra como animar o valor de uma propriedade que aceita um <xref:System.Double> usando quadros-chave.  
@@ -22,11 +22,11 @@ Este exemplo mostra como animar o valor de uma propriedade que aceita um <xref:S
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir move um retângulo por uma tela. O exemplo usa o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Media.TranslateTransform.X%2A> propriedade de uma <xref:System.Windows.Media.TranslateTransform> aplicado a um <xref:System.Windows.Shapes.Rectangle>. Essa animação, que se repete indefinidamente, usa três quadros chave da seguinte maneira:  
   
-1.  Durante os primeiros três segundos, usa uma instância da <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> classe para mover o retângulo ao longo de um caminho a uma taxa constante de sua posição inicial até a posição 500. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> criam uma transição linear suave entre valores.  
+1. Durante os primeiros três segundos, usa uma instância da <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> classe para mover o retângulo ao longo de um caminho a uma taxa constante de sua posição inicial até a posição 500. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> criam uma transição linear suave entre valores.  
   
-2.  No final do quarto segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> classe para mover repentinamente o retângulo para a próxima posição. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> criam saltos repentinos entre valores. Neste exemplo, o retângulo está na posição inicial e, de repente, aparece na posição 500.  
+2. No final do quarto segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> classe para mover repentinamente o retângulo para a próxima posição. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> criam saltos repentinos entre valores. Neste exemplo, o retângulo está na posição inicial e, de repente, aparece na posição 500.  
   
-3.  Os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> classe para mover o retângulo de volta para sua posição inicial. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> criam uma transição variável entre valores de acordo com o valor da <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o retângulo começa a se mover lentamente e acelera exponencialmente em direção ao final do segmento de tempo.  
+3. Os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> classe para mover o retângulo de volta para sua posição inicial. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> criam uma transição variável entre valores de acordo com o valor da <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o retângulo começa a se mover lentamente e acelera exponencialmente em direção ao final do segmento de tempo.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]

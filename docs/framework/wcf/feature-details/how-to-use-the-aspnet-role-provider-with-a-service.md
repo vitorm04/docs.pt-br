@@ -2,12 +2,12 @@
 title: 'Como: usar o provedor de função do ASP.NET com um serviço'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 20ffd1bb51bc2d6ac106927f805c7349c12059c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301133"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Como: usar o provedor de função do ASP.NET com um serviço
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função (em conjunto com o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação) é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permitem aos usuários criar uma conta com um site e a serem atribuídos a funções para autorização finalidades. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e faça logon no acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, o que exige que os usuários têm contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome/senha de usuário) pode usar o site e seus serviços.  
@@ -18,13 +18,13 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função
   
 ### <a name="to-configure-the-role-provider"></a>Para configurar o provedor de função  
   
-1.  No arquivo Web. config, sob o <`system.web`> elemento, adicionar um <`roleManager`> elemento e defina seu `enabled` de atributo para `true`.  
+1. No arquivo Web. config, sob o <`system.web`> elemento, adicionar um <`roleManager`> elemento e defina seu `enabled` de atributo para `true`.  
   
-2.  Defina as `defaultProvider` atributo `SqlRoleProvider`.  
+2. Defina as `defaultProvider` atributo `SqlRoleProvider`.  
   
-3.  Como um filho para o <`roleManager`> elemento, adicione um <`providers`> elemento.  
+3. Como um filho para o <`roleManager`> elemento, adicione um <`providers`> elemento.  
   
-4.  Como um filho para o <`providers`> elemento, adicione um <`add`> elemento com os seguintes atributos definidos com valores apropriados: `name`, `type`, `connectionStringName`, e `applicationName`, conforme mostrado no exemplo a seguir.  
+4. Como um filho para o <`providers`> elemento, adicione um <`add`> elemento com os seguintes atributos definidos com valores apropriados: `name`, `type`, `connectionStringName`, e `applicationName`, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -41,19 +41,19 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função
   
 ### <a name="to-configure-the-service-to-use-the-role-provider"></a>Para configurar o serviço para usar o provedor de função  
   
-1.  No arquivo Web. config, adicione uma [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento.  
+1. No arquivo Web. config, adicione uma [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento.  
   
-2.  Adicionar um [ \<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento para o <`system.ServiceModel`> elemento.  
+2. Adicionar um [ \<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento para o <`system.ServiceModel`> elemento.  
   
-3.  Adicionar um [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) para o <`behaviors`> elemento.  
+3. Adicionar um [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) para o <`behaviors`> elemento.  
   
-4.  Adicionar um [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento e defina o `name` de atributo para um valor apropriado.  
+4. Adicionar um [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento e defina o `name` de atributo para um valor apropriado.  
   
-5.  Adicionar um [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) para o <`behavior`> elemento.  
+5. Adicionar um [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) para o <`behavior`> elemento.  
   
-6.  Defina as `principalPermissionMode` atributo `UseAspNetRoles`.  
+6. Defina as `principalPermissionMode` atributo `UseAspNetRoles`.  
   
-7.  Defina as `roleProviderName` atributo `SqlRoleProvider`. O exemplo a seguir mostra um fragmento da configuração.  
+7. Defina as `roleProviderName` atributo `SqlRoleProvider`. O exemplo a seguir mostra um fragmento da configuração.  
   
     ```xml  
     <behaviors>  

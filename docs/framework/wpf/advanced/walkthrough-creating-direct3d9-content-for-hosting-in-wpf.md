@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando conteúdo Direct3D9 para hospedar no WPF'
+title: 'Passo a passo: criar conteúdo Direct3D9 para hospedar no WPF'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 160395b84ef7ca447d162ceff34752113a1d59a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379595"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300262"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Passo a passo: Criando conteúdo Direct3D9 para hospedar no WPF
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Passo a passo: criar conteúdo Direct3D9 para hospedar no WPF
 Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado para hospedagem em um aplicativo do Windows Presentation Foundation (WPF). Para obter mais informações sobre hospedagem de conteúdo Direct3D9 em aplicativos WPF, consulte [Interoperação Direct3D9 e WPF](wpf-and-direct3d9-interoperation.md).
 
  Nesta instrução passo a passo, as seguintes tarefas serão executadas:
@@ -37,29 +37,29 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 
 #### <a name="to-create-the-direct3d9-project"></a>Criar o projeto Direct3D9
 
-1.  Crie um novo Projeto Win32 no C++ chamado `D3DContent`.
+1. Crie um novo Projeto Win32 no C++ chamado `D3DContent`.
 
      O Assistente de Aplicativo Win32 abrirá e exibirá a tela de boas-vindas.
 
-2.  Clique em **Avançar**.
+2. Clique em **Avançar**.
 
      A tela de Configurações do Aplicativo será exibida.
 
-3.  Na seção **tipo de Aplicativo:**, selecione a opção **DLL**.
+3. Na seção **tipo de Aplicativo:**, selecione a opção **DLL**.
 
-4.  Clique em **Finalizar**.
+4. Clique em **Finalizar**.
 
      O projeto D3DContent será gerado.
 
-5.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto D3DContent e selecione **Propriedades**.
+5. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto D3DContent e selecione **Propriedades**.
 
      A caixa de diálogo **Páginas de Propriedades do D3DContent** se abrirá.
 
-6.  Selecione o nó **C/C++**.
+6. Selecione o nó **C/C++**.
 
-7.  No campo **Diretórios de Inclusão Adicionais**, especifique o local da pasta de inclusão DirectX. O local padrão dessa pasta é %ProgramFiles%\Microsoft DirectX SDK (*version*)\Include.
+7. No campo **Diretórios de Inclusão Adicionais**, especifique o local da pasta de inclusão DirectX. O local padrão dessa pasta é %ProgramFiles%\Microsoft DirectX SDK (*version*)\Include.
 
-8.  Clique duas vezes no nó **Vinculador** para expandi-lo.
+8. Clique duas vezes no nó **Vinculador** para expandi-lo.
 
 9. No campo **Diretórios de Inclusão Adicionais**, especifique o local da pasta de bibliotecas do DirectX. O local padrão dessa pasta é %ProgramFiles%\Microsoft DirectX SDK (*version*)\Lib\x86.
 
@@ -74,39 +74,39 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 
 #### <a name="to-create-the-direct3d9-content"></a>Para criar o conteúdo Direct3D9
 
-1.  Usando o Gerenciador de Soluções, adicione três classes do C++ ao projeto nomeado como a seguir.
+1. Usando o Gerenciador de Soluções, adicione três classes do C++ ao projeto nomeado como a seguir.
 
-     `CRenderer` (com o destruidor virtual)
+     `CRenderer` (com um destruidor virtual)
 
      `CRendererManager`
 
      `CTriangleRenderer`
 
-2.  Abra o Renderer.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+2. Abra o Renderer.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3.  Abra o Renderer.cpp no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+3. Abra o Renderer.cpp no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4.  Abra o RendererManager.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+4. Abra o RendererManager.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5.  Abra o RendererManager.cpp no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+5. Abra o RendererManager.cpp no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6.  Abra o TriangleRenderer.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+6. Abra o TriangleRenderer.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7.  Abra o TriangleRenderer.cpp no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+7. Abra o TriangleRenderer.cpp no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8.  Abra o stdafx.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
+8. Abra o stdafx.h no Editor de Códigos e substitua o código gerado automaticamente pelo código a seguir.
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
@@ -142,5 +142,5 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.D3DImage>
-- [Considerações sobre Desempenho para Interoperabilidade entre Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Passo a passo: Hospedando conteúdo Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [Passo a passo: hospedar o conteúdo de Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

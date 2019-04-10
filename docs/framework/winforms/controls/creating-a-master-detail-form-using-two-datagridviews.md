@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295790"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Passo a passo: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms
 Um dos cenários mais comuns para usar o <xref:System.Windows.Forms.DataGridView> controle é o *mestre/detalhes* formulário, na qual uma relação pai/filho entre duas tabelas de banco de dados é exibida. Seleção de linhas na tabela mestra faz com que a tabela de detalhes sejam atualizadas com os dados filho correspondentes.  
@@ -33,14 +33,14 @@ Um dos cenários mais comuns para usar o <xref:System.Windows.Forms.DataGridView
   
 #### <a name="to-create-a-masterdetail-form"></a>Para criar um formulário mestre/detalhes  
   
-1.  Criar uma classe que deriva de <xref:System.Windows.Forms.Form> e contém duas <xref:System.Windows.Forms.DataGridView> controles e dois <xref:System.Windows.Forms.BindingSource> componentes. O código a seguir fornece inicialização de formulário básica e inclui um método `Main`. Se você usar o designer do Visual Studio para criar o seu formulário, você pode usar o código gerado pelo designer em vez desse código, mas não se esqueça de usar os nomes mostrados nas declarações de variável aqui.  
+1. Criar uma classe que deriva de <xref:System.Windows.Forms.Form> e contém duas <xref:System.Windows.Forms.DataGridView> controles e dois <xref:System.Windows.Forms.BindingSource> componentes. O código a seguir fornece inicialização de formulário básica e inclui um método `Main`. Se você usar o designer do Visual Studio para criar o seu formulário, você pode usar o código gerado pelo designer em vez desse código, mas não se esqueça de usar os nomes mostrados nas declarações de variável aqui.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Implemente um método na sua definição de classe do formulário para manipular os detalhes da conexão ao banco de dados. Este exemplo usa um `GetData` método que preenche uma <xref:System.Data.DataSet> do objeto, adiciona um <xref:System.Data.DataRelation> objeto para o conjunto de dados e associa o <xref:System.Windows.Forms.BindingSource> componentes. Certifique-se de definir a variável de `connectionString` como um valor que seja apropriada para o base de dados.  
+2. Implemente um método na sua definição de classe do formulário para manipular os detalhes da conexão ao banco de dados. Este exemplo usa um `GetData` método que preenche uma <xref:System.Data.DataSet> do objeto, adiciona um <xref:System.Data.DataRelation> objeto para o conjunto de dados e associa o <xref:System.Windows.Forms.BindingSource> componentes. Certifique-se de definir a variável de `connectionString` como um valor que seja apropriada para o base de dados.  
   
     > [!IMPORTANT]
     >  O armazenamento das informações confidenciais (tal como uma senha) dentro da cadeia de conexão pode afetar a segurança do aplicativo. O uso da Autenticação do Windows (também conhecida como segurança integrada) é uma maneira mais segura de controlar o acesso a um banco de dados. Para obter mais informações, consulte [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ Um dos cenários mais comuns para usar o <xref:System.Windows.Forms.DataGridView
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Implemente um manipulador para seu formulário <xref:System.Windows.Forms.Form.Load> evento que é associado a <xref:System.Windows.Forms.DataGridView> controles para o <xref:System.Windows.Forms.BindingSource> componentes e chama o `GetData` método. O exemplo a seguir inclui o código que redimensiona <xref:System.Windows.Forms.DataGridView> colunas para caber os dados exibidos.  
+3. Implemente um manipulador para seu formulário <xref:System.Windows.Forms.Form.Load> evento que é associado a <xref:System.Windows.Forms.DataGridView> controles para o <xref:System.Windows.Forms.BindingSource> componentes e chama o `GetData` método. O exemplo a seguir inclui o código que redimensiona <xref:System.Windows.Forms.DataGridView> colunas para caber os dados exibidos.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

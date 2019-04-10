@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304216"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída
 Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere aplicar o operador 'Await' ao resultado da chamada.  
@@ -95,13 +95,13 @@ Como esta chamada não era esperada, a execução do método atual continua ante
 ## <a name="example"></a>Exemplo  
  O seguinte aplicativo do WPF (Windows Presentation Foundation) contém os métodos do exemplo anterior. As etapas a seguir configuram o aplicativo.  
   
-1.  Crie um aplicativo WPF e nomeie-o `AsyncWarning`.  
+1. Crie um aplicativo WPF e nomeie-o `AsyncWarning`.  
   
-2.  No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
+2. No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
   
      Se a guia não estiver visível, abra o menu de atalho para MainWindow.xaml no **Gerenciador de Soluções** e, em seguida, escolha **Exibir Código**.  
   
-3.  Substitua o código na exibição **XAML** de MainWindow.xaml pelo código a seguir.  
+3. Substitua o código na exibição **XAML** de MainWindow.xaml pelo código a seguir.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ Como esta chamada não era esperada, a execução do método atual continua ante
   
      Uma janela simples, contendo um botão e uma caixa de texto, aparecerá no modo de exibição de **Design** de MainWindow.xaml.  
   
-     Para obter mais informações sobre o Designer XAML, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simple, consulte o "para criar um aplicativo WPF" e "para projetar um MainWindow WPF simples" seções [passo a passo: acessar a Web usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     Para obter mais informações sobre o Designer XAML, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simples, confira as seções "Para criar um aplicativo WPF" e "Para criar um MainWindow simples do WPF" do [Passo a passo: acessar a Web usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4.  Substitua o código no XAML. vb pelo código a seguir.  
+4. Substitua o código no XAML. vb pelo código a seguir.  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ Como esta chamada não era esperada, a execução do método atual continua ante
     ' Exiting the Click event handler.  
     ```  
   
-5.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
+5. Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
   
      A saída esperada será exibida no final do código.  
   

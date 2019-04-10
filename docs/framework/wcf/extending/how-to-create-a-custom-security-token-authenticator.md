@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 7cd1cd22a216458add2cef97e45ce2daef3f9f9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 096cfc0f19189ba3173a8c5decd483542a18dbb0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304177"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Como: criar um autenticador de token de segurança personalizadas
 Este tópico mostra como criar um autenticador de token de segurança personalizada e como integrá-lo com um Gerenciador de token de segurança personalizada. Um autenticador de token de segurança valida o conteúdo de um token de segurança fornecido com uma mensagem de entrada. Se a validação for bem-sucedida, o autenticador retorna uma coleção de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instâncias que, quando avaliado, retorna um conjunto de declarações.  
@@ -23,11 +23,11 @@ Este tópico mostra como criar um autenticador de token de segurança personaliz
   
 #### <a name="to-create-a-custom-security-token-authenticator"></a>Para criar um autenticador de token de segurança personalizadas  
   
-1.  Definir uma nova classe que deriva de <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> classe.  
+1. Definir uma nova classe que deriva de <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> classe.  
   
-2.  Substituir o método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A>. O método retornará `true` ou `false` dependendo se o autenticador personalizado pode validar o tipo de token de entrada ou não.  
+2. Substituir o método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A>. O método retornará `true` ou `false` dependendo se o autenticador personalizado pode validar o tipo de token de entrada ou não.  
   
-3.  Substituir o método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Esse método precisa validar o conteúdo do token adequadamente. Se o token passa a etapa de validação, ele retorna uma coleção de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instâncias. O exemplo a seguir usa uma implementação de política de autorização personalizada que será criada no próximo procedimento.  
+3. Substituir o método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Esse método precisa validar o conteúdo do token adequadamente. Se o token passa a etapa de validação, ele retorna uma coleção de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instâncias. O exemplo a seguir usa uma implementação de política de autorização personalizada que será criada no próximo procedimento.  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
@@ -36,13 +36,13 @@ Este tópico mostra como criar um autenticador de token de segurança personaliz
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Para criar uma política de autorização personalizada  
   
-1.  Definir uma nova classe implementando o <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface.  
+1. Definir uma nova classe implementando o <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface.  
   
-2.  Implementar o <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> propriedade somente leitura. Uma maneira de implementar essa propriedade é gerar um identificador global exclusivo (GUID) no construtor da classe e retorná-lo toda vez que o valor dessa propriedade é solicitado.  
+2. Implementar o <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> propriedade somente leitura. Uma maneira de implementar essa propriedade é gerar um identificador global exclusivo (GUID) no construtor da classe e retorná-lo toda vez que o valor dessa propriedade é solicitado.  
   
-3.  Implementar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> propriedade somente leitura. Esta propriedade precisa retornar um emissor dos conjuntos de declarações que são obtidos do token. Esse emissor deve corresponder ao emissor do token ou uma autoridade que é responsável por validar o conteúdo do token. O exemplo a seguir usa a declaração do emissor que passados para essa classe do autenticador de token de segurança personalizada criado no procedimento anterior. O autenticador de token de segurança personalizada usa o conjunto de declarações fornecidas pelo sistema (retornado pela <xref:System.IdentityModel.Claims.ClaimSet.System%2A> propriedade) para representar o emissor do token de nome de usuário.  
+3. Implementar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> propriedade somente leitura. Esta propriedade precisa retornar um emissor dos conjuntos de declarações que são obtidos do token. Esse emissor deve corresponder ao emissor do token ou uma autoridade que é responsável por validar o conteúdo do token. O exemplo a seguir usa a declaração do emissor que passados para essa classe do autenticador de token de segurança personalizada criado no procedimento anterior. O autenticador de token de segurança personalizada usa o conjunto de declarações fornecidas pelo sistema (retornado pela <xref:System.IdentityModel.Claims.ClaimSet.System%2A> propriedade) para representar o emissor do token de nome de usuário.  
   
-4.  Implementar o método de <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> . Esse método popula uma instância da <xref:System.IdentityModel.Policy.EvaluationContext> (transmitida como um argumento) da classe com declarações que se baseiam no conteúdo do token de segurança entrada. O método retorna `true` quando ele é feito com a avaliação. Em casos quando a implementação se baseia na presença de outras políticas de autorização que fornecem informações adicionais para o contexto de avaliação, esse método pode retornar `false` se não houver as informações necessárias ainda no contexto de avaliação. Nesse caso, o WCF chamará o método novamente depois de avaliar todas as demais diretivas de autorização geradas para a mensagem de entrada se pelo menos uma dessas políticas de autorização tiver modificado o contexto de avaliação.  
+4. Implementar o método de <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> . Esse método popula uma instância da <xref:System.IdentityModel.Policy.EvaluationContext> (transmitida como um argumento) da classe com declarações que se baseiam no conteúdo do token de segurança entrada. O método retorna `true` quando ele é feito com a avaliação. Em casos quando a implementação se baseia na presença de outras políticas de autorização que fornecem informações adicionais para o contexto de avaliação, esse método pode retornar `false` se não houver as informações necessárias ainda no contexto de avaliação. Nesse caso, o WCF chamará o método novamente depois de avaliar todas as demais diretivas de autorização geradas para a mensagem de entrada se pelo menos uma dessas políticas de autorização tiver modificado o contexto de avaliação.  
   
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
@@ -51,9 +51,9 @@ Este tópico mostra como criar um autenticador de token de segurança personaliz
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Integrar um autenticador de token de segurança personalizada com um Gerenciador de token de segurança personalizadas  
   
-1.  Substituir o <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> método em sua implementação do Gerenciador de token de segurança personalizada.  
+1. Substituir o <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> método em sua implementação do Gerenciador de token de segurança personalizada.  
   
-2.  Adicionar lógica para o método para habilitá-lo retornar o autenticador de token de segurança personalizada com base no <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro. O exemplo a seguir retorna um autenticador de token de segurança personalizada, se o tipo de token de requisitos de token é um nome de usuário (representado pelo <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> propriedade) e a direção da mensagem para os quais o autenticador de token de segurança está sendo solicitado é de entrada ( representado pelo <xref:System.ServiceModel.Description.MessageDirection.Input> campo).  
+2. Adicionar lógica para o método para habilitá-lo retornar o autenticador de token de segurança personalizada com base no <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro. O exemplo a seguir retorna um autenticador de token de segurança personalizada, se o tipo de token de requisitos de token é um nome de usuário (representado pelo <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> propriedade) e a direção da mensagem para os quais o autenticador de token de segurança está sendo solicitado é de entrada ( representado pelo <xref:System.ServiceModel.Description.MessageDirection.Input> campo).  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

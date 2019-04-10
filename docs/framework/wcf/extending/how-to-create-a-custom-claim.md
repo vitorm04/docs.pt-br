@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167421"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295374"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Como: criar uma declaração personalizada
 A infraestrutura de modelo de identidade no Windows Communication Foundation (WCF) fornece um conjunto de tipos de declaração interna e direitos com as funções auxiliares para a criação de <xref:System.IdentityModel.Claims.Claim> instâncias com esses tipos e direitos. Essas declarações internas são projetadas para informações sobre o modelo encontrado em tipos de credencial de cliente WCF oferece suporte por padrão. Em muitos casos, as declarações internas são suficientes; No entanto, alguns aplicativos podem exigir declarações personalizadas. Uma declaração consiste o tipo de declaração, o recurso para o qual a declaração aplica-se a e à direita que é declarada por esse recurso. Este tópico descreve como criar uma declaração personalizada.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Para criar uma declaração personalizada que é baseada em um tipo de dados primitivo  
   
-1.  Criar uma declaração personalizada, passando o tipo de declaração, o valor do recurso e o direito do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> construtor.  
+1. Criar uma declaração personalizada, passando o tipo de declaração, o valor do recurso e o direito do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> construtor.  
   
     1.  Escolha um valor exclusivo para o tipo de declaração.  
   
@@ -40,7 +40,7 @@ A infraestrutura de modelo de identidade no Windows Communication Foundation (WC
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-non-primitive-data-type"></a>Para criar uma declaração personalizada que é baseada em um tipo de dados não primitivos  
   
-1.  Criar uma declaração personalizada, passando o tipo de declaração, o valor do recurso e o direito do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> construtor.  
+1. Criar uma declaração personalizada, passando o tipo de declaração, o valor do recurso e o direito do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> construtor.  
   
     1.  Escolha um valor exclusivo para o tipo de declaração.  
   

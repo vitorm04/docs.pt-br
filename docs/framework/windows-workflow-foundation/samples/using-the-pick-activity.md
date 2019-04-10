@@ -2,12 +2,12 @@
 title: Usando a atividade de picareta
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 59f99d2e0a69d796c1ec64093cf73e07b88887c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848277"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302966"
 ---
 # <a name="using-the-pick-activity"></a>Usando a atividade de picareta
 Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statements.Pick> .
@@ -17,32 +17,32 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
  Este exemplo solicita um usuário a digite seu nome no console em um período de tempo especificado. A atividade de <xref:System.Activities.Statements.Pick> no exemplo tem duas ramificações de que são executados com base na se o usuário digita em seu nome dentro de 5 segundos ou não. Se o usuário digita em seu nome dentro de 5 segundos, o primeiro ramificação será executado, que contém uma atividade personalizado de `ReadLine` ; se não a outra ramificação é executado, que contém uma atividade de <xref:System.Activities.Statements.Delay> . Uma vez que um nome de usuário é digitado no console, o nome de usuário é impresso no console. Se uma entrada não é inserido em 5 segundos, a operação é esgotado.
 
 ## <a name="demonstrates"></a>Demonstra
- atividade de<xref:System.Activities.Statements.Pick> .
+ <xref:System.Activities.Statements.Pick> atividade.
 
 ## <a name="discussion"></a>Discussão
  O exemplo inclui um fluxo de trabalho do designer e fluxo de trabalho codificado.
 
  Versão de designer o Designer de fluxo de trabalho de exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
--   Module.vb: Inclui a função de `Main` que executa o fluxo de trabalho de exemplo.
+-   Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
 
--   ReadString.cs: Uma atividade personalizado que lê algumas entradas de console.
+-   ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
 
 -   Sequence1.xaml: Um fluxo de trabalho criado usando o designer que usa a picareta.
 
  O fluxo de trabalho codificado a versão codificado de exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
--   Module.vb: Inclui a função de `Main` que executa o fluxo de trabalho de exemplo.
+-   Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
 
--   ReadString.cs: Uma atividade personalizado que lê algumas entradas de console.
+-   ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2010, abra o arquivo de solução de Pick.
+1. Usando o Visual Studio 2010, abra o arquivo de solução de Pick.
 
-2.  Para criar a solução, pressione CTRL+SHIFT+B.
+2. Para criar a solução, pressione CTRL+SHIFT+B.
 
-3.  Para executar a solução, pressione F5.
+3. Para executar a solução, pressione F5.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303135"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Como: assegurar que a linha selecionada em uma tabela filho permaneça na posição correta
 Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você exibirá dados no que é chamado de modo de exibição pai/filho ou detalhes/mestre. Isso se refere a um cenário de associação de dados em que os dados da mesma fonte são exibidos em dois controles. Alterar a seleção em um controle faz com que os dados exibidos no segundo controle mudem. Por exemplo, o primeiro controle pode conter uma lista de clientes e o segundo, uma lista de pedidos relacionada ao cliente selecionado no primeiro controle.  
@@ -30,28 +30,28 @@ Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você 
   
 ### <a name="to-cache-the-current-child-position"></a>Para armazenar em cache a posição filho atual  
   
-1.  Declare uma variável de inteiro para armazenar a posição de lista filho e uma variável booliana para indicar se a posição filho deve ser armazenada em cache.  
+1. Declare uma variável de inteiro para armazenar a posição de lista filho e uma variável booliana para indicar se a posição filho deve ser armazenada em cache.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Lidar com o <xref:System.Windows.Forms.CurrencyManager.ListChanged> evento para a associação <xref:System.Windows.Forms.CurrencyManager> e verifique se há um <xref:System.ComponentModel.ListChangedType> de <xref:System.ComponentModel.ListChangedType.Reset>.  
+2. Lidar com o <xref:System.Windows.Forms.CurrencyManager.ListChanged> evento para a associação <xref:System.Windows.Forms.CurrencyManager> e verifique se há um <xref:System.ComponentModel.ListChangedType> de <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Verifique a posição atual do <xref:System.Windows.Forms.CurrencyManager>. Se for maior que a primeira entrada na lista (normalmente 0), salve-a em uma variável.  
+3. Verifique a posição atual do <xref:System.Windows.Forms.CurrencyManager>. Se for maior que a primeira entrada na lista (normalmente 0), salve-a em uma variável.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Lidar com a lista de pai <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> evento para o Gerenciador de moeda pai. No manipulador, defina o valor booliano para indicar que este não é um cenário de cache. Se o <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> ocorre, a alteração para o pai é uma alteração de posição de lista e não uma alteração de valor do item.  
+4. Lidar com a lista de pai <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> evento para o Gerenciador de moeda pai. No manipulador, defina o valor booliano para indicar que este não é um cenário de cache. Se o <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> ocorre, a alteração para o pai é uma alteração de posição de lista e não uma alteração de valor do item.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Para redefinir a posição filho  
   
-1.  Lidar com o <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> eventos para o filho da associação <xref:System.Windows.Forms.CurrencyManager>.  
+1. Lidar com o <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> eventos para o filho da associação <xref:System.Windows.Forms.CurrencyManager>.  
   
-2.  Redefina a posição da tabela filho para a posição em cache salva no procedimento anterior.  
+2. Redefina a posição da tabela filho para a posição em cache salva no procedimento anterior.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,17 +64,17 @@ Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você 
   
  Para testar o exemplo de código, execute as etapas a seguir:  
   
-1.  Execute o exemplo.  
+1. Execute o exemplo.  
   
-2.  Marque a caixa de seleção **Armazenar em cache e redefinir posição**.  
+2. Marque a caixa de seleção **Armazenar em cache e redefinir posição**.  
   
-3.  Clique no botão **Limpar campo pai** para provocar uma alteração em um campo da tabela pai. Observe que a linha selecionada na tabela filho não muda.  
+3. Clique no botão **Limpar campo pai** para provocar uma alteração em um campo da tabela pai. Observe que a linha selecionada na tabela filho não muda.  
   
-4.  Feche e execute o exemplo novamente. Você precisa fazer isso porque o comportamento de reinicialização ocorre apenas na primeira alteração da linha pai.  
+4. Feche e execute o exemplo novamente. Você precisa fazer isso porque o comportamento de reinicialização ocorre apenas na primeira alteração da linha pai.  
   
-5.  Desmarque a caixa de seleção **Armazenar em cache e redefinir posição**.  
+5. Desmarque a caixa de seleção **Armazenar em cache e redefinir posição**.  
   
-6.  Clique no botão **Limpar campo pai**. Observe que a linha selecionada na tabela filho muda para a primeira linha.  
+6. Clique no botão **Limpar campo pai**. Observe que a linha selecionada na tabela filho muda para a primeira linha.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  

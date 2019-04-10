@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834069"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300626"
 ---
 # <a name="option-compare-statement"></a>Instrução Option Compare
 Declara o método padrão de comparação a ser usado ao comparar dados da cadeia de caracteres.  
@@ -65,11 +65,11 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>Para definir o Option Compare no IDE  
   
-1.  No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
+1. No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
   
-2.  Clique na guia **Compilar**.  
+2. Clique na guia **Compilar**.  
   
-3.  Defina o valor na **Option Compare** caixa.  
+3. Defina o valor na **Option Compare** caixa.  
   
  Quando você cria um projeto, o **Option Compare** definindo na **compilar** for definido como o **Option Compare** definindo no **opções** caixa de diálogo. Para alterar essa configuração, nos **ferramentas** menu, clique em **opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração inicial padrão nos **padrões de VB** é **binário**.  
   
@@ -95,9 +95,9 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Operadores de comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Operadores de comparação no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Operador Like](../../../visual-basic/language-reference/operators/like-operator.md)
-- [Funções da Cadeia de Caracteres](../../../visual-basic/language-reference/functions/string-functions.md)
+- [Funções da cadeia de caracteres](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

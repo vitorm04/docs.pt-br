@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236642"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890495"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como: Verificar se as cadeias de caracteres estão em um formato de email válido
 O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de caracteres está no formato de email válido.  
@@ -50,17 +50,17 @@ O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de ca
  [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
  [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]  
   
- Neste exemplo, o padrão de expressão regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` é interpretado como mostrado na tabela a seguir. A expressão regular é compilada com o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.  
+ Neste exemplo, o padrão de expressão regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` é interpretado conforme mostrado na tabela a seguir. A expressão regular é compilada com o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Comece a correspondência no início da cadeia de caracteres.|  
-|`(?(")`|Determine se o primeiro caractere é aspas. `(?(")` é o início de um construtor de alternância.|  
+|`(?(")`|Determine se o primeiro caractere é aspas. `(?(")` é o início de um constructo de alternância.|  
 |`(?("")("".+?(?<!\\)""@)`|Se o primeiro caractere for aspas, coincida as aspas iniciais seguidas de pelo menos uma ocorrência de qualquer caractere, seguido de uma marca de aspas finais. As aspas finais não devem ser precedidas por um caractere de barra invertida (\\). `(?<!` é o início de uma asserção lookbehind negativa de largura zero. A cadeia de caracteres deve terminar com um sinal de arroba (@).|  
 |<code>&#124;(([0-9a-z]</code>|Se o primeiro caractere não for aspas, coincida qualquer caractere alfabético de a até z ou de A até Z (a comparação não diferencia maiúsculas de minúsculas) ou qualquer caractere numérico entre 0 e 9.|  
 |`(\.(?!\.))`|Se o próximo caractere for um ponto final, coincida com ele. Se ele não for um ponto final, observe o próximo caractere e continue a correspondência. `(?!\.)` é uma asserção lookahead negativa de largura zero que impede dois pontos finais consecutivos de serem exibidos na parte local de um endereço de email.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Se o próximo caractere não for um ponto final, corresponda qualquer caractere de palavra ou um dos seguintes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Coincida o padrão de alternância (um ponto final seguido de um não ponto final ou um de um número de caracteres) zero ou mais vezes.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Se o próximo caractere não for um ponto final, corresponda qualquer caractere de palavra ou um dos seguintes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Coincida o padrão de alternância (um ponto final seguido de um não ponto final ou um de um número de caracteres) zero ou mais vezes.|  
 |`@`|Coincida o caractere @.|  
 |`(?<=[0-9a-z])`|Continue a correspondência se o caractere que precede o caractere @ for de A a Z, de a até z ou de 0 a 9. O constructo `(?<=[0-9a-z])` define uma asserção lookbehind positiva de largura zero.|  
 |`(?(\[)`|Verifique se o caractere que segue @ é um colchete de abertura.|  

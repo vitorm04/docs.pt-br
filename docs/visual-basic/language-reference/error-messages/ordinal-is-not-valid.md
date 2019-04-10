@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: f3207c2cc237ae22c295c2b3ed56f18601625226
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299248"
 ---
 # <a name="ordinal-is-not-valid"></a>O ordinal não é válido
 A chamada para uma biblioteca de vínculo dinâmico (DLL) indicado para usar um número em vez de um nome de procedimento, usando o `#num` sintaxe. Esse erro tem as seguintes causas possíveis:  
@@ -22,11 +22,11 @@ A chamada para uma biblioteca de vínculo dinâmico (DLL) indicado para usar um 
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se que a expressão representa um número válido, ou chame o procedimento por nome.  
+1. Verifique se que a expressão representa um número válido, ou chame o procedimento por nome.  
   
-2.  Certifique-se de `#num` identifica uma função válida na DLL.  
+2. Certifique-se de `#num` identifica uma função válida na DLL.  
   
-3.  Isole a causa do problema comentando o código de chamada de procedimento. Gravar um `Declare` instrução para o procedimento e relatar o problema para o fornecedor da biblioteca de tipo.  
+3. Isole a causa do problema comentando o código de chamada de procedimento. Gravar um `Declare` instrução para o procedimento e relatar o problema para o fornecedor da biblioteca de tipo.  
   
 ## <a name="see-also"></a>Consulte também
 

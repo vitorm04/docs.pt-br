@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304799"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091610"
 ## <a name="wpf-add-ins"></a>Suplementos do WPF  
  O WPF, junto com o .NET Framework suplemento do modelo, permite que você direcione uma ampla variedade de cenários que exigem aplicativos host exibam interfaces de usuário dos suplementos. Em particular, estes cenários são endereçados pelo WPF com os dois modelos de programação a seguir:  
   
-1.  **O suplemento retorna uma interface do usuário**. Um suplemento retorna uma interface do usuário para o aplicativo host via uma chamada de método, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
+1. **O suplemento retorna uma interface do usuário**. Um suplemento retorna uma interface do usuário para o aplicativo host via uma chamada de método, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
   
     -   A aparência de uma interface do usuário que é retornado por um suplemento é dependente de dados ou condições que existem somente em tempo de execução, tais como dinamicamente relatórios gerados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091610"
   
     -   O suplemento principalmente executa um serviço para o aplicativo host e relata o status para o aplicativo host com uma interface do usuário.  
   
-2.  **O suplemento é uma interface do usuário**. Um suplemento é uma interface do usuário, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
+2. **O suplemento é uma interface do usuário**. Um suplemento é uma interface do usuário, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
   
     -   Um suplemento não fornece nenhum serviço além de ser exibido, por exemplo, um anúncio.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091610"
   
  Os tipos de UI WPF não são remotos. Para resolver o problema, o WPF estende o modelo do .NET Framework suplemento para habilitar o WPF UI criadas por suplementos a ser exibida de aplicativos host. Esse suporte é fornecido pelo WPF por dois tipos: o <xref:System.AddIn.Contract.INativeHandleContract> interface e dois métodos estáticos implementados pela <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Em um nível elevado, esses tipos e métodos são usados da seguinte maneira:  
   
-1.  WPF exige que as interfaces de usuário fornecidas pelos suplementos sejam classes que derivam direta ou indiretamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuário, painéis de layout e páginas.  
+1. WPF exige que as interfaces de usuário fornecidas pelos suplementos sejam classes que derivam direta ou indiretamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuário, painéis de layout e páginas.  
   
-2.  Aonde o contrato declarar que uma interface do usuário será transmitida entre o suplemento e o aplicativo host, ele deve ser declarado como um <xref:System.AddIn.Contract.INativeHandleContract> (não um <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> é uma representação remota do suplemento a interface do usuário que pode ser passada entre limites de isolamento.  
+2. Aonde o contrato declarar que uma interface do usuário será transmitida entre o suplemento e o aplicativo host, ele deve ser declarado como um <xref:System.AddIn.Contract.INativeHandleContract> (não um <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> é uma representação remota do suplemento a interface do usuário que pode ser passada entre limites de isolamento.  
   
-3.  Antes de ser transmitido do domínio de aplicativo do suplemento, um <xref:System.Windows.FrameworkElement> é empacotado como um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Antes de ser transmitido do domínio de aplicativo do suplemento, um <xref:System.Windows.FrameworkElement> é empacotado como um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Após ser transmitido ao domínio de aplicativo do aplicativo host, o <xref:System.AddIn.Contract.INativeHandleContract> deve ser reempacotado como um <xref:System.Windows.FrameworkElement> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Após ser transmitido ao domínio de aplicativo do aplicativo host, o <xref:System.AddIn.Contract.INativeHandleContract> deve ser reempacotado como um <xref:System.Windows.FrameworkElement> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  Como <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> são usados dependendo do cenário específico. As seções a seguir fornecem detalhes para cada modelo de programação.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091610"
 ## <a name="add-in-returns-a-user-interface"></a>O suplemento retorna uma interface do usuário  
  Para um suplemento retornar uma interface do usuário para um aplicativo host, são necessários:  
   
-1.  O aplicativo host, suplemento e pipeline devem ser criados, conforme descrito pelo .NET Framework [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação.  
+1. O aplicativo host, suplemento e pipeline devem ser criados, conforme descrito pelo .NET Framework [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação.  
   
-2.  O contrato deve implementar <xref:System.AddIn.Contract.IContract> e, para retornar uma interface do usuário, o contrato deve declarar um método com um valor de retorno do tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. O contrato deve implementar <xref:System.AddIn.Contract.IContract> e, para retornar uma interface do usuário, o contrato deve declarar um método com um valor de retorno do tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  A interface do usuário que é passado entre o suplemento e o aplicativo host deve derivar diretamente ou indiretamente de <xref:System.Windows.FrameworkElement>.  
+3. A interface do usuário que é passado entre o suplemento e o aplicativo host deve derivar diretamente ou indiretamente de <xref:System.Windows.FrameworkElement>.  
   
-4.  A interface do usuário que é retornado pelo suplemento deve ser convertido de um <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento.  
+4. A interface do usuário que é retornado pelo suplemento deve ser convertido de um <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento.  
   
-5.  A interface do usuário que é retornado deve ser convertido de um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento.  
+5. A interface do usuário que é retornado deve ser convertido de um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento.  
   
-6.  O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
+6. O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
   
  Para obter um exemplo que demonstra como implementar um suplemento que retorna uma interface do usuário, consulte [criar um suplemento que retorna uma interface do usuário](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091610"
 ## <a name="add-in-is-a-user-interface"></a>O suplemento é uma interface do usuário  
  Quando um suplemento é uma interface do usuário, são necessários os seguintes:  
   
-1.  O aplicativo host, suplemento e pipeline devem ser criados, conforme descrito pelo .NET Framework [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação.  
+1. O aplicativo host, suplemento e pipeline devem ser criados, conforme descrito pelo .NET Framework [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação.  
   
-2.  A interface de contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. A interface de contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  O suplemento que é passado para o aplicativo host deve derivar direta ou indiretamente de <xref:System.Windows.FrameworkElement>.  
+3. O suplemento que é passado para o aplicativo host deve derivar direta ou indiretamente de <xref:System.Windows.FrameworkElement>.  
   
-4.  O suplemento deve ser convertido de um <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento.  
+4. O suplemento deve ser convertido de um <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento.  
   
-5.  O suplemento deve ser convertido de um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento.  
+5. O suplemento deve ser convertido de um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento.  
   
-6.  O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
+6. O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
   
  Para obter um exemplo que demonstra como implementar um suplemento que é uma interface do usuário, consulte [criar um suplemento que é uma interface do usuário](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091610"
   
  A próxima etapa é especificar os assemblies de pipeline e o assembly do suplemento como os arquivos de conteúdo do [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] em [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], fazendo o seguinte:  
   
-1.  Incluindo o assembly do pipeline e do suplemento no projeto clicando com o botão direito do mouse em cada pasta de pipeline no Gerenciador de Soluções e escolhendo **Incluir no Projeto**.  
+1. Incluindo o assembly do pipeline e do suplemento no projeto clicando com o botão direito do mouse em cada pasta de pipeline no Gerenciador de Soluções e escolhendo **Incluir no Projeto**.  
   
-2.  Definindo a **Ação de Build** de cada assembly do pipeline e assembly do suplemento para **Conteúdo** da janela **Propriedades**.  
+2. Definindo a **Ação de Build** de cada assembly do pipeline e assembly do suplemento para **Conteúdo** da janela **Propriedades**.  
   
  A etapa final é configurar o manifesto do aplicativo para incluir os arquivos do assembly do pipeline e o arquivo do assembly do suplemento para download. Os arquivos devem estar localizados em pastas na raiz da pasta no cache do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que o aplicativo [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ocupa. A configuração pode ser obtida em [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], fazendo o seguinte:  
   
-1.  Clique com o botão direito do mouse no projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], clique em **Propriedades**, clique em **Publicar** e, em seguida, clique no botão **Arquivos de Aplicativo**.  
+1. Clique com o botão direito do mouse no projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], clique em **Propriedades**, clique em **Publicar** e, em seguida, clique no botão **Arquivos de Aplicativo**.  
   
-2.  Na caixa de diálogo **Arquivos de Aplicativo**, defina o **Status da Publicação** de cada DLL de suplemento e de pipeline a **Incluir (Auto)** e defina o **Grupo de Download** para cada DLL de pipeline e de suplemento para **(Obrigatório)**.  
+2. Na caixa de diálogo **Arquivos de Aplicativo**, defina o **Status da Publicação** de cada DLL de suplemento e de pipeline a **Incluir (Auto)** e defina o **Grupo de Download** para cada DLL de pipeline e de suplemento para **(Obrigatório)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Usando o pipeline e o suplemento da base de aplicativo  
  Quando o pipeline e o suplemento são configurados para a implantação do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], eles são baixados para a mesma pasta de cache do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar o pipeline e o suplemento por meio do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], o código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve obtê-los da base de aplicativo. Os diversos tipos e membros do modelo do .NET Framework suplemento para usar pipelines e suplementos fornecem suporte especial para esse cenário. Em primeiro lugar, o caminho é identificado pelo <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeração. Você pode usar esse valor com sobrecargas de membros de suplemento pertinentes para usar pipelines que incluem o seguinte:  

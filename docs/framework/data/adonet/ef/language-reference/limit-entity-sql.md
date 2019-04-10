@@ -2,12 +2,12 @@
 title: LIMITAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 44b28ec265a18632e936ba05e25840a03f68da90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b267e97860a2cb071b857224455f01b73115c72d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299683"
 ---
 # <a name="limit-entity-sql"></a>LIMITAR (Entity SQL)
 A paginação física pode ser executada usando a subcláusula LIMIT em uma ORDER BY. LIMIT não pode ser usada separadamente da cláusula ORDER BY.  
@@ -30,9 +30,9 @@ A paginação física pode ser executada usando a subcláusula LIMIT em uma ORDE
 ## <a name="example"></a>Exemplo  
  A seguinte consulta Entity SQL usa o operador ORDER BY com LIMIT para especificar ordem de classificação usada em objetos retornados em uma instrução SELECT. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#LIMIT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#limit)]  
   

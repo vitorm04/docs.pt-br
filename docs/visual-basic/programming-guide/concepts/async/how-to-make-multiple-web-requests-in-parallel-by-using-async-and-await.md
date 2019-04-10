@@ -2,12 +2,12 @@
 title: 'Como: Fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 3d5a41cab961f2ec054085b02a0047b69b488a1d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303460"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Como: Fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)
 Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. O [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador é aplicado à tarefa no ponto no método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.  
@@ -44,7 +44,7 @@ Dim result = Await myTask
   
 ### <a name="to-set-up-the-project"></a>Para configurar o projeto  
   
-1.  Para configurar um aplicativo WPF, complete as etapas a seguir. Encontre instruções detalhadas para essas etapas em [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Para configurar um aplicativo WPF, complete as etapas a seguir. Encontre instruções detalhadas para essas etapas em [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Crie um aplicativo WPF que contenha uma caixa de texto e um botão. Dê o nome `startButton` para o botão e `resultsTextBox`, para a caixa de texto.  
   
@@ -54,9 +54,9 @@ Dim result = Await myTask
   
 ### <a name="to-add-the-code"></a>Para adicionar o código  
   
-1.  Na janela de design, MainWindow. XAML, clique duas vezes no botão para criar o `startButton_Click` manipulador de eventos no XAML. vb.  
+1. Na janela de design, MainWindow. XAML, clique duas vezes no botão para criar o `startButton_Click` manipulador de eventos no XAML. vb.  
   
-2.  Copie o código a seguir e cole-o no corpo da `startButton_Click` em XAML. vb.  
+2. Copie o código a seguir e cole-o no corpo da `startButton_Click` em XAML. vb.  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -66,11 +66,11 @@ Dim result = Await myTask
   
      O código chama um método assíncrono, `CreateMultipleTasksAsync`, que controla o aplicativo.  
   
-3.  Adicione os seguintes métodos de suporte ao projeto:  
+3. Adicione os seguintes métodos de suporte ao projeto:  
   
-    -   O `ProcessURLAsync` usa um método <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site como uma matriz de bytes. Em seguida, o método de suporte `ProcessURLAsync` exibe e retorna o comprimento da matriz.  
+    -   `ProcessURLAsync` usa um <xref:System.Net.Http.HttpClient> método para baixar o conteúdo de um site como uma matriz de bytes. Em seguida, o método de suporte `ProcessURLAsync` exibe e retorna o comprimento da matriz.  
   
-    -   O `DisplayResults` exibe o número de bytes na matriz de bytes para cada URL. Essa exibição mostra quando cada tarefa termina o download.  
+    -   `DisplayResults` Exibe o número de bytes na matriz de bytes para cada URL. Essa exibição mostra quando cada tarefa termina o download.  
   
      Copie os seguintes métodos e cole-os após o `startButton_Click` manipulador de eventos no XAML. vb.  
   
@@ -94,7 +94,7 @@ Dim result = Await myTask
     End Sub  
     ```  
   
-4.  Finalmente, defina o método `CreateMultipleTasksAsync`, que executa as seguintes etapas.  
+4. Finalmente, defina o método `CreateMultipleTasksAsync`, que executa as seguintes etapas.  
   
     -   O método declara um objeto `HttpClient`, que você precisa para acessar o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> em `ProcessURLAsync`.  
   
@@ -136,7 +136,7 @@ Dim result = Await myTask
     End Function  
     ```  
   
-5.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
+5. Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
   
      Execute o programa várias vezes para ver que as três tarefas nem sempre são concluídas na mesma ordem e que a ordem em que elas são concluídas não é, necessariamente, a ordem em que elas foram criadas e aguardadas.  
   

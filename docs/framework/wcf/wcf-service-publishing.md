@@ -2,12 +2,12 @@
 title: Publicação de serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299716"
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
 
@@ -35,13 +35,13 @@ O serviço pode ser publicado para os seguintes locais de destino.
 
 Execute as seguintes etapas para implantar uma implementação de serviço:
 
-1.  Abra o Visual Studio com privilégios elevados (clique com botão direito no executável e escolha **executar como administrador** para abri-lo).  Se você estiver usando o IIS 7.0 ou posterior, certifique-se de que você instalou o componente de "Metabase de IIS e compatibilidade de configuração de IIS6" usa "Windows ativar ou desativar recursos do" no painel de controle.
+1. Abra o Visual Studio com privilégios elevados (clique com botão direito no executável e escolha **executar como administrador** para abri-lo).  Se você estiver usando o IIS 7.0 ou posterior, certifique-se de que você instalou o componente de "Metabase de IIS e compatibilidade de configuração de IIS6" usa "Windows ativar ou desativar recursos do" no painel de controle.
 
-2.  Abra um projeto de serviço, selecione **construir** > **publicar \<nome do projeto >** no menu principal, ou clique com botão direito no projeto no **Solution Explorer**e clique em **publicar**.
+2. Abra um projeto de serviço, selecione **construir** > **publicar \<nome do projeto >** no menu principal, ou clique com botão direito no projeto no **Solution Explorer**e clique em **publicar**.
 
-3.  O **publicar** janela é exibida. Clique o **...** . botão para especificar o local de destino que o serviço deve ser implantado. Você pode selecionar para implantar o aplicativo no IIS local, sistema de arquivos ou FTP Site. Se implantar o aplicativo IIS local, você pode selecionar seu site e crie seu aplicativo web sob ele, clicando o **criar novo aplicativo Web** ícone no canto superior direito.
+3. O **publicar** janela é exibida. Clique o **...** . botão para especificar o local de destino que o serviço deve ser implantado. Você pode selecionar para implantar o aplicativo no IIS local, sistema de arquivos ou FTP Site. Se implantar o aplicativo IIS local, você pode selecionar seu site e crie seu aplicativo web sob ele, clicando o **criar novo aplicativo Web** ícone no canto superior direito.
 
-4.  Depois de clicar em **publicar** na janela principal, o Visual Studio implanta o aplicativo para o local de destino especificado e copia os arquivos Web. config,. svc e assembly para o diretório de destino. . O nome de. svc será "ProjectName.ServiceName.svc". Depois que o serviço é publicado com êxito, você pode encontrar um hotlink na janela de saída do Visual Studio, que é semelhante a "conectar-se ao `http://localhost/WebApplicationFolderName...`". Você pode pressionar a tecla CTRL e clique no link para abrir uma página do navegador dentro do Visual Studio para exibir a estrutura de diretório de serviço.
+4. Depois de clicar em **publicar** na janela principal, o Visual Studio implanta o aplicativo para o local de destino especificado e copia os arquivos Web. config,. svc e assembly para o diretório de destino. . O nome de. svc será "ProjectName.ServiceName.svc". Depois que o serviço é publicado com êxito, você pode encontrar um hotlink na janela de saída do Visual Studio, que é semelhante a "conectar-se ao `http://localhost/WebApplicationFolderName...`". Você pode pressionar a tecla CTRL e clique no link para abrir uma página do navegador dentro do Visual Studio para exibir a estrutura de diretório de serviço.
 
      Se você não pode navegar para o site, talvez seja porque o navegador de diretório não está habilitado no IIS. Siga as dicas na seção "Coisas que você pode tentar" para habilitá-lo. Como alternativa, você pode digitar diretamente `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` para exibir sua página de serviço.
 
@@ -77,4 +77,4 @@ Se você optar por implantar seu aplicativo no IIS local, você poderá encontra
 
 - [Modelos do Visual Studio do WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Cliente de Teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

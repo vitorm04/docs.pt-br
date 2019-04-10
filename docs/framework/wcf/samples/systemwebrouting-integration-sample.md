@@ -2,12 +2,12 @@
 title: Exemplo de integração de SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 244a7b7b73217086864b16945bc1521a3383aeac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302228"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Exemplo de integração de SystemWebRouting
 Este exemplo demonstra a integração da camada de hospedagem com as classes de <xref:System.Web.Routing> namespace. As classes de <xref:System.Web.Routing> namespace permitem que um aplicativo usar URLs que não correspondem diretamente a um recurso físico. Usando o roteamento da Web permite que o desenvolvedor crie endereços virtuais para HTTP, em seguida, são mapeados para os serviços WCF reais. Isso é útil quando um serviço WCF deve ser hospedado sem a necessidade de um arquivo físico ou recurso, ou quando os serviços devem ser acessados com URLs que não contêm arquivos como. HTML ou. aspx. Este exemplo demonstra como utilizar o <xref:System.Web.Routing.RouteTable> classe para criar URIs virtuais que são mapeados para executar serviços definidos no global. asax. 
@@ -32,31 +32,31 @@ Este exemplo pode já estar instalado no seu computador. Verifique o seguinte di
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Usando o Visual Studio, abra o arquivo de WebRoutingIntegration.sln.  
+1. Usando o Visual Studio, abra o arquivo de WebRoutingIntegration.sln.  
   
-2.  Para executar a solução e iniciar o Web development server, pressione F5.  
+2. Para executar a solução e iniciar o Web development server, pressione F5.  
   
      Um listagem de diretório para a amostra é exibida. Observe que não há nenhum arquivo com uma extensão de arquivo. svc.  
   
-3.  Na barra de endereços, adicione `movies` à URL, para que ele apareça `http://localhost:[port]/movies` e pressione ENTER.  
+3. Na barra de endereços, adicione `movies` à URL, para que ele apareça `http://localhost:[port]/movies` e pressione ENTER.  
   
      O feed de filmes é exibida no navegador.  
   
-4.  Na barra de endereços, adicione `channels` à URL, portanto, que é leituras `http://localhost:[port]/channels` e pressione ENTER.  
+4. Na barra de endereços, adicione `channels` à URL, portanto, que é leituras `http://localhost:[port]/channels` e pressione ENTER.  
   
      O feed de canais é exibida no navegador.  
   
-5.  Feche o navegador da Web, pressionando ALT + F4.  
+5. Feche o navegador da Web, pressionando ALT + F4.  
   
      Se o servidor de desenvolvimento não tiver sido encerrado, o botão direito do mouse no ícone da área de notificação e selecione **parar**.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>Para usar este exemplo quando hospedado no IIS  
   
-1.  Usando o Visual Studio, abra o arquivo de WebRoutingIntegration.sln.  
+1. Usando o Visual Studio, abra o arquivo de WebRoutingIntegration.sln.  
   
-2.  Compile o projeto, pressionando CTRL + SHIFT + B.  
+2. Compile o projeto, pressionando CTRL + SHIFT + B.  
   
-3.  Crie um aplicativo Web no Gerenciador de serviços de informações da Internet (IIS).  
+3. Crie um aplicativo Web no Gerenciador de serviços de informações da Internet (IIS).  
   
     1.  Clique com botão direito no Gerenciador do IIS, o **Site padrão** e selecione **adicionar um aplicativo**.  
   
@@ -66,17 +66,17 @@ Este exemplo pode já estar instalado no seu computador. Verifique o seguinte di
   
     4.  Pressione **OK**.  
   
-4.  Iniciar o aplicativo, clicando duas vezes o aplicativo Web e selecionando **gerenciar aplicativo** e, em seguida **procurar**.  
+4. Iniciar o aplicativo, clicando duas vezes o aplicativo Web e selecionando **gerenciar aplicativo** e, em seguida **procurar**.  
   
-5.  Na barra de endereços, adicione `movies` à URL, portanto, que é leituras `http://localhost:[port]/movies` e pressione ENTER.  
+5. Na barra de endereços, adicione `movies` à URL, portanto, que é leituras `http://localhost:[port]/movies` e pressione ENTER.  
   
      O feed de filmes é exibida no navegador.  
   
-6.  Na barra de endereços, adicione `channels` à URL, portanto, que é leituras `http://localhost:[port]/channels` e pressione ENTER.  
+6. Na barra de endereços, adicione `channels` à URL, portanto, que é leituras `http://localhost:[port]/channels` e pressione ENTER.  
   
      O feed de canais é exibida no navegador.  
   
-7.  Feche o navegador da Web, pressionando ALT + F4.  
+7. Feche o navegador da Web, pressionando ALT + F4.  
   
  Este exemplo demonstra que a camada de hospedagem é capaz de composição com as classes de <xref:System.Web.Routing> namespace para as solicitações de serviços hospedados por meio de HTTP de roteamento.  
   

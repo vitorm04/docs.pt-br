@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831413"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301224"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
@@ -83,9 +83,9 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
 ## <a name="advantages-of-generic-types"></a>Vantagens de tipos genéricos  
  Um tipo genérico serve como base para declarar vários elementos de programação diferentes, cada uma delas opera em um tipo de dados específico. As alternativas para um tipo genérico são:  
   
-1.  Um único tipo de operando com o `Object` tipo de dados.  
+1. Um único tipo de operando com o `Object` tipo de dados.  
   
-2.  Um conjunto de *específicos do tipo* as versões do tipo, cada versão individualmente codificada e operando em um tipo de dados específico, como `String`, `Integer`, ou um tipo definido pelo usuário, como `customer`.  
+2. Um conjunto de *específicos do tipo* as versões do tipo, cada versão individualmente codificada e operando em um tipo de dados específico, como `String`, `Integer`, ou um tipo definido pelo usuário, como `customer`.  
   
  Um tipo genérico tem as seguintes vantagens sobre essas alternativas:  
   
@@ -149,13 +149,13 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Tipos de valor e referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Solucionando problemas de tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Covariância e Contravariância](../../concepts/covariance-contravariance/index.md)
-- [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Covariância e contravariância](../../concepts/covariance-contravariance/index.md)
+- [Iterators](../../../../visual-basic/programming-guide/concepts/iterators.md)

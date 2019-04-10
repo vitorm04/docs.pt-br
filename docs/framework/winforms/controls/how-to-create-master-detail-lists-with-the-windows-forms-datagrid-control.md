@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302390"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094977"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Definir uma relação mestre/detalhes com programação  
   
-1.  Crie duas novas <xref:System.Windows.Forms.DataGrid> controla e defina suas propriedades.  
+1. Crie duas novas <xref:System.Windows.Forms.DataGrid> controla e defina suas propriedades.  
   
-2.  Adicione tabelas ao conjunto de dados.  
+2. Adicione tabelas ao conjunto de dados.  
   
-3.  Declare uma variável do tipo <xref:System.Data.DataRelation> para representar a relação que você deseja criar.  
+3. Declare uma variável do tipo <xref:System.Data.DataRelation> para representar a relação que você deseja criar.  
   
-4.  Instancie o relacionamento especificando um nome para o relacionamento e especificando a tabela, coluna e item que associará as duas tabelas.  
+4. Instancie o relacionamento especificando um nome para o relacionamento e especificando a tabela, coluna e item que associará as duas tabelas.  
   
-5.  Adicionar a relação para o <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Relations%2A> coleção.  
+5. Adicionar a relação para o <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Relations%2A> coleção.  
   
-6.  Use o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método da <xref:System.Windows.Forms.DataGrid> para associar cada uma das grades para o <xref:System.Data.DataSet>.  
+6. Use o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método da <xref:System.Windows.Forms.DataGrid> para associar cada uma das grades para o <xref:System.Data.DataSet>.  
   
      O exemplo a seguir mostra como definir uma relação mestre/detalhes entre as tabelas Customers e Orders no gerado anteriormente <xref:System.Data.DataSet> (`ds`).  
   

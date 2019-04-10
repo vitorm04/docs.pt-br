@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: abab705c7ea83318949cf0d75e491905da7896e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2fe0360a0548bddb0ebba566eca0d121c9ec9160
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300613"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Como: Chamar funções definidas por modelo em consultas
 Este tópico descreve como chamar funções que são definidas no modelo conceitual de dentro das consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] .  
@@ -19,9 +19,9 @@ Este tópico descreve como chamar funções que são definidas no modelo conceit
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Para chamar uma função definida no modelo conceitual  
   
-1.  Adicione um método do Common Language Runtime (CLR) ao seu aplicativo que mapeia função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
+1. Adicione um método do Common Language Runtime (CLR) ao seu aplicativo que mapeia função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
   
-2.  Chamar a função em uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] .  
+2. Chamar a função em uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] .  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como chamar uma função que é definida no modelo conceitual de uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . O exemplo usa o modelo de escola. Para obter informações sobre o modelo de escola, consulte [criando o banco de dados de exemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [gerando a. edmx de escola arquivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  

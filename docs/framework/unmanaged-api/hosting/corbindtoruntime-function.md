@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b9b17c1457a920aa3e05f5fd839e6ffdc0c6fee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eb5c05a88c12b5124c77b0d0a7f834b405dd289f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304617"
 ---
 # <a name="corbindtoruntime-function"></a>Função CorBindToRuntime
 Habilita hosts não gerenciados para carregar o common language runtime (CLR) em um processo.  
@@ -73,9 +73,9 @@ HRESULT CorBindToRuntime (
   
  Você pode alterar o fluxo de duas maneiras:  
   
-1.  Modificando o <xref:System.Threading.ExecutionContext> configurações para suprimir o fluxo em uma base por thread (consulte a <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>, e <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> métodos).  
+1. Modificando o <xref:System.Threading.ExecutionContext> configurações para suprimir o fluxo em uma base por thread (consulte a <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>, e <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> métodos).  
   
-2.  Alterando o modo de processo padrão para o modo de compatibilidade de versão 1, onde o <xref:System.Security.Principal.WindowsIdentity> objeto não flua entre qualquer ponto assíncrono, independentemente do <xref:System.Threading.ExecutionContext> configurações no thread atual. Como alterar o modo padrão depende se você usar uma interface de hospedagem não gerenciada ou um executável gerenciado para carregar o CLR:  
+2. Alterando o modo de processo padrão para o modo de compatibilidade de versão 1, onde o <xref:System.Security.Principal.WindowsIdentity> objeto não flua entre qualquer ponto assíncrono, independentemente do <xref:System.Threading.ExecutionContext> configurações no thread atual. Como alterar o modo padrão depende se você usar uma interface de hospedagem não gerenciada ou um executável gerenciado para carregar o CLR:  
   
     1.  Para executáveis gerenciados, você deve definir a `enabled` atributo o [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elemento a ser `true`.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: f82a548c820aec7d2ae13c30a67d778fc167a8b6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299105"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>As constantes devem ser do tipo intrínseco ou enumerado, e não classe, estrutura, parâmetro de tipo ou tipo de matriz
 Você tentou declarar uma constante, como uma classe, estrutura ou tipo de matriz, ou como um parâmetro de tipo definido por um tipo genérico.  
@@ -23,12 +23,12 @@ Você tentou declarar uma constante, como uma classe, estrutura ou tipo de matri
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Declare a constante como um intrínseco ou `Enum` tipo.  
+1. Declare a constante como um intrínseco ou `Enum` tipo.  
   
-2.  Uma constante pode ser também um valor especial, como `True`, `False`, ou `Nothing`. O compilador considera esses valores predefinidos para ser do tipo intrínseco apropriado.  
+2. Uma constante pode ser também um valor especial, como `True`, `False`, ou `Nothing`. O compilador considera esses valores predefinidos para ser do tipo intrínseco apropriado.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Constantes e Enumerações](../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Constantes e enumerações](../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)

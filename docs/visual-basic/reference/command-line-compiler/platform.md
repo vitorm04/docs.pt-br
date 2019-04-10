@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301159"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Especifica qual versão de plataforma do common language runtime (CLR) pode executar o arquivo de saída.  
@@ -68,9 +68,9 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>Para definir - plataforma no IDE do Visual Studio  
   
-1.  Na **Gerenciador de soluções**, escolha o projeto, abra o **Project** menu e, em seguida, clique **propriedades**.  
+1. Na **Gerenciador de soluções**, escolha o projeto, abra o **Project** menu e, em seguida, clique **propriedades**.  
   
-2.  No **compilar** guia, marque ou desmarque as **preferir 32 bits** caixa de seleção, ou, no **Target CPU** , escolha um valor.  
+2. No **compilar** guia, marque ou desmarque as **preferir 32 bits** caixa de seleção, ou, no **Target CPU** , escolha um valor.  
   
      Para obter mais informações, consulte [compilar página, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Consulte também
 
-- [/Target (Visual Basic)](target.md)
+- [/target (Visual Basic)](target.md)
 - [Compilador de linha de comando do Visual Basic](index.md)
-- [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](sample-compilation-command-lines.md)

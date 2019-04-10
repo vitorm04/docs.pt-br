@@ -2,12 +2,12 @@
 title: Oracle BFILEs
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304461"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILEs
 O provedor de dados .NET Framework para Oracle inclui a classe <xref:System.Data.OracleClient.OracleBFile>, que é usada para trabalhar com os tipos de dados Oracle <xref:System.Data.OracleClient.OracleType.BFile>.  
@@ -26,9 +26,9 @@ O provedor de dados .NET Framework para Oracle inclui a classe <xref:System.Data
   
  Cada nulos **OracleBFile** objeto está associado a duas entidades que definem o local do arquivo físico subjacente:  
   
-1.  Um objeto DIRECTORY da Oracle, que é um alias de banco de dados para um diretório no sistema de arquivos, e  
+1. Um objeto DIRECTORY da Oracle, que é um alias de banco de dados para um diretório no sistema de arquivos, e  
   
-2.  O nome de arquivo do arquivo físico subjacente, que está localizado no diretório associado ao objeto DIRECTORY.  
+2. O nome de arquivo do arquivo físico subjacente, que está localizado no diretório associado ao objeto DIRECTORY.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo c# a seguir demonstra como você pode criar uma **BFILE** em um Oracle tabela e, em seguida, recuperá-la na forma de uma **OracleBFile** objeto. O exemplo demonstra como usar o <xref:System.Data.OracleClient.OracleDataReader> objeto e o **OracleBFile** **busca** e **leitura** métodos. Observe que, para usar este exemplo, você deve criar primeiro um diretório chamado "c:\\\bfiles" e o arquivo chamado "Myfile" no servidor Oracle.  

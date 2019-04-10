@@ -2,15 +2,21 @@
 title: Implantando o .NET Framework e aplicativos
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], packaging'
-  - 'deploying applications [.NET Framework]'
-  - 'deploying applications [.NET Framework], features'
-  - 'deploying applications [.NET Framework], distribution'
-  - '.NET Framework, deploying'
-  - .NET Framework application deployment
+- deploying applications [.NET Framework], packaging
+- deploying applications [.NET Framework]
+- deploying applications [.NET Framework], features
+- deploying applications [.NET Framework], distribution
+- .NET Framework, deploying
+- .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 0ff426f051b37830b0161cd0e0e4368a5750c664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124761"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicativo. A maioria das informações destina-se a desenvolvedores, OEMs e administradores corporativos. Os usuários que desejam instalar o .NET Framework nos respectivos computadores devem ler o artigo [Instalando o .NET Framework](~/docs/framework/install/index.md).  
@@ -36,7 +42,7 @@ Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicati
   
     -   [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   Implantação do .NET Framework com um aplicativo cliente (para desenvolvedores):  
   
@@ -151,14 +157,15 @@ Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicati
 |-----------|-----------------|  
 |[Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Descreve como o Common Language Runtime determina qual assembly usar para atender a uma solicitação de associação.|  
 |[Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.|  
-|[Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|  
+|[Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|  
 |[Guia de implantação para administradores](../../../docs/framework/deployment/guide-for-administrators.md)|Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).|  
 |[Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.|  
 |[Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components)|Aborda as opções de implantação no Visual Studio, incluindo instruções para publicar um aplicativo usando as tecnologias ClickOnce e Windows Installer.| 
 |[Publicando aplicativos ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descreve como empacotar um aplicativo do Windows Forms e implantá-lo com o ClickOnce em computadores cliente em uma rede.|  
 |[Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Descreve o modelo de hub e spoke usado pelo .NET Framework para empacotar e implantar recursos; aborda convenções de nomenclatura de recurso, processo de fallback e alternativas de empacotamento.|  
-|[Implantação de um aplicativo de interoperabilidade](../../../docs/framework/interop/deploying-an-interop-application.md)|Explica como enviar e instalar aplicativos de interoperabilidade, que geralmente incluem um assembly de cliente do .NET Framework, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipo COM e um ou mais componentes COM registrados.|  
+|[Implantando um aplicativo de interoperabilidade](../../../docs/framework/interop/deploying-an-interop-application.md)|Explica como enviar e instalar aplicativos de interoperabilidade, que geralmente incluem um assembly de cliente do .NET Framework, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipo COM e um ou mais componentes COM registrados.|  
 |[Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de desenvolvimento](../../../docs/framework/development-guide.md)

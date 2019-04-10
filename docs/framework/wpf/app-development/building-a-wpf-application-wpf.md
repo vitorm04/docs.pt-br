@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300951"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 Aplicativos do Windows Presentation Foundation (WPF) podem ser criados como [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] executáveis (.exe), bibliotecas (. dll) ou uma combinação de ambos os tipos de assemblies. Este tópico apresenta como compilar aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve as principais etapas no processo de build.  
@@ -57,11 +57,11 @@ Aplicativos do Windows Presentation Foundation (WPF) podem ser criados como [!IN
   
  Durante esta etapa, as seguintes atividades ocorrem para cada arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que é um item de build `Page`:  
   
-1.  O arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é analisado pelo compilador de marcação.  
+1. O arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é analisado pelo compilador de marcação.  
   
-2.  Uma representação compilada é criada para esse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e copiada para a pasta obj\Release.  
+2. Uma representação compilada é criada para esse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e copiada para a pasta obj\Release.  
   
-3.  Uma representação CodeDOM de uma nova classe parcial é criada e copiada para a pasta obj\Release.  
+3. Uma representação CodeDOM de uma nova classe parcial é criada e copiada para a pasta obj\Release.  
   
  Além disso, um arquivo de código específico a um idioma é gerado para cada arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Por exemplo, para uma página Page1.xaml em um projeto do Visual Basic, é gerado um Page1.g.vb; para uma página Page1.xaml em um projeto c#, um Page1.g.cs é gerado. O ".g" no nome de arquivo indica que o arquivo é um código gerado que tem uma declaração de classe parcial para o elemento de nível superior do arquivo de marcação (como `Page` ou `Window`). A classe é declarada com o `partial` modificador em c# (`Extends` no Visual Basic) para indicar que há outra declaração para a classe em outro lugar, geralmente no code-behind do arquivo Page1.xaml.cs.  
   

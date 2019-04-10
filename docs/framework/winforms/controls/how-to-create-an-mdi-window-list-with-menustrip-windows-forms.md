@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: bfe84ccb30b13b8232172749454bf8f3625269ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299638"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Como: Criar uma lista de janelas MDI com MenuStrip (Windows Forms)
 Use a interface MDI para criar aplicativos que podem abrir vários documentos no mesmo momento e copie e cole o conteúdo de um documento para outro.  
@@ -22,21 +22,21 @@ Use a interface MDI para criar aplicativos que podem abrir vários documentos no
   
 ### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Para criar uma lista de janelas MDI em um MenuStrip  
   
-1.  Criar um formulário e defina suas <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade para `true`.  
+1. Criar um formulário e defina suas <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade para `true`.  
   
-2.  Adicionar um <xref:System.Windows.Forms.MenuStrip> ao formulário.  
+2. Adicionar um <xref:System.Windows.Forms.MenuStrip> ao formulário.  
   
-3.  Adicione dois itens de menu de nível superior para o <xref:System.Windows.Forms.MenuStrip> e defina seus <xref:System.Windows.Forms.Control.Text%2A> propriedades a serem `&File` e `&Window`.  
+3. Adicione dois itens de menu de nível superior para o <xref:System.Windows.Forms.MenuStrip> e defina seus <xref:System.Windows.Forms.Control.Text%2A> propriedades a serem `&File` e `&Window`.  
   
-4.  Adicionar um item de submenu para o `&File` item de menu e defina seu <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade para `&Open`.  
+4. Adicionar um item de submenu para o `&File` item de menu e defina seu <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade para `&Open`.  
   
-5.  Defina a <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade do <xref:System.Windows.Forms.MenuStrip> para o `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+5. Defina a <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade do <xref:System.Windows.Forms.MenuStrip> para o `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-6.  Adicione um formulário ao projeto e adicionar o controle desejado, como outro <xref:System.Windows.Forms.MenuStrip>.  
+6. Adicione um formulário ao projeto e adicionar o controle desejado, como outro <xref:System.Windows.Forms.MenuStrip>.  
   
-7.  Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+7. Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-8.  No manipulador de eventos, insira um código semelhante ao seguinte para criar e exibir novas instâncias de `Form2` como filhos MDI de `Form1`.  
+8. No manipulador de eventos, insira um código semelhante ao seguinte para criar e exibir novas instâncias de `Form2` como filhos MDI de `Form1`.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  

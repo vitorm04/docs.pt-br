@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189307"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304722"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189307"
   
  Se o <xref:System.Windows.Forms.DataGrid> é associado a dados com várias tabelas relacionadas e se a navegação estiver habilitada na grade, a grade exibirá expansores em cada linha. Com um expansor, o usuário pode se mover de uma tabela pai para uma tabela filho. A tabela filho é exibida ao clicar em um nó; a tabela pai original é exibida ao clicar em um botão Voltar. Dessa forma, a grade exibe as relações hierárquicas entre tabelas.  
   
- Captura de tela a seguir mostra que um DataGrid associado a dados com várias tabelas.  
+ Captura de tela a seguir mostra que um DataGrid associado a dados com várias tabelas:  
   
- ![Um DataGrid associado a dados com várias tabelas](./media/vbcontrol1.gif "vbControl1")  
-Um DataGrid associado a dados com várias tabelas  
+ ![Um aplicativo WinForms mostrando um DataGrid associado a dados com várias tabelas.](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  O <xref:System.Windows.Forms.DataGrid> pode fornecer uma interface do usuário para um conjunto de dados, a navegação entre tabelas relacionadas e elaboradas de formatação e recursos de edição.  
   
@@ -94,15 +93,16 @@ Um DataGrid associado a dados com várias tabelas
   
  Quando o <xref:System.Windows.Forms.DataGrid> controle está exibindo uma tabela e o <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> estiver definida como `true`, dados podem ser reclassificados clicando nos cabeçalhos de coluna. O usuário também pode adicionar linhas e editar células.  
   
- As relações entre um conjunto de tabelas são exibidas aos usuários por meio do uso de uma estrutura pai/filho de navegação. As tabelas pai são o nível mais alto de dados; as tabelas filho são as tabelas de dados derivadas de listagens de individuais nas tabelas pai. Os expansores são exibidos em cada linha pai que contém uma tabela filho. Ao clicar em um expansor, é gerada uma lista de links semelhantes a links Web para as tabelas filho. Quando o usuário seleciona um link, a tabela filho é exibida. Ao clicar no ícone de exibir/ocultar linhas pai, (![show&#47;hide parent rows icon](./media/vbicon.gif "vbIcon")), as informações sobre a tabela pai serão ocultadas ou serão exibidas novamente se o usuário as tiver ocultado antes. O usuário pode clicar no botão Voltar para retornar à tabela visualizada anteriormente.  
+ As relações entre um conjunto de tabelas são exibidas aos usuários por meio do uso de uma estrutura pai/filho de navegação. As tabelas pai são o nível mais alto de dados; as tabelas filho são as tabelas de dados derivadas de listagens de individuais nas tabelas pai. Os expansores são exibidos em cada linha pai que contém uma tabela filho. Ao clicar em um expansor, é gerada uma lista de links semelhantes a links Web para as tabelas filho. Quando o usuário seleciona um link, a tabela filho é exibida. Clicar no ícone de linhas Mostrar/ocultar pai (![Ícone Mostrar/ocultar linhas pai](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) será ocultar as informações sobre a tabela pai ou fazer com que serão exibidas novamente se o usuário tiver ocultado antes. O usuário pode clicar no botão Voltar para retornar à tabela visualizada anteriormente.  
   
 ## <a name="columns-and-rows"></a>Colunas e linhas  
  O <xref:System.Windows.Forms.DataGrid> consiste em uma coleção de <xref:System.Windows.Forms.DataGridTableStyle> objetos que estão contidos na <xref:System.Windows.Forms.DataGrid> do controle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade. Um estilo de tabela pode conter uma coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos que estão contidos em de <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade do <xref:System.Windows.Forms.DataGridTableStyle>... Você pode editar a <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedades usando editores de coleção acessados por meio de **propriedades** janela.  
   
  Qualquer <xref:System.Windows.Forms.DataGridTableStyle> associado com o <xref:System.Windows.Forms.DataGrid> controle pode ser acessado por meio de <xref:System.Windows.Forms.GridTableStylesCollection>. O <xref:System.Windows.Forms.GridTableStylesCollection> podem ser editados no designer com o <xref:System.Windows.Forms.DataGridTableStyle> editor de coleção, ou programaticamente usando o <xref:System.Windows.Forms.DataGrid> do controle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade.  
-  
- ![Objetos incluídos no controle DataGrid](./media/vbcolumns1.gif "vbColumns1")  
-A ilustração a seguir mostra os objetos incluídos no controle DataGrid.  
+
+ A ilustração a seguir mostra os objetos incluídos no controle DataGrid:
+
+ ![Diagrama que mostra objetos incluídos no controle DataGrid.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  Estilos de tabela e coluna são sincronizados com <xref:System.Data.DataTable> objetos e <xref:System.Data.DataColumn> objetos, definindo suas `MappingName` propriedades ao apropriado <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataColumn.ColumnName%2A> propriedades. Quando um <xref:System.Windows.Forms.DataGridTableStyle> que não tem nenhuma coluna estilos é adicionado a um <xref:System.Windows.Forms.DataGrid> controle associado a uma fonte de dados válidos e o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade desse estilo de tabela é definida como válido <xref:System.Data.DataTable.TableName%2A> propriedade, uma coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos é criado para que estilo de tabela. Para cada <xref:System.Data.DataColumn> encontrado na <xref:System.Data.DataTable.Columns%2A> coleção da <xref:System.Data.DataTable>, um correspondente <xref:System.Windows.Forms.DataGridColumnStyle> é adicionado ao <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> é acessado por meio de <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade do <xref:System.Windows.Forms.DataGridTableStyle>. Colunas podem ser adicionadas ou excluídas da grade usando o <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> ou <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> método o <xref:System.Windows.Forms.GridColumnStylesCollection>. Para obter mais informações, confira [Como: Adicionar tabelas e colunas para o Windows Forms controle DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) e [como: Excluir ou ocultar colunas no Windows Forms controle DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   

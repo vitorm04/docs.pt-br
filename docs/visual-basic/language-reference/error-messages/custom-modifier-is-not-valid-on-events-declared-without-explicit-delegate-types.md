@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300938"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>O modificador 'Custom' não é válido em eventos declarados sem tipos delegados explícitos
 Ao contrário de um evento não-personalizado, uma `Custom Event` declaração requer um `As` cláusula após o nome do evento que especifica explicitamente o tipo de delegado para o evento.  
@@ -23,13 +23,13 @@ Ao contrário de um evento não-personalizado, uma `Custom Event` declaração r
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Defina um delegado com a mesma lista de parâmetros que o evento personalizado.  
+1. Defina um delegado com a mesma lista de parâmetros que o evento personalizado.  
   
      Por exemplo, se o `Custom Event` foi definido por `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, em seguida, o delegado correspondente seria o seguinte.  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  Substitua a lista de parâmetros do evento personalizado com um `As` cláusula especificando o tipo de delegado.  
+2. Substitua a lista de parâmetros do evento personalizado com um `As` cláusula especificando o tipo de delegado.  
   
      Continuando com o exemplo `Custom Event` declaração poderia ser reescrita da seguinte maneira.  
   

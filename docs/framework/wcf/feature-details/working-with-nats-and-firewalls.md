@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 9cecca0905baa4c0769359caf1fe1b477bf4d6bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296336"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede com frequência não têm uma conexão direta e abrir o caminho para a comunicação. Pacotes são filtradas, roteadas, analisados e transformados em máquinas de ponto de extremidade e pelas máquinas intermediárias na rede. Conversões de endereço de rede (NATs) e firewalls são exemplos comuns de aplicativos intermediários que podem participar da comunicação de rede.  
@@ -37,11 +37,11 @@ O cliente e o servidor de uma conexão de rede com frequência não têm uma con
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Escolhendo um transporte e padrões de troca de mensagem  
  Selecionando um transporte e MEP é um processo de três etapas:  
   
-1.  Analise a capacidade de endereçamento das máquinas de ponto de extremidade. Servidores corporativos normalmente têm a capacidade de endereçamento direta, enquanto os usuários finais normalmente têm sua capacidade de endereçamento bloqueada por NATs. Se ambos os pontos de extremidade protegido por um NAT, como em cenários de ponto a ponto entre os usuários finais, em seguida, talvez seja necessário uma tecnologia, como a Teredo para fornecer capacidade de endereçamento.  
+1. Analise a capacidade de endereçamento das máquinas de ponto de extremidade. Servidores corporativos normalmente têm a capacidade de endereçamento direta, enquanto os usuários finais normalmente têm sua capacidade de endereçamento bloqueada por NATs. Se ambos os pontos de extremidade protegido por um NAT, como em cenários de ponto a ponto entre os usuários finais, em seguida, talvez seja necessário uma tecnologia, como a Teredo para fornecer capacidade de endereçamento.  
   
-2.  Analise as restrições de porta e protocolo as máquinas de ponto de extremidade. Servidores corporativos normalmente estão atrás de firewalls de alta seguras que bloqueiam muitas portas. No entanto, a porta 80 é aberta com frequência para permitir o tráfego HTTP e porta 443 está aberta para permitir o tráfego HTTPS. Os usuários finais têm menor probabilidade de ter restrições de porta, mas pode ser protegido por um firewall que permite apenas conexões de saída. Alguns firewalls permitem o gerenciamento por aplicativos no ponto de extremidade para abrir as conexões de forma seletiva.  
+2. Analise as restrições de porta e protocolo as máquinas de ponto de extremidade. Servidores corporativos normalmente estão atrás de firewalls de alta seguras que bloqueiam muitas portas. No entanto, a porta 80 é aberta com frequência para permitir o tráfego HTTP e porta 443 está aberta para permitir o tráfego HTTPS. Os usuários finais têm menor probabilidade de ter restrições de porta, mas pode ser protegido por um firewall que permite apenas conexões de saída. Alguns firewalls permitem o gerenciamento por aplicativos no ponto de extremidade para abrir as conexões de forma seletiva.  
   
-3.  Computação de transportes e MEPs permitem que as restrições de capacidade de endereçamento e a porta de rede.  
+3. Computação de transportes e MEPs permitem que as restrições de capacidade de endereçamento e a porta de rede.  
   
  Uma topologia comuns para aplicativos cliente-servidor é que os clientes que estão atrás de um NAT sem Teredo com um firewall apenas de saída e um servidor que está diretamente endereçável com um firewall de alta segurança. Neste cenário, o transporte TCP com um MEP duplex e um transporte HTTP com uma solicitação-resposta MEP funcionar muito bem. Uma topologia comuns para aplicativos ponto a ponto é que ambos os pontos de extremidade atrás de NATs e firewalls. Nesse cenário e em cenários em que a topologia de rede é desconhecida, considere as seguintes recomendações:  
   

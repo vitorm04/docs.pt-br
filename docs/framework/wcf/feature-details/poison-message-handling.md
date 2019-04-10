@@ -2,12 +2,12 @@
 title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305020"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não pode processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo na fila recebe mensagens em uma transação. Anulando a transação na qual uma mensagem na fila foi recebida deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo de recebimento pode fique preso em um loop de recebimento e anulando a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
@@ -66,17 +66,17 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
   
  O aplicativo pode exigir algum tipo de manipulação de mensagens suspeitas automatizado que move as mensagens suspeitas em uma fila de mensagens suspeitas, para que o serviço possa acessar o restante das mensagens na fila. O único cenário para usar o mecanismo do manipulador de erro para escutar mensagens suspeitas exceções é quando o <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> configuração é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. O exemplo de mensagens suspeitas para enfileiramento de mensagens 3.0 demonstra esse comportamento. O exemplo a seguir descreve as etapas necessárias para tratar mensagens suspeitas, incluindo práticas recomendadas:  
   
-1.  Certifique-se de que suas configurações suspeitas refletem os requisitos do seu aplicativo. Ao trabalhar com as configurações, certifique-se de que você entenda as diferenças entre os recursos do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Certifique-se de que suas configurações suspeitas refletem os requisitos do seu aplicativo. Ao trabalhar com as configurações, certifique-se de que você entenda as diferenças entre os recursos do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-2.  Se necessário, implemente o `IErrorHandler` para lidar com erros de mensagens suspeitas. Como definir `ReceiveErrorHandling` para `Fault` requer um mecanismo manual para mover a mensagem suspeita fora da fila ou para corrigir um problema de dependente externo, o uso típico é implementar `IErrorHandler` quando `ReceiveErrorHandling` é definido como `Fault`, como como mostrado no código a seguir.  
+2. Se necessário, implemente o `IErrorHandler` para lidar com erros de mensagens suspeitas. Como definir `ReceiveErrorHandling` para `Fault` requer um mecanismo manual para mover a mensagem suspeita fora da fila ou para corrigir um problema de dependente externo, o uso típico é implementar `IErrorHandler` quando `ReceiveErrorHandling` é definido como `Fault`, como como mostrado no código a seguir.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Criar um `PoisonBehaviorAttribute` que o comportamento de serviço pode usar. Instala o comportamento de `IErrorHandler` no dispatcher. Consulte o exemplo de código a seguir.  
+3. Criar um `PoisonBehaviorAttribute` que o comportamento de serviço pode usar. Instala o comportamento de `IErrorHandler` no dispatcher. Consulte o exemplo de código a seguir.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Certifique-se de que seu serviço é anotado com o atributo de comportamento suspeitos.  
+4. Certifique-se de que seu serviço é anotado com o atributo de comportamento suspeitos.  
 
  Além disso, se o `ReceiveErrorHandling` é definido como `Fault`, o `ServiceHost` Falha ao encontrar a mensagem suspeita. Você pode interligar o evento com falha e desligar o serviço, tome medidas corretivas e reiniciar. Por exemplo, o `LookupId` no <xref:System.ServiceModel.MsmqPoisonMessageException> propagadas para o `IErrorHandler` pode ser observado e quando as falhas de host de serviço, você pode usar o `System.Messaging` API para receber a mensagem de fila usando o `LookupId` para remover a mensagem da fila e armazenar a mensagem em algum armazenamento externo ou outra fila. Você pode reiniciar `ServiceHost` para continuar o processamento normal. O [manipulação de mensagens suspeitas no MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) demonstra esse comportamento.  
   

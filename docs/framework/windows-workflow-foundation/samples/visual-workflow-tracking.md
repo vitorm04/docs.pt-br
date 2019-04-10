@@ -2,12 +2,12 @@
 title: Rastreamento visual de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296453"
 ---
 # <a name="visual-workflow-tracking"></a>Rastreamento visual de fluxo de trabalho
 Este exemplo demonstra como escrever um aplicativo visual de acompanhamento de fluxo de trabalho usando a funcionalidade de depuração disponível com [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
@@ -19,17 +19,17 @@ Este exemplo demonstra como escrever um aplicativo visual de acompanhamento de f
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Abra o arquivo de Workflowsimulator do diretório de exemplo no Visual Studio 2010.
+1. Abra o arquivo de Workflowsimulator do diretório de exemplo no Visual Studio 2010.
 
-2.  Pressione CTRL+SHIFT+B para criar a solução.
+2. Pressione CTRL+SHIFT+B para criar a solução.
 
-3.  O pressionar o CTRL + F5 para executar o exemplo. Isso exibe o arquivo de Workflow.xaml em uma janela rehosted de designer de fluxo de trabalho.
+3. O pressionar o CTRL + F5 para executar o exemplo. Isso exibe o arquivo de Workflow.xaml em uma janela rehosted de designer de fluxo de trabalho.
 
-4.  Clique o **arquivo** menu e selecione **executar o fluxo de trabalho...** .
+4. Clique o **arquivo** menu e selecione **executar o fluxo de trabalho...** .
 
-5.  Observe que a atividade atualmente executando realçada como descrito anteriormente e os registros de rastreamento são exibidos no lado direito da janela do aplicativo.
+5. Observe que a atividade atualmente executando realçada como descrito anteriormente e os registros de rastreamento são exibidos no lado direito da janela do aplicativo.
 
-6.  Quando o fluxo de trabalho concluído, você pode clicar em alguns dos registros de rastreamento verificar que a atividade ele corresponde.
+6. Quando o fluxo de trabalho concluído, você pode clicar em alguns dos registros de rastreamento verificar que a atividade ele corresponde.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

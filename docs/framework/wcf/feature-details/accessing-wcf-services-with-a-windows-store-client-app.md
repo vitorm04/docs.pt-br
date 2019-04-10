@@ -2,12 +2,12 @@
 title: Acessando os serviços WCF com um aplicativo cliente da Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294854"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Acessando os serviços WCF com um aplicativo cliente da Windows Store
 O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Windows Store. Esses aplicativos são criados em torno de uma interface de tela sensível ao toque. O .NET Framework 4.5 permite que aplicativos da Windows Store chamem serviços WCF.  
@@ -24,31 +24,31 @@ O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Window
 ### <a name="supported-bindings"></a>Associações com suporte  
  As seguintes associações do WCF têm suporte em aplicativos da Windows Store:  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Os seguintes elementos de associação têm suporte em aplicativos da Windows Store  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>Serialização  
  Os seguintes serializadores têm suporte em aplicativos da Windows Store:  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write(DateTime) grava agora o objeto DateTime como uma cadeia de caracteres.  
@@ -120,21 +120,21 @@ Os modos de segurança a seguir têm suporte em aplicativos da Windows Store:
   
 Os seguintes tipos de credencial do cliente têm suporte em aplicativos da Windows Store:
   
-1.  Nenhum  
+1. Nenhum  
   
-2.  Basic  
+2. Basic  
   
-3.  Digest  
+3. Digest  
   
-4.  Negotiate  
+4. Negotiate  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  Username (Segurança de Mensagem)  
+7. Username (Segurança de Mensagem)  
   
-8.  Windows (Segurança de Transporte)  
+8. Windows (Segurança de Transporte)  
   
  Para que os aplicativos da Windows Store acessem e enviem credenciais padrão do Windows, você deverá habilitar essa funcionalidade dentro do arquivo Package.appmanifest. Abra esse arquivo e selecione a guia recursos e selecione "Credenciais padrão do Windows". Isso permite que o aplicativo se conecte aos recursos de intranet que exigem credenciais de domínio.  
   
@@ -144,11 +144,11 @@ Os seguintes tipos de credencial do cliente têm suporte em aplicativos da Windo
 ### <a name="misc"></a>Diversos  
  O uso das seguintes classes tem suporte para aplicativos da Windows Store:  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Definindo contratos de serviço  
  É recomendável somente a definição de operações de serviço assíncronas usando o padrão assíncrono baseado em tarefas. Isso garante que os aplicativos da Windows Store permaneçam respondendo ao chamar uma operação de serviço.  

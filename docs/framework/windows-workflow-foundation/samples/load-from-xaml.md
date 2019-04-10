@@ -2,23 +2,23 @@
 title: Carregamento XAML
 ms.date: 03/30/2017
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
-ms.openlocfilehash: 783e26b05d23baa7842c4414c92d4e78262dd9ec
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5a3b3673812c0b5500a13ae9ce79ce8206aa4834
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300964"
 ---
 # <a name="load-from-xaml"></a>Carregamento XAML
 Este exemplo demonstra como carregar dinamicamente um fluxo de trabalho XAML sem ter que execute a ferramenta de XamlBuildTask. Em vez disso, o exemplo chama o método de <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> . O exemplo é um aplicativo de cliente do Windows Presentation Foundation (WPF) que carrega fluxos de trabalho XAML usando o <xref:System.Activities.XamlIntegration.ActivityXamlServices> de classe e os executa. Depois que foram carregados usando a classe de <xref:System.Activities.XamlIntegration.ActivityXamlServices> , <xref:System.Activities.DynamicActivity%601> é retornado que pode ser executado.
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2010, abra o arquivo de solução de Loadfromxaml.
+1. Usando o Visual Studio 2010, abra o arquivo de solução de Loadfromxaml.
 
-2.  Para criar a solução, pressione CTRL+SHIFT+B.
+2. Para criar a solução, pressione CTRL+SHIFT+B.
 
-3.  Para executar a solução, pressione CTRL+F5.
+3. Para executar a solução, pressione CTRL+F5.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

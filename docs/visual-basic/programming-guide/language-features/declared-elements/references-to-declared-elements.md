@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296700"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referências a elementos declarados (Visual Basic)
 Quando seu código se refere a um elemento declarado, o compilador do Visual Basic corresponde ao nome na sua referência para a declaração apropriada desse nome. Se mais de um elemento é declarado com o mesmo nome, você pode controlar qual desses elementos deve ser referenciado por *qualificado* seu nome.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Para acessar um elemento declarado pelo qualificar seu nome  
   
-1.  Determine o local no qual o elemento foi definido. Isso pode incluir um namespace ou até mesmo uma hierarquia de namespaces. Dentro do namespace de nível mais baixo, o elemento deve estar contido em um módulo, classe ou estrutura.  
+1. Determine o local no qual o elemento foi definido. Isso pode incluir um namespace ou até mesmo uma hierarquia de namespaces. Dentro do namespace de nível mais baixo, o elemento deve estar contido em um módulo, classe ou estrutura.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Determine um demarcador de qualificação, com base na localização do elemento de destino. Iniciar com o namespace de nível mais alto, vá para o namespace de nível mais baixo e terminar com o módulo, classe ou estrutura que contém o elemento de destino. Cada elemento no caminho deve conter o elemento que o segue.  
+2. Determine um demarcador de qualificação, com base na localização do elemento de destino. Iniciar com o namespace de nível mais alto, vá para o namespace de nível mais baixo e terminar com o módulo, classe ou estrutura que contém o elemento de destino. Cada elemento no caminho deve conter o elemento que o segue.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Prepare a cadeia de caracteres de qualificação para o elemento de destino. Coloque um ponto final (`.`) após cada elemento no caminho. Seu aplicativo deve ter acesso a todos os elementos em sua cadeia de caracteres de qualificação.  
+3. Prepare a cadeia de caracteres de qualificação para o elemento de destino. Coloque um ponto final (`.`) após cada elemento no caminho. Seu aplicativo deve ter acesso a todos os elementos em sua cadeia de caracteres de qualificação.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Escreva a expressão ou instrução de atribuição, referindo-se ao elemento de destino da maneira normal.  
+4. Escreva a expressão ou instrução de atribuição, referindo-se ao elemento de destino da maneira normal.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Preceda o nome de elemento de destino com a cadeia de caracteres de qualificação. O nome deve seguir imediatamente o período (`.`) que segue o módulo, classe ou estrutura que contém o elemento.  
+5. Preceda o nome de elemento de destino com a cadeia de caracteres de qualificação. O nome deve seguir imediatamente o período (`.`) que segue o módulo, classe ou estrutura que contém o elemento.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  O compilador usa a cadeia de caracteres de qualificação para encontrar uma declaração clara e inequívoca para o qual ele pode corresponder a referência de elemento de destino.  
+6. O compilador usa a cadeia de caracteres de qualificação para encontrar uma declaração clara e inequívoca para o qual ele pode corresponder a referência de elemento de destino.  
   
  Você também terá que qualificar uma referência de nome se seu aplicativo tem acesso a mais de um elemento de programação que tem o mesmo nome. Por exemplo, o <xref:System.Windows.Forms> e <xref:System.Web.UI.WebControls> ambos os namespaces contêm uma `Label` classe (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> e <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Se seu aplicativo usa ambos, ou se ela define sua própria `Label` classe, você deve distinguir as diferentes `Label` objetos. Inclua o alias de namespace ou de importação na declaração da variável. O exemplo a seguir usa o alias de importação.  
   
@@ -195,10 +195,10 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>Consulte também
 
-- [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Características do Elemento Declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Nomes de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Características do elemento declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)
 - [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Instrução Imports (Tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Operador New](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Público](../../../../visual-basic/language-reference/modifiers/public.md)

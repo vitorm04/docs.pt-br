@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299300"
 ---
 # <a name="transport-quotas"></a>Cotas de transporte
 Cotas de transporte são um mecanismo de política para decidir quando uma conexão está consumindo recursos excessivos. Uma cota é um limite rígido que impede o uso de recursos adicionais depois que o valor da cota é excedido. Cotas de transporte impedir mal-intencionados ou não intencionais ataques de negação de serviço.  
@@ -100,9 +100,9 @@ Cotas de transporte são um mecanismo de política para decidir quando uma conex
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  O `MaxBufferSize` cota de transporte só está disponível no `BasicHttp` associação. O `WSHttp` associações são para cenários que não dão suporte a modos de transporte em fluxo.  
+1. O `MaxBufferSize` cota de transporte só está disponível no `BasicHttp` associação. O `WSHttp` associações são para cenários que não dão suporte a modos de transporte em fluxo.  
   
-2.  As cotas de transporte `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` são combinados em uma cota única de transporte chamada `MaxConnections`.  
+2. As cotas de transporte `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` são combinados em uma cota única de transporte chamada `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Controlando as cotas de transporte da configuração  
  Configuração de aplicativo pode definir as cotas de transporte mesmo como acessar diretamente as propriedades em uma associação. Arquivos de configuração, o nome de uma cota de transporte sempre começa com uma letra minúscula. Por exemplo, o `CloseTimeout` propriedade em uma associação corresponde à `closeTimeout` na configuração e o `MaxConnections` propriedade em uma associação corresponde à `maxConnections` na configuração.  

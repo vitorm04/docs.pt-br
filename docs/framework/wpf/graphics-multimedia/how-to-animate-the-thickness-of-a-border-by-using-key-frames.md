@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: 0c5dc61ac1a4cc3f2aba83ac3a4a71084b553a2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301783"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Como: Animar a espessura de uma borda usando quadros principais
 Este exemplo mostra como animar a <xref:System.Windows.Controls.Control.BorderThickness%2A> propriedade de um <xref:System.Windows.Controls.Border>.  
@@ -19,11 +19,11 @@ Este exemplo mostra como animar a <xref:System.Windows.Controls.Control.BorderTh
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Controls.Control.BorderThickness%2A> propriedade de um <xref:System.Windows.Controls.Border>. Essa animação usa três quadros-chave da seguinte maneira:  
   
-1.  Durante o primeiro meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> classe para aumentar gradualmente a espessura da borda. O exemplo usa <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> para criar um aumento linear suave entre valores.  
+1. Durante o primeiro meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> classe para aumentar gradualmente a espessura da borda. O exemplo usa <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> para criar um aumento linear suave entre valores.  
   
-2.  No final do próximo meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> classe para aumentar repentinamente a espessura da borda. Quadros chave discretos como aqueles derivam <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> criam saltos repentinos entre valores, ou seja, o movimento da animação é brusco.  
+2. No final do próximo meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> classe para aumentar repentinamente a espessura da borda. Quadros chave discretos como aqueles derivam <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> criam saltos repentinos entre valores, ou seja, o movimento da animação é brusco.  
   
-3.  Durante os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> classe para diminuir a espessura da borda. Quadros-chave spline, como aqueles derivam <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> propriedade. Neste quadro-chave, a animação começa lentamente e acelera exponencialmente na direção do final do segmento de tempo.  
+3. Durante os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> classe para diminuir a espessura da borda. Quadros-chave spline, como aqueles derivam <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> propriedade. Neste quadro-chave, a animação começa lentamente e acelera exponencialmente na direção do final do segmento de tempo.  
   
  [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   

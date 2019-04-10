@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 4823bf482e785b1e9d03ca57010a832cb0e26dd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295608"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente
 Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar o código do aplicativo Web do DHTML (HTML) dinâmico existente para seus aplicativos de cliente do Windows Forms. Isso é útil quando você tiver investido tempo de desenvolvimento significativo na criação de controles com base em DHTML e quiser aproveitar os recursos de interface do usuário avançada dos Windows Forms sem reescrever o código existente.  
@@ -28,22 +28,22 @@ Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar
   
 ### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Para inserir DHTML em seu aplicativo dos Windows Forms  
   
-1.  Defina a <xref:System.Windows.Forms.WebBrowser> do controle <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> propriedade a ser `false` para impedir que o <xref:System.Windows.Forms.WebBrowser> controle abra arquivos soltados nele.  
+1. Defina a <xref:System.Windows.Forms.WebBrowser> do controle <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> propriedade a ser `false` para impedir que o <xref:System.Windows.Forms.WebBrowser> controle abra arquivos soltados nele.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
-2.  Defina o controle <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> propriedade para `false` para impedir que o <xref:System.Windows.Forms.WebBrowser> controle de exibir o menu de atalho quando o usuário clica-lo.  
+2. Defina o controle <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> propriedade para `false` para impedir que o <xref:System.Windows.Forms.WebBrowser> controle de exibir o menu de atalho quando o usuário clica-lo.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
-3.  Defina o controle <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> propriedade para `false` para impedir que o <xref:System.Windows.Forms.WebBrowser> controle responda às teclas de atalho.  
+3. Defina o controle <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> propriedade para `false` para impedir que o <xref:System.Windows.Forms.WebBrowser> controle responda às teclas de atalho.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
-4.  Defina as <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> propriedade no construtor do formulário ou um <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+4. Defina as <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> propriedade no construtor do formulário ou um <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
   
      O código a seguir usa a classe de formulário em si para o objeto de script.  
   
@@ -53,14 +53,14 @@ Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
-5.  Implemente métodos ou propriedades públicas no código do aplicativo que seu código de script usará.  
+5. Implemente métodos ou propriedades públicas no código do aplicativo que seu código de script usará.  
   
      Por exemplo, se você usar a classe de formulário para o objeto de script, adicione o código a seguir à sua classe de formulário.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
-6.  Use o objeto `window.external` no código de script para acessar propriedades públicas e métodos do objeto especificado.  
+6. Use o objeto `window.external` no código de script para acessar propriedades públicas e métodos do objeto especificado.  
   
      O código HTML a seguir demonstra como chamar um método no objeto de script com um clique de botão. Copie esse código para o elemento de corpo de um documento HTML que você carregue usando o controle <xref:System.Windows.Forms.WebBrowser.Navigate%2A> método ou que você atribua para o controle <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> propriedade.  
   
@@ -70,7 +70,7 @@ Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar
     </button>  
     ```  
   
-7.  Implemente funções em seu código de script que seu código do aplicativo usará.  
+7. Implemente funções em seu código de script que seu código do aplicativo usará.  
   
      O seguinte elemento SCRIPT HTML apresenta uma função de exemplo. Copie esse código para o elemento HEAD de um documento HTML que você carregue usando o controle <xref:System.Windows.Forms.WebBrowser.Navigate%2A> método ou que você atribua para o controle <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> propriedade.  
   
@@ -82,7 +82,7 @@ Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar
     </script>  
     ```  
   
-8.  Use o <xref:System.Windows.Forms.WebBrowser.Document%2A> propriedade para acessar o código de script do seu código de aplicativo do cliente.  
+8. Use o <xref:System.Windows.Forms.WebBrowser.Document%2A> propriedade para acessar o código de script do seu código de aplicativo do cliente.  
   
      Por exemplo, adicione o seguinte código para um botão <xref:System.Windows.Forms.Control.Click> manipulador de eventos.  
   

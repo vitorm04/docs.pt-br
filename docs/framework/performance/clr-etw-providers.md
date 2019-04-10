@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302615"
 ---
 # <a name="clr-etw-providers"></a>Provedores ETW no CLR
 O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de execução e o provedor de encerramento.  
@@ -58,7 +58,7 @@ O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de exec
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Coleta de dados ETW usando o tempo de execução e provedores de encerramento  
  O exemplo a seguir demonstra como usar o provedor de encerramento CLR de uma maneira que permite a resolução de símbolo de processos gerenciados com impacto mínimo, independentemente do início ou término dos processos dentro ou fora da janela com perfil criado.  
   
-1.  Ative o log ETW usando o provedor de tempo de execução do CLR:  
+1. Ative o log ETW usando o provedor de tempo de execução do CLR:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de exec
   
      O log será salvo no arquivo clr1.etl.  
   
-2.  Para interromper a criação de perfil durante a execução do processo, inicie o provedor de encerramento para capturar os eventos `DCEnd`:  
+2. Para interromper a criação de perfil durante a execução do processo, inicie o provedor de encerramento para capturar os eventos `DCEnd`:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de exec
   
      Isso permite que a coleção de eventos `DCEnd` inicie uma sessão de encerramento. Talvez seja necessário aguardar de 30 a 60 segundos para que todos os eventos sejam coletados. O log será salvo no arquivo clr1.et2.  
   
-3.  Desligue toda a criação de perfil ETW:  
+3. Desligue toda a criação de perfil ETW:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Mescle os perfis para criar um arquivo de log:  
+4. Mescle os perfis para criar um arquivo de log:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

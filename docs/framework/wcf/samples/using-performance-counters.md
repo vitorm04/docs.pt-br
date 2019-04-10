@@ -2,12 +2,12 @@
 title: Utilizando contadores de desempenho
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: aa4e309c7097359e538e92aa3ddf88794150f3c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c5042d497a09984a6f6c398a943b443ee9aafb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186766"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302849"
 ---
 # <a name="using-performance-counters"></a>Utilizando contadores de desempenho
 Este exemplo demonstra como acessar os contadores de desempenho do Windows Communication Foundation (WCF) e como criar contadores de desempenho definidos pelo usuário. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -33,39 +33,39 @@ Este exemplo demonstra como acessar os contadores de desempenho do Windows Commu
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-view-performance-data"></a>Para exibir dados de desempenho  
   
-1.  Inicie a ferramenta Monitor de desempenho clicando **inicie**, **executar...** , insira `perfmon` e clique em **Okey,** ou, no painel de controle, selecione **ferramentas administrativas** e clique duas vezes **desempenho**.  
+1. Inicie a ferramenta Monitor de desempenho clicando **inicie**, **executar...** , insira `perfmon` e clique em **Okey,** ou, no painel de controle, selecione **ferramentas administrativas** e clique duas vezes **desempenho**.  
   
     > [!NOTE]
     >  Não é possível adicionar contadores, até que o código de exemplo está em execução.  
   
-2.  Remova os contadores de desempenho que são listados selecionando-os e pressionando a tecla Delete.  
+2. Remova os contadores de desempenho que são listados selecionando-os e pressionando a tecla Delete.  
   
-3.  Adicionar contadores WCF clicando duas vezes no painel gráfico e selecionando **adicionar contadores**. No **adicionar contadores** caixa de diálogo, selecione **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 ou ServiceModelService 3.0.0.0** no objeto de desempenho caixa suspensa. Selecione os contadores que você deseja exibir na lista.  
+3. Adicionar contadores WCF clicando duas vezes no painel gráfico e selecionando **adicionar contadores**. No **adicionar contadores** caixa de diálogo, selecione **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 ou ServiceModelService 3.0.0.0** no objeto de desempenho caixa suspensa. Selecione os contadores que você deseja exibir na lista.  
   
     > [!NOTE]
     >  Não há nenhum contador de desempenho para um serviço WCF se não houver nenhum serviço WCF em execução no computador.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Para usar o Editor de configuração para habilitar os contadores  
   
-1.  Abra uma instância da SvcConfigEditor.exe.  
+1. Abra uma instância da SvcConfigEditor.exe.  
   
-2.  No menu Arquivo, clique em **aberto** e, em seguida, clique em **arquivo de configuração...** .  
+2. No menu Arquivo, clique em **aberto** e, em seguida, clique em **arquivo de configuração...** .  
   
-3.  Navegue até a pasta de serviço do aplicativo de exemplo e abra o arquivo Web. config.  
+3. Navegue até a pasta de serviço do aplicativo de exemplo e abra o arquivo Web. config.  
   
-4.  Clique em **diagnóstico** na árvore de configuração.  
+4. Clique em **diagnóstico** na árvore de configuração.  
   
-5.  Ativar/desativar **contador de desempenho** na **diagnóstico** janela Mostrar 'Todos'.  
+5. Ativar/desativar **contador de desempenho** na **diagnóstico** janela Mostrar 'Todos'.  
   
-6.  Salve o arquivo de configuração e saia do editor.  
+6. Salve o arquivo de configuração e saia do editor.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

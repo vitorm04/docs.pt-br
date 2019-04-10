@@ -2,12 +2,12 @@
 title: 'Como: Carregar e descarregar Assemblies (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-ms.openlocfilehash: 07c8370d7aeb5171f991ddf24bf473f787408f2d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: efd8ddbe45323e1f80cec54379d61b5aa8a435cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297377"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Como: Carregar e descarregar Assemblies (Visual Basic)
 Os assemblies referenciados pelo seu programa serão automaticamente carregados e tempo de build, mas também é possível carregar assemblies específicos no domínio do aplicativo atual em tempo de execução. Para obter mais informações, confira [Como: Carregar assemblies em um domínio do aplicativo](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -18,14 +18,14 @@ Os assemblies referenciados pelo seu programa serão automaticamente carregados 
   
 ### <a name="to-load-an-assembly-into-an-application-domain"></a>Para carregar um assembly em um domínio de aplicativo  
   
-1.  Use um dos vários métodos de carga contidos nas classes <xref:System.AppDomain> e <xref:System.Reflection>. Para obter mais informações, confira [Como: Carregar assemblies em um domínio do aplicativo](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
+1. Use um dos vários métodos de carga contidos nas classes <xref:System.AppDomain> e <xref:System.Reflection>. Para obter mais informações, confira [Como: Carregar assemblies em um domínio do aplicativo](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
   
 ### <a name="to-unload-an-application-domain"></a>Para descarregar um domínio de aplicativo  
   
-1.  Não há nenhuma maneira de descarregar um assembly individual sem descarregar todos os domínios de aplicativo que o contêm. Use o método `Unload` de <xref:System.AppDomain> para descarregar os domínios de aplicativo. Para obter mais informações, confira [Como: Descarregar um domínio do aplicativo](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
+1. Não há nenhuma maneira de descarregar um assembly individual sem descarregar todos os domínios de aplicativo que o contêm. Use o método `Unload` de <xref:System.AppDomain> para descarregar os domínios de aplicativo. Para obter mais informações, confira [Como: Descarregar um domínio do aplicativo](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Conceitos de programação](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Como: Carregar assemblies em um domínio do aplicativo](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

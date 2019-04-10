@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 0966cea26c5dde8f116081c7a6411b4275e50f40
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817031"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298988"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Referência de assembly Friend \<referência > é inválido
 Referência de assembly Friend \<referência > é inválido. O nome forte assinado em assemblies deve especificar uma chave pública em suas declarações InternalsVisibleTo.  
@@ -23,9 +23,9 @@ Referência de assembly Friend \<referência > é inválido. O nome forte assina
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Determine a chave pública para o assembly de nome forte amigo. Incluir a chave pública como parte do nome do assembly passado para o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> construtor de atributo usando o `PublicKey` atributo.  
+1. Determine a chave pública para o assembly de nome forte amigo. Incluir a chave pública como parte do nome do assembly passado para o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> construtor de atributo usando o `PublicKey` atributo.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Reflection.AssemblyName>
-- [Assemblies Amigáveis](../../../standard/assembly/friend-assemblies.md)
+- [Assemblies amigáveis](../../../standard/assembly/friend-assemblies.md)

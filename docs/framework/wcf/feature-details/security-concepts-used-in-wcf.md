@@ -2,12 +2,12 @@
 title: Conceitos de segurança utilizados no WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142214"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295543"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceitos de segurança utilizados no WCF
 Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já está em uso e implantada em várias infraestruturas de segurança.  
@@ -34,15 +34,15 @@ Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já
 ## <a name="access-control-mechanisms"></a>Mecanismos de controle de acesso  
  WCF fornece várias maneiras para controlar o acesso a um serviço ou a operação. Entre elas estão  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  Provedor de associação do ASP.NET  
+2. Provedor de associação do ASP.NET  
   
-3.  Provedor de função ASP.NET  
+3. Provedor de função ASP.NET  
   
-4.  Gerenciador de autorização  
+4. Gerenciador de autorização  
   
-5.  Modelo de identidade  
+5. Modelo de identidade  
   
  Para obter mais informações sobre esses tópicos, consulte [mecanismos de controle de acesso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

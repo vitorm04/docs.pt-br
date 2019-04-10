@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219506"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 ## <a name="types-variables-and-values"></a>Tipos, variáveis e valores  
@@ -75,8 +75,7 @@ ms.locfileid: "58465493"
  A ilustração a seguir mostra a relação entre tipos de referência e tipos de valor no CTS.
 
  A imagem a seguir mostra os tipos de valor e tipos de referência no CTS: 
-  
-  
+
  ![Captura de tela que mostra de tipos de valor CTS e tipos de referência.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
@@ -167,19 +166,19 @@ stringList.Add(4);
 ## <a name="related-sections"></a>Seções relacionadas  
  Para mais informações, consulte os seguintes tópicos:  
   
--   [Transmissões e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+-   [Conversão e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
 -   [Conversão boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
   
--   [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+-   [Usar o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
   
 -   [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)  
   
 -   [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+-   [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
   
--   [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+-   [Tipos anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
   
 -   [Genéricos](../../../csharp/programming-guide/generics/index.md)  
 

@@ -2,12 +2,12 @@
 title: Controlando registros
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298351"
 ---
 # <a name="tracking-records"></a>Controlando registros
 O tempo de execução de fluxo de trabalho é instrumentado para emitir registros de controle para siga a execução de uma instância de fluxo de trabalho.  
@@ -50,15 +50,15 @@ O tempo de execução de fluxo de trabalho é instrumentado para emitir registro
   
  Por exemplo, pode haver uma atividade simples de <xref:System.Activities.Statements.Sequence> que contém uma operação de <xref:System.Activities.Statements.WriteLine> com os registros de rastreamento emissores na seguinte ordem:  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que o fluxo de trabalho está sendo iniciada.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que o fluxo de trabalho está sendo iniciada.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> indica que uma atividade foi agendada. Nesse caso é uma atividade de <xref:System.Activities.Statements.Sequence> .  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> indica que uma atividade foi agendada. Nesse caso é uma atividade de <xref:System.Activities.Statements.Sequence> .  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> representa o <xref:System.Activities.Statements.WriteLine> atividade.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> representa o <xref:System.Activities.Statements.WriteLine> atividade.  
   
-4.  Há dois registros de <xref:System.Activities.Tracking.ActivityStateRecord> que representam concluir de duas atividades.  
+4. Há dois registros de <xref:System.Activities.Tracking.ActivityStateRecord> que representam concluir de duas atividades.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que o fluxo de trabalho está sendo concluída.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que o fluxo de trabalho está sendo concluída.  
   
 ## <a name="see-also"></a>Consulte também
 

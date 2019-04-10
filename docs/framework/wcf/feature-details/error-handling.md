@@ -2,12 +2,12 @@
 title: Tratamento de erros
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136429"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300275"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 ## <a name="error-handling-in-windows-communication-foundation"></a>Tratamento de erro no Windows Communication Foundation  
@@ -34,15 +34,15 @@ ms.locfileid: "59136429"
   
  Com um IErrorHandler, você pode controlar explicitamente o comportamento do seu aplicativo quando uma exceção é lançada. Você pode:  
   
-1.  Decida se deseja ou não enviar uma falha para o cliente  
+1. Decida se deseja ou não enviar uma falha para o cliente  
   
-2.  Substituir uma exceção com uma falha  
+2. Substituir uma exceção com uma falha  
   
-3.  Substituir uma falha por outra falha  
+3. Substituir uma falha por outra falha  
   
-4.  Executar o registro em log ou rastreamento  
+4. Executar o registro em log ou rastreamento  
   
-5.  Realizar outras atividades personalizadas  
+5. Realizar outras atividades personalizadas  
   
  Um pode instalar um manipulador de erro personalizada ao adicioná-lo à propriedade ErrorHandlers dos dispatchers de canal para o seu serviço.  É possível ter mais de um manipulador de erro e eles são chamados na ordem em que eles são adicionados a esta coleção.  
   

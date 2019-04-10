@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842324"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304149"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Expressão do tipo \<tipo > não é passível de consulta
 Expressão do tipo \<tipo > não é passível de consulta. Certifique-se de que não está faltando uma importação de namespace e/ou referência de assembly para o provedor LINQ.  
@@ -29,18 +29,18 @@ Expressão do tipo \<tipo > não é passível de consulta. Certifique-se de que 
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Adicionar um `Import` instrução para o <xref:System.Linq>, <xref:System.Data.Linq>, ou <xref:System.Xml.Linq> namespace ao seu arquivo de código. Você também pode importar namespaces para o seu projeto usando o **referências** página do Designer de projeto (**My Project**).  
+1. Adicionar um `Import` instrução para o <xref:System.Linq>, <xref:System.Data.Linq>, ou <xref:System.Xml.Linq> namespace ao seu arquivo de código. Você também pode importar namespaces para o seu projeto usando o **referências** página do Designer de projeto (**My Project**).  
   
-2.  Certifique-se de que o tipo que você tenha identificado como a origem da sua consulta é um tipo passível de consulta. Ou seja, um tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>.  
+2. Certifique-se de que o tipo que você tenha identificado como a origem da sua consulta é um tipo passível de consulta. Ou seja, um tipo que implementa <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>
-- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução a LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Referências e a Instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Referências e a instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Instrução Imports (tipo e namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Página Referências, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

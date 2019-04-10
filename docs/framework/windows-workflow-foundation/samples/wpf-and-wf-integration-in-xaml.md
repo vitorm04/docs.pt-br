@@ -2,18 +2,18 @@
 title: Integração de WPF e WF em XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: ce6fc259b4e8743abd71e979825545183eef136a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840857"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298637"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integração de WPF e WF em XAML
 Este exemplo demonstra como criar um aplicativo que usa recursos do Windows Presentation Foundation (WPF) e o Windows Workflow Foundation (WF) em um único documento XAML. Para fazer isso, o exemplo usa a extensibilidade do Windows Workflow Foundation (WF) e XAML.
 
 ## <a name="sample-details"></a>Detalhes de exemplo
- O arquivo de ShowWindow.xaml desserializa em uma atividade de <xref:System.Activities.Statements.Sequence> com duas variáveis de cadeia de caracteres que são manipulados por atividades de sequência: `ShowWindow` e `WriteLine`. A saída de atividade de <xref:System.Activities.Statements.WriteLine> para a janela do console a expressão que atribui a <xref:System.Activities.Statements.WriteLine.Text%2A> à propriedade. A atividade de `ShowWindow` exibe uma janela de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] como parte de sua lógica de execução. <xref:System.Activities.ActivityContext.DataContext%2A> da janela inclui as variáveis declaradas na sequência. Os controles window declarada na atividade de `ShowWindow` usam a associação de dados para manipular esses variáveis. Finalmente, a janela contém um controle de botão. O evento de `Click` para o botão é tratado por <xref:System.Activities.ActivityDelegate> chamado `MarkupExtension` que contém uma atividade de `CloseWindow` . `MarkUpExtension` chama a atividade contida que fornece, como o contexto, todos os objetos identificados por `x:Name`, bem como o <xref:System.Activities.ActivityContext.DataContext%2A> da janela recipiente. Assim, `CloseWindow.InArgument<Window>` pode ser associado usando uma expressão que referencia o nome da janela.
+ O arquivo de ShowWindow.xaml desserializa em uma atividade de <xref:System.Activities.Statements.Sequence> com duas variáveis de cadeia de caracteres que são manipulados por atividades de sequência: `ShowWindow` e `WriteLine`. A saída de atividade de <xref:System.Activities.Statements.WriteLine> para a janela do console a expressão que atribui a <xref:System.Activities.Statements.WriteLine.Text%2A> à propriedade. A atividade de `ShowWindow` exibe uma janela de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] como parte de sua lógica de execução. <xref:System.Activities.ActivityContext.DataContext%2A> da janela inclui as variáveis declaradas na sequência. Os controles window declarada na atividade de `ShowWindow` usam a associação de dados para manipular esses variáveis. Finalmente, a janela contém um controle de botão. O evento de `Click` para o botão é tratado por <xref:System.Activities.ActivityDelegate> chamado `MarkupExtension` que contém uma atividade de `CloseWindow` . `MarkUpExtension` invoca a atividade contida que fornece, como o contexto, todos os objetos identificados por um `x:Name`, bem como o <xref:System.Activities.ActivityContext.DataContext%2A> da janela. Assim, `CloseWindow.InArgument<Window>` pode ser associado usando uma expressão que referencia o nome da janela.
 
  A atividade de `ShowWindow` deriva da classe de <xref:System.Activities.AsyncCodeActivity%601> para exibir uma janela de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] e conclui-se quando a janela é fechada. A propriedade de `Window` é do tipo `Func<Window>` que permite que a janela é criado sob demanda para cada execução de atividade. A propriedade de `Window` usa <xref:System.Xaml.XamlDeferringLoader> para ativar este modelo adiado de avaliação. `FuncFactoryDeferringLoader` permite que `XamlReader` é capturado durante a serialização e ler durante a execução da atividade.
 
@@ -26,15 +26,15 @@ Este exemplo demonstra como criar um aplicativo que usa recursos do Windows Pres
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2010, abra o arquivo de solução de Wpfwfintegration.
+1. Usando o Visual Studio 2010, abra o arquivo de solução de Wpfwfintegration.
 
-2.  Para criar a solução, pressione CTRL+SHIFT+B.
+2. Para criar a solução, pressione CTRL+SHIFT+B.
 
-3.  Para executar a solução, pressione F5.
+3. Para executar a solução, pressione F5.
 
-4.  Digite seu primeiro e último nome na caixa de diálogo.
+4. Digite seu primeiro e último nome na caixa de diálogo.
 
-5.  Fechar a caixa de diálogo e o console ecoa seu nome.
+5. Fechar a caixa de diálogo e o console ecoa seu nome.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 314706207800b2e86aa0032a52d8c50fbb726887
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305306"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Como: Declarar um objeto usando um inicializador de objeto (Visual Basic)
 Inicializadores de objeto permitem que você declarar e instanciar uma instância de uma classe em uma única instrução. Além disso, você pode inicializar um ou mais membros da instância ao mesmo tempo, sem chamar um construtor com parâmetros.  
@@ -27,33 +27,33 @@ Inicializadores de objeto permitem que você declarar e instanciar uma instânci
   
 ### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Para criar um objeto de uma classe nomeada usando um inicializador de objeto  
   
-1.  Inicie a declaração como se planejar usar um construtor.  
+1. Inicie a declaração como se planejar usar um construtor.  
   
      `Dim student1 As New Student`  
   
-2.  Digite a palavra-chave `With`, seguido por uma lista de inicialização entre chaves.  
+2. Digite a palavra-chave `With`, seguido por uma lista de inicialização entre chaves.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  Na lista de inicialização, inclua cada propriedade que você deseja inicializar e atribuir um valor inicial a ela. O nome da propriedade é precedido por um período.  
+3. Na lista de inicialização, inclua cada propriedade que você deseja inicializar e atribuir um valor inicial a ela. O nome da propriedade é precedido por um período.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      Você pode inicializar um ou mais membros da classe.  
   
-4.  Como alternativa, você pode declarar uma nova instância da classe e, em seguida, atribuir um valor a ela. Em primeiro lugar, declarar uma instância de `Student`:  
+4. Como alternativa, você pode declarar uma nova instância da classe e, em seguida, atribuir um valor a ela. Em primeiro lugar, declarar uma instância de `Student`:  
   
      `Dim student2 As Student`  
   
-5.  Começar a criação de uma instância de `Student` da maneira normal.  
+5. Começar a criação de uma instância de `Student` da maneira normal.  
   
      `Dim student2 As Student = New Student`  
   
-6.  Tipo `With` e, em seguida, um inicializador de objeto para inicializar um ou mais membros da nova instância.  
+6. Tipo `With` e, em seguida, um inicializador de objeto para inicializar um ou mais membros da nova instância.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7.  Você pode simplificar a definição na etapa anterior, omitindo `As Student`. Se você fizer isso, o compilador determina que `student3` é uma instância de `Student` usando inferência de tipo local.  
+7. Você pode simplificar a definição na etapa anterior, omitindo `As Student`. Se você fizer isso, o compilador determina que `student3` é uma instância de `Student` usando inferência de tipo local.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
@@ -61,7 +61,7 @@ Inicializadores de objeto permitem que você declarar e instanciar uma instânci
   
 ## <a name="see-also"></a>Consulte também
 
-- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Como: criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
 - [Inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

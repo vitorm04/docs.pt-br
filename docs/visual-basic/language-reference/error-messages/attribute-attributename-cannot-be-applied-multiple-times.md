@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: fe72e7a14723bcfa429ce80b15dbc22b256774aa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843585"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304292"
 ---
 # <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Atributo '\<attributename >' não pode ser aplicado várias vezes
 O atributo pode ser aplicado somente uma vez. O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.  
@@ -21,9 +21,9 @@ O atributo pode ser aplicado somente uma vez. O `AttributeUsage` atributo determ
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se que o atributo é aplicado somente uma vez.  
+1. Verifique se que o atributo é aplicado somente uma vez.  
   
-2.  Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, assim como acontece com o exemplo a seguir.  
+2. Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, assim como acontece com o exemplo a seguir.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
@@ -32,5 +32,5 @@ O atributo pode ser aplicado somente uma vez. O `AttributeUsage` atributo determ
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.AttributeUsageAttribute>
-- [Criando Atributos Personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Criar atributos personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
 - [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

@@ -2,12 +2,12 @@
 title: Fluxo de controle em programas assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 57c83021551ab386f62c8d22b90db8da8054df7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300925"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Fluxo de controle em programas assíncronos (Visual Basic)
 Você pode escrever e manter programas assíncronos mais facilmente usando as palavras-chave `Async` e `Await`. No entanto, os resultados podem surpreendê-lo se você não entender o funcionamento do seu programa. Este tópico rastreia o fluxo de controle por meio de um programa assíncrono simples para mostrar quando o controle se move de um método para o outro e quais informações são transferidas a cada vez.  
@@ -21,7 +21,7 @@ Você pode escrever e manter programas assíncronos mais facilmente usando as pa
   
 -   `startButton_Click`, que chama `AccessTheWebAsync` e exibe o resultado.  
   
--   `AccessTheWebAsync`, que baixa o conteúdo de um site na forma de uma cadeia de caracteres e retorna o comprimento da cadeia de caracteres. `AccessTheWebAsync` usa um método <xref:System.Net.Http.HttpClient> assíncrono, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, para baixar o conteúdo.  
+-   `AccessTheWebAsync`, que baixa o conteúdo de um site como uma cadeia de caracteres e retorna o comprimento da cadeia de caracteres. `AccessTheWebAsync` usa assíncrona <xref:System.Net.Http.HttpClient> método, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, para baixar o conteúdo.  
   
  Linhas numeradas de exibição aparecem em pontos estratégicos em todo o programa para ajudá-lo a entender como o programa é executado e explicar o que acontece em cada ponto marcado. As linhas de exibição são rotuladas como "UM"a "SEIS". Os rótulos representam a ordem na qual o programa alcança essas linhas de código.  
   
@@ -100,34 +100,34 @@ Length of the downloaded string: 33946.
 ### <a name="download-the-program"></a>Baixar o Programa  
  Você pode baixar o aplicativo para este tópico em [exemplo assíncrono: Controlar fluxo em programas assíncronos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). As etapas a seguir abrem e executam o programa.  
   
-1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
+1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
-2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
+2. Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  Navegue até a pasta que contém o código de exemplo descompactado, abra o arquivo da solução (.sln) e, em seguida, escolha a tecla F5 para compilar e executar o projeto.  
+3. Navegue até a pasta que contém o código de exemplo descompactado, abra o arquivo da solução (.sln) e, em seguida, escolha a tecla F5 para compilar e executar o projeto.  
   
 ### <a name="build-the-program-yourself"></a>Compilar o Programa Sozinho  
  O projeto WPF (Windows Presentation Foundation) a seguir contém o exemplo de código deste tópico.  
   
  Para executar o projeto, realize as seguintes etapas:  
   
-1.  Inicie o Visual Studio.  
+1. Inicie o Visual Studio.  
   
-2.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
+2. Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
      A caixa de diálogo **Novo Projeto** é aberta.  
   
-3.  No **modelos instalados** painel, escolha **Visual Basic**e, em seguida, escolha **aplicativo WPF** na lista de tipos de projeto.  
+3. No **modelos instalados** painel, escolha **Visual Basic**e, em seguida, escolha **aplicativo WPF** na lista de tipos de projeto.  
   
-4.  Digite `AsyncTracer` como o nome do projeto e, em seguida, escolha o botão **OK**.  
+4. Digite `AsyncTracer` como o nome do projeto e, em seguida, escolha o botão **OK**.  
   
      O novo projeto aparece no **Gerenciador de Soluções**.  
   
-5.  No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
+5. No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
   
      Se a guia não estiver visível, abra o menu de atalho para MainWindow.xaml no **Gerenciador de Soluções** e, em seguida, escolha **Exibir Código**.  
   
-6.  Na exibição **XAML** de MainWindow.xaml, substitua o código pelo código a seguir.  
+6. Na exibição **XAML** de MainWindow.xaml, substitua o código pelo código a seguir.  
   
     ```vb  
     <Window  
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
   
      Uma janela simples, contendo uma caixa de texto e um botão, aparecerá no modo de exibição de **Design** de MainWindow.xaml.  
   
-7.  Adicione uma referência para <xref:System.Net.Http>.  
+7. Adicione uma referência para <xref:System.Net.Http>.  
   
-8.  Na **Gerenciador de soluções**, abra o menu de atalho para XAML. vb e, em seguida, escolha **Exibir código**.  
+8. Na **Gerenciador de soluções**, abra o menu de atalho para XAML. vb e, em seguida, escolha **Exibir código**.  
   
 9. No XAML. vb, substitua o código pelo código a seguir.  
   
@@ -334,7 +334,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![Etapa CINCO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
   
- `AccessTheWebAsync` é executado até a conclusão e o controle retorna ao `startButton_Click`, que está aguardando a conclusão.  
+ `AccessTheWebAsync` é executado para conclusão e o controle retorna para `startButton_Click`, que está aguardando a conclusão.  
   
 ### <a name="step-six"></a>Etapa SEIS  
  Quando `AccessTheWebAsync` sinaliza que está concluído, o processamento pode continuar após a instrução await em `startButton_Async`. Na verdade, o programa não tem mais nada para fazer.  
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tipos de retorno assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Exemplo de Async: Controlar fluxo em programas assíncronos (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Exemplo de Async: Fluxo de controle em programas assíncronos (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

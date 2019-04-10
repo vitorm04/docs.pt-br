@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295868"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escrevendo a primeira consulta LINQ (Visual Basic)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas são expressas em uma linguagem de consulta dedicado. Ao longo do tempo, diferentes linguagens foram desenvolvidas para diferentes tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Isso torna necessária para o desenvolvedor do aplicativo aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados com suporte.  
@@ -21,11 +21,11 @@ Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As co
 ## <a name="three-stages-of-a-query-operation"></a>Três Estágios de uma Operação de Consulta  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operações de consulta consistem em três ações:  
   
-1.  Obter a fonte de dados ou fontes.  
+1. Obter a fonte de dados ou fontes.  
   
-2.  Criar a consulta.  
+2. Criar a consulta.  
   
-3.  Executar a consulta.  
+3. Executar a consulta.  
   
  No [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a execução de uma consulta é diferente da criação da consulta. Você não recupera todos os dados apenas criando uma consulta. Esse ponto é abordado com mais detalhes posteriormente neste tópico.  
   
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução ao LINQ no Visual Basic](getting-started-with-linq.md)
-- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Introdução a LINQ no Visual Basic](getting-started-with-linq.md)
+- [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

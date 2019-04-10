@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083824"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 Dados semelhantes podem normalmente ser tratados com mais eficiência quando armazenados e manipulados como uma coleção. Você pode usar a classe ou as classes <xref:System.Array?displayProperty=nameWithType> nos namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable para adicionar, remover e modificar elementos individuais ou um intervalo de elementos em uma coleção.  
@@ -25,8 +25,7 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
  Há dois tipos principais de coleções; coleções genéricas e coleções não genéricas. Coleções genéricas foram adicionadas ao .NET Framework 2.0 e fornecem coleções que são fortemente tipadas no tempo de compilação. Por isso, coleções genéricas normalmente oferecem melhor desempenho. Coleções genéricas aceitam um parâmetro de tipo quando são criadas e não exigem que você converta de e para o tipo <xref:System.Object> ao adicionar ou remover itens da coleção.  Além disso, a maioria das coleções genéricas tem suporte nos aplicativos [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Coleções não genéricas armazenam itens como <xref:System.Object>, exigem a conversão e a maioria não tem suporte para desenvolvimento de aplicativos [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. No entanto, você pode ver as coleções não genéricas no código mais antigo.  
   
  Começando com a [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção de vários threads. As classes de coleção imutáveis no namespace System.Collections.Immutable ([NuGet package](https://www.nuget.org/packages/System.Collections.Immutable)) são inerentemente thread-safe, pois as operações são executadas em uma cópia da coleção original e a coleção original não pode ser modificada.  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Recursos comuns de coleção  
  Todas as coleções fornecem métodos para adicionar, remover ou localizar itens na coleção. Além disso, todas as coleções que direta ou indiretamente implementam a interface <xref:System.Collections.ICollection> ou a interface <xref:System.Collections.Generic.ICollection%601> compartilham estes recursos:  
@@ -77,13 +76,13 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Selecionando uma Classe de Coleção](../../../docs/standard/collections/selecting-a-collection-class.md)|Descreve as diferentes coleções e ajuda a selecionar uma para o seu cenário.|  
-|[Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Descreve os tipos de coleção genérica e não genérica normalmente usadas, tais como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
-|[Quando Usar Coleções Genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve o uso de tipos de coleção genérica.|  
-|[Comparações e Classificações Dentro de Coleções](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|  
-|[Tipos de Coleção Sorted](../../../docs/standard/collections/sorted-collection-types.md)|Descreve as características e o desempenho de coleções classificadas|  
-|[Tipos de Coleção de Tabela de Hash e Dicionário](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.|  
-|[Coleções Thread-Safe](../../../docs/standard/collections/thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|  
+|[Selecionando uma classe de coleção](../../../docs/standard/collections/selecting-a-collection-class.md)|Descreve as diferentes coleções e ajuda a selecionar uma para o seu cenário.|  
+|[Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Descreve os tipos de coleção genérica e não genérica normalmente usadas, tais como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
+|[Quando usar coleções genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve o uso de tipos de coleção genérica.|  
+|[Comparações e classificações dentro de coleções](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|  
+|[Tipos de coleção Sorted](../../../docs/standard/collections/sorted-collection-types.md)|Descreve as características e o desempenho de coleções classificadas|  
+|[Tipos de coleção Hashtable e Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.|  
+|[Coleções thread-safe](../../../docs/standard/collections/thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|  
 |System.Collections.Immutable|Apresenta as coleções imutáveis e fornece links para os tipos de coleção.|  
   
 <a name="BKMK_Reference"></a>   

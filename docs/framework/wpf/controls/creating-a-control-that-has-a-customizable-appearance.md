@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298338"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Criando um controle que tenha uma aparência personalizável
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ Um controle NumericUpDown personalizado
   
  As seguintes práticas garantirão que o controle responda corretamente a ausentes <xref:System.Windows.FrameworkElement> objetos:  
   
-1.  Defina as `x:Name` atributo para cada <xref:System.Windows.FrameworkElement> que você precisa referenciar no código.  
+1. Defina as `x:Name` atributo para cada <xref:System.Windows.FrameworkElement> que você precisa referenciar no código.  
   
-2.  Defina as propriedades particulares para cada <xref:System.Windows.FrameworkElement> que você precisa interagir com.  
+2. Defina as propriedades particulares para cada <xref:System.Windows.FrameworkElement> que você precisa interagir com.  
   
-3.  Assinar e cancelar a assinatura de todos os eventos que seu controle lida com o <xref:System.Windows.FrameworkElement> propriedade do acessador set.  
+3. Assinar e cancelar a assinatura de todos os eventos que seu controle lida com o <xref:System.Windows.FrameworkElement> propriedade do acessador set.  
   
-4.  Defina as <xref:System.Windows.FrameworkElement> propriedades que você definiu na etapa 2 <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> método. Isso é mais antigo que o <xref:System.Windows.FrameworkElement> no <xref:System.Windows.Controls.ControlTemplate> está disponível para o controle. Use o `x:Name` do <xref:System.Windows.FrameworkElement> para obtê-lo a <xref:System.Windows.Controls.ControlTemplate>.  
+4. Defina as <xref:System.Windows.FrameworkElement> propriedades que você definiu na etapa 2 <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> método. Isso é mais antigo que o <xref:System.Windows.FrameworkElement> no <xref:System.Windows.Controls.ControlTemplate> está disponível para o controle. Use o `x:Name` do <xref:System.Windows.FrameworkElement> para obtê-lo a <xref:System.Windows.Controls.ControlTemplate>.  
   
-5.  Verifique se o <xref:System.Windows.FrameworkElement> não é `null` antes de acessar seus membros.  Se ele for `null`, não relate um erro.  
+5. Verifique se o <xref:System.Windows.FrameworkElement> não é `null` antes de acessar seus membros.  Se ele for `null`, não relate um erro.  
   
  Os exemplos a seguir mostram como o `NumericUpDown` controle interage com <xref:System.Windows.FrameworkElement> objetos de acordo com as recomendações na lista anterior.  
   

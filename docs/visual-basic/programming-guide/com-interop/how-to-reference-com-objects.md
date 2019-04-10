@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 9e88f5f093ce55d3d80da9b38689016872ea12cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980185"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295257"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Como: Objetos de referência COM do Visual Basic
 No Visual Basic, a adição de referências a objetos COM que têm bibliotecas de tipo requer a criação de um assembly de interoperabilidade para a biblioteca COM. As referências aos membros do objeto COM são roteadas para o assembly de interoperabilidade e, em seguida, encaminhadas para o objeto COM real. As respostas do objeto COM são roteadas para o assembly de interoperabilidade e encaminhadas para seu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativo.  
@@ -24,19 +24,19 @@ No Visual Basic, a adição de referências a objetos COM que têm bibliotecas d
   
 ### <a name="to-add-references-to-com-objects"></a>Para adicionar referências a objetos COM  
   
-1.  Sobre o **projeto** menu, escolha **adicionar referência** e, em seguida, clique no **COM** guia na caixa de diálogo.  
+1. Sobre o **projeto** menu, escolha **adicionar referência** e, em seguida, clique no **COM** guia na caixa de diálogo.  
   
-2.  Selecione o componente que você deseja usar na lista de objetos COM.  
+2. Selecione o componente que você deseja usar na lista de objetos COM.  
   
-3.  Para simplificar o acesso ao assembly de interoperabilidade, adicione um `Imports` instrução na parte superior da classe ou módulo que você usará o objeto COM. Por exemplo, o exemplo de código a seguir importa o namespace `INKEDLib` para objetos referenciados no `Microsoft InkEdit Control 1.0` biblioteca.  
+3. Para simplificar o acesso ao assembly de interoperabilidade, adicione um `Imports` instrução na parte superior da classe ou módulo que você usará o objeto COM. Por exemplo, o exemplo de código a seguir importa o namespace `INKEDLib` para objetos referenciados no `Microsoft InkEdit Control 1.0` biblioteca.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Para criar um assembly de interoperabilidade usando Tlbimp  
   
-1.  Adicione o local do Tlbimp ao caminho de pesquisa, se ele não ainda faz parte do caminho de pesquisa e você não estiver atualmente no diretório onde ele está localizado.  
+1. Adicione o local do Tlbimp ao caminho de pesquisa, se ele não ainda faz parte do caminho de pesquisa e você não estiver atualmente no diretório onde ele está localizado.  
   
-2.  Tlbimp chamada em um prompt de comando, fornecendo as seguintes informações:  
+2. Tlbimp chamada em um prompt de comando, fornecendo as seguintes informações:  
   
     -   Nome e o local da DLL que contém a biblioteca de tipos  
   
@@ -57,6 +57,6 @@ No Visual Basic, a adição de referências a objetos COM que têm bibliotecas d
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Passo a passo: implementação de herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Solução de problemas de Interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Passo a passo: Implementando a herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Solucionando problemas de interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Instrução Imports (tipo e namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

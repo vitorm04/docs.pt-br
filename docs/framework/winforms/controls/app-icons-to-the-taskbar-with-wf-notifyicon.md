@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304513"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Como: Adicionar ícones do aplicativo à TaskBar com o componente NotifyIcon do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.NotifyIcon> componente exibe um único ícone na área de notificação de status da barra de tarefas. Para exibir vários ícones na área de status, você deve ter vários <xref:System.Windows.Forms.NotifyIcon> componentes em seu formulário. Para definir o ícone exibido para um controle, use o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. Você também pode escrever código no <xref:System.Windows.Forms.NotifyIcon.DoubleClick> manipulador de eventos para que algo acontece quando o usuário clica duas vezes no ícone. Por exemplo, você pode fazer com que uma caixa de diálogo apareça para o usuário configurar o processo em segundo plano representado pelo ícone.  
@@ -28,11 +28,11 @@ Os formulários do Windows <xref:System.Windows.Forms.NotifyIcon> componente exi
   
 ### <a name="to-set-the-icon"></a>Definir o ícone  
   
-1.  Atribuir um valor para o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. O valor deve ser do tipo `System.Drawing.Icon` e pode ser carregados de um arquivo .ico. Você pode especificar o arquivo de ícone no código ou clicando no botão de reticências (![captura de tela VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) ao lado de <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade no  **As propriedades** janela e, em seguida, selecionando o arquivo na **aberto** caixa de diálogo que aparece.  
+1. Atribuir um valor para o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade. O valor deve ser do tipo `System.Drawing.Icon` e pode ser carregados de um arquivo .ico. Você pode especificar o arquivo de ícone no código ou clicando no botão de reticências (![captura de tela VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) ao lado de <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propriedade no  **As propriedades** janela e, em seguida, selecionando o arquivo na **aberto** caixa de diálogo que aparece.  
   
-2.  Defina a propriedade <xref:System.Windows.Forms.NotifyIcon.Visible%2A> como `true`.  
+2. Defina a propriedade <xref:System.Windows.Forms.NotifyIcon.Visible%2A> como `true`.  
   
-3.  Defina o <xref:System.Windows.Forms.NotifyIcon.Text%2A> propriedade como uma cadeia de caracteres de dica de ferramenta apropriada.  
+3. Defina o <xref:System.Windows.Forms.NotifyIcon.Text%2A> propriedade como uma cadeia de caracteres de dica de ferramenta apropriada.  
   
      No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows incluem essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem o aplicativo com mais segurança. O exemplo a seguir exige um formulário com um <xref:System.Windows.Forms.NotifyIcon> controle já adicionado. Ele também requer um arquivo de ícone denominado `Icon.ico`.  
   

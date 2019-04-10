@@ -2,37 +2,37 @@
 title: Usando o contexto de edição de ModelItem
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: d8d2e7d055099a6aedd13dd48dd78403cdff2a50
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846266"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296870"
 ---
 # <a name="using-the-modelitem-editing-context"></a>Usando o contexto de edição de ModelItem
-<xref:System.Activities.Presentation.Model.ModelItem> que contexto de edição é o objeto que o aplicativo host usa para se comunicar com o designer. <xref:System.Activities.Presentation.EditingContext> expõe dois métodos, <xref:System.Activities.Presentation.EditingContext.Items%2A> e <xref:System.Activities.Presentation.EditingContext.Services%2A>, que podem ser usados  
+<xref:System.Activities.Presentation.Model.ModelItem> que contexto de edição é o objeto que o aplicativo host usa para se comunicar com o designer. <xref:System.Activities.Presentation.EditingContext> expõe dois métodos, <xref:System.Activities.Presentation.EditingContext.Items%2A> e <xref:System.Activities.Presentation.EditingContext.Services%2A>, que pode ser usado  
   
 ## <a name="the-items-collection"></a>A coleção de itens  
  A coleção de <xref:System.Activities.Presentation.EditingContext.Items%2A> é usada para acessar os dados que são compartilhados entre o host e o designer, ou os dados que estão disponíveis para todos os designers. Essa coleção possui os seguintes recursos, acessados por meio da classe <xref:System.Activities.Presentation.ContextItemManager> :  
   
-1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
+1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
-2.  <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
+4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>A coleção de serviços  
  A coleção de <xref:System.Activities.Presentation.EditingContext.Services%2A> é usada para acessar os serviços que o designer usa para interagir com o host, ou serviços que todos os designers usam. Esta coleção tem os seguintes métodos de observação:  
   
-1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
+1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
-2.  <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
+4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>Atribuindo a um designer uma atividade  
  Para especificar que o designer uma atividade, use o atributo de designer é usado.  

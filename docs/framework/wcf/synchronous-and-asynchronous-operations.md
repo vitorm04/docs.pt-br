@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297701"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -49,11 +49,11 @@ Este tópico discute como implementar e chamar as operações de serviço assín
 ### <a name="implementing-an-asynchronous-service-operation"></a>Implementando uma operação de serviço assíncrona  
  As operações assíncronas podem ser implementadas usando um dos três métodos a seguir:  
   
-1.  O padrão assíncrono baseado em tarefas  
+1. O padrão assíncrono baseado em tarefas  
   
-2.  O padrão assíncrono baseado em eventos  
+2. O padrão assíncrono baseado em eventos  
   
-3.  O padrão assíncrono IAsyncResult  
+3. O padrão assíncrono IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>O padrão assíncrono baseado em tarefas  
  O padrão assíncrono baseado em tarefas é o modo preferido de implementar operações assíncronas porque é mais fácil e mais simples. Para usar esse método, basta implementar a operação de seu serviço e especificar um tipo de retorno de Task\<T>, em que T é o tipo retornado pela operação lógica. Por exemplo:  

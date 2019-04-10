@@ -2,31 +2,31 @@
 title: 'Como: usar um moniker de serviço com contratos WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: b8729055c82e3ce1273e8a0cfae53a1f6d3c14e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298078"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Como: usar um moniker de serviço com contratos WSDL
 Essas são situações em que talvez você queira que um cliente de interoperabilidade COM totalmente independente. O serviço que você deseja chamar não pode expor um ponto de extremidade MEX e o cliente do WCF com que dll não pode ser registrado para interoperabilidade. Nesses casos, você pode criar um arquivo WSDL que descreve o serviço e passá-la para o moniker de serviço do WCF. Este tópico descreve como chamar o exemplo de Introdução ao WCF usando um moniker de WCF WSDL.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Usando o moniker de serviço WSDL  
   
-1.  Abrir e criar a solução de exemplo GettingStarted.  
+1. Abrir e criar a solução de exemplo GettingStarted.  
   
-2.  Abra o Internet Explorer e navegue até `http://localhost/ServiceModelSamples/Service.svc` para certificar-se de que o serviço está funcionando.  
+2. Abra o Internet Explorer e navegue até `http://localhost/ServiceModelSamples/Service.svc` para certificar-se de que o serviço está funcionando.  
   
-3.  No arquivo Service.cs, adicione o seguinte atributo na classe CalculatorService:  
+3. No arquivo Service.cs, adicione o seguinte atributo na classe CalculatorService:  
   
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
-4.  Adicione um namespace de associação para o serviço de App. config:  
+4. Adicione um namespace de associação para o serviço de App. config:  
 
-5.  Crie um arquivo WSDL para o aplicativo ler. Como os namespaces foram adicionados nas etapas 3 e 4, você pode usar o IE para consultar a descrição inteira de WSDL do serviço, navegando até `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Você pode salvar o arquivo do Internet Explorer como serviceWSDL.xml. Se você não especificar os namespaces nas etapas 3 e 4, o documento WSDL retornado das consultas URL acima não será concluída WSDL. O documento WSDL retornado incluirá várias instruções de importação que importar outros documentos WSDL. Você precisará passar por cada instrução de importação e compilar todo o documento WSDL, combinando o WSDL retornado do serviço com o WSDL importado.  
+5. Crie um arquivo WSDL para o aplicativo ler. Como os namespaces foram adicionados nas etapas 3 e 4, você pode usar o IE para consultar a descrição inteira de WSDL do serviço, navegando até `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Você pode salvar o arquivo do Internet Explorer como serviceWSDL.xml. Se você não especificar os namespaces nas etapas 3 e 4, o documento WSDL retornado das consultas URL acima não será concluída WSDL. O documento WSDL retornado incluirá várias instruções de importação que importar outros documentos WSDL. Você precisará passar por cada instrução de importação e compilar todo o documento WSDL, combinando o WSDL retornado do serviço com o WSDL importado.  
   
-6.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
+6. Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
@@ -52,7 +52,7 @@ Essas são situações em que talvez você queira que um cliente de interoperabi
     > [!NOTE]
     >  Se o moniker está mal formado ou se o serviço está indisponível a chamada para `GetObject` retornará um erro informando que "Sintaxe inválida".  Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
   
-7.  Execute o aplicativo Visual Basic. Caixa de mensagem será exibida com os resultados da subtração de chamada (145, 76.54).  
+7. Execute o aplicativo Visual Basic. Caixa de mensagem será exibida com os resultados da subtração de chamada (145, 76.54).  
   
 ## <a name="see-also"></a>Consulte também
 

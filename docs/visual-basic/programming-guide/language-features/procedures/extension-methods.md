@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296232"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensão (Visual Basic)
 Métodos de extensão permitem que os desenvolvedores adicionem funcionalidades personalizadas aos tipos de dados que já estão definidos sem criar um novo tipo derivado. Métodos de extensão tornam possível escrever um método que pode ser chamado como se fosse um método de instância do tipo existente.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Precedência do método de extensão  
  Quando dois métodos de extensão que possuem assinaturas idênticas estiverem no escopo e acessíveis, aquele com precedência mais alta será invocado. Precedência de um método de extensão se baseia no mecanismo usado para trazer o método para o escopo. A lista a seguir mostra a hierarquia de precedência, em ordem decrescente.  
   
-1.  Métodos de extensão definidos dentro do módulo atual.  
+1. Métodos de extensão definidos dentro do módulo atual.  
   
-2.  Métodos de extensão definidos dentro de dados tipos no namespace atual ou qualquer um de seus pais, com namespaces filhos que têm precedência maior do que namespaces pai.  
+2. Métodos de extensão definidos dentro de dados tipos no namespace atual ou qualquer um de seus pais, com namespaces filhos que têm precedência maior do que namespaces pai.  
   
-3.  Métodos de extensão definidos dentro de qualquer tipo de importação no arquivo atual.  
+3. Métodos de extensão definidos dentro de qualquer tipo de importação no arquivo atual.  
   
-4.  Métodos de extensão definidos dentro de qualquer importação de namespace no arquivo atual.  
+4. Métodos de extensão definidos dentro de qualquer importação de namespace no arquivo atual.  
   
-5.  Métodos de extensão definidos dentro de qualquer importação de tipo de nível de projeto.  
+5. Métodos de extensão definidos dentro de qualquer importação de tipo de nível de projeto.  
   
-6.  Métodos de extensão definidos dentro de qualquer importação de namespace de nível de projeto.  
+6. Métodos de extensão definidos dentro de qualquer importação de namespace de nível de projeto.  
   
  Se a precedência não resolver a ambiguidade, você pode usar o nome totalmente qualificado para especificar o método que você está chamando. Se o `Print` método no exemplo anterior é definido em um módulo denominado `StringExtensions`, é o nome totalmente qualificado `StringExtensions.Print(example)` em vez de `example.Print()`.  
   
@@ -178,10 +178,10 @@ End Module
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Métodos de Extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
 - [Instrução Module](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Parâmetros Opcionais](./optional-parameters.md)
-- [Matrizes de Parâmetros](./parameter-arrays.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros opcionais](./optional-parameters.md)
+- [Matrizes de parâmetros](./parameter-arrays.md)
 - [Visão geral de atributos](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

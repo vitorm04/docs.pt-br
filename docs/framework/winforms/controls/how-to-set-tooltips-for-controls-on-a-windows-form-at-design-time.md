@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301328"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Como: Definir ToolTips para controles em um Windows Form no momento do design
 Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres no código ou no Designer de formulários do Windows. Para obter mais informações sobre o <xref:System.Windows.Forms.ToolTip> componente, consulte [visão geral do componente ToolTip](tooltip-component-overview-windows-forms.md).  
@@ -24,9 +24,9 @@ Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres n
   
 ### <a name="to-set-a-tooltip-programmatically"></a>Para definir uma dica de ferramenta de forma programática  
   
-1.  Adicione o controle que exibirá a dica de ferramenta.  
+1. Adicione o controle que exibirá a dica de ferramenta.  
   
-2.  Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método da <xref:System.Windows.Forms.ToolTip> componente.  
+2. Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método da <xref:System.Windows.Forms.ToolTip> componente.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres n
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>Para definir uma dica de ferramenta no designer  
   
-1.  Adicionar um <xref:System.Windows.Forms.ToolTip> componente para o formulário.  
+1. Adicionar um <xref:System.Windows.Forms.ToolTip> componente para o formulário.  
   
-2.  Selecione o controle que será exibir a dica de ferramenta ou adicioná-lo ao formulário.  
+2. Selecione o controle que será exibir a dica de ferramenta ou adicioná-lo ao formulário.  
   
-3.  No **propriedades** janela, defina as **dica de ferramenta no ToolTip1** valor a ser uma cadeia de caracteres apropriada de texto.  
+3. No **propriedades** janela, defina as **dica de ferramenta no ToolTip1** valor a ser uma cadeia de caracteres apropriada de texto.  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>Para remover uma dica de ferramenta de forma programática  
   
-1.  Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método da <xref:System.Windows.Forms.ToolTip> componente.  
+1. Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método da <xref:System.Windows.Forms.ToolTip> componente.  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres n
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>Para remover uma dica de ferramenta no designer  
   
-1.  Selecione o controle que está exibindo a dica de ferramenta.  
+1. Selecione o controle que está exibindo a dica de ferramenta.  
   
-2.  No **propriedades** janela, exclua o texto na **dica de ferramenta no ToolTip1**.  
+2. No **propriedades** janela, exclua o texto na **dica de ferramenta no ToolTip1**.  
 
 ## <a name="see-also"></a>Consulte também
 

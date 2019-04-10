@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295504"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Como: recuperar dados da área de transferência
 O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode usar para interagir com o recurso de área de transferência do sistema operacional Windows. Muitos aplicativos usam a Área de Transferência como um repositório temporário para dados. Por exemplo, processadores globais usam a Área de Transferência durante operações de cortar e colar. A Área de Transferência também é útil para transferir informações de um aplicativo para outro.  
@@ -31,14 +31,14 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Recuperar dados da Área de Transferência em um único formato comum  
   
-1.  Use o <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, ou <xref:System.Windows.Forms.Clipboard.GetText%2A> método. Opcionalmente, use os métodos `Contains`*Formato* correspondentes primeiro para determinar se os dados estão disponíveis em um formato específico. Esses métodos estão disponíveis somente em [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use o <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, ou <xref:System.Windows.Forms.Clipboard.GetText%2A> método. Opcionalmente, use os métodos `Contains`*Formato* correspondentes primeiro para determinar se os dados estão disponíveis em um formato específico. Esses métodos estão disponíveis somente em [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Recuperar dados da Área de Transferência em um formato personalizado  
   
-1.  Use o <xref:System.Windows.Forms.Clipboard.GetData%2A> método com um nome de formato personalizado. Esse método está disponível apenas no [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use o <xref:System.Windows.Forms.Clipboard.GetData%2A> método com um nome de formato personalizado. Esse método está disponível apenas no [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      Você também pode usar nomes de formato predefinidos com o <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obter mais informações, consulte <xref:System.Windows.Forms.DataFormats>.  
   
@@ -49,7 +49,7 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Recuperar dados da Área de Transferência em vários formatos  
   
-1.  Use o método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Você deve usar esse método para recuperar dados da Área de Transferência em versões anteriores à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Use o método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Você deve usar esse método para recuperar dados da Área de Transferência em versões anteriores à [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

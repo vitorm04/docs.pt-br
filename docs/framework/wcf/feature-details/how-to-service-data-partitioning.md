@@ -2,12 +2,12 @@
 title: 'Como: fornecer particionamento de dados'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300379"
 ---
 # <a name="how-to-service-data-partitioning"></a>Como: fornecer particionamento de dados
 Este tópico descreve as etapas básicas necessárias para mensagens de partição em várias instâncias do mesmo serviço de destino. Particionamento de dados de serviço é normalmente usados quando você precisar dimensionar um serviço a fim de fornecer a melhor qualidade de serviço, ou quando você precisa lidar com solicitações de clientes diferentes de uma maneira específica. Por exemplo, mensagens de alto valor ou clientes de "Ouro" talvez precise ser processadas em uma prioridade mais alta do que as mensagens de um cliente padrão.  
@@ -21,7 +21,7 @@ Este tópico descreve as etapas básicas necessárias para mensagens de partiç�
   
 ### <a name="implement-service-data-partitioning"></a>Particionamento de dados de serviço implementar  
   
-1.  Crie a configuração básica do serviço de roteamento, especificando os pontos de extremidade de serviço expostos pelo serviço. O exemplo a seguir define dois pontos de extremidade, que serão usados para receber mensagens. Ele também define os pontos de extremidade do cliente, que são usados para enviar mensagens para as instâncias de serviço regularCalc.  
+1. Crie a configuração básica do serviço de roteamento, especificando os pontos de extremidade de serviço expostos pelo serviço. O exemplo a seguir define dois pontos de extremidade, que serão usados para receber mensagens. Ele também define os pontos de extremidade do cliente, que são usados para enviar mensagens para as instâncias de serviço regularCalc.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ Este tópico descreve as etapas básicas necessárias para mensagens de partiç�
      </client>  
     ```  
   
-2.  Defina os filtros usados para rotear mensagens para os pontos de extremidade de destino.  Neste exemplo, o filtro de EndpointName é usado para determinar qual ponto de extremidade de serviço recebeu a mensagem. O exemplo a seguir define os filtros e a seção de roteamento necessário.  
+2. Defina os filtros usados para rotear mensagens para os pontos de extremidade de destino.  Neste exemplo, o filtro de EndpointName é usado para determinar qual ponto de extremidade de serviço recebeu a mensagem. O exemplo a seguir define os filtros e a seção de roteamento necessário.  
   
     ```xml  
     <filters>  
@@ -71,7 +71,7 @@ Este tópico descreve as etapas básicas necessárias para mensagens de partiç�
     </filters>  
     ```  
   
-3.  Defina a tabela de filtro, que associa cada filtro com um ponto de extremidade do cliente. Neste exemplo, a mensagem será roteada com base no ponto de extremidade específico que foi recebido pela. Uma vez que a mensagem só pode corresponder a um dos dois filtros possíveis, não é necessário para usar a prioridade do filtro para controlar a ordem na qual os filtros são avaliados.  
+3. Defina a tabela de filtro, que associa cada filtro com um ponto de extremidade do cliente. Neste exemplo, a mensagem será roteada com base no ponto de extremidade específico que foi recebido pela. Uma vez que a mensagem só pode corresponder a um dos dois filtros possíveis, não é necessário para usar a prioridade do filtro para controlar a ordem na qual os filtros são avaliados.  
   
      A seguir define a tabela de filtro e adiciona os filtros definidos anteriormente.  
   
@@ -85,7 +85,7 @@ Este tópico descreve as etapas básicas necessárias para mensagens de partiç�
     </filterTables>  
     ```  
   
-4.  Para avaliar as mensagens de entrada com os filtros contidos na tabela, você deve associar a tabela de filtro com os pontos de extremidade de serviço usando o comportamento de roteamento. O exemplo a seguir demonstra a associação "filterTable1" com os pontos de extremidade de serviço:  
+4. Para avaliar as mensagens de entrada com os filtros contidos na tabela, você deve associar a tabela de filtro com os pontos de extremidade de serviço usando o comportamento de roteamento. O exemplo a seguir demonstra a associação "filterTable1" com os pontos de extremidade de serviço:  
   
     ```xml  
     <behaviors>  

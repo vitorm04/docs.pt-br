@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197185"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306047"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Como: Associar um controle ComboBox ou ListBox do Windows Forms aos dados
 Você pode associar o <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.ListBox> aos dados para executar tarefas como pesquisar dados em um banco de dados, inserir novos dados ou editar dados existentes.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Para associar controles ComboBox ou ListBox  
   
-1.  Defina o `DataSource` propriedade para um objeto de fonte de dados. Possíveis fontes de dados incluem um <xref:System.Windows.Forms.BindingSource> associado a dados, uma tabela de dados, uma exibição de dados, um conjunto de dados, exibir uma data manager, uma matriz ou qualquer classe que implementa o <xref:System.Collections.IList> interface. Para mais informações, consulte [Fontes de Dados com Suporte nos Windows Forms](../data-sources-supported-by-windows-forms.md).  
+1. Defina o `DataSource` propriedade para um objeto de fonte de dados. Possíveis fontes de dados incluem um <xref:System.Windows.Forms.BindingSource> associado a dados, uma tabela de dados, uma exibição de dados, um conjunto de dados, exibir uma data manager, uma matriz ou qualquer classe que implementa o <xref:System.Collections.IList> interface. Para mais informações, consulte [Fontes de Dados com Suporte nos Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
-2.  Se você estiver associando a uma tabela, defina o `DisplayMember` propriedade para o nome de uma coluna na fonte de dados.  
+2. Se você estiver associando a uma tabela, defina o `DisplayMember` propriedade para o nome de uma coluna na fonte de dados.  
   
      \- ou -  
   

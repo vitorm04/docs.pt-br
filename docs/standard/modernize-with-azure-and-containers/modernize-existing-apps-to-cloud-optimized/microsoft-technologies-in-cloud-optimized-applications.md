@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296245"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologias da Microsoft em aplicativos otimizados para a nuvem
 
@@ -25,9 +25,9 @@ A lista a seguir descreve as ferramentas, tecnologias e soluções que são reco
 
 -   **Monitoramento, telemetria, registro e auditoria**: A capacidade de aplicativos de monitoramento e a auditoria e contêineres que estão em execução na nuvem é essencial para qualquer aplicativo otimizada para a nuvem. [O Azure Application Insights](https://azure.microsoft.com/services/application-insights/) e [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) são as principais ferramentas da Microsoft que fornecem monitoramento e auditoria para aplicativos otimizados para a nuvem.
 
--   **Provisionamento**: Ferramentas de automação de ajudam você a provisionar a infraestrutura e implantar um aplicativo em vários ambientes (produção, teste, preparação). Você pode usar ferramentas como o Chef e Puppet para gerenciar a configuração de um aplicativo e o ambiente. Essa camada também pode ser implementada usando as abordagens mais simples e diretas. Por exemplo, você pode implantar diretamente por meio de interface de linha de comando do Azure (CLI do Azure) de ferramentas e, em seguida, usar a implantação contínua e liberar pipelines de gerenciamento no [serviços do Azure DevOps](https://visualstudio.microsoft.com/team-services/).
+-   **Provisionamento**: Ferramentas de automação de ajudam você a provisionar a infraestrutura e implantar um aplicativo em vários ambientes (produção, teste, preparação). Você pode usar ferramentas como o Chef e Puppet para gerenciar a configuração de um aplicativo e o ambiente. Essa camada também pode ser implementada usando as abordagens mais simples e diretas. Por exemplo, você pode implantar diretamente por meio de interface de linha de comando do Azure (CLI do Azure) de ferramentas e, em seguida, usar a implantação contínua e liberar pipelines de gerenciamento no [serviços do Azure DevOps](https://azure.microsoft.com/services/devops/).
 
--   **Ciclo de vida do aplicativo**: [Os serviços do Azure DevOps](https://visualstudio.microsoft.com/team-services/) e outras ferramentas, como Jenkins, são servidores de automação criada que ajudam você a implementar pipelines de CI/CD, incluindo o gerenciamento de versão.
+-   **Ciclo de vida do aplicativo**: [Os serviços do Azure DevOps](https://azure.microsoft.com/services/devops/) e outras ferramentas, como Jenkins, são servidores de automação criada que ajudam você a implementar pipelines de CI/CD, incluindo o gerenciamento de versão.
 
 As próximas seções deste capítulo e a passo a passo relacionados, concentre-se especificamente em detalhes sobre a camada de tempo de execução (contêineres do Windows). As diretrizes descrevem as maneiras que você pode implantar VMs de contêineres do Windows no Windows Server 2016 (e versões posteriores) e instâncias de contêiner do Azure. Ele também aborda a plataformas de PaaS mais avançadas, como o serviço de aplicativo do Azure e o orchestrator, como o Azure Service Fabric e serviço Kubernetes do Azure.
 
