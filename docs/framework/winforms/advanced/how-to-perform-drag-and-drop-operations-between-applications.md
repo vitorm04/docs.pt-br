@@ -1,17 +1,17 @@
 ---
-title: 'Como: Executar operações de arrastar e soltar entre aplicativos'
+title: 'Como: executar operações de do tipo "arrastar e soltar" entre aplicativos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221750"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Como: Executar operações de arrastar e soltar entre aplicativos
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Como: executar operações de do tipo "arrastar e soltar" entre aplicativos
 Executar operações de arrastar e soltar entre aplicativos não é diferente de ativar esta ação dentro de um aplicativo, desde que os dois aplicativos envolvidos se comportam de acordo com o "contrato" estabelecido entre o <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A> Propriedades.  
   
  No procedimento a seguir, você usará um aplicativo do Windows que você criou e o processador de texto WordPad incluído no sistema operacional Windows para executar operações do tipo "arrastar e soltar" entre aplicativos. O WordPad tem um certo conjunto de efeitos permitidos para o texto que está sendo arrastado e solto; o aplicativo do Windows para o qual o código está sendo escrito funcionará com esses efeitos para que as operações do tipo "arrastar e soltar" possam ser concluídas com êxito.  
@@ -39,6 +39,7 @@ Executar operações de arrastar e soltar entre aplicativos não é diferente de
      Além disso, você pode configurar seu <xref:System.Windows.Forms.TextBox> controle para permitir que cadeias de caracteres de texto sejam arrastadas e soltas no WordPad. Para obter mais informações, confira [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)
-- [Como: Recuperar dados da área de transferência](how-to-retrieve-data-from-the-clipboard.md)
-- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](drag-and-drop-operations-and-clipboard-support.md)
+
+- [Como: adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)
+- [Como: recuperar dados da área de transferência](how-to-retrieve-data-from-the-clipboard.md)
+- [Operações de arrastar e soltar e suporte à área de transferência](drag-and-drop-operations-and-clipboard-support.md)

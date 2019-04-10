@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223821"
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
 Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para a lógica de roteamento eficiente de design ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que seguem a maioria das configurações de serviço de roteamento. Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.  
@@ -36,7 +36,7 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
   
  Para obter as etapas usadas para criar uma configuração de controle de versão de serviço, consulte [How To: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
-### <a name="service-data-partitioning"></a>Particionamento de dados de serviço  
+### <a name="service-data-partitioning"></a>fornecer particionamento de dados  
  Ao criar um ambiente distribuído, geralmente é desejável para distribuir a carga de processamento entre vários computadores para fornecer alta disponibilidade, diminuir a carga de processamento em computadores individuais ou para fornecer recursos dedicados para um subconjunto específico de mensagens. Enquanto o serviço de roteamento não substitui uma solução de balanceamento de carga dedicada, sua capacidade de executar o roteamento com base em conteúdo pode ser usado para rotear mensagens de outra forma semelhante para destinos específicos. Por exemplo, você pode ter um requisito para processar as mensagens de um cliente específico separadamente de mensagens recebidas de outros clientes.  
   
  Para obter as etapas usadas para criar uma configuração de particionamento de dados de serviço, consulte [How To: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
@@ -66,13 +66,14 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
  Para obter as etapas usadas para configurar o tratamento de erros, consulte [How To: Tratamento de erro](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Como: Controle de versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Como: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Como: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Como: fornecer particionamento de dados](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [Como: Atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
  [Como: Tratamento de erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

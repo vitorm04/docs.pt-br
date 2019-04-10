@@ -2,12 +2,12 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213383"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -456,6 +456,7 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
  Se você abrir um log de rastreamento criado em um sistema operacional árabe, poderá observar que o filtro de tempo não funciona. Por exemplo, o ano 2005 corresponde ao ano 1427 no calendário árabe. Porém, o intervalo de tempo aceito pelo filtro da ferramenta Visualizador de Rastreamento de Serviço não oferece suporte a uma data anterior a 1752. Isso indica que você não pode selecionar uma data correta no filtro. Para resolver esse problema, você pode criar um filtro personalizado (**Exibir/filtros personalizados**) usando uma expressão XPath para incluir um intervalo de tempo específico.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+
+- [Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Rastreamento ponta a ponta](./diagnostics/tracing/end-to-end-tracing.md)

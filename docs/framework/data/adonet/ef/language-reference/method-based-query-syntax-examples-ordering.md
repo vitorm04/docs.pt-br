@@ -1,18 +1,18 @@
 ---
-title: 'Exemplos de sintaxe de consulta com base em método: Ordenando'
+title: 'Exemplos de sintaxe de consulta baseada em método: Ordenando'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
-ms.openlocfilehash: 73ea7a11353c83995bee6457c1fed12cd9c936d2
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e213046955c2c4e720c56adb96da29078ea3c48d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226846"
 ---
-# <a name="method-based-query-syntax-examples-ordering"></a>Exemplos de sintaxe de consulta com base em método: Ordenando
+# <a name="method-based-query-syntax-examples-ordering"></a>Exemplos de sintaxe de consulta baseada em método: Ordenando
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.ThenBy%2A> método para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
@@ -37,4 +37,5 @@ Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Th
  [!code-vb[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescending_mq)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

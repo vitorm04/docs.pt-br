@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c8339142ef382ca029e9dd32c0270bd794ffcc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0decfde08a9097c8fe5185c8b5a3fef4f7f68189
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213331"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>Método ICorProfilerCallback::ExceptionOSHandlerLeave
 Não implementado. Um criador de perfil que precisa de informações de exceção não gerenciado deve obter essas informações por outros meios.  
@@ -44,4 +44,5 @@ HRESULT ExceptionOSHandlerLeave(
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

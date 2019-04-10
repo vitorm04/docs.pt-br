@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar o espaçamento e alinhamento de itens de ToolStrip nos Windows Forms'
+title: 'Como: Alterar o espaçamento e o alinhamento de itens ToolStrip no Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213305"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Como: Alterar o espaçamento e alinhamento de itens de ToolStrip nos Windows Forms
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Como: Alterar o espaçamento e o alinhamento de itens ToolStrip no Windows Forms
 O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recursos de layout como dimensionamento, espaçamento de <xref:System.Windows.Forms.ToolStripItem> controles relativos uns aos outros, a organização dos controles na <xref:System.Windows.Forms.ToolStrip>e o espaçamento dos controles relativo para o <xref:System.Windows.Forms.ToolStrip>.  
   
  Porque o valor padrão do <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> é de propriedade `true`, controles são dimensionados automaticamente a menos que você defina o <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> propriedade `false`.  
@@ -80,6 +80,7 @@ O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recu
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
@@ -88,5 +89,5 @@ O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recu
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)
-- [Arquitetura de controle do ToolStrip](toolstrip-control-architecture.md)
+- [Arquitetura de controle ToolStrip](toolstrip-control-architecture.md)
 - [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md)

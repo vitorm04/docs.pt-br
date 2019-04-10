@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166927"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) autônomo por meio do windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os fundamentos da criação e gerenciamento de janelas em aplicativos autônomos.  
   
 > [!NOTE]
 >  Hospedados pelo navegador [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos, incluindo [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] fracamente acopladas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] páginas, não fornecem suas próprias janelas. Em vez disso, eles são hospedados em janelas fornecidas pelo [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Ver [visão geral dos aplicativos de navegador XAML do WPF](wpf-xaml-browser-applications-overview.md).  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>A classe Window  
  A figura a seguir ilustra as partes constituintes de uma janela:  
@@ -109,9 +108,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurar uma definição de janela para MSBuild  
  Como você implementa sua janela determina como ela é configurada para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para uma janela que é definida usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e code-behind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` itens.  
   
--   Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` itens.  
+-   Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` itens.  
   
  Isso é mostrado na seguinte [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] arquivo de projeto.  
   
@@ -130,8 +129,7 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Tempo de vida de janela  
  Assim como com qualquer classe, uma janela tem um tempo de vida que começa quando ela é instanciada pela primeira vez, fato após o qual ela é aberta, ativada e desativada e, eventualmente, fechada.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>Abrir uma janela  
  Para abrir uma janela, você primeiro cria uma instância dela, o que é demonstrado no exemplo a seguir.  
@@ -258,9 +256,8 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- O <xref:System.Windows.Window.Closing> manipulador de eventos recebe um <xref:System.ComponentModel.CancelEventArgs>, que implementa o `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade definida como `true` para impedir que uma janela seja fechada.  
+
+ O <xref:System.Windows.Window.Closing> manipulador de eventos recebe um <xref:System.ComponentModel.CancelEventArgs>, que implementa o `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> que você definir a propriedade `true` para impedir que uma janela seja fechada.  
   
  Se <xref:System.Windows.Window.Closing> não for tratada, ou é tratado mas não cancelado, a janela será fechada. Antes de uma janela realmente fechar, <xref:System.Windows.Window.Closed> é gerado. Neste ponto, uma janela não pode ser impedida de fechar.  
   
@@ -401,8 +398,7 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
  Você pode alterar a aparência da área de cliente de uma janela adicionando conteúdo específico de janela a ela, por exemplo, botões, rótulos e caixas de texto. Para configurar a área não cliente, <xref:System.Windows.Window> fornece várias propriedades, que incluem <xref:System.Windows.Window.Icon%2A> para definir um ícone de janela e <xref:System.Windows.Window.Title%2A> para definir seu título.  
   
  Você também pode alterar a aparência e o comportamento da borda da área de não cliente configurando o modo de redimensionamento da janela, o estilo da janela e definindo se essa janela aparece ou não como um botão na barra de tarefas da área de trabalho.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modo de redimensionamento  
  Dependendo do <xref:System.Windows.Window.WindowStyle%2A> propriedade, você pode controlar como (e se) os usuários podem redimensionar a janela. A opção de estilo da janela afeta se um usuário pode redimensionar a janela arrastando sua borda com o mouse, se o **minimizar**, **maximizar**, e **redimensionar** botões aparecem na área não cliente, e, se eles forem exibidos, se elas estão habilitadas.  
@@ -484,9 +480,10 @@ A aparência padrão de uma janela inclui um botão de barra de tarefas, como a 
  Caixas de diálogo são janelas que geralmente são usadas para coletar informações de um usuário para concluir uma função. Por exemplo, quando um usuário deseja abrir um arquivo, o **abrir arquivo** caixa de diálogo normalmente é exibida por um aplicativo para obter o nome do arquivo do usuário. Para obter mais informações, consulte [Visão geral das caixas de diálogo](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
 - [Visão geral das caixas de diálogo](dialog-boxes-overview.md)
-- [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)
+- [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md)

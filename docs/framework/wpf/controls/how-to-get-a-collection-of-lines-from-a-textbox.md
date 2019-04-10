@@ -1,18 +1,18 @@
 ---
-title: 'Como: Obter uma coleção de linhas a partir de um TextBox'
+title: 'Como: Obter uma coleção de linhas de um TextBox'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lines [WPF], getting collection of
 - TextBox control [WPF], getting collection of lines
 ms.assetid: a12f529d-b926-47f6-92bf-cad5f17b532a
-ms.openlocfilehash: 1aa73e55a3fdfd658c6a337b598dff96244ace40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7b2f1c2e071388635fb50b1e3573fd7f44334dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224631"
 ---
-# <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Como: Obter uma coleção de linhas a partir de um TextBox
+# <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Como: Obter uma coleção de linhas de um TextBox
 Este exemplo mostra como obter um conjunto de linhas de texto de um <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Exemplo  
@@ -21,5 +21,6 @@ Este exemplo mostra como obter um conjunto de linhas de texto de um <xref:System
  [!code-csharp[TextBox_MiscCode#_TextBox_GetLines](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textbox_getlines)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral de TextBox](textbox-overview.md)
 - [Visão geral de RichTextBox](richtextbox-overview.md)

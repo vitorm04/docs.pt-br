@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224452"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Como: Especifique a cadeia de certificados de autoridade de certificado usada para verificar as assinaturas (WCF)
 Quando o Windows Communication Foundation (WCF) recebe uma mensagem SOAP assinada usando um certificado X.509, por padrão ele verifica se o certificado x. 509 foi emitido por uma autoridade de certificação confiável. Isso é feito procurando em um repositório de certificados e determinar se o certificado de autoridade de certificação tiver sido designada como confiável. Em ordem para o WCF tomar essa decisão, a cadeia de certificados de autoridade de certificação deve ser instalada no repositório de certificados correto.  
@@ -34,4 +34,5 @@ Quando o Windows Communication Foundation (WCF) recebe uma mensagem SOAP assinad
          Para obter mais informações sobre como usar o snap-in de certificados com o MMC, consulte [como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227165"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>O carregamento adiado de conteúdo (WCF Data Services)
 Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a quantidade de dados que retorna uma consulta. No entanto, você pode carregar explicitamente dados adicionais, incluindo entidades relacionadas, dados de respostas paginadas e fluxos de dados binários do serviço de dados quando ele for necessário. Este tópico descreve como carregar tal conteúdo adiado para o aplicativo.  
@@ -58,5 +58,6 @@ Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita 
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você acesse dados de objeto binário grande (BLOB) como um fluxo de dados. Streaming adia o carregamento de dados binários, até que ela é necessária e o cliente com mais eficiência pode processar esses dados. Para tirar proveito dessa funcionalidade, o serviço de dados deve implementar o <xref:System.Data.Services.Providers.IDataServiceStreamProvider> provedor. Para obter mais informações, consulte [provedor de Streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Quando o streaming está habilitado, os tipos de entidade são retornados sem os dados binários relacionados. Nesse caso, você deve usar o <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> método da <xref:System.Data.Services.Client.DataServiceContext> classe para acessar o fluxo de dados para os dados binários do serviço. Da mesma forma, usar o <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> método para adicionar ou alterar os dados binários para uma entidade como um fluxo. Para obter mais informações, consulte [trabalhando com dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

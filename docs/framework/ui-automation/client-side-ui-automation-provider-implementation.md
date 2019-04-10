@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: dd795eae1ac4610c90c0decece3b19fcad2ca438
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224450"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementação de Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
@@ -50,5 +50,6 @@ ms.locfileid: "57678926"
  Os dois últimos parâmetros são opcionais. O cliente pode especificar o nome da imagem do aplicativo de destino quando desejar usar provedores diferentes para diferentes aplicativos. Por exemplo, o cliente pode usar um provedor para um [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] lista de controle de exibição em um aplicativo conhecido que suporta o padrão de exibição de vários e outro para um controle semelhante em outro aplicativo conhecido que não.  
   
 ## <a name="see-also"></a>Consulte também
-- [Criar um provedor de automação de interface do usuário do lado do cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+
+- [Criar um Provedor de Automação de Interface de Usuário do Lado do Cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
 - [Implementar provedores de automação de interface do usuário em um aplicativo cliente](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

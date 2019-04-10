@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6962b52925ab5b70a8b34c6d3720bb45c85b24c0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 365261883f0b81884bb7cf70614628c05f9067c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221001"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Método IGCHost::SetGCStartupLimits
 Define o tamanho do segmento e o tamanho máximo para a geração 0.  
@@ -59,4 +59,5 @@ HRESULT SetGCStartupLimits (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
