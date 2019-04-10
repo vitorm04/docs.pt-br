@@ -2,12 +2,12 @@
 title: Usando um editor de expressão personalizado
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101270"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314081"
 ---
 # <a name="using-a-custom-expression-editor"></a>Usando um editor de expressão personalizado
 Um editor de expressão personalizado pode ser implementada para fornecer uma experiência de edição de uma expressão mais rica ou mais simples. Há várias situações em que você talvez queira usar um editor de expressão personalizado:  
@@ -18,11 +18,11 @@ Um editor de expressão personalizado pode ser implementada para fornecer uma ex
   
  Três etapas básicas são necessárias para implementar um editor de expressão personalizado:  
   
-1.  Implementar a interface <xref:System.Activities.Presentation.View.IExpressionEditorService>. Essa interface gerencia a criação e a destruição de editores de expressão.  
+1. Implementar a interface <xref:System.Activities.Presentation.View.IExpressionEditorService>. Essa interface gerencia a criação e a destruição de editores de expressão.  
   
-2.  Implementar a interface <xref:System.Activities.Presentation.View.IExpressionEditorInstance>. Essa interface implementa a interface do usuário para a expressão de edição de interface do usuário.  
+2. Implementar a interface <xref:System.Activities.Presentation.View.IExpressionEditorInstance>. Essa interface implementa a interface do usuário para a expressão de edição de interface do usuário.  
   
-3.  Publicar <xref:System.Activities.Presentation.View.IExpressionEditorService> em seu aplicativo de fluxo de trabalho rehosted.  
+3. Publicar <xref:System.Activities.Presentation.View.IExpressionEditorService> em seu aplicativo de fluxo de trabalho rehosted.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementando um editor de expressão personalizado em uma biblioteca de classe  
  Aqui está um exemplo de código para a classe (prova de conceito) `MyEditorService` que implementa a interface de <xref:System.Activities.Presentation.View.IExpressionEditorService> está contida em um projeto de biblioteca de MyExpressionEditorService.  

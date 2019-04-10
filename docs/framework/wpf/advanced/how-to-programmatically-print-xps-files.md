@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312066"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Como: Imprimir arquivos XPS com programação
 Você pode usar uma sobrecarga da <xref:System.Printing.PrintQueue.AddJob%2A> método para imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] arquivos sem abrir uma <xref:System.Windows.Controls.PrintDialog> ou, em princípio, qualquer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] em todos os.  
@@ -25,13 +25,13 @@ Você pode usar uma sobrecarga da <xref:System.Printing.PrintQueue.AddJob%2A> m�
 ## <a name="example"></a>Exemplo  
  As etapas principais para usar o parâmetro de três <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> método são da seguinte maneira. O exemplo abaixo fornece detalhes.  
   
-1.  Determine se a impressora é uma impressora XPSDrv. (Consulte [Visão geral de impressão](printing-overview.md) para obter mais informações sobre XPSDrv.)  
+1. Determine se a impressora é uma impressora XPSDrv. (Consulte [Visão geral de impressão](printing-overview.md) para obter mais informações sobre XPSDrv.)  
   
-2.  Se a impressora não for uma impressora XPSDrv, defina o apartment do thread como um thread único.  
+2. Se a impressora não for uma impressora XPSDrv, defina o apartment do thread como um thread único.  
   
-3.  Crie uma instância de um servidor de impressão e um objeto de fila de impressão.  
+3. Crie uma instância de um servidor de impressão e um objeto de fila de impressão.  
   
-4.  Chame o método, especificando um nome de trabalho, o arquivo a ser impresso e um <xref:System.Boolean> sinalizador que indica se a impressora é uma impressora XPSDrv ou não.  
+4. Chame o método, especificando um nome de trabalho, o arquivo a ser impresso e um <xref:System.Boolean> sinalizador que indica se a impressora é uma impressora XPSDrv ou não.  
   
  O exemplo a seguir mostra como imprimir em lote todos os arquivos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] em um diretório. Embora o aplicativo solicite ao usuário especificar o diretório, o parâmetro de três <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> método não requer um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Ele pode ser usado em qualquer caminho de código em que você tem um nome de arquivo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] e um caminho que pode passar para ele.  
   

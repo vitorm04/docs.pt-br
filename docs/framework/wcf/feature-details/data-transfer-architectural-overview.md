@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315875"
 ---
 # <a name="data-transfer-architectural-overview"></a>Visão geral da arquitetura de transferência de dados
 Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura de mensagens. Ele pode receber mensagens, processá-los e distribuí-los para o código de usuário para outra ação, ou pode construir mensagens de dados fornecidos pelo código do usuário e enviá-las para um destino. Este tópico, que é destinado a desenvolvedores avançados, descreve a arquitetura para lidar com mensagens e os dados contidos. Para uma exibição mais simples e orientada a tarefas de como enviar e receber dados, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura 
   
  Para que isso seja possível, um mapeamento deve ser definido entre todo o `Message` instância e um XML Infoset. Na verdade, existe um mapeamento: O WCF usa o padrão SOAP para definir esse mapeamento. Quando um `Message` instância é escrito como um XML Infoset, o Infoset resultante é o envelope SOAP válido que contém a mensagem. Portanto, `WriteMessage` normalmente executaria as seguintes etapas:  
   
-1.  Gravar o marca de abertura do elemento envelope SOAP.  
+1. Gravar o marca de abertura do elemento envelope SOAP.  
   
-2.  Gravar o elemento de cabeçalho SOAP marca de abertura, gravar todos os cabeçalhos e fechar o elemento de cabeçalho.  
+2. Gravar o elemento de cabeçalho SOAP marca de abertura, gravar todos os cabeçalhos e fechar o elemento de cabeçalho.  
   
-3.  Gravar o elemento de corpo SOAP marca de abertura.  
+3. Gravar o elemento de corpo SOAP marca de abertura.  
   
-4.  Chamar `WriteBodyContents` ou um método equivalente para gravar o corpo.  
+4. Chamar `WriteBodyContents` ou um método equivalente para gravar o corpo.  
   
-5.  Feche os elementos de corpo e o envelope.  
+5. Feche os elementos de corpo e o envelope.  
   
  As etapas anteriores estão intimamente ligadas ao padrão de SOAP. Isso é complicado pelo fato de que há várias versões do SOAP, por exemplo, é impossível gravar o elemento do envelope SOAP corretamente sem saber a versão SOAP em uso. Além disso, em alguns casos, pode ser desejável para desativar esse complexa específicas de SOAP mapeando completamente.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura 
   
  Para essa finalidade, o <xref:System.Xml.IStreamProvider> interface é usada. A interface tem um <xref:System.Xml.IStreamProvider.GetStream> método que retorna o fluxo a ser gravado. A maneira correta de escrever um corpo de mensagem transmitidos em <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> é da seguinte maneira:  
   
-1.  Grave as informações necessárias que precede o fluxo (por exemplo, a marca de abertura XML).  
+1. Grave as informações necessárias que precede o fluxo (por exemplo, a marca de abertura XML).  
   
-2.  Chame o `WriteValue` sobrecarregar do <xref:System.Xml.XmlDictionaryWriter> que usa um <xref:System.Xml.IStreamProvider>, com um `IStreamProvider` implementação que retorna o fluxo a ser gravado.  
+2. Chame o `WriteValue` sobrecarregar do <xref:System.Xml.XmlDictionaryWriter> que usa um <xref:System.Xml.IStreamProvider>, com um `IStreamProvider` implementação que retorna o fluxo a ser gravado.  
   
-3.  Grave todas as informações a seguir o fluxo (por exemplo, o marcação XML de fechamento).  
+3. Grave todas as informações a seguir o fluxo (por exemplo, o marcação XML de fechamento).  
   
  Com essa abordagem, o gravador de XML tem uma opção de quando chamar <xref:System.Xml.IStreamProvider.GetStream> e gravar os dados transmitidos. Por exemplo, os gravadores XML textuais e binários serão chamá-lo imediatamente e gravar o conteúdo transmitido entre as marcas de início e término. O gravador MTOM pode optar por chamar <xref:System.Xml.IStreamProvider.GetStream> posteriormente, quando ele está pronto para gravar a parte apropriada da mensagem.  
   

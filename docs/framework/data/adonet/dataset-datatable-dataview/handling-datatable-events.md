@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312820"
 ---
 # <a name="handling-datatable-events"></a>Manipulação de eventos de DataTable
 O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem ser processadas por um aplicativo. A tabela a seguir descreve `DataTable` eventos.  
@@ -47,21 +47,21 @@ O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem se
 ## <a name="sequence-of-operations"></a>Sequência de operações  
  Aqui está a sequência de operações que ocorrem quando um `DataRow` é adicionado, modificado ou excluído:  
   
-1.  Criar o registro de proposta e aplicar as alterações.  
+1. Criar o registro de proposta e aplicar as alterações.  
   
-2.  Verificar restrições para colunas não-expression.  
+2. Verificar restrições para colunas não-expression.  
   
-3.  Gerar a `RowChanging` ou `RowDeleting` eventos conforme aplicável.  
+3. Gerar a `RowChanging` ou `RowDeleting` eventos conforme aplicável.  
   
-4.  Defina o registro proposto para ser o registro atual.  
+4. Defina o registro proposto para ser o registro atual.  
   
-5.  Atualize qualquer índice associado.  
+5. Atualize qualquer índice associado.  
   
-6.  Gerar `ListChanged` eventos para associados `DataView` objetos e `PropertyChanged` associadas de eventos para `DataRowView` objetos.  
+6. Gerar `ListChanged` eventos para associados `DataView` objetos e `PropertyChanged` associadas de eventos para `DataRowView` objetos.  
   
-7.  Avalie todas as colunas de expressão, mas o atraso, verificando a quaisquer restrições nessas colunas.  
+7. Avalie todas as colunas de expressão, mas o atraso, verificando a quaisquer restrições nessas colunas.  
   
-8.  Elevar `ListChanged` eventos associados `DataView` objetos e `PropertyChanged` associadas de eventos para `DataRowView` objetos afetados pelas avaliações de coluna de expressão.  
+8. Elevar `ListChanged` eventos associados `DataView` objetos e `PropertyChanged` associadas de eventos para `DataRowView` objetos afetados pelas avaliações de coluna de expressão.  
   
 9. Elevar `RowChanged` ou `RowDeleted` eventos conforme aplicável.  
   

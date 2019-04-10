@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317773"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Como: definir a propriedade ProtectionLevel
 Você pode definir o nível de proteção, aplicando um atributo apropriado e definir a propriedade. Você pode definir a proteção no nível de serviço para afetar todas as partes de todas as mensagens, ou você pode definir proteção nos níveis de cada vez mais granulares, de métodos às partes da mensagem. Para obter mais informações sobre o `ProtectionLevel` propriedade, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md).  
@@ -23,20 +23,20 @@ Você pode definir o nível de proteção, aplicando um atributo apropriado e de
   
 ### <a name="to-sign-all-messages-for-a-service"></a>Para assinar todas as mensagens para um serviço  
   
-1.  Crie uma interface para o serviço.  
+1. Crie uma interface para o serviço.  
   
-2.  Aplicar a <xref:System.ServiceModel.ServiceContractAttribute> de atributo para o serviço e defina o <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> propriedade <xref:System.Net.Security.ProtectionLevel.Sign>, conforme mostrado no código a seguir (o nível padrão é <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>).  
+2. Aplicar a <xref:System.ServiceModel.ServiceContractAttribute> de atributo para o serviço e defina o <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> propriedade <xref:System.Net.Security.ProtectionLevel.Sign>, conforme mostrado no código a seguir (o nível padrão é <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>).  
   
      [!code-csharp[C_ProtectionLevel#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#1)]
      [!code-vb[C_ProtectionLevel#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#1)]  
   
 ### <a name="to-sign-all-message-parts-for-an-operation"></a>Para assinar todas as partes da mensagem para uma operação  
   
-1.  Criar uma interface para o serviço e aplicar o <xref:System.ServiceModel.ServiceContractAttribute> à interface de atributo.  
+1. Criar uma interface para o serviço e aplicar o <xref:System.ServiceModel.ServiceContractAttribute> à interface de atributo.  
   
-2.  Adicione uma declaração de método na interface.  
+2. Adicione uma declaração de método na interface.  
   
-3.  Aplicar a <xref:System.ServiceModel.OperationContractAttribute> de atributo para o método e, em seguida, defina a <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> propriedade para <xref:System.Net.Security.ProtectionLevel.Sign>, conforme mostrado no código a seguir.  
+3. Aplicar a <xref:System.ServiceModel.OperationContractAttribute> de atributo para o método e, em seguida, defina a <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> propriedade para <xref:System.Net.Security.ProtectionLevel.Sign>, conforme mostrado no código a seguir.  
   
      [!code-csharp[C_ProtectionLevel#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#2)]
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
@@ -46,16 +46,16 @@ Você pode definir o nível de proteção, aplicando um atributo apropriado e de
   
 #### <a name="to-protect-a-fault-message"></a>Para proteger uma mensagem de falha  
   
-1.  Crie um tipo que representa a mensagem de falha. O exemplo a seguir cria uma classe chamada `MathFault` com dois campos.  
+1. Crie um tipo que representa a mensagem de falha. O exemplo a seguir cria uma classe chamada `MathFault` com dois campos.  
   
-2.  Aplicar a <xref:System.Runtime.Serialization.DataContractAttribute> para o tipo de atributo e um <xref:System.Runtime.Serialization.DataMemberAttribute> de atributo para cada campo que deve ser serializado, conforme mostrado no código a seguir.  
+2. Aplicar a <xref:System.Runtime.Serialization.DataContractAttribute> para o tipo de atributo e um <xref:System.Runtime.Serialization.DataMemberAttribute> de atributo para cada campo que deve ser serializado, conforme mostrado no código a seguir.  
   
      [!code-csharp[C_ProtectionLevel#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#3)]
      [!code-vb[C_ProtectionLevel#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#3)]  
   
-3.  Na interface que retornará a falha, se aplicam a <xref:System.ServiceModel.FaultContractAttribute> de atributo para o método que retorna a falha e definir o `detailType` parâmetro para o tipo da classe falha.  
+3. Na interface que retornará a falha, se aplicam a <xref:System.ServiceModel.FaultContractAttribute> de atributo para o método que retorna a falha e definir o `detailType` parâmetro para o tipo da classe falha.  
   
-4.  Também no construtor, defina as <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> propriedade para <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, conforme mostrado no código a seguir.  
+4. Também no construtor, defina as <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> propriedade para <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, conforme mostrado no código a seguir.  
   
      [!code-csharp[C_ProtectionLevel#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#4)]
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
@@ -65,13 +65,13 @@ Você pode definir o nível de proteção, aplicando um atributo apropriado e de
   
 #### <a name="to-protect-a-message-body"></a>Para proteger um corpo de mensagem  
   
-1.  Crie um tipo que representa a mensagem. O exemplo a seguir cria uma `Company` classe com dois campos, `CompanyName` e `CompanyID`.  
+1. Crie um tipo que representa a mensagem. O exemplo a seguir cria uma `Company` classe com dois campos, `CompanyName` e `CompanyID`.  
   
-2.  Aplicar a <xref:System.ServiceModel.MessageContractAttribute> à classe de atributo e definir o <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> propriedade <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+2. Aplicar a <xref:System.ServiceModel.MessageContractAttribute> à classe de atributo e definir o <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> propriedade <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-3.  Aplicar a <xref:System.ServiceModel.MessageHeaderAttribute> atributo a um campo que será expresso como um cabeçalho de mensagem e defina o `ProtectionLevel` propriedade <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+3. Aplicar a <xref:System.ServiceModel.MessageHeaderAttribute> atributo a um campo que será expresso como um cabeçalho de mensagem e defina o `ProtectionLevel` propriedade <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-4.  Aplicar a <xref:System.ServiceModel.MessageBodyMemberAttribute> a qualquer campo que expressa como parte do corpo da mensagem e defina o `ProtectionLevel` propriedade para <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, conforme mostrado no exemplo a seguir.  
+4. Aplicar a <xref:System.ServiceModel.MessageBodyMemberAttribute> a qualquer campo que expressa como parte do corpo da mensagem e defina o `ProtectionLevel` propriedade para <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, conforme mostrado no exemplo a seguir.  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  

@@ -2,12 +2,12 @@
 title: 'Passo a passo: modelo e consulta de objeto simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309453"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Passo a passo: modelo e consulta de objeto simples (C#)
 Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] com complexidades mínimas. Você criará uma classe de entidade que modela a tabela Customers no banco de dados de exemplo Northwind. Em seguida, você irá criar uma consulta simples para listar os clientes que estão localizados em Londres.  
@@ -44,30 +44,30 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
-1.  No Visual Studio **arquivo** , aponte para **New**e, em seguida, clique em **projeto**.  
+1. No Visual Studio **arquivo** , aponte para **New**e, em seguida, clique em **projeto**.  
   
-2.  No **tipos de projeto** painel da **novo projeto** caixa de diálogo, clique em **Visual C#** .  
+2. No **tipos de projeto** painel da **novo projeto** caixa de diálogo, clique em **Visual C#** .  
   
-3.  No painel **Modelos**, clique em **Aplicativo de Console**.  
+3. No painel **Modelos**, clique em **Aplicativo de Console**.  
   
-4.  No **nome** , digite **LinqConsoleApp**.  
+4. No **nome** , digite **LinqConsoleApp**.  
   
-5.  No **local** , verifique se onde você deseja armazenar seus arquivos de projeto.  
+5. No **local** , verifique se onde você deseja armazenar seus arquivos de projeto.  
   
-6.  Clique em **OK**.  
+6. Clique em **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Adicionando referências e diretivas LINQ  
  Este passo a passo usa assemblies que não podem ser instalados por padrão em seu projeto. Se System não estiver listada como uma referência em seu projeto (expanda o **referências** nó no **Gerenciador de soluções**), adicione-o conforme explicado nas etapas a seguir.  
   
 #### <a name="to-add-systemdatalinq"></a>Para adicionar System.Data.Linq  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
+1. Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
   
-2.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
+2. No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
   
      O assembly é adicionado ao projeto.  
   
-3.  Adicione as seguintes diretivas na parte superior da **Program.cs**:  
+3. Adicione as seguintes diretivas na parte superior da **Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
 #### <a name="to-execute-the-query"></a>Para executar a consulta  
   
-1.  Digite ou cole o seguinte código ao final do método `Main` (após a descrição de consulta).  
+1. Digite ou cole o seguinte código ao final do método `Main` (após a descrição de consulta).  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  Pressione F5 para depurar o aplicativo.  
+2. Pressione F5 para depurar o aplicativo.  
   
     > [!NOTE]
     >  Se seu aplicativo gera um erro de tempo de execução, consulte a seção solução de problemas [aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
@@ -147,7 +147,7 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
      `ID=SEVES, City=London`  
   
-3.  Pressione Enter na janela Console para fechar o aplicativo.  
+3. Pressione Enter na janela Console para fechar o aplicativo.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  O [passo a passo: Consultando através de relações (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) tópico continua onde este passo a passo termina. O passo a passo consulta entre relações demonstra como [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode consultar entre tabelas, semelhantes ao *junções* em um banco de dados relacional.  

@@ -2,12 +2,12 @@
 title: Serviço de roteador de descoberta
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318761"
 ---
 # <a name="discovery-router-service"></a>Serviço de roteador de descoberta
 Este exemplo demonstra como encaminhar mensagens para outro ponto de extremidade de descoberta.  
@@ -22,13 +22,13 @@ Este exemplo demonstra como encaminhar mensagens para outro ponto de extremidade
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Crie o exemplo.  
+1. Crie o exemplo.  
   
-2.  Execute o executável DiscoveryRouter.  
+2. Execute o executável DiscoveryRouter.  
   
-3.  Execute o executável do serviço de diretório de compilação.  
+3. Execute o executável do serviço de diretório de compilação.  
   
-4.  Execute o executável do cliente. Observe que o cliente localiza o serviço.  
+4. Execute o executável do cliente. Observe que o cliente localiza o serviço.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

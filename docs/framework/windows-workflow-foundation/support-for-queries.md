@@ -2,12 +2,12 @@
 title: Suporte para consultas
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307945"
 ---
 # <a name="support-for-queries"></a>Suporte para consultas
 A instância Store de fluxo de trabalho do SQL registra um conjunto de propriedades conhecidos no armazenamento. Os usuários podem ver para as instâncias com base nessas propriedades. A lista a seguir contém algumas dessas propriedades conhecidas:  
@@ -22,7 +22,7 @@ A instância Store de fluxo de trabalho do SQL registra um conjunto de proprieda
   
 -   **Namespace de serviço.** Nome do namespace que usa o serviço.  
   
--   **Computador atual.**  
+-   **O computador atual.**  
   
 -   **Máquina de última**. O computador no qual a instância do serviço de fluxo de trabalho executou a última vez.  
   
@@ -39,21 +39,21 @@ A instância Store de fluxo de trabalho do SQL registra um conjunto de proprieda
 ### <a name="the-instances-view"></a>O modo de instâncias  
  O modo de instâncias contém os campos seguintes:  
   
-1.  **ID**  
+1. **Id**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ A instância Store de fluxo de trabalho do SQL registra um conjunto de proprieda
 ### <a name="the-servicedeployments-view"></a>O modo de ServiceDeployments  
  O modo de ServiceDeployments contém os campos seguintes:  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>O modo de InstancePromotedProperties  
  O modo de InstancePromotedProperties contém os seguintes campos. Para obter detalhes sobre propriedades elevadas, consulte o [extensibilidade de Store](store-extensibility.md) tópico.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Valor #** (um intervalo de campos da **Value1** à **Value64**).
+4. **Valor #** (um intervalo de campos da **Value1** à **Value64**).

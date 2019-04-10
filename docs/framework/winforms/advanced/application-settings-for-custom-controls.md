@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317292"
 ---
 # <a name="application-settings-for-custom-controls"></a>Configurações do aplicativo para controles personalizados
 É necessário concluir algumas tarefas para que os controles personalizados tenham a capacidade de persistir as configurações de aplicativo quando os controles estão hospedados em aplicativos de terceiros.  
@@ -22,9 +22,9 @@ ms.locfileid: "59169735"
   
  Além disso, é necessário implementar o seguinte na ordem das configurações do aplicativo para que os controles personalizados funcionem corretamente em ambientes de tempo de design como o Visual Studio:  
   
-1.  Uma classe de configurações de aplicativo personalizado com um construtor que aceita um <xref:System.ComponentModel.IComponent> como um único parâmetro. Use essa classe para salvar e carregar todas as configurações do aplicativo. Ao criar uma nova instância dessa classe, passe o controle personalizado usando o construtor.  
+1. Uma classe de configurações de aplicativo personalizado com um construtor que aceita um <xref:System.ComponentModel.IComponent> como um único parâmetro. Use essa classe para salvar e carregar todas as configurações do aplicativo. Ao criar uma nova instância dessa classe, passe o controle personalizado usando o construtor.  
   
-2.  Crie esta classe de configurações personalizadas depois que o controle foi criado e colocado em um formulário, como o formulário <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+2. Crie esta classe de configurações personalizadas depois que o controle foi criado e colocado em um formulário, como o formulário <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
   
  Para obter instruções sobre como criar uma classe de configurações personalizadas, consulte [como: Criar configurações de aplicativo](how-to-create-application-settings.md).  
   

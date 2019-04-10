@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310454"
 ---
 # <a name="how-to-clone-a-printer"></a>Como: Clonar uma impressora
 A maioria das empresas comprará várias impressoras do mesmo modelo em algum momento. Normalmente, elas são instaladas com configurações praticamente idênticas. Instalar cada impressora pode ser um processo demorado e sujeito a erros. O <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> namespace e o <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe que são expostos com o Microsoft .NET Framework possibilita a instalação instantânea de qualquer número de filas de impressão adicionais que são clonadas de uma fila de impressa existente.  
@@ -24,9 +24,9 @@ A maioria das empresas comprará várias impressoras do mesmo modelo em algum mo
 ## <a name="example"></a>Exemplo  
  No exemplo abaixo, uma segunda fila de impressão é clonada de uma fila de impressão existente. A segunda difere da primeira somente no nome, localização, porta e status compartilhado. As principais etapas para fazer isso são as seguintes.  
   
-1.  Criar um <xref:System.Printing.PrintQueue> objeto para a impressora existente que está prestes a ser clonada.  
+1. Criar um <xref:System.Printing.PrintQueue> objeto para a impressora existente que está prestes a ser clonada.  
   
-2.  Criar uma <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> do <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> da <xref:System.Printing.PrintQueue>. O <xref:System.Collections.DictionaryEntry.Value%2A> propriedade de cada entrada neste dicionário é um objeto de um tipo derivado de <xref:System.Printing.IndexedProperties.PrintProperty>. Há duas maneiras de definir o valor de uma entrada neste dicionário.  
+2. Criar uma <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> do <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> da <xref:System.Printing.PrintQueue>. O <xref:System.Collections.DictionaryEntry.Value%2A> propriedade de cada entrada neste dicionário é um objeto de um tipo derivado de <xref:System.Printing.IndexedProperties.PrintProperty>. Há duas maneiras de definir o valor de uma entrada neste dicionário.  
   
     -   Usar o dicionário **remova** e <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> métodos para remover a entrada e, em seguida, adicioná-la novamente com o valor desejado.  
   
@@ -34,17 +34,17 @@ A maioria das empresas comprará várias impressoras do mesmo modelo em algum mo
   
      O exemplo abaixo ilustra ambas as direções.  
   
-3.  Criar uma <xref:System.Printing.IndexedProperties.PrintBooleanProperty> do objeto e defina sua <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> para "IsShared" e seu <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> para `true`.  
+3. Criar uma <xref:System.Printing.IndexedProperties.PrintBooleanProperty> do objeto e defina sua <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> para "IsShared" e seu <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> para `true`.  
   
-4.  Use o <xref:System.Printing.IndexedProperties.PrintBooleanProperty> objeto como sendo o valor da <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>da entrada "IsShared".  
+4. Use o <xref:System.Printing.IndexedProperties.PrintBooleanProperty> objeto como sendo o valor da <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>da entrada "IsShared".  
   
-5.  Criar uma <xref:System.Printing.IndexedProperties.PrintStringProperty> do objeto e defina sua <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> para "ShareName" e seu <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> com um número apropriado <xref:System.String>.  
+5. Criar uma <xref:System.Printing.IndexedProperties.PrintStringProperty> do objeto e defina sua <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> para "ShareName" e seu <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> com um número apropriado <xref:System.String>.  
   
-6.  Use o <xref:System.Printing.IndexedProperties.PrintStringProperty> objeto como sendo o valor da <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>da entrada "ShareName".  
+6. Use o <xref:System.Printing.IndexedProperties.PrintStringProperty> objeto como sendo o valor da <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>da entrada "ShareName".  
   
-7.  Criar outra <xref:System.Printing.IndexedProperties.PrintStringProperty> do objeto e defina sua <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> para "Location" e seu <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> com um número apropriado <xref:System.String>.  
+7. Criar outra <xref:System.Printing.IndexedProperties.PrintStringProperty> do objeto e defina sua <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> para "Location" e seu <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> com um número apropriado <xref:System.String>.  
   
-8.  Use a segunda <xref:System.Printing.IndexedProperties.PrintStringProperty> objeto como sendo o valor da <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>da entrada "Location".  
+8. Use a segunda <xref:System.Printing.IndexedProperties.PrintStringProperty> objeto como sendo o valor da <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>da entrada "Location".  
   
 9. Criar uma matriz de <xref:System.String>s. Cada item é o nome de uma porta no servidor.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315173"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configurando suporte de transações de WS-Atomic
 Este tópico descreve como você pode configurar o suporte de WS-AtomicTransaction (WS-AT) usando o utilitário de configuração do WS-AT.  
@@ -56,19 +56,19 @@ Este tópico descreve como você pode configurar o suporte de WS-AtomicTransacti
   
  Você já deve ter os certificados necessários para estabelecer a confiança. Para saber como criar e instalar novos certificados antes das etapas a seguir, consulte [como: Criar e instalar certificados de cliente temporário no WCF durante o desenvolvimento](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
-1.  No computador A usando o snap-in, a importação de certificados do MMC o certificado existente (certA) no LocalMachine\MY (nó pessoal) e store LocalMachine\ROOT (nó de autoridade de certificação raiz confiável). Para importar um certificado para um nó específico, clique com botão direito no nó e escolha **todas as tarefas/importação**.  
+1. No computador A usando o snap-in, a importação de certificados do MMC o certificado existente (certA) no LocalMachine\MY (nó pessoal) e store LocalMachine\ROOT (nó de autoridade de certificação raiz confiável). Para importar um certificado para um nó específico, clique com botão direito no nó e escolha **todas as tarefas/importação**.  
   
-2.  No computador B, usando o snap-in do MMC de certificados, criar ou obter um certificado certB com uma chave privada e importá-lo para o LocalMachine\MY (nó pessoal) e o armazenamento de LocalMachine\ROOT (nó de autoridade de certificação raiz confiável).  
+2. No computador B, usando o snap-in do MMC de certificados, criar ou obter um certificado certB com uma chave privada e importá-lo para o LocalMachine\MY (nó pessoal) e o armazenamento de LocalMachine\ROOT (nó de autoridade de certificação raiz confiável).  
   
-3.  Exporte a chave pública de certA para um arquivo se isso não já foi feito.  
+3. Exporte a chave pública de certA para um arquivo se isso não já foi feito.  
   
-4.  Exporte chave pública do certB para um arquivo, se isso não já foi feito.  
+4. Exporte chave pública do certB para um arquivo, se isso não já foi feito.  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>Estabelecendo a confiança mútua entre máquinas  
   
-1.  No computador A, importe a representação de arquivo de certB nos armazenamentos de LocalMachine\MY e LocalMachine\ROOT. Isso declara nessa máquina um certB de relações de confiança para se comunicar com ele.  
+1. No computador A, importe a representação de arquivo de certB nos armazenamentos de LocalMachine\MY e LocalMachine\ROOT. Isso declara nessa máquina um certB de relações de confiança para se comunicar com ele.  
   
-2.  No computador B, importe o arquivo do certA para os repositórios de LocalMachine\MY e LocalMachine\ROOT. Isso implica na máquina B certA de relações de confiança para se comunicar com ele.  
+2. No computador B, importe o arquivo do certA para os repositórios de LocalMachine\MY e LocalMachine\ROOT. Isso implica na máquina B certA de relações de confiança para se comunicar com ele.  
   
  Depois de concluir essas etapas, a relação de confiança é estabelecida entre as duas máquinas, e eles podem ser configurados para se comunicar entre si usando WS-AT.  
   
@@ -77,9 +77,9 @@ Este tópico descreve como você pode configurar o suporte de WS-AtomicTransacti
   
  Você pode configurar isso usando o snap-in do MMC WS-AT. Para obter mais informações sobre essa ferramenta, consulte o [Snap-in MMC de configuração WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) tópico. As etapas a seguir descrevem como estabelecer a relação de confiança entre dois computadores executando o MSDTC.  
   
-1.  Defina configurações de máquina do. Para "Certificado do ponto de extremidade", selecione certA. Por "Certificados autorizado", selecione o certB.  
+1. Defina configurações de máquina do. Para "Certificado do ponto de extremidade", selecione certA. Por "Certificados autorizado", selecione o certB.  
   
-2.  Defina configurações do computador B. Para "Certificado do ponto de extremidade", selecione certB. Por "Certificados autorizado", selecione o certA.  
+2. Defina configurações do computador B. Para "Certificado do ponto de extremidade", selecione certB. Por "Certificados autorizado", selecione o certA.  
   
 > [!NOTE]
 >  Quando um computador envia uma mensagem ao outro computador, o remetente tenta verificar o nome da entidade do certificado do destinatário e o nome da máquina do destinatário correspondem. Se eles não corresponderem, falha de verificação do certificado e as duas máquinas não podem se comunicar.  
@@ -98,13 +98,13 @@ Este tópico descreve como você pode configurar o suporte de WS-AtomicTransacti
   
  O serviço de protocolo WS-AT também dá suporte a rastreamento de ServiceModel integrado por meio da sessão de rastreamento ETW. Isso fornece rastreamentos mais detalhados, de comunicação específicos, além de rastreamentos de transação existentes.  Para habilitar esses rastreamentos adicionais, siga estas etapas  
   
-1.  Abra o **iniciar/executar** menu, digite "regedit" na caixa de entrada e selecione **Okey**.  
+1. Abra o **iniciar/executar** menu, digite "regedit" na caixa de entrada e selecione **Okey**.  
   
-2.  No **Editor do registro**, navegue até a seguinte pasta no painel esquerdo, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
+2. No **Editor do registro**, navegue até a seguinte pasta no painel esquerdo, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
-3.  Clique com botão direito do `ServiceModelDiagnosticTracing` de valor no painel direito e selecione **modificar**.  
+3. Clique com botão direito do `ServiceModelDiagnosticTracing` de valor no painel direito e selecione **modificar**.  
   
-4.  No **dados do valor** caixa de entrada, digite um dos seguintes valores válidos para especificar o nível de rastreamento que você deseja habilitar.  
+4. No **dados do valor** caixa de entrada, digite um dos seguintes valores válidos para especificar o nível de rastreamento que você deseja habilitar.  
   
 -   0: desativado  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313561"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a> Ao desenvolver autônomo do Windows Presentation Foundation (WPF) e aplicativos hospedados pelo navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos executados com permissões ilimitadas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](./app-development/wpf-add-ins-overview.md).  
@@ -103,15 +103,15 @@ ms.locfileid: "59193662"
   
  A coleção de funcionalidade que pode ser protegida dessa maneira é configurada em uma base por zona para o **Internet**, **Intranet**, **Sites confiáveis**, e  **Sites restritos** zonas. As etapas a seguir descrevem como definir as configurações de segurança:  
   
-1.  Abra **Painel de Controle**.  
+1. Abra **Painel de Controle**.  
   
-2.  Clique em **rede e Internet** e, em seguida, clique em **opções da Internet**.  
+2. Clique em **rede e Internet** e, em seguida, clique em **opções da Internet**.  
   
      É exibida a caixa de diálogo Opções da Internet.  
   
-3.  Sobre o **segurança** , selecione para definir as configurações de segurança para a zona.  
+3. Sobre o **segurança** , selecione para definir as configurações de segurança para a zona.  
   
-4.  Clique o **nível personalizado** botão.  
+4. Clique o **nível personalizado** botão.  
   
      O **as configurações de segurança** caixa de diálogo é exibida e você pode configurar as configurações de segurança para a zona selecionada.  
   

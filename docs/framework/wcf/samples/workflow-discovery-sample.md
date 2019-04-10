@@ -2,12 +2,12 @@
 title: Exemplo de descoberta de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9a0d3ad22b4663ee71b5b2aa8d0e3d64f20996d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964417"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311644"
 ---
 # <a name="workflow-discovery-sample"></a>Exemplo de descoberta de fluxo de trabalho
 Este exemplo demonstra como tornar um serviço de fluxo de trabalho detectável e como criar uma atividade de código personalizado que procura por um serviço específico.  
@@ -20,7 +20,7 @@ Este exemplo demonstra como tornar um serviço de fluxo de trabalho detectável 
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Este exemplo usa pontos de extremidade HTTP, que devem ter o URL apropriado ACLs para ser executado (consulte [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes). Executando o seguinte comando em um prompt de comando elevado deve adicionar as ACLs apropriado. Substitua o seu domínio e nome de usuário para os argumentos a seguir se o seu shell não entende o formato de variável.  
+1. Este exemplo usa pontos de extremidade HTTP, que devem ter o URL apropriado ACLs para ser executado (consulte [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes). Executando o seguinte comando em um prompt de comando elevado deve adicionar as ACLs apropriado. Substitua o seu domínio e nome de usuário para os argumentos a seguir se o seu shell não entende o formato de variável.  
   
      **Netsh http adicionar url urlacl =http://+:8000/ usuário = % domínio %\\% UserName %**  
   

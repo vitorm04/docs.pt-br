@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 3e3f1168a983b2fa608cbadffba0531afef7c92b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306710"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Como: Criar uma propriedade (Visual Basic)
 Coloque uma definição de propriedade entre um `Property` instrução e um `End Property` instrução. Nessa definição você define uma `Get` procedimento, uma `Set` procedimento, ou ambos. Todo o código da propriedade está situado nesses procedimentos.  
@@ -21,33 +21,33 @@ Coloque uma definição de propriedade entre um `Property` instrução e um `End
   
 ### <a name="to-create-a-property"></a>Para criar uma propriedade  
   
-1.  Fora de qualquer propriedade ou procedimento, use uma [instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md), seguido por um `End Property` instrução.  
+1. Fora de qualquer propriedade ou procedimento, use uma [instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md), seguido por um `End Property` instrução.  
   
-2.  Se a propriedade usa parâmetros, execute o `Property` palavra-chave com o nome do procedimento, em seguida, a lista de parâmetros entre parênteses.  
+2. Se a propriedade usa parâmetros, execute o `Property` palavra-chave com o nome do procedimento, em seguida, a lista de parâmetros entre parênteses.  
   
-3.  Siga os parênteses com um `As` cláusula para especificar o tipo de dados do valor da propriedade. Você deve especificar o tipo de dados, mesmo para uma propriedade somente gravação.  
+3. Siga os parênteses com um `As` cláusula para especificar o tipo de dados do valor da propriedade. Você deve especificar o tipo de dados, mesmo para uma propriedade somente gravação.  
   
-4.  Adicione `Get` e `Set` procedimentos, conforme apropriado. Consulte as instruções a seguir.  
+4. Adicione `Get` e `Set` procedimentos, conforme apropriado. Consulte as instruções a seguir.  
   
 ### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>Para criar um procedimento Get que recupera um valor de propriedade  
   
-1.  Entre os `Property` e `End Property` escrever instruções, um [instrução Get](../../../../visual-basic/language-reference/statements/get-statement.md), seguido por um `End Get` instrução. Não é necessário definir quaisquer parâmetros para o `Get` procedimento.  
+1. Entre os `Property` e `End Property` escrever instruções, um [instrução Get](../../../../visual-basic/language-reference/statements/get-statement.md), seguido por um `End Get` instrução. Não é necessário definir quaisquer parâmetros para o `Get` procedimento.  
   
-2.  Coloque as declarações de código para recuperar o valor da propriedade entre o `Get` e `End Get` instruções. Esse código pode incluir outros cálculos e manipulações de dados, além de gerar e retornar o valor da propriedade.  
+2. Coloque as declarações de código para recuperar o valor da propriedade entre o `Get` e `End Get` instruções. Esse código pode incluir outros cálculos e manipulações de dados, além de gerar e retornar o valor da propriedade.  
   
-3.  Use um `Return` instrução para retornar o valor da propriedade para o código de chamada.  
+3. Use um `Return` instrução para retornar o valor da propriedade para o código de chamada.  
   
  Você deve escrever um `Get` procedimento para uma propriedade de leitura / gravação e para uma propriedade somente leitura. Você não deve definir um `Get` procedimento para uma propriedade somente gravação.  
   
 ### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>Para criar um procedimento definido que grava um valor de propriedade  
   
-1.  Entre os `Property` e `End Property` escrever instruções, um [instrução Set](../../../../visual-basic/language-reference/statements/set-statement.md), seguido por um `End Set` instrução.  
+1. Entre os `Property` e `End Property` escrever instruções, um [instrução Set](../../../../visual-basic/language-reference/statements/set-statement.md), seguido por um `End Set` instrução.  
   
-2.  No `Set` instrução, siga o `Set` palavra-chave com uma lista de parâmetros entre parênteses. Essa lista de parâmetros deve incluir pelo menos um parâmetro de valor para o valor passado pelo código de chamada. O nome padrão para esse parâmetro de valor é `Value`, mas você pode usar um nome diferente, se apropriado. O parâmetro de valor deve ter os mesmos dados de tipo que a própria propriedade.  
+2. No `Set` instrução, siga o `Set` palavra-chave com uma lista de parâmetros entre parênteses. Essa lista de parâmetros deve incluir pelo menos um parâmetro de valor para o valor passado pelo código de chamada. O nome padrão para esse parâmetro de valor é `Value`, mas você pode usar um nome diferente, se apropriado. O parâmetro de valor deve ter os mesmos dados de tipo que a própria propriedade.  
   
-3.  Coloque as declarações de código para armazenar um valor na propriedade entre o `Set` e `End Set` instruções. Esse código pode incluir outros cálculos e manipulações de dados, além de validação e o valor da propriedade de armazenamento.  
+3. Coloque as declarações de código para armazenar um valor na propriedade entre o `Set` e `End Set` instruções. Esse código pode incluir outros cálculos e manipulações de dados, além de validação e o valor da propriedade de armazenamento.  
   
-4.  Use o parâmetro value para aceitar o valor fornecido pelo código de chamada. Você pode armazenar esse valor diretamente em uma instrução de atribuição ou usá-lo em uma expressão para calcular o valor interno a ser armazenado.  
+4. Use o parâmetro value para aceitar o valor fornecido pelo código de chamada. Você pode armazenar esse valor diretamente em uma instrução de atribuição ou usá-lo em uma expressão para calcular o valor interno a ser armazenado.  
   
  Você deve escrever um `Set` procedimento para uma propriedade de leitura / gravação e para uma propriedade somente gravação. Você não deve definir um `Set` procedimento para uma propriedade somente leitura.  
   
@@ -64,10 +64,10 @@ Coloque uma definição de propriedade entre um `Property` instrução e um `End
 
 - [Procedimentos](./index.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
 - [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)
-- [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Como: Chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
+- [Como: declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Como: chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
 - [Como: Declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Como: Inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
-- [Como: Obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+- [Como: inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
+- [Como: obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

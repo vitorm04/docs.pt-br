@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316733"
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  
@@ -259,9 +259,9 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
   
  A lista a seguir descreve o procedimento pelo qual os tempos-chave são resolvidos para os quadros-chave de uma animação de quadro-chave.  
   
-1.  Resolver <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valores.  
+1. Resolver <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-2.  Determine o *tempo total de interpolação* da animação, o tempo total necessário para que a animação de quadro-chave conclua uma interação progressiva.  
+2. Determine o *tempo total de interpolação* da animação, o tempo total necessário para que a animação de quadro-chave conclua uma interação progressiva.  
   
     1.  Se a animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A> não é <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, o tempo total de interpolação é o valor da animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriedade.  
   
@@ -269,19 +269,19 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
   
     3.  Caso contrário, o tempo total de interpolação será de 1 segundo.  
   
-3.  Use o valor de tempo total de interpolação para resolver <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valores.  
+3. Use o valor de tempo total de interpolação para resolver <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-4.  Resolva o último quadro-chave, caso ele ainda não tenha sido resolvido nas etapas anteriores. Se o <xref:System.Windows.Media.Animation.KeyTime> do último quadro-chave é <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, seu tempo resolvido será igual ao tempo total de interpolação.  
+4. Resolva o último quadro-chave, caso ele ainda não tenha sido resolvido nas etapas anteriores. Se o <xref:System.Windows.Media.Animation.KeyTime> do último quadro-chave é <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, seu tempo resolvido será igual ao tempo total de interpolação.  
   
      Se o <xref:System.Windows.Media.Animation.KeyTime> é o primeiro quadro-chave <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> e essa animação tiver mais de quadros de chave, resolva seu <xref:System.Windows.Media.Animation.KeyTime> valor como zero; se houver apenas um quadro chave e seu <xref:System.Windows.Media.Animation.KeyTime> valor é <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, é resolvido para o total tempo de interpolação, conforme descrito na etapa anterior.  
   
-5.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores: cada um recebe uma parte igual do tempo disponível.  Durante esse processo, não resolvido <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores são tratados temporariamente como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores e obtenha um momento resolvido temporário.  
+5. Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores: cada um recebe uma parte igual do tempo disponível.  Durante esse processo, não resolvido <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores são tratados temporariamente como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores e obtenha um momento resolvido temporário.  
   
-6.  Resolver o <xref:System.Windows.Media.Animation.KeyTime> valores de quadros-chave com momentos chave não especificados usando quadros chave declarados mais próximos deles que tenham resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
+6. Resolver o <xref:System.Windows.Media.Animation.KeyTime> valores de quadros-chave com momentos chave não especificados usando quadros chave declarados mais próximos deles que tenham resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-7.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Use o <xref:System.Windows.Media.Animation.KeyTime> valores de vizinhos quadros para determinar seus tempos resolvidos da chave.  O objetivo é garantir que a velocidade da animação é constante em relação ao tempo resolvido desse quadro-chave.  
+7. Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Use o <xref:System.Windows.Media.Animation.KeyTime> valores de vizinhos quadros para determinar seus tempos resolvidos da chave.  O objetivo é garantir que a velocidade da animação é constante em relação ao tempo resolvido desse quadro-chave.  
   
-8.  Classifique os quadros-chave na ordem de tempo resolvido (chave primária) e ordem de declaração (chave secundária), ou seja, use uma classificação estável com base no quadro-chave resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
+8. Classifique os quadros-chave na ordem de tempo resolvido (chave primária) e ordem de declaração (chave secundária), ou seja, use uma classificação estável com base no quadro-chave resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
 ## <a name="see-also"></a>Consulte também
 

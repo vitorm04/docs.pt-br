@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317903"
 ---
 # <a name="property-animation-techniques-overview"></a>Visão geral das técnicas de animação da propriedade
 Este tópico descreve as diferentes abordagens para animar propriedades: storyboards, animações locais, relógios e animações por quadro.  
@@ -42,13 +42,13 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  Um <xref:System.Windows.Media.Animation.Storyboard> é um tipo especial de contêiner <xref:System.Windows.Media.Animation.Timeline> que fornece informações de direcionamento para as animações que ele contém. Para animar com um <xref:System.Windows.Media.Animation.Storyboard>, você concluir as três etapas a seguir.  
   
-1.  Declarar um <xref:System.Windows.Media.Animation.Storyboard> e uma ou mais animações.  
+1. Declarar um <xref:System.Windows.Media.Animation.Storyboard> e uma ou mais animações.  
   
-2.  Use o <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> anexado propriedades para especificar o objeto de destino e a propriedade de cada animação.  
+2. Use o <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> e <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> anexado propriedades para especificar o objeto de destino e a propriedade de cada animação.  
   
-3.  (Somente código) Definir um <xref:System.Windows.NameScope> para um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Registrar os nomes dos objetos para animar com aquele <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>.  
+3. (Somente código) Definir um <xref:System.Windows.NameScope> para um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Registrar os nomes dos objetos para animar com aquele <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>.  
   
-4.  Começar a <xref:System.Windows.Media.Animation.Storyboard>.  
+4. Começar a <xref:System.Windows.Media.Animation.Storyboard>.  
   
  Começando uma <xref:System.Windows.Media.Animation.Storyboard> aplica animações às propriedades que eles animam e as inicia. Há duas maneiras de iniciar um <xref:System.Windows.Media.Animation.Storyboard>: você pode usar o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método fornecido pelo <xref:System.Windows.Media.Animation.Storyboard> classe, ou você pode usar um <xref:System.Windows.Media.Animation.BeginStoryboard> ação. A única maneira de animar em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é usar um <xref:System.Windows.Media.Animation.BeginStoryboard> ação. Um <xref:System.Windows.Media.Animation.BeginStoryboard> ação pode ser usada em um <xref:System.Windows.EventTrigger>, propriedade <xref:System.Windows.Trigger>, ou um <xref:System.Windows.DataTrigger>.  
   
@@ -70,9 +70,9 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  Para animar usando um animação local, conclua as etapas a seguir.  
   
-1.  Criar um <xref:System.Windows.Media.Animation.AnimationTimeline> objeto.  
+1. Criar um <xref:System.Windows.Media.Animation.AnimationTimeline> objeto.  
   
-2.  Use o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationTimeline> à propriedade que você especificar.  
+2. Use o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationTimeline> à propriedade que você especificar.  
   
  O exemplo a seguir mostra como animar a cor de plano de fundo e a largura de um <xref:System.Windows.Controls.Button>.  
   
@@ -87,11 +87,11 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  Para aplicar uma única <xref:System.Windows.Media.Animation.Clock> a uma propriedade, você concluir as etapas a seguir.  
   
-1.  Criar um <xref:System.Windows.Media.Animation.AnimationTimeline> objeto.  
+1. Criar um <xref:System.Windows.Media.Animation.AnimationTimeline> objeto.  
   
-2.  Use o <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> método da <xref:System.Windows.Media.Animation.AnimationTimeline> para criar um <xref:System.Windows.Media.Animation.AnimationClock>.  
+2. Use o <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> método da <xref:System.Windows.Media.Animation.AnimationTimeline> para criar um <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-3.  Use o <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationClock> à propriedade que você especifica.  
+3. Use o <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationClock> à propriedade que você especifica.  
   
  O exemplo a seguir mostra como criar um <xref:System.Windows.Media.Animation.AnimationClock> e aplicá-lo a duas propriedades semelhantes.  
   
@@ -100,11 +100,11 @@ Este tópico descreve as diferentes abordagens para animar propriedades: storybo
   
  Para criar uma árvore de tempo e usá-la para animar propriedades, conclua as etapas a seguir.  
   
-1.  Use <xref:System.Windows.Media.Animation.ParallelTimeline> e <xref:System.Windows.Media.Animation.AnimationTimeline> objetos para criar a árvore de tempo.  
+1. Use <xref:System.Windows.Media.Animation.ParallelTimeline> e <xref:System.Windows.Media.Animation.AnimationTimeline> objetos para criar a árvore de tempo.  
   
-2.  Use o <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> da raiz <xref:System.Windows.Media.Animation.ParallelTimeline> para criar um <xref:System.Windows.Media.Animation.ClockGroup>.  
+2. Use o <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> da raiz <xref:System.Windows.Media.Animation.ParallelTimeline> para criar um <xref:System.Windows.Media.Animation.ClockGroup>.  
   
-3.  Iterar por meio de <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> do <xref:System.Windows.Media.Animation.ClockGroup> e aplicar seu filho <xref:System.Windows.Media.Animation.Clock> objetos. Para cada <xref:System.Windows.Media.Animation.AnimationClock> filho, use o <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationClock> à propriedade que você especifica  
+3. Iterar por meio de <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> do <xref:System.Windows.Media.Animation.ClockGroup> e aplicar seu filho <xref:System.Windows.Media.Animation.Clock> objetos. Para cada <xref:System.Windows.Media.Animation.AnimationClock> filho, use o <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> método do objeto que você deseja animar para aplicar o <xref:System.Windows.Media.Animation.AnimationClock> à propriedade que você especifica  
   
  Para obter mais informações sobre objetos de Relógio, consulte o [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md).  
   

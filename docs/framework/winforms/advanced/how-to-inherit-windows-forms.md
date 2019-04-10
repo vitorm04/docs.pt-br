@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314536"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Como: herdar Windows Forms
 Criar novo Windows Forms herdando de formulários base é uma maneira prática de duplicar seus melhores esforços sem passar pelo processo de recriar inteiramente um formulário toda vez que precisar dele.  
@@ -25,9 +25,9 @@ Criar novo Windows Forms herdando de formulários base é uma maneira prática d
   
 ### <a name="to-inherit-a-form-programmatically"></a>Herdar um formulário programaticamente  
   
-1.  Em sua classe, adicione uma referência ao namespace que contém o formulário que se deseja herdar.  
+1. Em sua classe, adicione uma referência ao namespace que contém o formulário que se deseja herdar.  
   
-2.  Na definição de classe, adicione uma referência ao formulário de onde será herdado. A referência deve incluir o namespace que contém o formulário seguido por uma vírgula, depois o nome do próprio formulário base.  
+2. Na definição de classe, adicione uma referência ao formulário de onde será herdado. A referência deve incluir o namespace que contém o formulário seguido por uma vírgula, depois o nome do próprio formulário base.  
   
     ```vb  
     Public Class Form2  

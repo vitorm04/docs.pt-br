@@ -2,12 +2,12 @@
 title: 'Codificador de mensagem personalizado: Codificador de compactação'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140680"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310493"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensagem personalizado: Codificador de compactação
 Este exemplo demonstra como implementar um codificador personalizado usando a plataforma do Windows Communication Foundation (WCF).  
@@ -39,9 +39,9 @@ Este exemplo demonstra como implementar um codificador personalizado usando a pl
   
  Como indicado anteriormente, há várias camadas que são implementadas em um codificador personalizado. Para ilustrar melhor a relação entre cada uma dessas camadas, uma ordem simplificada de eventos de inicialização do serviço está na lista a seguir:  
   
-1.  O servidor for iniciado.  
+1. O servidor for iniciado.  
   
-2.  As informações de configuração é lido.  
+2. As informações de configuração é lido.  
   
     1.  A configuração do serviço registra o manipulador de configuração personalizada.  
   
@@ -51,11 +51,11 @@ Este exemplo demonstra como implementar um codificador personalizado usando a pl
   
     4.  O elemento de associação personalizada cria e retorna uma fábrica de codificador de mensagem.  
   
-3.  Uma mensagem é recebida.  
+3. Uma mensagem é recebida.  
   
-4.  A fábrica de codificador de mensagem retorna um codificador de mensagem para leitura da mensagem e gravar a resposta.  
+4. A fábrica de codificador de mensagem retorna um codificador de mensagem para leitura da mensagem e gravar a resposta.  
   
-5.  A camada de codificador é implementada como uma fábrica de classes. Somente a fábrica de classes do codificador deve estar publicamente exposta para o codificador personalizado. O objeto de fábrica é retornado pelo elemento de associação quando o <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> objeto é criado. Codificadores de mensagem podem operar em um modo em buffer ou de streaming. Este exemplo demonstra o modo com buffer e modo de streaming.  
+5. A camada de codificador é implementada como uma fábrica de classes. Somente a fábrica de classes do codificador deve estar publicamente exposta para o codificador personalizado. O objeto de fábrica é retornado pelo elemento de associação quando o <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> objeto é criado. Codificadores de mensagem podem operar em um modo em buffer ou de streaming. Este exemplo demonstra o modo com buffer e modo de streaming.  
   
  Para cada modo, há um que acompanha `ReadMessage` e `WriteMessage` método em abstrata `MessageEncoder` classe. A maioria do trabalho de codificação ocorre nesses métodos. O exemplo encapsula o texto existente e codificadores de mensagem binária. Isso permite que o exemplo delegar a leitura e gravação da representação de transmissão de mensagens para o codificador interno e permite que o codificador de compactação compactar ou descompactar os resultados. Porque não há nenhum pipeline para codificação de mensagem, isso é o único modelo para usar vários codificadores no WCF. Depois que a mensagem foi descompactada, a mensagem resultante é passada acima da pilha para lidar com a pilha de canais. Durante a compactação, a mensagem compactada resultante é gravada diretamente para o fluxo fornecido.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o seguinte comando:  
+1. Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o seguinte comando:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 65e332d229da8fe51ad9c3e9850603471b1dfb12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307230"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Como partir dados serializados
 
@@ -26,23 +26,23 @@ ms.locfileid: "45994514"
 
 Dois problemas que ocorrem ao enviar grandes conjuntos de dados em mensagens de serviço Web são:  
   
-1.  Um grande conjunto de trabalho (memória) devido ao armazenamento em buffer pelo mecanismo de serialização.  
+1. Um grande conjunto de trabalho (memória) devido ao armazenamento em buffer pelo mecanismo de serialização.  
   
-2.  Consumo de largura de banda desordenado devido à inflação de 33 por cento após a codificação Base64.  
+2. Consumo de largura de banda desordenado devido à inflação de 33 por cento após a codificação Base64.  
   
  Para resolver esses problemas, implemente a interface <xref:System.Xml.Serialization.IXmlSerializable> para controlar a serialização e a desserialização. Especificamente, implemente os métodos <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> para partir os dados.  
   
 ### <a name="to-implement-server-side-chunking"></a>Para implementar o agrupamento do lado do servidor  
   
-1.  Na música do servidor, o método da Web deve desativar o buffer do ASP.NET e retornar um tipo que implementa <xref:System.Xml.Serialization.IXmlSerializable>.  
+1. Na música do servidor, o método da Web deve desativar o buffer do ASP.NET e retornar um tipo que implementa <xref:System.Xml.Serialization.IXmlSerializable>.  
   
-2.  O tipo que implementa <xref:System.Xml.Serialization.IXmlSerializable> partir os dados no método <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  
+2. O tipo que implementa <xref:System.Xml.Serialization.IXmlSerializable> partir os dados no método <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  
   
 ### <a name="to-implement-client-side-processing"></a>Para implementar o processamento do lado do cliente  
   
-1.  Altere o método da Web no proxy do cliente para retornar o tipo que implementa <xref:System.Xml.Serialization.IXmlSerializable>. Você pode usar uma <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> para fazer isso automaticamente, mas isso não é mostrado aqui.  
+1. Altere o método da Web no proxy do cliente para retornar o tipo que implementa <xref:System.Xml.Serialization.IXmlSerializable>. Você pode usar uma <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> para fazer isso automaticamente, mas isso não é mostrado aqui.  
   
-2.  Implemente o método <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> para ler o fluxo de dados em partes e gravar os bytes no disco. Essa implementação também gera eventos de progresso que podem ser usados por um controle de gráfico, como uma barra de progresso.  
+2. Implemente o método <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> para ler o fluxo de dados em partes e gravar os bytes no disco. Essa implementação também gera eventos de progresso que podem ser usados por um controle de gráfico, como uma barra de progresso.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo de código a seguir mostra o método da Web no cliente que desativa o buffering do ASP.NET. Ele também mostra a implementação do lado do cliente da interface <xref:System.Xml.Serialization.IXmlSerializable> que parte os dados no método <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  

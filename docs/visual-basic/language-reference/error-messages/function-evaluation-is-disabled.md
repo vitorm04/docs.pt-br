@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315771"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>A avaliação de função está desabilitada porque uma avaliação de função anterior atingiu o tempo limite
 Avaliação de função está desabilitada porque uma avaliação de função anterior atingiu o tempo limite. Para reabilitar a avaliação da função, siga as etapas novamente ou reinicie a depuração.  
@@ -27,9 +27,9 @@ Avaliação de função está desabilitada porque uma avaliação de função an
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Se possível, determine qual foi a avaliação da função anterior e o que fez com que ele atinja o tempo limite. Caso contrário, você pode encontrar esse erro novamente.  
+1. Se possível, determine qual foi a avaliação da função anterior e o que fez com que ele atinja o tempo limite. Caso contrário, você pode encontrar esse erro novamente.  
   
-2.  Etapa o depurador novamente, ou encerrar e reiniciar a depuração.  
+2. Etapa o depurador novamente, ou encerrar e reiniciar a depuração.  
   
 ## <a name="see-also"></a>Consulte também
 

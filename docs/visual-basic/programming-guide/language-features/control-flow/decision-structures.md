@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318930"
 ---
 # <a name="decision-structures-visual-basic"></a>Estruturas de decisão (Visual Basic)
 Visual Basic permite testar condições e executar operações diferentes dependendo dos resultados do teste. Você pode testar uma condição ser verdadeira ou falsa para vários valores de uma expressão, ou para várias exceções geradas quando você executa uma série de instruções.  
   
  A ilustração a seguir mostra uma estrutura de decisão que testa uma condição ser verdadeira e executa ações diferentes dependendo se ele for verdadeiro ou falso.  
   
- ![Gráfico de fluxo de uma instrução If... Then... Outra construção](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-Tomando diferentes ações quando uma condição for true e quando é falsa.  
+ ![Um gráfico de fluxo de uma instrução If... Then... Outra construção.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If... Then... Outra construção  
  `If...Then...Else` construções permitem que você teste para uma ou mais condições e executar uma ou mais instruções, dependendo de cada condição. Você pode testar condições e tomar ações das seguintes maneiras:  
@@ -48,8 +47,8 @@ Tomando diferentes ações quando uma condição for true e quando é falsa.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [Estruturas de Controle Aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Fluxo de controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Outras estruturas de controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Estruturas de controle aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Operador If](../../../../visual-basic/language-reference/operators/if-operator.md)

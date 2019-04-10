@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309635"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeração em contratos de dados
 Enumerações podem ser expressos no modelo de contrato de dados. Este tópico explica a vários exemplos que explicam o modelo de programação.  
@@ -79,11 +79,11 @@ Enumerações podem ser expressos no modelo de contrato de dados. Este tópico e
   
  As etapas a seguir se aplicam a enviar o valor de enumeração do sinalizador um:  
   
-1.  Tentativa de encontrar um membro de enumeração (com o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo aplicado) que é mapeado para o valor numérico. Se encontrado, envie uma lista que contém apenas esse membro.  
+1. Tentativa de encontrar um membro de enumeração (com o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo aplicado) que é mapeado para o valor numérico. Se encontrado, envie uma lista que contém apenas esse membro.  
   
-2.  Tentativa de dividir o valor numérico em uma soma, de modo que há membros de enumeração (cada um com o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo aplicado) que são mapeados para cada parte da soma. Envie a lista de todos esses membros. Observe que o *algoritmo greedy* é usado para localizar a soma, e, portanto, não há nenhuma garantia de que como a soma é encontrada, mesmo se ele estiver presente. Para evitar esse problema, certifique-se de que os valores numéricos dos membros de enumeração são potências de dois.  
+2. Tentativa de dividir o valor numérico em uma soma, de modo que há membros de enumeração (cada um com o <xref:System.Runtime.Serialization.EnumMemberAttribute> atributo aplicado) que são mapeados para cada parte da soma. Envie a lista de todos esses membros. Observe que o *algoritmo greedy* é usado para localizar a soma, e, portanto, não há nenhuma garantia de que como a soma é encontrada, mesmo se ele estiver presente. Para evitar esse problema, certifique-se de que os valores numéricos dos membros de enumeração são potências de dois.  
   
-3.  Se as duas etapas anteriores falharem e o valor numérico é diferente de zero, lançar um <xref:System.Runtime.Serialization.SerializationException>. Se o valor numérico for zero, envie uma lista vazia.  
+3. Se as duas etapas anteriores falharem e o valor numérico é diferente de zero, lançar um <xref:System.Runtime.Serialization.SerializationException>. Se o valor numérico for zero, envie uma lista vazia.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de enumeração a seguir pode ser usado em uma operação de sinalizador.  

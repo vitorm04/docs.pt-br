@@ -2,12 +2,12 @@
 title: Chamando funções em consultas no LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312079"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Chamando funções em consultas no LINQ to Entities
 Os tópicos nesta seção descrevem como chamar funções em consultas LINQ to Entities.  
@@ -16,11 +16,11 @@ Os tópicos nesta seção descrevem como chamar funções em consultas LINQ to E
   
  O processo para chamar uma função personalizada exige três etapas básicas:  
   
-1.  Defina uma função no modelo conceitual ou declare uma função no modelo de armazenamento.  
+1. Defina uma função no modelo conceitual ou declare uma função no modelo de armazenamento.  
   
-2.  Adicione um método ao seu aplicativo e mapeie-o para a função no modelo com um <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
+2. Adicione um método ao seu aplicativo e mapeie-o para a função no modelo com um <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
   
-3.  Chame a função em uma consulta LINQ to Entities.  
+3. Chame a função em uma consulta LINQ to Entities.  
   
  Para obter mais informações, consulte os tópicos nesta seção.  
   

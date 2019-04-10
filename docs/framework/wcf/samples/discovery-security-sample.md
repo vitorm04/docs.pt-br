@@ -2,12 +2,12 @@
 title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160758"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318397"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 A especificação de descoberta não requer que os pontos de extremidade que participam do processo de descoberta para ser seguro. Aprimorando as mensagens de descoberta com segurança atenua os vários tipos de ataques (negação de serviço, a alteração da mensagem, reproduzir, falsificação). Este exemplo implementa canais personalizados de computação e verifique se as assinaturas de mensagem usando o formato de assinatura compact (descrito na seção 8.2 da especificação WS-Discovery). O exemplo dá suporte a ambos os [especificação de descoberta de 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e o [versão 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,11 +60,11 @@ A especificação de descoberta não requer que os pontos de extremidade que par
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Execute o script de Setup. bat de um Prompt de comando do desenvolvedor para Visual Studio. O exemplo usa certificados para assinar e verificar as mensagens. O script cria os certificados usando Makecert.exe e, em seguida, instala-os usando Certmgr.exe. O script deve ser executado com privilégios de administrador.  
+1. Execute o script de Setup. bat de um Prompt de comando do desenvolvedor para Visual Studio. O exemplo usa certificados para assinar e verificar as mensagens. O script cria os certificados usando Makecert.exe e, em seguida, instala-os usando Certmgr.exe. O script deve ser executado com privilégios de administrador.  
   
-2.  Para compilar e executar o exemplo, abra o arquivo Security.sln no Visual Studio e escolha **Rebuild All**. Atualizar as propriedades de solução para iniciar projetos múltiplos: selecione **iniciar** para todos os projetos, exceto DiscoverySecureChannels. Execute a solução normalmente.  
+2. Para compilar e executar o exemplo, abra o arquivo Security.sln no Visual Studio e escolha **Rebuild All**. Atualizar as propriedades de solução para iniciar projetos múltiplos: selecione **iniciar** para todos os projetos, exceto DiscoverySecureChannels. Execute a solução normalmente.  
   
-3.  Depois de terminar com o exemplo, execute o script de CleanUp que remove os certificados criados para este exemplo.  
+3. Depois de terminar com o exemplo, execute o script de CleanUp que remove os certificados criados para este exemplo.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

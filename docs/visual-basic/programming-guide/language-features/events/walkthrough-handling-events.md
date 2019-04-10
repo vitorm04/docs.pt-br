@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308556"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Passo a passo: Manipulação de eventos (Visual Basic)
 Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O primeiro tópico, [passo a passo: Declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), mostra como declarar e acionar eventos. Esta seção usa o formulário e a classe esse passo a passo para mostrar como manipular eventos quando eles ocorrem.  
@@ -23,7 +23,7 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Para manipular o evento PercentDone da classe Widget  
   
-1.  Coloque o seguinte código no `Form1`:  
+1. Coloque o seguinte código no `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 #### <a name="to-handle-an-event"></a>Para identificar um evento  
   
-1.  Selecione `mWidget` na lista suspensa à esquerda na **Editor de códigos**.  
+1. Selecione `mWidget` na lista suspensa à esquerda na **Editor de códigos**.  
   
-2.  Selecione o `PercentDone` evento na lista suspensa à direita. O **Editor de códigos** abre o `mWidget_PercentDone` procedimento de evento.  
+2. Selecione o `PercentDone` evento na lista suspensa à direita. O **Editor de códigos** abre o `mWidget_PercentDone` procedimento de evento.  
   
     > [!NOTE]
     >  O **Editor de códigos** é útil, mas não obrigatórios, para a inserção de novos manipuladores de eventos. Neste passo a passo, é mais direto para copiar apenas os manipuladores de eventos diretamente no seu código.  
   
-3.  Adicione o seguinte código ao manipulador de eventos do `mWidget_PercentDone`:  
+3. Adicione o seguinte código ao manipulador de eventos do `mWidget_PercentDone`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Sempre que o `PercentDone` é gerado, o procedimento de evento exibe a porcentagem concluída em um `Label` controle. O `DoEvents` método permite que o rótulo a ser redesenhado e também fornece ao usuário a oportunidade de clicar o **Cancelar** botão.  
   
-4.  Adicione o seguinte código para o `Button2_Click` manipulador de eventos:  
+4. Adicione o seguinte código para o `Button2_Click` manipulador de eventos:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Para criar um objeto e atribuir uma referência a ele  
   
-1.  Selecione **(eventos de Form1)** na lista suspensa à esquerda na **Editor de códigos**.  
+1. Selecione **(eventos de Form1)** na lista suspensa à esquerda na **Editor de códigos**.  
   
-2.  Selecione o `Load` evento na lista suspensa à direita. O **Editor de códigos** abre o `Form1_Load` procedimento de evento.  
+2. Selecione o `Load` evento na lista suspensa à direita. O **Editor de códigos** abre o `Form1_Load` procedimento de evento.  
   
-3.  Adicione o seguinte código para o `Form1_Load` procedimento de evento para criar o `Widget`:  
+3. Adicione o seguinte código para o `Form1_Load` procedimento de evento para criar o `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 #### <a name="to-run-the-program"></a>Para executar o programa  
   
-1.  Pressione F5 para colocar o projeto no modo de execução.  
+1. Pressione F5 para colocar o projeto no modo de execução.  
   
-2.  Clique o **Iniciar tarefa** botão. Cada vez que o `PercentDone` é gerado, o rótulo será atualizado com a porcentagem da tarefa que foi concluída.  
+2. Clique o **Iniciar tarefa** botão. Cada vez que o `PercentDone` é gerado, o rótulo será atualizado com a porcentagem da tarefa que foi concluída.  
   
-3.  Clique o **Cancelar** no botão para parar a tarefa. Observe que a aparência do **Cancelar** botão não é alterado imediatamente quando você clica nele. O `Click` evento não pode ocorrer até que o `My.Application.DoEvents` instrução permite o processamento de eventos.  
+3. Clique o **Cancelar** no botão para parar a tarefa. Observe que a aparência do **Cancelar** botão não é alterado imediatamente quando você clica nele. O `Click` evento não pode ocorrer até que o `My.Application.DoEvents` instrução permite o processamento de eventos.  
   
     > [!NOTE]
     >  O `My.Application.DoEvents` método não processa os eventos exatamente da mesma maneira como faz o formulário. Por exemplo, este passo a passo, você deve clicar o **Cancelar** botão duas vezes. Para permitir que o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading gerenciado](../../../../standard/threading/index.md).
@@ -118,5 +118,5 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [Passo a passo: declarar e gerar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313574"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Como: registrar e configurar um moniker de serviço
 Antes de usar o moniker de serviço do Windows Communication Foundation (WCF) dentro de um aplicativo COM um contrato com tipo, você deve registrar os tipos de atributo necessários com e configurar o aplicativo COM e o identificador de origem com a ligação exigida configuração.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Para registrar os tipos de atributo necessários COM  
   
-1.  Use o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ferramenta para recuperar o contrato de metadados do serviço WCF. Isso gera o código-fonte para um assembly de cliente do WCF e um arquivo de configuração de aplicativo do cliente.  
+1. Use o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ferramenta para recuperar o contrato de metadados do serviço WCF. Isso gera o código-fonte para um assembly de cliente do WCF e um arquivo de configuração de aplicativo do cliente.  
   
-2.  Certifique-se de que os tipos no assembly são marcados como `ComVisible`. Para fazer isso, adicione o seguinte atributo ao arquivo AssemblyInfo.cs no projeto do Visual Studio.  
+2. Certifique-se de que os tipos no assembly são marcados como `ComVisible`. Para fazer isso, adicione o seguinte atributo ao arquivo AssemblyInfo.cs no projeto do Visual Studio.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Compile o cliente WCF gerenciado como um assembly de nome forte. Isso exige a assinar com um par de chaves criptográficas. Para obter mais informações, consulte [assinar um Assembly com um nome forte](https://go.microsoft.com/fwlink/?LinkId=94874) no guia do desenvolvedor do .NET.  
+3. Compile o cliente WCF gerenciado como um assembly de nome forte. Isso exige a assinar com um par de chaves criptográficas. Para obter mais informações, consulte [assinar um Assembly com um nome forte](https://go.microsoft.com/fwlink/?LinkId=94874) no guia do desenvolvedor do .NET.  
   
-4.  Use a ferramenta de registro do Assembly (Regasm.exe) com o `/tlb` opção registrar os tipos no assembly com COM.  
+4. Use a ferramenta de registro do Assembly (Regasm.exe) com o `/tlb` opção registrar os tipos no assembly com COM.  
   
-5.  Use a ferramenta de Cache de Assembly Global (Gacutil.exe) para adicionar o assembly no cache de assembly global.  
+5. Use a ferramenta de Cache de Assembly Global (Gacutil.exe) para adicionar o assembly no cache de assembly global.  
   
     > [!NOTE]
     >  Assinar o assembly e adicioná-lo ao Cache de Assembly Global são etapas opcionais, mas elas podem simplificar o processo de carregar o assembly do local correto no tempo de execução.  
@@ -89,7 +89,7 @@ Antes de usar o moniker de serviço do Windows Communication Foundation (WCF) de
     > [!NOTE]
     >  : Se o moniker está mal formado ou se o serviço está indisponível, a chamada para `GetObject` retornará um erro de "Sintaxe inválida". Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
   
-     Embora este tópico se concentra no uso o moniker de serviço do código do VB 6.0, você pode usar um moniker de serviço de outros idiomas. Quando usar um moniker de C++ de código a Svcutil.exe gerado assembly deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
+     Embora este tópico se concentra no uso o moniker de serviço do código do VB 6.0, você pode usar um moniker de serviço de outros idiomas. Ao usar um moniker de C++ código de Svcutil.exe assembly gerado deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  

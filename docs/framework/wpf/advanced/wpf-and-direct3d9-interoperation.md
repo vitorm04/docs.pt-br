@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307724"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interoperação Direct3D9 e WPF
 Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presentation Foundation). Este tópico descreve como criar conteúdo Direct3D9 para interoperar com eficiência com o WPF.  
@@ -112,13 +112,13 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
   
  Para evitar a degradação de desempenho, escreva um código especificamente para o caso de vários monitores. A lista a seguir mostra uma maneira de escrever código para vários monitores.  
   
-1.  Localizar um ponto do <xref:System.Windows.Interop.D3DImage> no espaço de tela com a `Visual.ProjectToScreen` método.  
+1. Localizar um ponto do <xref:System.Windows.Interop.D3DImage> no espaço de tela com a `Visual.ProjectToScreen` método.  
   
-2.  Use o método GDI `MonitorFromPoint` para localizar o monitor que está exibindo o ponto.  
+2. Use o método GDI `MonitorFromPoint` para localizar o monitor que está exibindo o ponto.  
   
-3.  Use o método `IDirect3D9::GetAdapterMonitor` para localizar em qual adaptador de Direct3D9 o monitor está.  
+3. Use o método `IDirect3D9::GetAdapterMonitor` para localizar em qual adaptador de Direct3D9 o monitor está.  
   
-4.  Se o adaptador não for o mesmo que o adaptador com o buffer de fundo, crie um novo buffer de fundo no novo monitor e o atribui a <xref:System.Windows.Interop.D3DImage> buffer de fundo.  
+4. Se o adaptador não for o mesmo que o adaptador com o buffer de fundo, crie um novo buffer de fundo no novo monitor e o atribui a <xref:System.Windows.Interop.D3DImage> buffer de fundo.  
   
 > [!NOTE]
 >  Se o <xref:System.Windows.Interop.D3DImage> permeiam monitores, o desempenho será lentos, exceto no caso do WDDM e `IDirect3D9Ex` no mesmo adaptador. Não há nenhuma maneira de melhorar o desempenho nessa situação.  

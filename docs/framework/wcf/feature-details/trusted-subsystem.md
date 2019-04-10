@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208534"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319359"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confiança
 Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web são projetados para que o acesso a recursos adicionais (como bancos de dados ou outros serviços da Web) é encapsulado na lógica de negócios do serviço Web. Esses recursos devem ser protegidos contra acesso não autorizado. A ilustração a seguir ilustra um processo de subsistema confiável.  
@@ -19,15 +19,15 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
   
  As etapas a seguir descrevem o processo de subsistema confiável, conforme ilustrado:  
   
-1.  O cliente envia uma solicitação para o subsistema confiável, juntamente com as credenciais.  
+1. O cliente envia uma solicitação para o subsistema confiável, juntamente com as credenciais.  
   
-2.  O subsistema confiável autentica e autoriza o usuário.  
+2. O subsistema confiável autentica e autoriza o usuário.  
   
-3.  O subsistema confiável envia uma mensagem de solicitação para o recurso remoto. Essa solicitação é acompanhada pelas credenciais para o subsistema confiável (ou a conta de serviço sob a qual o processo de subsistema confiável está sendo executado).  
+3. O subsistema confiável envia uma mensagem de solicitação para o recurso remoto. Essa solicitação é acompanhada pelas credenciais para o subsistema confiável (ou a conta de serviço sob a qual o processo de subsistema confiável está sendo executado).  
   
-4.  O recurso de back-end autentica e autoriza o subsistema confiável. Em seguida, ele processa a solicitação e emitirá uma resposta para o subsistema confiável.  
+4. O recurso de back-end autentica e autoriza o subsistema confiável. Em seguida, ele processa a solicitação e emitirá uma resposta para o subsistema confiável.  
   
-5.  O subsistema confiável processa a resposta e emite sua própria resposta ao cliente.  
+5. O subsistema confiável processa a resposta e emite sua própria resposta ao cliente.  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  

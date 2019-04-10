@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314692"
 ---
 # <a name="framework-property-metadata"></a>Metadados de propriedade de estrutura
 Opções de metadados de propriedades de Framework são relatadas para as propriedades dos elementos de objeto consideradas a nível de estrutura do WPF na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] arquitetura. Em geral a designação de nível de estrutura WPF implica que recursos, como renderização, vinculação de dados e refinamentos do sistema são tratados pela [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apresentação [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] e executáveis. Metadados de propriedade de estrutura é consultado por esses sistemas para determinar características específicas de recurso de propriedades de elemento específico.  
@@ -48,9 +48,9 @@ Opções de metadados de propriedades de Framework são relatadas para as propri
   
  Se você estiver criando um <xref:System.Windows.FrameworkPropertyMetadata> da instância, há duas maneiras de preencher os metadados com valores para as propriedades específicas que comunicam as características de propriedade do framework:  
   
-1.  Use o <xref:System.Windows.FrameworkPropertyMetadata> assinatura de construtor que permite que um `flags` parâmetro. Esse parâmetro deve ser preenchido com desejado de todos os valores combinados do <xref:System.Windows.FrameworkPropertyMetadataOptions> sinalizadores de enumeração.  
+1. Use o <xref:System.Windows.FrameworkPropertyMetadata> assinatura de construtor que permite que um `flags` parâmetro. Esse parâmetro deve ser preenchido com desejado de todos os valores combinados do <xref:System.Windows.FrameworkPropertyMetadataOptions> sinalizadores de enumeração.  
   
-2.  Use uma das assinaturas sem um `flags` parâmetro e, em seguida, defina cada propriedade booliana de relatório <xref:System.Windows.FrameworkPropertyMetadata> para `true` para cada alteração de característica desejada. Se você fizer isso, você deverá definir essas propriedades antes de quaisquer elementos com esta propriedade de dependência sejam construídos; as propriedades boolianas são leitura / gravação para permitir que esse comportamento de evitar o `flags` parâmetro e ainda preencher os metadados, mas os metadados devem ficar efetivamente selados antes de usar a propriedade. Assim, a tentativa de definir as propriedades, depois de solicitar os metadados, será uma operação inválida.  
+2. Use uma das assinaturas sem um `flags` parâmetro e, em seguida, defina cada propriedade booliana de relatório <xref:System.Windows.FrameworkPropertyMetadata> para `true` para cada alteração de característica desejada. Se você fizer isso, você deverá definir essas propriedades antes de quaisquer elementos com esta propriedade de dependência sejam construídos; as propriedades boolianas são leitura / gravação para permitir que esse comportamento de evitar o `flags` parâmetro e ainda preencher os metadados, mas os metadados devem ficar efetivamente selados antes de usar a propriedade. Assim, a tentativa de definir as propriedades, depois de solicitar os metadados, será uma operação inválida.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Comportamento de mesclagem de metadados de propriedades de estrutura  

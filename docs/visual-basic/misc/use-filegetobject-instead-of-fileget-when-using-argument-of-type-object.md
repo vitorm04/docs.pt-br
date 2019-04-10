@@ -2,12 +2,12 @@
 title: Use 'FileGetObject' em vez de 'FileGet' quando usar argumento do tipo 'Object'
 ms.date: 07/20/2015
 ms.assetid: 090b8088-895a-482a-9362-606596bac304
-ms.openlocfilehash: 60eaabc686070aced908116728f06d4e82b5cecb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdad64a4b35aa792c996d25a9fd72a9ce1126fbd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306918"
 ---
 # <a name="use-filegetobject-instead-of-fileget-when-using-argument-of-type-object"></a>Use 'FileGetObject' em vez de 'FileGet' quando usar argumento do tipo 'Object'
 O `FileGet` método inclui um argumento do tipo `Object`. `FileGetObject` deve ser usado no lugar de `FileGet` para evitar ambiguidades.  
@@ -16,9 +16,9 @@ O `FileGet` método inclui um argumento do tipo `Object`. `FileGetObject` deve s
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Substitua `FileGet` por `FileGetObject`.  
+1. Substitua `FileGet` por `FileGetObject`.  
   
-2.  Conversão de `Object` argumento para um tipo mais específico.  
+2. Conversão de `Object` argumento para um tipo mais específico.  
   
 ## <a name="see-also"></a>Consulte também
 

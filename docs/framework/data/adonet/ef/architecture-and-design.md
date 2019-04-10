@@ -2,12 +2,12 @@
 title: Arquitetura e design
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307568"
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) é implementado como um visitante na árvore de expressão que representa a árvore de comando. A geração é feita em uma única passada sobre a árvore de expressão.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  Visitar esses nós segue o padrão a seguir:  
   
-1.  Interativo entrada relacional e obter o SqlSelectStatement resultante. A entrada a um nó relacional pode ser um dos seguintes:  
+1. Interativo entrada relacional e obter o SqlSelectStatement resultante. A entrada a um nó relacional pode ser um dos seguintes:  
   
     -   Um nó relacional, incluindo uma extensão (um DbScanExpression, por exemplo). Visitar um nó retorna um SqlSelectStatement.  
   
     -   Uma expressão de operação relevante (UNION TODOS, por exemplo). O resultado tem que ser empacotado entre colchetes e coloque na cláusula de um novo SqlSelectStatement.  
   
-2.  Verifique se o nó atual pode ser adicionado ao SqlSelectStatement gerado pela entrada. A seção denominada agrupamento expressões em instruções SQL descreve esta. Se não,  
+2. Verifique se o nó atual pode ser adicionado ao SqlSelectStatement gerado pela entrada. A seção denominada agrupamento expressões em instruções SQL descreve esta. Se não,  
   
     -   Aparecer o objeto atual de SqlSelectStatement.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Coloque o novo objeto sobre a pilha.  
   
-3.  Redirecionando a expressão de entrada que associa o símbolo correto de entrada. Essa informação é mantida no objeto de SqlSelectStatement.  
+3. Redirecionando a expressão de entrada que associa o símbolo correto de entrada. Essa informação é mantida no objeto de SqlSelectStatement.  
   
-4.  Adicione um novo escopo de SymbolTable.  
+4. Adicione um novo escopo de SymbolTable.  
   
-5.  Interativo a parte das entrada de expressões (por exemplo, projeção e predicado).  
+5. Interativo a parte das entrada de expressões (por exemplo, projeção e predicado).  
   
-6.  Aparecer todos os objetos adicionados às pilhas globais.  
+6. Aparecer todos os objetos adicionados às pilhas globais.  
   
  DbSkipExpression para não ter um direto equivalente no SQL. Logicamente, é convertido em:  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  Segundo, processar entradas um de cada vez. Para cada entrada:  
   
-1.  Didático de entrada.  
+1. Didático de entrada.  
   
-2.  Enviar o processo visitar o resultado da entrada por ProcessJoinInputResult, que é responsável para manter a tabela de símbolo após visitado um filho de uma expressão de associação e possivelmente ter concluído o SqlSelectStatement gerado pelo filho. O resultado de filho pode ser um dos seguintes:  
+2. Enviar o processo visitar o resultado da entrada por ProcessJoinInputResult, que é responsável para manter a tabela de símbolo após visitado um filho de uma expressão de associação e possivelmente ter concluído o SqlSelectStatement gerado pelo filho. O resultado de filho pode ser um dos seguintes:  
   
     -   Um SqlSelectStatement diferente de aquele que o pai será adicionado. Em tais casos, talvez precisem ser concluído adicionando colunas padrão. Se a entrada foi uma associação, você precisa criar um novo join para o símbolo. Caso contrário, crie um símbolo normal.  
   

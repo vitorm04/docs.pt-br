@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311520"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Como: Controlar a disponibilidade de uma variável (Visual Basic)
 Controlar a disponibilidade de uma variável especificando seu *nível de acesso*. O nível de acesso determina qual código tem permissão para ler ou gravar na variável.  
@@ -31,25 +31,25 @@ Controlar a disponibilidade de uma variável especificando seu *nível de acesso
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Para fazer uma variável acessível somente dentro de seu módulo, classe ou estrutura  
   
-1.  Coloque o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. Coloque o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [privados](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave no `Dim` instrução.  
+2. Incluir o [privados](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave no `Dim` instrução.  
   
      Você pode ler ou gravar a variável em qualquer lugar dentro do módulo, classe ou estrutura, mas não de fora dela.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Para tornar acessível de qualquer código que pode vê-lo uma variável  
   
-1.  Para uma variável de membro, coloque o `Dim` instrução para a variável dentro de um módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. Para uma variável de membro, coloque o `Dim` instrução para a variável dentro de um módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave no `Dim` instrução.  
+2. Incluir o [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave no `Dim` instrução.  
   
      Você pode ler ou gravar a variável de qualquer código que interopera com o assembly.  
   
  - ou -  
   
-1.  Para obter uma variável local, coloque o `Dim` instrução para a variável dentro de um procedimento.  
+1. Para obter uma variável local, coloque o `Dim` instrução para a variável dentro de um procedimento.  
   
-2.  Não inclua o `Public` palavra-chave no `Dim` instrução.  
+2. Não inclua o `Public` palavra-chave no `Dim` instrução.  
   
      Você pode ler ou gravar a variável em qualquer lugar dentro do procedimento, mas não de fora dela.  
   
@@ -58,17 +58,17 @@ Controlar a disponibilidade de uma variável especificando seu *nível de acesso
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Para fazer uma variável acessível somente dentro de sua classe e quaisquer classes derivadas  
   
-1.  Coloque o `Dim` instrução para a variável dentro de uma classe, mas fora de qualquer procedimento.  
+1. Coloque o `Dim` instrução para a variável dentro de uma classe, mas fora de qualquer procedimento.  
   
-2.  Incluir o [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) palavra-chave no `Dim` instrução.  
+2. Incluir o [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) palavra-chave no `Dim` instrução.  
   
      Você pode ler ou gravar para a variável em qualquer lugar dentro da classe, bem como de dentro de qualquer classe derivada dele, mas não de fora de qualquer classe na cadeia de derivação.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Para fazer uma variável acessíveis somente de dentro do mesmo assembly  
   
-1.  Coloque o `Dim` instrução para a variável dentro de um módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. Coloque o `Dim` instrução para a variável dentro de um módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [amigo](../../../../visual-basic/language-reference/modifiers/friend.md) palavra-chave no `Dim` instrução.  
+2. Incluir o [amigo](../../../../visual-basic/language-reference/modifiers/friend.md) palavra-chave no `Dim` instrução.  
   
      Você pode ler ou gravar a variável em qualquer lugar dentro do módulo, classe ou estrutura, bem como de qualquer código no mesmo assembly, mas não de fora do assembly.  
   
@@ -93,4 +93,4 @@ Private numberForMeOnly As Integer
 - [Público](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protegido](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Privado](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Particular](../../../../visual-basic/language-reference/modifiers/private.md)

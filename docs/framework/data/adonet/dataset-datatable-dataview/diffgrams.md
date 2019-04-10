@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313509"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Um DiffGram é um formato XML que identifica as versões atuais e originais de elementos de dados. O <xref:System.Data.DataSet> usa o formato DiffGram para carregar e manter seu conteúdo e para serializar seu conteúdo para transporte entre uma conexão de rede. Quando um <xref:System.Data.DataSet> é escrito como um DiffGram, ele preenche o DiffGram com todas as informações necessárias para com precisão recriar o conteúdo, porém não é o esquema, do <xref:System.Data.DataSet>, incluindo valores de coluna para ambos o **Original** e **atual** versões de linha, informações de erro de linha e ordem de linha.  
@@ -20,26 +20,26 @@ Um DiffGram é um formato XML que identifica as versões atuais e originais de e
   
 ### <a name="to-generate-a-diffgram"></a>Para gerar um Diffgram  
   
-1.  Gere uma lista de tabelas de raiz (ou seja, tabelas sem nenhum pai).  
+1. Gere uma lista de tabelas de raiz (ou seja, tabelas sem nenhum pai).  
   
-2.  Para cada tabela e seus descendentes na lista, gravar a versão atual de todas as linhas na primeira seção Diffgram.  
+2. Para cada tabela e seus descendentes na lista, gravar a versão atual de todas as linhas na primeira seção Diffgram.  
   
-3.  Para cada tabela na <xref:System.Data.DataSet>, escreva-out da versão original de todas as linhas, se houver, no  **\<antes de >** seção de Diffgram.  
+3. Para cada tabela na <xref:System.Data.DataSet>, escreva-out da versão original de todas as linhas, se houver, no  **\<antes de >** seção de Diffgram.  
   
-4.  Para o conteúdo de erro de gravação de linhas com erros, o  **\<erros >** seção de Diffgram.  
+4. Para o conteúdo de erro de gravação de linhas com erros, o  **\<erros >** seção de Diffgram.  
   
  Um Diffgram é processado na ordem do início do arquivo XML para o final.  
   
 ### <a name="to-process-a-diffgram"></a>Para processar um Diffgram  
   
-1.  A primeira seção do Diffgram que contém a versão atual das linhas do processo.  
+1. A primeira seção do Diffgram que contém a versão atual das linhas do processo.  
   
-2.  Processar o segundo ou o  **\<antes de >** seção que contém a versão de linha original do modificado e linhas excluídas.  
+2. Processar o segundo ou o  **\<antes de >** seção que contém a versão de linha original do modificado e linhas excluídas.  
   
     > [!NOTE]
     >  Se uma linha é marcado como excluída, a operação de exclusão pode excluir descendentes da linha, bem, dependendo do `Cascade` propriedade do atual <xref:System.Data.DataSet>.  
   
-3.  Processo do  **\<erros >** seção. Defina as informações de erro para a linha e coluna especificadas para cada item nesta seção.  
+3. Processo do  **\<erros >** seção. Defina as informações de erro para a linha e coluna especificadas para cada item nesta seção.  
   
 > [!NOTE]
 >  Se você definir a <xref:System.Data.XmlWriteMode> para Diffgram, o conteúdo do destino <xref:System.Data.DataSet> e o original <xref:System.Data.DataSet> podem ser diferentes.  

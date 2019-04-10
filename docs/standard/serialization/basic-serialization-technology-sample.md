@@ -2,12 +2,12 @@
 title: Exemplo de tecnologia de serialização básica
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315004"
 ---
 # <a name="basic-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica
 [Baixar exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54681697"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Para criar o exemplo usando o Prompt de Comando  
   
-1.  Navegue para um dos subdiretórios específicos da linguagem no diretório Technologies\Serialization\Runtime Serialization\Basic directory, usando o prompt de comando.  
+1. Navegue para um dos subdiretórios específicos da linguagem no diretório Technologies\Serialization\Runtime Serialization\Basic directory, usando o prompt de comando.  
   
-2.  Digite **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** ou **msbuild SerializationVB.sln**, dependendo de sua escolha da linguagem de programação, na linha de comando.  
+2. Digite **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** ou **msbuild SerializationVB.sln**, dependendo de sua escolha da linguagem de programação, na linha de comando.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para criar o exemplo usando Visual Studio  
   
-1.  Abra o [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] e navegue para um dos subdiretórios específicos da linguagem para o exemplo.  
+1. Abra o [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] e navegue para um dos subdiretórios específicos da linguagem para o exemplo.  
   
-2.  Clique duas vezes no ícone para o arquivo SerializationCS.sln, SerializationJSL.sln ou SerializationVB.sln, dependendo de sua escolha da linguagem de programação para abrir o arquivo no Visual Studio.  
+2. Clique duas vezes no ícone para o arquivo SerializationCS.sln, SerializationJSL.sln ou SerializationVB.sln, dependendo de sua escolha da linguagem de programação para abrir o arquivo no Visual Studio.  
   
-3.  No menu **Compilar**, selecione **Compilar Solução**.  
+3. No menu **Compilar**, selecione **Compilar Solução**.  
   
  O aplicativo de exemplo será criado no subdiretório padrão \bin ou \bin\Debug.  
   
 ### <a name="to-run-the-sample"></a>Para executar a amostra  
   
-1.  Navegue para o diretório contendo o executável compilado.  
+1. Navegue para o diretório contendo o executável compilado.  
   
-2.  Digite **Serialization.exe**, junto com os valores de parâmetro desejados, na linha de comando.  
+2. Digite **Serialization.exe**, junto com os valores de parâmetro desejados, na linha de comando.  
   
     > [!NOTE]
     >  Esse exemplo cria um aplicativo de console. Você deve lançá-lo usando o prompt de comando para exibir a saída.  
@@ -58,13 +58,13 @@ ms.locfileid: "54681697"
   
  Por exemplo:  
   
- **Serialize.exe -sb Test.bin 10000 >somefile.txt**  
+ **Serialize.exe - sb Test.bin 10000 > somefile**  
   
  Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas por esse exemplo.  
   
 -   Serialização em tempo de execução  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Usado para referir-se a um objeto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Usado para referir-se a um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou um <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objeto.  
   
     -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Usado para serializar uma lista vinculada a um fluxo em um formato binário. O formatador binário usa um formato que somente o tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> entende. No entanto, os dados são concisos.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54681697"
   
     -   <xref:System.IO.Stream> Usado para serializar e desserializar. O tipo de fluxo específico usado nesse exemplo é o tipo <xref:System.IO.FileStream>. No entanto, a serialização pode ser usada com qualquer tipo derivado de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Usado para criar objetos <xref:System.IO.FileStream> para ler e criar arquivos em disco.  
+    -   <xref:System.IO.File> Usado para criar <xref:System.IO.FileStream> objetos para ler e criar arquivos no disco.  
   
     -   <xref:System.IO.FileStream> Usado para serializar e desserializar listas vinculadas.  
   

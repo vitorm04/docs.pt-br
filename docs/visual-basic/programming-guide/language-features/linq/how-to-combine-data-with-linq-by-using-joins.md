@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319593"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Como: Combinar dados com LINQ com junções (Visual Basic)
 O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa combinar o conteúdo de várias coleções com base nos valores comuns entre as coleções de consulta. Esses valores são conhecidos como *chave* valores. Os desenvolvedores familiarizados com conceitos de banco de dados relacional reconhecerá a `Join` cláusula como um INNER JOIN e o `Group Join` cláusula como, efetivamente, uma junção externa esquerda.  
@@ -25,9 +25,9 @@ O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa c
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Para criar um projeto que contém dados de exemplo e tipos  
   
-1.  Para executar os exemplos neste tópico, abra o Visual Studio e adicione um novo projeto de aplicativo de Console do Visual Basic. Clique duas vezes no arquivo Module1.vb criado pelo Visual Basic.  
+1. Para executar os exemplos neste tópico, abra o Visual Studio e adicione um novo projeto de aplicativo de Console do Visual Basic. Clique duas vezes no arquivo Module1.vb criado pelo Visual Basic.  
   
-2.  Os exemplos neste tópico usam o `Person` e `Pet` tipos e dados do exemplo de código a seguir. Copie esse código para o padrão `Module1` módulo criado pelo Visual Basic.  
+2. Os exemplos neste tópico usam o `Person` e `Pet` tipos e dados do exemplo de código a seguir. Copie esse código para o padrão `Module1` módulo criado pelo Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa c
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Para executar uma Inner Join, usando a cláusula de junção  
   
-1.  Adicione o seguinte código para o `Module1` módulo em seu projeto para ver exemplos de ambos os uma implícita e explícita junção interna.  
+1. Adicione o seguinte código para o `Module1` módulo em seu projeto para ver exemplos de ambos os uma implícita e explícita junção interna.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa c
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Para executar uma junção externa esquerda, usando a cláusula Group Join  
   
-1.  Adicione o seguinte código para o `Module1` módulo em seu projeto para ver exemplos de uma junção externa esquerda de agrupados e uma junção externa esquerda de desagrupados.  
+1. Adicione o seguinte código para o `Module1` módulo em seu projeto para ver exemplos de uma junção externa esquerda de agrupados e uma junção externa esquerda de desagrupados.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa c
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Para executar uma junção, usando uma chave composta  
   
-1.  Adicione o seguinte código para o `Module1` módulo em seu projeto para ver exemplos de uma junção que usa uma chave composta.  
+1. Adicione o seguinte código para o `Module1` módulo em seu projeto para ver exemplos de uma junção que usa uma chave composta.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,16 +73,16 @@ O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa c
   
 #### <a name="to-add-code-to-run-the-examples"></a>Para adicionar código para executar os exemplos  
   
-1.  Substitua os `Sub Main` no `Module1` módulo em seu projeto com o código a seguir para executar os exemplos neste tópico.  
+1. Substitua os `Sub Main` no `Module1` módulo em seu projeto com o código a seguir para executar os exemplos neste tópico.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  Pressione F5 para executar os exemplos.  
+2. Pressione F5 para executar os exemplos.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Cláusula Join](../../../../visual-basic/language-reference/queries/join-clause.md)
 - [Cláusula Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)
 - [Cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md)

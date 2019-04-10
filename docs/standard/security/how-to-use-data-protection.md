@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar a proteção de dados'
+title: 'Como: usar a proteção de dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314446"
 ---
-# <a name="how-to-use-data-protection"></a>Como: Usar a proteção de dados
+# <a name="how-to-use-data-protection"></a>Como: usar a proteção de dados
 O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe permite criptografar dados usando as informações de conta de usuário atual ou do computador.  Quando você usa a DPAPI, você aliviar o problema difícil de explicitamente gerar e armazenar uma chave de criptografia.  
   
  Use o <xref:System.Security.Cryptography.ProtectedMemory> classe para criptografar uma matriz de bytes na memória.  Essa funcionalidade está disponível no Microsoft Windows XP e sistemas operacionais posteriores.  Você pode especificar que a memória criptografada pelo atual processo pode ser descriptografado pelo processo atual, por todos os processos ou no mesmo contexto de usuário.  Consulte a <xref:System.Security.Cryptography.MemoryProtectionScope> enumeração para uma descrição detalhada do <xref:System.Security.Cryptography.ProtectedMemory> opções.  
@@ -34,25 +34,25 @@ O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe 
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Para criptografar os dados na memória usando a proteção de dados  
   
-1.  Chamar estático <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> método passando uma matriz de bytes para criptografar a entropia e o escopo de proteção de memória.  
+1. Chamar estático <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> método passando uma matriz de bytes para criptografar a entropia e o escopo de proteção de memória.  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Para descriptografar os dados na memória usando a proteção de dados  
   
-1.  Chamar estático <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> método passando uma matriz de bytes para descriptografar e o escopo de proteção de memória.  
+1. Chamar estático <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> método passando uma matriz de bytes para descriptografar e o escopo de proteção de memória.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Para criptografar dados em um arquivo ou fluxo usando a proteção de dados  
   
-1.  Crie entropia aleatória.  
+1. Crie entropia aleatória.  
   
-2.  Chamar estático <xref:System.Security.Cryptography.ProtectedData.Protect%2A> método passando uma matriz de bytes para criptografar a entropia e o escopo de proteção de dados.  
+2. Chamar estático <xref:System.Security.Cryptography.ProtectedData.Protect%2A> método passando uma matriz de bytes para criptografar a entropia e o escopo de proteção de dados.  
   
-3.  Gravar os dados criptografados em um arquivo ou fluxo.  
+3. Gravar os dados criptografados em um arquivo ou fluxo.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Para descriptografar os dados de um arquivo ou fluxo usando a proteção de dados  
   
-1.  Ler os dados criptografados de um arquivo ou fluxo.  
+1. Ler os dados criptografados de um arquivo ou fluxo.  
   
-2.  Chamar estático <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> método passando uma matriz de bytes para descriptografar e o escopo de proteção de dados.  
+2. Chamar estático <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> método passando uma matriz de bytes para descriptografar e o escopo de proteção de dados.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra duas formas de criptografia e descriptografia.  Primeiro, o exemplo de código criptografa e descriptografa uma matriz na memória de bytes.  Em seguida, o exemplo de código criptografa uma cópia de uma matriz de bytes, salva em um arquivo, carrega os dados de volta do arquivo e, em seguida, descriptografa os dados.  O exemplo exibe os dados originais, os dados criptografados e os dados descriptografados.  

@@ -2,19 +2,19 @@
 title: 'Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313132"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
 Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato não tem suporte byWCF. Este tópico discute usando o modelo de programação WCF REST para criar um serviço que recebe dados arbitrários.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
   
-1.  Defina o contrato de serviço. A operação que recebe os dados arbitrários deve ter um parâmetro de tipo <xref:System.IO.Stream>. Além disso, esse parâmetro deve ser o único parâmetro passado no corpo da solicitação. A operação descrita neste exemplo também usa um parâmetro de nome de arquivo. Este parâmetro é passado na URL da solicitação. Você pode especificar que um parâmetro é passado na URL, especificando um <xref:System.UriTemplate> no <xref:System.ServiceModel.Web.WebInvokeAttribute>. Nesse caso, que o URI usado para chamar esse método termina em "UploadFile/alguns-nome do arquivo". A parte "{filename}" do modelo de URI especifica que o parâmetro de nome de arquivo para a operação é passado no URI usado para chamar a operação.  
+1. Defina o contrato de serviço. A operação que recebe os dados arbitrários deve ter um parâmetro de tipo <xref:System.IO.Stream>. Além disso, esse parâmetro deve ser o único parâmetro passado no corpo da solicitação. A operação descrita neste exemplo também usa um parâmetro de nome de arquivo. Este parâmetro é passado na URL da solicitação. Você pode especificar que um parâmetro é passado na URL, especificando um <xref:System.UriTemplate> no <xref:System.ServiceModel.Web.WebInvokeAttribute>. Nesse caso, que o URI usado para chamar esse método termina em "UploadFile/alguns-nome do arquivo". A parte "{filename}" do modelo de URI especifica que o parâmetro de nome de arquivo para a operação é passado no URI usado para chamar a operação.  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ ms.locfileid: "59144073"
     }  
     ```  
   
-2.  Implemente o contrato de serviço. O contrato tem apenas um método, `UploadFile` que recebe um arquivo de dados arbitrários em um fluxo. A operação lê o fluxo de contagem do número de bytes lidos e, em seguida, exibe o nome do arquivo e o número de bytes lidos.  
+2. Implemente o contrato de serviço. O contrato tem apenas um método, `UploadFile` que recebe um arquivo de dados arbitrários em um fluxo. A operação lê o fluxo de contagem do número de bytes lidos e, em seguida, exibe o nome do arquivo e o número de bytes lidos.  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -46,7 +46,7 @@ ms.locfileid: "59144073"
   
 ### <a name="to-host-the-service"></a>Para hospedar o serviço  
   
-1.  Crie um aplicativo de console para hospedar o serviço.  
+1. Crie um aplicativo de console para hospedar o serviço.  
   
     ```csharp  
     class Program  
@@ -57,25 +57,25 @@ ms.locfileid: "59144073"
     }  
     ```  
   
-2.  Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.  
+2. Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço que especifica a classe de serviço e o endereço básico.  
+3. Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço que especifica a classe de serviço e o endereço básico.  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  Adicionar um ponto de extremidade que especifica o contrato <xref:System.ServiceModel.WebHttpBinding>, e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4. Adicionar um ponto de extremidade que especifica o contrato <xref:System.ServiceModel.WebHttpBinding>, e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  Abra o host do serviço. O serviço agora está pronto para receber solicitações.  
+5. Abra o host do serviço. O serviço agora está pronto para receber solicitações.  
   
     ```csharp  
     host.Open();  
@@ -84,20 +84,20 @@ ms.locfileid: "59144073"
   
 ### <a name="to-call-the-service-programmatically"></a>Para chamar o serviço de forma programática  
   
-1.  Criar um <xref:System.Net.HttpWebRequest> com o URI usado para chamar o serviço. Nesse código, o endereço base é combinado com `"/UploadFile/Text"`. O `"UploadFile"` parte do URI especifica a operação para chamar. O `"Test.txt"` parte do URI especifica o parâmetro de nome de arquivo para passar para o `UploadFile` operação. Ambos esses itens do mapa para o <xref:System.UriTemplate> aplicados ao contrato de operação.  
+1. Criar um <xref:System.Net.HttpWebRequest> com o URI usado para chamar o serviço. Nesse código, o endereço base é combinado com `"/UploadFile/Text"`. O `"UploadFile"` parte do URI especifica a operação para chamar. O `"Test.txt"` parte do URI especifica o parâmetro de nome de arquivo para passar para o `UploadFile` operação. Ambos esses itens do mapa para o <xref:System.UriTemplate> aplicados ao contrato de operação.  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  Defina a <xref:System.Net.HttpWebRequest.Method%2A> propriedade do <xref:System.Net.HttpWebRequest> para `POST` e o <xref:System.Net.HttpWebRequest.ContentType%2A> propriedade para `"text/plain"`. Isso instrui o serviço que o código está enviando dados e são de que os dados em texto sem formatação.  
+2. Defina a <xref:System.Net.HttpWebRequest.Method%2A> propriedade do <xref:System.Net.HttpWebRequest> para `POST` e o <xref:System.Net.HttpWebRequest.ContentType%2A> propriedade para `"text/plain"`. Isso instrui o serviço que o código está enviando dados e são de que os dados em texto sem formatação.  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3.  Chamar <xref:System.Net.HttpWebRequest.GetRequestStream%2A> para obter o fluxo da solicitação, crie os dados para enviar, gravar dados no fluxo de solicitação e feche o fluxo.  
+3. Chamar <xref:System.Net.HttpWebRequest.GetRequestStream%2A> para obter o fluxo da solicitação, crie os dados para enviar, gravar dados no fluxo de solicitação e feche o fluxo.  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,14 +110,14 @@ ms.locfileid: "59144073"
     reqStream.Close();  
     ```  
   
-4.  Obter a resposta do serviço chamando <xref:System.Net.HttpWebRequest.GetResponse%2A> e exibir os dados de resposta para o console.  
+4. Obter a resposta do serviço chamando <xref:System.Net.HttpWebRequest.GetResponse%2A> e exibir os dados de resposta para o console.  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5.  Feche o host de serviço.  
+5. Feche o host de serviço.  
   
     ```csharp  
     host.Close();  

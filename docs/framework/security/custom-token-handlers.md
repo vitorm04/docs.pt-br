@@ -3,12 +3,12 @@ title: Manipuladores de token personalizados
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312105"
 ---
 # <a name="custom-token-handlers"></a>Manipuladores de token personalizados
 Este tópico aborda os manipuladores de token no WIF e como eles são usados para processar tokens. O tópico também aborda o que é necessário para criar manipuladores de token personalizados para os tipos de token sem suporte por padrão no WIF.  
@@ -42,9 +42,9 @@ Este tópico aborda os manipuladores de token no WIF e como eles são usados par
   
 #### <a name="adding-a-custom-token-handler"></a>Adicionando um manipulador de token personalizado  
   
-1.  Crie uma nova classe que é derivada de <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1. Crie uma nova classe que é derivada de <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Substitua os seguintes métodos e forneça sua própria implementação:  
+2. Substitua os seguintes métodos e forneça sua própria implementação:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ Este tópico aborda os manipuladores de token no WIF e como eles são usados par
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Adicione uma referência ao novo manipulador de token personalizado no arquivo *Web.config* ou *App.config*, na seção **\<system.identityModel>** que se aplica ao WIF. Por exemplo, a marcação de configuração a seguir especifica um novo manipulador de token chamado **MyCustomTokenHandler** que reside no namespace **CustomToken**.  
+3. Adicione uma referência ao novo manipulador de token personalizado no arquivo *Web.config* ou *App.config*, na seção **\<system.identityModel>** que se aplica ao WIF. Por exemplo, a marcação de configuração a seguir especifica um novo manipulador de token chamado **MyCustomTokenHandler** que reside no namespace **CustomToken**.  
   
     ```xml  
     <system.identityModel>  

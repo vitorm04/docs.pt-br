@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312704"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Como: fornecer ajuda em um aplicativo do Windows
 Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexar tópicos da Ajuda em um arquivo de ajuda a controles específicos em formulários do Windows. O arquivo de Ajuda pode ser HTML ou HTMLHelp 1.x ou formato maior.  
@@ -23,17 +23,17 @@ Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexa
   
 ### <a name="to-provide-help"></a>Para fornecer Ajuda  
   
-1.  Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.HelpProvider> ao seu formulário.  
+1. Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.HelpProvider> ao seu formulário.  
   
      O componente ficará na bandeja na parte inferior do Designer de Formulários do Windows.  
   
-2.  No **propriedades** janela, defina o <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriedade para o arquivo de Ajuda. chm,. col ou. htm.  
+2. No **propriedades** janela, defina o <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriedade para o arquivo de Ajuda. chm,. col ou. htm.  
   
-3.  Selecione outro controle que você tem em seu formulário e, na **propriedades** janela, defina o <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propriedade.  
+3. Selecione outro controle que você tem em seu formulário e, na **propriedades** janela, defina o <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propriedade.  
   
      Isso é a cadeia de caracteres passada por meio de <xref:System.Windows.Forms.HelpProvider> componente ao seu arquivo de ajuda para chamar o tópico de Ajuda apropriado.  
   
-4.  No **propriedades** janela, defina as <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> propriedade um valor a <xref:System.Windows.Forms.HelpNavigator> enumeração.  
+4. No **propriedades** janela, defina as <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> propriedade um valor a <xref:System.Windows.Forms.HelpNavigator> enumeração.  
   
      Isso determina o modo como a propriedade **HelpKeyword** é passada para o sistema de Ajuda. A tabela a seguir mostra as possíveis configurações e suas descrições.  
   

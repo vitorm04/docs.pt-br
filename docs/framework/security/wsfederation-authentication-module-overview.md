@@ -3,12 +3,12 @@ title: Visão geral do módulo de autenticação WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310246"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Visão geral do módulo de autenticação WSFederation
 O Windows Identity Foundation (WIF) inclui suporte para autenticação federada em aplicativos do ASP.NET por meio do módulo de autenticação WS-Federated (WS-FAM). Este tópico ajudará você a entender como a autenticação federada funciona e como usá-la.  
@@ -18,26 +18,26 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
   
  ![Cenário de autenticação federada](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Um cliente no domínio de confiança Fabrikam envia uma solicitação para um aplicativo de terceira parte confiável (RP) no domínio de confiança da Contoso.  
+1. Um cliente no domínio de confiança Fabrikam envia uma solicitação para um aplicativo de terceira parte confiável (RP) no domínio de confiança da Contoso.  
   
-2.  O RP redireciona o cliente para um STS no domínio de confiança da Contoso. Esse STS não tem conhecimento do cliente.  
+2. O RP redireciona o cliente para um STS no domínio de confiança da Contoso. Esse STS não tem conhecimento do cliente.  
   
-3.  O STS da Contoso redireciona o cliente para um STS no domínio de confiança da Fabrikam, com a qual o domínio de confiança da Contoso tem uma relação de confiança.  
+3. O STS da Contoso redireciona o cliente para um STS no domínio de confiança da Fabrikam, com a qual o domínio de confiança da Contoso tem uma relação de confiança.  
   
-4.  O STS da Fabrikam verifica a identidade do cliente e emite um token de segurança para o STS da Contoso.  
+4. O STS da Fabrikam verifica a identidade do cliente e emite um token de segurança para o STS da Contoso.  
   
-5.  O STS da Contoso usa o token da Fabrikam para criar seu próprio token que pode ser usado pelo RP e o envia para o RP.  
+5. O STS da Contoso usa o token da Fabrikam para criar seu próprio token que pode ser usado pelo RP e o envia para o RP.  
   
-6.  O RP extrai declarações do cliente do token de segurança e toma uma decisão de autorização.  
+6. O RP extrai declarações do cliente do token de segurança e toma uma decisão de autorização.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Uso do módulo de autenticação federada com o ASP.NET  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) é um módulo HTTP que permite que você adicione autenticação federada a um [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativo. A autenticação federada permite que a autenticação lógica seja tratada pelo STS e permite que você se concentre em escrever a lógica de negócios.  
   
  Configure o WS-FAM para especificar o STS para o qual as solicitações não autenticadas deverão ser redirecionadas. O WIF permite autenticar um usuário de duas maneiras:  
   
-1.  Redirecionamento passivo: Quando um usuário não autenticado tenta acessar um recurso protegido, e você deseja simplesmente redirecioná-lo para um STS sem a necessidade de uma página de logon, isso é a abordagem correta. O STS verifica a identidade do usuário e emite um token de segurança que contém as declarações apropriadas para esse usuário. Essa opção exige que o WS-FAM seja adicionado ao pipeline dos módulos de HTTP. Você pode usar a Ferramenta de Acesso e Identidade para o Visual Studio 2012 para modificar o arquivo de configuração do seu aplicativo para usar WS-FAM e federar com um STS. Para saber mais, confira [Ferramenta de Identidade e Acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Redirecionamento passivo: Quando um usuário não autenticado tenta acessar um recurso protegido, e você deseja simplesmente redirecioná-lo para um STS sem a necessidade de uma página de logon, isso é a abordagem correta. O STS verifica a identidade do usuário e emite um token de segurança que contém as declarações apropriadas para esse usuário. Essa opção exige que o WS-FAM seja adicionado ao pipeline dos módulos de HTTP. Você pode usar a Ferramenta de Acesso e Identidade para o Visual Studio 2012 para modificar o arquivo de configuração do seu aplicativo para usar WS-FAM e federar com um STS. Para saber mais, confira [Ferramenta de Identidade e Acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Chame o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> ou o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> por meio do code-behind de uma página de entrada no aplicativo RP.  
+2. Chame o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> ou o método <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> por meio do code-behind de uma página de entrada no aplicativo RP.  
   
  No redirecionamento passivo, toda a comunicação é realizada por meio de redirecionamento/resposta do cliente (normalmente um navegador). Você pode adicionar o WS-FAM ao pipeline de HTTP do seu aplicativo, onde ele inspeciona se há solicitações de usuários não autenticados e redireciona os usuários para o STS que você especificar.  
   

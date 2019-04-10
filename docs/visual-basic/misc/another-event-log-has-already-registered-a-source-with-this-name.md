@@ -2,12 +2,12 @@
 title: Outro log de eventos já registrou uma fonte com esse nome
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314666"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Outro log de eventos já registrou uma fonte com esse nome
 Foi feita uma tentativa para gravar uma entrada para um log de eventos em que a origem especificada está registrada com outro log de eventos.  
@@ -16,9 +16,9 @@ Foi feita uma tentativa para gravar uma entrada para um log de eventos em que a 
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Remova a associação da origem com o primeiro log usando o <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> ou o <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> método.  
+1. Remova a associação da origem com o primeiro log usando o <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> ou o <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> método.  
   
-2.  Registre a fonte com o novo log.  
+2. Registre a fonte com o novo log.  
   
 ## <a name="see-also"></a>Consulte também
 

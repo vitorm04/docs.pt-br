@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139250"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316161"
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -50,11 +50,11 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Usar uma classe existente de gerenciador de evento fraco  
   
-1.  Encontre um gerenciador de evento fraco existente.  
+1. Encontre um gerenciador de evento fraco existente.  
   
      Para obter uma lista de gerenciadores de evento fraco incluídos com o WPF, consulte a hierarquia de herança na <xref:System.Windows.WeakEventManager> classe.  
   
-2.  Use o novo gerenciador de evento fraco em vez da conexão de evento normal.  
+2. Use o novo gerenciador de evento fraco em vez da conexão de evento normal.  
   
      Por exemplo, se seu código usa o padrão a seguir para assinar um evento:  
   
@@ -82,7 +82,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Usando uma classe de gerenciador de evento fraco genérico  
   
-1.  Usar o genérico <xref:System.Windows.WeakEventManager%602> classe em vez da conexão de evento normal.  
+1. Usar o genérico <xref:System.Windows.WeakEventManager%602> classe em vez da conexão de evento normal.  
   
      Quando você usa <xref:System.Windows.WeakEventManager%602> para registrar ouvintes de eventos, você fornece a origem do evento e <xref:System.EventArgs> tipo de como os parâmetros de tipo para a classe e a chamada <xref:System.Windows.WeakEventManager%602.AddHandler%2A> conforme mostrado no código a seguir:  
   
@@ -92,19 +92,19 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Criando uma classe de gerenciador de evento fraco personalizado  
   
-1.  Copie o seguinte modelo de classe no seu projeto.  
+1. Copie o seguinte modelo de classe no seu projeto.  
   
      Essa classe herda a <xref:System.Windows.WeakEventManager> classe.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Substitua o nome `SomeEventWeakEventManager` pelo seu próprio nome.  
+2. Substitua o nome `SomeEventWeakEventManager` pelo seu próprio nome.  
   
-3.  Substitua os três nomes descritos anteriormente pelos nomes correspondentes para seu evento. (`SomeEvent`, `EventSource` e `SomeEventEventArgs`)  
+3. Substitua os três nomes descritos anteriormente pelos nomes correspondentes para seu evento. (`SomeEvent`, `EventSource` e `SomeEventEventArgs`)  
   
-4.  Defina a visibilidade (pública/interna/privada) da classe de gerenciador de evento fraco para a mesma visibilidade que o evento que ele gerencia.  
+4. Defina a visibilidade (pública/interna/privada) da classe de gerenciador de evento fraco para a mesma visibilidade que o evento que ele gerencia.  
   
-5.  Use o novo gerenciador de evento fraco em vez da conexão de evento normal.  
+5. Use o novo gerenciador de evento fraco em vez da conexão de evento normal.  
   
      Por exemplo, se seu código usa o padrão a seguir para assinar um evento:  
   

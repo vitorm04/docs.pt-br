@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 82b513b89d661e49853e55f26df13eb354945038
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313600"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Ocorreu um erro inesperado porque não foi possível adquirir um recurso do sistema operacional obrigatório para a inicialização de instância única
 O aplicativo não pôde adquirir um recurso do sistema operacional necessário. Algumas das causas possíveis para esse problema são:  
@@ -22,13 +22,13 @@ O aplicativo não pôde adquirir um recurso do sistema operacional necessário. 
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se o aplicativo possui permissões suficientes para criar objetos nomeados do sistema operacional.  
+1. Verifique se o aplicativo possui permissões suficientes para criar objetos nomeados do sistema operacional.  
   
-2.  Verifique se o Common Language Runtime possui permissões suficientes para criar arquivos de memória mapeada.  
+2. Verifique se o Common Language Runtime possui permissões suficientes para criar arquivos de memória mapeada.  
   
-3.  Reinicie o computador para limpar qualquer processo que possa estar usando os recursos necessários para se conectar ao aplicativo da instância original.  
+3. Reinicie o computador para limpar qualquer processo que possa estar usando os recursos necessários para se conectar ao aplicativo da instância original.  
   
-4.  Observe as circunstâncias sob as quais ocorreu o erro e chame o Microsoft Product Support Services  
+4. Observe as circunstâncias sob as quais ocorreu o erro e chame o Microsoft Product Support Services  
   
 ## <a name="see-also"></a>Consulte também
 

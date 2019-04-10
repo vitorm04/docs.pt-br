@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313080"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Como: simular eventos de mouse e teclado no código
 O Windows Forms fornece várias opções para simular programaticamente entradas do mouse e do teclado. Este tópico fornece uma visão geral dessas opções.  
@@ -27,9 +27,9 @@ O Windows Forms fornece várias opções para simular programaticamente entradas
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>Para clicar programaticamente no botão direito do mouse  
   
-1.  Criar uma <xref:System.Windows.Forms.MouseEventArgs> cujos <xref:System.Windows.Forms.MouseEventArgs.Button%2A> estiver definida como o <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> valor.  
+1. Criar uma <xref:System.Windows.Forms.MouseEventArgs> cujos <xref:System.Windows.Forms.MouseEventArgs.Button%2A> estiver definida como o <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> valor.  
   
-2.  Chame o <xref:System.Windows.Forms.Control.OnMouseClick%2A> método com este <xref:System.Windows.Forms.MouseEventArgs> como o argumento.  
+2. Chame o <xref:System.Windows.Forms.Control.OnMouseClick%2A> método com este <xref:System.Windows.Forms.MouseEventArgs> como o argumento.  
   
  Para obter mais informações sobre controles personalizados, consulte [Desenvolvendo Controles dos Windows Forms no Tempo de Design](./controls/developing-windows-forms-controls-at-design-time.md).  
   
@@ -58,7 +58,7 @@ O Windows Forms fornece várias opções para simular programaticamente entradas
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>Para enviar um pressionamento de tecla para o mesmo aplicativo  
   
-1.  Chame o <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> método o <xref:System.Windows.Forms.SendKeys> classe. Os pressionamentos de teclas especificados serão recebidos pelo controle ativo do aplicativo. O seguinte exemplo de código usa <xref:System.Windows.Forms.SendKeys.Send%2A> para simular o pressionamento da tecla ENTER quando o usuário clica duas vezes a superfície do formulário. Este exemplo pressupõe um <xref:System.Windows.Forms.Form> com um único <xref:System.Windows.Forms.Button> controle que tem um índice de tabulação 0.  
+1. Chame o <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> método o <xref:System.Windows.Forms.SendKeys> classe. Os pressionamentos de teclas especificados serão recebidos pelo controle ativo do aplicativo. O seguinte exemplo de código usa <xref:System.Windows.Forms.SendKeys.Send%2A> para simular o pressionamento da tecla ENTER quando o usuário clica duas vezes a superfície do formulário. Este exemplo pressupõe um <xref:System.Windows.Forms.Form> com um único <xref:System.Windows.Forms.Button> controle que tem um índice de tabulação 0.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
@@ -66,7 +66,7 @@ O Windows Forms fornece várias opções para simular programaticamente entradas
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>Para enviar um pressionamento de tecla para um aplicativo diferente  
   
-1.  Ativar a janela do aplicativo que receberá os pressionamentos de tecla e, em seguida, chame o <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> método. Como não há nenhum método gerenciado para ativar outro aplicativo, você deve usar métodos nativos do Windows para forçar foco em outros aplicativos. A seguinte código exemplo usa invocação de plataforma para chamar o `FindWindow` e `SetForegroundWindow` métodos para ativar a janela do aplicativo Calculadora e, em seguida, chama <xref:System.Windows.Forms.SendKeys.SendWait%2A> para emitir uma série de cálculos para o aplicativo Calculadora.  
+1. Ativar a janela do aplicativo que receberá os pressionamentos de tecla e, em seguida, chame o <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> método. Como não há nenhum método gerenciado para ativar outro aplicativo, você deve usar métodos nativos do Windows para forçar foco em outros aplicativos. A seguinte código exemplo usa invocação de plataforma para chamar o `FindWindow` e `SetForegroundWindow` métodos para ativar a janela do aplicativo Calculadora e, em seguida, chama <xref:System.Windows.Forms.SendKeys.SendWait%2A> para emitir uma série de cálculos para o aplicativo Calculadora.  
   
     > [!NOTE]
     >  Os parâmetros corretos da chamada `FindWindow` que localiza o aplicativo Calculadora variam de acordo com sua versão do Windows.  O código a seguir localiza o aplicativo Calculadora em [!INCLUDE[win7](../../../includes/win7-md.md)]. Em [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], altere o primeiro parâmetro para "SciCalc". Você pode usar a ferramenta Spy++, incluída no Visual Studio, para determinar os parâmetros corretos.  

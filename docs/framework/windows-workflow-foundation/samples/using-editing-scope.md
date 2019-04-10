@@ -2,12 +2,12 @@
 title: Usando o escopo de edição
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308621"
 ---
 # <a name="using-editing-scope"></a>Usando o escopo de edição
 Este exemplo demonstra como em lotes um conjunto de alterações de modo que eles possam ser desfeitos em uma única unidade atômica. Por padrão, as ações executadas por um autor do designer de atividade automaticamente são integradas desfazer/refazem o sistema.  
@@ -24,15 +24,15 @@ Este exemplo demonstra como em lotes um conjunto de alterações de modo que ele
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Compilar e executar o exemplo, e depois use os botões à esquerda para alterar o fluxo de trabalho.  
+1. Compilar e executar o exemplo, e depois use os botões à esquerda para alterar o fluxo de trabalho.  
   
-2.  Clique em **abrir o escopo de edição**.  
+2. Clique em **abrir o escopo de edição**.  
   
     1.  Este comando chama <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> que cria um escopo e envia de edição ele na pilha de edição.  
   
     2.  Três atividades são adicionadas a <xref:System.Activities.Presentation.Model.ModelItem>selecionado. Observe que se o escopo de edição não tivesse sido aberto com <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, três novas atividades apareceriam na tela de designer. Porque esta operação ainda está pendente dentro de <xref:System.Activities.Presentation.Model.EditingScope>, o designer não é atualizada ainda.  
   
-3.  Pressione **próximo escopo de edição** para confirmar o escopo de edição. Três atividades aparecem no designer.  
+3. Pressione **próximo escopo de edição** para confirmar o escopo de edição. Três atividades aparecem no designer.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

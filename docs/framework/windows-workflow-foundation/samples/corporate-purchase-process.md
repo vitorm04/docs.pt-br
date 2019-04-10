@@ -2,12 +2,12 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442237"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313327"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.
@@ -50,25 +50,25 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 ## <a name="description-of-the-process"></a>Descrição do processo  
  Este exemplo mostra uma implementação de um programa do Windows Workflow Foundation (WF) para reunir as propostas de fornecedores para uma empresa genérico.  
   
-1.  Um funcionário da empresa X cria um aplicativo de propostas (RFP).  
+1. Um funcionário da empresa X cria um aplicativo de propostas (RFP).  
   
     1.  O funcionário no título e a descrição de RFP.  
   
     2.  O funcionário seleciona fornecedores que deseja convidar para enviar propostas.  
   
-2.  O funcionário envia a proposta.  
+2. O funcionário envia a proposta.  
   
     1.  Uma instância de fluxo de trabalho é criada.  
   
     2.  O fluxo de trabalho está aguardando todos os editores para enviar suas propostas.  
   
-3.  As propostas são recebidas completos, o fluxo de trabalho itera com todas as propostas recebidas e selecione melhor.  
+3. As propostas são recebidas completos, o fluxo de trabalho itera com todas as propostas recebidas e selecione melhor.  
   
     1.  Cada fornecedor tem uma reputação (este exemplo armazena a lista de reputação em VendorRepository.cs).  
   
     2.  Total de valor proposta é determinado por (o valor tipado no fornecedor) (*) escrita de reputação de fornecedor/100.  
   
-4.  O solicitador original pode ver todas as propostas enviadas. A melhor proposta é apresentada em uma seção especial no relatório.  
+4. O solicitador original pode ver todas as propostas enviadas. A melhor proposta é apresentada em uma seção especial no relatório.  
   
 ## <a name="process-definition"></a>Definição de processo  
  A lógica de núcleo de exemplo usa uma atividade de <xref:System.Activities.Statements.ParallelForEach%601> que espera as oferece de cada fornecedor (usando uma atividade personalizado que cria um indexador), e registra a proposta de fornecedor como um RFP (usando uma atividade de <xref:System.Activities.Statements.InvokeMethod> ).  
@@ -143,15 +143,15 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Usando o Visual Studio 2010, abra o arquivo de solução de Purchaseprocess.  
+1. Usando o Visual Studio 2010, abra o arquivo de solução de Purchaseprocess.  
   
-2.  Para executar o projeto de cliente da Web, abra **Gerenciador de soluções** e clique com botão direito do **cliente Web** projeto. Selecione **definir como projeto de inicialização**.  
+2. Para executar o projeto de cliente da Web, abra **Gerenciador de soluções** e clique com botão direito do **cliente Web** projeto. Selecione **definir como projeto de inicialização**.  
   
-3.  Para executar o projeto de cliente de WinForms, abra **Gerenciador de soluções** e clique com botão direito do **cliente de WinForms** projeto. Selecione **definir como projeto de inicialização**.  
+3. Para executar o projeto de cliente de WinForms, abra **Gerenciador de soluções** e clique com botão direito do **cliente de WinForms** projeto. Selecione **definir como projeto de inicialização**.  
   
-4.  Para criar a solução, pressione CTRL+SHIFT+B.  
+4. Para criar a solução, pressione CTRL+SHIFT+B.  
   
-5.  Para executar a solução, pressione CTRL+F5.  
+5. Para executar a solução, pressione CTRL+F5.  
   
 ### <a name="web-client-options"></a>Opções de cliente web  
   

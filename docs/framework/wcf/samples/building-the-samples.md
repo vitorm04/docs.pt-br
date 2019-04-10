@@ -2,12 +2,12 @@
 title: 'Compilando os exemplos do Windows Communication Foundation '
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658865"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317851"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 
@@ -18,9 +18,9 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>Para criar o exemplo usando um prompt de comando
 
-1.  Abra o Prompt de comando do desenvolvedor para Visual Studio e navegue até o subdiretório específico do idioma em que o local do diretório onde você instalou o exemplo.
+1. Abra o Prompt de comando do desenvolvedor para Visual Studio e navegue até o subdiretório específico do idioma em que o local do diretório onde você instalou o exemplo.
 
-2.  Tipo `msbuild` na linha de comando. Os arquivos de programa do cliente são incorporados *client\bin* e os arquivos de programa de serviço são criados para *service\bin*. Se o serviço é hospedado pelo Internet Information Services (IIS), os arquivos de programa de serviço também são copiados para o *servicemodelsamples* diretório e seu *\bin* subdiretório.
+2. Tipo `msbuild` na linha de comando. Os arquivos de programa do cliente são incorporados *client\bin* e os arquivos de programa de serviço são criados para *service\bin*. Se o serviço é hospedado pelo Internet Information Services (IIS), os arquivos de programa de serviço também são copiados para o *servicemodelsamples* diretório e seu *\bin* subdiretório.
 
 > [!NOTE]
 > Você deve definir as ACLs no *%systemdrive%\inetpub\wwwroot* para conceder permissões de modificação para a conta sob a qual você está executando. Caso contrário, alguns lançar falha de eventos de build. Como alternativa, você pode deixar as ACLs que são e executar o prompt de comando do SDK como administrador.
@@ -50,9 +50,9 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>Para gerar novamente os arquivos de configuração e de cliente
 
-1.  Abra um prompt de comando do SDK e navegue até o subdiretório específico do idioma em que o local do diretório onde você instalou o exemplo.
+1. Abra um prompt de comando do SDK e navegue até o subdiretório específico do idioma em que o local do diretório onde você instalou o exemplo.
 
-2.  Se o serviço for um tipo hospedados na Web, use o comando a seguir.
+2. Se o serviço for um tipo hospedados na Web, use o comando a seguir.
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
@@ -84,4 +84,4 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o
 ## <a name="see-also"></a>Consulte também
 
 - [Executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)
-- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

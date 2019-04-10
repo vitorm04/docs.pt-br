@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314614"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Expressão tem o tipo '\<typename >' que é um tipo restrito e não pode ser usado para acessar membros herdados de 'Object' ou 'ValueType'
 Uma expressão é avaliada como um tipo que não pode ser convertido pelo common language runtime (CLR), mas acessa um membro que requer conversão boxing.  
@@ -25,12 +25,12 @@ Uma expressão é avaliada como um tipo que não pode ser convertido pelo common
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Localize a expressão que é avaliada como o tipo citado.  
+1. Localize a expressão que é avaliada como o tipo citado.  
   
-2.  Localize a parte da sua declaração que tenta chamar o método herdado de <xref:System.Object> ou <xref:System.ValueType>.  
+2. Localize a parte da sua declaração que tenta chamar o método herdado de <xref:System.Object> ou <xref:System.ValueType>.  
   
-3.  Reescreva a instrução para evitar a chamada de método.  
+3. Reescreva a instrução para evitar a chamada de método.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Conversões implícitas e explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

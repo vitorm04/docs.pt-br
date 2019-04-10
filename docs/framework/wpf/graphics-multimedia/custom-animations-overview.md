@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313938"
 ---
 # <a name="custom-animations-overview"></a>Visão geral de animações personalizadas
 Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de animação criando quadros-chave personalizados, classes de animação ou utilizando callback por quadro para contorná-lo.  
@@ -99,9 +99,9 @@ Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../
   
  O paradigma recomendado (usada pelas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animações) é utilizar dois níveis de herança:  
   
-1.  Criar um resumo  *\<tipo >* classe AnimationBase que deriva de <xref:System.Windows.Media.Animation.AnimationTimeline>. Essa classe deve substituir o <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> método. Também deve introduzir um novo método abstrato, GetCurrentValueCore e substituir <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> , de modo que ele valida os tipos dos parâmetros de valor de destino padrão e o valor de origem padrão, em seguida, chama o GetCurrentValueCore.  
+1. Criar um resumo  *\<tipo >* classe AnimationBase que deriva de <xref:System.Windows.Media.Animation.AnimationTimeline>. Essa classe deve substituir o <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> método. Também deve introduzir um novo método abstrato, GetCurrentValueCore e substituir <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> , de modo que ele valida os tipos dos parâmetros de valor de destino padrão e o valor de origem padrão, em seguida, chama o GetCurrentValueCore.  
   
-2.  Criar outra classe que herda de sua nova  *\<tipo >* classe AnimationBase e substitui o <xref:System.Windows.Freezable.CreateInstanceCore%2A> método, o método GetCurrentValueCore que você introduziu, e o <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> propriedade.  
+2. Criar outra classe que herda de sua nova  *\<tipo >* classe AnimationBase e substitui o <xref:System.Windows.Freezable.CreateInstanceCore%2A> método, o método GetCurrentValueCore que você introduziu, e o <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> propriedade.  
   
  **Abordagens alternativas**  
   

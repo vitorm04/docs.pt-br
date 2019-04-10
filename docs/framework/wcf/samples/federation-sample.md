@@ -2,12 +2,12 @@
 title: Exemplo de federação
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311455"
 ---
 # <a name="federation-sample"></a>Exemplo de federação
 Este exemplo demonstra a segurança federada.  
@@ -67,17 +67,17 @@ Este exemplo demonstra a segurança federada.
   
  A sequência de eventos ao acessar o `BuyBook` operação é da seguinte maneira:  
   
-1.  O cliente é autenticado para o STS HomeRealm usando as credenciais do Windows.  
+1. O cliente é autenticado para o STS HomeRealm usando as credenciais do Windows.  
   
-2.  O STS HomeRealm emite um token que pode ser usado para se autenticar no STS livraria.  
+2. O STS HomeRealm emite um token que pode ser usado para se autenticar no STS livraria.  
   
-3.  O cliente é autenticado para o STS da livraria usando o token emitido pelo STS HomeRealm.  
+3. O cliente é autenticado para o STS da livraria usando o token emitido pelo STS HomeRealm.  
   
-4.  O STS da livraria emite um token que pode ser usado para autenticar o serviço de livraria.  
+4. O STS da livraria emite um token que pode ser usado para autenticar o serviço de livraria.  
   
-5.  O cliente é autenticado para o serviço de livraria usando o token emitido pelo STS livraria.  
+5. O cliente é autenticado para o serviço de livraria usando o token emitido pelo STS livraria.  
   
-6.  O cliente acessa o `BuyBook` operação.  
+6. O cliente acessa o `BuyBook` operação.  
   
  Consulte as instruções a seguir sobre como configurar e executar esse exemplo.  
   
@@ -86,18 +86,18 @@ Este exemplo demonstra a segurança federada.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Abra a janela de comando do SDK. No exemplo de caminho, execute Setup. bat. Isso cria os diretórios virtuais necessários para o exemplo e instala os certificados necessários com permissões apropriadas.  
+1. Abra a janela de comando do SDK. No exemplo de caminho, execute Setup. bat. Isso cria os diretórios virtuais necessários para o exemplo e instala os certificados necessários com permissões apropriadas.  
   
     > [!NOTE]
     >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Prompt de comando do SDK do Windows. Ele requer que a variável de ambiente MSSDK apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Prompt de comando do SDK do Windows. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], você deve garantir que o gerenciamento de compatibilidade do IIS 6.0 está instalado porque o conjunto de backup usa scripts de administrador do IIS. Execução do script de configuração em [!INCLUDE[wv](../../../../includes/wv-md.md)] requer privilégios de administrador.  
   
-2.  Abra FederationSample.sln no Visual Studio e selecione **compilar solução** da **Build** menu. Isso cria os arquivos de projeto comum, o serviço de livraria, livraria STS, HomeRealm STS e os implanta no IIS. Isso também criará o aplicativo de cliente da livraria e coloca o BookStoreClient.exe executável na pasta FederationSample\BookStoreClient\bin\Debug.  
+2. Abra FederationSample.sln no Visual Studio e selecione **compilar solução** da **Build** menu. Isso cria os arquivos de projeto comum, o serviço de livraria, livraria STS, HomeRealm STS e os implanta no IIS. Isso também criará o aplicativo de cliente da livraria e coloca o BookStoreClient.exe executável na pasta FederationSample\BookStoreClient\bin\Debug.  
   
-3.  Clique duas vezes em BookStoreClient.exe. A janela BookStoreClient é exibida.  
+3. Clique duas vezes em BookStoreClient.exe. A janela BookStoreClient é exibida.  
   
-4.  Você pode procurar os livros disponíveis na livraria clicando **livros procurar**.  
+4. Você pode procurar os livros disponíveis na livraria clicando **livros procurar**.  
   
-5.  Para comprar um livro específico, selecione o catálogo na lista e clique em **comprar o livro**. O aplicativo é iniciado e é autenticado usando a autenticação do Windows com o serviço de Token de segurança HomeRealm.  
+5. Para comprar um livro específico, selecione o catálogo na lista e clique em **comprar o livro**. O aplicativo é iniciado e é autenticado usando a autenticação do Windows com o serviço de Token de segurança HomeRealm.  
   
      O exemplo é configurado para permitir aos usuários comprar livros que custam US $15 ou menos. Tentando comprar livros que custam mais do que os resultados de US $15 no cliente recebendo uma mensagem de acesso negado do serviço de Store de livro.  
   
@@ -106,7 +106,7 @@ Este exemplo demonstra a segurança federada.
   
 #### <a name="to-clean-up"></a>Para limpar  
   
-1.  Execute CleanUp. Isso exclui os diretórios virtuais que foram criados durante a instalação e também remove os certificados instalados durante a instalação.  
+1. Execute CleanUp. Isso exclui os diretórios virtuais que foram criados durante a instalação e também remove os certificados instalados durante a instalação.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

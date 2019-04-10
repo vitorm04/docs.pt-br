@@ -2,12 +2,12 @@
 title: '>= (Maior que ou igual a) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 1e2eef7c98aefd93c6ef388888661ac758fd8e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317136"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (maior que ou igual a) (Entity SQL)
 Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.  
@@ -28,9 +28,9 @@ expression >= expression
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa > = operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior que ou igual à expressão da direita. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#GREATER_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater_or_equals)]  
   

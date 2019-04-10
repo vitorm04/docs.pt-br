@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318215"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Não é possível gravar no arquivo de saída '\<filename >': \<erro >
 Ocorreu um problema na criação do arquivo.  
@@ -31,31 +31,31 @@ Ocorreu um problema na criação do arquivo.
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Compile o programa novamente para verificar se o erro persiste.  
+1. Compile o programa novamente para verificar se o erro persiste.  
   
-2.  Se o erro persistir, salve seu trabalho e reinicie o Visual Studio.  
+2. Se o erro persistir, salve seu trabalho e reinicie o Visual Studio.  
   
-3.  Se o erro persistir, reinicie o computador.  
+3. Se o erro persistir, reinicie o computador.  
   
-4.  Se o erro persistir, reinstale o Visual Basic.  
+4. Se o erro persistir, reinstale o Visual Basic.  
   
-5.  Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
+5. Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>Para verificar atributos de arquivo no Explorador de Arquivos  
   
-1.  Abra a pasta que lhe interessa.  
+1. Abra a pasta que lhe interessa.  
   
-2.  Clique o **modos de exibição** ícone e escolha **detalhes**.  
+2. Clique o **modos de exibição** ícone e escolha **detalhes**.  
   
-3.  Clique com botão direito no cabeçalho da coluna e, em seguida, escolha **atributos** na lista suspensa.  
+3. Clique com botão direito no cabeçalho da coluna e, em seguida, escolha **atributos** na lista suspensa.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Para alterar os atributos de um arquivo ou pasta  
   
-1.  Na **Explorador de arquivos**, clique com botão direito no arquivo ou pasta e escolha **propriedades**.  
+1. Na **Explorador de arquivos**, clique com botão direito no arquivo ou pasta e escolha **propriedades**.  
   
-2.  No **atributos** seção o **gerais** guia, desmarque o **somente leitura** caixa.  
+2. No **atributos** seção o **gerais** guia, desmarque o **somente leitura** caixa.  
   
-3.  Pressione **OK**.  
+3. Pressione **OK**.  
   
 ## <a name="see-also"></a>Consulte também
 

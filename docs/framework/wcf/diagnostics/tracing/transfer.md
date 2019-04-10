@@ -2,12 +2,12 @@
 title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311013"
 ---
 # <a name="transfer"></a>Transferir
 Este tópico descreve a transferência no modelo de rastreamento de atividade do Windows Communication Foundation (WCF).  
@@ -42,21 +42,21 @@ Este tópico descreve a transferência no modelo de rastreamento de atividade do
 ## <a name="activity-transfer-sequence"></a>Sequência de transferência de atividade  
  Uma sequência de transferência bem formado de atividade inclui as seguintes etapas.  
   
-1.  Iniciar uma nova atividade, que consiste em selecionar um novo gAId.  
+1. Iniciar uma nova atividade, que consiste em selecionar um novo gAId.  
   
-2.  Emissão de um rastreamento de transferência para esse novo gAId da ID da atividade atual  
+2. Emissão de um rastreamento de transferência para esse novo gAId da ID da atividade atual  
   
-3.  Definir a nova ID no TLS  
+3. Definir a nova ID no TLS  
   
-4.  Emita um rastreamento de início para indicar o início da nova atividade por.  
+4. Emita um rastreamento de início para indicar o início da nova atividade por.  
   
-5.  Retorne para a atividade original consiste no seguinte:  
+5. Retorne para a atividade original consiste no seguinte:  
   
-6.  Emissão de um rastreamento de transferência para o gAId original  
+6. Emissão de um rastreamento de transferência para o gAId original  
   
-7.  Emissão de um rastreamento de interrupção para indicar o final da nova atividade  
+7. Emissão de um rastreamento de interrupção para indicar o final da nova atividade  
   
-8.  Defina o TLS para o antigo gAId.  
+8. Defina o TLS para o antigo gAId.  
   
  O exemplo de código a seguir demonstra como fazer isso. Este exemplo supõe que uma chamada de bloqueio é feita ao transferir para a nova atividade e inclui os rastreamentos de suspender/retomar.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309414"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Método ICorDebugRegisterSet2::GetRegistersAvailable
 Obtém uma matriz de bytes que fornece um bitmap de registros disponíveis.  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Comentários  
  Os valores da enumeração CorDebugRegister especificam os registros de microprocessadores diferentes. Os cinco bits superiores de cada valor são o índice para o `availableRegChunks` matriz de bytes. Três bits inferiores de cada valor de identificar a posição de bit dentro do byte indexada. Dado um `CorDebugRegister` valor que especifica um registro específico, a posição do registro na máscara é determinado da seguinte maneira:  
   
-1.  Extrair o índice necessário para acessar o byte correto no `availableRegChunks` matriz:  
+1. Extrair o índice necessário para acessar o byte correto no `availableRegChunks` matriz:  
   
      `CorDebugRegister` valor >> 3  
   
-2.  Extrai a posição de bit dentro do byte indexada, em que o bit de zero é o bit menos significativo:  
+2. Extrai a posição de bit dentro do byte indexada, em que o bit de zero é o bit menos significativo:  
   
      `CorDebugRegister` valor & 7  
   

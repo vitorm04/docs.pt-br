@@ -10,29 +10,29 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316447"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros (Visual Basic)
 Se um procedimento tem um [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parâmetro, você não pode definir uma versão sobrecarregada, levando a uma matriz unidimensional para a matriz de parâmetros. Para obter mais informações, consulte "Implícita sobrecargas para um parâmetro ParamArray" na [considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Para sobrecarregar um procedimento que usa um número variável de parâmetros  
   
-1.  Verificar que o procedimento e chamar os benefícios de lógica de código de versões sobrecarregadas mais de um `ParamArray` parâmetro. Consulte "Sobrecargas e ParamArrays" nos [considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  
+1. Verificar que o procedimento e chamar os benefícios de lógica de código de versões sobrecarregadas mais de um `ParamArray` parâmetro. Consulte "Sobrecargas e ParamArrays" nos [considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  
   
-2.  Determine quais números de valores fornecidos, o procedimento deve aceitar na variável parte da lista de parâmetros. Isso pode incluir o caso de nenhum valor, e ele pode incluir o caso de uma única matriz unidimensional.  
+2. Determine quais números de valores fornecidos, o procedimento deve aceitar na variável parte da lista de parâmetros. Isso pode incluir o caso de nenhum valor, e ele pode incluir o caso de uma única matriz unidimensional.  
   
-3.  Para cada número aceitável de valores fornecidos, escreva uma `Sub` ou `Function` instrução de declaração que define a lista de parâmetro correspondente. Não pode usar uma as `Optional` ou o `ParamArray` palavra-chave nesta versão sobrecarregada.  
+3. Para cada número aceitável de valores fornecidos, escreva uma `Sub` ou `Function` instrução de declaração que define a lista de parâmetro correspondente. Não pode usar uma as `Optional` ou o `ParamArray` palavra-chave nesta versão sobrecarregada.  
   
-4.  Em cada declaração, preceda a `Sub` ou `Function` palavra-chave com o [sobrecarrega](../../../../visual-basic/language-reference/modifiers/overloads.md) palavra-chave.  
+4. Em cada declaração, preceda a `Sub` ou `Function` palavra-chave com o [sobrecarrega](../../../../visual-basic/language-reference/modifiers/overloads.md) palavra-chave.  
   
-5.  Após cada declaração, escreva o código de procedimento que deve ser executado quando o código de chamada fornece valores correspondentes à lista de parâmetros da declaração.  
+5. Após cada declaração, escreva o código de procedimento que deve ser executado quando o código de chamada fornece valores correspondentes à lista de parâmetros da declaração.  
   
-6.  Encerrar cada procedimento com o `End Sub` ou `End Function` instrução conforme apropriado.  
+6. Encerrar cada procedimento com o `End Sub` ou `End Function` instrução conforme apropriado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra um procedimento definido com um [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parâmetro e, em seguida, um conjunto equivalente de procedimentos sobrecarregados.  
@@ -56,12 +56,12 @@ Se um procedimento tem um [ParamArray](../../../../visual-basic/language-referen
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos](./index.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Parâmetros Opcionais](./optional-parameters.md)
-- [Matrizes de Parâmetros](./parameter-arrays.md)
-- [Sobrecarga de Procedimento](./procedure-overloading.md)
-- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
-- [Como: Definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Como: Chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
-- [Como: Sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Resolução de Sobrecarga](./overload-resolution.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros opcionais](./optional-parameters.md)
+- [Matrizes de parâmetros](./parameter-arrays.md)
+- [Sobrecarga de procedimento](./procedure-overloading.md)
+- [Solução de problemas de procedimentos](./troubleshooting-procedures.md)
+- [Como: definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Como: chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
+- [Como: sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Resolução de sobrecarga](./overload-resolution.md)

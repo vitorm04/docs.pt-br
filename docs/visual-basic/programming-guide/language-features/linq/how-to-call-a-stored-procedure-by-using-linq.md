@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 2d05d43ae8f9b93fd3e5e405bb7ff0d59832e830
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: af25ebe10681ebb1c346f90afc0291e53224833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319567"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Como: Chamar um procedimento armazenado usando LINQ (Visual Basic)
 Consulta integrada à linguagem (LINQ) facilita o acesso a informações de banco de dados, incluindo o banco de dados objetos como procedimentos armazenados.  
@@ -25,39 +25,39 @@ Consulta integrada à linguagem (LINQ) facilita o acesso a informações de banc
   
 ### <a name="to-create-a-connection-to-a-database"></a>Para criar uma conexão para um banco de dados  
   
-1.  No Visual Studio, abra **Gerenciador de servidores**/**Database Explorer** clicando **Server Explorer**/**banco de dados Explorer** sobre o **exibição** menu.  
+1. No Visual Studio, abra **Gerenciador de servidores**/**Database Explorer** clicando **Server Explorer**/**banco de dados Explorer** sobre o **exibição** menu.  
   
-2.  Clique com botão direito **conexões de dados** na **Gerenciador de servidores**/**Database Explorer** e, em seguida, clique em **Adicionar Conexão**.  
+2. Clique com botão direito **conexões de dados** na **Gerenciador de servidores**/**Database Explorer** e, em seguida, clique em **Adicionar Conexão**.  
   
-3.  Especifique uma conexão válida para o banco de dados de exemplo Northwind.  
+3. Especifique uma conexão válida para o banco de dados de exemplo Northwind.  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Para adicionar um projeto que contém um arquivo LINQ to SQL  
   
-1.  No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. Selecione Visual Basic **aplicativo do Windows Forms** como o tipo de projeto.  
+1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. Selecione Visual Basic **aplicativo do Windows Forms** como o tipo de projeto.  
   
-2.  No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o **Classes LINQ to SQL** modelo de item.  
+2. No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o **Classes LINQ to SQL** modelo de item.  
   
-3.  Dê o nome `northwind.dbml` para o arquivo. Clique em **Adicionar**. O Object Relational Designer (O/R Designer) é aberto para o arquivo Northwind dbml.  
+3. Dê o nome `northwind.dbml` para o arquivo. Clique em **Adicionar**. O Object Relational Designer (O/R Designer) é aberto para o arquivo Northwind dbml.  
   
 ### <a name="to-add-stored-procedures-to-the-or-designer"></a>Para adicionar os procedimentos armazenados para o O/R Designer  
   
-1.  Na **Gerenciador de servidores**/**Gerenciador de banco de dados**, expanda a conexão ao banco de dados Northwind. Expanda o **procedimentos armazenados** pasta.  
+1. Na **Gerenciador de servidores**/**Gerenciador de banco de dados**, expanda a conexão ao banco de dados Northwind. Expanda o **procedimentos armazenados** pasta.  
   
      Se você tiver fechado o O/R Designer, você poderá reabri-lo clicando duas vezes no arquivo dbml que você adicionou anteriormente.  
   
-2.  Clique o **vendas por ano** procedimento armazenado e arraste-o para o painel à direita do designer. Clique o **dez produtos mais caros** procedimento armazenado arraste-o para o painel à direita do designer.  
+2. Clique o **vendas por ano** procedimento armazenado e arraste-o para o painel à direita do designer. Clique o **dez produtos mais caros** procedimento armazenado arraste-o para o painel à direita do designer.  
   
-3.  Salve suas alterações e feche o designer.  
+3. Salve suas alterações e feche o designer.  
   
-4.  Salve seu projeto.  
+4. Salve seu projeto.  
   
 ### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>Para adicionar código para exibir os resultados dos procedimentos armazenados  
   
-1.  Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.DataGridView> controle para o formulário do Windows padrão para seu projeto, Form1.  
+1. Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.DataGridView> controle para o formulário do Windows padrão para seu projeto, Form1.  
   
-2.  Clique duas vezes em Form1 para adicionar código ao seu `Load` eventos.  
+2. Clique duas vezes em Form1 para adicionar código ao seu `Load` eventos.  
   
-3.  Quando você adicionou os procedimentos armazenados para o Designer relacional de objetos, o designer adicionará um <xref:System.Data.Linq.DataContext> objeto para o seu projeto. Este objeto contém o código que você deve ter para acessar esses procedimentos. O <xref:System.Data.Linq.DataContext> objeto para o projeto é nomeado com base no nome do arquivo. dbml. Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.  
+3. Quando você adicionou os procedimentos armazenados para o Designer relacional de objetos, o designer adicionará um <xref:System.Data.Linq.DataContext> objeto para o seu projeto. Este objeto contém o código que você deve ter para acessar esses procedimentos. O <xref:System.Data.Linq.DataContext> objeto para o projeto é nomeado com base no nome do arquivo. dbml. Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.  
   
      Você pode criar uma instância da <xref:System.Data.Linq.DataContext> no seu código e chamar os métodos de procedimento armazenado especificado pelo Designer relacional de objetos. Para associar à <xref:System.Windows.Forms.DataGridView> do objeto, você pode ter que forçar a consulta seja executada imediatamente, chamando o <xref:System.Linq.Enumerable.ToList%2A> método nos resultados do procedimento armazenado.  
   
@@ -66,12 +66,12 @@ Consulta integrada à linguagem (LINQ) facilita o acesso a informações de banc
      [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
     [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4.  Pressione F5 para executar seu projeto e exibir os resultados.  
+4. Pressione F5 para executar seu projeto e exibir os resultados.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Métodos de DataContext (Designer de Objeto Relacional)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

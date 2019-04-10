@@ -1,16 +1,16 @@
 ---
-title: 'Como: Habilitar o rastreamento do WIF'
+title: 'Como: habilitar o rastreamento do WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310259"
 ---
-# <a name="how-to-enable-wif-tracing"></a>Como: Habilitar o rastreamento do WIF
+# <a name="how-to-enable-wif-tracing"></a>Como: habilitar o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -55,19 +55,19 @@ ms.locfileid: "54605146"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
   
-1.  Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
+1. Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
   
-2.  Na janela **Novo Projeto**, clique em **Aplicativo ASP.NET Web Forms**.  
+2. Na janela **Novo Projeto**, clique em **Aplicativo ASP.NET Web Forms**.  
   
-3.  Em **Nome**, insira `TestApp` e pressione **OK**.  
+3. Em **Nome**, insira `TestApp` e pressione **OK**.  
   
-4.  Clique com o botão direito do mouse no projeto **TestApp** em **Gerenciador de Soluções** e selecione **Identidade e Acesso**.  
+4. Clique com o botão direito do mouse no projeto **TestApp** em **Gerenciador de Soluções** e selecione **Identidade e Acesso**.  
   
-5.  A janela **Identidade e Acesso** é exibida. Em **Provedores**, selecione **Testar o aplicativo com o STS de Desenvolvimento Local** e clique em **Aplicar**.  
+5. A janela **Identidade e Acesso** é exibida. Em **Provedores**, selecione **Testar o aplicativo com o STS de Desenvolvimento Local** e clique em **Aplicar**.  
   
-6.  Crie uma nova pasta chamada **logs** na raiz do **c:** unidade, como mostrado: **C:\logs**  
+6. Crie uma nova pasta chamada **logs** na raiz do **c:** unidade, como mostrado: **C:\logs**  
   
-7.  Adicione o elemento **\<System.Diagnostics>** a seguir para o arquivo de configuração *Web.config* imediatamente após o fechamento do elemento **\</configSections>**, conforme mostrado:  
+7. Adicione o elemento **\<System.Diagnostics>** a seguir para o arquivo de configuração *Web.config* imediatamente após o fechamento do elemento **\</configSections>**, conforme mostrado:  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605146"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>Para testar seu aplicativo ASP.NET habilitado para WIF visando um rastreamento bem-sucedido  
   
-1.  Execute a solução pressionando a tecla **F5**. A Home Page ASP.NET padrão deverá ser apresentada a você e você deverá ser autenticado automaticamente com o nome de usuário *Terry*, que é o usuário padrão que é retornado pelo STS de desenvolvimento.  
+1. Execute a solução pressionando a tecla **F5**. A Home Page ASP.NET padrão deverá ser apresentada a você e você deverá ser autenticado automaticamente com o nome de usuário *Terry*, que é o usuário padrão que é retornado pelo STS de desenvolvimento.  
   
-2.  Feche a janela do navegador e, em seguida, navegue até a pasta **C:\logs**. Abra o arquivo **C:\logs\WIF.xml** usando um editor de texto.  
+2. Feche a janela do navegador e, em seguida, navegue até a pasta **C:\logs**. Abra o arquivo **C:\logs\WIF.xml** usando um editor de texto.  
   
-3.  Inspecione o arquivo **WIF.xml** e verifique se ele contém entradas começando com **\<E2ETraceEvent>**. Esses rastreamentos conterão elementos **\<TraceRecord>** com descrições para a atividade rastreada, tais como **Validando SecurityToken**.
+3. Inspecione o arquivo **WIF.xml** e verifique se ele contém entradas começando com **\<E2ETraceEvent>**. Esses rastreamentos conterão elementos **\<TraceRecord>** com descrições para a atividade rastreada, tais como **Validando SecurityToken**.

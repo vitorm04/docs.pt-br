@@ -2,12 +2,12 @@
 title: Tipos de retorno assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313275"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de retorno assíncronos (Visual Basic)
 Métodos assíncronos têm três tipos de retornados possíveis: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>e void. No Visual Basic, o tipo de retorno void é gravado como um procedimento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obter mais informações sobre os métodos assíncronos, consulte [programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -150,23 +150,23 @@ End Sub
   
  Para executar o projeto, realize as seguintes etapas:  
   
-1.  Inicie o Visual Studio.  
+1. Inicie o Visual Studio.  
   
-2.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
+2. Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
      A caixa de diálogo **Novo Projeto** é aberta.  
   
-3.  No **Installed**, **modelos** categoria, escolha **Visual Basic**e, em seguida, escolha **Windows**. Escolha **Aplicativo WPF** na lista de tipos de projeto.  
+3. No **Installed**, **modelos** categoria, escolha **Visual Basic**e, em seguida, escolha **Windows**. Escolha **Aplicativo WPF** na lista de tipos de projeto.  
   
-4.  Digite `AsyncReturnTypes` como o nome do projeto e, em seguida, escolha o botão **OK**.  
+4. Digite `AsyncReturnTypes` como o nome do projeto e, em seguida, escolha o botão **OK**.  
   
      O novo projeto aparece no **Gerenciador de Soluções**.  
   
-5.  No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
+5. No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
   
      Se a guia não estiver visível, abra o menu de atalho para MainWindow.xaml no **Gerenciador de Soluções** e, em seguida, escolha **Abrir**.  
   
-6.  Na janela **XAML** de MainWindow.xaml, substitua o código pelo código a seguir.  
+6. Na janela **XAML** de MainWindow.xaml, substitua o código pelo código a seguir.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Uma janela simples, contendo uma caixa de texto e um botão, aparecerá na janela **Design** de MainWindow.xaml.  
   
-7.  Na **Gerenciador de soluções**, abra o menu de atalho para XAML. vb e, em seguida, escolha **Exibir código**.  
+7. Na **Gerenciador de soluções**, abra o menu de atalho para XAML. vb e, em seguida, escolha **Exibir código**.  
   
-8.  Substitua o código no XAML. vb pelo código a seguir.  
+8. Substitua o código no XAML. vb pelo código a seguir.  
   
     ```vb  
     Class MainWindow  

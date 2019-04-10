@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307698"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Passo a passo: hospedar um controle Win32 no WPF
 Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação de aplicativos. No entanto, quando você tem um investimento substancial em código Win32, pode ser mais eficiente reutilizar pelo menos parte desse código em seu aplicativo WPF em vez de reescrevê-lo completamente. O WPF fornece um mecanismo simples para hospedar uma janela do Win32, em uma página do WPF.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) fornece um ambiente rico para a criação 
   
  O procedimento básico de hospedagem é:  
   
-1.  Implemente uma página do WPF para hospedar a janela. Uma técnica é criar um <xref:System.Windows.Controls.Border> elemento para reservar uma seção da página para a janela hospedada.  
+1. Implemente uma página do WPF para hospedar a janela. Uma técnica é criar um <xref:System.Windows.Controls.Border> elemento para reservar uma seção da página para a janela hospedada.  
   
-2.  Implemente uma classe para hospedar o controle que herda de <xref:System.Windows.Interop.HwndHost>.  
+2. Implemente uma classe para hospedar o controle que herda de <xref:System.Windows.Interop.HwndHost>.  
   
-3.  Essa classe, substitua os <xref:System.Windows.Interop.HwndHost> membro da classe <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. Essa classe, substitua os <xref:System.Windows.Interop.HwndHost> membro da classe <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Crie a janela hospedada como um filho da janela que contém a página do WPF. Embora a programação convencional do WPF não precisa fazer explicitamente usá-lo, a página de hospedagem é uma janela com um identificador (HWND). Você recebe o HWND da página por meio de `hwndParent` parâmetro do <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> método. A janela hospedada deve ser criada como um filho desse HWND.  
+4. Crie a janela hospedada como um filho da janela que contém a página do WPF. Embora a programação convencional do WPF não precisa fazer explicitamente usá-lo, a página de hospedagem é uma janela com um identificador (HWND). Você recebe o HWND da página por meio de `hwndParent` parâmetro do <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> método. A janela hospedada deve ser criada como um filho desse HWND.  
   
-5.  Depois de criar a janela do host, retorne o HWND da janela hospedada. Se você quiser hospedar um ou mais controles do Win32, você normalmente cria uma janela de host como um filho do HWND e tornar os filhos de controles de janela de host. Encapsular os controles em uma janela host fornece uma maneira simples para sua página WPF receber notificações dos controles, que lida com alguns problemas específicos do Win32 com notificações além do limite HWND.  
+5. Depois de criar a janela do host, retorne o HWND da janela hospedada. Se você quiser hospedar um ou mais controles do Win32, você normalmente cria uma janela de host como um filho do HWND e tornar os filhos de controles de janela de host. Encapsular os controles em uma janela host fornece uma maneira simples para sua página WPF receber notificações dos controles, que lida com alguns problemas específicos do Win32 com notificações além do limite HWND.  
   
-6.  Manipule as mensagens selecionadas enviadas à janela de host, como notificações dos controles filho. Há duas formas de fazer isso.  
+6. Manipule as mensagens selecionadas enviadas à janela de host, como notificações dos controles filho. Há duas formas de fazer isso.  
   
     -   Se você preferir manipular as mensagens na classe de hospedagem, substitua os <xref:System.Windows.Interop.HwndHost.WndProc%2A> método da <xref:System.Windows.Interop.HwndHost> classe.  
   
     -   Se você preferir que o WPF manipular as mensagens, lidar com o <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> eventos em seu code-behind. Esse evento ocorre para cada mensagem recebida pela janela hospedada. Se você escolher essa opção, você ainda precisará substituir <xref:System.Windows.Interop.HwndHost.WndProc%2A>, mas você só precisa de uma implementação mínima.  
   
-7.  Substituir a <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Você deve substituir esses métodos para satisfazer o <xref:System.Windows.Interop.HwndHost> contrato, mas você só precisará fornecer uma implementação mínima.  
+7. Substituir a <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Você deve substituir esses métodos para satisfazer o <xref:System.Windows.Interop.HwndHost> contrato, mas você só precisará fornecer uma implementação mínima.  
   
-8.  No seu arquivo code-behind, crie uma instância da classe que hospeda controles e torná-lo um filho de <xref:System.Windows.Controls.Border> elemento se destina a hospedar a janela.  
+8. No seu arquivo code-behind, crie uma instância da classe que hospeda controles e torná-lo um filho de <xref:System.Windows.Controls.Border> elemento se destina a hospedar a janela.  
   
 9. Se comunicar com a janela hospedada, enviando- [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] mensagens e manipule mensagens das janelas filho, como notificações enviadas pelos controles.  
   

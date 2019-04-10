@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314965"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introdução ao .NET Framework
 
@@ -71,7 +71,7 @@ Para desenvolver aplicativos ou componentes do .NET Framework, faça o seguinte:
 
 2. Selecione a linguagem ou linguagens com suporte do .NET Framework que você pretende usar para desenvolver seus aplicativos. Há um grande número de linguagens disponível, incluindo [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) da Microsoft. (Uma linguagem de programação que permite que você desenvolva aplicativos para o .NET Framework adere à [especificação de CLI [Common Language Infrastructure]](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
-3. Para criar seus aplicativos , selecione e instale o ambiente de desenvolvimento a ser usado que dê suporte à linguagem ou às linguagens de programação selecionadas. O IDE (ambiente de desenvolvimento integrado) da Microsoft para aplicativos .NET Framework é o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Está disponível em várias edições.
+3. Para criar seus aplicativos , selecione e instale o ambiente de desenvolvimento a ser usado que dê suporte à linguagem ou às linguagens de programação selecionadas. O IDE (ambiente de desenvolvimento integrado) da Microsoft para aplicativos .NET Framework é o [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Está disponível em várias edições.
 
 Para obter mais informações sobre o desenvolvimento de aplicativos direcionados ao .NET Framework, consulte o [Guia de desenvolvimento](../development-guide.md).
 
@@ -79,10 +79,10 @@ Para obter mais informações sobre o desenvolvimento de aplicativos direcionado
 
 | Título | Descrição |
 | ----- |------------ |
-| [Visão Geral](overview.md) | Fornece informações detalhadas para desenvolvedores que criam aplicativos direcionados ao .NET Framework. |
+| [Visão geral](overview.md) | Fornece informações detalhadas para desenvolvedores que criam aplicativos direcionados ao .NET Framework. |
 | [Guia de instalação](../install/index.md) | Fornece informações sobre como instalar o .NET Framework. |  
 | [O .NET Framework e lançamentos fora da banda](the-net-framework-and-out-of-band-releases.md) | Descreve os lançamentos fora de banda do .NET Framework e como usá-los em seu aplicativo. |
-| [Requisitos do sistema](system-requirements.md) | Lista os requisitos de hardware e software para executar o .NET Framework. |
+| [Requisitos de sistema](system-requirements.md) | Lista os requisitos de hardware e software para executar o .NET Framework. |
 | [.NET Core e software livre](net-core-and-open-source.md) | Descreve o .NET Core em relação ao .NET Framework e como acessar os projetos de software livre do .NET Core. |
 | [Documentação do .NET Core](../../core/index.md) | Fornece a documentação conceitual e de referência de API para .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Discute .NET padrão, uma especificação de versão que dá suporte a implementações de .NET individuais para garantir que um conjunto consistente de APIs sejam disponíveis em várias plataformas.
@@ -90,6 +90,6 @@ Para obter mais informações sobre o desenvolvimento de aplicativos direcionado
 ## <a name="see-also"></a>Consulte também
 
 - [Guia do .NET Framework](../index.md)
-- [Novidades](../whats-new/index.md)
-- [Navegador de API do .NET](../../../api/index.md)
+- [O Que Há de Novo](../whats-new/index.md)
+- [Navegador de API .NET](../../../api/index.md)
 - [Guia de desenvolvimento](../development-guide.md)

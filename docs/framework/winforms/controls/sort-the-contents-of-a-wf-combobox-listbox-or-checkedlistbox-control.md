@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312573"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como: Classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms
 Controles dos Windows Forms não classificados quando elas são associadas a dados. Para exibir os dados classificados, usar uma fonte de dados que dá suporte à classificação e, em seguida, ter a fonte de dados classificá-los. Fontes de dados que dão suporte à classificação são modos de exibição de dados, exibir gerenciadores de dados e classificados de matrizes.  
@@ -22,7 +22,7 @@ Controles dos Windows Forms não classificados quando elas são associadas a dad
   
 ### <a name="to-sort-the-list"></a>Para classificar a lista  
   
-1.  Defina a propriedade `Sorted` como `true`.  
+1. Defina a propriedade `Sorted` como `true`.  
   
      Essa configuração reposiciona todos os itens existentes na lista em ordem classificada.  
   

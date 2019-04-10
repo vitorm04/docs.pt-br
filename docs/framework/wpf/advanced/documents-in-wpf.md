@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313951"
 ---
 # <a name="documents-in-wpf"></a>Documentos no WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece uma ampla gama de recursos de documento que permitem a criação de conteúdo de alta fidelidade que é projetado para ser mais facilmente acessado e lido que nas gerações anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Além das capacidades e da qualidade aprimoradas, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece serviços integrados para exibição, empacotamento e segurança de documentos. Este tópico fornece uma introdução aos tipos de documento e ao empacotamento de documento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -89,9 +89,9 @@ ms.locfileid: "59169605"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  Para segurança, um <xref:System.IO.Packaging.PackageDigitalSignature> ("assinatura digital") pode ser associada a partes dentro de um pacote. Um <xref:System.IO.Packaging.PackageDigitalSignature> incorpora um [509] que fornece dois recursos:  
   
-1.  Identifica e autentica o originador da parte.  
+1. Identifica e autentica o originador da parte.  
   
-2.  Valida que a parte não foi modificada.  
+2. Valida que a parte não foi modificada.  
   
  A assinatura digital não evita que uma parte seja modificada, mas uma verificação de validação em relação à assinatura digital falhará se a parte tiver sido alterada de alguma maneira. O aplicativo pode adotar a ação adequada, por exemplo, bloquear a abertura da parte ou notificar o usuário que a parte foi modificada e não é segura.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169605"
   
  Os relacionamentos de pacotes fornecem um meio detectável de acrescentar e associar informações adicionais com as partes individuais ou com o pacote inteiro. Os relacionamentos de pacotes são usados para duas funções principais:  
   
-1.  Definir relações de dependência de uma parte com outra.  
+1. Definir relações de dependência de uma parte com outra.  
   
-2.  Definir relacionamentos de informação que adicionam anotações ou outros dados relacionados à parte.  
+2. Definir relacionamentos de informação que adicionam anotações ou outros dados relacionados à parte.  
   
  Um <xref:System.IO.Packaging.PackageRelationship> fornece um meio rápido e detectável para definir dependências e outras informações associadas a uma parte do pacote ou o pacote como um todo.  
   

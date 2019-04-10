@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317695"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Como: permitir solicitações de metadados durante a autorização
 Durante a autorização personalizada, ele pode ser necessário permitir que uma solicitação de metadados a serem processados. O tópico a seguir explica as etapas para validar essa solicitação.  
@@ -21,13 +21,13 @@ Durante a autorização personalizada, ele pode ser necessário permitir que uma
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Para permitir solicitações de metadados durante a autorização  
   
-1.  Criar uma extensão do <xref:System.ServiceModel.ServiceAuthorizationManager> classe.  
+1. Criar uma extensão do <xref:System.ServiceModel.ServiceAuthorizationManager> classe.  
   
-2.  Substituir o método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. O método retornará `true` ou `false` dependendo se a autorização é permitida. Obter informações sobre o procedimento atual o <xref:System.ServiceModel.OperationContext> passado como um parâmetro para o método.  
+2. Substituir o método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. O método retornará `true` ou `false` dependendo se a autorização é permitida. Obter informações sobre o procedimento atual o <xref:System.ServiceModel.OperationContext> passado como um parâmetro para o método.  
   
-3.  Na substituição, verifique o nome do contrato, namespace e a ação, conforme mostrado no exemplo a seguir. Se as condições forem válidas, em seguida, retornar `true.`  
+3. Na substituição, verifique o nome do contrato, namespace e a ação, conforme mostrado no exemplo a seguir. Se as condições forem válidas, em seguida, retornar `true.`  
   
-4.  Use o ponto de extensibilidade para empregar a classe. Para obter mais informações, confira [Como: Criar um Gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4. Use o ponto de extensibilidade para empregar a classe. Para obter mais informações, confira [Como: Criar um Gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra uma substituição do <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método.  

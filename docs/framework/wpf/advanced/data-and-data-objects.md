@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312053"
 ---
 # <a name="data-and-data-objects"></a>Dados e objetos de dados
 Dados que são transferidos como parte de uma operação do tipo "arrastar e soltar" são armazenados em um objeto de dados.  Conceitualmente, um objeto de dados consiste em um ou mais dos seguintes pares:  
@@ -87,11 +87,11 @@ Dados que são transferidos como parte de uma operação do tipo "arrastar e sol
 ### <a name="removing-data-from-a-data-object"></a>Removendo dados de um objeto de dados  
  Os dados não podem ser removidos diretamente de um objeto de dados.  Para remover efetivamente os dados de um objeto de dados, siga estas etapas:  
   
-1.  Crie um novo objeto de dados que conterá somente os dados que você deseja manter.  
+1. Crie um novo objeto de dados que conterá somente os dados que você deseja manter.  
   
-2.  "Copie" os dados desejados do objeto de dados antigo para o novo objeto de dados.  Para copiar os dados, use um dos <xref:System.Windows.DataObject.GetData%2A> métodos para recuperar uma <xref:System.Object> que contém os dados brutos e, em seguida, use um do <xref:System.Windows.DataObject.SetData%2A> métodos para adicionar os dados para o novo objeto de dados.  
+2. "Copie" os dados desejados do objeto de dados antigo para o novo objeto de dados.  Para copiar os dados, use um dos <xref:System.Windows.DataObject.GetData%2A> métodos para recuperar uma <xref:System.Object> que contém os dados brutos e, em seguida, use um do <xref:System.Windows.DataObject.SetData%2A> métodos para adicionar os dados para o novo objeto de dados.  
   
-3.  Substitua o objeto de dados antigo pelo novo.  
+3. Substitua o objeto de dados antigo pelo novo.  
   
 > [!NOTE]
 >  O <xref:System.Windows.DataObject.SetData%2A> métodos somente adicionam dados a um objeto de dados; eles não substituem os dados, mesmo se os dados e o formato de dados são exatamente o mesmo que uma chamada anterior. Chamar <xref:System.Windows.DataObject.SetData%2A> duas vezes para os mesmos dados e dados de formato resultará no formato de dados/dados estarem presentes duas vezes no objeto de dados.

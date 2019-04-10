@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315849"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Como: Alterar os dados exibidos em tempo de execução no controle DataGrid do Windows Forms
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175598"
   
 ### <a name="to-change-data-programmatically"></a>Alterar dados com programação  
   
-1.  Especifique a tabela desejada do <xref:System.Data.DataSet> objeto e o estado desejado de linhas e de campo da tabela e defina a célula igual para o novo valor.  
+1. Especifique a tabela desejada do <xref:System.Data.DataSet> objeto e o estado desejado de linhas e de campo da tabela e defina a célula igual para o novo valor.  
   
     > [!NOTE]
     >  Para especificar o primeiro índice da <xref:System.Data.DataSet> ou a primeira linha da tabela, use 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175598"
   
 ### <a name="to-change-the-datasource-programmatically"></a>Alterar o DataSource com programação  
   
-1.  Defina o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método com o nome da fonte de dados e tabela que você deseja associar.  
+1. Defina o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método com o nome da fonte de dados e tabela que você deseja associar.  
   
      O exemplo a seguir mostra como alterar a fonte de data usando o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método para um [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controle de dados (adoPubsAuthors) conectado à tabela autores no banco de dados Pubs.  
   

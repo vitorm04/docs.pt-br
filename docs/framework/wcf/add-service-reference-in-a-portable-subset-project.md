@@ -2,12 +2,12 @@
 title: Adicione uma referência de serviço em um projeto de subconjunto portátil
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145425"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316720"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Adicione uma referência de serviço em um projeto de subconjunto portátil
 Projetos de subconjunto portáteis permitem que os programadores do assembly .NET manter uma única árvore de origem e o sistema de compilação e ainda dar suporte a várias implementações do .NET (área de trabalho, Silverlight, Windows Phone e XBOX). Projetos de subconjunto portáteis somente fazem referência a bibliotecas portáteis .NET, que são um assembly do framework .NET que pode ser usado em qualquer implementação do .NET.  
@@ -15,21 +15,21 @@ Projetos de subconjunto portáteis permitem que os programadores do assembly .NE
 ## <a name="add-service-reference-details"></a>Detalhes de Adicionar Referência de Serviço  
  Ao adicionar uma referência de serviço em um projeto de subconjunto portátil, as seguintes restrições são aplicadas:  
   
-1.  Para <xref:System.Xml.Serialization.XmlSerializer>, somente as codificações literais são permitidas. As codificações SOAP geram um erro durante a importação.  
+1. Para <xref:System.Xml.Serialization.XmlSerializer>, somente as codificações literais são permitidas. As codificações SOAP geram um erro durante a importação.  
   
-2.  Para os serviços que usam cenários de <xref:System.Runtime.Serialization.DataContractSerializer>, um contrato de dados substituto é fornecido para garantir que os tipos reutilizados venham somente do subconjunto portátil.  
+2. Para os serviços que usam cenários de <xref:System.Runtime.Serialization.DataContractSerializer>, um contrato de dados substituto é fornecido para garantir que os tipos reutilizados venham somente do subconjunto portátil.  
   
-3.  Os pontos de extremidade que se baseiam em associações não têm suporte em bibliotecas portáteis (todas as associações exceto <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sem fluxo de transações, sessões confiáveis ou codificação de MTOM e associações personalizadas equivalentes) são ignorados.  
+3. Os pontos de extremidade que se baseiam em associações não têm suporte em bibliotecas portáteis (todas as associações exceto <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sem fluxo de transações, sessões confiáveis ou codificação de MTOM e associações personalizadas equivalentes) são ignorados.  
   
-4.  Os cabeçalhos de mensagem são excluídos de todas as descrições de mensagem em todas as operações antes da importação.  
+4. Os cabeçalhos de mensagem são excluídos de todas as descrições de mensagem em todas as operações antes da importação.  
   
-5.  Os atributos não portáteis <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> e <xref:System.ServiceModel.TransactionFlowAttribute> são removidos do código de proxy cliente gerado.  
+5. Os atributos não portáteis <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> e <xref:System.ServiceModel.TransactionFlowAttribute> são removidos do código de proxy cliente gerado.  
   
-6.  As propriedades não portáteis ProtectionLevel, SessionMode, IsInitiating, IsTerminating são removidas de <xref:System.ServiceModel.ServiceContractAttribute>, de <xref:System.ServiceModel.OperationContractAttribute> e de <xref:System.ServiceModel.FaultContractAttribute>.  
+6. As propriedades não portáteis ProtectionLevel, SessionMode, IsInitiating, IsTerminating são removidas de <xref:System.ServiceModel.ServiceContractAttribute>, de <xref:System.ServiceModel.OperationContractAttribute> e de <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7.  Todas as operações de serviço são geradas como operações assíncronas no proxy do cliente.  
+7. Todas as operações de serviço são geradas como operações assíncronas no proxy do cliente.  
   
-8.  Os construtores de cliente gerados que usam tipos não portáteis são removidos.  
+8. Os construtores de cliente gerados que usam tipos não portáteis são removidos.  
   
 9. Uma instância <xref:System.Net.CookieContainer> é exposta no cliente gerado.  
   

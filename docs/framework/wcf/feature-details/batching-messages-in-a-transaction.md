@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310519"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensagens de lote em uma transação
 Aplicativos em fila usam transações para garantir a correção e entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira para melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. A compensação está entre desempenho e recuperação: conforme aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessário se as transações serão revertidas. É importante observar a diferença entre o envio em lote de mensagens em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. Para obter mais informações sobre as sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens em lote em uma transação são uma otimização que não são alterados como o aplicativo é executado.  
@@ -31,11 +31,11 @@ Aplicativos em fila usam transações para garantir a correção e entrega confi
 ## <a name="leaving-batching-mode"></a>Sair do modo de lote  
  Se uma mensagem em um lote faz com que a transação seja anulada, ocorrem as seguintes etapas:  
   
-1.  Todo o lote de mensagens é revertido.  
+1. Todo o lote de mensagens é revertido.  
   
-2.  As mensagens são lidas uma de cada vez até que o número de mensagens lidas excede duas vezes o tamanho máximo de lote.  
+2. As mensagens são lidas uma de cada vez até que o número de mensagens lidas excede duas vezes o tamanho máximo de lote.  
   
-3.  Modo de lote é inserido novamente.  
+3. Modo de lote é inserido novamente.  
   
 ## <a name="choosing-the-batch-size"></a>Escolhendo o tamanho do lote  
  O tamanho de um lote é dependente de aplicativo. O método empírico é a melhor maneira de chegar a um tamanho de lote ideal para o aplicativo. É importante lembrar-se ao escolher um tamanho de lote para escolher o tamanho de acordo com o modelo de implantação real do seu aplicativo. Por exemplo, ao implantar o aplicativo, se você precisar de um SQL server em um computador remoto e uma transação que abrange a fila e o SQL server, em seguida, o tamanho do lote é melhor determinado executando essa configuração exata.  

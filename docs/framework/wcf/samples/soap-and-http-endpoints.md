@@ -2,12 +2,12 @@
 title: Pontos de extremidade SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523185"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307438"
 ---
 # <a name="soap-and-http-endpoints"></a>Pontos de extremidade SOAP e HTTP
 Este exemplo demonstra como implementar um serviço baseado em RPC e expô-lo no formato SOAP e o formato "Plain Old XML" (POX) usando o modelo de programação da Web do WCF. Consulte a [serviço HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo para obter mais detalhes sobre a associação de HTTP para o serviço. Este exemplo se concentra nos detalhes que pertencem ao expor o mesmo serviço via SOAP e HTTP usando ligações diferentes.  
@@ -36,21 +36,21 @@ Este exemplo demonstra como implementar um serviço baseado em RPC e expô-lo no
   
 #### <a name="to-run-the-sample"></a>Para executar a amostra  
   
-1.  Abra a solução para o exemplo de pontos de extremidade de HTTP e SOAP.  
+1. Abra a solução para o exemplo de pontos de extremidade de HTTP e SOAP.  
   
-2.  Pressione CTRL+SHIFT+B para criar a solução.  
+2. Pressione CTRL+SHIFT+B para criar a solução.  
   
-3.  Se não ainda estiver aberto, pressione CTRL + W, S para abrir o **Gerenciador de soluções** janela.  
+3. Se não ainda estiver aberto, pressione CTRL + W, S para abrir o **Gerenciador de soluções** janela.  
   
-4.  Do **Gerenciador de soluções** janela, com o botão direito o **Service** do projeto e coloque o cursor sobre o **depurar** opção de menu de contexto, de modo que o **iniciar nova Instância** menu de contexto é exibido. Clique em **iniciar nova instância**. Isso inicia o ASP.NET development server, que hospeda o serviço.  
+4. Do **Gerenciador de soluções** janela, com o botão direito o **Service** do projeto e coloque o cursor sobre o **depurar** opção de menu de contexto, de modo que o **iniciar nova Instância** menu de contexto é exibido. Clique em **iniciar nova instância**. Isso inicia o ASP.NET development server, que hospeda o serviço.  
   
-5.  Das janelas Solution Explorer, clique com botão direito do projeto de cliente e coloque o cursor sobre o **Debug** opção de menu de contexto para que o **iniciar nova instância** menu de contexto é exibido. Clique em **iniciar nova instância**.  
+5. Das janelas Solution Explorer, clique com botão direito do projeto de cliente e coloque o cursor sobre o **Debug** opção de menu de contexto para que o **iniciar nova instância** menu de contexto é exibido. Clique em **iniciar nova instância**.  
   
-6.  A janela de console do cliente é exibida e fornece o URI do serviço em execução e o URI do HTML na página para a execução do serviço de Ajuda. A qualquer momento, você pode exibir a página de ajuda HTML, digitando o URI da página de Ajuda em um navegador.  
+6. A janela de console do cliente é exibida e fornece o URI do serviço em execução e o URI do HTML na página para a execução do serviço de Ajuda. A qualquer momento, você pode exibir a página de ajuda HTML, digitando o URI da página de Ajuda em um navegador.  
   
-7.  Como o exemplo é executado, o cliente grava o status da atividade atual.  
+7. Como o exemplo é executado, o cliente grava o status da atividade atual.  
   
-8.  Pressione qualquer tecla para encerrar o aplicativo de console do cliente.  
+8. Pressione qualquer tecla para encerrar o aplicativo de console do cliente.  
   
 9. Pressione SHIFT + F5 para parar a depuração de serviço.  
   

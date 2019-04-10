@@ -2,12 +2,12 @@
 title: Assinando procedimentos armazenados no SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313912"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Assinando procedimentos armazenados no SQL Server
  Uma assinatura digital é um resumo dos dados criptografados com a chave privada do assinante. A chave privada garante que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar assemblies, gatilhos, procedimentos armazenados e funções (exceto funções com valor de tabela do embutidas).  
@@ -23,25 +23,25 @@ ms.locfileid: "59094613"
   
  Há duas etapas necessárias envolvidas na assinatura de um módulo:  
   
-1.  Criar um certificado usando a instrução Transact-SQL `CREATE CERTIFICATE [certificateName]`. Essa instrução tem várias opções para definir uma data inicial e final e uma senha. A data de expiração padrão é um ano.  
+1. Criar um certificado usando a instrução Transact-SQL `CREATE CERTIFICATE [certificateName]`. Essa instrução tem várias opções para definir uma data inicial e final e uma senha. A data de expiração padrão é um ano.  
   
-1.  Assinar o procedimento armazenado com o certificado usando a instrução Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
+1. Assinar o procedimento armazenado com o certificado usando a instrução Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
 
 Depois que o módulo foi assinado, uma ou mais entidades precisa ser criada para manter as permissões adicionais que devem ser associadas ao certificado.  
 
 Se o módulo precisa de permissões de nível de banco de dados adicionais:  
   
-1.  Crie um usuário de banco de dados associado ao certificado usando a instrução Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Esse usuário existe no banco de dados somente e não está associado um logon, a menos que também foi criado um logon do mesmo certificado.  
+1. Crie um usuário de banco de dados associado ao certificado usando a instrução Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Esse usuário existe no banco de dados somente e não está associado um logon, a menos que também foi criado um logon do mesmo certificado.  
   
-1.  Conceda ao usuário de certificado as permissões de nível de banco de dados necessárias.  
+1. Conceda ao usuário de certificado as permissões de nível de banco de dados necessárias.  
   
 Se o módulo precisa de permissões de nível de servidor adicionais:  
   
-1.  Copie o certificado para o `master` banco de dados.  
+1. Copie o certificado para o `master` banco de dados.  
  
-1.  Crie um logon associado ao certificado usando o Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrução.  
+1. Crie um logon associado ao certificado usando o Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrução.  
   
-1.  Concede ao logon de certificado as permissões de nível de servidor necessárias.  
+1. Concede ao logon de certificado as permissões de nível de servidor necessárias.  
   
 > [!NOTE]  
 >  Um certificado não pode conceder permissões a um usuário que tem permissões revogadas usando a instrução DENY. DENY sempre terá precedência sobre GRANT, impedindo que o chamador herde as permissões concedidas ao usuário do certificado.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316265"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Como: Corresponder uma cadeia de caracteres com um padrão (Visual Basic)
 Se você quiser saber se uma expressão do [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfaz um padrão, em seguida, você pode usar o [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -68,11 +68,11 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Para corresponder um caractere na expressão de cadeia de caracteres em uma lista de caracteres ou nenhum caractere  
   
-1.  Chame o `Like` operador duas vezes na mesma expressão de cadeia de caracteres e conecte as duas chamadas com o [ou operador](../../../../visual-basic/language-reference/operators/or-operator.md) ou o [operador OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Chame o `Like` operador duas vezes na mesma expressão de cadeia de caracteres e conecte as duas chamadas com o [ou operador](../../../../visual-basic/language-reference/operators/or-operator.md) ou o [operador OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  Na cadeia de caracteres padrão para a primeira `Like` cláusula, inclua a lista de caracteres entre colchetes (`[ ]`).  
+2. Na cadeia de caracteres padrão para a primeira `Like` cláusula, inclua a lista de caracteres entre colchetes (`[ ]`).  
   
-3.  Na cadeia de caracteres padrão para o segundo `Like` cláusula, não coloque qualquer caractere na posição em questão.  
+3. Na cadeia de caracteres padrão para o segundo `Like` cláusula, não coloque qualquer caractere na posição em questão.  
   
      O exemplo a seguir testa o número de telefone de sete dígitos `phoneNum` para obter exatamente três dígitos numéricos, seguido por um espaço, um hífen (`–`), um período (`.`), ou nenhum caractere, seguidos por exatamente quatro dígitos numéricos.  
   
@@ -80,7 +80,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 ## <a name="see-also"></a>Consulte também
 
-- [Operadores de Comparação](../../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Operadores e Expressões](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operadores de comparação](../../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Operadores e expressões](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operador Like](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Tipo de dados da cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md)

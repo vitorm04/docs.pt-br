@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099775"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312560"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
 Este tópico descreve como a arquitetura das configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
@@ -100,11 +100,11 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
 ### <a name="settings-serialization"></a>Serialização de configurações  
  Quando <xref:System.Configuration.LocalFileSettingsProvider> deve salvar as configurações em disco, ele executa as seguintes ações:  
   
-1.  Usa a reflexão para examinar todas as propriedades definidas no seu <xref:System.Configuration.ApplicationSettingsBase> derivado da classe, localizando aquelas que são aplicadas com um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Usa a reflexão para examinar todas as propriedades definidas no seu <xref:System.Configuration.ApplicationSettingsBase> derivado da classe, localizando aquelas que são aplicadas com um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Serializa a propriedade para o disco. Ela primeiro tenta chamar o <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> ou <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> sobre o tipo associado à <xref:System.ComponentModel.TypeConverter>. Se isso não for bem-sucedido, ela usará a serialização de XML.  
+2. Serializa a propriedade para o disco. Ela primeiro tenta chamar o <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> ou <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> sobre o tipo associado à <xref:System.ComponentModel.TypeConverter>. Se isso não for bem-sucedido, ela usará a serialização de XML.  
   
-3.  Determina quais configurações vão em quais arquivos, com base no atributo da configuração.  
+3. Determina quais configurações vão em quais arquivos, com base no atributo da configuração.  
   
  Se você implementar sua própria classe de configurações, você pode usar o <xref:System.Configuration.SettingsSerializeAsAttribute> para marcar uma configuração para a serialização binária ou personalizada usando o <xref:System.Configuration.SettingsSerializeAs> enumeração. Para obter mais informações sobre como criar sua própria classe de configurações no código, consulte [como: Criar configurações de aplicativo](how-to-create-application-settings.md).  
   

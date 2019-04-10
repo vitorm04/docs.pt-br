@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318423"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperação de dados e operações de COMIDA RUMINADA em aplicativos de n camadas (LINQ to SQL)
 Quando você serializa objetos de entidade como clientes ou pedidos para um cliente em uma rede, essas entidades são desanexadas de seu contexto de dados. O contexto de dados não controla as alterações ou suas associações com outros objetos. Isso não é um problema que os clientes estão lê apenas os dados. Também é relativamente simples permitir que clientes para adicionar novas linhas em uma base de dados. No entanto, se seu aplicativo requer que os clientes possam atualizar ou excluir dados, você deve anexar as entidades a um novo contexto de dados antes de chamar <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Além disso, se você estiver usando uma verificação de simultaneidade otimista com valores originais, então você também precisará de uma maneira de fornecer a base de dados a entidade original e a entidade como modificada. Os métodos de `Attach` são fornecidos para permite que você coloque entidades em um novo contexto de dados depois que foram separados.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>Estado  
  Depois que um objeto de entidade é conectado à instância de <xref:System.Data.Linq.DataContext> , o objeto é considerado estar no estado de `PossiblyModified` . Existem três maneiras para forçar um objeto anexado a ser considerado `Modified`.  
   
-1.  Como anexá-lo inalterados, e então altere-o diretamente os campos.  
+1. Como anexá-lo inalterados, e então altere-o diretamente os campos.  
   
-2.  Anexa com a sobrecarga de <xref:System.Data.Linq.Table%601.Attach%2A> que recebe a atuais e originais instâncias de objeto. Isso fornece o perseguidor de alteração com valores antigo e novo de modo que sabe como automaticamente campos que foram alterados.  
+2. Anexa com a sobrecarga de <xref:System.Data.Linq.Table%601.Attach%2A> que recebe a atuais e originais instâncias de objeto. Isso fornece o perseguidor de alteração com valores antigo e novo de modo que sabe como automaticamente campos que foram alterados.  
   
-3.  Anexa com a sobrecarga de <xref:System.Data.Linq.Table%601.Attach%2A> que leva um segundo parâmetro boolean (definido para retificar). Isso dirá o perseguidor de alteração para ver o objeto alterado sem ter que fornecer os valores originais. Nessa abordagem, o objeto deve ter um campo de versão/carimbo de data/hora.  
+3. Anexa com a sobrecarga de <xref:System.Data.Linq.Table%601.Attach%2A> que leva um segundo parâmetro boolean (definido para retificar). Isso dirá o perseguidor de alteração para ver o objeto alterado sem ter que fornecer os valores originais. Nessa abordagem, o objeto deve ter um campo de versão/carimbo de data/hora.  
   
  Para obter mais informações, consulte [estados de objeto e controle de alterações](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   

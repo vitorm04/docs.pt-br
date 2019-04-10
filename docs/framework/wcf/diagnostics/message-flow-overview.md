@@ -2,35 +2,35 @@
 title: Visão geral de fluxo de mensagens
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372779"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312638"
 ---
 # <a name="message-flow-overview"></a>Visão geral de fluxo de mensagens
 Em um sistema distribuído que contém serviços interconectados, é necessário determinar relações causais entre os serviços. É importante entender os vários componentes que faziam parte de um fluxo de solicitação para dar suporte a cenários críticos, tais como integridade, monitoramento, solução de problemas e análise da causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:
 
--   Rastreamento analítico: um alto desempenho e o recurso de rastreamento de baixo nível de detalhes usando o rastreamento de eventos para Windows (ETW).
+-   Rastreamento analítico: Um alto desempenho e o recurso de rastreamento de baixo nível de detalhes usando o rastreamento de eventos para Windows (ETW).
 
--   Modelo de atividade de ponta a ponta para os serviços do WCF/WF: esse recurso dá suporte à correlação de rastreamentos gerados pelo <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> namespaces.
+-   Modelo de atividade de ponta a ponta para os serviços do WCF/WF: Esse recurso dá suporte à correlação de rastreamentos gerados pelo <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> namespaces.
 
--   Rastreamento de WF ETW: esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade sobre o estado atual e o progresso do fluxo de trabalho.
+-   Rastreamento do WF com o ETW: Esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade sobre o estado atual e o progresso do fluxo de trabalho.
 
  Erros registrados em um rastreamento ou registro de rastreamento podem ser usados para localizar defeitos de código ou mensagens formadas incorretamente. A propriedade ActivityId do nó correlação no cabeçalho da mensagem do evento pode ser usada para determinar a atividade com falha. Para habilitar o rastreamento de fluxo de mensagem por ID de atividade, consulte [Configurando o rastreamento de fluxo de mensagem](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Este tópico demonstra como habilitar o rastreamento de fluxo de mensagem no projeto criado no tutorial de Introdução.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Para habilitar o rastreamento de fluxo de mensagem no tutorial de Introdução
 
-1.  Abra o Visualizador de eventos clicando **inicie**, **execute**e inserindo `eventvwr.exe`.
+1. Abra o Visualizador de eventos clicando **inicie**, **execute**e inserindo `eventvwr.exe`.
 
-2.  Se você ainda não tiver ativado rastreamento analítico, expanda **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativos de servidor** . Selecione **modo de exibição**, **analíticos e de Logs de depuração**. Clique com botão direito **analítico** e selecione **Habilitar Log**. Deixe o Visualizador de eventos aberto para que os rastreamentos podem ser exibidos.
+2. Se você ainda não tiver ativado rastreamento analítico, expanda **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativos de servidor** . Selecione **modo de exibição**, **analíticos e de Logs de depuração**. Clique com botão direito **analítico** e selecione **Habilitar Log**. Deixe o Visualizador de eventos aberto para que os rastreamentos podem ser exibidos.
 
-3.  Abra o exemplo criado a [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) no Visual Studio 2012. Observe que você deve executar o Visual Studio 2012 como um administrador para que o serviço pode ser criado. Se você tiver que instalar os exemplos WCF, você pode abrir o [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto concluído criado no tutorial.
+3. Abra o exemplo criado a [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) no Visual Studio 2012. Observe que você deve executar o Visual Studio 2012 como um administrador para que o serviço pode ser criado. Se você tiver que instalar os exemplos WCF, você pode abrir o [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto concluído criado no tutorial.
 
-4.  Com o botão direito do **Service** do projeto e selecione **Add**, **Novo Item**. Selecione **arquivo de configuração de aplicativo** e clique em **Okey**.
+4. Com o botão direito do **Service** do projeto e selecione **Add**, **Novo Item**. Selecione **arquivo de configuração de aplicativo** e clique em **Okey**.
 
-5.  Adicione o seguinte código ao arquivo App. config criado na etapa anterior.
+5. Adicione o seguinte código ao arquivo App. config criado na etapa anterior.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
     </system.serviceModel>
     ```
 
-6.  Execute o aplicativo de servidor sem depuração pressionando CTRL + F5. Executar o projeto de cliente clicando com o **Client** projeto e selecionando **Debug**, **iniciar uma nova instância**.
+6. Execute o aplicativo de servidor sem depuração pressionando CTRL + F5. Executar o projeto de cliente clicando com o **Client** projeto e selecionando **Debug**, **iniciar uma nova instância**.
 
-7.  Para rastrear os eventos do cliente para o servidor, adicione o seguinte ao arquivo de configuração de aplicativo no projeto do cliente.
+7. Para rastrear os eventos do cliente para o servidor, adicione o seguinte ao arquivo de configuração de aplicativo no projeto do cliente.
 
     ```xml
     <diagnostics>
@@ -50,7 +50,7 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
     </diagnostics>
     ```
 
-8.  Em Program.cs no cliente, adicione a seguinte instrução Using.
+8. Em Program.cs no cliente, adicione a seguinte instrução Using.
 
     ```csharp
     using System.Diagnostics;

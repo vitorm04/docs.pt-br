@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315680"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
 <a name="introduction"></a> Este tópico explica como o funcionamento do sistema de propriedades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode afetar o valor de uma propriedade de dependência e descreve a precedência pela qual os aspectos do sistema de propriedades são aplicados ao valor efetivo de uma propriedade.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117738"
 ## <a name="dependency-property-setting-precedence-list"></a>Lista de precedências de configuração das propriedades de dependência  
  Veja a seguir a ordem definitiva que o sistema de propriedades usa ao atribuir os valores de tempo de execução das propriedades de dependência. A precedência mais alta é listada primeiro. Essa lista se expande em algumas das generalizações feitas na [Visão geral das propriedades de dependência](dependency-properties-overview.md).  
   
-1.  **Coerção do sistema de propriedade.** Para obter detalhes sobre coerção, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
+1. **Coerção do sistema de propriedade.** Para obter detalhes sobre coerção, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
   
-2.  **Animações ativas ou animações com um comportamento em espera.** Para obter um efeito prático, uma animação de uma propriedade deve conseguir ter precedência sobre o valor base (não animado), mesmo que esse valor tenha sido definido localmente. Para obter detalhes, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
+2. **Animações ativas ou animações com um comportamento em espera.** Para obter um efeito prático, uma animação de uma propriedade deve conseguir ter precedência sobre o valor base (não animado), mesmo que esse valor tenha sido definido localmente. Para obter detalhes, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
   
-3.  **Valor local.** Um valor local pode ser definido por meio da conveniência da propriedade "wrapper", que também equivale à configuração como um elemento de propriedade ou atributo em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou por uma chamada para o <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso, cada um deles atuará na precedência como se um valor direto fosse definido.  
+3. **Valor local.** Um valor local pode ser definido por meio da conveniência da propriedade "wrapper", que também equivale à configuração como um elemento de propriedade ou atributo em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou por uma chamada para o <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso, cada um deles atuará na precedência como se um valor direto fosse definido.  
   
-4.  **Propriedades de modelo TemplatedParent.** Um elemento tem um <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se ele foi criado como parte de um modelo (um <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Para obter detalhes sobre quando isso se aplica, consulte [TemplatedParent](#templatedparent) mais adiante neste tópico. No modelo, a seguinte precedência se aplica:  
+4. **Propriedades de modelo TemplatedParent.** Um elemento tem um <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se ele foi criado como parte de um modelo (um <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Para obter detalhes sobre quando isso se aplica, consulte [TemplatedParent](#templatedparent) mais adiante neste tópico. No modelo, a seguinte precedência se aplica:  
   
     1.  Dispara a partir de <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modelo.  
   
     2.  Conjuntos de propriedades (normalmente por meio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributos) na <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modelo.  
   
-5.  **Estilo implícito.** Aplicável somente à propriedade `Style`. A propriedade `Style` é preenchida por qualquer recurso de estilo com uma chave que corresponde ao tipo desse elemento. Esse recurso de estilo deve existir na página ou no aplicativo; a pesquisa de um recurso de estilo implícito não continua nos temas.  
+5. **Estilo implícito.** Aplicável somente à propriedade `Style`. A propriedade `Style` é preenchida por qualquer recurso de estilo com uma chave que corresponde ao tipo desse elemento. Esse recurso de estilo deve existir na página ou no aplicativo; a pesquisa de um recurso de estilo implícito não continua nos temas.  
   
-6.  **Gatilhos de estilo.** Os gatilhos em estilos da página ou do aplicativo (esses estilos podem ser estilos explícitos ou implícitos, mas não baseados em estilos padrão, que têm precedência mais baixa).  
+6. **Gatilhos de estilo.** Os gatilhos em estilos da página ou do aplicativo (esses estilos podem ser estilos explícitos ou implícitos, mas não baseados em estilos padrão, que têm precedência mais baixa).  
   
-7.  **Gatilhos de modelo.** Qualquer gatilho de um modelo em um estilo ou um modelo aplicado diretamente.  
+7. **Gatilhos de modelo.** Qualquer gatilho de um modelo em um estilo ou um modelo aplicado diretamente.  
   
-8.  **Setters de estilo.** Valores de um <xref:System.Windows.Setter> em estilos da página ou do aplicativo.  
+8. **Setters de estilo.** Valores de um <xref:System.Windows.Setter> em estilos da página ou do aplicativo.  
   
 9. **Estilo (tema) padrão.** Para obter detalhes sobre quando isso se aplica e como os estilos de tema se relacionam com os modelos nos estilos de tema, consulte [Estilos (tema) padrão](#themestyles) mais adiante neste tópico. Em um estilo padrão, a seguinte ordem de precedência se aplica:  
   

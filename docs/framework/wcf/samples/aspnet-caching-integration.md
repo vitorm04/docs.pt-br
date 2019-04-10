@@ -2,12 +2,12 @@
 title: Integração de cache ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309466"
 ---
 # <a name="aspnet-caching-integration"></a>Integração de cache ASP.NET
 Este exemplo demonstra como utilizar o cache de saída ASP.NET com o modelo de programação WCF WEB HTTP. Este tópico enfoca o recurso de integração de cache de saída do ASP.NET.  
@@ -34,31 +34,31 @@ Este exemplo demonstra como utilizar o cache de saída ASP.NET com o modelo de p
 ## <a name="to-run-the-sample"></a>Para executar a amostra  
  O exemplo consiste em três projetos:  
   
--   **Serviço**: projeto de um aplicativo de Web que inclui um serviço de HTTP do WCF hospedado no ASP.NET.  
+-   **Serviço**: Um projeto de aplicativo Web que inclui um serviço de HTTP do WCF hospedado no ASP.NET.  
   
--   **Cliente**: um projeto de aplicativo de console que faz chamadas para o serviço.  
+-   **Cliente**: Um projeto de aplicativo de console que faz chamadas para o serviço.  
   
--   **Common**: uma biblioteca compartilhada que contém o tipo de cliente usado pelo cliente e serviço.  
+-   **Common**: Uma biblioteca compartilhada que contém o tipo de cliente usado pelo cliente e serviço.  
   
  Como o aplicativo de console do cliente é executado, o cliente faz solicitações para o serviço e grava as informações pertinentes das respostas à janela do console.  
   
 #### <a name="to-run-the-sample"></a>Para executar a amostra  
   
-1.  Abra a solução para o exemplo de integração de cache do ASP.NET.  
+1. Abra a solução para o exemplo de integração de cache do ASP.NET.  
   
-2.  Pressione CTRL+SHIFT+B para criar a solução.  
+2. Pressione CTRL+SHIFT+B para criar a solução.  
   
-3.  Se o **Gerenciador de soluções** janela não ainda estiver aberta, pressione CTRL + W + S.  
+3. Se o **Gerenciador de soluções** janela não ainda estiver aberta, pressione CTRL + W + S.  
   
-4.  Dos **Gerenciador de soluções** janela, o botão direito do mouse a **Service** do projeto e selecione **iniciar uma nova instância**. Isso inicia o ASP.NET development server, que hospeda o serviço.  
+4. Dos **Gerenciador de soluções** janela, o botão direito do mouse a **Service** do projeto e selecione **iniciar uma nova instância**. Isso inicia o ASP.NET development server, que hospeda o serviço.  
   
-5.  Dos **Gerenciador de soluções** janela, o botão direito do mouse a **cliente** do projeto e selecione **iniciar uma nova instância**.  
+5. Dos **Gerenciador de soluções** janela, o botão direito do mouse a **cliente** do projeto e selecione **iniciar uma nova instância**.  
   
-6.  A janela de console do cliente é exibida e fornece o URI do serviço em execução e o URI do HTML na página para a execução do serviço de Ajuda. A qualquer momento, você pode exibir a página de ajuda HTML, digitando o URI da página de Ajuda em um navegador.  
+6. A janela de console do cliente é exibida e fornece o URI do serviço em execução e o URI do HTML na página para a execução do serviço de Ajuda. A qualquer momento, você pode exibir a página de ajuda HTML, digitando o URI da página de Ajuda em um navegador.  
   
-7.  Como o exemplo é executado, o cliente grava o status da atividade atual.  
+7. Como o exemplo é executado, o cliente grava o status da atividade atual.  
   
-8.  Pressione qualquer tecla para encerrar o aplicativo de console do cliente.  
+8. Pressione qualquer tecla para encerrar o aplicativo de console do cliente.  
   
 9. Pressione SHIFT + F5 para parar a depuração de serviço.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310181"
 ---
 # <a name="option-strict-statement"></a>Instrução Option Strict
 Restringe conversões de tipo de dados implícitos para somente conversões de expansão, não permite associação tardia e não permite digitação implícita que resulta em um `Object` tipo.  
@@ -69,11 +69,11 @@ Option Strict { On | Off }
   
 -   [Operador +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ Operador (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [Operador \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [Operador / = (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [Operador /= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Tipo de Dados de Caractere](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [Tipo de dados Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Ao concatenar cadeias de caracteres usando o [& operador](../../../visual-basic/language-reference/operators/concatenation-operator.md), todas as conversões para as cadeias de caracteres são consideradas para ser de ampliação. Portanto, essas conversões não geram um erro de conversão de estreitamento implícitas, mesmo se `Option Strict` está em.  
   
@@ -109,18 +109,18 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Para definir o Option Strict no IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
+1. No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
   
-2.  Sobre o **compilar** guia, defina o valor **Option Strict** caixa.  
+2. Sobre o **compilar** guia, defina o valor **Option Strict** caixa.  
   
 ### <a name="conditions"></a> Para definir configurações de aviso no IDE  
  Quando você usa o [compilar página, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) em vez de um `Option Strict` instrução, você tem controle adicional sobre as condições que geram erros. O **configurações de aviso** seção o **página compilar** tem configurações que correspondem às três condições que causam um erro de tempo de compilação quando `Option Strict` está em. A seguir estão estas configurações:  
   
 -   **Conversão implícita**  
   
--   **Associação tardia; a chamada poderia falhar no tempo de execução**  
+-   **Associação tardia; a chamada pode falhar em tempo de execução**  
   
--   **Tipo implícito; objeto assumido**  
+-   **Tipo implícito; Object assumido**  
   
  Quando você define **Opção Estrita** como **Ativada**, todas estas três definições de configuração de aviso são definidas como **Erro**. Quando você define **Opção Estrita** como **Desativada**, todas as três configurações são definidas como **Nenhum**.  
   
@@ -154,13 +154,13 @@ Option Strict { On | Off }
 ## <a name="see-also"></a>Consulte também
 
 - [Conversões de Widening e Narrowing](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Conversões Implícitas e Explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Conversões implícitas e explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Página de Compilação, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Como: Acessar membros de um objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
-- [Expressões Inseridas no XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Vinculação tardia em soluções do Office](/visualstudio/vsto/late-binding-in-office-solutions)
+- [Funções de conversão do tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Como: acessar membros de um objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Expressões inseridas em XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Associação tardia em soluções do Office](/visualstudio/vsto/late-binding-in-office-solutions)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

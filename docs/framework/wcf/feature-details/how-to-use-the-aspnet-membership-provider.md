@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310350"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Como: usar o provedor de associação do ASP.NET
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permitem aos usuários criar combinações de nome e senha de usuário exclusivo. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entrar para acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, o que exige que os usuários têm contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome/senha de usuário) pode usar o site e seus serviços.  
@@ -27,13 +27,13 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
   
 ### <a name="to-configure-the-membership-provider"></a>Para configurar o provedor de associação  
   
-1.  No arquivo Web. config, sob o <`system.web`> elemento, crie um <`membership`> elemento.  
+1. No arquivo Web. config, sob o <`system.web`> elemento, crie um <`membership`> elemento.  
   
-2.  Sob o `<membership>` elemento, criar um `<providers>` elemento.  
+2. Sob o `<membership>` elemento, criar um `<providers>` elemento.  
   
-3.  Como um filho para o <`providers`> elemento, adicionar um `<clear />` elemento para a coleção de provedores de liberação.  
+3. Como um filho para o <`providers`> elemento, adicionar um `<clear />` elemento para a coleção de provedores de liberação.  
   
-4.  Sob o `<clear />` elemento, crie um <`add`> elemento com os seguintes atributos definidos com valores apropriados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, e `passwordFormat`. O `name` atributo é usado posteriormente como um valor no arquivo de configuração. O exemplo a seguir define como `SqlMembershipProvider`.  
+4. Sob o `<clear />` elemento, crie um <`add`> elemento com os seguintes atributos definidos com valores apropriados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, e `passwordFormat`. O `name` atributo é usado posteriormente como um valor no arquivo de configuração. O exemplo a seguir define como `SqlMembershipProvider`.  
   
      O exemplo a seguir mostra a seção de configuração.  
   
@@ -58,13 +58,13 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Para configurar a segurança de serviço para aceitar a combinação de nome/senha do usuário  
   
-1.  No arquivo de configuração, sob o [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, adicionar um [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+1. No arquivo de configuração, sob o [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, adicionar um [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à seção de associações. Para obter mais informações sobre a criação de um elemento de associação do WCF, consulte [como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à seção de associações. Para obter mais informações sobre a criação de um elemento de associação do WCF, consulte [como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-3.  Defina o atributo `mode` do elemento `<security>` como `Message`.  
+3. Defina o atributo `mode` do elemento `<security>` como `Message`.  
   
-4.  Defina as `clientCredentialType` atributo da <`message`> elemento a ser `UserName`. Isso especifica que um par de nome/senha do usuário será usado como credencial do cliente.  
+4. Defina as `clientCredentialType` atributo da <`message`> elemento a ser `UserName`. Isso especifica que um par de nome/senha do usuário será usado como credencial do cliente.  
   
      O exemplo a seguir mostra o código de configuração para a associação.  
   
@@ -85,22 +85,22 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Para configurar um serviço para usar o provedor de associação  
   
-1.  Como um filho para o `<system.serviceModel>` elemento, adicione uma [ \<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
+1. Como um filho para o `<system.serviceModel>` elemento, adicione uma [ \<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
   
-2.  Adicionar um [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) para o <`behaviors`> elemento.  
+2. Adicionar um [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) para o <`behaviors`> elemento.  
   
-3.  Adicionar um [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e defina o `name` de atributo para um valor apropriado.  
+3. Adicionar um [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e defina o `name` de atributo para um valor apropriado.  
   
-4.  Adicionar um [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) para o <`behavior`> elemento.  
+4. Adicionar um [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) para o <`behavior`> elemento.  
   
-5.  Adicionar um [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) para o `<serviceCredentials>` elemento.  
+5. Adicionar um [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) para o `<serviceCredentials>` elemento.  
   
-6.  Defina as `userNamePasswordValidationMode` atributo `MembershipProvider`.  
+6. Defina as `userNamePasswordValidationMode` atributo `MembershipProvider`.  
   
     > [!IMPORTANT]
     >  Se o `userNamePasswordValidationMode` valor não for definido, o WCF usa a autenticação do Windows em vez do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação.  
   
-7.  Defina o `membershipProviderName` de atributo para o nome do provedor (especificado ao adicionar o provedor no primeiro procedimento neste tópico). O exemplo a seguir mostra o fragmento do `<serviceCredentials>` para este ponto.  
+7. Defina o `membershipProviderName` de atributo para o nome do provedor (especificado ao adicionar o provedor no primeiro procedimento neste tópico). O exemplo a seguir mostra o fragmento do `<serviceCredentials>` para este ponto.  
   
     ```xml  
     <behaviors>  
