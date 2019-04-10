@@ -2,12 +2,12 @@
 title: Rastreamento de variável e argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300886"
 ---
 # <a name="variable-and-argument-tracking"></a>Rastreamento de variável e argumento
 Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair dados. Isso fornece um contexto extra para acessar uma execução de postagem de registro de rastreamento. Em [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], você pode extrair qualquer variável ou argumento visível no escopo de qualquer atividade em um fluxo de trabalho usando o rastreamento. Controlando os perfis facilitam extrair dados.  
@@ -40,11 +40,11 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>Informações de proteção armazenada em variáveis e os argumentos  
  Uma variável ou um argumento controlado por padrão são feitas visível no tempo de execução de WF. Um desenvolvedor de fluxo de trabalho de protegê-lo pode ser acessado colocando as seguintes etapas:  
   
-1.  Criptografar o valor de uma variável.  
+1. Criptografar o valor de uma variável.  
   
-2.  Controle a criação de um perfil de rastreamento para evitar a extração de uma variável ou um argumento.  
+2. Controle a criação de um perfil de rastreamento para evitar a extração de uma variável ou um argumento.  
   
-3.  Para participantes personalizados de rastreamento certifique-se de que o código de WF não divulgue informações sigilosas que é armazenada em variáveis ou nos argumentos.  
+3. Para participantes personalizados de rastreamento certifique-se de que o código de WF não divulgue informações sigilosas que é armazenada em variáveis ou nos argumentos.  
   
 ## <a name="see-also"></a>Consulte também
 

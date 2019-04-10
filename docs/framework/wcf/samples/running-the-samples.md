@@ -2,12 +2,12 @@
 title: Executando os exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b7a719aeeba2c14e79d790dfa5cbb4090d50009a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333139"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Executando os exemplos do Windows Communication Foundation
 Os exemplos do Windows Communication Foundation (WCF) podem ser executados em uma configuração única máquina ou várias máquinas. Como fornecidos, os exemplos estão prontos para execução em um único computador. Em uma configuração de várias máquinas, é necessário modificar o arquivo de configuração de um exemplo. Os procedimentos a seguir explicam como executar um exemplo em configurações na mesma máquina e entre computadores. Observe que há variações nas etapas para serviços hospedados no Internet Information Services (IIS) e os exemplos de auto-hospedados. A maioria dos exemplos são hospedados no IIS; Consulte as informações do Leiame do exemplo para determinar como ele está hospedado.  
@@ -19,17 +19,17 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser executados em um
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo na mesma máquina  
   
-1.  Se o serviço é hospedado pelo IIS, certifique-se de que você pode acessar o serviço usando um navegador, digitando o seguinte endereço: `http://localhost/servicemodelsamples/service.svc`. Uma página de confirmação deve ser exibida na resposta. Se a página de confirmação não for exibida, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+1. Se o serviço é hospedado pelo IIS, certifique-se de que você pode acessar o serviço usando um navegador, digitando o seguinte endereço: `http://localhost/servicemodelsamples/service.svc`. Uma página de confirmação deve ser exibida na resposta. Se a página de confirmação não for exibida, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-2.  Se o serviço é auto-hospedado, execute Service.exe em \service\bin, sob a pasta de idioma específico. Atividade do serviço é exibida na janela do console de serviço.  
+2. Se o serviço é auto-hospedado, execute Service.exe em \service\bin, sob a pasta de idioma específico. Atividade do serviço é exibida na janela do console de serviço.  
   
-3.  Executar Client.exe de \Client\Bin.\\, sob a pasta de idioma específico. Atividade do cliente é exibida na janela do console do cliente.  
+3. Executar Client.exe de \Client\Bin.\\, sob a pasta de idioma específico. Atividade do cliente é exibida na janela do console do cliente.  
   
-4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre máquinas  
   
-1.  Se o serviço está hospedado no IIS:  
+1. Se o serviço está hospedado no IIS:  
   
     1.  No computador do serviço, crie um diretório virtual chamado ServiceModelSamples. O arquivo de lote Setupvroot.bat incluído [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) pode ser usado para criar o diretório de disco e o diretório virtual.  
   
@@ -47,21 +47,21 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser executados em um
   
     4.  Inicie o Service.exe em um prompt de comando.  
   
-2.  Copie os arquivos de programa do cliente da pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
+2. Copie os arquivos de programa do cliente da pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
   
-3.  Defina o endereço do ponto de extremidade.  
+3. Defina o endereço do ponto de extremidade.  
   
     1.  Se o serviço não está em execução em uma conta de domínio, abra o arquivo de configuração do cliente e altere o valor de endereço da definição do ponto de extremidade para coincidir com o novo endereço do seu serviço. Substitua todas as referências a "localhost" com um nome de domínio totalmente qualificado no endereço.  
   
     2.  Se o serviço está em execução em uma conta de domínio, gere novamente a configuração do cliente executando Svcutil.exe no serviço. Para obter mais informações sobre como executar Svcutil.exe, consulte [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Use o arquivo gerado em vez do arquivo de configuração no exemplo. O arquivo de configuração gerada tem informações de identidade adicional e contém todas as configurações necessárias para se conectar ao ponto de extremidade de serviço, mesmo que eles sejam as configurações padrão. Para obter mais informações sobre informações de identidade, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), e [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
-4.  No computador cliente, inicie Client.exe em um prompt de comando.  
+4. No computador cliente, inicie Client.exe em um prompt de comando.  
   
 ### <a name="to-debug-a-service"></a>Para depurar um serviço  
   
-1.  Compilar a solução (cliente e serviço) usando o **Build** menu ou CTRL + SHIFT + B.  
+1. Compilar a solução (cliente e serviço) usando o **Build** menu ou CTRL + SHIFT + B.  
   
-2.  Se o serviço está hospedado no IIS:  
+2. Se o serviço está hospedado no IIS:  
   
     1.  Ativar o serviço usando um navegador, inserindo o endereço `http://localhost/servicemodelsamples/service.svc`.  
   
@@ -71,9 +71,9 @@ Os exemplos do Windows Communication Foundation (WCF) podem ser executados em um
   
     4.  Selecione o processo de trabalho do host W3wp.exe depurar (selecione ASPNet_wp.exe no Windows XP).  
   
-3.  Agora você pode definir pontos de interrupção no código de serviço e habilitar pontos de interrupção em exceções.  
+3. Agora você pode definir pontos de interrupção no código de serviço e habilitar pontos de interrupção em exceções.  
   
-4.  O item de projeto do cliente com o botão direito e escolha **Debug**, **iniciar nova instância**.  
+4. O item de projeto do cliente com o botão direito e escolha **Debug**, **iniciar nova instância**.  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   

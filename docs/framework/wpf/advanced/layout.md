@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330487"
 ---
 # <a name="layout"></a>Layout
 Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Entender como e quando ocorrem os cálculos de layout é essencial para a criação de interfaces do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,17 +64,17 @@ Este tópico descreve o sistema de layout do [!INCLUDE[TLA#tla_winclient](../../
   
  Cada vez que um filho <xref:System.Windows.UIElement> muda de posição, ele tem o potencial de disparar uma nova passagem pelo sistema de layout. Portanto, é importante compreender os eventos que podem invocar o sistema de layout, pois invocações desnecessárias podem levar a desempenho ruim do aplicativo. O exemplo a seguir descreve o processo que ocorre quando o sistema de layout é invocado.  
   
-1.  Um filho <xref:System.Windows.UIElement> começa o processo de layout primeiro tendo suas propriedades principais medidas.  
+1. Um filho <xref:System.Windows.UIElement> começa o processo de layout primeiro tendo suas propriedades principais medidas.  
   
-2.  As propriedades definidas em de dimensionamento <xref:System.Windows.FrameworkElement> são avaliadas, como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. As propriedades definidas em de dimensionamento <xref:System.Windows.FrameworkElement> são avaliadas, como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-lógica específica é aplicado, como <xref:System.Windows.Controls.Dock> direção ou empilhamento <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-lógica específica é aplicado, como <xref:System.Windows.Controls.Dock> direção ou empilhamento <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  O conteúdo é organizado depois que todos os filhos são medidos.  
+4. O conteúdo é organizado depois que todos os filhos são medidos.  
   
-5.  O <xref:System.Windows.Controls.Panel.Children%2A> coleção é desenhada na tela.  
+5. O <xref:System.Windows.Controls.Panel.Children%2A> coleção é desenhada na tela.  
   
-6.  O processo é chamado novamente se adicionais <xref:System.Windows.Controls.Panel.Children%2A> são adicionados à coleção, um <xref:System.Windows.FrameworkElement.LayoutTransform%2A> é aplicado, ou o <xref:System.Windows.UIElement.UpdateLayout%2A> método é chamado.  
+6. O processo é chamado novamente se adicionais <xref:System.Windows.Controls.Panel.Children%2A> são adicionados à coleção, um <xref:System.Windows.FrameworkElement.LayoutTransform%2A> é aplicado, ou o <xref:System.Windows.UIElement.UpdateLayout%2A> método é chamado.  
   
  Esse processo e como ele é invocado são definidos em mais detalhes nas seções a seguir.  
   

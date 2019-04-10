@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320464"
 ---
 # <a name="adorners-overview"></a>Visão geral de adornos
 Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado para fornecer dicas visuais para um usuário. Entre outros usos, adornos podem ser usados para adicionar alças funcionais a elementos ou para fornecer informações de estado sobre um controle.  
@@ -74,9 +74,9 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
 ## <a name="adorning-a-single-uielement"></a>Adornado um único UIElement  
  Para associar um adorno a um determinado <xref:System.Windows.UIElement>, siga estas etapas:  
   
-1.  Chame o método estático <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para obter uma <xref:System.Windows.Documents.AdornerLayer> do objeto para o <xref:System.Windows.UIElement> a ser adornado. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> percorre a árvore visual, iniciando no local especificado <xref:System.Windows.UIElement>e retorna a primeira camada de adorno que encontra. (Se nenhuma camada de adorno for encontrada, o método retornará nulo.)  
+1. Chame o método estático <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para obter uma <xref:System.Windows.Documents.AdornerLayer> do objeto para o <xref:System.Windows.UIElement> a ser adornado. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> percorre a árvore visual, iniciando no local especificado <xref:System.Windows.UIElement>e retorna a primeira camada de adorno que encontra. (Se nenhuma camada de adorno for encontrada, o método retornará nulo.)  
   
-2.  Chame o <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para associar o adorno ao destino <xref:System.Windows.UIElement>.  
+2. Chame o <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para associar o adorno ao destino <xref:System.Windows.UIElement>.  
   
  O exemplo a seguir associa um SimpleCircleAdorner (mostrado acima) para um <xref:System.Windows.Controls.TextBox> nomeado *myTextBox*.  
   
@@ -90,9 +90,9 @@ Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado p
 ## <a name="adorning-the-children-of-a-panel"></a>Adornando os filhos de um painel  
  Para associar um adorno aos filhos de um <xref:System.Windows.Controls.Panel>, siga estas etapas:  
   
-1.  Chame o `static` método <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para encontrar uma camada de adorno para o elemento cujos filhos serão adornados.  
+1. Chame o `static` método <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para encontrar uma camada de adorno para o elemento cujos filhos serão adornados.  
   
-2.  Enumere todos os filhos do elemento pai e chamada o <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para associar um adorno a cada elemento filho.  
+2. Enumere todos os filhos do elemento pai e chamada o <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para associar um adorno a cada elemento filho.  
   
  O exemplo a seguir associa um SimpleCircleAdorner (mostrado acima) aos filhos de um <xref:System.Windows.Controls.StackPanel> nomeado *myStackPanel*.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332164"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Como: Criar um ToolStrip de formulários do Windows básico com itens padrão usando o Designer
 O procedimento a seguir demonstra como criar uma <xref:System.Windows.Forms.ToolStrip> e adicionar sete <xref:System.Windows.Forms.ToolStripButton> controles que representam tarefas comuns.  
@@ -22,11 +22,11 @@ O procedimento a seguir demonstra como criar uma <xref:System.Windows.Forms.Tool
   
 ### <a name="to-add-standard-items-in-the-designer"></a>Para adicionar itens padrão no designer  
   
-1.  criar um <xref:System.Windows.Forms.ToolStrip> controle.  
+1. criar um <xref:System.Windows.Forms.ToolStrip> controle.  
   
-2.  No canto superior direito do <xref:System.Windows.Forms.ToolStrip>, clique na seta de tarefa inteligente para exibir o **tarefas do ToolStrip** painel.  
+2. No canto superior direito do <xref:System.Windows.Forms.ToolStrip>, clique na seta de tarefa inteligente para exibir o **tarefas do ToolStrip** painel.  
   
-3.  No **tarefas do ToolStrip** painel, escolha **inserir itens padrão**.  
+3. No **tarefas do ToolStrip** painel, escolha **inserir itens padrão**.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: 'Tarefa 2: Hospedar o Designer de Fluxo de Trabalho'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299261"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar o Designer de Fluxo de Trabalho
 Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo Windows Presentation Foundation (WPF).  
@@ -16,19 +16,19 @@ Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar o designer de fluxo de trabalho  
   
-1.  Abra o projeto de HostingApplication você criou no [tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
+1. Abra o projeto de HostingApplication você criou no [tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
-2.  Ajuste o tamanho da janela para facilitar usar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para fazer isso, selecione **MainWindow** no designer, pressione F4 para exibir o **propriedades** janela e, na **Layout** seção lá, defina o **largura** como um valor de 600 e o **altura** para um valor de 350.  
+2. Ajuste o tamanho da janela para facilitar usar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para fazer isso, selecione **MainWindow** no designer, pressione F4 para exibir o **propriedades** janela e, na **Layout** seção lá, defina o **largura** como um valor de 600 e o **altura** para um valor de 350.  
   
-3.  Defina o nome da grade selecionando o **grade** painel no designer (clique na caixa dentro a **MainWindow**) e configuração o **nome** propriedade na parte superior do  **Propriedades** janela a "grid1".  
+3. Defina o nome da grade selecionando o **grade** painel no designer (clique na caixa dentro a **MainWindow**) e configuração o **nome** propriedade na parte superior do  **Propriedades** janela a "grid1".  
   
-4.  No **propriedades** janela, clique no botão de reticências (**...** ) ao lado de `ColumnDefinitions` para abrir o **Editor de coleção** caixa de diálogo.  
+4. No **propriedades** janela, clique no botão de reticências (**...** ) ao lado de `ColumnDefinitions` para abrir o **Editor de coleção** caixa de diálogo.  
   
-5.  No **Collection Editor** caixa de diálogo, clique no **Add** botão três vezes para inserir três colunas no layout. A primeira coluna conterá o **caixa de ferramentas**, a segunda coluna hospedará o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e a terceira coluna será usada para a inspeção de propriedade.  
+5. No **Collection Editor** caixa de diálogo, clique no **Add** botão três vezes para inserir três colunas no layout. A primeira coluna conterá o **caixa de ferramentas**, a segunda coluna hospedará o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e a terceira coluna será usada para a inspeção de propriedade.  
   
-6.  Defina o `Width` propriedade da coluna do meio para o valor "4 *".  
+6. Defina o `Width` propriedade da coluna do meio para o valor "4 *".  
   
-7.  Clique em **OK** para salvar as alterações. O XAML a seguir é adicionado ao seu arquivo de MainWindow.xaml:  
+7. Clique em **OK** para salvar as alterações. O XAML a seguir é adicionado ao seu arquivo de MainWindow.xaml:  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ Este tópico descreve o procedimento para hospedar uma instância das [!INCLUDE[
     </Grid>  
     ```  
   
-8.  Na **Gerenciador de soluções**, MainWindow. XAML com o botão direito e selecione **Exibir código**. Modifique o código seguindo estas etapas:  
+8. Na **Gerenciador de soluções**, MainWindow. XAML com o botão direito e selecione **Exibir código**. Modifique o código seguindo estas etapas:  
   
     1.  Adicione as seguintes namespaces:  
   

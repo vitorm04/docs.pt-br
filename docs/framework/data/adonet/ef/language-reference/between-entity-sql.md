@@ -2,12 +2,12 @@
 title: ENTRE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 2c411fd7fcac9d98323d5fcfb1874f98bc664991
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eae4387bcd5cbaf381ebf7169b6bc54d60328377
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309297"
 ---
 # <a name="between-entity-sql"></a>ENTRE (Entity SQL)
 Determina se uma expressão resulta em um valor em um intervalo especificado. O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ENTER expressão tem a mesma funcionalidade que a expressão Transact-SQL entre.  
@@ -43,9 +43,9 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="example"></a>Exemplo  
  Os seguintes usos da consulta SQL Entity ENTER o operador determinar se uma expressão resulta em um valor em um intervalo especificado. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
+2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   

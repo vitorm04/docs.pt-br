@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314653"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Passo a passo: consultar entre relações (Visual Basic)
 Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associações* para representar as relações de chave estrangeira no banco de dados.  
@@ -53,15 +53,15 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Para acessar objetos Order usando objetos Customer  
   
-1.  Modifique o método `Sub Main` digitando ou colando o seguinte código no método:  
+1. Modifique o método `Sub Main` digitando ou colando o seguinte código no método:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Pressione F5 para depurar seu aplicativo.  
+2. Pressione F5 para depurar seu aplicativo.  
   
      Dois nomes aparecem na caixa de mensagem, e a janela Console mostra o código SQL gerado.  
   
-3.  Feche a caixa de mensagem para interromper a depuração.  
+3. Feche a caixa de mensagem para interromper a depuração.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Criando uma exibição fortemente tipada do seu banco de dados  
  É muito mais fácil começar com uma exibição fortemente tipada do seu banco de dados. Com o objeto <xref:System.Data.Linq.DataContext> fortemente tipado, você não precisa de chamadas para <xref:System.Data.Linq.DataContext.GetTable%2A>. Você pode usar tabelas fortemente tipadas em todas as consultas quando usa o objeto <xref:System.Data.Linq.DataContext> fortemente tipado.  
@@ -70,23 +70,23 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Para tornar o objeto DataContext fortemente tipado  
   
-1.  Adicione o código a seguir acima da declaração da classe `Customer`.  
+1. Adicione o código a seguir acima da declaração da classe `Customer`.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Modifique `Sub Main` para usar o <xref:System.Data.Linq.DataContext> fortemente tipado da seguinte maneira:  
+2. Modifique `Sub Main` para usar o <xref:System.Data.Linq.DataContext> fortemente tipado da seguinte maneira:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Pressione F5 para depurar seu aplicativo.  
+3. Pressione F5 para depurar seu aplicativo.  
   
      A saída da janela Console é:  
   
      `ID=WHITC`  
   
-4.  Pressione Enter na janela Console para fechar o aplicativo.  
+4. Pressione Enter na janela Console para fechar o aplicativo.  
   
-5.  No **arquivo** menu, clique em **Salvar tudo** se você quiser salvar esse aplicativo.  
+5. No **arquivo** menu, clique em **Salvar tudo** se você quiser salvar esse aplicativo.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  A próximo passo a passo ([passo a passo: Manipulando dados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) demonstra como manipular dados. Esse passo a passo não requer que você salve os dois tutoriais passo a passo desta série que você já concluiu.  

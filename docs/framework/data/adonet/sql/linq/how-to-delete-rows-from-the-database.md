@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331670"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Como: excluir linhas do banco de dados
 Você pode excluir linhas em um banco de dados, removendo correspondente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos de sua coleção de tabela relacionada. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte suas alterações para o SQL apropriado `DELETE` comandos.  
@@ -32,11 +32,11 @@ Você pode excluir linhas em um banco de dados, removendo correspondente [!INCLU
   
 ### <a name="to-delete-a-row-in-the-database"></a>Para excluir uma linha no banco de dados  
   
-1.  Consulte o banco de dados para a linha ser excluída.  
+1. Consulte o banco de dados para a linha ser excluída.  
   
-2.  Chame o método <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
+2. Chame o método <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
   
-3.  Envie a alteração para o banco de dados.  
+3. Envie a alteração para o banco de dados.  
   
 ## <a name="example"></a>Exemplo  
  O primeiro exemplo de código consulta o banco de dados para obter os detalhes do pedido que pertencem ao Pedido #11000, marca esses detalhes do pedido para exclusão e envia estas alterações para o banco de dados.  

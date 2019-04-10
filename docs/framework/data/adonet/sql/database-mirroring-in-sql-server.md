@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325690"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Espelhamento de banco de dados no SQL Server
 O espelhamento de banco de dados no SQL Server permite que você mantenha uma cópia, ou o espelho, de um banco de dados do SQL Server em um servidor em espera. O espelhamento garante que duas cópias separadas dos dados existam o tempo todo, fornecendo a alta disponibilidade e a redundância completa de dados. O provedor de dados .NET para o SQL Server fornece suporte implícito para espelhamento de banco de dados, de modo que o desenvolvedor não precisa realizar nenhuma ação ou gravar código quando tiver sido configurado para um banco de dados do SQL Server. Além disso, o objeto <xref:System.Data.SqlClient.SqlConnection> oferece suporte a um modo de conexão explícita que permite fornecer o nome de um servidor de parceiro de failover no <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  A seguinte sequência simplificada de eventos ocorre para um objeto <xref:System.Data.SqlClient.SqlConnection> cujo alvo são um banco de dados configurado para espelhamento:  
   
-1.  O aplicativo cliente conecta-se com sucesso ao banco de dados principal e o servidor envia de volta o nome do servidor parceiro, que é armazenado em cache no cliente.  
+1. O aplicativo cliente conecta-se com sucesso ao banco de dados principal e o servidor envia de volta o nome do servidor parceiro, que é armazenado em cache no cliente.  
   
-2.  Se o servidor que contém o banco de dados principal falhar ou a conectividade for interrompida, a conexão e o estado da transação serão perdidos. O aplicativo cliente tenta restabelecer uma conexão com o banco de dados principal e falha.  
+2. Se o servidor que contém o banco de dados principal falhar ou a conectividade for interrompida, a conexão e o estado da transação serão perdidos. O aplicativo cliente tenta restabelecer uma conexão com o banco de dados principal e falha.  
   
-3.  O aplicativo cliente em seguida tenta de modo transparente estabelecer uma conexão com o banco de dados espelho no servidor parceiro. Se tiver êxito, a conexão será redirecionada para o banco de dados espelho, que então se torna o novo banco de dados principal.  
+3. O aplicativo cliente em seguida tenta de modo transparente estabelecer uma conexão com o banco de dados espelho no servidor parceiro. Se tiver êxito, a conexão será redirecionada para o banco de dados espelho, que então se torna o novo banco de dados principal.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Especificando o parceiro de failover na cadeia de conexão  
  Se você fornece o nome de um servidor de parceiro de failover na cadeia de conexão, o cliente tentará de modo transparente uma conexão com o parceiro de failover se o banco de dados principal ficar indisponível quando o aplicativo cliente for conectado primeiro.  

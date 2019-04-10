@@ -2,12 +2,12 @@
 title: Perfil seguro confiável
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331566"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiável
 Este exemplo demonstra como compor o WCF e [perfil seguro confiável](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este exemplo demonstra a implementação de um [fazer Conexão](https://go.microsoft.com/fwlink/?LinkId=178141) canal que pode ser composto em conjunto com o sistema de mensagens confiável e, opcionalmente, um canal seguro para criar uma associação segura confiável com base na especificação RSP.  
@@ -26,16 +26,16 @@ Este exemplo demonstra como compor o WCF e [perfil seguro confiável](https://go
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Abra o **ReliableSecureProfile** solução.  
+1. Abra o **ReliableSecureProfile** solução.  
   
-2.  Clique com botão direito do **Service** project no **Gerenciador de soluções**, selecione **depurar**, **iniciar nova instância** no menu de contexto. Isso inicia o host de serviço.  
+2. Clique com botão direito do **Service** project no **Gerenciador de soluções**, selecione **depurar**, **iniciar nova instância** no menu de contexto. Isso inicia o host de serviço.  
   
-3.  Clique com botão direito do **Client** project no **Gerenciador de soluções**, selecione **depurar**, **iniciar nova instância** no menu de contexto. Isso inicia o cliente.  
+3. Clique com botão direito do **Client** project no **Gerenciador de soluções**, selecione **depurar**, **iniciar nova instância** no menu de contexto. Isso inicia o cliente.  
   
-4.  Digite qualquer cadeia de caracteres no prompt na janela do console de cliente e clique em ENTER. Isso envia a cadeia de caracteres de entrada para o serviço, que calcula um hash da cadeia de caracteres.  
+4. Digite qualquer cadeia de caracteres no prompt na janela do console de cliente e clique em ENTER. Isso envia a cadeia de caracteres de entrada para o serviço, que calcula um hash da cadeia de caracteres.  
   
-5.  Exiba o resultado no cliente windows quando o serviço chama de volta a operação de contrato de retorno de chamada duplex para exibir o resultado na janela do console do cliente. Há um atraso intencional no serviço para simular uma operação de longa execução do processamento de dados.  
+5. Exiba o resultado no cliente windows quando o serviço chama de volta a operação de contrato de retorno de chamada duplex para exibir o resultado na janela do console do cliente. Há um atraso intencional no serviço para simular uma operação de longa execução do processamento de dados.  
   
-6.  Monitorar o tráfego HTTP (por qualquer uma das ferramentas como o Monitor de rede, Fiddler e assim por diante de monitoramento de rede online) mostra que uma sequência para a comunicação é estabelecida entre o cliente e o serviço como colocados pelo perfil seguro confiável e como o cliente sonda o serviço com solicitações de 'Fazer Conexão'. Quando o serviço obtém pronto para enviar de volta a resposta processada, ele usa o canal de retorno da última solicitação de 'Fazer Conexão' para enviar de volta os resultados.  
+6. Monitorar o tráfego HTTP (por qualquer uma das ferramentas como o Monitor de rede, Fiddler e assim por diante de monitoramento de rede online) mostra que uma sequência para a comunicação é estabelecida entre o cliente e o serviço como colocados pelo perfil seguro confiável e como o cliente sonda o serviço com solicitações de 'Fazer Conexão'. Quando o serviço obtém pronto para enviar de volta a resposta processada, ele usa o canal de retorno da última solicitação de 'Fazer Conexão' para enviar de volta os resultados.  
   
-7.  Pressione ENTER na janela do console de serviço para fechar o serviço. Pressione ENTER na janela do console de cliente para fechar o cliente.
+7. Pressione ENTER na janela do console de serviço para fechar o serviço. Pressione ENTER na janela do console de cliente para fechar o cliente.

@@ -2,12 +2,12 @@
 title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229167"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332307"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava ETW no Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos de analíticos destinam-se tornar mais fácil de obter visibilidade em seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram com os serviços WCF.  
@@ -43,31 +43,31 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Usando o Visual Studio 2012, abra o arquivo de solução WCFAnalyticTracingExtensibility.sln.  
+1. Usando o Visual Studio 2012, abra o arquivo de solução WCFAnalyticTracingExtensibility.sln.  
   
-2.  Para criar a solução, pressione CTRL+SHIFT+B.  
+2. Para criar a solução, pressione CTRL+SHIFT+B.  
   
-3.  Para executar a solução, pressione CTRL+F5.  
+3. Para executar a solução, pressione CTRL+F5.  
   
      No navegador da Web, clique em **Calculator.svc**. O URI do documento WSDL para o serviço deve aparecer no navegador. Copie esse URI.  
   
-4.  Execute o cliente de teste do WCF (WcfTestClient.exe).  
+4. Execute o cliente de teste do WCF (WcfTestClient.exe).  
   
      O cliente de teste do WCF (WcfTestClient.exe) está localizado em `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Dir de instalação do Visual Studio 2012 padrão é `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5.  Dentro do cliente de teste do WCF, adicione o serviço, selecionando **arquivo**e então **Adicionar serviço**.  
+5. Dentro do cliente de teste do WCF, adicione o serviço, selecionando **arquivo**e então **Adicionar serviço**.  
   
      Adicione o endereço do ponto de extremidade na caixa de entrada.  
   
-6.  Clique em **Okey** para fechar a caixa de diálogo.  
+6. Clique em **Okey** para fechar a caixa de diálogo.  
   
      O serviço de ICalculator é adicionado no painel esquerdo, sob **meus projetos de serviço**.  
   
-7.  Abra o aplicativo visualizador de eventos.  
+7. Abra o aplicativo visualizador de eventos.  
   
      Antes de invocar o serviço, inicie o Visualizador de eventos e certifique-se de que o log de eventos é escutando eventos de rastreamento emitidos de serviço do WCF.  
   
-8.  Dos **inicie** menu, selecione **ferramentas administrativas**e, em seguida, **Visualizador de eventos**. Habilitar o **analítico** e **depurar** logs.  
+8. Dos **inicie** menu, selecione **ferramentas administrativas**e, em seguida, **Visualizador de eventos**. Habilitar o **analítico** e **depurar** logs.  
   
 9. Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**e, em seguida, **Aplicativos de servidor**. Clique com botão direito **aplicativos de servidor**, selecione **exibição**e então **Mostrar Logs analíticos e depuração**.  
   
@@ -97,13 +97,13 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 #### <a name="to-clean-up-optional"></a>Para limpar (opcional)  
   
-1.  Abra **Visualizador de eventos**.  
+1. Abra **Visualizador de eventos**.  
   
-2.  Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**e, em seguida,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **desabilitar Log**.  
+2. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**e, em seguida,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **desabilitar Log**.  
   
-3.  Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**e então **analítica**. Clique com botão direito **analítico** e selecione **Limpar Log**.  
+3. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**e então **analítica**. Clique com botão direito **analítico** e selecione **Limpar Log**.  
   
-4.  Clique em **limpar** para limpar os eventos.  
+4. Clique em **limpar** para limpar os eventos.  
   
 ## <a name="known-issue"></a>Problema conhecido  
  Há um problema conhecido na **Visualizador de eventos** onde ele pode não decodifica eventos ETW. Você poderá ver uma mensagem de erro que diz: "A descrição para a ID de evento \<id > da fonte Microsoft-Windows-aplicativos de servidor não podem ser encontrados. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local." Se você encontrar esse erro, selecione **Refresh** da **ações** menu. O evento, em seguida, deve decodificar corretamente.  

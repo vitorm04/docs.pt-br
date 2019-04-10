@@ -2,12 +2,12 @@
 title: Rastreamento de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321660"
 ---
 # <a name="workflow-tracing"></a>Rastreamento de fluxo de trabalho
 Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informações de diagnóstico usando os ouvintes de rastreamento do .NET Framework. O rastreamento podem ser ativado se é um problema detectado com o aplicativo e desativado novamente o problema é resolvido uma vez. Há duas maneiras que você pode ativar o rastreamento de depuração para fluxos de trabalho. Você poderá configurá-lo usando o visualizador de rastreamento do evento ou você pode usar <xref:System.Diagnostics> para enviar os eventos de rastreamento em um arquivo.  
@@ -15,13 +15,13 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
 ## <a name="enabling-debug-tracing-in-etw"></a>Ativar o rastreamento de depuração em ETW  
  Para ativar o rastreamento usando ETW, ative o canal de depuração no visualizador de eventos:  
   
-1.  Navegue para o nó analítico e de depuração dos logs no visualizador de eventos.  
+1. Navegue para o nó analítico e de depuração dos logs no visualizador de eventos.  
   
-2.  Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos -> aplicativos e Logs de serviços -> Microsoft -> Windows -> aplicativos de servidor**. Clique com botão direito **aplicativos de servidor** e selecione **Exibir -> Mostrar Logs analíticos e depuração**. Clique com botão direito **Debug** e selecione **Habilitar Log**.  
+2. Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos -> aplicativos e Logs de serviços -> Microsoft -> Windows -> aplicativos de servidor**. Clique com botão direito **aplicativos de servidor** e selecione **Exibir -> Mostrar Logs analíticos e depuração**. Clique com botão direito **Debug** e selecione **Habilitar Log**.  
   
-3.  Quando um fluxo de trabalho executa a depuração e os rastreamentos são emitidas ao canal de depuração de ETW, podem ser exibidos no visualizador de eventos. Navegue até **Visualizador de eventos -> aplicativos e Logs de serviços -> Microsoft -> Windows -> aplicativos de servidor**. Clique com botão direito **Debug** e selecione **atualizar**.  
+3. Quando um fluxo de trabalho executa a depuração e os rastreamentos são emitidas ao canal de depuração de ETW, podem ser exibidos no visualizador de eventos. Navegue até **Visualizador de eventos -> aplicativos e Logs de serviços -> Microsoft -> Windows -> aplicativos de servidor**. Clique com botão direito **Debug** e selecione **atualizar**.  
   
-4.  O tamanho do buffer analítico padrão de rastreamento é apenas 4 quilobytes de (KB); é recomendável aumentar o tamanho para 32 KB. Para fazer isso, execute as seguintes etapas.  
+4. O tamanho do buffer analítico padrão de rastreamento é apenas 4 quilobytes de (KB); é recomendável aumentar o tamanho para 32 KB. Para fazer isso, execute as seguintes etapas.  
   
     1.  Execute o seguinte comando no diretório do framework atual (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215944"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295894"
 ---
 # <a name="document-serialization-and-storage"></a>Serialização e armazenamento do documento
 Microsoft .NET Framework fornece um ambiente potente para criar e exibir documentos de alta qualidade.  Recursos aprimorados que dão suporte a documentos fixos e documentos de fluxo, advanced exibindo controles, combinado com 2D poderosos e recursos gráficos 3D levar os aplicativos do .NET Framework para um novo nível de qualidade e experiência do usuário.  Ser capaz de gerenciar com flexibilidade uma representação na memória de um documento é um recurso fundamental do .NET Framework e ser capaz de salvar e carregar documentos de um armazenamento de dados de forma eficiente é uma necessidade de quase todos os aplicativos.  O processo de conversão de um documento de uma representação na memória interna em um armazenamento de dados externo é chamado de serialização.  O processo inverso de ler um armazenamento de dados e recriar a instância original na memória é chamado desserialização.  
@@ -65,11 +65,11 @@ Microsoft .NET Framework fornece um ambiente potente para criar e exibir documen
 ### <a name="creating-a-plug-in-serializer"></a>Criando um serializador de plug-in  
  Os serializadores de plug-in e os serializadores vinculados usam os mesmos eventos e métodos públicos expostos e, da mesma forma, podem ser projetados para operar de forma síncrona ou assíncrona.  Há três etapas básicas normalmente seguidas para criar um serializador de plug-in:  
   
-1.  Implementar e depurar o serializador primeiramente como um serializador vinculado.  Criar, inicialmente, o serializador compilado e o vinculado diretamente em um aplicativo de teste fornece acesso completo a pontos de interrupção e outros serviços de depuração úteis para teste.  
+1. Implementar e depurar o serializador primeiramente como um serializador vinculado.  Criar, inicialmente, o serializador compilado e o vinculado diretamente em um aplicativo de teste fornece acesso completo a pontos de interrupção e outros serviços de depuração úteis para teste.  
   
-2.  Depois que o serializador é totalmente testado, um <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface é adicionada ao criar um plug-in.  O <xref:System.Windows.Documents.Serialization.ISerializerFactory> permite acesso completo a todos os objetos do .NET Framework, que inclui a árvore lógica, a interface <xref:System.Windows.UIElement> objetos, <xref:System.Windows.Documents.IDocumentPaginatorSource>, e <xref:System.Windows.Media.Visual> elementos.  Além disso <xref:System.Windows.Documents.Serialization.ISerializerFactory> fornece os mesmos métodos síncronos e assíncronos e eventos utilizados por serializadores vinculados.  Já que documentos grandes podem levar tempo para serem enviados, as operações assíncronas são recomendadas para manter a interação do usuário responsivo e oferecem uma opção "Cancelar" se ocorrer algum problema com o armazenamento de dados.  
+2. Depois que o serializador é totalmente testado, um <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface é adicionada ao criar um plug-in.  O <xref:System.Windows.Documents.Serialization.ISerializerFactory> permite acesso completo a todos os objetos do .NET Framework, que inclui a árvore lógica, a interface <xref:System.Windows.UIElement> objetos, <xref:System.Windows.Documents.IDocumentPaginatorSource>, e <xref:System.Windows.Media.Visual> elementos.  Além disso <xref:System.Windows.Documents.Serialization.ISerializerFactory> fornece os mesmos métodos síncronos e assíncronos e eventos utilizados por serializadores vinculados.  Já que documentos grandes podem levar tempo para serem enviados, as operações assíncronas são recomendadas para manter a interação do usuário responsivo e oferecem uma opção "Cancelar" se ocorrer algum problema com o armazenamento de dados.  
   
-3.  Depois que o serializador de plug-in for criado, um script de instalação será implementado para distribuir e instalar (e desinstalar) o plug-in (veja acima, "[Instalando serializadores de plug-in](#InstallingPluginSerializers)").  
+3. Depois que o serializador de plug-in for criado, um script de instalação será implementado para distribuir e instalar (e desinstalar) o plug-in (veja acima, "[Instalando serializadores de plug-in](#InstallingPluginSerializers)").  
   
 ## <a name="see-also"></a>Consulte também
 

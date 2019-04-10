@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327523"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Como: executar operações de do tipo "arrastar e soltar" entre aplicativos
 Executar operações de arrastar e soltar entre aplicativos não é diferente de ativar esta ação dentro de um aplicativo, desde que os dois aplicativos envolvidos se comportam de acordo com o "contrato" estabelecido entre o <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A> Propriedades.  
@@ -18,21 +18,21 @@ Executar operações de arrastar e soltar entre aplicativos não é diferente de
   
 ### <a name="to-perform-a-drag-and-drop-procedure-between-applications"></a>Realizar um procedimento do tipo "arrastar e soltar" entre aplicativos  
   
-1.  Criar um novo aplicativo Windows Form.  
+1. Criar um novo aplicativo Windows Form.  
   
-2.  Adicione um controle <xref:System.Windows.Forms.TextBox> ao seu formulário.  
+2. Adicione um controle <xref:System.Windows.Forms.TextBox> ao seu formulário.  
   
-3.  Configurar o <xref:System.Windows.Forms.TextBox> controle para receber dados descartados.  
+3. Configurar o <xref:System.Windows.Forms.TextBox> controle para receber dados descartados.  
   
      Para obter mais informações, confira [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
-4.  Execute seu aplicativo do Windows e, enquanto o aplicativo está em execução, execute o WordPad.  
+4. Execute seu aplicativo do Windows e, enquanto o aplicativo está em execução, execute o WordPad.  
   
      O WordPad é um editor de texto instalado pelo Windows que permite realizar operações do tipo "arrastar e soltar". Ele pode ser acessado pressionando o botão **Iniciar**, selecionando **Executar** e digitando `WordPad` na caixa de texto da caixa de diálogo **Executar** e clicando em **OK**.  
   
-5.  Após abrir o WordPad, digite uma cadeia de caracteres de texto nele.  
+5. Após abrir o WordPad, digite uma cadeia de caracteres de texto nele.  
   
-6.  Usando o mouse, selecione o texto e arraste o texto selecionado para o <xref:System.Windows.Forms.TextBox> controle em seu aplicativo baseado em Windows.  
+6. Usando o mouse, selecione o texto e arraste o texto selecionado para o <xref:System.Windows.Forms.TextBox> controle em seu aplicativo baseado em Windows.  
   
      Observe que quando você passa o mouse sobre o <xref:System.Windows.Forms.TextBox> controle (e, consequentemente, gerar o <xref:System.Windows.Forms.Control.DragEnter> evento), o cursor muda e você pode soltar o texto selecionado para o <xref:System.Windows.Forms.TextBox> controle.  
   

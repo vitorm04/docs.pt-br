@@ -2,21 +2,21 @@
 title: Critérios de localização personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836729"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332528"
 ---
 # <a name="custom-find-criteria"></a>Critérios de localização personalizados
 Este exemplo demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizada. Clientes usam a funcionalidade de correspondência de escopo personalizado para refinar e se baseiam ainda mais a funcionalidade de localização fornecidos pelo sistema de descoberta do WCF. O cenário que abrange esse exemplo é da seguinte maneira:  
   
-1.  Um cliente está procurando por um serviço de calculadora.  
+1. Um cliente está procurando por um serviço de calculadora.  
   
-2.  Para refinar sua pesquisa, o cliente deve usar um regra de correspondência de escopo personalizado.  
+2. Para refinar sua pesquisa, o cliente deve usar um regra de correspondência de escopo personalizado.  
   
-3.  Acordo com esta regra, um serviço responde ao cliente se o seu ponto de extremidade corresponde a qualquer um dos escopos especificados pelo cliente.  
+3. Acordo com esta regra, um serviço responde ao cliente se o seu ponto de extremidade corresponde a qualquer um dos escopos especificados pelo cliente.  
   
 ## <a name="demonstrates"></a>Demonstra  
   
@@ -27,11 +27,11 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
 ## <a name="discussion"></a>Discussão  
  O cliente está procurando por tipo de "Ou" critérios de correspondência. Um serviço responde novamente se os escopos em seus pontos de extremidade correspondem a nenhum dos escopos fornecidos pelo cliente. Nesse caso, o cliente está procurando um serviço de calculadora que tenha qualquer um dos escopos na lista a seguir:  
   
-1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
+1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
-2.  `net.tcp://Microsoft.Samples.Discovery/SeattleLocation`  
+2. `net.tcp://Microsoft.Samples.Discovery/SeattleLocation`  
   
-3.  `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
+3. `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
  Para fazer isso, o cliente direciona os serviços para usar um regra de correspondência, passando uma correspondência de escopo personalizado pelo URI de escopo personalizado. Para facilitar a correspondência de escopo personalizado, o serviço deve usar um serviço de descoberta personalizados que compreende a regra de correspondência de escopo personalizado e implementa a lógica de correspondência associada.  
   
@@ -39,13 +39,13 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
   
  Abra o projeto de serviço. Três arquivos são usados para implementar o serviço de descoberta personalizado:  
   
-1.  **AsyncResult.cs**: esta é a implementação do `AsyncResult` que é exigido pelos métodos de descoberta.  
+1. **AsyncResult.cs**: Esta é a implementação do `AsyncResult` que é exigido pelos métodos de descoberta.  
   
-2.  **CustomDiscoveryService.cs**: esse arquivo implementa o serviço de descoberta personalizada. Estende a implementação de <xref:System.ServiceModel.Discovery.DiscoveryService> de classe e substitui os métodos necessários. Observe a implementação do <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> método. O método verifica se a correspondência de escopo personalizado pela regra foi especificada pelo cliente. Isso é o mesmo URI personalizado que o cliente especificou anteriormente. Se a regra personalizada for especificada, o caminho do código que implementa a lógica de correspondência de "Ou" será seguido.  
+2. **CustomDiscoveryService.cs**: Esse arquivo implementa o serviço de descoberta personalizada. Estende a implementação de <xref:System.ServiceModel.Discovery.DiscoveryService> de classe e substitui os métodos necessários. Observe a implementação do <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> método. O método verifica se a correspondência de escopo personalizado pela regra foi especificada pelo cliente. Isso é o mesmo URI personalizado que o cliente especificou anteriormente. Se a regra personalizada for especificada, o caminho do código que implementa a lógica de correspondência de "Ou" será seguido.  
   
      Essa lógica personalizada passa por todos os escopos em cada um dos pontos de extremidade que tem o serviço. Se qualquer um dos escopos do ponto de extremidade corresponde a nenhum dos escopos fornecidos pelo cliente, o serviço de descoberta adiciona o ponto de extremidade à resposta que é enviada de volta ao cliente.  
   
-3.  **CustomDiscoveryExtension.cs**: A última etapa na implementação do serviço de descoberta é para se conectar a essa implementação do personalizado descobrir serviço ao host de serviço. A classe auxiliar usada aqui é o `CustomDiscoveryExtension` classe. Essa classe estende a <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> classe. O usuário deve substituir o <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> método. Nesse caso, o método retorna uma instância do serviço de descoberta personalizada que foi criado antes. `PublishedEndpoints` é um <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contém todos os pontos de extremidade do aplicativo que são adicionados para o <xref:System.ServiceModel.ServiceHost>. O serviço de descoberta personalizado usa isso para preencher sua lista interna. Um usuário pode para adicionar outros metadados do ponto de extremidade também.  
+3. **CustomDiscoveryExtension.cs**: A última etapa na implementação do serviço de descoberta é para se conectar a essa implementação do personalizado descobrir serviço ao host de serviço. A classe auxiliar usada aqui é o `CustomDiscoveryExtension` classe. Essa classe estende a <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> classe. O usuário deve substituir o <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> método. Nesse caso, o método retorna uma instância do serviço de descoberta personalizada que foi criado antes. `PublishedEndpoints` é um <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contém todos os pontos de extremidade do aplicativo que são adicionados para o <xref:System.ServiceModel.ServiceHost>. O serviço de descoberta personalizado usa isso para preencher sua lista interna. Um usuário pode para adicionar outros metadados do ponto de extremidade também.  
   
  Por fim, abra Program.cs. Observe que tanto a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e `CustomDiscoveryExtension` são adicionados ao host. Depois que isso é feito e o host tem um ponto de extremidade ao longo do qual deseja receber mensagens de descoberta, o aplicativo pode usar o serviço de descoberta personalizada.  
   
@@ -53,13 +53,13 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Abra a solução que contém o projeto.  
+1. Abra a solução que contém o projeto.  
   
-2.  Compile o projeto.  
+2. Compile o projeto.  
   
-3.  Execute o aplicativo de serviço.  
+3. Execute o aplicativo de serviço.  
   
-4.  Execute o aplicativo cliente.  
+4. Execute o aplicativo cliente.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216399"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319671"
 ---
 # <a name="designing-and-implementing-services"></a>Serviços de implantação e projeção
 Esta seção mostra como definir e implementar contratos do WCF. Um contrato de serviço Especifica o que um ponto de extremidade comunica ao mundo externo. Em um nível mais concreto, é uma afirmação sobre um conjunto de mensagens específicas, organizados em padrões de troca de mensagens básicas (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço é um conjunto de trocas de mensagens relacionadas logicamente, uma operação de serviço é uma troca de mensagens única. Por exemplo, um `Hello` operação obviamente deve aceitar uma mensagem (de modo que o chamador pode anunciar a saudação) e podem ou não pode retornar uma mensagem (dependendo de cortesia da operação).  
@@ -38,13 +38,13 @@ Esta seção mostra como definir e implementar contratos do WCF. Um contrato de 
   
  Por exemplo, um contrato de ordem de compra pode ter um `CreateOrder` tipos de operação que aceita uma entrada de informações do pedido e retorna informações de êxito ou falha, incluindo um identificador do pedido. Ele também pode ter um `GetOrderStatus` operação que aceita um identificador do pedido e retorna informações de status do pedido. Um contrato de serviço desse tipo deve especificar:  
   
-1.  Se o contrato de ordem de compra consistiu `CreateOrder` e `GetOrderStatus` operações.  
+1. Se o contrato de ordem de compra consistiu `CreateOrder` e `GetOrderStatus` operações.  
   
-2.  Que especificou as operações de mensagens de entrada e as mensagens de saída.  
+2. Que especificou as operações de mensagens de entrada e as mensagens de saída.  
   
-3.  Os dados que podem ser executadas por essas mensagens.  
+3. Os dados que podem ser executadas por essas mensagens.  
   
-4.  Categóricas instruções sobre a infraestrutura de comunicação necessária para processar com êxito as mensagens. Por exemplo, esses detalhes incluem se e que formas de segurança são necessárias para estabelecer a comunicação bem-sucedida.  
+4. Categóricas instruções sobre a infraestrutura de comunicação necessária para processar com êxito as mensagens. Por exemplo, esses detalhes incluem se e que formas de segurança são necessárias para estabelecer a comunicação bem-sucedida.  
   
  Para transmitir esse tipo de informação para outros aplicativos em várias plataformas (incluindo plataformas de não-Microsoft), os contratos de serviço XML são publicamente expressas em formatos XML padrão, como [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) ( WSDL) e [esquema XML](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), entre outros. Os desenvolvedores para várias plataformas podem usar essas informações de contrato público para criar aplicativos que podem se comunicar com o serviço, pois eles entendem o idioma da especificação e como essas linguagens são projetadas para habilitar a interoperação descrevendo o públicos formulários, formatos e protocolos que o serviço oferece suporte. Para obter mais informações sobre como o WCF trata esse tipo de informação, consulte [metadados](../../../docs/framework/wcf/feature-details/metadata.md).  
   

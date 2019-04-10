@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307582"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
@@ -27,9 +27,9 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  Você pode modificar essas palavras-chave de cadeia de caracteres de conexão por meio de programação com:  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  Definindo `MultiSubnetFailover` à `true` não é necessária com [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] ou versões posteriores.
@@ -59,9 +59,9 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  Se o roteamento de somente leitura não estiver em vigor, conectar-se a um local de réplica secundário falhará nas seguintes situações:  
   
-1.  Se o local de réplica secundário não estiver configurado para aceitar conexões.  
+1. Se o local de réplica secundário não estiver configurado para aceitar conexões.  
   
-2.  Se um aplicativo usar `ApplicationIntent=ReadWrite` (discutido abaixo) e o local de réplica secundário estiver configurado para acesso de somente leitura.  
+2. Se um aplicativo usar `ApplicationIntent=ReadWrite` (discutido abaixo) e o local de réplica secundário estiver configurado para acesso de somente leitura.  
   
  <xref:System.Data.SqlClient.SqlDependency> não é suportado em réplicas secundárias somente leitura.  
   
@@ -86,11 +86,11 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
 ## <a name="read-only-routing"></a>Roteamento de somente leitura  
  Roteamento de somente leitura é um recurso que pode garantir a disponibilidade de uma réplica de somente leitura de um banco de dados. Para habilitar o roteamento de somente leitura:  
   
-1.  Você deve se conectar a um ouvinte do Grupo de Disponibilidade Always On.  
+1. Você deve se conectar a um ouvinte do Grupo de Disponibilidade Always On.  
   
-2.  A palavra-chave da cadeia de conexão `ApplicationIntent` deve ser definida como `ReadOnly`.  
+2. A palavra-chave da cadeia de conexão `ApplicationIntent` deve ser definida como `ReadOnly`.  
   
-3.  O Grupo de Disponibilidade deve ser configurado pelo administrador do banco de dados para habilitar o roteamento de somente leitura.  
+3. O Grupo de Disponibilidade deve ser configurado pelo administrador do banco de dados para habilitar o roteamento de somente leitura.  
   
  É possível que várias conexões usando o roteamento de somente leitura serão não se conectam à mesma réplica somente leitura. Alterações na sincronização ou alteração de banco de dados na configuração de roteamento do servidor podem resultar em conexões de cliente para diferentes réplicas somente leitura. Para garantir que todas as solicitações de somente leitura se conectem à mesma réplica somente leitura, não passe um ouvinte de grupo de disponibilidade para a palavra-chave da cadeia de conexão `Data Source`. Em vez disso, especifique o nome da instância de somente leitura.  
   

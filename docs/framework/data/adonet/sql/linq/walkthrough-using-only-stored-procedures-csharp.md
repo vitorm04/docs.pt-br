@@ -2,12 +2,12 @@
 title: 'Passo a passo: usar somente procedimentos armazenados (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332673"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Passo a passo: usar somente procedimentos armazenados (C#)
 Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para acessar dados executando somente procedimentos armazenados. Essa abordagem é frequentemente usada por administradores de banco de dados para limitar como o repositório de dados é acessado.  
@@ -60,17 +60,17 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
-1.  No Visual Studio **arquivo** , aponte para **New**e, em seguida, clique em **projeto**.  
+1. No Visual Studio **arquivo** , aponte para **New**e, em seguida, clique em **projeto**.  
   
-2.  No **tipos de projeto** painel na **novo projeto** caixa de diálogo, clique em **Visual C#** .  
+2. No **tipos de projeto** painel na **novo projeto** caixa de diálogo, clique em **Visual C#** .  
   
-3.  No **modelos** painel, clique em **aplicativo de formulários do Windows**.  
+3. No **modelos** painel, clique em **aplicativo de formulários do Windows**.  
   
-4.  No **nome** , digite **SprocOnlyApp**.  
+4. No **nome** , digite **SprocOnlyApp**.  
   
-5.  No **local** , verifique se onde você deseja armazenar seus arquivos de projeto.  
+5. No **local** , verifique se onde você deseja armazenar seus arquivos de projeto.  
   
-6.  Clique em **OK**.  
+6. Clique em **OK**.  
   
      O Designer de Formulários do Windows é aberto.  
   
@@ -79,9 +79,9 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-add-systemdatalinqdll"></a>Para adicionar o System.Data.Linq.dll  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
+1. Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
   
-2.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
+2. No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
   
      O assembly é adicionado ao projeto.  
   
@@ -90,9 +90,9 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para adicionar o arquivo do código Northwind ao projeto  
   
-1.  Sobre o **Project** menu, clique em **Add Existing Item**.  
+1. Sobre o **Project** menu, clique em **Add Existing Item**.  
   
-2.  No **Adicionar Item existente** caixa de diálogo, mova para c:\linqtest7\northwind.cs e, em seguida, clique em **Add**.  
+2. No **Adicionar Item existente** caixa de diálogo, mova para c:\linqtest7\northwind.cs e, em seguida, clique em **Add**.  
   
      O arquivo northwind.cs é adicionado ao projeto.  
   
@@ -101,9 +101,9 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-create-the-database-connection"></a>Par criar a conexão de banco de dados  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **Form1.cs**e, em seguida, clique em **Exibir código**.  
+1. Na **Gerenciador de soluções**, clique com botão direito **Form1.cs**e, em seguida, clique em **Exibir código**.  
   
-2.  Digite o código a seguir na classe `Form1`:  
+2. Digite o código a seguir na classe `Form1`:  
   
      [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
   
@@ -112,42 +112,42 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-set-up-the-user-interface"></a>Para configurar a interface do usuário  
   
-1.  Retorne para o Windows Forms Designer (**Form1.cs[Design]**).  
+1. Retorne para o Windows Forms Designer (**Form1.cs[Design]**).  
   
-2.  No menu **Exibir**, clique em **Caixa de Ferramentas**.  
+2. No menu **Exibir**, clique em **Caixa de Ferramentas**.  
   
      A caixa de ferramentas é aberta.  
   
     > [!NOTE]
     >  Clique o **ocultar automaticamente** pino para manter a caixa de ferramentas aberta enquanto você executa o restante das etapas nesta seção.  
   
-3.  Arraste dois botões, duas caixas de texto e dois rótulos da toolbox **Form1**.  
+3. Arraste dois botões, duas caixas de texto e dois rótulos da toolbox **Form1**.  
   
      Organize os controles conforme mostrado na ilustração de acompanhamento. Expandir **Form1** para que os controles se encaixem facilmente.  
   
-4.  Clique com botão direito **label1**e, em seguida, clique em **propriedades**.  
+4. Clique com botão direito **label1**e, em seguida, clique em **propriedades**.  
   
-5.  Alterar o **texto** propriedade de **label1** para **Enter OrderID:**.  
+5. Alterar o **texto** propriedade de **label1** para **Enter OrderID:**.  
   
-6.  Da mesma forma para **label2**, altere o **texto** propriedade de **label2** para **Enter CustomerID:**.  
+6. Da mesma forma para **label2**, altere o **texto** propriedade de **label2** para **Enter CustomerID:**.  
   
-7.  Da mesma forma, altere o **texto** propriedade **button1** para **detalhes do pedido**.  
+7. Da mesma forma, altere o **texto** propriedade **button1** para **detalhes do pedido**.  
   
-8.  Alterar o **texto** propriedade **button2** para **histórico de pedidos**.  
+8. Alterar o **texto** propriedade **button2** para **histórico de pedidos**.  
   
      Amplie os controles de botão de modo que todo o texto fique visível.  
   
 #### <a name="to-handle-button-clicks"></a>Para manipular cliques de botão  
   
-1.  Clique duas vezes em **detalhes do pedido** nos **Form1** para abrir o manipulador de eventos de button1 no editor de códigos.  
+1. Clique duas vezes em **detalhes do pedido** nos **Form1** para abrir o manipulador de eventos de button1 no editor de códigos.  
   
-2.  Digite o código a seguir no manipulador `button1`:  
+2. Digite o código a seguir no manipulador `button1`:  
   
      [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
   
-3.  Agora clique duas vezes **button2** nos **Form1** para abrir o `button2` manipulador  
+3. Agora clique duas vezes **button2** nos **Form1** para abrir o `button2` manipulador  
   
-4.  Digite o código a seguir no manipulador `button2`:  
+4. Digite o código a seguir no manipulador `button2`:  
   
      [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
   
@@ -156,33 +156,33 @@ Este passo a passo fornece um cenário completo do [!INCLUDE[vbtecdlinq](../../.
   
 #### <a name="to-test-the-application"></a>Para testar o aplicativo  
   
-1.  Pressione F5 para iniciar a depuração.  
+1. Pressione F5 para iniciar a depuração.  
   
      Form1 aparecerá.  
   
-2.  No **Enter OrderID** , digite `10249`e, em seguida, clique em **detalhes do pedido**.  
+2. No **Enter OrderID** , digite `10249`e, em seguida, clique em **detalhes do pedido**.  
   
      Uma caixa de mensagem lista os produtos incluídos no pedido 10249.  
   
      Clique em **Okey** para fechar a caixa de mensagem.  
   
-3.  No **Enter CustomerID** , digite `ALFKI`e, em seguida, clique em **histórico de pedidos**.  
+3. No **Enter CustomerID** , digite `ALFKI`e, em seguida, clique em **histórico de pedidos**.  
   
      Uma caixa de mensagem aparecerá, listando o histórico do pedido do cliente ALFKI.  
   
      Clique em **Okey** para fechar a caixa de mensagem.  
   
-4.  No **Enter OrderID** , digite `123`e, em seguida, clique em **detalhes do pedido**.  
+4. No **Enter OrderID** , digite `123`e, em seguida, clique em **detalhes do pedido**.  
   
      Uma caixa de mensagem exibirá "Nenhum resultado".  
   
      Clique em **Okey** para fechar a caixa de mensagem.  
   
-5.  Sobre o **Debug** menu, clique em **parar a depuração**.  
+5. Sobre o **Debug** menu, clique em **parar a depuração**.  
   
      A sessão de depuração é fechada.  
   
-6.  Se você tiver terminado o teste, você pode clicar em **fechar projeto** sobre o **arquivo** menu e salvar o projeto quando solicitado.  
+6. Se você tiver terminado o teste, você pode clicar em **fechar projeto** sobre o **arquivo** menu e salvar o projeto quando solicitado.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você pode aprimorar esse projeto fazendo algumas alterações. Por exemplo, você pode listar os procedimentos armazenados disponíveis em uma caixa de listagem e fazer com que o usuário selecione os procedimentos que serão executados. Você também pode transmitir a saída dos relatórios para um arquivo de texto.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328667"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida
 Os painéis do <xref:System.Windows.Forms.SplitContainer> controle prestam bem ao que está sendo redimensionado e manipulados pelos usuários. No entanto, há momentos em que é útil controlar o divisor com programação, onde ele está posicionado e em que grau pode ser movido.  
@@ -31,7 +31,7 @@ Os painéis do <xref:System.Windows.Forms.SplitContainer> controle prestam bem a
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>Definir o comportamento de redimensionamento do SplitContainer  
   
-1.  Em um procedimento, defina o <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriedade para o tamanho desejado, para que o comportamento do separador 'Ajuste' é obtido.  
+1. Em um procedimento, defina o <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriedade para o tamanho desejado, para que o comportamento do separador 'Ajuste' é obtido.  
   
      No exemplo de código, dentro do formulário <xref:System.Windows.Forms.Form.Load> evento, o divisor dentro a <xref:System.Windows.Forms.SplitContainer> controle está definido para pular 10 pixels quando arrastado.  
   

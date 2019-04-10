@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332229"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Como: Selecionar um intervalo de datas no controle MonthCalendar do Windows Forms
 Um recurso importante dos formulários Windows <xref:System.Windows.Forms.MonthCalendar> controle é que o usuário pode selecionar um intervalo de datas. Esse recurso é um aprimoramento o recurso de seleção de data do <xref:System.Windows.Forms.DateTimePicker> controle, que permite apenas que o usuário selecione um valor único de data/hora. Você pode definir um intervalo de datas ou obter um intervalo de seleção definido pelo usuário usando as propriedades do <xref:System.Windows.Forms.MonthCalendar> controle. O exemplo de código a seguir demonstra como definir um intervalo de seleção.  
   
 ### <a name="to-select-a-range-of-dates"></a>Para selecionar um intervalo de datas  
   
-1.  Criar <xref:System.DateTime> objetos que representam a primeira e última data em um intervalo.  
+1. Criar <xref:System.DateTime> objetos que representam a primeira e última data em um intervalo.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ Um recurso importante dos formulários Windows <xref:System.Windows.Forms.MonthC
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  Definir a propriedade <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>.  
+2. Definir a propriedade <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>.  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331644"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>O nome da variável de intervalo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos
 Um elemento de programação que usa um ou mais argumentos está incluído em uma consulta LINQ. O compilador é capaz de inferir uma variável de intervalo do elemento de programação.  
@@ -21,7 +21,7 @@ Um elemento de programação que usa um ou mais argumentos está incluído em um
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Forneça um nome de variável explícito para o elemento de programação, como mostrado no código a seguir:  
+1. Forneça um nome de variável explícito para o elemento de programação, como mostrado no código a seguir:  
   
 ```  
 Dim query = From var1 In collection1   
@@ -30,5 +30,5 @@ Dim query = From var1 In collection1
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução a LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)

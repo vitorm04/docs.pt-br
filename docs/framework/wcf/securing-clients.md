@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331800"
 ---
 # <a name="securing-clients"></a>Protegendo clientes
 No Windows Communication Foundation (WCF), o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica qual modo de segurança para usar e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simple: usar os metadados obtidos do serviço (se for publicado) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atenda ao requisito. Este tópico discute o processo em mais detalhes. Para obter mais informações sobre como criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
@@ -33,9 +33,9 @@ No Windows Communication Foundation (WCF), o serviço determina os requisitos de
 ## <a name="setting-a-client-credential"></a>Definir uma credencial de cliente  
  Definir uma credencial de cliente em um cliente consiste em duas etapas:  
   
-1.  Determinar a *tipo de credencial de cliente* requer que o serviço. Isso é feito por um dos dois métodos. Primeiro, se você tiver a documentação do criador do serviço, ele deve especificar a credencial do cliente requer que o serviço do tipo (se houver). Em segundo lugar, se você tiver apenas um arquivo de configuração gerado pela ferramenta Svcutil.exe, você pode examinar as associações individuais para determinar que tipo de credencial é necessária.  
+1. Determinar a *tipo de credencial de cliente* requer que o serviço. Isso é feito por um dos dois métodos. Primeiro, se você tiver a documentação do criador do serviço, ele deve especificar a credencial do cliente requer que o serviço do tipo (se houver). Em segundo lugar, se você tiver apenas um arquivo de configuração gerado pela ferramenta Svcutil.exe, você pode examinar as associações individuais para determinar que tipo de credencial é necessária.  
   
-2.  Especifica uma credencial de cliente real. A credencial de cliente real é chamada de um *valor de credencial de cliente* para distingui-lo do tipo. Por exemplo, se o tipo de credencial de cliente especifica um certificado, você deve fornecer um certificado X.509 que é emitido por uma autoridade de certificação, o serviço de relações de confiança.  
+2. Especifica uma credencial de cliente real. A credencial de cliente real é chamada de um *valor de credencial de cliente* para distingui-lo do tipo. Por exemplo, se o tipo de credencial de cliente especifica um certificado, você deve fornecer um certificado X.509 que é emitido por uma autoridade de certificação, o serviço de relações de confiança.  
   
 ### <a name="determining-the-client-credential-type"></a>Determinando o tipo de credencial de cliente  
  Se você tiver a configuração do arquivo a ferramenta Svcutil.exe gerada, examine os [ \<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) seção para determinar que tipo de credencial de cliente é necessário. Dentro da seção são elementos de associação que especificam os requisitos de segurança. Especificamente, examine o \<segurança > elemento de cada associação. Esse elemento inclui o `mode` atributo, que pode ser definido para um dos três valores possíveis (`Message`, `Transport`, ou `TransportWithMessageCredential`). O valor do atributo determina o modo e o modo determina qual dos elementos filho é significativo.  

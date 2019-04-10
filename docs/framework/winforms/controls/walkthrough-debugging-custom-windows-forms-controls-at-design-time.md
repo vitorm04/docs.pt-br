@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213676"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325352"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Passo a passo: Depurando controles do Windows Forms no tempo de design
 Quando criar um controle personalizado, frequentemente você achará necessário depurar seu comportamento em tempo de design. Isso será especialmente válido se você estiver criando um designer personalizado para seu controle personalizado. Para obter detalhes, consulte [passo a passo: Criando um Windows Forms o controle que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md).  
@@ -58,13 +58,13 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 #### <a name="to-create-the-control-library-project"></a>Para criar o projeto de biblioteca de controles  
   
-1.  Adicione um projeto de **Biblioteca de controle do Windows** à solução.  
+1. Adicione um projeto de **Biblioteca de controle do Windows** à solução.  
   
-2.  Adicione um novo item **UserControl** ao projeto DebugControlLibrary. Para obter detalhes, confira [Como: Adicionar novos itens de projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Dê ao novo arquivo de origem o nome base "DebugControl".  
+2. Adicione um novo item **UserControl** ao projeto DebugControlLibrary. Para obter detalhes, confira [Como: Adicionar novos itens de projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Dê ao novo arquivo de origem o nome base "DebugControl".  
   
-3.  Usando o **Gerenciador de Soluções**, exclua o controle padrão do projeto excluindo o arquivo de código com o nome de base "`UserControl1`". Para obter detalhes, confira [Como: Remover, apagar e excluir itens](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
+3. Usando o **Gerenciador de Soluções**, exclua o controle padrão do projeto excluindo o arquivo de código com o nome de base "`UserControl1`". Para obter detalhes, confira [Como: Remover, apagar e excluir itens](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
-4.  Compile a solução.  
+4. Compile a solução.  
   
 ## <a name="checkpoint"></a>Ponto de verificação  
  Neste ponto, você poderá ver o controle personalizado na **Caixa de Ferramentas**.  
@@ -78,7 +78,7 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 #### <a name="to-add-a-property-to-your-custom-control"></a>Para adicionar uma propriedade ao controle personalizado  
   
-1.  Abra **DebugControl** no **Editor de Códigos**. Adicione o seguinte código à definição da classe:  
+1. Abra **DebugControl** no **Editor de Códigos**. Adicione o seguinte código à definição da classe:  
   
     ```vb  
     Private demoStringValue As String = Nothing  
@@ -112,42 +112,42 @@ Quando criar um controle personalizado, frequentemente você achará necessário
     }  
     ```  
   
-2.  Compile a solução.  
+2. Compile a solução.  
   
 ## <a name="adding-your-custom-control-to-the-host-form"></a>Adicionar o Controle Personalizado ao Formulário de Host  
  Para depurar o comportamento em tempo de design do controle personalizado, você colocará uma instância da classe do controle personalizado em um formulário do host.  
   
 #### <a name="to-add-your-custom-control-to-the-host-form"></a>Para adicionar o controle personalizado ao formulário de host  
   
-1.  No projeto "DebuggingExample", abra Form1 no **Designer de Formulários do Windows**.  
+1. No projeto "DebuggingExample", abra Form1 no **Designer de Formulários do Windows**.  
   
-2.  Na **caixa de Ferramentas**, abra a guia **Componentes de DebugControlLibrary** e arraste uma instância de **DebugControl** para o formulário.  
+2. Na **caixa de Ferramentas**, abra a guia **Componentes de DebugControlLibrary** e arraste uma instância de **DebugControl** para o formulário.  
   
-3.  Encontre a propriedade personalizada `DemoString` na janela **Propriedades**. Observe que você pode alterar seu valor, da mesma forma que faria com qualquer outra propriedade. Observe também que, quando a propriedade `DemoString` for selecionada, a cadeia de caracteres de descrição da propriedade aparecerá na parte inferior da janela **Propriedades**.  
+3. Encontre a propriedade personalizada `DemoString` na janela **Propriedades**. Observe que você pode alterar seu valor, da mesma forma que faria com qualquer outra propriedade. Observe também que, quando a propriedade `DemoString` for selecionada, a cadeia de caracteres de descrição da propriedade aparecerá na parte inferior da janela **Propriedades**.  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>Configurar o Projeto para Depuração em Tempo de Design  
  Para depurar o comportamento em tempo de design do seu controle personalizado, você depurará uma instância separada do Visual Studio que está executando o código do seu controle personalizado.  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>Para configurar o projeto para depuração em tempo de design  
   
-1.  Clique com o botão direito do mouse no projeto **DebugControlLibrary** no **Gerenciador de Soluções** e selecione **Propriedades**.  
+1. Clique com o botão direito do mouse no projeto **DebugControlLibrary** no **Gerenciador de Soluções** e selecione **Propriedades**.  
   
-2.  Na folha de propriedades **DebugControlLibrary**, selecione a guia **Depurar**.  
+2. Na folha de propriedades **DebugControlLibrary**, selecione a guia **Depurar**.  
   
      Na seção **Iniciar Ação**, selecione **Iniciar programa externo**. Você depurará uma instância separada do Visual Studio, então clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) para procurar o IDE do Visual Studio. O nome do arquivo executável é **devenv.exe** e, se você o instalou no local padrão, o caminho dele é %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.  
   
-3.  Clique em **OK** para fechar a caixa de diálogo.  
+3. Clique em **OK** para fechar a caixa de diálogo.  
   
-4.  Clique com botão direito do mouse no projeto **DebugControlLibrary** e selecione **Definir como Projeto de Inicialização** para habilitar essa configuração de depuração.  
+4. Clique com botão direito do mouse no projeto **DebugControlLibrary** e selecione **Definir como Projeto de Inicialização** para habilitar essa configuração de depuração.  
   
 ## <a name="debugging-your-custom-control-at-design-time"></a>Depurar o Controle Personalizado em Tempo de Design  
  Agora, você está pronto para depurar o controle personalizado enquanto ele é executado em modo de design. Quando você iniciar a sessão de depuração, uma nova instância do Visual Studio será criada e você a usará para carregar a solução "DebuggingExample". Quando você abrir Form1 no **Designer de Formulários**, uma instância do controle personalizado será criada e começará a ser executada.  
   
 #### <a name="to-debug-your-custom-control-at-design-time"></a>Para depurar o controle personalizado em tempo de design  
   
-1.  Abra o arquivo de origem **DebugControl** no **Editor de Códigos** e coloque um ponto de interrupção no acessador `Set` da propriedade `DemoString`.  
+1. Abra o arquivo de origem **DebugControl** no **Editor de Códigos** e coloque um ponto de interrupção no acessador `Set` da propriedade `DemoString`.  
   
-2.  Pressione F5 para iniciar a sessão de depuração. Observe que uma nova instância do Visual Studio é criada. É possível diferenciar as instâncias de duas maneiras:  
+2. Pressione F5 para iniciar a sessão de depuração. Observe que uma nova instância do Visual Studio é criada. É possível diferenciar as instâncias de duas maneiras:  
   
     -   A instância de depuração tem as palavras **Em execução** na barra de título  
   
@@ -155,13 +155,13 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
      Seu ponto de interrupção é definido na instância de depuração.  
   
-3.  Na nova instância do Visual Studio, abra a solução "DebuggingExample". Você pode localizar facilmente a solução selecionando **Projetos Recentes** no menu **Arquivo**. O arquivo de solução "DebuggingExample.sln" será listado como o arquivo usado mais recentemente.  
+3. Na nova instância do Visual Studio, abra a solução "DebuggingExample". Você pode localizar facilmente a solução selecionando **Projetos Recentes** no menu **Arquivo**. O arquivo de solução "DebuggingExample.sln" será listado como o arquivo usado mais recentemente.  
   
-4.  Abra Form1 no **Designer de Formulários** e selecione o controle **DebugControl**.  
+4. Abra Form1 no **Designer de Formulários** e selecione o controle **DebugControl**.  
   
-5.  Altere o valor da propriedade `DemoString`. Observe que, quando você confirma a alteração, a instância de depuração do Visual Studio fica em foco e a execução é interrompida no ponto de interrupção. É possível percorrer passo a passo o acessador de propriedade, da mesma forma que você o faria com qualquer outro código.  
+5. Altere o valor da propriedade `DemoString`. Observe que, quando você confirma a alteração, a instância de depuração do Visual Studio fica em foco e a execução é interrompida no ponto de interrupção. É possível percorrer passo a passo o acessador de propriedade, da mesma forma que você o faria com qualquer outro código.  
   
-6.  Quando tiver terminado sua sessão de depuração, você pode sair ignorando a instância hospedada do Visual Studio ou clicando no botão **Parar Depuração** na instância de depuração.  
+6. Quando tiver terminado sua sessão de depuração, você pode sair ignorando a instância hospedada do Visual Studio ou clicando no botão **Parar Depuração** na instância de depuração.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Agora que você pode depurar seus controles personalizados em tempo de design, há muitas possibilidades para expandir a interação do controle com o IDE do Visual Studio.  

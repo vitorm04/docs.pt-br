@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329200"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Como: Determinar propriedades de página usando o componente PageSetupDialog
 O componente [PageSetupDialog](pagesetupdialog-component-windows-forms.md) apresenta o layout, tamanho do papel e outras opções de layout da página ao usuário para um documento.  
@@ -26,7 +26,7 @@ O componente [PageSetupDialog](pagesetupdialog-component-windows-forms.md) apres
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>Para determinar propriedades de página usando o componente PageSetupDialog  
   
-1.  Use o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para exibir a caixa de diálogo, especificando o <xref:System.Drawing.Printing.PrintDocument> usar.  
+1. Use o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para exibir a caixa de diálogo, especificando o <xref:System.Drawing.Printing.PrintDocument> usar.  
   
      No exemplo a seguir, o <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos abre uma instância da <xref:System.Windows.Forms.PageSetupDialog> componente. Um documento existente é especificado na <xref:System.Windows.Forms.PageSetupDialog.Document%2A> propriedade e sua <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> estiver definida como `false`.  
   

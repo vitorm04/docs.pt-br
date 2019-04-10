@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332385"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Faz com que o compilador relatar erros se variáveis não forem declaradas antes de serem usadas.  
@@ -34,11 +34,11 @@ Faz com que o compilador relatar erros se variáveis não forem declaradas antes
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Definir - optionexplicit no IDE do Visual Studio  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
   
-2.  Clique na guia **Compilar**.  
+2. Clique na guia **Compilar**.  
   
-3.  Modificar o valor de **Option Explicit** caixa.  
+3. Modificar o valor de **Option Explicit** caixa.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila quando `-optionexplicit-` é usado.  
@@ -51,6 +51,6 @@ Faz com que o compilador relatar erros se variáveis não forem declaradas antes
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

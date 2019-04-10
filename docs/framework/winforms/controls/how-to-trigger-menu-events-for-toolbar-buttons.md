@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228336"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303980"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Como: Disparar eventos de menu para botões da barra de ferramentas
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228336"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>Para manipular o evento de Clique na barra de ferramentas  
   
-1.  Em um procedimento, adicione botões de barra de ferramentas para o <xref:System.Windows.Forms.ToolBar> controle.  
+1. Em um procedimento, adicione botões de barra de ferramentas para o <xref:System.Windows.Forms.ToolBar> controle.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228336"
        }  
     ```  
   
-2.  Adicionar um manipulador de eventos para o <xref:System.Windows.Forms.ToolBar> do controle <xref:System.Windows.Forms.ToolBar.ButtonClick> eventos. Um instrução de comutação de caso de uso e o <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe para determinar o botão de barra de ferramentas que foi clicado. Com base nisso, exiba a caixa de mensagem apropriada.  
+2. Adicionar um manipulador de eventos para o <xref:System.Windows.Forms.ToolBar> do controle <xref:System.Windows.Forms.ToolBar.ButtonClick> eventos. Um instrução de comutação de caso de uso e o <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe para determinar o botão de barra de ferramentas que foi clicado. Com base nisso, exiba a caixa de mensagem apropriada.  
   
     > [!NOTE]
     >  Uma caixa de mensagem está sendo usada apenas como um espaço reservado neste exemplo. Fique à vontade para adicionar outro código para ser executado quando os botões da barra de ferramentas forem clicados.  

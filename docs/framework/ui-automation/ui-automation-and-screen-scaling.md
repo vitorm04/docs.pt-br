@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332671"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194052"
   
  A solução é em duas partes.  
   
-1.  Primeiro, verifique o aplicativo cliente [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-ciente. Para fazer isso, chame o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] função `SetProcessDPIAware` na inicialização. No código gerenciado, a seguinte declaração disponibiliza essa função.  
+1. Primeiro, verifique o aplicativo cliente [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-ciente. Para fazer isso, chame o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] função `SetProcessDPIAware` na inicialização. No código gerenciado, a seguinte declaração disponibiliza essa função.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Essa função faz com que todo o processo de reconhecimento de dpi, que significa que todas as janelas que pertencem ao processo são fora de escala. No [exemplo de marca-texto](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), por exemplo, as quatro janelas que compõem o retângulo de realce estão localizadas nas coordenadas físicas obtidas de automação de interface do usuário, não nas coordenadas lógicas. Se o exemplo não estava cientes de dpi, o realce poderia ser desenhado nas coordenadas lógicas na área de trabalho, o que resulta na colocação incorreta em um ambiente de não-96-dpi.  
   
-2.  Para obter as coordenadas do cursor, chame o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] função `GetPhysicalCursorPos`. O exemplo a seguir mostra como declarar e usar essa função.  
+2. Para obter as coordenadas do cursor, chame o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] função `GetPhysicalCursorPos`. O exemplo a seguir mostra como declarar e usar essa função.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  

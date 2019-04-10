@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306216"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Como: exportar declarações de política personalizadas
 Declarações de política descrevem os recursos e os requisitos de um ponto de extremidade de serviço. Aplicativos de serviço podem usar declarações de política personalizadas nos metadados de serviço para se comunicar o ponto de extremidade, contrato ou associação de informações de personalização para o aplicativo cliente. Você pode usar o Windows Communication Foundation (WCF) para exportar declarações em expressões de política anexadas em associações WSDL no ponto de extremidade, operação ou entidades de mensagem, dependendo dos recursos ou requisitos que você está se comunicando.  
@@ -23,28 +23,28 @@ Declarações de política descrevem os recursos e os requisitos de um ponto de 
   
 ### <a name="to-export-custom-policy-assertions"></a>Para exportar as declarações de política personalizada  
   
-1.  Implemente a <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> da interface em um <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. O exemplo de código a seguir mostra a implementação de uma asserção de política personalizada no nível da associação.  
+1. Implemente a <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> da interface em um <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. O exemplo de código a seguir mostra a implementação de uma asserção de política personalizada no nível da associação.  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  Inserir o elemento de associação para o ponto de extremidade de associação seja programaticamente ou usando um arquivo de configuração do aplicativo. Consulte os procedimentos a seguir.  
+2. Inserir o elemento de associação para o ponto de extremidade de associação seja programaticamente ou usando um arquivo de configuração do aplicativo. Consulte os procedimentos a seguir.  
   
 ### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Para inserir um elemento de associação usando um arquivo de configuração de aplicativo  
   
-1.  Implemente <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> para seu elemento de associação de asserção de política personalizada.  
+1. Implemente <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> para seu elemento de associação de asserção de política personalizada.  
   
-2.  Adicionar a extensão de elemento de associação para o arquivo de configuração usando o [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elemento.  
+2. Adicionar a extensão de elemento de associação para o arquivo de configuração usando o [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elemento.  
   
-3.  Criar uma ligação personalizada usando o <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+3. Criar uma ligação personalizada usando o <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
 ### <a name="to-insert-a-binding-element-programmatically"></a>Para inserir um elemento de associação de forma programática  
   
-1.  Criar um novo <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e adicione-o a um <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+1. Criar um novo <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e adicione-o a um <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-2.  Adicione a associação personalizada da etapa 1. para um novo ponto de extremidade e adicionar esse novo ponto de extremidade de serviço para o <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> chamando o <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> método.  
+2. Adicione a associação personalizada da etapa 1. para um novo ponto de extremidade e adicionar esse novo ponto de extremidade de serviço para o <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> chamando o <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> método.  
   
-3.  Abra o <xref:System.ServiceModel.ServiceHost>. O exemplo de código a seguir mostra a criação de uma ligação personalizada e a inserção de programação de elementos de associação.  
+3. Abra o <xref:System.ServiceModel.ServiceHost>. O exemplo de código a seguir mostra a criação de uma ligação personalizada e a inserção de programação de elementos de associação.  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  

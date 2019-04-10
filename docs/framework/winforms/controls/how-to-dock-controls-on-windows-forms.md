@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317253"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Como: Encaixar controles nos Windows Forms
 Você pode encaixar controles nas bordas do formulário ou fazer com que eles preencham o contêiner do controle (um controle de contêiner ou formulário). Por exemplo, o Windows Explorer encaixa seu <xref:System.Windows.Forms.TreeView> controle para o lado esquerdo da janela e sua <xref:System.Windows.Forms.ListView> controle para o lado direito da janela. Use o <xref:System.Windows.Forms.Control.Dock%2A> propriedade para todos os controles de Windows Forms visíveis definir o modo de encaixe.  
@@ -23,13 +23,13 @@ Você pode encaixar controles nas bordas do formulário ou fazer com que eles pr
   
 ### <a name="to-dock-a-control"></a>Para encaixar um controle  
   
-1.  Selecione o controle que deseja encaixar.  
+1. Selecione o controle que deseja encaixar.  
   
-2.  Na janela Propriedades, clique na seta à direita do <xref:System.Windows.Forms.Control.Dock%2A> propriedade.  
+2. Na janela Propriedades, clique na seta à direita do <xref:System.Windows.Forms.Control.Dock%2A> propriedade.  
   
      Um editor será exibido que mostra uma série de caixas que representam as bordas e o centro do formulário.  
   
-3.  Clique no botão que representa a borda do formulário no qual você deseja encaixar o controle. Para preencher o conteúdo do controle de contêiner ou formulário do controle, clique na caixa do centro. Clique em **(nenhum)** para desabilitar o encaixe.  
+3. Clique no botão que representa a borda do formulário no qual você deseja encaixar o controle. Para preencher o conteúdo do controle de contêiner ou formulário do controle, clique na caixa do centro. Clique em **(nenhum)** para desabilitar o encaixe.  
   
      O controle é redimensionado automaticamente para ajustar os limites da borda encaixada.  
   

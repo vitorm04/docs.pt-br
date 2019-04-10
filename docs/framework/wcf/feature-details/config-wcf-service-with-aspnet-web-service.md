@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 8955018124f4e60b0a7c74ad70210b4369676ef5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325183"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Como: configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET
 Para configurar um ponto de extremidade de serviço do Windows Communication Foundation (WCF) para interoperabilidade com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de serviço Web, use o <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como o tipo de associação para o ponto de extremidade de serviço.  
@@ -21,23 +21,23 @@ Para configurar um ponto de extremidade de serviço do Windows Communication Fou
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Para adicionar um ponto de extremidade do WCF que é compatível com clientes de serviço Web do ASP.NET no código  
   
-1.  Criar um novo <xref:System.ServiceModel.BasicHttpBinding> instância  
+1. Criar um novo <xref:System.ServiceModel.BasicHttpBinding> instância  
   
-2.  Opcionalmente, habilitar a segurança de transporte para essa associação de ponto de extremidade de serviço, definindo o modo de segurança para a associação se <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obter detalhes, consulte [segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2. Opcionalmente, habilitar a segurança de transporte para essa associação de ponto de extremidade de serviço, definindo o modo de segurança para a associação se <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obter detalhes, consulte [segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-3.  Adicione um novo ponto de extremidade do aplicativo para seu host de serviço usando a instância de associação que você acabou de criar. Para obter detalhes sobre como adicionar um ponto de extremidade de serviço no código, consulte o [como: Criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+3. Adicione um novo ponto de extremidade do aplicativo para seu host de serviço usando a instância de associação que você acabou de criar. Para obter detalhes sobre como adicionar um ponto de extremidade de serviço no código, consulte o [como: Criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
-4.  Habilite um ponto de extremidade de metadados HTTP/GET para o seu serviço. Para obter detalhes, consulte [como: Publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+4. Habilite um ponto de extremidade de metadados HTTP/GET para o seu serviço. Para obter detalhes, consulte [como: Publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Para adicionar um ponto de extremidade do WCF que é compatível com clientes de serviço Web do ASP.NET em um arquivo de configuração  
   
-1.  Criar um novo <xref:System.ServiceModel.BasicHttpBinding> configuração de associação. Para obter detalhes, consulte o [como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+1. Criar um novo <xref:System.ServiceModel.BasicHttpBinding> configuração de associação. Para obter detalhes, consulte o [como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-2.  Opcionalmente, habilitar a segurança de transporte para essa configuração de associação de ponto de extremidade de serviço, definindo o modo de segurança para a associação se <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obter detalhes, consulte [segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2. Opcionalmente, habilitar a segurança de transporte para essa configuração de associação de ponto de extremidade de serviço, definindo o modo de segurança para a associação se <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Para obter detalhes, consulte [segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-3.  Configure um novo ponto de extremidade do aplicativo para seu serviço usando a configuração de associação que você acabou de criar. Para obter detalhes sobre como adicionar um ponto de extremidade de serviço em um arquivo de configuração, consulte o [como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+3. Configure um novo ponto de extremidade do aplicativo para seu serviço usando a configuração de associação que você acabou de criar. Para obter detalhes sobre como adicionar um ponto de extremidade de serviço em um arquivo de configuração, consulte o [como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
-4.  Habilite um ponto de extremidade de metadados HTTP/GET para o seu serviço. Para obter detalhes, consulte o [como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+4. Habilite um ponto de extremidade de metadados HTTP/GET para o seu serviço. Para obter detalhes, consulte o [como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como adicionar um ponto de extremidade do WCF que é compatível com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de serviço no código da Web e, opcionalmente, nos arquivos de configuração.  

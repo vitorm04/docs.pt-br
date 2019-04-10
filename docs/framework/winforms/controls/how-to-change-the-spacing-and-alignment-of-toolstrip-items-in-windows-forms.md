@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323168"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Como: Alterar o espaçamento e o alinhamento de itens ToolStrip no Windows Forms
 O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recursos de layout como dimensionamento, espaçamento de <xref:System.Windows.Forms.ToolStripItem> controles relativos uns aos outros, a organização dos controles na <xref:System.Windows.Forms.ToolStrip>e o espaçamento dos controles relativo para o <xref:System.Windows.Forms.ToolStrip>.  
@@ -23,7 +23,7 @@ O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recu
   
 ### <a name="to-manually-size-a-toolstripitem"></a>Para dimensionar manualmente um ToolStripItem  
   
-1.  Defina as <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> propriedade para `false` para o controle associado.  
+1. Defina as <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> propriedade para `false` para o controle associado.  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,11 +33,11 @@ O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recu
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  Defina as <xref:System.Windows.Forms.ToolStripItem.Size%2A> propriedade da maneira desejada para associado <xref:System.Windows.Forms.ToolStripItem>.  
+2. Defina as <xref:System.Windows.Forms.ToolStripItem.Size%2A> propriedade da maneira desejada para associado <xref:System.Windows.Forms.ToolStripItem>.  
   
 ### <a name="to-set-the-spacing-of-a-toolstripitem"></a>Para definir o espaçamento de um ToolStripItem  
   
-1.  Insira os valores desejados, em pixels, o <xref:System.Windows.Forms.ToolStripItem.Margin%2A> propriedade do controle associado.  
+1. Insira os valores desejados, em pixels, o <xref:System.Windows.Forms.ToolStripItem.Margin%2A> propriedade do controle associado.  
   
      Os valores da <xref:System.Windows.Forms.ToolStripItem.Margin%2A> propriedade especificam o espaçamento entre o item e itens adjacentes nesta ordem: À esquerda, superior, direita e inferior.  
   
@@ -53,7 +53,7 @@ O <xref:System.Windows.Forms.ToolStrip> totalmente o controle dá suporte a recu
   
 ### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>Para alinhar um ToolStripItem à direita de ToolStrip  
   
-1.  Defina as <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> propriedade para <xref:System.Windows.Forms.ToolStripItemAlignment.Right> para o controle associado. Por padrão, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> é definido como <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, que alinha os controles à esquerda do <xref:System.Windows.Forms.ToolStrip>.  
+1. Defina as <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> propriedade para <xref:System.Windows.Forms.ToolStripItemAlignment.Right> para o controle associado. Por padrão, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> é definido como <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, que alinha os controles à esquerda do <xref:System.Windows.Forms.ToolStrip>.  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  

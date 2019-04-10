@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321049"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Como: criar e inicializar ouvintes de rastreamento
 As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> enviam mensagens para objetos chamados ouvintes, que recebem e processam essas mensagens. Um ouvinte desse tipo, o <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, é criado e inicializado automaticamente quando a depuração ou o rastreamento é habilitado. Se você desejar que a saída <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> seja direcionada para outras fontes, crie e inicialize ouvintes de rastreamento adicionais.  
@@ -29,7 +29,7 @@ As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Para criar e usar um ouvinte de rastreamento usando um arquivo de configuração  
   
-1.  Declare o ouvinte de rastreamento no arquivo de configuração de aplicativo. Se o ouvinte que você está criando exigir outros objetos, declare-os também. O exemplo a seguir mostra como criar um ouvinte chamado `myListener` que grava no arquivo de texto `TextWriterOutput.log`.  
+1. Declare o ouvinte de rastreamento no arquivo de configuração de aplicativo. Se o ouvinte que você está criando exigir outros objetos, declare-os também. O exemplo a seguir mostra como criar um ouvinte chamado `myListener` que grava no arquivo de texto `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:
     </configuration>  
     ```  
   
-2.  Use a classe <xref:System.Diagnostics.Trace> no código para gravar uma mensagem nos ouvintes de rastreamento.  
+2. Use a classe <xref:System.Diagnostics.Trace> no código para gravar uma mensagem nos ouvintes de rastreamento.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

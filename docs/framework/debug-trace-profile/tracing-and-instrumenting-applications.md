@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298897"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
 O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Fases de rastreamento de código  
  Há três fases de rastreamento de código:  
   
-1.  **Instrumentação** – você adiciona o código de rastreamento ao aplicativo.  
+1. **Instrumentação** – você adiciona o código de rastreamento ao aplicativo.  
   
-2.  **Rastreamento** – o código de rastreamento grava as informações no destino especificado.  
+2. **Rastreamento** – o código de rastreamento grava as informações no destino especificado.  
   
-3.  **Análise** – você avalia as informações de rastreamento para identificar e entender problemas no aplicativo.  
+3. **Análise** – você avalia as informações de rastreamento para identificar e entender problemas no aplicativo.  
   
  Durante o desenvolvimento, todos os métodos de saída de depuração e rastreamento gravam informações na janela de Saída do Visual Studio por padrão. Em um aplicativo implantado, os métodos gravam informações de rastreamento nos destinos especificados. Para obter mais informações sobre como especificar um destino de saída de rastreamento ou de depuração, consulte [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>Para usar o rastreamento em um aplicativo  
   
-1.  Considere qual saída de rastreamento você desejará receber no local depois de implantar o aplicativo.  
+1. Considere qual saída de rastreamento você desejará receber no local depois de implantar o aplicativo.  
   
-2.  Crie um conjunto de opções. Para obter mais informações, confira [Como: Configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Crie um conjunto de opções. Para obter mais informações, confira [Como: Configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Adicione as instruções de rastreamento ao código do aplicativo.  
+3. Adicione as instruções de rastreamento ao código do aplicativo.  
   
-4.  Determine o local em que você deseja que a saída de rastreamento seja exibida e adicione os ouvintes apropriados. Para obter mais informações, consulte [Criando e inicializando ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Determine o local em que você deseja que a saída de rastreamento seja exibida e adicione os ouvintes apropriados. Para obter mais informações, consulte [Criando e inicializando ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Teste e depure o aplicativo e o código de rastreamento que ele contém.  
+5. Teste e depure o aplicativo e o código de rastreamento que ele contém.  
   
-6.  Compile o aplicativo no código executável usando um dos seguintes procedimentos:  
+6. Compile o aplicativo no código executável usando um dos seguintes procedimentos:  
   
     -   Use o menu **Compilar** juntamente com a página **Depurar** da caixa de diálogo **Páginas de Propriedades** no **Gerenciador de Soluções**. Use essa opção quando estiver compilando no Visual Studio.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Use as diretivas do compilador **Trace** e **Debug** para o método de compilação de linha de comando. Para obter mais informações, consulte [Compilando condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Use essa opção quando estiver compilando na linha de comando.  
   
-7.  Se ocorrer um problema durante o tempo de execução, ative a opção de rastreamento apropriada. Para obter mais informações, consulte [Configurando Opções de Rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Se ocorrer um problema durante o tempo de execução, ative a opção de rastreamento apropriada. Para obter mais informações, consulte [Configurando Opções de Rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      O código de rastreamento grava mensagens de rastreamento em um destino especificado, por exemplo, uma tela, um arquivo de texto ou um log de eventos. O tipo de ouvinte incluído na coleção **Trace.Listeners** determina o destino.  
   
-8.  Analise as mensagens de rastreamento para identificar e entender o problema no aplicativo.  
+8. Analise as mensagens de rastreamento para identificar e entender o problema no aplicativo.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentação de rastreamento e aplicativos distribuídos  
  Ao criar um aplicativo distribuído, talvez seja difícil testá-lo da maneira em que ele será usado. Poucas equipes de desenvolvimento têm a capacidade de testar todas as combinações possíveis de sistemas operacionais ou navegadores da Web (incluindo todas as opções de idiomas localizados) ou de simular o grande número de usuários que acessarão o aplicativo ao mesmo tempo. Nessas circunstâncias, não é possível testar como um aplicativo distribuído responderá a grandes volumes, diferentes configurações e comportamentos exclusivos do usuário final. Além disso, muitas partes de um aplicativo distribuído não tem nenhuma interface do usuário com a qual é possível interagir diretamente ou exibir a atividade dessas partes.  

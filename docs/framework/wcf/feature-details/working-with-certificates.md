@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331709"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -90,13 +90,13 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Para criar uma cadeia de confiança com o cmdlet New-SelfSignedCertificate  
   
-1.  Crie um certificado (autoassinado) da autoridade de raiz temporário usando o cmdlet New-SelfSignedCertificate. Salve a chave privada no disco.  
+1. Crie um certificado (autoassinado) da autoridade de raiz temporário usando o cmdlet New-SelfSignedCertificate. Salve a chave privada no disco.  
   
-2.  Use o novo certificado para emitir outro certificado que contém a chave pública.  
+2. Use o novo certificado para emitir outro certificado que contém a chave pública.  
   
-3.  Importe o certificado de autoridade no repositório de Autoridades de Certificação Confiáveis.  
+3. Importe o certificado de autoridade no repositório de Autoridades de Certificação Confiáveis.  
   
-4.  Para obter instruções passo a passo, consulte [como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Para obter instruções passo a passo, consulte [como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Qual certificado usar?  
  As perguntas comuns sobre certificados são qual certificado usar e por quê. A resposta depende de se você está programando um cliente ou serviço. As informações a seguir fornecem uma orientação geral e não são uma resposta completa a essas perguntas.  

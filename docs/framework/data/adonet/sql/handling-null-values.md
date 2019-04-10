@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332138"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 Um valor nulo em um banco de dados relacional é usado quando o valor em uma coluna é desconhecido ou ausente. Um nulo não é uma cadeia de caracteres vazia (para os tipos de dados character ou datetime) nem um valor zero (para tipos de dados numéricos). A especificação ANSI SQL-92 indica que um valor nulo deve ser o mesmo para todos os tipos de dados, para que todos os nulos sejam tratados consistentemente. O namespace <xref:System.Data.SqlTypes> fornece uma semântica nula implementando a interface <xref:System.Data.SqlTypes.INullable>. Cada um dos tipos de dados no <xref:System.Data.SqlTypes> tem sua própria propriedade `IsNull` e um valor `Null` que pode ser atribuído a uma instância desse tipo de dados.  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Além disso, as seguintes regras se aplicam a uma instância de atribuições nulas de `DataRow.["columnName"]`:  
   
-1.  O padrão *padrão* valor é `DbNull.Value` para todos, exceto as colunas nulas fortemente tipadas em que é apropriado fortemente tipada de valor nulo.  
+1. O padrão *padrão* valor é `DbNull.Value` para todos, exceto as colunas nulas fortemente tipadas em que é apropriado fortemente tipada de valor nulo.  
   
-2.  Os valores nulos nunca são gravados durante a serialização para arquivos XML (como em “xsi:nil").  
+2. Os valores nulos nunca são gravados durante a serialização para arquivos XML (como em “xsi:nil").  
   
-3.  Todos os valores não nulos, incluindo os valores padrão, sempre são gravados durante a serialização para XML. Esta é a semântica XSD/XML improvável, em que um valor nulo (xsi:nil) é explícito e o valor padrão é implícito (caso não esteja presente no XML, um analisador de validação poderá obtê-lo em um esquema XSD associado). O oposto é verdadeiro para `DataTable`: um valor nulo é implícito e o valor padrão é explícito.  
+3. Todos os valores não nulos, incluindo os valores padrão, sempre são gravados durante a serialização para XML. Esta é a semântica XSD/XML improvável, em que um valor nulo (xsi:nil) é explícito e o valor padrão é implícito (caso não esteja presente no XML, um analisador de validação poderá obtê-lo em um esquema XSD associado). O oposto é verdadeiro para `DataTable`: um valor nulo é implícito e o valor padrão é explícito.  
   
-4.  Todos os valores de coluna ausentes para as linhas lidas na entrada XML recebem NULL. As linhas criadas por meio de <xref:System.Data.DataTable.NewRow%2A> ou de métodos similares recebem o valor padrão de DataColumn.  
+4. Todos os valores de coluna ausentes para as linhas lidas na entrada XML recebem NULL. As linhas criadas por meio de <xref:System.Data.DataTable.NewRow%2A> ou de métodos similares recebem o valor padrão de DataColumn.  
   
-5.  O método <xref:System.Data.DataRow.IsNull%2A> retorna `true` para `DbNull.Value` e `INullable.Null`.  
+5. O método <xref:System.Data.DataRow.IsNull%2A> retorna `true` para `DbNull.Value` e `INullable.Null`.  
   
 ## <a name="assigning-null-values"></a>Atribuindo valores nulos  
  O valor padrão para qualquer instância de <xref:System.Data.SqlTypes> é nulo.  

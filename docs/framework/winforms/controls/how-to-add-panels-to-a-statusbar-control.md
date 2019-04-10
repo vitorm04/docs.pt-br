@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319853"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Como: Adicionar painéis a um controle StatusBar
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227789"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Para adicionar painéis a uma barra de status  
   
-1.  Em um procedimento, crie painéis da barra de status adicionando-os para o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Especifique as configurações de propriedade para painéis individuais usando seu índice passado por meio de <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade.  
+1. Em um procedimento, crie painéis da barra de status adicionando-os para o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Especifique as configurações de propriedade para painéis individuais usando seu índice passado por meio de <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade.  
   
      No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir exige um formulário com um <xref:System.Windows.Forms.StatusBar> controle já adicionado.  
   
