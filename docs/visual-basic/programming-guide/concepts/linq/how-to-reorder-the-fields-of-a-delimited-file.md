@@ -2,21 +2,21 @@
 title: 'Como: Reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: fbcd880d7bae9d6ad57f4769a5c4b6ef6f0141a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f41a8e38812cf9d3c652fa605febf2511f07a27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339080"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a><span data-ttu-id="f3ae2-102">Como: Reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3ae2-102">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="f3ae2-103">Um CSV (arquivo de valores separados por vírgula) é um arquivo de texto que é frequentemente usado para armazenar dados de planilha ou outros dados de tabela que são representados por linhas e colunas.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="f3ae2-104">Ao usar o método <xref:System.String.Split%2A> para separar os campos, é muito fácil consultar e manipular arquivos CSV usando LINQ.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="f3ae2-105">Na verdade, a mesma técnica pode ser usada para reordenar as partes de qualquer linha estruturada de texto. Ela não é limitada a arquivos CSV.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a><span data-ttu-id="07781-102">Como: Reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07781-102">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="07781-103">Um CSV (arquivo de valores separados por vírgula) é um arquivo de texto que é frequentemente usado para armazenar dados de planilha ou outros dados de tabela que são representados por linhas e colunas.</span><span class="sxs-lookup"><span data-stu-id="07781-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="07781-104">Ao usar o método <xref:System.String.Split%2A> para separar os campos, é muito fácil consultar e manipular arquivos CSV usando LINQ.</span><span class="sxs-lookup"><span data-stu-id="07781-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="07781-105">Na verdade, a mesma técnica pode ser usada para reordenar as partes de qualquer linha estruturada de texto. Ela não é limitada a arquivos CSV.</span><span class="sxs-lookup"><span data-stu-id="07781-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
   
- <span data-ttu-id="f3ae2-106">No exemplo a seguir, suponha que as três colunas representam o "sobrenome", o "nome" e a "ID" dos alunos.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="f3ae2-107">Os campos estão em ordem alfabética com base nos sobrenomes dos alunos.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="f3ae2-108">A consulta gera uma nova sequência, na qual a coluna ID é exibida em primeiro, seguida por uma segunda coluna que combina o nome e o sobrenome do aluno.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="f3ae2-109">As linhas são reordenadas acordo com o campo ID.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="f3ae2-110">Os resultados são salvos em um novo arquivo e os dados originais não são modificados.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-110">The results are saved into a new file and the original data is not modified.</span></span>  
+ <span data-ttu-id="07781-106">No exemplo a seguir, suponha que as três colunas representam o "sobrenome", o "nome" e a "ID" dos alunos.</span><span class="sxs-lookup"><span data-stu-id="07781-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="07781-107">Os campos estão em ordem alfabética com base nos sobrenomes dos alunos.</span><span class="sxs-lookup"><span data-stu-id="07781-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="07781-108">A consulta gera uma nova sequência, na qual a coluna ID é exibida em primeiro, seguida por uma segunda coluna que combina o nome e o sobrenome do aluno.</span><span class="sxs-lookup"><span data-stu-id="07781-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="07781-109">As linhas são reordenadas acordo com o campo ID.</span><span class="sxs-lookup"><span data-stu-id="07781-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="07781-110">Os resultados são salvos em um novo arquivo e os dados originais não são modificados.</span><span class="sxs-lookup"><span data-stu-id="07781-110">The results are saved into a new file and the original data is not modified.</span></span>  
   
-### <a name="to-create-the-data-file"></a><span data-ttu-id="f3ae2-111">Para criar o arquivo de dados</span><span class="sxs-lookup"><span data-stu-id="f3ae2-111">To create the data file</span></span>  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="07781-111">Para criar o arquivo de dados</span><span class="sxs-lookup"><span data-stu-id="07781-111">To create the data file</span></span>  
   
-1.  <span data-ttu-id="f3ae2-112">Copie as seguintes linhas em um arquivo de texto sem formatação denominado spreadsheet1.csv.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="f3ae2-113">Salve o arquivo na pasta do seu projeto.</span><span class="sxs-lookup"><span data-stu-id="f3ae2-113">Save the file in your project folder.</span></span>  
+1. <span data-ttu-id="07781-112">Copie as seguintes linhas em um arquivo de texto sem formatação denominado spreadsheet1.csv.</span><span class="sxs-lookup"><span data-stu-id="07781-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="07781-113">Salve o arquivo na pasta do seu projeto.</span><span class="sxs-lookup"><span data-stu-id="07781-113">Save the file in your project folder.</span></span>  
   
     ```  
     Adams,Terry,120  
@@ -33,7 +33,7 @@ ms.locfileid: "54564559"
     Zabokritski,Eugene,121  
     ```  
   
-## <a name="example"></a><span data-ttu-id="f3ae2-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f3ae2-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="07781-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="07781-114">Example</span></span>  
   
 ```vb  
 Class CSVFiles  
@@ -74,10 +74,10 @@ End Class
 ' 122, Michael Tucker  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f3ae2-115">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="f3ae2-115">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="07781-115">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="07781-115">Compiling the Code</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3ae2-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f3ae2-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07781-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="07781-116">See also</span></span>
 
-- [<span data-ttu-id="f3ae2-117">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3ae2-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="f3ae2-118">LINQ e diretórios de arquivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3ae2-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [<span data-ttu-id="f3ae2-119">Como: Gerar XML de arquivos CSV</span><span class="sxs-lookup"><span data-stu-id="f3ae2-119">How to: Generate XML from CSV Files</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [<span data-ttu-id="07781-117">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07781-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="07781-118">LINQ e diretórios de arquivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07781-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="07781-119">Como: gerar um XML com base em arquivos CSV</span><span class="sxs-lookup"><span data-stu-id="07781-119">How to: Generate XML from CSV Files</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
