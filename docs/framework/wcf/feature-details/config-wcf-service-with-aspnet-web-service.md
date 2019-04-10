@@ -1,18 +1,18 @@
 ---
-title: 'Como: Configurar o serviço do WCF para interoperar com clientes de serviço Web do ASP.NET'
+title: 'Como: configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 8f7fe8c3dea700743def739de216633c8a26329b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8955018124f4e60b0a7c74ad70210b4369676ef5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214696"
 ---
-# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Como: Configurar o serviço do WCF para interoperar com clientes de serviço Web do ASP.NET
+# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Como: configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET
 Para configurar um ponto de extremidade de serviço do Windows Communication Foundation (WCF) para interoperabilidade com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de serviço Web, use o <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como o tipo de associação para o ponto de extremidade de serviço.  
   
  Opcionalmente, você pode habilitar o suporte para HTTPS e autenticação de cliente de nível de transporte na associação. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Clientes de serviço Web não dão suporte para a codificação de mensagem MTOM, portanto, o <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> propriedade deve ser deixada como seu valor padrão, que é <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Clientes de serviço Web do ASP.Net não dão suporte a WS-Security, portanto, o <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve ser definido como <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
@@ -47,10 +47,11 @@ Para configurar um ponto de extremidade de serviço do Windows Communication Fou
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]     
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
-- [Como: Publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
-- [Como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+
+- [Como: criar um ponto de extremidade de serviço em código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [Como: publicar metadados utilizando código para um serviço](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Como: criar um ponto de extremidade de serviço em configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Como: publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)

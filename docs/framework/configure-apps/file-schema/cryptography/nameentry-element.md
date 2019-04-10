@@ -1,5 +1,5 @@
 ---
-title: Elemento <nameEntry>
+title: <nameEntry> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225320"
 ---
 # <a name="nameentry-element"></a>\<nameEntry> Element
 Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que uma classe tenha vários nomes amigáveis.  
@@ -38,7 +38,7 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**name**|Atributo obrigatório.<br /><br /> Especifica o nome amigável do algoritmo que implementa a classe de criptografia.|  
-|**class**|Atributo obrigatório.<br /><br /> Especifica o valor para o **nome** atributo na [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
+|**classe**|Atributo obrigatório.<br /><br /> Especifica o valor para o **nome** atributo na [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -76,6 +76,7 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)

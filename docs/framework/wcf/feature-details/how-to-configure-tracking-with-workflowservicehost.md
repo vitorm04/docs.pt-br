@@ -1,15 +1,15 @@
 ---
-title: 'Como: Configurar o rastreamento com WorkflowServiceHost'
+title: 'Como: configurar o acompanhamento com WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 8ed8775a8eb13a8e69566c1d413dcd2eba6d8b6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226541"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como: Configurar o rastreamento com WorkflowServiceHost
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como: configurar o acompanhamento com WorkflowServiceHost
 Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fluxo de trabalho hospedado em <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ele é configurado por meio de um arquivo Web. config, especificando um comportamento de serviço.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurar o controle na configuração  
@@ -69,6 +69,7 @@ Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_
      Para obter mais informações sobre o controle em geral, consulte [fluxo de trabalho, controle e rastreamento](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Para obter um exemplo de configuração de rastreamento programaticamente, consulte [Configurando o rastreamento para um fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+
+- [Configuração simplificada para serviços do WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Acompanhando perfis](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Controlando perfis](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors of elements [WPF], changing
 - elements [WPF], changing color of
 ms.assetid: 7e246802-3625-47a7-ae9d-c8a2a40fd040
-ms.openlocfilehash: 0d2c297108da7af09e5f01551bdedc5f0ac5e9af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 744963cc543110121a777e1d4c3cdcb3cec40d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217634"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Como: Alterar a cor de um elemento usando eventos de foco
 Este exemplo mostra como alterar a cor de um elemento quando ele recebe e perde o foco usando o <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus> eventos.  
@@ -32,4 +32,5 @@ Este exemplo mostra como alterar a cor de um elemento quando ele recebe e perde 
  [!code-vb[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/VisualBasic/Window1.xaml.vb#gotlostfocussampleeventhandlers)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da entrada](input-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214826"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer
 Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para agrupar outros controles. Há três razões para agrupar controles. Uma delas é o agrupamento visual de elementos de formulários relacionados para uma interface do usuário clara; a outra é o agrupamento programático dos botões de opção, por exemplo; a última é para mover os controles como uma unidade em tempo de design.  
@@ -30,6 +30,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para agrup
 3.  (Opcional) Se você quiser adicionar uma borda a um painel, defina seu <xref:System.Windows.Forms.BorderStyle> propriedade. Há três opções: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, e <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Controle de painel](panel-control-windows-forms.md)
-- [Visão geral do controle Panel](panel-control-overview-windows-forms.md)
-- [Como: Definir plano de fundo de um painel](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Visão geral do controle de painel](panel-control-overview-windows-forms.md)
+- [Como: Definir a tela de fundo de um painel](how-to-set-the-background-of-a-windows-forms-panel.md)

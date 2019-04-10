@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213676"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Passo a passo: Depurando controles do Windows Forms no tempo de design
 Quando criar um controle personalizado, frequentemente você achará necessário depurar seu comportamento em tempo de design. Isso será especialmente válido se você estiver criando um designer personalizado para seu controle personalizado. Para obter detalhes, consulte [passo a passo: Criando um Windows Forms o controle que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md).  
@@ -173,6 +173,7 @@ Quando criar um controle personalizado, frequentemente você achará necessário
 -   Você pode escrever um designer personalizado para seu controle personalizado. Isso lhe dá controle total sobre a experiência de design usando a infra-estrutura de designer extensível exposta pelo Visual Studio. Para obter detalhes, consulte [passo a passo: Criando um Windows Forms o controle que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Passo a passo: Criando um controle de formulários do Windows que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md)
+
+- [Passo a passo: Criar um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
 - [Como: Serviços de tempo de Design de acesso](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Como: Suporte de tempo de Design de acesso no Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

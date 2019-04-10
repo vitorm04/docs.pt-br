@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting text attributes
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
-ms.openlocfilehash: 70a4d5967601780e83116d94f86fb24720f06626
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d4cb9d12e4e2d5a28744e3a238884616a6db8f68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214891"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>Obter atributos de texto usando automação de interface do usuário
 > [!NOTE]
@@ -35,9 +35,10 @@ ms.locfileid: "57676792"
  O <xref:System.Windows.Automation.TextPattern> padrão de controle, em tandem com o <xref:System.Windows.Automation.Text.TextPatternRange> classe, dá suporte a atributos de texto básico, propriedades e métodos. Para a funcionalidade específica do controle que não é compatível com <xref:System.Windows.Automation.TextPattern> ou <xref:System.Windows.Automation.Text.TextPatternRange> o <xref:System.Windows.Automation.AutomationElement>, classe fornece métodos para um cliente de automação de interface do usuário acessar o modelo de objeto nativo correspondente.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral de TextPattern de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Adicionar conteúdo a uma caixa de texto utilizando automação da interface do usuário](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Localizar e destacar texto usando automação de interface do usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+
+- [Visão geral de TextPattern de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Acrescentar Conteúdo a um Text Box Utilizando Automação de IU](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Encontre e destaque texto usando automação de interface de usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Visão Geral de Padrões de Controle de Automação de Interface de Usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Padrões de Controle para Clientes de Automação de IU](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Obter detalhes de atributos de texto misto usando automação de interface do usuário](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)

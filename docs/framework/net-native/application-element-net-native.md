@@ -1,15 +1,15 @@
 ---
-title: <Application> (.NET Nativo)
+title: <Application> (.NET nativo)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228296"
 ---
 # <a name="application-element-net-native"></a>\<Aplicativo > (.NET nativo)
 Serve como um contêiner para tipos em todo o aplicativo e membros de tipo cujos metadados estão disponível para reflexão no tempo de execução e aplica-se à política de reflexão no tempo de execução a todos os elementos de programa em um aplicativo.  
@@ -60,21 +60,21 @@ Elemento \<Application> (rd.xml)
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política a todos os tipos em um assembly específico.|  
+|[\<Assembly >](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política a todos os tipos em um assembly específico.|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica a política a todos os tipos em um namespace específico.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política a um tipo específico, como uma classe ou estrutura.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política a um tipo específico, como uma classe ou estrutura.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído. Por exemplo, um elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) pode ser usado para definir a política para um tipo `List<String>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política a um método em um tipo específico.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Aplica a política a uma propriedade em um tipo específico.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Aplica a política a um campo em um tipo específico.|  
+|[\<Método >](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política a um método em um tipo específico.|  
+|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica a política a um tipo genérico construído.|  
+|[\<Propriedade >](../../../docs/framework/net-native/property-element-net-native.md)|Aplica a política a uma propriedade em um tipo específico.|  
+|[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)|Aplica a política a um campo em um tipo específico.|  
 |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Aplica a política a um evento em um determinado tipo.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de tempo de execução.|  
+|[\<Diretivas >](../../../docs/framework/net-native/directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) pode conter zero ou um elemento `<Application>`. Vários elementos `<Application>` em um mesmo arquivo de diretivas de reflexão não são suportados.  
@@ -86,7 +86,8 @@ Elemento \<Application> (rd.xml)
 -   Como um elemento que define a política de todo o aplicativo para reflexão, serialização e interoperabilidade. Os atributos do elemento `<Application>` definem a política de todo o aplicativo, que pode ser substituída pelos elementos filhos definidos pelo elemento `<Application>` ou [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [\<Biblioteca > elemento](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Diretivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
+
+- [Elemento \<Library>](../../../docs/framework/net-native/library-element-net-native.md)
+- [Elemento \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

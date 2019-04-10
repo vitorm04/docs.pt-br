@@ -1,15 +1,15 @@
 ---
-title: 'Como: Especifique as credenciais de segurança de canal'
+title: 'Como: especificar credenciais de segurança de canal'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222595"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Como: Especifique as credenciais de segurança de canal
+# <a name="how-to-specify-channel-security-credentials"></a>Como: especificar credenciais de segurança de canal
 O Moniker de serviço do Windows Communication Foundation (WCF) permite que aplicativos de COM chamar serviços WCF. A maioria dos serviços WCF requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um serviço WCF de um cliente WCF, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração de aplicativo. Ao chamar um serviço WCF em um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico será ilustram várias maneiras para especificar as credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
   
 > [!NOTE]
@@ -65,13 +65,9 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
 ### <a name="to-specify-user-name-and-password"></a>Para especificar o nome de usuário e senha  
   
 1.  Modifique o arquivo App. config do serviço para usar o `wsHttpBinding`. Isso é necessário para a validação de nome e a senha do usuário:  
-  
-  
-  
+
 2.  Defina o `clientCredentialType` ao nome de usuário:  
-  
-  
-  
+
 3.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
@@ -96,9 +92,7 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
 ### <a name="to-specify-windows-credentials"></a>Para especificar as credenciais do Windows  
   
 1.  Definir `clientCredentialType` para Windows no arquivo App. config do serviço:  
-  
-  
-  
+
 2.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
@@ -138,8 +132,9 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
      Para obter mais informações sobre os parâmetros para esse método, consulte <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Federação](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: configurar credenciais em um serviço de federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

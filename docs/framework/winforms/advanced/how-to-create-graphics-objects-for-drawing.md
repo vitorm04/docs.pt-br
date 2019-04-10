@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar objetos gráficos para desenho'
+title: 'Como: criar objetos gráficos para desenho'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223622"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Como: Criar objetos gráficos para desenho
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Como: criar objetos gráficos para desenho
 Antes que você possa desenhar linhas e formas, renderizar texto ou exibir e manipular imagens com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você precisa criar um <xref:System.Drawing.Graphics> objeto. O <xref:System.Drawing.Graphics> objeto representa um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superfície de desenho, e é o objeto que é usado para criar imagens gráficas.  
   
  Há duas etapas ao trabalhar com gráficos:  
@@ -33,11 +33,11 @@ Antes que você possa desenhar linhas e formas, renderizar texto ou exibir e man
   
 -   Receba uma referência a um objeto gráfico como parte do <xref:System.Windows.Forms.PaintEventArgs> no <xref:System.Windows.Forms.Control.Paint> eventos de um formulário ou controle. Geralmente é assim que você obtém uma referência a um objeto gráfico ao criar código de pintura para um controle. Da mesma forma, você também pode obter um objeto gráfico como uma propriedade do <xref:System.Drawing.Printing.PrintPageEventArgs> ao lidar com o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento para um <xref:System.Drawing.Printing.PrintDocument>.  
   
-     -ou-  
+     - ou -  
   
 -   Chame o <xref:System.Windows.Forms.Control.CreateGraphics%2A> método de um controle ou formulário para obter uma referência a um <xref:System.Drawing.Graphics> objeto que representa a superfície de desenho desse controle ou formulário. Use esse método se quiser desenhar em um formulário ou controle que já exista.  
   
-     -ou-  
+     - ou -  
   
 -   Criar uma <xref:System.Drawing.Graphics> objeto de qualquer objeto que herda de <xref:System.Drawing.Image>. Essa abordagem é útil quando você quer alterar uma imagem existente.  
   
@@ -165,13 +165,14 @@ Antes que você possa desenhar linhas e formas, renderizar texto ou exibir e man
   
     |Para renderizar|Consulte|  
     |---------------|---------|  
-    |Linhas|[Como: Desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formas|[Como: Desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)|  
-    |Texto|[Como: Desenhar texto em um formulário do Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Imagens|[Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)|  
+    |Linhas|[Como: desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formas|[Como: desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)|  
+    |Texto|[Como: desenhar texto em um formulário do Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Imagens|[Como: renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Consulte também
-- [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
-- [Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)
+
+- [Introdução à programação de elementos gráficos](getting-started-with-graphics-programming.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Linhas, curvas e formas](lines-curves-and-shapes.md)
+- [Como: renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)

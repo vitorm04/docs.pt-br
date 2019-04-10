@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219805"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Retornos de chamada da propriedade de dependência e validação
 Este tópico descreve como criar propriedades de dependência usando implementações alternativas personalizadas para recursos relacionados a propriedade como validação de determinação, callbacks que são chamadas sempre que o valor efetivo da propriedade é alterado e substituindo possíveis influências externas na determinação do valor. Este tópico também aborda os cenários em que é apropriado expandir os comportamentos padrões do sistema usando essas técnicas.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico pressupõe que você compreenda os cenários básicos de implementar uma propriedade de dependência e como os metadados são aplicados a uma propriedade de dependência personalizada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) e [Metadados de propriedade de dependência](dependency-property-metadata.md) para ver o contexto.  
@@ -81,6 +79,7 @@ Este tópico descreve como criar propriedades de dependência usando implementa�
  O sistema de propriedades tratará qualquer <xref:System.Windows.CoerceValueCallback> que retorna o valor <xref:System.Windows.DependencyProperty.UnsetValue> como um caso especial. Nesse caso especial significa que a alteração da propriedade que resultou no <xref:System.Windows.CoerceValueCallback> que está sendo chamado deve ser rejeitado pelo sistema de propriedades e o sistema de propriedades em vez disso, deve relatar qualquer valor anterior que a propriedade tinha. Esse mecanismo poderá ser útil para verificar se as alterações a uma propriedade que foram iniciadas de forma assíncrona ainda são válidas para o estado atual do objeto e para eliminar as alterações se não forem válidas. Outro cenário possível é que você pode seletivamente suprimir um valor dependendo de qual componente de determinação do valor da propriedade é responsável pelo valor que está sendo relatado. Para fazer isso, você pode usar o <xref:System.Windows.DependencyProperty> passado no retorno de chamada e o identificador de propriedade como entrada para <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>e, em seguida, processar o <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Metadados de propriedade da dependência](dependency-property-metadata.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)

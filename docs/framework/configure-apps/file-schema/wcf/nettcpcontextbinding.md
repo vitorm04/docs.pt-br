@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 35a7f322a38135ae2f728993f29b570c1fa94e8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228439"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Especifica um contexto para o <xref:System.ServiceModel.NetTcpBinding> que requer que o nível de proteção seja assinado. O contextExchangeMechanism para NetTcpContextBinding é SOAPHeader.  
@@ -88,7 +88,7 @@ Especifica um contexto para o <xref:System.ServiceModel.NetTcpBinding> que reque
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
+|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre pontos de extremidade de canal.|  
   
@@ -99,6 +99,7 @@ Especifica um contexto para o <xref:System.ServiceModel.NetTcpBinding> que reque
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.NetTcpContextBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>

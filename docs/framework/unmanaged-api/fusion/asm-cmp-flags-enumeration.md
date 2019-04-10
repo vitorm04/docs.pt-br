@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9aad9568169e6b8feb05fbf0418dbe3dfbbe017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216841"
 ---
 # <a name="asmcmpflags-enumeration"></a>Enumeração ASM_CMP_FLAGS
 Indica a versão, compilação, cultura, assinatura e assim por diante, de dois assemblies a serem comparados o [iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) método.  
@@ -77,5 +77,6 @@ typedef enum {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Enumerações de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Enumerações Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

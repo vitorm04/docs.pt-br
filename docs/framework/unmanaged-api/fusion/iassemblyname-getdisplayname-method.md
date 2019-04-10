@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddcfe7a4066686da918cf5ed93aebec0d6f306f5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 323c883b4010f3ddd4c575e5d5fc40a3419e57c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214358"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>Método IAssemblyName::GetDisplayName
 Obtém o nome legível do assembly referenciado por este [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.  
@@ -55,5 +55,6 @@ HRESULT GetDisplayName (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Enumerações de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Enumerações Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

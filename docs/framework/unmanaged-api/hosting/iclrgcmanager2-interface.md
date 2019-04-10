@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9897526882a8ae53410a7744f78c558dfa6981e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89a7ef34418163d790fd055de681c1cdf989e57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226905"
 ---
 # <a name="iclrgcmanager2-interface"></a>Interface ICLRGCManager2
 Fornece métodos que permitem que um host interagir com o sistema de coleta de lixo do common language runtime.  
@@ -47,9 +47,10 @@ Fornece métodos que permitem que um host interagir com o sistema de coleta de l
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
+
+- [Gerenciamento automático de memória](../../../../docs/standard/automatic-memory-management.md)
 - [Estrutura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [Interfaces de hospedagem CLR adicionadas ao .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem CLR adicionadas no .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

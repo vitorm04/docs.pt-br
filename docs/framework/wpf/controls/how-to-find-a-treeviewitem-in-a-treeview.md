@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219038"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Como: Localizar um TreeViewItem em um TreeView
 O <xref:System.Windows.Controls.TreeView> controle fornece uma maneira conveniente de exibir dados hierárquicos. Se sua <xref:System.Windows.Controls.TreeView> está associado a uma fonte de dados, o <xref:System.Windows.Controls.TreeView.SelectedItem%2A> propriedade fornece uma maneira conveniente para que você possa recuperar rapidamente o objeto de dados selecionado. É geralmente a melhor trabalhar com o objeto de dados subjacente, mas, às vezes, talvez você precise manipular programaticamente os dados que contém <xref:System.Windows.Controls.TreeViewItem>. Por exemplo, talvez você precise expandir programaticamente o <xref:System.Windows.Controls.TreeViewItem>, ou selecione um item diferente no <xref:System.Windows.Controls.TreeView>.  
@@ -42,4 +42,5 @@ O <xref:System.Windows.Controls.TreeView> controle fornece uma maneira convenien
  [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Melhorar o desempenho de um TreeView](how-to-improve-the-performance-of-a-treeview.md)

@@ -2,12 +2,12 @@
 title: ServiceStartFailed
 ms.date: 03/30/2017
 ms.assetid: 33a42eae-d57a-48b3-955c-a8e10b0bb66d
-ms.openlocfilehash: 167753fffebb716e26742317cb590ab069382f37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cb4f120bb3e22ddf6ee19c67528d9900a436d6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225099"
 ---
 # <a name="servicestartfailed"></a>ServiceStartFailed
 Id: 164  
@@ -20,5 +20,6 @@ Id: 164
  Esse evento indica que uma solicitação para iniciar o serviço falhou. O evento lista o código de erro, o nome do processo e a ID de processo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Elemento <assemblyBinding> para <runtime>
+title: <assemblyBinding> elemento para <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75f8e0561711fea8646c9da84f1b7553b3f7553
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225242"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > elemento para \<tempo de execução >
 Contém informações sobre o redirecionamento de versão e os locais dos assemblies.  
@@ -47,7 +47,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Encapsula o local de assembly e política de associação para um assembly. Use um  **\<dependentAssembly >** marca para cada assembly.|  
-|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Especifica os subdiretórios que o common language runtime procura ao carregar assemblies.|  
+|[\<investigação >](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Especifica os subdiretórios que o common language runtime procura ao carregar assemblies.|  
 |[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Especifica se o tempo de execução aplica a política do editor.|  
 |[\<qualifyAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.|  
   
@@ -93,6 +93,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Salvar arquivos com o controle RichTextBox dos Windows Forms'
+title: 'Como: Salvar arquivos com o controle RichTextBox do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213526"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Como: Salvar arquivos com o controle RichTextBox dos Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Como: Salvar arquivos com o controle RichTextBox do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode gravar as informações exibidas em um dos vários formatos:  
   
 -   Texto sem formatação  
@@ -88,6 +88,7 @@ Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode
     >  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, essa aplicativo precisará de acesso Criar para a pasta. As permissões são definidas usando listas de controle de acesso. Se o arquivo já existir, o aplicativo precisará apenas de acesso Gravar, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso de leitura a um único arquivo, em vez de acesso Criar a uma pasta. Além disso, é mais seguro gravar dados em pastas de usuário do que na pasta raiz ou na pasta Arquivos de Programas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)

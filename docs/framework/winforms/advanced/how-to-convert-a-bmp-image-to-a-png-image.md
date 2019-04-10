@@ -1,5 +1,5 @@
 ---
-title: 'Como: Converter uma imagem BMP em uma imagem PNG'
+title: 'Como: converter uma imagem BMP em uma imagem PNG'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - BMP images [Windows Forms], converting to PNG
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
-ms.openlocfilehash: f8636bea120aee86c795b4196415145a484e5772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217010"
 ---
-# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Como: Converter uma imagem BMP em uma imagem PNG
+# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Como: converter uma imagem BMP em uma imagem PNG
 Muitas vezes, convém converter do formato de arquivo de uma imagem para outra. Você pode fazer essa conversão facilmente por meio da chamada a <xref:System.Drawing.Image.Save%2A> método da <xref:System.Drawing.Image> classe e especificando o <xref:System.Drawing.Imaging.ImageFormat> para o formato de arquivo de imagem desejada.  
   
 ## <a name="example"></a>Exemplo  
@@ -32,6 +32,7 @@ Muitas vezes, convém converter do formato de arquivo de uma imagem para outra. 
 -   Uma referência para o `System.Drawing.Imaging` namespace.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Listar os codificadores instalados](how-to-list-installed-encoders.md)
-- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)
-- [Tipos de Bitmaps](types-of-bitmaps.md)
+
+- [Como: listar os codificadores instalados](how-to-list-installed-encoders.md)
+- [Usando codecs de imagem no GDI+ gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [Tipos de bitmaps](types-of-bitmaps.md)

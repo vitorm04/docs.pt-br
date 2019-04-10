@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224917"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 Extensões de marcação são uma técnica XAML para a obtenção de um valor que não é um primitivo nem um tipo específico de XAML. Para uso do atributo, extensões de marcação usam a sequência de caracteres conhecidos de uma chave de abertura `{` para inserir o escopo de extensão de marcação e uma chave de fechamento `}` para sair. Ao usar os serviços de XAML do .NET Framework, você pode usar alguns das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasses do <xref:System.Windows.Markup.MarkupExtension> classe, definida em System. XAML e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma determinada estrutura, se você já está fazendo referência a essa estrutura.  
@@ -155,6 +155,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
  Se você estiver trabalhando com um fluxo do nó XAML na salvar caminho, geralmente não há nada presente em uma representação de gráfico de objeto que pode informá-lo que o objeto a serializar originalmente foi fornecido pelo uso de uma extensão de marcação e um `ProvideValue` resultado. Entrada de XAML em cenários que precisam manter os usos de extensão de marcação para o ciclo completo, enquanto outras alterações no grafo de objeto de captura também deve criar suas próprias técnicas para preservar o conhecimento de um uso de extensão de marcação do original. Por exemplo, para restaurar os usos de extensão de marcação, talvez você precise trabalhar com o fluxo do nó na salvar caminho para executar algum tipo de mesclagem entre o XAML original e o XAML cíclicos ou restaure os usos de extensão de marcação. Algumas estruturas de implementação de XAML, como o WPF usam tipos intermediários (expressões) para ajudar a representar casos em que os usos de extensão de marcação fornecido os valores.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - [Conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md)
-- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

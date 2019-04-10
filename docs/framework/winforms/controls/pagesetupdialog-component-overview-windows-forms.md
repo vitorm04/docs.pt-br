@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 702e9a40652e00cc2f93dd52af29a61a50c90ae0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30ac782cae830ac996132046cbbc57392067c0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228309"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>Visão geral do componente PageSetupDialog (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.PageSetupDialog> componente é uma caixa de diálogo pré-configurada usada para definir os detalhes da página para impressão em aplicativos baseados no Windows. Use-o dentro de seu aplicativo com base em Windows, como uma solução simples para os usuários para definir preferências de página em vez de configurar sua própria caixa de diálogo. Você pode habilitar os usuários definam os ajustes de borda e margem, cabeçalhos e rodapés de páginas e orientação retrato ou paisagem. Com base nas caixas de diálogo padrão do Windows, crie aplicativos cuja funcionalidade básica é imediatamente familiar aos usuários.  
@@ -23,5 +23,6 @@ Os formulários do Windows <xref:System.Windows.Forms.PageSetupDialog> component
  Quando ele é adicionado a um formulário, o <xref:System.Windows.Forms.PageSetupDialog> componente aparece na bandeja na parte inferior do Designer de formulários do Windows.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.PageSetupDialog>
 - [Componente PageSetupDialog](pagesetupdialog-component-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 5254907147444f7c02b2bf0141af02d0efd4159b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c9920869a660bc6144749cc7584275be4608a7c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228803"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 Especifica a versão mínima do subsistema no qual o arquivo executável gerado pode ser executado, determinando assim as versões do Windows em que o arquivo executável pode ser executado. Normalmente, essa opção garante que o arquivo executável possa tirar proveito de determinados recursos de segurança que não estão disponíveis com versões mais antigas do Windows.  
@@ -49,9 +49,9 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
   
 -   O valor padrão é 6.02 se qualquer opção do compilador na lista a seguir for definida:  
   
-    -   [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
     -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
@@ -61,11 +61,9 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
   
 ## <a name="setting-this-option"></a>Definindo esta opção  
  Para definir a **- subsystemversion** opção de compilador no Visual Studio, abra o arquivo. vbproj e especifique um valor para o `SubsystemVersion` propriedade no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
-  
 
-  
 ## <a name="see-also"></a>Consulte também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 
-- [Propriedades MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties)

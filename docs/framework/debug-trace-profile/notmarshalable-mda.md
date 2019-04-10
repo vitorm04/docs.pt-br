@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cec3fd0c3b20c70b6ddf3e875c481e829dd5eb28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226099"
 ---
 # <a name="notmarshalable-mda"></a>MDA notMarshalable
 O MDA (Assistente de Depuração Gerenciado) de `notMarshalable` é ativado quando o CLR (Common Language Runtime) encontra um ponteiro de interface COM sem um proxy/stub registrado válido ou uma implementação incorreta da interface `IMarshal` ao tentar realizar marshaling da interface entre contextos.  
@@ -49,6 +49,7 @@ O MDA (Assistente de Depuração Gerenciado) de `notMarshalable` é ativado quan
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)

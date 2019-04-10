@@ -1,5 +1,5 @@
 ---
-title: 'Como: Modificar a entrada do teclado para um controle padrão'
+title: 'Como: modificar a entrada do teclado para um controle padrão'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 41071efad50d42c873410420c850a7800b41008d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225775"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Como: Modificar a entrada do teclado para um controle padrão
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Como: modificar a entrada do teclado para um controle padrão
 O Windows Forms fornece a capacidade de consumir e modificar as entradas do teclado. Consumir uma tecla significa tratá-la dentro de um método ou manipulador de eventos para que outros métodos e eventos mais adiante na fila de mensagens não recebam o valor da tecla. Modificar uma tecla significa modificar o valor de uma tecla para que os métodos e manipuladores de eventos mais adiante na fila de mensagens recebam um valor de tecla diferente. Este tópico mostra como realizar essas tarefas.  
   
 ### <a name="to-consume-a-key"></a>Consumir uma tecla  
@@ -68,6 +68,7 @@ O Windows Forms fornece a capacidade de consumir e modificar as entradas do tecl
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
-- [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Entrada do usuário em um aplicativo dos Windows Forms](user-input-in-a-windows-forms-application.md)
+
+- [Entrada do teclado em um aplicativo do Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+- [Entrada do usuário em um aplicativo do Windows Forms](user-input-in-a-windows-forms-application.md)
 - [Como a entrada do teclado funciona](how-keyboard-input-works.md)

@@ -3,12 +3,12 @@ title: Usando F# no Azure
 description: Guia para o uso de serviços do Azure comF#
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211732"
 ---
 # <a name="using-f-on-azure"></a>Usando F# no Azure
 
@@ -25,7 +25,6 @@ O Azure oferece suporte a várias configurações de VM (máquina virtual), veja
 
 Para instalar F# em uma máquina virtual para execução, compilação e/ou geração de script, veja [Como usar F# no Linux](https://fsharp.org/use/linux) e [Como usar F# no Windows](https://fsharp.org/use/windows).
 
-
 ## <a name="using-azure-functions-with-f"></a>Usando o Azure Functions com F\#
 
 [Azure Functions](https://azure.microsoft.com/services/functions/) é uma solução para execução facilitada de pequenas partes de código, ou "funções", na nuvem. Você pode escrever apenas o código necessário para o problema atual, sem se preocupar com todo o aplicativo ou com a infraestrutura para executá-lo. As funções são conectadas a eventos no Armazenamento do Azure e a outros recursos hospedados na nuvem. Os dados fluem para suas funções em F# por meio de argumentos da função. Você pode usar a linguagem de desenvolvimento preferida, confiando no Azure para escalar conforme necessário.
@@ -34,18 +33,18 @@ O Azure Functions oferece suporte a F# como uma linguagem de primeira classe com
 
 Outros recursos para usar o Azure Functions e F#:
 
-* [Dimensionar o Azure Functions em F# usando Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
-* [Como criar função do Azure em F#](https://mnie.github.io/2016-09-08-AzureFunctions/)
+* [Escalar verticalmente o Azure Functions em F# usando Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [Como criar função do Azure noF#](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [Usando o provedor de tipos do Azure com o Azure Functions](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>Usar o armazenamento do Azure com F\#
 
 O Armazenamento do Azure é uma camada base de serviços de armazenamento para aplicativos modernos que dependem de durabilidade, disponibilidade e escalabilidade para atender às necessidades dos clientes. F#programas podem interagir diretamente com os serviços de armazenamento do Azure, usando as técnicas descritas nos artigos a seguir.
 
-* [Introdução ao armazenamento de Blobs do Azure usando F#](blob-storage.md)
-* [Introdução ao armazenamento de Arquivos do Azure usando F#](file-storage.md)
-* [Introdução ao armazenamento de Filas do Azure usando F#](queue-storage.md)
-* [Introdução ao armazenamento de Tabelas do Azure usando F#](table-storage.md)
+* [Introdução ao uso do armazenamento de BLOBs do AzureF#](blob-storage.md)
+* [Introdução ao uso do armazenamento de arquivos do AzureF#](file-storage.md)
+* [Introdução ao uso do armazenamento de filas do AzureF#](queue-storage.md)
+* [Introdução ao uso do armazenamento de tabelas do AzureF#](table-storage.md)
 
 O Armazenamento do Azure também pode ser usado em conjunto com o Azure Functions por meio de configuração declarativa em vez de chamadas de API explícitas. Consulte [Gatilhos e associações do Azure Functions para Armazenamento do Azure](/azure/azure-functions/functions-bindings-storage) que inclui exemplos de F#.
 
@@ -53,15 +52,15 @@ O Armazenamento do Azure também pode ser usado em conjunto com o Azure Function
 
 [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) é uma plataforma de nuvem para compilação de aplicativos Web e móveis avançados que se conectam aos dados em qualquer lugar, na nuvem ou localmente.
 
-* [Exemplo de API Web do Azure em F#](https://github.com/fsprojects/azure-webapi-example)
-* [Como hospedar F# em um aplicativo Web no Azure](https://github.com/isaacabraham/fsharp-demonstrator)
+* [F#Exemplo de API da Web do Azure](https://github.com/fsprojects/azure-webapi-example)
+* [Hospedando F# em um aplicativo web no Azure](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Como usar o Apache Spark com F# com o Azure HDInsight
 
 [Apache Spark para Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) é uma estrutura de processamento de código-fonte aberto que executa aplicativos de análise de dados em larga escala. O Azure torna o Apache Spark fácil e barato de implantar. Desenvolva seu aplicativo Spark em F# usando [Mobius](https://github.com/Microsoft/Mobius), uma API do .NET para Spark.
 
 * [Implementar aplicativos Spark em F# usando Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Exemplo de aplicativos Spark em F# usando Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Exemplo F# aplicativos Spark usando Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>Usar o Azure Cosmos DB com F\#
 
@@ -90,7 +89,6 @@ Os Hubs de Notificação do Azure podem ser usados com F# de duas maneiras:
 1. Durante a criação de Azure Functions em F# que enviam resultados para um hub de notificação. Consulte [Gatilhos de saída do Azure Function para Hubs de Notificação](/azure/azure-functions/functions-bindings-notification-hubs), ou
 2. Usando o [SDK do .NET para Azure](https://blogs.msdn.microsoft.com/azuremobile/2014/04/08/push-notifications-using-notification-hub-and-net-backend/). Observe que esses exemplos estão em C#.
 
-
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementação de WebHooks no Azure com F\#
 
 Um [Webhook](https://en.wikipedia.org/wiki/Webhook) é um retorno de chamada disparado por meio de uma solicitação da Web. os Webhooks são usados por sites, como o GitHub, para eventos de sinal.
@@ -101,7 +99,7 @@ Os Webhooks podem ser implementados em F# e hospedados no Azure por meio de um [
 
 [Webjobs](/azure/app-service-web/web-sites-create-web-jobs) são programas que você pode executar em seu aplicativo da Web de Serviço de aplicativo de três maneiras: sob demanda, continuamente ou com agendamento.
 
-[Exemplo do Webjob do F#](https://github.com/jrr/webjob-project-examples)
+[Exemplo F# trabalho Web](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>Implementação de temporizadores no Azure com F\#
 

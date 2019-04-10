@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar e inicializar ouvintes de rastreamento'
+title: 'Como: criar e inicializar ouvintes de rastreamento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222712"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Como: Criar e inicializar ouvintes de rastreamento
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Como: criar e inicializar ouvintes de rastreamento
 As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> enviam mensagens para objetos chamados ouvintes, que recebem e processam essas mensagens. Um ouvinte desse tipo, o <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, é criado e inicializado automaticamente quando a depuração ou o rastreamento é habilitado. Se você desejar que a saída <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> seja direcionada para outras fontes, crie e inicialize ouvintes de rastreamento adicionais.  
   
  Os ouvintes criados devem refletir as necessidades do aplicativo. Por exemplo, se desejar obter um registro de texto de toda a saída de rastreamento, crie um ouvinte <xref:System.Diagnostics.TextWriterTraceListener>, que grava toda a saída para um novo arquivo de texto quando ele é habilitado. Por outro lado, se desejar exibir a saída somente durante a execução do aplicativo, crie um ouvinte <xref:System.Diagnostics.ConsoleTraceListener>, que direciona toda a saída para uma janela do console. O <xref:System.Diagnostics.EventLogTraceListener> pode direcionar a saída de rastreamento para um log de eventos. Para obter mais informações, consulte [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -95,7 +95,8 @@ As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Como: adicionar instruções de rastreamento ao código de um aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Rastreamento e instrumentação de aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

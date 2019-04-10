@@ -1,5 +1,5 @@
 ---
-title: 'Como: Validar configurações do aplicativo'
+title: 'Como: validar configurações de aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212083"
 ---
-# <a name="how-to-validate-application-settings"></a>Como: Validar configurações do aplicativo
+# <a name="how-to-validate-application-settings"></a>Como: validar configurações de aplicativo
 Este tópico demonstra como validar configurações do aplicativo antes que elas sejam persistentes.  
   
  Considerando que as configurações do aplicativo são fortemente tipadas, você tem alguma confiança de que os usuários não podem atribuir dados de um tipo incorreto a uma determinada configuração. No entanto, um usuário ainda pode tentar atribuir um valor a uma configuração que esteja fora do limite aceitável, por exemplo, fornecendo uma data de nascimento no futuro. <xref:System.Configuration.ApplicationSettingsBase>, a classe pai de todas as classes de configurações do aplicativo, expõe quatro eventos para permitir essa verificação de limites. Manipular esses eventos coloca todo o código de validação em um único local, em vez de distribuí-lo em todo o projeto.  
@@ -58,11 +58,11 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
         MySettings.Default   
         ```  
   
-         -ou-  
+         - ou -  
   
     -   Se você for um desenvolvedor de Visual Basic e tiver criado as configurações do aplicativo usando o Designer de Projeto, poderá recuperar as configurações usando o [Objeto My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         -ou-  
+         - ou -  
   
     -   Se você tiver criado suas configurações derivando de <xref:System.Configuration.ApplicationSettingsBase> diretamente, você precisa instanciar sua classe manualmente.  
   
@@ -80,7 +80,7 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
   
 1.  Se você estiver um C# developer, no seu formulário ou do controle `Load` evento, adicione um manipulador de eventos para o <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento.  
   
-     -ou-  
+     - ou -  
   
      Se você for um desenvolvedor de Visual Basic, deverá declarar a variável `Settings` usando a palavra-chave `WithEvents`.  
   
@@ -161,5 +161,6 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criando manipuladores de eventos no Windows Forms](../creating-event-handlers-in-windows-forms.md)
-- [Como: Criar configurações de aplicativo](how-to-create-application-settings.md)
+- [Como: criar configurações de aplicativo](how-to-create-application-settings.md)

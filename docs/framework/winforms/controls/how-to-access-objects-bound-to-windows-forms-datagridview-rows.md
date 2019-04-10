@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acessar objetos associados ao Windows Forms DataGridView linhas'
+title: 'Como: Acessar objetos associados às linhas de DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: 5c66bc961d92a2ece1aea4986d0c23181c971b3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 50882ab9a1a498bf8f76381e3f4aac53876abbb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217400"
 ---
-# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Como: Acessar objetos associados ao Windows Forms DataGridView linhas
+# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Como: Acessar objetos associados às linhas de DataGridView do Windows Forms
 Às vezes, é útil exibir uma tabela de informações armazenadas em uma coleção de objetos de negócios. Quando você associa um <xref:System.Windows.Forms.DataGridView> controle a uma coleção assim, cada propriedade pública é exibido em sua própria coluna, a menos que a propriedade foi marcado como não pesquisável com um <xref:System.ComponentModel.BrowsableAttribute>. Por exemplo, uma coleção de objetos `Customer` teria colunas como **Nome** e **Endereço**.  
   
  Se esses objetos contiverem informações adicionais e o código que você deseja acessar, será possível alcançá-lo por meio de objetos de linha. No exemplo de código a seguir, os usuários podem selecionar várias linhas e clicar em um botão para enviar uma fatura para cada um dos clientes correspondentes.  
@@ -42,8 +42,9 @@ ms.locfileid: "57720339"
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
-- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Associar objetos a controles DataGridView dos Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Associar objetos a controles DataGridView do Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

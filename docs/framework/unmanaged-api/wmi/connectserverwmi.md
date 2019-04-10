@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214865"
 ---
 # <a name="connectserverwmi-function"></a>Função ConnectServerWmi
 Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado.
@@ -106,7 +106,6 @@ Para acesso local para o namespace padrão, `strNetworkResource` pode ser um cam
 
 `strUser` não pode ser uma cadeia de caracteres vazia. Se o domínio é especificado na `strAuthority`, ela também não deve ser incluída no `strUser`, ou a função retornará `WBEM_E_INVALID_PARAMETER`.
 
-
 ## <a name="requirements"></a>Requisitos
 
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
@@ -117,4 +116,4 @@ Para acesso local para o namespace padrão, `strNetworkResource` pode ser um cam
 
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

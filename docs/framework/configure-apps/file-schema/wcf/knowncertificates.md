@@ -2,12 +2,12 @@
 title: <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
-ms.openlocfilehash: 4c1dc15621138aa692f0a30d285f729c2bd670d3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c20baecf3e9fe83385c986e3fb58f0c03eeeb47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224189"
 ---
 # <a name="knowncertificates"></a>\<knownCertificates>
 Representa uma coleção de certificados X.509 que são fornecidos para autenticar as credenciais de segurança emitidas de um Security Token Service (STS).  
@@ -72,6 +72,7 @@ Representa uma coleção de certificados X.509 que são fornecidos para autentic
  Para obter um exemplo que mostra como preencher a coleção na configuração, consulte [ \<Adicionar >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
@@ -82,7 +83,7 @@ Representa uma coleção de certificados X.509 que são fornecidos para autentic
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)
 - [\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)
 - [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: configurar credenciais em um serviço de federação](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)

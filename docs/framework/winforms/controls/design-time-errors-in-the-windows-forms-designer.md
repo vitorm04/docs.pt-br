@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 64a0b8d0d0d9f0cc2bc2a841b999af58f29b4f75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213136"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erros de tempo de design no Designer de Formulários do Windows
 Este tópico explica o significado e o uso da lista de erros de tempo de design que aparece no Microsoft Visual Studio quando o carregamento do Designer de Formulários do Windows falha. Se essa lista de erros aparecer, não a interprete como um bug do designer, mas como um auxílio para a correção de erros no código.  
@@ -45,15 +45,16 @@ Este tópico explica o significado e o uso da lista de erros de tempo de design 
 ### <a name="forum-posts-about-this-error"></a>Postagens do fórum sobre este erro  
  A ajuda adicional incluirá um link para postagens no fórum do MSDN relacionadas ao erro. Os fóruns são pesquisados com base na cadeia de caracteres da mensagem de erro. Também é possível tentar pesquisar os fóruns a seguir:  
   
--   [Fórum do Designer de Formulários do Windows](https://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Fórum do Windows Forms Designer](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Fóruns do Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Fóruns de formulários do Windows](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignorar e Continuar  
  É possível ignorar a condição de erro e continuar o carregamento do designer. Escolher esta ação pode resultar em comportamento inesperado. Por exemplo, os controles podem não aparecer na superfície de design.  
   
 ## <a name="see-also"></a>Consulte também
-- [Solucionando problemas de desenvolvimento de tempo de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
-- [Solução de problemas de criação de controle e de componente](troubleshooting-control-and-component-authoring.md)
-- [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)
-- [Mensagens de erro do Designer de Formulários do Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))
+
+- [Solução de problemas do desenvolvimento para tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [Solucionando problemas de criação do controle e do componente](troubleshooting-control-and-component-authoring.md)
+- [Desenvolvendo controles dos Windows Forms na hora de design](developing-windows-forms-controls-at-design-time.md)
+- [Mensagens de erro do Windows Forms Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

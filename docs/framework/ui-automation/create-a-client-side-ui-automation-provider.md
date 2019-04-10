@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-ms.openlocfilehash: df6de47f3ed7373f9065ff7035df90ff09d150c9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 03f64386271565b3494b9dac42cf969fc777e40b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211303"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>Criar um Provedor de Automação de Interface de Usuário do Lado do Cliente
 > [!NOTE]
@@ -28,5 +28,6 @@ ms.locfileid: "57678280"
  [!code-vb[UIAClientSideProvider_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csproviderprogram.vb#101)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Visão geral dos provedores de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Registrar um assembly do provedor do lado do cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
+
+- [Visão Geral dos Provedores de Automação de Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Registrar um Módulo Provedor do Lado do Cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)

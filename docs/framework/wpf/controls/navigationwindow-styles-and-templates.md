@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 586af00dee64cdc9eae1a9c927d079502b0b009a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32d8aac99d40693e66c7b52a6c7d2c116d2f3baf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225801"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>Estilos e modelos NavigationWindow
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Navigation.NavigationWindow> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -48,6 +48,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Navigatio
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)

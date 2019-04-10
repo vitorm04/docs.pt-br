@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216399"
 ---
 # <a name="designing-and-implementing-services"></a>Serviços de implantação e projeção
 Esta seção mostra como definir e implementar contratos do WCF. Um contrato de serviço Especifica o que um ponto de extremidade comunica ao mundo externo. Em um nível mais concreto, é uma afirmação sobre um conjunto de mensagens específicas, organizados em padrões de troca de mensagens básicas (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço é um conjunto de trocas de mensagens relacionadas logicamente, uma operação de serviço é uma troca de mensagens única. Por exemplo, um `Hello` operação obviamente deve aceitar uma mensagem (de modo que o chamador pode anunciar a saudação) e podem ou não pode retornar uma mensagem (dependendo de cortesia da operação).  
@@ -67,5 +67,6 @@ Esta seção mostra como definir e implementar contratos do WCF. Um contrato de 
  Esse processo aditivas requisito é importante ter em mente ao projetar, implementar, configurar e hospedar um aplicativo de serviço do Windows Communication Foundation (WCF). Por exemplo, o contrato pode especificar que ele precisa dar suporte a uma sessão. Nesse caso, em seguida, você deve configurar a associação para dar suporte a esse requisito contratual ou a implementação do serviço não funcionará. Ou, se seu serviço requer a autenticação integrada do Windows e é hospedado no Internet Information Services (IIS), o aplicativo Web no qual reside o serviço deve ter autenticação integrada do Windows ativado e suporte anônimo desativado. Para obter mais informações sobre os recursos e o impacto dos tipos de aplicativos de host de serviço diferentes, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)

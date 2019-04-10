@@ -2,12 +2,12 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: 9c9bbb9ccc7879510ae3e2bee2fabd604fd52f65
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b2cdd29cda7f82ce555b0f6c1a963567b41ff81b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212993"
 ---
 # <a name="enablewebscript"></a>\<enableWebScript>
 Esse elemento permite que o comportamento de ponto de extremidade que torna possível consumir o serviço de páginas da web de ASP.NET AJAX.  
@@ -43,7 +43,8 @@ Esse elemento permite que o comportamento de ponto de extremidade que torna poss
  Esse comportamento só deve ser usado em conjunto com qualquer um de [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) associação padrão, ou o [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) elemento de associação.  Para obter mais informações sobre esse comportamento, consulte <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
 - <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
-- [Integração AJAX e suporte para JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [Integração de AJAX e suporte para JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
 - [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)

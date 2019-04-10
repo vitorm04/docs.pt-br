@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212291"
 ---
 # <a name="beginenumeration-function"></a>Função BeginEnumeration
 Redefine um enumerador para o início da enumeração.  
@@ -97,7 +97,6 @@ Constante  |Valor  |Descrição  |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite a enumeração para propriedades que são definidas ou modificadas na própria classe. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração para propriedades que são herdadas de classes base. |
 
-
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
@@ -107,4 +106,4 @@ Constante  |Valor  |Descrição  |
   
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

@@ -1,13 +1,13 @@
 ---
-title: 'Como: Gerar o modelo de objeto no Visual Basic ou c#'
+title: 'Como: gerar o modelo de objeto em Visual Basic ou em C#'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8752a28b9bcfd068afcfc5d33c3097f26cf0f231
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225359"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Como: Gerar o modelo de objeto no Visual Basic ou C\#
 No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um modelo de objeto em sua própria linguagem de programação é mapeado para um banco de dados relacional. Duas ferramentas estão disponíveis para gerar automaticamente um Visual Basic ou C# modelo de metadados do banco de dados existente.  
@@ -36,12 +36,13 @@ sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /function
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de Programação](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
-- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Como: personalizar classes de entidade usando o editor de códigos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [Mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)

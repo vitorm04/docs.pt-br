@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 9331c892b0c0abccf2ea8700d46fa4180a7225ed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224254"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que oferecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  
@@ -90,7 +90,7 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Para usar o atributo `Freeze`, você deve mapear para o namespace de opções de apresentação: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. O `PresentationOptions` é o prefixo recomendado para mapear este namespace:  
+ Para usar o atributo `Freeze`, você deve mapear para o namespace de opções de apresentação: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` é o prefixo recomendado para mapear este namespace:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
@@ -162,7 +162,8 @@ mc:Ignorable="PresentationOptions"
  Para obter um exemplo de um personalizado <xref:System.Windows.Freezable> classe, consulte a [amostra de animação personalizada](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Freezable>
 - [Exemplo de animação personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)
-- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)

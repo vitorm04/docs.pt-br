@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir ícones de erro para validação do formulário com o componente do Windows Forms ErrorProvider'
+title: 'Como: Exibir ícones de erro para validação de formulário com o componente ErrorProvider do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223544"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Como: Exibir ícones de erro para validação do formulário com o componente do Windows Forms ErrorProvider
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Como: Exibir ícones de erro para validação de formulário com o componente ErrorProvider do Windows Forms
 Você pode usar um Windows Forms <xref:System.Windows.Forms.ErrorProvider> componente para exibir um ícone de erro quando o usuário insere dados inválidos. Você deve ter pelo menos dois controles no formulário para alternar entre eles e, portanto, invocar o código de validação.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Para exibir um ícone de erro quando o valor do controle é inválido  
@@ -93,6 +93,7 @@ Você pode usar um Windows Forms <xref:System.Windows.Forms.ErrorProvider> compo
 4.  Execute o projeto. Digite dados inválidos (neste exemplo, não numéricos) no primeiro controle e alterne para o segundo. Quando o ícone de erro for exibido, aponte para ele com o ponteiro do mouse para ver o texto do erro.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [Visão geral do componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
-- [Como: Exibir erros dentro de um conjunto de dados com o componente do Windows Forms ErrorProvider](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Como: Exibir erros dentro de um DataSet com o componente ErrorProvider do Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

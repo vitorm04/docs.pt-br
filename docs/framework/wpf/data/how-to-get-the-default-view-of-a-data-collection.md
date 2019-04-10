@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222101"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Como: Obter a exibição padrão de uma coleta de dados
 As exibições permitem que a mesma coleta de dados seja visualizada de diferentes maneiras, dependendo dos critérios de classificação, filtragem ou agrupamento. Cada coleta tem uma exibição padrão compartilhada, que é usada como a fonte de associação real quando uma associação especifica uma coleta como sua origem. Este exemplo mostra como conseguir a exibição padrão de uma coleta.  
@@ -33,5 +33,6 @@ As exibições permitem que a mesma coleta de dados seja visualizada de diferent
  Para obter exemplos da funcionalidade fornecida por uma exibição de coleta, consulte [Classificar dados em uma exibição](how-to-sort-data-in-a-view.md), [Filtrar dados em uma exibição](how-to-filter-data-in-a-view.md) e [Navegar pelos objetos em uma exibição de coleta de dados](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Classificar e agrupar dados usando uma exibição em XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

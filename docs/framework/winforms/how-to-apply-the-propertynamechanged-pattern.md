@@ -1,5 +1,5 @@
 ---
-title: 'Como: Aplicar o padrão PropertyNameChanged'
+title: 'Como: aplicar o padrão PropertyNameChanged'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], custom controls
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-ms.openlocfilehash: 889a7f5f7a84db378acaa88b717b6011f1a3dfdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213013"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Como: Aplicar o padrão PropertyNameChanged
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Como: aplicar o padrão PropertyNameChanged
 O exemplo de código a seguir demonstra como aplicar a *PropertyName*Changed padrão para um controle personalizado. Aplica esse padrão quando você implementa controles personalizados que são usados com o mecanismo de associação de dados de formulários do Windows.  
   
 ## <a name="example"></a>Exemplo  
@@ -29,6 +29,7 @@ O exemplo de código a seguir demonstra como aplicar a *PropertyName*Changed pad
 -   Cole o código em um arquivo de código vazio. Você deve usar o controle personalizado em um formulário do Windows que contenha um `Main` método.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Implementar a Interface INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)
-- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
+
+- [Como: implementar a interface INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)
+- [Notificação de alteração na associação de dados do Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 820b0c464f591ca71072d35886a910f5409f654e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f24dd3864be1bda454ac5e863f3fa2caf736bda9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215216"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>Método IMetaDataEmit::DefineUserString
 Obtém os metadados de um token de cadeia de caracteres literal especificada.  
@@ -57,5 +57,6 @@ HRESULT DefineUserString (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

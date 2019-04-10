@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212278"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: herdar formulários usando a caixa de diálogo Selecionador de Herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  
@@ -57,7 +57,8 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
     >  Ao combinar controles e componentes herdados com controles e componentes padrão no Windows Forms, você pode encontrar conflitos com a ordenação z. Você pode corrigir isso modificando a ordenação z, o que é feito clicando no menu **Formato**, apontando para **Ordem** e, em seguida, clicando em **Trazer para Frente** ou **Enviar para Trás**. Para obter mais informações sobre a ordem z dos controles, consulte [como: Camada de objetos no Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Efeitos da Modificação da Aparência de um Formulário Base](effects-of-modifying-base-form-appearance.md)
-- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)
+- [Efeitos da modificação da aparência de um formulário base](effects-of-modifying-base-form-appearance.md)
+- [Herança visual dos Windows Forms](windows-forms-visual-inheritance.md)

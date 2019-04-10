@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230649"
 ---
 # <a name="graphics-how-to-topics"></a>Tópicos explicativos de elementos gráficos
 Os tópicos a seguir demonstram como usar os recursos gráficos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -22,11 +22,12 @@ Os tópicos a seguir demonstram como usar os recursos gráficos do [!INCLUDE[TLA
  [Animar um retângulo](how-to-animate-a-rectangle.md)  
  [Animar a posição de um objeto usando PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformar pontos e vetores](how-to-transform-points-and-vectors.md)  
- [Estender o quadro transparente em um aplicativo WPF](extend-glass-frame-into-a-wpf-application.md)  
+ [Estender quadro com efeito de transparência em um aplicativo WPF](extend-glass-frame-into-a-wpf-application.md)  
  [Como: Melhorar o desempenho de renderização armazenando em cache um elemento](how-to-improve-rendering-performance-by-caching-an-element.md)  
  [Como: Usar um elemento armazenado em cache como um pincel](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -34,5 +35,5 @@ Os tópicos a seguir demonstram como usar os recursos gráficos do [!INCLUDE[TLA
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Elementos gráficos e multimídia](index.md)
+- [Gráficos e multimídia](index.md)
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)

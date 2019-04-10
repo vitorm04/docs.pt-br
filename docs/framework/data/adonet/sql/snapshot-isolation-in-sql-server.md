@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215931"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento de instantâneo no SQL Server
 O isolamento de instantâneo melhora a simultaneidade para aplicativos de OLTP.  
@@ -142,6 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
  Se seu aplicativo tiver muitos conflitos, o isolamento de instantâneo poderá não ser a melhor opção. As dicas deverão ser usadas somente quando for realmente necessário. Seu aplicativo não deverá ser criado de modo que dependa constantemente de dicas de bloqueio para sua operação.  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [Guia de controle de versão de linha e bloqueio de transação](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

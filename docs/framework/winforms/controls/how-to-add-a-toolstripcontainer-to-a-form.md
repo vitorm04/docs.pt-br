@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216204"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Como: Adicionar um ToolStripContainer a um formulário
 Você pode adicionar programaticamente uma <xref:System.Windows.Forms.ToolStripContainer> a um formulário do Windows e preenchê-lo com controles.  
@@ -33,6 +33,7 @@ Você pode adicionar programaticamente uma <xref:System.Windows.Forms.ToolStripC
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [Controle ToolStripContainer](toolstripcontainer-control.md)
 - [Controle ToolStrip](toolstrip-control-windows-forms.md)

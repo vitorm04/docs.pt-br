@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219415"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Visão geral do controle SplitContainer (Windows Forms)
 O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser considerado uma composição; são dois painéis separados por uma barra móvel. Quando o ponteiro do mouse passa sobre a barra, ele muda de forma para mostrar que a barra é móvel.  
@@ -40,16 +40,17 @@ O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina qual painel permanecerá o mesmo tamanho após o <xref:System.Windows.Forms.SplitContainer> controle é redimensionado.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se o divisor pode ser movido com o teclado ou mouse.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Determina se o separador é disposto na vertical ou horizontal.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina a distância em pixels da borda esquerda ou superior para o divisor móvel.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina a distância mínima, em pixels, que o divisor pode ser movido pelo usuário.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina a espessura, em pixels, do separador.|  
-|Evento <xref:System.Windows.Forms.SplitContainer.SplitterMoving>|Ocorre quando o separador está sendo movido.|  
-|Evento <xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Ocorre quando o separador foi movido.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> propriedade|Determina qual painel permanecerá o mesmo tamanho após o <xref:System.Windows.Forms.SplitContainer> controle é redimensionado.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriedade|Determina se o divisor pode ser movido com o teclado ou mouse.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade|Determina se o separador é disposto na vertical ou horizontal.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propriedade|Determina a distância em pixels da borda esquerda ou superior para o divisor móvel.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriedade|Determina a distância mínima, em pixels, que o divisor pode ser movido pelo usuário.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> propriedade|Determina a espessura, em pixels, do separador.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> evento|Ocorre quando o separador está sendo movido.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> evento|Ocorre quando o separador foi movido.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)
 - [Exemplo do controle SplitContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

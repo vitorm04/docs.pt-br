@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228244"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depurando erros de autenticação do Windows
 Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface de provedor de suporte de segurança (SSPI) lida com processos de segurança. Quando ocorrem erros de segurança na camada de SSPI, elas são exibidas pelo Windows Communication Foundation (WCF). Este tópico fornece uma estrutura e um conjunto de perguntas para ajudar a diagnosticar os erros.  
@@ -145,6 +145,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface
  Se você desenvolve seu aplicativo em um computador e implantar em outro e usa diferentes tipos de conta para autenticar em cada computador, você pode enfrentar um comportamento diferente. Por exemplo, suponha que você desenvolve seu aplicativo em um computador Windows XP Pro usando o `SSPI Negotiated` modo de autenticação. Se você usar uma conta de usuário local para autenticar com o, protocolo NTLM será usado. Depois que o aplicativo é desenvolvido, você implantar o serviço a uma máquina Windows Server 2003 onde ele é executado sob uma conta de domínio. Neste ponto o cliente não será capaz de autenticar o serviço, pois ele estará usando Kerberos e um controlador de domínio.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Disparar eventos de Menu para botões da barra de ferramentas'
+title: 'Como: Disparar eventos de menu para botões da barra de ferramentas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228336"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Como: Disparar eventos de Menu para botões da barra de ferramentas
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Como: Disparar eventos de menu para botões da barra de ferramentas
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.ToolStrip> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ToolBar>, no entanto, o controle <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
@@ -135,7 +135,8 @@ ms.locfileid: "57707541"
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Como: Adicionar botões a um controle de barra de ferramentas](how-to-add-buttons-to-a-toolbar-control.md)
+- [Como: Adicionar botões a um controle ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
 - [Como: Definir um ícone para um botão de barra de ferramentas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Controle de barra de ferramentas](toolbar-control-windows-forms.md)
+- [Controle ToolBar](toolbar-control-windows-forms.md)

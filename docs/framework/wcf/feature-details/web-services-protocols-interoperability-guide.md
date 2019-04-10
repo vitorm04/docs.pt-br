@@ -2,12 +2,12 @@
 title: Guia de interoperabilidade de protocolos de serviços
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228246"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guia de interoperabilidade de protocolos de serviços
 Windows Communication Foundation (WCF) implementa um número de protocolos de serviços da Web. Muitos desses protocolos incluem uma série de opções e os pontos de extensibilidade da esquerda para a critério do implementador. Este tópico fornece uma lista de protocolos de serviços Web que WCF implementa. Outros tópicos dentro desta seção fornecem detalhes de implementação para cada protocolo com suporte.  
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) implementa um número de protocolos de se
 |WS-Secure Conversation|[Linguagem de conversa segura de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Idioma de confiança de serviços Web](https://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Linguagem de conversa segura de serviços da Web](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Como corrigida por errata enviado ao OASIS WS-SX Technical Committee.<br /><br /> [mensagem do WS-sx](https://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS-ReliableMessaging 1.1|[Protocolo de Reliable Messaging versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|WS-ReliableMessaging 1.1|[Protocolo de mensagem confiável versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> dá suporte a especificações na tabela a seguir.  
   
@@ -86,7 +86,7 @@ Windows Communication Foundation (WCF) implementa um número de protocolos de se
   
 -   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [1.2 mecanismo WS-PolicyAttachment](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
 -   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
@@ -94,19 +94,20 @@ Windows Communication Foundation (WCF) implementa um número de protocolos de se
   
  Além disso, os seguintes perfis de interoperabilidade são implementados em WCF:  
   
--   [Perfil básico 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+-   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
 -   [SOAP Simple associação 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
 -   [Criar o perfil de segurança básica 1.0 trabalho rascunho](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Consulte também
-- [Protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+
+- [Associações de interoperabilidade fornecidas pelo sistema oferece suporte para protocolos de serviços Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
 - [Protocolos de mensagens](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
 - [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [WSDL e política](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
 - [Protocolos de segurança](../../../../docs/framework/wcf/feature-details/security-protocols.md)
-- [Protocolo de Reliable Messaging versão 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
-- [Protocolo de Reliable Messaging versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [Protocolo de mensagens confiável versão 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Protocolo de mensagem confiável versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
 - [Protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
-- [Protocolo de troca de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+- [Protocolo de intercâmbio de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

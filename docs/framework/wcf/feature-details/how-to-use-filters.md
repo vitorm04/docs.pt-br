@@ -1,15 +1,15 @@
 ---
-title: 'Como: Usar filtros'
+title: 'Como: usar filtros'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216191"
 ---
-# <a name="how-to-use-filters"></a>Como: Usar filtros
+# <a name="how-to-use-filters"></a>Como: usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são roteadas para duas implementações de um serviço de Calculadora, regularCalc e roundingCalc. Ambas as implementações de suportam as mesmas operações; No entanto, um serviço Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar a versão de arredondamento do serviço; Se nenhuma preferência de serviço é expressa a mensagem é balanceada entre os dois serviços. As operações expostas por ambos os serviços são:  
   
 -   Adicionar  
@@ -326,4 +326,5 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Serviços de roteamento](../../../../docs/framework/wcf/samples/routing-services.md)

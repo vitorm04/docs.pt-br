@@ -1,19 +1,19 @@
 ---
-title: 'Como: Criar um controle associado e formatar os dados exibidos'
+title: 'Como: criar um controle associado e formatar os dados exibidos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225528"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Como: Criar um controle associado e formatar os dados exibidos
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Como: criar um controle associado e formatar os dados exibidos
 Com a associação de dados do Windows Forms, você pode formatar os dados exibidos em um controle associado a dados usando a caixa de diálogo **Formatação e associação avançada**.  
   
 > [!NOTE]
@@ -55,6 +55,7 @@ Com a associação de dados do Windows Forms, você pode formatar os dados exibi
 8.  Clique em **OK** para fechar a caixa de diálogo **Formatação e associação avançada** e retornar para a janela Propriedades.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar um controle associado simples em um formulário do Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Validação da entrada do usuário nos Windows Forms](user-input-validation-in-windows-forms.md)
+
+- [Como: criar um controle associado simples em um Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validação da entrada do usuário no Windows Forms](user-input-validation-in-windows-forms.md)
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)

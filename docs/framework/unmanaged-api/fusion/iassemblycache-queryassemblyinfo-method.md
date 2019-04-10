@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0bdd1a22a771a8d0c3cbab511e14eb3456df5032
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 81b647032b2e9474e3b4472552ed884cec92ffc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216401"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Método IAssemblyCache::QueryAssemblyInfo
 Obtém os dados solicitados sobre o assembly especificado.  
@@ -59,4 +59,5 @@ HRESULT QueryAssemblyInfo (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

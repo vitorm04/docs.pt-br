@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e5d998bd85f1cc872acde74fdf954299a279c40
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 17568a46c8e946989af0e401366d7eaa885886da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220962"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Método IMetaDataImport::GetScopeProps
 Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo atual de metadados.  
@@ -64,5 +64,6 @@ HRESULT GetScopeProps (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

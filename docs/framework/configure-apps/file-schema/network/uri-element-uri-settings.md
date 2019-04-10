@@ -1,19 +1,19 @@
 ---
-title: Elemento <Uri> (configurações de Uri)
+title: <Uri> (Configurações de Uri)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212135"
 ---
 # <a name="uri-element-uri-settings"></a>\<URI > (configurações de Uri)
 Contém configurações que especificam como o .NET Framework controla endereços da web expressados usando identificadores de recurso uniformes (URIs).  
   
 ## <a name="schema-hierarchy"></a>Hierarquia de esquema  
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuração > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -42,7 +42,7 @@ Contém configurações que especificam como o .NET Framework controla endereço
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contém configurações para todos os namespaces.|  
+|[configuração](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contém configurações para todos os namespaces.|  
   
 ## <a name="remarks"></a>Comentários  
  O `uri` elemento contém configurações para os membros a <xref:System.Uri> usada pelas classes de classe a <xref:System.Net> namespace. As configurações de configuram o suporte a IRI e IDN.  
@@ -68,4 +68,5 @@ Contém configurações que especificam como o .NET Framework controla endereço
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

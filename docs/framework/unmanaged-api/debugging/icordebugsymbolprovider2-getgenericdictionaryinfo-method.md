@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5696dc8fcf4b5c84e12ca60f93679f7b67d5f7e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216815"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Método ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Recupera um mapa de dicionário genérico.  
@@ -81,5 +81,6 @@ Heap Size = Stream.Length – (Directory Size + 4)
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

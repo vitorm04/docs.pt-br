@@ -1,17 +1,17 @@
 ---
-title: 'Como: Evitar a adição de linha e exclusão no controle DataGridView do Windows Forms usando o Designer'
+title: 'Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms usando o designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-ms.openlocfilehash: 52514c07313a60bac8e2c7142b66099dbcd779e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f78068597edb616017876c9c72b01d44111f6f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220546"
 ---
-# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Evitar a adição de linha e exclusão no controle DataGridView do Windows Forms usando o Designer
+# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms usando o designer
 Às vezes, você desejará impedir que usuários insiram novas linhas de dados ou excluam linhas existentes em seu <xref:System.Windows.Forms.DataGridView> controle. Novas linhas são inseridas na linha especial para novos registros na parte inferior do controle. Quando você desabilitar a adição de linha, a linha para novos registros não será exibida. Em seguida, você pode deixar o controle totalmente somente leitura desabilitando a exclusão de linha e a edição de célula.  
   
  O procedimento a seguir exige um **aplicativo do Windows** projeto com um formulário que contém um <xref:System.Windows.Forms.DataGridView> controle. Para obter informações sobre como configurar um projeto desse tipo, consulte [como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -27,7 +27,8 @@ ms.locfileid: "57714730"
     >  Para tornar o controle somente leitura inteiramente, desmarque também a caixa de seleção **Habilitar Edição**.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>
 - [Como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)

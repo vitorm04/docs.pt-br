@@ -1,5 +1,5 @@
 ---
-title: 'Como: Uma forma com uma imagem lado a lado'
+title: 'Como: Organizar lado a lado uma forma com uma imagem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221532"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Como: Uma forma com uma imagem lado a lado
+# <a name="how-to-tile-a-shape-with-an-image"></a>Como: Organizar lado a lado uma forma com uma imagem
 Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso, imagens retangulares podem ser colocadas umas ao lado das outras para preencher (organizar lado a lado) uma forma. Para organizar o interior de uma forma lado a lado, use um pincel de textura. Quando você constrói uma <xref:System.Drawing.TextureBrush> do objeto, um dos argumentos passados para o construtor é um <xref:System.Drawing.Image> objeto. Quando você usa o pincel de textura para pintar o interior de uma forma, ela será preenchida com repetidas cópias dessa imagem.  
   
  A propriedade de modo de encapsulamento do <xref:System.Drawing.TextureBrush> objeto determina como a imagem é orientada conforme ele é repetida em uma grade retangular. Você pode fazer todos os blocos na grade terem a mesma orientação ou fazer com que a imagem fique invertida de uma posição de grade para a próxima. A inversão pode ser horizontal, vertical ou ambas. Os exemplos a seguir demonstram organização lado a lado com tipos diferentes de inversão.  
@@ -61,4 +61,5 @@ Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso,
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando um pincel para preencher formas](using-a-brush-to-fill-shapes.md)

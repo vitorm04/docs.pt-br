@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222296"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Como: Especificar a origem da associação
 Na associação de dados, o objeto da origem de associação refere-se àquele cujos dados você deseja obter. Este tópico descreve as diferentes maneiras de especificar a origem da associação.  
@@ -44,9 +44,10 @@ Na associação de dados, o objeto da origem de associação refere-se àquele c
 |<xref:System.Windows.Data.Binding.ElementName%2A>|Especifique uma cadeia de caracteres que representa o elemento ao qual você deseja associar. Isso é útil quando você deseja associar à propriedade de outro elemento em seu aplicativo. Por exemplo, se você quiser usar um <xref:System.Windows.Controls.Slider> para controlar a altura de outro controle em seu aplicativo, ou se você deseja associar a <xref:System.Windows.Controls.ContentControl.Content%2A> do seu controle para o <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriedade do seu <xref:System.Windows.Controls.ListBox> controle. Para obter mais informações, consulte <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Herança do valor da propriedade](../advanced/property-value-inheritance.md)
+- [Herança do valor de propriedade](../advanced/property-value-inheritance.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
 - [Visão geral das declarações de associação](binding-declarations-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Tópicos explicativos ](data-binding-how-to-topics.md)

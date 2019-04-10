@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: cc4ada3dabe20927f4c3a27dbb0fda78e41452c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1df3c685940562bfdf1ed84030be9f9e1c283f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228777"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Como: Determinar o número de entidades retornadas por uma consulta (WCF Data Services)
 Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode determinar o número de entidades que estão no conjunto especificada por um URI de consulta de entidades. Essa contagem pode ser incluída junto com o resultado da consulta ou como um valor inteiro. Para obter mais informações, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -32,4 +32,5 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode dete
  [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#countallcustomersvalueonly)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+
+- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

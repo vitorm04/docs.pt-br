@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee76f894d31fd65fd31011f33f7363f1b09de31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15bdbc001838e3d13a9789c8f54daa80f3b6ef9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219818"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>Interface ICLRAppDomainResourceMonitor
 Fornece métodos que inspecionam a memória e uso da CPU de um domínio de aplicativo.  
@@ -57,7 +57,8 @@ Fornece métodos que inspecionam a memória e uso da CPU de um domínio de aplic
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [\<appDomainResourceMonitoring > elemento](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [Monitoramento de recursos de domínio do aplicativo](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Monitoramento de recursos de domínio de aplicativo](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

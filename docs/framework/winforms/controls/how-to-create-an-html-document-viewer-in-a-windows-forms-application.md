@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms'
+title: 'Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: a25d8bf413614ae71676335c0c8e672caadbf885
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0eecefd961aed5408e7d02769056dc551e604b02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214566"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms
 Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir e imprimir documentos HTML sem fornecer a funcionalidade completa do Internet Explorer. Isso é útil quando você quer aproveitar os recursos de formatação de HTML, mas não quer que os usuários carreguem páginas da Web arbitrárias que podem conter controles de Web não confiáveis ou código de script potencialmente mal-intencionado. Você talvez queira restringir a capacidade do <xref:System.Windows.Forms.WebBrowser> controlar dessa maneira, por exemplo, para usá-lo como um visualizador de email HTML ou para fornecer ajuda formatado em HTML em seu aplicativo.  
   
 ### <a name="to-create-an-html-document-viewer"></a>Para criar um visualizador de documentos HTML  
@@ -39,10 +39,11 @@ Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir e 
 -   Referências aos assemblies `System` e `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [Visão geral do controle WebBrowser](webbrowser-control-overview.md)
-- [Segurança do WebBrowser](webbrowser-security.md)
-- [Como: Navegue até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Segurança de WebBrowser](webbrowser-security.md)
+- [Como: Navegar até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
 - [Como: Imprimir com um controle WebBrowser](how-to-print-with-a-webbrowser-control.md)

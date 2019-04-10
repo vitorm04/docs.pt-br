@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: e41d2146c07655548ad36de8ffc7041ed63ee5be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213943"
 ---
 # <a name="manipulating-data"></a>Manipulando dados
 Antes da introdução de Multiple Active Result Sets (MARS), os desenvolvedores precisavam usar várias conexões ou cursores de servidor para solucionar determinados cenários. Além disso, quando várias conexões eram usadas em uma situação transacional, as conexões associadas (com **sp_getbindtoken** e **sp_bindsession**) eram necessárias. Os cenários a seguir mostram como usar uma conexão habilitada para MARS em vez de várias conexões.  
@@ -403,5 +403,6 @@ private static string GetConnectionString()
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [Vários conjuntos de resultados ativos (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

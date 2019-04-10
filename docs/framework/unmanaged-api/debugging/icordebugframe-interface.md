@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f77708a5b315cb65b54ffa0983caa17176d01324
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a15d7f16676b8b9d66f8d1ba7484f3fec5735a44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222556"
 ---
 # <a name="icordebugframe-interface"></a>Interface ICorDebugFrame
 
@@ -55,4 +55,5 @@ Representa um quadro na pilha atual.
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

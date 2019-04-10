@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214722"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modo de preenchimento da coluna no controle DataGridView dos Windows Forms
 No modo de preenchimento de coluna, o <xref:System.Windows.Forms.DataGridView> controle redimensiona as colunas automaticamente para que elas preencham a largura da área de exibição disponíveis. O controle não exibe a barra de rolagem horizontal, exceto quando ele for necessário para manter a largura de cada coluna igual a ou maior que sua <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> valor da propriedade.  
@@ -63,6 +63,7 @@ No modo de preenchimento de coluna, o <xref:System.Windows.Forms.DataGridView> c
 -   Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>

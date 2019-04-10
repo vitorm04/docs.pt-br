@@ -2,12 +2,12 @@
 title: Hospedagem em um aplicativo gerenciado
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218791"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedagem em um aplicativo gerenciado
 Serviços do Windows Communication Foundation (WCF) podem ser hospedados em qualquer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo. Serviços de hospedagem interna é a opção de hospedagem mais flexível porque requer que a infra-estrutura mínimos para implantar. No entanto, também é a opção de hospedagem menos robusta, porque os aplicativos gerenciados não fornecem hospedagem avançados e recursos de gerenciamento de outras opções de hospedagem no WCF, como os serviços de Internet Information Services (IIS) e Windows.  
@@ -25,5 +25,6 @@ Serviços do Windows Communication Foundation (WCF) podem ser hospedados em qual
  Outros cenários comuns que permite a hospedagem interna são aplicativos cliente avançados, como aqueles baseados em Windows Presentation Foundation (WPF) ou Windows Forms (WinForms). Essa opção de hospedagem também torna mais fácil para aplicativos cliente avançados, tais como [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] e os aplicativos WinForms, para se comunicar com o mundo exterior. Por exemplo, um cliente de colaboração ponto a ponto que usa [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] para sua interface do usuário e também hospeda um serviço WCF que permite que outros clientes para conectá-lo e compartilhar informações.  
   
 ## <a name="see-also"></a>Consulte também
-- [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)
-- [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md)
+
+- [Serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md)
+- [Guia de introdução ao tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)

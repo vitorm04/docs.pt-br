@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 2194292d-bf5f-4aef-9336-cd3c4795cb71
-ms.openlocfilehash: e5735596f1b724e47cdaadd30f07629ea6b772eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8acdb2f94e752860025ee2963aa78682b43b079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216906"
 ---
 # <a name="microsofttransactionstransactionbridgepreparedmessageretry"></a>Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 Uma tentativa de mensagem preparada foi enviada a um coordenador não responder.  
@@ -19,6 +19,7 @@ Uma tentativa de mensagem preparada foi enviada a um coordenador não responder.
  Investigar os potencial rede ou problemas do produto que evitar que sejam entregues em tempo de resposta.  Se muitas dessas mensagens são vistas, isso pode indicar problemas de infraestrutura ou tempos de resposta anormalmente longo. Os dois problemas reduzirá drasticamente a taxa de transferência de transações no sistema.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

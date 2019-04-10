@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 713591de414c367e415c5bf524c297cfcabb3b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9483cf8671b7d3ad5430081d93925af30b3d8368
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215676"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>Enumeração RUNTIME_INFO_FLAGS
 Contém valores que indicam quais informações sobre o common language runtime (CLR) devem ser retornadas.  
@@ -75,4 +75,5 @@ typedef enum {
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+
+- [Hospedando enumerações](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

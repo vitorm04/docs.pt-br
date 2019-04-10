@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227386"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do publicador com o assembly atualizado. O arquivo de política de publicador Especifica as configurações de base de código e redirecionamento de assembly e usa o mesmo formato que o arquivo de configuração do aplicativo. O arquivo de política de publicador é compilado em um assembly e colocado no cache de assembly global.  
@@ -61,7 +61,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
   
     -   O *publisherPolicyAssemblyFile* argumento é o nome do assembly da diretiva de editor que é o resultado desse comando. O nome de arquivo do assembly deve seguir o formato:  
   
-         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **política.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   O *keyPairFile* argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly de política do publicador com o mesmo par de chaves.  
   
@@ -101,9 +101,10 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
     >  O assembly de política do publicador não pode ser adicionado ao cache de assembly global, a menos que o arquivo de política do publicador original está localizado no mesmo diretório que o assembly.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurando aplicativos usando arquivos de configuração](../../../docs/framework/configure-apps/index.md)
+- [Configurando aplicativos usando arquivos de configuração ](../../../docs/framework/configure-apps/index.md)
 - [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

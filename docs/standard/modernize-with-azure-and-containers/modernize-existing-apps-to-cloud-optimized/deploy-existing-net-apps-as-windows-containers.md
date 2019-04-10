@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216659"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -135,7 +135,6 @@ Executar um contêiner no Windows, com ou sem o isolamento do Hyper-V é uma dec
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
-
 ## <a name="the-container-ecosystem-in-azure"></a>O ecossistema de contêiner no Azure
 
 Nas seções anteriores, ele tem sido explicado quais são os benefícios de contêineres do Docker, bem como detalhes sobre as imagens de contêiner específico para aplicativos .NET. Obter informações genéricas tudo o que são fundamentais para desenvolver ou colocar em contêiner um aplicativo.
@@ -157,7 +156,7 @@ Os produtos em contêineres de suporte do Azure que estão ao mesmo tempo mais p
 -   **Serviço de Aplicativo do Azure**
 -   **Serviço Kubernetes do Azure (AKS e ACS)**
 -   **Azure Service Fabric** 
--   **Lote do Azure** 
+-   **Azure Batch** 
 
 Em seguida, o registro de contêiner do Azure é um registro de contêiner escalonável alta hospedado no Azure que você pode usar de todos os produtos anteriores durante o registro e implantar suas imagens de contêiner personalizado.
 

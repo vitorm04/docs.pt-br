@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225957"
 ---
 # <a name="optimizing-performance-text"></a>Otimizando desempenho: Texto
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui suporte para a apresentação do conteúdo de texto com o uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com recursos sofisticados. Em geral, você pode dividir a renderização de texto em três camadas:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui suporte para a apresentação do conteúdo de texto com o uso de recursos sofisticados [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controles. Em geral, você pode dividir a renderização de texto em três camadas:  
   
 1.  Usando o <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> objetos diretamente.  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409400"
 3.  Usando controles de alto nível, como o <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument> objetos.  
   
  Este tópico apresenta recomendações de desempenho de renderização de texto.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Renderização de texto no nível de glifos  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece suporte avançado de texto incluindo marcação em nível de glifos com acesso direto ao <xref:System.Windows.Documents.Glyphs> para clientes que desejam interceptar e persistir texto após a formatação. Esses recursos dão suporte crítico aos diferentes requisitos de renderização de texto em cada um dos cenários a seguir.  
@@ -75,7 +74,7 @@ ms.locfileid: "58409400"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>Controles de rótulo, TextBlock e FlowDocument  
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>O FlowDocument impacta o desempenho mais do que o TextBlock ou o Rótulo  
  Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado quando suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> pode ser usado quando suporte mínimo a texto é necessário. O <xref:System.Windows.Documents.FlowDocument> elemento é um contêiner para documentos re-flowable que dão suporte à apresentação avançada de conteúdo e, portanto, tem um impacto de desempenho maior do que usando o <xref:System.Windows.Controls.TextBlock> ou <xref:System.Windows.Controls.Label> controles.  
@@ -98,7 +97,7 @@ ms.locfileid: "58409400"
   
  A tabela a seguir mostra o custo de exibir 1000 <xref:System.Windows.Controls.TextBlock> objetos com e sem um explícito <xref:System.Windows.Documents.Run>.  
   
-|**Tipo TextBlock**|**Tempo de criação (ms)**|**Tempo de renderização (ms)**|  
+|**Tipo TextBlock**|**Hora de criação (ms)**|**Renderizar tempo (ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Propriedades de texto de configuração Run|146|540|  
 |Propriedades de texto de configuração TextBlock|43|453|  
@@ -143,14 +142,14 @@ ms.locfileid: "58409400"
   
  A tabela a seguir mostra o custo de desempenho de exibir 1000 <xref:System.Windows.Documents.Hyperlink> elementos com e sem sublinhado.  
   
-|**Hiperlink**|**Tempo de criação (ms)**|**Tempo de renderização (ms)**|  
+|**Hiperlink**|**Hora de criação (ms)**|**Renderizar tempo (ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |Com sublinhado|289|1130|  
 |Sem sublinhado|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Recursos de formatação de texto  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece serviços de formatação de texto avançado, como hifenizações automáticas. Esses serviços podem afetar o desempenho do aplicativo e devem ser usados somente quando necessário.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece serviços, como hifenizações automáticas de formatação rich text. Esses serviços podem afetar o desempenho do aplicativo e devem ser usados somente quando necessário.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Evite o uso desnecessário de hifenização  
  A hifenização automática localiza pontos de interrupção de hífen para linhas de texto e permite posições adicionais de quebra de linhas no <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument> objetos. Por padrão, o recurso de hifenização automática está desabilitado nesses objetos. Você pode habilitar esse recurso configurando a propriedade IsHyphenationEnabled do objeto como `true`. No entanto, habilitar esse recurso faz com que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inicie a interoperabilidade [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], que pode afetar o desempenho do aplicativo. É recomendável que você não use a hifenização automática, a menos que necessário.  
@@ -162,9 +161,10 @@ ms.locfileid: "58409400"
  O recurso de parágrafo ideal o <xref:System.Windows.Documents.FlowDocument> objeto dispõe parágrafos para que o espaço em branco seja distribuído de maneira mais uniforme possível. Por padrão, o recurso de parágrafo otimizado é desabilitado. Você pode habilitar esse recurso, definindo o objeto <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> propriedade para `true`. No entanto, habilitar esse recurso afeta o desempenho do aplicativo. É recomendável que você não use o recurso de parágrafo ideal, a menos que necessário.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)

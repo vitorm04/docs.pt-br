@@ -2,12 +2,12 @@
 title: Mapeamento baseado em atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223557"
 ---
 # <a name="attribute-based-mapping"></a>Mapeamento baseado em atributos
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados do SQL Server para um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objeto aplicando atributos ou usando um arquivo de mapeamento externo. Este tópico descreve a abordagem baseada em atributos.  
@@ -26,12 +26,12 @@ ms.locfileid: "54713896"
   
 |Propriedade|Tipo|Padrão|Descrição|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Cadeia de Caracteres|Consulte <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.|Usado com sua propriedade <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, especifica o nome do banco de dados.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Cadeia de Caracteres|Consulte <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Usado com sua propriedade <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, especifica o nome do banco de dados.|  
   
  Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>Atributo TableAttribute  
- Use esse atributo para designar uma classe como uma classe de entidade que está associada com uma tabela de banco de dados ou uma exibição. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trata as classes que têm esse atributo como classes persistentes. A tabela a seguir descreve a propriedade <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
+ Use esse atributo para designar uma classe como uma classe de entidade que está associada com uma tabela de banco de dados ou uma exibição. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trata as classes que têm esse atributo como classes persistentes. A tabela a seguir descreve a propriedade <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
   
 |Propriedade|Tipo|Padrão|Descrição|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "54713896"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|Indica que a coluna contém um valor de discriminador para uma hierarquia de herança do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|Especifica que este membro da classe representa uma coluna que é ou faz parte das chaves primárias da tabela.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|Identifica o tipo de coluna do membro como um carimbo de data/hora ou número de versão do banco de dados.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a menos que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> seja `true` para um membro|Especifica como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aborda a detecção de conflitos de simultaneidade otimista.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a menos que <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> é `true` para um membro|Especifica como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aborda a detecção de conflitos de simultaneidade otimista.|  
   
  Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -143,4 +143,5 @@ ms.locfileid: "54713896"
  Para obter mais informações, consulte <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

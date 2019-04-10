@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392f526df53474dd2926e631e24ec5449bd1b199
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 52fd0e9dac1d255197909d153099d9c6f2bd8ff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212928"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>Método ICorDebugSymbolProvider::GetCodeRange
 Obtém o endereço de início do método e o tamanho fornecido um endereço virtual relativo (RVA) em um método.  
@@ -49,5 +49,6 @@ HRESULT GetCodeRange(
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

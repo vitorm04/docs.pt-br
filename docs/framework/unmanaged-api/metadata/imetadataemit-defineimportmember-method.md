@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ac44d29dd99e0205c515905f9846263033babf3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222686"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Método IMetaDataEmit::DefineImportMember
 Cria uma referência ao membro de um módulo que é definido fora do escopo atual e define um token para essa referência ou tipo especificado.  
@@ -88,5 +88,6 @@ HRESULT DefineImportMember (
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

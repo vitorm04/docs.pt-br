@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211628"
 ---
 # <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
 Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XAML especificado.  
@@ -44,7 +44,7 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
 |`typeNameValue`|Necessário. Um nome de tipo que pode ser resolvido para o namespace XAML padrão atual; ou especificado prefixo mapeado se `prefix` for fornecido.|  
   
 ## <a name="remarks"></a>Comentários  
- O `x:Type` extensão de marcação tem uma função semelhante para o `typeof()` operador em C# ou o `GetType` operador no Microsoft Visual Basic.  
+ O `x:Type` extensão de marcação tem uma função semelhante para o `typeof()` operador em c# ou o `GetType` operador no Microsoft Visual Basic.  
   
  O `x:Type` extensão de marcação fornece um comportamento de conversão de cadeia de caracteres para propriedades que usam o tipo <xref:System.Type>. A entrada é um tipo XAML. A relação entre o tipo de XAML de entrada e saída CLR <xref:System.Type> é que a saída <xref:System.Type> é o <xref:System.Xaml.XamlType.UnderlyingType%2A> da entrada <xref:System.Xaml.XamlType>, depois de pesquisar o necessário <xref:System.Xaml.XamlType> com base no contexto do esquema XAML e o <xref:System.Windows.Markup.IXamlTypeResolver>fornece o contexto de serviço.  
   
@@ -80,7 +80,8 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
  No WPF, você pode usar os recursos do XAML 2009 mas somente para XAML flexível (XAML não é compilado por marcação). Compilado por marcação XAML para WPF e o formato BAML de XAML têm suporte no momento, as palavras-chave do XAML 2009 e os recursos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Style>
 - [Estilo e modelagem](../wpf/controls/styling-and-templating.md)
 - [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220559"
 ---
 # <a name="idebugautoattach-interface"></a>Interface IDebugAutoAttach
 Define a interface para a anexação automática de servidor chamado depurador.  
@@ -36,4 +36,5 @@ Define a interface para a anexação automática de servidor chamado depurador.
  **Cabeçalho:** DbgAutoAttach.idl  
   
 ## <a name="see-also"></a>Consulte também
-- [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+
+- [Interfaces de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

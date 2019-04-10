@@ -1,18 +1,18 @@
 ---
-title: 'Como: Expor um Feed como Atom e RSS'
+title: 'Como: expor um feed como Atom e RSS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 17494b00259839be3beb580a516ff017ec3de50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228400"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Como: Expor um Feed como Atom e RSS
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Como: expor um feed como Atom e RSS
 Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um feed de sindicalização. Este tópico discute como criar um serviço de distribuição que expõe um feed usando RSS 2.0 e Atom 1.0 de distribuição. Este serviço expõe um ponto de extremidade que pode retornar qualquer um dos formatos de distribuição. Para simplificar, o serviço usado neste exemplo é auto-hospedado. Em um ambiente de produção um serviço desse tipo deve ser hospedado no IIS ou WAS. Para obter mais informações sobre o WCF diferente opções de hospedagem, consulte [hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Para criar um serviço básico de distribuição  
@@ -96,5 +96,6 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
  Ao compilar o código anterior, fazer referência a ServiceModel. dll e System.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

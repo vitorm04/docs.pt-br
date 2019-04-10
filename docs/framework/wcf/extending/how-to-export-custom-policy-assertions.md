@@ -1,18 +1,18 @@
 ---
-title: 'Como: Exportar declarações de política personalizada'
+title: 'Como: exportar declarações de política personalizadas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213596"
 ---
-# <a name="how-to-export-custom-policy-assertions"></a>Como: Exportar declarações de política personalizada
+# <a name="how-to-export-custom-policy-assertions"></a>Como: exportar declarações de política personalizadas
 Declarações de política descrevem os recursos e os requisitos de um ponto de extremidade de serviço. Aplicativos de serviço podem usar declarações de política personalizadas nos metadados de serviço para se comunicar o ponto de extremidade, contrato ou associação de informações de personalização para o aplicativo cliente. Você pode usar o Windows Communication Foundation (WCF) para exportar declarações em expressões de política anexadas em associações WSDL no ponto de extremidade, operação ou entidades de mensagem, dependendo dos recursos ou requisitos que você está se comunicando.  
   
  Declarações de política personalizadas são exportadas, Implementando a <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> da interface em um <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e inserindo o elemento de associação diretamente para a associação do ponto de extremidade de serviço ou registrando-se o elemento de associação em seu aplicativo arquivo de configuração. Sua implementação de exportação de política deve adicionar sua declaração de política personalizada como um <xref:System.Xml.XmlElement?displayProperty=nameWithType> instância apropriado <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> na <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passado para o <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> método.  
@@ -50,6 +50,7 @@ Declarações de política descrevem os recursos e os requisitos de um ponto de 
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Como: Importar asserções de política personalizada](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Como: importar declarações de política personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

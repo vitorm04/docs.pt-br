@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214930"
 ---
 # <a name="data-contract-equivalence"></a>Equivalência de contrato de dados
 Para um cliente enviar com êxito os dados de um determinado tipo para um serviço ou um serviço para enviar com êxito os dados para um cliente, o tipo de envio não necessariamente precisa existir na extremidade receptora. O único requisito é que os contratos de ambos os tipos de dados ser equivalentes. (Às vezes, equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,8 +61,9 @@ Para um cliente enviar com êxito os dados de um determinado tipo para um servi�
  Ao passar parâmetros e valores retornados entre aplicativos, se o tipo esperado é uma interface, ele é equivalente o tipo esperado é do tipo <xref:System.Object>. Porque cada tipo, por fim, deriva <xref:System.Object>, cada contrato de dados deriva, por fim, o contrato de dados <xref:System.Object>. Portanto, qualquer tipo de contrato de dados pode ser passado quando se espera que uma interface. São necessárias etapas adicionais para trabalhar com êxito com interfaces; Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Tipos de contratos de dados conhecidos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

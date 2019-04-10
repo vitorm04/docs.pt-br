@@ -1,15 +1,15 @@
 ---
-title: Suporte do SqlClient para alta disponibilidade, recuperação de desastres
+title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213786"
 ---
-# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastres
+# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
   
  Agora você pode especificar o ouvinte do grupo de disponibilidade de uma (alta disponibilidade, recuperação de desastres) (AG) do grupo de disponibilidade ou instância de Cluster de Failover do SQL Server 2012 na propriedade de conexão. Se um aplicativo SqlClient está conectado a um banco de dados AlwaysOn que realiza failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.  
@@ -63,7 +63,7 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
 2.  Se um aplicativo usar `ApplicationIntent=ReadWrite` (discutido abaixo) e o local de réplica secundário estiver configurado para acesso de somente leitura.  
   
- <xref:System.Data.SqlClient.SqlDependency> não é suportado em réplicas secundárias de somente leitura.  
+ <xref:System.Data.SqlClient.SqlDependency> não é suportado em réplicas secundárias somente leitura.  
   
  Uma conexão falhará se a réplica primária estiver configurada para rejeitar as cargas de trabalho de somente leitura e a cadeia de caracteres da conexão contém `ApplicationIntent=ReadOnly`.  
   
@@ -79,7 +79,7 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  A palavra-chave `ApplicationIntent` não funciona com bancos de dados legados de somente leitura.  
   
- Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com a cláusula `ALLOW_CONNECTIONS` das instruções `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
+ Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com o `ALLOW_CONNECTIONS` cláusula do `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instruções.)  
   
  A palavra-chave `ApplicationIntent` é usada para ativar o roteamento de somente leitura.  
   
@@ -97,5 +97,6 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
  O roteamento de somente leitura pode demorar mais do que a conexão principal porque ele primeiro se conecta ao primário e, em seguida, procura o melhor secundário legível disponível. Por isso, aumente o tempo limite de logon.  
   
 ## <a name="see-also"></a>Consulte também
-- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+- [funcionalidades do SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

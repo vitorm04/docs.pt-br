@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 41f4e7cd633cf6175b6b167937cf53ceb4d9ec59
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225814"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Gerando a biblioteca do cliente de serviço de dados (serviços de dados WCF)
 Um serviço de dados que implementa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pode retornar um documento de metadados de serviço que descreve o modelo de dados exposto pelo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Para obter mais informações, consulte [OData: Documento de metadados de serviço](https://go.microsoft.com/fwlink/?LinkId=186070). Você pode usar o **adicionar referência de serviço** caixa de diálogo no Visual Studio para adicionar uma referência a um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-serviço baseado em. Quando você usar essa ferramenta para adicionar uma referência aos metadados retornados por uma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed em um projeto de cliente, ele executa as seguintes ações:  
@@ -53,5 +53,6 @@ Um serviço de dados que implementa o [!INCLUDE[ssODataFull](../../../../include
  Para obter mais informações, consulte [OData: Tipos de dados primitivos](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
 ## <a name="see-also"></a>Consulte também
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) (Início rápido)
+
+- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Guia de Início Rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

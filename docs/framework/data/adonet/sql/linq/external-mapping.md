@@ -2,12 +2,12 @@
 title: Mapeamento externo
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218674"
 ---
 # <a name="external-mapping"></a>Mapeamento externo
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a *mapeamento externo*, um processo pelo qual você deve usar um arquivo XML separado para especificar o mapeamento entre o modelo de dados do banco de dados e seu modelo de objeto. As vantagens de usar um arquivo de mapeamento externo incluem o seguinte:  
@@ -27,7 +27,7 @@ ms.locfileid: "54614552"
   
 -   As substituições externos de mapeamento atributos com o mapeamento. Ou seja quando você usa uma fonte externa de mapeamento para criar <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora todos os atributos de mapeamento que você criou em classes. Esse comportamento é verdadeiro se a classe está incluída no arquivo de mapeamento externo.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ao uso híbrido das duas abordagens mapeando (com base em atributos e externos).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte a uso híbrido das duas abordagens mapeando (com base em atributo e externos).  
   
 ## <a name="xml-schema-definition-file"></a>Arquivo de Definição de Esquema XML  
  O mapeamento externa em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve ser válido com a seguinte definição de esquema XML.  
@@ -142,6 +142,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+
+- [Geração de código em LINQ para SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Como: Gerar o modelo de objeto como um arquivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Como: gerar o modelo de objeto como um arquivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

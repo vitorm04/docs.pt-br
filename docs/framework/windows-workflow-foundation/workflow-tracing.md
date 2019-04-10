@@ -2,12 +2,12 @@
 title: Rastreamento de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224930"
 ---
 # <a name="workflow-tracing"></a>Rastreamento de fluxo de trabalho
 Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informações de diagnóstico usando os ouvintes de rastreamento do .NET Framework. O rastreamento podem ser ativado se é um problema detectado com o aplicativo e desativado novamente o problema é resolvido uma vez. Há duas maneiras que você pode ativar o rastreamento de depuração para fluxos de trabalho. Você poderá configurá-lo usando o visualizador de rastreamento do evento ou você pode usar <xref:System.Diagnostics> para enviar os eventos de rastreamento em um arquivo.  
@@ -23,7 +23,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
   
 4.  O tamanho do buffer analítico padrão de rastreamento é apenas 4 quilobytes de (KB); é recomendável aumentar o tamanho para 32 KB. Para fazer isso, execute as seguintes etapas.  
   
-    1.  Execute o seguinte comando no diretório atual do framework (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0 .21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Execute o seguinte comando no diretório do framework atual (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  Alterar o \<bufferSize > valor no arquivo do Windows a 32.  
   
@@ -35,7 +35,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
                   </channel>  
         ```  
   
-    3.  Execute o seguinte comando no diretório atual do framework (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0 .21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Execute o seguinte comando no diretório do framework atual (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  Se você estiver usando o .NET Framework 4 Client Profile, você deve primeiro registrar o manifesto ETW executando o seguinte comando do diretório .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
@@ -70,5 +70,6 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)

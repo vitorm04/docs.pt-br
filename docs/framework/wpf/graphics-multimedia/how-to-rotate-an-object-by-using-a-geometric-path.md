@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 2a027e11b910650044996c7ca7bdb822a1de513f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229206"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Como: Girar um objeto usando um caminho geométrico
 Este exemplo mostra como girar um objeto ao longo de um caminho geométrico que é definido por um <xref:System.Windows.Media.PathGeometry> objeto.  
@@ -35,6 +35,7 @@ Este exemplo mostra como girar um objeto ao longo de um caminho geométrico que 
  Para o exemplo completo, consulte [exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Visão geral da animação](animation-overview.md)
 - [Exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)

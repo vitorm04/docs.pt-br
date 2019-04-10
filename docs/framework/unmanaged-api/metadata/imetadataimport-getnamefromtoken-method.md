@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45c89572362f380997e7d8247b93c0f8629655
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1d77891478c9136a18dc4c9c44beed805244dd1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225931"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>Método IMetaDataImport::GetNameFromToken
 Obtém o nome de UTF-8 do objeto referenciado pelo token de metadados especificado. Esse método é obsoleto.  
@@ -56,5 +56,6 @@ HRESULT GetNameFromToken (
  **Versões do .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

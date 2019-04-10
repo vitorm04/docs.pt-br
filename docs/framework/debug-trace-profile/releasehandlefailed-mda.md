@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217868"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA releaseHandleFailed
 O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado é notificar os desenvolvedores quando o método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> retorna `false`.  
@@ -28,7 +28,7 @@ O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado
 ## <a name="cause"></a>Causa  
  Os usuários devem fornecer a implementação do método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> se eles criarem classes que derivam de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle>; assim, as circunstâncias são específicas do recurso individual. No entanto, os requisitos de configuração são os seguintes:  
   
--   Os tipos <xref:System.Runtime.InteropServices.SafeHandle> e <xref:System.Runtime.InteropServices.CriticalHandle> representam wrappers em torno de recursos vitais do processo. Uma perda de memória inutilizaria o processo ao longo do tempo.  
+-   <xref:System.Runtime.InteropServices.SafeHandle> e <xref:System.Runtime.InteropServices.CriticalHandle> tipos representam wrappers em torno de recursos vitais do processo. Uma perda de memória inutilizaria o processo ao longo do tempo.  
   
 -   O método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> não deve falhar ao executar sua função. Depois que o processo adquire um recurso desse tipo, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> é a única maneira de liberá-lo. Portanto, a falha implica em perda de recursos.  
   
@@ -91,6 +91,7 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)

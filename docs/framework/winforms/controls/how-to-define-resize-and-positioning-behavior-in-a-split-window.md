@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir redimensionamento e posicionamento de comportamento em uma janela dividida'
+title: 'Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217062"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Como: Definir redimensionamento e posicionamento de comportamento em uma janela dividida
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida
 Os painéis do <xref:System.Windows.Forms.SplitContainer> controle prestam bem ao que está sendo redimensionado e manipulados pelos usuários. No entanto, há momentos em que é útil controlar o divisor com programação, onde ele está posicionado e em que grau pode ser movido.  
   
  O <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriedade e outras propriedades no <xref:System.Windows.Forms.SplitContainer> controle oferecem um controle preciso sobre o comportamento da interface do usuário para atender às suas necessidades. Tais propriedades são listadas na tabela a seguir.  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se o divisor pode ser movido com o teclado ou mouse.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina a distância em pixels da borda esquerda ou superior para o divisor móvel.|  
-|Propriedade <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina a distância mínima, em pixels, que o divisor pode ser movido pelo usuário.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriedade|Determina se o divisor pode ser movido com o teclado ou mouse.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propriedade|Determina a distância em pixels da borda esquerda ou superior para o divisor móvel.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriedade|Determina a distância mínima, em pixels, que o divisor pode ser movido pelo usuário.|  
   
  O exemplo a seguir modifica o <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propriedade para criar um efeito de "divisor ajustado"; quando o usuário arrasta o divisor, ele é incrementado em unidades de 10 pixels, em vez do padrão 1.  
   
@@ -64,5 +64,6 @@ Os painéis do <xref:System.Windows.Forms.SplitContainer> controle prestam bem a
      Mover o divisor ligeiramente para a esquerda ou direita não terá nenhum efeito; no entanto, quando o ponteiro do mouse se move em 10 pixels em qualquer direção, o divisor se ajustará à nova posição.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

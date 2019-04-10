@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-ms.openlocfilehash: c29a6c24920ee43108b30df0a515f72479b77b85
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d577f053e2865462a32349baba97edeff89cb585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215177"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle MenuBar
 > [!NOTE]
@@ -67,7 +67,7 @@ ms.locfileid: "57673711"
 ## <a name="required-ui-automation-events"></a>Eventos de automação de interface do usuário necessária  
  A seguinte tabela lista o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventos devem ser suportados por todos os controles de barra de menu. Para obter mais informações sobre eventos, consulte [visão geral de eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Evento|Suporte/valor|Observações|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte/valor|Observações|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de propriedade alterada.|Necessária|Nenhum|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de propriedade alterada.|Necessária|Nenhum|  
@@ -77,6 +77,7 @@ ms.locfileid: "57673711"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessária|Nenhum|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Automation.ControlType.MenuBar>
-- [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Visão Geral dos Tipos de Controle de Automação de Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Visão geral de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

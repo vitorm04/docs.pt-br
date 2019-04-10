@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218375"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
 <a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Porque os aplicativos hospedados pelo navegador do Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade para um conjunto semelhante de restrições. Para impor essas restrições [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se baseia em ambos [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, os aplicativos hospedados pelo navegador solicitam a zona da Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permissões, independentemente se eles são lançados da Internet, intranet local ou no computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
@@ -164,6 +164,7 @@ ms.locfileid: "57371626"
  Como alternativa, você pode usar o modelo de implantação do ClickOnce confiáveis para implantação de confiança total de qualquer zona de segurança. Para obter mais informações, consulte [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) e [segurança](security-wpf.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Segurança](security-wpf.md)
-- [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
-- [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)
+- [Estratégia de segurança do WPF - segurança da plataforma](wpf-security-strategy-platform-security.md)
+- [Estratégia de segurança do WPF - engenharia de segurança](wpf-security-strategy-security-engineering.md)

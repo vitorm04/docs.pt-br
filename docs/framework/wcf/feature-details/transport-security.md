@@ -2,12 +2,12 @@
 title: Segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218960"
 ---
 # <a name="transport-security"></a>Segurança de transporte
 Segurança de transporte no Windows Communication Foundation (WCF) depende da associação selecionada. O transporte que implementa a associação determina o mecanismo de segurança real. Os tópicos nesta seção explicam os mecanismos que são implementados e suas opções.  
@@ -19,13 +19,13 @@ Segurança de transporte no Windows Communication Foundation (WCF) depende da as
  [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
  Explica como o WCF implementa o Secure Sockets Layer (SSL ou HTTPS).  
   
- [Entendendo a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
+ [Noções básicas de autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  Descreve os esquemas de autenticação de HTTP, como Basic, Digest, NT LAN Manager (NTLM) e outros.  
   
- [Usando a representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Utilizando Personificação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Explica os cinco níveis de representação que são possíveis com o modo de segurança de transporte.  
   
- [Como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Apresenta os conceitos básicos de configuração de uma porta em uma máquina com um certificado x. 509 para segurança SSL (transport).  
   
 ## <a name="reference"></a>Referência  
@@ -39,4 +39,5 @@ Segurança de transporte no Windows Communication Foundation (WCF) depende da as
  [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

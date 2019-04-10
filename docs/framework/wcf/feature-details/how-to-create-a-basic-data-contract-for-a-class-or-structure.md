@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um contrato de dados básicos para uma classe ou estrutura'
+title: 'Como: criar um contrato de dados básicos para uma classe ou estrutura'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 29105b7f3177403aacf5f8e628f2dceda4e26354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220507"
 ---
-# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Como: Criar um contrato de dados básicos para uma classe ou estrutura
+# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Como: criar um contrato de dados básicos para uma classe ou estrutura
 Este tópico mostra as etapas básicas para criar um contrato de dados usando uma classe ou estrutura. Para obter mais informações sobre contratos de dados e como elas são usadas, consulte [contratos de dados usando](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Para obter um tutorial que orienta pelas etapas de criação de um serviço Windows Communication Foundation (WCF) básicas e um cliente, consulte a [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md). Para um aplicativo de exemplo funcional que consiste em um serviço básico e um cliente, consulte [contrato de dados básico](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
@@ -37,8 +37,9 @@ Este tópico mostra as etapas básicas para criar um contrato de dados usando um
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Guia de introdução ao tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)

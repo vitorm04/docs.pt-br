@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar formulários pai MDI'
+title: 'Como: criar formulários pai MDI'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216308"
 ---
-# <a name="how-to-create-mdi-parent-forms"></a>Como: Criar formulários pai MDI
+# <a name="how-to-create-mdi-parent-forms"></a>Como: criar formulários pai MDI
 > [!IMPORTANT]
 >  Este tópico usa o controle <xref:System.Windows.Forms.MainMenu>, que foi substituído pelo controle <xref:System.Windows.Forms.MenuStrip>. O controle <xref:System.Windows.Forms.MainMenu> é mantido para compatibilidade com versões anteriores e uso futuro, se você desejar.  Para obter informações sobre como criar um MDI pai formulário usando um <xref:System.Windows.Forms.MenuStrip>, consulte [como: Criar uma lista de janelas MDI com MenuStrip](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
   
@@ -36,8 +36,9 @@ ms.locfileid: "57722978"
 4.  Pressione **F5** para executar o aplicativo. Para obter informações sobre como criar janelas que operam no formulário pai MDI filho MDI, consulte [como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
-- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
-- [Como: Enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
-- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)
+
+- [Aplicativos de Interface de Documentos Múltiplos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Como: criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como: determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como: enviar dados para o filho MDI ativo](how-to-send-data-to-the-active-mdi-child.md)
+- [Como: organizar formulários MDI filho](how-to-arrange-mdi-child-forms.md)

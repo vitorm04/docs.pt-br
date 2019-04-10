@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225333"
 ---
 # <a name="federation-and-trust"></a>Federação e confiabilidade
 Este tópico aborda os vários aspectos relacionados a aplicativos federados, limites de confiança e configuração e uso de tokens emitidos no Windows Communication Foundation (WCF).  
@@ -38,7 +38,8 @@ Este tópico aborda os vários aspectos relacionados a aplicativos federados, li
  Se um token emitido é serializado em uma mensagem enviada de um cliente para um ponto de extremidade federado ou não é controlado pela configuração de <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> propriedade do <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> classe. Essa propriedade pode ser definida como um do <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> valores de enumeração, mas não é útil em cenários federados mais. O `SecurityTokenInclusionMode.Never` e `SecurityTokenInclusionMode.AlwaysToInitiator` valores fazem com que o cliente envie uma referência para o token emitido pelo serviço de token de segurança para a terceira parte confiável. A menos que a terceira possui uma cópia da autenticação de token, emitida falhará porque a referência de token não for resolvida. O WCF trata `SecurityTokenInclusionMode.Once` como equivalente à `SecurityTokenInclusionMode.AlwaysToRecipient`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Como: Criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: configurar credenciais em um serviço de federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: criar uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

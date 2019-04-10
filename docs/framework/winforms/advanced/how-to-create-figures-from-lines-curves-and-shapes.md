@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar figuras usando linhas, curvas e formas'
+title: 'Como: criar figuras usando linhas, curvas e formas'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 1977f1c9efe2c379ef6039870aade300efca2bdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224904"
 ---
-# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Como: Criar figuras usando linhas, curvas e formas
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Como: criar figuras usando linhas, curvas e formas
 Para criar uma figura, construa uma <xref:System.Drawing.Drawing2D.GraphicsPath>e, em seguida, chamar métodos, como <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, para adicionar primitivos ao caminho.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,6 +35,7 @@ Para criar uma figura, construa uma <xref:System.Drawing.Drawing2D.GraphicsPath>
  Os exemplos anteriores são projetados para uso com o Windows Forms e exigem <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [Construindo e desenhando demarcadores](constructing-and-drawing-paths.md)
 - [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)

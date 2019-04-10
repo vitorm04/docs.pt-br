@@ -2,12 +2,12 @@
 title: Escrevendo um provedor de dados do Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 254207b9c3f5edd55fff867b784d71359f6c94c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228738"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Escrevendo um provedor de dados do Entity Framework
 Esta seção discute como escrever um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provedor para dar suporte a uma fonte de dados diferente do SQL Server. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclui um provedor que dá suporte ao SQL Server.  
@@ -35,11 +35,12 @@ Esta seção discute como escrever um [!INCLUDE[adonet_ef](../../../../../includ
  Consulte a [provedor de exemplo do Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) para obter um exemplo de um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provedor que dá suporte a uma fonte de dados diferente do SQL Server.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
+ [Geração SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
- [Geração de SQL de modificação](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [Geração de alteração SQL](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
  [Especificação do manifesto do provedor](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Consulte também
-- [Trabalhando com Provedores de Dados](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+
+- [Trabalhando com provedores de dados](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

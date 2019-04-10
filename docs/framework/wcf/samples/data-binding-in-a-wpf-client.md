@@ -2,12 +2,12 @@
 title: Associação de dados em um cliente do Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: c8382df188c7a2e47394ec73741c1e583f46fba6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2687e406743a8f503175a8775b25c76630aea9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223167"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associação de dados em um cliente do Windows Presentation Foundation
 Este exemplo demonstra o uso da ligação de dados em um cliente do Windows Presentation Foundation (WPF). O exemplo usa um serviço do Windows Communication Foundation (WCF) que gera aleatoriamente uma matriz de álbuns para retornar ao cliente. Cada álbum tem um nome, um preço e uma lista de faixas do álbum. As faixas do álbum tem um nome e uma duração. As informações que são retornadas pelo serviço são associadas automaticamente a interface do usuário (IU) fornecida pelo cliente do Windows Presentation Foundation (WPF).  
@@ -81,4 +81,3 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
-  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222660"
 ---
 # <a name="null-comparisons"></a>Comparações nulas
 Um valor `null` na fonte de dados indica que o valor é desconhecido. Nas consultas do [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], você pode procurar valores nulos de modo que determinados cálculos ou comparações só sejam executados nas linhas que têm dados válidos ou não nulos. A semântica nula do CLR, no entanto, pode diferir da semântica nula da fonte de dados. A maioria dos bancos de dados usa uma versão da lógica de três valores para manipular comparações nulas. Ou seja, uma comparação com um valor nulo não é avaliada como `true` ou `false`, ele será avaliado como `unknown`. Geralmente, essa é uma implementação de valores nulos ANSI, mas isso nem sempre acontece.  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  Na [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], quando você passa uma coleção que dá suporte a `IQueryable` para uma função de agregação, as operações agregadas são executadas no banco de dados. Pode haver diferenças nos resultados de uma consulta que foi executada na memória e uma consulta que foi executada no banco de dados. Com uma consulta na memória, se não houver nenhuma correspondência, a consulta retorna zero. No banco de dados, a mesma consulta retorna `null`. Se um `null` valor é passado para uma função agregada LINQ, uma exceção será gerada. Para aceitar possível `null` valores, converta os tipos e as propriedades dos tipos que recebem resultados de consulta para tipos anuláveis.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Expressões em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

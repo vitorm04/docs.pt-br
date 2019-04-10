@@ -1,17 +1,17 @@
 ---
-title: 'Como: Tratar o evento ContextMenuOpening'
+title: 'Como: Manipular o evento ContextMenuOpening'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219623"
 ---
-# <a name="how-to-handle-the-contextmenuopening-event"></a>Como: Tratar o evento ContextMenuOpening
+# <a name="how-to-handle-the-contextmenuopening-event"></a>Como: Manipular o evento ContextMenuOpening
 O <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento pode ser tratado em um aplicativo para ajustar um menu de contexto existente antes para exibir ou suprimir o menu que seria exibido, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade `true` nos dados do evento. A razão típica para configuração <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true` no evento dados são substituir o menu completamente com um novo <xref:System.Windows.Controls.ContextMenu> do objeto, que requer, às vezes, o cancelamento da operação e inicie uma nova abertura. Se você escrever manipuladores para o <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, você deve conhecer os problemas de tempo entre um <xref:System.Windows.Controls.ContextMenu> controle e o serviço que é responsável pela abertura e posicionamento dos menus de contexto para controles em geral. Este tópico ilustra algumas das técnicas de código para vários cenários de abertura do menu de contexto e ilustra um caso em que ocorre um problema de sincronismo.  
   
  Há vários cenários para a manipulação de <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos:  
@@ -56,6 +56,7 @@ O <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento pode ser trat
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [Visão geral de elementos base](base-elements-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211382"
 ---
 # <a name="preview-events"></a>Eventos de visualização
 Eventos de Visualização, também conhecidos como eventos de túnel, são eventos roteados em que a direção da rota vai da raiz do aplicativo em direção ao elemento que gerou o evento e é relatado como origem nos dados do evento. Nem todos os cenários de eventos têm suporte ou precisam de eventos de visualização. Este tópico descreve as situações em que os eventos de visualização existem, como aplicativos ou componentes devem lidar com eles e casos em que criar eventos de visualização em componentes ou classes personalizados pode ser apropriado.  
@@ -30,5 +30,6 @@ Eventos de Visualização, também conhecidos como eventos de túnel, são event
  Cada uma dessas técnicas tem efeitos colaterais ou limitações. O efeito colateral de manipular o evento de Visualização é que manipular o evento nesse ponto pode desabilitar manipuladores que esperam manipular o evento de propagação e, portanto, a limitação é que geralmente não é uma boa ideia marcar o evento como manipulado enquanto ele ainda está na parte de Visualização da rota. A limitação da técnica `handledEventsToo` é que você não pode especificar um manipulador `handledEventsToo` em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] como um atributo, é preciso registrar o manipulador de eventos no código depois de obter uma referência de objeto para o elemento ao qual o manipulador será anexado.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Marcando eventos roteados como manipulados e tratamento de classes](marking-routed-events-as-handled-and-class-handling.md)
 - [Visão geral de eventos roteados](routed-events-overview.md)

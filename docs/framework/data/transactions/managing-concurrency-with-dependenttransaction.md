@@ -1,15 +1,15 @@
 ---
-title: Gerenciando a simultaneidade com DependentTransaction
+title: Gerenciar simultaneidade com DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216295"
 ---
-# <a name="managing-concurrency-with-dependenttransaction"></a>Gerenciando a simultaneidade com DependentTransaction
+# <a name="managing-concurrency-with-dependenttransaction"></a>Gerenciar simultaneidade com DependentTransaction
 O <xref:System.Transactions.Transaction> objeto é criado usando o <xref:System.Transactions.Transaction.DependentClone%2A> método. Sua única finalidade é garantir que a transação não confirmada enquanto alguns outros trechos de código (por exemplo, um thread de trabalho) ainda estão executando o trabalho na transação. Quando o trabalho realizado dentro da transação clonada é concluído e pronto para ser confirmada, ele pode notificar o criador da transação usando o <xref:System.Transactions.DependentTransaction.Complete%2A> método. Portanto, você pode preservar a consistência e correção dos dados.  
   
  O <xref:System.Transactions.DependentTransaction> classe também pode ser usada para gerenciar a simultaneidade entre tarefas assíncronas. Nesse cenário, o pai pode continuar a executar qualquer código enquanto o clone dependente funciona em suas tarefas. Em outras palavras, a execução do pai não é bloqueada até que o dependente é concluída.  
@@ -17,7 +17,7 @@ O <xref:System.Transactions.Transaction> objeto é criado usando o <xref:System.
 ## <a name="creating-a-dependent-clone"></a>Criando um Clone dependente  
  Para criar uma transação dependente, chame o <xref:System.Transactions.Transaction.DependentClone%2A> método e passar o <xref:System.Transactions.DependentCloneOption> enumeração como um parâmetro. Esse parâmetro define o comportamento da transação se `Commit` é chamado na transação pai antes que o clone dependente indica que ele está pronto para a transação seja confirmada (chamando o <xref:System.Transactions.DependentTransaction.Complete%2A> método). Os seguintes valores são válidos para esse parâmetro:  
   
--   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>cria uma transação dependente que bloqueia o processo de confirmação da transação pai até os tempos de transação do pai, limite ou até <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado em todos os dependentes indicando sua conclusão. Isso é útil quando o cliente não deseja que a transação do pai seja confirmada até que as transações dependentes sejam concluídas. Se o pai concluir seu trabalho antes que a transação dependente e chamadas <xref:System.Transactions.CommittableTransaction.Commit%2A> na transação, o processo de confirmação será bloqueado em um estado onde trabalho adicional pode ser feito na transação e novas inscrições podem ser criadas, até que todos os da chamada dependentes <xref:System.Transactions.DependentTransaction.Complete%2A>. Assim que todos eles concluiu seu trabalho e chame <xref:System.Transactions.DependentTransaction.Complete%2A>, inicia o processo de confirmação da transação.  
+-   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> cria uma transação dependente que bloqueia o processo de confirmação da transação pai até os tempos de transação do pai, limite ou até <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado em todos os dependentes indicando sua conclusão. Isso é útil quando o cliente não deseja que a transação do pai seja confirmada até que as transações dependentes sejam concluídas. Se o pai concluir seu trabalho antes que a transação dependente e chamadas <xref:System.Transactions.CommittableTransaction.Commit%2A> na transação, o processo de confirmação será bloqueado em um estado onde trabalho adicional pode ser feito na transação e novas inscrições podem ser criadas, até que todos os da chamada dependentes <xref:System.Transactions.DependentTransaction.Complete%2A>. Assim que todos eles concluiu seu trabalho e chame <xref:System.Transactions.DependentTransaction.Complete%2A>, inicia o processo de confirmação da transação.  
   
 -   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, por outro lado, cria uma transação dependente automaticamente será anulada se <xref:System.Transactions.CommittableTransaction.Commit%2A> é chamado na transação pai antes de <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado. Nesse caso, todo o trabalho feito na transação dependente está intacto no tempo de vida de uma transação e não tem a oportunidade de confirmar apenas uma parte dele.  
   
@@ -82,4 +82,5 @@ using(TransactionScope scope = new TransactionScope())
 -   Se o thread de trabalho gera um novo thread de trabalho, certifique-se de criar um clone dependente do clone dependente e passá-lo para o novo thread.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Transactions.DependentTransaction>

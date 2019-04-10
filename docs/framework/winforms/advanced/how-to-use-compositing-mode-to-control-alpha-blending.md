@@ -1,5 +1,5 @@
 ---
-title: 'Como: Use o modo de composição para controlar a combinação alfa'
+title: 'Como: usar o modo de composição para controlar a combinação alfa'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210680"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Como: Use o modo de composição para controlar a combinação alfa
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Como: usar o modo de composição para controlar a combinação alfa
 Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguintes características:  
   
 -   Cores com valores alfabéticos inferiores a 255.  
@@ -54,8 +54,9 @@ Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguint
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Combinação Alfa em Linhas e Preenchimentos](alpha-blending-lines-and-fills.md)
+- [Combinação alfa em linhas e preenchimentos](alpha-blending-lines-and-fills.md)

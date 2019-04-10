@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar a ordem das colunas no controle DataGridView dos Windows Forms'
+title: 'Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 0e49107193d546e590582ca6bab798149d7064a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 90d262e738f092215e88e38e31169d74059e4401
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228790"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Como: Alterar a ordem das colunas no controle DataGridView dos Windows Forms
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms
 Quando você usa um <xref:System.Windows.Forms.DataGridView> para exibir dados de uma fonte de dados, as colunas no esquema da fonte de dados, às vezes, não aparecem na ordem em que você gostaria de exibi-los. Você pode alterar a ordem das colunas exibida usando o <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> propriedade do <xref:System.Windows.Forms.DataGridViewColumn> classe.  
   
  O exemplo de código a seguir reposiciona algumas das colunas geradas automaticamente ao se associar à tabela Clientes no banco de dados de exemplo Northwind. Para obter mais informações sobre como associar o <xref:System.Windows.Forms.DataGridView> controle a uma tabela de banco de dados, consulte [como: Associar dados para o Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
@@ -35,9 +35,10 @@ Quando você usa um <xref:System.Windows.Forms.DataGridView> para exibir dados d
 -   Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
-- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Associar dados ao controle DataGridView dos Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Associar dados ao controle DataGridView do Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

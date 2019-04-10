@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225281"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
 Comunicação remota permite que você configure transparente chamando entre domínios de aplicativos, processos ou computadores. No entanto, a movimentação de pilha de segurança de acesso de código não pode cruzar os limites de processo ou computadores (Aplicar entre domínios de aplicativo do mesmo processo).  
@@ -38,4 +38,5 @@ Comunicação remota permite que você configure transparente chamando entre dom
  Normalmente, o domínio de aplicativo padrão cria o filho domínios de aplicativo com um objeto de controle em cada um. O objeto de controle gerencia o novo domínio de aplicativo e, ocasionalmente, recebe pedidos de domínio de aplicativo padrão, mas ele não pode, na verdade, entre em contato com o domínio diretamente. Ocasionalmente, o domínio de aplicativo padrão chama seu proxy para o objeto de controle. No entanto, pode haver casos em que é necessário para o objeto de controle para o retorno de chamada para o domínio de aplicativo padrão. Nesses casos, o domínio de aplicativo padrão passa um objeto de retorno de chamada de marshaling por referência para o construtor do objeto de controle. É responsabilidade do objeto de controle para proteger esse proxy. Se o objeto de controle colocar o proxy em um campo estático público de uma classe pública ou expor publicamente o proxy, caso contrário, isso abriria um mecanismo perigoso para outro código de retorno de chamada no domínio de aplicativo padrão. Por esse motivo, os objetos de controle são sempre implicitamente confiáveis para manter o proxy particulares.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

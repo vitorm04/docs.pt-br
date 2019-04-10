@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 2fbb1f520a1497ef5aa3227d038b3759b8327eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218206"
 ---
 # <a name="saml-tokens-and-claims"></a>Declarações e tokens de SAML
 Declarações de marcação linguagem SAML (Security) *tokens* são representações XML de declarações. Por padrão, são tokens SAML que usa o Windows Communication Foundation (WCF) em cenários de segurança federada *tokens emitidos*.  
@@ -43,13 +43,14 @@ Declarações de marcação linguagem SAML (Security) *tokens* são representaç
  Quando os tokens SAML são recebidos em mensagens, as várias declarações no token SAML são transformadas em <xref:System.IdentityModel.Policy.IAuthorizationPolicy> objetos que são colocados no <xref:System.IdentityModel.Policy.AuthorizationContext>. As declarações de cada instrução SAML são retornadas pelo <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> propriedade do <xref:System.IdentityModel.Policy.AuthorizationContext> e pode ser examinado para determinar se deve autenticar e autorizar o usuário.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [Federação](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: configurar credenciais em um serviço de federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Gerenciamento de declarações e autorizações com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Declarações e tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Valores de recursos e criação de declarações](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Como: Criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Como: criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219207"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
 O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |Método|Saída|  
 |------------|------------|  
 |**Assert**|O texto especificado; ou, se nenhum for especificado, a Pilha de Chamadas. A saída é gravada somente se a condição especificada como um argumento na instrução **Assert** é **false**.|  
-|**Falha**|O texto especificado; ou, se nenhum for especificado, a Pilha de Chamadas.|  
+|**Reprovado**|O texto especificado; ou, se nenhum for especificado, a Pilha de Chamadas.|  
 |**Write**|O texto especificado.|  
 |**WriteIf**|O texto especificado, se a condição especificada como um argumento na instrução **WriteIf** é atendida.|  
 |**WriteLine**|O texto especificado e um retorno de carro.|  
@@ -142,14 +142,15 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Se você não desabilitar o rastreamento e a depuração antes de implantar um aplicativo ASP.NET, o aplicativo poderá revelar informações sobre si mesmo que podem ser exploradas por um programa mal-intencionado. Para obter mais informações, confira [Como: Compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio), e [como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). A depuração também é configurável por meio do IIS (Serviços de Informações da Internet).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Contratos de código](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [Tipos de projeto C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Como: adicionar instruções de rastreamento ao código de um aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Como: compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [Como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Como: Criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Como: Usar TraceSource e filtros com ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Como: criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Como: criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Como: usar TraceSource e filtros com ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)

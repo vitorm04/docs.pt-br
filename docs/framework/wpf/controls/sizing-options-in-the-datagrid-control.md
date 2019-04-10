@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219194"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opções de dimensionamento no controle DataGrid
 Várias opções estão disponíveis para controlar como o <xref:System.Windows.Controls.DataGrid> se dimensiona. O <xref:System.Windows.Controls.DataGrid>e linhas e colunas individuais no <xref:System.Windows.Controls.DataGrid>, pode ser definido para dimensionar automaticamente a seu conteúdo ou podem ser definidas com valores específicos. Por padrão, o <xref:System.Windows.Controls.DataGrid> aumentará ou reduzirá para ajustar o tamanho de seu conteúdo.  
@@ -86,6 +86,7 @@ Várias opções estão disponíveis para controlar como o <xref:System.Windows.
  Os usuários podem redimensionar <xref:System.Windows.Controls.DataGrid> linhas e colunas arrastando os divisores de cabeçalho de linha ou coluna. O <xref:System.Windows.Controls.DataGrid> também dá suporte a redimensionamento automático de linhas e colunas clicando duas vezes no divisor de cabeçalho de linha ou coluna. Para impedir que um usuário redimensione colunas específicas, defina as <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> propriedade para `false` para as colunas individuais. Para impedir que os usuários redimensionem todas as colunas, defina as <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> propriedade para `false`. Para impedir que os usuários redimensionem todas as linhas, defina as <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> propriedade para `false`.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

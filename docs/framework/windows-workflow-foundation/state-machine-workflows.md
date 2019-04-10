@@ -2,12 +2,12 @@
 title: Fluxos de trabalho do computador de estado
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222985"
 ---
 # <a name="state-machine-workflows"></a>Fluxos de trabalho do computador de estado
 Um computador de estado é um paradigma conhecido para programas desenvolvimento. A atividade de <xref:System.Activities.Statements.StateMachine> , juntamente com <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, e outras atividades pode ser usada para criar programas de fluxo de trabalho do computador de estado. Este tópico fornece uma visão geral de criar fluxos de trabalho do computador de estado.  
@@ -101,8 +101,9 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
  Um estado que representa a conclusão do computador de estado.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md)
-- [Designer de atividade StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+
+- [Como: criar um fluxo de trabalho da máquina de estado](how-to-create-a-state-machine-workflow.md)
+- [Designer de atividade de StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Designer de atividade de estado](/visualstudio/workflow-designer/state-activity-designer)
-- [Designer de atividade FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [Designer de atividade Transition](/visualstudio/workflow-designer/transition-activity-designer)
+- [Designer de atividade de FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
+- [Fazer a transição o designer de atividades](/visualstudio/workflow-designer/transition-activity-designer)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Realizar uma ação personalizada com base em alterações em uma célula de um controle do Windows Forms DataGridView'
+title: 'Como: Realizar uma ação personalizada com base em alterações em uma célula do controle DataGridView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: ad1c60c34fc5461de21e2ad5d4d02f5b2abd6dfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229154"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Como: Realizar uma ação personalizada com base em alterações em uma célula de um controle do Windows Forms DataGridView
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Como: Realizar uma ação personalizada com base em alterações em uma célula do controle DataGridView do Windows Forms
 O <xref:System.Windows.Forms.DataGridView> controle tem um número de eventos que você pode usar para detectar alterações no estado de <xref:System.Windows.Forms.DataGridView> células. Duas das mais comumente usadas são as <xref:System.Windows.Forms.DataGridView.CellValueChanged> e <xref:System.Windows.Forms.DataGridView.CellStateChanged> eventos.  
   
 ### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>Para detectar alterações nos valores das células DataGridView  
@@ -41,8 +41,9 @@ O <xref:System.Windows.Forms.DataGridView> controle tem um número de eventos qu
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
 - [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Passo a passo: Validando dados no controle DataGridView dos Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Passo a passo: Validando dados no controle DataGridView do Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

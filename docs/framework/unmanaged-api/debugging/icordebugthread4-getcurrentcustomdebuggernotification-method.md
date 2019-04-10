@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32f5fc34c4dbde5a5ae04ad95ad5d960e1ceadcd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216321"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>Método ICorDebugThread4::GetCurrentCustomDebuggerNotification
 
@@ -56,6 +56,7 @@ O valor de `ppNotificationObject` será nulo se o método não é chamado de den
 **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
 - [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

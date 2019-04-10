@@ -1,5 +1,5 @@
 ---
-title: Elemento <sources>
+title: <sources> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215775"
 ---
 # <a name="sources-element"></a>\<fontes > elemento
 Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.  
@@ -41,7 +41,7 @@ Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obrigatório.<br /><br /> Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
+|[\<origem >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obrigatório.<br /><br /> Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -80,6 +80,7 @@ Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
@@ -87,4 +88,4 @@ Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [\<origem >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

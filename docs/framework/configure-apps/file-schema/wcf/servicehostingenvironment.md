@@ -2,12 +2,12 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 09a796a78cf37b464f5f7c359822d9d0c5001787
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215983"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular. Se esse elemento estiver vazio, o tipo padrão é usado. Esse elemento só pode ser usado no aplicativo ou arquivos de configuração de nível de máquina.  
@@ -93,7 +93,8 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
 - [Hospedagem](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Serviços do WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Serviços WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

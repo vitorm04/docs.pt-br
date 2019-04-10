@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 7a557a3d278c2b6d8d083b2ebf8c8129bc498afa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223570"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Como: Alongar um ToolStripTextBox para preencher a largura restante de um ToolStrip (Windows Forms)
 Quando você define o <xref:System.Windows.Forms.ToolStrip.Stretch%2A> propriedade de um <xref:System.Windows.Forms.ToolStrip> o controle para `true`, o controle preenche seu contêiner de ponta a ponta e é redimensionado quando o contêiner é redimensionado. Nessa configuração, talvez seja útil para alongar um item no controle, como um <xref:System.Windows.Forms.ToolStripTextBox>, para preencher o espaço disponível e redimensionar quando o controle é redimensionado. Esse alongamento será útil, por exemplo, se você desejar obter aparência e comportamento semelhantes para a barra de endereços do Microsoft® Internet Explorer.  
@@ -30,9 +30,10 @@ Quando você define o <xref:System.Windows.Forms.ToolStrip.Stretch%2A> proprieda
 -   Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripTextBox>
 - <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>
-- [Arquitetura de controle do ToolStrip](toolstrip-control-architecture.md)
+- [Arquitetura de controle ToolStrip](toolstrip-control-architecture.md)
 - [Como: Usar a propriedade Spring de forma interativa em um StatusStrip](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

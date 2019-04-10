@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213591"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos em controles dos Windows Forms
 O .NET Framework fornece uma variedade de atributos que podem ser aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  
@@ -61,7 +61,8 @@ O .NET Framework fornece uma variedade de atributos que podem ser aplicados aos 
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Especifica a cadeia de caracteres de filtro e o tipo de filtro para um item de Caixa de ferramentas.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Attribute>
-- [Como: Aplicar atributos em controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
-- [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Como: Aplicar atributos a controles do Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Estendendo o suporte para tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)

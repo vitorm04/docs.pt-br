@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Atualizando informações da barra de Status em tempo de execução'
+title: 'Passo a passo: Atualizando informações da barra de status em tempo de execução'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225762"
 ---
-# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Passo a passo: Atualizando informações da barra de Status em tempo de execução
+# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Passo a passo: Atualizando informações da barra de status em tempo de execução
 > [!IMPORTANT]
 >  O <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controles substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controla; no entanto, o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controles sejam mantidos para compatibilidade com versões anteriores e uso futuro, se você Escolha.  
   
@@ -85,8 +85,9 @@ ms.locfileid: "57716459"
     >  Levará cerca de 30 segundos para o relógio aparecer na barra de status. Isso serve para obter a hora mais precisa possível. Por outro lado, para fazer com que o relógio apareça antes, você pode reduzir o valor da <xref:System.Windows.Forms.Timer.Interval%2A> propriedade definida na etapa 7 no procedimento anterior.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Como: Adicionar painéis a um controle StatusBar](how-to-add-panels-to-a-statusbar-control.md)
-- [Como: Determinar qual painel no controle StatusBar dos Windows Forms foi clicado](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Como: Determinar qual painel no controle StatusBar do Windows Forms foi clicado](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Visão geral do controle StatusBar](statusbar-control-overview-windows-forms.md)

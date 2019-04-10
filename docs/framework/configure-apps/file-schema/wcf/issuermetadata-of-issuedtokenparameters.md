@@ -2,12 +2,12 @@
 title: <issuerMetadata> De <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 2697d24a731dbf8de3d68bcce7fd52c55ff6dc68
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214793"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata > de \<issuedTokenParameters >
 \<system.serviceModel>  
@@ -47,10 +47,11 @@ ms.locfileid: "55276972"
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica os parâmetros para um token de segurança emitido em um cenário de segurança federada.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Identidade e autenticação de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Recursos de segurança com associações personalizadas](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
@@ -58,5 +59,5 @@ ms.locfileid: "55276972"
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

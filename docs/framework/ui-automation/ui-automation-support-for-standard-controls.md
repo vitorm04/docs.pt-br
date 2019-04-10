@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 5dbd547378faf885f5d0349ff77d124b0b860591
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3fde9779205ea7d0902ddd99ed192f097a159d2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221473"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Suporte de automação de interface do usuário para Controles Padrão
 > [!NOTE]
@@ -168,4 +168,5 @@ ms.locfileid: "57677624"
 |StatusStrip|  
   
 ## <a name="see-also"></a>Consulte também
-- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)
+
+- [Tipos de controle de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types.md)

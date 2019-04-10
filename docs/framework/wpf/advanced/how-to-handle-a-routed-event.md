@@ -1,5 +1,5 @@
 ---
-title: 'Como: Identificar um evento roteado'
+title: 'Como: Manipular um evento roteado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211589"
 ---
-# <a name="how-to-handle-a-routed-event"></a>Como: Identificar um evento roteado
+# <a name="how-to-handle-a-routed-event"></a>Como: Manipular um evento roteado
 Este exemplo mostra como os eventos de propagação funcionam e como escrever um manipulador que pode processar os dados de eventos roteados.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,8 +35,9 @@ Este exemplo mostra como os eventos de propagação funcionam e como escrever um
  [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.RoutedEvent>
 - [Visão geral da entrada](input-overview.md)
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Tópicos de instruções](events-how-to-topics.md)
+- [Tópicos explicativos ](events-how-to-topics.md)
 - [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md)

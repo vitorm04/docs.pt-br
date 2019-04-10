@@ -2,12 +2,12 @@
 title: <peer> De <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: c1df586916ebf165942c66ff2113c3199e31c3aa
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d726ab460141b1e373a1cabf770b8958f50319eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219142"
 ---
 # <a name="peer-of-servicecredentials"></a>\<Peer > de \<serviceCredentials >
 Especifica as credenciais atuais para um nó par.  
@@ -50,11 +50,12 @@ Especifica as credenciais atuais para um nó par.
 |[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
-- [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Rede peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticação de mensagem de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [Autenticação personalizada de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

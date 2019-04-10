@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b6fcd0e5e4ce4055a6678e931dee50a6a4ccc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6eefdaf5dee423b0a9ae054446224a3ea97e3c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213773"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>Método IHostTaskManager::ReverseEnterRuntime
 Notifica o host que está sendo feita uma chamada para o common language runtime (CLR) do código não gerenciado.  
@@ -61,6 +61,7 @@ HRESULT ReverseEnterRuntime ();
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interface ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

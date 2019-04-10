@@ -1,5 +1,5 @@
 ---
-title: 'Como: Habilitar exibição lado a lado em um controle ListView dos Windows Forms'
+title: 'Como: Habilitar a exibição de bloco em um controle ListView do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: ad0a925601d3cfaebcd21a2082e3d208d82151bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d47eddbc1d9a4efc7f1e4644136ac6621088396
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215021"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Como: Habilitar exibição lado a lado em um controle ListView dos Windows Forms
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Como: Habilitar a exibição de bloco em um controle ListView do Windows Forms
 Com o recurso de exibição de bloco a <xref:System.Windows.Forms.ListView> controle, você pode fornecer um equilíbrio visual entre informações gráficas e textuais. As informações textuais exibidas para um item na exibição lado a lado são as mesmas que as informações de coluna definidas para exibição de detalhes. Exibição lado a lado funciona em combinação com recursos de marca de agrupamento ou inserção no <xref:System.Windows.Forms.ListView> controle.  
   
  O modo de exibição lado a lado usa um ícone de 32 x 32 pixels e várias linhas de texto, conforme mostrado nas imagens a seguir.  
@@ -59,6 +59,7 @@ Com o recurso de exibição de bloco a <xref:System.Windows.Forms.ListView> cont
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Controle ListView](listview-control-windows-forms.md)

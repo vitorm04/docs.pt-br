@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219662"
 ---
 # <a name="creating-an-ink-input-control"></a>Criando um controle de entrada de tinta
 Você pode criar um controle personalizado que renderiza a tinta de forma dinâmica e estática. Ou seja, é possível renderizar a tinta conforme um usuário desenha um traço, fazendo com que a tinta apareça "fluindo" da caneta eletrônica e exibi-la depois de adicionada ao controle, tanto pela caneta eletrônica, colada da área de transferência ou carregada de um arquivo. Para renderizar a tinta dinamicamente, o controle deve usar um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Para renderizar a tinta estaticamente, você deve substituir os métodos de evento de caneta (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) para coletar <xref:System.Windows.Input.StylusPoint> dados, criar traços e adicioná-los para um <xref:System.Windows.Controls.InkPresenter> (que renderiza a tinta no controle).  
@@ -99,5 +99,6 @@ Você pode criar um controle personalizado que renderiza a tinta de forma dinâm
  Você pode criar um controle que coleta e renderiza a tinta, substituindo os métodos de evento da caneta. Ao criar seu próprio controle, derivando suas próprias <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes e inserindo-o em <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, você pode implementar praticamente qualquer comportamento imaginável com tinta digital. Você tem acesso a <xref:System.Windows.Input.StylusPoint> dados como ele são gerados, dando a você a oportunidade de personalizar <xref:System.Windows.Input.Stylus> de entrada e renderizá-lo na tela, conforme apropriado para seu aplicativo. Porque você tem tal acesso de baixo nível para o <xref:System.Windows.Input.StylusPoint> dados, você pode implementar a coleção de tinta e renderizá-la com um desempenho ideal para seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
-- [Tratamento avançado de tinta](advanced-ink-handling.md)
-- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+
+- [Tratamento de tinta avançado](advanced-ink-handling.md)
+- [Acessando e manipulando entrada de caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

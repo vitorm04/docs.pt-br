@@ -2,12 +2,12 @@
 title: ONDE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: a8e1061e-0028-4a6f-8f19-b9f48e96c4b8
-ms.openlocfilehash: 0b9cf9bdb211a74acd8fc229c53f3565b48e5ddd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02eeaeb8cfa335e5545b26d3d52b91c4e1614629
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230701"
 ---
 # <a name="where-entity-sql"></a>ONDE (Entity SQL)
 A cláusula WHERE é aplicada diretamente após o [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md) cláusula.  
@@ -34,5 +34,6 @@ select c from cs as c where e
  A cláusula WHERE é aplicada diretamente após a cláusula e antes de qualquer agrupamento, ordenação, ou projeção ocorre. Todos os nomes de elementos definidos na cláusula são visíveis para a expressão de uma cláusula WHERE.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Expressões de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
