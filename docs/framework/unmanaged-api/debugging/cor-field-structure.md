@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 691041632312bf8ac7c82a11724dcd725e14a420
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231052"
 ---
-# <a name="corfield-structure"></a><span data-ttu-id="3e91f-102">Estrutura COR_FIELD</span><span class="sxs-lookup"><span data-stu-id="3e91f-102">COR_FIELD Structure</span></span>
-<span data-ttu-id="3e91f-103">Fornece informações sobre um campo em um objeto.</span><span class="sxs-lookup"><span data-stu-id="3e91f-103">Provides information about a field in an object.</span></span>  
+# <a name="corfield-structure"></a><span data-ttu-id="bc495-102">Estrutura COR_FIELD</span><span class="sxs-lookup"><span data-stu-id="bc495-102">COR_FIELD Structure</span></span>
+<span data-ttu-id="bc495-103">Fornece informações sobre um campo em um objeto.</span><span class="sxs-lookup"><span data-stu-id="bc495-103">Provides information about a field in an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e91f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3e91f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc495-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bc495-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_FIELD{  
@@ -37,26 +37,27 @@ typedef struct COR_FIELD{
 } COR_FIELD;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3e91f-105">Membros</span><span class="sxs-lookup"><span data-stu-id="3e91f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bc495-105">Membros</span><span class="sxs-lookup"><span data-stu-id="bc495-105">Members</span></span>  
   
-|<span data-ttu-id="3e91f-106">Membro</span><span class="sxs-lookup"><span data-stu-id="3e91f-106">Member</span></span>|<span data-ttu-id="3e91f-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="3e91f-107">Description</span></span>|  
+|<span data-ttu-id="bc495-106">Membro</span><span class="sxs-lookup"><span data-stu-id="bc495-106">Member</span></span>|<span data-ttu-id="bc495-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="bc495-107">Description</span></span>|  
 |------------|-----------------|  
-|`token`|<span data-ttu-id="3e91f-108">Um `mdFieldDef` token que pode ser usado para obter informações de campo.</span><span class="sxs-lookup"><span data-stu-id="3e91f-108">An `mdFieldDef` token that can be used to get field information.</span></span>|  
-|`offset`|<span data-ttu-id="3e91f-109">O deslocamento, em bytes, para os dados do campo no objeto.</span><span class="sxs-lookup"><span data-stu-id="3e91f-109">The offset, in bytes, to the field data in the object.</span></span>|  
-|`id`|<span data-ttu-id="3e91f-110">Um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) valor que identifica o tipo desse campo.</span><span class="sxs-lookup"><span data-stu-id="3e91f-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) value that identifies the type of this field.</span></span>|  
-|`fieldType`|<span data-ttu-id="3e91f-111">Um valor de enumeração CorElementType que indica o tipo do campo.</span><span class="sxs-lookup"><span data-stu-id="3e91f-111">A CorElementType enumeration value that indicates the type of the field.</span></span>|  
+|`token`|<span data-ttu-id="bc495-108">Um `mdFieldDef` token que pode ser usado para obter informações de campo.</span><span class="sxs-lookup"><span data-stu-id="bc495-108">An `mdFieldDef` token that can be used to get field information.</span></span>|  
+|`offset`|<span data-ttu-id="bc495-109">O deslocamento, em bytes, para os dados do campo no objeto.</span><span class="sxs-lookup"><span data-stu-id="bc495-109">The offset, in bytes, to the field data in the object.</span></span>|  
+|`id`|<span data-ttu-id="bc495-110">Um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) valor que identifica o tipo desse campo.</span><span class="sxs-lookup"><span data-stu-id="bc495-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) value that identifies the type of this field.</span></span>|  
+|`fieldType`|<span data-ttu-id="bc495-111">Um valor de enumeração CorElementType que indica o tipo do campo.</span><span class="sxs-lookup"><span data-stu-id="bc495-111">A CorElementType enumeration value that indicates the type of the field.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3e91f-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="3e91f-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc495-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="bc495-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e91f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3e91f-113">Requirements</span></span>  
- <span data-ttu-id="3e91f-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e91f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc495-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bc495-113">Requirements</span></span>  
+ <span data-ttu-id="bc495-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc495-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e91f-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3e91f-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bc495-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc495-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3e91f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e91f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bc495-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc495-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3e91f-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e91f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="bc495-117">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="bc495-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3e91f-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3e91f-118">See also</span></span>
-- [<span data-ttu-id="3e91f-119">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="3e91f-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="3e91f-120">Depuração</span><span class="sxs-lookup"><span data-stu-id="3e91f-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="bc495-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bc495-118">See also</span></span>
+
+- [<span data-ttu-id="bc495-119">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="bc495-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="bc495-120">Depuração</span><span class="sxs-lookup"><span data-stu-id="bc495-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

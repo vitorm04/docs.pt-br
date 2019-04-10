@@ -11,19 +11,19 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f33eef5c405b98b9dbf88973a8b7cafad06308b6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 12414064bf0651eab443951bde2a50dcff7b2291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226946"
 ---
-# <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a><span data-ttu-id="9c7f5-102">Método ICorProfilerCallback7::ModuleInMemorySymbolsUpdated</span><span class="sxs-lookup"><span data-stu-id="9c7f5-102">ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method</span></span>
-<span data-ttu-id="9c7f5-103">[Com suporte no .NET Framework 4.6.1 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="9c7f5-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
+# <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a><span data-ttu-id="b2997-102">Método ICorProfilerCallback7::ModuleInMemorySymbolsUpdated</span><span class="sxs-lookup"><span data-stu-id="b2997-102">ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method</span></span>
+<span data-ttu-id="b2997-103">[Com suporte no .NET Framework 4.6.1 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="b2997-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
   
- <span data-ttu-id="9c7f5-104">Notifica o criador de perfil sempre que o fluxo de símbolo associado a um módulo na memória for atualizado.</span><span class="sxs-lookup"><span data-stu-id="9c7f5-104">Notifies the profiler whenever the symbol stream associated with an in-memory module is updated.</span></span>  
+ <span data-ttu-id="b2997-104">Notifica o criador de perfil sempre que o fluxo de símbolo associado a um módulo na memória for atualizado.</span><span class="sxs-lookup"><span data-stu-id="b2997-104">Notifies the profiler whenever the symbol stream associated with an in-memory module is updated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c7f5-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9c7f5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2997-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b2997-105">Syntax</span></span>  
   
 ```  
 HRESULT ModuleInMemorySymbolsUpdated(  
@@ -31,28 +31,29 @@ HRESULT ModuleInMemorySymbolsUpdated(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9c7f5-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9c7f5-106">Parameters</span></span>  
- <span data-ttu-id="9c7f5-107">[in] `moduleId`</span><span class="sxs-lookup"><span data-stu-id="9c7f5-107">[in] `moduleId`</span></span>  
- <span data-ttu-id="9c7f5-108">O identificador do módulo na memória cujos símbolos de fluxo é atualizado.</span><span class="sxs-lookup"><span data-stu-id="9c7f5-108">The identifier of the in-memory module whose symbol stream is updated.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2997-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b2997-106">Parameters</span></span>  
+ <span data-ttu-id="b2997-107">[in]</span><span class="sxs-lookup"><span data-stu-id="b2997-107">[in]</span></span> `moduleId`  
+ <span data-ttu-id="b2997-108">O identificador do módulo na memória cujos símbolos de fluxo é atualizado.</span><span class="sxs-lookup"><span data-stu-id="b2997-108">The identifier of the in-memory module whose symbol stream is updated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9c7f5-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="9c7f5-109">Remarks</span></span>  
- <span data-ttu-id="9c7f5-110">Esse retorno de chamada é controlado pela configuração de [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) sinalizador de máscara de evento ao chamar o [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="9c7f5-110">This callback is controlled by setting the [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) event mask flag when calling the [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2997-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="b2997-109">Remarks</span></span>  
+ <span data-ttu-id="b2997-110">Esse retorno de chamada é controlado pela configuração de [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) sinalizador de máscara de evento ao chamar o [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="b2997-110">This callback is controlled by setting the [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) event mask flag when calling the [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9c7f5-111">Esse evento não é gerado no momento para símbolos implicitamente criado ou modificado por meio do <xref:System.Reflection.Emit> APIs.</span><span class="sxs-lookup"><span data-stu-id="9c7f5-111">This event is not currently raised for symbols implicitly created or modified via <xref:System.Reflection.Emit> APIs.</span></span>  
+>  <span data-ttu-id="b2997-111">Esse evento não é gerado no momento para símbolos implicitamente criado ou modificado por meio do <xref:System.Reflection.Emit> APIs.</span><span class="sxs-lookup"><span data-stu-id="b2997-111">This event is not currently raised for symbols implicitly created or modified via <xref:System.Reflection.Emit> APIs.</span></span>  
   
- <span data-ttu-id="9c7f5-112">Até mesmo quando símbolos são fornecidos com antecedência em uma chamada para uma das sobrecargas de gerenciados <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> métodos que inclui um `rawSymbolStore` argumento para especificar os símbolos para o assembly, o tempo de execução pode não realmente associar simbólicos dados com o módulo até depois que o [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) retorno de chamada tenha ocorrido.</span><span class="sxs-lookup"><span data-stu-id="9c7f5-112">Even when symbols are provided up front in a call to one of the overloads of the managed <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> methods that includes a `rawSymbolStore` argument to specify the symbols for the assembly, the runtime may not actually associate the symbolic data with the module until after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback has occurred.</span></span> <span data-ttu-id="9c7f5-113">Este evento oferece uma oportunidade posterior para coletar os símbolos para esses módulos.</span><span class="sxs-lookup"><span data-stu-id="9c7f5-113">This event provides a later opportunity to collect symbols for such modules.</span></span>  
+ <span data-ttu-id="b2997-112">Até mesmo quando símbolos são fornecidos com antecedência em uma chamada para uma das sobrecargas de gerenciados <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> métodos que inclui um `rawSymbolStore` argumento para especificar os símbolos para o assembly, o tempo de execução pode não realmente associar simbólicos dados com o módulo até depois que o [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) retorno de chamada tenha ocorrido.</span><span class="sxs-lookup"><span data-stu-id="b2997-112">Even when symbols are provided up front in a call to one of the overloads of the managed <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> methods that includes a `rawSymbolStore` argument to specify the symbols for the assembly, the runtime may not actually associate the symbolic data with the module until after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback has occurred.</span></span> <span data-ttu-id="b2997-113">Este evento oferece uma oportunidade posterior para coletar os símbolos para esses módulos.</span><span class="sxs-lookup"><span data-stu-id="b2997-113">This event provides a later opportunity to collect symbols for such modules.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c7f5-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9c7f5-114">Requirements</span></span>  
- <span data-ttu-id="9c7f5-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c7f5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2997-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b2997-114">Requirements</span></span>  
+ <span data-ttu-id="b2997-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2997-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c7f5-116">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9c7f5-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b2997-116">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b2997-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9c7f5-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c7f5-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2997-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2997-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9c7f5-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c7f5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
+ **<span data-ttu-id="b2997-118">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b2997-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9c7f5-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9c7f5-119">See also</span></span>
-- [<span data-ttu-id="9c7f5-120">Método ModuleLoadFinished</span><span class="sxs-lookup"><span data-stu-id="9c7f5-120">ModuleLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
-- [<span data-ttu-id="9c7f5-121">Método SetEventMask2</span><span class="sxs-lookup"><span data-stu-id="9c7f5-121">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
-- [<span data-ttu-id="9c7f5-122">Interface ICorProfilerCallback7</span><span class="sxs-lookup"><span data-stu-id="9c7f5-122">ICorProfilerCallback7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b2997-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b2997-119">See also</span></span>
+
+- [<span data-ttu-id="b2997-120">Método ModuleLoadFinished</span><span class="sxs-lookup"><span data-stu-id="b2997-120">ModuleLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
+- [<span data-ttu-id="b2997-121">Método SetEventMask2</span><span class="sxs-lookup"><span data-stu-id="b2997-121">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+- [<span data-ttu-id="b2997-122">Interface ICorProfilerCallback7</span><span class="sxs-lookup"><span data-stu-id="b2997-122">ICorProfilerCallback7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)

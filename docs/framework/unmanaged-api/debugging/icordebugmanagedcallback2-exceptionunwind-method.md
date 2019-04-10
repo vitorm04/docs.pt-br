@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 802d4987b3be86b5a6302b78f75e4f0c02d49f3e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: faba9631e85ac84ff1517b64e9a3f5567ee7c9dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214787"
 ---
-# <a name="icordebugmanagedcallback2exceptionunwind-method"></a><span data-ttu-id="3663b-102">Método ICorDebugManagedCallback2::ExceptionUnwind</span><span class="sxs-lookup"><span data-stu-id="3663b-102">ICorDebugManagedCallback2::ExceptionUnwind Method</span></span>
-<span data-ttu-id="3663b-103">Fornece uma notificação de status durante o processo de desenrolamento de exceção.</span><span class="sxs-lookup"><span data-stu-id="3663b-103">Provides a status notification during the exception unwinding process.</span></span>  
+# <a name="icordebugmanagedcallback2exceptionunwind-method"></a><span data-ttu-id="bdb01-102">Método ICorDebugManagedCallback2::ExceptionUnwind</span><span class="sxs-lookup"><span data-stu-id="bdb01-102">ICorDebugManagedCallback2::ExceptionUnwind Method</span></span>
+<span data-ttu-id="bdb01-103">Fornece uma notificação de status durante o processo de desenrolamento de exceção.</span><span class="sxs-lookup"><span data-stu-id="bdb01-103">Provides a status notification during the exception unwinding process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3663b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3663b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bdb01-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bdb01-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionUnwind (  
@@ -38,33 +38,34 @@ HRESULT ExceptionUnwind (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3663b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3663b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bdb01-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bdb01-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="3663b-106">[in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o segmento em que a exceção foi lançada.</span><span class="sxs-lookup"><span data-stu-id="3663b-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="bdb01-106">[in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o segmento em que a exceção foi lançada.</span><span class="sxs-lookup"><span data-stu-id="bdb01-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread on which the exception was thrown.</span></span>  
   
  `pThread`  
- <span data-ttu-id="3663b-107">[in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual a exceção foi lançada.</span><span class="sxs-lookup"><span data-stu-id="3663b-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="bdb01-107">[in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual a exceção foi lançada.</span><span class="sxs-lookup"><span data-stu-id="bdb01-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the exception was thrown.</span></span>  
   
  `dwEventType`  
- <span data-ttu-id="3663b-108">[in] Um valor de enumeração CorDebugExceptionUnwindCallbackType que especifica o evento que está sendo sinalizado pelo retorno de chamada durante a fase de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="3663b-108">[in] A value of the CorDebugExceptionUnwindCallbackType enumeration that specifies the event that is being signaled by the callback during the unwind phase.</span></span>  
+ <span data-ttu-id="bdb01-108">[in] Um valor de enumeração CorDebugExceptionUnwindCallbackType que especifica o evento que está sendo sinalizado pelo retorno de chamada durante a fase de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="bdb01-108">[in] A value of the CorDebugExceptionUnwindCallbackType enumeration that specifies the event that is being signaled by the callback during the unwind phase.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="3663b-109">[in] Um valor igual a [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeração que especifica informações adicionais sobre a exceção.</span><span class="sxs-lookup"><span data-stu-id="3663b-109">[in] A value of the [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeration that specifies additional information about the exception.</span></span>  
+ <span data-ttu-id="bdb01-109">[in] Um valor igual a [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeração que especifica informações adicionais sobre a exceção.</span><span class="sxs-lookup"><span data-stu-id="bdb01-109">[in] A value of the [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeration that specifies additional information about the exception.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3663b-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="3663b-110">Remarks</span></span>  
- <span data-ttu-id="3663b-111">`ExceptionUnwind` é chamado em vários pontos durante a fase de desenrolamento do processo de manipulação de exceção.</span><span class="sxs-lookup"><span data-stu-id="3663b-111">`ExceptionUnwind` is called at various points during the unwind phase of the exception-handling process.</span></span> <span data-ttu-id="3663b-112">`ExceptionUnwind` pode ser chamado mais de uma vez durante o desenrolamento de uma única exceção.</span><span class="sxs-lookup"><span data-stu-id="3663b-112">`ExceptionUnwind` can be called more than once while unwinding a single exception.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bdb01-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="bdb01-110">Remarks</span></span>  
+ `ExceptionUnwind` <span data-ttu-id="bdb01-111">é chamado em vários pontos durante a fase de desenrolamento do processo de manipulação de exceção.</span><span class="sxs-lookup"><span data-stu-id="bdb01-111">is called at various points during the unwind phase of the exception-handling process.</span></span> `ExceptionUnwind` <span data-ttu-id="bdb01-112">pode ser chamado mais de uma vez durante o desenrolamento de uma única exceção.</span><span class="sxs-lookup"><span data-stu-id="bdb01-112">can be called more than once while unwinding a single exception.</span></span>  
   
- <span data-ttu-id="3663b-113">Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, o ponteiro de instrução será no quadro de thread, no ponto de sequência antes de folha (Isso pode ser várias instruções de antes) da instrução que conduziram à exceção.</span><span class="sxs-lookup"><span data-stu-id="3663b-113">If `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, the instruction pointer will be in the leaf frame of the thread, at the sequence point before (this may be several instructions before) the instruction that led to the exception.</span></span>  
+ <span data-ttu-id="bdb01-113">Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, o ponteiro de instrução será no quadro de thread, no ponto de sequência antes de folha (Isso pode ser várias instruções de antes) da instrução que conduziram à exceção.</span><span class="sxs-lookup"><span data-stu-id="bdb01-113">If `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, the instruction pointer will be in the leaf frame of the thread, at the sequence point before (this may be several instructions before) the instruction that led to the exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3663b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3663b-114">Requirements</span></span>  
- <span data-ttu-id="3663b-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3663b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bdb01-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bdb01-114">Requirements</span></span>  
+ <span data-ttu-id="bdb01-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bdb01-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3663b-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3663b-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bdb01-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bdb01-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3663b-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3663b-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bdb01-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bdb01-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3663b-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3663b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="bdb01-118">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="bdb01-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3663b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3663b-119">See also</span></span>
-- [<span data-ttu-id="3663b-120">Interface ICorDebugManagedCallback2</span><span class="sxs-lookup"><span data-stu-id="3663b-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="3663b-121">Interface ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="3663b-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bdb01-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bdb01-119">See also</span></span>
+
+- [<span data-ttu-id="bdb01-120">Interface ICorDebugManagedCallback2</span><span class="sxs-lookup"><span data-stu-id="bdb01-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="bdb01-121">Interface ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="bdb01-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

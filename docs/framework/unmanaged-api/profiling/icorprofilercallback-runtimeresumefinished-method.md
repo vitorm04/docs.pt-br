@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2cf80c7e02d706b0b00ea87aa62986107cdd6a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c7b3c3ea5e976645c265b34327caa38ef6a28fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226983"
 ---
-# <a name="icorprofilercallbackruntimeresumefinished-method"></a><span data-ttu-id="7e6ed-102">Método ICorProfilerCallback::RuntimeResumeFinished</span><span class="sxs-lookup"><span data-stu-id="7e6ed-102">ICorProfilerCallback::RuntimeResumeFinished Method</span></span>
-<span data-ttu-id="7e6ed-103">Notifica o criador de perfil que o tempo de execução foi retomada todos os threads de tempo de execução e retornou para operação normal.</span><span class="sxs-lookup"><span data-stu-id="7e6ed-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span></span>  
+# <a name="icorprofilercallbackruntimeresumefinished-method"></a><span data-ttu-id="f863d-102">Método ICorProfilerCallback::RuntimeResumeFinished</span><span class="sxs-lookup"><span data-stu-id="f863d-102">ICorProfilerCallback::RuntimeResumeFinished Method</span></span>
+<span data-ttu-id="f863d-103">Notifica o criador de perfil que o tempo de execução foi retomada todos os threads de tempo de execução e retornou para operação normal.</span><span class="sxs-lookup"><span data-stu-id="f863d-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e6ed-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7e6ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f863d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f863d-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeResumeFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="7e6ed-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="7e6ed-105">Remarks</span></span>  
- <span data-ttu-id="7e6ed-106">O `RuntimeResumeFinished` retorno de chamada não é garantido que ocorrem no mesmo thread que o [ICorProfilerCallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="7e6ed-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span> <span data-ttu-id="7e6ed-107">No entanto, é garantido que ele ocorrer no mesmo thread que o [ICorProfilerCallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="7e6ed-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f863d-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="f863d-105">Remarks</span></span>  
+ <span data-ttu-id="f863d-106">O `RuntimeResumeFinished` retorno de chamada não é garantido que ocorrem no mesmo thread que o [ICorProfilerCallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="f863d-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span> <span data-ttu-id="f863d-107">No entanto, é garantido que ele ocorrer no mesmo thread que o [ICorProfilerCallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="f863d-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e6ed-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7e6ed-108">Requirements</span></span>  
- <span data-ttu-id="7e6ed-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e6ed-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f863d-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f863d-108">Requirements</span></span>  
+ <span data-ttu-id="f863d-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f863d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e6ed-110">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7e6ed-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f863d-110">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f863d-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7e6ed-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e6ed-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f863d-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f863d-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7e6ed-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e6ed-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="f863d-112">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f863d-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7e6ed-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7e6ed-113">See also</span></span>
-- [<span data-ttu-id="7e6ed-114">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="7e6ed-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f863d-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f863d-113">See also</span></span>
+
+- [<span data-ttu-id="f863d-114">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="f863d-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

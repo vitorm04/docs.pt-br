@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 738789ee6b21b190302d5e5a204538bd14851b24
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3361212f9a7f7ff0739e8544419a2b67abc8f457
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214644"
 ---
-# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="b88eb-102">Método IMetaDataAssemblyEmit::SetAssemblyProps</span><span class="sxs-lookup"><span data-stu-id="b88eb-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
-<span data-ttu-id="b88eb-103">Modifica especificado `Assembly` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="b88eb-103">Modifies the specified `Assembly` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="b248a-102">Método IMetaDataAssemblyEmit::SetAssemblyProps</span><span class="sxs-lookup"><span data-stu-id="b248a-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
+<span data-ttu-id="b248a-103">Modifica especificado `Assembly` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="b248a-103">Modifies the specified `Assembly` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b88eb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b88eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b248a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b248a-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyProps (  
@@ -41,39 +41,40 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b88eb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b88eb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b248a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b248a-105">Parameters</span></span>  
  `pma`  
- <span data-ttu-id="b88eb-106">[in] O token de metadados que especifica o `Assembly` estrutura de metadados a ser modificado.</span><span class="sxs-lookup"><span data-stu-id="b88eb-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="b248a-106">[in] O token de metadados que especifica o `Assembly` estrutura de metadados a ser modificado.</span><span class="sxs-lookup"><span data-stu-id="b248a-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
   
  `pbPublicKey`  
- <span data-ttu-id="b88eb-107">[in] Um ponteiro para a chave pública do Editor do assembly.</span><span class="sxs-lookup"><span data-stu-id="b88eb-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
+ <span data-ttu-id="b248a-107">[in] Um ponteiro para a chave pública do Editor do assembly.</span><span class="sxs-lookup"><span data-stu-id="b248a-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="b88eb-108">[in] O tamanho em bytes do `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="b88eb-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="b248a-108">[in] O tamanho em bytes do `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="b248a-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `ulHashAlgId`  
- <span data-ttu-id="b88eb-109">[in] O identificador para o algoritmo de hash usado para os arquivos de assembly de hash.</span><span class="sxs-lookup"><span data-stu-id="b88eb-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
+ <span data-ttu-id="b248a-109">[in] O identificador para o algoritmo de hash usado para os arquivos de assembly de hash.</span><span class="sxs-lookup"><span data-stu-id="b248a-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
   
  `szName`  
- <span data-ttu-id="b88eb-110">[in] O nome de texto legível do assembly.</span><span class="sxs-lookup"><span data-stu-id="b88eb-110">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="b248a-110">[in] O nome de texto legível do assembly.</span><span class="sxs-lookup"><span data-stu-id="b248a-110">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="b88eb-111">[in] Um ponteiro para o ASSEMBLYMETADATA que contém informações de localidade, plataforma e versão para o assembly.</span><span class="sxs-lookup"><span data-stu-id="b88eb-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="b248a-111">[in] Um ponteiro para o ASSEMBLYMETADATA que contém informações de localidade, plataforma e versão para o assembly.</span><span class="sxs-lookup"><span data-stu-id="b248a-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="b88eb-112">[in] Uma combinação bit a bit de [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) valores que especificam vários atributos do assembly.</span><span class="sxs-lookup"><span data-stu-id="b88eb-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
+ <span data-ttu-id="b248a-112">[in] Uma combinação bit a bit de [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) valores que especificam vários atributos do assembly.</span><span class="sxs-lookup"><span data-stu-id="b248a-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b88eb-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="b88eb-113">Remarks</span></span>  
- <span data-ttu-id="b88eb-114">Para criar uma `Assembly` estrutura de metadados, use o [imetadataassemblyemit:: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="b88eb-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b248a-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="b248a-113">Remarks</span></span>  
+ <span data-ttu-id="b248a-114">Para criar uma `Assembly` estrutura de metadados, use o [imetadataassemblyemit:: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="b248a-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b88eb-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b88eb-115">Requirements</span></span>  
- <span data-ttu-id="b88eb-116">**Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b88eb-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b248a-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b248a-115">Requirements</span></span>  
+ <span data-ttu-id="b248a-116">**Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b248a-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b88eb-117">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b88eb-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b248a-117">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b248a-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b88eb-118">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b88eb-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b248a-118">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b248a-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b88eb-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b88eb-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b248a-119">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b248a-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b88eb-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b88eb-120">See also</span></span>
-- [<span data-ttu-id="b88eb-121">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="b88eb-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b248a-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b248a-120">See also</span></span>
+
+- [<span data-ttu-id="b248a-121">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="b248a-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

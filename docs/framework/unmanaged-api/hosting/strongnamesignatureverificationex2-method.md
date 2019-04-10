@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8b3096bd0c60e826fec4c8daf535c3c4086630
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aab3b697a0bb2f58258816ce4f8133009b26f54a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220585"
 ---
-# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="42b52-102">Método StrongNameSignatureVerificationEx2</span><span class="sxs-lookup"><span data-stu-id="42b52-102">StrongNameSignatureVerificationEx2 Method</span></span>
-<span data-ttu-id="42b52-103">Verifica a assinatura de um assembly de nome forte e fornece um mapeamento da chave do ECMA para uma chave real.</span><span class="sxs-lookup"><span data-stu-id="42b52-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
+# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="07d99-102">Método StrongNameSignatureVerificationEx2</span><span class="sxs-lookup"><span data-stu-id="07d99-102">StrongNameSignatureVerificationEx2 Method</span></span>
+<span data-ttu-id="07d99-103">Verifica a assinatura de um assembly de nome forte e fornece um mapeamento da chave do ECMA para uma chave real.</span><span class="sxs-lookup"><span data-stu-id="07d99-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42b52-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="42b52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07d99-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="07d99-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -38,35 +38,36 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="42b52-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="42b52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07d99-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="07d99-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="42b52-106">[in] O caminho para o arquivo executável portátil (.exe ou. dll) para o assembly a ser verificado.</span><span class="sxs-lookup"><span data-stu-id="42b52-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="07d99-106">[in] O caminho para o arquivo executável portátil (.exe ou. dll) para o assembly a ser verificado.</span><span class="sxs-lookup"><span data-stu-id="07d99-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="42b52-107">[in] `true` para executar a verificação, mesmo se for necessário substituir as configurações do registro; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="42b52-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="07d99-107">[in] `true` para executar a verificação, mesmo se for necessário substituir as configurações do registro; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="07d99-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pbEcmaPublicKey`  
- <span data-ttu-id="42b52-108">[in] Um ponteiro para o mapeamento da chave pública do ECMA para a chave real usado para verificação.</span><span class="sxs-lookup"><span data-stu-id="42b52-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
+ <span data-ttu-id="07d99-108">[in] Um ponteiro para o mapeamento da chave pública do ECMA para a chave real usado para verificação.</span><span class="sxs-lookup"><span data-stu-id="07d99-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
   
  `cbEcmaPublicKey`  
- <span data-ttu-id="42b52-109">[in] O comprimento da chave pública real do ECMA.</span><span class="sxs-lookup"><span data-stu-id="42b52-109">[in] The length of the real ECMA public key.</span></span>  
+ <span data-ttu-id="07d99-109">[in] O comprimento da chave pública real do ECMA.</span><span class="sxs-lookup"><span data-stu-id="07d99-109">[in] The length of the real ECMA public key.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="42b52-110">[out] `true` se a assinatura de nome forte foi verificado; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="42b52-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="42b52-111">Esse parâmetro também é definido como `false` se a verificação for bem-sucedida devido a configurações de registro.</span><span class="sxs-lookup"><span data-stu-id="42b52-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="07d99-110">[out] `true` se a assinatura de nome forte foi verificado; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="07d99-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="07d99-111">Esse parâmetro também é definido como `false` se a verificação for bem-sucedida devido a configurações de registro.</span><span class="sxs-lookup"><span data-stu-id="07d99-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="42b52-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="42b52-112">Return Value</span></span>  
- <span data-ttu-id="42b52-113">`S_OK` Se a verificação for bem-sucedida; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="42b52-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07d99-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="07d99-112">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="07d99-113">Se a verificação for bem-sucedida; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="07d99-113">if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42b52-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="42b52-114">Requirements</span></span>  
- <span data-ttu-id="42b52-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42b52-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07d99-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="07d99-114">Requirements</span></span>  
+ <span data-ttu-id="07d99-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07d99-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42b52-116">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="42b52-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="07d99-116">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="07d99-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="42b52-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="42b52-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="07d99-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="07d99-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="42b52-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42b52-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="07d99-118">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="07d99-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="42b52-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="42b52-119">See also</span></span>
-- [<span data-ttu-id="42b52-120">Método StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="42b52-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [<span data-ttu-id="42b52-121">Método StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="42b52-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="42b52-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="42b52-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="07d99-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="07d99-119">See also</span></span>
+
+- [<span data-ttu-id="07d99-120">Método StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="07d99-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="07d99-121">Método StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="07d99-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="07d99-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="07d99-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

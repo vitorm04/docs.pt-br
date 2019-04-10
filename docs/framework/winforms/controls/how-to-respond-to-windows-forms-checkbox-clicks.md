@@ -1,5 +1,5 @@
 ---
-title: 'Como: Responder ao Windows Forms cliques no CheckBox'
+title: 'Como: Responder a cliques CheckBox do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211979"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="3a7fe-102">Como: Responder ao Windows Forms cliques no CheckBox</span><span class="sxs-lookup"><span data-stu-id="3a7fe-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
-<span data-ttu-id="3a7fe-103">Sempre que um usuário clica em um Windows Forms <xref:System.Windows.Forms.CheckBox> controle, o <xref:System.Windows.Forms.Control.Click> evento ocorre.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="3a7fe-104">Você pode programar seu aplicativo para realizar alguma ação dependendo do estado da caixa de seleção.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="94886-102">Como: Responder a cliques CheckBox do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="94886-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
+<span data-ttu-id="94886-103">Sempre que um usuário clica em um Windows Forms <xref:System.Windows.Forms.CheckBox> controle, o <xref:System.Windows.Forms.Control.Click> evento ocorre.</span><span class="sxs-lookup"><span data-stu-id="94886-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="94886-104">Você pode programar seu aplicativo para realizar alguma ação dependendo do estado da caixa de seleção.</span><span class="sxs-lookup"><span data-stu-id="94886-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
   
-### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="3a7fe-105">Para responder a cliques na caixa de seleção</span><span class="sxs-lookup"><span data-stu-id="3a7fe-105">To respond to CheckBox clicks</span></span>  
+### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="94886-105">Para responder a cliques na caixa de seleção</span><span class="sxs-lookup"><span data-stu-id="94886-105">To respond to CheckBox clicks</span></span>  
   
-1.  <span data-ttu-id="3a7fe-106">No <xref:System.Windows.Forms.Control.Click> manipulador de eventos, use o <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade para determinar o estado do controle e executar qualquer ação necessária.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
+1.  <span data-ttu-id="94886-106">No <xref:System.Windows.Forms.Control.Click> manipulador de eventos, use o <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade para determinar o estado do controle e executar qualquer ação necessária.</span><span class="sxs-lookup"><span data-stu-id="94886-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ ms.locfileid: "57724492"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="3a7fe-107">Se o usuário tentar clicar duas vezes o <xref:System.Windows.Forms.CheckBox> controle, cada clique será processado separadamente; ou seja, o <xref:System.Windows.Forms.CheckBox> controle não dá suporte para o evento de clique duplo.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
+    >  <span data-ttu-id="94886-107">Se o usuário tentar clicar duas vezes o <xref:System.Windows.Forms.CheckBox> controle, cada clique será processado separadamente; ou seja, o <xref:System.Windows.Forms.CheckBox> controle não dá suporte para o evento de clique duplo.</span><span class="sxs-lookup"><span data-stu-id="94886-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="3a7fe-108">Quando o <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> é de propriedade `true` (o padrão), o <xref:System.Windows.Forms.CheckBox> é automaticamente selecionada ou desmarcada quando ele for clicado.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="3a7fe-109">Caso contrário, você deve definir manualmente as <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade quando o <xref:System.Windows.Forms.Control.Click> evento ocorre.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
+    >  <span data-ttu-id="94886-108">Quando o <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> é de propriedade `true` (o padrão), o <xref:System.Windows.Forms.CheckBox> é automaticamente selecionada ou desmarcada quando ele for clicado.</span><span class="sxs-lookup"><span data-stu-id="94886-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="94886-109">Caso contrário, você deve definir manualmente as <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade quando o <xref:System.Windows.Forms.Control.Click> evento ocorre.</span><span class="sxs-lookup"><span data-stu-id="94886-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
   
-     <span data-ttu-id="3a7fe-110">Você também pode usar o <xref:System.Windows.Forms.CheckBox> controle para determinar um curso de ação.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
+     <span data-ttu-id="94886-110">Você também pode usar o <xref:System.Windows.Forms.CheckBox> controle para determinar um curso de ação.</span><span class="sxs-lookup"><span data-stu-id="94886-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="3a7fe-111">Para determinar um curso de ação quando uma caixa de seleção é clicada</span><span class="sxs-lookup"><span data-stu-id="3a7fe-111">To determine a course of action when a check box is clicked</span></span>  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="94886-111">Para determinar um curso de ação quando uma caixa de seleção é clicada</span><span class="sxs-lookup"><span data-stu-id="94886-111">To determine a course of action when a check box is clicked</span></span>  
   
-1.  <span data-ttu-id="3a7fe-112">Use uma instrução case para consultar o valor da <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriedade para determinar um curso de ação.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="3a7fe-113">Quando o <xref:System.Windows.Forms.CheckBox.ThreeState%2A> estiver definida como `true`, o <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriedade pode retornar três valores possíveis, que representam a caixa que está sendo verificada, a caixa desmarcada ou um terceiro estado indeterminado no qual a caixa é exibida com um esmaecido aparência para indicar que a opção não está disponível.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
+1.  <span data-ttu-id="94886-112">Use uma instrução case para consultar o valor da <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriedade para determinar um curso de ação.</span><span class="sxs-lookup"><span data-stu-id="94886-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="94886-113">Quando o <xref:System.Windows.Forms.CheckBox.ThreeState%2A> estiver definida como `true`, o <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriedade pode retornar três valores possíveis, que representam a caixa que está sendo verificada, a caixa desmarcada ou um terceiro estado indeterminado no qual a caixa é exibida com um esmaecido aparência para indicar que a opção não está disponível.</span><span class="sxs-lookup"><span data-stu-id="94886-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,10 +133,11 @@ ms.locfileid: "57724492"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="3a7fe-114">Quando o <xref:System.Windows.Forms.CheckBox.ThreeState%2A> estiver definida como `true`, o <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade retorna `true` para ambos <xref:System.Windows.Forms.CheckState.Checked> e <xref:System.Windows.Forms.CheckState.Indeterminate>.</span><span class="sxs-lookup"><span data-stu-id="3a7fe-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
+    >  <span data-ttu-id="94886-114">Quando o <xref:System.Windows.Forms.CheckBox.ThreeState%2A> estiver definida como `true`, o <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade retorna `true` para ambos <xref:System.Windows.Forms.CheckState.Checked> e <xref:System.Windows.Forms.CheckState.Indeterminate>.</span><span class="sxs-lookup"><span data-stu-id="94886-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a7fe-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3a7fe-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94886-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="94886-115">See also</span></span>
+
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="3a7fe-116">Visão geral do controle CheckBox</span><span class="sxs-lookup"><span data-stu-id="3a7fe-116">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="3a7fe-117">Como: Definir opções com controles CheckBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3a7fe-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [<span data-ttu-id="3a7fe-118">Controle CheckBox</span><span class="sxs-lookup"><span data-stu-id="3a7fe-118">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="94886-116">Visão geral do controle CheckBox</span><span class="sxs-lookup"><span data-stu-id="94886-116">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="94886-117">Como: Definir opções com controles CheckBox do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="94886-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [<span data-ttu-id="94886-118">Controle de CheckBox</span><span class="sxs-lookup"><span data-stu-id="94886-118">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
