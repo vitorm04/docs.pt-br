@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fbea1350c7749f67b7e0cc62378a8a520923ae8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 21fa9a17067f754fe9b13c4d32193856a57750ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227360"
 ---
-# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="c9d16-102">Método ICLRDataTarget::GetTLSValue</span><span class="sxs-lookup"><span data-stu-id="c9d16-102">ICLRDataTarget::GetTLSValue Method</span></span>
-<span data-ttu-id="c9d16-103">Obtém um valor de armazenamento local de thread (TLS) do thread no processo de destino especificado.</span><span class="sxs-lookup"><span data-stu-id="c9d16-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="c9d16-104">Esse método é chamado pelo serviço de acesso de dados do common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="c9d16-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="e39d7-102">Método ICLRDataTarget::GetTLSValue</span><span class="sxs-lookup"><span data-stu-id="e39d7-102">ICLRDataTarget::GetTLSValue Method</span></span>
+<span data-ttu-id="e39d7-103">Obtém um valor de armazenamento local de thread (TLS) do thread no processo de destino especificado.</span><span class="sxs-lookup"><span data-stu-id="e39d7-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="e39d7-104">Esse método é chamado pelo serviço de acesso de dados do common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="e39d7-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9d16-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c9d16-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e39d7-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e39d7-105">Syntax</span></span>  
   
 ```  
 HRESULT GetTLSValue (  
@@ -37,27 +37,28 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9d16-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c9d16-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e39d7-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e39d7-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="c9d16-107">[in] O identificador de sistema operacional de um thread no processo de destino.</span><span class="sxs-lookup"><span data-stu-id="c9d16-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="e39d7-107">[in] O identificador de sistema operacional de um thread no processo de destino.</span><span class="sxs-lookup"><span data-stu-id="e39d7-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="c9d16-108">[in] O índice do local.</span><span class="sxs-lookup"><span data-stu-id="c9d16-108">[in] The index of the location.</span></span> <span data-ttu-id="c9d16-109">Esse valor deve ser um índice válido no repositório local do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="c9d16-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="e39d7-108">[in] O índice do local.</span><span class="sxs-lookup"><span data-stu-id="e39d7-108">[in] The index of the location.</span></span> <span data-ttu-id="e39d7-109">Esse valor deve ser um índice válido no repositório local do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="e39d7-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="c9d16-110">[out] Um ponteiro para um `CLRDATA_ADDRESS` valor que especifica o valor retornado do local indicado TLS.</span><span class="sxs-lookup"><span data-stu-id="c9d16-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
+ <span data-ttu-id="e39d7-110">[out] Um ponteiro para um `CLRDATA_ADDRESS` valor que especifica o valor retornado do local indicado TLS.</span><span class="sxs-lookup"><span data-stu-id="e39d7-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c9d16-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9d16-111">Remarks</span></span>  
- <span data-ttu-id="c9d16-112">Este método é implementado pelo autor do aplicativo de depuração.</span><span class="sxs-lookup"><span data-stu-id="c9d16-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e39d7-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="e39d7-111">Remarks</span></span>  
+ <span data-ttu-id="e39d7-112">Este método é implementado pelo autor do aplicativo de depuração.</span><span class="sxs-lookup"><span data-stu-id="e39d7-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9d16-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c9d16-113">Requirements</span></span>  
- <span data-ttu-id="c9d16-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9d16-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e39d7-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e39d7-113">Requirements</span></span>  
+ <span data-ttu-id="e39d7-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e39d7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9d16-115">**Cabeçalho:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="c9d16-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="e39d7-115">**Cabeçalho:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="e39d7-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="c9d16-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9d16-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e39d7-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e39d7-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c9d16-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9d16-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="e39d7-117">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e39d7-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c9d16-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9d16-118">See also</span></span>
-- [<span data-ttu-id="c9d16-119">Interface ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="c9d16-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e39d7-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e39d7-118">See also</span></span>
+
+- [<span data-ttu-id="e39d7-119">Interface ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="e39d7-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
