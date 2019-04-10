@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344943"
 ---
 # <a name="istrue-operator-visual-basic"></a>Operador IsTrue (Visual Basic)
 Determina se uma expressão é `True`.  
@@ -24,15 +24,15 @@ Determina se uma expressão é `True`.
 ## <a name="compiler-use-of-istrue"></a>Uso do compilador de IsTrue  
  Quando você tiver definido uma classe ou estrutura, você pode usar uma variável desse tipo em uma `For`, `If`, `Else If`, ou `While` instrução, ou em um `When` cláusula. Se você fizer isso, o compilador exige um operador que converte seu tipo em um `Boolean` para que ele possa testar uma condição de valor. Ele procura por um operador adequado na seguinte ordem:  
   
-1.  Um operador de conversão de ampliação de sua classe ou estrutura para `Boolean`.  
+1. Um operador de conversão de ampliação de sua classe ou estrutura para `Boolean`.  
   
-2.  Um operador de conversão de ampliação de sua classe ou estrutura para `Boolean?`.  
+2. Um operador de conversão de ampliação de sua classe ou estrutura para `Boolean?`.  
   
-3.  O `IsTrue` operador em sua classe ou estrutura.  
+3. O `IsTrue` operador em sua classe ou estrutura.  
   
-4.  Uma conversão de estreitamento `Boolean?` que não envolve uma conversão de `Boolean` para `Boolean?`.  
+4. Uma conversão de estreitamento `Boolean?` que não envolve uma conversão de `Boolean` para `Boolean?`.  
   
-5.  Um operador de conversão de estreitamento de sua classe ou estrutura para `Boolean`.  
+5. Um operador de conversão de estreitamento de sua classe ou estrutura para `Boolean`.  
   
  Se você não definiu qualquer conversão para `Boolean` ou um `IsTrue` operador, o compilador sinaliza um erro.  
   
@@ -47,5 +47,5 @@ Determina se uma expressão é `True`.
 ## <a name="see-also"></a>Consulte também
 
 - [Operador IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [Como: Definir um operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Como: definir um operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [Operador OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127342"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346048"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Passo a passo: Validando dados no controle DataGridView do Windows Forms
 Ao exibir a funcionalidade de entrada de dados para usuários, frequentemente é necessário validar os dados inseridos no formulário. O <xref:System.Windows.Forms.DataGridView> classe fornece uma maneira conveniente para executar a validação antes de dados são confirmados no repositório de dados. Você pode validar dados manipulando o <xref:System.Windows.Forms.DataGridView.CellValidating> evento, que é gerado pelo <xref:System.Windows.Forms.DataGridView> quando a célula atual é alterado.  
@@ -35,7 +35,7 @@ Ao exibir a funcionalidade de entrada de dados para usuários, frequentemente é
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>Validar dados inseridos em um DataGridView  
   
-1.  Criar uma classe que deriva de <xref:System.Windows.Forms.Form> e contém uma <xref:System.Windows.Forms.DataGridView> controle e um <xref:System.Windows.Forms.BindingSource> componente.  
+1. Criar uma classe que deriva de <xref:System.Windows.Forms.Form> e contém uma <xref:System.Windows.Forms.DataGridView> controle e um <xref:System.Windows.Forms.BindingSource> componente.  
   
      O exemplo de código a seguir fornece inicialização básica e inclui um método `Main`.  
   
@@ -44,7 +44,7 @@ Ao exibir a funcionalidade de entrada de dados para usuários, frequentemente é
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  Implemente um método na definição de classe do formulário para manipular os detalhes de conexão ao banco de dados.  
+2. Implemente um método na definição de classe do formulário para manipular os detalhes de conexão ao banco de dados.  
   
      Este exemplo de código usa um `GetData` método que retorna um populados <xref:System.Data.DataTable> objeto. Verifique se a variável `connectionString` é definida como um valor apropriado para o banco de dados.  
   
@@ -54,12 +54,12 @@ Ao exibir a funcionalidade de entrada de dados para usuários, frequentemente é
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  Implemente um manipulador para seu formulário <xref:System.Windows.Forms.Form.Load> evento que inicializa o <xref:System.Windows.Forms.DataGridView> e <xref:System.Windows.Forms.BindingSource> e configura a vinculação de dados.  
+3. Implemente um manipulador para seu formulário <xref:System.Windows.Forms.Form.Load> evento que inicializa o <xref:System.Windows.Forms.DataGridView> e <xref:System.Windows.Forms.BindingSource> e configura a vinculação de dados.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  Implemente manipuladores para o <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Windows.Forms.DataGridView.CellValidating> e <xref:System.Windows.Forms.DataGridView.CellEndEdit> eventos.  
+4. Implemente manipuladores para o <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Windows.Forms.DataGridView.CellValidating> e <xref:System.Windows.Forms.DataGridView.CellEndEdit> eventos.  
   
      O <xref:System.Windows.Forms.DataGridView.CellValidating> manipulador de eventos é onde você possa determinar se o valor de uma célula no `CompanyName` coluna estará vazia. Se o valor da célula falhar na validação, defina as <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade do <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> classe para `true`. Isso faz com que o <xref:System.Windows.Forms.DataGridView> controle para impedir que o cursor de sair da célula. Defina o <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> propriedade na linha para uma cadeia de caracteres explicativa. Isso exibirá um ícone de erro com uma ToolTip que contém o texto de erro. No <xref:System.Windows.Forms.DataGridView.CellEndEdit> manipulador de eventos, defina o <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> propriedade na linha para a cadeia de caracteres vazia. O <xref:System.Windows.Forms.DataGridView.CellEndEdit> evento ocorre somente quando a célula sair do modo de edição, ele não pode fazer se a validação falhar.  
   

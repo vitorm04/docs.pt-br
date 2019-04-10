@@ -2,12 +2,12 @@
 title: 'Como: Controle de versão de serviço'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085370"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346282"
 ---
 # <a name="how-to-service-versioning"></a>Como: Controle de versão de serviço
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que roteia mensagens para diferentes versões do mesmo serviço. Neste exemplo, as mensagens são roteadas para duas versões diferentes de um serviço de calculadora `roundingCalc` (v1) e `regularCalc` (v2). Ambas as implementações de suportam as mesmas operações; No entanto o serviço mais antigo, `roundingCalc`, Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar o mais recente `regularCalc` service.  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Implementar o controle de versão do serviço  
   
-1.  Crie a configuração básica do serviço de roteamento, especificando o ponto de extremidade de serviço exposto pelo serviço. O exemplo a seguir define um ponto de extremidade de serviço único, que será usado para receber mensagens. Ele também define os pontos de extremidade do cliente que serão usados para enviar mensagens para o `roundingCalc` (v1) e o `regularCalc` serviços (v2).  
+1. Crie a configuração básica do serviço de roteamento, especificando o ponto de extremidade de serviço exposto pelo serviço. O exemplo a seguir define um ponto de extremidade de serviço único, que será usado para receber mensagens. Ele também define os pontos de extremidade do cliente que serão usados para enviar mensagens para o `roundingCalc` (v1) e o `regularCalc` serviços (v2).  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  Defina os filtros usados para rotear mensagens para os pontos de extremidade de destino.  Neste exemplo, o filtro XPath é usado para detectar o valor do cabeçalho personalizado "CalcVer" para determinar qual é a mensagem deve ser roteada para a versão. Um filtro XPath também é usado para detectar mensagens que não contêm o cabeçalho "CalcVer". O exemplo a seguir define os filtros necessários e a tabela de namespace.  
+2. Defina os filtros usados para rotear mensagens para os pontos de extremidade de destino.  Neste exemplo, o filtro XPath é usado para detectar o valor do cabeçalho personalizado "CalcVer" para determinar qual é a mensagem deve ser roteada para a versão. Um filtro XPath também é usado para detectar mensagens que não contêm o cabeçalho "CalcVer". O exemplo a seguir define os filtros necessários e a tabela de namespace.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > O prefixo de namespace s12 é definido por padrão na tabela de namespace e representa o namespace `http://www.w3.org/2003/05/soap-envelope`.
   
-3.  Defina a tabela de filtro, que associa cada filtro com um ponto de extremidade do cliente. Se a mensagem contém o cabeçalho de "CalcVer" com um valor de 1, ele será enviado para o serviço regularCalc. Se o cabeçalho contém um valor de 2, ele será enviado para o serviço roundingCalc. Se nenhum cabeçalho estiver presente, a mensagem será roteada para o regularCalc.  
+3. Defina a tabela de filtro, que associa cada filtro com um ponto de extremidade do cliente. Se a mensagem contém o cabeçalho de "CalcVer" com um valor de 1, ele será enviado para o serviço regularCalc. Se o cabeçalho contém um valor de 2, ele será enviado para o serviço roundingCalc. Se nenhum cabeçalho estiver presente, a mensagem será roteada para o regularCalc.  
   
      A seguir define a tabela de filtro e adiciona os filtros definidos anteriormente.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Para avaliar as mensagens de entrada com os filtros contidos na tabela de filtros, você deve associar a tabela de filtro com os pontos de extremidade de serviço usando o comportamento de roteamento. O exemplo a seguir demonstra a associação `filterTable1` com os pontos de extremidade de serviço:  
+4. Para avaliar as mensagens de entrada com os filtros contidos na tabela de filtros, você deve associar a tabela de filtro com os pontos de extremidade de serviço usando o comportamento de roteamento. O exemplo a seguir demonstra a associação `filterTable1` com os pontos de extremidade de serviço:  
   
     ```xml  
     <behaviors>  

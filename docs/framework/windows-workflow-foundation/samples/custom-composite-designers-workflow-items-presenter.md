@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344865"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Designer de compostos personalizados - apresentador de itens de fluxo de trabalho
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> é um principal no modelo de programação do designer de WF que permite a edição de uma coleção de elementos contidos. Este exemplo mostra como criar um designer de atividade que surija uma coleção tão editável.
@@ -25,9 +25,9 @@ ms.locfileid: "59118099"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1.  Abra o **Usingworkflowitemspresenter** solução de exemplo para c# ou VB no Visual Studio 2010.
+1. Abra o **Usingworkflowitemspresenter** solução de exemplo para c# ou VB no Visual Studio 2010.
 
-2.  Criar e executar a solução. Um aplicativo rehosted de designer de fluxo de trabalho deve abrir, e você pode arrastar atividades na tela.
+2. Criar e executar a solução. Um aplicativo rehosted de designer de fluxo de trabalho deve abrir, e você pode arrastar atividades na tela.
 
 ## <a name="sample-highlights"></a>Realces de exemplo
  O código para esse exemplo mostra o seguinte:

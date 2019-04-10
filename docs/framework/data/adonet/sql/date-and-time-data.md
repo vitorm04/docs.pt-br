@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344163"
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para manipular as informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora, e tipos de dados expandidos com maior intervalo, precisão e reconhecimento de fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -21,7 +21,7 @@ O SQL Server 2008 apresenta novos tipos de dados para manipular as informações
   
  **Manuais Online do SQL Server**  
   
-1.  [Usando dados de data e hora](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Usando dados de data e hora](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de dados de data/hora introduzidos no SQL Server 2008  
  A tabela a seguir descreve os novos tipos de dados de data e hora.  

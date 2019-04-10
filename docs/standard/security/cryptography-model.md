@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343864"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de Criptografia do .NET Framework
 O .NET Framework fornece implementações de muitos algoritmos criptográficos padrão. Esses algoritmos são fáceis de usar e têm as propriedades possíveis padrão mais seguras. Além disso, o modelo de criptografia do .NET Framework de herança de objetos, o design de fluxo e a configuração é extremamente extensível.  
@@ -32,15 +32,15 @@ O .NET Framework fornece implementações de muitos algoritmos criptográficos p
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>Como os algoritmos são implementados no .NET Framework  
  Por exemplo as diferentes implementações disponíveis para um algoritmo, considere algoritmos simétricos. É a base para todos os algoritmos simétricos <xref:System.Security.Cryptography.SymmetricAlgorithm>, que são herdadas pelos seguintes algoritmos:  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
  <xref:System.Security.Cryptography.Aes> é herdada por duas classes: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged>. O <xref:System.Security.Cryptography.AesCryptoServiceProvider> classe é um wrapper em torno a implementação do Windows CAPI (Cryptography API) do Aes, enquanto o <xref:System.Security.Cryptography.AesManaged> classe é escrito totalmente em código gerenciado. Também há um terceiro tipo de implementação, geração de CNG (Cryptography Next), além de gerenciado e implementações de CAPI. Um exemplo de um algoritmo CNG é <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Algoritmos CNG estão disponíveis no Windows Vista e posterior.  
   

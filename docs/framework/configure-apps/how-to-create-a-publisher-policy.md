@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344657"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do publicador com o assembly atualizado. O arquivo de política de publicador Especifica as configurações de base de código e redirecionamento de assembly e usa o mesmo formato que o arquivo de configuração do aplicativo. O arquivo de política de publicador é compilado em um assembly e colocado no cache de assembly global.  
   
  Há três etapas envolvidas na criação de uma política de editor:  
   
-1.  Crie um arquivo de política do publicador.  
+1. Crie um arquivo de política do publicador.  
   
-2.  Crie um assembly de política do publicador.  
+2. Crie um assembly de política do publicador.  
   
-3.  Adicione o assembly de política do publicador para o cache de assembly global.  
+3. Adicione o assembly de política do publicador para o cache de assembly global.  
   
  O esquema para a política de editor é descrito na [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md). O exemplo a seguir mostra um editor de arquivo de política que redireciona uma versão do `myAssembly` para outro.  
   
@@ -51,7 +51,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Para criar um assembly de política do publicador  
   
-1.  Digite o seguinte comando no prompt de comando:  
+1. Digite o seguinte comando no prompt de comando:  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Para adicionar o assembly de política de publicador para o cache de assembly global  
   
-1.  Digite o seguinte comando no prompt de comando:  
+1. Digite o seguinte comando no prompt de comando:  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

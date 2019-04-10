@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344241"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurando e estendendo o tempo de execução com comportamentos
 Comportamentos que você possa modificar o comportamento padrão e adicionar extensões personalizadas que inspecionem e validar a configuração de serviço ou modificam o comportamento de tempo de execução em aplicativos de cliente e o serviço do Windows Communication Foundation (WCF). Este tópico descreve as interfaces de comportamento, como implementá-los e como adicioná-los para a descrição do serviço (em um aplicativo de serviço) ou o ponto de extremidade (em um aplicativo de cliente) por meio de programação ou em um arquivo de configuração. Para obter mais informações sobre como usar os comportamentos fornecidos pelo sistema, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [especificando comportamento de tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -18,7 +18,7 @@ Comportamentos que você possa modificar o comportamento padrão e adicionar ext
  Tipos de comportamento são adicionados ao serviço ou objetos de descrição do ponto de extremidade de serviço (no serviço ou cliente, respectivamente) antes que esses objetos são usados pelo Windows Communication Foundation (WCF) para criar um tempo de execução que executa um serviço WCF ou um cliente do WCF. Quando esses comportamentos são chamados durante o processo de construção de tempo de execução, em seguida, eles são capazes de acessar propriedades de tempo de execução e os métodos que modificam o tempo de execução construído o contrato, associações e endereços.  
   
 ### <a name="behavior-methods"></a>Métodos de comportamento  
- Todos os comportamentos têm uma `AddBindingParameters` método, uma `ApplyDispatchBehavior` método, um `Validate` método e uma `ApplyClientBehavior` método com uma exceção: porque <xref:System.ServiceModel.Description.IServiceBehavior> não é possível executar em um cliente, ele não implementa `ApplyClientBehavior`.  
+ Todos os comportamentos têm uma `AddBindingParameters` método, uma `ApplyDispatchBehavior` método, um `Validate` método e um `ApplyClientBehavior` método com uma exceção: Porque <xref:System.ServiceModel.Description.IServiceBehavior> não é possível executar em um cliente, ele não implementa `ApplyClientBehavior`.  
   
 -   Use o `AddBindingParameters` método para modificar ou adicionar objetos personalizados a uma coleção de ligações personalizadas podem acessar para uso quando o tempo de execução é construído. Por exemplo, isso como os requisitos de proteção são especificados, que afetam a maneira que o canal é criado, mas não são conhecidos pelo desenvolvedor do canal.  
   
@@ -54,16 +54,16 @@ Comportamentos que você possa modificar o comportamento padrão e adicionar ext
 #### <a name="service-behaviors"></a>Comportamentos de serviço  
  Comportamentos de serviço, que implementam <xref:System.ServiceModel.Description.IServiceBehavior>, são o principal mecanismo pelo qual você modificar o tempo de execução de todo o serviço. Existem três mecanismos para adicionar comportamentos de serviço a um serviço.  
   
-1.  Usando um atributo na classe de serviço.  Quando um <xref:System.ServiceModel.ServiceHost> é construído, o <xref:System.ServiceModel.ServiceHost> implementação usa a reflexão para descobrir o conjunto de atributos no tipo de serviço. Se qualquer um desses atributos são implementações de <xref:System.ServiceModel.Description.IServiceBehavior>, eles são adicionados à coleção de comportamentos em <xref:System.ServiceModel.Description.ServiceDescription>. Isso permite que esses comportamentos participar na construção do serviço de tempo de execução.  
+1. Usando um atributo na classe de serviço.  Quando um <xref:System.ServiceModel.ServiceHost> é construído, o <xref:System.ServiceModel.ServiceHost> implementação usa a reflexão para descobrir o conjunto de atributos no tipo de serviço. Se qualquer um desses atributos são implementações de <xref:System.ServiceModel.Description.IServiceBehavior>, eles são adicionados à coleção de comportamentos em <xref:System.ServiceModel.Description.ServiceDescription>. Isso permite que esses comportamentos participar na construção do serviço de tempo de execução.  
   
-2.  Adicionando programaticamente o comportamento à coleção de comportamentos em <xref:System.ServiceModel.Description.ServiceDescription>. Isso pode ser feito com as seguintes linhas de código:  
+2. Adicionando programaticamente o comportamento à coleção de comportamentos em <xref:System.ServiceModel.Description.ServiceDescription>. Isso pode ser feito com as seguintes linhas de código:  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  Implementação de uma <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que se estende a configuração. Isso permite que o uso do comportamento do serviço de arquivos de configuração do aplicativo.  
+3. Implementação de uma <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que se estende a configuração. Isso permite que o uso do comportamento do serviço de arquivos de configuração do aplicativo.  
   
  Exemplos de comportamentos de serviço do WCF a <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo, o <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>e o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportamento.  
   
@@ -89,9 +89,9 @@ Comportamentos que você possa modificar o comportamento padrão e adicionar ext
   
  Há dois mecanismos para adicionar comportamentos de ponto de extremidade a um serviço.  
   
-1.  Adicionar o comportamento para o <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> propriedade.  
+1. Adicionar o comportamento para o <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> propriedade.  
   
-2.  Implementar um personalizado <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que se estende a configuração.  
+2. Implementar um personalizado <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que se estende a configuração.  
   
  Para obter mais informações e um exemplo, consulte o tópico de referência.  
   
@@ -110,7 +110,7 @@ Comportamentos que você possa modificar o comportamento padrão e adicionar ext
  Serviço e o ponto de extremidade e pode de comportamentos de contrato por projetado para ser especificado no código ou usando os atributos; somente os comportamentos de serviço e o ponto de extremidade podem ser configurados usando o aplicativo ou arquivos de configuração Web. Expondo comportamentos usando atributos permite que os desenvolvedores especifiquem um comportamento em tempo de compilação que não pode ser adicionado, removido ou modificado em tempo de execução. Isso geralmente é adequado para comportamentos que sempre são necessários para a operação correta de um serviço (por exemplo, os parâmetros relacionados de transação para o <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> atributo). Expondo comportamentos usando a configuração permite aos desenvolvedores deixar a especificação e a configuração desses comportamentos para aqueles que implantar o serviço. Isso é adequado para comportamentos que são componentes opcionais ou outra configuração de implantação específicas, como se os metadados são expostos para o serviço ou a configuração de autorização específico para um serviço.  
   
 > [!NOTE]
->  Você também pode usar comportamentos que dão suporte à configuração para impor as políticas de aplicativo da empresa, inserindo-os no arquivo de configuração Machine. config e bloquear esses itens. Para obter uma descrição e um exemplo, consulte [como: bloqueio para baixo os pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+>  Você também pode usar comportamentos que dão suporte à configuração para impor as políticas de aplicativo da empresa, inserindo-os no arquivo de configuração Machine. config e bloquear esses itens. Para obter uma descrição e um exemplo, consulte [como: Bloquear pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
  Para expor um comportamento usando a configuração, um desenvolvedor deve criar uma classe derivada de <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> e, em seguida, registre essa extensão com a configuração.  
   
@@ -188,23 +188,23 @@ protected override object CreateBehavior()
   
  O <xref:System.ServiceModel.ServiceHost> aplica comportamentos na seguinte ordem:  
   
-1.  Serviço  
+1. Serviço  
   
-2.  Contrato  
+2. Contrato  
   
-3.  Ponto de extremidade  
+3. Ponto de extremidade  
   
-4.  Operação  
+4. Operação  
   
  Dentro de qualquer coleção de comportamentos, nenhuma ordem é garantida.  
   
  O <xref:System.ServiceModel.ChannelFactory%601> aplica comportamentos na seguinte ordem:  
   
-1.  Contrato  
+1. Contrato  
   
-2.  Ponto de extremidade  
+2. Ponto de extremidade  
   
-3.  Operação  
+3. Operação  
   
  Dentro de qualquer coleção de comportamentos, novamente, sem nenhuma ordem é garantida.  
   

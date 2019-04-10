@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344826"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Segurança de mensagem com um cliente Windows sem negociação de credencial
 O cenário a seguir mostra um serviço protegido pelo protocolo Kerberos e o cliente do Windows Communication Foundation (WCF).  
@@ -46,9 +46,9 @@ O cenário a seguir mostra um serviço protegido pelo protocolo Kerberos e o cli
 > [!NOTE]
 >  Para usar o tipo de credencial do Windows sem negociação, a conta de usuário do serviço deve ter acesso ao nome principal do serviço (SPN) que está registrado com o domínio do Active Directory. Você pode fazer isso de duas maneiras:  
   
-1.  Use o `NetworkService` ou `LocalSystem` conta para executar seu serviço. Como essas contas têm acesso ao computador do SPN é estabelecido quando o computador ingressa no domínio do Active Directory, o WCF gera automaticamente o elemento SPN apropriado dentro do ponto de extremidade do serviço nos metadados do serviço (descrição de serviços Web Linguagem, ou WSDL).  
+1. Use o `NetworkService` ou `LocalSystem` conta para executar seu serviço. Como essas contas têm acesso ao computador do SPN é estabelecido quando o computador ingressa no domínio do Active Directory, o WCF gera automaticamente o elemento SPN apropriado dentro do ponto de extremidade do serviço nos metadados do serviço (descrição de serviços Web Linguagem, ou WSDL).  
   
-2.  Use uma conta de domínio do Active Directory arbitrária para executar seu serviço. Nesse caso, você precisa estabelecer um SPN para essa conta de domínio. Uma maneira de fazer isso é usar a ferramenta de utilitário Setspn.exe. Depois de criar o SPN para a conta de serviço, configure o WCF para publicar esse SPN aos clientes do serviço por meio de seus metadados (WSDL). Isso é feito definindo a identidade do ponto de extremidade para o ponto de extremidade exposto, o que um arquivo de configuração de aplicativo ou código. O exemplo a seguir publica a identidade por meio de programação.  
+2. Use uma conta de domínio do Active Directory arbitrária para executar seu serviço. Nesse caso, você precisa estabelecer um SPN para essa conta de domínio. Uma maneira de fazer isso é usar a ferramenta de utilitário Setspn.exe. Depois de criar o SPN para a conta de serviço, configure o WCF para publicar esse SPN aos clientes do serviço por meio de seus metadados (WSDL). Isso é feito definindo a identidade do ponto de extremidade para o ponto de extremidade exposto, o que um arquivo de configuração de aplicativo ou código. O exemplo a seguir publica a identidade por meio de programação.  
   
  Para obter mais informações sobre SPNs, o protocolo Kerberos e do Active Directory, consulte [Kerberos técnica suplementar para Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Para obter mais informações sobre identidades de ponto de extremidade, consulte [modos de autenticação de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

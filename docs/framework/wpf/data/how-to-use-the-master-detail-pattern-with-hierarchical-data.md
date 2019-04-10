@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346178"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Como: Usar o padrão de detalhes mestre com os dados hierárquicos
 Este exemplo mostra como implementar o cenário de detalhes mestre.  
@@ -27,9 +27,9 @@ Este exemplo mostra como implementar o cenário de detalhes mestre.
   
  As duas coisas a se observar neste exemplo são:  
   
-1.  Os três <xref:System.Windows.Controls.ListBox> controles se ligam à mesma fonte. Defina as <xref:System.Windows.Data.Binding.Path%2A> propriedade da associação para especificar o nível de dados que você deseja o <xref:System.Windows.Controls.ListBox> para exibir.  
+1. Os três <xref:System.Windows.Controls.ListBox> controles se ligam à mesma fonte. Defina as <xref:System.Windows.Data.Binding.Path%2A> propriedade da associação para especificar o nível de dados que você deseja o <xref:System.Windows.Controls.ListBox> para exibir.  
   
-2.  Você deve definir a <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> propriedade para `true` no <xref:System.Windows.Controls.ListBox> controles que a seleção estiver acompanhando. A definição dessa propriedade garante que o item selecionado é sempre definido como o <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Como alternativa, se o <xref:System.Windows.Controls.ListBox> obtém seus dados de um <xref:System.Windows.Data.CollectionViewSource>, ele sincroniza a seleção e moeda automaticamente.  
+2. Você deve definir a <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> propriedade para `true` no <xref:System.Windows.Controls.ListBox> controles que a seleção estiver acompanhando. A definição dessa propriedade garante que o item selecionado é sempre definido como o <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Como alternativa, se o <xref:System.Windows.Controls.ListBox> obtém seus dados de um <xref:System.Windows.Data.CollectionViewSource>, ele sincroniza a seleção e moeda automaticamente.  
   
  A técnica é um pouco diferente quando você usa dados [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Para ver um exemplo, confira [Usar o padrão de detalhes mestre com os dados XML hierárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   

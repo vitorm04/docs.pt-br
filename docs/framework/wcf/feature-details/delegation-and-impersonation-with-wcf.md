@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345515"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 *Representação* é uma técnica comum usada pelos serviços para restringir o acesso para cliente aos recursos de um domínio serviço. Recursos do serviço de domínio podem ser recursos do computador, como arquivos locais (representação), ou um recurso em outro computador, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Como configurar um aplicativo para usar a delegação restrita  
  Antes de poder usar restrita a delegação, o remetente, destinatário e o controlador de domínio deve ser configurado para fazer isso. O procedimento a seguir lista as etapas que permitem que a delegação restrita. Para obter detalhes sobre as diferenças entre a delegação e a delegação restrita, consulte a parte de [extensões do Windows Server 2003 Kerberos](https://go.microsoft.com/fwlink/?LinkId=100194) que aborda a discussão restrita.  
   
-1.  No controlador de domínio, desmarque a **conta é sigilosa e não pode ser delegada** caixa de seleção para a conta sob a qual o aplicativo cliente está em execução.  
+1. No controlador de domínio, desmarque a **conta é sigilosa e não pode ser delegada** caixa de seleção para a conta sob a qual o aplicativo cliente está em execução.  
   
-2.  No controlador de domínio, selecione a **conta é confiável para delegação** caixa de seleção para a conta sob a qual o aplicativo cliente está em execução.  
+2. No controlador de domínio, selecione a **conta é confiável para delegação** caixa de seleção para a conta sob a qual o aplicativo cliente está em execução.  
   
-3.  No controlador de domínio, configure o computador de camada intermediária para que ele seja confiável para delegação, clicando o **confiar no computador para delegação** opção.  
+3. No controlador de domínio, configure o computador de camada intermediária para que ele seja confiável para delegação, clicando o **confiar no computador para delegação** opção.  
   
-4.  No controlador de domínio, configure o computador de camada intermediária para usar a delegação restrita, clicando o **confiar no computador para delegação apenas a serviços especificados** opção.  
+4. No controlador de domínio, configure o computador de camada intermediária para usar a delegação restrita, clicando o **confiar no computador para delegação apenas a serviços especificados** opção.  
   
  Para obter instruções mais detalhadas sobre como configurar a delegação restrita, consulte os tópicos a seguir no MSDN:  
   

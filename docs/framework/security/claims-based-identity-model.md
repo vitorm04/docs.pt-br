@@ -3,12 +3,12 @@ title: Modelo de identidade baseada em declarações
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345866"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidade baseada em declarações
 Quando você cria aplicativos com reconhecimento de declarações, a identidade do usuário é representada em seu aplicativo como um conjunto de declarações. Uma reivindicação pode ser o nome do usuário, outra pode ser um endereço de email. A ideia é que um sistema externo de identidade seja configurado para dar ao seu aplicativo tudo que ele precisa saber sobre o usuário com cada solicitação que ele faz, juntamente com a segurança criptográfica que os dados de identidade você recebe de uma fonte confiável.  
@@ -73,10 +73,10 @@ Quando você cria aplicativos com reconhecimento de declarações, a identidade 
   
  Esse diagrama mostra um site (aplicativo da terceira parte confiável, RP) que foi configurado para usar o WIF para autenticação, e um cliente ou um navegador da Web que deseja usar esse site.  
   
-1.  Quando um usuário não autenticado solicita uma página, seu navegador é redirecionado para as páginas de IdP (provedor) de identidade.  
+1. Quando um usuário não autenticado solicita uma página, seu navegador é redirecionado para as páginas de IdP (provedor) de identidade.  
   
-2.  O IdP exige que o usuário apresente suas credenciais, como nome de usuário/senha ou autenticação Kerberos.  
+2. O IdP exige que o usuário apresente suas credenciais, como nome de usuário/senha ou autenticação Kerberos.  
   
-3.  Os problemas de IdP um token que é retornado ao navegador.  
+3. Os problemas de IdP um token que é retornado ao navegador.  
   
-4.  O navegador é redirecionado de volta à página solicitada originalmente, onde o WIF determina se o token atende aos requisitos para acessar a página. Em caso positivo, um cookie é emitido para estabelecer uma sessão para que a autenticação ocorra apenas uma vez, e o controle é passado para o aplicativo.
+4. O navegador é redirecionado de volta à página solicitada originalmente, onde o WIF determina se o token atende aos requisitos para acessar a página. Em caso positivo, um cookie é emitido para estabelecer uma sessão para que a autenticação ocorra apenas uma vez, e o controle é passado para o aplicativo.

@@ -2,12 +2,12 @@
 title: WebContentTypeMapper Sample
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344670"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper Sample
 Este exemplo demonstra como mapear os novos tipos de conteúdo para formatos de corpo de mensagem do Windows Communication Foundation (WCF).  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compile a solução WebContentTypeMapperSample.sln, conforme descrito em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Compile a solução WebContentTypeMapperSample.sln, conforme descrito em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Navegue até `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (não abrir JCTMClientPage.htm no navegador de dentro do diretório do projeto).  
+3. Navegue até `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (não abrir JCTMClientPage.htm no navegador de dentro do diretório do projeto).  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

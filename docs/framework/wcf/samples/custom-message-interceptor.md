@@ -2,12 +2,12 @@
 title: Interceptor de mensagem personalizado
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181409"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344267"
 ---
 # <a name="custom-message-interceptor"></a>Interceptor de mensagem personalizado
 Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de associação personalizado que cria as fábricas de canais e ouvintes de canais para interceptar todas as mensagens de entrada e saídas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e servidor que demonstram o uso dessas fábricas personalizadas.  
@@ -28,13 +28,13 @@ Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particula
   
  O exemplo descreve o procedimento recomendado para a criação de um canal personalizado de em camadas no Windows Communication Foundation (WCF), usando a estrutura de canais e seguir as práticas recomendadas do WCF. As etapas para criar um canal personalizado de em camadas são da seguinte maneira:  
   
-1.  Decida quais das formas de canal oferecerá suporte a sua fábrica de canais e o ouvinte de canais.  
+1. Decida quais das formas de canal oferecerá suporte a sua fábrica de canais e o ouvinte de canais.  
   
-2.  Crie uma fábrica de canais e um ouvinte de canais que dão suporte a suas formas de canal.  
+2. Crie uma fábrica de canais e um ouvinte de canais que dão suporte a suas formas de canal.  
   
-3.  Adicione um elemento de associação que adiciona o canal em camadas personalizado a uma pilha de canais.  
+3. Adicione um elemento de associação que adiciona o canal em camadas personalizado a uma pilha de canais.  
   
-4.  Adicione uma seção de extensão de elemento de associação para expor o novo elemento de associação para o sistema de configuração.  
+4. Adicione uma seção de extensão de elemento de associação para expor o novo elemento de associação para o sistema de configuração.  
   
 ## <a name="channel-shapes"></a>Formas de canal  
  A primeira etapa ao escrever um canal personalizado de em camadas é decidir quais formas são necessárias para o canal. Para nosso Inspetor de mensagens, há suporte para qualquer forma que a camada abaixo nos dá suporte a (por exemplo, se a camada abaixo nos pode compilar <xref:System.ServiceModel.Channels.IOutputChannel> e <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, em seguida, podemos também expor <xref:System.ServiceModel.Channels.IOutputChannel> e <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
+1. Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Execute Service.exe primeiro, em seguida, executar Client.exe e assista a ambas as janelas do console de saída.  
+5. Execute Service.exe primeiro, em seguida, executar Client.exe e assista a ambas as janelas do console de saída.  

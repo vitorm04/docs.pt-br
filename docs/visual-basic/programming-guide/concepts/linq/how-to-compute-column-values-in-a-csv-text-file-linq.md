@@ -2,19 +2,19 @@
 title: 'Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 1249b5555c9ef7074410682ad9b26e5b003aea9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344215"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)
 Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.  
   
 ### <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
   
-1.  Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.  
+1. Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.  
   
     ```  
     111, 97, 92, 81, 60  

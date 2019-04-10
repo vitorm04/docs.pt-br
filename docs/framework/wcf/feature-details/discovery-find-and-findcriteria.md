@@ -2,12 +2,12 @@
 title: FindCriteria e descoberta achada
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345775"
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das principais ações na descoberta. Executar um localizar envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. Para obter mais informações sobre as mensagens de descoberta, consulte o [especificação WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -40,9 +40,9 @@ Uma operação de localização de descoberta é iniciada por um cliente para de
   
  Critérios de encerramento incluem:  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -O tempo máximo de espera por respostas de serviços na rede. A duração padrão é 20 segundos.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -O tempo máximo de espera por respostas de serviços na rede. A duração padrão é 20 segundos.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -O número máximo de respostas a esperar. Se <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> respostas são recebidas antes de <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> tiver decorrido, o término da operação de localizar.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -O número máximo de respostas a esperar. Se <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> respostas são recebidas antes de <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> tiver decorrido, o término da operação de localizar.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> tem um <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> propriedade de coleção que contém as respostas enviadas por correspondência de serviços na rede. Se nenhum serviço respondida, a coleção está vazia. Se um ou mais serviços respondeu, cada resposta é armazenada em um <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> objeto, que contém o endereço, contrato e algumas informações adicionais sobre o serviço.  

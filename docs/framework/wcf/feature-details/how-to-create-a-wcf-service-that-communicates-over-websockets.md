@@ -2,19 +2,19 @@
 title: 'Como: criar um serviço WCF que se comunica por meio de WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223180"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346360"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Como: criar um serviço WCF que se comunica por meio de WebSockets
 Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBinding> associação para se comunicar por meio de WebSockets.  O WebSocket será usado quando o <xref:System.ServiceModel.NetHttpBinding> determina o contrato de serviço define um contrato de retorno de chamada. Este tópico descreve como implementar um serviço WCF e um cliente que usa o <xref:System.ServiceModel.NetHttpBinding> para se comunicar por meio de WebSockets.  
   
 ### <a name="define-the-service"></a>Definir o serviço  
   
-1.  Definir um contrato de retorno de chamada  
+1. Definir um contrato de retorno de chamada  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBin
   
      Esse contrato será implementado pelo aplicativo cliente para permitir que o serviço enviar mensagens de volta ao cliente.  
   
-2.  Defina o contrato de serviço e especifique o `IStockQuoteCallback` interface como o contrato de retorno de chamada.  
+2. Defina o contrato de serviço e especifique o `IStockQuoteCallback` interface como o contrato de retorno de chamada.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBin
         }  
     ```  
   
-3.  Implemente o contrato de serviço.  
+3. Implemente o contrato de serviço.  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBin
   
      A operação de serviço `StartSendingQuotes` é implementado como uma chamada assíncrona. Podemos recuperar o canal de retorno de chamada usando o `OperationContext` e se o canal estiver aberto, podemos tornar async chamar no canal de retorno de chamada.  
   
-4.  Configurar o serviço  
+4. Configurar o serviço  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBin
   
 ### <a name="define-the-client"></a>Definir o cliente  
   
-1.  Implemente o contrato de retorno de chamada.  
+1. Implemente o contrato de retorno de chamada.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

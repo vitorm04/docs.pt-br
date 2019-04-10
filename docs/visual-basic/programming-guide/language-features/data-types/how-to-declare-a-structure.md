@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343552"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Como: Declarar uma estrutura (Visual Basic)
 Começar uma declaração de estrutura com o [instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), e você encerrá-lo com o `End Structure` instrução. Entre essas duas instruções, você deve declarar pelo menos um *elemento*. Os elementos podem ser de qualquer tipo de dados, mas pelo menos um deve ser uma variável não compartilhada ou um evento não compartilhado, não personalizado.  
@@ -25,7 +25,7 @@ Começar uma declaração de estrutura com o [instrução Structure](../../../..
   
 ### <a name="to-declare-a-structure"></a>Para declarar uma estrutura  
   
-1.  Crie o início e fim instruções para a estrutura.  
+1. Crie o início e fim instruções para a estrutura.  
   
      Você pode especificar o nível de acesso de uma estrutura usando o [pública](../../../../visual-basic/language-reference/modifiers/public.md), [protegido](../../../../visual-basic/language-reference/modifiers/protected.md), [amigo](../../../../visual-basic/language-reference/modifiers/friend.md), ou [privada](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave, ou você pode permitir que ele o padrão `Public`.  
   
@@ -34,7 +34,7 @@ Começar uma declaração de estrutura com o [instrução Structure](../../../..
     End Structure  
     ```  
   
-2.  Adicione elementos ao corpo da estrutura.  
+2. Adicione elementos ao corpo da estrutura.  
   
      Uma estrutura deve ter pelo menos um elemento. Você deve declarar cada elemento e especificar um nível de acesso para ele. Se você usar o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sem quaisquer palavras-chave, a acessibilidade padrão é `Public`.  
   
@@ -58,12 +58,12 @@ Começar uma declaração de estrutura com o [instrução Structure](../../../..
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tipos de Dados Elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de dados elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Tipos de dados compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Tipos de valor e referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Variáveis de Estrutura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
-- [Estruturas e Outros Elementos de Programação](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [Estruturas e Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [Tipo de Dados Definido pelo Usuário](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+- [Solucionando problemas de tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Variáveis de estrutura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [Estruturas e outros elementos de programação](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
+- [Estruturas e classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Tipo de dados definido pelo usuário](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

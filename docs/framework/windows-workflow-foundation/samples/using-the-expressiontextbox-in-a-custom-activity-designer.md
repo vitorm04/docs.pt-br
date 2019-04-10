@@ -2,12 +2,12 @@
 title: Usando o ExpressionTextBox em um designer personalizado de atividades
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344969"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Usando o ExpressionTextBox em um designer personalizado de atividades
 Este exemplo mostra como usar <xref:System.Activities.Presentation.View.ExpressionTextBox> em um designer personalizado de atividade. A atividade personalizado, `MultiAssign`, atribui dois valores de cadeia de caracteres a duas variáveis de cadeia de caracteres. Alguns controles de <xref:System.Activities.Presentation.View.ExpressionTextBox> associação a <xref:System.Activities.InArgument>s e associar a qualquer <xref:System.Activities.OutArgument>S.
@@ -23,19 +23,19 @@ Este exemplo mostra como usar <xref:System.Activities.Presentation.View.Expressi
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Usando o Visual Studio 2010, abra o arquivo de Expressiontextboxsample.
+1. Usando o Visual Studio 2010, abra o arquivo de Expressiontextboxsample.
 
-2.  Para criar a solução, pressione CTRL+SHIFT+B.
+2. Para criar a solução, pressione CTRL+SHIFT+B.
 
 #### <a name="to-run-this-sample"></a>Para executar este exemplo
 
-1.  Adicione um novo aplicativo de console do fluxo de trabalho à solução.
+1. Adicione um novo aplicativo de console do fluxo de trabalho à solução.
 
-2.  Adicione uma referência para o **ExpressionTextBoxSample** projeto do novo projeto de aplicativo de Console do fluxo de trabalho.
+2. Adicione uma referência para o **ExpressionTextBoxSample** projeto do novo projeto de aplicativo de Console do fluxo de trabalho.
 
-3.  Compile a solução.
+3. Compile a solução.
 
-4.  Arraste o **MultiAssign** atividade da caixa de ferramentas e solte-o no fluxo de trabalho.
+4. Arraste o **MultiAssign** atividade da caixa de ferramentas e solte-o no fluxo de trabalho.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

@@ -2,12 +2,12 @@
 title: Comportamento específico do processo do SQL Server do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-ms.openlocfilehash: 7a4eecc116307b96f4318a92cdad44ca133a3793
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0c227e1177e59b3421297e80510d1a7077f7f165
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344839"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Comportamento específico do processo do SQL Server do ADO.NET
 Há quatro principais extensões funcionais para o ADO.NET, localizadas no namespace <xref:Microsoft.SqlServer.Server>, que são especificamente para uso no processo: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> e <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  
@@ -16,7 +16,7 @@ Há quatro principais extensões funcionais para o ADO.NET, localizadas no names
   
  **Manuais Online do SQL Server**  
   
-1.  [Extensões específicas do processo do SQL Server para o ADO.NET](https://go.microsoft.com/fwlink/?LinkId=115403)  
+1. [Extensões específicas do processo do SQL Server para o ADO.NET](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343578"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar Controles ao Windows Forms
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](index.md).  
@@ -24,11 +24,11 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
   
 ### <a name="to-draw-a-control-on-a-form"></a>Desenhar um controle em um formulário  
   
-1.  Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Na **Caixa de ferramentas**, clique no controle que você deseja adicionar ao formulário.  
+2. Na **Caixa de ferramentas**, clique no controle que você deseja adicionar ao formulário.  
   
-3.  No formulário, clique onde você deseja que o canto superior esquerdo do controle se localize e arraste até onde você deseja posicionar o canto inferior direito do controle.  
+3. No formulário, clique onde você deseja que o canto superior esquerdo do controle se localize e arraste até onde você deseja posicionar o canto inferior direito do controle.  
   
      O controle é adicionado ao formulário com a localização e o tamanho especificados.  
   
@@ -37,9 +37,9 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
   
 ### <a name="to-drag-a-control-to-a-form"></a>Arrastar um controle para um formulário  
   
-1.  Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Na **Caixa de ferramentas**, clique no controle que você deseja e arraste-o para o formulário.  
+2. Na **Caixa de ferramentas**, clique no controle que você deseja e arraste-o para o formulário.  
   
      O controle é adicionado ao formulário na localização e tamanho especificados.  
   
@@ -53,7 +53,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>Adicionar um controle a um formulário com programação  
   
-1.  No método que trata o evento `Click` do botão na classe do formulário, insira código semelhante ao seguinte para adicionar uma referência à variável do controle, defina o `Location` do controle e adicione o controle.  
+1. No método que trata o evento `Click` do botão na classe do formulário, insira código semelhante ao seguinte para adicionar uma referência à variável do controle, defina o `Location` do controle e adicione o controle.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

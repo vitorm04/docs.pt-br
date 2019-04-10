@@ -15,12 +15,12 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344007"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Como: Vincular a um objeto ou página da Web com o controle LinkLabel do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.LinkLabel> controle permite que você crie links de estilo da Web em seu formulário. Ao clicar no link, é possível alterar sua cor para indicar que o link foi visitado. Para obter mais informações sobre como alterar a cor, consulte [como: Alterar a aparência do controle LinkLabel dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
@@ -29,9 +29,9 @@ Os formulários do Windows <xref:System.Windows.Forms.LinkLabel> controle permit
   
 #### <a name="to-link-to-another-form-with-a-linklabel-control"></a>Vincular a outro formulário com um controle LinkLabel  
   
-1.  Defina o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade para uma legenda apropriada.  
+1. Defina o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade para uma legenda apropriada.  
   
-2.  Defina o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicada como um link. Como isso é indicado depende das propriedades relacionadas à aparência do rótulo do link. O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor é representado por um <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> contendo dois números, a posição do caractere inicial e o número de caracteres do objeto. O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade pode ser definida na janela Propriedades ou no código de maneira semelhante à seguinte:  
+2. Defina o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicada como um link. Como isso é indicado depende das propriedades relacionadas à aparência do rótulo do link. O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor é representado por um <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> contendo dois números, a posição do caractere inicial e o número de caracteres do objeto. O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade pode ser definida na janela Propriedades ou no código de maneira semelhante à seguinte:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,7 +54,7 @@ Os formulários do Windows <xref:System.Windows.Forms.LinkLabel> controle permit
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, invocar o <xref:System.Windows.Forms.Form.Show%2A> método para abrir outro formulário no projeto e defina o <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade `true`.  
+3. No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, invocar o <xref:System.Windows.Forms.Form.Show%2A> método para abrir outro formulário no projeto e defina o <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade `true`.  
   
     > [!NOTE]
     >  Uma instância da <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> classe transmite uma referência para o <xref:System.Windows.Forms.LinkLabel> controle que foi clicado, portanto, não é necessário converter o `sender` objeto.  
@@ -97,11 +97,11 @@ Os formulários do Windows <xref:System.Windows.Forms.LinkLabel> controle permit
   
 #### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Abrir o Internet Explorer e vincular a uma página da Web com um controle LinkLabel  
   
-1.  Defina o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade para uma legenda apropriada.  
+1. Defina o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade para uma legenda apropriada.  
   
-2.  Defina o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicada como um link.  
+2. Defina o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicada como um link.  
   
-3.  No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, no meio de um bloco de manipulação de exceção, chame um segundo procedimento define as <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade a ser `true` e usa o <xref:System.Diagnostics.Process.Start%2A> método para iniciar o navegador padrão com uma URL. Para usar o <xref:System.Diagnostics.Process.Start%2A> método, você precisará adicionar uma referência para o <xref:System.Diagnostics?displayProperty=nameWithType> namespace.  
+3. No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, no meio de um bloco de manipulação de exceção, chame um segundo procedimento define as <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade a ser `true` e usa o <xref:System.Diagnostics.Process.Start%2A> método para iniciar o navegador padrão com uma URL. Para usar o <xref:System.Diagnostics.Process.Start%2A> método, você precisará adicionar uma referência para o <xref:System.Diagnostics?displayProperty=nameWithType> namespace.  
   
     > [!IMPORTANT]
     >  Se o código abaixo for executado em um ambiente de confiança parcial (como em uma unidade compartilhada), o compilador JIT falhará quando o método `VisitLink` for chamado. O `System.Diagnostics.Process.Start` instrução faz com que uma demanda de link falhará. Ao capturar a exceção quando o método `VisitLink` é chamado, o código a seguir garante que, se o compilador JIT falhar, o erro será tratado normalmente.  

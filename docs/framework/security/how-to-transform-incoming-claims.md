@@ -1,16 +1,16 @@
 ---
-title: Como transformar declarações de entrada
+title: 'Como: transformar declarações de entrada'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344631"
 ---
-# <a name="how-to-transform-incoming-claims"></a>Como transformar declarações de entrada
+# <a name="how-to-transform-incoming-claims"></a>Como: transformar declarações de entrada
 ## <a name="applies-to"></a>Aplica-se a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,19 +58,19 @@ ms.locfileid: "50181618"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Para criar um aplicativo ASP.NET simples  
   
-1.  Inicie o Visual Studio em modo elevado como administrador.  
+1. Inicie o Visual Studio em modo elevado como administrador.  
   
-2.  No Visual Studio, clique em **Arquivo**, **Novo** e **Projeto**.  
+2. No Visual Studio, clique em **Arquivo**, **Novo** e **Projeto**.  
   
-3.  Na janela **Novo Projeto**, clique em **Aplicativo ASP.NET Web Forms**.  
+3. Na janela **Novo Projeto**, clique em **Aplicativo ASP.NET Web Forms**.  
   
-4.  Em **Nome**, insira `TestApp` e pressione **OK**.  
+4. Em **Nome**, insira `TestApp` e pressione **OK**.  
   
-5.  Clique com o botão direito do mouse no projeto **TestApp** em **Gerenciador de Soluções** e selecione **Identidade e Acesso**.  
+5. Clique com o botão direito do mouse no projeto **TestApp** em **Gerenciador de Soluções** e selecione **Identidade e Acesso**.  
   
-6.  A janela **Identidade e Acesso** é exibida. Em **Provedores**, selecione **Testar o aplicativo com o STS de Desenvolvimento Local** e clique em **Aplicar**.  
+6. A janela **Identidade e Acesso** é exibida. Em **Provedores**, selecione **Testar o aplicativo com o STS de Desenvolvimento Local** e clique em **Aplicar**.  
   
-7.  No arquivo *Default.aspx*, substitua a marcação existente pela seguinte e então salve o arquivo:  
+7. No arquivo *Default.aspx*, substitua a marcação existente pela seguinte e então salve o arquivo:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181618"
     </asp:Content>  
     ```  
   
-8.  Abra o arquivo code-behind chamado *Default.aspx.cs*. Substitua o código existente pelo fornecido a seguir e salve o arquivo:  
+8. Abra o arquivo code-behind chamado *Default.aspx.cs*. Substitua o código existente pelo fornecido a seguir e salve o arquivo:  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181618"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Implementar a transformação de declarações usando um ClaimsAuthenticationManager personalizado  
   
-1.  No Visual Studio, clique com o botão direito do mouse na solução, clique em **Adicionar** e **Novo Projeto**.  
+1. No Visual Studio, clique com o botão direito do mouse na solução, clique em **Adicionar** e **Novo Projeto**.  
   
-2.  Na janela **Adicionar Novo Projeto**, selecione **Biblioteca de Classes** da lista de modelos do **Visual C#**, digite `ClaimsTransformation` e pressione **OK**. O novo projeto será criado na pasta da solução.  
+2. Na janela **Adicionar Novo Projeto**, selecione **Biblioteca de Classes** da lista de modelos do **Visual C#**, digite `ClaimsTransformation` e pressione **OK**. O novo projeto será criado na pasta da solução.  
   
-3.  Clique com o botão direito do mouse em **Referências**, no projeto **ClaimsTransformation** e em **Adicionar Referência**.  
+3. Clique com o botão direito do mouse em **Referências**, no projeto **ClaimsTransformation** e em **Adicionar Referência**.  
   
-4.  Na janela **Gerenciador de Referências**, selecione **System.IdentityModel** e, em seguida, clique em **OK**.  
+4. Na janela **Gerenciador de Referências**, selecione **System.IdentityModel** e, em seguida, clique em **OK**.  
   
-5.  Abra **Class1.cs** ou, se ele não existir, clique com o botão direito do mouse em **ClaimsTransformation**, clique em **Adicionar** e, em seguida, clique em **Classe...**  
+5. Abra **Class1.cs** ou, se ele não existir, clique com o botão direito do mouse em **ClaimsTransformation**, clique em **Adicionar** e, em seguida, clique em **Classe...**  
   
-6.  Adicione o seguinte usando diretivas no arquivo de código:  
+6. Adicione o seguinte usando diretivas no arquivo de código:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Adicione a classe e o método a seguir no arquivo de código.  
+7. Adicione a classe e o método a seguir no arquivo de código.  
   
     > [!WARNING]
     >  O código a seguir é exclusivamente para fins de demonstração; certifique-se de que você verifica suas permissões pretendidas no código de produção.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181618"
     }  
     ```  
   
-8.  Salve o arquivo e compile o projeto **ClaimsTransformation**.  
+8. Salve o arquivo e compile o projeto **ClaimsTransformation**.  
   
 9. No seu projeto ASP.NET **TestApp**, clique com o botão direito do mouse em Referências e, em seguida, clique em **Adicionar Referência**.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181618"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Testar o aplicativo ASP.NET Web Forms para declarações usando a autenticação de formulários  
   
-1.  Pressione **F5** para compilar e executar o aplicativo. O *Default.aspx* deverá ser apresentado a você.  
+1. Pressione **F5** para compilar e executar o aplicativo. O *Default.aspx* deverá ser apresentado a você.  
   
-2.  Na página *Default.aspx*, você deverá ver uma tabela abaixo do cabeçalho **Suas Declarações**, que inclui as informações das declarações **Issuer**, **OriginalIssuer**, **Type**, **Value** e **ValueType** sobre a sua conta. A última linha deve ser apresentada da seguinte maneira:  
+2. Na página *Default.aspx*, você deverá ver uma tabela abaixo do cabeçalho **Suas Declarações**, que inclui as informações das declarações **Issuer**, **OriginalIssuer**, **Type**, **Value** e **ValueType** sobre a sua conta. A última linha deve ser apresentada da seguinte maneira:  
   
     ||||||  
     |-|-|-|-|-|  

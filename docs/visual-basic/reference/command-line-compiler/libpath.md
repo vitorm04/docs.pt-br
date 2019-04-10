@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344202"
 ---
 # <a name="-libpath"></a>-libpath
 Especifica o local dos assemblies referenciados.  
@@ -33,13 +33,13 @@ Especifica o local dos assemblies referenciados.
   
  O compilador pesquisa referências de assembly que não são totalmente qualificadas na seguinte ordem:  
   
-1.  Diretório de trabalho atual. Esse é o diretório do qual o compilador é invocado.  
+1. Diretório de trabalho atual. Esse é o diretório do qual o compilador é invocado.  
   
-2.  O diretório de sistema do Common Language Runtime.  
+2. O diretório de sistema do Common Language Runtime.  
   
-3.  Diretórios especificados pela `/libpath`.  
+3. Diretórios especificados pela `/libpath`.  
   
-4.  Diretórios especificados pela variável de ambiente LIB.  
+4. Diretórios especificados pela variável de ambiente LIB.  
   
  O `-libpath` opção é aditivo; especificá-lo mais de uma vez acrescenta a valores anteriores.  
   
@@ -60,4 +60,4 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 
 - [Assemblies no .NET](../../../standard/assembly/index.md)
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

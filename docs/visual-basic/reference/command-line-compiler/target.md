@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 69312ca3512c5407185df11e66d95ce9f5cdddff
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344735"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Especifica o formato da saída do compilador.  
@@ -42,11 +42,11 @@ Especifica o formato da saída do compilador.
   
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>Para definir - alvo no IDE do Visual Studio  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
   
-2.  Clique na guia **Aplicativo**.  
+2. Clique na guia **Aplicativo**.  
   
-3.  Modificar o valor de **tipo de aplicativo** caixa.  
+3. Modificar o valor de **tipo de aplicativo** caixa.  
   
 ## <a name="example"></a>Exemplo  
  O seguinte código compila `in.vb`, criando `in.dll`:  
@@ -64,4 +64,4 @@ vbc -target:library in.vb
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [Assemblies no .NET](../../../standard/assembly/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

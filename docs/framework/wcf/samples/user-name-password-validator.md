@@ -2,12 +2,12 @@
 title: Validador de senha e nome de usuário
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345008"
 ---
 # <a name="user-name-password-validator"></a>Validador de senha e nome de usuário
 Este exemplo demonstra como implementar um validador personalizado de UserNamePassword. Isso é útil em casos em que nenhum dos modos de validação UserNamePassword internos é adequado para os requisitos do aplicativo; Por exemplo, quando os pares de nome de usuário e senha são armazenados em algum armazenamento externo, como um banco de dados. Este exemplo mostra um serviço que tem um validador personalizado que verifica se há dois pares de nome de usuário/senha específica. O cliente usa tal um par de nome de usuário/senha para se autenticar no serviço.
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo
 
-1.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-2.  Para executar o exemplo em uma configuração ou entre máquinas, use as instruções a seguir.
+2. Para executar o exemplo em uma configuração ou entre máquinas, use as instruções a seguir.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo na mesma máquina
 
-1.  Execute Setup. bat da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012. Essa opção instala todos os certificados necessários para executar o exemplo.
+1. Execute Setup. bat da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012. Essa opção instala todos os certificados necessários para executar o exemplo.
 
     > [!NOTE]
     >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat.  
   
-2.  Inicie o Service.exe no service\bin.  
+2. Inicie o Service.exe no service\bin.  
   
-3.  Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre máquinas  
   
-1.  Crie um diretório na máquina do serviço para os binários de serviço.  
+1. Crie um diretório na máquina do serviço para os binários de serviço.  
   
-2.  Copie os arquivos de programa do serviço diretório de serviço na máquina do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador de serviço.  
+2. Copie os arquivos de programa do serviço diretório de serviço na máquina do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador de serviço.  
   
-3.  Você precisa de um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado da máquina. O arquivo de configuração para o servidor deve ser atualizado para refletir o novo nome de certificado.  
+3. Você precisa de um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado da máquina. O arquivo de configuração para o servidor deve ser atualizado para refletir o novo nome de certificado.  
   
-4.  Copie o certificado do servidor para o repositório CurrentUser TrustedPeople do cliente. Você precisa fazer isso apenas se o certificado do servidor não foi emitido por um emissor confiável.  
+4. Copie o certificado do servidor para o repositório CurrentUser TrustedPeople do cliente. Você precisa fazer isso apenas se o certificado do servidor não foi emitido por um emissor confiável.  
   
-5.  No arquivo App. config no computador do serviço, altere o valor do endereço base para especificar um nome de máquina totalmente qualificado em vez do localhost.  
+5. No arquivo App. config no computador do serviço, altere o valor do endereço base para especificar um nome de máquina totalmente qualificado em vez do localhost.  
   
-6.  No computador do serviço, inicie Service.exe em uma janela do prompt de comando.  
+6. No computador do serviço, inicie Service.exe em uma janela do prompt de comando.  
   
-7.  Copie os arquivos de programa do cliente da pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
+7. Copie os arquivos de programa do cliente da pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
   
-8.  No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
+8. No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
   
 9. No computador cliente, inicie Client.exe em uma janela do prompt de comando.  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
-1.  Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo. Isso remove o certificado do servidor do repositório de certificados.  
+1. Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo. Isso remove o certificado do servidor do repositório de certificados.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343584"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introdução a tinta no WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) tem um recurso de tinta que facilita a inc
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para usar os exemplos a seguir, primeiro [instalar o Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ele também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda na introdução ao WPF, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Para usar os exemplos a seguir, primeiro instale [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Ele também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda na introdução ao WPF, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Início rápido
 
@@ -113,4 +113,4 @@ Você pode acessar todos os recursos do WPF do código de procedimento. Siga est
 - [Tinta digital](digital-ink.md)
 - [Coletando tinta](collecting-ink.md)
 - [Reconhecimento de manuscrito](handwriting-recognition.md)
-- [Armazenando a tinta](storing-ink.md)
+- [Armazenando tinta](storing-ink.md)
