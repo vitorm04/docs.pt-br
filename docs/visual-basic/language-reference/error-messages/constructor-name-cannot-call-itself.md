@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324377"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Construtor '\<nome >' não pode chamar a mesmo
 Um `Sub New` procedimento em uma classe ou estrutura chama a mesmo.  
@@ -23,9 +23,9 @@ Um `Sub New` procedimento em uma classe ou estrutura chama a mesmo.
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique a lista de parâmetros do construtor que está sendo chamado. Ele deve ser diferente do construtor fazendo a chamada.  
+1. Verifique a lista de parâmetros do construtor que está sendo chamado. Ele deve ser diferente do construtor fazendo a chamada.  
   
-2.  Se você não pretende chamar um construtor diferente, remova o `Sub New` chamar inteiramente.  
+2. Se você não pretende chamar um construtor diferente, remova o `Sub New` chamar inteiramente.  
   
 ## <a name="see-also"></a>Consulte também
 

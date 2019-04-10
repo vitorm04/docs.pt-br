@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320880"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados usando o Designer
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115719"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Associar os dados do controle DataGrid a uma única tabela no designer  
   
-1.  Defina o controle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade para o objeto que contém os itens de dados que você deseja associar.  
+1. Defina o controle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade para o objeto que contém os itens de dados que você deseja associar.  
   
-2.  Se a fonte de dados for um conjunto de dados, defina o <xref:System.Windows.Forms.DataGrid.DataMember%2A> o nome da tabela para associar a propriedade.  
+2. Se a fonte de dados for um conjunto de dados, defina o <xref:System.Windows.Forms.DataGrid.DataMember%2A> o nome da tabela para associar a propriedade.  
   
-3.  Se a fonte de dados for um conjunto de dados ou uma exibição de dados com base em uma tabela de conjunto de dados, adicione código ao formulário para preencher o conjunto de dados.  
+3. Se a fonte de dados for um conjunto de dados ou uma exibição de dados com base em uma tabela de conjunto de dados, adicione código ao formulário para preencher o conjunto de dados.  
   
      O código exato usado depende do local em que o conjunto de dados está recebendo dados. Se o conjunto de dados estiver sendo preenchido diretamente de um banco de dados, normalmente, chama-se o método `Fill` de um adaptador de dados, como no exemplo de código a seguir, que preenche um conjunto de dados chamado `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115719"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Opcional) Adicione os estilos apropriados de tabela e coluna à grade.  
+4. (Opcional) Adicione os estilos apropriados de tabela e coluna à grade.  
   
      Se não houver nenhum estilo de tabela, a tabela ainda será vista, mas com formatação mínima e todas as colunas visíveis.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Associar os dados do controle DataGrid a várias tabelas em um conjunto de dados no designer  
   
-1.  Defina o controle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade para o objeto que contém os itens de dados que você deseja associar.  
+1. Defina o controle <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade para o objeto que contém os itens de dados que você deseja associar.  
   
-2.  Se o conjunto de dados contiver tabelas relacionadas (ou seja, se ele contém um objeto relation), defina o <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade com o nome da tabela pai.  
+2. Se o conjunto de dados contiver tabelas relacionadas (ou seja, se ele contém um objeto relation), defina o <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade com o nome da tabela pai.  
   
-3.  Grave código para preencher o conjunto de dados.  
+3. Grave código para preencher o conjunto de dados.  
   
 ## <a name="see-also"></a>Consulte também
 

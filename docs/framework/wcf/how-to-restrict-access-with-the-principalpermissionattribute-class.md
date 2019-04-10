@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105281"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323311"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Como: restringir o acesso com a classe PrincipalPermissionAttribute
 Controlando o acesso aos recursos em um computador de domínio do Windows é uma tarefa básica de segurança. Por exemplo, somente determinados usuários devem ser capazes de exibir dados confidenciais, como informações de folha de pagamento. Este tópico explica como restringir o acesso a um método exigindo que o usuário pertencer a um grupo predefinido. Para obter um exemplo funcional, consulte [autorizando o acesso a operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -23,25 +23,25 @@ Controlando o acesso aos recursos em um computador de domínio do Windows é uma
   
 ### <a name="to-create-a-windows-group"></a>Para criar um grupo do Windows  
   
-1.  Abra o **gerenciamento do computador** console.  
+1. Abra o **gerenciamento do computador** console.  
   
-2.  No painel esquerdo, clique em **usuários e grupos locais**.  
+2. No painel esquerdo, clique em **usuários e grupos locais**.  
   
-3.  Clique com botão direito **grupos**e clique em **grupo novo**.  
+3. Clique com botão direito **grupos**e clique em **grupo novo**.  
   
-4.  No **nome do grupo** , digite um nome para o novo grupo.  
+4. No **nome do grupo** , digite um nome para o novo grupo.  
   
-5.  No **descrição** , digite uma descrição do novo grupo.  
+5. No **descrição** , digite uma descrição do novo grupo.  
   
-6.  Clique o **adicionar** botão para adicionar novos membros ao grupo.  
+6. Clique o **adicionar** botão para adicionar novos membros ao grupo.  
   
-7.  Se você mesmo adicionou ao grupo e deseja testar o código a seguir, você deve fazer logoff do computador e logon novamente para ser incluído no grupo.  
+7. Se você mesmo adicionou ao grupo e deseja testar o código a seguir, você deve fazer logoff do computador e logon novamente para ser incluído no grupo.  
   
 ### <a name="to-demand-user-membership"></a>A associação do usuário por demanda  
   
-1.  Abra o arquivo de código do Windows Communication Foundation (WCF) que contém o código de contrato de serviço implementada. Para obter mais informações sobre como implementar um contrato, consulte [implementar contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Abra o arquivo de código do Windows Communication Foundation (WCF) que contém o código de contrato de serviço implementada. Para obter mais informações sobre como implementar um contrato, consulte [implementar contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-2.  Aplicar o <xref:System.Security.Permissions.PrincipalPermissionAttribute> de atributo para cada método que deve ser restrito a um grupo específico. Defina a <xref:System.Security.Permissions.SecurityAttribute.Action%2A> propriedade para <xref:System.Security.Permissions.SecurityAction.Demand> e o <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> propriedade para o nome do grupo. Por exemplo:  
+2. Aplicar o <xref:System.Security.Permissions.PrincipalPermissionAttribute> de atributo para cada método que deve ser restrito a um grupo específico. Defina a <xref:System.Security.Permissions.SecurityAttribute.Action%2A> propriedade para <xref:System.Security.Permissions.SecurityAction.Demand> e o <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> propriedade para o nome do grupo. Por exemplo:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -56,16 +56,16 @@ Controlando o acesso aos recursos em um computador de domínio do Windows é uma
   
 #### <a name="to-control-access-using-a-certificate"></a>Para controlar o acesso usando um certificado  
   
-1.  Aplicar o <xref:System.Security.Permissions.PrincipalPermissionAttribute> classe para o método que você deseja restringir o acesso.  
+1. Aplicar o <xref:System.Security.Permissions.PrincipalPermissionAttribute> classe para o método que você deseja restringir o acesso.  
   
-2.  Defina a ação do atributo a ser <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
+2. Defina a ação do atributo a ser <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
   
-3.  Defina o `Name` propriedade como uma cadeia de caracteres que consiste o nome da entidade e impressão digital do certificado. Separe os dois valores com um ponto e vírgula e um espaço, conforme mostrado no exemplo a seguir:  
+3. Defina o `Name` propriedade como uma cadeia de caracteres que consiste o nome da entidade e impressão digital do certificado. Separe os dois valores com um ponto e vírgula e um espaço, conforme mostrado no exemplo a seguir:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4.  Defina as <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriedade para <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> conforme mostrado no exemplo de configuração a seguir:  
+4. Defina as <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriedade para <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> conforme mostrado no exemplo de configuração a seguir:  
   
     ```xml  
     <behaviors>  

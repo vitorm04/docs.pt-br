@@ -2,19 +2,19 @@
 title: Escopo e visibilidade de definição de atividades
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325209"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Escopo e visibilidade de definição de atividades
 O escopo e a visibilidade de definição de atividade, assim como o escopo e a visibilidade de um objeto, são a capacidade de objetos ou outras atividades para acessar membros da atividade. A definição da atividade é executada por implementações seguintes:  
   
-1.  Determinando os membros (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, e objetos de <xref:System.Activities.ActivityDelegate> , e atividades filho) expõe de uma atividade para os usuários.  
+1. Determinando os membros (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, e objetos de <xref:System.Activities.ActivityDelegate> , e atividades filho) expõe de uma atividade para os usuários.  
   
-2.  Implementando lógica de execução de atividades  
+2. Implementando lógica de execução de atividades  
   
  A implementação pode envolver os membros que não são expostos aos consumidores de atividade, mas é um pouco detalhes de implementação.  Semelhante à definição de tipo, o modelo de atividade permite que um autor qualifica a visibilidade de um membro da atividade em relação à definição da atividade sendo definida.  Controla a visibilidade aspectos do membro, como o escopo de dados.  
   
@@ -27,9 +27,9 @@ O escopo e a visibilidade de definição de atividade, assim como o escopo e a v
 ### <a name="activity-members"></a>Membros de atividades  
  O modelo de atividade define argumentos, variáveis, representantes, e as atividades filhos que a atividade torna disponíveis para os consumidores. Cada um desses membros pode ser declarado como `public` ou `private`. Os membros públicos são configurados pelo consumidor de atividade, enquanto os membros de `private` usam uma implementação fixa pelo autor de atividade. As regras de visibilidade para o escopo de dados são:  
   
-1.  Os membros públicos e membros públicos de atividades filhos públicas podem referenciar variáveis públicas.  
+1. Os membros públicos e membros públicos de atividades filhos públicas podem referenciar variáveis públicas.  
   
-2.  Os membros particulares e membros públicos de atividades filhos públicas podem referenciar argumentos e variáveis privadas.  
+2. Os membros particulares e membros públicos de atividades filhos públicas podem referenciar argumentos e variáveis privadas.  
   
  Um membro que pode ser definido pelo consumidor de uma atividade nunca deve ser feito particular.  
   

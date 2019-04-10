@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 7a5694826e0fff82aceb8ad18f75f96f308e724c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faed4d3c9498938e022daf821dd0aefbcbcf2e8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680381"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322024"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Passo a passo: Criando e implementando Interfaces (Visual Basic)
 
@@ -27,15 +27,15 @@ Interfaces descrevem as características de propriedades, métodos e eventos, ma
   
 ## <a name="to-define-an-interface"></a>Para definir uma interface
   
-1.  Abra um novo projeto de aplicativo do Windows Visual Basic.  
+1. Abra um novo projeto de aplicativo do Windows Visual Basic.  
   
-2.  Adicionar um novo módulo ao projeto clicando **Adicionar módulo** sobre o **projeto** menu.  
+2. Adicionar um novo módulo ao projeto clicando **Adicionar módulo** sobre o **projeto** menu.  
   
-3.  Nomeie o novo módulo `Module1.vb` e clique em **Add**. O código para o novo módulo é exibido.  
+3. Nomeie o novo módulo `Module1.vb` e clique em **Add**. O código para o novo módulo é exibido.  
   
-4.  Definir uma interface denominada `TestInterface` dentro de `Module1` digitando `Interface TestInterface` entre as `Module` e `End Module` instruções e, em seguida, pressionando ENTER. O **Editor de códigos** recuos a `Interface` palavra-chave e adiciona um `End Interface` instrução para formar um bloco de código.  
+4. Definir uma interface denominada `TestInterface` dentro de `Module1` digitando `Interface TestInterface` entre as `Module` e `End Module` instruções e, em seguida, pressionando ENTER. O **Editor de códigos** recuos a `Interface` palavra-chave e adiciona um `End Interface` instrução para formar um bloco de código.  
   
-5.  Definir uma propriedade, método e evento para a interface, colocando o seguinte código entre o `Interface` e `End Interface` instruções:  
+5. Definir uma propriedade, método e evento para a interface, colocando o seguinte código entre o `Interface` e `End Interface` instruções:  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
@@ -45,13 +45,13 @@ Interfaces descrevem as características de propriedades, métodos e eventos, ma
   
 ### <a name="to-implement-the-interface"></a>Para implementar a interface
   
-1.  Adicione uma classe chamada `ImplementationClass` adicionando a seguinte instrução para `Module1`após o `End Interface` instrução, mas antes de `End Module` instrução e, em seguida, pressionando ENTER:  
+1. Adicione uma classe chamada `ImplementationClass` adicionando a seguinte instrução para `Module1`após o `End Interface` instrução, mas antes de `End Module` instrução e, em seguida, pressionando ENTER:  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
      Se você estiver trabalhando dentro do ambiente de desenvolvimento integrado, o **Editor de códigos** fornece uma correspondência `End Class` instrução quando você pressiona ENTER.  
   
-2.  Adicione o seguinte `Implements` instrução para `ImplementationClass`, que chama a interface a classe implementa:  
+2. Adicione o seguinte `Implements` instrução para `ImplementationClass`, que chama a interface a classe implementa:  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
@@ -59,13 +59,13 @@ Interfaces descrevem as características de propriedades, métodos e eventos, ma
   
      Se você estiver trabalhando dentro do ambiente de desenvolvimento integrado, o **Editor de códigos** implementa os membros de classe exigidos pelo `TestInterface` quando você pressiona ENTER, e você poderá ignorar a próxima etapa.  
   
-3.  Se você não estiver trabalhando dentro do ambiente de desenvolvimento integrado, você deve implementar todos os membros da interface `MyInterface`. Adicione o seguinte código ao `ImplementationClass` implementar `Event1`, `Method1`, e `Prop1`:  
+3. Se você não estiver trabalhando dentro do ambiente de desenvolvimento integrado, você deve implementar todos os membros da interface `MyInterface`. Adicione o seguinte código ao `ImplementationClass` implementar `Event1`, `Method1`, e `Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
      O `Implements` instrução nomeia a interface e o membro de interface que está sendo implementado.  
   
-4.  Concluir a definição de `Prop1` adicionando um campo particular à classe que o valor de propriedade armazenado:  
+4. Concluir a definição de `Prop1` adicionando um campo particular à classe que o valor de propriedade armazenado:  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
@@ -77,35 +77,35 @@ Interfaces descrevem as características de propriedades, métodos e eventos, ma
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5.  Concluir a definição de `Method1` adicionando o código a seguir.  
+5. Concluir a definição de `Method1` adicionando o código a seguir.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>Para testar a implementação da interface
   
-1.  Clique com botão direito do formulário de inicialização para seu projeto na **Gerenciador de soluções**e clique em **Exibir código**. O editor exibe a classe para seu formulário de inicialização. Por padrão, o formulário de inicialização é chamado `Form1`.  
+1. Clique com botão direito do formulário de inicialização para seu projeto na **Gerenciador de soluções**e clique em **Exibir código**. O editor exibe a classe para seu formulário de inicialização. Por padrão, o formulário de inicialização é chamado `Form1`.  
   
-2.  Adicione o seguinte `testInstance` campo para o `Form1` classe:  
+2. Adicione o seguinte `testInstance` campo para o `Form1` classe:  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
      Declarando `testInstance` como `WithEvents`, o `Form1` classe pode manipular seus eventos.  
   
-3.  Adicione o seguinte manipulador de eventos para o `Form1` classe para manipular eventos acionados por `testInstance`:  
+3. Adicione o seguinte manipulador de eventos para o `Form1` classe para manipular eventos acionados por `testInstance`:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4.  Adicionar uma sub-rotina chamada `Test` para o `Form1` classe para testar a classe de implementação:  
+4. Adicionar uma sub-rotina chamada `Test` para o `Form1` classe para testar a classe de implementação:  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
      O `Test` procedimento cria uma instância da classe que implementa `MyInterface`, atribui a essa instância para o `testInstance` define uma propriedade de campo e executa um método por meio da interface.  
   
-5.  Adicione código para chamar o `Test` procedimento do `Form1 Load` procedimento do seu formulário de inicialização:  
+5. Adicione código para chamar o `Test` procedimento do `Form1 Load` procedimento do seu formulário de inicialização:  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6.  Execute o `Test` procedimento pressionando F5. A mensagem "Prop1 foi definida para 9" é exibida. Depois de clicar em Okey, a mensagem "o parâmetro X Method1 é 5" é exibida. Clique em Okey, e a mensagem "o manipulador de eventos detectada o evento" é exibida.  
+6. Execute o `Test` procedimento pressionando F5. A mensagem "Prop1 foi definida para 9" é exibida. Depois de clicar em Okey, a mensagem "o parâmetro X Method1 é 5" é exibida. Clique em Okey, e a mensagem "o manipulador de eventos detectada o evento" é exibida.  
   
 ## <a name="see-also"></a>Consulte também
 

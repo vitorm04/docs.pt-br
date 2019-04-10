@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143904"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322635"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Como: usar os modificadores e as propriedades GenerateMember
 Quando você coloca um componente em um Windows Form, duas propriedades são fornecidas pelo ambiente de design: `GenerateMember` e `Modifiers`. A propriedade `GenerateMember` especifica quando o Designer de Formulários do Windows gera uma variável de membro de um componente. A propriedade `Modifiers` é o modificador de acesso atribuído a essa variável de membro. Se o valor da propriedade `GenerateMember` for `false`, o valor da propriedade `Modifiers` não terá efeito.  
@@ -30,11 +30,11 @@ Quando você coloca um componente em um Windows Form, duas propriedades são for
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Para especificar se um componente é um membro do formulário  
   
-1.  No Designer de Formulários do Windows, abra o formulário.  
+1. No Designer de Formulários do Windows, abra o formulário.  
   
-2.  Abra o **caixa de ferramentas**e no formulário, coloque três <xref:System.Windows.Forms.Button> controles.  
+2. Abra o **caixa de ferramentas**e no formulário, coloque três <xref:System.Windows.Forms.Button> controles.  
   
-3.  Defina as `GenerateMember` e `Modifiers` propriedades de cada <xref:System.Windows.Forms.Button> controle de acordo com a tabela a seguir.  
+3. Defina as `GenerateMember` e `Modifiers` propriedades de cada <xref:System.Windows.Forms.Button> controle de acordo com a tabela a seguir.  
   
     |Nome do botão|Valor GenerateMember|Valor de modificadores|  
     |-----------------|--------------------------|---------------------|  
@@ -42,13 +42,13 @@ Quando você coloca um componente em um Windows Form, duas propriedades são for
     |`button2`|`true`|`protected`|  
     |`button3`|`false`|Nenhuma alteração|  
   
-4.  Compile a solução.  
+4. Compile a solução.  
   
-5.  Em **Gerenciador de Soluções**, clique no botão **Mostrar Todos os Arquivos**.  
+5. Em **Gerenciador de Soluções**, clique no botão **Mostrar Todos os Arquivos**.  
   
-6.  Abra o nó **Form1** e no **Editor de Códigos**, abra o arquivo **Form1.Designer.vb** ou **Form1. Designer.cs**. Esse arquivo contém o código emitido pelo Designer de Formulários do Windows.  
+6. Abra o nó **Form1** e no **Editor de Códigos**, abra o arquivo **Form1.Designer.vb** ou **Form1. Designer.cs**. Esse arquivo contém o código emitido pelo Designer de Formulários do Windows.  
   
-7.  Localize as declarações dos três botões. O exemplo de código a seguir mostra as diferenças especificadas pelas propriedades `GenerateMember` e `Modifiers`.  
+7. Localize as declarações dos três botões. O exemplo de código a seguir mostra as diferenças especificadas pelas propriedades `GenerateMember` e `Modifiers`.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  

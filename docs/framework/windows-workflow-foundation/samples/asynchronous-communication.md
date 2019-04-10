@@ -2,12 +2,12 @@
 title: Comunicação assíncrona
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323649"
 ---
 # <a name="asynchronous-communication"></a>Comunicação assíncrona
 Este exemplo demonstra como a comunicação entre os dois serviços diferentes do Windows Workflow Foundation (WF) é feita de forma assíncrona por padrão.  
@@ -31,13 +31,13 @@ Este exemplo demonstra como a comunicação entre os dois serviços diferentes d
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Clique com botão direito do **AsynchronousCommunication** solução e selecione **propriedades**.  
+1. Clique com botão direito do **AsynchronousCommunication** solução e selecione **propriedades**.  
   
-2.  Na **propriedades comuns**, selecione **projeto de inicialização**e selecione **vários projetos de inicialização**.  
+2. Na **propriedades comuns**, selecione **projeto de inicialização**e selecione **vários projetos de inicialização**.  
   
-3.  Mover **RentalApprovalService** para a primeira posição na lista, seguido por **CreditCheckService**, seguido por **cliente**. Defina as **iniciar** ação em todos os três projetos.  
+3. Mover **RentalApprovalService** para a primeira posição na lista, seguido por **CreditCheckService**, seguido por **cliente**. Defina as **iniciar** ação em todos os três projetos.  
   
-4.  Clique em **Okey**, e pressione F5 para executar o exemplo.  
+4. Clique em **Okey**, e pressione F5 para executar o exemplo.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

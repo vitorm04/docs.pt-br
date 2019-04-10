@@ -2,12 +2,12 @@
 title: 'Passo a passo: consultar entre relações (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325365"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Passo a passo: consultar entre relações (C#)
 Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associações* para representar as relações de chave estrangeira no banco de dados.  
@@ -51,16 +51,16 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Para acessar objetos Order usando objetos Customer  
   
-1.  Modifique o método `Main` digitando ou colando o seguinte código no método:  
+1. Modifique o método `Main` digitando ou colando o seguinte código no método:  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  Pressione F5 para depurar seu aplicativo.  
+2. Pressione F5 para depurar seu aplicativo.  
   
     > [!NOTE]
     >  Você pode eliminar o código SQL na janela do console comentando por `db.Log = Console.Out;`.  
   
-3.  Pressione Enter na janela de Console para parar a depuração.  
+3. Pressione Enter na janela de Console para parar a depuração.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Criando uma exibição fortemente tipada do seu banco de dados  
  É muito mais fácil começar com uma exibição fortemente tipada do seu banco de dados. Com o objeto <xref:System.Data.Linq.DataContext> fortemente tipado, você não precisa de chamadas para <xref:System.Data.Linq.DataContext.GetTable%2A>. Você pode usar tabelas fortemente tipadas em todas as consultas quando usa o objeto <xref:System.Data.Linq.DataContext> fortemente tipado.  
@@ -69,21 +69,21 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Para tornar o objeto DataContext fortemente tipado  
   
-1.  Adicione o código a seguir acima da declaração da classe `Customer`.  
+1. Adicione o código a seguir acima da declaração da classe `Customer`.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  Modifique o método `Main` para usar o <xref:System.Data.Linq.DataContext> fortemente tipado da seguinte maneira:  
+2. Modifique o método `Main` para usar o <xref:System.Data.Linq.DataContext> fortemente tipado da seguinte maneira:  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  Pressione F5 para depurar seu aplicativo.  
+3. Pressione F5 para depurar seu aplicativo.  
   
      A saída da janela Console é:  
   
      `ID=WHITC`  
   
-4.  Pressione Enter na janela de Console para parar a depuração.  
+4. Pressione Enter na janela de Console para parar a depuração.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  A próximo passo a passo ([passo a passo: Manipulando dados (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) demonstra como manipular dados. Esse passo a passo não requer que você salve os dois tutoriais passo a passo desta série que você já concluiu.  

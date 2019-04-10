@@ -1,5 +1,5 @@
 ---
-title: 'Como: Chaves assimétricas Store em um contêiner de chave'
+title: 'Como: armazenar chaves assimétricas em um contêiner de chave'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326184"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Como: Chaves assimétricas Store em um contêiner de chave
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Como: armazenar chaves assimétricas em um contêiner de chave
 As chaves privadas assimétricas nunca devem ser armazenadas no formato textual nem como texto sem formatação no computador local. Se precisar armazenar uma chave privada, você deverá usar um contêiner de chave. Para obter mais informações sobre contêineres de chave, consulte [Noções básicas sobre nível de máquina e contêineres de chave RSA de nível de usuário](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Para criar uma chave assimétrica e salvá-la em um contêiner de chaves  
   
-1.  Criar uma nova instância de um <xref:System.Security.Cryptography.CspParameters> de classe e passe o nome que você deseja chamar o contêiner de chaves a <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
+1. Criar uma nova instância de um <xref:System.Security.Cryptography.CspParameters> de classe e passe o nome que você deseja chamar o contêiner de chaves a <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
   
-2.  Criar uma nova instância de uma classe que deriva de <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (normalmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passe criado anteriormente  **CspParameters** objeto para seu construtor.  
+2. Criar uma nova instância de uma classe que deriva de <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (normalmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passe criado anteriormente  **CspParameters** objeto para seu construtor.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Para excluir uma chave de um contêiner de chaves  
   
-1.  Criar uma nova instância de um **CspParameters** de classe e passe o nome que você deseja chamar o contêiner de chave para o **KeyContainerName** campo.  
+1. Criar uma nova instância de um **CspParameters** de classe e passe o nome que você deseja chamar o contêiner de chave para o **KeyContainerName** campo.  
   
-2.  Criar uma nova instância de uma classe que deriva de **AsymmetricAlgorithm** classe (geralmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passar o criado anteriormente **CspParameters** objeto para seu construtor.  
+2. Criar uma nova instância de uma classe que deriva de **AsymmetricAlgorithm** classe (geralmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passar o criado anteriormente **CspParameters** objeto para seu construtor.  
   
-3.  Defina as **PersistKeyInCSP** propriedade da classe que deriva **AsymmetricAlgorithm** para **false** (**False** no Visual Basic).  
+3. Defina as **PersistKeyInCSP** propriedade da classe que deriva **AsymmetricAlgorithm** para **false** (**False** no Visual Basic).  
   
-4.  Chame o **clara** método da classe que deriva **AsymmetricAlgorithm**. Esse método libera todos os recursos da classe e limpa o contêiner de chaves.  
+4. Chame o **clara** método da classe que deriva **AsymmetricAlgorithm**. Esse método libera todos os recursos da classe e limpa o contêiner de chaves.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como criar uma chave assimétrica, salvá-la em um contêiner de chaves, recuperar a chave posteriormente e excluir a chave do contêiner.  
@@ -225,7 +225,7 @@ Key deleted.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Geração de chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Gerando chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Criptografando dados](../../../docs/standard/security/encrypting-data.md)
 - [Descriptografando dados](../../../docs/standard/security/decrypting-data.md)
 - [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

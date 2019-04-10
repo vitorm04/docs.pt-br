@@ -2,12 +2,12 @@
 title: Mensagens em fila da solução de problemas
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463105"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322037"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 Esta seção contém perguntas comuns e solução de problemas de ajuda para usar as filas no Windows Communication Foundation (WCF).  
@@ -96,9 +96,9 @@ Esta seção contém perguntas comuns e solução de problemas de ajuda para usa
   
  **R:** O motivo mais comum é que as permissões.  
   
-1.  Certifique-se de que o `NetMsmqActivator` processo está em execução e a identidade do `NetMsmqActivator` processo é dada a leitura e busca de permissão na fila.  
+1. Certifique-se de que o `NetMsmqActivator` processo está em execução e a identidade do `NetMsmqActivator` processo é dada a leitura e busca de permissão na fila.  
   
-2.  Se o `NetMsmqActivator` é o monitoramento de filas em um computador remoto, certifique-se de que `NetMsmqActivator` não é executado em um token restrito. Para executar o `NetMsmqActivator` com um token sem restrições:  
+2. Se o `NetMsmqActivator` é o monitoramento de filas em um computador remoto, certifique-se de que `NetMsmqActivator` não é executado em um token restrito. Para executar o `NetMsmqActivator` com um token sem restrições:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R:** Você não pode usar um repositório de certificados do computador local com o modo de certificado. Você precisa copiar o certificado do repositório de certificados de computador para o armazenamento do usuário atual usando o snap-in de certificado. Para obter o certificado do snap-in:  
   
-1.  Clique em **inicie**, selecione **execute**, digite `mmc`e clique em **Okey**.  
+1. Clique em **inicie**, selecione **execute**, digite `mmc`e clique em **Okey**.  
   
-2.  No **Console de gerenciamento Microsoft**, abra o **arquivo** menu e selecione **Adicionar/Remover Snap-in**.  
+2. No **Console de gerenciamento Microsoft**, abra o **arquivo** menu e selecione **Adicionar/Remover Snap-in**.  
   
-3.  No **Adicionar/Remover Snap-in** caixa de diálogo, clique o **Add** botão.  
+3. No **Adicionar/Remover Snap-in** caixa de diálogo, clique o **Add** botão.  
   
-4.  No **Adicionar Snap-in Standalone** caixa de diálogo, selecione certificados e clique em **Add**.  
+4. No **Adicionar Snap-in Standalone** caixa de diálogo, selecione certificados e clique em **Add**.  
   
-5.  No **certificados** caixa de diálogo snap-in, selecione **minha conta de usuário** e clique em **concluir**.  
+5. No **certificados** caixa de diálogo snap-in, selecione **minha conta de usuário** e clique em **concluir**.  
   
-6.  Em seguida, adicione um segundo certificados snap-in usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **próxima**.  
+6. Em seguida, adicione um segundo certificados snap-in usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **próxima**.  
   
-7.  Selecione **computador Local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados de computador para o armazenamento do usuário atual.  
+7. Selecione **computador Local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados de computador para o armazenamento do usuário atual.  
   
  **P:** Quando meu serviço lê uma fila em outro computador no modo de grupo de trabalho, eu obtenho uma exceção "acesso negado".  
   

@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319996"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista diversos problemas conhecidos, os clientes têm executado até ao desenvolver clientes WCF e serviços. Se o problema que está ocorrendo não estiver nessa lista, é recomendável que configurar o rastreamento para seu serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador do arquivo de rastreamento e obter informações detalhadas sobre exceções que possam estar ocorrendo dentro do serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [Ferramenta de Visualizador de rastreamento (SvcTraceViewer.exe) de serviço](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [Depois de instalar o Windows 7 e o IIS, quando eu tentar navegar para um serviço WCF, eu obtenho a seguinte mensagem de erro: Erro de HTTP 404.3 – não encontrado](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [Depois de instalar o Windows 7 e o IIS, quando eu tentar navegar para um serviço WCF, eu obtenho a seguinte mensagem de erro: Erro de HTTP 404.3 – não encontrado](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      Erro de HTTP 404.3 – não página FoundThe você está solicitando não pode ser servida devido à configuração da extensão. Se a página é um script, adicione um manipulador. Se o arquivo deve ser baixado, adicione um mapa MIME. InformationModule StaticFileModule de erro detalhada.  
   
-2.  [Às vezes, recebo um MessageSecurityException na segunda solicitação se meu cliente está ocioso há algum tempo após a primeira solicitação. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [Às vezes, recebo um MessageSecurityException na segunda solicitação se meu cliente está ocioso há algum tempo após a primeira solicitação. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Meu serviço começa a rejeitar novos clientes depois de cerca de 10 clientes estão interagindo com ele. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Meu serviço começa a rejeitar novos clientes depois de cerca de 10 clientes estão interagindo com ele. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [Pode carregar minha configuração de serviço do em outro lugar além do arquivo de configuração do aplicativo WCF?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [Pode carregar minha configuração de serviço do em outro lugar além do arquivo de configuração do aplicativo WCF?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Meu serviço e cliente funcionem bem, mas eu não é possível fazê-los funcionar quando o cliente está em outro computador? O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Meu serviço e cliente funcionem bem, mas eu não é possível fazê-los funcionar quando o cliente está em outro computador? O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Quando eu gero uma FaultException\<exceção > em que o tipo é uma exceção, eu sempre recebem um tipo FaultException geral no cliente e não o tipo genérico. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Quando eu gero uma FaultException\<exceção > em que o tipo é uma exceção, eu sempre recebem um tipo FaultException geral no cliente e não o tipo genérico. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Aparentemente, unidirecional e operações de solicitação-resposta retornam com aproximadamente a mesma velocidade quando a resposta não contém nenhum dado. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Aparentemente, unidirecional e operações de solicitação-resposta retornam com aproximadamente a mesma velocidade quando a resposta não contém nenhum dado. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [Estou usando um certificado X.509 com o serviço e obter um System.Security.Cryptography.CryptographicException. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [Estou usando um certificado X.509 com o serviço e obter um System.Security.Cryptography.CryptographicException. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [Eu alterei o primeiro parâmetro de uma operação de letras maiusculas em minúsculas; Agora o meu cliente gera uma exceção. O que está acontecendo?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   

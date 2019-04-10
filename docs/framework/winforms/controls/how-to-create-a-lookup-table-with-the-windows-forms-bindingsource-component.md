@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321894"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Como: Criar uma tabela de pesquisa com o componente BindingSource do Windows Forms
 A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados de registros em uma tabela relacionada. Nos procedimentos a seguir, um controle <xref:System.Windows.Forms.ComboBox> é usado para exibir o campo com a relação de chave estrangeira da tabela pai para a tabela filho.  
@@ -49,21 +49,21 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
 ### <a name="to-create-the-user-interface"></a>Para criar a interface do usuário  
   
-1.  Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.ComboBox> controle para o formulário.  
+1. Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.ComboBox> controle para o formulário.  
   
      Esse controle exibirá a coluna da tabela pai.  
   
-2.  Arraste outros controles para exibir detalhes da tabela filho. O formato dos dados na tabela deve determinar quais controles você escolhe. Para obter mais informações, consulte [Controles dos Windows Forms por função](windows-forms-controls-by-function.md).  
+2. Arraste outros controles para exibir detalhes da tabela filho. O formato dos dados na tabela deve determinar quais controles você escolhe. Para obter mais informações, consulte [Controles dos Windows Forms por função](windows-forms-controls-by-function.md).  
   
-3.  Arraste um controle <xref:System.Windows.Forms.BindingNavigator> para o formulário; isso permitirá que você navegue os dados na tabela filho.  
+3. Arraste um controle <xref:System.Windows.Forms.BindingNavigator> para o formulário; isso permitirá que você navegue os dados na tabela filho.  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>Para conectar-se aos dados e vinculá-lo aos controles  
   
-1.  Selecione o <xref:System.Windows.Forms.ComboBox> e clique no glifo da Tarefa Inteligente para exibir a caixa de diálogo Tarefa Inteligente.  
+1. Selecione o <xref:System.Windows.Forms.ComboBox> e clique no glifo da Tarefa Inteligente para exibir a caixa de diálogo Tarefa Inteligente.  
   
-2.  Selecione **Usar itens vinculados aos dados**.  
+2. Selecione **Usar itens vinculados aos dados**.  
   
-3.  Clique na seta ao lado da caixa suspensa **Fonte de Dados**. Se uma fonte de dados foi configurada anteriormente para o projeto ou formulário, ela aparecerá; caso contrário, siga as seguintes etapas (Este exemplo usa as tabelas Clientes e Pedidos do banco de dados de amostra Northwind e refere-se a elas nos parênteses).  
+3. Clique na seta ao lado da caixa suspensa **Fonte de Dados**. Se uma fonte de dados foi configurada anteriormente para o projeto ou formulário, ela aparecerá; caso contrário, siga as seguintes etapas (Este exemplo usa as tabelas Clientes e Pedidos do banco de dados de amostra Northwind e refere-se a elas nos parênteses).  
   
     1.  Clique em **Adicionar Fonte de Dados do Projeto** para conectar-se aos dados e criar uma fonte de dados.  
   
@@ -81,15 +81,15 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
     8.  Clique em **Finalizar**.  
   
-4.  Na caixa suspensa **Exibir Membro**, selecione o nome da coluna (por exemplo, ContactName) a ser exibida na caixa de combinação.  
+4. Na caixa suspensa **Exibir Membro**, selecione o nome da coluna (por exemplo, ContactName) a ser exibida na caixa de combinação.  
   
-5.  Na caixa suspensa **Membro do Valor**, selecione a coluna (por exemplo, CustomerID) para executar a operação de pesquisa na tabela filho.  
+5. Na caixa suspensa **Membro do Valor**, selecione a coluna (por exemplo, CustomerID) para executar a operação de pesquisa na tabela filho.  
   
-6.  Na caixa suspensa **Valor Selecionado**, navegue até **Fontes de Dados do Projeto** e o conjunto de dados que você criou que contém as tabelas pai e filho. Selecione a mesma propriedade da tabela filho que é o Membro do Valor da tabela pai (por exemplo, Orders.CustomerID). Os <xref:System.Windows.Forms.BindingSource>, componentes do conjunto de dados e do adaptador de tabela adequado, serão criados e adicionados ao formulário.  
+6. Na caixa suspensa **Valor Selecionado**, navegue até **Fontes de Dados do Projeto** e o conjunto de dados que você criou que contém as tabelas pai e filho. Selecione a mesma propriedade da tabela filho que é o Membro do Valor da tabela pai (por exemplo, Orders.CustomerID). Os <xref:System.Windows.Forms.BindingSource>, componentes do conjunto de dados e do adaptador de tabela adequado, serão criados e adicionados ao formulário.  
   
-7.  Vincule o controle <xref:System.Windows.Forms.BindingNavigator> para o <xref:System.Windows.Forms.BindingSource> da tabela filho (por exemplo, `OrdersBindingSource`).  
+7. Vincule o controle <xref:System.Windows.Forms.BindingNavigator> para o <xref:System.Windows.Forms.BindingSource> da tabela filho (por exemplo, `OrdersBindingSource`).  
   
-8.  Vincule os controles diferentes dos controles <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.BindingNavigator> aos campos de detalhes do <xref:System.Windows.Forms.BindingSource> da tabela filho (Por exemplo, `OrdersBindingSource`) que você deseja exibir.  
+8. Vincule os controles diferentes dos controles <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.BindingNavigator> aos campos de detalhes do <xref:System.Windows.Forms.BindingSource> da tabela filho (Por exemplo, `OrdersBindingSource`) que você deseja exibir.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: Variáveis e argumentos
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320737"
 ---
 # <a name="variables-and-arguments"></a>Variáveis e argumentos
 No Windows Workflow Foundation (WF), as variáveis representam o armazenamento de dados e os argumentos representam o fluxo de dados dentro e fora de uma atividade. Uma atividade tem um conjunto de argumentos e compõem a assinatura de atividade. Além disso, uma atividade pode manter uma lista de variáveis para que um desenvolvedor pode adicionar ou remover variáveis durante o design de um fluxo de trabalho. Um argumento é associado usando uma expressão que retorna um valor.  
@@ -63,11 +63,11 @@ Variable<string> var = new Variable<string>
   
  O tempo de execução de fluxo de trabalho faz as seguintes garantias sobre o controle de tempo de movimentação de dados de e para atividades:  
   
-1.  Quando uma atividade se inicia, os valores dos argumentos de entrada e de arquivos entrada/saída são calculados. Por exemplo, independentemente de <xref:System.Activities.Argument.Get%2A> quando é chamado, o valor retornado é calculado no tempo de execução antes da chamada de `Execute`.  
+1. Quando uma atividade se inicia, os valores dos argumentos de entrada e de arquivos entrada/saída são calculados. Por exemplo, independentemente de <xref:System.Activities.Argument.Get%2A> quando é chamado, o valor retornado é calculado no tempo de execução antes da chamada de `Execute`.  
   
-2.  Quando <xref:System.Activities.InOutArgument%601.Set%2A> é chamado, o tempo de execução define o valor imediatamente.  
+2. Quando <xref:System.Activities.InOutArgument%601.Set%2A> é chamado, o tempo de execução define o valor imediatamente.  
   
-3.  Os argumentos podem opcionalmente ter seu <xref:System.Activities.Argument.EvaluationOrder%2A> especificado. <xref:System.Activities.Argument.EvaluationOrder%2A> é um valor com base zero que especifica a ordem em que o argumento é avaliado. Por padrão, a ordem de classificação de argumento é especificado e não é igual ao valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> . Definir <xref:System.Activities.Argument.EvaluationOrder%2A> para um valor maior ou igual a zero para especificar uma ordem de classificação para esse argumento. Windows Workflow Foundation avalia argumentos com uma ordem de classificação especificada em ordem crescente. Observe que os argumentos com uma ordem não-especificada de avaliação são avaliados antes que esses especificado com uma ordem de classificação.  
+3. Os argumentos podem opcionalmente ter seu <xref:System.Activities.Argument.EvaluationOrder%2A> especificado. <xref:System.Activities.Argument.EvaluationOrder%2A> é um valor baseado em zero que especifica a ordem na qual o argumento é avaliado. Por padrão, a ordem de classificação de argumento é especificado e não é igual ao valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> . Definir <xref:System.Activities.Argument.EvaluationOrder%2A> para um valor maior ou igual a zero para especificar uma ordem de classificação para esse argumento. Windows Workflow Foundation avalia argumentos com uma ordem de classificação especificada em ordem crescente. Observe que os argumentos com uma ordem não-especificada de avaliação são avaliados antes que esses especificado com uma ordem de classificação.  
   
  Um autor de atividade pode usar um mecanismo fortemente tipado para expor seus argumentos. Isso é feito declarando propriedades do tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, e <xref:System.Activities.InOutArgument%601>. Isso permite que um autor de atividade estabeleça um contrato específico sobre os dados que vão e fora de uma atividade.  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  As atividades que retornam um valor único podem derivar de <xref:System.Activities.Activity%601>, de <xref:System.Activities.NativeActivity%601>, ou de <xref:System.Activities.CodeActivity%601>. Essas atividades têm <xref:System.Activities.OutArgument%601> bem definido chamado <xref:System.Activities.Activity%601.Result%2A> que contém o valor de retorno da atividade.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>Usando variáveis e argumentos em fluxos de trabalho  
- O exemplo a seguir mostra como variáveis e os argumentos são usados em um fluxo de trabalho. O fluxo de trabalho é uma sequência que declara três variáveis: `var1`, `var2`, e `var3`. A primeira atividade no fluxo de trabalho é uma atividade de `Assign` que atribui o valor da variável `var1``var2`variável. Isso é seguido por uma atividade de `WriteLine` que imprimir o valor da variável de `var2` . Em seguida é outra atividade de `Assign` que atribui o valor da variável `var2``var3`variável. Finalmente há outra atividade de `WriteLine` que imprimir o valor da variável de `var3` . A primeira atividade de `Assign` usa `InArgument<string>` e `OutArgument<string>` objetos que representa explicitamente as associações para os argumentos de atividade. `InArgument<string>` é usado para <xref:System.Activities.Statements.Assign.Value%2A> porque o valor é fluxo na atividade de <xref:System.Activities.Statements.Assign%601> através de seu argumento de <xref:System.Activities.Statements.Assign.Value%2A> , e `OutArgument<string>` é usado para <xref:System.Activities.Statements.Assign.To%2A> porque o valor de fluxo está fora do argumento de <xref:System.Activities.Statements.Assign.To%2A> na variável. A segunda atividade de `Assign` realiza a mesma coisa com mais sintaxe compacta mas equivalente que usa conversões implícitas. As atividades de `WriteLine` também usam a sintaxe compacta.  
+ O exemplo a seguir mostra como variáveis e os argumentos são usados em um fluxo de trabalho. O fluxo de trabalho é uma sequência que declara três variáveis: `var1`, `var2`, e `var3`. A primeira atividade no fluxo de trabalho é uma atividade de `Assign` que atribui o valor da variável `var1``var2`variável. Isso é seguido por uma atividade de `WriteLine` que imprimir o valor da variável de `var2` . Em seguida é outra atividade de `Assign` que atribui o valor da variável `var2``var3`variável. Finalmente há outra atividade de `WriteLine` que imprimir o valor da variável de `var3` . A primeira atividade de `Assign` usa `InArgument<string>` e `OutArgument<string>` objetos que representa explicitamente as associações para os argumentos de atividade. `InArgument<string>` é usado para <xref:System.Activities.Statements.Assign.Value%2A> porque o valor está fluindo para o <xref:System.Activities.Statements.Assign%601> atividade por meio de seu <xref:System.Activities.Statements.Assign.Value%2A> argumento, e `OutArgument<string>` é usado para <xref:System.Activities.Statements.Assign.To%2A> porque o valor é fluxo do <xref:System.Activities.Statements.Assign.To%2A> argumento para a variável. A segunda atividade de `Assign` realiza a mesma coisa com mais sintaxe compacta mas equivalente que usa conversões implícitas. As atividades de `WriteLine` também usam a sintaxe compacta.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

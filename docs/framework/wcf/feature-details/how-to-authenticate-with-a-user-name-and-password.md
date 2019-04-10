@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321024"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Como: fazer a autenticação com um nome de usuário e senha
 
@@ -21,7 +21,7 @@ Este tópico demonstra como habilitar um serviço do Windows Communication Found
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Para configurar um serviço WCF para se autenticar usando a senha e nome de usuário de domínio Windows
   
-1.  Criar uma instância das <xref:System.ServiceModel.WSHttpBinding>, defina o modo de segurança da associação a <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, defina o `ClientCredentialType` da associação a <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>e adicione um ponto de extremidade de serviço usando a associação configurada para o host de serviço, conforme mostrado no código a seguir:  
+1. Criar uma instância das <xref:System.ServiceModel.WSHttpBinding>, defina o modo de segurança da associação a <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, defina o `ClientCredentialType` da associação a <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>e adicione um ponto de extremidade de serviço usando a associação configurada para o host de serviço, conforme mostrado no código a seguir:  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ Este tópico demonstra como habilitar um serviço do Windows Communication Found
     // ...  
     ```  
   
-2.  Especifique o certificado do servidor usado para criptografar o nome de usuário e informações de senha enviadas eletronicamente. Esse código deve seguir imediatamente o código acima. O exemplo a seguir usa o certificado que é criado pelo arquivo Setup. bat do [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md) exemplo:  
+2. Especifique o certificado do servidor usado para criptografar o nome de usuário e informações de senha enviadas eletronicamente. Esse código deve seguir imediatamente o código acima. O exemplo a seguir usa o certificado que é criado pelo arquivo Setup. bat do [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md) exemplo:  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ Este tópico demonstra como habilitar um serviço do Windows Communication Found
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>Para chamar o serviço, passando o nome de usuário e senha  
   
-1.  O aplicativo cliente deve solicitar ao usuário seu nome de usuário e senha. O código a seguir solicita ao usuário para o nome de usuário e senha.  
+1. O aplicativo cliente deve solicitar ao usuário seu nome de usuário e senha. O código a seguir solicita ao usuário para o nome de usuário e senha.  
   
     > [!WARNING]
     >  Esse código não deve ser usado na produção, como a senha é exibida ao mesmo tempo em que está sendo inserido.  
@@ -61,7 +61,7 @@ Este tópico demonstra como habilitar um serviço do Windows Communication Found
             }  
     ```  
   
-2.  Crie uma instância do proxy do cliente especificando as credenciais do cliente conforme mostrado no código a seguir:  
+2. Crie uma instância do proxy do cliente especificando as credenciais do cliente conforme mostrado no código a seguir:  
   
     ```  
     string username;  

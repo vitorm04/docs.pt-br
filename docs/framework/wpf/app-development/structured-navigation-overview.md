@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161500"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320026"
 ---
 # <a name="structured-navigation-overview"></a>Visão geral da navegação estruturada
 Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], um <xref:System.Windows.Controls.Frame>, ou uma <xref:System.Windows.Navigation.NavigationWindow> é composto de páginas que podem ser identificadas pelo pacote [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e acessadas por hiperlinks. A estrutura de páginas e as maneiras pelas quais elas podem ser navegadas, como definidas pelos hiperlinks, é conhecida como uma topologia de navegação. Uma topologia como esta serve a uma variedade de tipos de aplicativos, especialmente aqueles que navegam através de documentos. Para tais aplicativos, o usuário pode navegar de uma página à outra sem que as páginas precisem saber qualquer coisa sobre a outra.  
@@ -134,9 +134,9 @@ Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../incl
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Retornando o resultado da tarefa e os dados de tarefa de uma tarefa para uma página chamadora  
  Quando o usuário tiver terminado de usar a página chamada, ao pressionar os botões OK ou Cancelar neste exemplo, a página chamada precisa retornar. Como a página chamadora usou a página chamada para coletar dados do usuário, a página chamadora necessita de dois tipos de informações:  
   
-1.  Se o usuário cancelou a página chamada (pressionando o botão OK ou o botão Cancelar neste exemplo). Isso permite que a página chamadora determine se deve processar os dados que a página chamadora obteve do usuário.  
+1. Se o usuário cancelou a página chamada (pressionando o botão OK ou o botão Cancelar neste exemplo). Isso permite que a página chamadora determine se deve processar os dados que a página chamadora obteve do usuário.  
   
-2.  Os dados que foram fornecidos pelo usuário.  
+2. Os dados que foram fornecidos pelo usuário.  
   
  Para retornar informações, <xref:System.Windows.Navigation.PageFunction%601> implementa o <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> método. O código a seguir mostra como chamá-lo.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323714"
 ---
 # <a name="custom-rendering-ink"></a>Tinta de renderização personalizada
 O <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriedade de um traço permite que você especifique a aparência de um traço, como seu tamanho, cor e forma, mas pode haver ocasiões em que você deseja personalizar a aparência além do que <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> permitir. Convém personalizar a aparência da tinta renderizando na aparência de um pincel de ar, pintura a óleo e muitos outros efeitos. O Windows Presentation Foundation (WPF) permite renderização personalizada de tinta implementando um personalizado <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e <xref:System.Windows.Ink.Stroke> objeto.  
@@ -37,11 +37,11 @@ O <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriedade de um traço
   
  Há três classes para implementar ao renderizar dinamicamente a tinta.  
   
-1.  **DynamicRenderer**: Implemente uma classe que deriva de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Essa classe é especializada <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que renderiza o traço conforme ele é desenhado. O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> faz a renderização em um thread separado, para a superfície de tinta pareça coletar tinta mesmo quando o thread de interface do usuário do usuário de aplicativo é bloqueado. Para obter mais informações sobre o modelo de threading, consulte [O Modelo de Threading de Tinta](the-ink-threading-model.md). Para personalizar a renderização dinamicamente de um traço, substitua o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> método.  
+1. **DynamicRenderer**: Implemente uma classe que deriva de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Essa classe é especializada <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que renderiza o traço conforme ele é desenhado. O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> faz a renderização em um thread separado, para a superfície de tinta pareça coletar tinta mesmo quando o thread de interface do usuário do usuário de aplicativo é bloqueado. Para obter mais informações sobre o modelo de threading, consulte [O Modelo de Threading de Tinta](the-ink-threading-model.md). Para personalizar a renderização dinamicamente de um traço, substitua o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> método.  
   
-2.  **Traço**: Implemente uma classe que deriva de <xref:System.Windows.Ink.Stroke>. Essa classe é responsável pela renderização estática dos <xref:System.Windows.Input.StylusPoint> dados após ele ter sido convertido em um <xref:System.Windows.Ink.Stroke> objeto. Substituir o <xref:System.Windows.Ink.Stroke.DrawCore%2A> método para garantir que a renderização estática do traço seja consistente com a renderização dinâmica.  
+2. **Traço**: Implemente uma classe que deriva de <xref:System.Windows.Ink.Stroke>. Essa classe é responsável pela renderização estática dos <xref:System.Windows.Input.StylusPoint> dados após ele ter sido convertido em um <xref:System.Windows.Ink.Stroke> objeto. Substituir o <xref:System.Windows.Ink.Stroke.DrawCore%2A> método para garantir que a renderização estática do traço seja consistente com a renderização dinâmica.  
   
-3.  **InkCanvas:** Implemente uma classe que deriva de <xref:System.Windows.Controls.InkCanvas>. Atribuir personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> para o <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> propriedade. Substituir a <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> método e adicione um traço personalizado para o <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propriedade. Isso garante que a aparência da tinta seja consistente.  
+3. **InkCanvas:** Implemente uma classe que deriva de <xref:System.Windows.Controls.InkCanvas>. Atribuir personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> para o <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> propriedade. Substituir a <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> método e adicione um traço personalizado para o <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propriedade. Isso garante que a aparência da tinta seja consistente.  
   
 <a name="ImplementingADynamicRenderer"></a>   
 ## <a name="implementing-a-dynamic-renderer"></a>Implementando um Renderizador Dinâmico  

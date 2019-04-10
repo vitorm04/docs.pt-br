@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320685"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Passo a passo: Declarando e acionando eventos (Visual Basic)
 Este passo a passo demonstra como declarar e acionar eventos para uma classe chamada `Widget`. Depois de concluir as etapas, você talvez queira ler o tópico [passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que mostra como usar eventos de `Widget` objetos para fornecer informações de status em um aplicativo.  
@@ -28,11 +28,11 @@ Este passo a passo demonstra como declarar e acionar eventos para uma classe cha
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Para compilar o exemplo de código para este tópico  
   
-1.  Abra um novo projeto de aplicativo do Windows Visual Basic e crie um formulário chamado `Form1`.  
+1. Abra um novo projeto de aplicativo do Windows Visual Basic e crie um formulário chamado `Form1`.  
   
-2.  Adicione dois botões e um rótulo para `Form1`.  
+2. Adicione dois botões e um rótulo para `Form1`.  
   
-3.  Nomeie os objetos como mostrado na tabela a seguir.  
+3. Nomeie os objetos como mostrado na tabela a seguir.  
   
     |Objeto|Propriedade|Configuração|  
     |------------|--------------|-------------|  
@@ -40,7 +40,7 @@ Este passo a passo demonstra como declarar e acionar eventos para uma classe cha
     |`Button2`|`Text`|Cancelar|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  Sobre o **projeto** menu, escolha **Adicionar classe** para adicionar uma classe chamada `Widget.vb` ao projeto.  
+4. Sobre o **projeto** menu, escolha **Adicionar classe** para adicionar uma classe chamada `Widget.vb` ao projeto.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Para declarar um evento para a classe de Widget  
   
@@ -57,11 +57,11 @@ Este passo a passo demonstra como declarar e acionar eventos para uma classe cha
   
 #### <a name="to-raise-the-percentdone-event"></a>Para gerar o evento PercentDone  
   
-1.  Para simplificar o acesso para o `Timer` propriedade usada por essa classe, adicione uma `Imports` instrução na parte superior da seção de declarações do seu módulo de classe, acima o `Class Widget` instrução.  
+1. Para simplificar o acesso para o `Timer` propriedade usada por essa classe, adicione uma `Imports` instrução na parte superior da seção de declarações do seu módulo de classe, acima o `Class Widget` instrução.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  Adicione o seguinte código à classe `Widget`:  
+2. Adicione o seguinte código à classe `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
@@ -77,5 +77,5 @@ Este passo a passo demonstra como declarar e acionar eventos para uma classe cha
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
-- [Passo a passo: Manipulação de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
+- [Passo a passo: Tratando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
 - [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)

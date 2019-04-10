@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211914"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplicativos geralmente dependem de arquivos que contêm dados não executáveis, tais como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados do aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
@@ -38,8 +38,7 @@ ms.locfileid: "57379192"
  Para fazer referência a arquivos de dados do aplicativo, o Windows Presentation Foundation (WPF) usa o pacote [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] esquema, que é descrito detalhadamente nas [URIs de pacote no WPF](pack-uris-in-wpf.md)).  
   
  Este tópico descreve como configurar e usar arquivos de dados do aplicativo.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Arquivos de recursos  
  Se um arquivo de dados do aplicativo precisar estar sempre disponível para um aplicativo, a única maneira de garantir essa disponibilidade será compilá-lo em um assembly executável principal do aplicativo ou em um de seus assemblies referenciados. Esse tipo de arquivo de dados do aplicativo é conhecido como um *arquivo de recurso*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379192"
  Você deve usar arquivos de conteúdo quando o aplicativo requer um conjunto específico de arquivos de dados do aplicativo que você deseja ser capaz de atualizar sem recompilar o assembly que os consome.  
   
 ### <a name="configuring-content-files"></a>Configurando arquivos de conteúdo  
- Para adicionar um arquivo de conteúdo a um projeto, um arquivo de dados do aplicativo deve ser incluído como um `Content` item. Além disso, como um arquivo de conteúdo não é compilado diretamente no assembly, você precisa definir a [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` elemento de metadados para especificar que o arquivo de conteúdo é copiado para um local que é relativo ao assembly compilado. Se você deseja que o recurso a ser copiado para a pasta de saída de compilação sempre que um projeto é compilado, defina as `CopyToOutputDirectory` o elemento de metadados com o `Always` valor. Caso contrário, você pode garantir que apenas a versão mais recente do recurso é copiada para a pasta de saída de build usando o `PreserveNewest` valor.  
+ Para adicionar um arquivo de conteúdo a um projeto, um arquivo de dados do aplicativo deve ser incluído como um `Content` item. Além disso, como um arquivo de conteúdo não é compilado diretamente no assembly, você precisa definir o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` elemento de metadados para especificar que o arquivo de conteúdo é copiado para um local que é relativo ao assembly compilado. Se você deseja que o recurso a ser copiado para a pasta de saída de compilação sempre que um projeto é compilado, defina as `CopyToOutputDirectory` o elemento de metadados com o `Always` valor. Caso contrário, você pode garantir que apenas a versão mais recente do recurso é copiada para a pasta de saída de build usando o `PreserveNewest` valor.  
   
  A seguir é mostrado um arquivo que está configurado como um arquivo de conteúdo que é copiado para a pasta de saída de build somente quando uma nova versão do recurso é adicionada ao projeto.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379192"
 ### <a name="configuring-site-of-origin-files"></a>Configurando arquivos de site de origem  
  Se seu site de arquivos de origem é inexistentes ou desconhecidos em tempo de compilação, você precisará usar tradicionais de implantação de mecanismos para garantir que os arquivos necessários estão disponíveis em tempo de execução, incluindo o uso de qualquer um de `XCopy` programa de linha de comando ou o [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Se você souber em tempo de compilação os arquivos você que gostaria que estivessem localizados no site de origem, mas ainda desejar evitar uma dependência explícita, você pode adicionar esses arquivos em um [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] do projeto como `None` item. Assim como arquivos de conteúdo, você precisa definir a [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` atributo para especificar que o local do arquivo de origem é copiado para um local que é relativo ao assembly compilado, especificando as `Always` valor ou o `PreserveNewest` valor.  
+ Se você souber em tempo de compilação os arquivos você que gostaria que estivessem localizados no site de origem, mas ainda desejar evitar uma dependência explícita, você pode adicionar esses arquivos em um [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] do projeto como `None` item. Assim como arquivos de conteúdo, você precisa definir a [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` atributo para especificar que o local do arquivo de origem é copiado para um local que é relativo ao assembly compilado, especificando o `Always` valor ou o `PreserveNewest` valor.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379192"
  Depois de alterar o tipo de build de um arquivo de dados do aplicativo, você precisa recompilar o aplicativo inteiro para garantir que essas alterações sejam aplicadas. Se você apenas compilar o aplicativo, as alterações não serão aplicadas.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325574"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Como: adicionar instruções de rastreamento ao código de um aplicativo
 Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Gravar**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, e **falhar**. Esses métodos podem ser divididos em duas categorias: **Gravar**, **WriteLine**, e **falhar** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf**e  **Assert** testar uma condição booleana e escrever ou não gravar com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  
@@ -29,7 +29,7 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
   
 ### <a name="to-write-a-complete-line"></a>Para gravar uma linha completa  
   
-1.  Chame o método <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
+1. Chame o método <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
   
      Um retorno de carro é acrescentado ao final da mensagem retornada por esse método, de modo que a próxima mensagem retornada por **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** comece na seguinte linha:  
   
@@ -48,7 +48,7 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
   
 ### <a name="to-write-a-partial-line"></a>Para gravar uma linha parcial  
   
-1.  Chame o método <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A>.  
+1. Chame o método <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A>.  
   
      A próxima mensagem colocada por uma instrução **Write**, **WriteIf**, **WriteLine** ou **WriteLineIf** começará na mesma linha da mensagem colocada pela instrução **Write** ou **WriteIf**:  
   
@@ -69,7 +69,7 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Para verificar se certas condições existem antes ou depois de executar um método  
   
-1.  Chame o método <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Chame o método <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
     Dim i As Integer = 4  

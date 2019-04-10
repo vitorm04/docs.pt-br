@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320139"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
 Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` os membros de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite que você personalize o comportamento do modelo de aplicativo e adicionar chamadas para seus próprios métodos quando o aplicativo é inicializado e desligado.  
@@ -32,7 +32,7 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
  Se o aplicativo é um aplicativo normal (aplicativo de várias instâncias) ou a primeira instância de um aplicativo de instância única, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método executa o `Overridable` métodos na seguinte ordem:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Por padrão, esse método define os estilos visuais, estilos de exibição de texto e a entidade de segurança atual para o thread principal do aplicativo (se o aplicativo usa a autenticação do Windows) e chama `ShowSplashScreen` se nem `/nosplash` nem `-nosplash` é usado como um argumento de linha de comando.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Por padrão, esse método define os estilos visuais, estilos de exibição de texto e a entidade de segurança atual para o thread principal do aplicativo (se o aplicativo usa a autenticação do Windows) e chama `ShowSplashScreen` se nem `/nosplash` nem `-nosplash` é usado como um argumento de linha de comando.  
   
      A sequência de inicialização do aplicativo será cancelada se essa função retorna `False`. Isso pode ser útil se há circunstâncias em que o aplicativo não deve executar.  
   
@@ -46,11 +46,11 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
          Por padrão, esse método não fará nada. Se você selecionar uma tela inicial para seu aplicativo no Visual Basic **Designer de projeto**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriedade para uma nova instância do formulário de tela inicial .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornece um ponto de extensibilidade para disparar o `Startup` eventos. A sequência de inicialização do aplicativo para se essa função retorna `False`.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornece um ponto de extensibilidade para disparar o `Startup` eventos. A sequência de inicialização do aplicativo para se essa função retorna `False`.  
   
      Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> eventos. Se o manipulador de eventos define o <xref:System.ComponentModel.CancelEventArgs.Cancel> propriedade do argumento do evento para `True`, o método retorna `False` para cancelar a inicialização do aplicativo.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fornece o ponto de partida para quando o aplicativo principal está pronto para começar a ser executado, após a inicialização ser feita.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fornece o ponto de partida para quando o aplicativo principal está pronto para começar a ser executado, após a inicialização ser feita.  
   
      Por padrão, antes de entrar no loop de mensagem do Windows Forms, este método chama o `OnCreateMainForm` (para criar o formulário principal do aplicativo) e `HideSplashScreen` (para fechar a tela inicial) métodos:  
   
@@ -62,15 +62,15 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
          Por padrão, esse método fecha a tela inicial.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fornece uma maneira de personalizar como um aplicativo de instância única se comporta quando outra instância do aplicativo é iniciado.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fornece uma maneira de personalizar como um aplicativo de instância única se comporta quando outra instância do aplicativo é iniciado.  
   
      Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> eventos.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fornece um ponto de extensibilidade para disparar o `Shutdown` eventos. Esse método não será executado se ocorrer uma exceção sem tratamento no aplicativo principal.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fornece um ponto de extensibilidade para disparar o `Shutdown` eventos. Esse método não será executado se ocorrer uma exceção sem tratamento no aplicativo principal.  
   
      Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> eventos.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Executado se uma exceção não tratada ocorrer em qualquer um dos métodos listados acima.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Executado se uma exceção não tratada ocorrer em qualquer um dos métodos listados acima.  
   
      Por padrão, esse método dispara a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> evento, desde que um depurador não está anexado e o aplicativo está manuseando o `UnhandledException` eventos.  
   

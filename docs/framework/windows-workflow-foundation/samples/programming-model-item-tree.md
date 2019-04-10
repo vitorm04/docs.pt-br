@@ -2,12 +2,12 @@
 title: Árvore modelo de programação de item
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321127"
 ---
 # <a name="programming-model-item-tree"></a>Árvore modelo de programação de item
 Este exemplo demonstra como navegar o <xref:System.Activities.Presentation.Model.ModelItem> árvore usando associação declarativa de dados da exibição de árvore do Windows Presentation Foundation (WPF).
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1.  Abra a solução de Programmingmodelitemtree no Visual Studio 2010.
+1. Abra a solução de Programmingmodelitemtree no Visual Studio 2010.
 
-2.  Compile a solução selecionando **compilar solução** da **Build** menu.
+2. Compile a solução selecionando **compilar solução** da **Build** menu.
 
-3.  Pressione F5 para executar o aplicativo. O formulário de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] é exibido em seguida.
+3. Pressione F5 para executar o aplicativo. O formulário de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] é exibido em seguida.
 
-4.  Clique o **Carregando WF** botão para carregar o <xref:System.Activities.Presentation.Model.ModelItem> e associá-lo para o modo de exibição de árvore.
+4. Clique o **Carregando WF** botão para carregar o <xref:System.Activities.Presentation.Model.ModelItem> e associá-lo para o modo de exibição de árvore.
 
-5.  Clicar a **árvore de Item de modelo de alteração** botão executa o código anterior para adicionar um item na árvore e definir uma propriedade.
+5. Clicar a **árvore de Item de modelo de alteração** botão executa o código anterior para adicionar um item na árvore e definir uma propriedade.
 
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

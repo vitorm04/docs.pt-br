@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322167"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como: criar um controle associado simples em um Windows Form
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.  
@@ -20,25 +20,25 @@ Com a *associação simples*, é possível exibir um elemento de dados simples, 
   
 ### <a name="to-simple-bind-a-control"></a>Para associar de maneira simples um controle  
   
-1.  Conecte-se a uma fonte de dados. Para obter mais informações, consulte [Conectando a uma fonte de dados](../data/adonet/connecting-to-a-data-source.md).  
+1. Conecte-se a uma fonte de dados. Para obter mais informações, consulte [Conectando a uma fonte de dados](../data/adonet/connecting-to-a-data-source.md).  
   
-2.  No formulário, selecione o controle e abra exiba janela **Propriedades**.  
+2. No formulário, selecione o controle e abra exiba janela **Propriedades**.  
   
-3.  Expanda a propriedade **(DataBindings)**.  
+3. Expanda a propriedade **(DataBindings)**.  
   
      As propriedades geralmente mais associadas são exibidas sob a propriedade **(DataBindings)**. Por exemplo, na maioria dos controles, a propriedade **Text** é vinculada com mais frequência.  
   
-4.  Se a propriedade que deseja associar não for uma das propriedades comumente vinculadas, clique no botão **Elipse** (![VisualStudioEllipsesButton screenshot](./media/vbellipsesbutton.png "vbEllipsesButton")) na caixa **(Avançado)** para exibir a caixa de diálogo **Formatação e associação avançada** com uma lista completa de propriedades para esse controle.  
+4. Se a propriedade que deseja associar não for uma das propriedades comumente vinculadas, clique no botão **Elipse** (![VisualStudioEllipsesButton screenshot](./media/vbellipsesbutton.png "vbEllipsesButton")) na caixa **(Avançado)** para exibir a caixa de diálogo **Formatação e associação avançada** com uma lista completa de propriedades para esse controle.  
   
-5.  Selecione a propriedade que deseja associar e clique na seta suspensa em **Associação**.  
+5. Selecione a propriedade que deseja associar e clique na seta suspensa em **Associação**.  
   
      Uma lista de fontes de dados disponíveis é exibida.  
   
-6.  Expanda a fonte de dados a que deseja associar até encontrar o elemento de dados individual desejado. Por exemplo, se você estiver associando a um valor de coluna na tabela do conjunto de dados, expanda o nome do conjunto de dados e o nome da tabela para exibir os nomes das colunas.  
+6. Expanda a fonte de dados a que deseja associar até encontrar o elemento de dados individual desejado. Por exemplo, se você estiver associando a um valor de coluna na tabela do conjunto de dados, expanda o nome do conjunto de dados e o nome da tabela para exibir os nomes das colunas.  
   
-7.  Clique no nome de um elemento que receberá a associação.  
+7. Clique no nome de um elemento que receberá a associação.  
   
-8.  Se você estiver trabalhando na caixa de diálogo **Formatação e associação avançada**, clique em **OK** para voltar para a janela **Propriedades**.  
+8. Se você estiver trabalhando na caixa de diálogo **Formatação e associação avançada**, clique em **OK** para voltar para a janela **Propriedades**.  
   
 9. Se deseja associar propriedades adicionais do controle, repita as etapas 3 a 7.  
   

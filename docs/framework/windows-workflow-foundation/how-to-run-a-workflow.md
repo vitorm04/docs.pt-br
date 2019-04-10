@@ -1,18 +1,18 @@
 ---
-title: 'Como: Executar um fluxo de trabalho'
+title: 'Como: executar um fluxo de trabalho'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a5866bae5217b8c8ea22ba66a344b464694583ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319918"
 ---
-# <a name="how-to-run-a-workflow"></a>Como: Executar um fluxo de trabalho
+# <a name="how-to-run-a-workflow"></a>Como: executar um fluxo de trabalho
 Este tópico é uma continuação do tutorial do guia de Introdução do Windows Workflow Foundation e discute como criar um host de fluxo de trabalho e executar o fluxo de trabalho definido anteriormente na [como: Criar um fluxo de trabalho](how-to-create-a-workflow.md) tópico.
 
 > [!NOTE]
@@ -23,27 +23,27 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
   
 ### <a name="to-create-the-workflow-host-project"></a>Para criar o projeto de host de fluxo de trabalho  
   
-1.  Abra a solução do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico usando o Visual Studio 2012.  
+1. Abra a solução do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico usando o Visual Studio 2012.  
   
-2.  Com o botão direito do **WF45GettingStartedTutorial** solução em **Gerenciador de soluções** e selecione **Add**, **novo projeto**.  
+2. Com o botão direito do **WF45GettingStartedTutorial** solução em **Gerenciador de soluções** e selecione **Add**, **novo projeto**.  
   
     > [!TIP]
     >  Se o **Gerenciador de soluções** janela não for exibida, selecione **Gerenciador de soluções** do **exibição** menu.
 
-3.  No **Installed** nó, selecione **Visual c#**, **fluxo de trabalho** (ou **Visual Basic**, **fluxo de trabalho**).
+3. No **Installed** nó, selecione **Visual c#**, **fluxo de trabalho** (ou **Visual Basic**, **fluxo de trabalho**).
 
     > [!NOTE]
     >  Dependendo da linguagem de programação configurada como linguagem primária no Visual Studio, o **Visual c#** ou **Visual Basic** nó pode estar abaixo de **outros idiomas** nó de **instalado** nó.
 
      Certifique-se de que **.NET Framework 4.5** está selecionado na lista suspensa de versão do .NET Framework. Selecione **aplicativo de Console do fluxo de trabalho** da **fluxo de trabalho** lista. Tipo de `NumberGuessWorkflowHost` para o **nome** caixa e clique em **Okey**. Isso cria um aplicativo de fluxo de trabalho inicial com suporte básico de hospedagem de fluxo de trabalho. Esse código básico de hospedagem é modificado e usado para executar o aplicativo de fluxo de trabalho.
 
-4.  Clique com botão direito recém-adicionada **NumberGuessWorkflowHost** project no **Gerenciador de soluções** e selecione **Add Reference**. Selecione **solução** da **adicionar referência** lista, marque a caixa de seleção ao lado de **NumberGuessWorkflowActivities**e, em seguida, clique em **Okey** .
+4. Clique com botão direito recém-adicionada **NumberGuessWorkflowHost** project no **Gerenciador de soluções** e selecione **Add Reference**. Selecione **solução** da **adicionar referência** lista, marque a caixa de seleção ao lado de **NumberGuessWorkflowActivities**e, em seguida, clique em **Okey** .
 
-5.  Clique com botão direito **Workflow1.xaml** na **Gerenciador de soluções** e escolha **excluir**. Clique em **Okey** para confirmar.
+5. Clique com botão direito **Workflow1.xaml** na **Gerenciador de soluções** e escolha **excluir**. Clique em **Okey** para confirmar.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>Para modificar o código de hospedagem do fluxo de trabalho
 
-1.  Clique duas vezes em **Program.cs** ou **Module1.vb** na **Gerenciador de soluções** para exibir o código.
+1. Clique duas vezes em **Program.cs** ou **Module1.vb** na **Gerenciador de soluções** para exibir o código.
 
     > [!TIP]
     >  Se o **Gerenciador de soluções** janela não for exibida, selecione **Gerenciador de soluções** do **exibição** menu.
@@ -62,7 +62,7 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Esse código de hospedagem gerado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado somente para os fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> fornece um modelo mais avançado para executar fluxos de trabalho que incluem a notificação de eventos de ciclo de vida, o controle de execução, o reinício do indicador e a persistência. Este exemplo usa indicadores e o <xref:System.Activities.WorkflowApplication> é usado para hospedar o fluxo de trabalho. Adicione o seguinte `using` ou **Imports** instrução na parte superior da **Program.cs** ou **Module1.vb** abaixo das **usando** ou **importações** instruções.
+     Esse código de hospedagem gerado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> Fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado apenas para fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> Fornece um modelo mais rico para executar fluxos de trabalho que inclui a notificação de eventos de ciclo de vida, controle de execução, retomada do indicador e persistência. Este exemplo usa indicadores e o <xref:System.Activities.WorkflowApplication> é usado para hospedar o fluxo de trabalho. Adicione o seguinte `using` ou **Imports** instrução na parte superior da **Program.cs** ou **Module1.vb** abaixo das **usando** ou **importações** instruções.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -86,12 +86,12 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
 
 ### <a name="to-set-input-arguments-of-a-workflow"></a>Para definir argumentos de entrada de um fluxo de trabalho
 
-1.  Adicione a seguinte instrução na parte superior da **Program.cs** ou **Module1.vb** abaixo das `using` ou `Imports` instruções.
+1. Adicione a seguinte instrução na parte superior da **Program.cs** ou **Module1.vb** abaixo das `using` ou `Imports` instruções.
 
      [!code-csharp[CFX_WF_GettingStarted#5](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#5)]
      [!code-vb[CFX_WF_GettingStarted#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#5)]
 
-2.  Substitua a linha de código que cria uma nova <xref:System.Activities.WorkflowApplication> pelo código a seguir que cria e passa um dicionário dos parâmetros para o fluxo de trabalho quando ele é criado.
+2. Substitua a linha de código que cria uma nova <xref:System.Activities.WorkflowApplication> pelo código a seguir que cria e passa um dicionário dos parâmetros para o fluxo de trabalho quando ele é criado.
 
     > [!NOTE]
     >  Substitua `Workflow1` nesses exemplos com `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, ou `StateMachineNumberGuessWorkflow`, dependendo de qual fluxo de trabalho concluída anteriormente na [como: Criar um fluxo de trabalho](how-to-create-a-workflow.md) etapa. Se você não substituir `Workflow1`, receberá erros de compilação quando tentar criar ou executar o fluxo de trabalho.
@@ -103,19 +103,19 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Para recuperar argumentos de saída de um fluxo de trabalho
 
-1.  Modifique o manipulador <xref:System.Activities.WorkflowApplication.Completed%2A> para recuperar e exibir o número de sequências usadas pelo fluxo de trabalho.
+1. Modifique o manipulador <xref:System.Activities.WorkflowApplication.Completed%2A> para recuperar e exibir o número de sequências usadas pelo fluxo de trabalho.
 
      [!code-csharp[CFX_WF_GettingStarted#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#7)]
      [!code-vb[CFX_WF_GettingStarted#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#7)]
 
 ### <a name="to-resume-a-bookmark"></a>Para retomar um indicador
 
-1.  Adicione o código a seguir na parte superior do método `Main` imediatamente após a instrução <xref:System.Threading.AutoResetEvent> existente.
+1. Adicione o código a seguir na parte superior do método `Main` imediatamente após a instrução <xref:System.Threading.AutoResetEvent> existente.
 
      [!code-csharp[CFX_WF_GettingStarted#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#8)]
      [!code-vb[CFX_WF_GettingStarted#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#8)]
 
-2.  Adicione o manipulador <xref:System.Activities.WorkflowApplication.Idle%2A> a seguir abaixo dos manipuladores existentes do ciclo de vida de fluxo de trabalho em `Main`.
+2. Adicione o manipulador <xref:System.Activities.WorkflowApplication.Idle%2A> a seguir abaixo dos manipuladores existentes do ciclo de vida de fluxo de trabalho em `Main`.
 
      [!code-csharp[CFX_WF_GettingStarted#9](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]
@@ -125,7 +125,7 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
     > [!NOTE]
     >  Neste exemplo, o aplicativo host usa eventos de redefinição automática nos manipuladores <xref:System.Activities.WorkflowApplication.Completed%2A> e de <xref:System.Activities.WorkflowApplication.Idle%2A> para sincronizar o aplicativo host com o progresso do fluxo de trabalho. Não é necessário bloquear e esperar que o fluxo de trabalho fique inativo antes de retomar um indicador, mas, nesse exemplo, os eventos de sincronização são necessários para que o host saiba se o fluxo de trabalho está concluído ou se está aguardando mais entrada do usuário usando o <xref:System.Activities.Bookmark>. Para obter mais informações, consulte [indicadores](bookmarks.md).
 
-3.  Remova a chamada para `WaitOne` e substitua-a pelo código para coletar entrada do usuário e retomar o <xref:System.Activities.Bookmark>.
+3. Remova a chamada para `WaitOne` e substitua-a pelo código para coletar entrada do usuário e retomar o <xref:System.Activities.Bookmark>.
 
      Remova a seguinte linha de código.
 
@@ -139,9 +139,9 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
 
 ## <a name="BKMK_ToRunTheApplication"></a> Para compilar e executar o aplicativo
 
-1.  Clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e selecione **Set as StartUp Project**.
+1. Clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e selecione **Set as StartUp Project**.
 
-2.  Pressione CTRL+F5 para compilar e executar o aplicativo. Tente determinar o número no menor número de sequências possível.
+2. Pressione CTRL+F5 para compilar e executar o aplicativo. Tente determinar o número no menor número de sequências possível.
 
      Para testar o aplicativo com um dos outros estilos de fluxo de trabalho, substitua `Workflow1` no código que cria o <xref:System.Activities.WorkflowApplication> por `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow` ou `StateMachineNumberGuessWorkflow`, dependendo de qual estilo de fluxo de trabalho você deseja.
 
@@ -164,8 +164,8 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Programação do Windows Workflow Foundation](programming.md)
-- [Tutorial de Introdução](getting-started-tutorial.md)
-- [Como: Criar um fluxo de trabalho](how-to-create-a-workflow.md)
-- [Como: Criar e executar uma longa em execução de fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md)
-- [Esperando entrada em um fluxo de trabalho](waiting-for-input-in-a-workflow.md)
+- [Guia de introdução ao tutorial](getting-started-tutorial.md)
+- [Como: criar um fluxo de trabalho](how-to-create-a-workflow.md)
+- [Como: criar e executar um fluxo de trabalho de execução prolongada](how-to-create-and-run-a-long-running-workflow.md)
+- [Entrada de espera em um fluxo de trabalho](waiting-for-input-in-a-workflow.md)
 - [Hospedando fluxos de trabalho](hosting-workflows.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320381"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Como: Criar um procedimento (Visual Basic)
 Você coloca um procedimento entre uma declaração inicial (`Sub` ou `Function`) e uma declaração final (`End Sub` ou `End Function`). Todo o código do procedimento fica entre essas instruções.  
@@ -24,29 +24,29 @@ Você coloca um procedimento entre uma declaração inicial (`Sub` ou `Function`
   
 ### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Para criar um procedimento que não retorna um valor  
   
-1.  Fora de qualquer outro procedimento, utilize uma `Sub` instrução, seguida por um `End Sub` instrução.  
+1. Fora de qualquer outro procedimento, utilize uma `Sub` instrução, seguida por um `End Sub` instrução.  
   
-2.  No `Sub` instrução, siga o `Sub` palavra-chave com o nome do procedimento, em seguida, a lista de parâmetros entre parênteses.  
+2. No `Sub` instrução, siga o `Sub` palavra-chave com o nome do procedimento, em seguida, a lista de parâmetros entre parênteses.  
   
-3.  Colocar instruções de código do procedimento entre o `Sub` e `End Sub` instruções.  
+3. Colocar instruções de código do procedimento entre o `Sub` e `End Sub` instruções.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Para criar um procedimento que retorna um valor  
   
-1.  Fora de qualquer outro procedimento, utilize uma `Function` instrução, seguida por um `End Function` instrução.  
+1. Fora de qualquer outro procedimento, utilize uma `Function` instrução, seguida por um `End Function` instrução.  
   
-2.  No `Function` instrução, siga as `Function` palavra-chave com o nome do procedimento, em seguida, a lista de parâmetros entre parênteses e, em seguida, um `As` cláusula especificando o tipo de dados do valor de retorno.  
+2. No `Function` instrução, siga as `Function` palavra-chave com o nome do procedimento, em seguida, a lista de parâmetros entre parênteses e, em seguida, um `As` cláusula especificando o tipo de dados do valor de retorno.  
   
-3.  Colocar instruções de código do procedimento entre o `Function` e `End Function` instruções.  
+3. Colocar instruções de código do procedimento entre o `Function` e `End Function` instruções.  
   
-4.  Use um `Return` instrução para retornar o valor para o código de chamada.  
+4. Use um `Return` instrução para retornar o valor para o código de chamada.  
   
 ### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Para conectar-se o seu novo procedimento com os blocos antigos e repetitivos de código  
   
-1.  Certifique-se de que definir o novo procedimento em um local em que o código antigo tem acesso a ele.  
+1. Certifique-se de que definir o novo procedimento em um local em que o código antigo tem acesso a ele.  
   
-2.  No seu bloco de código repetitivo antigo, substitua as instruções que executam as tarefas repetitivas com uma única instrução que chama o `Sub` ou `Function` procedimento.  
+2. No seu bloco de código repetitivo antigo, substitua as instruções que executam as tarefas repetitivas com uma única instrução que chama o `Sub` ou `Function` procedimento.  
   
-3.  Se seu procedimento é um `Function` que retorna um valor, certifique-se de que sua instrução de chamada executa uma ação com o valor retornado, como armazená-los em uma variável, ou então o valor será perdido.  
+3. Se seu procedimento é um `Function` que retorna um valor, certifique-se de que sua instrução de chamada executa uma ação com o valor retornado, como armazená-los em uma variável, ou então o valor será perdido.  
   
 ## <a name="example"></a>Exemplo  
  O seguinte `Function` procedimento calcula o lado mais longo, ou hipotenusa de um triângulo, considerando os valores para os dois lados.  
@@ -59,9 +59,9 @@ Você coloca um procedimento entre uma declaração inicial (`Sub` ou `Function`
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Procedimentos de Operador](./operator-procedures.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Procedimentos Recursivos](./recursive-procedures.md)
-- [Sobrecarga de Procedimento](./procedure-overloading.md)
-- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Procedimentos do operador](./operator-procedures.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Procedimentos recursivos](./recursive-procedures.md)
+- [Sobrecarga de procedimento](./procedure-overloading.md)
+- [Objetos e classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)

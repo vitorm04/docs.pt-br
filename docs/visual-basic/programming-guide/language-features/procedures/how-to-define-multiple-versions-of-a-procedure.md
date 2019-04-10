@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324026"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Como: Definir várias versões de um procedimento (Visual Basic)
 Você pode definir um procedimento em várias versões por *sobrecarga* -lo, usando o mesmo nome mas uma lista de parâmetros diferentes para cada versão. O objetivo de sobrecarga é definir várias versões intimamente relacionadas de um procedimento sem a necessidade para diferenciá-los por nome.  
@@ -22,13 +22,13 @@ Você pode definir um procedimento em várias versões por *sobrecarga* -lo, usa
   
 ### <a name="to-define-multiple-versions-of-a-procedure"></a>Para definir várias versões de um procedimento  
   
-1.  Gravar uma `Sub` ou `Function` instrução de declaração para cada versão do procedimento que você deseja definir. Use o mesmo nome do procedimento em cada declaração.  
+1. Gravar uma `Sub` ou `Function` instrução de declaração para cada versão do procedimento que você deseja definir. Use o mesmo nome do procedimento em cada declaração.  
   
-2.  Preceda a `Sub` ou `Function` palavra-chave em cada declaração com o [sobrecarrega](../../../../visual-basic/language-reference/modifiers/overloads.md) palavra-chave. Opcionalmente, você pode omitir `Overloads` em declarações, mas se você incluí-lo em qualquer uma das declarações, você deve incluí-lo em cada declaração.  
+2. Preceda a `Sub` ou `Function` palavra-chave em cada declaração com o [sobrecarrega](../../../../visual-basic/language-reference/modifiers/overloads.md) palavra-chave. Opcionalmente, você pode omitir `Overloads` em declarações, mas se você incluí-lo em qualquer uma das declarações, você deve incluí-lo em cada declaração.  
   
-3.  Após cada instrução de declaração, escreva um código de procedimento para manipular o caso específico em que o código de chamada fornece argumentos correspondentes a lista de parâmetros desta versão. Você não precisa testar para quais parâmetros o código de chamada forneceu. Visual Basic passa o controle para a versão correspondente do seu procedimento.  
+3. Após cada instrução de declaração, escreva um código de procedimento para manipular o caso específico em que o código de chamada fornece argumentos correspondentes a lista de parâmetros desta versão. Você não precisa testar para quais parâmetros o código de chamada forneceu. Visual Basic passa o controle para a versão correspondente do seu procedimento.  
   
-4.  Cada versão do procedimento com o `End Sub` ou `End Function` instrução conforme apropriado.  
+4. Cada versão do procedimento com o `End Sub` ou `End Function` instrução conforme apropriado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir define uma `Sub` procedimento para lançar uma transação em relação ao saldo do cliente. Ele usa o `Overloads` palavra-chave para definir duas versões do procedimento, uma que aceita o cliente por nome e a outra pelo número de conta.  
@@ -45,9 +45,9 @@ Você pode definir um procedimento em várias versões por *sobrecarga* -lo, usa
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos](./index.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
-- [Como: Sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considerações sobre Procedimentos de Sobrecarga](./considerations-in-overloading-procedures.md)
-- [Resolução de Sobrecarga](./overload-resolution.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Solução de problemas de procedimentos](./troubleshooting-procedures.md)
+- [Como: sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Como: sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md)
+- [Resolução de sobrecarga](./overload-resolution.md)

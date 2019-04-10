@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320919"
 ---
 # <a name="using-sessions"></a>Utilizando sessões
 Em aplicativos do Windows Communication Foundation (WCF), uma *sessão* correlaciona a um grupo de mensagens em uma conversa. As sessões WCF são diferentes do objeto de sessão disponível no [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativos, dar suporte a comportamentos diferentes e são controlados de maneiras diferentes. Este tópico descreve os recursos que permitem que as sessões no WCF aplicativos e como usá-los.  
@@ -53,9 +53,9 @@ Em aplicativos do Windows Communication Foundation (WCF), uma *sessão* correlac
   
  Quando um serviço WCF aceita uma sessão de cliente, os seguintes recursos são habilitados por padrão:  
   
-1.  Todas as chamadas entre um objeto de cliente do WCF são manipuladas pela mesma instância de serviço.  
+1. Todas as chamadas entre um objeto de cliente do WCF são manipuladas pela mesma instância de serviço.  
   
-2.  Associações diferentes com base em sessão fornecem recursos adicionais.  
+2. Associações diferentes com base em sessão fornecem recursos adicionais.  
   
 ## <a name="system-provided-session-types"></a>Tipos de sessão fornecido pelo sistema  
  Uma associação baseada em sessão oferece suporte a associação de padrão de uma instância de serviço com uma determinada sessão. No entanto, ligações diferentes com base em sessão de suportam a recursos diferentes, além de habilitar o controle de instanciação baseadas em sessão descrito anteriormente.  

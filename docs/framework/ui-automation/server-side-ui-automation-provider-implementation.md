@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320041"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementação do provedor de automação de interface do usuário no lado do servidor
 > [!NOTE]
@@ -148,13 +148,13 @@ ms.locfileid: "59077284"
   
  Para reassociar uma janela pop-up:  
   
-1.  Crie um provedor para a janela pop-up. Isso requer que a classe da janela pop-up é conhecida de antemão.  
+1. Crie um provedor para a janela pop-up. Isso requer que a classe da janela pop-up é conhecida de antemão.  
   
-2.  Implemente todas as propriedades e padrões como de costume para essa janela pop-up, como se fosse um controle em si mesmo.  
+2. Implemente todas as propriedades e padrões como de costume para essa janela pop-up, como se fosse um controle em si mesmo.  
   
-3.  Implemente a <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> propriedade para que ele retorne o valor obtido de <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, onde o parâmetro é o identificador de janela da janela pop-up.  
+3. Implemente a <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> propriedade para que ele retorne o valor obtido de <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, onde o parâmetro é o identificador de janela da janela pop-up.  
   
-4.  Implemente <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> para a janela pop-up e seu pai para que a navegação é tratada corretamente do pai lógico para os filhos lógicos e entre irmãos.  
+4. Implemente <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> para a janela pop-up e seu pai para que a navegação é tratada corretamente do pai lógico para os filhos lógicos e entre irmãos.  
   
  Quando [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] encontrar uma janela pop-up, ele reconhece que a navegação está sendo substituída do padrão e pula a janela pop-up quando ele é encontrado como um filho da área de trabalho. Em vez disso, o nó será alcançável através do fragmento.  
   

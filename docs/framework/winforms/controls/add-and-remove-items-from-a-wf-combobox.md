@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322726"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como: Adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms
 Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa de listagem ou caixa de listagem marcada de várias maneiras, porque esses controles podem ser vinculados a uma variedade de fontes de dados. No entanto, este tópico demonstra o método mais simples e não requer nenhuma vinculação de dados. Normalmente, os itens exibidos são cadeias de caracteres; No entanto, qualquer objeto pode ser usado. O texto que é exibido no controle é o valor retornado pelo objeto de `ToString` método.  
   
 ### <a name="to-add-items"></a>Para adicionar Itens  
   
-1.  Adicione a cadeia de caracteres ou objeto à lista usando o método `Add` da classe `ObjectCollection`. A coleção é referenciada usando a `Items` propriedade:  
+1. Adicione a cadeia de caracteres ou objeto à lista usando o método `Add` da classe `ObjectCollection`. A coleção é referenciada usando a `Items` propriedade:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa
   
      - ou –  
   
-2.  Insira a cadeia de caracteres ou o objeto no ponto desejado na lista com o `Insert` método:  
+2. Insira a cadeia de caracteres ou o objeto no ponto desejado na lista com o `Insert` método:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa
   
      - ou –  
   
-3.  Atribuir uma matriz inteira para o `Items` coleção:  
+3. Atribuir uma matriz inteira para o `Items` coleção:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa
   
 ### <a name="to-remove-an-item"></a>Para remover um item  
   
-1.  Chame o `Remove` ou `RemoveAt` método para excluir itens.  
+1. Chame o `Remove` ou `RemoveAt` método para excluir itens.  
   
      `Remove` tem um argumento que especifica o item a ser removido.`RemoveAt` remove o item com o número de índice especificado.  
   
@@ -122,7 +122,7 @@ Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa
   
 ### <a name="to-remove-all-items"></a>Para remover todos os itens  
   
-1.  Chame o método `Clear` para remover todos os itens da coleção:  
+1. Chame o método `Clear` para remover todos os itens da coleção:  
   
     ```vb  
     ListBox1.Items.Clear()  

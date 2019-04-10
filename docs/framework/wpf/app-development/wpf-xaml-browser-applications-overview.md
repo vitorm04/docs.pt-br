@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320126"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194806"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Depurando XBAPs que usam HostScript  
  Se seu XBAP usa o <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> objeto para se comunicar com a janela do HTML, há duas configurações que você deve especificar para executar e depurar o aplicativo no Visual Studio. O aplicativo deve ter acesso ao seu site de origem e você deve iniciar o aplicativo com a página HTML que contém o XBAP. As etapas a seguir descrevem como verificar essas duas configurações:  
   
-1.  No Visual Studio, abra as propriedades do projeto.  
+1. No Visual Studio, abra as propriedades do projeto.  
   
-2.  Na guia **Segurança**, clique em **Avançada**.  
+2. Na guia **Segurança**, clique em **Avançada**.  
   
      A caixa de diálogo Configurações Avançadas de Segurança é exibida.  
   
-3.  Verifique se a caixa de seleção **Conceder ao aplicativo acesso ao site de origem** está marcada e, em seguida, clique em **OK**.  
+3. Verifique se a caixa de seleção **Conceder ao aplicativo acesso ao site de origem** está marcada e, em seguida, clique em **OK**.  
   
-4.  Na guia **Depurar**, selecione a opção **Iniciar Navegador com URL** e especifique a URL da página HTML que contém o XBAP.  
+4. Na guia **Depurar**, selecione a opção **Iniciar Navegador com URL** e especifique a URL da página HTML que contém o XBAP.  
   
-5.  No Internet Explorer, clique no botão **Ferramentas** e, em seguida, selecione **Opções da Internet**.  
+5. No Internet Explorer, clique no botão **Ferramentas** e, em seguida, selecione **Opções da Internet**.  
   
      É exibida a caixa de diálogo Opções da Internet.  
   
-6.  Clique na aba **Avançado**.  
+6. Clique na aba **Avançado**.  
   
-7.  Na lista **Configurações** em **Segurança**, marque a caixa de seleção **Permitir que o conteúdo ativo seja executado em arquivos no Meu Computador**.  
+7. Na lista **Configurações** em **Segurança**, marque a caixa de seleção **Permitir que o conteúdo ativo seja executado em arquivos no Meu Computador**.  
   
-8.  Clique em **OK**.  
+8. Clique em **OK**.  
   
      As alterações entrarão em vigor depois que você reiniciar o Internet Explorer.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194806"
 ### <a name="creating-a-full-trust-xbap"></a>Criando um XBAP de confiança total  
  Se seu XBAP requer confiança total, você pode alterar seu projeto para habilitar essa permissão. As etapas a seguir descrevem como habilitar a confiança total:  
   
-1.  No Visual Studio, abra as propriedades do projeto.  
+1. No Visual Studio, abra as propriedades do projeto.  
   
-2.  Na guia **Segurança**, selecione a opção **Este é um aplicativo de confiança total**.  
+2. Na guia **Segurança**, selecione a opção **Este é um aplicativo de confiança total**.  
   
  Essa configuração faz as seguintes alterações:  
   

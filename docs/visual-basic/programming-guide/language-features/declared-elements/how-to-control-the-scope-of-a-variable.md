@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324312"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Como: Controlar o escopo de uma variável (Visual Basic)
 Normalmente, uma variável está no *escopo*, ou visível para referência, em toda a região na qual você declará-la. Em alguns casos, a variável *nível de acesso* podem influenciar seu escopo.  
@@ -43,19 +43,19 @@ Normalmente, uma variável está no *escopo*, ou visível para referência, em t
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Para tornar uma variável visível em um módulo, classe ou estrutura  
   
-1.  Coloque o `Dim` instrução para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. Coloque o `Dim` instrução para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [privados](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave no `Dim` instrução.  
+2. Incluir o [privados](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave no `Dim` instrução.  
   
-3.  Você pode fazer referência à variável de qualquer lugar dentro do módulo, classe ou estrutura, mas não de fora dela.  
+3. Você pode fazer referência à variável de qualquer lugar dentro do módulo, classe ou estrutura, mas não de fora dela.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Para tornar uma variável visível em um namespace  
   
-1.  Coloque o `Dim` instrução para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. Coloque o `Dim` instrução para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [amigo](../../../../visual-basic/language-reference/modifiers/friend.md) ou [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave no `Dim` instrução.  
+2. Incluir o [amigo](../../../../visual-basic/language-reference/modifiers/friend.md) ou [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave no `Dim` instrução.  
   
-3.  Você pode fazer referência à variável de qualquer lugar dentro do namespace que contém o módulo, classe ou estrutura.  
+3. Você pode fazer referência à variável de qualquer lugar dentro do namespace que contém o módulo, classe ou estrutura.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir declara uma variável no nível de módulo e limita sua visibilidade ao código dentro do módulo.  
@@ -92,5 +92,5 @@ Public strMsg As String
 - [Tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Declaração de variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

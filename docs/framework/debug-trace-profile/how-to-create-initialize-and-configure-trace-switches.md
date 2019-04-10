@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325703"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: criar, inicializar e configurar opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento.  
@@ -31,9 +31,9 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Para criar e inicializar uma opção de rastreamento  
   
-1.  Defina uma opção como o tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> ou o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e defina o nome e a descrição da opção.  
+1. Defina uma opção como o tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> ou o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e defina o nome e a descrição da opção.  
   
-2.  Configure a opção de rastreamento. Para obter mais informações, consulte [Configurando opções de rastreamento](#configure).  
+2. Configure a opção de rastreamento. Para obter mais informações, consulte [Configurando opções de rastreamento](#configure).  
   
      O código a seguir cria duas opções, uma de cada tipo:  
   
@@ -71,9 +71,9 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 #### <a name="to-configure-trace-switches"></a>Para configurar opções de rastreamento  
   
-1.  Para usar opções de rastreamento, primeiro você deve criá-las e colocá-las no código, conforme descrito na seção [Criando e inicializando uma opção de rastreamento](#create).  
+1. Para usar opções de rastreamento, primeiro você deve criá-las e colocá-las no código, conforme descrito na seção [Criando e inicializando uma opção de rastreamento](#create).  
   
-2.  Se o projeto não contiver um arquivo de configuração (app.config ou Web.config), no menu **Projeto**, selecione **Adicionar Novo Item**.  
+2. Se o projeto não contiver um arquivo de configuração (app.config ou Web.config), no menu **Projeto**, selecione **Adicionar Novo Item**.  
   
     -   **Visual Basic:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo de configuração de aplicativo**.  
   
@@ -88,7 +88,7 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
          Quando o projeto é compilado, o arquivo app.config é copiado para a pasta de saída do projeto e é renomeado *applicationname*.exe.config.  
   
-3.  Após a marcação `<configuration>`, mas antes da marcação `</configuration>`, adicione o XML apropriado para configurar as opções. Os exemplos a seguir demonstram uma **BooleanSwitch** com uma propriedade **DisplayName** `DataMessageSwitch` e uma **TraceSwitch** com uma propriedade **DisplayName** igual a `TraceLevelSwitch`.  
+3. Após a marcação `<configuration>`, mas antes da marcação `</configuration>`, adicione o XML apropriado para configurar as opções. Os exemplos a seguir demonstram uma **BooleanSwitch** com uma propriedade **DisplayName** `DataMessageSwitch` e uma **TraceSwitch** com uma propriedade **DisplayName** igual a `TraceLevelSwitch`.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
      Nessa configuração, ambas as opções estão desativadas.  
   
-4.  Se precisar ativar uma **BooleanSwitch**, como `DataMessagesSwitch` mostrado no exemplo anterior, altere o **Value** para qualquer inteiro diferente de 0.  
+4. Se precisar ativar uma **BooleanSwitch**, como `DataMessagesSwitch` mostrado no exemplo anterior, altere o **Value** para qualquer inteiro diferente de 0.  
   
-5.  Se precisar ativar uma **TraceSwitch**, como `TraceLevelSwitch` mostrado no exemplo anterior, altere o **Value** para a configuração de nível apropriada (1 a 4).  
+5. Se precisar ativar uma **TraceSwitch**, como `TraceLevelSwitch` mostrado no exemplo anterior, altere o **Value** para a configuração de nível apropriada (1 a 4).  
   
-6.  Adicione comentários ao arquivo .config, de modo que o usuário final tenha uma compreensão clara dos valores que devem ser alterados para configurar as opções de forma adequada.  
+6. Adicione comentários ao arquivo .config, de modo que o usuário final tenha uma compreensão clara dos valores que devem ser alterados para configurar as opções de forma adequada.  
   
      O seguinte exemplo mostra a possível aparência do código final, incluindo comentários:  
   

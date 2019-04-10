@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b0773b4c41b77fe43a5b7fba994778ae18c16c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325001"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Como: Personalizar células e colunas no controle DataGridView do Windows Forms estendendo o comportamento e a aparência
 O <xref:System.Windows.Forms.DataGridView> controle fornece várias maneiras de personalizar sua aparência e comportamento usando propriedades, eventos e classe complementares. Ocasionalmente, você pode ter requisitos para as suas células que ultrapassem o que esses recursos podem fornecer. Você pode criar seu próprio <xref:System.Windows.Forms.DataGridViewCell> classe para fornecer funcionalidade estendida.  
@@ -35,24 +35,24 @@ O <xref:System.Windows.Forms.DataGridView> controle fornece várias maneiras de 
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>Para personalizar células e colunas no controle DataGridView  
   
-1.  Derivar uma nova classe de célula, chamada `DataGridViewRolloverCell`, da <xref:System.Windows.Forms.DataGridViewTextBoxCell> tipo.  
+1. Derivar uma nova classe de célula, chamada `DataGridViewRolloverCell`, da <xref:System.Windows.Forms.DataGridViewTextBoxCell> tipo.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2.  Substituir a <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> método no `DataGridViewRolloverCell` classe. Em uma substituição, primeiro chame a implementação da classe base, que lida com a funcionalidade de caixa de texto hospedada. Em seguida, use o controle <xref:System.Windows.Forms.Control.PointToClient%2A> método para transformar a posição do cursor (nas coordenadas de tela) para o <xref:System.Windows.Forms.DataGridView> coordenadas da área de cliente. Se as coordenadas do mouse estiverem dentro dos limites da célula, desenhe o retângulo em baixo-relevo.  
+2. Substituir a <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> método no `DataGridViewRolloverCell` classe. Em uma substituição, primeiro chame a implementação da classe base, que lida com a funcionalidade de caixa de texto hospedada. Em seguida, use o controle <xref:System.Windows.Forms.Control.PointToClient%2A> método para transformar a posição do cursor (nas coordenadas de tela) para o <xref:System.Windows.Forms.DataGridView> coordenadas da área de cliente. Se as coordenadas do mouse estiverem dentro dos limites da célula, desenhe o retângulo em baixo-relevo.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3.  Substituir a <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> e <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> métodos no `DataGridViewRolloverCell` classe para forçar as células a repintarem a próprias quando o ponteiro do mouse entra ou sair delas.  
+3. Substituir a <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> e <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> métodos no `DataGridViewRolloverCell` classe para forçar as células a repintarem a próprias quando o ponteiro do mouse entra ou sair delas.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4.  Derivar uma nova classe chamada `DataGridViewRolloverCellColumn`, da <xref:System.Windows.Forms.DataGridViewColumn> tipo. No construtor, atribuir um novo `DataGridViewRolloverCell` o objeto para a sua <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> propriedade.  
+4. Derivar uma nova classe chamada `DataGridViewRolloverCellColumn`, da <xref:System.Windows.Forms.DataGridViewColumn> tipo. No construtor, atribuir um novo `DataGridViewRolloverCell` o objeto para a sua <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> propriedade.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  

@@ -2,27 +2,27 @@
 title: Usando extensões de atividade
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 420bd25a94f67169d299bbac64dae06e15c5b0b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321283"
 ---
 # <a name="using-activity-extensions"></a>Usando extensões de atividade
 As atividades podem interagir com as extensões do aplicativo de fluxo de trabalho que permitem que o host fornece funcionalidade adicional que não é modelada explicitamente no fluxo de trabalho.  Este tópico descreve como criar e usar uma extensão para contar o número de vezes que a atividade é executado.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>Para usar uma extensão de atividade para contar executa
 
-1.  Abra o Visual Studio 2010. Selecione **novos**, **projeto**. Sob o **Visual c#** nó, selecione **fluxo de trabalho**.  Selecione **aplicativo de Console do fluxo de trabalho** da lista de modelos. Nomeie o projeto `Extensions`. Clique em **OK** para criar o projeto.
+1. Abra o Visual Studio 2010. Selecione **novos**, **projeto**. Sob o **Visual c#** nó, selecione **fluxo de trabalho**.  Selecione **aplicativo de Console do fluxo de trabalho** da lista de modelos. Nomeie o projeto `Extensions`. Clique em **OK** para criar o projeto.
 
-2.  Adicionar um `using` instrução no arquivo Program.cs para o **Collections** namespace.
+2. Adicionar um `using` instrução no arquivo Program.cs para o **Collections** namespace.
 
     ```
     using System.Collections.Generic;
     ```
 
-3.  No arquivo Program.cs, crie uma nova classe chamada **ExecutionCountExtension**. O código a seguir cria uma extensão de fluxo de trabalho que controla IDs de instância quando seu **registrar** método é chamado.
+3. No arquivo Program.cs, crie uma nova classe chamada **ExecutionCountExtension**. O código a seguir cria uma extensão de fluxo de trabalho que controla IDs de instância quando seu **registrar** método é chamado.
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ As atividades podem interagir com as extensões do aplicativo de fluxo de trabal
     }
     ```
 
-4.  Criar uma atividade que consome os **ExecutionCountExtension**. O código a seguir define uma atividade que recupera o **ExecutionCountExtension** objeto de tempo de execução e chama seu **registrar** método quando a atividade é executada.
+4. Criar uma atividade que consome os **ExecutionCountExtension**. O código a seguir define uma atividade que recupera o **ExecutionCountExtension** objeto de tempo de execução e chama seu **registrar** método quando a atividade é executada.
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ As atividades podem interagir com as extensões do aplicativo de fluxo de trabal
     }
     ```
 
-5.  Implementar a atividade na **Main** método do arquivo program.cs. O código a seguir contém métodos para gerar dois fluxos de trabalho diferentes, para executar cada fluxo de trabalho várias vezes, e exibir os dados resultante que estão contidos na extensão.
+5. Implementar a atividade na **Main** método do arquivo program.cs. O código a seguir contém métodos para gerar dois fluxos de trabalho diferentes, para executar cada fluxo de trabalho várias vezes, e exibir os dados resultante que estão contidos na extensão.
 
     ```
     class Program

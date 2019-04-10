@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324520"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como: Acessar itens específicos em um controle ComboBox, ListBox ou CheckedListBox do Windows Forms
 Acessar itens específicos em uma caixa de combinação de Windows Forms, caixa de listagem ou caixa de listagem marcada é uma tarefa essencial. Ele permite que você determine programaticamente o que está em uma lista, em qualquer posição determinada.  
   
 ### <a name="to-access-a-specific-item"></a>Para acessar um item específico  
   
-1.  Consulta o `Items` coleção usando o índice do item específico:  
+1. Consulta o `Items` coleção usando o índice do item específico:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

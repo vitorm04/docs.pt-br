@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323142"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Usando associações para configurar serviços e clientes
 Associações são objetos que especificam os detalhes de comunicação necessários para se conectar a um ponto de extremidade. Mais especificamente, as associações contêm informações de configuração que são usadas para criar o tempo de execução do cliente ou serviço, definindo as especificidades de transportes, formatos de transmissão (codificação de mensagens) e de protocolo para o canal de cliente ou de ponto de extremidade do respectivo. Para criar um serviço Windows Communication Foundation (WCF) ativo, cada ponto de extremidade no serviço requer uma associação. Este tópico explica o que são associações, como elas são definidas e como uma ligação específica é especificada para um ponto de extremidade.  
@@ -45,9 +45,9 @@ Associações são objetos que especificam os detalhes de comunicação necessá
 ## <a name="using-bindings"></a>Usando associações  
  Usando associações envolve duas etapas básicas:  
   
-1.  Selecione ou defina uma associação. É o método mais fácil escolher uma das associações fornecidas pelo sistema e usar as configurações padrão. Também pode escolher uma associação fornecida pelo sistema e de redefinição de seus valores de propriedade para atender às suas necessidades. Como alternativa, você pode criar uma ligação personalizada e definir todas as propriedades conforme necessário.  
+1. Selecione ou defina uma associação. É o método mais fácil escolher uma das associações fornecidas pelo sistema e usar as configurações padrão. Também pode escolher uma associação fornecida pelo sistema e de redefinição de seus valores de propriedade para atender às suas necessidades. Como alternativa, você pode criar uma ligação personalizada e definir todas as propriedades conforme necessário.  
   
-2.  Crie um ponto de extremidade que usa essa associação.  
+2. Crie um ponto de extremidade que usa essa associação.  
   
 ## <a name="code-and-configuration"></a>Configuração e código  
  Você pode definir ou configurar as associações por meio de código ou na configuração. Essas duas abordagens são independentes do tipo de associação usado, por exemplo, se você estiver usando um fornecido pelo sistema ou uma <xref:System.ServiceModel.Channels.CustomBinding> associação. Em geral, usando código lhe dá controle total sobre a definição de uma associação ao compilar. Por outro lado, usando a configuração, permite que um administrador do sistema ou o usuário de um serviço WCF ou o cliente para alterar os parâmetros de associações. Essa flexibilidade geralmente é desejável porque não há nenhuma maneira de prever os requisitos de máquina específica e as condições em que um aplicativo WCF deve ser implantada da rede. Separar as informações de associação (e endereçamento) do código permite que os administradores alterem os detalhes de associação sem ter que recompilar ou reimplantar o aplicativo. Observe que, se a associação é definida no código, ele substitui quaisquer definições de configuração feitas no arquivo de configuração. Para obter exemplos dessas abordagens, consulte os tópicos a seguir:  

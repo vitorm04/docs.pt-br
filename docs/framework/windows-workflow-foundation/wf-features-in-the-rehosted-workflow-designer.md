@@ -2,12 +2,12 @@
 title: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324156"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos novos recursos, incluindo vários aprimoramentos à experiência de designer do fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
@@ -124,13 +124,13 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
 ### <a name="state-machine-workflows"></a>Fluxo de trabalho de máquina de estado  
  Fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. As atualizações incluem:  
   
-1.  A capacidade de definir pontos de interrupção em estados  
+1. A capacidade de definir pontos de interrupção em estados  
   
-2.  A capacidade de copiar e colar transições no designer de fluxo de trabalho  
+2. A capacidade de copiar e colar transições no designer de fluxo de trabalho  
   
-3.  Suporte de designer para criação de transição do disparador compartilhado  
+3. Suporte de designer para criação de transição do disparador compartilhado  
   
-4.  Atividades usadas para criar fluxos de trabalho da máquina de estado, incluindo: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> e <xref:System.Activities.Statements.Transition>.  
+4. As atividades usadas para criar fluxos de trabalho de máquina de estado, incluindo: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, e <xref:System.Activities.Statements.Transition>  
   
  Captura de tela a seguir mostra o fluxo de trabalho de máquina de estado concluído do [Tutorial de Introdução](getting-started-tutorial.md) etapa [como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md).  
   

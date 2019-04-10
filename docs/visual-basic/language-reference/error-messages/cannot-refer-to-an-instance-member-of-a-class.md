@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822564"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322687"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Não é possível fazer referência a um membro da instância de uma classe de dentro de um método compartilhado ou inicializador de membro compartilhado sem uma instância explícita da classe
 Você tentou fazer referência a um membro não compartilhado de uma classe de dentro de um procedimento compartilhado. O exemplo a seguir demonstra uma situação como essa.  
@@ -37,11 +37,11 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Decida se deseja que o membro a ser compartilhado entre todas as instâncias da classe ou mantido individual para cada instância.  
+1. Decida se deseja que o membro a ser compartilhado entre todas as instâncias da classe ou mantido individual para cada instância.  
   
-2.  Se você desejar uma única cópia do membro a ser compartilhado entre todas as instâncias, adicione o `Shared` palavra-chave para a declaração de membro. Reter o `Shared` palavra-chave na declaração do procedimento.  
+2. Se você desejar uma única cópia do membro a ser compartilhado entre todas as instâncias, adicione o `Shared` palavra-chave para a declaração de membro. Reter o `Shared` palavra-chave na declaração do procedimento.  
   
-3.  Se você quiser que cada instância tenha sua própria cópia individual do membro, não especifique `Shared` na declaração de membro. Remover o `Shared` palavra-chave da declaração de procedimento.  
+3. Se você quiser que cada instância tenha sua própria cópia individual do membro, não especifique `Shared` na declaração de membro. Remover o `Shared` palavra-chave da declaração de procedimento.  
   
 ## <a name="see-also"></a>Consulte também
 

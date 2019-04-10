@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322648"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Este aplicativo de instância única não pôde se conectar à instância original
 Este aplicativo de instância única não pôde se conectar à instância original. Algumas das possíveis causas para esse problema são as seguintes:  
@@ -22,15 +22,15 @@ Este aplicativo de instância única não pôde se conectar à instância origin
   
 ## <a name="to-correct-this-error-when-developing-the-application"></a>Para corrigir esse erro ao desenvolver o aplicativo  
   
-1.  Verifique se o aplicativo não entrar em um estado sem resposta.  
+1. Verifique se o aplicativo não entrar em um estado sem resposta.  
   
-2.  Verifique se o aplicativo tem permissões suficientes para criar objetos kernel.  
+2. Verifique se o aplicativo tem permissões suficientes para criar objetos kernel.  
   
-3.  Reinicie a instância original do aplicativo.  
+3. Reinicie a instância original do aplicativo.  
   
-4.  Reinicie o computador para limpar qualquer processo que possam estar usando o recurso que é necessário para se conectar ao aplicativo da instância original.  
+4. Reinicie o computador para limpar qualquer processo que possam estar usando o recurso que é necessário para se conectar ao aplicativo da instância original.  
   
-5.  Observe as circunstâncias sob as quais o erro ocorreu e telefone o Microsoft Product Support Services.  
+5. Observe as circunstâncias sob as quais o erro ocorreu e telefone o Microsoft Product Support Services.  
   
 ## <a name="see-also"></a>Consulte também
 

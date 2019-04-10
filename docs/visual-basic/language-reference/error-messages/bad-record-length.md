@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: f3df7819da0afddd7f238f282d496136d89cb052
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324169"
 ---
 # <a name="bad-record-length"></a>Comprimento de registro inválido
 Entre as causas possíveis desse erro são:  
@@ -22,11 +22,11 @@ Entre as causas possíveis desse erro são:
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se a soma dos tamanhos das variáveis de comprimento fixo no tipo definido pelo usuário definindo o tipo de registro da variável é o mesmo que o valor indicado na `FileOpen` da instrução `Len` cláusula.  
+1. Verifique se a soma dos tamanhos das variáveis de comprimento fixo no tipo definido pelo usuário definindo o tipo de registro da variável é o mesmo que o valor indicado na `FileOpen` da instrução `Len` cláusula.  
   
-2.  Se a variável em uma `FilePut` ou `FilePutObject` instrução é ou inclui uma cadeia de caracteres de comprimento variável, verifique se a cadeia de caracteres de comprimento variável é pelo menos 2 caracteres menor do que o comprimento do registro especificado na `Len` cláusula do `FileOpen` instrução.  
+2. Se a variável em uma `FilePut` ou `FilePutObject` instrução é ou inclui uma cadeia de caracteres de comprimento variável, verifique se a cadeia de caracteres de comprimento variável é pelo menos 2 caracteres menor do que o comprimento do registro especificado na `Len` cláusula do `FileOpen` instrução.  
   
-3.  Se a variável em uma `FilePut` ou `FilePutObject` é ou inclui uma `Variant` Verifique se a cadeia de caracteres de comprimento variável é menor do que o comprimento do registro especificado em pelo menos 4 bytes a `Len` cláusula do `FileOpen` instrução.  
+3. Se a variável em uma `FilePut` ou `FilePutObject` é ou inclui uma `Variant` Verifique se a cadeia de caracteres de comprimento variável é menor do que o comprimento do registro especificado em pelo menos 4 bytes a `Len` cláusula do `FileOpen` instrução.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: Armazenamentos de instância
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323324"
 ---
 # <a name="instance-stores"></a>Armazenamentos de instância
 Um armazenamento de instância é um contêiner lógico instâncias. É o local onde os dados e os metadados de instância são armazenados. Um armazenamento de instância não implica o armazenamento físico dedicado. Um armazenamento de instância pode conter informações durável em uma base de dados SQL Server ou em uma informações de estado não durável na memória. Os vem de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] com a instância Store de fluxo de trabalho SQL, que é uma implementação concreta de um armazenamento de instância que permite que os fluxos de trabalho persistam dados e metadados de instância em uma base de dados SQL Server 2005 ou SQL Server 2008. Além a tela de aplicativo Windows Server também fornece uma implementação concreta de um armazenamento de instância. Para obter mais informações, consulte [Store de instância do Windows Server App Fabric, consulta e provedores de controle](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
@@ -22,10 +22,10 @@ Um armazenamento de instância é um contêiner lógico instâncias. É o local 
   
  A lista a seguir contém as etapas importantes envolvidas na interação de host com o armazenamento de instância:  
   
-1.  Obter um **InstanceStore** de um provedor de persistência.  
+1. Obter um **InstanceStore** de um provedor de persistência.  
 
-2.  Obter o identificador para uma instância chamando o <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> método em de **InstanceStore**.  
+2. Obter o identificador para uma instância chamando o <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> método em de **InstanceStore**.  
   
-3.  Chamar comandos contra o identificador de instância chamando o <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> método em de **InstanceStore**.  
+3. Chamar comandos contra o identificador de instância chamando o <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> método em de **InstanceStore**.  
   
-4.  Examine os <xref:System.Runtime.DurableInstancing.InstanceView> retornado por **Instancestore** para determinar os resultados dos comandos.
+4. Examine os <xref:System.Runtime.DurableInstancing.InstanceView> retornado por **Instancestore** para determinar os resultados dos comandos.

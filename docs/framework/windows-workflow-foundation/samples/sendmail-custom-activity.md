@@ -2,12 +2,12 @@
 title: Atividade personalizado de SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321855"
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
 Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizada usa os recursos do <xref:System.Net.Mail.SmtpClient> para enviar email de forma assíncrona e enviar email com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
@@ -28,7 +28,7 @@ Este exemplo demonstra como criar uma atividade personalizada que derive de <xre
 |Para|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários desta mensagem de email.|  
 |CÓPIA CARBONO|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Trata da coleção que contém os destinatários CC (cópia carbono) desta mensagem de email.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários com cópia oculta (Cco) desta mensagem de email.|  
-|Tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadeia de caracteres, cadeia de caracteres >>|Tokens a substituição no corpo. Esse recurso permite que os usuários especifiquem alguns valores no corpo do que pode ser substituído pelos tokens fornecidos posteriormente usando essa propriedade.|  
+|Tokens|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Tokens a substituição no corpo. Esse recurso permite que os usuários especifiquem alguns valores no corpo do que pode ser substituído pelos tokens fornecidos posteriormente usando essa propriedade.|  
 |BodyTemplateFilePath|Cadeia de Caracteres|Caminho de um modelo para o corpo. A atividade de `SendMail` copia o conteúdo do arquivo a sua propriedade body.<br /><br /> O modelo pode conter os tokens que são substituídos pelos conteúdos da propriedade tokens.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando essa propriedade é definida, todos os emails são enviados para o endereço especificado nele.<br /><br /> Esta propriedade destina-se a ser usada ao testar fluxos de trabalho. Por exemplo, quando você deseja ter certeza de que todos os emails são enviados sem enviar aos destinatários reais.|  
 |TestDropPath|Cadeia de Caracteres|Quando essa propriedade é definida, todos os emails também são salvas no arquivo especificado.<br /><br /> Esta propriedade destina-se a ser usado quando você está testando ou depurando fluxos de trabalho, para certificar-se de que o formato e o conteúdo dos emails de saída é apropriada.|  
@@ -119,17 +119,17 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Para executar este exemplo  
   
-1.  Usando o Visual Studio 2010, abra o arquivo de solução de Sendmail.  
+1. Usando o Visual Studio 2010, abra o arquivo de solução de Sendmail.  
   
-2.  Certifique-se de que você tem acesso a um servidor SMTP válido. Consulte as instruções de configuração.  
+2. Certifique-se de que você tem acesso a um servidor SMTP válido. Consulte as instruções de configuração.  
   
-3.  Configure o programa com o endereço do servidor e de e para endereços de email.  
+3. Configure o programa com o endereço do servidor e de e para endereços de email.  
   
      Para executar corretamente este exemplo, talvez você precise configurar o valor de e para endereços de email e o endereço do servidor SMTP em Module. vb e em Sequence. Você precisará alterar o endereço nos dois lugares como o envia email de programa em duas maneiras diferentes  
   
-4.  Para criar a solução, pressione CTRL+SHIFT+B.  
+4. Para criar a solução, pressione CTRL+SHIFT+B.  
   
-5.  Para executar a solução, pressione CTRL+F5.  
+5. Para executar a solução, pressione CTRL+F5.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

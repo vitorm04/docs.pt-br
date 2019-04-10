@@ -2,18 +2,18 @@
 title: Criando uma atividade em tempo de execução com o DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321218"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Criando uma atividade em tempo de execução com o DynamicActivity
-<xref:System.Activities.DynamicActivity> é um concreto, classe lacradas com um construtor público. <xref:System.Activities.DynamicActivity> pode ser usado para reunir a funcionalidade de atividade em tempo de execução usando os DOM de uma atividade.  
+<xref:System.Activities.DynamicActivity> é uma concreto, classe lacradas com um construtor público. <xref:System.Activities.DynamicActivity> pode ser usado para montar a funcionalidade de atividade em tempo de execução usando uma atividade DOM.  
   
 ## <a name="dynamicactivity-features"></a>Recursos de DynamicActivity  
- <xref:System.Activities.DynamicActivity> tem acesso às propriedades de execução, os argumentos e variáveis, mas nenhum o acesso aos serviços de tempo de execução como atividades filhos de programação ou o rastreamento.  
+ <xref:System.Activities.DynamicActivity> tem acesso a propriedades de execução, argumentos e variáveis, mas nenhum acesso aos serviços de tempo de execução como atividades filhos de programação ou de rastreamento.  
   
  As propriedades de nível superior podem ser definidas usando objetos de <xref:System.Activities.Argument> de fluxo de trabalho. No código obrigatório, esses argumentos são criados usando propriedades de CLR em um novo tipo. Em XAML, são declarados usando `x:Class` e marcas de `x:Member` .  
   
@@ -21,19 +21,19 @@ ms.locfileid: "57724608"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Para criar uma atividade em tempo de execução usando o código obrigatório  
   
-1.  Abra o Visual Studio 2010.  
+1. Abra o Visual Studio 2010.  
   
-2.  Selecione **arquivo**, **novos**, **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **Sequential Workflow Console Application** na **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
+2. Selecione **arquivo**, **novos**, **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **Sequential Workflow Console Application** na **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
   
-3.  Botão direito do mouse Workflow1.xaml no projeto de HelloActivity e selecione **excluir**.  
+3. Botão direito do mouse Workflow1.xaml no projeto de HelloActivity e selecione **excluir**.  
   
-4.  Abra Module.vb. Adicione a seguinte diretiva para a parte superior do arquivo.  
+4. Abra Module.vb. Adicione a seguinte diretiva para a parte superior do arquivo.  
   
     ```  
     using System.Collections.Generic;  
     ```  
   
-5.  Substitua o conteúdo do método de `Main` com o código a seguir, que cria uma atividade de <xref:System.Activities.Statements.Sequence> que contém uma única atividade de <xref:System.Activities.Statements.WriteLine> e a atribui à propriedade de <xref:System.Activities.DynamicActivity.Implementation%2A> de uma nova atividade dinâmico.  
+5. Substitua o conteúdo do método de `Main` com o código a seguir, que cria uma atividade de <xref:System.Activities.Statements.Sequence> que contém uma única atividade de <xref:System.Activities.Statements.WriteLine> e a atribui à propriedade de <xref:System.Activities.DynamicActivity.Implementation%2A> de uma nova atividade dinâmico.  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -66,25 +66,25 @@ ms.locfileid: "57724608"
                 Console.ReadLine();  
     ```  
   
-6.  Executar o aplicativo. Uma janela de console com o texto "Hello World!" Exibe.  
+6. Executar o aplicativo. Uma janela de console com o texto "Hello World!" Exibe.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Para criar uma atividade em tempo de execução usando XAML  
   
-1.  Abra o Visual Studio 2010.  
+1. Abra o Visual Studio 2010.  
   
-2.  Selecione **arquivo**, **novos**, **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **aplicativo de Console do fluxo de trabalho** na **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
+2. Selecione **arquivo**, **novos**, **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **aplicativo de Console do fluxo de trabalho** na **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
   
-3.  Workflow1.xaml aberto no projeto de HelloActivity. Clique o **argumentos** opção na parte inferior do designer. Crie um novo argumento de `In` chamado `TextToWrite` de tipo `String`.  
+3. Workflow1.xaml aberto no projeto de HelloActivity. Clique o **argumentos** opção na parte inferior do designer. Crie um novo argumento de `In` chamado `TextToWrite` de tipo `String`.  
   
-4.  Arraste uma **WriteLine** atividade da **primitivos** seção da caixa de ferramentas na superfície do designer. Atribua o valor `TextToWrite` para o **texto** propriedade da atividade.  
+4. Arraste uma **WriteLine** atividade da **primitivos** seção da caixa de ferramentas na superfície do designer. Atribua o valor `TextToWrite` para o **texto** propriedade da atividade.  
   
-5.  Abra Module.vb. Adicione a seguinte diretiva para a parte superior do arquivo.  
+5. Abra Module.vb. Adicione a seguinte diretiva para a parte superior do arquivo.  
   
     ```  
     using System.Activities.XamlIntegration;  
     ```  
   
-6.  Substitua o conteúdo do método de `Main` com o código a seguir.  
+6. Substitua o conteúdo do método de `Main` com o código a seguir.  
   
     ```  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
@@ -92,9 +92,9 @@ ms.locfileid: "57724608"
     Console.ReadLine();  
     ```  
   
-7.  Executar o aplicativo. Uma janela de console com o texto "Hello World!" é exibida.  
+7. Executar o aplicativo. Uma janela de console com o texto "Hello World!" é exibida.  
   
-8.  Clique no arquivo de Workflow1.xaml na **Gerenciador de soluções** e selecione **Exibir código**. Observe que a classe da atividade é criada com `x:Class` e a propriedade é criada com `x:Property`.  
+8. Clique no arquivo de Workflow1.xaml na **Gerenciador de soluções** e selecione **Exibir código**. Observe que a classe da atividade é criada com `x:Class` e a propriedade é criada com `x:Property`.  
   
 ## <a name="see-also"></a>Consulte também
 

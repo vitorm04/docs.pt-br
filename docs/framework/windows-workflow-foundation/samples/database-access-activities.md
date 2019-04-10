@@ -2,12 +2,12 @@
 title: Atividades de acesso a base de dados
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322596"
 ---
 # <a name="database-access-activities"></a>Atividades de acesso a base de dados
 As atividades de acesso a base de dados permitem que você acesse um base de dados em um fluxo de trabalho. Essas atividades permitem acessar bancos de dados para recuperar ou modificar as informações e usar [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) para acessar o banco de dados.  
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Para executar Setup.cmd
 
-1.  Abra um prompt de comando.
+1. Abra um prompt de comando.
 
-2.  Vá para a pasta de DbActivities.
+2. Vá para a pasta de DbActivities.
 
-3.  Digite "Setup. cmd" e pressione ENTER.
+3. Digite "Setup. cmd" e pressione ENTER.
 
     > [!NOTE]
     >  Setup.cmd tentar instalar o exemplo em sua instância de SqlExpress do computador local. Se você deseja instalá-lo em outra instância do SQL server, a edição Setup.cmd com o novo nome da instância.
 
 ##### <a name="to-uninstall-the-sample-database"></a>Para desinstalar o base de dados de exemplo
 
-1.  Executar Cleanup.cmd da pasta de exemplo em um prompt de comando.
+1. Executar Cleanup.cmd da pasta de exemplo em um prompt de comando.
 
 ##### <a name="to-run-the-sample"></a>Para executar a amostra
 
-1.  Abra a solução no Visual Studio 2010
+1. Abra a solução no Visual Studio 2010
 
-2.  Para criar a solução, pressione CTRL+SHIFT+B.
+2. Para criar a solução, pressione CTRL+SHIFT+B.
 
-3.  Para executar o exemplo sem depuração, pressione CTRL+F5.
+3. Para executar o exemplo sem depuração, pressione CTRL+F5.
 
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
