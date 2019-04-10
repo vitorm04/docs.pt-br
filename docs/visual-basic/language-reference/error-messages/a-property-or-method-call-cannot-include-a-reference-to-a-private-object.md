@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 0a8d6603bf5c97b966d29f000b21435cec8040d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 04124ca044ad8dbff58f85230d7e10ea336d41e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341463"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>Uma chamada de propriedade ou método não pode incluir uma referência a um objeto particular, como um argumento ou um valor de retorno
 Entre as causas possíveis desse erro são:  
@@ -24,8 +24,8 @@ Entre as causas possíveis desse erro são:
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Remova a referência.  
+1. Remova a referência.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Privado](../../../visual-basic/language-reference/modifiers/private.md)
+- [Particular](../../../visual-basic/language-reference/modifiers/private.md)

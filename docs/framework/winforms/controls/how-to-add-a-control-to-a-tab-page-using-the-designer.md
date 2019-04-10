@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340965"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Como: Adicionar um controle a uma página de guia usando o Designer
 O uso dos formulários Windows <xref:System.Windows.Forms.TabControl> é exibir outros controles de forma organizada. Você pode usar essas instruções para exibir uma imagem na parte principal de uma página da guia. Para obter informações sobre como adicionar um ícone à parte do rótulo de uma página da guia, consulte [como: Alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
@@ -23,9 +23,9 @@ O uso dos formulários Windows <xref:System.Windows.Forms.TabControl> é exibir 
   
 ### <a name="to-add-a-control-using-the-designer"></a>Para adicionar um controle usando o designer  
   
-1.  Clique na página da guia apropriada para que ele apareça na parte superior.  
+1. Clique na página da guia apropriada para que ele apareça na parte superior.  
   
-2.  Desenhe o controle na página da guia.  
+2. Desenhe o controle na página da guia.  
   
 ## <a name="see-also"></a>Consulte também
 

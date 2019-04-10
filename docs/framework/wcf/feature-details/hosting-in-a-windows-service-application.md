@@ -2,12 +2,12 @@
 title: Hospedando um aplicativo de serviço do Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335362"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
 Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) fornecem um processo modelo particularmente adequado para aplicativos que devem residir em um executável de longa execução e não exibem nenhuma forma de interface do usuário. O tempo de vida de um aplicativo de serviço é gerenciado pelo Gerenciador de controle de serviços (SCM), que permite que você inicie, de Windows parar e pausar os aplicativos de serviço do Windows. Você pode configurar um processo de serviço do Windows para iniciar automaticamente quando o computador é iniciado, tornando-o um ambiente de hospedagem adequado para aplicativos "always on". Para obter mais informações sobre aplicativos de serviço do Windows, consulte [aplicativos de serviço do Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -24,9 +24,9 @@ Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) for
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Para hospedar o WCF dentro de um aplicativo de serviço do Windows  
   
-1.  Crie um aplicativo de serviço do Windows. Você pode escrever aplicativos de serviço do Windows em código gerenciado usando as classes de <xref:System.ServiceProcess> namespace. Este aplicativo deve incluir uma classe que herda de <xref:System.ServiceProcess.ServiceBase>.  
+1. Crie um aplicativo de serviço do Windows. Você pode escrever aplicativos de serviço do Windows em código gerenciado usando as classes de <xref:System.ServiceProcess> namespace. Este aplicativo deve incluir uma classe que herda de <xref:System.ServiceProcess.ServiceBase>.  
   
-2.  Vincule o tempo de vida dos serviços do WCF para o tempo de vida do aplicativo do Windows. Geralmente, você deseja que os serviços WCF hospedados em um aplicativo de serviço do Windows para se tornar ativo quando o serviço de hospedagem é iniciado, interromper a escuta para mensagens quando o serviço de hospedagem for interrompido e desligar o processo de hospedagem quando o serviço WCF encontra um erro. Isso pode ser feito da seguinte maneira:  
+2. Vincule o tempo de vida dos serviços do WCF para o tempo de vida do aplicativo do Windows. Geralmente, você deseja que os serviços WCF hospedados em um aplicativo de serviço do Windows para se tornar ativo quando o serviço de hospedagem é iniciado, interromper a escuta para mensagens quando o serviço de hospedagem for interrompido e desligar o processo de hospedagem quando o serviço WCF encontra um erro. Isso pode ser feito da seguinte maneira:  
   
     -   Substituir <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> para abrir uma ou mais instâncias de <xref:System.ServiceModel.ServiceHost>. Um único aplicativo de serviço do Windows pode hospedar vários serviços do WCF que iniciam e param como um grupo.  
   

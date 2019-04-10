@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814036"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337234"
 ---
 # <a name="-main"></a>-main
 Especifica a classe ou o módulo que contém o procedimento `Sub Main`.  
@@ -37,13 +37,13 @@ Especifica a classe ou o módulo que contém o procedimento `Sub Main`.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Para definir - principal no ambiente de desenvolvimento integrado do Visual Studio  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.  
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.  
   
-2.  Clique na guia **Aplicativo**.  
+2. Clique na guia **Aplicativo**.  
   
-3.  Verifique se o **habilitar estrutura de aplicativo** caixa de seleção não estiver marcada.  
+3. Verifique se o **habilitar estrutura de aplicativo** caixa de seleção não estiver marcada.  
   
-4.  Modificar o valor de **objeto de inicialização** caixa.  
+4. Modificar o valor de **objeto de inicialização** caixa.  
   
 ## <a name="example"></a>Exemplo  
  O seguinte código compila `T2.vb` e `T3.vb`, especificando que o `Sub Main` procedimento será encontrado na `Test2` classe.  
@@ -56,5 +56,5 @@ vbc t2.vb t3.vb -main:Test2
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

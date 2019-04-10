@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340432"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Especifica como são feitas comparações de cadeia de caracteres.  
@@ -38,11 +38,11 @@ Especifica como são feitas comparações de cadeia de caracteres.
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Definir - optioncompare no IDE do Visual Studio  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
   
-2.  Clique na guia **Compilar**.  
+2. Clique na guia **Compilar**.  
   
-3.  Modificar o valor de **Option Compare** caixa.  
+3. Modificar o valor de **Option Compare** caixa.  
   
 ### <a name="to-set--optioncompare-programmatically"></a>Definir - optioncompare de maneira programática  
   
@@ -61,6 +61,6 @@ vbc -optioncompare:binary projFile.vb
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

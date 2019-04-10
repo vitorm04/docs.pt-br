@@ -2,26 +2,26 @@
 title: Configurando valores de tempo limite em uma associação
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 21d99ad2ce092db738469f93e80c39380acabd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339756"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Configurando valores de tempo limite em uma associação
-Há um número de configurações de tempo limite em associações do WCF. Definir esses tempo limite configurações corretamente podem melhorar não apenas o serviço desempenho, mas também executar uma função na usabilidade e segurança de seu serviço. Limite a seguir estão disponíveis em associações do WCF:  
+Há uma série de configurações de tempo limite em associações do WCF. Definir tempo limite dessas configurações corretamente podem melhorar não apenas seu serviço desempenho, mas também play uma função na usabilidade e a segurança do seu serviço. Limite a seguir estão disponíveis em associações do WCF:  
   
-1.  openTimeout  
+1. OpenTimeout  
   
-2.  closeTimeout  
+2. CloseTimeout  
   
-3.  sendTimeout  
+3. sendTimeout  
   
-4.  ReceiveTimeout  
+4. ReceiveTimeout  
   
-## <a name="wcf-binding-timeouts"></a>Tempos limite de ligação do WCF  
- Cada uma das configurações abordadas neste tópico são feitas na associação, na configuração ou código. O código a seguir mostra como definir o tempo limite em uma associação WCF no contexto de um serviço auto-hospedado programaticamente.  
+## <a name="wcf-binding-timeouts"></a>Tempos limite de associação do WCF  
+ Cada uma das configurações discutidas neste tópico são feitas na associação em si, no código ou na configuração. O código a seguir mostra como definir o tempo limite programaticamente uma associação do WCF no contexto de um serviço auto-hospedado.  
   
 ```csharp  
 public static void Main()
@@ -54,7 +54,7 @@ public static void Main()
 }
 ```  
   
- O exemplo a seguir mostra como configurar o tempo limite em uma associação em um arquivo de configuração.  
+ O exemplo a seguir mostra como configurar tempos limite em uma associação em um arquivo de configuração.  
   
 ```xml  
 <configuration>
@@ -77,17 +77,17 @@ public static void Main()
 ### <a name="client-side-timeouts"></a>Tempos limite do lado do cliente  
  No lado do cliente:  
   
-1.  SendTimeout – usado para inicializar o OperationTimeout, que controla todo o processo de enviar uma mensagem, incluindo recebendo uma mensagem de resposta para uma operação de serviço de solicitação/resposta. Esse tempo limite também se aplica ao enviar mensagens de resposta de um método de contrato de retorno de chamada.  
+1. SendTimeout – usado para inicializar o OperationTimeout, que governa o todo o processo de envio de uma mensagem, incluindo recebendo uma mensagem de resposta para uma operação de serviço de solicitação/resposta. Esse tempo limite também se aplica ao enviar mensagens de resposta de um método de contrato de retorno de chamada.  
   
-2.  OpenTimeout – usada ao abrir canais quando nenhum valor de tempo limite explícito for especificado.  
+2. OpenTimeout – usado ao abrir canais quando nenhum valor de tempo limite explícito for especificado.  
   
-3.  CloseTimeout – usado ao fechar canais quando nenhum valor de tempo limite explícito for especificado.  
+3. CloseTimeout – usado ao fechar canais quando nenhum valor de tempo limite explícito for especificado.  
   
-4.  ReceiveTimeout – não é usado.  
+4. ReceiveTimeout – não é usado.  
   
 ### <a name="service-side-timeouts"></a>Tempos limite do lado do serviço  
  No lado do serviço:  
   
-1.  SendTimeout, OpenTimeout, CloseTimeout são os mesmos que no cliente.  
+1. SendTimeout, OpenTimeout, CloseTimeout são os mesmos como no cliente.  
   
-2.  ReceiveTimeout – usado pela camada de estrutura de serviço para inicializar o tempo limite de ociosidade de sessão, que controla quanto tempo uma sessão pode ficar ociosa antes do tempo limite.
+2. ReceiveTimeout – usada pela camada de serviço de estrutura para inicializar o tempo limite de ociosidade de sessão, que controla quanto tempo uma sessão pode ficar ociosa antes do tempo limite.

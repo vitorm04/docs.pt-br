@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342226"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Como: Associar dados ao controle MaskedTextBox
 Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> controlar exatamente como faria para qualquer outro controle de formulários do Windows. No entanto, se o formato dos seus dados no banco de dados não corresponder ao formato esperado pela sua definição de máscara, será necessário reformatar os dados. O procedimento a seguir demonstra como fazer isso usando o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos do <xref:System.Windows.Forms.Binding> classe para exibir o número de telefone separados e campos de banco de dados de extensão de telefone como um único campo editável.  
@@ -24,15 +24,15 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Associar dados ao controle MaskedTextBox  
   
-1.  Criar um novo projeto dos Windows Forms.  
+1. Criar um novo projeto dos Windows Forms.  
   
-2.  Arraste duas <xref:System.Windows.Forms.TextBox> controles para seu formulário; nomeie-as `FirstName` e `LastName`.  
+2. Arraste duas <xref:System.Windows.Forms.TextBox> controles para seu formulário; nomeie-as `FirstName` e `LastName`.  
   
-3.  Arraste uma <xref:System.Windows.Forms.MaskedTextBox> de controle para seu formulário; nomeie- `PhoneMask`.  
+3. Arraste uma <xref:System.Windows.Forms.MaskedTextBox> de controle para seu formulário; nomeie- `PhoneMask`.  
   
-4.  Defina as <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade de `PhoneMask` para `(000) 000-0000 x9999`.  
+4. Defina as <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade de `PhoneMask` para `(000) 000-0000 x9999`.  
   
-5.  Adicione as seguintes importações de namespace ao formulário.  
+5. Adicione as seguintes importações de namespace ao formulário.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     Imports System.Data.SqlClient  
     ```  
   
-6.  Clique com o botão direito do mouse do formulário e escolha **Exibir código**. Coloque esse código em qualquer lugar em sua classe de formulário.  
+6. Clique com o botão direito do mouse do formulário e escolha **Exibir código**. Coloque esse código em qualquer lugar em sua classe de formulário.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     End Sub  
     ```  
   
-7.  Adicionar manipuladores de eventos para o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos para combinar e separar o `PhoneNumber` e `Extension` campos base no limite <xref:System.Data.DataSet>.  
+7. Adicionar manipuladores de eventos para o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos para combinar e separar o `PhoneNumber` e `Extension` campos base no limite <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     End Sub  
     ```  
   
-8.  Adicione dois <xref:System.Windows.Forms.Button> controles ao formulário. Nomeie-os como `previousButton` e `nextButton`. Clique duas vezes em cada botão para adicionar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos e preencha os manipuladores de eventos, conforme mostrado no exemplo de código a seguir.  
+8. Adicione dois <xref:System.Windows.Forms.Button> controles ao formulário. Nomeie-os como `previousButton` e `nextButton`. Clique duas vezes em cada botão para adicionar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos e preencha os manipuladores de eventos, conforme mostrado no exemplo de código a seguir.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

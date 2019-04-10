@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: e66d8c81114a4550f0473f75a8101e79e8db2c76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334348"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Como: Definir a tela de fundo de um painel do Windows Forms usando o Designer
 Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor de fundo e uma imagem de plano de fundo. O <xref:System.Windows.Forms.Control.BackColor%2A> propriedade define a cor de plano de fundo de controles que estão contidos no painel, como rótulos e botões de opção. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> não está definida, o <xref:System.Windows.Forms.Control.BackColor%2A> seleção preencherá todos o painel. Se o <xref:System.Windows.Forms.Control.BackgroundImage%2A> estiver definida, a imagem será exibida por trás dos controles que estão contidos no painel.  
@@ -24,17 +24,17 @@ Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor 
   
 ### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Para definir a tela de fundo no Designer de Formulários do Windows  
   
-1.  Selecione o <xref:System.Windows.Forms.Panel> controle.  
+1. Selecione o <xref:System.Windows.Forms.Panel> controle.  
   
-2.  No **propriedades** , clique na seta ao lado de <xref:System.Windows.Forms.Control.BackColor%2A> propriedade para exibir uma janela com três guias.  
+2. No **propriedades** , clique na seta ao lado de <xref:System.Windows.Forms.Control.BackColor%2A> propriedade para exibir uma janela com três guias.  
   
-3.  Selecione a guia **Personalizado** para exibir uma paleta de cores.  
+3. Selecione a guia **Personalizado** para exibir uma paleta de cores.  
   
-4.  Selecione a guia **Web** ou **Sistema** para exibir uma lista de nomes predefinidos para cores e, em seguida, selecione uma cor.  
+4. Selecione a guia **Web** ou **Sistema** para exibir uma lista de nomes predefinidos para cores e, em seguida, selecione uma cor.  
   
-5.  No **propriedades** , clique na seta ao lado de <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriedade.  
+5. No **propriedades** , clique na seta ao lado de <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriedade.  
   
-6.  Na caixa de diálogo **Abrir**, selecione o arquivo que deseja exibir.  
+6. Na caixa de diálogo **Abrir**, selecione o arquivo que deseja exibir.  
   
 ## <a name="see-also"></a>Consulte também
 

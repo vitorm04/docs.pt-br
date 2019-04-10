@@ -2,12 +2,12 @@
 title: Indexador de resumo de WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
-ms.openlocfilehash: 8b435a50801e03ec6ed00bcfef3c7e9198a7e7e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5c3c996a73d8f88e925d459fae3eb785996eada4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340536"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>Indexador de resumo de WorkflowHostingEndpoint
 Este exemplo demonstra como <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> pode ser usado com <xref:System.ServiceModel.Activities.WorkflowServiceHost> para criar instâncias de fluxo de trabalho.  
@@ -16,7 +16,7 @@ Este exemplo demonstra como <xref:System.ServiceModel.Activities.WorkflowHosting
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
 ## <a name="discussion"></a>Discussão  
- Este exemplo usa <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> para criar uma instância de fluxo de trabalho hospedada usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> é um ponto de extensibilidade para <xref:System.ServiceModel.Activities.WorkflowServiceHost> que pode ser usada nos seguintes situações:  
+ Este exemplo usa <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> para criar uma instância de fluxo de trabalho hospedada usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> é um ponto de extensibilidade para <xref:System.ServiceModel.Activities.WorkflowServiceHost> que pode ser usado nos seguintes cenários:  
   
 -   Criando novas instâncias de fluxo de trabalho.  
   
@@ -26,9 +26,9 @@ Este exemplo demonstra como <xref:System.ServiceModel.Activities.WorkflowHosting
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Compile a solução.  
+1. Compile a solução.  
   
-2.  Execute o aplicativo. O console de `CreationEndpoint` mostra uma mensagem que inclui a ID da instância quando a instância do fluxo de trabalho é criada. A mensagem "Hello World!" é impresso pelo fluxo de trabalho em ressunção com êxito do indicador.  
+2. Execute o aplicativo. O console de `CreationEndpoint` mostra uma mensagem que inclui a ID da instância quando a instância do fluxo de trabalho é criada. A mensagem "Hello World!" é impresso pelo fluxo de trabalho em ressunção com êxito do indicador.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

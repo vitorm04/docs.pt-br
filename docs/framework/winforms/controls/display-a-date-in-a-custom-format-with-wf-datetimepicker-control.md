@@ -10,21 +10,21 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 0c454580c6f3aa1fadb6e98d2ee715da948364b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 08d5a505229cd434dbf82e8ae4624bb418efd379
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335934"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Como: Exibir uma data em um formato personalizado com o controle DateTimePicker do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.DateTimePicker> controle oferece flexibilidade na formatação da exibição de datas e horas no controle. O <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade permite que você selecione um dos formatos predefinidos, listados no <xref:System.Windows.Forms.DateTimePickerFormat>. Se nenhum deles for adequado para suas finalidades, você pode criar seu próprio estilo de formato usando caracteres de formato listados no <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
   
 ### <a name="to-display-a-custom-format"></a>Para exibir um formato personalizado  
   
-1.  Defina a propriedade <xref:System.Windows.Forms.DateTimePicker.Format%2A> como `DateTimePickerFormat.Custom`.  
+1. Defina a propriedade <xref:System.Windows.Forms.DateTimePicker.Format%2A> como `DateTimePickerFormat.Custom`.  
   
-2.  Defina o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade como uma cadeia de caracteres de formato.  
+2. Defina o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade como uma cadeia de caracteres de formato.  
   
     ```vb  
     DateTimePicker1.Format = DateTimePickerFormat.Custom  
@@ -46,7 +46,7 @@ Os formulários do Windows <xref:System.Windows.Forms.DateTimePicker> controle o
   
 ### <a name="to-add-text-to-the-formatted-value"></a>Para adicionar texto ao valor formatado  
   
-1.  Use aspas simples para incluir qualquer caractere que não seja um caractere de formato como "M" ou um delimitador como ":". Por exemplo, a cadeia de formato a seguir exibe a data atual com o formato "hoje é: 05:30:31 março de sexta-feira 02, 2012" na cultura inglês (Estados Unidos).  
+1. Use aspas simples para incluir qualquer caractere que não seja um caractere de formato como "M" ou um delimitador como ":". Por exemplo, a cadeia de formato a seguir exibe a data atual com o formato "hoje é: 05:30:31 março de sexta-feira 02, 2012" na cultura inglês (Estados Unidos).  
   
     ```vb  
     DateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy"  

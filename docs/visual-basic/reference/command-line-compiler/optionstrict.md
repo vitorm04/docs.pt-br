@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835655"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336077"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Impõe semântica de tipo estrito para restringir conversões de tipo implícito.  
@@ -39,11 +39,11 @@ Impõe semântica de tipo estrito para restringir conversões de tipo implícito
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Definir - optionstrict no IDE do Visual Studio  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. Sobre o **Project** menu, clique em **propriedades.**   
+1. Selecione um projeto no **Gerenciador de Soluções**. Sobre o **Project** menu, clique em **propriedades.**   
   
-2.  Clique na guia **Compilar**.  
+2. Clique na guia **Compilar**.  
   
-3.  Modificar o valor de **Option Strict** caixa.  
+3. Modificar o valor de **Option Strict** caixa.  
   
 ### <a name="to-set--optionstrict-programmatically"></a>Definir - optionstrict programaticamente  
   
@@ -64,6 +64,6 @@ vbc -optionstrict+ test.vb
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

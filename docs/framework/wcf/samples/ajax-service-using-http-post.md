@@ -2,12 +2,12 @@
 title: Serviço AJAX utilizando HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343240"
 ---
 # <a name="ajax-service-using-http-post"></a>Serviço AJAX utilizando HTTP POST
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviço Asynchronous JavaScript and XML (AJAX) que usa o HTTP POST. Um serviço AJAX é aquele que você pode acessar usando o código JavaScript básico de um cliente de navegador da Web. Este exemplo se baseia a [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo; a única diferença entre os dois exemplos é o uso de HTTP POST em vez de HTTP GET.  
@@ -48,8 +48,8 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você execute as instruções de instalação [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você execute as instruções de instalação [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compile a solução PostAjaxService.sln, conforme descrito em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Compile a solução PostAjaxService.sln, conforme descrito em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Navegue até `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (não abrir PostAjaxClientPage.aspx no navegador do diretório do projeto).
+3. Navegue até `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (não abrir PostAjaxClientPage.aspx no navegador do diretório do projeto).

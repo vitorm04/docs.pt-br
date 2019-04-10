@@ -1,5 +1,5 @@
 ---
-title: 'Como: Formatar o controle de DataGrid do Windows Forms usando o Designer'
+title: 'Como: Formatar o controle DataGrid do Windows Forms usando o Designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333568"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Formatar o controle de DataGrid do Windows Forms usando o Designer
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Formatar o controle DataGrid do Windows Forms usando o Designer
 
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -40,9 +40,9 @@ ms.locfileid: "57725357"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Estabelecer um estilo padrão para o controle DataGrid  
   
-1.  Selecione o <xref:System.Windows.Forms.DataGrid> controle.  
+1. Selecione o <xref:System.Windows.Forms.DataGrid> controle.  
   
-2.  Na janela **Propriedades**, defina as seguintes propriedades, conforme adequado.  
+2. Na janela **Propriedades**, defina as seguintes propriedades, conforme adequado.  
   
     |Propriedade|Descrição|  
     |--------------|-----------------|  
@@ -77,21 +77,21 @@ ms.locfileid: "57725357"
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Para definir o estilo de tabela e de coluna de uma tabela de dados em tempo de design
 
-1.  Selecione o <xref:System.Windows.Forms.DataGrid> controle no formulário.
+1. Selecione o <xref:System.Windows.Forms.DataGrid> controle no formulário.
 
-2.  No **propriedades** janela, selecione a <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade e clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) botão.
+2. No **propriedades** janela, selecione a <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade e clique no **reticências** (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) botão.
 
-3.  Na caixa de diálogo **Editor de Coleção DataGridTableStyle**, clique em **Adicionar** para adicionar um estilo de tabela à coleção.
+3. Na caixa de diálogo **Editor de Coleção DataGridTableStyle**, clique em **Adicionar** para adicionar um estilo de tabela à coleção.
 
      Com o **Editor de Coleção DataGridTableStyle**, você pode adicionar e remover estilos de tabela, definir propriedades de layout e exibição e definir o nome de mapeamento para os estilos de tabela.
 
-4.  Defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade para o nome do mapeamento para cada estilo de tabela.
+4. Defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade para o nome do mapeamento para cada estilo de tabela.
 
      O nome do mapeamento é usado para especificar qual estilo de tabela deve ser usado com cada tabela.
 
-5.  No **Editor de coleção DataGridTableStyle**, selecione o <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade e clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton ")).
+5. No **Editor de coleção DataGridTableStyle**, selecione o <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade e clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton ")).
 
-6.  Na caixa de diálogo **Editor de Coleção DataGridColumnStyle**, adicione estilos de coluna ao estilo de tabela que você criou.
+6. Na caixa de diálogo **Editor de Coleção DataGridColumnStyle**, adicione estilos de coluna ao estilo de tabela que você criou.
 
      Com o **Editor de Coleção DataGridColumnStyle**, você pode adicionar e remover estilos de coluna, definir propriedades de layout e exibição e definir o nome de mapeamento e cadeias de caracteres de formatação para as colunas de dados.
 
@@ -103,5 +103,5 @@ ms.locfileid: "57725357"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Como: Excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como: Excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Controle DataGrid](datagrid-control-windows-forms.md)

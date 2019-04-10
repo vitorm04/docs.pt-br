@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: ce0c7d48f053094d0026348fea8221ea80ccca59
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d98c5906d99dff9371f8290e7dbc9c9011cd0c29
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338781"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Como: Exibir guias alinhadas lateralmente com TabControl
 O <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade de <xref:System.Windows.Forms.TabControl> dá suporte à exibição de guias verticalmente (na borda esquerda ou direita do controle), em vez de horizontalmente (na parte superior ou inferior do controle). Por padrão, essa exibição vertical resulta em uma experiência de usuário ruim, porque o <xref:System.Windows.Forms.TabPage.Text%2A> propriedade do <xref:System.Windows.Forms.TabPage> objeto não exibe na guia de quando estilos visuais estiverem habilitados. Também não há nenhuma maneira direta de controlar a direção do texto dentro da guia. Você pode usar o proprietário traçam <xref:System.Windows.Forms.TabControl> para aprimorar essa experiência.  
@@ -23,19 +23,19 @@ O <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade de <xref:Syste
   
 ### <a name="to-display-right-aligned-tabs"></a>Exibir guias alinhadas à direita  
   
-1.  Adicionar um <xref:System.Windows.Forms.TabControl> ao seu formulário.  
+1. Adicionar um <xref:System.Windows.Forms.TabControl> ao seu formulário.  
   
-2.  Defina a propriedade <xref:System.Windows.Forms.TabControl.Alignment%2A> como <xref:System.Windows.Forms.TabAlignment.Right>.  
+2. Defina a propriedade <xref:System.Windows.Forms.TabControl.Alignment%2A> como <xref:System.Windows.Forms.TabAlignment.Right>.  
   
-3.  Defina as <xref:System.Windows.Forms.TabControl.SizeMode%2A> propriedade para <xref:System.Windows.Forms.TabSizeMode.Fixed>, de modo que todas as guias têm a mesma largura.  
+3. Defina as <xref:System.Windows.Forms.TabControl.SizeMode%2A> propriedade para <xref:System.Windows.Forms.TabSizeMode.Fixed>, de modo que todas as guias têm a mesma largura.  
   
-4.  Defina o <xref:System.Windows.Forms.TabControl.ItemSize%2A> tamanho para as guias de fixo de propriedade para o preferencial. Tenha em mente que o <xref:System.Windows.Forms.TabControl.ItemSize%2A> propriedade se comporta como se foram de guias na parte superior, embora sejam alinhadas à direita. Como resultado, para tornar as guias mais largas, você deve alterar o <xref:System.Drawing.Size.Height%2A> propriedade, e para torná-las mais alto, você deve alterar o <xref:System.Drawing.Size.Width%2A> propriedade.  
+4. Defina o <xref:System.Windows.Forms.TabControl.ItemSize%2A> tamanho para as guias de fixo de propriedade para o preferencial. Tenha em mente que o <xref:System.Windows.Forms.TabControl.ItemSize%2A> propriedade se comporta como se foram de guias na parte superior, embora sejam alinhadas à direita. Como resultado, para tornar as guias mais largas, você deve alterar o <xref:System.Drawing.Size.Height%2A> propriedade, e para torná-las mais alto, você deve alterar o <xref:System.Drawing.Size.Width%2A> propriedade.  
   
      Para obter melhor resultado com o exemplo de código abaixo, defina as <xref:System.Drawing.Size.Width%2A> das guias para 25 e o <xref:System.Drawing.Size.Height%2A> a 100.  
   
-5.  Defina a propriedade <xref:System.Windows.Forms.TabControl.DrawMode%2A> como <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed>.  
+5. Defina a propriedade <xref:System.Windows.Forms.TabControl.DrawMode%2A> como <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed>.  
   
-6.  Definir um manipulador para o <xref:System.Windows.Forms.TabControl.DrawItem> eventos de <xref:System.Windows.Forms.TabControl> que renderiza o texto da esquerda para a direita.  
+6. Definir um manipulador para o <xref:System.Windows.Forms.TabControl.DrawItem> eventos de <xref:System.Windows.Forms.TabControl> que renderiza o texto da esquerda para a direita.  
   
      [!code-csharp[TabControl.RightAlignedTabs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
      [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  

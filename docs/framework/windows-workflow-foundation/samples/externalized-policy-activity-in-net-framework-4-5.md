@@ -2,12 +2,12 @@
 title: Atividade exteriorizada de política no .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338274"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Atividade exteriorizada de política no .NET Framework 4.5
 
@@ -56,8 +56,7 @@ O designer ExternalizedPolicy4 permite que você configure uma atividade para us
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 e ExternalPolicy4
 
-A atividade de política permite que você crie e execute um conjunto de regras do .NET Framework 3.5 em um fluxo de trabalho WF 4,5. 
-  <xref:System.Workflow.Activities.Rules.RuleSet> é embutido serializado Policy4 na definição da atividade XAML. O exemplo ExternalizedPolicy4 mostra como usar <xref:System.Workflow.Activities.Rules.RuleSet> externo existente (contido em um arquivo de .rules).
+A atividade de política permite que você crie e execute um conjunto de regras do .NET Framework 3.5 em um fluxo de trabalho WF 4,5. <xref:System.Workflow.Activities.Rules.RuleSet> é embutido serializado Policy4 na definição da atividade XAML. O exemplo ExternalizedPolicy4 mostra como usar <xref:System.Workflow.Activities.Rules.RuleSet> externo existente (contido em um arquivo de .rules).
 
 ## <a name="use-this-sample"></a>Use este exemplo
 
@@ -67,21 +66,21 @@ Este exemplo contém dois aplicativos de cliente: ImperativeCodeClientSample e D
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Executar o aplicativo de ImperativeCodeClientSample
 
-1.  Usando o Visual Studio, abra o *Policy4sample.sln* arquivo de solução.
+1. Usando o Visual Studio, abra o *Policy4sample.sln* arquivo de solução.
 
-2.  Na **Gerenciador de soluções**, clique com botão direito do **ImperativeCodeClientSample** do projeto e, em seguida, selecione **definir como projeto de inicialização**.
+2. Na **Gerenciador de soluções**, clique com botão direito do **ImperativeCodeClientSample** do projeto e, em seguida, selecione **definir como projeto de inicialização**.
 
-3.  Para executar o projeto, pressione **Ctrl**+**F5**.
+3. Para executar o projeto, pressione **Ctrl**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>Executar o aplicativo de DesignerClientSample
 
-1.  Usando o Visual Studio, abra o *Policy4sample.sln* arquivo de solução.
+1. Usando o Visual Studio, abra o *Policy4sample.sln* arquivo de solução.
 
-2.  Na **Gerenciador de soluções**, clique com botão direito do **DesignerClientSample** do projeto e, em seguida, selecione **definir como projeto de inicialização**.
+2. Na **Gerenciador de soluções**, clique com botão direito do **DesignerClientSample** do projeto e, em seguida, selecione **definir como projeto de inicialização**.
 
-3.  Pressione **Ctrl**+**Shift**+**B** para compilar o projeto.
+3. Pressione **Ctrl**+**Shift**+**B** para compilar o projeto.
 
-4.  Pressione **Ctrl**+**F5** para executar o projeto.
+4. Pressione **Ctrl**+**F5** para executar o projeto.
 
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.

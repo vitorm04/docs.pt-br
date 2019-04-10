@@ -2,12 +2,12 @@
 title: Segurança de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 444e9fc1b9a1543ab22c112468929efa2621db03
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814413"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339444"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 Este exemplo demonstra como configurar a segurança por meio de uma associação personalizada. Ele mostra como usar uma ligação personalizada para habilitar a segurança em nível de mensagem junto com um transporte seguro. Isso é útil quando um transporte seguro é necessária para transmitir as mensagens entre o cliente e o serviço e ao mesmo tempo as mensagens devem ser seguras no nível da mensagem. Essa configuração não é suportada por associações fornecidas pelo sistema.
@@ -105,28 +105,28 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1.  Abra um Prompt de comando do desenvolvedor para a janela do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.
+1. Abra um Prompt de comando do desenvolvedor para a janela do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.
 
     > [!NOTE]
     >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat.  
   
-2.  Inicie o Service.exe no \service\bin.  
+2. Inicie o Service.exe no \service\bin.  
   
-3.  Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
   
-1.  No computador do serviço:  
+1. No computador do serviço:  
   
     1.  Crie um diretório virtual chamado servicemodelsamples no computador do serviço.  
   
@@ -143,7 +143,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     6.  Execute Service.exe em um prompt de comando.
 
-2.  No computador cliente:
+2. No computador cliente:
 
     1.  Copie os arquivos de programa do cliente da pasta \client\bin\ no computador cliente. Copie também o arquivo de CleanUp.
 

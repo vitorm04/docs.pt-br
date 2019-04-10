@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339041"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Como: responder a alterações no esquema de fontes em um aplicativo do Windows Forms
 Nos sistemas operacionais Windows, um usuário pode alterar as configurações de fonte de todo o sistema para tornar a fonte padrão maior ou menor. A alteração dessas configurações de fonte é essencial para usuários com deficiência visual, que requerem letras maiores para ler o texto em suas telas. É possível ajustar seu aplicativo do Windows Forms para reagir a essas alterações aumentando ou diminuindo o tamanho do formulário e todo o texto contido nele sempre que o esquema de fontes for alterado. Se desejar que seu formulário acomode as alterações em tamanhos de fonte dinamicamente, será possível adicionar código a ele.  
@@ -21,24 +21,24 @@ Nos sistemas operacionais Windows, um usuário pode alterar as configurações d
   
 ### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Utilizar a fonte da área de trabalho e responder a alterações no esquema de fontes  
   
-1.  Crie seu formulário e adicione os controles desejados a ele. Para obter mais informações, confira [Como: Criar um aplicativo de formulários do Windows da linha de comando](how-to-create-a-windows-forms-application-from-the-command-line.md) e [controles a serem usados nos Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
+1. Crie seu formulário e adicione os controles desejados a ele. Para obter mais informações, confira [Como: Criar um aplicativo de formulários do Windows da linha de comando](how-to-create-a-windows-forms-application-from-the-command-line.md) e [controles a serem usados nos Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
-2.  Adicione uma referência para o <xref:Microsoft.Win32> namespace ao seu código.  
+2. Adicione uma referência para o <xref:Microsoft.Win32> namespace ao seu código.  
   
      [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3.  Adicione o seguinte código ao construtor do formulário para ligar manipuladores de eventos necessários e para alterar a fonte padrão em uso do formulário.  
+3. Adicione o seguinte código ao construtor do formulário para ligar manipuladores de eventos necessários e para alterar a fonte padrão em uso do formulário.  
   
      [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4.  Implemente um manipulador para o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento que faz com que o formulário dimensionar automaticamente quando o <xref:Microsoft.Win32.UserPreferenceCategory.Window> as alterações de categoria.  
+4. Implemente um manipulador para o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento que faz com que o formulário dimensionar automaticamente quando o <xref:Microsoft.Win32.UserPreferenceCategory.Window> as alterações de categoria.  
   
      [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5.  Finalmente, implemente um manipulador para o <xref:System.Windows.Forms.Form.FormClosing> evento que dispara o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> manipulador de eventos.  
+5. Finalmente, implemente um manipulador para o <xref:System.Windows.Forms.Form.FormClosing> evento que dispara o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> manipulador de eventos.  
   
      > [!IMPORTANT]
      > Uma falha na inclusão desse código fará com que ocorra vazamento de memória no aplicativo.  
@@ -46,15 +46,15 @@ Nos sistemas operacionais Windows, um usuário pode alterar as configurações d
      [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
      [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-6.  Compile e execute o código.  
+6. Compile e execute o código.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Alterar manualmente o esquema de fontes no Windows XP  
   
-1.  Enquanto o Aplicativo do Windows Forms está em execução, clique com o botão direito do mouse na área de trabalho do Windows e escolha **Propriedades** no menu de atalho.  
+1. Enquanto o Aplicativo do Windows Forms está em execução, clique com o botão direito do mouse na área de trabalho do Windows e escolha **Propriedades** no menu de atalho.  
   
-2.  Na caixa de diálogo **Propriedades de Exibição**, clique na guia **Aparência**.  
+2. Na caixa de diálogo **Propriedades de Exibição**, clique na guia **Aparência**.  
   
-3.  Na caixa de listagem suspensa **Tamanho da Fonte**, selecione um novo tamanho da fonte.  
+3. Na caixa de listagem suspensa **Tamanho da Fonte**, selecione um novo tamanho da fonte.  
   
      Você observará que o formulário agora reage a alterações de tempo de execução no esquema de fontes da área de trabalho. Quando o usuário altera entre **Normal**, **Fontes Grandes** e **Fontes Extra Grandes**, o formulário muda a fonte e ajusta a escala corretamente.  
   

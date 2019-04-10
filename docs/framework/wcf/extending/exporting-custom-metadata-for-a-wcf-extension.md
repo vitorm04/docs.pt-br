@@ -2,12 +2,12 @@
 title: Exportando metadados personalizados para uma extensão do WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334504"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportando metadados personalizados para uma extensão do WCF
 No Windows Communication Foundation (WCF), a exportação de metadados é o processo de descrever os pontos de extremidade de serviço e Projetando-os em uma representação paralela e padronizada que os clientes podem usar para entender como usar o serviço. Metadados personalizados consistem em elementos XML que o Exportadores de metadados fornecidos pelo sistema não é possível exportar. Normalmente, isso inclui elementos WSDL personalizados para comportamentos definidos pelo usuário e elementos de associação e declarações de política sobre os recursos e requisitos de associações e contratos.  
@@ -19,9 +19,9 @@ No Windows Communication Foundation (WCF), a exportação de metadados é o proc
   
  Esta seção descreve:  
   
-1.  Como implementar e usar o <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface, que expõe os dados de geração de WSDL para você antes de publicar o WSDL.  
+1. Como implementar e usar o <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface, que expõe os dados de geração de WSDL para você antes de publicar o WSDL.  
   
-2.  Como implementar e usar o <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface, que expõe a política de dados para você antes de exportar as declarações de política nos dados WSDL.  
+2. Como implementar e usar o <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface, que expõe a política de dados para você antes de exportar as declarações de política nos dados WSDL.  
   
  Para obter mais informações sobre como importar WSDL personalizado e declarações de política, consulte [importando metadados personalizados para uma extensão do WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md).  
   

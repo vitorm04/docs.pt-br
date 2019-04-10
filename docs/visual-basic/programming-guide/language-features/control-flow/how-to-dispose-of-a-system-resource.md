@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829909"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341901"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como: Descartar um recurso do sistema (Visual Basic)
 Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco. Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para descartar uma conexão de banco de dados quando seu código for concluído com ele  
   
-1.  Certifique-se de incluir apropriado [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início de seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).  
+1. Certifique-se de incluir apropriado [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início de seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).  
   
-2.  Criar uma `Using` bloco com o `Using` e `End Using` instruções. Dentro do bloco, coloque o código que lida com a conexão de banco de dados.  
+2. Criar uma `Using` bloco com o `Using` e `End Using` instruções. Dentro do bloco, coloque o código que lida com a conexão de banco de dados.  
   
-3.  A conexão de declarar e criar uma instância dela como parte do `Using` instrução.  
+3. A conexão de declarar e criar uma instância dela como parte do `Using` instrução.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -47,9 +47,9 @@ Você pode usar um `Using` bloco para garantir que o sistema de descarte de um r
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Data.SqlClient.SqlConnection>
-- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [Estruturas de Controle Aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Fluxo de controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Estruturas de loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Outras estruturas de controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Estruturas de controle aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Instrução Using](../../../../visual-basic/language-reference/statements/using-statement.md)

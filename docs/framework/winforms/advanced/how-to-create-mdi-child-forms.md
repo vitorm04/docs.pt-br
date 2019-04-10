@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342452"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Como: criar formulários filho MDI
 Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interface MDI](multiple-document-interface-mdi-applications.md), pois esses formulários são o centro da interação do usuário.  
@@ -26,17 +26,17 @@ Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interfa
   
 ### <a name="to-create-mdi-child-forms"></a>Para criar formulários filho MDI  
   
-1.  Criar um novo projeto dos Windows Forms. No **as propriedades do Windows** para o formulário, defina seu <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade a ser `true`e seu `WindowsState` propriedade `Maximized`.  
+1. Criar um novo projeto dos Windows Forms. No **as propriedades do Windows** para o formulário, defina seu <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade a ser `true`e seu `WindowsState` propriedade `Maximized`.  
   
      Isso designa o formulário como um recipiente MDI para janelas filho.  
   
-2.  Dos `Toolbox`, arraste um <xref:System.Windows.Forms.MenuStrip> controle ao formulário. Defina sua propriedade `Text` para o **Arquivo**.  
+2. Dos `Toolbox`, arraste um <xref:System.Windows.Forms.MenuStrip> controle ao formulário. Defina sua propriedade `Text` para o **Arquivo**.  
   
-3.  Clique nas reticências (...) ao lado da propriedade **Itens** e clique em **Adicionar** para adicionar dois itens de menu filho da faixa de ferramentas. Defina a propriedade `Text` para esses itens como **Novo** e **Janela**.  
+3. Clique nas reticências (...) ao lado da propriedade **Itens** e clique em **Adicionar** para adicionar dois itens de menu filho da faixa de ferramentas. Defina a propriedade `Text` para esses itens como **Novo** e **Janela**.  
   
-4.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e selecione **Adicionar novo item**.  
+4. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e selecione **Adicionar novo item**.  
   
-5.  No **Adicionar Novo Item** caixa de diálogo, selecione **formulário do Windows** (no Visual Basic ou no Visual c#) ou **aplicativo de formulários do Windows (.NET)** (em [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) do  **Modelos** painel. Na caixa **Nome**, dê o nome **Form2** ao formulário. Clique no botão **Abrir** para adicionar o formulário ao projeto.  
+5. No **Adicionar Novo Item** caixa de diálogo, selecione **formulário do Windows** (no Visual Basic ou no Visual c#) ou **aplicativo de formulários do Windows (.NET)** (em [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) do  **Modelos** painel. Na caixa **Nome**, dê o nome **Form2** ao formulário. Clique no botão **Abrir** para adicionar o formulário ao projeto.  
   
     > [!NOTE]
     >  O formulário MDI filho criado nesta etapa é um formulário padrão do Windows. Como tal, ele tem um <xref:System.Windows.Forms.Form.Opacity%2A> propriedade, que permite que você controle a transparência do formulário. No entanto, o <xref:System.Windows.Forms.Form.Opacity%2A> propriedade foi projetada para janelas de nível superior. Não use-a com formulários filho MDI, pois podem ocorrer problemas de pintura.  
@@ -45,13 +45,13 @@ Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interfa
   
      O **Designer de Formulários do Windows** é aberto, exibindo **Form2**.  
   
-6.  Na **Caixa de Ferramentas**, arraste um controle **RichTextBox** para o formulário.  
+6. Na **Caixa de Ferramentas**, arraste um controle **RichTextBox** para o formulário.  
   
-7.  Na janela **Propriedades**, defina a propriedade `Anchor` como **Superior, Esquerda** e a propriedade `Dock` como **Preenchimento**.  
+7. Na janela **Propriedades**, defina a propriedade `Anchor` como **Superior, Esquerda** e a propriedade `Dock` como **Preenchimento**.  
   
      Isso faz com que o <xref:System.Windows.Forms.RichTextBox> controle para preencher completamente a área do formulário filho MDI, mesmo quando o formulário é redimensionado.  
   
-8.  Clique duas vezes o **New** item de menu para criar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos para ele.  
+8. Clique duas vezes o **New** item de menu para criar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos para ele.  
   
 9. Insira um código semelhante ao seguinte para criar um novo formulário filho MDI quando o usuário clicar no item de menu **Novo**.  
   

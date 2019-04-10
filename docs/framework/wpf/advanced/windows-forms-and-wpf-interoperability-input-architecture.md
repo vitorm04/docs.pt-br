@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335713"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms e arquitetura de entrada da interoperabilidade do WPF
 A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requer que as duas tecnologias tenham o processamento de entrada de teclado apropriado. Este tópico descreve como essas tecnologias implementam o processamento de mensagens e teclado para permitir uma interoperação suave em aplicativos híbridos.  
@@ -57,13 +57,13 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 ### <a name="surrogate-windows-forms-message-loop"></a>Loop de mensagens substituto dos Windows Forms  
  Por padrão, o <xref:System.Windows.Forms.Application?displayProperty=nameWithType> classe contém o loop de mensagem principal para [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicativos. Durante a interoperação, o loop de mensagens [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não processa mensagens. Portanto, essa lógica deve ser reproduzida. O manipulador para o <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> eventos executa as seguintes etapas:  
   
-1.  Filtra a mensagem usando o <xref:System.Windows.Forms.IMessageFilter> interface.  
+1. Filtra a mensagem usando o <xref:System.Windows.Forms.IMessageFilter> interface.  
   
-2.  Chama o método <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>.  
+2. Chama o método <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>.  
   
-3.  Converte e envia a mensagem, se necessário.  
+3. Converte e envia a mensagem, se necessário.  
   
-4.  Passa a mensagem para o controle de host, se nenhum outro controle processar a mensagem.  
+4. Passa a mensagem para o controle de host, se nenhum outro controle processar a mensagem.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>Implementação de IKeyboardInputSink  
  O loop de mensagens substituto trata do gerenciamento do teclado. Portanto, o <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> método é a única <xref:System.Windows.Interop.IKeyboardInputSink> membro que requer uma implementação no <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe.  
@@ -72,11 +72,11 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
  O <xref:System.Windows.Forms.Integration.WindowsFormsHost> implementação do <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> método executa as seguintes etapas:  
   
-1.  Localiza o primeiro ou último [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle que está contido pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle e que pode receber o foco. A escolha do controle depende de informações de passagem.  
+1. Localiza o primeiro ou último [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle que está contido pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle e que pode receber o foco. A escolha do controle depende de informações de passagem.  
   
-2.  Define o foco para o controle e retorna `true`.  
+2. Define o foco para o controle e retorna `true`.  
   
-3.  Se nenhum controle puder receber o foco, retorna `false`.  
+3. Se nenhum controle puder receber o foco, retorna `false`.  
   
 ### <a name="windowsformshost-registration"></a>Registro de WindowsFormsHost  
  Quando a janela de identificador para um <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle é criado, o <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle chama um método estático interno que registra sua presença no loop de mensagens.  

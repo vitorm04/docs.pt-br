@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342525"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Criando um DataTable de uma consulta (LINQ to DataSet)
 A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> recebe os resultados de uma consulta e copia os dados em um <xref:System.Data.DataTable>, que podem ser usados para vinculação de dados. Quando as operações de dados tiverem sido executadas, o novo <xref:System.Data.DataTable> será mesclado de volta no <xref:System.Data.DataTable> de origem.  
   
  O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> usa o seguinte processo para criar um <xref:System.Data.DataTable> de uma consulta:  
   
-1.  O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> clona um <xref:System.Data.DataTable> da tabela de origem (um objeto <xref:System.Data.DataTable> que implementa a interface <xref:System.Linq.IQueryable%601>). A fonte do <xref:System.Collections.IEnumerable> foi geralmente originada de uma expressão [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ou consulta de método.  
+1. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> clona um <xref:System.Data.DataTable> da tabela de origem (um objeto <xref:System.Data.DataTable> que implementa a interface <xref:System.Linq.IQueryable%601>). A fonte do <xref:System.Collections.IEnumerable> foi geralmente originada de uma expressão [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ou consulta de método.  
   
-2.  O esquema do <xref:System.Data.DataTable> clonado é criado de colunas do primeiro objeto <xref:System.Data.DataRow> enumerado na tabela de origem e o nome da tabela clonada é o nome da tabela de origem com a palavra “consulta” adicionada a ele.  
+2. O esquema do <xref:System.Data.DataTable> clonado é criado de colunas do primeiro objeto <xref:System.Data.DataRow> enumerado na tabela de origem e o nome da tabela clonada é o nome da tabela de origem com a palavra “consulta” adicionada a ele.  
   
-3.  Para cada linha na tabela de origem, o conteúdo da linha é copiado para um novo objeto <xref:System.Data.DataRow>, que é, em seguida, inserido na tabela clonada. As propriedades <xref:System.Data.DataRow.RowState%2A> e <xref:System.Data.DataRow.RowError%2A> são preservadas na operação de cópia. Um <xref:System.ArgumentException> é gerado se os objetos <xref:System.Data.DataRow> na fonte forem de tabelas diferentes.  
+3. Para cada linha na tabela de origem, o conteúdo da linha é copiado para um novo objeto <xref:System.Data.DataRow>, que é, em seguida, inserido na tabela clonada. As propriedades <xref:System.Data.DataRow.RowState%2A> e <xref:System.Data.DataRow.RowError%2A> são preservadas na operação de cópia. Um <xref:System.ArgumentException> é gerado se os objetos <xref:System.Data.DataRow> na fonte forem de tabelas diferentes.  
   
-4.  O <xref:System.Data.DataTable> clonado é retornado após todos os objetos <xref:System.Data.DataRow> na tabela consultável de entrada terem sido copiados. Se a sequência de origem não contiver nenhum objeto <xref:System.Data.DataRow>, o método retornará um <xref:System.Data.DataTable> vazio.  
+4. O <xref:System.Data.DataTable> clonado é retornado após todos os objetos <xref:System.Data.DataRow> na tabela consultável de entrada terem sido copiados. Se a sequência de origem não contiver nenhum objeto <xref:System.Data.DataRow>, o método retornará um <xref:System.Data.DataTable> vazio.  
   
  Observe que a chamada ao método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> fará com que a consulta associada à tabela de origem seja executada.  
   

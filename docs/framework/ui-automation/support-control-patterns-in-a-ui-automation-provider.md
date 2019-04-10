@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: dd8bc880126cd6fa82f7f3a775edf47f0725b6d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 65ec0f85bf0a63d0051ff9491623a65abee7a05c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336675"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Padrões de controle de suporte em um provedor de automação da interface do usuário
 > [!NOTE]
@@ -23,9 +23,9 @@ ms.locfileid: "59123923"
   
 ### <a name="support-control-patterns"></a>Suporte a padrões de controle  
   
-1.  Implemente as interfaces apropriadas para os padrões de controle que o elemento deve suportar, tais como <xref:System.Windows.Automation.Provider.IInvokeProvider> para <xref:System.Windows.Automation.InvokePattern>.  
+1. Implemente as interfaces apropriadas para os padrões de controle que o elemento deve suportar, tais como <xref:System.Windows.Automation.Provider.IInvokeProvider> para <xref:System.Windows.Automation.InvokePattern>.  
   
-2.  Retornar o objeto que contém a implementação de cada interface de controle em sua implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2. Retornar o objeto que contém a implementação de cada interface de controle em sua implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra uma implementação de <xref:System.Windows.Automation.Provider.ISelectionProvider> para uma caixa de seleção única de lista personalizada. Ela retorna três propriedades e obtém o item atualmente selecionado.  

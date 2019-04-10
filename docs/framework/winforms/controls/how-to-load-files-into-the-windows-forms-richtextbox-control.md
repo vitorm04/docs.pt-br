@@ -15,21 +15,21 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 0456190f160c555dcc8ce5553674eee2cb73db8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ffbce7401f068b3d0a7fee4fd8ba04c10cb6f6b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086774"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340848"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Como: Carregar arquivos no controle RichTextBox do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle pode exibir um texto sem formatação, texto simples Unicode ou arquivo de formato Rich-Text (RTF). Para fazer isso, chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método para carregar dados de um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Para carregar um Arquivo no controle RichTextBox  
   
-1.  Determinar o caminho do arquivo a ser aberto usando o <xref:System.Windows.Forms.OpenFileDialog> componente. Para obter uma visão geral, consulte [Visão geral do componente OpenFileDialog](openfiledialog-component-overview-windows-forms.md).  
+1. Determinar o caminho do arquivo a ser aberto usando o <xref:System.Windows.Forms.OpenFileDialog> componente. Para obter uma visão geral, consulte [Visão geral do componente OpenFileDialog](openfiledialog-component-overview-windows-forms.md).  
   
-2.  Chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método da <xref:System.Windows.Forms.RichTextBox> controle, especificando o arquivo a ser carregado e, opcionalmente, um tipo de arquivo. No exemplo a seguir, o arquivo a ser carregado é obtido a <xref:System.Windows.Forms.OpenFileDialog> do componente <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade. Se você chamar o método com um nome de arquivo como seu único argumento, o tipo de arquivo será considerado como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da <xref:System.Windows.Forms.RichTextBoxStreamType> enumeração como seu segundo argumento.  
+2. Chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método da <xref:System.Windows.Forms.RichTextBox> controle, especificando o arquivo a ser carregado e, opcionalmente, um tipo de arquivo. No exemplo a seguir, o arquivo a ser carregado é obtido a <xref:System.Windows.Forms.OpenFileDialog> do componente <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade. Se você chamar o método com um nome de arquivo como seu único argumento, o tipo de arquivo será considerado como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da <xref:System.Windows.Forms.RichTextBoxStreamType> enumeração como seu segundo argumento.  
   
      No exemplo a seguir, o <xref:System.Windows.Forms.OpenFileDialog> componente é mostrado quando um botão é clicado. O arquivo selecionado é aberto e exibido no <xref:System.Windows.Forms.RichTextBox> controle. Este exemplo supõe que um formulário tem um botão, `btnOpenFile`.  
   

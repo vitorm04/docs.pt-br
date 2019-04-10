@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334452"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Como: Criar chaves de acesso para controles do Windows Forms
 Uma *chave de acesso* é um caractere de sublinhado no texto de um menu, item de menu ou rótulo de um controle como um botão. Com uma chave de acesso, o usuário pode "clicar" um botão pressionando a tecla ALT em combinação com a chave de acesso predefinidas. Por exemplo, se um botão executa um procedimento para imprimir um formulário e, portanto, seu `Text` estiver definida como "Print", adicionando um e comercial antes que a letra "P" faz com que a letra "P" seja sublinhada no texto do botão no tempo de execução. O usuário pode executar o comando associado ao botão pressionando ALT+P. Não é possível ter uma chave de acesso para um controle que não possa receber foco.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Para criar uma chave de acesso para um controle  
   
-1.  Defina o `Text` propriedade como uma cadeia de caracteres que inclua um e comercial (&) antes da letra que será o atalho.  
+1. Defina o `Text` propriedade como uma cadeia de caracteres que inclua um e comercial (&) antes da letra que será o atalho.  
   
     ```vb  
     ' Set the letter "P" as an access key.  

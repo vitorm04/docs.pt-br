@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333828"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Como: Definir um parâmetro para um procedimento (Visual Basic)
 Um *parâmetro* permite que o código de chamada passar um valor para o procedimento quando ele a chama. Você declara cada parâmetro para um procedimento da mesma maneira que você declare uma variável, especificando seu nome e tipo de dados. Você também especificar o mecanismo de passagem, e se o parâmetro é opcional.  
@@ -22,17 +22,17 @@ Um *parâmetro* permite que o código de chamada passar um valor para o procedim
   
 ### <a name="to-define-a-procedure-parameter"></a>Para definir um parâmetro de procedimento  
   
-1.  Na declaração do procedimento, adicione o nome do parâmetro à lista de parâmetros do procedimento, separando-o de outros parâmetros por vírgulas.  
+1. Na declaração do procedimento, adicione o nome do parâmetro à lista de parâmetros do procedimento, separando-o de outros parâmetros por vírgulas.  
   
-2.  Decida o tipo de dados do parâmetro.  
+2. Decida o tipo de dados do parâmetro.  
   
-3.  Siga o nome do parâmetro com um `As` cláusula para especificar o tipo de dados.  
+3. Siga o nome do parâmetro com um `As` cláusula para especificar o tipo de dados.  
   
-4.  Decida o mecanismo de passagem que você deseja para o parâmetro. Normalmente você passa um parâmetro por valor, a menos que você deseja que o procedimento para ser capaz de alterar seu valor no código de chamada.  
+4. Decida o mecanismo de passagem que você deseja para o parâmetro. Normalmente você passa um parâmetro por valor, a menos que você deseja que o procedimento para ser capaz de alterar seu valor no código de chamada.  
   
-5.  Preceda o nome de parâmetro com [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) para especificar o mecanismo de passagem. Para obter mais informações, consulte [diferenças entre passar um argumento por valor e por referência](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Preceda o nome de parâmetro com [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) para especificar o mecanismo de passagem. Para obter mais informações, consulte [diferenças entre passar um argumento por valor e por referência](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Se o parâmetro é opcional, preceda o mecanismo de passagem com [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) e siga o tipo de dados de parâmetro com um sinal de igual (`=`) e um valor padrão.  
+6. Se o parâmetro é opcional, preceda o mecanismo de passagem com [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) e siga o tipo de dados de parâmetro com um sinal de igual (`=`) e um valor padrão.  
   
      O exemplo a seguir define o contorno de uma `Sub` procedimento com três parâmetros. As duas primeiras são necessárias e a terceira é opcional. As declarações de parâmetro são separadas na lista de parâmetros por vírgulas.  
   
@@ -57,9 +57,9 @@ Um *parâmetro* permite que o código de chamada passar um valor para o procedim
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)
-- [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
-- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)
-- [Procedimentos Recursivos](./recursive-procedures.md)
-- [Sobrecarga de Procedimento](./procedure-overloading.md)
-- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Como: passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
+- [Passar argumentos por valor e por referência](./passing-arguments-by-value-and-by-reference.md)
+- [Procedimentos recursivos](./recursive-procedures.md)
+- [Sobrecarga de procedimento](./procedure-overloading.md)
+- [Objetos e classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)

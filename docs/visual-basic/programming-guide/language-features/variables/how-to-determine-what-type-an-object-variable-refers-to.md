@@ -6,26 +6,26 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342863"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Como: Determinar que tipo uma variável de objeto se refere (Visual Basic)
 Uma variável de objeto contém um ponteiro para dados armazenados em outro lugar. O tipo de dados que pode alterar durante o tempo de execução. A qualquer momento, você pode usar o <xref:System.Type.GetTypeCode%2A> método para determinar o tipo de tempo de execução atual, ou o [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para descobrir se atual o tipo de tempo de execução é compatível com um tipo especificado.  
   
 ### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>Para determinar que exatamente tipo a uma variável de objeto atualmente refere-se ao  
   
-1.  A variável de objeto, chame o <xref:System.Object.GetType%2A> método para recuperar um <xref:System.Type?displayProperty=nameWithType> objeto.  
+1. A variável de objeto, chame o <xref:System.Object.GetType%2A> método para recuperar um <xref:System.Type?displayProperty=nameWithType> objeto.  
   
     ```  
     Dim myObject As Object  
     myObject.GetType()  
     ```  
   
-2.  Sobre o <xref:System.Type?displayProperty=nameWithType> de classe, chame o método compartilhado <xref:System.Type.GetTypeCode%2A> para recuperar o <xref:System.TypeCode> valor de enumeração para o tipo do objeto.  
+2. Sobre o <xref:System.Type?displayProperty=nameWithType> de classe, chame o método compartilhado <xref:System.Type.GetTypeCode%2A> para recuperar o <xref:System.TypeCode> valor de enumeração para o tipo do objeto.  
   
     ```  
     Dim myObject As Object  
@@ -58,6 +58,6 @@ Uma variável de objeto contém um ponteiro para dados armazenados em outro luga
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>
 - <xref:System.TypeCode>
-- [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [Valores de Variável de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Variáveis de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Valores de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

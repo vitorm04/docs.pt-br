@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077908"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342512"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -43,13 +43,13 @@ Exemplo de um fluxo de texto com objetos inseridos e seus intervalos abrangentes
   
  Quando for necessário atravessar o conteúdo de um intervalo de texto, uma série de etapas envolvidas nos bastidores para que o <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método a ser executado com êxito.  
   
-1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido em um intervalo de degeneração a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover a ambiguidade em situações onde um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, `{The URL https://www.microsoft.com is embedded in text` onde "{" e "}" é o texto de pontos de extremidade do intervalo.  
+1. O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido em um intervalo de degeneração a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover a ambiguidade em situações onde um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, `{The URL https://www.microsoft.com is embedded in text` onde "{" e "}" é o texto de pontos de extremidade do intervalo.  
   
-2.  O intervalo resultante é movido para trás na <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> para o início da solicitada <xref:System.Windows.Automation.Text.TextUnit> limites.  
+2. O intervalo resultante é movido para trás na <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> para o início da solicitada <xref:System.Windows.Automation.Text.TextUnit> limites.  
   
-3.  O intervalo é movido para frente ou para trás na <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> pelo número solicitado de <xref:System.Windows.Automation.Text.TextUnit> limites.  
+3. O intervalo é movido para frente ou para trás na <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> pelo número solicitado de <xref:System.Windows.Automation.Text.TextUnit> limites.  
   
-4.  O intervalo é expandido de um estado de intervalo de degeneração, em seguida, movendo o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> ponto de extremidade por um solicitado <xref:System.Windows.Automation.Text.TextUnit> limites.  
+4. O intervalo é expandido de um estado de intervalo de degeneração, em seguida, movendo o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> ponto de extremidade por um solicitado <xref:System.Windows.Automation.Text.TextUnit> limites.  
   
  ![Ajustes de intervalo por Move & ExpandToEnclosingUnit](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclosingUnit)  

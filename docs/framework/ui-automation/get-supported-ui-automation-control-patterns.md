@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: f55862722c6062c5353fc3b1ab8569d4759ac342
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 64c5bae738cee5249e6c2406a2f94667ecb2931f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157281"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337013"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Obter Padrões de Controle de Automação de IU Suportados
 > [!NOTE]
@@ -24,18 +24,18 @@ ms.locfileid: "59157281"
   
 ### <a name="obtain-all-control-patterns"></a>Obter todos os padrões de controle  
   
-1.  Obter o <xref:System.Windows.Automation.AutomationElement> cujos padrões de controle você está interessado.  
+1. Obter o <xref:System.Windows.Automation.AutomationElement> cujos padrões de controle você está interessado.  
   
-2.  Chamar <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> para obter todos os padrões de controle do elemento.  
+2. Chamar <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> para obter todos os padrões de controle do elemento.  
   
 > [!CAUTION]
 >  É altamente recomendável que um cliente não usar <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>. Desempenho pode ser afetado gravemente pois esse método chama <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> internamente para cada padrão de controle existente. Se possível, um cliente deve chamar <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para os padrões principais de interesse.  
   
 ### <a name="obtain-a-specific-control-pattern"></a>Obter um padrão de controle específicos  
   
-1.  Obter o <xref:System.Windows.Automation.AutomationElement> cujos padrões de controle você está interessado.  
+1. Obter o <xref:System.Windows.Automation.AutomationElement> cujos padrões de controle você está interessado.  
   
-2.  Chame <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> para consultar um padrão específico. Esses métodos são semelhantes, mas se o padrão não for encontrado, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> gera uma exceção, e <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> retorna `false`.  
+2. Chame <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> para consultar um padrão específico. Esses métodos são semelhantes, mas se o padrão não for encontrado, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> gera uma exceção, e <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> retorna `false`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir recupera uma <xref:System.Windows.Automation.AutomationElement> para um item de lista e obtém um <xref:System.Windows.Automation.SelectionItemPattern> desse elemento.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: fe1d037d7d72f41b602abe823a26655750338d85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0c2fdf820b9b42a592c422cf77362598c5e5eed7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338885"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Como: Navegar em dados com o controle BindingNavigator do Windows Forms
 O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Forms permite aos desenvolvedores fornecer aos usuários finais com um simples de dados de navegação e manipulação de interface do usuário em formulários que criam.  
@@ -26,16 +26,16 @@ O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Fo
   
 ### <a name="to-set-up-the-bindingnavigator-control"></a>Configurar o controle BindingNavigator  
   
-1.  Adicionar um <xref:System.Windows.Forms.BindingSource> componente denominado `bindingSource1` e duas <xref:System.Windows.Forms.TextBox> controles denominados `textBox1` e `textBox2`.  
+1. Adicionar um <xref:System.Windows.Forms.BindingSource> componente denominado `bindingSource1` e duas <xref:System.Windows.Forms.TextBox> controles denominados `textBox1` e `textBox2`.  
   
-2.  Associe `bindingSource1` a dados e os controles da caixa de texto a `bindingSource1`. Para fazer isso, cole o código a seguir no formulário e chame `LoadData` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+2. Associe `bindingSource1` a dados e os controles da caixa de texto a `bindingSource1`. Para fazer isso, cole o código a seguir no formulário e chame `LoadData` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
   
-3.  Adicionar um <xref:System.Windows.Forms.BindingNavigator> controle chamado `bindingNavigator1` ao seu formulário.  
+3. Adicionar um <xref:System.Windows.Forms.BindingNavigator> controle chamado `bindingNavigator1` ao seu formulário.  
   
-4.  Defina as <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propriedade para `bindingNavigator1` para `bindingSource1`. É possível fazer isso com o designer ou em código.  
+4. Defina as <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propriedade para `bindingNavigator1` para `bindingSource1`. É possível fazer isso com o designer ou em código.  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  

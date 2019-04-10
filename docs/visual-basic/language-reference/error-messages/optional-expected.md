@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: d70a71f8b5f72edbd7f3e50bc099360d02e95389
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341875"
 ---
 # <a name="optional-expected"></a>'Optional' esperado
 Um argumento opcional em uma declaração de procedimento é seguido por um argumento obrigatório. Cada argumento após um argumento opcional também deve ser opcional.  
@@ -21,10 +21,10 @@ Um argumento opcional em uma declaração de procedimento é seguido por um argu
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Se o argumento deve ser necessária, movê-la para preceder o primeiro argumento opcional na lista de argumentos.  
+1. Se o argumento deve ser necessária, movê-la para preceder o primeiro argumento opcional na lista de argumentos.  
   
-2.  Se o argumento deve ser opcional, use o `Optional` palavra-chave.  
+2. Se o argumento deve ser opcional, use o `Optional` palavra-chave.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

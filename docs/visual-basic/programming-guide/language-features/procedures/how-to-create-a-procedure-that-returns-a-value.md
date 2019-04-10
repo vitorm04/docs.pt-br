@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335492"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Como: Criar um procedimento que retorna um valor (Visual Basic)
 Você usa um `Function` procedimento retornar um valor para o código de chamada.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Para criar um procedimento que retorna um valor  
   
-1.  Fora de qualquer outro procedimento, utilize uma `Function` instrução, seguida por um `End Function` instrução.  
+1. Fora de qualquer outro procedimento, utilize uma `Function` instrução, seguida por um `End Function` instrução.  
   
-2.  No `Function` instrução, siga o `Function` palavra-chave com o nome do procedimento e, em seguida, a lista de parâmetros entre parênteses.  
+2. No `Function` instrução, siga o `Function` palavra-chave com o nome do procedimento e, em seguida, a lista de parâmetros entre parênteses.  
   
-3.  Siga os parênteses com um `As` cláusula para especificar o tipo de dados do valor retornado.  
+3. Siga os parênteses com um `As` cláusula para especificar o tipo de dados do valor retornado.  
   
-4.  Colocar instruções de código do procedimento entre o `Function` e `End Function` instruções.  
+4. Colocar instruções de código do procedimento entre o `Function` e `End Function` instruções.  
   
-5.  Use um `Return` instrução para retornar o valor para o código de chamada.  
+5. Use um `Return` instrução para retornar o valor para o código de chamada.  
   
      O seguinte `Function` procedimento calcula o lado mais longo, ou hipotenusa de um triângulo, considerando os valores para os dois lados.  
   
@@ -41,8 +41,8 @@ Você usa um `Function` procedimento retornar um valor para o código de chamada
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Procedimentos de Operador](./operator-procedures.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Procedimentos do operador](./operator-procedures.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Function](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Como: Retornar um valor de um procedimento](./how-to-return-a-value-from-a-procedure.md)
-- [Como: Chamar um procedimento que retorna um valor](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Como: retornar um valor de um procedimento](./how-to-return-a-value-from-a-procedure.md)
+- [Como: chamar um procedimento que retorna um valor](./how-to-call-a-procedure-that-returns-a-value.md)

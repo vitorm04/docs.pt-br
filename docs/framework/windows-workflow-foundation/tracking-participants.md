@@ -2,12 +2,12 @@
 title: Participantes de rastreamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340172"
 ---
 # <a name="tracking-participants"></a>Participantes de rastreamento
 Os participantes de rastreamento são os pontos de extensibilidade que permitem que um desenvolvedor de fluxo de trabalho acessar objetos de <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e processe os. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclui um participante de rastreamento padrão que grava registros de rastreamento como eventos do Event Tracing for Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.  
@@ -81,13 +81,13 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Para ativar exibir os registros de rastreamento no visualizador de eventos  
   
-1.  Ligue o visualizador de eventos (EVENTVWR.EXE)  
+1. Ligue o visualizador de eventos (EVENTVWR.EXE)  
   
-2.  Selecione **Visualizador de eventos, Applications and Services Logs, Microsoft, Windows, aplicativos de servidor**.  
+2. Selecione **Visualizador de eventos, Applications and Services Logs, Microsoft, Windows, aplicativos de servidor**.  
   
-3.  Clique com botão direito e certifique-se de que **exibição, mostrar logs analíticos e depuração** está selecionado. Se não, selecione-o para que a marca de seleção aparece próxima a ela. Isso exibe a **analítico**, **Perf**, e **depurar** logs.  
+3. Clique com botão direito e certifique-se de que **exibição, mostrar logs analíticos e depuração** está selecionado. Se não, selecione-o para que a marca de seleção aparece próxima a ela. Isso exibe a **analítico**, **Perf**, e **depurar** logs.  
   
-4.  Clique com botão direito do **analítico** faça logon e, em seguida, selecione **Habilitar Log**. O log existirá no diretório %SystemRoot% \ arquivo de Winevt System32 \ \ \ application logs Server-Applications%4Analytic.etl.  
+4. Clique com botão direito do **analítico** faça logon e, em seguida, selecione **Habilitar Log**. O log existirá no diretório %SystemRoot% \ arquivo de Winevt System32 \ \ \ application logs Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participante de rastreamento personalizada  
  O participante de rastreamento API permite a extensão de rastreamento usuário fornecido com o participante de rastreamento que pode incluir a lógica personalizada para manipular os registros de rastreamento emissores em tempo de execução de fluxo de trabalho. Para gravar um participante personalizado de rastreamento, o desenvolvedor deve implementar o método `Track` na classe de <xref:System.Activities.Tracking.TrackingParticipant> . Este método é chamado quando um registro de rastreamento é emitida em tempo de execução de fluxo de trabalho.  

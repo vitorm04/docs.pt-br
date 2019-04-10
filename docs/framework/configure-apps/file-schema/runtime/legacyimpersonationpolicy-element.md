@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333984"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > elemento
 Especifica que a identidade do Windows não flua entre pontos assíncronos, independentemente das configurações de fluxo para o contexto de execução no thread atual.  
@@ -67,11 +67,11 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
   
  Você pode alterar esse comportamento padrão de outras duas maneiras:  
   
-1.  No código gerenciado em uma base por thread.  
+1. No código gerenciado em uma base por thread.  
   
      Você pode suprimir o fluxo em uma base por thread, modificando o <xref:System.Threading.ExecutionContext> e <xref:System.Security.SecurityContext> as configurações usando o <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> ou <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> método.  
   
-2.  Na chamada para a interface de hospedagem não gerenciada para carregar o common language runtime (CLR).  
+2. Na chamada para a interface de hospedagem não gerenciada para carregar o common language runtime (CLR).  
   
      Se uma interface de hospedagem não gerenciada (em vez de um executável gerenciado simple) é usada para carregar o CLR, você pode especificar um sinalizador especial na chamada para o [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) função. Para habilitar o modo de compatibilidade para todo o processo, defina as `flags` parâmetro para [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) para STARTUP_LEGACY_IMPERSONATION.  
   

@@ -2,12 +2,12 @@
 title: Programação assíncrona
 description: Saiba como F# programação assíncrona é realizada por meio de um modelo de programação de nível de linguagem que é o idioma natural e fácil de usar.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343448"
 ---
 # <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
@@ -57,7 +57,7 @@ Além disso, normal `let`, `use`, e `do` palavras-chave podem ser usadas junto c
 
 Como mencionado anteriormente, o código assíncrono é uma especificação de trabalho a ser feito em outro contexto que deve ser iniciada explicitamente. Aqui estão duas maneiras principais de fazer isso:
 
-1.  `Async.RunSynchronously` Inicie um fluxo de trabalho assíncrono em outro thread e await seu resultado.
+1. `Async.RunSynchronously` Inicie um fluxo de trabalho assíncrono em outro thread e await seu resultado.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` iniciará um fluxo de trabalho assíncrono em outro thread e serão **não** await seu resultado.
+2. `Async.Start` iniciará um fluxo de trabalho assíncrono em outro thread e serão **não** await seu resultado.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Há algumas semelhanças e diferenças que merecem atenção.
 
 Por outro lado, F# fluxos de trabalho assíncronos são mais naturalmente cancelável. O cancelamento é um processo de três etapas simples.
 
-1.  Crie um novo `CancellationTokenSource`.
-2.  Passá-la para uma função inicial.
-3.  Chamar `Cancel` no token.
+1. Crie um novo `CancellationTokenSource`.
+2. Passá-la para uma função inicial.
+3. Chamar `Cancel` no token.
 
 Exemplo:
 

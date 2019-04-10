@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337052"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Como: Associar um menu de atalho a um componente NotifyIcon do Windows Forms
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097984"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Associar um menu de atalho ao componente NotifyIcon no tempo de design  
   
-1.  Adicionar um <xref:System.Windows.Forms.NotifyIcon> ao seu formulário e defina as propriedades importantes, como o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedades.  
+1. Adicionar um <xref:System.Windows.Forms.NotifyIcon> ao seu formulário e defina as propriedades importantes, como o <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propriedades.  
   
      Para obter mais informações, confira [Como: Adicionar ícones de aplicativo ao TaskBar com o Windows Forms ao componente NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2.  Adicionar um <xref:System.Windows.Forms.ContextMenu> ao seu formulário do Windows.  
+2. Adicionar um <xref:System.Windows.Forms.ContextMenu> ao seu formulário do Windows.  
   
      Adicione itens de menu ao menu de atalho que representam os comandos que você deseja disponibilizar no tempo de execução. Esse também é um bom momento para adicionar melhorias de menu a esses itens de menu, como teclas de acesso.  
   
-3.  Defina a <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade do <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
+3. Defina a <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade do <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
   
      Com essa propriedade definida, o menu de atalho será exibido ao clicar no ícone da barra de tarefas.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Associar um menu de atalho ao componente NotifyIcon com programação  
   
-1.  Criar uma instância do <xref:System.Windows.Forms.NotifyIcon> classe e uma <xref:System.Windows.Forms.ContextMenu> classe, com todas as configurações de propriedade são necessárias para o aplicativo (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> as propriedades para o <xref:System.Windows.Forms.NotifyIcon> componente, itens de menu para o <xref:System.Windows.Forms.ContextMenu> componente).  
+1. Criar uma instância do <xref:System.Windows.Forms.NotifyIcon> classe e uma <xref:System.Windows.Forms.ContextMenu> classe, com todas as configurações de propriedade são necessárias para o aplicativo (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A> as propriedades para o <xref:System.Windows.Forms.NotifyIcon> componente, itens de menu para o <xref:System.Windows.Forms.ContextMenu> componente).  
   
-2.  Defina a <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade do <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
+2. Defina a <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propriedade do <xref:System.Windows.Forms.NotifyIcon> componente para o menu de atalho que você adicionou.  
   
      Com essa propriedade definida, o menu de atalho será exibido ao clicar no ícone da barra de tarefas.  
   

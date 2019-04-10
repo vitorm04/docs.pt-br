@@ -2,12 +2,12 @@
 title: Introdução à Integração do SQL Server CLR
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 2f65e8690aa52f0442b4bee3b98bb1ea86e064a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336805"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introdução à Integração do SQL Server CLR
 O CLR (Common Language Runtime) é o coração do Microsoft .NET Framework e fornece o ambiente de execução para todo o código do .NET Framework. O código que é executado dentro do CLR é conhecido como código gerenciado. O CLR fornece várias funções e serviços necessários para a execução do programa, incluindo a compilação just-in-time (JIT), alocação e gerenciamento de memória, imposição de segurança de tipo, manipulação de exceção, gerenciamento de segmento e segurança.  
@@ -45,7 +45,7 @@ GO
   
  **Manuais Online do SQL Server**  
   
-1.  [Implantando objetos de banco de dados de CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [Implantando objetos de banco de dados de CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Segurança de integração de CLR  
  O modelo de segurança de integração do Microsoft SQL Server com o CLR (Common Language Runtime) do Microsoft .NET Framework gerencia e protege o acesso entre diferentes tipos de objetos CLR e não CLR que são executados no SQL Server. Esses objetos podem ser chamados por uma instrução Transact-SQL ou outro objeto CLR que é executado no servidor.  

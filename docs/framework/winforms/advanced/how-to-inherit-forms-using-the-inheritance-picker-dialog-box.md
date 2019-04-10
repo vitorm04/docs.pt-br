@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342083"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: herdar formulários usando a caixa de diálogo Selecionador de Herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  
@@ -23,23 +23,23 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Para criar um Formulário do Windows herdado de um formulário existente usando o seletor de herança  
   
-1.  No menu **Projeto**, escolha **Adicionar Formulário do Windows**.  
+1. No menu **Projeto**, escolha **Adicionar Formulário do Windows**.  
   
      A caixa de diálogo **Adicionar Novo Item** é aberta.  
   
-2.  Pesquisa o **formulário herdado** modelo a partir da caixa de pesquisa ou clicando na **Windows Forms** categoria, selecione-o e nomeie-o na **nome** caixa. Clique no botão **Adicionar** para continuar.  
+2. Pesquisa o **formulário herdado** modelo a partir da caixa de pesquisa ou clicando na **Windows Forms** categoria, selecione-o e nomeie-o na **nome** caixa. Clique no botão **Adicionar** para continuar.  
   
      A caixa de diálogo **Selecionador de Herança** é aberta. Se o projeto atual já contiver formulários, eles serão exibidos na caixa de diálogo **Selecionador de Herança**.  
   
-3.  Para herdar de um formulário em outro assembly, clique no botão **Procurar**.  
+3. Para herdar de um formulário em outro assembly, clique no botão **Procurar**.  
   
-4.  Dentro da caixa de diálogo **Selecionar um arquivo que contenha um componente do qual herdar**, navegue para o projeto que contém o formulário ou módulo desejado.  
+4. Dentro da caixa de diálogo **Selecionar um arquivo que contenha um componente do qual herdar**, navegue para o projeto que contém o formulário ou módulo desejado.  
   
-5.  Clique no nome do arquivo .dll ou .exe para selecioná-la e clique no botão **Abrir**.  
+5. Clique no nome do arquivo .dll ou .exe para selecioná-la e clique no botão **Abrir**.  
   
      Isso o leva de volta à caixa de diálogo **Selecionador de Herança**, na qual o componente agora está listado, junto com o projeto no qual ele está localizado.  
   
-6.  Selecione o componente.  
+6. Selecione o componente.  
   
      No **Gerenciador de Soluções**, o componente é adicionado ao seu projeto. Se ele tem uma interface do usuário, controles que fazem parte do formulário herdado serão marcados com um glifo (![captura de tela de símbolo de herança do Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) e, quando selecionado, têm uma borda que indica o nível de segurança que tem o controle sobre o formulário da superclasse. Os comportamentos que correspondem aos diferentes níveis de segurança são listados na tabela a seguir.  
   

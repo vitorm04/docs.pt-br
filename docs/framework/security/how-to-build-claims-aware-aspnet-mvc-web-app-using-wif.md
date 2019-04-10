@@ -1,16 +1,16 @@
 ---
-title: Como criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
+title: 'Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF'
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335661"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Como criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -53,24 +53,24 @@ ms.locfileid: "48035994"
   
 #### <a name="to-create-simple-aspnet-mvc-application"></a>Para criar um aplicativo ASP.NET MVC simples  
   
-1.  Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
+1. Inicie o Visual Studio, clique em **Arquivo**, **Novo** e, depois, em **Projeto**.  
   
-2.  Na janela **Novo Projeto**, clique em **Aplicativo Web ASP.NET MVC 3**.  
+2. Na janela **Novo Projeto**, clique em **Aplicativo Web ASP.NET MVC 3**.  
   
-3.  Em **Nome**, insira `TestApp` e pressione **OK**.  
+3. Em **Nome**, insira `TestApp` e pressione **OK**.  
   
-4.  Na caixa de diálogo **Novo Projeto ASP.NET MVC 3**, selecione **Aplicativo da Internet** nos modelos disponíveis, verifique se o **Mecanismo de Exibição** está definido como **Razor** e, em seguida, clique em **OK**.  
+4. Na caixa de diálogo **Novo Projeto ASP.NET MVC 3**, selecione **Aplicativo da Internet** nos modelos disponíveis, verifique se o **Mecanismo de Exibição** está definido como **Razor** e, em seguida, clique em **OK**.  
   
-5.  Quando o novo projeto for aberto, clique com o botão direito do mouse no projeto **TestApp** no **Gerenciador de Soluções** e selecione a opção **Propriedades**.  
+5. Quando o novo projeto for aberto, clique com o botão direito do mouse no projeto **TestApp** no **Gerenciador de Soluções** e selecione a opção **Propriedades**.  
   
-6.  Na página de propriedades do projeto, clique na guia **Web** à esquerda e verifique se a opção **Usar Servidor Web do IIS Local** é selecionada.  
+6. Na página de propriedades do projeto, clique na guia **Web** à esquerda e verifique se a opção **Usar Servidor Web do IIS Local** é selecionada.  
   
 ## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Etapa 2 – Configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
  Nesta etapa, você adicionará entradas de configuração ao arquivo de configuração *Web.config* do aplicativo Web ASP.NET MVC para torná-lo baseado em declarações.  
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Para configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
   
-1.  Adicione as definições de seção de configuração a seguir ao arquivo de configuração *Web.config*. Elas definem as seções de configuração exigidas pelo Windows Identity Foundation. Adicione as definições imediatamente após o elemento de abertura **\<configuration>**:  
+1. Adicione as definições de seção de configuração a seguir ao arquivo de configuração *Web.config*. Elas definem as seções de configuração exigidas pelo Windows Identity Foundation. Adicione as definições imediatamente após o elemento de abertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "48035994"
     </configSections>  
     ```  
   
-2.  Adicione um elemento **\<location>** que habilita o acesso aos metadados de federação do aplicativo:  
+2. Adicione um elemento **\<location>** que habilita o acesso aos metadados de federação do aplicativo:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "48035994"
     </location>  
     ```  
   
-3.  Adicione as seguintes entradas de configuração nos elementos **\<system.web>** para negar usuários, desabilitar a autenticação nativa e permitir que o WIF gerencie a autenticação.  
+3. Adicione as seguintes entradas de configuração nos elementos **\<system.web>** para negar usuários, desabilitar a autenticação nativa e permitir que o WIF gerencie a autenticação.  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "48035994"
     <authentication mode="None" />  
     ```  
   
-4.  Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>**, no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>**. Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
+4. Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>**, no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>**. Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "48035994"
     </system.identityModel.services>  
     ```  
   
-5.  Adicione uma referência ao assembly <xref:System.IdentityModel>.  
+5. Adicione uma referência ao assembly <xref:System.IdentityModel>.  
   
-6.  Compile a solução para verificar se há erros.  
+6. Compile a solução para verificar se há erros.  
   
 ## <a name="step-3--test-your-solution"></a>Etapa 3 – Testar a solução  
  Nesta etapa, você testará o aplicativo Web ASP.NET MVC configurado para a autenticação baseada em declarações. Para executar um teste básico, você adicionará um código simples que exibe as declarações no token emitido pelo STS (Serviço de Token de Segurança).  
   
 #### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Para testar o aplicativo ASP.NET MVC para autenticação baseada em declarações  
   
-1.  No **Gerenciador de Soluções**, expanda a pasta **Controladores** e abra o arquivo *HomeController.cs* no editor. Adicione o seguinte código ao método **Index**:  
+1. No **Gerenciador de Soluções**, expanda a pasta **Controladores** e abra o arquivo *HomeController.cs* no editor. Adicione o seguinte código ao método **Index**:  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "48035994"
     }  
     ```  
   
-2.  No **Gerenciador de Soluções**, expanda **Exibições** e, em seguida, as pastas **Página Inicial** e abra o arquivo *Index.cshtml* no editor. Exclua seu conteúdo e adicione a seguinte marcação:  
+2. No **Gerenciador de Soluções**, expanda **Exibições** e, em seguida, as pastas **Página Inicial** e abra o arquivo *Index.cshtml* no editor. Exclua seu conteúdo e adicione a seguinte marcação:  
   
     ```html  
     @{  
@@ -212,10 +212,10 @@ ms.locfileid: "48035994"
     </table>  
     ```  
   
-3.  Execute a solução pressionando a tecla **F5**.  
+3. Execute a solução pressionando a tecla **F5**.  
   
-4.  Você deverá ver a página que exibe as declarações no token que foi emitido por você pelo Serviço de Token de Segurança.  
+4. Você deverá ver a página que exibe as declarações no token que foi emitido por você pelo Serviço de Token de Segurança.  
   
 ## <a name="related-items"></a>Itens relacionados  
   
--   [Como criar um aplicativo Web Forms do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

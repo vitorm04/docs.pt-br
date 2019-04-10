@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336649"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: criar um aplicativo baseado no Windows acessível
 A criação de um aplicativo acessível tem implicações importantes nos negócios. Muitos órgãos governamentais tem regulamentos de acessibilidade para a compra de software. O logotipo Certified for Windows inclui requisitos de acessibilidade. Estima-se que 30 milhões de moradores, apenas dos EUA, muitos deles clientes potenciais, são afetados pela acessibilidade do software.  
@@ -158,7 +158,7 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Para habilitar o modo de Alto Contraste de uma maneira eficaz  
   
-1.  Crie um método para definir as cores do rótulo para as cores do sistema.  
+1. Crie um método para definir as cores do rótulo para as cores do sistema.  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     }  
     ```  
   
-2.  Chame o procedimento `SetColorScheme` no construtor do formulário (`Public Sub New()` no Visual Basic e `public class Form1` no Visual C#). Para acessar o construtor no Visual Basic, você precisará expandir a região rotulada como **Código gerado pelo Windows Form Designer**.  
+2. Chame o procedimento `SetColorScheme` no construtor do formulário (`Public Sub New()` no Visual Basic e `public class Form1` no Visual C#). Para acessar o construtor no Visual Basic, você precisará expandir a região rotulada como **Código gerado pelo Windows Form Designer**.  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     }  
     ```  
   
-3.  Criar um procedimento de evento, com a assinatura apropriada, para responder a <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos.  
+3. Criar um procedimento de evento, com a assinatura apropriada, para responder a <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos.  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     }  
     ```  
   
-4.  Adicione código ao construtor de formulário, após a chamada ao `InitializeComponents`, para associar o procedimento de evento ao evento do sistema. Esse método chama o procedimento `SetColorScheme`.  
+4. Adicione código ao construtor de formulário, após a chamada ao `InitializeComponents`, para associar o procedimento de evento ao evento do sistema. Esse método chama o procedimento `SetColorScheme`.  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     }  
     ```  
   
-5.  Adicione código ao formulário <xref:System.Windows.Forms.Control.Dispose%2A> método antes de chamar o <xref:System.Windows.Forms.Control.Dispose%2A> método da classe base, para liberar o evento quando o aplicativo é fechado. Para acessar o <xref:System.Windows.Forms.Control.Dispose%2A> método no Visual Basic, você precisará expandir a região rotulada como código gerado pelo Windows Form Designer.  
+5. Adicione código ao formulário <xref:System.Windows.Forms.Control.Dispose%2A> método antes de chamar o <xref:System.Windows.Forms.Control.Dispose%2A> método da classe base, para liberar o evento quando o aplicativo é fechado. Para acessar o <xref:System.Windows.Forms.Control.Dispose%2A> método no Visual Basic, você precisará expandir a região rotulada como código gerado pelo Windows Form Designer.  
   
     > [!NOTE]
     >  O código de evento do sistema executa um thread separado do aplicativo principal. Se você não liberar o evento, o código que você associou com o evento será executado mesmo depois que o programa for fechado.  
@@ -281,38 +281,38 @@ A criação de um aplicativo acessível tem implicações importantes nos negóc
     }  
     ```  
   
-6.  Pressione F5 para executar o aplicativo.  
+6. Pressione F5 para executar o aplicativo.  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>Transmitindo informações importantes por outros meios além do som  
  Neste aplicativo, nenhuma informação é transmitida apenas pelo som. Se você usa som em seu aplicativo, você também deve fornecer as informações por algum outro meio.  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Para fornecer informações por outros meios além do som  
   
-1.  Faça a barra de título piscar, usando a função FlashWindow da API do Windows. Para obter um exemplo de como chamar funções da API do Windows, consulte [passo a passo: Chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1. Faça a barra de título piscar, usando a função FlashWindow da API do Windows. Para obter um exemplo de como chamar funções da API do Windows, consulte [passo a passo: Chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  O usuário pode ter o serviço SoundSentry do Windows habilitado, que também fará com que a janela pisque quando os sons do sistema forem executados pelo alto-falante do computador.  
   
-2.  Exiba as informações importantes em uma janela não modal para que o usuário possa responder a elas.  
+2. Exiba as informações importantes em uma janela não modal para que o usuário possa responder a elas.  
   
-3.  Exiba uma caixa de mensagem que obtém o foco do teclado. Evite esse método quando o usuário pode estar digitando.  
+3. Exiba uma caixa de mensagem que obtém o foco do teclado. Evite esse método quando o usuário pode estar digitando.  
   
-4.  Exiba um indicador de status na área de notificação de status da barra de tarefas. Para obter detalhes, consulte [Adicionando ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4. Exiba um indicador de status na área de notificação de status da barra de tarefas. Para obter detalhes, consulte [Adicionando ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Testando o aplicativo  
  Antes de implantar o aplicativo, você deve testar os recursos de acessibilidade que implementou.  
   
 #### <a name="to-test-accessibility-features"></a>Para testar os recursos de acessibilidade  
   
-1.  Para testar o acesso do teclado, desconecte o mouse e navegue na interface do usuário até cada recurso, usando apenas o teclado. Certifique-se de que todas as tarefas podem ser realizadas usando apenas o teclado.  
+1. Para testar o acesso do teclado, desconecte o mouse e navegue na interface do usuário até cada recurso, usando apenas o teclado. Certifique-se de que todas as tarefas podem ser realizadas usando apenas o teclado.  
   
-2.  Para testar o suporte ao Alto Contraste, escolha o ícone de Opções de Acessibilidade no Painel de Controle. Clique na guia Exibir e marque a caixa de seleção Usar Alto Contraste. Navegue por todos os elementos de interface do usuário para garantir que as alterações de cores e fontes estão refletidas. Além disso, verifique se as imagens ou os padrões desenhados atrás do texto estão omitidos.  
+2. Para testar o suporte ao Alto Contraste, escolha o ícone de Opções de Acessibilidade no Painel de Controle. Clique na guia Exibir e marque a caixa de seleção Usar Alto Contraste. Navegue por todos os elementos de interface do usuário para garantir que as alterações de cores e fontes estão refletidas. Além disso, verifique se as imagens ou os padrões desenhados atrás do texto estão omitidos.  
   
     > [!NOTE]
     >  O Windows NT 4 não tem um ícone de Opções de Acessibilidade no Painel de Controle. Portanto, este procedimento para alterar a configuração SystemInformation.HighContrast não funciona no Windows NT 4.  
   
-3.  Outras ferramentas estão prontamente disponíveis para testar a acessibilidade de um aplicativo.  
+3. Outras ferramentas estão prontamente disponíveis para testar a acessibilidade de um aplicativo.  
   
-4.  Para testar a exposição do foco do teclado, execute a Lupa. (Para abri-la, clique no menu **Iniciar**, aponte para **Programas**, aponte para **Acessórios**, aponte para **Acessibilidade** e, em seguida, clique em **Lupa**). Navegue na interface do usuário usando as tabulações do teclado e o mouse. Verifique se toda a navegação é rastreada corretamente na **Lupa**.  
+4. Para testar a exposição do foco do teclado, execute a Lupa. (Para abri-la, clique no menu **Iniciar**, aponte para **Programas**, aponte para **Acessórios**, aponte para **Acessibilidade** e, em seguida, clique em **Lupa**). Navegue na interface do usuário usando as tabulações do teclado e o mouse. Verifique se toda a navegação é rastreada corretamente na **Lupa**.  
   
-5.  Para testar a exposição dos elementos da tela, execute Inspecionar e use o mouse e a tecla TAB para acessar cada elemento. Verifique se as informações apresentadas nos campos Nome, Estado, Função, Local e Valor da janela Inspecionar são significativas para o usuário para cada objeto na interface do usuário.
+5. Para testar a exposição dos elementos da tela, execute Inspecionar e use o mouse e a tecla TAB para acessar cada elemento. Verifique se as informações apresentadas nos campos Nome, Estado, Função, Local e Valor da janela Inspecionar são significativas para o usuário para cada objeto na interface do usuário.

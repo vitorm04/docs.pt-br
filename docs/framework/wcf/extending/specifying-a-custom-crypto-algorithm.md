@@ -2,21 +2,21 @@
 title: Especificando um algoritmo de criptografia personalizada
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342824"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificando um algoritmo de criptografia personalizada
 O WCF permite que você especifique um algoritmo de criptografia personalizado para usar ao criptografar dados ou computação em assinaturas digitais. Isso é feito com as seguintes etapas:  
   
-1.  Derive uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. Derive uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  Registre-se o algoritmo  
+2. Registre-se o algoritmo  
   
-3.  Configurar a associação com o <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-classe derivada.  
+3. Configurar a associação com o <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-classe derivada.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Derive uma classe de SecurityAlgorithmSuite  
  O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> é uma classe base abstrata que permite que você especifique o algoritmo a ser usado ao executar a segurança de várias operações relacionadas. Por exemplo, computar um hash para uma assinatura digital ou criptografar uma mensagem. O código a seguir mostra como derivar uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  

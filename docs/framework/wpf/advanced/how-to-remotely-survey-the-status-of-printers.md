@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143540"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340783"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Como: Pesquisar remotamente o status das impressoras
 A qualquer momento em médias e grandes empresas, pode haver várias impressoras que não estão funcionando devido a atolamentos de papel ou falta de papel ou alguma outra situação problemática. O conjunto avançado de propriedades da impressora exposto no [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] do Microsoft .NET Framework fornecem um meio para executar uma pesquisa rápida dos Estados das impressoras.  
@@ -24,11 +24,11 @@ A qualquer momento em médias e grandes empresas, pode haver várias impressoras
 ## <a name="example"></a>Exemplo  
  As principais etapas para criar esse tipo de utilitário são as apresentadas a seguir.  
   
-1.  Obter uma lista de todos os servidores de impressão.  
+1. Obter uma lista de todos os servidores de impressão.  
   
-2.  Executar um loop pelos servidores para consultar suas filas de impressão.  
+2. Executar um loop pelos servidores para consultar suas filas de impressão.  
   
-3.  Em cada passagem do loop do servidor, executar um loop em todas as filas do servidor e ler cada propriedade que pode indicar que a fila não está funcionando no momento.  
+3. Em cada passagem do loop do servidor, executar um loop em todas as filas do servidor e ler cada propriedade que pode indicar que a fila não está funcionando no momento.  
   
  O código a seguir é uma série de snippets de código. Para simplificar, este exemplo presume que há uma lista delimitada por CRLF de servidores de impressão. A variável `fileOfPrintServers` é um <xref:System.IO.StreamReader> objeto para este arquivo. Como cada nome de servidor está em sua própria linha, qualquer chamada de <xref:System.IO.StreamReader.ReadLine%2A> obtém o nome do próximo servidor e move o <xref:System.IO.StreamReader>do cursor até o início da próxima linha.  
   

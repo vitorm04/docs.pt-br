@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335024"
 ---
 # <a name="extending-dispatchers"></a>Estendendo distribuidores
 Distribuidores são responsáveis por puxando as mensagens recebidas fora de canais subjacentes, convertendo-os em invocações de método no código do aplicativo e enviar os resultados para o chamador. Extensões de Dispatcher permitem que você modifique esse processamento.  Você pode implementar os inspetores de mensagem ou de parâmetro que inspecionam ou modificar o conteúdo de mensagens ou parâmetros.  Você pode alterar o modo como as mensagens são roteadas para operações ou fornecem algumas outras funcionalidades.  
@@ -76,13 +76,13 @@ Distribuidores são responsáveis por puxando as mensagens recebidas fora de can
   
  Há quatro áreas principais de extensibilidade do dispatcher expostos pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime> classe:  
   
-1.  Componentes de canal usam as propriedades do <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e aqueles do dispatcher do canal associado, retornado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> propriedade para personalizar como o dispatcher do canal aceita e fecha canais. Essa categoria inclui as <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> propriedades.  
+1. Componentes de canal usam as propriedades do <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e aqueles do dispatcher do canal associado, retornado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> propriedade para personalizar como o dispatcher do canal aceita e fecha canais. Essa categoria inclui as <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> propriedades.  
   
-2.  Componentes de mensagens personalizadas para cada mensagem processada. Essa categoria inclui as <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>e o <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> propriedades.  
+2. Componentes de mensagens personalizadas para cada mensagem processada. Essa categoria inclui as <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>e o <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> propriedades.  
   
-3.  Componentes da instância personalizar a criação, tempo de vida e descarte de instâncias do tipo de serviço. Para obter mais informações sobre os tempos de vida de objeto de serviço, consulte o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propriedade. Essa categoria inclui as <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> e o <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> propriedades.  
+3. Componentes da instância personalizar a criação, tempo de vida e descarte de instâncias do tipo de serviço. Para obter mais informações sobre os tempos de vida de objeto de serviço, consulte o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propriedade. Essa categoria inclui as <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> e o <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> propriedades.  
   
-4.  Componentes de segurança podem usar as seguintes propriedades:  
+4. Componentes de segurança podem usar as seguintes propriedades:  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica onde os eventos de auditoria são gravados.  
   

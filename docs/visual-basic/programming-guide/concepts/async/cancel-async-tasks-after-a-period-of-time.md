@@ -2,12 +2,12 @@
 title: Cancelar tarefas assíncronas após um período (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 2b5634165493ff1aa5e07f5240a3db15741d57a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2f3fee4909338155ed4b8917fd1de46984614908
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341693"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Cancelar tarefas assíncronas após um período (Visual Basic)
 Você pode cancelar uma operação assíncrona após um período de tempo usando o método <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> se você não deseja aguardar a conclusão da operação. Esse método agenda o cancelamento de quaisquer tarefas associadas que não são concluídas dentro do período designado pela expressão `CancelAfter`.  
@@ -20,19 +20,19 @@ Você pode cancelar uma operação assíncrona após um período de tempo usando
 ## <a name="downloading-the-example"></a>Baixando o Exemplo  
  Baixe o projeto completo do WPF (Windows Presentation Foundation) em [Amostra assíncrona: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.  
   
-1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
+1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
-2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
+2. Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningVB.  
+3. Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningVB.  
   
-4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterTime** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
+4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterTime** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
-5.  Escolha a tecla F5 para executar o projeto.  
+5. Escolha a tecla F5 para executar o projeto.  
   
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.  
   
-6.  Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites.  
+6. Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites.  
   
  Se não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xaml.vb no final deste tópico.  
   
@@ -194,5 +194,5 @@ End Class
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Exemplo de Async: ajuste do seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Ajustando seu aplicativo Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Exemplo de Async: Ajustando seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336792"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Como: Animar uma matriz usando quadros principais
 Este exemplo mostra como animar a <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade de um <xref:System.Windows.Media.MatrixTransform> usando quadros-chave.  
@@ -21,11 +21,11 @@ Este exemplo mostra como animar a <xref:System.Windows.Media.MatrixTransform.Mat
   
  Essa animação usa o <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> de classe para criar dois quadros-chave e faz o seguinte com eles:  
   
-1.  Anima o primeiro <xref:System.Windows.Media.Matrix> durante o primeiro 0,2 segundo. O exemplo altera o <xref:System.Windows.Media.Matrix.M11%2A> e <xref:System.Windows.Media.Matrix.M12%2A> propriedades do <xref:System.Windows.Media.Matrix>. Essa alteração faz com que o botão se alongue e fique achatado. O exemplo também modifica o <xref:System.Windows.Media.Matrix.OffsetX%2A> e <xref:System.Windows.Media.Matrix.OffsetY%2A> propriedades para que o botão muda de posição.  
+1. Anima o primeiro <xref:System.Windows.Media.Matrix> durante o primeiro 0,2 segundo. O exemplo altera o <xref:System.Windows.Media.Matrix.M11%2A> e <xref:System.Windows.Media.Matrix.M12%2A> propriedades do <xref:System.Windows.Media.Matrix>. Essa alteração faz com que o botão se alongue e fique achatado. O exemplo também modifica o <xref:System.Windows.Media.Matrix.OffsetX%2A> e <xref:System.Windows.Media.Matrix.OffsetY%2A> propriedades para que o botão muda de posição.  
   
-2.  Anima o segundo <xref:System.Windows.Media.Matrix> em 1,0 segundo. O botão muda para outra posição enquanto o botão não é mais distorcido ou alongado.  
+2. Anima o segundo <xref:System.Windows.Media.Matrix> em 1,0 segundo. O botão muda para outra posição enquanto o botão não é mais distorcido ou alongado.  
   
-3.  Repete a animação indefinidamente.  
+3. Repete a animação indefinidamente.  
   
 > [!NOTE]
 >  Quadros que derivam de chave a <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> objeto criam saltos repentinos entre valores, ou seja, o movimento da animação é brusco.  

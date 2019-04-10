@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337624"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  
@@ -27,11 +27,11 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
   
 -   Usando a marca `IFRAME`, que cria uma janela flutuante que pode ser reposicionada em tempo de execução.  
   
-1.  Como os quadros contêm documentos HTML, eles são representados no Modelo de Objeto do Documento (DOM) como elementos de janela e de quadro.  
+1. Como os quadros contêm documentos HTML, eles são representados no Modelo de Objeto do Documento (DOM) como elementos de janela e de quadro.  
   
-2.  Quando você acessa uma `FRAME` ou `IFRAME` marca usando a coleção de quadros de <xref:System.Windows.Forms.HtmlWindow>, o elemento de janela correspondente ao quadro. Isso representa todas as propriedades dinâmicas do quadro, como sua URL, documento e tamanho atual.  
+2. Quando você acessa uma `FRAME` ou `IFRAME` marca usando a coleção de quadros de <xref:System.Windows.Forms.HtmlWindow>, o elemento de janela correspondente ao quadro. Isso representa todas as propriedades dinâmicas do quadro, como sua URL, documento e tamanho atual.  
   
-3.  Quando você acessa uma `FRAME` ou `IFRAME` marca usando o <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> propriedade do <xref:System.Windows.Forms.HtmlWindow>, o <xref:System.Windows.Forms.HtmlElement.Children%2A> coleção ou métodos como <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> ou <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, você está recuperando o elemento de quadro. Isso representa as propriedades estáticas do quadro, incluindo a URL especificada no arquivo HTML original.  
+3. Quando você acessa uma `FRAME` ou `IFRAME` marca usando o <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> propriedade do <xref:System.Windows.Forms.HtmlWindow>, o <xref:System.Windows.Forms.HtmlElement.Children%2A> coleção ou métodos como <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> ou <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, você está recuperando o elemento de quadro. Isso representa as propriedades estáticas do quadro, incluindo a URL especificada no arquivo HTML original.  
   
 ## <a name="frames-and-security"></a>Quadros e Segurança  
  O acesso aos quadros é complicado pelo fato de que o HTML DOM gerenciado implementa uma medida de segurança, conhecida como *segurança de scripts entre quadros*. Se um documento contiver um `FRAMESET` com duas ou mais `FRAME`s em domínios diferentes, esses `FRAME`s não poderão interagir entre si. Em outras palavras, uma `FRAME` que exibe o conteúdo do seu site da Web não pode acessar informações em um `FRAME` que hospeda um site de terceiros, como `http://www.adatum.com/`. Essa segurança é implementada no nível do <xref:System.Windows.Forms.HtmlWindow> classe. Você pode obter informações gerais sobre um `FRAME` hospeda outro site, como sua URL, mas não será possível acessar seus <xref:System.Windows.Forms.HtmlWindow.Document%2A> ou alterar o tamanho ou local de hospedagem `FRAME` ou `IFRAME`.  

@@ -2,23 +2,23 @@
 title: 'Como: gerar código personalizado modificando um arquivo DBML'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: f64d323abf124f3bd8aeb684563a08289fa47f7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338417"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Como: gerar código personalizado modificando um arquivo DBML
 Você pode gerar o Visual Basic ou C# código-fonte de um arquivo de metadados do banco de dados markup language (. dbml). Essa abordagem fornece uma oportunidade para personalizar o arquivo .dbml padrão antes de você gerar o código de mapeamento do aplicativo. Esse é um recurso avançado.  
   
  As etapas nesse processo são as seguintes:  
   
-1.  Gere um arquivo .dbml.  
+1. Gere um arquivo .dbml.  
   
-2.  Use um editor para modificar o arquivo .dbml. Observe que o arquivo. dbml deve validar o arquivo de definição (. xsd) de esquema para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] arquivos. dbml. Para obter mais informações, consulte [geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+2. Use um editor para modificar o arquivo .dbml. Observe que o arquivo. dbml deve validar o arquivo de definição (. xsd) de esquema para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] arquivos. dbml. Para obter mais informações, consulte [geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Gerar o Visual Basic ou C# código-fonte.  
+3. Gerar o Visual Basic ou C# código-fonte.  
   
  Os exemplos a seguir usam a ferramenta de linha de comando SQLMetal. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

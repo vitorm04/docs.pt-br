@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171854"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340016"
 ---
 # <a name="control-authoring-overview"></a>Visão geral da criação de controle
 A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] reduz consideravelmente a necessidade de criar um novo controle. No entanto, em alguns casos, você ainda precisará criar um controle personalizado. Este tópico aborda os recursos que minimizam sua necessidade de criar um controle personalizado e os diferentes modelos de criação no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico também demonstra como criar um novo controle.  
@@ -191,15 +191,15 @@ A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../..
   
  Quando um aplicativo procura um recurso, ele procura em três níveis na seguinte ordem:  
   
-1.  O nível de elemento.  
+1. O nível de elemento.  
   
      O sistema começa com o elemento que referencia o recurso e pesquisa por recursos do pai lógico e assim por diante até o elemento raiz ser alcançado.  
   
-2.  O nível de aplicativo.  
+2. O nível de aplicativo.  
   
      Recursos definidos pelo <xref:System.Windows.Application> objeto.  
   
-3.  O nível de tema.  
+3. O nível de tema.  
   
      Dicionários no nível de tema são armazenados em uma subpasta denominada Themes.  Os arquivos na pasta Themes correspondem aos temas.  Por exemplo, você pode ter Aero.NormalColor.xaml, Luna.NormalColor.xaml, Royale.NormalColor.xaml e assim por diante.  Você também pode ter um arquivo chamado generic.xaml.  Quando o sistema procura por um recurso no nível de temas, ele primeiro procura por esse recurso no arquivo específico do tema e, em seguida, procura por ele em generic.xaml.  
   

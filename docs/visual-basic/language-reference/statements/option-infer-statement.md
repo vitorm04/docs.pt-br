@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823487"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338560"
 ---
 # <a name="option-infer-statement"></a>Instrução Option Infer
 Permite o uso de inferência de tipo local ao declarar variáveis.  
@@ -63,11 +63,11 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Para definir o Option Infer no IDE  
   
-1.  No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
+1. No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
   
-2.  Clique na guia **Compilar**.  
+2. Clique na guia **Compilar**.  
   
-3.  Defina o valor na **Option infer** caixa.  
+3. Defina o valor na **Option infer** caixa.  
   
  Quando você cria um novo projeto, o **Option Infer** definindo na **compilar** for definido como o **Option Infer** definindo no **padrões de VB** caixa de diálogo. Para acessar o **padrões de VB** caixa de diálogo do **ferramentas** menu, clique em **opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração inicial padrão nos **padrões de VB** é `On`.  
   
@@ -98,7 +98,7 @@ Option Infer { On | Off }
 ## <a name="see-also"></a>Consulte também
 
 - [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Inferência de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -2,12 +2,12 @@
 title: Ativação de UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337650"
 ---
 # <a name="udp-activation"></a>Ativação de UDP
 Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemplo. Ele estende o [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemplo para dar suporte à ativação de processo usando o serviço de ativação de processos do Windows (WAS).  
@@ -75,13 +75,13 @@ Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/sample
   
 #### <a name="to-set-up-this-sample"></a>Para configurar este exemplo  
   
-1.  Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
+1. Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Compile o projeto no Windows Vista. Após a compilação, ele também executa as seguintes operações na fase de pós-compilação:  
+2. Compile o projeto no Windows Vista. Após a compilação, ele também executa as seguintes operações na fase de pós-compilação:  
   
     -   Instala a associação de UDP para o site "Site padrão".  
   
@@ -89,13 +89,13 @@ Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/sample
   
     -   Ele também habilita o protocolo de "net.udp" para esse aplicativo virtual.  
   
-3.  Inicie o aplicativo de interface do usuário "WasNetActivator.exe". Clique o **instalação** guia, marque as caixas de seleção a seguir e, em seguida, clique em **instalar** instalá-los:  
+3. Inicie o aplicativo de interface do usuário "WasNetActivator.exe". Clique o **instalação** guia, marque as caixas de seleção a seguir e, em seguida, clique em **instalar** instalá-los:  
   
     -   Adaptador de escuta UDP  
   
     -   Manipuladores de protocolo UDP  
   
-4.  Clique o **ativação** guia do aplicativo de interface do usuário "WasNetActivator.exe". Clique o **iniciar** botão para iniciar o adaptador de escuta. Agora você está pronto para executar o programa.  
+4. Clique o **ativação** guia do aplicativo de interface do usuário "WasNetActivator.exe". Clique o **iniciar** botão para iniciar o adaptador de escuta. Agora você está pronto para executar o programa.  
   
     > [!NOTE]
     >  Quando tiver terminado com este exemplo, você deve executar CleanUp para remover a associação de net.udp de "Site da Web padrão".  
@@ -113,15 +113,15 @@ Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/sample
   
 -   Certifique-se de que todas as partes necessárias estão instaladas corretamente. As etapas a seguir mostram como executar o exemplo:  
   
-1.  Certifique-se de que os seguintes serviços do Windows foram iniciados:  
+1. Certifique-se de que os seguintes serviços do Windows foram iniciados:  
   
     -   Windows Process Activation Service (WAS).  
   
     -   Serviços de informações da Internet (IIS): W3SVC.  
   
-2.  Em seguida, inicie o ativador, WasNetActivator.exe. Sob o **ativação** guia, o único protocolo, **UDP**, está selecionado na lista suspensa. Clique o **iniciar** botão para iniciar o ativador.  
+2. Em seguida, inicie o ativador, WasNetActivator.exe. Sob o **ativação** guia, o único protocolo, **UDP**, está selecionado na lista suspensa. Clique o **iniciar** botão para iniciar o ativador.  
   
-3.  Depois que o ativador for iniciado, você pode executar o código do cliente, executando Client.exe em uma janela de comando. Este é o exemplo de saída:  
+3. Depois que o ativador for iniciado, você pode executar o código do cliente, executando Client.exe em uma janela de comando. Este é o exemplo de saída:  
   
     ```  
     Testing Udp Activation.  

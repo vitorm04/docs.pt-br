@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: cb19dfb59ba36eea94f65005c2711ad58d098144
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343396"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Passo a passo: Implementando um formulário que usa uma operação em segundo plano
 Se você tiver uma operação que levará muito tempo para ser concluída, e não desejar sua interface do usuário (UI) para parar de responder ou "parada", você pode usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar a operação em outro thread.  
@@ -47,21 +47,21 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 #### <a name="to-create-a-form-that-uses-a-background-operation"></a>Como criar um formulário que usa uma operação em segundo plano  
   
-1.  Crie um projeto de aplicativo baseado no Windows chamado `BackgroundWorkerExample` (**arquivo** > **New** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
+1. Crie um projeto de aplicativo baseado no Windows chamado `BackgroundWorkerExample` (**arquivo** > **New** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
   
-2.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1** e escolha **Renomear** no menu de atalho. Altere o nome de arquivo para `FibonacciCalculator`. Clique no botão **Sim** quando solicitado se desejar renomear todas as referências ao elemento de código '`Form1`'.  
+2. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1** e escolha **Renomear** no menu de atalho. Altere o nome de arquivo para `FibonacciCalculator`. Clique no botão **Sim** quando solicitado se desejar renomear todas as referências ao elemento de código '`Form1`'.  
   
-3.  Arraste uma <xref:System.Windows.Forms.NumericUpDown> controlar do **caixa de ferramentas** para o formulário. Definir a <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> propriedade para `1` e o <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> propriedade `91`.  
+3. Arraste uma <xref:System.Windows.Forms.NumericUpDown> controlar do **caixa de ferramentas** para o formulário. Definir a <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> propriedade para `1` e o <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> propriedade `91`.  
   
-4.  Adicione dois <xref:System.Windows.Forms.Button> controles ao formulário.  
+4. Adicione dois <xref:System.Windows.Forms.Button> controles ao formulário.  
   
-5.  Renomeie o primeiro <xref:System.Windows.Forms.Button> controle `startAsyncButton` e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Start Async`. Renomeie o segundo <xref:System.Windows.Forms.Button> controle `cancelAsyncButton`e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Cancel Async`. Defina suas <xref:System.Windows.Forms.Control.Enabled%2A> propriedade para `false`.  
+5. Renomeie o primeiro <xref:System.Windows.Forms.Button> controle `startAsyncButton` e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Start Async`. Renomeie o segundo <xref:System.Windows.Forms.Button> controle `cancelAsyncButton`e defina as <xref:System.Windows.Forms.Control.Text%2A> propriedade `Cancel Async`. Defina suas <xref:System.Windows.Forms.Control.Enabled%2A> propriedade para `false`.  
   
-6.  Criar um manipulador de eventos para ambos os <xref:System.Windows.Forms.Button> dos controles <xref:System.Windows.Forms.Control.Click> eventos. Para obter detalhes, confira [Como: Criar manipuladores de eventos usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
+6. Criar um manipulador de eventos para ambos os <xref:System.Windows.Forms.Button> dos controles <xref:System.Windows.Forms.Control.Click> eventos. Para obter detalhes, confira [Como: Criar manipuladores de eventos usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
-7.  Arraste uma <xref:System.Windows.Forms.Label> controlar do **caixa de ferramentas** para o formulário e renomeie- `resultLabel`.  
+7. Arraste uma <xref:System.Windows.Forms.Label> controlar do **caixa de ferramentas** para o formulário e renomeie- `resultLabel`.  
   
-8.  Arraste uma <xref:System.Windows.Forms.ProgressBar> controlar do **caixa de ferramentas** para o formulário.  
+8. Arraste uma <xref:System.Windows.Forms.ProgressBar> controlar do **caixa de ferramentas** para o formulário.  
   
 ## <a name="creating-a-backgroundworker-in-your-form"></a>Usando um BackgroundWorker no seu formulário  
  Você pode criar o <xref:System.ComponentModel.BackgroundWorker> para sua operação assíncrona usando o **Windows** **Designer de formulários**.  
@@ -75,15 +75,15 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Como implementar manipuladores de evento assíncrono  
   
-1.  No **propriedades** janela, com o <xref:System.ComponentModel.BackgroundWorker> componente ainda selecionado, clique no **eventos** botão. Clique duas vezes o <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para criar manipuladores de eventos. Para obter mais informações sobre como usar manipuladores de eventos, consulte [como: Criar manipuladores de eventos usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
+1. No **propriedades** janela, com o <xref:System.ComponentModel.BackgroundWorker> componente ainda selecionado, clique no **eventos** botão. Clique duas vezes o <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para criar manipuladores de eventos. Para obter mais informações sobre como usar manipuladores de eventos, consulte [como: Criar manipuladores de eventos usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
-2.  Crie um novo método, chamado `ComputeFibonacci`, no formulário. Esse método faz o trabalho real e ele será executado em segundo plano. Esse código demonstra a implementação recursiva do algoritmo de Fibonacci, que é notavelmente ineficiente, demorando mais tempo para concluir o cálculo de números maiores. Ele é usado aqui para fins ilustrativos, para mostrar uma operação que pode introduzir longos atrasos em seu aplicativo.  
+2. Crie um novo método, chamado `ComputeFibonacci`, no formulário. Esse método faz o trabalho real e ele será executado em segundo plano. Esse código demonstra a implementação recursiva do algoritmo de Fibonacci, que é notavelmente ineficiente, demorando mais tempo para concluir o cálculo de números maiores. Ele é usado aqui para fins ilustrativos, para mostrar uma operação que pode introduzir longos atrasos em seu aplicativo.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#10)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#10)]
      [!code-vb[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#10)]  
   
-3.  No <xref:System.ComponentModel.BackgroundWorker.DoWork> manipulador de eventos, adicione uma chamada para o `ComputeFibonacci` método. Leve o primeiro parâmetro `ComputeFibonacci` do <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> propriedade do <xref:System.ComponentModel.DoWorkEventArgs>. O <xref:System.ComponentModel.BackgroundWorker> e <xref:System.ComponentModel.DoWorkEventArgs> parâmetros serão usados posteriormente para relatório de progresso e cancelamento de suporte. Atribua o valor de retorno `ComputeFibonacci` para o <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> propriedade do <xref:System.ComponentModel.DoWorkEventArgs>. Esse resultado estará disponível para o <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos.  
+3. No <xref:System.ComponentModel.BackgroundWorker.DoWork> manipulador de eventos, adicione uma chamada para o `ComputeFibonacci` método. Leve o primeiro parâmetro `ComputeFibonacci` do <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> propriedade do <xref:System.ComponentModel.DoWorkEventArgs>. O <xref:System.ComponentModel.BackgroundWorker> e <xref:System.ComponentModel.DoWorkEventArgs> parâmetros serão usados posteriormente para relatório de progresso e cancelamento de suporte. Atribua o valor de retorno `ComputeFibonacci` para o <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> propriedade do <xref:System.ComponentModel.DoWorkEventArgs>. Esse resultado estará disponível para o <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos.  
   
     > [!NOTE]
     >  O <xref:System.ComponentModel.BackgroundWorker.DoWork> manipulador de eventos não faz referência a `backgroundWorker1` variável de instância diretamente, pois isso seria acoplar o manipulador de eventos para uma instância específica do <xref:System.ComponentModel.BackgroundWorker>. Em vez disso, uma referência para o <xref:System.ComponentModel.BackgroundWorker> que gerou esse evento é recuperado do `sender` parâmetro. Isso é importante quando o formulário hospeda mais de um <xref:System.ComponentModel.BackgroundWorker>. Também é importante não manipular quaisquer objetos de interface do usuário no seu <xref:System.ComponentModel.BackgroundWorker.DoWork> manipulador de eventos. Em vez disso, se comunicar com a interface do usuário por meio de <xref:System.ComponentModel.BackgroundWorker> eventos.  
@@ -92,13 +92,13 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
      [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
-4.  No `startAsyncButton` do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos, adicione o código que inicia a operação assíncrona.  
+4. No `startAsyncButton` do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos, adicione o código que inicia a operação assíncrona.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#13)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#13)]
      [!code-vb[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#13)]  
   
-5.  No <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos, atribua o resultado do cálculo para o `resultLabel` controle.  
+5. No <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> manipulador de eventos, atribua o resultado do cálculo para o `resultLabel` controle.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
@@ -109,15 +109,15 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 #### <a name="to-implement-progress-reporting"></a>Como implementar o relatório de progresso  
   
-1.  Na janela **Propriedades**, selecione `backgroundWorker1`. Defina as propriedades <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> e <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> como `true`.  
+1. Na janela **Propriedades**, selecione `backgroundWorker1`. Defina as propriedades <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> e <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> como `true`.  
   
-2.  Declare duas variáveis no formulário `FibonacciCalculator`. Elas serão usadas para acompanhar o progresso.  
+2. Declare duas variáveis no formulário `FibonacciCalculator`. Elas serão usadas para acompanhar o progresso.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#14)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
      [!code-vb[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]  
   
-3.  Adicionar um manipulador de eventos para o <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> eventos. No <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> manipulador de eventos, atualize o <xref:System.Windows.Forms.ProgressBar> com o <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> propriedade do <xref:System.ComponentModel.ProgressChangedEventArgs> parâmetro.  
+3. Adicionar um manipulador de eventos para o <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> eventos. No <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> manipulador de eventos, atualize o <xref:System.Windows.Forms.ProgressBar> com o <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> propriedade do <xref:System.ComponentModel.ProgressChangedEventArgs> parâmetro.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]
@@ -125,13 +125,13 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
   
 #### <a name="to-implement-support-for-cancellation"></a>Como implementar o suporte ao cancelamento  
   
-1.  No `cancelAsyncButton` do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos, adicione o código que cancela a operação assíncrona.  
+1. No `cancelAsyncButton` do controle <xref:System.Windows.Forms.Control.Click> manipulador de eventos, adicione o código que cancela a operação assíncrona.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#4)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#4)]  
   
-2.  Os fragmentos de código a seguir no relatório de método `ComputeFibonacci` progridem e dão suporte ao cancelamento.  
+2. Os fragmentos de código a seguir no relatório de método `ComputeFibonacci` progridem e dão suporte ao cancelamento.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#11)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#11)]
@@ -168,7 +168,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
 - [Threading gerenciado](../../../standard/threading/index.md)
 - [Práticas recomendadas de threading gerenciado](../../../standard/threading/managed-threading-best-practices.md)
-- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Visão geral do padrão assíncrono baseado em evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Passo a passo: Executando uma operação em segundo plano](walkthrough-running-an-operation-in-the-background.md)
 - [Componente BackgroundWorker](backgroundworker-component.md)

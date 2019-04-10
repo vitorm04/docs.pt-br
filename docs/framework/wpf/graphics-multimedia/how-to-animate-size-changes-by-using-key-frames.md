@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342356"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Como: Animar alterações de tamanho usando quadros principais
 Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.  
@@ -19,11 +19,11 @@ Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Media.ArcSegment.Size%2A> propriedade de um <xref:System.Windows.Media.ArcSegment>. Essa animação usa três quadros-chave da seguinte maneira:  
   
-1.  Durante o primeiro meio segundo da animação, usa uma instância da <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> classe para aumentar gradualmente o tamanho do arco. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> criam uma transição linear suave entre valores.  
+1. Durante o primeiro meio segundo da animação, usa uma instância da <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> classe para aumentar gradualmente o tamanho do arco. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> criam uma transição linear suave entre valores.  
   
-2.  No final do próximo meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> classe, de repente, aumentar o tamanho do arco. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> criam saltos repentinos entre valores, ou seja, as alterações de tamanho ocorrem repentinamente e não são sutis.  
+2. No final do próximo meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> classe, de repente, aumentar o tamanho do arco. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> criam saltos repentinos entre valores, ou seja, as alterações de tamanho ocorrem repentinamente e não são sutis.  
   
-3.  Sobre os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> classe para aumentar o tamanho do arco. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o tamanho do arco aumenta lentamente no início e aumenta exponencialmente até o final do segmento de tempo.  
+3. Sobre os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> classe para aumentar o tamanho do arco. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o tamanho do arco aumenta lentamente no início e aumenta exponencialmente até o final do segmento de tempo.  
   
  [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   

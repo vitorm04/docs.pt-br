@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338066"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Passo a passo: modelo e consulta de objeto simples (Visual Basic)
 Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] com complexidades mínimas. Você criará uma classe de entidade que modela a tabela Customers no banco de dados de exemplo Northwind. Em seguida, você irá criar uma consulta simples para listar os clientes que estão localizados em Londres.  
@@ -46,32 +46,32 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
-1.  No menu **Arquivo**, clique em **Novo Projeto**.  
+1. No menu **Arquivo**, clique em **Novo Projeto**.  
   
-2.  No **tipos de projeto** painel da **novo projeto** caixa de diálogo, clique em **Visual Basic**.  
+2. No **tipos de projeto** painel da **novo projeto** caixa de diálogo, clique em **Visual Basic**.  
   
-3.  No painel **Modelos**, clique em **Aplicativo de Console**.  
+3. No painel **Modelos**, clique em **Aplicativo de Console**.  
   
-4.  No **nome** , digite **LinqConsoleApp**.  
+4. No **nome** , digite **LinqConsoleApp**.  
   
-5.  Clique em **OK**.  
+5. Clique em **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Adicionando referências e diretivas LINQ  
  Este passo a passo usa assemblies que não podem ser instalados por padrão em seu projeto. Se `System.Data.Linq` não estiver listado como uma referência em seu projeto (clique em **Show All Files** na **Gerenciador de soluções** e expanda o **referências** nó), adicioná-lo, conforme explicado em as etapas a seguir.  
   
 #### <a name="to-add-systemdatalinq"></a>Para adicionar System.Data.Linq  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
+1. Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
   
-2.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
+2. No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
   
      O assembly é adicionado ao projeto.  
   
-3.  Além disso, nos **adicionar referência** caixa de diálogo, clique em **.NET**, role para e clique em System e, em seguida, clique em **Okey**.  
+3. Além disso, nos **adicionar referência** caixa de diálogo, clique em **.NET**, role para e clique em System e, em seguida, clique em **Okey**.  
   
      Este assembly, que oferece suporte à caixa de mensagem no passo a passo, é adicionado ao projeto.  
   
-4.  Adicione as seguintes diretivas acima de `Module1`:  
+4. Adicione as seguintes diretivas acima de `Module1`:  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -128,22 +128,22 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
 #### <a name="to-execute-the-query"></a>Para executar a consulta  
   
-1.  Digite ou cole o seguinte código ao final do método `Sub Main` (após a descrição de consulta):  
+1. Digite ou cole o seguinte código ao final do método `Sub Main` (após a descrição de consulta):  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  Pressione F5 para depurar o aplicativo.  
+2. Pressione F5 para depurar o aplicativo.  
   
     > [!NOTE]
     >  Se seu aplicativo gera um erro de tempo de execução, consulte a seção solução de problemas [aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
      A caixa de mensagem exibe uma lista de seis clientes. A janela Console exibe o código SQL gerado.  
   
-3.  Clique em **OK** para descartar a caixa de mensagem.  
+3. Clique em **OK** para descartar a caixa de mensagem.  
   
      O aplicativo é fechado.  
   
-4.  No menu **Arquivo**, clique em **Salvar tudo**.  
+4. No menu **Arquivo**, clique em **Salvar tudo**.  
   
      Você precisará deste aplicativo para continuar com o próximo passo a passo.  
   

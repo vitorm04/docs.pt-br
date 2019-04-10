@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 108293a5f4607afb8c19dce65d53efdaf9e184b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333386"
 ---
 # <a name="srmp"></a>SRMP
 Este exemplo demonstra como executar transacionada comunicação em fila usando o serviço de enfileiramento de mensagens (MSMQ) em HTTP.  
@@ -18,21 +18,21 @@ Este exemplo demonstra como executar transacionada comunicação em fila usando 
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Antes de executar a amostra **Adicionar/remover componentes do Windows**, certifique-se de que o MSMQ está instalado com o suporte a HTTP. Instalando o suporte a HTTP automaticamente instala os serviços de informações da Internet (IIS) e adiciona o suporte de protocolo no IIS para o MSMQ.  
+4. Antes de executar a amostra **Adicionar/remover componentes do Windows**, certifique-se de que o MSMQ está instalado com o suporte a HTTP. Instalando o suporte a HTTP automaticamente instala os serviços de informações da Internet (IIS) e adiciona o suporte de protocolo no IIS para o MSMQ.  
   
-5.  Se você quiser ter certeza de que o HTTP é usado para comunicação, você pode habilitar o MSMQ seja executado no modo protegido. Isso garante que nenhuma mensagem para qualquer fila hospedada na máquina pode chegar usando qualquer transporte não HTTP.  
+5. Se você quiser ter certeza de que o HTTP é usado para comunicação, você pode habilitar o MSMQ seja executado no modo protegido. Isso garante que nenhuma mensagem para qualquer fila hospedada na máquina pode chegar usando qualquer transporte não HTTP.  
   
-6.  Depois que você tiver selecionado o MSMQ seja executado no modo protegido, o computador requer a reinicialização do computador em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Depois que você tiver selecionado o MSMQ seja executado no modo protegido, o computador requer a reinicialização do computador em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
-7.  Executar o serviço.  
+7. Executar o serviço.  
   
-8.  Execute o cliente. Certifique-se de que você altere o endereço do ponto de extremidade para apontar para o nome do computador ou endereço IP em vez do localhost. O cliente envia uma mensagem e sai.  
+8. Execute o cliente. Certifique-se de que você altere o endereço do ponto de extremidade para apontar para o nome do computador ou endereço IP em vez do localhost. O cliente envia uma mensagem e sai.  
   
 ## <a name="requirements"></a>Requisitos  
  Para executar este exemplo, o IIS deve ser instalado sobre o serviço e os computadores cliente, além de MSMQ.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334933"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Como: Retornar um resultado de consulta LINQ como um tipo específico (Visual Basic)
 Consulta integrada à linguagem (LINQ) facilita o acesso às informações de banco de dados e executar consultas. Por padrão, consultas LINQ retornam uma lista de objetos como um tipo anônimo. Você também pode especificar que uma consulta retorne uma lista de um tipo específico usando o `Select` cláusula.  
@@ -27,45 +27,45 @@ Consulta integrada à linguagem (LINQ) facilita o acesso às informações de ba
   
 ### <a name="to-create-a-connection-to-a-database"></a>Para criar uma conexão para um banco de dados  
   
-1.  No Visual Studio, abra **Gerenciador de servidores**/**Database Explorer** clicando **Server Explorer**/**banco de dados Explorer** sobre o **exibição** menu.  
+1. No Visual Studio, abra **Gerenciador de servidores**/**Database Explorer** clicando **Server Explorer**/**banco de dados Explorer** sobre o **exibição** menu.  
   
-2.  Clique com botão direito **conexões de dados** na **Gerenciador de servidores**/**Database Explorer** e, em seguida, clique em **Adicionar Conexão**.  
+2. Clique com botão direito **conexões de dados** na **Gerenciador de servidores**/**Database Explorer** e, em seguida, clique em **Adicionar Conexão**.  
   
-3.  Especifique uma conexão válida para o banco de dados de exemplo Northwind.  
+3. Especifique uma conexão válida para o banco de dados de exemplo Northwind.  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Para adicionar um projeto que contém um arquivo LINQ to SQL  
   
-1.  No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. Selecione Visual Basic **aplicativo do Windows Forms** como o tipo de projeto.  
+1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. Selecione Visual Basic **aplicativo do Windows Forms** como o tipo de projeto.  
   
-2.  No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o **Classes LINQ to SQL** modelo de item.  
+2. No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o **Classes LINQ to SQL** modelo de item.  
   
-3.  Dê o nome `northwind.dbml` para o arquivo. Clique em **Adicionar**. O Object Relational Designer (O/R Designer) é aberto para o arquivo Northwind dbml.  
+3. Dê o nome `northwind.dbml` para o arquivo. Clique em **Adicionar**. O Object Relational Designer (O/R Designer) é aberto para o arquivo Northwind dbml.  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>Para adicionar tabelas de consulta para o O/R Designer  
   
-1.  Na **Gerenciador de servidores**/**Gerenciador de banco de dados**, expanda a conexão ao banco de dados Northwind. Expanda o **tabelas** pasta.  
+1. Na **Gerenciador de servidores**/**Gerenciador de banco de dados**, expanda a conexão ao banco de dados Northwind. Expanda o **tabelas** pasta.  
   
      Se você tiver fechado o O/R Designer, você poderá reabri-lo clicando duas vezes no arquivo dbml que você adicionou anteriormente.  
   
-2.  Clique na tabela clientes e arraste-o no painel esquerdo do designer.  
+2. Clique na tabela clientes e arraste-o no painel esquerdo do designer.  
   
      O designer cria um novo `Customer` objeto para o seu projeto. Você pode projetar um resultado de consulta como o `Customer` tipo ou como um tipo que você cria. Este exemplo criará um novo tipo em um procedimento posterior e um resultado de consulta como esse tipo de projeto.  
   
-3.  Salve suas alterações e feche o designer.  
+3. Salve suas alterações e feche o designer.  
   
-4.  Salve seu projeto.  
+4. Salve seu projeto.  
   
 ### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Para adicionar código para consultar o banco de dados e exibir os resultados  
   
-1.  Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.DataGridView> controle para o formulário do Windows padrão para seu projeto, Form1.  
+1. Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.DataGridView> controle para o formulário do Windows padrão para seu projeto, Form1.  
   
-2.  Clique duas vezes em Form1 para modificar a classe Form1.  
+2. Clique duas vezes em Form1 para modificar a classe Form1.  
   
-3.  Após o `End Class` declaração da classe Form1, adicione o seguinte código para criar um `CustomerInfo` tipo para manter os resultados da consulta para esse exemplo.  
+3. Após o `End Class` declaração da classe Form1, adicione o seguinte código para criar um `CustomerInfo` tipo para manter os resultados da consulta para esse exemplo.  
   
      [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
-4.  Quando você adicionar tabelas ao Designer relacional de objetos, o designer adicionará um <xref:System.Data.Linq.DataContext> objeto ao seu projeto. Este objeto contém o código que você deve ter para acessar essas tabelas e para acessar objetos individuais e coleções para cada tabela. O <xref:System.Data.Linq.DataContext> objeto para seu projeto é nomeado com base no nome do seu arquivo. dbml. Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.  
+4. Quando você adicionar tabelas ao Designer relacional de objetos, o designer adicionará um <xref:System.Data.Linq.DataContext> objeto ao seu projeto. Este objeto contém o código que você deve ter para acessar essas tabelas e para acessar objetos individuais e coleções para cada tabela. O <xref:System.Data.Linq.DataContext> objeto para seu projeto é nomeado com base no nome do seu arquivo. dbml. Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.  
   
      Você pode criar uma instância da <xref:System.Data.Linq.DataContext> no seu código e consultar as tabelas especificadas pelo Designer relacional de objetos.  
   
@@ -73,11 +73,11 @@ Consulta integrada à linguagem (LINQ) facilita o acesso às informações de ba
   
      [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
-5.  Pressione F5 para executar seu projeto e exibir os resultados.  
+5. Pressione F5 para executar seu projeto e exibir os resultados.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Métodos de DataContext (Designer de Objeto Relacional)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

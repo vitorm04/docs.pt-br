@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336051"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Como: Definir opções de grade para todos os Windows Forms
 Quando você se acostumar a trabalhar no ambiente de desenvolvimento do Visual Studio, você pode definir preferências para todos os formulários e projetos que você trabalha com no Designer de formulários do Windows.  
@@ -23,9 +23,9 @@ Quando você se acostumar a trabalhar no ambiente de desenvolvimento do Visual S
   
 ### <a name="to-set-global-windows-forms-options"></a>Para definir opções globais dos Windows Forms  
   
-1.  No menu **Ferramentas**, selecione **Opções**.  
+1. No menu **Ferramentas**, selecione **Opções**.  
   
-2.  No painel esquerdo da caixa de diálogo **Opções**, clique em **Designer de Formulários do Windows**.  
+2. No painel esquerdo da caixa de diálogo **Opções**, clique em **Designer de Formulários do Windows**.  
   
      No painel direito, sob o título **Configurações de Layout**, você pode configurar as configurações de grade padrão para todos os novos formulários criados. Essas configurações incluem o tamanho da grade, se os controles se ajustam a ela e se ela é ativada por padrão. Além disso, você pode selecionar entre os modos de layout **SnapToGrid** e **SnapLines**. Para obter mais informações sobre guias de alinhamento, consulte [passo a passo: Organizando controles nos Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Serializar um objeto'
+title: 'Como: serializar um objeto'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336311"
 ---
-# <a name="how-to-serialize-an-object"></a>Como: Serializar um objeto
+# <a name="how-to-serialize-an-object"></a>Como: serializar um objeto
 Para serializar um objeto, primeiro crie o objeto a ser serializado e defina seus campos e propriedades públicos. Para fazer isso, você deve determinar o formato de transporte em que o fluxo XML deve ser armazenado: como um fluxo ou como um arquivo. Por exemplo, se o fluxo XML precisar ser salvo de uma forma permanente, crie um objeto <xref:System.IO.FileStream>.  
   
 > [!NOTE]
@@ -23,11 +23,11 @@ Para serializar um objeto, primeiro crie o objeto a ser serializado e defina seu
   
 ### <a name="to-serialize-an-object"></a>Para serializar um objeto  
   
-1.  Crie o objeto e defina seus campos e propriedades públicos.  
+1. Crie o objeto e defina seus campos e propriedades públicos.  
   
-2.  Construa um <xref:System.Xml.Serialization.XmlSerializer> usando o tipo do objeto. Para obter mais informações, consulte os construtores da classe <xref:System.Xml.Serialization.XmlSerializer>.  
+2. Construa um <xref:System.Xml.Serialization.XmlSerializer> usando o tipo do objeto. Para obter mais informações, consulte os construtores da classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
-3.  Chame o método <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> para gerar um fluxo XML ou uma representação em arquivo de propriedades e campos públicos do objeto. O exemplo a seguir cria um arquivo.  
+3. Chame o método <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> para gerar um fluxo XML ou uma representação em arquivo de propriedades e campos públicos do objeto. O exemplo a seguir cria um arquivo.  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -53,4 +53,4 @@ Para serializar um objeto, primeiro crie o objeto a ser serializado e defina seu
 ## <a name="see-also"></a>Consulte também
 
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como: desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

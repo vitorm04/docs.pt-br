@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335479"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Como: Chamar um procedimento de operador (Visual Basic)
 Você pode chamar um procedimento de operador, usando o símbolo do operador em uma expressão. No caso de um operador de conversão, você chama o [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para converter um valor de um tipo de dados para outro.  
@@ -27,19 +27,19 @@ Você pode chamar um procedimento de operador, usando o símbolo do operador em 
   
 ### <a name="to-call-an-operator-procedure"></a>Para chamar um procedimento de operador  
   
-1.  Use o símbolo do operador em uma expressão na forma comum.  
+1. Use o símbolo do operador em uma expressão na forma comum.  
   
-2.  Certifique-se de que os tipos de dados dos operandos são apropriados para o operador e na ordem correta.  
+2. Certifique-se de que os tipos de dados dos operandos são apropriados para o operador e na ordem correta.  
   
-3.  O operador contribui para o valor da expressão conforme o esperado.  
+3. O operador contribui para o valor da expressão conforme o esperado.  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>Para chamar um procedimento de operador de conversão  
   
-1.  Use `CType` dentro de uma expressão.  
+1. Use `CType` dentro de uma expressão.  
   
-2.  Certifique-se de que os tipos de dados dos operandos são apropriados para a conversão e na ordem correta.  
+2. Certifique-se de que os tipos de dados dos operandos são apropriados para a conversão e na ordem correta.  
   
-3.  `CType` chama o procedimento de operador de conversão e retorna o valor convertido.  
+3. `CType` chama o procedimento de operador de conversão e retorna o valor convertido.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria dois <xref:System.TimeSpan> estruturas, adiciona-os juntos e armazena o resultado em uma terceira <xref:System.TimeSpan> estrutura. O <xref:System.TimeSpan> estrutura define procedimentos de operador para sobrecarregar vários operadores padrão.  
@@ -55,13 +55,13 @@ Você pode chamar um procedimento de operador, usando o símbolo do operador em 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Procedimentos de Operador](./operator-procedures.md)
-- [Como: Definir um operador](./how-to-define-an-operator.md)
-- [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)
+- [Procedimentos do operador](./operator-procedures.md)
+- [Como: definir um operador](./how-to-define-an-operator.md)
+- [Como: definir um operador de conversão](./how-to-define-a-conversion-operator.md)
 - [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Ampliação](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Como: Declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Conversões implícitas e explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

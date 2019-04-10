@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341485"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Como: criar imagens em miniatura
 Uma imagem em miniatura é uma versão pequena de uma imagem. Você pode criar uma imagem em miniatura chamando o <xref:System.Drawing.Image.GetThumbnailImage%2A> método de um <xref:System.Drawing.Image> objeto.  
@@ -34,19 +34,19 @@ Uma imagem em miniatura é uma versão pequena de uma imagem. Você pode criar u
 ## <a name="compiling-the-code"></a>Compilando o código  
  O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Para executar o exemplo, siga estas etapas:  
   
-1.  Criar um novo aplicativo Windows Form.  
+1. Criar um novo aplicativo Windows Form.  
   
-2.  Adicione o código de exemplo ao formulário.  
+2. Adicione o código de exemplo ao formulário.  
   
-3.  Criar um manipulador para o formulário <xref:System.Windows.Forms.Control.Paint> evento  
+3. Criar um manipulador para o formulário <xref:System.Windows.Forms.Control.Paint> evento  
   
-4.  No <xref:System.Windows.Forms.Control.Paint> manipulador, a chamada a `GetThumbnail` método e passar `e` para <xref:System.Windows.Forms.PaintEventArgs>.  
+4. No <xref:System.Windows.Forms.Control.Paint> manipulador, a chamada a `GetThumbnail` método e passar `e` para <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Localize um arquivo de imagem do qual deseja criar uma miniatura.  
+5. Localize um arquivo de imagem do qual deseja criar uma miniatura.  
   
-6.  No método `GetThumbnail`, especifique o caminho e nome do arquivo para sua imagem.  
+6. No método `GetThumbnail`, especifique o caminho e nome do arquivo para sua imagem.  
   
-7.  Pressione F5 para executar o exemplo.  
+7. Pressione F5 para executar o exemplo.  
   
      Uma imagem em miniatura de 100 por 100 aparece no formulário.  
   

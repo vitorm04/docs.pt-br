@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333672"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos do mouse no Windows Forms
 Quando manipula entradas de mouse, você geralmente deseja conhecer a localização do ponteiro do mouse e o estado dos botões do mouse. Este tópico fornece detalhes sobre como obter essas informações de eventos do mouse e explica a ordem em que eventos de clique do mouse são gerados em controles dos Windows Forms. Para obter uma lista e uma descrição de todos os eventos de mouse, consulte [Como a entrada do mouse funciona nos Windows Forms](how-mouse-input-works-in-windows-forms.md).  Consulte também [visão geral de manipuladores de eventos (Windows Forms)](event-handlers-overview-windows-forms.md) e [visão geral de eventos (Windows Forms)](events-overview-windows-forms.md).  
@@ -36,31 +36,31 @@ Quando manipula entradas de mouse, você geralmente deseja conhecer a localizaç
 ## <a name="standard-click-event-behavior"></a>Comportamento do evento de clique  
  Se quiser manipular eventos de clique do mouse na ordem correta, você precisará conhecer a ordem em que os eventos de clique são gerados em controles dos Windows Forms. Todos os controles dos Windows Forms geram eventos de clique na mesma ordem quando um botão do mouse é pressionado e liberado (independentemente de qual botão do mouse), exceto onde é indicado na lista a seguir de controles individuais. A lista a seguir mostra a ordem dos eventos gerados por um único clique do botão do mouse:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  A seguir, temos a ordem dos eventos gerados por um clique duplo do botão do mouse:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> .  
+5. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> . (Isso pode variar, dependendo se o controle em questão tem o <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> definido como bit de estilo `true`. Para obter mais informações sobre como definir um <xref:System.Windows.Forms.ControlStyles> bit, consulte o <xref:System.Windows.Forms.Control.SetStyle%2A> método.)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> . (Isso pode variar, dependendo se o controle em questão tem o <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> definido como bit de estilo `true`. Para obter mais informações sobre como definir um <xref:System.Windows.Forms.ControlStyles> bit, consulte o <xref:System.Windows.Forms.Control.SetStyle%2A> método.)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> .  
+8. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  Para obter um exemplo de código que mostra a ordem do mouse, clique em eventos, consulte [como: Entrada do usuário de identificador de eventos nos Windows Forms a controles](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -122,21 +122,21 @@ Quando manipula entradas de mouse, você geralmente deseja conhecer a localizaç
 ### <a name="painting-behavior-of-toggle-controls"></a>Comportamento de pintura dos controles de alternância  
  Ativar/desativar controles, como os controles que derivam de <xref:System.Windows.Forms.ButtonBase> de classe, ter o seguinte comportamento de pintura distinto em combinação com o mouse eventos de clique:  
   
-1.  O usuário pressiona o botão do mouse.  
+1. O usuário pressiona o botão do mouse.  
   
-2.  O controle pinta no estado pressionado.  
+2. O controle pinta no estado pressionado.  
   
-3.  O <xref:System.Windows.Forms.Control.MouseDown> é gerado.  
+3. O <xref:System.Windows.Forms.Control.MouseDown> é gerado.  
   
-4.  O usuário libera o botão do mouse.  
+4. O usuário libera o botão do mouse.  
   
-5.  O controle pinta no estado elevado.  
+5. O controle pinta no estado elevado.  
   
-6.  O <xref:System.Windows.Forms.Control.Click> é gerado.  
+6. O <xref:System.Windows.Forms.Control.Click> é gerado.  
   
-7.  O <xref:System.Windows.Forms.Control.MouseClick> é gerado.  
+7. O <xref:System.Windows.Forms.Control.MouseClick> é gerado.  
   
-8.  O <xref:System.Windows.Forms.Control.MouseUp> é gerado.  
+8. O <xref:System.Windows.Forms.Control.MouseUp> é gerado.  
   
     > [!NOTE]
     >  Se o usuário move o ponteiro para fora do controle de alternância enquanto o botão do mouse está pressionado (como mover o mouse o <xref:System.Windows.Forms.Button> controlar enquanto ele está pressionado), o controle de alternância pintará no solto estado e somente o <xref:System.Windows.Forms.Control.MouseUp> evento ocorre. O <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> eventos não ocorrerão nesta situação.  

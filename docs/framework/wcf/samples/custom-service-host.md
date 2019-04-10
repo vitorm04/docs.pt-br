@@ -2,12 +2,12 @@
 title: Host de serviço personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: daa6645440a9988fc148757948d7d24615d5a9f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340926"
 ---
 # <a name="custom-service-host"></a>Host de serviço personalizado
 Este exemplo demonstra como usar um personalizado derivado do <xref:System.ServiceModel.ServiceHost> classe para alterar o comportamento de tempo de execução de um serviço. Essa abordagem fornece uma alternativa reutilizável para configurar um grande número de serviços de uma maneira comum. O exemplo também demonstra como usar o <xref:System.ServiceModel.Activation.ServiceHostFactory> classe para usar um ServiceHost personalizado no ambiente de hospedagem dos serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS).  
@@ -158,21 +158,21 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 #### <a name="to-observe-the-effect-of-the-custom-host"></a>Para observar o efeito do host personalizado  
   
-1.  Abra o arquivo do serviço Web. config e observe que não há nenhuma configuração habilitando explicitamente os metadados para o serviço.  
+1. Abra o arquivo do serviço Web. config e observe que não há nenhuma configuração habilitando explicitamente os metadados para o serviço.  
   
-2.  Abra o arquivo do serviço. svc e observe que seu @ServiceHost diretiva contém um atributo de fábrica que especifica o nome de um ServiceHostFactory personalizado.  
+2. Abra o arquivo do serviço. svc e observe que seu @ServiceHost diretiva contém um atributo de fábrica que especifica o nome de um ServiceHostFactory personalizado.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Depois que a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
+3. Depois que a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Para remover o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] execução CleanUp do aplicativo.  
+5. Para remover o [!INCLUDE[iisver](../../../../includes/iisver-md.md)] execução CleanUp do aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
 

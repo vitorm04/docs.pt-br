@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339808"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Como: Declarar uma propriedade com níveis de acesso mistos (Visual Basic)
 Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter diferentes níveis de acesso, você pode usar o nível mais permissivo na `Property` instrução e o nível mais restritivo em qualquer um os `Get` ou `Set` instrução. Você pode usar níveis de acesso mistos em uma propriedade quando você deseja certas partes do código para ser capaz de obter o valor da propriedade e determinadas outras partes do código para ser capaz de alterar o valor.  
@@ -24,11 +24,11 @@ Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter di
   
 ### <a name="to-declare-a-property-with-mixed-access-levels"></a>Para declarar uma propriedade com níveis de acesso mistos  
   
-1.  Declarar a propriedade da maneira normal e especificar o nível de acesso menos restritivo (como `Public`) na `Property` instrução.  
+1. Declarar a propriedade da maneira normal e especificar o nível de acesso menos restritivo (como `Public`) na `Property` instrução.  
   
-2.  Declare a `Get` ou o `Set` procedimento especificando o nível de acesso mais restritivo (como `Friend`).  
+2. Declare a `Get` ou o `Set` procedimento especificando o nível de acesso mais restritivo (como `Friend`).  
   
-3.  Não especifique um nível de acesso em outro procedimento de propriedade. Ele pressupõe que o nível de acesso declarado no `Property` instrução. Você pode restringir o acesso em apenas um dos procedimentos de propriedade.  
+3. Não especifique um nível de acesso em outro procedimento de propriedade. Ele pressupõe que o nível de acesso declarado no `Property` instrução. Você pode restringir o acesso em apenas um dos procedimentos de propriedade.  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
@@ -38,11 +38,11 @@ Se você quiser que o `Get` e `Set` procedimentos de uma propriedade para ter di
 
 - [Procedimentos](./index.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)
-- [Como: Criar uma propriedade](./how-to-create-a-property.md)
-- [Como: Chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
+- [Como: criar uma propriedade](./how-to-create-a-property.md)
+- [Como: chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
 - [Como: Declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Como: Inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
-- [Como: Obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+- [Como: inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
+- [Como: obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

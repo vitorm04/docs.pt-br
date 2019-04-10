@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335622"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Definir estilos de linhas alternados para o controle DataGridView do Windows Forms usando o designer
 Dados tabulares geralmente são apresentados em um formato contábil no qual linhas alternativas têm cores de tela de fundo diferente. Esse formato facilita para os usuários saber quais células estão em cada linha, especialmente com tabelas largas com muitas colunas.  
@@ -27,13 +27,13 @@ Dados tabulares geralmente são apresentados em um formato contábil no qual lin
   
 ### <a name="define-styles-for-alternating-rows"></a>Defina estilos para linhas alternadas  
   
-1.  Selecione o <xref:System.Windows.Forms.DataGridView> controle no designer.  
+1. Selecione o <xref:System.Windows.Forms.DataGridView> controle no designer.  
   
-2.  No **propriedades** janela, clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) lado a <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriedade.  
+2. No **propriedades** janela, clique no botão de reticências (![captura de tela de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) lado a <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriedade.  
   
-3.  Na caixa de diálogo **Construtor CellStyle**, defina o estilo configurando as propriedades e use o painel **Visualização** para confirmar suas escolhas. Os estilos que você especifica são usados para todas as outras linhas exibidas no controle, começando com a segunda.  
+3. Na caixa de diálogo **Construtor CellStyle**, defina o estilo configurando as propriedades e use o painel **Visualização** para confirmar suas escolhas. Os estilos que você especifica são usados para todas as outras linhas exibidas no controle, começando com a segunda.  
   
-4.  Para definir estilos para as linhas restantes, repita as etapas 2 e 3 usando o <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> propriedade.  
+4. Para definir estilos para as linhas restantes, repita as etapas 2 e 3 usando o <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> propriedade.  
   
     > [!NOTE]
     >  Células são exibidas usando estilos herdados de várias propriedades. Para obter mais informações sobre herança de estilo, consulte [Estilos de célula no controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343409"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solucionando problemas de criação do controle e do componente
 Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver componentes e controles. Para obter mais informações, consulte [Programando com componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -38,9 +38,9 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Para adicionar um controle à Caixa de Ferramentas  
   
-1.  Clique com o botão direito do mouse em **Caixa de Ferramentas** e selecione **Escolher Itens** no menu de atalho.  
+1. Clique com o botão direito do mouse em **Caixa de Ferramentas** e selecione **Escolher Itens** no menu de atalho.  
   
-2.  Na caixa de diálogo **Escolher Itens da Caixa de Ferramentas**, adicione o componente:  
+2. Na caixa de diálogo **Escolher Itens da Caixa de Ferramentas**, adicione o componente:  
   
     -   Se você quiser adicionar um controle ou um componente do .NET Framework, clique na guia **Componentes do .NET Framework**.  
   
@@ -48,11 +48,11 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
   
     -   Se você quiser adicionar um componente COM ou um controle ActiveX, clique na guia **Componentes COM**.  
   
-3.  Se o controle estiver listado na caixa de diálogo, confirme que ele está selecionado e, em seguida, clique em **OK**.  
+3. Se o controle estiver listado na caixa de diálogo, confirme que ele está selecionado e, em seguida, clique em **OK**.  
   
      O controle é adicionado à **Caixa de Ferramentas**.  
   
-4.  Se seu controle não estiver listado na caixa de diálogo, faça o seguinte:  
+4. Se seu controle não estiver listado na caixa de diálogo, faça o seguinte:  
   
     1.  Clique no botão **Procurar**.  
   
@@ -73,15 +73,15 @@ Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver
   
 #### <a name="to-debug-a-control-or-component"></a>Para depurar um controle ou um componente  
   
-1.  No menu **Compilar**, clique em **Compilar Solução** para compilar sua solução.  
+1. No menu **Compilar**, clique em **Compilar Solução** para compilar sua solução.  
   
-2.  No menu **Arquivo**, escolha **Adicionar** e, em seguida, **Novo Projeto** para adicionar um projeto de teste ao seu aplicativo.  
+2. No menu **Arquivo**, escolha **Adicionar** e, em seguida, **Novo Projeto** para adicionar um projeto de teste ao seu aplicativo.  
   
-3.  Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Aplicativos do Windows** para o tipo de projeto.  
+3. Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Aplicativos do Windows** para o tipo de projeto.  
   
-4.  Em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** para o novo projeto. No menu de atalho, clique em **Adicionar Referência** para adicionar uma referência ao projeto que contém o controle ou o componente.  
+4. Em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** para o novo projeto. No menu de atalho, clique em **Adicionar Referência** para adicionar uma referência ao projeto que contém o controle ou o componente.  
   
-5.  Crie uma instância do seu controle ou componente no projeto de teste. Se o componente estiver na **Toolbox**, você poderá arrastá-lo para a superfície do designer ou criar a instância programaticamente, conforme mostrado no exemplo de código a seguir.  
+5. Crie uma instância do seu controle ou componente no projeto de teste. Se o componente estiver na **Toolbox**, você poderá arrastá-lo para a superfície do designer ou criar a instância programaticamente, conforme mostrado no exemplo de código a seguir.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  

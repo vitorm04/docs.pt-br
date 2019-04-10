@@ -2,12 +2,12 @@
 title: Filas de mensagens de inatividade
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334088"
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
 Este exemplo demonstra como manipular e processar as mensagens com falha na entrega. Ele se baseia a [associação de MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa o `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.
@@ -310,9 +310,9 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
+2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
 
     1.  Abra o Gerenciador de servidores no Visual Studio 2012.
 
@@ -324,13 +324,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 
-3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Para executar o exemplo em uma fila de alteração de configuração ou entre computadores nomes apropriadamente, substituindo o localhost pelo nome completo do computador e siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para executar o exemplo em uma fila de alteração de configuração ou entre computadores nomes apropriadamente, substituindo o localhost pelo nome completo do computador e siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para executar o exemplo em um computador associado a um grupo de trabalho
 
-1.  Se seu computador não fizer parte de um domínio, desative a segurança de transporte, definindo o nível de proteção e o modo de autenticação como `None` conforme mostrado no seguinte exemplo de configuração:
+1. Se seu computador não fizer parte de um domínio, desative a segurança de transporte, definindo o nível de proteção e o modo de autenticação como `None` conforme mostrado no seguinte exemplo de configuração:
 
     ```xml
     <bindings>
@@ -344,7 +344,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
      Verifique se o ponto de extremidade está associado com a associação, definindo o ponto de extremidade `bindingConfiguration` atributo.
 
-2.  Certifique-se de que você altera a configuração no DeadLetterService, server e o cliente antes de executar o exemplo.
+2. Certifique-se de que você altera a configuração no DeadLetterService, server e o cliente antes de executar o exemplo.
 
     > [!NOTE]
     >  Definindo `security mode` à `None` é equivalente à configuração `MsmqAuthenticationMode`, `MsmqProtectionLevel` e `Message` security `None`.

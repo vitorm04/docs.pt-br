@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377019"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335310"
 ---
 # <a name="the-ink-threading-model"></a>O modelo de threading da tinta
 Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escrever com uma caneta comum e papel.  Para fazer isso, a caneta eletrônica coleta dados de entrada a uma taxa muito maior do que um mouse e renderiza a tinta enquanto o usuário escreve.  O thread da interface do usuário do aplicativo não é suficiente para coletar dados da caneta e renderizar a tinta, porque ele pode ser bloqueado.  Para resolver isso, um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa dois threads adicionais quando um usuário escreve com tinta.  
@@ -38,7 +38,7 @@ Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escre
   
  ![Modelo de threading ao desenhar um traço. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Ações que ocorrem enquanto o usuário desenha o traço  
+1. Ações que ocorrem enquanto o usuário desenha o traço  
   
     1.  Quando o usuário desenha um traço, os pontos da caneta entram no thread da caneta.  Plug-ins de caneta, incluindo o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, aceite os pontos da caneta no thread da caneta e têm a oportunidade de modificá-las antes do <xref:System.Windows.Controls.InkCanvas> recebe-los.  
   
@@ -46,7 +46,7 @@ Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escre
   
     3.  O <xref:System.Windows.Controls.InkCanvas> recebe os pontos da caneta no thread da interface do usuário.  
   
-2.  Ações que ocorrem após o usuário terminar o traço  
+2. Ações que ocorrem após o usuário terminar o traço  
   
     1.  Quando o usuário termina de desenhar o traço, o <xref:System.Windows.Controls.InkCanvas> cria um <xref:System.Windows.Ink.Stroke> do objeto e adiciona-o para o <xref:System.Windows.Controls.InkPresenter>, que o renderiza estaticamente.  
   
@@ -61,13 +61,13 @@ Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escre
   
  No diagrama anterior, o seguinte comportamento ocorre:  
   
-1.  `StylusPlugin1` modifica os valores de x e y.  
+1. `StylusPlugin1` modifica os valores de x e y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recebe os pontos da caneta modificados e os renderiza no thread de renderização dinâmica.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recebe os pontos da caneta modificados e os renderiza no thread de renderização dinâmica.  
   
-3.  `StylusPlugin2` recebe os pontos da caneta modificados e modifica mais os valores de x e y.  
+3. `StylusPlugin2` recebe os pontos da caneta modificados e modifica mais os valores de x e y.  
   
-4.  O aplicativo coleta os pontos da caneta e, quando o usuário termina o traço, renderiza estaticamente o traço.  
+4. O aplicativo coleta os pontos da caneta e, quando o usuário termina o traço, renderiza estaticamente o traço.  
   
  Suponha que `stylusPlugin1` restrinja os pontos da caneta a um retângulo e `stylusPlugin2` mova os pontos da caneta para a direita.  No cenário anterior, o <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recebe os pontos da caneta restritos, mas não os pontos da caneta traduzido.  Quando o usuário desenha o traço, o traço é renderizado dentro dos limites do retângulo, mas o traço não parece ser movido até que o usuário levante a caneta.  
   
@@ -83,15 +83,15 @@ Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escre
   
  ![Diagrama de threading de tinta](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  O usuário inicia o traço.  
+1. O usuário inicia o traço.  
   
     1.  O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cria a árvore visual.  
   
-2.  O usuário está desenhando o traço.  
+2. O usuário está desenhando o traço.  
   
     1.  O <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila a árvore visual.  
   
-3.  O usuário termina o traço.  
+3. O usuário termina o traço.  
   
     1.  O <xref:System.Windows.Controls.InkPresenter> adiciona o traço à sua árvore visual.  
   

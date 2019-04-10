@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336870"
 ---
 # <a name="exporting-schemas-from-classes"></a>Exportando esquemas de classes
 Para gerar esquemas XSD (linguagem) de definição de esquema XML de classes que são usadas no modelo de contrato de dados, use o <xref:System.Runtime.Serialization.XsdDataContractExporter> classe. Este tópico descreve o processo de criação de esquemas.  
@@ -25,20 +25,20 @@ Para gerar esquemas XSD (linguagem) de definição de esquema XML de classes que
   
 #### <a name="to-export-schemas"></a>Para exportar os esquemas  
   
-1.  Criar uma instância da <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+1. Criar uma instância da <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-2.  Opcional. Passar um <xref:System.Xml.Schema.XmlSchemaSet> no construtor. Nesse caso, o esquema gerado durante a exportação de esquema é adicionado a este <xref:System.Xml.Schema.XmlSchemaSet> instância em vez de começar com um espaço em branco <xref:System.Xml.Schema.XmlSchemaSet>.  
+2. Opcional. Passar um <xref:System.Xml.Schema.XmlSchemaSet> no construtor. Nesse caso, o esquema gerado durante a exportação de esquema é adicionado a este <xref:System.Xml.Schema.XmlSchemaSet> instância em vez de começar com um espaço em branco <xref:System.Xml.Schema.XmlSchemaSet>.  
   
-3.  Opcional. Chame um do <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> métodos. O método determina se o tipo especificado pode ser exportado. O método tem as mesmas sobrecargas como o `Export` método na próxima etapa.  
+3. Opcional. Chame um do <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> métodos. O método determina se o tipo especificado pode ser exportado. O método tem as mesmas sobrecargas como o `Export` método na próxima etapa.  
   
-4.  Chame um do <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> métodos. Há três sobrecargas colocar uma <xref:System.Type>, um <xref:System.Collections.Generic.List%601> de `Type` objetos, ou uma <xref:System.Collections.Generic.List%601> de <xref:System.Reflection.Assembly> objetos. No último caso, todos os tipos em todos os assemblies determinados são exportados.  
+4. Chame um do <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> métodos. Há três sobrecargas colocar uma <xref:System.Type>, um <xref:System.Collections.Generic.List%601> de `Type` objetos, ou uma <xref:System.Collections.Generic.List%601> de <xref:System.Reflection.Assembly> objetos. No último caso, todos os tipos em todos os assemblies determinados são exportados.  
   
      Diversas chamadas para o `Export` método resulta em vários itens que estão sendo adicionados à mesma `XmlSchemaSet`. Um tipo não é gerado para o `XmlSchemaSet` se ele já existe. Portanto, chamar `Export` várias vezes na mesma `XsdDataContractExporter` é preferível à criação de várias instâncias do `XsdDataContractExporter` classe. Isso evita que os tipos de esquema duplicadas sejam geradas.  
   
     > [!NOTE]
     >  Se houver uma falha durante a exportação, o `XmlSchemaSet` estará em um estado imprevisível.  
   
-5.  Acesso a <xref:System.Xml.Schema.XmlSchemaSet> por meio de <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> propriedade.  
+5. Acesso a <xref:System.Xml.Schema.XmlSchemaSet> por meio de <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> propriedade.  
   
 ## <a name="export-options"></a>Opções de exportação  
  Você pode definir as <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> propriedade do <xref:System.Runtime.Serialization.XsdDataContractExporter> a uma instância da <xref:System.Runtime.Serialization.ExportOptions> classe para controlar vários aspectos do processo de exportação. Especificamente, você pode definir as seguintes opções:  

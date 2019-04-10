@@ -13,19 +13,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ef579923ac2b9ea9905a60000d93f6bfc90ed5b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342668"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Como: Definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle tem várias opções para formatar o texto que ele exibe. Você pode formatar parágrafos selecionados como listas com marcadores, definindo o <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriedade. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, e <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedades para definir o recuo de parágrafos em relação à esquerda e direita bordas do controle e a borda esquerda de outras linhas de texto.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Formatar um parágrafo como uma lista com marcadores  
   
-1.  Defina a propriedade <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> como `true`.  
+1. Defina a propriedade <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> como `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -41,11 +41,11 @@ Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle tem 
   
 ### <a name="to-indent-a-paragraph"></a>Para recuar um parágrafo  
   
-1.  Defina o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propriedade em um inteiro que representa a distância em pixels entre a borda esquerda do controle e a borda esquerda do texto.  
+1. Defina o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propriedade em um inteiro que representa a distância em pixels entre a borda esquerda do controle e a borda esquerda do texto.  
   
-2.  Defina o <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade em um inteiro que representa a distância em pixels entre a borda esquerda da primeira linha do texto no parágrafo e a borda esquerda das linhas subsequentes do mesmo parágrafo. O valor da <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade só se aplica a linhas em um parágrafo que foram encapsuladas abaixo da primeira linha.  
+2. Defina o <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade em um inteiro que representa a distância em pixels entre a borda esquerda da primeira linha do texto no parágrafo e a borda esquerda das linhas subsequentes do mesmo parágrafo. O valor da <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade só se aplica a linhas em um parágrafo que foram encapsuladas abaixo da primeira linha.  
   
-3.  Defina o <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propriedade em um inteiro que representa a distância em pixels entre a borda direita do controle e a borda direita do texto.  
+3. Defina o <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propriedade em um inteiro que representa a distância em pixels entre a borda direita do controle e a borda direita do texto.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  

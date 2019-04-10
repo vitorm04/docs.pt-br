@@ -2,12 +2,12 @@
 title: Visão geral de descoberta do WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335336"
 ---
 # <a name="wcf-discovery-overview"></a>Visão geral de descoberta do WCF
 As APIs de descoberta fornecem um modelo de programação unificado para a publicação dinâmica e a descoberta de serviços da Web usando o protocolo WS-Discovery. Essas APIs permitem que os serviços publicar em si e os clientes localizem serviços publicados. Depois que um serviço é feito detectável, o serviço tem a capacidade de enviar mensagens de comunicado, bem como ouvir e responder às solicitações de descoberta. Serviços podem ser descobertos podem enviar mensagens de saudação anunciar sua chegada em uma rede e Bye anunciar sua saída de uma rede. Para localizar um serviço, os clientes enviam uma `Probe` solicitação que contém critérios específicos, como o tipo de contrato de serviço, as palavras-chave e o escopo na rede. Serviços de recebem o `Probe` solicitar e determinar se eles correspondem aos critérios. Se corresponder a um serviço, ele responde enviando um `ProbeMatch` mensagem de volta para o cliente com as informações necessárias para contatar o serviço. Os clientes também podem enviar `Resolve` solicitações que lhes permitem encontrar os serviços que podem ter sido alteradas seu endereço de ponto de extremidade. Serviços correspondentes respondem às `Resolve` solicitações enviando um `ResolveMatch` mensagem de volta ao cliente.  
@@ -151,9 +151,9 @@ class Client
 ## <a name="discovery-and-web-hosted-services"></a>Serviços hospedados de descoberta e Web  
  Para serviços do WCF seja detectável eles devem estar em execução. Os serviços WCF hospedados em IIS ou WAS não são executados até que o IIS / WAS recebe uma mensagem associada para o serviço, portanto, eles não podem ser detectáveis por padrão.  Há duas opções para tornar os serviços hospedados na Web podem ser descobertos:  
   
-1.  Use o recurso Auto-Start do Windows Server AppFabric  
+1. Use o recurso Auto-Start do Windows Server AppFabric  
   
-2.  Usar um proxy de descoberta para se comunicar em nome do serviço  
+2. Usar um proxy de descoberta para se comunicar em nome do serviço  
   
  O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço a ser iniciado antes de receber todas as mensagens. Com essa Auto-Start definido, um IIS / WAS hospedado serviço pode ser configurado para ser descoberto. Para obter mais informações sobre o Auto-Start recurso, consulte [recurso de início automático do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Junto com a ativar o recurso Auto-Start, você deve configurar o serviço para descoberta. Para obter mais informações, confira [Como: Adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configurando a descoberta em um arquivo de configuração](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   

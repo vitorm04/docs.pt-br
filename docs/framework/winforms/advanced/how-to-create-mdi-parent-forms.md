@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338651"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Como: criar formulários pai MDI
 > [!IMPORTANT]
@@ -20,20 +20,20 @@ ms.locfileid: "59216308"
   
 ### <a name="to-create-an-mdi-parent-form-at-design-time"></a>Para criar um formulário MDI pai no tempo de design  
   
-1.  Criar um projeto de aplicativos do Windows.  
+1. Criar um projeto de aplicativos do Windows.  
   
-2.  No **propriedades** janela, defina o <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade **true**.  
+2. No **propriedades** janela, defina o <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade **true**.  
   
      Isso designa o formulário como um recipiente MDI para janelas filho.  
   
     > [!NOTE]
     >  Ao configurar propriedades na janela **Propriedades**, você também pode definir a propriedade `WindowState` para **Maximized**, se desejar, pois é mais fácil manipular janelas filho MDI quando o formulário pai está maximizado. Além disso, esteja ciente de que a borda do formulário MDI pai selecionará a cor do sistema (definida no Painel de Controle do Sistema do Windows), em vez da cor de fundo definida usando a propriedade <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType>.  
   
-3.  Na **Caixa de Ferramentas**, arraste um controle **MenuStrip** para o formulário. Crie um item de menu de nível superior com a propriedade **Text** definida para **&File** com itens de submenu chamados **&New** e **&Close**. Crie também um item de menu de nível superior chamado **&Window**.  
+3. Na **Caixa de Ferramentas**, arraste um controle **MenuStrip** para o formulário. Crie um item de menu de nível superior com a propriedade **Text** definida para **&File** com itens de submenu chamados **&New** e **&Close**. Crie também um item de menu de nível superior chamado **&Window**.  
   
      O primeiro menu criará e ocultará itens do menu no tempo de execução e o segundo menu irá controlar as janelas MDI filhas abertas. Neste ponto, você já terá criado uma janela MDI pai.  
   
-4.  Pressione **F5** para executar o aplicativo. Para obter informações sobre como criar janelas que operam no formulário pai MDI filho MDI, consulte [como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md).  
+4. Pressione **F5** para executar o aplicativo. Para obter informações sobre como criar janelas que operam no formulário pai MDI filho MDI, consulte [como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Consulte também
 

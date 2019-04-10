@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341394"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer
 Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para agrupar outros controles. Há três razões para agrupar controles. Uma delas é o agrupamento visual de elementos de formulários relacionados para uma interface do usuário clara; a outra é o agrupamento programático dos botões de opção, por exemplo; a última é para mover os controles como uma unidade em tempo de design.  
@@ -21,13 +21,13 @@ Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para agrup
   
 ### <a name="to-create-a-group-of-controls"></a>Para criar um grupo de controles  
   
-1.  Arraste uma <xref:System.Windows.Forms.Panel> controlar do **Windows Forms** guia da caixa de ferramentas para um formulário.  
+1. Arraste uma <xref:System.Windows.Forms.Panel> controlar do **Windows Forms** guia da caixa de ferramentas para um formulário.  
   
-2.  Adicione outros controles ao painel desenhando cada um deles dentro do painel.  
+2. Adicione outros controles ao painel desenhando cada um deles dentro do painel.  
   
      Se você tiver controles existentes que você deseja incluir em um painel, você pode selecionar todos os controles, recortá-los para a área de transferência, selecione o <xref:System.Windows.Forms.Panel> controlar e, em seguida, cole-os para o painel. Você também pode arrastá-los para o painel.  
   
-3.  (Opcional) Se você quiser adicionar uma borda a um painel, defina seu <xref:System.Windows.Forms.BorderStyle> propriedade. Há três opções: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, e <xref:System.Windows.Forms.BorderStyle.None>.  
+3. (Opcional) Se você quiser adicionar uma borda a um painel, defina seu <xref:System.Windows.Forms.BorderStyle> propriedade. Há três opções: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, e <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,15 +1,15 @@
 ---
-title: 'Como: Troca de mensagens dentro de uma sessão confiável'
+title: 'Como: fazer intercâmbio de mensagens dentro de uma sessão confiável'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260680"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342980"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como: Troca de mensagens dentro de uma sessão confiável
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como: fazer intercâmbio de mensagens dentro de uma sessão confiável
 
 Este tópico descreve as etapas necessárias para habilitar uma sessão confiável usando uma das associações fornecidas pelo sistema que dão suporte a essa sessão, mas não por padrão. Habilitar uma sessão confiável imperativamente usando código ou de forma declarativa em seu arquivo de configuração. Este procedimento usa os arquivos de configuração do cliente e o serviço para habilitar a sessão confiável e estipulam que as mensagens chegam na mesma ordem em que foram enviadas.
 
@@ -37,7 +37,7 @@ Para a cópia de origem deste exemplo, consulte [sessão confiável de WS](../..
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Coloque o *svc* arquivo no seu diretório virtual de serviços de informações da Internet (IIS).
+1. Coloque o *svc* arquivo no seu diretório virtual de serviços de informações da Internet (IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurar o cliente com um WSHttpBinding para usar uma sessão confiável
 

@@ -2,12 +2,12 @@
 title: Exemplo de identidade de serviço
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: fcb967af6d95169817dea3f17ea350cf21494d56
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336389"
 ---
 # <a name="service-identity-sample"></a>Exemplo de identidade de serviço
 Este exemplo de identidade de serviço demonstra como definir a identidade de um serviço. Em tempo de design, um cliente pode recuperar a identidade usando metadados do serviço e, em seguida, em tempo de execução, o cliente pode autenticar a identidade do serviço. O conceito de identidade de serviço é permitir que um cliente autenticar um serviço antes de chamar qualquer uma de suas operações, protegendo, assim, o cliente de chamadas não autenticadas. Em uma conexão segura o serviço também autentica as credenciais de um cliente antes de permitir acesso ele, mas isso não é o foco deste exemplo. Consulte os exemplos na [cliente](../../../../docs/framework/wcf/samples/client.md) que mostram a autenticação do servidor.
@@ -107,44 +107,44 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1.  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importar o arquivo de certificado Identity.pfx na pasta da solução de identidade para o repositório de LocalMachine/meu certificado (pessoal) usando a ferramenta de snap-in do MMC. Esse arquivo é protegido por senha. Durante a importação, você será solicitado para uma senha. Tipo `xyz` na caixa de senha. Para obter mais informações, confira a página [Como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tópico. Depois que isso for feito, execute Setup. bat em um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador, que copia esse certificado no repositório de pessoas confiáveis CurrentUser para uso no cliente.
+1. Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importar o arquivo de certificado Identity.pfx na pasta da solução de identidade para o repositório de LocalMachine/meu certificado (pessoal) usando a ferramenta de snap-in do MMC. Esse arquivo é protegido por senha. Durante a importação, você será solicitado para uma senha. Tipo `xyz` na caixa de senha. Para obter mais informações, confira a página [Como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tópico. Depois que isso for feito, execute Setup. bat em um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador, que copia esse certificado no repositório de pessoas confiáveis CurrentUser para uso no cliente.
 
-2.  Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], execute Setup. bat a partir da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012 com privilégios de administrador. Essa opção instala todos os certificados necessários para executar o exemplo.
+2. Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], execute Setup. bat a partir da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012 com privilégios de administrador. Essa opção instala todos os certificados necessários para executar o exemplo.
 
     > [!NOTE]
     >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat. Certifique-se de que você remova os certificados com a execução CleanUp quando você terminar com o exemplo. Outros exemplos de segurança usam os mesmos certificados.  
   
-3.  Inicie o Service.exe do diretório \service\bin. Certifique-se de que o serviço indica que ele está pronto e exibe um prompt para pressionar \<Enter > para encerrar o serviço.  
+3. Inicie o Service.exe do diretório \service\bin. Certifique-se de que o serviço indica que ele está pronto e exibe um prompt para pressionar \<Enter > para encerrar o serviço.  
   
-4.  Inicie o Client.exe do diretório \Client\Bin. ou pressionando F5 no Visual Studio para compilar e executar. Atividade do cliente é exibida no aplicativo de console do cliente.  
+4. Inicie o Client.exe do diretório \Client\Bin. ou pressionando F5 no Visual Studio para compilar e executar. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-5.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+5. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas para obter exemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
   
-1.  Antes de compilar a parte cliente de exemplo, certifique-se de alterar o valor para o endereço do ponto de extremidade do serviço no arquivo Client.cs no `CallServiceCustomClientIdentity` método. Em seguida, crie o exemplo.  
+1. Antes de compilar a parte cliente de exemplo, certifique-se de alterar o valor para o endereço do ponto de extremidade do serviço no arquivo Client.cs no `CallServiceCustomClientIdentity` método. Em seguida, crie o exemplo.  
   
-2.  Crie um diretório no computador do serviço.  
+2. Crie um diretório no computador do serviço.  
   
-3.  Copie os arquivos de programa do serviço de service\bin para o diretório no computador do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador do serviço.  
+3. Copie os arquivos de programa do serviço de service\bin para o diretório no computador do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador do serviço.  
   
-4.  Crie um diretório no computador cliente para os binários do cliente.  
+4. Crie um diretório no computador cliente para os binários do cliente.  
   
-5.  Copie os arquivos de programa do cliente para o diretório do cliente no computador cliente. Também copie os arquivos Setup. bat, CleanUp e ImportServiceCert.bat ao cliente.  
+5. Copie os arquivos de programa do cliente para o diretório do cliente no computador cliente. Também copie os arquivos Setup. bat, CleanUp e ImportServiceCert.bat ao cliente.  
   
-6.  No serviço, executar `setup.bat service` em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
+6. No serviço, executar `setup.bat service` em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
   
-7.  Copie o arquivo de Service.cer do diretório de serviço para o diretório do cliente no computador cliente.  
+7. Copie o arquivo de Service.cer do diretório de serviço para o diretório do cliente no computador cliente.  
   
-8.  No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço. Há várias instâncias que devem ser alteradas.  
+8. No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço. Há várias instâncias que devem ser alteradas.  
   
 9. No cliente, execute ImportServiceCert.bat em um Prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
   

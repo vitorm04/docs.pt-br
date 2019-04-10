@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 82bab7a42c7a8de131cc53d792cf2d372580af40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343279"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o designer
 Os formulários do Windows <xref:System.Windows.Forms.DataGridView> controle deve conter colunas para exibir dados. Para preencher o controle manualmente é preciso adicionar as colunas. De forma alternativa, é possível associar o controle a uma fonte de dados, que gera e preenche as colunas automaticamente. Se a fonte de dados contém mais colunas do que se deseja exibir, remova as colunas indesejadas.  
@@ -24,22 +24,22 @@ Os formulários do Windows <xref:System.Windows.Forms.DataGridView> controle dev
   
 ### <a name="to-add-a-column-using-the-designer"></a>Para adicionar uma coluna usando o designer  
   
-1.  Clique no glifo de marca inteligente (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no canto superior direito dos <xref:System.Windows.Forms.DataGridView> controle e, em seguida, selecione **adicionar coluna**.  
+1. Clique no glifo de marca inteligente (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no canto superior direito dos <xref:System.Windows.Forms.DataGridView> controle e, em seguida, selecione **adicionar coluna**.  
   
-2.  Na caixa de diálogo **Adicionar Coluna**, escolha a opção **Coluna de Associação de Dados** e selecione uma coluna da fonte de dados, ou escolha a opção **Coluna Não Associada** e defina a coluna usando os campos fornecidos.  
+2. Na caixa de diálogo **Adicionar Coluna**, escolha a opção **Coluna de Associação de Dados** e selecione uma coluna da fonte de dados, ou escolha a opção **Coluna Não Associada** e defina a coluna usando os campos fornecidos.  
   
-3.  Clique no botão **Adicionar** para adicionar a coluna, fazendo com que ela apareça no designer se as colunas existentes não preencherem ainda o controle da área de exibição.  
+3. Clique no botão **Adicionar** para adicionar a coluna, fazendo com que ela apareça no designer se as colunas existentes não preencherem ainda o controle da área de exibição.  
   
     > [!NOTE]
     >  É possível modificar propriedades da coluna na caixa de diálogo **Editar Colunas**, que pode ser acessada na marca inteligente do controle.  
   
 ### <a name="to-remove-a-column-using-the-designer"></a>Para remover uma coluna usando o designer  
   
-1.  Escolha **Editar Colunas** na marca inteligente do controle.  
+1. Escolha **Editar Colunas** na marca inteligente do controle.  
   
-2.  Selecione uma coluna na lista **Colunas Selecionadas**.  
+2. Selecione uma coluna na lista **Colunas Selecionadas**.  
   
-3.  Clique no botão **Remover** para excluir a coluna, fazendo com que ela desapareça do designer.  
+3. Clique no botão **Remover** para excluir a coluna, fazendo com que ela desapareça do designer.  
   
 ## <a name="see-also"></a>Consulte também
 

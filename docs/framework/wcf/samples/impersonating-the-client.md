@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: bd03ddb2478d8f9938a8c89c04f536a81e9e24da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d79ce0d189fc88310594f356f1901d93b3e1e06f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340913"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
 O exemplo representação demonstra como representar o aplicativo do chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
@@ -109,13 +109,13 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Para demonstrar que o serviço representará o chamador, execute o cliente em uma conta diferente daquela que o serviço está sendo executado. Para fazer isso, no prompt de comando, digite:  
+4. Para demonstrar que o serviço representará o chamador, execute o cliente em uma conta diferente daquela que o serviço está sendo executado. Para fazer isso, no prompt de comando, digite:  
   
     ```  
     runas /user:<machine-name>\<user-name> client.exe  
@@ -123,4 +123,4 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
      Em seguida, você será solicitado para uma senha. Insira a senha para a conta especificada anteriormente.  
   
-5.  Quando você executa o cliente, observe a identidade de antes e depois da execução com credenciais diferentes.  
+5. Quando você executa o cliente, observe a identidade de antes e depois da execução com credenciais diferentes.  

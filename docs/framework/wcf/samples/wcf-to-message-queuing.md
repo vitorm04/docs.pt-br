@@ -2,12 +2,12 @@
 title: Windows Communication Foundation para enfileiramento de mensagens
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 7761761a20fea765988b5d7fac678125e8c66b05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343376"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation para enfileiramento de mensagens
 Este exemplo demonstra como um aplicativo do Windows Communication Foundation (WCF) pode enviar uma mensagem a um aplicativo de enfileiramento de mensagens (MSMQ). O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila. O serviço e o cliente não precisa estar em execução ao mesmo tempo.
@@ -134,9 +134,9 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 ### <a name="to-setup-build-and-run-the-sample"></a>A configuração, compilação, e executar o exemplo  
   
-1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.  
+2. Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.  
   
     1.  Abra o Gerenciador de servidores no Visual Studio 2012.  
   
@@ -148,21 +148,21 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.  
   
-3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
   
-1.  Copie os arquivos de programa de serviço na pasta \service\bin\, sob a pasta de idioma específico, para o computador do serviço.  
+1. Copie os arquivos de programa de serviço na pasta \service\bin\, sob a pasta de idioma específico, para o computador do serviço.  
   
-2.  Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
+2. Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
   
-3.  No arquivo Client.exe.config, altere o endereço do ponto de extremidade do cliente para especificar o nome do computador do serviço em vez de ".".  
+3. No arquivo Client.exe.config, altere o endereço do ponto de extremidade do cliente para especificar o nome do computador do serviço em vez de ".".  
   
-4.  No computador do serviço, inicie Service.exe em um prompt de comando.  
+4. No computador do serviço, inicie Service.exe em um prompt de comando.  
   
-5.  No computador cliente, inicie Client.exe em um prompt de comando.  
+5. No computador cliente, inicie Client.exe em um prompt de comando.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

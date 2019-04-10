@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334920"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Melhores práticas: Controle de versão de contrato de dados
 Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo. Para obter mais informações sobre contratos de dados, consulte os tópicos [contratos de dados usando](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -50,21 +50,21 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
   
  Algumas das diretrizes devem ser seguidas exatamente a fim de enviar novas versões de um tipo de onde se espera que mais antiga ou enviar uma antiga onde se espera que um novo. Outras diretrizes não são estritamente necessárias, mas são listadas aqui porque eles podem ser afetados pelo futuro do controle de versão do esquema.  
   
-1.  Não tente contratos de dados de versão por herança de tipo. Para criar versões posteriores, altere o contrato de dados em um tipo existente ou criar um novo tipo de não relacionado.  
+1. Não tente contratos de dados de versão por herança de tipo. Para criar versões posteriores, altere o contrato de dados em um tipo existente ou criar um novo tipo de não relacionado.  
   
-2.  O uso de herança junto com os contratos de dados é permitido, desde que a herança não é usada como um mecanismo de controle de versão e certas regras sejam seguidas. Se um tipo derivado de um determinado tipo de base, não o tornará derivar de um tipo base diferente em uma versão futura (a menos que ele tenha os mesmos dados contrato). Há uma exceção a isso: você pode inserir um tipo na hierarquia entre um tipo de contrato de dados e seu tipo base, mas somente se ele não contém membros de dados com os mesmos nomes que outros membros em todas as versões possíveis de outros tipos na hierarquia. Em geral, usando membros de dados com os mesmos nomes em diferentes níveis da mesma hierarquia de herança pode causar problemas graves de controle de versão e deve ser evitada.  
+2. O uso de herança junto com os contratos de dados é permitido, desde que a herança não é usada como um mecanismo de controle de versão e certas regras sejam seguidas. Se um tipo derivado de um determinado tipo de base, não o tornará derivar de um tipo base diferente em uma versão futura (a menos que ele tenha os mesmos dados contrato). Há uma exceção a isso: você pode inserir um tipo na hierarquia entre um tipo de contrato de dados e seu tipo base, mas somente se ele não contém membros de dados com os mesmos nomes que outros membros em todas as versões possíveis de outros tipos na hierarquia. Em geral, usando membros de dados com os mesmos nomes em diferentes níveis da mesma hierarquia de herança pode causar problemas graves de controle de versão e deve ser evitada.  
   
-3.  Começando com a primeira versão de um contrato de dados, sempre implementar <xref:System.Runtime.Serialization.IExtensibleDataObject> para habilitar o ciclo completo. Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se você tiver lançado uma ou mais versões de um tipo sem implementar essa interface, você deve implementá-la na próxima versão do tipo.  
+3. Começando com a primeira versão de um contrato de dados, sempre implementar <xref:System.Runtime.Serialization.IExtensibleDataObject> para habilitar o ciclo completo. Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se você tiver lançado uma ou mais versões de um tipo sem implementar essa interface, você deve implementá-la na próxima versão do tipo.  
   
-4.  Em versões posteriores, não altere o nome do contrato de dados ou um namespace. Se alterar o nome ou namespace do tipo subjacente de contrato de dados, certifique-se preservar o namespace e nome do contrato de dados usando os mecanismos apropriados, como o <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> propriedade do <xref:System.Runtime.Serialization.DataContractAttribute>. Para obter mais informações sobre como nomear, consulte [nomes de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4. Em versões posteriores, não altere o nome do contrato de dados ou um namespace. Se alterar o nome ou namespace do tipo subjacente de contrato de dados, certifique-se preservar o namespace e nome do contrato de dados usando os mecanismos apropriados, como o <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> propriedade do <xref:System.Runtime.Serialization.DataContractAttribute>. Para obter mais informações sobre como nomear, consulte [nomes de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  Em versões posteriores, não altere os nomes de todos os membros de dados. Se alterar o nome do campo, propriedade ou evento subjacente o membro de dados, use o `Name` propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> para preservar o nome de membro de dados existente.  
+5. Em versões posteriores, não altere os nomes de todos os membros de dados. Se alterar o nome do campo, propriedade ou evento subjacente o membro de dados, use o `Name` propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> para preservar o nome de membro de dados existente.  
   
-6.  Em versões posteriores, não altere o tipo de qualquer campo, propriedade ou evento subjacente a um membro de dados, de modo que os dados resultantes de contrato que alterações de dados membro. Tenha em mente que tipos de interface são equivalentes a <xref:System.Object> a fim de determinar o contrato de dados esperado.  
+6. Em versões posteriores, não altere o tipo de qualquer campo, propriedade ou evento subjacente a um membro de dados, de modo que os dados resultantes de contrato que alterações de dados membro. Tenha em mente que tipos de interface são equivalentes a <xref:System.Object> a fim de determinar o contrato de dados esperado.  
   
-7.  Em versões posteriores, não altere a ordem dos membros de dados existente, ajustando a <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> atributo.  
+7. Em versões posteriores, não altere a ordem dos membros de dados existente, ajustando a <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> atributo.  
   
-8.  Em versões posteriores, é possível adicionar novos membros de dados. Eles sempre devem seguir estas regras:  
+8. Em versões posteriores, é possível adicionar novos membros de dados. Eles sempre devem seguir estas regras:  
   
     1.  O <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriedade sempre deve ser deixada com seu valor padrão de `false`.  
   

@@ -2,12 +2,12 @@
 title: 'Como: migrar serviços Web habilitados para AJAX ASP.NET para o WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337416"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Como: migrar serviços Web habilitados para AJAX ASP.NET para o WCF
 Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET AJAX a um serviço habilitado para AJAX Windows Communication Foundation (WCF) equivalente. Ele mostra como criar uma versão equivalente do WCF de um serviço ASP.NET AJAX. Os dois serviços, em seguida, podem ser usados lado a lado, ou o serviço WCF pode ser usado para substituir o serviço ASP.NET AJAX.
@@ -26,21 +26,21 @@ Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET A
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Para criar e testar o aplicativo de serviço da Web do ASP.NET
 
-1.  Abra o Visual Studio 2012.
+1. Abra o Visual Studio 2012.
 
-2.  Do **arquivo** menu, selecione **New**, em seguida, **projeto**, em seguida, **Web**e, em seguida, selecione **aplicativo de serviço Web ASP.NET** .
+2. Do **arquivo** menu, selecione **New**, em seguida, **projeto**, em seguida, **Web**e, em seguida, selecione **aplicativo de serviço Web ASP.NET** .
 
-3.  Nomeie o projeto `ASPHello` e clique em **Okey**.
+3. Nomeie o projeto `ASPHello` e clique em **Okey**.
 
-4.  Remova a linha no arquivo de Service1.asmx.cs contém `System.Web.Script.Services.ScriptService]` para habilitar o AJAX para esse serviço.
+4. Remova a linha no arquivo de Service1.asmx.cs contém `System.Web.Script.Services.ScriptService]` para habilitar o AJAX para esse serviço.
 
-5.  Dos **construir** menu, selecione **compilar solução**.
+5. Dos **construir** menu, selecione **compilar solução**.
 
-6.  No menu **Depurar**, selecione **Iniciar sem Depurar**.
+6. No menu **Depurar**, selecione **Iniciar sem Depurar**.
 
-7.  Na página da Web gerada, selecione o `HelloWorld` operação.
+7. Na página da Web gerada, selecione o `HelloWorld` operação.
 
-8.  Clique o **Invoke** botão o `HelloWorld` página de teste. Você deve receber a seguinte resposta XML.
+8. Clique o **Invoke** botão o `HelloWorld` página de teste. Você deve receber a seguinte resposta XML.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET A
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Para criar um aplicativo de serviço WCF AJAX equivalente
 
-1.  Com o botão direito a **ASPHello** do projeto e selecione **Add**, em seguida, **Novo Item**e, em seguida, **serviço WCF habilitado para AJAX**.
+1. Com o botão direito a **ASPHello** do projeto e selecione **Add**, em seguida, **Novo Item**e, em seguida, **serviço WCF habilitado para AJAX**.
 
-2.  Nomeie o serviço `WCFHello` e clique em **Add**.
+2. Nomeie o serviço `WCFHello` e clique em **Add**.
 
-3.  Abra o arquivo WCFHello.svc.cs.
+3. Abra o arquivo WCFHello.svc.cs.
 
-4.  Service1.asmx.cs, copie a seguinte implementação do `HelloWorld` operação.
+4. Service1.asmx.cs, copie a seguinte implementação do `HelloWorld` operação.
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET A
     }
     ```
 
-5.  Colar a implementação copiada do `HelloWorld` operação no arquivo WCFHello.svc.cs no lugar o código a seguir.
+5. Colar a implementação copiada do `HelloWorld` operação no arquivo WCFHello.svc.cs no lugar o código a seguir.
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET A
     }
     ```
 
-6.  Especifique o `Namespace` de atributo para <xref:System.ServiceModel.ServiceContractAttribute> como `WCFHello`.
+6. Especifique o `Namespace` de atributo para <xref:System.ServiceModel.ServiceContractAttribute> como `WCFHello`.
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET A
     { … }
     ```
 
-7.  Adicionar o <xref:System.ServiceModel.Web.WebInvokeAttribute> para o `HelloWorld` operação e defina o <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriedade para retornar <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Observe que, se não for definido, o padrão é de tipo de retorno <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Adicionar o <xref:System.ServiceModel.Web.WebInvokeAttribute> para o `HelloWorld` operação e defina o <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriedade para retornar <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Observe que, se não for definido, o padrão é de tipo de retorno <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET A
     }
     ```
 
-8.  Dos **construir** menu, selecione **compilar solução**.
+8. Dos **construir** menu, selecione **compilar solução**.
 
 9. Abra o arquivo WCFHello.svc e para o **Debug** menu, selecione **Start Without Debugging**.
 

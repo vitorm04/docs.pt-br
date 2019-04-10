@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341186"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionando problemas de interoperabilidade (Visual Basic)
 Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], você pode encontrar um ou mais dos seguintes problemas comuns.  
@@ -42,9 +42,9 @@ Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdns
   
  A renomeação pode causar problemas de duas para os consumidores do objeto COM.  
   
-1.  Os clientes não podem esperar que os nomes de método gerado.  
+1. Os clientes não podem esperar que os nomes de método gerado.  
   
-2.  Os nomes de método gerado na classe exposta como um objeto COM podem mudar quando novas sobrecargas são adicionadas à classe ou sua classe base. Isso pode causar problemas de controle de versão.  
+2. Os nomes de método gerado na classe exposta como um objeto COM podem mudar quando novas sobrecargas são adicionadas à classe ou sua classe base. Isso pode causar problemas de controle de versão.  
   
  Para resolver os dois problemas, dê a cada método um nome exclusivo, em vez de usar a sobrecarga, quando você desenvolve os objetos que serão expostos como objetos COM.  
   
@@ -132,6 +132,6 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Passo a passo: implementação de herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Passo a passo: Implementando a herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Cache de assembly global](../../../framework/app-domains/gac.md)
+- [Cache de assemblies global](../../../framework/app-domains/gac.md)

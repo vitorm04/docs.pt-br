@@ -13,12 +13,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336494"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Como: Definir um ícone para um botão de barra de ferramentas
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "59153121"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Para definir um ícone para um botão de barra de ferramentas programaticamente  
   
-1.  Em um procedimento, instanciar uma <xref:System.Windows.Forms.ImageList> componente e um <xref:System.Windows.Forms.ToolBar> controle.  
+1. Em um procedimento, instanciar uma <xref:System.Windows.Forms.ImageList> componente e um <xref:System.Windows.Forms.ToolBar> controle.  
   
-2.  No mesmo procedimento, atribuir uma imagem para o <xref:System.Windows.Forms.ImageList> componente.  
+2. No mesmo procedimento, atribuir uma imagem para o <xref:System.Windows.Forms.ImageList> componente.  
   
-3.  No mesmo procedimento, atribua o <xref:System.Windows.Forms.ImageList> o controle para o <xref:System.Windows.Forms.ToolBar> controlar e atribuir o <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade dos botões da barra de ferramentas individuais.  
+3. No mesmo procedimento, atribua o <xref:System.Windows.Forms.ImageList> o controle para o <xref:System.Windows.Forms.ToolBar> controlar e atribuir o <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade dos botões da barra de ferramentas individuais.  
   
      No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo a seguir supõe um formulário com um <xref:System.Windows.Forms.PictureBox> controle já adicionado.  
   

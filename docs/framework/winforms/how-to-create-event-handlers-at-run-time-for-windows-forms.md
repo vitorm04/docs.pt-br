@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343253"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Como: criar manipuladores de eventos em tempo de execução para o Windows Forms
 Além de criar eventos usando o Designer de Formulários do Windows, também é possível criar um manipulador de eventos no tempo de execução. Essa ação permite que você conecte manipuladores de eventos com base em condições no código no tempo de execução em vez de conectá-los quando o programa inicia.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Para criar um manipulador de eventos no tempo de execução  
   
-1.  Abra o formulário no Editor de códigos ao qual deseja adicionar um manipulador de eventos.  
+1. Abra o formulário no Editor de códigos ao qual deseja adicionar um manipulador de eventos.  
   
-2.  Adicione um método ao seu formulário com a assinatura do método para o evento que deseja manipular.  
+2. Adicione um método ao seu formulário com a assinatura do método para o evento que deseja manipular.  
   
      Por exemplo, se você estiver manipulando o <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle, você criaria um método como o seguinte:  
   
@@ -52,11 +52,11 @@ Além de criar eventos usando o Designer de Formulários do Windows, também é 
        }  
     ```  
   
-3.  Adicione código ao manipulador de eventos conforme apropriado para seu aplicativo.  
+3. Adicione código ao manipulador de eventos conforme apropriado para seu aplicativo.  
   
-4.  Determine para qual formulário ou controle deseja criar um manipulador de eventos.  
+4. Determine para qual formulário ou controle deseja criar um manipulador de eventos.  
   
-5.  Em um método na classe do formulário, adicione o código que especifica o manipulador de eventos para manipular o evento. Por exemplo, o código a seguir especifica o manipulador de eventos `button1_Click` manipula a <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle:  
+5. Em um método na classe do formulário, adicione o código que especifica o manipulador de eventos para manipular o evento. Por exemplo, o código a seguir especifica o manipulador de eventos `button1_Click` manipula a <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle:  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  

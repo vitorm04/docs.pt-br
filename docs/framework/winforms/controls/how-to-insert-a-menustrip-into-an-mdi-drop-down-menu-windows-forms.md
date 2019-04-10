@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: 1c0ee8c7029639d6911dbb80657ce03068223246
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b41699d8da1c99705f6796105dab6f3ab1d727d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341628"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Como: Inserir um MenuStrip um Menu suspenso MDI (Windows Forms)
 Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos) filho pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu da MDI pai com o conteúdo do menu da MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  
@@ -23,21 +23,21 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
   
 ### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Como inserir um MenuStrip em um menu suspenso MDI  
   
-1.  Criar um formulário e defina suas <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade para `true`.  
+1. Criar um formulário e defina suas <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade para `true`.  
   
-2.  Adicionar um <xref:System.Windows.Forms.MenuStrip> para `Form1` e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade o <xref:System.Windows.Forms.MenuStrip> para `true`.  
+2. Adicionar um <xref:System.Windows.Forms.MenuStrip> para `Form1` e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade o <xref:System.Windows.Forms.MenuStrip> para `true`.  
   
-3.  Adicionar um item de menu de nível superior para o `Form1`<xref:System.Windows.Forms.MenuStrip> e defina sua <xref:System.Windows.Forms.Control.Text%2A> propriedade `&File`.  
+3. Adicionar um item de menu de nível superior para o `Form1`<xref:System.Windows.Forms.MenuStrip> e defina sua <xref:System.Windows.Forms.Control.Text%2A> propriedade `&File`.  
   
-4.  Adicione três itens de submenu para o `&File` item de menu e defina seus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedades a serem `&Open`, `&Import from`, e `E&xit`.  
+4. Adicione três itens de submenu para o `&File` item de menu e defina seus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedades a serem `&Open`, `&Import from`, e `E&xit`.  
   
-5.  Adicione dois itens de submenu para o `&Import from` item de submenu e defina seus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedades a serem `&Word` e `&Excel`.  
+5. Adicione dois itens de submenu para o `&Import from` item de submenu e defina seus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedades a serem `&Word` e `&Excel`.  
   
-6.  Adicionar um formulário ao projeto, adicione uma <xref:System.Windows.Forms.MenuStrip> para o formulário e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade da `Form2`<xref:System.Windows.Forms.MenuStrip> para `true`.  
+6. Adicionar um formulário ao projeto, adicione uma <xref:System.Windows.Forms.MenuStrip> para o formulário e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade da `Form2`<xref:System.Windows.Forms.MenuStrip> para `true`.  
   
-7.  Adicionar um item de menu de nível superior para o `Form2`<xref:System.Windows.Forms.MenuStrip> e defina sua <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade `&File`.  
+7. Adicionar um item de menu de nível superior para o `Form2`<xref:System.Windows.Forms.MenuStrip> e defina sua <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade `&File`.  
   
-8.  Adicionar itens de submenu para o `&File` menu de `Form2` na seguinte ordem: um <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`e outro <xref:System.Windows.Forms.ToolStripSeparator>.  
+8. Adicionar itens de submenu para o `&File` menu de `Form2` na seguinte ordem: um <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`e outro <xref:System.Windows.Forms.ToolStripSeparator>.  
   
 9. Defina as <xref:System.Windows.Forms.MergeAction> e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriedades do `Form2` itens de menu, conforme mostrado na tabela a seguir.  
   

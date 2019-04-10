@@ -2,12 +2,12 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341095"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -72,7 +72,7 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
 ##### <a name="to-open-a-trace-file"></a>Para abrir um arquivo de rastreamento  
   
-1.  Iniciar o Visualizador de rastreamento de serviço usando uma janela de comando, navegue até o local de instalação do WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e, em seguida, digite `SvcTraceViewer.exe`.  
+1. Iniciar o Visualizador de rastreamento de serviço usando uma janela de comando, navegue até o local de instalação do WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e, em seguida, digite `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  A ferramenta Visualizador de Rastreamento de Serviço pode se associar a dois tipos de arquivos: .svclog e .stvproj. Você pode usar dois parâmetros na linha de comando para registrar e cancelar o registro das extensões de arquivo.  
@@ -81,14 +81,14 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 >   
 >  /unregister: cancela o registro da associação de extensões de arquivo ".svclog" e ".stvproj" com SvcTraceViewer.exe  
   
-1.  Quando o Visualizador de rastreamento de serviço é iniciado, clique em **arquivo** e, em seguida, aponte para **abrir**. Navegue até o local onde seus arquivos de rastreamento são armazenados.  
+1. Quando o Visualizador de rastreamento de serviço é iniciado, clique em **arquivo** e, em seguida, aponte para **abrir**. Navegue até o local onde seus arquivos de rastreamento são armazenados.  
   
-2.  Clique duas vezes no arquivo de rastreamento que deseja abrir.  
+2. Clique duas vezes no arquivo de rastreamento que deseja abrir.  
   
     > [!NOTE]
     >  Pressione a tecla SHIFT enquanto clica em vários arquivos de rastreamento para selecioná-los e abri-los simultaneamente. O Visualizador de Rastreamento de Serviço mescla o conteúdo de todos os arquivos e apresenta uma exibição. Por exemplo, você pode abrir arquivos de rastreamento do cliente e do serviço. Isso é útil quando você tiver habilitado o log de mensagens e a propagação de atividade na configuração. Dessa forma, é possível examinar a troca de mensagens entre o cliente e o serviço. Você também pode arrastar vários arquivos para o visualizador ou use o **projeto** guia. Consulte a seção Gerenciando projetos para obter mais detalhes.  
   
-3.  Para adicionar arquivos de rastreamento extras à coleção que está aberta, clique em **arquivo** e, em seguida, aponte para **Add**. Na janela que é aberta, navegue até o local dos arquivos de rastreamento e clique duas vezes no arquivo que deseja adicionar.  
+3. Para adicionar arquivos de rastreamento extras à coleção que está aberta, clique em **arquivo** e, em seguida, aponte para **Add**. Na janela que é aberta, navegue até o local dos arquivos de rastreamento e clique duas vezes no arquivo que deseja adicionar.  
   
 > [!CAUTION]
 >  Não é recomendável carregar um arquivo de log de rastreamento maior que 200 MB. Se você tentar carregar um arquivo maior do que esse limite, o processo de carregamento poderá levar muito tempo, dependendo do recurso do computador. A ferramenta Visualizador de Rastreamento de Serviço talvez não responda por um longo tempo, ou poderá esgotar a memória do computador. Para evitar esse problema, é recomendável configurar um carregamento parcial. Para obter mais informações sobre como fazer isso, consulte a seção "Carregando arquivos de rastreamento grandes".  
@@ -154,24 +154,24 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
 ###### <a name="selecting-traces-in-the-graph"></a>Selecionando rastreamentos no gráfico  
   
-1.  Clique em um bloco no gráfico.  
+1. Clique em um bloco no gráfico.  
   
-2.  Use as teclas para cima e para baixo para selecionar seus rastreamentos vizinhos.  
+2. Use as teclas para cima e para baixo para selecionar seus rastreamentos vizinhos.  
   
-3.  Observe as informações de rastreamento no Painel de Rastreamento e no Painel de Detalhes.  
+3. Observe as informações de rastreamento no Painel de Rastreamento e no Painel de Detalhes.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Expandindo ou recolhendo transferências de atividades  
  É possível expandir transferências de atividades quando a atividade na seleção é transferida para outra atividade. O recurso permite que você siga as transferências.  
   
  Para expandir ou recolher transferências de atividades  
   
-1.  Localize o rastreamento de transferência com um sinal "+" à esquerda do ícone de transferência.  
+1. Localize o rastreamento de transferência com um sinal "+" à esquerda do ícone de transferência.  
   
-2.  Clique em "+" ou pressione **Ctrl** e "+" usando o teclado.  
+2. Clique em "+" ou pressione **Ctrl** e "+" usando o teclado.  
   
-3.  A próxima atividade aparece no grafo.  
+3. A próxima atividade aparece no grafo.  
   
-4.  Um "-" aparece à esquerda do ícone de transferência. Clique o "-" assinar ou pressione Ctrl e "-", a transferência de atividade é recolhido.  
+4. Um "-" aparece à esquerda do ícone de transferência. Clique o "-" assinar ou pressione Ctrl e "-", a transferência de atividade é recolhido.  
   
 > [!NOTE]
 >  Quando uma atividade contém várias transferências e você expande uma das transferências, as atividades que levam à nova atividade da atividade raiz são exibidas. Essas novas atividades aparecem no formulário recolhido. Se você quiser ver os detalhes dessas atividades, expanda-as verticalmente clicando no ícone de expansão no cabeçalho do gráfico.  
@@ -181,13 +181,13 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
  Para expandir ou recolher atividades verticalmente  
   
-1.  Clique no ícone "+" no cabeçalho da atividade para expandir a atividade verticalmente.  
+1. Clique no ícone "+" no cabeçalho da atividade para expandir a atividade verticalmente.  
   
-2.  Observe que todos os rastreamentos são exibidos no gráfico.  
+2. Observe que todos os rastreamentos são exibidos no gráfico.  
   
-3.  Clique o "-" ícone no cabeçalho da atividade para recolhê-la verticalmente.  
+3. Clique o "-" ícone no cabeçalho da atividade para recolhê-la verticalmente.  
   
-4.  Observe que somente as transferências, os logs de mensagens e os rastreamentos de avisos e exceções são mostrados na atividade.  
+4. Observe que somente as transferências, os logs de mensagens e os rastreamentos de avisos e exceções são mostrados na atividade.  
   
 ###### <a name="options"></a>Opções  
  Você pode selecionar duas opções do **opção** menu no modo de exibição gráfico.  
@@ -259,17 +259,17 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Criando um filtro personalizado usando o assistente de modelo  
  Você pode clicar em um rastreamento existente e criar um filtro baseado na estrutura do rastreamento. Este exemplo cria um filtro personalizado baseado em ID de thread.  
   
-1.  No painel de rastreamento na área de superior direita do visualizador, selecione um rastreamento que inclua o elemento pelo qual você deseja filtrar.  
+1. No painel de rastreamento na área de superior direita do visualizador, selecione um rastreamento que inclua o elemento pelo qual você deseja filtrar.  
   
-2.  Clique o **criar filtro personalizado** botão localizado na parte superior do painel de rastreamento.  
+2. Clique o **criar filtro personalizado** botão localizado na parte superior do painel de rastreamento.  
   
-3.  Na caixa de diálogo que aparece, digite um nome para o filtro. Neste exemplo, digite `Thread ID`. Você também pode fornecer uma descrição do seu filtro.  
+3. Na caixa de diálogo que aparece, digite um nome para o filtro. Neste exemplo, digite `Thread ID`. Você também pode fornecer uma descrição do seu filtro.  
   
-4.  A exibição de árvore à esquerda exibe a estrutura do registro de rastreamento selecionado na etapa 1. Navegue até o elemento para o qual você deseja criar uma condição. Neste exemplo, navegue até o ThreadID a ser localizado no XPath: /E2ETraceEvent/System/Execution/@ThreadID nó. Clique duas vezes no atributo ThreadID na exibição de árvore. Isso cria uma expressão para o atributo no lado direito da caixa de diálogo.  
+4. A exibição de árvore à esquerda exibe a estrutura do registro de rastreamento selecionado na etapa 1. Navegue até o elemento para o qual você deseja criar uma condição. Neste exemplo, navegue até o ThreadID a ser localizado no XPath: /E2ETraceEvent/System/Execution/@ThreadID nó. Clique duas vezes no atributo ThreadID na exibição de árvore. Isso cria uma expressão para o atributo no lado direito da caixa de diálogo.  
   
-5.  Altere o campo de parâmetro para a condição ThreadID de nenhum para '{0}'. Esta etapa permite que o valor de ThreadID seja configurado quando o filtro é aplicado. (Consulte a seção Como aplicar um filtro.) Você pode definir até quatro parâmetros. As condições são combinadas com o operador OR.  
+5. Altere o campo de parâmetro para a condição ThreadID de nenhum para '{0}'. Esta etapa permite que o valor de ThreadID seja configurado quando o filtro é aplicado. (Consulte a seção Como aplicar um filtro.) Você pode definir até quatro parâmetros. As condições são combinadas com o operador OR.  
   
-6.  Clique em **Okey** para criar o filtro.  
+6. Clique em **Okey** para criar o filtro.  
   
 > [!NOTE]
 >  Uma vez que um filtro tenha sido criado com o assistente de modelo, ele só poderá ser editado manualmente. Não é possível ativar o assistente para um filtro que foi criado anteriormente. Além disso, as condições de um filtro XPath criado no assistente de modelo são combinadas com o operador OR. Se você precisar de uma operação AND, poderá editar a expressão de filtro depois que ela for criada.  
@@ -277,20 +277,20 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 ###### <a name="creating-a-custom-filter-manually"></a>Criando um filtro personalizado manualmente  
  O menu Filtros Personalizados permite que você insira filtros XPath manualmente.  
   
-1.  No menu Exibir, clique no **filtros personalizados** item de menu.  
+1. No menu Exibir, clique no **filtros personalizados** item de menu.  
   
-2.  Na caixa de diálogo que aparece, clique em **novo.**  
+2. Na caixa de diálogo que aparece, clique em **novo.**  
   
-3.  No mínimo, especifique um nome de filtro e a expressão XPath.  
+3. No mínimo, especifique um nome de filtro e a expressão XPath.  
   
-4.  Clique em **OK**.  
+4. Clique em **OK**.  
   
 ###### <a name="applying-a-custom-filter"></a>Aplicando um filtro personalizado  
  Uma vez que um filtro personalizado tenha sido criado, ele fica acessível na barra de ferramentas de filtro. Selecione o filtro que você deseja aplicar na **pesquisar em** campo da barra de ferramentas de filtro. Para o exemplo anterior, selecione 'ID do Thread'.  
   
-1.  Especifique o valor que você está procurando na **localizar** campo. Em nosso exemplo, digite a ID do thread que deseja pesquisar.  
+1. Especifique o valor que você está procurando na **localizar** campo. Em nosso exemplo, digite a ID do thread que deseja pesquisar.  
   
-2.  Clique em **filtrar agora**e observe o resultado da operação.  
+2. Clique em **filtrar agora**e observe o resultado da operação.  
   
  Se seu filtro usa vários parâmetros, insira-os usando ';' como um separador na **localizar** campo. Por exemplo, a cadeia de caracteres a seguir define 3 parâmetros: ‘1;findValue;text’. O visualizador aplica '1' para o {0} parâmetro do filtro. 'findValue' e 'text' são aplicadas aos {1} e {2} , respectivamente.  
   
@@ -299,21 +299,21 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
   
  Para importar um filtro personalizado:  
   
-1.  No **modo de exibição** menu, clique em **filtros personalizados**.  
+1. No **modo de exibição** menu, clique em **filtros personalizados**.  
   
-2.  Na caixa de diálogo que é aberta, clique o **importação** botão.  
+2. Na caixa de diálogo que é aberta, clique o **importação** botão.  
   
-3.  Navegue até o arquivo de filtro personalizado (. stvcf), clique no arquivo e clique no **abrir** botão.  
+3. Navegue até o arquivo de filtro personalizado (. stvcf), clique no arquivo e clique no **abrir** botão.  
   
  Para exportar um filtro personalizado:  
   
-1.  No menu Exibir, clique em **filtros personalizados**.  
+1. No menu Exibir, clique em **filtros personalizados**.  
   
-2.  Na caixa de diálogo que é aberta, selecione o filtro que você deseja exportar.  
+2. Na caixa de diálogo que é aberta, selecione o filtro que você deseja exportar.  
   
-3.  Clique o **exportar** botão.  
+3. Clique o **exportar** botão.  
   
-4.  Especifique o nome e local do arquivo de definição de filtro personalizado (. stvcf) e clique no **salvar** botão.  
+4. Especifique o nome e local do arquivo de definição de filtro personalizado (. stvcf) e clique no **salvar** botão.  
   
 > [!NOTE]
 >  Esses filtros personalizados podem apenas ser importados e exportados pelo Visualizador de Rastreamento de Serviço. Eles não podem ser lidos por outras ferramentas.  
@@ -396,9 +396,9 @@ A partir do .NET Framework 4.8, controles de caixa de combinação em alguns tem
 #### <a name="adjusting-partial-loading"></a>Ajustando o carregamento parcial  
  Depois de ter carregado parcialmente o arquivo de rastreamento, você talvez queira modificar o conjunto de dados que está sendo carregado. É possível fazer isso ajustando a barra de ferramentas Carregamento Parcial na parte superior do visualizador.  
   
-1.  Mova a barra de ferramentas usando o mouse, ou insira os horários de Início e Término.  
+1. Mova a barra de ferramentas usando o mouse, ou insira os horários de Início e Término.  
   
-2.  Clique o **ajustar** botão.  
+2. Clique o **ajustar** botão.  
   
 ## <a name="understanding-trace-icons"></a>Entendendo os ícones de rastreamento  
  A seguir está uma lista de ícones que a ferramenta Visualizador de rastreamento de serviço usa o **atividade** exibição, **Graph** modo de exibição e **rastreamento** painel para representar itens diferentes.  

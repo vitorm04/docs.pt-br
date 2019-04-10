@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: criando um aplicativo criptográfico'
+title: 'Passo a passo: criar um aplicativo criptográfico'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341758"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>Instruções passo a passo: criando um aplicativo criptográfico
+# <a name="walkthrough-creating-a-cryptographic-application"></a>Passo a passo: criar um aplicativo criptográfico
 Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os exemplos de código são projetados para um aplicativo Windows Forms. Este aplicativo não demonstram cenários do mundo real, como o uso de cartões inteligentes. Em vez disso, ele demonstra os conceitos básicos de criptografia e descriptografia.  
   
  Este passo a passo usa as seguintes diretrizes para criptografia:  
@@ -88,15 +88,15 @@ Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os
   
  O `EncryptFile` método faz o seguinte:  
   
-1.  Cria um <xref:System.Security.Cryptography.RijndaelManaged> algoritmo simétrico para criptografar o conteúdo.  
+1. Cria um <xref:System.Security.Cryptography.RijndaelManaged> algoritmo simétrico para criptografar o conteúdo.  
   
-2.  Cria uma <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para criptografar o <xref:System.Security.Cryptography.RijndaelManaged> chave.  
+2. Cria uma <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para criptografar o <xref:System.Security.Cryptography.RijndaelManaged> chave.  
   
-3.  Usa um <xref:System.Security.Cryptography.CryptoStream> objeto leia e criptografar as <xref:System.IO.FileStream> do arquivo de origem, em blocos de bytes em um destino <xref:System.IO.FileStream> objeto para o arquivo criptografado.  
+3. Usa um <xref:System.Security.Cryptography.CryptoStream> objeto leia e criptografar as <xref:System.IO.FileStream> do arquivo de origem, em blocos de bytes em um destino <xref:System.IO.FileStream> objeto para o arquivo criptografado.  
   
-4.  Determina os comprimentos do IV e a chave criptografada e cria as matrizes de bytes de seus valores de comprimento.  
+4. Determina os comprimentos do IV e a chave criptografada e cria as matrizes de bytes de seus valores de comprimento.  
   
-5.  Grava a chave, IV e seus valores de comprimento para o pacote criptografado.  
+5. Grava a chave, IV e seus valores de comprimento para o pacote criptografado.  
   
  O pacote de criptografia usa o seguinte formato:  
   
@@ -127,15 +127,15 @@ Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os
   
  O `Decrypt` método faz o seguinte:  
   
-1.  Cria um <xref:System.Security.Cryptography.RijndaelManaged> algoritmo simétrico para descriptografar o conteúdo.  
+1. Cria um <xref:System.Security.Cryptography.RijndaelManaged> algoritmo simétrico para descriptografar o conteúdo.  
   
-2.  Lê os primeiros oito bytes do <xref:System.IO.FileStream> do pacote criptografado em matrizes de bytes para obter os comprimentos de chave criptografada e o IV.  
+2. Lê os primeiros oito bytes do <xref:System.IO.FileStream> do pacote criptografado em matrizes de bytes para obter os comprimentos de chave criptografada e o IV.  
   
-3.  Extrai o IV e a chave do pacote de criptografia para matrizes de bytes.  
+3. Extrai o IV e a chave do pacote de criptografia para matrizes de bytes.  
   
-4.  Cria uma <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para descriptografar o <xref:System.Security.Cryptography.RijndaelManaged> chave.  
+4. Cria uma <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para descriptografar o <xref:System.Security.Cryptography.RijndaelManaged> chave.  
   
-5.  Usa um <xref:System.Security.Cryptography.CryptoStream> objeto leia e descriptografar a seção de texto cifrado do <xref:System.IO.FileStream> criptografia de pacote, em blocos de bytes, no <xref:System.IO.FileStream> objeto para o arquivo descriptografado. Quando isso for concluído, a descriptografia é concluída.  
+5. Usa um <xref:System.Security.Cryptography.CryptoStream> objeto leia e descriptografar a seção de texto cifrado do <xref:System.IO.FileStream> criptografia de pacote, em blocos de bytes, no <xref:System.IO.FileStream> objeto para o arquivo descriptografado. Quando isso for concluído, a descriptografia é concluída.  
   
  Adicione o seguinte código como o `Click` manipulador de eventos para o `Decrypt File` botão.  
   
@@ -182,33 +182,33 @@ Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Para criar chaves, criptografar e descriptografar  
   
-1.  Clique no botão `Create Keys`. O rótulo exibe o nome da chave e mostra que é um par de chave completo.  
+1. Clique no botão `Create Keys`. O rótulo exibe o nome da chave e mostra que é um par de chave completo.  
   
-2.  Clique no botão `Export Public Key`. Observe que os parâmetros de chave públicos a exportação não altera a chave atual.  
+2. Clique no botão `Export Public Key`. Observe que os parâmetros de chave públicos a exportação não altera a chave atual.  
   
-3.  Clique o `Encrypt File` botão e selecione um arquivo.  
+3. Clique o `Encrypt File` botão e selecione um arquivo.  
   
-4.  Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas.  
+4. Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas.  
   
-5.  Examine o arquivo descriptografado apenas.  
+5. Examine o arquivo descriptografado apenas.  
   
-6.  Feche o aplicativo e reiniciá-lo para testar ao recuperar contêineres de chave persistidos no próximo cenário.  
+6. Feche o aplicativo e reiniciá-lo para testar ao recuperar contêineres de chave persistidos no próximo cenário.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Para criptografar usando a chave pública  
   
-1.  Clique no botão `Import Public Key`. O rótulo exibe o nome da chave e mostra que ele é público apenas.  
+1. Clique no botão `Import Public Key`. O rótulo exibe o nome da chave e mostra que ele é público apenas.  
   
-2.  Clique o `Encrypt File` botão e selecione um arquivo.  
+2. Clique o `Encrypt File` botão e selecione um arquivo.  
   
-3.  Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas. Isso irá falhar porque você deve ter a chave privada para descriptografar.  
+3. Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas. Isso irá falhar porque você deve ter a chave privada para descriptografar.  
   
  Este cenário demonstra tendo apenas a chave pública para criptografar um arquivo para outra pessoa. Normalmente, essa pessoa seria lhe somente a chave pública e reter a chave privada para descriptografar.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Para descriptografar usando a chave privada  
   
-1.  Clique no botão `Get Private Key`. O rótulo exibe o nome da chave e mostra se ele é o par de chave completo.  
+1. Clique no botão `Get Private Key`. O rótulo exibe o nome da chave e mostra se ele é o par de chave completo.  
   
-2.  Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas. Isso será bem-sucedida porque você tem o par de chave completo para descriptografar.  
+2. Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas. Isso será bem-sucedida porque você tem o par de chave completo para descriptografar.  
   
 ## <a name="see-also"></a>Consulte também
 

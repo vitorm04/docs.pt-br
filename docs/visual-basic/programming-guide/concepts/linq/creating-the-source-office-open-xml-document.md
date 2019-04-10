@@ -2,12 +2,12 @@
 title: Criando o documento do código-fonte Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: dad832aeef4d6519c272589033acc6d2fe3c2676
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838845"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333685"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Criando o documento do código-fonte Office Open XML (Visual Basic)
 Este tópico mostra como criar o documento do Office Open XML WordprocessingML que os outros exemplos neste tutorial uso. Se você segue essas declarações, a saída corresponderão a saída fornecida em cada exemplo.  
@@ -20,9 +20,9 @@ Este tópico mostra como criar o documento do Office Open XML WordprocessingML q
   
 #### <a name="to-create-the-wordprocessingml-document"></a>Para criar o documento de WordprocessingML  
   
-1.  Crie um novo documento Microsoft Word.  
+1. Crie um novo documento Microsoft Word.  
   
-2.  Cole o seguinte texto no novo documento:  
+2. Cole o seguinte texto no novo documento:  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ Este tópico mostra como criar o documento do Office Open XML WordprocessingML q
     Hello World  
     ```  
   
-3.  Formatar a primeira linha com o estilo que dirige “1 ".  
+3. Formatar a primeira linha com o estilo que dirige “1 ".  
   
-4.  Selecione as linhas que contêm o código do Visual Basic. A primeira linha começa com a palavra-chave `Imports` . A última linha é "End Class". Formatar as linhas com a fonte de correio. Formatar-los com um novo estilo, e nomeie o novo estilo “código”.  
+4. Selecione as linhas que contêm o código do Visual Basic. A primeira linha começa com a palavra-chave `Imports` . A última linha é "End Class". Formatar as linhas com a fonte de correio. Formatar-los com um novo estilo, e nomeie o novo estilo “código”.  
   
-5.  Finalmente, selecione a linha inteira que contém a saída, e formatar-la com o estilo de `Code` .  
+5. Finalmente, selecione a linha inteira que contém a saída, e formatar-la com o estilo de `Code` .  
   
-6.  Salve o documento, e denomine-o SampleDoc.docx.  
+6. Salve o documento, e denomine-o SampleDoc.docx.  
   
     > [!NOTE]
     >  Se você estiver usando o Microsoft Word 2003, selecione **Documento do Word 2007** na lista suspensa **Salvar como tipo**.  
