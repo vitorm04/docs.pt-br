@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a36cdf9f8cce935c8310e2ce9ffc79f67d077fe6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344345"
 ---
 # <a name="pack-uris-in-wpf"></a>URIs "pack://" no WPF
 No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] são usados para identificar e carregar arquivos de várias maneiras, incluindo o seguinte:  
@@ -234,15 +234,15 @@ No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Para determinar o tipo de arquivo que um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] se refere, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] resolve [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] para arquivos de recursos em assemblies locais e arquivos de conteúdo usando a heurística a seguir:  
   
-1.  Teste os metadados de assembly para um <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo que corresponde ao pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+1. Teste os metadados de assembly para um <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo que corresponde ao pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
-2.  Se o <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo for encontrado, o caminho do pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refere-se a um arquivo de conteúdo.  
+2. Se o <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo for encontrado, o caminho do pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refere-se a um arquivo de conteúdo.  
   
-3.  Se o <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo não for encontrado, verificar o conjunto de arquivos de recursos que é compilados no assembly local.  
+3. Se o <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atributo não for encontrado, verificar o conjunto de arquivos de recursos que é compilados no assembly local.  
   
-4.  Se um arquivo de recurso que corresponde ao caminho do pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for encontrado, o caminho do pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refere-se a um arquivo de recurso.  
+4. Se um arquivo de recurso que corresponde ao caminho do pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for encontrado, o caminho do pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] refere-se a um arquivo de recurso.  
   
-5.  Se o recurso não for encontrado, criado internamente <xref:System.Uri> é inválido.  
+5. Se o recurso não for encontrado, criado internamente <xref:System.Uri> é inválido.  
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] resolução não se aplica a [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que se referem ao seguinte:  
   

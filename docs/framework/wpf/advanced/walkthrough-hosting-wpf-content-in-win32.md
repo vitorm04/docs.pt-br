@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3396604d94b2b0fb3f4a178d3bb3a25b00ef91ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296102"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Passo a passo: hospedar conteúdo do WPF no Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece um ambiente rico para a criação de aplicativos. No entanto, quando você tem um investimento substancial em [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] código, ele pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece um mecanismo simples para hospedar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em um [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] janela.  
@@ -33,13 +33,13 @@ ms.locfileid: "59166641"
   
  A chave para hospedar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em um [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] janela é o <xref:System.Windows.Interop.HwndSource> classe. Essa classe encapsula o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em um [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] janela, permitindo que ele seja incorporado a seu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] como uma janela filho. A abordagem a seguir combina o [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um único aplicativo.  
   
-1.  Implemente sua [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo como uma classe gerenciada.  
+1. Implemente sua [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo como uma classe gerenciada.  
   
-2.  Implementar um aplicativo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] com [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Se você estiver começando com um aplicativo existente e não gerenciados [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] código, você poderá geralmente habilitá-lo chamar código gerenciado alterando as configurações de projeto para incluir o `/clr` sinalizador do compilador.  
+2. Implementar um aplicativo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] com [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Se você estiver começando com um aplicativo existente e não gerenciados [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] código, você poderá geralmente habilitá-lo chamar código gerenciado alterando as configurações de projeto para incluir o `/clr` sinalizador do compilador.  
   
-3.  Defina o modelo de threading como STA (Single-Threaded Apartment).  
+3. Defina o modelo de threading como STA (Single-Threaded Apartment).  
   
-4.  Lidar com o [WM_CREATE](/windows/desktop/winmsg/wm-create)notificação no seu procedimento de janela e faça o seguinte:  
+4. Lidar com o [WM_CREATE](/windows/desktop/winmsg/wm-create)notificação no seu procedimento de janela e faça o seguinte:  
   
     1.  Criar um novo <xref:System.Windows.Interop.HwndSource> objeto com a janela pai como seu `parent` parâmetro.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "59166641"
   
     4.  Obtenha o HWND do conteúdo. O <xref:System.Windows.Interop.HwndSource.Handle%2A> propriedade do <xref:System.Windows.Interop.HwndSource> objeto contém o identificador de janela (HWND). Para obter um HWND que você possa usar na parte não gerenciada de seu aplicativo, transmita `Handle.ToPointer()` para um HWND.  
   
-5.  Implemente uma classe gerenciada que contém um campo estático para manter uma referência ao seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Essa classe permite que você obtenha uma referência para o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo do seu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] código.  
+5. Implemente uma classe gerenciada que contém um campo estático para manter uma referência ao seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Essa classe permite que você obtenha uma referência para o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo do seu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] código.  
   
-6.  Atribuir o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo ao campo estático.  
+6. Atribuir o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo ao campo estático.  
   
-7.  Receber notificações do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo anexando um manipulador para um ou mais do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos.  
+7. Receber notificações do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo anexando um manipulador para um ou mais do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos.  
   
-8.  Se comunicar com o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo usando a referência que você armazenou no campo estático para definir propriedades e assim por diante.  
+8. Se comunicar com o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo usando a referência que você armazenou no campo estático para definir propriedades e assim por diante.  
   
 > [!NOTE]
 >  Você também pode usar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para implementar seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. No entanto, você precisará compilá-lo separadamente como um [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] e fazer referência a ele [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] de seu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativo. O restante do procedimento é semelhante ao descrito acima.
@@ -77,13 +77,13 @@ ms.locfileid: "59166641"
 ### <a name="the-basic-application"></a>O aplicativo básico
  O ponto de partida para o aplicativo host era criar um modelo do Visual Studio 2005.
 
-1.  Abra o Visual Studio 2005 e, em seguida, selecione **novo projeto** da **arquivo** menu.
+1. Abra o Visual Studio 2005 e, em seguida, selecione **novo projeto** da **arquivo** menu.
 
-2.  Selecione **Win32** na lista de [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] tipos de projeto. Se o idioma padrão não for [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], você encontrará esses tipos de projeto sob **outras linguagens**.
+2. Selecione **Win32** na lista de [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] tipos de projeto. Se o idioma padrão não for [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], você encontrará esses tipos de projeto sob **outras linguagens**.
 
-3.  Selecione uma **projeto Win32** modelo, atribua um nome ao projeto e clique em **Okey** para iniciar o **Assistente de aplicativo Win32**.
+3. Selecione uma **projeto Win32** modelo, atribua um nome ao projeto e clique em **Okey** para iniciar o **Assistente de aplicativo Win32**.
 
-4.  Aceite as configurações padrão do assistente e clique em **concluir** para iniciar o projeto.
+4. Aceite as configurações padrão do assistente e clique em **concluir** para iniciar o projeto.
 
  O modelo cria um basic [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativo, incluindo:
 
@@ -97,13 +97,13 @@ ms.locfileid: "59166641"
 
  A primeira é compilar o projeto como um código gerenciado. Por padrão, o projeto é compilado como um código não gerenciado. No entanto, porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é implementado no código gerenciado, o projeto deve ser compilado de acordo.
 
-1.  Clique com botão direito no nome do projeto no **Gerenciador de soluções** e selecione **propriedades** no menu de contexto para iniciar o **páginas de propriedade** caixa de diálogo.
+1. Clique com botão direito no nome do projeto no **Gerenciador de soluções** e selecione **propriedades** no menu de contexto para iniciar o **páginas de propriedade** caixa de diálogo.
 
-2.  Selecione **propriedades de configuração** da exibição em árvore no painel esquerdo.
+2. Selecione **propriedades de configuração** da exibição em árvore no painel esquerdo.
 
-3.  Selecione **Common Language Runtime** suporte das **padrões de projeto** lista no painel direito.
+3. Selecione **Common Language Runtime** suporte das **padrões de projeto** lista no painel direito.
 
-4.  Selecione **Common Language Runtime Support (/ clr)** na caixa de listagem suspensa.
+4. Selecione **Common Language Runtime Support (/ clr)** na caixa de listagem suspensa.
 
 > [!NOTE]
 >  Esse sinalizador de compilação permite que você use um código gerenciado no aplicativo, mas o código não gerenciado continuará sendo compilado como antes.
