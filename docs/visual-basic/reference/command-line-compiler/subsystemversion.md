@@ -6,61 +6,67 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: c9920869a660bc6144749cc7584275be4608a7c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228803"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480853"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
-Especifica a versão mínima do subsistema no qual o arquivo executável gerado pode ser executado, determinando assim as versões do Windows em que o arquivo executável pode ser executado. Normalmente, essa opção garante que o arquivo executável possa tirar proveito de determinados recursos de segurança que não estão disponíveis com versões mais antigas do Windows.  
-  
+
+Especifica a versão mínima do subsistema no qual o arquivo executável gerado pode ser executado, determinando assim as versões do Windows em que o arquivo executável pode ser executado. Normalmente, essa opção garante que o arquivo executável possa tirar proveito de determinados recursos de segurança que não estão disponíveis com versões mais antigas do Windows.
+
 > [!NOTE]
->  Para especificar o subsistema em si, use a opção do compilador [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```vb  
--subsystemversion:major.minor  
-```  
-  
-## <a name="parameters"></a>Parâmetros  
- `major.minor`  
- A versão mínima obrigatória do subsistema, conforme expresso em uma notação de ponto para versões principais e secundárias. Por exemplo, você pode especificar que um aplicativo não pode ser executado em um sistema operacional mais antigo que o Windows 7 se definir o valor dessa opção como 6.01, conforme descrito na tabela mais adiante neste tópico. Você deve especificar os valores de `major` e `minor` como inteiros.  
-  
- Zeros à esquerda na versão `minor` não alteram a versão, mas zeros à direita alteram. Por exemplo, 6.1 e 6.01 se referem à mesma versão, mas 6.10 se refere a uma versão diferente. É recomendável expressar a versão secundária como dois dígitos para evitar confusão.  
-  
-## <a name="remarks"></a>Comentários  
- A seguinte tabela lista as versões de subsistema comuns do Windows.  
-  
-|Versão do Windows|Versão do subsistema|  
-|---------------------|-----------------------|  
-|Windows 2000|5.00|  
-|Windows XP|5.01|  
-|Windows Server 2003|5.02|  
-|Windows Vista|6.00|  
-|Windows 7|6.01|  
-|Windows Server 2008|6.01|  
-|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
-  
-## <a name="default-values"></a>Valores padrão  
- O valor padrão da opção do compilador **-subsystemversion** depende das condições na lista a seguir:  
-  
--   O valor padrão é 6.02 se qualquer opção do compilador na lista a seguir for definida:  
-  
-    -   [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
-  
-    -   [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
-  
-    -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
-  
--   O valor padrão é 6.00 se você estiver usando o MSBuild, se tiver como alvo [!INCLUDE[net_v45](~/includes/net-v45-md.md)] e se não tiver definido nenhuma das opções de compilador que foram especificadas anteriormente na lista.  
-  
--   O valor padrão é 4.00 se nenhuma das condições anteriores for verdadeira.  
-  
-## <a name="setting-this-option"></a>Definindo esta opção  
- Para definir a **- subsystemversion** opção de compilador no Visual Studio, abra o arquivo. vbproj e especifique um valor para o `SubsystemVersion` propriedade no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
+> Para especificar o subsistema em si, use a opção do compilador [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```vb
+-subsystemversion:major.minor
+```
+
+## <a name="parameters"></a>Parâmetros
+
+`major.minor`
+
+A versão mínima obrigatória do subsistema, conforme expresso em uma notação de ponto para versões principais e secundárias. Por exemplo, você pode especificar que um aplicativo não pode ser executado em um sistema operacional mais antigo que o Windows 7 se definir o valor dessa opção como 6.01, conforme descrito na tabela mais adiante neste tópico. Você deve especificar os valores de `major` e `minor` como inteiros.
+
+Zeros à esquerda na versão `minor` não alteram a versão, mas zeros à direita alteram. Por exemplo, 6.1 e 6.01 se referem à mesma versão, mas 6.10 se refere a uma versão diferente. É recomendável expressar a versão secundária como dois dígitos para evitar confusão.
+
+## <a name="remarks"></a>Comentários
+
+A seguinte tabela lista as versões de subsistema comuns do Windows.
+
+|Versão do Windows|Versão do subsistema|
+|---------------------|-----------------------|
+|Windows 2000|5.00|
+|Windows XP|5.01|
+|Windows Server 2003|5.02|
+|Windows Vista|6.00|
+|Windows 7|6.01|
+|Windows Server 2008|6.01|
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|
+
+## <a name="default-values"></a>Valores padrão
+
+O valor padrão da opção do compilador **-subsystemversion** depende das condições na lista a seguir:
+
+- O valor padrão é 6.02 se qualquer opção do compilador na lista a seguir for definida:
+
+  - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+
+  - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+
+  - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
+
+- O valor padrão é 6.00 se você estiver usando o MSBuild, se tiver como alvo [!INCLUDE[net_v45](~/includes/net-v45-md.md)] e se não tiver definido nenhuma das opções de compilador que foram especificadas anteriormente na lista.
+
+- O valor padrão é 4.00 se nenhuma das condições anteriores for verdadeira.
+
+## <a name="setting-this-option"></a>Definindo esta opção
+
+Para definir a **- subsystemversion** opção de compilador no Visual Studio, abra o arquivo. vbproj e especifique um valor para o `SubsystemVersion` propriedade no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Consulte também
 

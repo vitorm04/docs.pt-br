@@ -5,16 +5,16 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: d3558976002e273aee239e518f0387033cb82873
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836136"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480632"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Faz com que o compilador produza um assembly cuja saída byte a byte é idêntica entre compilações para entradas idênticas. 
+Faz com que o compilador produza um assembly cuja saída byte a byte é idêntica entre compilações para entradas idênticas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,25 +32,25 @@ O compilador considera as seguintes entradas com a finalidade de determinismo:
 - O conteúdo do arquivo de resposta .rsp do compilador.
 - A versão precisa do compilador usado e seus assemblies referenciados.
 - O caminho do diretório atual.
-- O conteúdo binário de todos os arquivos passados explicitamente para o compilador direta ou indiretamente, incluindo: 
-    - Arquivos de origem
-    - Assemblies referenciados
-    - Módulos referenciados
-    - Recursos
-    - O arquivo de chave de nome forte
-    - @ arquivos de resposta
-    - Analisadores
-    - Conjuntos de regras
-    - Arquivos adicionais que podem ser usados por analisadores
+- O conteúdo binário de todos os arquivos passados explicitamente para o compilador direta ou indiretamente, incluindo:
+  - Arquivos de origem
+  - Assemblies referenciados
+  - Módulos referenciados
+  - Recursos
+  - O arquivo de chave de nome forte
+  - @ arquivos de resposta
+  - Analisadores
+  - Conjuntos de regras
+  - Arquivos adicionais que podem ser usados por analisadores
 - A cultura atual (para o idioma no qual as mensagens de diagnóstico e exceção são produzidas).
 - A codificação padrão (ou a página de código atual) se a codificação não for especificada.
 - A existência, a inexistência e o conteúdo dos arquivos em caminhos de pesquisa do compilador (especificados, por exemplo, por `/lib` ou `/recurse`).
 - A plataforma CLR na qual o compilador é executado.
 - O valor de `%LIBPATH%`, que pode afetar o carregamento de dependência do analisador.
 
-Quando as fontes estão disponíveis publicamente, a compilação determinística pode ser usada para estabelecer se um binário é compilado de uma fonte confiável. Isso também pode ser útil em um sistema de compilação contínua para determinar se as etapas de compilação dependentes de alterações para um binário precisam ser executadas. 
+Quando as fontes estão disponíveis publicamente, a compilação determinística pode ser usada para estabelecer se um binário é compilado de uma fonte confiável. Isso também pode ser útil em um sistema de compilação contínua para determinar se as etapas de compilação dependentes de alterações para um binário precisam ser executadas.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
