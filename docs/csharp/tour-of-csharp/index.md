@@ -3,12 +3,12 @@ title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152055"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481087"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#
 
@@ -52,27 +52,27 @@ A saída do programa é produzida pelo método `WriteLine` da classe `Console` n
 Há muito mais para aprender sobre C#.  Os tópicos a seguir fornecem uma visão geral dos elementos da linguagem C#. Essas visões gerais fornecerão informações básicas sobre todos os elementos da linguagem e fornecerão as informações necessárias para se aprofundar nos elementos da linguagem C#:
 
 * [Estrutura do programa](program-structure.md)
-    - Aprenda os principais conceitos organizacionais na linguagem C#: ***programas***, ***namespaces***, ***tipos***, ***membros*** e ***assemblies***.
+  - Aprenda os principais conceitos organizacionais na linguagem C#: ***programas***, ***namespaces***, ***tipos***, ***membros*** e ***assemblies***.
 * [Tipos e variáveis](types-and-variables.md)
-    - Saiba mais sobre ***tipos de valor***, ***tipos de referência***, e ***variáveis*** na linguagem C#.
+  - Saiba mais sobre ***tipos de valor***, ***tipos de referência***, e ***variáveis*** na linguagem C#.
 * [Expressões](expressions.md)
-    - ***Expressões*** são construídas a partir de ***operandos*** e ***operadores***. As expressões produzem um valor.
+  - ***Expressões*** são construídas a partir de ***operandos*** e ***operadores***. As expressões produzem um valor.
 * [Instruções](statements.md)
-    - Você usa ***instruções*** para expressar as ações de um programa.
+  - Você usa ***instruções*** para expressar as ações de um programa.
 * [Classes e objetos](classes-and-objects.md)
-    - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
+  - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
 * [Structs](structs.md)
-    - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
+  - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
 * [Matrizes](arrays.md)
-    - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.
+  - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.
 * [Interfaces](interfaces.md)
-    - Uma ***interface*** define um contrato que pode ser implementado por classes e estruturas. Uma interface pode conter métodos, propriedades, eventos e indexadores. Uma interface não fornece implementações dos membros que define — ela simplesmente especifica os membros que devem ser fornecidos por classes ou estruturas que implementam a interface.
+  - Uma ***interface*** define um contrato que pode ser implementado por classes e estruturas. Uma interface pode conter métodos, propriedades, eventos e indexadores. Uma interface não fornece implementações dos membros que define — ela simplesmente especifica os membros que devem ser fornecidos por classes ou estruturas que implementam a interface.
 * [Enums](enums.md)
-    - Um ***tipo enum*** é um tipo de valor diferente com um conjunto de constantes nomeadas.
+  - Um ***tipo enum*** é um tipo de valor diferente com um conjunto de constantes nomeadas.
 * [Delegados](delegates.md)
-    - Um ***delegado*** é um tipo que representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são parecidos com o conceito de ponteiros de função em outras linguagens, mas ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
+  - Um ***delegado*** é um tipo que representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são parecidos com o conceito de ponteiros de função em outras linguagens, mas ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
 * [Atributos](attributes.md)
-     * ***Atributos*** permitem que programas especifiquem informações declarativas adicionais sobre tipos, membros e outras entidades.
+  * ***Atributos*** permitem que programas especifiquem informações declarativas adicionais sobre tipos, membros e outras entidades.
 
 > [!div class="step-by-step"]
 > [Avançar](program-structure.md)
