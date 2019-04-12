@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 1df3c685940562bfdf1ed84030be9f9e1c283f10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f723d91dd30817f6e15be11dd1bc1432a5939647
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228777"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517545"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Como: Determinar o número de entidades retornadas por uma consulta (WCF Data Services)
 Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode determinar o número de entidades que estão no conjunto especificada por um URI de consulta de entidades. Essa contagem pode ser incluída junto com o resultado da consulta ou como um valor inteiro. Para obter mais informações, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -22,15 +22,15 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode dete
 ## <a name="example"></a>Exemplo  
  Este exemplo executa uma consulta depois de chamar o <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> método. O <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> propriedade retorna o número de entidades no `Customers` conjunto de entidades.  
   
- [!code-csharp[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#countallcustomers)]
- [!code-vb[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#countallcustomers)]  
+ [!code-csharp[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#countallcustomers)]
+ [!code-vb[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#countallcustomers)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo chama o <xref:System.Linq.Enumerable.Count%2A> valor de método para retornar apenas um número inteiro que é o número de entidades no `Customers` conjunto de entidades.  
   
- [!code-csharp[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#countallcustomersvalueonly)]
- [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#countallcustomersvalueonly)]  
+ [!code-csharp[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#countallcustomersvalueonly)]
+ [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#countallcustomersvalueonly)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 88e9b20f3ecefbd39789dfbc942af3938a9a2117
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fc738f7e81c02e44075ce5ed151ed42452650c94
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326392"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518117"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Como: Definir uma operação de serviço (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expor os métodos que são definidos no servidor como operações de serviço. Operações de serviço permitem que um serviço de dados fornecer acesso por meio de um URI para um método que é definido no servidor. Para definir uma operação de serviço, se aplicam a [`WebGet]` ou `[WebInvoke]` atributo ao método. Para dar suporte a operadores de consulta, a operação de serviço deve retornar um <xref:System.Linq.IQueryable%601> instância. Operações de serviço podem acessar a fonte de dados subjacente por meio de <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> propriedade no <xref:System.Data.Services.DataService%601>. Para obter mais informações, consulte [operações de serviço](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -26,13 +26,13 @@ ms.locfileid: "59326392"
   
 2. Na classe `Northwind`, defina um método de operação de serviço chamado `GetOrdersByCity` da seguinte maneira:  
   
-     [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
-     [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
+     [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
+     [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
 3. No `InitializeService` método da `Northwind` , adicione o código a seguir para habilitar o acesso à operação de serviço:  
   
-     [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
-     [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
+     [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
+     [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 ### <a name="to-query-the-getordersbycity-service-operation"></a>Para consultar a operação de serviço GetOrdersByCity  
   
@@ -50,9 +50,9 @@ ms.locfileid: "59326392"
 > [!NOTE]
 >  Operadores de consulta são suportados nesse ponto de extremidade de operação de serviço porque o método retorna um <xref:System.Linq.IQueryable%601> instância.  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperation)]
- [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperation)]
+ [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperation)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)

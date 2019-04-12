@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 5ef00861624531e68ad5b8a3b080810040ae3ff6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: aaee236487fedcb0c5d8ad113391bd628b11bb41
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109467"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517948"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Chamar operações de serviço (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as operações de serviço para um serviço de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina essas operações como métodos no serviço de dados. Assim como outros recursos do serviço de dados, essas operações de serviço são endereçadas por meio de URIs. Uma operação de serviço pode retornar coleções de tipos de entidade, as instâncias de tipo de entidade única e tipos primitivos, como integer e string. Uma operação de serviço também pode retornar `null` (`Nothing` no Visual Basic). O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente pode ser usada para acessar operações de serviço que oferecem suporte a solicitações HTTP GET. Esses tipos de operações de serviço são definidos como métodos que têm o <xref:System.ServiceModel.Web.WebGetAttribute> aplicado. Para obter mais informações, consulte [operações de serviço](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -57,8 +57,8 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
 ### <a name="calling-executet-to-return-a-collection-of-entities"></a>Chamar Execute\<T > para retornar uma coleção de entidades  
  O exemplo a seguir chama uma operação de serviço chamada GetOrdersByCity, que usa um parâmetro de cadeia de caracteres do `city` e retorna um <xref:System.Linq.IQueryable%601>:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationiqueryable)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationiqueryable)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationiqueryable)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationiqueryable)]  
   
  Neste exemplo, a operação de serviço retorna uma coleção de `Order` objetos com relacionados `Order_Detail` objetos.  
   
@@ -66,8 +66,8 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
 ### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>Usando CreateQuery\<T > para retornar uma coleção de entidades  
  O exemplo a seguir usa o <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para retornar um <xref:System.Data.Services.Client.DataServiceQuery%601> que é usado para chamar a operação de serviço GetOrdersByCity mesma:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationcreatequery)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationcreatequery)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationcreatequery)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationcreatequery)]  
   
  Neste exemplo, o <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> método é usado para adicionar o parâmetro à consulta e o <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método é usado para incluir objetos relacionados do Order_Details nos resultados.  
   
@@ -75,8 +75,8 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
 ### <a name="calling-executet-to-return-a-single-entity"></a>Chamar Execute\<T > para retornar uma única entidade  
  O exemplo a seguir chama uma operação de serviço chamada GetNewestOrder que retorna uma única entidade ordem:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationsingleentity)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationsingleentity)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleentity)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationsingleentity)]  
   
  Neste exemplo, o <xref:System.Linq.Enumerable.FirstOrDefault%2A> método é usado para solicitar apenas uma única entidade Order em execução.  
   
@@ -84,14 +84,14 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
 ### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>Chamar Execute\<T > para retornar uma coleção de valores primitivos  
  O exemplo a seguir chama uma operação de serviço que retorna uma coleção de valores de cadeia de caracteres:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationenumstring)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationenumstring)]  
   
 <a name="ExecutePrimitiveValue"></a>   
 ### <a name="calling-executet-to-return-a-single-primitive-value"></a>Chamar Execute\<T > para retornar um único valor primitivo  
  O exemplo a seguir chama uma operação de serviço que retorna um valor de cadeia de caracteres única:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationsingleint)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationsingleint)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleint)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationsingleint)]  
   
  Novamente neste exemplo, o <xref:System.Linq.Enumerable.FirstOrDefault%2A> método é usado para solicitar apenas um único valor inteiro em execução.  
   
@@ -99,8 +99,8 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
 ### <a name="calling-a-service-operation-that-returns-no-data"></a>Chamar uma operação de serviço que não retorna nenhum dado  
  O exemplo a seguir chama uma operação de serviço que não retorna nenhum dado:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationvoid)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationvoid)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationvoid)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationvoid)]  
   
  Porque os dados não são retornados, o valor da execução não está atribuído. A única indicação de que a solicitação foi bem-sucedida é que nenhum <xref:System.Data.Services.Client.DataServiceQueryException> é gerado.  
   
@@ -108,22 +108,22 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as oper
 ### <a name="calling-a-service-operation-asynchronously"></a>Chamando uma operação de serviço de forma assíncrona  
  O exemplo a seguir chama uma operação de serviço de forma assíncrona chamando <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> e <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationasync)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationasync)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationasync)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationasync)]  
   
- [!code-csharp[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onasyncexecutioncomplete)]
- [!code-vb[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncexecutioncomplete)]  
+ [!code-csharp[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncexecutioncomplete)]
+ [!code-vb[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncexecutioncomplete)]  
   
  Como nenhum dado é retornado, o valor retornado pela execução não é atribuído. A única indicação de que a solicitação foi bem-sucedida é que nenhum <xref:System.Data.Services.Client.DataServiceQueryException> é gerado.  
   
  O exemplo a seguir chama a mesma operação de serviço de forma assíncrona usando <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>:  
   
- [!code-csharp[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationqueryasync)]
- [!code-vb[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationqueryasync)]  
+ [!code-csharp[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationqueryasync)]
+ [!code-vb[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationqueryasync)]  
   
- [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onasyncqueryexecutioncomplete)]
- [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
+ [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncqueryexecutioncomplete)]
+ [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

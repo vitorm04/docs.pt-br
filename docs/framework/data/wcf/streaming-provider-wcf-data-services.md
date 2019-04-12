@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298871"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517584"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Porque o carregamento e a serialização de dados binários grandes dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ele pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -43,10 +43,10 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definindo uma entrada de link de mídia no modelo de dados  
  O provedor de fonte de dados determina a maneira que uma entidade é definida como uma entrada de link de mídia no modelo de dados.  
   
- **Provedor de Entity Framework**  
+ **Entity Framework Provider** (Provedor de Entity Framework)  
  Para indicar que uma entidade é uma entrada de link de mídia, adicione o atributo `HasStream` à definição de tipo de entidade no modelo conceitual, como no exemplo a seguir:  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Você também deve adicionar o namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à entidade ou à raiz do arquivo .edmx ou .csdl que define o modelo de dados.  
   
@@ -55,7 +55,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
  **Provedor de reflexão**  
  Para indicar que uma entidade é uma entrada de link de mídia, adicione o <xref:System.Data.Services.Common.HasStreamAttribute> à classe que define o tipo de entidade no provedor de reflexão.  
   
- **Provedor de serviços de dados personalizado**  
+ **Provedor de serviços de dados personalizados**  
  Ao usar provedores de serviços personalizados, você implementa a interface <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> para definir os metadados do serviço de dados. Para obter mais informações, consulte [provedores de serviço de dados personalizado](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Você indica que um fluxo de recurso binário pertence a um <xref:System.Data.Services.Providers.ResourceType> definindo a propriedade <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> para `true` no <xref:System.Data.Services.Providers.ResourceType> que representa o tipo de entidade, que é uma entrada de link de mídia.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implementando a interface IDataServiceStreamProvider  
@@ -74,8 +74,8 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
 ## <a name="creating-the-streaming-data-service"></a>Criando o serviço de dados de streaming  
  Para fornecer o tempo de execução do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] com acesso à implementação do <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, o serviço de dados que você cria também deve implementar a interface <xref:System.IServiceProvider>. O exemplo a seguir mostra como implementar o método <xref:System.IServiceProvider.GetService%2A> para retornar uma instância da classe `PhotoServiceStreamProvider` que implementa o <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  Para obter informações gerais sobre como criar um serviço de dados, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
@@ -127,6 +127,6 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
 ## <a name="see-also"></a>Consulte também
 
-- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Provedores de serviços de dados personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [Trabalhar com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [Trabalhando com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

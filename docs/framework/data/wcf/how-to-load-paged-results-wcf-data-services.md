@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-ms.openlocfilehash: 6042f4a89c390ade8b282f09808c698a107fdf24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0be7dcbefb23d2f2b283ac498f3b0ea43278f2d4
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212005"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517246"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>Como: Carregar resultados (WCF Data Services) paginados
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que o serviço de dados limitar o número de entidades que são retornados em um única feed de resposta. Quando isso acontece, a entrada final no feed contém um link para a próxima página de dados. O URI para a próxima página de dados é obtido chamando o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> método da <xref:System.Data.Services.Client.QueryOperationResponse%601>, que é retornado quando o <xref:System.Data.Services.Client.DataServiceQuery%601> é executado. O URI representado por esse objeto, em seguida, é usado para carregar a próxima página de resultados. Para obter mais informações, consulte [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
@@ -23,16 +23,16 @@ ms.locfileid: "59212005"
 ## <a name="example"></a>Exemplo  
  Este exemplo usa uma `do…while` loop carregar `Customers` entidades de um resultados paginados do serviço de dados.  
   
- [!code-csharp[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspaged)]
- [!code-vb[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspaged)]  
+ [!code-csharp[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getcustomerspaged)]
+ [!code-vb[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getcustomerspaged)]  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo retorna relacionado `Orders` entidades com cada `Customers` entidade e usa um `do…while` loop carregar `Customers` páginas de entidades e aninhado `while` loop para carregar páginas de relacionados `Orders` entidades do serviço de dados .  
   
- [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspagednested)]
- [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspagednested)]  
+ [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getcustomerspagednested)]
+ [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getcustomerspagednested)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Carregar conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
-- [Como: carregar entidades relacionadas](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)
+- [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
+- [Como: Carregar entidades relacionadas](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: b68595285eb5ec06be86c771733f7bb9036c9f21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154967"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517441"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Como: Executar consultas de serviço de dados (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você consulte um serviço de dados de um aplicativo cliente com base no .NET Framework usando as classes de serviço de dados do cliente gerado. Você pode executar consultas usando um desses métodos:  
+O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar um serviço de dados de um aplicativo cliente baseado em .NET Framework usando as classes de serviço de dados do cliente geradas. Você pode executar consultas usando um desses métodos:  
   
 -   Executando uma consulta LINQ no <xref:System.Data.Services.Client.DataServiceQuery%601> nomeado que você obtém de <xref:System.Data.Services.Client.DataServiceContext> que a ferramenta `Add Data Service Reference` produz.  
   
@@ -32,21 +32,21 @@ ms.locfileid: "59154967"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como definir e executar uma consulta LINQ que retorna todos os `Customers` no serviço de dados Northwind.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomerslinq)]
- [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomerslinq)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomerslinq)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomerslinq)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o contexto que a ferramenta `Add Data Service Reference` gera para implicitamente executar uma consulta que retorna todos os `Customers` no serviço de dados Northwind. O URI do conjunto de entidades de `Customers` é determinado automaticamente pelo contexto. A consulta é executada implicitamente quando a enumeração ocorre.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomers)]
- [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomers)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomers)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomers)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o <xref:System.Data.Services.Client.DataServiceContext> para explicitamente executar uma consulta que retorna todos os `Customers` no serviço de dados Northwind.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersexplicit)]
- [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: adicionar opções de consulta a uma consulta de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Como: Adicionar opções de consulta a uma consulta de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

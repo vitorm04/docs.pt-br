@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 4b63695992b3af28043a46c62b426ff176505048
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074320"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517038"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -21,8 +21,8 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode cr
   
  Os comportamentos do serviço de dados são definidos pelos membros da classe <xref:System.Data.Services.DataServiceConfiguration> e por membros da classe <xref:System.Data.Services.DataServiceBehavior>, que é acessada da propriedade <xref:System.Data.Services.DataServiceConfiguration.DataServiceBehavior%2A> da classe <xref:System.Data.Services.DataServiceConfiguration>. A classe <xref:System.Data.Services.DataServiceConfiguration> é fornecida para o método `InitializeService` que é implementado pelo serviço de dados, como na seguinte implementação de um serviço de dados da Northwind:  
   
-[!code-csharp[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/Astoria Northwind Service/cs/northwind.svc.cs#dataserviceconfigcomplete)]  
-[!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/Astoria Northwind Service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
+[!code-csharp[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigcomplete)]  
+[!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
   
 ## <a name="data-service-configuration-settings"></a>Parâmetros de configuração do serviço de dados  
  A classe <xref:System.Data.Services.DataServiceConfiguration> permite que você especifique os seguintes comportamentos de serviço de dados:  
@@ -85,5 +85,5 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode cr
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Hospedar o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Hospedagem o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

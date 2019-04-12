@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5514bf32bfe03a65d7d171a500dd5d4cfde35ff
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211966"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517402"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operações de serviço (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina operações de serviço em um serviço de dados para expor métodos no servidor. Como outros recursos do serviço de dados, as operações de serviço são endereçadas por URIs. As operações de serviço permitem que você exponha a lógica de negócio em um serviço de dados, como implementar a lógica de validação, aplicar a segurança baseada em função, ou expor recursos de consulta especializada. Operações de serviço são métodos adicionados à classe de serviço de dados que deriva de <xref:System.Data.Services.DataService%601>. Como todos os outros recursos de serviço do dados, você pode fornecer parâmetros para o método de operação de serviço. Por exemplo, o seguinte URI da operação de serviço (com base nas [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) serviço de dados) passa o valor `London` para o `city` parâmetro:  
+O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina operações de serviço em um serviço de dados para expor métodos no servidor. Como outros recursos do serviço de dados, as operações de serviço são endereçadas por URIs. As operações de serviço permitem que você exponha a lógica de negócio em um serviço de dados, como implementar a lógica de validação, aplicar a segurança baseada em função, ou expor recursos de consulta especializada. Operações de serviço são métodos adicionados à classe de serviço de dados que deriva de <xref:System.Data.Services.DataService%601>. Como todos os outros recursos de serviço do dados, você pode fornecer parâmetros para o método de operação de serviço. Por exemplo, o seguinte URI da operação de serviço (com base nas [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) serviço de dados) passa o valor `London` para o `city` parâmetro:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -24,8 +24,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  A definição para esta operação de serviço é a seguinte:  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
- [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
  Você pode usar o <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> do <xref:System.Data.Services.DataService%601> para acessar diretamente a fonte de dados que o serviço de dados está usando. Para obter mais informações, confira [Como: Definir uma operação de serviço](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
@@ -58,9 +58,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   O método deve ser anotado com o atributo `[WebGet]` ou `[WebInvoke]`.  
   
-    -   `[WebGet]` permite que o método a ser invocado por meio de uma solicitação GET.  
+    -   `[WebGet]` permite que o método seja chamado usando uma solicitação GET.  
   
-    -   `[WebInvoke(Method = "POST")]` permite que o método a ser invocado por meio de uma solicitação POST. Outros métodos <xref:System.ServiceModel.Web.WebInvokeAttribute> não têm suporte.  
+    -   `[WebInvoke(Method = "POST")]` permite que o método seja chamado usando uma solicitação POST. Outros métodos <xref:System.ServiceModel.Web.WebInvokeAttribute> não têm suporte.  
   
 -   Uma operação de serviço pode ser anotada com o <xref:System.Data.Services.SingleResultAttribute> que especifica que o valor de retorno do método é uma única entidade em vez de uma coleção de entidades. Essa distinção determina a serialização resultante da resposta e a maneira na qual as passagens de propriedades de navegação adicionais são representadas no URI. Por exemplo, ao usar a serialização AtomPub, uma única instância do tipo de recurso é representada como um elemento de entrada e um conjunto de instâncias como um elemento de feed.  
   
@@ -90,8 +90,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="service-operations-access-control"></a>Controle de acesso a operações de serviço  
  A visibilidade do serviço de operações de serviço é controlada pelo método <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> na classe <xref:System.Data.Services.IDataServiceConfiguration> da mesma forma que a visibilidade do conjunto de entidades é controlada usando o método <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A>. Por exemplo, a seguinte linha de código na definição do serviço de dados permite o acesso à operação de serviço `CustomersByCity`.  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
- [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 > [!NOTE]
 >  Se uma operação de serviço tiver um tipo de retorno que foi oculto pelo acesso de restrição nos conjuntos de entidades subjacentes, a operação de serviço não estará disponível para aplicativos cliente.  
@@ -101,8 +101,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="raising-exceptions"></a>Gerando exceções  
  Recomendamos que você use a classe <xref:System.Data.Services.DataServiceException> sempre que gerar uma exceção na execução do serviço de dados. Isso ocorre porque o tempo de execução do serviço de dados sabe como mapear corretamente as propriedades desse objeto de exceção para a mensagem de resposta HTTP. Quando você gera um <xref:System.Data.Services.DataServiceException> em uma operação de serviço, a exceção retornada é empacotada em um <xref:System.Reflection.TargetInvocationException>. Para retornar o <xref:System.Data.Services.DataServiceException> base sem o <xref:System.Reflection.TargetInvocationException> incluído, você deverá substituir o método <xref:System.Data.Services.DataService%601.HandleException%2A> no <xref:System.Data.Services.DataService%601>, extrair o <xref:System.Data.Services.DataServiceException> de <xref:System.Reflection.TargetInvocationException> e retorná-lo como o erro de nível superior, como no exemplo a seguir:  
   
- [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
- [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
+ [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
+ [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Consulte também
 

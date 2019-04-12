@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 6fa8e9d66fa89eb058aafd1e74164097b7f5c3a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 511a9bc5352e208697460364e463330fc0ef611a
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157842"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517467"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Como: Anexar uma entidade existente ao DataServiceContext (WCF Data Services)
 Quando uma entidade já existe em um serviço de dados, o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente permite que você anexe um objeto que representa a entidade diretamente para o <xref:System.Data.Services.Client.DataServiceContext> sem primeiro executar uma consulta. Para obter mais informações, consulte [atualização do serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -22,9 +22,9 @@ Quando uma entidade já existe em um serviço de dados, o [!INCLUDE[ssAstoria](.
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como criar um existente `Customer` objeto que contém as alterações a serem salvas para o serviço de dados. O objeto é anexado ao contexto e o <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> método é chamado para marcar o objeto anexado como <xref:System.Data.Services.Client.EntityStates.Modified> antes do <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método é chamado.  
   
- [!code-csharp[Astoria Northwind Client#AttachObject](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobject)]
- [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobject)]  
+ [!code-csharp[Astoria Northwind Client#AttachObject](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobject)]
+ [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobject)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

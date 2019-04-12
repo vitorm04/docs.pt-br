@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: 44f3709cf0a1485c772940e7460d3436a52aa3eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d0a04cc38f1f57ef10e3b5065f9c476fd952050c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163651"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517743"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Como: Habilitar o acesso ao serviço de dados (WCF Data Services)
 No [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você deve conceder explicitamente acesso aos recursos que são expostos por um serviço de dados. Isso significa que, depois de criar um novo serviço de dados, você deve explicitamente ainda fornecer acesso aos recursos individuais, como conjuntos de entidades. Este tópico mostra como habilitar a leitura e acesso de gravação para cinco da entidade define no serviço de dados Northwind é criado quando você conclui o [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Porque o <xref:System.Data.Services.EntitySetRights> enumeração é definida usando o <xref:System.FlagsAttribute>, você pode usar uma lógica ou operador para especificar várias permissões para uma única entidade definida.  
@@ -24,12 +24,12 @@ No [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você deve conce
   
 -   No código para o serviço de dados, substitua o código de espaço reservado na função `InitializeService` pelo seguinte:  
   
-     [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#allreadconfig)]
-     [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#allreadconfig)]  
+     [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
+     [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]  
   
      Isso permite que os clientes tenha de leitura e acesso de gravação para o `Orders` e `Order_Details` conjuntos de entidades e acesso somente leitura para o `Customers` conjuntos de entidades.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: desenvolver um serviço de dados do WCF em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)
-- [Configurar o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+- [Como: Desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)
+- [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

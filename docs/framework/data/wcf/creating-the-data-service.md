@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e8d82ff8958af12842366911b6633ea6b2e0efbb
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091819"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517220"
 ---
 # <a name="create-the-data-service"></a>Criar o serviço de dados
 
@@ -28,7 +28,7 @@ Neste tópico, você cria um serviço de dados de exemplo que usa o WCF Data Ser
 
 1. No Visual Studio, sobre o **arquivo** menu, selecione **New** > **projeto**.
 
-1. No **novo projeto** caixa de diálogo, em Visual Basic ou Visual C#, selecione a **Web** categoria e, em seguida, selecione **aplicativo Web ASP.NET**.
+1. No **novo projeto** caixa de diálogo, em Visual Basic ou Visual c#, selecione a **Web** categoria e, em seguida, selecione **aplicativo Web ASP.NET**.
 
 1. Insira `NorthwindService` como o nome do projeto e, em seguida, selecione **Okey**.
 
@@ -79,15 +79,15 @@ Neste tópico, você cria um serviço de dados de exemplo que usa o WCF Data Ser
 
 4. No código do serviço de dados, substitua o comentário `/* TODO: put your data source class name here */` na definição da classe que define o serviço de dados pelo tipo que é o contêiner de entidade do modelo de dados, que, neste caso, é `NorthwindEntities`. A definição da classe deve ter a seguinte aparência:
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="enable-access-to-data-service-resources"></a>Habilitar o acesso aos recursos do serviço de dados
 
 1. No código para o serviço de dados, substitua o código de espaço reservado na função `InitializeService` pelo seguinte:
 
-     [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#allreadconfig)]
-     [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#allreadconfig)]
+     [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
+     [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]
 
      Isso permite que clientes autorizados tenham acesso de leitura e gravação aos recursos para os conjuntos de entidades especificados.
 

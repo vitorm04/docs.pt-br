@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170320"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517233"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Trabalhando com dados binários (WCF Data Services)
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente permite que você recupere e atualize dados binários de um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed em uma das seguintes maneiras:  
@@ -30,7 +30,7 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de clie
 ## <a name="entity-metadata"></a>Metadados de entidade  
  Uma entidade que tenha um fluxo de recursos de mídia relacionado é indicada nos metadados do serviço de dados pelo atributo `HasStream` aplicado a um tipo de entidade que é a entrada do link da mídia. No exemplo a seguir, o `PhotoInfo` entidade é uma entrada de link de mídia que tem um recurso de mídia relacionado, indicado pelo `HasStream` atributo.  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Os outros exemplos deste tópico mostram como acessar e alterar o fluxo de recursos de mídia. Para obter um exemplo completo de como consumir um fluxo de recursos de mídia em um aplicativo de cliente do .NET Framework usando o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente, consulte a postagem [acessando um Stream de recurso de mídia do cliente](https://go.microsoft.com/fwlink/?LinkID=201637).  
   
@@ -43,14 +43,14 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de clie
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Obtendo o URI do fluxo binário  
  Para recuperar determinados tipos de recursos de mídia, como imagens e outros arquivos de mídia, geralmente é mais fácil usar o URI do recurso de mídia em seu aplicativo do que manipular o próprio fluxo de dados binários. Para obter o URI de um fluxo de recursos associado a uma determinada entrada de link de mídia, você deve chamar o método <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> na instância de <xref:System.Data.Services.Client.DataServiceContext> que está controlando a entidade. O exemplo a seguir mostra como chamar o método <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> para obter o URI de um fluxo de recursos de mídia que é usado para criar uma nova imagem no cliente:  
   
- [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photowindow.xaml.cs#getreadstreamuri)]
- [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photowindow.xaml.vb#getreadstreamuri)]  
+ [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photowindow.xaml.cs#getreadstreamuri)]
+ [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photowindow.xaml.vb#getreadstreamuri)]  
   
 ### <a name="downloading-the-binary-resource-stream"></a>Baixando o fluxo de recursos binários  
  Para recuperar um fluxo de recursos binários, você deve chamar o método <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> na instância de <xref:System.Data.Services.Client.DataServiceContext> que está controlando a entrada de link de mídia. Esse método envia uma solicitação ao serviço de dados que retorna um objeto <xref:System.Data.Services.Client.DataServiceStreamResponse>, que tem uma referência ao fluxo que contém o recurso. Use esse método quando o aplicativo exigir o recurso binário como um <xref:System.IO.Stream>. O exemplo a seguir mostra como chamar o método <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> para recuperar um fluxo que é usado para criar uma nova imagem no cliente:  
   
- [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria streaming client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
- [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria streaming client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
+ [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_streaming_client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
+ [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_streaming_client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
   
 > [!NOTE]
 >  O cabeçalho do comprimento do conteúdo na mensagem de resposta que contém o vapor binário não é definido pelo serviço de dados. Esse valor pode não refletir o comprimento real do fluxo de dados binários.  
@@ -58,8 +58,8 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de clie
 ### <a name="uploading-a-media-resource-as-a-stream"></a>Carregando um recurso de mídia como um fluxo  
  Para inserir ou atualizar um recurso de mídia, chame o método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> na instância de <xref:System.Data.Services.Client.DataServiceContext> que está controlando a entidade. Esse método envia uma solicitação para o serviço de dados que contém a leitura dos recursos de mídia do fluxo fornecido. O exemplo a seguir mostra como chamar o método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para enviar uma imagem ao serviço de dados:  
   
- [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photodetailswindow.xaml.cs#setsavestream)]
- [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photodetailswindow.xaml.vb#setsavestream)]  
+ [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photodetailswindow.xaml.cs#setsavestream)]
+ [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photodetailswindow.xaml.vb#setsavestream)]  
   
  Neste exemplo, o método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> é chamado fornecendo um valor de `true` para o parâmetro `closeStream`. Isso garante que o <xref:System.Data.Services.Client.DataServiceContext> feche o fluxo depois que os dados binários forem carregados no serviço de dados.  
   
@@ -68,5 +68,5 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de clie
   
 ## <a name="see-also"></a>Consulte também
 
-- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Associar dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [Associando dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

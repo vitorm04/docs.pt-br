@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231286"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517103"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Atualizando o serviço de dados (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são rastreados, usando o <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla as alterações para entidades que relatam usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastrear entidades adicionadas e excluídas e também as alterações feitas aos valores de propriedade ou relações entre instâncias de entidade. Essas alterações controladas são enviadas para o serviço de dados como operações baseadas em REST, quando você chama o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método.  
@@ -24,33 +24,33 @@ Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] b
 ## <a name="adding-modifying-and-changing-entities"></a>Adicionando, modificando e alteração de entidades  
  Quando você usa o **adicionar referência de serviço** caixa de diálogo no Visual Studio para adicionar uma referência a um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, as cliente dados serviço classes resultantes cada ter um estático *criar* que usa um método parâmetro para cada propriedade da entidade não anuláveis. Você pode usar esse método para criar instâncias da entidade de classes de tipo, como no exemplo a seguir:  
   
- [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#createnewproduct)]
- [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#createnewproduct)]  
+ [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
+ [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
  Para adicionar uma instância de entidade, chame o *AdicionarPara* método o <xref:System.Data.Services.Client.DataServiceContext> classe gerada pelo **Add Service Reference** caixa de diálogo, como no exemplo a seguir:  
   
- [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addproductspecific)]
- [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
+ [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
   
  Isso adiciona o objeto ao contexto e no conjunto de entidades correto. Você também pode chamar <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, mas em vez disso, você deve fornecer o nome do conjunto de entidade. Se a entidade adicionada tem uma ou mais relações a outras entidades, você pode usar o <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> método ou use um dos métodos anteriores e definir explicitamente esses links. Essas operações são discutidas neste tópico.  
   
  Para modificar uma instância de entidade existente, a primeira consulta para essa entidade, faça as alterações desejadas para suas propriedades e, em seguida, chame o <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> método no <xref:System.Data.Services.Client.DataServiceContext> para indicar para a biblioteca de cliente que ele precisa para enviar uma atualização para o objeto, como mostrado na o exemplo a seguir:  
   
- [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomerspecific)]
- [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomerspecific)]  
+ [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#modifycustomerspecific)]
+ [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#modifycustomerspecific)]  
   
  Para excluir uma instância de entidade, chame o <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> método no <xref:System.Data.Services.Client.DataServiceContext>, conforme mostrado no exemplo a seguir:  
   
- [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#deleteproductspecific)]
- [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#deleteproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
+ [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
  Para obter mais informações, confira [Como: Adicionar, modificar e excluir entidades](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Anexar entidades  
  A biblioteca de cliente permite que você salve as atualizações feitas a uma entidade sem primeiro executar uma consulta para carregar a entidade para o <xref:System.Data.Services.Client.DataServiceContext>. Use o <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> método para anexar um objeto existente a uma entidade específica definida <xref:System.Data.Services.Client.DataServiceContext>. Em seguida, você pode modificar o objeto e salvar as alterações para o serviço de dados. No exemplo a seguir, um objeto de cliente que foi alterado é anexado ao contexto e, em seguida <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> é chamado para marcar o objeto anexado como <xref:System.Data.Services.Client.EntityStates.Modified> antes de <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> é chamado:  
   
- [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobjectspecific)]
- [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobjectspecific)]  
+ [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
+ [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobjectspecific)]  
   
  As seguintes considerações se aplicam ao anexar objetos:  
   
@@ -80,13 +80,13 @@ Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] b
   
  O exemplo a seguir mostra como usar o <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> método para adicionar uma nova `Order_Detail` que está relacionado a um existente `Orders` entidade. Porque o novo `Order_Details` objeto agora é controlado pela <xref:System.Data.Services.Client.DataServiceContext>, a relação de adicionado `Order_Details` objeto existente `Products` entidade é definida chamando o <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> método:  
   
- [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderspecific)]
- [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderspecific)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderspecific)]  
   
  Enquanto o <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> método define links que deve ser criado no serviço de dados, para que esses links refletidas em objetos que estão no contexto, você também deve definir as propriedades de navegação nos objetos em si. No exemplo anterior, você deve definir as propriedades de navegação da seguinte maneira:  
   
- [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#setnavprops)]
- [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#setnavprops)]  
+ [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
+ [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
  Para obter mais informações, confira [Como: Definir relações entre entidades](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md).  
   
@@ -95,9 +95,9 @@ Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] b
   
 ## <a name="see-also"></a>Consulte também
 
-- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
 - [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [Operações de envio em lote](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
 - [Materialização de objetos](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [Gerenciar o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+- [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)

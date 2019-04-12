@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227165"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518000"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>O carregamento adiado de conteúdo (WCF Data Services)
 Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a quantidade de dados que retorna uma consulta. No entanto, você pode carregar explicitamente dados adicionais, incluindo entidades relacionadas, dados de respostas paginadas e fluxos de dados binários do serviço de dados quando ele for necessário. Este tópico descreve como carregar tal conteúdo adiado para o aplicativo.  
@@ -24,33 +24,33 @@ Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita 
   
 -   **O carregamento adiantado**: Você pode usar o `$expand` opção de consulta para solicitar que a consulta retorne entidades relacionadas por uma associação para a entidade que defina a consulta solicitada. Use o <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método em de <xref:System.Data.Services.Client.DataServiceQuery%601> para adicionar o `$expand` opção para a consulta que é enviada para o serviço de dados. Você pode solicitar que vários entidade relacionada define, separando-os por vírgula, como no exemplo a seguir. Todas as entidades que solicitado pela consulta são retornadas em uma única resposta. O exemplo a seguir retorna `Order_Details` e `Customers` junto com o `Orders` conjunto de entidades:  
   
-     [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
-     [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
+     [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
+     [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a 12, o número de conjuntos de entidades que podem ser incluídos em uma única consulta por meio de `$expand` opção de consulta.  
   
 -   **Carregamento explícito**: Você pode chamar o <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método no <xref:System.Data.Services.Client.DataServiceContext> instância para carregar explicitamente entidades relacionadas. Cada chamada para o <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método cria uma solicitação separada para o serviço de dados. O exemplo a seguir carrega explicitamente `Order_Details` para um `Orders` entidade:  
   
-     [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadrelatedorderdetailsspecific)]
-     [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadrelatedorderdetailsspecific)]  
+     [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
+     [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  
   
  Quando você considera qual opção usar, perceba que há um equilíbrio entre o número de solicitações para o serviço de dados e a quantidade de dados que são retornados em uma única resposta. Use o carregamento adiantado quando seu aplicativo requer que objetos associados e você quiser evitar a latência de solicitações adicionais para recuperá-los explicitamente. No entanto, se há casos em que o aplicativo precisa apenas dos dados para instâncias específicas de entidade relacionada, considere carregar explicitamente essas entidades, chamando o <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método. Para obter mais informações, confira [Como: Carregar entidades relacionadas](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md).  
   
 ## <a name="paged-content"></a>Conteúdo paginado  
  Quando a paginação está habilitada no serviço de dados, o número de entradas no feed que o serviço de dados retorna é limitado pela configuração do serviço de dados. Limites de página podem ser definidos separadamente para cada conjunto de entidades. Para obter mais informações, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Quando a paginação está habilitada, a entrada final no feed contém um link para a próxima página de dados. Esse link está contido em um <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> objeto. Obter o URI para a próxima página de dados chamando o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> método em de <xref:System.Data.Services.Client.QueryOperationResponse%601> retornado quando o <xref:System.Data.Services.Client.DataServiceQuery%601> é executado. Retornado <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> objeto, em seguida, é usado para carregar a próxima página de resultados. Você deve enumerar o resultado da consulta antes de chamar o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> método. Considere o uso de um `do…while` loop para enumerar pela primeira vez o resultado da consulta e, em seguida, verificar um `non-null` valor do próximo link. Quando o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> retorn `null` (`Nothing` no Visual Basic), não há nenhuma página de resultados adicionais para a consulta original. A exemplo a seguir mostra um `do…while` paginável de loop que carrega os dados do cliente do serviço de dados de exemplo Northwind.  
   
- [!code-csharp[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadnextlink)]
- [!code-vb[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadnextlink)]  
+ [!code-csharp[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadnextlink)]
+ [!code-vb[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadnextlink)]  
   
  Quando um solicitações de consulta que entidades relacionadas são retornados em uma única resposta junto com o conjunto de entidade solicitada, limites de paginação podem afetar feeds aninhados que são incluídas embutidas com a resposta. Por exemplo, quando um limite de paginação é definido no serviço de dados de exemplo Northwind para o `Customers` conjunto de entidades, também pode ser definido um limite de paginação independentes para relacionado `Orders` entidade definida, como no exemplo a seguir do Northwind.svc.cs arquivos que Define o serviço de dados de exemplo Northwind.  
   
- [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
- [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
+ [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
+ [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
  Nesse caso, você deve implementar a paginação para ambos os nível superior `Customers` e aninhada `Orders` feeds de entidade. A exemplo a seguir mostra a `while` loop usada para carregar páginas de `Orders` entidades relacionadas para um selecionado `Customers` entidade.  
   
- [!code-csharp[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadnextorderslink)]
- [!code-vb[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadnextorderslink)]  
+ [!code-csharp[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadnextorderslink)]
+ [!code-vb[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadnextorderslink)]  
   
  Para obter mais informações, confira [Como: Carregar resultados paginados](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md).  
   
@@ -59,5 +59,5 @@ Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
