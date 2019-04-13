@@ -2,12 +2,12 @@
 title: F#diretrizes de formatação de código
 description: Aprenda diretrizes de formatação F# código.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093613"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553856"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#diretrizes de formatação de código
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-Para qualquer operador personalizado que começa com `*`, você precisará adicionar um espaço em branco para o início da definição para evitar uma ambiguidade de compilador. Por isso, é recomendável que você simplesmente colocar as definições de todos os operadores com um único caractere de espaço em branco.
+Para qualquer operador personalizado que começa com `*` e que tem mais de um caractere, você precisará adicionar um espaço em branco para o início da definição para evitar uma ambiguidade de compilador. Por isso, é recomendável que você simplesmente colocar as definições de todos os operadores com um único caractere de espaço em branco.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>Coloque as setas de parâmetro de função com espaço em branco
 
