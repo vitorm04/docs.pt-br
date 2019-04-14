@@ -4,12 +4,12 @@ description: Uma visão geral da ferramenta Microsoft WCF Web Service Reference 
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197068"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usar a ferramenta WCF Web Service Reference Provider
 
@@ -54,7 +54,6 @@ A página **Serviços Conectados** é exibida, conforme mostrado na imagem a seg
     
     3c. Clique no botão **Avançar** para abrir as páginas **Opções de Tipo de Dados** e **Opções do Cliente**. Como alternativa, clique no botão **Concluir** para usar as opções padrão.
 
-
 4. O formulário **Opções de Tipo de Dados** permite que você refine as definições de configuração de referência do serviço gerado:
 
 ![Guia Opções de tipo de dados do Visual Studio para .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ A página **Serviços Conectados** é exibida, conforme mostrado na imagem a seg
 Pode haver um atraso enquanto as informações de tipo são carregadas, dependendo do número de dependências do projeto e de outros fatores de desempenho do sistema. O botão **Concluir** será desabilitado durante o carregamento, a menos que a caixa de seleção **Usar novamente os tipos em assemblies consultados** esteja desmarcada.
 
 5. Clique em **Concluir** quando terminar.
-
 
 Enquanto exibe o andamento, a ferramenta:
 

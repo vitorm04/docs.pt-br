@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo do .NET Core compatível com plug-in
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076803"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Criar um aplicativo do .NET Core com plug-ins
 
@@ -111,8 +111,6 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
     return CreateCommands(pluginAssembly);
 }).ToList();
 ```
-
-
 
 Em seguida, substitua o comentário `// Output the loaded commands` pelo snippet de código a seguir:
 
