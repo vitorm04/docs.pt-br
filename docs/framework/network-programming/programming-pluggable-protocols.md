@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072335"
 ---
 # <a name="programming-pluggable-protocols"></a>Programando protocolos conectáveis
 As classes abstratas <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> fornecem a base para protocolos conectáveis. Derivando classes específicas de protocolo de <xref:System.Net.WebRequest> e de <xref:System.Net.WebResponse>, um aplicativo pode solicitar dados de um recurso de Internet e ler a resposta sem especificar o protocolo que está sendo usado.  
@@ -32,6 +32,7 @@ As classes abstratas <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse
  Para tirar proveito dos protocolos conectáveis, seus descendentes de <xref:System.Net.WebRequest> devem fornecer uma transação de solicitação e resposta padrão que não requer que propriedades específicas de protocolo sejam definidas. Por exemplo, a classe <xref:System.Net.HttpWebRequest> que implementa a classe <xref:System.Net.WebRequest> para HTTP, fornece uma solicitação `GET` por padrão e retorna um <xref:System.Net.HttpWebResponse> que contém o fluxo retornado do servidor Web.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Derivando de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
 - [Derivando de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 - [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d2552b71ac13ef6d352b229d2ad965d0f989c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151535"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurando o redirecionamento de associações de assemblies
 Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que acompanha a versão do tempo de execução usada para compilar o aplicativo. Você pode usar o atributo **appliesTo** no elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.  
@@ -58,4 +58,5 @@ Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que 
  É possível identificar se um arquivo de configuração está sendo usado determinando se os redirecionamentos de associação de assembly estão ocorrendo. Use o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ver quais assemblies são carregados. Para ver todas as associações de assembly, você deve definir uma entrada para **ForceLog** no registro.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+
+- [Como: Habilitar e desabilitar o redirecionamento automático de associação](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

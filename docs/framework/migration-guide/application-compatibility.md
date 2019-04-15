@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176248"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
@@ -72,11 +72,10 @@ Cada problema inclui as seguintes informações:
 Para começar, selecione o tipo de alteração de compatibilidade abaixo:
 
 * [Alterações de redirecionamento](./retargeting/index.md)
-* [Alterações no tempo de execução](./runtime/index.md)
-
+* [Alterações em tempo de execução](./runtime/index.md)
 
 ## <a name="see-also"></a>Consulte também
 
 - [Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [Novidades](../../../docs/framework/whats-new/index.md)
-- [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)
+- [O Que Há de Novo](../../../docs/framework/whats-new/index.md)
+- [O que está obsoleto na biblioteca de classes](../../../docs/framework/whats-new/whats-obsolete.md)

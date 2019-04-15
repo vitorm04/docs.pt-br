@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: b70a4ac99b90e5112c64d25ab517ae6ba819542f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118125"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificadores de acesso (Referência de C#)
 Os modificadores de acesso são palavras-chave usadas para especificar a acessibilidade declarada de um membro ou de um tipo. Esta seção apresenta os quatro modificadores de acesso:  
@@ -43,9 +43,10 @@ Os modificadores de acesso são palavras-chave usadas para especificar a acessib
 -   [Restrições ao uso de níveis de acessibilidade](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): um resumo das restrições sobre o uso de níveis de acessibilidade declarados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
 - [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Palavras-chave de acesso](../../../csharp/language-reference/keywords/access-keywords.md)
 - [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)

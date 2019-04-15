@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186557"
 ---
 # <a name="setting-assembly-attributes"></a>Configuração de atributos de assembly
 Os atributos de assembly são valores que fornecem informações sobre um assembly. Os atributos são divididos nos seguintes conjuntos de informações:  
@@ -87,5 +87,6 @@ Os atributos de assembly são valores que fornecem informações sobre um assemb
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+
+- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

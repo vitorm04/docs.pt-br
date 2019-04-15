@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 5bc4e6e43d346c1543cf43d9782fd22718b4fef4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119919"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Usando um soquete de servidor assíncrono
 Os soquetes de servidor assíncrono usam o modelo de programação assíncrono do .NET Framework para processar solicitações de serviço da rede. A classe <xref:System.Net.Sockets.Socket> segue o padrão de nomenclatura assíncrona do .NET Framework; por exemplo, o método <xref:System.Net.Sockets.Socket.Accept%2A> síncrono corresponde aos métodos <xref:System.Net.Sockets.Socket.BeginAccept%2A> e <xref:System.Net.Sockets.Socket.EndAccept%2A> assíncronos.  
@@ -269,6 +269,7 @@ public static void ReadCallback(IAsyncResult ar)
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando um soquete de servidor síncrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Exemplo de soquete de servidor assíncrono](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [Threading](../../../docs/standard/threading/index.md)

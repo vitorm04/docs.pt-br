@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 060da3ebc60057554fd572bd2569652afee6bd0f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 1687b1b9a1a6861f9569a0e29426de7f32ffc32b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234334"
 ---
 ### <a name="il-ret-not-allowed-in-a-try-region"></a>IL ret não é permitido em uma região try
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760951"
 |Escopo|Microsoft Edge|
 |Versão|4.6|
 |Tipo|Redirecionando|
-

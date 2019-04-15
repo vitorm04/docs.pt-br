@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095094"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de diversos tipos de matrizes
 Uma matriz é um tipo de referência em código gerenciado que contém um ou mais elementos do mesmo tipo. Embora as matrizes sejam tipos de referência, elas são passadas como parâmetros para funções não gerenciadas. Esse comportamento é inconsistente com a maneira que matrizes gerenciadas são passadas para objetos gerenciados, que é na forma de parâmetros de In/Out. Para obter detalhes adicionais, consulte [Copiando e fixando](copying-and-pinning.md).  
@@ -115,5 +115,6 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos de dados de invocação de plataforma](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)

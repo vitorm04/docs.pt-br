@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 241fe7714bfd3dd3fd37f7ac83a836f89b4951bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141746"
 ---
 # <a name="accessibility-domain-c-reference"></a>Domínio de acessibilidade (Referência de C#)
 O domínio de acessibilidade de um membro especifica em que seções do programa um membro pode ser referenciado. Se o membro estiver aninhado dentro de outro tipo, seu domínio de acessibilidade será determinado pelo [nível de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md) do membro e pelo domínio de acessibilidade do tipo imediatamente contido.  
@@ -26,14 +26,15 @@ O domínio de acessibilidade de um membro especifica em que seções do programa
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
 - [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)
 - [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md)
 - [Restrições ao uso de níveis de acessibilidade](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
+- [públicos](../../../csharp/language-reference/keywords/public.md)
 - [private](../../../csharp/language-reference/keywords/private.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [interno](../../../csharp/language-reference/keywords/internal.md)

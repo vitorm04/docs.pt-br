@@ -2,12 +2,12 @@
 title: Roteamento IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: dabf17f85330b884918d5c6e1bc9832a7a0dbd02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f0fbce84caf096770e49ab47fb1de5b23b44b33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136676"
 ---
 # <a name="ipv6-routing"></a>Roteamento IPv6
 Um mecanismo de roteamento flexível é uma vantagem do IPv6. Devido à maneira que as IDs de rede IPv4 foram e são alocadas, grandes tabelas de roteamento precisam ser mantidas pelos roteadores que estão nos backbones da Internet. Esses roteadores devem saber todas as rotas para encaminhar pacotes que são potencialmente direcionados para qualquer nó na Internet. Com sua capacidade de agregar endereços, o IPv6 permite endereçamento flexível e reduz consideravelmente o tamanho das tabelas de roteamento. Nessa nova arquitetura de endereçamento, os roteadores intermediários devem controlar apenas a parte local de sua rede para encaminhar as mensagens corretamente.  
@@ -34,5 +34,6 @@ Um mecanismo de roteamento flexível é uma vantagem do IPv6. Devido à maneira 
 -   Redirecionamento. Enviado por roteadores a fim de indicar um melhor endereço de próximo salto para um destino específico para um nó de envio.  
   
 ## <a name="see-also"></a>Consulte também
-- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+
+- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Soquetes](../../../docs/framework/network-programming/sockets.md)

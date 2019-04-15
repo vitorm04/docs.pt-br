@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113718"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
 Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos, propriedades e eventos. Elas também podem ter métodos estáticos e não estáticos. Uma diferença importante é que estruturas são tipos de valor e classes são tipos de referência.  
@@ -289,6 +289,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)
 - [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
 - [Marshaling de diversos tipos de matrizes](marshaling-different-types-of-arrays.md)

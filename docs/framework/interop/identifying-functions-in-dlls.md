@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132005"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificando funções em DLLs
 A identidade de uma função de DLL consiste dos seguintes elementos:  
@@ -46,6 +46,7 @@ A identidade de uma função de DLL consiste dos seguintes elementos:
  Para obter a documentação completa sobre a API do Windows, confira o SDK da Plataforma. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consumindo funções de DLL não gerenciadas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Especificando um ponto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [Criando uma classe para conter funções de DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

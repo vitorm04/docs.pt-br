@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200942"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Melhores práticas para classes System.Net
 As seguintes recomendações ajudarão você a usar as classes contidas em <xref:System.Net> para seu melhor proveito:  
@@ -33,4 +33,5 @@ As seguintes recomendações ajudarão você a usar as classes contidas em <xref
 -   Ao acessar sites que exigem credenciais, use a classe <xref:System.Net.CredentialCache> para criar um cache de credenciais, em vez de fornecê-las com cada solicitação. A classe **CredentialCache** procura o cache para localizar as credenciais apropriadas a serem apresentadas com uma solicitação, liberando-o da responsabilidade de criar e apresentar credenciais baseadas na URL.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)

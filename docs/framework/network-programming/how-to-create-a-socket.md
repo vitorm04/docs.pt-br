@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101114"
 ---
 # <a name="how-to-create-a-socket"></a>Como: Criar um soquete
 Antes de poder usar um soquete para se comunicar com dispositivos remotos, o soquete deve ser inicializado com as informações de protocolo e endereço de rede. O construtor da classe <xref:System.Net.Sockets.Socket> tem parâmetros que especificam a família de endereços, o tipo de soquete e o tipo de protocolo usado pelo soquete para fazer conexões.  
@@ -61,5 +61,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Depois que um **Socket** for criado, ele poderá iniciar uma conexão com um ponto de extremidade remoto ou receber conexões de dispositivos remotos.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando soquetes do cliente](../../../docs/framework/network-programming/using-client-sockets.md)
+
+- [Usando soquetes de cliente](../../../docs/framework/network-programming/using-client-sockets.md)
 - [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)

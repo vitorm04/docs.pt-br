@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180655"
 ---
 # <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
 Esta seção da documentação do .NET Framework fornece informações para desenvolvedores que desejam instalar o .NET Framework com seus aplicativos e administradores que desejam implantar o .NET Framework em uma rede. Ele também aborda os problemas de ativação e reinicialização associados à implantação e como monitorar o andamento da instalação do .NET Framework.  
@@ -24,17 +24,18 @@ Esta seção da documentação do .NET Framework fornece informações para dese
  [Guia de implantação para administradores](../../../docs/framework/deployment/guide-for-administrators.md)  
  Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).  
   
- [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
  Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.  
   
  [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.  
   
- [Erros de inicialização do .NET Framework: Gerenciando a experiência do usuário](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [Erros de inicialização do .NET Framework: gerenciar a experiência do usuário](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  Explica o que acontece quando um aplicativo do .NET Framework requer uma versão do CLR inválida ou não instalada no computador do usuário, como resolver esses erros e como controlar a mensagem de erro exibida para o usuário.  
   
  [Como: depurar problemas de ativação do CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  Explica como exibir e depurar os logs de ativação do CLR para resolver problemas que você pode encontrar para fazer com que seu aplicativo seja executado com a versão correta do CLR.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de desenvolvimento](../../../docs/framework/development-guide.md)

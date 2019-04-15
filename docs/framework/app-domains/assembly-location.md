@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b065fe488031329815f6ec38da9661fd19700d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129630"
 ---
 # <a name="assembly-location"></a>Local de um assembly
 O local de um assembly determina se o Common Language Runtime pode localizá-lo quando referenciado, bem como pode determinar se o assembly pode ser compartilhado com outros assemblies. Você pode implantar um assembly nos seguintes locais:  
@@ -30,7 +30,8 @@ O local de um assembly determina se o Common Language Runtime pode localizá-lo 
      Um assembly implantado em um servidor HTTP deve ter um nome forte; você aponta para o assembly na seção de base de código do arquivo de configuração de aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
-- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
+
+- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Cache de assemblies global](../../../docs/framework/app-domains/gac.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

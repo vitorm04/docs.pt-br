@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8e37007318a55188d44607fd5e4c4f3950c105df
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 8a1e2ca0790cb62e3c2c879f2ba0bb169ef07d77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234331"
 ---
 ### <a name="applicationfiltermessage-no-longer-throws-for-re-entrant-implementations-of-imessagefilterprefiltermessage"></a>Application.FilterMessage não é mais gerada para implementações de reentrância de IMessageFilter.PreFilterMessage
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760956"
 |Versão|4.6.1|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)?displayProperty=nameWithType></li></ul>|
-

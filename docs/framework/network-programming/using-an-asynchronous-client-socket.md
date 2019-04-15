@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168890"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usando um soquete de cliente assíncrono
 Um soquete de cliente assíncrono não suspende o aplicativo enquanto aguarda a conclusão das operações de rede. Em vez disso, ele usa o modelo padrão de programação assíncrona do .NET Framework para processar a conexão de rede em um thread, enquanto o aplicativo continua em execução no thread original. Soquetes assíncronos são apropriados para aplicativos que fazem uso intenso da rede ou que não podem aguardar a conclusão das operações de rede antes de continuar.  
@@ -286,6 +286,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando um soquete de cliente síncrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Exemplo de soquete de cliente assíncrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d42fa296585d26186a2e75a49c5b3cf761e846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179056"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Usando componentes atendidos com o cache de assemblies global
 Componentes atendidos (componentes COM+ com código gerenciado) devem ser colocados no Cache de Assembly Global. Em alguns cenários, o Common Language Runtime e os Serviços COM+ podem manipular componentes atendidos que não estão no Cache de Assembly Global; em outros cenários, eles não podem. Os seguintes cenários ilustram isso:  
@@ -26,5 +26,6 @@ Componentes atendidos (componentes COM+ com código gerenciado) devem ser coloca
 -   Para componentes atendidos em um aplicativo ASP.NET, a situação é diferente. Se você colocar o assembly que contém os componentes atendidos no diretório bin da base de aplicativo e usar o registro sob demanda, o assembly será copiado por sombra para o cache de download, pois o ASP.NET aproveita os recursos de sombra do tempo de execução.  
   
 ## <a name="see-also"></a>Consulte também
-- [Como trabalhar com assemblies e o cache de assembly global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+
+- [Trabalhando com assemblies e o cache de assemblies global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

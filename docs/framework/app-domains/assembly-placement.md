@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2168c167c89f989f70a10d5832e70c93a8f90f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9b8357be5b9f49569114cbc1c2942eea03696eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180174"
 ---
 # <a name="assembly-placement"></a>Posicionamento dos assemblies
 Para a maioria dos aplicativos .NET Framework, você localiza assemblies que compõem um aplicativo no diretório do aplicativo, em um subdiretório do diretório do aplicativo ou no cache de assembly global (se o assembly for compartilhado). Você pode substituir onde o Common Language Runtime procura um assembly usando o [\<elemento codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) em um arquivo de configuração. Se o assembly não tiver um nome forte, o local especificado usando o [\<elemento codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) estará restrito ao diretório ou ao subdiretório do aplicativo. Se o assembly tiver um nome forte, o [\<elemento codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) poderá especificar qualquer local no computador ou em uma rede.  
@@ -22,7 +22,8 @@ Para a maioria dos aplicativos .NET Framework, você localiza assemblies que com
  Regras similares se aplicam à localização de assemblies durante o trabalho com código não gerenciado ou aplicativos interop COM: se o assembly for compartilhado por vários aplicativos, ele deverá ser instalado no cache de assembly global. Assemblies usados com códigos não gerenciados devem ser exportados como uma biblioteca de tipos e registrados. Assemblies usados pelo interop COM devem ser registrados no catálogo, embora em alguns casos, esse registro ocorra automaticamente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)
-- [Interoperando com código não gerenciado](../../../docs/framework/interop/index.md)
+- [Configuração de aplicativos](../../../docs/framework/configure-apps/index.md)
+- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)
 - [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

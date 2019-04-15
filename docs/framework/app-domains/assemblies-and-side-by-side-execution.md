@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b635dcbbb3a78948a2d1d1e9d4feca6f4d2ee76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa44090e589e7a2a70b8fb7dbd8d5e6967c1ed19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126627"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Assemblies e execução lado a lado
 Execução lado a lado é a capacidade de armazenar e executar várias versões de um aplicativo ou componente no mesmo computador. Isso significa que você pode ter várias versões do tempo de execução e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo. A execução lado a lado confere mais controle sobre a quais versões de um componente um aplicativo está associado e mais controle sobre qual versão do tempo de execução um aplicativo usa.  
@@ -22,5 +22,6 @@ Execução lado a lado é a capacidade de armazenar e executar várias versões 
  Embora o tempo de execução ofereça a capacidade de criar aplicativos lado a lado, a execução lado a lado não é automática. Para saber mais sobre a criação de aplicativos para execução lado a lado, confira [Diretrizes para criação de componentes para execução lado a lado](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

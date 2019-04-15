@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097971"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificando tipos do .NET para interoperação
 Se você pretende expor os tipos em um assembly para aplicativos COM, considere os requisitos de interoperabilidade COM em tempo de design. Tipos gerenciados (classe, interface, estrutura e enumeração) se integram perfeitamente com tipos COM quando você obedece às seguintes diretrizes:  
@@ -48,8 +48,9 @@ Se você pretende expor os tipos em um assembly para aplicativos COM, considere 
  Quando exportados para COM, a hierarquia de herança de um tipo gerenciado é nivelada. O controle de versão também difere entre ambientes gerenciados e não gerenciados. Os tipos expostos ao COM não têm as mesmas características de controle de versão de outros tipos gerenciados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
 - [Aplicando atributos de interoperabilidade](../../../docs/framework/interop/applying-interop-attributes.md)
-- [Empacotando um assembly para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Empacotando um assembly para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

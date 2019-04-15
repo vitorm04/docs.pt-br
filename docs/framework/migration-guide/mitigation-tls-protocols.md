@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfbea052072f0b90c9d018b520b67878d235701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70fab3dc418e3eb92e39a7c2b1365e8582b81834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125081"
 ---
 # <a name="mitigation-tls-protocols"></a>Mitigação: Protocolos TLS
 Do .NET Framework 4.6 em diante, as classes <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> têm permissão para usar um dos três seguintes protocolos: TLS 1.0, TLS 1.1 ou TLS 1.2. Não há suporte para o protocolo SSL 3.0 e a criptografia RC4.  
@@ -43,4 +43,5 @@ Do .NET Framework 4.6 em diante, as classes <xref:System.Net.ServicePointManager
  No entanto, observe que não é recomendável recusar o comportamento padrão, pois isso torna o aplicativo menos seguro.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

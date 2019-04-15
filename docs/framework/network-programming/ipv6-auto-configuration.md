@@ -2,12 +2,12 @@
 title: Configuração automática de endereço IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170048"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuração automática de endereço IPv6
 Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, deve ser possível conectar um nó a uma rede IPv6 de modo que ele seja configurado automaticamente sem intervenção humana.  
@@ -25,5 +25,6 @@ Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, de
  A proliferação de dispositivos móveis introduziu um novo requisito: Um dispositivo precisa conseguir alterar locais na Internet IPv6 arbitrariamente e ainda manter as conexões existentes. Para fornecer essa funcionalidade, um endereço residencial é atribuído a um nó móvel, endereço no qual ele sempre pode ser alcançado. Quando o nó móvel está no endereço residencial, ele se conecta ao link residencial e usa seu endereço residencial. Quando o nó móvel está longe do endereço residencial, um agente, que geralmente é um roteador, retransmite mensagens entre o nó móvel e os nós com os quais ele está se comunicando.  
   
 ## <a name="see-also"></a>Consulte também
-- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+
+- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Soquetes](../../../docs/framework/network-programming/sockets.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-ms.openlocfilehash: 07c15614f22409f427c6f75cd4ddb8cfa218beba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a4915796310e4f6899d833f20bc5260e0ee032b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171023"
 ---
 # <a name="creating-internet-requests"></a>Criando solicitações da Internet
 Os aplicativos criam instâncias <xref:System.Net.WebRequest> por meio do método <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>. Este é um método estático que cria uma classe derivada de **WebRequest**, com base no esquema de URI passado para ele.  
@@ -28,5 +28,6 @@ Os aplicativos criam instâncias <xref:System.Net.WebRequest> por meio do métod
  Para manipular solicitações que usam outros protocolos no nível de aplicativo, é necessário implementar classes específicas ao protocolo derivadas de **WebRequest** e **WebResponse**. Para obter mais informações, consulte [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Solicitar dados usando a classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
 - [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)

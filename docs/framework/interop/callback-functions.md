@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81a502ab3c0f9f2faf4685c5d61c66f2eab83e7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196990"
 ---
 # <a name="callback-functions"></a>Funções de retorno de chamada
 Uma função de retorno de chamada é o código em um aplicativo gerenciado que ajuda uma função de DLL não gerenciada a concluir uma tarefa. As chamadas a uma função de retorno de chamada passam indiretamente de um aplicativo gerenciado, por meio de uma função de DLL e novamente para a implementação gerenciada. Algumas das muitas funções de DLL chamadas com a invocação de plataforma exigem que uma função de retorno de chamada no código gerenciado seja executada corretamente.  
@@ -28,5 +28,6 @@ Uma função de retorno de chamada é o código em um aplicativo gerenciado que 
  As funções de retorno de chamada são ideais para uso em situações em que uma tarefa é executada repetidamente. Outro uso comum é com funções de enumeração, como **EnumFontFamilies**, **EnumPrinters** e **EnumWindows** na API do Windows. A função **EnumWindows** enumera por meio de todas as janelas existentes no computador, chamando a função de retorno de chamada para executar uma tarefa em cada janela. Para obter instruções e um exemplo, confira [Como: Implementar funções de retorno de chamada](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Implementar funções de retorno de chamada](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)

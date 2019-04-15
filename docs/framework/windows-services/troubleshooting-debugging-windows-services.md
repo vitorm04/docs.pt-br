@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
-ms.openlocfilehash: cdffb3a8ce9c5119a0a17a8bc7e6ca78276423f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0552fc005a25e83065bb44e425770f9cef84f71b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082575"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>Solução de problemas: Depurando serviços Windows
 Quando você depurar um aplicativo de serviço Windows, o serviço e o **Windows Service Manager** interagirão. O **Service Manager** inicia o serviço chamando o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e, em seguida, espera 30 segundos para que o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> retorne. Se o método não retornar nesse período, o gerenciador mostra um erro indicando que o serviço não pode ser iniciado.  
@@ -25,5 +25,6 @@ Quando você depurar um aplicativo de serviço Windows, o serviço e o **Windows
  Ao depurar o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, conforme descrito em [Como: Depurar aplicativos de serviço Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), você precisará estar ciente desse período de 30 segundos. Se você colocar um ponto de interrupção no método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e não entrar nele em até 30 segundos, o gerente não iniciará o serviço.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Depurar aplicativos do serviço Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Introdução a aplicativos do Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

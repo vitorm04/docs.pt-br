@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095511"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Tópicos explicativos sobre domínios do aplicativo e assemblies
 As seções a seguir contém links para todos os tópicos explicativos encontrados na documentação conceitual para programação com domínios do aplicativo e assemblies.  
@@ -37,7 +37,7 @@ As seções a seguir contém links para todos os tópicos explicativos encontrad
   
 -   [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
--   [Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+-   [Como: Criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
 -   [Como: assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
@@ -54,4 +54,5 @@ As seções a seguir contém links para todos os tópicos explicativos encontrad
 -   [Como: Exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Domínios do aplicativo e assemblies](../../../docs/framework/app-domains/index.md)

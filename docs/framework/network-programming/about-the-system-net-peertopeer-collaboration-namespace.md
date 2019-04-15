@@ -2,12 +2,12 @@
 title: Sobre o namespace System.Net.PeerToPeer.Collaboration
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a62b659472f6d05e61672fa603e8663d9946977e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127901"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Sobre o namespace System.Net.PeerToPeer.Collaboration
 O namespace <xref:System.Net.PeerToPeer.Collaboration> fornece classes e APIs que são usadas para implementar as atividades de colaboração de pares usando a infraestrutura de Colaboração Ponto a Ponto.  
@@ -40,4 +40,5 @@ O namespace <xref:System.Net.PeerToPeer.Collaboration> fornece classes e APIs qu
  Os aplicativos P2P típicos são: chamadas em conferência para anotações ou quadro de comunicações de colaboração, aplicativos de chat sem servidor, anúncios interativos e sessões de jogos online.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.PeerToPeer.Collaboration>

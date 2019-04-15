@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172543"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Os aplicativos podem usar os serviços dos protocolos TCP e UDP com as classes <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient>. Essas classes de protocolo são criadas com base na classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> e cuidam dos detalhes da transferência de dados.  
@@ -33,8 +33,9 @@ Os aplicativos podem usar os serviços dos protocolos TCP e UDP com as classes <
  A classe **UdpClient** usa uma matriz de bytes para armazenar o datagrama UDP. Use o método <xref:System.Net.Sockets.UdpClient.Send%2A> para enviar os dados para a rede e o método <xref:System.Net.Sockets.UdpClient.Receive%2A> para receber um datagrama de entrada.  
   
 ## <a name="see-also"></a>Consulte também
-- [Usando serviços de TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Usando serviços de UDP](../../../docs/framework/network-programming/using-udp-services.md)
+
+- [Usando os serviços TCP](../../../docs/framework/network-programming/using-tcp-services.md)
+- [Usando os serviços UDP](../../../docs/framework/network-programming/using-udp-services.md)
 - [Usando fluxos na rede](../../../docs/framework/network-programming/using-streams-on-the-network.md)
 - [Usando um soquete de servidor assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Usando um soquete de cliente assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)

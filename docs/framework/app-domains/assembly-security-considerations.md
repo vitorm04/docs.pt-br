@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218064"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre segurança de assemblies
 <a name="top"></a> Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
@@ -63,6 +63,7 @@ ms.locfileid: "54589565"
  Como a nomenclatura forte e a assinatura usando o [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) garantem integridade, você pode basear a política de segurança de acesso a códigos nessas duas formas de evidência do assembly. Nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md) garantem a integridade por meio de certificados e assinaturas digitais. Todas as tecnologias mencionadas — verificação de hash, nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md) — funcionam juntas para garantir que o assembly não tenha sido alterado de forma alguma.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md)

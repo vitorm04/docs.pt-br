@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112795"
 ---
 # <a name="cache-policy"></a>Política de cache
 Uma política de cache define as regras que são usadas para determinar se uma solicitação pode ser atendida usando uma cópia armazenada em cache do recurso solicitado. Os aplicativos especificam requisitos de cache de cliente para atualização, mas a política de cache efetiva é determinada pelos requisitos de cache de cliente, requisitos de expiração de conteúdo do servidor e requisitos de revalidação do servidor. A interação dos requisitos da política de cache de cliente e do servidor sempre resulta na política de cache mais conservadora, para ajudar a garantir que o conteúdo mais atualizado é retornado para o aplicativo cliente.  
@@ -39,6 +39,7 @@ Uma política de cache define as regras que são usadas para determinar se uma s
  Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
 - [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)

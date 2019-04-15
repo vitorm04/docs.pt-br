@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097521"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Como: Determinar o nome totalmente qualificado de um assembly
 Para descobrir o nome totalmente qualificado de um assembly no cache de assembly global, use a Ferramenta Cache de Assembly Global ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Confira [Como Exibir o conteúdo do cache de assembly global](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
@@ -43,9 +43,10 @@ Para descobrir o nome totalmente qualificado de um assembly no cache de assembly
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Nomes de assembly](../../../docs/framework/app-domains/assembly-names.md)
-- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
-- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
+- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Cache de assemblies global](../../../docs/framework/app-domains/gac.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

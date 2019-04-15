@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195820"
 ---
 # <a name="assembly-names"></a>Nomes de assembly
 Um nome de assembly é armazenado em metadados e tem um impacto significativo no escopo e uso do assembly por um aplicativo. Um assembly de nome forte tem um nome totalmente qualificado que inclui o nome, a cultura, a chave pública e o número de versão do assembly. Isso muitas vezes é chamado de nome de exibição, e para os assemblies carregados pode ser obtido usando a propriedade <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -58,9 +58,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Se você colocar um assembly de nome forte no cache de assembly global, o nome de arquivo do assembly deverá corresponder ao nome de assembly (não incluindo a extensão de nome de arquivo, como .exe ou .dll). Por exemplo, se o nome do arquivo de um assembly for myAssembly.dll, o nome do assembly deverá ser myAssembly. Assemblies particulares implantados somente no diretório do aplicativo raiz podem ter um nome de assembly diferente do nome do arquivo.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Determinar o nome totalmente qualificado de um assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
-- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
+- [Cache de assemblies global](../../../docs/framework/app-domains/gac.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096258"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -43,7 +43,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 -   [Definições de tipo](#type_definitions)  
   
--   [Membros de tipos](#type_members)  
+-   [Membros de tipo](#type_members)  
   
 -   [Características de membros de tipo](#characteristics_of_type_members)  
   
@@ -165,9 +165,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 > [!NOTE]
 >  Não é necessário usar esses métodos para representantes de manipuladores de eventos em C#, C++ e Visual Basic, porque essas linguagens fornecem sintaxe para adicionar e remover manipuladores de eventos.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Definições de tipo  
  Uma definição de tipo inclui o seguinte:  
@@ -226,11 +224,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Um tipo pode herdar valores e comportamentos de outro tipo. O Common Type System não permite que tipos sejam herdados de mais de um tipo de base.  
   
  Um tipo pode implementar um número qualquer de interfaces. Para implementar uma interface, um tipo deve implementar todos os membros virtuais dessa interface. Um método virtual pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente.  
-  
-  
-  
+
 <a name="type_members"></a>   
-## <a name="type-members"></a>Membros de tipos  
+## <a name="type-members"></a>Membros de tipo  
  O tempo de execução permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo. Os membros de tipo incluem o seguinte:  
   
 -   [Campos](#Fields)  
@@ -290,9 +286,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Um tipo aninhado é um tipo membro de outros tipos. Os tipos aninhados devem ser unidos ao tipo de contenção e não devem ser utilizados como tipos de uso geral. Os tipos aninhados são úteis quando o tipo declarativo usa e cria instâncias do tipo aninhado e o uso do tipo aninhado não é exposto em membros públicos.  
   
  Os tipos aninhados são confusos para alguns desenvolvedores e não devem ficar publicamente visíveis, a menos que haja um motivo forte para a visibilidade. Em uma biblioteca bem projetada, os desenvolvedores raramente precisam usar tipos aninhados para instanciar objetos ou declarar variáveis.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Características de membros de tipo  
  O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.  
@@ -324,6 +318,6 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Navegador de API do .NET](/dotnet/api)
+- [Navegador de API .NET](/dotnet/api)
 - [Common Language Runtime](../../../docs/standard/clr.md)
 - [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)

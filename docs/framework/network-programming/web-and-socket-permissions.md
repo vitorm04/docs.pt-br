@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166849"
 ---
 # <a name="web-and-socket-permissions"></a>Permissões da Web e de soquete
 A segurança da Internet para aplicativos que usam o namespace <xref:System.Net> é fornecida pelas classes <xref:System.Net.WebPermission> e <xref:System.Net.SocketPermission>. A classe **WebPermission** controla o direito de um aplicativo de solicitar dados de um URI ou de atender a um URI para a Internet. A classe **SocketPermission** controla o direito de um aplicativo de usar um <xref:System.Net.Sockets.Socket> para aceitar dados em uma porta local ou de entrar em contato com dispositivos remotos usando um protocolo de transporte em outro endereço, com base no host, no número da porta e no protocolo de transporte do soquete.  
@@ -34,5 +34,6 @@ A segurança da Internet para aplicativos que usam o namespace <xref:System.Net>
  Para instâncias **WebPermission**, aceitação significa que um aplicativo pode exportar o URI controlado pela **WebPermission** para o mundo; conexão significa que um aplicativo pode acessar esse URI (seja ele local ou remoto).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Segurança](../../../docs/standard/security/index.md)
 - [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)

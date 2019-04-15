@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: a368048f83540bf5bb9cd43a0a88c40641eb7e94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105768"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Usando um soquete de cliente síncrono
 Um soquete de cliente síncrona suspende o programa de aplicativo enquanto a operação de rede é concluída. Soquetes síncronos não são adequados para aplicativos que fazem uso intenso da rede para sua operação, mas podem permitir o acesso simples aos serviços de rede para outros aplicativos.  
@@ -71,6 +71,7 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando um soquete de cliente assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Exemplo de soquete de cliente síncrono](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

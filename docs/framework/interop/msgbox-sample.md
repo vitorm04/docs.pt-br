@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127693"
 ---
 # <a name="msgbox-sample"></a>Exemplo de MsgBox
 Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como parâmetros In e quando usar os campos <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -45,7 +45,8 @@ Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como 
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
 ## <a name="see-also"></a>Consulte também
-- [Marshaling em cadeias de caracteres](marshaling-strings.md)
+
+- [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
 - [Marshaling padrão para cadeias de caracteres](default-marshaling-for-strings.md)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
 - [Especificando um conjunto de caracteres](specifying-a-character-set.md)

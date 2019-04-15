@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2e80a050e3b2e14663ba4bb67f650a16a6c619
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdacf5fc4a5c73fc60df961432089ee65dd0cfaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079533"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigação: Serviços WCF e autenticação de certificado
 O .NET Framework 4.6 adiciona o TLS 1.1 e o TLS 1.2 à lista padrão de protocolos SSL do WCF. Quando os computadores cliente e servidor têm o .NET Framework 4.6 ou posteriores instalados, o TLS 1.2 é usado para negociação.  
@@ -54,4 +54,5 @@ O .NET Framework 4.6 adiciona o TLS 1.1 e o TLS 1.2 à lista padrão de protocol
     >  Essa solução alternativa não é recomendada, pois um certificado com o algoritmo de hash MD5 é considerado inseguro.  
   
 ## <a name="see-also"></a>Consulte também
-- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+
+- [Alterações em tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

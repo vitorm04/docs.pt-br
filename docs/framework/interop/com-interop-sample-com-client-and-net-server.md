@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086748"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Amostra de interoperabilidade COM: Cliente COM e servidor .NET
 Esta amostra ilustra a interoperação de um [Cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) e um [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) que faz cálculos de hipoteca. Neste exemplo, o cliente cria e chama uma instância da classe `Loan` gerenciada, passa quatro argumentos (um desses quatro sendo igual a zero) para a instância e exibe os cálculos. Os exemplos de código dessa amostra são apresentados nesta seção.  
@@ -390,4 +390,5 @@ namespace LoanLib {
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+
+- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
