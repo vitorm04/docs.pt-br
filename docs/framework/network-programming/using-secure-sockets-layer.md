@@ -15,25 +15,25 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135793"
 ---
-# <a name="using-secure-sockets-layer"></a><span data-ttu-id="5bf6f-102">Usando o protocolo SSL</span><span class="sxs-lookup"><span data-stu-id="5bf6f-102">Using Secure Sockets Layer</span></span>
-<span data-ttu-id="5bf6f-103">As classes <xref:System.Net> usam o protocolo SSL para criptografar a conexão para vários protocolos de rede.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
+# <a name="using-secure-sockets-layer"></a><span data-ttu-id="c888a-102">Usando o protocolo SSL</span><span class="sxs-lookup"><span data-stu-id="c888a-102">Using Secure Sockets Layer</span></span>
+<span data-ttu-id="c888a-103">As classes <xref:System.Net> usam o protocolo SSL para criptografar a conexão para vários protocolos de rede.</span><span class="sxs-lookup"><span data-stu-id="c888a-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
   
- <span data-ttu-id="5bf6f-104">Para conexões HTTP, as classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> usam o SSL para se comunicarem com hosts Web que dão suporte ao SSL.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="5bf6f-105">A decisão de usar o SSL é feita pela classe <xref:System.Net.WebRequest>, com base no URI fornecido.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="5bf6f-106">Se o URI começa com “https:”, o SSL é usado; se o URI começa com “http:”, uma conexão não criptografada é usada.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
+ <span data-ttu-id="c888a-104">Para conexões HTTP, as classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> usam o SSL para se comunicarem com hosts Web que dão suporte ao SSL.</span><span class="sxs-lookup"><span data-stu-id="c888a-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="c888a-105">A decisão de usar o SSL é feita pela classe <xref:System.Net.WebRequest>, com base no URI fornecido.</span><span class="sxs-lookup"><span data-stu-id="c888a-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="c888a-106">Se o URI começa com “https:”, o SSL é usado; se o URI começa com “http:”, uma conexão não criptografada é usada.</span><span class="sxs-lookup"><span data-stu-id="c888a-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
   
- <span data-ttu-id="5bf6f-107">Para usar o SSL com o protocolo FTP, defina a propriedade <xref:System.Net.FtpWebRequest.EnableSsl> como verdadeiro antes de chamar <xref:System.Net.FtpWebRequest.GetResponse>.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="5bf6f-108">Da mesma forma, para usar o SSL com o protocolo SMTP, defina a propriedade <xref:System.Net.Mail.SmtpClient.EnableSsl> como verdadeira antes de enviar o email.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
+ <span data-ttu-id="c888a-107">Para usar o SSL com o protocolo FTP, defina a propriedade <xref:System.Net.FtpWebRequest.EnableSsl> como verdadeiro antes de chamar <xref:System.Net.FtpWebRequest.GetResponse>.</span><span class="sxs-lookup"><span data-stu-id="c888a-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="c888a-108">Da mesma forma, para usar o SSL com o protocolo SMTP, defina a propriedade <xref:System.Net.Mail.SmtpClient.EnableSsl> como verdadeira antes de enviar o email.</span><span class="sxs-lookup"><span data-stu-id="c888a-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
   
- <span data-ttu-id="5bf6f-109">A classe <xref:System.Net.Security.SslStream> fornece uma abstração baseada em fluxo para o SSL e oferece muitas maneiras de configurar o handshake SSL.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
+ <span data-ttu-id="c888a-109">A classe <xref:System.Net.Security.SslStream> fornece uma abstração baseada em fluxo para o SSL e oferece muitas maneiras de configurar o handshake SSL.</span><span class="sxs-lookup"><span data-stu-id="c888a-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5bf6f-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5bf6f-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c888a-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c888a-110">Example</span></span>  
   
-### <a name="code"></a><span data-ttu-id="5bf6f-111">Código</span><span class="sxs-lookup"><span data-stu-id="5bf6f-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="c888a-111">Código</span><span class="sxs-lookup"><span data-stu-id="c888a-111">Code</span></span>  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -57,12 +57,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5bf6f-112">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="5bf6f-112">Compiling the Code</span></span>  
- <span data-ttu-id="5bf6f-113">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="5bf6f-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c888a-112">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="c888a-112">Compiling the Code</span></span>  
+ <span data-ttu-id="c888a-113">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="c888a-113">This example requires:</span></span>  
   
--   <span data-ttu-id="5bf6f-114">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="5bf6f-114">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="c888a-114">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="c888a-114">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bf6f-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5bf6f-115">See also</span></span>
-- [<span data-ttu-id="5bf6f-116">Segurança na programação de rede</span><span class="sxs-lookup"><span data-stu-id="5bf6f-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [<span data-ttu-id="5bf6f-117">Programação de rede no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5bf6f-117">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
-- [<span data-ttu-id="5bf6f-118">Seleção e validação de certificado</span><span class="sxs-lookup"><span data-stu-id="5bf6f-118">Certificate Selection and Validation</span></span>](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+## <a name="see-also"></a><span data-ttu-id="c888a-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c888a-115">See also</span></span>
+
+- [<span data-ttu-id="c888a-116">Segurança na programação de rede</span><span class="sxs-lookup"><span data-stu-id="c888a-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [<span data-ttu-id="c888a-117">Programação de rede no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c888a-117">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
+- [<span data-ttu-id="c888a-118">Seleção e validação de certificado</span><span class="sxs-lookup"><span data-stu-id="c888a-118">Certificate Selection and Validation</span></span>](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

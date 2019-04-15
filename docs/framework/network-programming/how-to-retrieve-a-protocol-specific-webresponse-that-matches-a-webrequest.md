@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-ms.openlocfilehash: 3b3b523d6248b3c61a0994728b035bc6f02d5cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fee2b725afbceef45b9651a7cd88a61b37952e32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087352"
 ---
-# <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a><span data-ttu-id="695f8-102">Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest</span><span class="sxs-lookup"><span data-stu-id="695f8-102">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>
-<span data-ttu-id="695f8-103">Esse exemplo mostra como recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest.</span><span class="sxs-lookup"><span data-stu-id="695f8-103">This example shows how to retrieve a protocol-specific WebResponse that matches a WebRequest.</span></span>  
+# <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a><span data-ttu-id="2f08c-102">Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest</span><span class="sxs-lookup"><span data-stu-id="2f08c-102">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>
+<span data-ttu-id="2f08c-103">Esse exemplo mostra como recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest.</span><span class="sxs-lookup"><span data-stu-id="2f08c-103">This example shows how to retrieve a protocol-specific WebResponse that matches a WebRequest.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="695f8-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="695f8-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2f08c-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2f08c-104">Example</span></span>  
   
 ```csharp  
 WebRequest req = WebRequest.Create("http://www.contoso.com/");  
@@ -27,10 +27,11 @@ Dim req As WebRequest = WebRequest.Create("http://www.contoso.com")
 Dim resp As WebResponse = req.GetResponse()  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="695f8-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="695f8-105">Compiling the Code</span></span>  
- <span data-ttu-id="695f8-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="695f8-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2f08c-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="2f08c-105">Compiling the Code</span></span>  
+ <span data-ttu-id="2f08c-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="2f08c-106">This example requires:</span></span>  
   
--   <span data-ttu-id="695f8-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="695f8-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="2f08c-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="2f08c-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="695f8-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="695f8-108">See also</span></span>
-- [<span data-ttu-id="695f8-109">Solicitando dados</span><span class="sxs-lookup"><span data-stu-id="695f8-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a><span data-ttu-id="2f08c-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2f08c-108">See also</span></span>
+
+- [<span data-ttu-id="2f08c-109">Solicitando dados</span><span class="sxs-lookup"><span data-stu-id="2f08c-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
