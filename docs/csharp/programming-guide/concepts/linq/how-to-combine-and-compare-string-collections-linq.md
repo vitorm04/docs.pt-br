@@ -2,19 +2,19 @@
 title: 'Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323740"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar o projeto e os arquivos de texto  
   
-1.  Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
+1. Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em segu
     Garcia, Debra  
     ```  
   
-2.  Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto. Observe que os dois arquivos tem alguns nomes em comum.  
+2. Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto. Observe que os dois arquivos tem alguns nomes em comum.  
   
     ```  
     Liu, Jinghao  

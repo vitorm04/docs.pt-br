@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643761"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314926"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Como: Exibir milissegundos em valores de data e hora
 Os métodos padrão de formatação de data e hora, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluem as horas, minutos e segundos de um valor temporal, mas excluem seu componente de milissegundos. Este tópico mostra como incluir um componente de milissegundos de uma data e hora em cadeias de caracteres de data e hora formatadas.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Para exibir o componente de milissegundos de um valor DateTime  
   
-1.  Se você estiver trabalhando na representação da cadeia de caracteres de uma data, converta-a para um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> usando a estatística <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> ou o método <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
+1. Se você estiver trabalhando na representação da cadeia de caracteres de uma data, converta-a para um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> usando a estatística <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> ou o método <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
   
-2.  Para extrair a representação de cadeia de caracteres do componente de milissegundos de um valor de data e hora, chame o método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%2A> do valor de data e hora e passe o padrão de formato personalizado `fff` ou `FFF`, sozinho ou com outros especificadores de formato personalizado como o parâmetro `format`.  
+2. Para extrair a representação de cadeia de caracteres do componente de milissegundos de um valor de data e hora, chame o método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%2A> do valor de data e hora e passe o padrão de formato personalizado `fff` ou `FFF`, sozinho ou com outros especificadores de formato personalizado como o parâmetro `format`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo exibe o componente de milissegundos de um valor de <xref:System.DateTime> e <xref:System.DateTimeOffset> para console, sozinho e incluído em uma cadeia de caracteres de data e hora mais longa.  

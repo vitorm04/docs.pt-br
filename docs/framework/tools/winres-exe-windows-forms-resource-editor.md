@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296648"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -106,9 +106,9 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Para localizar um arquivo .resx ou .resources associado a um formulário
 
-1.  Digite `winres` no prompt de comando do desenvolvedor para executar Winres.exe.
+1. Digite `winres` no prompt de comando do desenvolvedor para executar Winres.exe.
 
-2.  Para abrir os recursos padrão que serão localizados por um formulário, clique no comando **Abrir** do menu **Arquivo** e navegue até o arquivo para abri-lo.
+2. Para abrir os recursos padrão que serão localizados por um formulário, clique no comando **Abrir** do menu **Arquivo** e navegue até o arquivo para abri-lo.
 
      - ou -
 
@@ -129,11 +129,11 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
     > [!NOTE]
     > Se o formulário cujos recursos você está editando for formulário herdado, o assembly apresentava o formulário herdado e o assembly contendo o formulário (derivado) deverá ser registrado no cache de assembly global (GAC) ou residir no mesmo diretório de WinRes.exe. Para obter mais informações sobre como instalar componentes do .NET Framework no GAC, consulte [Cache de Assembly Global](../../../docs/framework/app-domains/gac.md).
 
-3.  Selecione controles no formulário e altere <xref:System.Windows.Forms.Control.Text%2A> e outras propriedades para refletir a cultura localizada e seu idioma. Mova ou redimensione controles conforme necessário para acomodar o texto localizado.
+3. Selecione controles no formulário e altere <xref:System.Windows.Forms.Control.Text%2A> e outras propriedades para refletir a cultura localizada e seu idioma. Mova ou redimensione controles conforme necessário para acomodar o texto localizado.
 
-4.  Para salvar a versão localizada do arquivo .resx ou .resources, clique no ícone **Salvar** ou no mesmo comando do menu **Arquivo**. A ferramenta exibe a janela **Selecionar Cultura**.
+4. Para salvar a versão localizada do arquivo .resx ou .resources, clique no ícone **Salvar** ou no mesmo comando do menu **Arquivo**. A ferramenta exibe a janela **Selecionar Cultura**.
 
-5.  Selecione a cultura apropriada e o modo de arquivo e clique em **OK**.
+5. Selecione a cultura apropriada e o modo de arquivo e clique em **OK**.
 
    A ferramenta salva o arquivo usando a convenção de nomenclatura esperada pelo tempo de execução para arquivos de recurso localizados. Por exemplo, se você localizar `TestApp.resources` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resources`. Se você localizar `TestApp.resx` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resx`. Para obter mais informações sobre as convenções de nomenclatura de recurso, consulte [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obter uma lista dos nomes de cultura predefinidos usados pelo tempo de execução, consulte a classe <xref:System.Globalization.CultureInfo>.
 

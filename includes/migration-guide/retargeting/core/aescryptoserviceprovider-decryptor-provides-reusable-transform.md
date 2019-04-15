@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c008809606372c84b05a2facd1cac1293382aed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234884"
+---
 ### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a>Descriptografador AesCryptoServiceProvider fornece uma transformação reutilizável
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versão|4.6.2|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType></li></ul>|
-

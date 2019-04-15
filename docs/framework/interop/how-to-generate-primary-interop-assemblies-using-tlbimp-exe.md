@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295491"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe
 Há duas maneiras de gerar um assembly de interoperabilidade primário:  
@@ -36,7 +36,7 @@ Há duas maneiras de gerar um assembly de interoperabilidade primário:
   
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Para gerar um assembly de interoperabilidade primário usando Tlbimp.exe  
   
-1.  No prompt de comando, digite:  
+1. No prompt de comando, digite:  
   
      **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*  
   
@@ -68,4 +68,5 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: Registrar assemblies de interoperabilidade primários](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

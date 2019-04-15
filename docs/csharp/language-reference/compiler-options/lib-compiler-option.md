@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677869"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319398"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opções do compilador C#)
 A opção **-lib** especifica o local dos assemblies referenciados por meio da opção [-reference (Opções do Compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -34,13 +34,13 @@ A opção **-lib** especifica o local dos assemblies referenciados por meio da o
 ## <a name="remarks"></a>Comentários  
  O compilador pesquisa referências de assembly que não são totalmente qualificadas na seguinte ordem:  
   
-1.  Diretório de trabalho atual. Esse é o diretório do qual o compilador é invocado.  
+1. Diretório de trabalho atual. Esse é o diretório do qual o compilador é invocado.  
   
-2.  O diretório de sistema do Common Language Runtime.  
+2. O diretório de sistema do Common Language Runtime.  
   
-3.  Diretórios especificados por **-lib**.  
+3. Diretórios especificados por **-lib**.  
   
-4.  Diretórios especificados pela variável de ambiente LIB.  
+4. Diretórios especificados pela variável de ambiente LIB.  
   
  Use **-reference** para especificar uma referência de assembly.  
   
@@ -52,11 +52,11 @@ A opção **-lib** especifica o local dos assemblies referenciados por meio da o
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto.  
   
-2.  Clique na página de propriedades **Caminho de Referências**.  
+2. Clique na página de propriedades **Caminho de Referências**.  
   
-3.  Modifique o conteúdo da caixa de listagem.  
+3. Modifique o conteúdo da caixa de listagem.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
@@ -70,4 +70,4 @@ csc -lib:c:\ -reference:t2.dll t2.cs
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)

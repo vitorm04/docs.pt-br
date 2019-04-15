@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: de246d78ac319f9da29d5a4aaf65d71deaa4cafb
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 122a5ab3e2def7c19d3d523881fcb15df4dbca26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236336"
 ---
 ### <a name="default-value-of-servicepointmanagersecurityprotocol-is-securityprotocoltypesystemdefault"></a>O valor padrão de ServicePointManager.SecurityProtocol é SecurityProtocolType.System.Default
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760145"
 |Versão|4.7|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType></li></ul>|
-

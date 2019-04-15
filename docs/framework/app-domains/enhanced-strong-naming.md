@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319866"
 ---
 # <a name="enhanced-strong-naming"></a>Nomeação forte aprimorada
 Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework para identificar os assemblies. É uma assinatura digital de chave pública que normalmente é usada para verificar a integridade dos dados que são passados de um remetente (assinante) para um destinatário (verificador). Essa assinatura é usada como uma identidade exclusiva para um assembly e garante que as referências ao assembly não sejam ambíguas. O assembly é assinado como parte do processo de compilação e verificado ao ser carregado.  
@@ -41,25 +41,25 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
 ### <a name="signing-with-sha-2-without-key-migration"></a>Assinar com SHA-2 sem migração de chave  
  Execute os seguintes comandos em uma janela do Prompt de comando para assinar um assembly sem migrar uma assinatura de nome forte:  
   
-1.  Gere a nova chave de identidade (se necessário).  
+1. Gere a nova chave de identidade (se necessário).  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Extraia a chave pública de identidade e especifique que um algoritmo SHA-2 deve ser usado ao assinar com essa chave.  
+2. Extraia a chave pública de identidade e especifique que um algoritmo SHA-2 deve ser usado ao assinar com essa chave.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Assine com atraso o assembly com o arquivo de chave pública de identidade.  
+3. Assine com atraso o assembly com o arquivo de chave pública de identidade.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Assine novamente o assembly com o par de chaves de identidade completa.  
+4. Assine novamente o assembly com o par de chaves de identidade completa.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
 ### <a name="signing-with-sha-2-with-key-migration"></a>Assinar com SHA-2 com migração de chave  
  Execute os seguintes comandos em uma janela de Prompt de comando para assinar um assembly com uma assinatura de nome forte migrado.  
   
-1.  Gere um par de chaves de identidade e de assinatura (se necessário).  
+1. Gere um par de chaves de identidade e de assinatura (se necessário).  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  Extraia a chave pública de assinatura e especifique que um algoritmo SHA-2 deve ser usado ao assinar com essa chave.  
+2. Extraia a chave pública de assinatura e especifique que um algoritmo SHA-2 deve ser usado ao assinar com essa chave.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Extraia a chave pública de identidade, que determina o algoritmo de hash que gera uma referenda.  
+3. Extraia a chave pública de identidade, que determina o algoritmo de hash que gera uma referenda.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Gere os parâmetros para um atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> e, em seguida, anexe o atributo ao assembly.  
+4. Gere os parâmetros para um atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> e, em seguida, anexe o atributo ao assembly.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
     )]
     ```
   
-5.  Assine com atraso o assembly com a chave pública de identidade.  
+5. Assine com atraso o assembly com a chave pública de identidade.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Assine completamente o assembly com o par de chaves de assinatura.  
+6. Assine completamente o assembly com o par de chaves de assinatura.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+
+- [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

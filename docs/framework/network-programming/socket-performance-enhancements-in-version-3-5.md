@@ -2,12 +2,12 @@
 title: Melhorias do desempenho de soquete na versão 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333282"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Melhorias do desempenho de soquete na versão 3.5
 A classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> foi aprimorada na Versão 3.5 para uso por aplicativos que usam a E/S de rede assíncrona para obter o melhor desempenho. Uma série de novas classes foi adicionada como parte de um conjunto de melhorias da classe <xref:System.Net.Sockets.Socket>, que fornece um padrão assíncrono alternativo que pode ser usado por aplicativos de soquete especializados de alto desempenho. Essas melhorias foram projetadas especificamente para aplicativos de servidor de rede que exigem alto desempenho. Um aplicativo pode usar o padrão assíncrono aprimorado exclusivamente ou somente nas áreas de acesso direcionadas de seu aplicativo (ao receber grandes quantidades de dados, por exemplo).  
@@ -19,21 +19,22 @@ A classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> foi aprim
   
  O padrão para executar uma operação de soquete assíncrono com essa classe consiste nas seguintes etapas:  
   
-1.  Alocar um novo objeto de contexto <xref:System.Net.Sockets.SocketAsyncEventArgs> ou obter um gratuito em um pool de aplicativos.  
+1. Alocar um novo objeto de contexto <xref:System.Net.Sockets.SocketAsyncEventArgs> ou obter um gratuito em um pool de aplicativos.  
   
-2.  Definir as propriedades no objeto de contexto para a operação prestes a ser executada (o método de representante do retorno de chamada e o buffer de dados, por exemplo).  
+2. Definir as propriedades no objeto de contexto para a operação prestes a ser executada (o método de representante do retorno de chamada e o buffer de dados, por exemplo).  
   
-3.  Chamar o método de soquete apropriado (xxxAsync) para iniciar a operação assíncrona.  
+3. Chamar o método de soquete apropriado (xxxAsync) para iniciar a operação assíncrona.  
   
-4.  Se o método de soquete assíncrono (xxxAsync) retornar verdadeiro no retorno de chamada, consulte as propriedades do contexto para obter o status de conclusão.  
+4. Se o método de soquete assíncrono (xxxAsync) retornar verdadeiro no retorno de chamada, consulte as propriedades do contexto para obter o status de conclusão.  
   
-5.  Se o método de soquete assíncrono (xxxAsync) retornar falso no retorno de chamada, isso indicará que a operação foi concluída de forma síncrona. As propriedades do contexto podem ser consultadas para obter o resultado da operação.  
+5. Se o método de soquete assíncrono (xxxAsync) retornar falso no retorno de chamada, isso indicará que a operação foi concluída de forma síncrona. As propriedades do contexto podem ser consultadas para obter o resultado da operação.  
   
-6.  Reutilizar o contexto para outra operação, colocá-lo novamente no pool ou descartá-lo.  
+6. Reutilizar o contexto para outra operação, colocá-lo novamente no pool ou descartá-lo.  
   
  O tempo de vida do novo objeto de contexto da operação de soquete assíncrono é determinado por referências no código do aplicativo e por referências de E/S assíncrona. Não é necessário que o aplicativo retenha uma referência a um objeto de contexto da operação de soquete assíncrono depois que ele é enviado como um parâmetro para um dos métodos da operação de soquete assíncrono. Ele permanecerá referenciado até o retorno do retorno de chamada de conclusão. No entanto, é vantajoso para o aplicativo reter a referência ao objeto de contexto, de modo que ele possa ser reutilizado para uma operação futura de soquete assíncrono.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>

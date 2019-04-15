@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313652"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Criar arquivos de recurso para aplicativos .NET
 
@@ -31,7 +31,7 @@ Você pode incluir recursos, como cadeias de caracteres, imagens ou dados de obj
 
 - Criar um arquivo de recurso binário (.resources) de forma programática. Em seguida, pode inserir o arquivo em um aplicativo executável ou em uma biblioteca de aplicativos usando um compilador de linguagem, ou você pode inseri-la em um assembly satélite usando o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Para obter mais informações, confira a secção [Recursos em Arquivos .resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
-- Use o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) para criar um arquivo de recursos e incluí-lo em seu projeto. O Visual Studio fornece um editor de recursos que lhe permite adicionar, excluir e modificar recursos. No momento da compilação, o arquivo de recurso é automaticamente convertido em um arquivo binário .resources e inserido em um assembly de aplicativo ou em um assembly satélite. Para obter mais informações, confira a secção [Arquivos de Recurso no Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
+- Use o [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para criar um arquivo de recursos e incluí-lo em seu projeto. O Visual Studio fornece um editor de recursos que lhe permite adicionar, excluir e modificar recursos. No momento da compilação, o arquivo de recurso é automaticamente convertido em um arquivo binário .resources e inserido em um assembly de aplicativo ou em um assembly satélite. Para obter mais informações, confira a secção [Arquivos de Recurso no Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Recursos em arquivos de texto
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> Como os arquivos .resx devem consistir em um XML bem formado num formato predefinido, não recomendamos que trabalhe manualmente com arquivos .resx, particularmente quando esses arquivos .resx contêm recursos além de cadeiras de caracteres. Em vez disso, o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) fornece uma interface transparente para criar e manipular arquivos .resx. Para obter mais informações, confira a secção [Arquivos de Recurso no Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Também pode criar e manipular arquivos .resx programaticamente. Para obter mais informações, confira [Trabalhando com arquivos .resx de forma programática](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> Como os arquivos .resx devem consistir em um XML bem formado num formato predefinido, não recomendamos que trabalhe manualmente com arquivos .resx, particularmente quando esses arquivos .resx contêm recursos além de cadeiras de caracteres. Em vez disso, o [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) fornece uma interface transparente para criar e manipular arquivos .resx. Para obter mais informações, confira a secção [Arquivos de Recurso no Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Também pode criar e manipular arquivos .resx programaticamente. Para obter mais informações, confira [Trabalhando com arquivos .resx de forma programática](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Recursos em arquivos .resources
@@ -198,7 +198,7 @@ Você pode usar a classe <xref:System.Resources.ResourceWriter?displayProperty=n
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Arquivos de recurso no Visual Studio
 
-Quando você adiciona um arquivo de recurso ao seu projeto do [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), o Visual Studio cria um arquivo .resx no diretório do projeto. O Visual Studio fornece editores de recursos que permitem adicionar cadeias de caracteres, imagens e objetos binários. Porque os editores são projetados para lidar apenas com dados estáticos, não podem ser usados para armazenar objetos de programação. Você deve gravar os dados de objeto para um arquivo .resx ou para um arquivo .resources por meio de programação. Para saber mais, confira [Como trabalhar com arquivos .resx de forma programática](../../../docs/framework/resources/working-with-resx-files-programmatically.md) e a seção [Recursos em arquivos .resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
+Quando você adiciona um arquivo de recurso ao seu projeto do [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), o Visual Studio cria um arquivo .resx no diretório do projeto. O Visual Studio fornece editores de recursos que permitem adicionar cadeias de caracteres, imagens e objetos binários. Porque os editores são projetados para lidar apenas com dados estáticos, não podem ser usados para armazenar objetos de programação. Você deve gravar os dados de objeto para um arquivo .resx ou para um arquivo .resources por meio de programação. Para saber mais, confira [Como trabalhar com arquivos .resx de forma programática](../../../docs/framework/resources/working-with-resx-files-programmatically.md) e a seção [Recursos em arquivos .resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
 Se você estiver adicionando recursos localizados, conceda a eles o mesmo nome de arquivo raiz que o arquivo de recurso principal. Você também deve designar a cultura no nome do arquivo. Por exemplo, se você adicionar um arquivo de recurso denominado Resources.resx, também pode criar arquivos de recursos chamados Resources.en-US.resx e fr Resources.fr-FR.resx para armazenar recursos para as culturas do Inglês (Estados Unidos) e Francês (França), respetivamente. Também deve designar a cultura padrão do seu aplicativo. Essa é a cultura em que os recursos são usados se não existirem recursos localizados encontrados para uma determinada cultura. Para especificar a cultura padrão, no Solution Explorer no Visual Studio, clique com botão direito no nome do projeto, aponte para Aplicativo, clique em **Informações de Assembly** e selecione a idioma/cultura apropriada na lista de **Idioma Neutro**.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305332"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Como: Cancelar uma consulta PLINQ
 Os exemplos a seguir mostram duas maneiras de cancelar uma consulta PLINQ. O primeiro exemplo mostra como cancelar uma consulta composta principalmente de travessia de dados. O segundo exemplo mostra como cancelar uma consulta que contém uma função de usuário que gasta muitos recursos de computação.  
@@ -34,9 +34,9 @@ Os exemplos a seguir mostram duas maneiras de cancelar uma consulta PLINQ. O pri
   
  A orientação geral sobre o cancelamento é a seguinte:  
   
-1.  Se você executar o cancelamento do delegado-usuário, deverá informar ao PLINQ sobre o <xref:System.Threading.CancellationToken> externo e lançar uma <xref:System.OperationCanceledException>(externalCT).  
+1. Se você executar o cancelamento do delegado-usuário, deverá informar ao PLINQ sobre o <xref:System.Threading.CancellationToken> externo e lançar uma <xref:System.OperationCanceledException>(externalCT).  
   
-2.  Se o cancelamento ocorrer e nenhum outra exceção for gerada, você deverá tratar uma <xref:System.OperationCanceledException> em vez de uma <xref:System.AggregateException>.  
+2. Se o cancelamento ocorrer e nenhum outra exceção for gerada, você deverá tratar uma <xref:System.OperationCanceledException> em vez de uma <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como tratar o cancelamento quando você tem uma função que consome muitos recursos de computação no código do usuário.  
@@ -53,5 +53,5 @@ Os exemplos a seguir mostram duas maneiras de cancelar uma consulta PLINQ. O pri
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [LINQ paralelo (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md)

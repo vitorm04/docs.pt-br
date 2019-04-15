@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b23909c53b451b4b18bf0ccdf59f51e7c8e3114f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: ad624a665dbe8e989ea05acc20213809e515e6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236575"
 ---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>Geração de código incorreto ao passar e comparar valores UInt16
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761438"
 |Escopo|Microsoft Edge|
 |Versão|4.7|
 |Tipo|Tempo de execução|
-

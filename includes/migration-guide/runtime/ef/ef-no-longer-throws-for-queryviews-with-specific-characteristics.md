@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236614"
+---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>EF não gera mais para QueryViews com características específicas
 
 |   |   |
@@ -7,4 +15,3 @@
 |Escopo|Microsoft Edge|
 |Versão|4.5.2|
 |Tipo|Tempo de execução|
-

@@ -2,12 +2,12 @@
 title: -target:winmdobj (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319294"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (opções do compilador C#)
 Se você usar a opção do compilador **-target:winmdobj**, o compilador criará um arquivo .winmdobj intermediário que pode ser convertido em um arquivo binário do Windows Runtime (.winmd). O arquivo .winmd pode, então, ser consumido por programas JavaScript e C++, bem como programas de linguagem gerenciada.  
@@ -29,11 +29,11 @@ Se você usar a opção do compilador **-target:winmdobj**, o compilador criará
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Para definir esta opção de compilador no IDE do Visual Studio para um aplicativo da Windows Store  
   
-1.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.  
+1. No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.  
   
-2.  Escolha a guia **Aplicativo**.  
+2. Escolha a guia **Aplicativo**.  
   
-3.  Na lista **Tipo de saída**, escolha **Arquivo WinMD**.  
+3. Na lista **Tipo de saída**, escolha **Arquivo WinMD**.  
   
      A opção **Arquivo WinMD** está disponível apenas para modelos de aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
@@ -48,5 +48,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [-target (opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 38c35f3f6f2262d06409690d2326d9b982e1ec86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235114"
+---
 ### <a name="managed-browser-hosting-controls-from-the-net-framework-11-and-20-are-blocked"></a>Controles de host do navegador gerenciado do .NET Framework 1.1 e 2.0 estão bloqueados
 
 |   |   |
@@ -7,4 +15,3 @@
 |Escopo|Secundário|
 |Versão|4.5|
 |Tipo|Tempo de execução|
-

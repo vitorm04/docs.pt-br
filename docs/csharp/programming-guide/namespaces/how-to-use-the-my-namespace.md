@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316018"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Como: usar o My Namespace (Guia de Programação em C#)
 O namespace <xref:Microsoft.VisualBasic.MyServices> (`My` no Visual Basic) oferece acesso rápido e intuitivo a inúmeras classes do .NET Framework, permitindo que você grave um código que interaja com o computador, com o aplicativo, com as configurações, com os recursos e assim por diante. Embora tenha sido projetado originalmente para ser usado com o Visual Basic, o namespace `MyServices` pode ser usado em aplicativos C#.  
@@ -22,9 +22,9 @@ O namespace <xref:Microsoft.VisualBasic.MyServices> (`My` no Visual Basic) ofere
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Para adicionar uma referência à biblioteca do Visual Basic  
   
-1.  In **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** e selecione **Adicionar Referência**.  
+1. In **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** e selecione **Adicionar Referência**.  
   
-2.  Quando a caixa de diálogo **Referências** for exibida, role a lista para baixo e selecione Microsoft.VisualBasic.dll.  
+2. Quando a caixa de diálogo **Referências** for exibida, role a lista para baixo e selecione Microsoft.VisualBasic.dll.  
   
      Também é possível incluir a seguinte linha na seção `using` na inicialização do seu programa.  
   
@@ -43,4 +43,4 @@ O namespace <xref:Microsoft.VisualBasic.MyServices> (`My` no Visual Basic) ofere
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
-- [Usando namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Usar namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)

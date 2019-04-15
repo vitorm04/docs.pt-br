@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298898"
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
 Este exemplo contém dados de exemplo no formato .csv e os métodos que os transformam em coleções na memória de Customers, Products, Orders e Order Details. Para fazer novas experiências com PLINQ, cole os exemplos de código de outros tópicos no código deste tópico e invoque o método `Main`. Você também pode usar esses dados com suas próprias consultas PLINQ.  
@@ -27,13 +27,13 @@ Este exemplo contém dados de exemplo no formato .csv e os métodos que os trans
   
 ### <a name="to-set-up-this-sample"></a>Para configurar este exemplo  
   
-1.  Crie um novo projeto de aplicativo de console do Visual Basic ou do Visual C#.  
+1. Crie um novo projeto de aplicativo de console do Visual Basic ou do Visual C#.  
   
-2.  Substitua o conteúdo de Module1.vb ou de Program.cs usando o código que segue estas etapas.  
+2. Substitua o conteúdo de Module1.vb ou de Program.cs usando o código que segue estas etapas.  
   
-3.  No menu **Projeto**, clique em **Adicionar Novo Item**. Escolha **Arquivo de Texto** e, em seguida, clique em **OK**. Copie os dados neste tópico e então cole-os no novo arquivo de texto. No menu **Arquivo**, clique em **Salvar**, nomeie o arquivo Plinqdata.csv e salve-o na pasta que contém os arquivos de código-fonte.  
+3. No menu **Projeto**, clique em **Adicionar Novo Item**. Escolha **Arquivo de Texto** e, em seguida, clique em **OK**. Copie os dados neste tópico e então cole-os no novo arquivo de texto. No menu **Arquivo**, clique em **Salvar**, nomeie o arquivo Plinqdata.csv e salve-o na pasta que contém os arquivos de código-fonte.  
   
-4.  Pressione F5 para verificar se o projeto compila e executa corretamente. A saída a seguir deve ser exibida na janela do console.  
+4. Pressione F5 para verificar se o projeto compila e executa corretamente. A saída a seguir deve ser exibida na janela do console.  
   
     ```  
     Customer count: 50  
@@ -864,4 +864,4 @@ END PRODUCTS
   
 ## <a name="see-also"></a>Consulte também
 
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [LINQ paralelo (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

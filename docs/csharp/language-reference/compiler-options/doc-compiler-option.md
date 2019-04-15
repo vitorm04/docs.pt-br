@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333594"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opções do compilador C#)
 A opção **-doc** permite colocar comentários de documentação em um arquivo XML.  
@@ -52,15 +52,15 @@ A opção **-doc** permite colocar comentários de documentação em um arquivo 
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a página **Propriedades** do projeto.  
+1. Abra a página **Propriedades** do projeto.  
   
-2.  Clique na guia **Build**.  
+2. Clique na guia **Build**.  
   
-3.  Modifique a propriedade **Arquivo de documentação XML**.  
+3. Modifique a propriedade **Arquivo de documentação XML**.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320412"
 ---
 # <a name="xslt-extension-objects"></a>Objetos de extensão XSLT
 Os objetos de extensão são usados para estender a funcionalidade de folhas de estilos. Os objetos de extensão são mantidos pela classe de <xref:System.Xml.Xsl.XsltArgumentList> .  
@@ -32,13 +32,13 @@ Os objetos de extensão são usados para estender a funcionalidade de folhas de 
   
 ### <a name="to-use-an-xslt-extension-object"></a>Para usar um objeto de extensão XSLT  
   
-1.  Crie um objeto de <xref:System.Xml.Xsl.XsltArgumentList> e adicione o objeto de extensão usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> .  
+1. Crie um objeto de <xref:System.Xml.Xsl.XsltArgumentList> e adicione o objeto de extensão usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> .  
   
-2.  Chame o objeto de extensão folha de estilos.  
+2. Chame o objeto de extensão folha de estilos.  
   
-3.  Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
+3. Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Considerações de segurança de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+- [Considerações de segurança XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

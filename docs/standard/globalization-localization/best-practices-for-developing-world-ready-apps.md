@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442484"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310532"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Práticas recomendadas para o desenvolvimento de aplicativos preparados para globalização
 
@@ -71,7 +71,7 @@ Essa seção descreve as práticas recomendadas a serem seguidas no desenvolvime
 
 8. Use a classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType> para recuperar os recursos com base na cultura.
 
-9. Use o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) para criar caixas de diálogo do Windows Forms para que elas possam ser localizadas usando o [Editor de Recursos do Windows Forms (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Não codifique manualmente as caixas de diálogo do Windows Forms.
+9. Use o [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para criar caixas de diálogo do Windows Forms para que elas possam ser localizadas usando o [Editor de Recursos do Windows Forms (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Não codifique manualmente as caixas de diálogo do Windows Forms.
 
 10. Procure um profissional de localização (tradução).
 

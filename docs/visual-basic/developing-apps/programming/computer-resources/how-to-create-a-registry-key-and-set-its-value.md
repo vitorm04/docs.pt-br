@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312600"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como: Criar uma chave do Registro e definir o valor no Visual Basic
 O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.  
@@ -31,11 +31,11 @@ O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para cr
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Criar uma chave do Registro e definir o valor  
   
-1.  Use o método `CreateSubkey` especificando em qual hive a chave será colocada, bem como o nome da chave. Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.  
+1. Use o método `CreateSubkey` especificando em qual hive a chave será colocada, bem como o nome da chave. Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  Defina o valor com o método `SetValue`. Este exemplo define o valor da cadeia de caracteres. De "MyTestKeyValue" para "Este é um valor de teste".  
+2. Defina o valor com o método `SetValue`. Este exemplo define o valor da cadeia de caracteres. De "MyTestKeyValue" para "Este é um valor de teste".  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
@@ -75,5 +75,5 @@ O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para cr
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
-- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md)
+- [Ler e gravar no Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Noções básicas da segurança de acesso do código](../../../../framework/misc/code-access-security-basics.md)

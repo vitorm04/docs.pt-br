@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ab2907b05bff409fed9a370d5cbebbf3d1575d2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235102"
+---
 ### <a name="systemthreadingtaskstask-no-longer-throw-objectdisposedexception-after-object-is-disposed"></a>System.Threading.Tasks.Task não gera mais ObjectDisposedException depois que o objeto é descartado
 
 |   |   |
@@ -7,4 +15,3 @@
 |Escopo|Secundário|
 |Versão|4.5|
 |Tipo|Tempo de execução|
-

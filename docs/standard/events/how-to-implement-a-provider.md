@@ -12,44 +12,44 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543783"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324767"
 ---
 # <a name="how-to-implement-a-provider"></a>Como: Implementar um provedor
 O padrão de design do observador requer uma divisão entre um provedor, que monitora os dados e envia notificações e um ou mais observadores, que recebem notificações (retornos de chamada) do provedor. Este tópico discute como criar um provedor. Um tópico relacionado, [Como: Implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md), descreve como criar um observador.  
   
 ### <a name="to-create-a-provider"></a>Para criar um provedor  
   
-1.  Defina os dados que o provedor é responsável por enviar para os observadores. Embora o provedor e os dados que ele envia para observadores possam ser um tipo único, geralmente são representados por tipos diferentes. Por exemplo, em um aplicativo de monitoramento de temperatura, a estrutura `Temperature` define os dados que o provedor (que é representado pela classe `TemperatureMonitor` definida na próxima etapa) monitora e quais observadores assinar.  
+1. Defina os dados que o provedor é responsável por enviar para os observadores. Embora o provedor e os dados que ele envia para observadores possam ser um tipo único, geralmente são representados por tipos diferentes. Por exemplo, em um aplicativo de monitoramento de temperatura, a estrutura `Temperature` define os dados que o provedor (que é representado pela classe `TemperatureMonitor` definida na próxima etapa) monitora e quais observadores assinar.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2.  Defina o provedor de dados, que é um tipo que implementa a interface <xref:System.IObservable%601?displayProperty=nameWithType>. O argumento de tipo genérico do provedor é o tipo que o provedor envia a observadores. O exemplo a seguir define uma classe `TemperatureMonitor`, que é uma implementação construída <xref:System.IObservable%601?displayProperty=nameWithType> com um argumento de tipo genérico de `Temperature`.  
+2. Defina o provedor de dados, que é um tipo que implementa a interface <xref:System.IObservable%601?displayProperty=nameWithType>. O argumento de tipo genérico do provedor é o tipo que o provedor envia a observadores. O exemplo a seguir define uma classe `TemperatureMonitor`, que é uma implementação construída <xref:System.IObservable%601?displayProperty=nameWithType> com um argumento de tipo genérico de `Temperature`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3.  Determine como o provedor armazena as referências a observadores para que cada observador possa ser notificado quando apropriado. Normalmente, um objeto de coleção como um objeto genérico <xref:System.Collections.Generic.List%601> é usado para essa finalidade. O exemplo a seguir define um objeto particular <xref:System.Collections.Generic.List%601> que é instanciado no constructo de classe `TemperatureMonitor`.  
+3. Determine como o provedor armazena as referências a observadores para que cada observador possa ser notificado quando apropriado. Normalmente, um objeto de coleção como um objeto genérico <xref:System.Collections.Generic.List%601> é usado para essa finalidade. O exemplo a seguir define um objeto particular <xref:System.Collections.Generic.List%601> que é instanciado no constructo de classe `TemperatureMonitor`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
   
-4.  Defina uma implementação <xref:System.IDisposable> que o provedor possa retornar para os assinantes para que eles possam interromper o recebimento de notificações a qualquer momento. O exemplo a seguir define uma classe `Unsubscriber` aninhada para a qual é passada uma referência à coleção de assinantes e ao assinante quando a classe é instanciada. Esse código permite que o assinante chame a implementação <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> do objeto para se remover da coleção de assinantes.  
+4. Defina uma implementação <xref:System.IDisposable> que o provedor possa retornar para os assinantes para que eles possam interromper o recebimento de notificações a qualquer momento. O exemplo a seguir define uma classe `Unsubscriber` aninhada para a qual é passada uma referência à coleção de assinantes e ao assinante quando a classe é instanciada. Esse código permite que o assinante chame a implementação <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> do objeto para se remover da coleção de assinantes.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5.  Implementar o método de <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> . O método recebe uma referência para a interface <xref:System.IObserver%601?displayProperty=nameWithType> e deve ser armazenado no objeto criado para essa finalidade na etapa 3. O método deve retornar a implementação <xref:System.IDisposable> desenvolvida na etapa 4. O exemplo a seguir mostra a implementação do método <xref:System.IObservable%601.Subscribe%2A> na classe `TemperatureMonitor`.  
+5. Implementar o método de <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> . O método recebe uma referência para a interface <xref:System.IObserver%601?displayProperty=nameWithType> e deve ser armazenado no objeto criado para essa finalidade na etapa 3. O método deve retornar a implementação <xref:System.IDisposable> desenvolvida na etapa 4. O exemplo a seguir mostra a implementação do método <xref:System.IObservable%601.Subscribe%2A> na classe `TemperatureMonitor`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  
   
-6.  Notificar os observadores conforme apropriado, chamando as implementações <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> e <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. Em alguns casos, um provedor não pode chamar o método <xref:System.IObserver%601.OnError%2A> quando ocorre um erro. Por exemplo, o método `GetTemperature` a seguir simula um monitor que lê dados de temperatura a cada cinco segundos e notifica os observadores se a temperatura foi alterada em pelo menos 0,1 grau desde a leitura anterior. Se o dispositivo não relatar uma temperatura (ou seja, se o valor for nulo), o provedor notificará observadores de que a transmissão foi concluída. Observe que, além de chamar o método <xref:System.IObserver%601.OnCompleted%2A> de cada observador, o método `GetTemperature` limpa a coleção <xref:System.Collections.Generic.List%601>. Nesse caso, o provedor não torna nenhuma chamada para o método <xref:System.IObserver%601.OnError%2A> de seus observadores.  
+6. Notificar os observadores conforme apropriado, chamando as implementações <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> e <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. Em alguns casos, um provedor não pode chamar o método <xref:System.IObserver%601.OnError%2A> quando ocorre um erro. Por exemplo, o método `GetTemperature` a seguir simula um monitor que lê dados de temperatura a cada cinco segundos e notifica os observadores se a temperatura foi alterada em pelo menos 0,1 grau desde a leitura anterior. Se o dispositivo não relatar uma temperatura (ou seja, se o valor for nulo), o provedor notificará observadores de que a transmissão foi concluída. Observe que, além de chamar o método <xref:System.IObserver%601.OnCompleted%2A> de cada observador, o método `GetTemperature` limpa a coleção <xref:System.Collections.Generic.List%601>. Nesse caso, o provedor não torna nenhuma chamada para o método <xref:System.IObserver%601.OnError%2A> de seus observadores.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#6)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  

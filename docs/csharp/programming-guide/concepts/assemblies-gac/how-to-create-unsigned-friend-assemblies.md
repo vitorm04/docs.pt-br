@@ -2,21 +2,21 @@
 title: 'Como: criar assemblies amigáveis sem sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365055"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318228"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Como: criar assemblies amigáveis sem sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies não assinados.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Para criar um assembly e um assembly amigável  
   
-1.  Abra um prompt de comando.  
+1. Abra um prompt de comando.  
   
-2.  Crie um arquivo do C# chamado `friend_unsigned_A.` que contenha o seguinte código. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly amigável.  
+2. Crie um arquivo do C# chamado `friend_unsigned_A.` que contenha o seguinte código. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly amigável.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
     }  
     ```  
   
-3.  Compile e assine friend_unsigned_A usando o comando a seguir.  
+3. Compile e assine friend_unsigned_A usando o comando a seguir.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  Crie um arquivo do C# chamado `friend_unsigned_B` que contenha o seguinte código. Como friend_unsigned_A especifica friend_unsigned_B como um assembly amigável, o código em friend_unsigned_B pode acessar tipos `internal` e membros de friend_unsigned_A.  
+4. Crie um arquivo do C# chamado `friend_unsigned_B` que contenha o seguinte código. Como friend_unsigned_A especifica friend_unsigned_B como um assembly amigável, o código em friend_unsigned_B pode acessar tipos `internal` e membros de friend_unsigned_A.  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,7 +75,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
     }  
     ```  
   
-5.  Compile friend_unsigned_B usando o comando a seguir.  
+5. Compile friend_unsigned_B usando o comando a seguir.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
   
      O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`. Para obter mais informações, consulte [/out (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Execute o arquivo friend_unsigned_B.exe.  
+6. Execute o arquivo friend_unsigned_B.exe.  
   
      O programa imprime duas cadeias de caracteres: "Class1.Test" e "Class2.Test".  
   
@@ -94,6 +94,6 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
-- [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
+- [Assemblies amigáveis](../../../../standard/assembly/friend-assemblies.md)
 - [Como: Criar assemblies amigáveis com sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)

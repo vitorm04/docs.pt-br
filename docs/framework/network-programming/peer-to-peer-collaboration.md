@@ -2,12 +2,12 @@
 title: Colaboração ponto a ponto
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225294"
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboração ponto a ponto
 
@@ -40,5 +40,6 @@ A infraestrutura de colaboração ponto a ponto é uma implementação simplific
  Em um domínio do Active Directory, os controladores de domínio fornecem serviços de autenticação usando o Kerberos. Em um ambiente de par sem servidor, os pares devem fornecer sua própria autenticação. Para rede ponto a ponto, qualquer nó pode agir como uma AC, removendo a necessidade de um certificado raiz no repositório de raiz confiável do cada par. A autenticação é fornecida usando certificados autoassinados, formatados como certificados X.509. Esses são os certificados que são criados por cada par, o que gera o par de chaves pública/privada e o certificado é assinado usando a chave privada. O certificado autoassinado é usado para autenticação e para fornecer informações sobre a entidade de par. Assim como a autenticação X.509, a autenticação de rede ponto a ponto depende de uma cadeia de certificados ser rastreada de volta para uma chave pública confiável.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [Sobre o namespace System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

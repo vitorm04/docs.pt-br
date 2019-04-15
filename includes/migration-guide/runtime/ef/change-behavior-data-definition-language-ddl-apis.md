@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1f06a185939c40274adad1ceac6990719069167a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235091"
+---
 ### <a name="change-in-behavior-in-data-definition-language-ddl-apis"></a>Mudança de comportamento nas APIs DDL (Linguagem de Definição de Dados)
 
 |   |   |
@@ -7,4 +15,3 @@
 |Escopo|Secundário|
 |Versão|4.5|
 |Tipo|Tempo de execução|
-

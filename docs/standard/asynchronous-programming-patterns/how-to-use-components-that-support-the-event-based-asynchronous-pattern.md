@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330877"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Como: Usar componentes compatíveis com o padrão assíncrono baseado em evento
 Muitos componentes oferecem a opção de executar seu trabalho de forma assíncrona. Os componentes <xref:System.Media.SoundPlayer> e <xref:System.Windows.Forms.PictureBox>, por exemplo, permite que você carregue sons e imagens "em segundo plano", enquanto o thread principal continua em execução sem interrupções.  
@@ -36,9 +36,9 @@ Muitos componentes oferecem a opção de executar seu trabalho de forma assíncr
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Para ativar um controle PictureBox para carregar assincronamente uma imagem  
   
-1.  Crie uma instância do componente <xref:System.Windows.Forms.PictureBox> no formulário.  
+1. Crie uma instância do componente <xref:System.Windows.Forms.PictureBox> no formulário.  
   
-2.  Atribua um manipulador de eventos ao evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
+2. Atribua um manipulador de eventos ao evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
      Verifique se ocorreu algum erro durante o download assíncrono aqui. Verifique também o cancelamento.  
   
@@ -48,7 +48,7 @@ Muitos componentes oferecem a opção de executar seu trabalho de forma assíncr
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  Adicione dois botões, chamados `loadButton` e `cancelLoadButton`, ao formulário. Adicione <xref:System.Windows.Forms.Control.Click> manipuladores de eventos para iniciar e cancelar o download.  
+3. Adicione dois botões, chamados `loadButton` e `cancelLoadButton`, ao formulário. Adicione <xref:System.Windows.Forms.Control.Click> manipuladores de eventos para iniciar e cancelar o download.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,11 +56,11 @@ Muitos componentes oferecem a opção de executar seu trabalho de forma assíncr
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  Execute seu aplicativo.  
+4. Execute seu aplicativo.  
   
      Conforme o download da imagem prossegue, você pode mover o formulário livremente, minimizá-lo e maximizá-lo.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Como: Executar uma operação em segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Visão geral do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

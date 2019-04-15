@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330428"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>O .NET Framework e lançamentos fora da banda
 
@@ -23,26 +23,26 @@ O .NET Framework está evoluindo para acomodar diferentes plataformas, como o Wi
 ## <a name="how-oob-packages-are-distributed"></a>Como os pacotes OOB são distribuídos
 As versões OOB para os componentes principais do CLR (Common Language Runtime) são entregues por meio do [NuGet](https://www.nuget.org/), um gerenciador de pacotes do .NET. O NuGet permite que você procure e adicione bibliotecas facilmente aos seus projetos .NET Framework via Gerenciador de Soluções no Visual Studio. O NuGet faz parte de todas as edições do Visual Studio a partir do Visual Studio 2012. Para verificar se o NuGet está instalado, procure **Gerenciador de Pacotes do NuGet** no menu **Ferramentas** do Visual Studio. Se ele não estiver instalado:
 
-1.  Na barra de menus do Visual Studio, escolha **Ferramentas**, **Extensões e Atualizações** (no Visual Studio 2010, escolha **Gerenciador de Extensões**).
+1. Na barra de menus do Visual Studio, escolha **Ferramentas**, **Extensões e Atualizações** (no Visual Studio 2010, escolha **Gerenciador de Extensões**).
 
      A caixa de diálogo **Extensões e Atualizações** é aberta.
 
-2.  Escolha **Online**, **Gerenciador de Pacotes NuGet** e, em seguida, escolha **Baixar**.
+2. Escolha **Online**, **Gerenciador de Pacotes NuGet** e, em seguida, escolha **Baixar**.
 
-3.  Após a conclusão do download, reinicie o Visual Studio.
+3. Após a conclusão do download, reinicie o Visual Studio.
 
  Para obter instruções de instalação detalhadas, veja [Instalação do NuGet](/nuget/install-nuget-client-tools) no site de Documentação do NuGet. Para saber mais sobre o NuGet, veja a [documentação do NuGet](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>Usando um pacote OOB do NuGet
  Após instalar o NuGet, você poderá procurar e adicionar referências aos pacotes NuGet usando o Gerenciador de Soluções no Visual Studio:
 
-1.  Abra o menu de atalho para seu projeto no Visual Studio e, em seguida, escolha **Gerenciar Pacotes NuGet**. (Esta opção também está disponível no menu **Projeto**.)
+1. Abra o menu de atalho para seu projeto no Visual Studio e, em seguida, escolha **Gerenciar Pacotes NuGet**. (Esta opção também está disponível no menu **Projeto**.)
 
-2.  No painel esquerdo, escolha **Online**.
+2. No painel esquerdo, escolha **Online**.
 
-3.  Se você deseja usar pacotes de pré-lançamento, na caixa de lista suspensa no painel intermediário, escolha **Incluir Pré-lançamento** em vez de **Somente Estável**.
+3. Se você deseja usar pacotes de pré-lançamento, na caixa de lista suspensa no painel intermediário, escolha **Incluir Pré-lançamento** em vez de **Somente Estável**.
 
-4.  No painel direito, use a caixa **Pesquisar** para localizar o pacote que deseja usar. Alguns pacotes da Microsoft são identificados pelo logotipo do Microsoft .NET Framework. Todos eles identificam Microsoft como o editor.
+4. No painel direito, use a caixa **Pesquisar** para localizar o pacote que deseja usar. Alguns pacotes da Microsoft são identificados pelo logotipo do Microsoft .NET Framework. Todos eles identificam Microsoft como o editor.
 
  ![Captura de tela que mostra o Gerenciador de Pacotes NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
@@ -57,4 +57,4 @@ As versões OOB para os componentes principais do CLR (Common Language Runtime) 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução](../../../docs/framework/get-started/index.md)
+- [Guia de Introdução](../../../docs/framework/get-started/index.md)

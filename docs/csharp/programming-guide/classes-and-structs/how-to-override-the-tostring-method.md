@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202425"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294971"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Como: substituir o método ToString (Guia de Programação em C#)
 Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. Portanto, cada objeto no C# obtém o método <xref:System.Object.ToString%2A>, que retorna uma representação de cadeia de caracteres desse objeto. Por exemplo, todas as variáveis do tipo `int` tem um método `ToString`, que permite retornar seus conteúdos como uma cadeia de caracteres:  
@@ -27,13 +27,13 @@ Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. 
   
 ### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Substituir o método ToString na classe ou struct  
   
-1.  Declare um método `ToString` com os seguintes modificadores e tipo retornado:  
+1. Declare um método `ToString` com os seguintes modificadores e tipo retornado:  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  Implemente o método para que ele retorne uma cadeia de caracteres.  
+2. Implemente o método para que ele retorne uma cadeia de caracteres.  
   
      O exemplo a seguir retorna o nome da classe, além dos dados específicos de uma instância particular da classe.  
   
@@ -47,10 +47,10 @@ Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. 
 
 - <xref:System.IFormattable>
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Cadeias de caracteres](../../../csharp/programming-guide/strings/index.md)
+- [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md)
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [Formatando Tipos](../../../standard/base-types/formatting-types.md)
+- [Formatar tipos](../../../standard/base-types/formatting-types.md)

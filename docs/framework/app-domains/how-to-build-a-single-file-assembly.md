@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303993"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Como: Criar um assembly de arquivo único
 
@@ -33,7 +33,7 @@ Os procedimentos a seguir mostram como criar assemblies de arquivo único usando
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>Para criar um assembly com uma extensão .exe
 
-1.  No prompt de comando, digite o seguinte comando:
+1. No prompt de comando, digite o seguinte comando:
 
      \<*comando do compilador*> \<*nome do módulo*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>Para criar um assembly com uma extensão .exe e especificar o nome do arquivo de saída
 
-1.  No prompt de comando, digite o seguinte comando:
+1. No prompt de comando, digite o seguinte comando:
 
      \<*comando do compilador*> **/out:**\<*nome de arquivo*> \<*nome do módulo*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>Para criar um assembly de biblioteca
 
-1.  No prompt de comando, digite o seguinte comando:
+1. No prompt de comando, digite o seguinte comando:
 
      \<*compiler command*> **-t:library** \<*module name*>
 
@@ -90,7 +90,7 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)
 - [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

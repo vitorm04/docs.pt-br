@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312872"
 ---
 # <a name="-operator-c-reference"></a>Operador | (referência do C#)
 
@@ -22,7 +22,7 @@ Os operadores binários `|` são predefinidos para os tipos integrais e `bool`. 
 
 ## <a name="remarks"></a>Comentários
 
-O operador binário `|` avalia ambos os operandos, independentemente do valor do primeiro, em contraste ao [operador OR-condicional](conditional-or-operator.md) `||`.
+O operador binário `|` avalia ambos os operandos, independentemente do valor do primeiro, em contraste ao [operador OR-condicional](boolean-logical-operators.md#conditional-logical-or-operator-) `||`.
 
 Os tipos definidos pelo usuário podem sobrecarregar o operador `|` (consulte [operador](../keywords/operator.md)).
 
@@ -34,4 +34,4 @@ Os tipos definidos pelo usuário podem sobrecarregar o operador `|` (consulte [o
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Operadores do C#](index.md)
+- [Operadores C#](index.md)

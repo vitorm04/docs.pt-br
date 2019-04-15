@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324468"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Como: Cancelar uma tarefa e seus filhos
 Estes exemplos mostram como realizar as seguintes tarefas:  
   
-1.  Crie e inicie uma tarefa cancelável.  
+1. Crie e inicie uma tarefa cancelável.  
   
-2.  Passe um token de cancelamento para o representante de usuário e, opcionalmente, para a instância da tarefa.  
+2. Passe um token de cancelamento para o representante de usuário e, opcionalmente, para a instância da tarefa.  
   
-3.  Observe e responda à solicitação de cancelamento de seu representante de usuário.  
+3. Observe e responda à solicitação de cancelamento de seu representante de usuário.  
   
-4.  Opcionalmente, observe no thread de chamada que a tarefa foi cancelada.  
+4. Opcionalmente, observe no thread de chamada que a tarefa foi cancelada.  
   
  O thread de chamada não força o término da tarefa. Ele apenas sinaliza que o cancelamento é solicitado. Se a tarefa já estiver em execução, cabe ao representante de usuário observar a solicitação e responder adequadamente. Se cancelamento for solicitado antes da execução da tarefa, o representante de usuário nunca será executado e o objeto de tarefa fará a transição para o estado Cancelado.  
   
@@ -44,6 +44,6 @@ Estes exemplos mostram como realizar as seguintes tarefas:
 - <xref:System.Threading.CancellationToken?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
-- [Programação assíncrona baseada em tarefa](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Programação assíncrona baseada em tarefas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
 - [Tarefas filho anexadas e desanexadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
 - [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

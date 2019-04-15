@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320152"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como: Exibir informações localizadas de data e hora para usuários da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações que analisam e formatam valores de data e hora não devem depender de um formato padrão (que geralmente é o formato da cultura local do servidor Web) ao interagir com o usuário. Em vez disso, formulários da Web que lidam com cadeias de caracteres de data e hora inseridas pelo usuário devem analisar as cadeias de caracteres usando a cultura preferencial do usuário. Da mesma forma, os dados de data e hora devem ser exibidos para o usuário em um formato compatível com a respectiva cultura. Este tópico mostra como fazer isso.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analisar a data e a hora em cadeias de caracteres de entrada do usuário  
   
-1.  Determine se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> é populada. Se não for, vá para a etapa 6.  
+1. Determine se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> é populada. Se não for, vá para a etapa 6.  
   
-2.  Se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> for populada, recupere o primeiro elemento. O primeiro elemento indica o idioma e a região padrão ou preferenciais do usuário.  
+2. Se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> for populada, recupere o primeiro elemento. O primeiro elemento indica o idioma e a região padrão ou preferenciais do usuário.  
   
-3.  Crie uma instância de um objeto <xref:System.Globalization.CultureInfo> que represente a cultura preferencial do usuário do chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Crie uma instância de um objeto <xref:System.Globalization.CultureInfo> que represente a cultura preferencial do usuário do chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Chame o método `TryParse` ou o `Parse` do tipo <xref:System.DateTime> ou <xref:System.DateTimeOffset> para tentar a conversão. Use uma sobrecarga do método `TryParse` ou `Parse` com um parâmetro `provider` e passe para ele um dos seguintes itens:  
+4. Chame o método `TryParse` ou o `Parse` do tipo <xref:System.DateTime> ou <xref:System.DateTimeOffset> para tentar a conversão. Use uma sobrecarga do método `TryParse` ou `Parse` com um parâmetro `provider` e passe para ele um dos seguintes itens:  
   
     -   O objeto <xref:System.Globalization.CultureInfo> criado na etapa 3.  
   
     -   O objeto <xref:System.Globalization.DateTimeFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> do objeto <xref:System.Globalization.CultureInfo> criado na etapa 3.  
   
-5.  Se a conversão falhar, repita as etapas 2 a 4 para cada elemento restante na matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Se a conversão falhar, repita as etapas 2 a 4 para cada elemento restante na matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Se a conversão ainda falhar ou se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> estiver vazia, analise a cadeia de caracteres usando a cultura invariável, que é retornada pela propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Se a conversão ainda falhar ou se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> estiver vazia, analise a cadeia de caracteres usando a cultura invariável, que é retornada pela propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Para analisar a data e a hora local da solicitação do usuário  
   
-1.  Adicione um controle <xref:System.Web.UI.WebControls.HiddenField> a um formulário da Web.  
+1. Adicione um controle <xref:System.Web.UI.WebControls.HiddenField> a um formulário da Web.  
   
-2.  Crie uma função JavaScript que manipula o eventos `onClick` de um botão `Submit` gravando a data e a hora atuais e o deslocamento do fuso horário local do UTC (Tempo Universal Coordenado) para a propriedade <xref:System.Web.UI.WebControls.HiddenField.Value%2A>. Use um delimitador (como ponto e vírgula) para separar os dois componentes da cadeia de caracteres.  
+2. Crie uma função JavaScript que manipula o eventos `onClick` de um botão `Submit` gravando a data e a hora atuais e o deslocamento do fuso horário local do UTC (Tempo Universal Coordenado) para a propriedade <xref:System.Web.UI.WebControls.HiddenField.Value%2A>. Use um delimitador (como ponto e vírgula) para separar os dois componentes da cadeia de caracteres.  
   
-3.  Use o evento <xref:System.Web.UI.Control.PreRender> do formulário de Web para injetar a função no fluxo de saída de HTML, passando o texto do script para o método <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Use o evento <xref:System.Web.UI.Control.PreRender> do formulário de Web para injetar a função no fluxo de saída de HTML, passando o texto do script para o método <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Conecte o manipulador de eventos ao evento `onClick` do botão `Submit`, fornecendo o nome da função JavaScript ao atributo `OnClientClick` do botão `Submit`.  
+4. Conecte o manipulador de eventos ao evento `onClick` do botão `Submit`, fornecendo o nome da função JavaScript ao atributo `OnClientClick` do botão `Submit`.  
   
-5.  Crie um manipulador para o evento <xref:System.Web.UI.WebControls.Button.Click> do botão `Submit`.  
+5. Crie um manipulador para o evento <xref:System.Web.UI.WebControls.Button.Click> do botão `Submit`.  
   
-6.  No manipulador de eventos, determine se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> é populada. Se não for, vá para a etapa 14.  
+6. No manipulador de eventos, determine se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> é populada. Se não for, vá para a etapa 14.  
   
-7.  Se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> for populada, recupere o primeiro elemento. O primeiro elemento indica o idioma e a região padrão ou preferenciais do usuário.  
+7. Se a matriz de cadeia de caracteres retornada pela propriedade <xref:System.Web.HttpRequest.UserLanguages%2A> for populada, recupere o primeiro elemento. O primeiro elemento indica o idioma e a região padrão ou preferenciais do usuário.  
   
-8.  Crie uma instância de um objeto <xref:System.Globalization.CultureInfo> que represente a cultura preferencial do usuário do chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+8. Crie uma instância de um objeto <xref:System.Globalization.CultureInfo> que represente a cultura preferencial do usuário do chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
 9. Passe a cadeia de caracteres atribuída à propriedade <xref:System.Web.UI.WebControls.HiddenField.Value%2A> para o método <xref:System.String.Split%2A> para armazenar a representação de cadeia de caracteres de data local do usuário e a representação de cadeia de caracteres do deslocamento de fuso horário local do usuário em elementos de matriz separada.  
   
@@ -116,4 +116,4 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações
 - [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Analisando cadeias de caracteres de data e hora](../../../docs/standard/base-types/parsing-datetime.md)
+- [Analisar cadeias de caracteres de Data e Hora](../../../docs/standard/base-types/parsing-datetime.md)

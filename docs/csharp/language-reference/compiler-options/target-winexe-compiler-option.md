@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3c16bf8aed0d281b2b5a3f9c6ae06f343b1eff7c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307296"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opções do compilador C#)
 A opção **-target:winexe** faz com que o compilador crie um programa do Windows executável (EXE).  
@@ -37,11 +37,11 @@ A opção **-target:winexe** faz com que o compilador crie um programa do Window
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a página **Propriedades** do projeto.  
+1. Abra a página **Propriedades** do projeto.  
   
-2.  Clique na página de propriedades do **Aplicativo**.  
+2. Clique na página de propriedades do **Aplicativo**.  
   
-3.  Modifique a propriedade **Tipo de saída**.  
+3. Modifique a propriedade **Tipo de saída**.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
@@ -54,5 +54,5 @@ csc -target:winexe in.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [-target (opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

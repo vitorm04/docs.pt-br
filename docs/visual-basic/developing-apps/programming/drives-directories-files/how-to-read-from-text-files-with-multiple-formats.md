@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334296"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Como: Ler de arquivos de texto com vários formatos em Visual Basic
 O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira fácil e eficiente de analisar arquivos de texto estruturados, como logs. É possível processar um arquivo com vários formatos usando o método `PeekChars` para determinar o formato de cada linha conforme você analisa por meio do arquivo.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Para analisar um arquivo de texto com vários formatos  
   
-1.  Adicione um arquivo de texto denominado testfile.txt ao seu projeto. Adicione o seguinte conteúdo ao arquivo de texto.  
+1. Adicione um arquivo de texto denominado testfile.txt ao seu projeto. Adicione o seguinte conteúdo ao arquivo de texto.  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,19 +34,19 @@ O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  Defina o formato esperado e o formato usado quando um erro é relatado. A última entrada em cada matriz é -1, portanto, supõe-se que o último campo tenha largura variável. Isso ocorre quando a última entrada na matriz é menor ou igual a 0.  
+2. Defina o formato esperado e o formato usado quando um erro é relatado. A última entrada em cada matriz é -1, portanto, supõe-se que o último campo tenha largura variável. Isso ocorre quando a última entrada na matriz é menor ou igual a 0.  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  Crie um novo objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, definindo a largura e o formato.  
+3. Crie um novo objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, definindo a largura e o formato.  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  Percorra as linhas, testando seus formatos antes da leitura.  
+4. Percorra as linhas, testando seus formatos antes da leitura.  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  Grave os erros no console.  
+5. Grave os erros no console.  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
@@ -76,6 +76,6 @@ O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Como: Ler de arquivos de texto separados por vírgula](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Como: Ler de arquivos de texto de largura fixa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [Como: ler de arquivos de texto separados por vírgula](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Como: ler de arquivos de texto de largura fixa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Analisando arquivos de texto com o objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

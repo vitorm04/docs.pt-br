@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1805c26f1eff46719f30de8a14ca6d35f01948a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234623"
+---
 ### <a name="foreach-iterator-variable-is-now-scoped-within-the-iteration-so-closure-capturing-semantics-are-different-in-c5"></a>A variável do iterador Foreach agora tem escopo na iteração, de modo que as semânticas de captura de fechamento são diferentes (no C#5)
 
 |   |   |
@@ -7,4 +15,3 @@
 |Escopo|Principal|
 |Versão|4.5|
 |Tipo|Redirecionando|
-

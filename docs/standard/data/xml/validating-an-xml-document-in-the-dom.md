@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664324"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298416"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validando um documento XML no DOM
 A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objeto de Documento) em um esquema da linguagem XSD ou uma DTD (definição de tipo de documento) por padrão; o XML é verificado somente se está bem-formado.  
@@ -29,15 +29,15 @@ A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objet
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>Criando um XmlReader de validação de esquema XML  
  Para criar um <xref:System.Xml.XmlReader> de validação de esquema XML, siga estas etapas.  
   
-1.  Construa uma nova instância de <xref:System.Xml.XmlReaderSettings>.  
+1. Construa uma nova instância de <xref:System.Xml.XmlReaderSettings>.  
   
-2.  Adicione um esquema XML à propriedade <xref:System.Xml.XmlReaderSettings.Schemas%2A> da instância <xref:System.Xml.XmlReaderSettings>.  
+2. Adicione um esquema XML à propriedade <xref:System.Xml.XmlReaderSettings.Schemas%2A> da instância <xref:System.Xml.XmlReaderSettings>.  
   
-3.  Especificar `Schema` como o <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
+3. Especificar `Schema` como o <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
   
-4.  Especificar opcionalmente <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> e <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> para manipular erros e avisos de validação de esquema encontrados durante a validação.  
+4. Especificar opcionalmente <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> e <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> para manipular erros e avisos de validação de esquema encontrados durante a validação.  
   
-5.  Finalmente, passe o objeto <xref:System.Xml.XmlReaderSettings> para o método <xref:System.Xml.XmlReader.Create%2A> da classe <xref:System.Xml.XmlReader> junto com o documento XML, criando um <xref:System.Xml.XmlReader> de validação de esquema.  
+5. Finalmente, passe o objeto <xref:System.Xml.XmlReaderSettings> para o método <xref:System.Xml.XmlReader.Create%2A> da classe <xref:System.Xml.XmlReader> junto com o documento XML, criando um <xref:System.Xml.XmlReader> de validação de esquema.  
   
 ### <a name="example"></a>Exemplo  
  No exemplo de código a seguir, o <xref:System.Xml.XmlReader> de esquema de validação valida os dados XML carregados no DOM. As modificações inválidas são feitas para o documento XML e o documento é então revalidados, causando erros de validação de esquema. Finalmente, um dos erros é corrigido e a parte do documento XML é validada parcialmente.  

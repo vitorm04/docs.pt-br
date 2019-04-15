@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319879"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acessando dados fortemente tipados XML usando XPathNavigator
 Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.XPath.XPathNavigator> pode conter dados fortemente tipados que mapeiam a Common Language Runtime (CLR) tipos. De acordo com o modelo de dados XPath 2,0, somente os elementos e atributos podem conter dados fortemente tipados. A classe de <xref:System.Xml.XPath.XPathNavigator> fornece mecanismos para acessar dados em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> como dados fortemente tipados bem como mecanismos para converter de um tipo de dados para outro.  
@@ -52,11 +52,11 @@ Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.X
 ## <a name="the-post-schema-validation-infoset-psvi"></a>A validação Infoset (PSVI) do esquema de postagem  
  Um processador XML de esquema XML Infoset aceita como entrada e o converte em uma validação Infoset (PSVI) do esquema de postagem. Um PSVI é o infoset original XML de entrada com novos elementos de informações adicionados e as novas propriedades adicionadas a elementos existentes de informações. Há três classes de informações de adicionadas a Infoset XML em PSVI que são expostos por <xref:System.Xml.XPath.XPathNavigator>.  
   
-1.  Resultados da validação: Informações referentes a se um elemento ou um atributo foi ou não bem-sucedido. Isso expõe a propriedade de <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> de propriedade de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
+1. Resultados da validação: Informações referentes a se um elemento ou um atributo foi ou não bem-sucedido. Isso expõe a propriedade de <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> de propriedade de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
-2.  Informações padrão: Indicações referentes a se o valor do elemento ou do atributo foi obtido ou não por meio dos valores padrão especificados no esquema. Isso expõe a propriedade de <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> de propriedade de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
+2. Informações padrão: Indicações referentes a se o valor do elemento ou do atributo foi obtido ou não por meio dos valores padrão especificados no esquema. Isso expõe a propriedade de <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> de propriedade de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
-3.  Anotações de tipo: Referências a componentes do esquema que podem ser definições de tipo ou declarações de elemento e atributo. A propriedade de <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> de <xref:System.Xml.XPath.XPathNavigator> contém informações de tipo específico de nó se é válido. Se a validade de um nó é desconhecida, como quando ele foi validado em editou posteriormente. a propriedade de <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> é definida na `null` mas informações de tipo está disponível ainda das várias propriedades de propriedade de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
+3. Anotações de tipo: Referências a componentes do esquema que podem ser definições de tipo ou declarações de elemento e atributo. A propriedade de <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> de <xref:System.Xml.XPath.XPathNavigator> contém informações de tipo específico de nó se é válido. Se a validade de um nó é desconhecida, como quando ele foi validado em editou posteriormente. a propriedade de <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> é definida na `null` mas informações de tipo está disponível ainda das várias propriedades de propriedade de <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
  O exemplo a seguir ilustra usando as informações na validação Infoset do esquema de postagem expostos por <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -190,8 +190,8 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Type Support in the System.Xml Classes](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md) (Suporte a tipo nas classes System.XML)
+- [Digite suporte nas classes de System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
 - [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
 - [Navegação do nó usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [Navegação do nó de atributo e de namespace usando o XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [Navegação do nó de atributo e do namespace usando XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
 - [Extrair dados XML usando XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

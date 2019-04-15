@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540969"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324118"
 ---
 # <a name="how-to-create-com-wrappers"></a>Como: Criar wrappers COM
 
@@ -28,13 +28,13 @@ No Visual Studio 2005, você pode adicionar o wrapper COM como uma referência a
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Para criar um RCW (Runtime Callable Wrapper) usando o Visual Studio
 
-1.  Abra o projeto do aplicativo gerenciado.
+1. Abra o projeto do aplicativo gerenciado.
 
-2.  No menu **Projeto**, clique em **Mostrar Todos os Arquivos**.
+2. No menu **Projeto**, clique em **Mostrar Todos os Arquivos**.
 
-3.  No menu **Projeto**, clique em **Adicionar Referência**.
+3. No menu **Projeto**, clique em **Adicionar Referência**.
 
-4.  Na caixa de diálogo Adicionar Referência, clique na guia **COM**, selecione o componente que você deseja usar e clique em **OK**.
+4. Na caixa de diálogo Adicionar Referência, clique na guia **COM**, selecione o componente que você deseja usar e clique em **OK**.
 
      No **Gerenciador de Soluções**, observe que o componente COM é adicionado à pasta Referências do projeto.
 
@@ -53,15 +53,15 @@ Agora você pode escrever o código para acessar o objeto COM. Comece declarando
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Para criar um COM Callable Wrapper usando o Visual Studio  
   
-1.  Crie um projeto de Biblioteca de Classes para a classe gerenciada que você deseja executar no código nativo. A classe deve ter um construtor padrão.  
+1. Crie um projeto de Biblioteca de Classes para a classe gerenciada que você deseja executar no código nativo. A classe deve ter um construtor padrão.  
   
      Verifique se você tem um número de versão de quatro partes completo para o assembly no arquivo AssemblyInfo. Esse número é necessário para manter o controle de versão no Registro do Windows. Para obter mais informações sobre os números de versão, consulte [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2.  No menu **Projeto**, clique em **Propriedades**.  
+2. No menu **Projeto**, clique em **Propriedades**.  
   
-3.  Clique na guia **Compilar**.  
+3. Clique na guia **Compilar**.  
   
-4.  Marque a caixa de seleção **Registrar para interoperabilidade COM**.  
+4. Marque a caixa de seleção **Registrar para interoperabilidade COM**.  
   
  Quando você cria o projeto, o assembly é registrado automaticamente para a interoperabilidade COM. Se estiver criando um aplicativo nativo no Visual Studio 2005, você poderá usar o assembly clicando em **Adicionar Referência** no menu **Projeto**.  
   

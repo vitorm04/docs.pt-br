@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301016"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Como: Referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
@@ -30,7 +30,7 @@ O processo para referenciar tipos ou recursos em um assembly de nome forte é no
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Para fazer uma referência no tempo de compilação a um assembly de nome forte  
   
-1.  No prompt de comando, digite o seguinte comando:  
+1. No prompt de comando, digite o seguinte comando:  
   
      \<*comando do compilador*> **/reference:**\<*nome do assembly*>  
   
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Para fazer uma referência no tempo de execução a um assembly de nome forte  
   
-1.  Quando você faz uma referência de tempo de execução a um assembly de nome forte (por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
+1. Quando você faz uma referência de tempo de execução a um assembly de nome forte (por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
   
      \<*nome do assembly*>**,** \<*número da versão*>**,** \<*cultura*>**,** \<*token de chave pública*>  
   
@@ -71,4 +71,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn -tp \<** *arquivo de chave pública* **>**  
   
 ## <a name="see-also"></a>Consulte também
-- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+
+- [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

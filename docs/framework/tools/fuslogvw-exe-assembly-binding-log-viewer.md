@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329512"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 O Visualizador de Log de Associação do Assembly exibe detalhes das associações de assembly. Essas informações ajudam a diagnosticar por que o .NET Framework não pode localizar um assembly no tempo de execução. Essas falhas normalmente são o resultado de um assembly implantado no local incorreto, de uma imagem nativa que não é mais válida ou de uma incompatibilidade em números de versão ou culturas. A falha no Common Language Runtime em localizar um assembly costuma aparecer como um <xref:System.TypeLoadException> em seu aplicativo.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>Para alterar a exibição do local do log  
   
-1.  Selecione o botão de opção **Padrão** para exibir falhas de associação de todos os tipos de aplicativo. Por padrão, as entradas de log são armazenadas em diretórios por usuário em disco no cache de wininet.  
+1. Selecione o botão de opção **Padrão** para exibir falhas de associação de todos os tipos de aplicativo. Por padrão, as entradas de log são armazenadas em diretórios por usuário em disco no cache de wininet.  
   
-2.  Selecione o botão de opção **Personalizar** para exibir falhas de associação em um diretório personalizado especificado. Você deve especificar o local personalizado no qual deseja que o tempo de execução armazene os logs definindo o local de log personalizado na caixa de diálogo **Configurações de Log** como um nome de diretório válido. Esse diretório deve estar limpo e conter apenas arquivos gerados pelo tempo de execução. Se ele contiver um executável que gere uma falha a ser registrada em log, a falha não será registrada em log porque a ferramenta tenta criar um diretório com o mesmo nome do executável. Além disso, haverá falha em uma tentativa de executar um executável com base no local do log.  
+2. Selecione o botão de opção **Personalizar** para exibir falhas de associação em um diretório personalizado especificado. Você deve especificar o local personalizado no qual deseja que o tempo de execução armazene os logs definindo o local de log personalizado na caixa de diálogo **Configurações de Log** como um nome de diretório válido. Esse diretório deve estar limpo e conter apenas arquivos gerados pelo tempo de execução. Se ele contiver um executável que gere uma falha a ser registrada em log, a falha não será registrada em log porque a ferramenta tenta criar um diretório com o mesmo nome do executável. Além disso, haverá falha em uma tentativa de executar um executável com base no local do log.  
   
     > [!NOTE]
     >  O local de associação padrão é preferível ao local de associação personalizado. O tempo de execução armazena o local de associação padrão no cache de wininet e, assim, o limpa automaticamente. Se especificar um local de associação personalizado, você será responsável por limpá-lo.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Para exibir detalhes sobre uma falha específica  
   
-1.  Selecione o nome do aplicativo da entrada desejada no visualizador.  
+1. Selecione o nome do aplicativo da entrada desejada no visualizador.  
   
-2.  Clique no botão **Exibir Log**. Também é possível clicar duas vezes na entrada selecionada.  
+2. Clique no botão **Exibir Log**. Também é possível clicar duas vezes na entrada selecionada.  
   
      A ferramenta exibe os seguintes detalhes sobre a falha de associação selecionada:  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>Para excluir uma única entrada do log  
   
-1.  Selecione uma entrada no visualizador.  
+1. Selecione uma entrada no visualizador.  
   
-2.  Clique no botão **Excluir Entrada**.  
+2. Clique no botão **Excluir Entrada**.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Para excluir todas as entradas do log  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>Para habilitar um caminho de log personalizado  
   
-1.  Selecione o botão de opção **Habilitar caminho de log personalizado**.  
+1. Selecione o botão de opção **Habilitar caminho de log personalizado**.  
   
-2.  Digite o caminho na caixa de texto **Caminho de log personalizado**.  
+2. Digite o caminho na caixa de texto **Caminho de log personalizado**.  
   
 > [!NOTE]
 >  O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários na caixa de diálogo Opções da Internet do IE.  
@@ -221,16 +221,17 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Para habilitar o registro em log para aplicativos em execução no contêiner do aplicativo do Windows  
   
-1.  Habilite um caminho de log personalizado, conforme descrito no procedimento anterior. Por padrão, os aplicativos em execução no contêiner do aplicativo do Windows têm acesso limitado no disco rígido. O diretório especificado terá acesso de leitura/gravação em todos os aplicativos no contêiner do aplicativo.  
+1. Habilite um caminho de log personalizado, conforme descrito no procedimento anterior. Por padrão, os aplicativos em execução no contêiner do aplicativo do Windows têm acesso limitado no disco rígido. O diretório especificado terá acesso de leitura/gravação em todos os aplicativos no contêiner do aplicativo.  
   
-2.  Marque a caixa de seleção **Habilitar registro em log imersivo**.  
+2. Marque a caixa de seleção **Habilitar registro em log imersivo**.  
   
     > [!NOTE]
     >  Essa caixa só está habilitada no Windows 8 ou posterior.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.TypeLoadException>
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
+- [Cache de assemblies global](../../../docs/framework/app-domains/gac.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

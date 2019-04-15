@@ -2,12 +2,12 @@
 title: -target:appcontainerexe (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 4f8c59d94b76dd0f3415846f7e682d62cc1771ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311065"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (opções do compilador C#)
 Se você usar a opção do compilador **-target:appcontainerexe**, o compilador criará um arquivo executável (.exe) do Windows que deverá ser executado em um contêiner de aplicativos. Essa opção é equivalente a [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), mas foi projetada para aplicativos [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
@@ -27,9 +27,9 @@ Se você usar a opção do compilador **-target:appcontainerexe**, o compilador 
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>Para definir esta opção do compilador no IDE  
   
-1.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.  
+1. No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.  
   
-2.  Na guia **Aplicativo**, na lista **Tipo de saída**, escolha **Aplicativo da Windows Store**.  
+2. Na guia **Aplicativo**, na lista **Tipo de saída**, escolha **Aplicativo da Windows Store**.  
   
      Essa opção está disponível apenas para modelos de aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
@@ -44,6 +44,6 @@ csc -target:appcontainerexe filename.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [-target:winexe (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
+- [-target (opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [-target:winexe (opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

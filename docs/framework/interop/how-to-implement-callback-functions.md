@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331319"
 ---
 # <a name="how-to-implement-callback-functions"></a>Como: Implementar funções de retorno de chamada
 O procedimento e o exemplo a seguir demonstram como um aplicativo gerenciado, usando invocação de plataforma, pode imprimir o valor do identificador para cada janela no computador local. Especificamente, o procedimento e o exemplo usam a função **EnumWindows** para percorrer a lista de janelas e uma função de retorno de chamada gerenciada (chamada CallBack) para imprimir o valor do identificador da janela.  
   
 ### <a name="to-implement-a-callback-function"></a>Para implementar uma função de retorno de chamada  
   
-1.  Examine a assinatura para a função **EnumWindows** antes de continuar com a implementação. **EnumWindows** tem a seguinte assinatura:  
+1. Examine a assinatura para a função **EnumWindows** antes de continuar com a implementação. **EnumWindows** tem a seguinte assinatura:  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
@@ -30,13 +30,13 @@ O procedimento e o exemplo a seguir demonstram como um aplicativo gerenciado, us
   
      Uma indicação de que essa função requer um retorno de chamada é a presença do argumento **lpEnumFunc**. É comum ver o prefixo **lp** (ponteiro longo) combinado com o sufixo **Func** no nome de argumentos que levam um ponteiro para uma função de retorno de chamada. Para obter a documentação sobre funções do Win32, consulte o SDK da Plataforma Microsoft.  
   
-2.  Crie a função de retorno de chamada gerenciada. O exemplo declara um tipo de delegado chamado `CallBack` que leva dois argumentos (**hwnd** e **lparam**). O primeiro argumento é um identificador para a janela, enquanto o segundo argumento é definido pelo aplicativo. Nesta versão, ambos os argumentos devem ser números inteiros.  
+2. Crie a função de retorno de chamada gerenciada. O exemplo declara um tipo de delegado chamado `CallBack` que leva dois argumentos (**hwnd** e **lparam**). O primeiro argumento é um identificador para a janela, enquanto o segundo argumento é definido pelo aplicativo. Nesta versão, ambos os argumentos devem ser números inteiros.  
   
      Funções de retorno de chamada normalmente retornam valores diferentes de zero para indicar êxito e zero para indicar falha. Este exemplo define explicitamente o valor retornado para **true** para continuar a enumeração.  
   
-3.  Crie um delegado e passe-o como um argumento para a função **EnumWindows**. A invocação de plataforma converte o delegado em um formato de retorno de chamada familiar automaticamente.  
+3. Crie um delegado e passe-o como um argumento para a função **EnumWindows**. A invocação de plataforma converte o delegado em um formato de retorno de chamada familiar automaticamente.  
   
-4.  Verifique se o coletor de lixo não recupera o delegado antes da função de retorno de chamada terminar seu trabalho. Quando você passa um delegado como um parâmetro ou passa um delegado contido como um campo em uma estrutura, ele permanece não coletado pela a duração da chamada. Portanto, como é o caso no exemplo de enumeração a seguir, a função de retorno de chamada termina o trabalho antes da chamada retornar e não requer nenhuma ação adicional pelo chamador gerenciado.  
+4. Verifique se o coletor de lixo não recupera o delegado antes da função de retorno de chamada terminar seu trabalho. Quando você passa um delegado como um parâmetro ou passa um delegado contido como um campo em uma estrutura, ele permanece não coletado pela a duração da chamada. Portanto, como é o caso no exemplo de enumeração a seguir, a função de retorno de chamada termina o trabalho antes da chamada retornar e não requer nenhuma ação adicional pelo chamador gerenciado.  
   
      Se, no entanto, a função de retorno de chamada puder ser chamada depois que a chamada retornar, o chamador gerenciado deverá tomar medidas para garantir que o delegado permaneça não coletado até que a função de retorno de chamada seja concluída. Para obter informações detalhadas sobre como evitar a coleta de lixo, consulte [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md) com invocação de plataforma.  
   
@@ -130,5 +130,6 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Funções de retorno de chamada](../../../docs/framework/interop/callback-functions.md)
 - [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)

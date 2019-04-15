@@ -2,12 +2,12 @@
 title: Resolução e publicação de nome de par
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309089"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Resolução e publicação de nome de par
 
@@ -25,9 +25,9 @@ Nós de versão 2 do PNRP não publicam IDs de PNRP se eles estão apenas resolv
 
  Localizar outros pares em uma nuvem ou rede PNRP é um processo composto de duas fases:  
   
-1.  Determinação do ponto de extremidade  
+1. Determinação do ponto de extremidade  
   
-2.  Resolução da ID de PNRP  
+2. Resolução da ID de PNRP  
   
  Na fase de determinação do ponto de extremidade, um par que está tentando resolver a ID de PNRP de um serviço em outro computador determina o endereço IPv6 desse par remoto.  O par remoto é o que publicou ou está associado com a ID de PNRP do computador ou serviço.  
   
@@ -48,4 +48,5 @@ O par solicitante continua esse processo com iterações sucessivas, eventualmen
  Dentro do namespace <xref:System.Net.PeerToPeer>, há uma relação muitos para muitos entre os registros de <xref:System.Net.PeerToPeer.PeerName> que contêm pontos de extremidade e nuvens PNRP ou malhas nas quais eles se comunicam. Quando há entradas duplicadas ou obsoletas ou vários nós com o mesmo nome de par, nós PNRP podem obter informações atuais usando a classe <xref:System.Net.PeerToPeer.PeerNameResolver>. Os métodos <xref:System.Net.PeerToPeer.PeerNameResolver> usam um único nome de par para simplificar a perspectiva para registros de nome de um par para muitos pares e do mesmo par para muitas nuvens. Isso é semelhante a uma consulta executada usando uma junção de tabela relacional. Após a conclusão bem-sucedida, o objeto resolvedor retorna um <xref:System.Net.PeerToPeer.PeerNameRecordCollection> para o nome de par especificado.  Por exemplo, um nome de par ocorreria em todos os registros de nome de par na coleção, ordenados pela nuvem. Estas são as instâncias do nome do par cujos dados de suporte podem ser solicitados por um aplicativo baseado em PNRP.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.PeerToPeer>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 0f58759b02fb650c090267e13ec5de65c2c63d19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230558"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acessando a Internet por meio de um proxy
 Se o site usar um proxy para fornecer acesso à Internet, você deverá configurar uma instância do proxy para permitir que o aplicativo se comunique com o proxy Web.  
@@ -33,5 +33,6 @@ Se o site usar um proxy para fornecer acesso à Internet, você deverá configur
 -   [Como: Substituir uma seleção de proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)
 - [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)

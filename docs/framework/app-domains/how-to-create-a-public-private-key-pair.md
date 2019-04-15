@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eaaa85b8bd287c37f59116e75cf99b030d63ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297831"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Como: Criar um par de chaves pública/privada
 
@@ -33,7 +33,7 @@ Para assinar um assembly com um nome forte, você deve ter um par de chaves púb
 
 ## <a name="to-create-a-key-pair"></a>Para criar um par de chaves
 
-1.  No prompt de comando, digite o seguinte comando:
+1. No prompt de comando, digite o seguinte comando:
 
      **sn –k** \<*nome de arquivo*>
 
@@ -69,4 +69,4 @@ sn -p keypair.snk public.snk
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333165"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Como: Criar uma classe usando o CodeDOM
 Os procedimentos a seguir ilustram como criar e compilar um grafo CodeDOM que gera uma classe que contém dois campos, três propriedades, um método, um construtor e um ponto de entrada.  
   
-1.  Crie um aplicativo de console que usará o código CodeDOM para gerar o código-fonte para uma classe.  
+1. Crie um aplicativo de console que usará o código CodeDOM para gerar o código-fonte para uma classe.  
   
      Neste exemplo, a classe de geração é nomeada `Sample` e o código gerado é uma classe chamada `CodeDOMCreatedClass` em um arquivo chamado SampleCode.  
   
-2.  Na classe de geração, inicialize o grafo CodeDOM e use os métodos CodeCOM para definir os membros, o construtor e o ponto de entrada (método `Main`) da classe gerada.  
+2. Na classe de geração, inicialize o grafo CodeDOM e use os métodos CodeCOM para definir os membros, o construtor e o ponto de entrada (método `Main`) da classe gerada.  
   
      Neste exemplo, a classe gerada tem dois campos, três propriedades, um construtor, um método e um método `Main`.  
   
-3.  Na classe de geração, crie um provedor de código de específico da linguagem e chame seu método <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> para gerar o código do grafo.  
+3. Na classe de geração, crie um provedor de código de específico da linguagem e chame seu método <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> para gerar o código do grafo.  
   
-4.  Compile e execute o aplicativo para gerar o código.  
+4. Compile e execute o aplicativo para gerar o código.  
   
      Neste exemplo, o código gerado está em um arquivo chamado SampleCode. Compilar e executar esse código para ver a saída de exemplo.  
   
@@ -87,12 +87,12 @@ Os procedimentos a seguir ilustram como criar e compilar um grafo CodeDOM que ge
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>Para criar o gráfico e gerar o código  
   
-1.  Adicione os métodos criados nas etapas anteriores para o método `Main` definido na primeira etapa.  
+1. Adicione os métodos criados nas etapas anteriores para o método `Main` definido na primeira etapa.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  Compile e execute a classe de geração.  
+2. Compile e execute a classe de geração.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra o código das etapas anteriores.  
@@ -119,5 +119,6 @@ The object:
 -   Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Usando o CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [Gerando e compilando código-fonte de um gráfico CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

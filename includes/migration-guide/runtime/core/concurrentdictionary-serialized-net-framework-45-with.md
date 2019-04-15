@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f9d7b8d22818245b96cafffe3732bdfe82ff69d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235067"
+---
 ### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a>Um ConcurrentDictionary serializado no .NET Framework 4.5 com NetDataContractSerializer não pode ser desserializado pelo .NET Framework 4.5.1 ou 4.5.2
 
 |   |   |
@@ -7,4 +15,3 @@
 |Escopo|Secundário|
 |Versão|4.5.1|
 |Tipo|Tempo de execução|
-

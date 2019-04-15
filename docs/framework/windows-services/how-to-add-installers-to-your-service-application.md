@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307243"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Como: Adicionar instaladores ao aplicativo de serviço
 O Visual Studio tem componentes de instalação que podem instalar recursos associados com seus aplicativos de serviço. Os componentes de instalação registram um serviço individual no sistema em que ele está sendo instalado e informam o Gerenciador de Controle de Serviços que o serviço existe. Ao trabalhar com um aplicativo de serviço, você pode selecionar um link na janela Propriedades para adicionar automaticamente os instaladores apropriados ao projeto.  
@@ -33,17 +33,17 @@ O Visual Studio tem componentes de instalação que podem instalar recursos asso
   
 ### <a name="to-add-installers-to-your-service-application"></a>Para adicionar instaladores ao seu aplicativo de serviço  
   
-1.  No **Gerenciador de Soluções**, acesse a exibição **Design** do serviço para o qual deseja adicionar um componente de instalação.  
+1. No **Gerenciador de Soluções**, acesse a exibição **Design** do serviço para o qual deseja adicionar um componente de instalação.  
   
-2.  Clique na tela de fundo do designer para selecionar o serviço em si, em vez de um de seus conteúdos.  
+2. Clique na tela de fundo do designer para selecionar o serviço em si, em vez de um de seus conteúdos.  
   
-3.  Como o foco no designer, clique com o botão direito do mouse e clique em **Adicionar Instalador**.  
+3. Como o foco no designer, clique com o botão direito do mouse e clique em **Adicionar Instalador**.  
   
      A nova classe `ProjectInstaller` e dois componentes de instalação, <xref:System.ServiceProcess.ServiceProcessInstaller> e <xref:System.ServiceProcess.ServiceInstaller>, são adicionados ao projeto e os valores de propriedade do serviço são copiados para os componentes.  
   
-4.  Clique no componente <xref:System.ServiceProcess.ServiceInstaller> e verifique se o valor da propriedade <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> está definido com o mesmo valor que o da propriedade <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> no serviço em si.  
+4. Clique no componente <xref:System.ServiceProcess.ServiceInstaller> e verifique se o valor da propriedade <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> está definido com o mesmo valor que o da propriedade <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> no serviço em si.  
   
-5.  Para determinar como o serviço será iniciado, clique no componente <xref:System.ServiceProcess.ServiceInstaller> e defina a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> para o valor apropriado.  
+5. Para determinar como o serviço será iniciado, clique no componente <xref:System.ServiceProcess.ServiceInstaller> e defina a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> para o valor apropriado.  
   
     |Valor|Resultado|  
     |-----------|------------|  
@@ -51,17 +51,18 @@ O Visual Studio tem componentes de instalação que podem instalar recursos asso
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|O serviço será iniciado sozinho, sempre que o computador for reiniciado.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Não é possível iniciar o serviço.|  
   
-6.  Para determinar o contexto de segurança no qual o serviço será executado, clique no componente <xref:System.ServiceProcess.ServiceProcessInstaller> e defina os valores de propriedade apropriados. Para obter mais informações, confira [Como: Especificar o contexto de segurança para serviços](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Para determinar o contexto de segurança no qual o serviço será executado, clique no componente <xref:System.ServiceProcess.ServiceProcessInstaller> e defina os valores de propriedade apropriados. Para obter mais informações, confira [Como: Especificar o contexto de segurança para serviços](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Substitua todos os métodos para os quais você precise realizar um processamento personalizado.  
+7. Substitua todos os métodos para os quais você precise realizar um processamento personalizado.  
   
-8.  Execute as etapas 1 a 7 para cada serviço adicional no projeto.  
+8. Execute as etapas 1 a 7 para cada serviço adicional no projeto.  
   
     > [!NOTE]
     >  Para cada serviço adicional no projeto, você precisará adicionar um componente <xref:System.ServiceProcess.ServiceInstaller> adicional à classe `ProjectInstaller` do projeto. O componente <xref:System.ServiceProcess.ServiceProcessInstaller> adicionado na etapa três funciona com todos os instaladores de serviço individuais no projeto.  
   
 ## <a name="see-also"></a>Consulte também
-- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+
+- [Introdução a aplicativos do Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Como: Iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Como: Especificar o contexto de segurança para serviços](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

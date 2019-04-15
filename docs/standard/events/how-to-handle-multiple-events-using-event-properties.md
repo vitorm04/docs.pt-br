@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592215"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330110"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Como: Manipular vários eventos usando propriedades de evento
 Para usar as propriedades de evento, defina as propriedades de evento na classe que gera os eventos e, em seguida, defina os representantes das propriedades de evento nas classes que tratam dos eventos. Para implementar várias propriedades de evento em uma classe, a classe deve armazenar e manter internamente o representante definido para cada evento. Uma abordagem típica é implementar uma coleção de representantes indexada por uma chave de evento.  
@@ -30,15 +30,15 @@ Para usar as propriedades de evento, defina as propriedades de evento na classe 
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>Para manipular vários eventos usando propriedades de evento  
   
-1.  Defina a coleção de representantes na classe que gera os eventos.  
+1. Defina a coleção de representantes na classe que gera os eventos.  
   
-2.  Defina uma chave para cada evento.  
+2. Defina uma chave para cada evento.  
   
-3.  Defina as propriedades de evento na classe que gera os eventos.  
+3. Defina as propriedades de evento na classe que gera os eventos.  
   
-4.  Use a coleção de representantes para implementar os métodos adicionar e remover acessador nas propriedades de evento.  
+4. Use a coleção de representantes para implementar os métodos adicionar e remover acessador nas propriedades de evento.  
   
-5.  Use as propriedades de evento públicas para adicionar e remover representantes do manipulador de eventos nas classes que tratam dos eventos.  
+5. Use as propriedades de evento públicas para adicionar e remover representantes do manipulador de eventos nas classes que tratam dos eventos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de C# a seguir implementa as propriedades de evento `MouseDown` e `MouseUp` usando uma <xref:System.ComponentModel.EventHandlerList> para armazenar o representante de cada evento. As palavras-chave dos constructos de propriedade de evento estão em negrito.  
@@ -55,4 +55,4 @@ Para usar as propriedades de evento, defina as propriedades de evento na classe 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Eventos](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A>
-- [Como: Declarar eventos personalizados para conservar a memória](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Como: declarar eventos personalizados para conservar a memória](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

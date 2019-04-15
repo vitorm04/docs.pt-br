@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322401"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
@@ -50,11 +50,11 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Para usar o parâmetro XSLT, o usuário precisará fazer o seguinte:  
   
-1.  Crie <xref:System.Xml.Xsl.XsltArgumentList> e adicione os objetos usando <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Crie <xref:System.Xml.Xsl.XsltArgumentList> e adicione os objetos usando <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Chame os parâmetros de folha de estilos.  
+2. Chame os parâmetros de folha de estilos.  
   
-3.  Passar <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> .  
+3. Passar <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> .  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir usa o método de <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> para criar um parâmetro para conter uma data calculada de desconto. A data de desconto é calculada para ser a 20 dias de data pedido.  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Para usar o objeto de extensão XSLT, o usuário precisará fazer o seguinte:  
   
-1.  Crie <xref:System.Xml.Xsl.XsltArgumentList> e adicione o objeto de extensão usando <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Crie <xref:System.Xml.Xsl.XsltArgumentList> e adicione o objeto de extensão usando <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Chamar o objeto de extensão folha de estilos.  
+2. Chamar o objeto de extensão folha de estilos.  
   
-3.  Passar <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> .  
+3. Passar <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> .  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir calcula a circunferência de um círculo determinado o raio.  
@@ -366,4 +366,4 @@ public class Sample
   
 ## <a name="see-also"></a>Consulte também
 
-- [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
