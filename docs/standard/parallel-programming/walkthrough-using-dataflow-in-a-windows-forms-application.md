@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344371"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Passo a passo: Usando um fluxo de dados em um aplicativo do Windows Forms
 Este documento demonstra como criar uma rede de blocos de fluxo de dados que executam o processamento de imagens em um Aplicativo do Windows Forms.  
@@ -35,7 +35,7 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
   
 -   [Conectar a rede de fluxo de dados à interface do usuário](#ui)  
   
--   [O exemplo completo](#complete)  
+-   [O Exemplo Completo](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Criar o aplicativo do Windows Forms  
@@ -43,15 +43,15 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
   
 #### <a name="to-create-the-windows-forms-application"></a>Para criar o aplicativo do Windows Forms  
   
-1.  No Visual Studio, crie um projeto de **aplicativo do Windows Forms** do Visual Basic ou do Visual C#. Neste documento, o projeto é chamado `CompositeImages`.  
+1. No Visual Studio, crie um projeto de **aplicativo do Windows Forms** do Visual Basic ou do Visual C#. Neste documento, o projeto é chamado `CompositeImages`.  
   
-2.  No designer de formulários do formulário principal, Form1.cs (Form1.vb para Visual Basic), adicione um controle <xref:System.Windows.Forms.ToolStrip>.  
+2. No designer de formulários do formulário principal, Form1.cs (Form1.vb para Visual Basic), adicione um controle <xref:System.Windows.Forms.ToolStrip>.  
   
-3.  Adicione um controle <xref:System.Windows.Forms.ToolStripButton> ao controle <xref:System.Windows.Forms.ToolStrip>. Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> e a propriedade <xref:System.Windows.Forms.ToolStripItem.Text%2A> como **Escolher Pasta**.  
+3. Adicione um controle <xref:System.Windows.Forms.ToolStripButton> ao controle <xref:System.Windows.Forms.ToolStrip>. Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> e a propriedade <xref:System.Windows.Forms.ToolStripItem.Text%2A> como **Escolher Pasta**.  
   
-4.  Adicione um segundo controle <xref:System.Windows.Forms.ToolStripButton> ao controle <xref:System.Windows.Forms.ToolStrip>. Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, a propriedade <xref:System.Windows.Forms.ToolStripItem.Text%2A> como **Cancelar** e a propriedade <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> como `False`.  
+4. Adicione um segundo controle <xref:System.Windows.Forms.ToolStripButton> ao controle <xref:System.Windows.Forms.ToolStrip>. Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, a propriedade <xref:System.Windows.Forms.ToolStripItem.Text%2A> como **Cancelar** e a propriedade <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> como `False`.  
   
-5.  Adicione um objeto <xref:System.Windows.Forms.PictureBox> ao formulário principal. Defina a propriedade <xref:System.Windows.Forms.Control.Dock%2A> como <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Adicione um objeto <xref:System.Windows.Forms.PictureBox> ao formulário principal. Defina a propriedade <xref:System.Windows.Forms.Control.Dock%2A> como <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>Criar a rede de fluxo de dados  
@@ -59,25 +59,25 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
   
 #### <a name="to-create-the-dataflow-network"></a>Para criar a rede de fluxo de dados  
   
-1.  Adicione uma referência a System.Threading.Tasks.Dataflow.dll ao seu projeto.  
+1. Adicione uma referência a System.Threading.Tasks.Dataflow.dll ao seu projeto.  
   
-2.  Verifique se o Form1.cs (Form1.vb para Visual Basic) contém as seguintes instruções `using` (`Using` em Visual Basic):  
+2. Verifique se o Form1.cs (Form1.vb para Visual Basic) contém as seguintes instruções `using` (`Using` em Visual Basic):  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3.  Adicione os membros de dados a seguir à classe `Form1`:  
+3. Adicione os membros de dados a seguir à classe `Form1`:  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4.  Adicione o seguinte método, `CreateImageProcessingNetwork`, à classe `Form1`. Esse método cria a rede de processamento de imagem.  
+4. Adicione o seguinte método, `CreateImageProcessingNetwork`, à classe `Form1`. Esse método cria a rede de processamento de imagem.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5.  Implementar o método de `LoadBitmaps` .  
+5. Implementar o método de `LoadBitmaps` .  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6.  Implementar o método de `CreateCompositeBitmap` .  
+6. Implementar o método de `CreateCompositeBitmap` .  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
@@ -109,15 +109,15 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
   
 #### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Para conectar a rede de fluxo de dados à interface do usuário  
   
-1.  No designer de formulários, do formulário principal, crie um manipulador de eventos para o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Escolher Pasta**.  
+1. No designer de formulários, do formulário principal, crie um manipulador de eventos para o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Escolher Pasta**.  
   
-2.  Implemente o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Escolher Pasta**.  
+2. Implemente o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Escolher Pasta**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  No designer de formulários, para o formulário principal, crie um manipulador de eventos para o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Cancelar**.  
+3. No designer de formulários, para o formulário principal, crie um manipulador de eventos para o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Cancelar**.  
   
-4.  Implante o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Cancelar**.  
+4. Implante o evento <xref:System.Windows.Forms.ToolStripItem.Click> para o botão **Cancelar**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   

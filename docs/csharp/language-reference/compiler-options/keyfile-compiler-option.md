@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bd89a5fa58507528b2a70efde04ecd2a6f601b39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344644"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (opções do compilador C#)
 Especifica o nome de arquivo que contém a chave de criptografia.  
@@ -45,15 +45,15 @@ Especifica o nome de arquivo que contém a chave de criptografia.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a página **Propriedades** do projeto.  
+1. Abra a página **Propriedades** do projeto.  
   
-2.  Clique na página de propriedades **Assinatura**.  
+2. Clique na página de propriedades **Assinatura**.  
   
-3.  Modifique a propriedade **Escolha um arquivo de chave de nome forte**.  
+3. Modifique a propriedade **Escolha um arquivo de chave de nome forte**.  
   
  Você pode acessar programaticamente essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)

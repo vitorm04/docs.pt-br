@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341498"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
 Especifica qual versão do CLR (Common Language Runtime) pode executar o assembly.  
@@ -60,11 +60,11 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a página **Propriedades** do projeto.  
+1. Abra a página **Propriedades** do projeto.  
   
-2.  Clique na página de propriedades **Compilar**.  
+2. Clique na página de propriedades **Compilar**.  
   
-3.  Modifique a propriedade **Destino da plataforma** e, para projetos que definem como destino o .NET Framework 4.5, marque ou desmarque a caixa de seleção **Preferir 32 bits**.  
+3. Modifique a propriedade **Destino da plataforma** e, para projetos que definem como destino o .NET Framework 4.5, marque ou desmarque a caixa de seleção **Preferir 32 bits**.  
   
  **Observe que -platform** não está disponível no ambiente de desenvolvimento no Visual C# Express.  
   
@@ -80,4 +80,4 @@ csc -platform:anycpu filename.cs
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)

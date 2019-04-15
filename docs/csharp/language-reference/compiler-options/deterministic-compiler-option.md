@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499837"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480658"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Faz com que o compilador produza um assembly cuja saída byte a byte é idêntica entre compilações para entradas idênticas. 
+Faz com que o compilador produza um assembly cuja saída byte a byte é idêntica entre compilações para entradas idênticas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,24 +37,24 @@ O compilador considera as seguintes entradas com a finalidade de determinismo:
 - A versão precisa do compilador usado e seus assemblies referenciados.
 - O caminho do diretório atual.
 - O conteúdo binário de todos os arquivos passados explicitamente para o compilador direta ou indiretamente, incluindo:
-    - Arquivos de origem
-    - Assemblies referenciados
-    - Módulos referenciados
-    - Recursos
-    - O arquivo de chave de nome forte
-    - @ arquivos de resposta
-    - Analisadores
-    - Conjuntos de regras
-    - Arquivos adicionais que podem ser usados por analisadores
+  - Arquivos de origem
+  - Assemblies referenciados
+  - Módulos referenciados
+  - Recursos
+  - O arquivo de chave de nome forte
+  - @ arquivos de resposta
+  - Analisadores
+  - Conjuntos de regras
+  - Arquivos adicionais que podem ser usados por analisadores
 - A cultura atual (para o idioma no qual as mensagens de diagnóstico e exceção são produzidas).
 - A codificação padrão (ou a página de código atual) se a codificação não for especificada.
 - A existência, a inexistência e o conteúdo dos arquivos em caminhos de pesquisa do compilador (especificados, por exemplo, por `/lib` ou `/recurse`).
 - A plataforma CLR na qual o compilador é executado.
 - O valor de `%LIBPATH%`, que pode afetar o carregamento de dependência do analisador.
 
-Quando as fontes estão disponíveis publicamente, a compilação determinística pode ser usada para estabelecer se um binário é compilado de uma fonte confiável. Isso também pode ser útil em um sistema de compilação contínua para determinar se as etapas de compilação dependentes de alterações para um binário precisam ser executadas. 
+Quando as fontes estão disponíveis publicamente, a compilação determinística pode ser usada para estabelecer se um binário é compilado de uma fonte confiável. Isso também pode ser útil em um sistema de compilação contínua para determinar se as etapas de compilação dependentes de alterações para um binário precisam ser executadas.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)

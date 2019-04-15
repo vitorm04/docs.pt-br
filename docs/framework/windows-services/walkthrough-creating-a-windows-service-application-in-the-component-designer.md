@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Criar um aplicativo de serviço Windows'
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262493"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518026"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Criar um aplicativo de serviço Windows
 
@@ -59,7 +59,6 @@ Renomeie o serviço de **Service1** para **MyNewService**.
 
 3. Selecione **Salvar Tudo** no menu **Arquivo**.
 
-
 ## <a name="add-features-to-the-service"></a>Adicionar recursos ao serviços
 
 Na próxima seção, adicione um log de eventos personalizado ao serviço Windows. O componente <xref:System.Diagnostics.EventLog> é um exemplo do tipo de componente que pode ser adicionado a um serviço Windows.
@@ -74,21 +73,7 @@ Na próxima seção, adicione um log de eventos personalizado ao serviço Window
 
 4. Defina um log de eventos personalizado. Para o C#, edite o construtor `MyNewService()` existente; para o Visual Basic, adicione o construtor `New()`:
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. Adicione uma instrução `using` a **MyNewService.cs** (caso ela ainda não exista) ou uma instrução `Imports` a **MyNewService.vb** para o namespace <xref:System.Diagnostics?displayProperty=nameWithType>:
@@ -141,7 +126,6 @@ Para configurar um mecanismo simples de sondagem, use o componente <xref:System.
 
 2. Adicione uma instrução `using` a **MyNewService.cs** ou uma instrução `Imports` a **MyNewService.vb** para o namespace <xref:System.Timers?displayProperty=nameWithType>:
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +133,6 @@ Para configurar um mecanismo simples de sondagem, use o componente <xref:System.
    ```vb
    Imports System.Timers
    ```
-
 
 3. Na classe `MyNewService`, adicione o método `OnTimer` para manipular o evento <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType>:
 
@@ -185,10 +168,7 @@ Em vez de executar todo o trabalho no thread principal, você pode executar tare
 
 Insira uma linha de código no método <xref:System.ServiceProcess.ServiceBase.OnStop%2A> que adiciona uma entrada ao log de eventos quando o serviço é interrompido:
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>Definir outras ações para o serviço
@@ -200,13 +180,11 @@ O seguinte código mostra como substituir o método <xref:System.ServiceProcess.
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>Definir status do serviço
 
 Os serviços relatam seu status para o [Gerenciador de Controle de Serviço](/windows/desktop/Services/service-control-manager), de modo que um usuário possa determinar se um serviço está funcionando corretamente. Por padrão, um serviço que herda de <xref:System.ServiceProcess.ServiceBase> relata um conjunto limitado de configurações de status, que incluem SERVICE_STOPPED, SERVICE_PAUSED e SERVICE_RUNNING. Se um serviço leva um tempo para ser inicializado, é útil relatar um status SERVICE_START_PENDING. 
 
 Você pode implementar as configurações de status SERVICE_START_PENDING e SERVICE_STOP_PENDING adicionando o código que chama a função [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) do Windows.
-
 
 ### <a name="implement-service-pending-status"></a>Implementar o status pendente do serviço
 
@@ -269,6 +247,9 @@ Você pode implementar as configurações de status SERVICE_START_PENDING e SERV
         Public dwWaitHint As Long
     End Structure
     ```
+
+    > [!NOTE]
+    > O Gerenciador de Controle de Serviço usa os membros `dwWaitHint` e `dwCheckpoint` da [estrutura SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) para determinar quanto tempo aguardar um serviço Windows ser iniciado ou desligado. Se os métodos `OnStart` e `OnStop` tiverem uma execução longa, o serviço poderá solicitar mais tempo chamando `SetServiceStatus` novamente com um valor `dwCheckPoint` incrementado.
 
 3. Na classe `MyNewService`, declare a função [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) usando a [inovação de plataforma](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -341,9 +322,6 @@ Você pode implementar as configurações de status SERVICE_START_PENDING e SERV
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> O Gerenciador de Controle de Serviço usa os membros `dwWaitHint` e `dwCheckpoint` da [estrutura SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) para determinar quanto tempo aguardar um serviço Windows ser iniciado ou desligado. Se os métodos `OnStart` e `OnStop` tiverem uma execução longa, o serviço poderá solicitar mais tempo chamando `SetServiceStatus` novamente com um valor `dwCheckPoint` incrementado.
-
 ## <a name="add-installers-to-the-service"></a>Adicionar instaladores ao serviço
 
 Antes de executar um serviço Windows, é necessário instalá-lo, o que o registra no Gerenciador de Controle de Serviço. Adicione instaladores ao projeto para lidar com os detalhes de registro.
@@ -396,24 +374,8 @@ Cada serviço Windows tem uma entrada do Registro na subchave **HKEY_LOCAL_MACHI
 
 1. Selecione **Program.cs** ou **MyNewService.Designer.vb** e, em seguida, escolha **Exibir Código** no menu de atalho. No método `Main`, altere o código para adicionar um parâmetro de entrada e passá-lo para o construtor do serviço:
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. Em **MyNewService.cs** ou **MyNewService.vb**, altere o construtor `MyNewService` para processar o parâmetro de entrada da seguinte maneira:
 
@@ -493,7 +455,6 @@ Cada serviço Windows tem uma entrada do Registro na subchave **HKEY_LOCAL_MACHI
    ```
 
    Normalmente, esse valor contém o caminho completo para o executável do serviço Windows. Para que o serviço seja iniciado corretamente, o usuário precisará inserir aspas no caminho e em cada parâmetro individual. Um usuário pode alterar os parâmetros na entrada do Registro **ImagePath** para alterar os parâmetros de inicialização do serviço Windows. No entanto, uma maneira melhor é alterar o valor de forma programática e expor a funcionalidade de forma amigável, como por meio de um utilitário de configuração ou gerenciamento.
-
 
 ## <a name="build-the-service"></a>Compilar o serviço
 

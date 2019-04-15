@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342434"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Passo a passo: Criar ouvintes de log personalizados (Visual Basic)
 Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.  
@@ -37,23 +37,23 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Para nomear fortemente o assembly de ouvinte de log  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, escolha **Propriedades**.   
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, escolha **Propriedades**.   
   
-2.  Clique na guia **Assinatura**.  
+2. Clique na guia **Assinatura**.  
   
-3.  Marque a caixa **Assinar o assembly**.  
+3. Marque a caixa **Assinar o assembly**.  
   
-4.  Selecione **Novo\<** da lista suspensa **Escolha um arquivo de chave de nome forte**.  
+4. Selecione **Novo\<** da lista suspensa **Escolha um arquivo de chave de nome forte**.  
   
      A caixa de diálogo **Criar Chave de Nome Forte** é aberta.  
   
-5.  Forneça um nome para o arquivo de chaves na caixa **Nome de arquivo de chaves**.  
+5. Forneça um nome para o arquivo de chaves na caixa **Nome de arquivo de chaves**.  
   
-6.  Digite uma senha nas caixas **Digite a senha** e **Confirmar senha** caixas.  
+6. Digite uma senha nas caixas **Digite a senha** e **Confirmar senha** caixas.  
   
-7.  Clique em **OK**.  
+7. Clique em **OK**.  
   
-8.  Recompile o aplicativo.  
+8. Recompile o aplicativo.  
   
 ## <a name="adding-the-listener"></a>Adicionando o ouvinte  
  Agora que o assembly tem um nome forte, você precisa determinar o nome forte do ouvinte para que `My.Application.Log` use seu ouvinte de log.  
@@ -74,7 +74,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>Para adicionar o ouvinte a My.Application.Log  
   
-1.  Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
+1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
   
      - ou -  
   
@@ -86,17 +86,17 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
     3.  Clique em **Adicionar**.  
   
-2.  Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", localizado na seção `<sources>`. A seção `<sources>` está localizada na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
+2. Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", localizado na seção `<sources>`. A seção `<sources>` está localizada na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   
-3.  Adicione esse elemento à seção `<listeners>`:  
+3. Adicione esse elemento à seção `<listeners>`:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
+4. Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   
-5.  Adicione esse elemento a essa seção `<sharedListeners>`:  
+5. Adicione esse elemento a essa seção `<sharedListeners>`:  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -107,7 +107,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
 ## <a name="see-also"></a>Consulte também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Como: registrar exceções](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Como: registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

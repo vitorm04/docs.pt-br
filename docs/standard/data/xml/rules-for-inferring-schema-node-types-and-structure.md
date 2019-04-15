@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338703"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regras para inferir tipos de nó e estrutura de esquema
 Este tópico descreve como o processo de inferência de esquema converte os tipos de nós em um documento XML a estrutura do idioma da definição de esquema XML (XSD).  
@@ -18,21 +18,21 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
 ## <a name="element-inference-rules"></a>Regras de inferência de elemento  
  Esta seção descreve as regras de inferência para declarações elemento. Há oito estruturas das declarações de elemento que serão inferidas:  
   
-1.  Elemento do tipo simples  
+1. Elemento do tipo simples  
   
-2.  Elemento vazio  
+2. Elemento vazio  
   
-3.  Elemento vazio com atributos  
+3. Elemento vazio com atributos  
   
-4.  Elemento com atributos e conteúdo simples  
+4. Elemento com atributos e conteúdo simples  
   
-5.  Elemento com uma sequência de elementos filho  
+5. Elemento com uma sequência de elementos filho  
   
-6.  Elemento com uma sequência de elementos filho e atributos  
+6. Elemento com uma sequência de elementos filho e atributos  
   
-7.  Elemento com uma sequência das opções de elementos filho  
+7. Elemento com uma sequência das opções de elementos filho  
   
-8.  Elemento com uma sequência das opções de elementos filho e atributos  
+8. Elemento com uma sequência das opções de elementos filho e atributos  
   
 > [!NOTE]
 >  Todas as declarações de `complexType` são inferidas como tipos anônimos. O único elemento global é inferido o elemento raiz; todos os outros elementos são locais.  
@@ -149,7 +149,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Inferindo um esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
 - [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regras para inferir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

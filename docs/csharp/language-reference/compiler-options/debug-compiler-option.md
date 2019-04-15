@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502956"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338482"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opções do compilador C#)
 A opção **-debug** faz o compilador gerar informações de depuração e colocá-las nos arquivos de saída.  
@@ -46,13 +46,13 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a página **Propriedades** do projeto.  
+1. Abra a página **Propriedades** do projeto.  
   
-2.  Clique na página de propriedades **Compilar**.  
+2. Clique na página de propriedades **Compilar**.  
   
-3.  Clique no botão **Avançado**.  
+3. Clique no botão **Avançado**.  
   
-4.  Modifique a propriedade **Informações de Depuração**.  
+4. Modifique a propriedade **Informações de Depuração**.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   
@@ -66,4 +66,4 @@ csc -debug -pdb:app.pdb test.cs
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)

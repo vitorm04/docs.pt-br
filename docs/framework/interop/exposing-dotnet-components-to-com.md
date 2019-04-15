@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345762"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Expondo componentes do .NET Framework para COM
 A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado são atividades distintas para desenvolvedores. Esta seção descreve várias dicas para escrever um código gerenciado que interopera com clientes COM:  
@@ -34,22 +34,23 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
   
 #### <a name="to-consume-a-managed-type-from-com"></a>Para consumir um tipo gerenciado por meio do COM  
   
-1.  [Registrar assemblies com o COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [Registrar assemblies com o COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
      Os tipos em um assembly (e as bibliotecas de tipos) devem ser registrados em tempo de design. Se um instalador não registrar o assembly, instrua os desenvolvedores do COM a usar Regasm.exe.  
   
-2.  [Referenciar tipos .NET por meio do COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [Referenciar tipos .NET por meio do COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
      Os desenvolvedores do COM podem referenciar tipos em um assembly usando as mesmas ferramentas e técnicas que usam hoje.  
   
-3.  [Chamar um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [Chamar um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
      Os desenvolvedores do COM podem chamar métodos no objeto .NET da mesma forma que chamam métodos em qualquer tipo não gerenciado. Por exemplo, a API **CoCreateInstance** do COM ativa objetos .NET.  
   
-4.  [Implante um aplicativo para o acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [Implante um aplicativo para o acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
      Um assembly de nome forte pode ser instalado no cache de assembly global e exige uma assinatura de seu fornecedor. Os assemblies que não têm nome forte devem ser instalados no diretório do aplicativo do cliente.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)
 - [Amostra de interoperabilidade COM: Cliente COM e servidor .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

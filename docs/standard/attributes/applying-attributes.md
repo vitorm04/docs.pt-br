@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337689"
 ---
 # <a name="applying-attributes"></a>Aplicando atributos
 Use o processo a seguir para aplicar um atributo a um elemento do código.  
   
-1.  Defina um novo atributo ou use um atributo existente importando seu namespace do .NET Framework.  
+1. Defina um novo atributo ou use um atributo existente importando seu namespace do .NET Framework.  
   
-2.  Aplique o atributo ao elemento de código, colocando-o imediatamente antes do elemento.  
+2. Aplique o atributo ao elemento de código, colocando-o imediatamente antes do elemento.  
   
      Cada linguagem tem sua própria sintaxe de atributo. Em C++ e C#, o atributo é delimitado por colchetes e separado do elemento por um espaço em branco, que pode incluir uma quebra de linha. No Visual Basic, o atributo é delimitado por colchetes angulares e deve estar na mesma linha lógica. O caractere de continuação de linha pode ser usado se você quiser uma quebra de linha.
   
-3.  Especifique parâmetros posicionais e parâmetros nomeados para o atributo.  
+3. Especifique parâmetros posicionais e parâmetros nomeados para o atributo.  
   
      Os parâmetros posicionais são necessários e devem vir antes de quaisquer parâmetros nomeados. Eles correspondem aos parâmetros de um dos constructos do atributo. Os parâmetros nomeados são opcionais e correspondem às propriedades do atributo de leitura/gravação. Em C++ e C#, especifique `name`=`value` para cada parâmetro opcional, em que `name` é o nome da propriedade. No Visual Basic, especifique `name`:=`value`.  
   

@@ -2,19 +2,19 @@
 title: 'Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337364"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
 Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
   
-1.  Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
+1. Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em se
     Garcia, Debra  
     ```  
   
-2.  Copie estes nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto: Observe que os dois arquivos tem alguns nomes em comum.  
+2. Copie estes nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto: Observe que os dois arquivos tem alguns nomes em comum.  
   
     ```  
     Liu, Jinghao  
