@@ -4,12 +4,12 @@ description: Obtenha uma visão geral de alto nível das opções para desenvolv
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: 55d80e3d9f464b940d17b13a598bdab57631a8e4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: de4ec036be4611ee56823ced3e0cddca5c32b900
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324078"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610789"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo de desenvolvimento de aplicativos baseados no Docker
 
@@ -35,7 +35,7 @@ Ao instalar as ferramentas do [Docker CE (Community Edition)](https://www.docker
   [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 - **Visual Studio Code**. Site oficial. \
-  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+  <https://code.visualstudio.com/download>
 
 - **Docker Community Edition (CE) para Mac e Windows** \
   [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
