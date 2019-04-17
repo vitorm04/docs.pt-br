@@ -2,18 +2,18 @@
 title: Pausando e continuando um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: 99455f117e5e8591750565452c3c40b74bf45ba1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0431b18f6d0e4b96d7494ec2e65acd355992c7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513478"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612596"
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="284bf-102">Pausando e continuando um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="284bf-102">Pausing and Resuming a Workflow</span></span>
-<span data-ttu-id="284bf-103">Fluxos de trabalho pausarão e continuarão em resposta a indexadores e para atividades de bloqueio como <xref:System.Activities.Statements.Delay>, mas um fluxo de trabalho também pode ser explicitamente pausado, descarregado, e continuado usando a persistência.</span><span class="sxs-lookup"><span data-stu-id="284bf-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="a4628-102">Pausando e continuando um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="a4628-102">Pausing and Resuming a Workflow</span></span>
+<span data-ttu-id="a4628-103">Fluxos de trabalho pausarão e continuarão em resposta a indexadores e para atividades de bloqueio como <xref:System.Activities.Statements.Delay>, mas um fluxo de trabalho também pode ser explicitamente pausado, descarregado, e continuado usando a persistência.</span><span class="sxs-lookup"><span data-stu-id="a4628-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="284bf-104">Pausando um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="284bf-104">Pausing a Workflow</span></span>  
- <span data-ttu-id="284bf-105">Para pausar um fluxo de trabalho, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span><span class="sxs-lookup"><span data-stu-id="284bf-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="284bf-106">Este método requer que o fluxo de trabalho persiste e descarrega, e irá acionar <xref:System.TimeoutException> se o fluxo de trabalho não descarrega em 30 segundos.</span><span class="sxs-lookup"><span data-stu-id="284bf-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="a4628-104">Pausando um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="a4628-104">Pausing a Workflow</span></span>  
+ <span data-ttu-id="a4628-105">Para pausar um fluxo de trabalho, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4628-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="a4628-106">Este método requer que o fluxo de trabalho persiste e descarrega, e irá acionar <xref:System.TimeoutException> se o fluxo de trabalho não descarrega em 30 segundos.</span><span class="sxs-lookup"><span data-stu-id="a4628-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -27,8 +27,8 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="284bf-107">Continuando um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="284bf-107">Resuming a Workflow</span></span>  
- <span data-ttu-id="284bf-108">Para continuar um fluxo de trabalho anteriormente em pausa e descarregado, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="284bf-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="284bf-109">Este método carrega um fluxo de trabalho de um armazenamento de persistência na memória.</span><span class="sxs-lookup"><span data-stu-id="284bf-109">This method loads a workflow from a persistence store into memory.</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="a4628-107">Continuando um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="a4628-107">Resuming a Workflow</span></span>  
+ <span data-ttu-id="a4628-108">Para continuar um fluxo de trabalho anteriormente em pausa e descarregado, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4628-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="a4628-109">Este método carrega um fluxo de trabalho de um armazenamento de persistência na memória.</span><span class="sxs-lookup"><span data-stu-id="a4628-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -36,8 +36,8 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="284bf-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="284bf-110">Example</span></span>  
- <span data-ttu-id="284bf-111">O exemplo de código a seguir demonstra como pausar e retomar um fluxo de trabalho usando a persistência.</span><span class="sxs-lookup"><span data-stu-id="284bf-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+## <a name="example"></a><span data-ttu-id="a4628-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a4628-110">Example</span></span>  
+ <span data-ttu-id="a4628-111">O exemplo de código a seguir demonstra como pausar e retomar um fluxo de trabalho usando a persistência.</span><span class="sxs-lookup"><span data-stu-id="a4628-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  
@@ -70,7 +70,7 @@ static void LoadAndCompleteInstance(Guid id)
     Console.WriteLine("Press <enter> to load the persisted workflow");  
     Console.ReadLine();  
     AutoResetEvent waitHandler = new AutoResetEvent(false);  
-    WorkflowApplication wfApp = new WorkflowApplication(new Workflow1());  
+    WorkflowApplication wfApp = new WorkflowApplication(GetDelayedWF());  
     wfApp.InstanceStore =  
         new SqlWorkflowInstanceStore(ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString());  
     wfApp.Completed = (workflowApplicationCompletedEventArgs) => {  
