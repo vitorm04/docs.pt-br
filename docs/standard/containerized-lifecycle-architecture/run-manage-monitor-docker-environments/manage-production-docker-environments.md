@@ -4,12 +4,12 @@ description: Obtenha a conhecer os principais pontos para gerenciar um ambiente 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836611"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672094"
 ---
 # <a name="manage-production-docker-environments"></a>Gerenciar ambientes de produção do Docker
 
@@ -30,7 +30,7 @@ Tabela 6-1 lista as ferramentas de gerenciamento comuns relacionadas à sua plat
 | [O Azure Monitor para contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Ferramenta de gerenciamento dedicada do Azure de Kubernetes | Serviços de Kubernetes do Azure (AKS) |
 | [Interface do usuário Web Kubernetes (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Ferramenta de gerenciamento do Kubernetes, pode monitorar e gerenciar o cluster local do Kubernetes | AKS (Serviço de Kubernetes do Azure)<br/>Kubernetes local |
 | [Portal do Azure para o Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Versão on-line e da área de trabalho para gerenciar clusters do Service Fabric, no Azure, no local, no desenvolvimento local e outras nuvens | Azure Service Fabric |
-| [Contêiner de monitoramento (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Gerenciamento de contêiner geral y solução de monitoramento. Pode gerenciar clusters de Kubernetes por meio [do Azure Monitor para contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>AKS (Serviço de Kubernetes do Azure)<br/>Mesosphere DC/SO e outros. |
+| [Contêiner de monitoramento (Monitor do Azure)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Gerenciamento de contêiner geral y solução de monitoramento. Pode gerenciar clusters de Kubernetes por meio [do Azure Monitor para contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>AKS (Serviço de Kubernetes do Azure)<br/>Mesosphere DC/SO e outros. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

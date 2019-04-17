@@ -4,12 +4,12 @@ description: Obtenha saber as ofertas da Microsoft para dar suporte ao ciclo de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680185"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672258"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introdução à plataforma Microsoft e ferramentas para aplicativos em contêineres
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680185"
 
 A Figura 3-1 mostra os pilares principais no ciclo de vida de aplicativos do Docker classificados por tipo de trabalho entregue por várias equipes (desenvolvimento de aplicativos, processos de infraestrutura de DevOps e o gerenciamento e operações de TI). Normalmente na empresa, os perfis de "a pessoa" responsável para cada área são diferentes. Suas habilidades também são diferentes.
 
-![Ferramentas da Microsoft. Para a carga de trabalho de Design/desenvolvimento: Mecanismo do docker para Windows, o VS e o VS Code, .NET Core, o serviço de Kubernetes do Azure. Para a carga de trabalho de Build/teste/remessa: DevOps do Azure, Team Foundation Server, Docker CLI, o serviço Kubernetes do Azure. Para a carga de trabalho de execução/Monitor/gerenciar: Application Insights, serviços de Kubernetes do Azure do Portal do Azure, Service Fabric, outros orquestradores.](./media/image1.png)
+![Ferramentas da Microsoft. Para a carga de trabalho de Design/desenvolvimento: Mecanismo do docker para Windows, o VS e o VS Code, .NET Core, o serviço de Kubernetes do Azure. Para a carga de trabalho de Build/teste/remessa: DevOps do Azure, Team Foundation Server, Docker CLI, o serviço Kubernetes do Azure. Para a carga de trabalho de execução/Monitor/gerenciar: O Azure Monitor, serviços de Kubernetes do Azure do Portal do Azure, Service Fabric, outros orquestradores.](./media/image1.png)
 
 **Figura 3-1.** Pilares principais no ciclo de vida de aplicativos do Docker em contêineres com ferramentas e plataformas da Microsoft
 
@@ -51,7 +51,7 @@ A plataforma Microsoft e ferramentas para aplicativos em contêineres do Docker,
 
   - **Ferramentas de código-fonte aberto** AKS porque expõe os pontos de extremidade de API padrão para o mecanismo de orquestração, as ferramentas mais populares são compatíveis com o AKS e, na maioria dos casos, funcionarão de imediato — incluindo visualizadores, monitoramento, ferramentas de linha de comando e até mesmo ferramentas futuras como eles se tornam disponíveis.
 
-  - **Application Insights** soution do Azure é para monitorar todos os ângulos de seu ambiente de produção. Você pode monitorar aplicativos do Docker de produção apenas configurando seu SDK nos seus serviços para que você pode obter dados de log gerados pelo sistema de aplicativos.
+  - **O Azure Monitor** solução do Azure é para monitorar todos os ângulos de seu ambiente de produção. Você pode monitorar aplicativos do Docker de produção apenas configurando seu SDK nos seus serviços para que você pode obter dados de log gerados pelo sistema de aplicativos.
 
 Dessa forma, a Microsoft oferece uma base completa para um ciclo de vida de ponta a ponta para aplicativos do Docker em contêineres. No entanto, vale *uma coleção de produtos e tecnologias que permitem que você selecione, opcionalmente e integrar com existente, ferramentas e processos*. A flexibilidade de uma abordagem ampla junto com a força da profundidade dos recursos colocam a Microsoft em uma forte posição para desenvolvimento de aplicativos em contêineres do Docker.
 

@@ -4,20 +4,20 @@ description: Em contêineres Docker ciclo de vida do fluxo de trabalho Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663919"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672297"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 
-*Microsoft Visual Studio, o serviços de DevOps do Azure, o Team Foundation Server e o Application Insights fornecem um ecossistema abrangente para desenvolvimento e operações de TI que proporcionam à sua equipe as ferramentas para gerenciar projetos e rapidamente criar, testar e implantar aplicativos em contêineres.*
+*Serviços de DevOps do Azure, Microsoft Visual Studio, Team Foundation Server e do Azure Monitor fornecem que um ecossistema abrangente para desenvolvimento e operações de TI que proporcionam à sua equipe as ferramentas para gerenciar projetos e rapidamente compilar, testar e implantar em contêineres aplicativos.*
 
 Com o Visual Studio e serviços do Azure DevOps na nuvem, juntamente com o Team Foundation Server local, as equipes de desenvolvimento produtiva podem criar, testar e liberar aplicativos em contêineres que direcionam o Windows ou Linux.
 
-Ferramentas da Microsoft podem automatizar o pipeline para implementações específicas de aplicativos em contêineres — Docker, .NET Core ou qualquer combinação com outras plataformas — desde compilações globais e CI (integração contínua) e testes com serviços de DevOps do Azure ou a equipe Foundation Server, a CD (implantação contínua) para ambientes do Docker (desenvolvimento, preparo, produção) e para transmitir informações de análise sobre os serviços para a equipe de desenvolvimento por meio do Application Insights. Cada confirmação de código pode iniciar uma compilação (CI) e implantar automaticamente os serviços em ambientes em contêineres específicos (CD).
+Ferramentas da Microsoft podem automatizar o pipeline para implementações específicas de aplicativos em contêineres — Docker, .NET Core ou qualquer combinação com outras plataformas — desde compilações globais e CI (integração contínua) e testes com serviços de DevOps do Azure ou a equipe Foundation Server, a CD (implantação contínua) para ambientes do Docker (desenvolvimento, preparo, produção) e para transmitir informações de análise sobre os serviços para a equipe de desenvolvimento por meio do Azure Monitor. Cada confirmação de código pode iniciar uma compilação (CI) e implantar automaticamente os serviços em ambientes em contêineres específicos (CD).
 
 Os desenvolvedores e testadores podem provisionar ambientes de desenvolvimento e teste semelhante à produção com rapidez e facilidade baseados no Docker usando modelos no Microsoft Azure.
 
