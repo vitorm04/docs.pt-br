@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122142"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611895"
 ---
 # <a name="bindings-and-security"></a>Associações e segurança
 As associações fornecidas pelo sistema incluídas com o Windows Communication Foundation (WCF) oferecem uma maneira rápida de aplicativos do WCF de programa. Com uma exceção, todas as associações têm um esquema de segurança padrão habilitado. Este tópico ajuda você a selecionar a associação certa para suas necessidades de segurança.  
@@ -39,7 +39,7 @@ As associações fornecidas pelo sistema incluídas com o Windows Communication 
   
 -   Aplicativos do Web Service Enhancements (WSE).  
   
--   Basic perfil conforme definido na interoperabilidade de serviços da Web (WS-I) especificação ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Basic perfil conforme definido na interoperabilidade de serviços da Web (WS-I) especificação (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   Perfil de segurança básica, conforme definido em WS-I.  
   
@@ -205,8 +205,8 @@ As associações fornecidas pelo sistema incluídas com o Windows Communication 
 |Tipo|Descrição|  
 |----------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
-|Basic|Autenticação básica. Para obter mais informações, consulte RFC 2617 – autenticação HTTP: Básica e Digest, disponível em [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Autenticação Digest. Para obter mais informações, consulte RFC 2617 – autenticação HTTP: Básica e Digest, disponível em [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Autenticação básica. Para obter mais informações, consulte RFC 2617 – autenticação HTTP: Básica e Digest, disponível em <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Digest|Autenticação Digest. Para obter mais informações, consulte RFC 2617 – autenticação HTTP: Básica e Digest, disponível em <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|Autenticação NT LAN Manager (NTLM).|  
 |Windows|Autenticação do Windows.|  
 |Certificado|Autenticação executada usando um certificado.|  

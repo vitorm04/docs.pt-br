@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216659"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611244"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -93,14 +93,14 @@ Em cenários de migração para aplicativos existentes ou herdados que se baseia
 
 Quando você adiciona o nome da imagem ao seu arquivo Dockerfile, você pode selecionar o sistema operacional e a versão por meio de uma marca, como nos exemplos a seguir para imagens de contêiner do Windows com base no .NET Framework:
 
-> | **Marca** | **Versão e sistema** |
+> | **Tag** | **Versão e sistema** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x no Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x com personalização adicional do ASP.NET, no Windows Server Core |
 
 Para o .NET Core (plataforma cruzada para Linux e Windows), as marcas teriam a seguinte aparência:
 
-> | **Marca** | **Versão e sistema**
+> | **Tag** | **Versão e sistema**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 em tempo de execução somente no Linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Tempo de execução somente no Windows Nano Server do .NET core 2.0 |
@@ -125,15 +125,15 @@ Executar um contêiner no Windows, com ou sem o isolamento do Hyper-V é uma dec
 
 -   **Documentação de contêineres do Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
 -   **Conceitos básicos de contêineres do Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
 -   **Infográfico: A Microsoft e contêineres**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>O ecossistema de contêiner no Azure
 

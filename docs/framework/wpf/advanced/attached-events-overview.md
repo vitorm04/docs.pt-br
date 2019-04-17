@@ -12,15 +12,15 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140849"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613584"
 ---
 # <a name="attached-events-overview"></a>Visão geral de eventos anexados
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define um componente de linguagem e tipo de evento chamado de um *evento anexado*. O conceito de um evento anexado permite que você adicione um manipulador para um evento específico a um elemento arbitrário em vez de um elemento que realmente define ou herda o evento. Nesse caso, nem o objeto potencialmente aumentando o evento, nem a instância de tratamento define ou caso contrário, é "proprietário" do evento.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define um componente de linguagem e o tipo de evento chamado de *evento anexado*. O conceito de um evento anexado permite que você adicione um manipulador para um evento específico a um elemento arbitrário em vez de um elemento que realmente define ou herda o evento. Nesse caso, nem o objeto potencialmente aumentando o evento, nem a instância de tratamento define ou caso contrário, é "proprietário" do evento.  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
@@ -64,9 +64,9 @@ ms.locfileid: "59140849"
   
  O padrão é o seguinte:  
   
--   Um método **Add*EventName*manipulador** com dois parâmetros. O primeiro parâmetro deve identificar o evento e o evento identificado deve corresponder a nomes com o ***EventName*** no nome do método. O segundo parâmetro é o manipulador a ser adicionado. O método deve ser `public` e `static`, sem nenhum valor de retorno.  
+-   Um método **Add*EventName*manipulador** com dois parâmetros. O primeiro parâmetro é a instância à qual o manipulador de eventos é adicionado. O segundo parâmetro é o manipulador de eventos para adicionar. O método deve ser `public` e `static`, sem nenhum valor de retorno.  
   
--   Um método **remova*EventName*manipulador** com dois parâmetros. O primeiro parâmetro deve identificar o evento e o evento identificado deve corresponder a nomes com o ***EventName*** no nome do método. O segundo parâmetro é o manipulador a ser removido. O método deve ser `public` e `static`, sem nenhum valor de retorno.  
+-   Um método **remova*EventName*manipulador** com dois parâmetros. O primeiro parâmetro é a instância na qual o manipulador de eventos é removido. O segundo parâmetro é o manipulador de eventos a ser removido. O método deve ser `public` e `static`, sem nenhum valor de retorno.  
   
  O **Add*EventName*manipulador** facilita o método de acessador a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processamento quando anexou o manipulador de eventos são os atributos declarados em um elemento. O **Add*EventName*manipulador** e **remover*EventName*manipulador** métodos também permitem acesso de código ao repositório do manipulador de eventos para o evento anexado.  
   

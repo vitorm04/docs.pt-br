@@ -1,5 +1,5 @@
 ---
-title: Linguagem de expressões regulares - referência rápida
+title: Linguagem de expressões regulares – referência rápida
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 f1_keywords:
@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58410518"
 ---
-# <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares - referência rápida
+# <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares – referência rápida
  Uma expressão regular é um padrão ao qual o mecanismo de expressões regulares tenta corresponder no texto de entrada. Um padrão consiste em um ou mais literais de caracteres, operadores ou constructos.  Para ver uma breve introdução, confira [Expressões regulares no .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
  Cada seção desta referência rápida lista uma categoria específica de caracteres, operadores e constructos que podem ser usados para definir expressões regulares.  
@@ -38,14 +38,14 @@ ms.locfileid: "58410518"
   
 |Caractere com escape|Descrição|Padrão|Correspondências|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Corresponde a um caractere de sino, \u0007.|`\a`|`"\u0007"` in `"Error!" + '\u0007'`|  
-|`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|`"\b\b\b\b"` in `"\b\b\b\b"`|  
+|`\a`|Corresponde a um caractere de sino, \u0007.|`\a`|`"\u0007"` em `"Error!" + '\u0007'`|  
+|`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|`"\b\b\b\b"` em `"\b\b\b\b"`|  
 |`\t`|Corresponde a uma tabulação, \u0009.|`(\w+)\t`|`"item1\t"` e `"item2\t"` em `"item1\titem2\t"`|  
-|`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|`"\r\nThese"` in `"\r\nThese are\ntwo lines."`|  
-|`\v`|Corresponde a uma tabulação vertical, \u000B.|`[\v]{2,}`|`"\v\v\v"` in `"\v\v\v"`|  
-|`\f`|Corresponde a um avanço de página, \u000C.|`[\f]{2,}`|`"\f\f\f"` in `"\f\f\f"`|  
-|`\n`|Corresponde a uma nova linha, \u000A.|`\r\n(\w+)`|`"\r\nThese"` in `"\r\nThese are\ntwo lines."`|  
-|`\e`|Corresponde a um escape, \u001B.|`\e`|`"\x001B"` in `"\x001B"`|  
+|`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|`"\r\nThese"` em `"\r\nThese are\ntwo lines."`|  
+|`\v`|Corresponde a uma tabulação vertical, \u000B.|`[\v]{2,}`|`"\v\v\v"` em `"\v\v\v"`|  
+|`\f`|Corresponde a um avanço de página, \u000C.|`[\f]{2,}`|`"\f\f\f"` em `"\f\f\f"`|  
+|`\n`|Corresponde a uma nova linha, \u000A.|`\r\n(\w+)`|`"\r\nThese"` em `"\r\nThese are\ntwo lines."`|  
+|`\e`|Corresponde a um escape, \u001B.|`\e`|`"\x001B"` em `"\x001B"`|  
 |`\` *nnn*|Usa representação octal para especificar um caractere (*nnn* consiste em dois ou três dígitos).|`\w\040\w`|`"a b"` e `"c d"` em `"a bc d"`|  
 |`\x` *nn*|Usa representação hexadecimal para especificar um caractere (*nn* consiste exatamente em dois dígitos).|`\w\x20\w`|`"a b"` e `"c d"` em `"a bc d"`|  
 |`\c` *X*<br /><br /> `\c` *x*|Corresponde ao caractere de controle ASCII especificado por *X* ou *x*, em que *X* ou *x* é a letra do caractere de controle.|`\cC`|`"\x0003"` em `"\x0003"` (Ctrl-C)|  
@@ -59,18 +59,18 @@ ms.locfileid: "58410518"
   
 |Classe de caractere|Descrição|Padrão|Correspondências|  
 |---------------------|-----------------|-------------|-------------|  
-|`[` *character_group* `]`|Corresponde a qualquer caractere único em *character_group*. Por padrão, a correspondência diferencia maiúsculas de minúsculas.|`[ae]`|`"a"` in `"gray"`<br /><br /> `"a"` e `"e"` em `"lane"`|  
-|`[^` *character_group* `]`|Negação: Encontra a correspondência de qualquer caractere individual que não esteja em *character_group*. Por padrão, caracteres em *character_group* diferenciam maiúsculas de minúsculas.|`[^aei]`|`"r"`, `"g"` e `"n"` em `"reign"`|  
-|`[` *first* `-` *last* `]`|Intervalo de caracteres: Encontra a correspondência de qualquer caractere individual no intervalo de *first* a *last*.|`[A-Z]`|`"A"` e `"B"` em `"AB123"`|  
-|`.`|Curinga: Encontra a correspondência de qualquer caractere individual, exceto \n.<br /><br /> Para corresponder a um caractere literal de ponto (. ou `\u002E`), você deve precedê-lo com o caractere de escape (`\.`).|`a.e`|`"ave"` in `"nave"`<br /><br /> `"ate"` in `"water"`|  
-|`\p{` *name* `}`|Corresponde a qualquer caractere único na categoria geral Unicode ou no bloco nomeado especificado por *name*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"` e `"L"` em `"City Lights"`<br /><br /> `"Д"` e `"Ж"` em `"ДЖem"`|  
-|`\P{` *name* `}`|Corresponde a qualquer caractere único que não esteja na categoria geral Unicode ou no bloco nomeado especificado por *name*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"` e `"y"` em `"City"`<br /><br /> `"e"` e `"m"` em `"ДЖem"`|  
+|`[` *grupo_de_caracteres* `]`|Corresponde a qualquer caractere único em *grupo_de_caracteres*. Por padrão, a correspondência diferencia maiúsculas de minúsculas.|`[ae]`|`"a"` em `"gray"`<br /><br /> `"a"` e `"e"` em `"lane"`|  
+|`[^` *grupo_de_caracteres* `]`|Negação: Encontra a correspondência de qualquer caractere individual que não esteja em *grupo_de_caracteres*. Por padrão, caracteres em *grupo_de_caracteres* diferenciam maiúsculas de minúsculas.|`[^aei]`|`"r"`, `"g"` e `"n"` em `"reign"`|  
+|`[` *primeiro* `-` *último* `]`|Intervalo de caracteres: Encontra a correspondência de qualquer caractere individual no intervalo de *primeiro* a *último*.|`[A-Z]`|`"A"` e `"B"` em `"AB123"`|  
+|`.`|Curinga: Encontra a correspondência de qualquer caractere individual, exceto \n.<br /><br /> Para corresponder a um caractere literal de ponto (. ou `\u002E`), você deve precedê-lo com o caractere de escape (`\.`).|`a.e`|`"ave"` em `"nave"`<br /><br /> `"ate"` em `"water"`|  
+|`\p{` *nome* `}`|Corresponde a qualquer caractere único na categoria geral Unicode ou no bloco nomeado especificado por *nome*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"` e `"L"` em `"City Lights"`<br /><br /> `"Д"` e `"Ж"` em `"ДЖem"`|  
+|`\P{` *nome* `}`|Corresponde a qualquer caractere único que não esteja na categoria geral Unicode ou no bloco nomeado especificado por *nome*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"` e `"y"` em `"City"`<br /><br /> `"e"` e `"m"` em `"ДЖem"`|  
 |`\w`|Corresponde a qualquer caractere de palavra.|`\w`|`"I"`, `"D"`, `"A"`, `"1"` e `"3"` em `"ID A1.3"`|  
 |`\W`|Corresponde a qualquer caractere que não seja uma palavra.|`\W`|`" "` e `"."` em `"ID A1.3"`|  
-|`\s`|Corresponde a qualquer caractere de espaço em branco.|`\w\s`|`"D "` in `"ID A1.3"`|  
-|`\S`|Corresponde a qualquer caractere que não seja um caractere de espaço em branco.|`\s\S`|`" _"` in `"int __ctr"`|  
-|`\d`|Corresponde a qualquer dígito decimal.|`\d`|`"4"` in `"4 = IV"`|  
-|`\D`|Corresponde a qualquer caractere que não seja uma dígito decimal|`\D`|`" "`, `"="`, `" "`, `"I"` e `"V"` em `"4 = IV"`|  
+|`\s`|Corresponde a qualquer caractere de espaço em branco.|`\w\s`|`"D "` em `"ID A1.3"`|  
+|`\S`|Corresponde a qualquer caractere que não seja um caractere de espaço em branco.|`\s\S`|`" _"` em `"int __ctr"`|  
+|`\d`|Corresponde a qualquer dígito decimal.|`\d`|`"4"` em `"4 = IV"`|  
+|`\D`|Corresponde a qualquer caractere que não seja uma dígito decimal.|`\D`|`" "`, `"="`, `" "`, `"I"` e `"V"` em `"4 = IV"`|  
   
  [Voltar ao início](#top)  
   
@@ -79,11 +79,11 @@ ms.locfileid: "58410518"
   
 |Asserção|Descrição|Padrão|Correspondências|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Por padrão, a correspondência precisa começar no início da cadeia de caracteres. No modo multilinha, precisa começar no início da linha.|`^\d{3}`|`"901"` in `"901-333-"`|  
-|`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve antes do fim da linha ou antes de `\n` no fim da linha.|`-\d{3}$`|`"-333"` in `"-901-333"`|  
-|`\A`|A correspondência deve ocorrer no início da cadeia de caracteres.|`\A\d{3}`|`"901"` in `"901-333-"`|  
-|`\Z`|A correspondência deve ocorrer no final da cadeia de caracteres ou antes de `\n` no final da cadeia de caracteres.|`-\d{3}\Z`|`"-333"` in `"-901-333"`|  
-|`\z`|A correspondência deve ocorrer no final da cadeia de caracteres.|`-\d{3}\z`|`"-333"` in `"-901-333"`|  
+|`^`|Por padrão, a correspondência precisa começar no início da cadeia de caracteres. No modo multilinha, precisa começar no início da linha.|`^\d{3}`|`"901"` em `"901-333-"`|  
+|`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve antes do fim da linha ou antes de `\n` no fim da linha.|`-\d{3}$`|`"-333"` em `"-901-333"`|  
+|`\A`|A correspondência deve ocorrer no início da cadeia de caracteres.|`\A\d{3}`|`"901"` em `"901-333-"`|  
+|`\Z`|A correspondência deve ocorrer no final da cadeia de caracteres ou antes de `\n` no final da cadeia de caracteres.|`-\d{3}\Z`|`"-333"` em `"-901-333"`|  
+|`\z`|A correspondência deve ocorrer no final da cadeia de caracteres.|`-\d{3}\z`|`"-333"` em `"-901-333"`|  
 |`\G`|A correspondência deve ocorrer no ponto em que a correspondência anterior foi encerrada.|`\G\(\d\)`|`"(1)"`, `"(3)"` e `"(5)"` em `"(1)(3)(5)[7](9)"`|  
 |`\b`|A correspondência deve ocorrer em um limite entre um caractere `\w` (alfanumérico) e um caractere `\W` (não alfanumérico).|`\b\w+\s\w+\b`|`"them theme"` e `"them them"` em `"them theme them them"`|  
 |`\B`|A correspondência não deve ocorrer em um limite `\b`.|`\Bend\w*\b`|`"ends"` e `"ender"` em `"end sends endure lender"`|  
@@ -95,16 +95,16 @@ ms.locfileid: "58410518"
   
 |Constructo de agrupamento|Descrição|Padrão|Correspondências|  
 |------------------------|-----------------|-------------|-------------|  
-|`(` *subexpression* `)`|Captura a subexpressão correspondente e atribui a ela um número ordinal com base um.|`(\w)\1`|`"ee"` in `"deep"`|  
-|`(?<` *nome* `>` *subexpressão* `)`|Captura a subexpressão correspondente em um grupo nomeado.|`(?<double>\w)\k<double>`|`"ee"` in `"deep"`|  
-|`(?<` *nome1* `-` *nome2* `>` *subexpressão* `)`|Especifica uma definição de grupo de balanceamento. Para saber mais, confira a seção "Definição de grupo de balanceamento" em [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` in `"3+2^((1-3)*(3-1))"`|  
-|`(?:` *subexpression* `)`|Define um grupo de não captura.|`Write(?:Line)?`|`"WriteLine"` in `"Console.WriteLine()"`<br /><br /> `"Write"` in `"Console.Write(value)"`|  
-|`(?imnsx-imnsx:` *subexpression* `)`|Aplica ou desabilita as opções especificadas em *subexpressão*. Para obter mais informações, consulte [Opções de expressões regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"` e `"A12XL"` em `"A12xl A12XL a12xl"`|  
-|`(?=` *subexpression* `)`|Asserções lookahead positivas de largura zero.|`\w+(?=\.)`|`"is"`, `"ran"` e `"out"` em `"He is. The dog ran. The sun is out."`|  
-|`(?!` *subexpression* `)`|Asserções lookahead negativas de largura zero.|`\b(?!un)\w+\b`|`"sure"` e `"used"` em `"unsure sure unity used"`|  
-|`(?<=` *subexpression* `)`|Asserção lookbehind positiva de largura zero.|`(?<=19)\d{2}\b`|`"99"`, `"50"` e `"05"` em `"1851 1999 1950 1905 2003"`|  
-|`(?<!` *subexpression* `)`|Asserção lookbehind negativa de largura zero.|`(?<!19)\d{2}\b`|`"51"` e `"03"` em `"1851 1999 1950 1905 2003"`|  
-|`(?>` *subexpression* `)`|Subexpressão sem retrocesso (ou "Greedy").|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` e `"5AB"` em `"1ABB 3ABBC 5AB 5AC"`|  
+|`(` *subexpressão* `)`|Captura a subexpressão correspondente e atribui a ela um número ordinal com base um.|`(\w)\1`|`"ee"` em `"deep"`|  
+|`(?<` *nome* `>` *subexpressão* `)`|Captura a subexpressão correspondente em um grupo nomeado.|`(?<double>\w)\k<double>`|`"ee"` em `"deep"`|  
+|`(?<` *nome1* `-` *nome2* `>` *subexpressão* `)`|Especifica uma definição de grupo de balanceamento. Para saber mais, confira a seção "Definição de grupo de balanceamento" em [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` em `"3+2^((1-3)*(3-1))"`|  
+|`(?:` *subexpressão* `)`|Define um grupo de não captura.|`Write(?:Line)?`|`"WriteLine"` em `"Console.WriteLine()"`<br /><br /> `"Write"` em `"Console.Write(value)"`|  
+|`(?imnsx-imnsx:` *subexpressão* `)`|Aplica ou desabilita as opções especificadas na *subexpressão*. Para obter mais informações, consulte [Opções de expressões regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"` e `"A12XL"` em `"A12xl A12XL a12xl"`|  
+|`(?=` *subexpressão* `)`|Asserções lookahead positivas de largura zero.|`\w+(?=\.)`|`"is"`, `"ran"` e `"out"` em `"He is. The dog ran. The sun is out."`|  
+|`(?!` *subexpressão* `)`|Asserções lookahead negativas de largura zero.|`\b(?!un)\w+\b`|`"sure"` e `"used"` em `"unsure sure unity used"`|  
+|`(?<=` *subexpressão* `)`|Asserção lookbehind positiva de largura zero.|`(?<=19)\d{2}\b`|`"99"`, `"50"` e `"05"` em `"1851 1999 1950 1905 2003"`|  
+|`(?<!` *subexpressão* `)`|Asserção lookbehind negativa de largura zero.|`(?<!19)\d{2}\b`|`"51"` e `"03"` em `"1851 1999 1950 1905 2003"`|  
+|`(?>` *subexpressão* `)`|Subexpressão sem retrocesso (ou "Greedy").|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` e `"5AB"` em `"1ABB 3ABBC 5AB 5AC"`|  
   
  [Voltar ao início](#top)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "58410518"
 |`?`|Corresponde ao elemento anterior zero ou uma vez.|`"rai?n"`|`"ran"`, `"rain"`|  
 |`{` *n* `}`|Corresponde ao elemento anterior exatamente *n* vezes.|`",\d{3}"`|`",043"` em `"1,043.6"`, `",876"`, `",543"` e `",210"` em `"9,876,543,210"`|  
 |`{` *n* `,}`|Corresponde ao elemento anterior pelo menos *n* vezes.|`"\d{2,}"`|`"166"`, `"29"`, `"1930"`|  
-|`{` *n* `,` *m* `}`|Corresponde ao elemento anterior pelo menos *n* vezes, mas não mais do que *m* vezes.|`"\d{3,5}"`|`"166"`, `"17668"`<br /><br /> `"19302"` in `"193024"`|  
+|`{` *n* `,` *m* `}`|Corresponde ao elemento anterior pelo menos *n* vezes, mas não mais do que *m* vezes.|`"\d{3,5}"`|`"166"`, `"17668"`<br /><br /> `"19302"` em `"193024"`|  
 |`*?`|Corresponde ao elemento anterior zero ou mais vezes, mas o menor número de vezes possível.|`\d*?\.\d`|`".0"`, `"19.9"`, `"219.9"`|  
 |`+?`|Corresponde ao elemento anterior uma ou mais vezes, mas o menor número de vezes possível.|`"be+?"`|`"be"` em `"been"`, `"be"` em `"bent"`|  
 |`??`|Corresponde ao elemento anterior zero ou uma vez, mas o menor número de vezes possível.|`"rai??n"`|`"ran"`, `"rain"`|  
@@ -133,8 +133,8 @@ ms.locfileid: "58410518"
   
 |Constructo de referência inversa|Descrição|Padrão|Correspondências|  
 |-----------------------------|-----------------|-------------|-------------|  
-|`\` *number*|Referência inversa. Corresponde ao valor de uma subexpressão numerada.|`(\w)\1`|`"ee"` in `"seek"`|  
-|`\k<` *name* `>`|Referência inversa nomeada. Corresponde ao valor de uma expressão nomeada.|`(?<char>\w)\k<char>`|`"ee"` in `"seek"`|  
+|`\` *número*|Referência inversa. Corresponde ao valor de uma subexpressão numerada.|`(\w)\1`|`"ee"` em `"seek"`|  
+|`\k<` *nome* `>`|Referência inversa nomeada. Corresponde ao valor de uma expressão nomeada.|`(?<char>\w)\k<char>`|`"ee"` em `"seek"`|  
   
  [Voltar ao início](#top)  
   
@@ -144,8 +144,8 @@ ms.locfileid: "58410518"
 |Constructo de alternância|Descrição|Padrão|Correspondências|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Corresponde a qualquer elemento separado pelo caractere de barra vertical (<code>&#124;</code>).|<code>th(e&#124;is&#124;at)</code>|`"the"` e `"this"` em `"this is the day."`|  
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Corresponde a *yes* se o padrão de expressão regular designado por *expression* for correspondente. Do contrário, corresponde à parte *no* opcional. *expression* é interpretado como uma asserção de largura zero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"` e `"910"` em `"A10 C103 910"`|  
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Corresponde a *yes* se *name*, um grupo de captura nomeado ou numerado, apresenta uma correspondência. Do contrário, corresponde a *no* opcional.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "` e `"\"Yiska playing.jpg\""` em `"Dogs.jpg \"Yiska playing.jpg\""`|  
+|`(?(` *expressão* `)` *sim* <code>&#124;</code> *não* `)`|Corresponde a *sim* se o padrão de expressão regular designado por *expressão* for correspondente. Do contrário, corresponde à parte *não* opcional. *expressão* é interpretado como uma asserção de largura zero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"` e `"910"` em `"A10 C103 910"`|  
+|`(?(` *nome* `)` *sim* <code>&#124;</code> *não* `)`|Corresponde a *sim* se *nome*, um grupo de captura nomeado ou numerado, apresenta uma correspondência. Do contrário, corresponde a *não* opcional.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "` e `"\"Yiska playing.jpg\""` em `"Dogs.jpg \"Yiska playing.jpg\""`|  
   
  [Voltar ao início](#top)  
   
@@ -154,8 +154,8 @@ ms.locfileid: "58410518"
   
 |Caractere|Descrição|Padrão|Padrão de substituição|Cadeia de caracteres de entrada|Cadeia de caracteres de resultado|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
-|`$` *number*|Substitui a subcadeia de caracteres correspondida pelo grupo *number*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|  
-|`${` *name* `}`|Substitui a subcadeia de caracteres correspondida pelo grupo chamado *name*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
+|`$` *número*|Substitui a substring de caracteres correspondida pelo grupo *número*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|  
+|`${` *nome* `}`|Substitui a substring de caracteres correspondida pelo grupo chamado *nome*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
 |`$$`|Substitui um literal "$".|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
 |`$&`|Substitui uma cópia da correspondência inteira.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
 |``$` ``|Substitui todo o texto da cadeia de caracteres de entrada antes da correspondência.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
@@ -172,7 +172,7 @@ ms.locfileid: "58410518"
   
 -   Usando o [constructo diverso](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, em que um sinal de subtração (-) antes de uma opção ou um conjunto de opções desativa essas opções. Por exemplo, `(?i-mn)` ativa a correspondência sem diferenciação de maiúsculas e minúsculas (`i`), desativa o modo de várias linhas (`m`) e desativa capturas de grupo sem nome (`n`). A opção se aplica ao padrão de expressão regular no ponto em que a opção é definida e entra em vigor no final do padrão ou no ponto em que outro constructo inverte a opção.  
   
--   Usando o [construtor de agrupamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`, que define opções somente para o grupo especificado.  
+-   Usando o [construtor de agrupamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpressão*`)`, que define opções somente para o grupo especificado.  
   
  O mecanismo de expressões regulares do .NET dá suporte às opções embutidas a seguir.  
   

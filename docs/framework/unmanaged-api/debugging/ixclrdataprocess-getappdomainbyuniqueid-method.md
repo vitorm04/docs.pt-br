@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 257fa2cf03a62ea888b76519aa5c9f9e84038045
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126497"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614016"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>Método IXCLRDataProcess::GetAppDomainByUniqueId
 
@@ -29,7 +29,8 @@ Obtém um `AppDomain` em um processo com base em seu identificador exclusivo.
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>Sintaxe
-```
+
+```cpp
 HRESULT GetAppDomainByUniqueID(
     [in] ULONG64               id,
     [out] IXCLRDataAppDomain **appDomain
@@ -49,10 +50,9 @@ HRESULT GetAppDomainByUniqueID(
 O método fornecido é parte do `IXCLRDataProcess` de interface e corresponde ao slot de 20 anos da tabela de método virtual. O `IXCLRDataAppDomain*` retornado é usado para interação com outras APIs.
 
 ## <a name="requirements"></a>Requisitos
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Cabeçalho:** Nenhum **biblioteca:** Nenhum **versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Consulte também
 

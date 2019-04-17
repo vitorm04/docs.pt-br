@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214865"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611530"
 ---
 # <a name="connectserverwmi-function"></a>Função ConnectServerWmi
+
 Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>Parâmetros
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in] Um ponteiro para um válido `BSTR` que contém a senha. Um `null` indica o contexto de segurança atual. Uma cadeia de caracteres vazia ("") indica uma senha válida de comprimento zero.
 
 `strLocale`\
-[in] Um ponteiro para um válido `BSTR` que indica a localidade correta para a recuperação de informações. Identificadores de localidade da Microsoft, o formato da cadeia de caracteres é "MS\_*xxx*", onde *xxx* é uma cadeia de caracteres em formato hexadecimal que indica o identificador de localidade (LCID). Se um local inválido for especificado, o método retorna `WBEM_E_INVALID_PARAMETER` exceto no Windows 7, em que a localidade padrão do servidor é usada em vez disso. Se ' null1, a localidade atual é usado. 
- 
+[in] Um ponteiro para um válido `BSTR` que indica a localidade correta para a recuperação de informações. Identificadores de localidade da Microsoft, o formato da cadeia de caracteres é "MS\_*xxx*", onde *xxx* é uma cadeia de caracteres em formato hexadecimal que indica o identificador de localidade (LCID). Se um local inválido for especificado, o método retorna `WBEM_E_INVALID_PARAMETER` exceto no Windows 7, em que a localidade padrão do servidor é usada em vez disso. Se ' null1, a localidade atual é usado.
+
 `lSecurityFlags`\
 [in] Sinalizadores a serem passados para o `ConnectServerWmi` método. Um valor de zero (0) para esse parâmetro resulta na chamada para `ConnectServerWmi` retornando somente após o estabelecimento de uma conexão ao servidor. Isso pode resultar em um aplicativo não está respondendo indefinidamente se o servidor será interrompido. Os outros valores válidos são:
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*nome de domínio* | Autenticação NT LAN Manager é usada, e este parâmetro contém um nome de domínio do NTLM. |
 
 `pCtx`\
-[in] Normalmente, esse parâmetro é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto exigido por um ou mais provedores de classe dinâmica. 
+[in] Normalmente, esse parâmetro é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto exigido por um ou mais provedores de classe dinâmica.
 
 `ppNamespace`\
 [out] Quando a função retornar, recebe um ponteiro para um [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto associado ao namespace especificado. Ele é definido para apontar para `null` quando ocorre um erro.
@@ -116,4 +118,4 @@ Para acesso local para o namespace padrão, `strNetworkResource` pode ser um cam
 
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

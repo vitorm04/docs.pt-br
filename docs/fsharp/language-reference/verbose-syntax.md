@@ -2,12 +2,12 @@
 title: Sintaxe detalhada
 description: Aprenda a diferença entre a sintaxe leve e detalhado no F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 05b909d438e9844ad5adcb2a4087ce04f8999751
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c770f2843276619cb2878198a537dcfb9c054b6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610886"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613779"
 ---
 # <a name="verbose-syntax"></a>Sintaxe detalhada
 
@@ -33,6 +33,7 @@ expressões compostas
 <expression1>
 <expression2>
 ```
+
 </td><td>
 
 ```fsharp
@@ -84,6 +85,7 @@ begin
     <expression2>;
 end
 ```
+
 </td>
 </tr>
 <tr><td>
@@ -162,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>Registro
+<tr><td>record
 </td><td>
 
 ```fsharp
@@ -206,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>Estrutura</td><td>
+<tr><td>Estrutura </td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -244,7 +246,7 @@ type <union-name> =
     ...
     with
         <value-or-member-definitions>
-    end    
+    end
 ```
 
 </td>
@@ -255,6 +257,7 @@ type <union-name> =
 type <interface-name> =
     ...
 ```
+
 </td><td>
 
 ```fsharp

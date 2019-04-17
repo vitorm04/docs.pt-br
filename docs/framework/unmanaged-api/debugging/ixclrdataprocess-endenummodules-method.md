@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3b7050e92af6fc58b45837840b2796a5deac955c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375331"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611426"
 ---
 # <a name="ixclrdataprocessendenummodules-method"></a>Método IXCLRDataProcess::EndEnumModules
 
@@ -29,7 +29,8 @@ Libera os recursos usados pelos iteradores internos usados durante a enumeraçã
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>Sintaxe
-```
+
+```cpp
 HRESULT EndEnumModules(
     [in] CLRDATA_ENUM handle
 );
@@ -46,10 +47,8 @@ O método fornecido é parte do `IXCLRDataProcess` de interface e corresponde ao
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).   
-**Cabeçalho:** Nenhum   
-**Biblioteca:** Nenhum   
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Cabeçalho:** Nenhum **biblioteca:** Nenhum **versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Consulte também
 

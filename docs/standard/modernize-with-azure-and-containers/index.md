@@ -4,12 +4,12 @@ description: Aprenda a comparação de precisão and -shift e modernizar aplicat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324689"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613090"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure (2ª edição)
 
@@ -91,7 +91,7 @@ O terceiro nível de maturidade é a meta final na nuvem, mas é opcional para m
 
 A Tabela 1-1 descreve as principais vantagens e motivos para escolher cada abordagem de migração ou modernização.
 
-| **Pronto para infraestrutura de nuvem** <br /> *Lift- and -shift* | **Otimização para nuvem** <br /> *Modernizar* | **Nativo de nuvem** <br /> *Modernize, refazer a arquitetura e reescrever* |
+| **Pronto para infraestrutura de nuvem** <br /> *Lift-and-shift* | **Otimização para nuvem** <br /> *Modernize* | **Cloud-Native** <br /> *Modernize, refazer a arquitetura e reescrever* |
 |---|---|---|
 | **Destino de computação do aplicativo** |
 | Aplicativos implantados em VMs no Azure | Monolítico ou aplicativos de N camadas implantados para o serviço de aplicativo do Azure, instância de contêiner do Azure (ACI), VMs com contêineres, o Azure Service Fabric ou o AKS (serviço de Kubernetes do Azure) | Microsserviços em contêineres no serviço de Kubernetes do Azure (AKS), o Service Fabric e/ou microsserviços sem servidor com base nas funções do Azure. |
@@ -129,7 +129,7 @@ A Figura 1-3 mostra as tecnologias internas que você pode usar para cada nível
 
 ![Tecnologias internas para cada nível de maturidade de modernização](./media/image1-3.png)
 
-> **Figura 1 a 3.** Tecnologias internas para cada nível de maturidade de modernização
+> **Figura 1-3.** Tecnologias internas para cada nível de maturidade de modernização
 
 ## <a name="lift-and-shift-scenario"></a>Cenário de lift- and -shift
 
@@ -145,13 +145,13 @@ Para cenários de modernização, você pode ter um aplicativo de otimização d
 
 ![Cenário de exemplo de "Escolha", com o banco de dados no IaaS, DevOps e ativos em contêineres](./media/image1-5.png)
 
-> **Figura 1 a 5.** Cenário de exemplo de "Escolha", com o banco de dados no IaaS, DevOps e ativos em contêineres
+> **Figura 1-5.** Cenário de exemplo de "Escolha", com o banco de dados no IaaS, DevOps e ativos em contêineres
 
 Em seguida, como o cenário ideal para muitos aplicativos existentes do .NET Framework migrar, você pode migrar para um aplicativo de otimização para nuvem, para obter benefícios significativos com pouco trabalho. Essa abordagem também prepara você para nativo de nuvem como uma evolução futura possíveis. A Figura 1-6 mostra um exemplo.
 
 ![Cenário de otimização para nuvem aplicativos de exemplo, com contêineres do Windows e os serviços gerenciados](./media/image1-6.png)
 
-> **Figura 1 a 6.** Cenário de otimização para nuvem aplicativos de exemplo, com contêineres do Windows e os serviços gerenciados
+> **Figura 1-6.** Cenário de otimização para nuvem aplicativos de exemplo, com contêineres do Windows e os serviços gerenciados
 
 Além disso, você pode estender o aplicativo de otimização de nuvem existente adicionando alguns microsserviços para cenários específicos. Isso moverá você parcialmente para o nível de modelo nativos de nuvem, o que não é o foco principal deste guia.
 
@@ -161,7 +161,7 @@ Este guia abrange um subconjunto específico de cenários de exemplo, conforme m
 
 ![Nativo de nuvem não é abordado neste guia](./media/image1-7.png)
 
-> **Figura 1 a 7.** Nativo de nuvem não é abordado neste guia
+> **Figura 1-7.** Nativo de nuvem não é abordado neste guia
 
 O foco deste guia é específico. Ele mostra o caminho que você pode tomar para alcançar um lift- and -shift dos seus aplicativos .NET existentes, sem refazendo a arquitetura e sem alterações no código. Por fim, ele mostra como tornar seu aplicativo otimizada para a nuvem.
 
@@ -170,13 +170,13 @@ Este guia não mostra como criar aplicativos nativos de nuvem, por exemplo, como
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Em contêineres Docker o ciclo de vida do aplicativo com a plataforma e ferramentas Microsoft** (livro eletrônico baixável) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres** (livro eletrônico baixável) \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **Arquitetura de aplicativos web modernos com o ASP.NET Core e o Azure** (livro eletrônico baixável) \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia
 
