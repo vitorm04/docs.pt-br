@@ -6,35 +6,35 @@ helpviewer_keywords:
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
 ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821407"
 ---
-# <a name="value-visual-basic"></a><span data-ttu-id="d84a4-102">\<valor > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d84a4-102">\<value> (Visual Basic)</span></span>
-<span data-ttu-id="d84a4-103">Especifica a descrição de uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="d84a4-103">Specifies the description of a property.</span></span>  
+# <a name="value-visual-basic"></a><span data-ttu-id="df7be-102">\<valor > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df7be-102">\<value> (Visual Basic)</span></span>
+<span data-ttu-id="df7be-103">Especifica a descrição de uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="df7be-103">Specifies the description of a property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d84a4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d84a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df7be-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="df7be-104">Syntax</span></span>  
   
 ```xml  
 <value>property-description</value>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d84a4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d84a4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="df7be-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="df7be-105">Parameters</span></span>  
  `property-description`  
- <span data-ttu-id="d84a4-106">Uma descrição da propriedade.</span><span class="sxs-lookup"><span data-stu-id="d84a4-106">A description for the property.</span></span>  
+ <span data-ttu-id="df7be-106">Uma descrição da propriedade.</span><span class="sxs-lookup"><span data-stu-id="df7be-106">A description for the property.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d84a4-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d84a4-107">Remarks</span></span>  
- <span data-ttu-id="d84a4-108">Use o `<value>` marca para descrever uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="d84a4-108">Use the `<value>` tag to describe a property.</span></span> <span data-ttu-id="d84a4-109">Observe que quando você adiciona uma propriedade usando o Assistente de código no ambiente de desenvolvimento do Visual Studio, ele adicionará um [ \<resumo >](../../../visual-basic/language-reference/xmldoc/summary.md) marca para a nova propriedade.</span><span class="sxs-lookup"><span data-stu-id="d84a4-109">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="d84a4-110">Você deve adicionar manualmente um `<value>` marca para descrever o valor que representa a propriedade.</span><span class="sxs-lookup"><span data-stu-id="d84a4-110">You should then manually add a `<value>` tag to describe the value that the property represents.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="df7be-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="df7be-107">Remarks</span></span>  
+ <span data-ttu-id="df7be-108">Use o `<value>` marca para descrever uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="df7be-108">Use the `<value>` tag to describe a property.</span></span> <span data-ttu-id="df7be-109">Observe que quando você adiciona uma propriedade usando o Assistente de código no ambiente de desenvolvimento do Visual Studio, ele adicionará um [ \<resumo >](../../../visual-basic/language-reference/xmldoc/summary.md) marca para a nova propriedade.</span><span class="sxs-lookup"><span data-stu-id="df7be-109">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="df7be-110">Você deve adicionar manualmente um `<value>` marca para descrever o valor que representa a propriedade.</span><span class="sxs-lookup"><span data-stu-id="df7be-110">You should then manually add a `<value>` tag to describe the value that the property represents.</span></span>  
   
- <span data-ttu-id="d84a4-111">Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="d84a4-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="df7be-111">Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="df7be-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d84a4-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d84a4-112">Example</span></span>  
- <span data-ttu-id="d84a4-113">Este exemplo usa o `<value>` marca para descrever qual valor o `Counter` isenções de propriedade.</span><span class="sxs-lookup"><span data-stu-id="d84a4-113">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span></span>  
+## <a name="example"></a><span data-ttu-id="df7be-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="df7be-112">Example</span></span>  
+ <span data-ttu-id="df7be-113">Este exemplo usa o `<value>` marca para descrever qual valor o `Counter` isenções de propriedade.</span><span class="sxs-lookup"><span data-stu-id="df7be-113">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="d84a4-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d84a4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df7be-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="df7be-114">See also</span></span>
 
-- [<span data-ttu-id="d84a4-115">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="d84a4-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="df7be-115">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="df7be-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
 ms.openlocfilehash: 75c280b57df03bde173c740123cccda278536dc1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820302"
 ---
-# <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a><span data-ttu-id="d2c93-102">Como: Criar uma coleção usada por um inicializador de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2c93-102">How to: Create a Collection Used by a Collection Initializer (Visual Basic)</span></span>
-<span data-ttu-id="d2c93-103">Quando você usa um inicializador de coleção para criar uma coleção, o compilador do Visual Basic procura um `Add` método de tipo de coleção para a qual os parâmetros para o `Add` método correspondem aos tipos dos valores no inicializador de coleção.</span><span class="sxs-lookup"><span data-stu-id="d2c93-103">When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer.</span></span> <span data-ttu-id="d2c93-104">Isso `Add` método é usado para popular a coleção com os valores do inicializador de coleção.</span><span class="sxs-lookup"><span data-stu-id="d2c93-104">This `Add` method is used to populate the collection with the values from the collection initializer.</span></span>  
+# <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a><span data-ttu-id="bc226-102">Como: Criar uma coleção usada por um inicializador de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc226-102">How to: Create a Collection Used by a Collection Initializer (Visual Basic)</span></span>
+<span data-ttu-id="bc226-103">Quando você usa um inicializador de coleção para criar uma coleção, o compilador do Visual Basic procura um `Add` método de tipo de coleção para a qual os parâmetros para o `Add` método correspondem aos tipos dos valores no inicializador de coleção.</span><span class="sxs-lookup"><span data-stu-id="bc226-103">When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer.</span></span> <span data-ttu-id="bc226-104">Isso `Add` método é usado para popular a coleção com os valores do inicializador de coleção.</span><span class="sxs-lookup"><span data-stu-id="bc226-104">This `Add` method is used to populate the collection with the values from the collection initializer.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2c93-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d2c93-105">Example</span></span>  
- <span data-ttu-id="d2c93-106">A exemplo a seguir mostra uma `OrderCollection` coleção que contém uma pública `Add` método um inicializador de coleção pode usar para adicionar objetos do tipo `Order`.</span><span class="sxs-lookup"><span data-stu-id="d2c93-106">The following example shows an `OrderCollection` collection that contains a public `Add` method that a collection initializer can use to add objects of type `Order`.</span></span> <span data-ttu-id="d2c93-107">O `Add` método permite que você use a sintaxe do inicializador de coleção reduzida.</span><span class="sxs-lookup"><span data-stu-id="d2c93-107">The `Add` method enables you to use the shortened collection initializer syntax.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc226-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bc226-105">Example</span></span>  
+ <span data-ttu-id="bc226-106">A exemplo a seguir mostra uma `OrderCollection` coleção que contém uma pública `Add` método um inicializador de coleção pode usar para adicionar objetos do tipo `Order`.</span><span class="sxs-lookup"><span data-stu-id="bc226-106">The following example shows an `OrderCollection` collection that contains a public `Add` method that a collection initializer can use to add objects of type `Order`.</span></span> <span data-ttu-id="bc226-107">O `Add` método permite que você use a sintaxe do inicializador de coleção reduzida.</span><span class="sxs-lookup"><span data-stu-id="bc226-107">The `Add` method enables you to use the shortened collection initializer syntax.</span></span>  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo2/VB/Module1.vb#4)]  
   
@@ -25,7 +25,7 @@ ms.locfileid: "58820302"
   
  [!code-vb[VbVbalrCollectionInitializersHowTo2#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo2/VB/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="d2c93-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d2c93-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc226-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bc226-108">See also</span></span>
 
-- [<span data-ttu-id="d2c93-109">Inicializadores de Coleção</span><span class="sxs-lookup"><span data-stu-id="d2c93-109">Collection Initializers</span></span>](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [<span data-ttu-id="d2c93-110">Como: Criar um método para Adicionar extensão usado por um inicializador de coleção</span><span class="sxs-lookup"><span data-stu-id="d2c93-110">How to: Create an Add Extension Method Used by a Collection Initializer</span></span>](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)
+- [<span data-ttu-id="bc226-109">Inicializadores de Coleção</span><span class="sxs-lookup"><span data-stu-id="bc226-109">Collection Initializers</span></span>](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [<span data-ttu-id="bc226-110">Como: Criar um método para Adicionar extensão usado por um inicializador de coleção</span><span class="sxs-lookup"><span data-stu-id="bc226-110">How to: Create an Add Extension Method Used by a Collection Initializer</span></span>](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)
