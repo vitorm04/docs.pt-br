@@ -3,23 +3,23 @@ title: 'Como: Localizar um atributo do pai (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
 ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828648"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="54d06-102">Como: Localizar um atributo do pai (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54d06-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="54d06-103">Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.</span><span class="sxs-lookup"><span data-stu-id="54d06-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="75673-102">Como: Localizar um atributo do pai (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75673-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="75673-103">Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.</span><span class="sxs-lookup"><span data-stu-id="75673-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
   
- <span data-ttu-id="54d06-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="54d06-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="75673-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="75673-104">The XPath expression is:</span></span>  
   
  `../@id`  
   
-## <a name="example"></a><span data-ttu-id="54d06-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="54d06-105">Example</span></span>  
- <span data-ttu-id="54d06-106">Este exemplo localiza primeiro um elemento de `Author` .</span><span class="sxs-lookup"><span data-stu-id="54d06-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="54d06-107">Localiza no atributo de `id` de elemento pai.</span><span class="sxs-lookup"><span data-stu-id="54d06-107">It then finds the `id` attribute of the parent element.</span></span>  
+## <a name="example"></a><span data-ttu-id="75673-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="75673-105">Example</span></span>  
+ <span data-ttu-id="75673-106">Este exemplo localiza primeiro um elemento de `Author` .</span><span class="sxs-lookup"><span data-stu-id="75673-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="75673-107">Localiza no atributo de `id` de elemento pai.</span><span class="sxs-lookup"><span data-stu-id="75673-107">It then finds the `id` attribute of the parent element.</span></span>  
   
- <span data-ttu-id="54d06-108">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="54d06-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="75673-108">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="75673-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -40,13 +40,13 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- <span data-ttu-id="54d06-109">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="54d06-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="75673-109">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="75673-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 id="bk101"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="54d06-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54d06-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75673-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="75673-110">See also</span></span>
 
-- [<span data-ttu-id="54d06-111">LINQ to XML para os usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54d06-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="75673-111">LINQ to XML para os usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75673-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
