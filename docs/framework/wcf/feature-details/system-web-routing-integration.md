@@ -3,10 +3,10 @@ title: Integração de System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097506"
 ---
 # <a name="systemwebrouting-integration"></a>Integração de System.Web.Routing
@@ -71,5 +71,5 @@ Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de
   
 ## <a name="see-also"></a>Consulte também
 
-- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Roteamento do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)

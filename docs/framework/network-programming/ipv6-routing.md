@@ -3,10 +3,10 @@ title: Roteamento IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 ms.openlocfilehash: 0f0fbce84caf096770e49ab47fb1de5b23b44b33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136676"
 ---
 # <a name="ipv6-routing"></a>Roteamento IPv6
@@ -35,5 +35,5 @@ Um mecanismo de roteamento flexível é uma vantagem do IPv6. Devido à maneira 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Soquetes](../../../docs/framework/network-programming/sockets.md)

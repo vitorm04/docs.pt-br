@@ -9,10 +9,10 @@ helpviewer_keywords:
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
 ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150495"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>Como: usar um teste de clique com uma região
@@ -31,4 +31,4 @@ A finalidade de teste de clique é determinar se o cursor está sobre um determi
 
 - <xref:System.Drawing.Region>
 - [Regiões no GDI+](regions-in-gdi.md)
-- [Como: usar recorte com uma região](how-to-use-clipping-with-a-region.md)
+- [Como: Use com uma região de recorte](how-to-use-clipping-with-a-region.md)

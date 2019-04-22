@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
 ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098969"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>Como: especificar a verificação de conflito de simultaneidade
@@ -23,5 +23,5 @@ Você pode especificar quais colunas de base de dados devem ser marcadas para ve
   
 ## <a name="see-also"></a>Consulte também
 
-- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Como: personalizar classes de entidade usando o editor de códigos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

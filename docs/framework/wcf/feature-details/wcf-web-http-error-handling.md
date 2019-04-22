@@ -3,10 +3,10 @@ title: Tratamento de erros HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152692"
 ---
 # <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF
@@ -51,8 +51,8 @@ Public string Operation2()
   
 ## <a name="see-also"></a>Consulte também
 
-- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Formatação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [Definindo e especificando falhas](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
-- [Lidando com exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [Tratamento de exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Enviando e recebendo falhas](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

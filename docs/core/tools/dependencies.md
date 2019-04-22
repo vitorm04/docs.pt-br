@@ -3,12 +3,12 @@ title: Gerenciamento de dependências das ferramentas do .NET Core
 description: Explica como gerenciar suas dependências com as ferramentas do .NET Core.
 ms.date: 03/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 701100476b8b08aa4b0229bd0de30d02c54ddce9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673867"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611906"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Gerenciando dependências com o SDK 1.0 do .NET Core
 
@@ -46,6 +46,7 @@ Neste exemplo, usaremos o modelo padrão removido pelo `dotnet new console`. Est
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
+
 Depois disso, salve o projeto e execute o comando de `dotnet restore` para instalar a dependência. 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

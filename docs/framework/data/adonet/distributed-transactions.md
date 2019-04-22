@@ -3,10 +3,10 @@ title: Transações distribuídas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150196"
 ---
 # <a name="distributed-transactions"></a>Transações distribuídas
@@ -39,7 +39,7 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
 >  Assim que uma conexão é inscrita explicitamente em uma transação, ela não pode ter a inscrição cancelada nem ser inscrita em outra transação até a primeira transação terminar.  
   
 > [!CAUTION]
->  `EnlistTransaction` gera uma exceção se a conexão já tiver começado uma transação usando a conexão <xref:System.Data.Common.DbConnection.BeginTransaction%2A> método. No entanto, se a transação for uma transação local iniciada na fonte de dados (por exemplo, executando a instrução BEGIN TRANSACTION explicitamente usando uma <xref:System.Data.SqlClient.SqlCommand>), o `EnlistTransaction` reverterá a transação local e se inscreverá na transação distribuída existente conforme o solicitado. Você não receberá o aviso de que a transação local foi revertida e deverá gerenciar as transações locais não iniciadas usando <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se você estiver usando o provedor de dados .NET Framework para SQL Server (`SqlClient`) com SQL Server, uma tentativa de inscrição gerará uma exceção. Todos os outros casos permanecerão despercebidos.  
+>  `EnlistTransaction` gera uma exceção se a conexão já tiver começado uma transação usando o método <xref:System.Data.Common.DbConnection.BeginTransaction%2A> da conexão. No entanto, se a transação for uma transação local iniciada na fonte de dados (por exemplo, executando a instrução BEGIN TRANSACTION explicitamente usando uma <xref:System.Data.SqlClient.SqlCommand>), o `EnlistTransaction` reverterá a transação local e se inscreverá na transação distribuída existente conforme o solicitado. Você não receberá o aviso de que a transação local foi revertida e deverá gerenciar as transações locais não iniciadas usando <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se você estiver usando o provedor de dados .NET Framework para SQL Server (`SqlClient`) com SQL Server, uma tentativa de inscrição gerará uma exceção. Todos os outros casos permanecerão despercebidos.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transações passíveis de promoção no SQL Server  
  O SQL Server oferece suporte a transações passíveis de promoção nas quais uma transação leve local pode ser automaticamente promovida para uma transação distribuída somente se isso for necessário. Uma transação passível de promoção não chama a sobrecarga adicional de uma transação distribuída a menos que a sobrecarga adicional seja necessária. Para obter mais informações e um exemplo de código, consulte [integração de System. Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
@@ -51,4 +51,4 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
 
 - [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Integração de System.Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

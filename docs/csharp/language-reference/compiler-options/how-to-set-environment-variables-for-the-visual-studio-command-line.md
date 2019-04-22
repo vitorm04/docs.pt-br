@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9eea7f76d386816aad060e9b99cea6b906a09ab9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322115"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612115"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Como: configurar variáveis de ambiente para a linha de comando do Visual Studio.
 
@@ -28,27 +28,28 @@ O arquivo VsDevCmd.bat define as variáveis de ambiente adequadas para habilitar
 
 > [!NOTE]
 > O arquivo VsDevCmd.bat é um novo arquivo fornecido com o Visual Studio 2017. O Visual Studio 2015 e versões anteriores usavam o VSVARS32.bat para a mesma finalidade. Esse arquivo era armazenado em \Arquivos de Programas\Microsoft Visual Studio\\*Versão*\Common7\Tools ou Arquivos de Programas (x86)\Microsoft Visual Studio\\*Versão*\Common7\Tools.
-  
+
 Se a versão atual do Visual Studio estiver instalada em um computador que também tiver uma versão anterior do Visual Studio, você não deverá executar VsDevCmd.bat e VSVARS32.bat de versões diferentes na mesma janela do Prompt de Comando. Em vez disso, você deve executar o comando para cada versão em sua própria janela.
-  
-### <a name="to-run-vsdevcmdbat"></a>Para executar o VsDevCmd.BAT  
-  
+
+### <a name="to-run-vsdevcmdbat"></a>Para executar o VsDevCmd.BAT
+
 1. No menu **Iniciar**, abra o **Prompt de Comando do Desenvolvedor para VS 2017**.  Ele está na pasta do **Visual Studio 2017**.
-  
+
 2. Altere para o subdiretório \Arquivos de Programas\Microsoft Visual Studio\\*Versão*\\*Oferta*\Common7\Tools ou \Arquivos de Programas (x86)\Microsoft Visual Studio\\*Versão*\\*Oferta*\Common7\Tools da sua instalação.  (a *Versão* é *2017* para a versão atual. *Oferta* é uma entre *Enterprise*, *Professional* ou *Community*).
-  
-3. Execute o VsDevCmd.bat digitando **VsDevCmd**.  
-  
+
+3. Execute o VsDevCmd.bat digitando **VsDevCmd**.
+
     > [!CAUTION]
-    >  O VsDevCmd.bat pode variar de um computador para outro. Não substitua um arquivo VsDevCmd.bat não encontrado ou danificado por um VsDevCmd.bat de outro computador. Em vez disso, execute novamente a instalação para substituir o arquivo não encontrado.  
+    > O VsDevCmd.bat pode variar de um computador para outro. Não substitua um arquivo VsDevCmd.bat não encontrado ou danificado por um VsDevCmd.bat de outro computador. Em vez disso, execute novamente a instalação para substituir o arquivo não encontrado.
 
 ### <a name="available-options-for-vsdevcmdbat"></a>Opções disponíveis para o VsDevCmd.BAT
 
 Para ver as opções disponíveis para VsDevCmd.BAT, execute o comando com a opção `-help`:
+
 ```console
 VsDevCmd.bat -help
 ```
 
 ## <a name="see-also"></a>Consulte também
 
-- [Compilando pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

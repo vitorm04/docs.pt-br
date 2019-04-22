@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
 ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137430"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Otimizando desempenho: Comportamento do objeto
@@ -25,7 +25,7 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Não remover manipuladores de eventos em objetos poderá manter os objetos ativos  
  O delegado que um objeto passa para seu evento é, efetivamente, uma referência a esse objeto. Portanto, os manipuladores de eventos podem manter objetos ativos por mais tempo que o esperado. Ao realizar a limpeza de um objeto que tenha sido registrado para escutar um evento de objeto, é essencial remover esse delegado antes de liberar o objeto. Manter objetos desnecessários ativos aumenta o uso de memória do aplicativo. Isso é especialmente verdadeiro quando o objeto é a raiz de uma árvore lógica ou de uma árvore visual.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apresenta um padrão de escuta para eventos que podem ser úteis em situações em que as relações de tempo de vida de objeto entre origem e de escuta são difíceis de manter o controle de evento fraco. Alguns eventos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes usam esse padrão. Se estiver implementando objetos com eventos personalizados, esse padrão poderá ser útil para você. Para obter detalhes, consulte [Padrões de evento fracos](weak-event-patterns.md).  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apresenta um padrão fraco de ouvinte de eventos para eventos que podem ser úteis em situações em que as relações de tempo de vida do objeto, entre a origem e o ouvinte, são difíceis de controlar. Alguns eventos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes usam esse padrão. Se estiver implementando objetos com eventos personalizados, esse padrão poderá ser útil para você. Para obter detalhes, consulte [Padrões de evento fracos](weak-event-patterns.md).  
   
  Há várias ferramentas, como o Criador de Perfil CLR e o Visualizador de Conjunto de Trabalho, que podem fornecer informações sobre o uso de memória de um processo especificado. O Criador de Perfil CLR inclui várias exibições muito úteis do perfil de alocação, incluindo um histograma de tipos alocados, grafos de alocação e de chamadas, uma linha do tempo mostrando coletas de lixo de várias gerações e o estado resultante do heap gerenciado após essas coletas, além de uma árvore de chamadas mostrando as cargas de assembly e alocações por método. Para obter mais informações, consulte [Centro de desenvolvedores do .NET Framework](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -65,9 +65,9 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
   
  Congelando uma <xref:System.Windows.Freezable> pode melhorar seu desempenho, porque ele não precisa mais gastar recursos em manter as notificações de alteração. A tabela a seguir mostra o tamanho de um simples <xref:System.Windows.Media.SolidColorBrush> quando sua <xref:System.Windows.Freezable.IsFrozen%2A> estiver definida como `true`, comparado a quando não é. Isso pressupõe a aplicação de um pincel para o <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade de dez <xref:System.Windows.Shapes.Rectangle> objetos.  
   
-|**Estado**|**Tamanho**|  
+|**Estado**|**Size**|  
 |---------------|--------------|  
-|Congelado <xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
+|Frozen <xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
 |Não congelado <xref:System.Windows.Media.SolidColorBrush>|972 bytes|  
   
  O exemplo de código a seguir demonstra esse conceito:  
@@ -103,7 +103,7 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
   
  A tabela a seguir mostra o tempo decorrido, adicionar e renderizar 5000 <xref:System.Windows.Controls.TextBlock> elementos a uma <xref:System.Windows.Controls.StackPanel> e um <xref:System.Windows.Controls.VirtualizingStackPanel>. Nesse cenário, as medidas representam o tempo entre anexar uma cadeia de caracteres de texto para o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade de um <xref:System.Windows.Controls.ItemsControl> objeto para a hora quando os elementos do painel exibem a cadeia de caracteres de texto.  
   
-|**Painel de host**|**Renderizar tempo (ms)**|  
+|**Painel de host**|**Tempo de renderização (ms)**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
@@ -111,8 +111,8 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
 ## <a name="see-also"></a>Consulte também
 
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Recursos do aplicativo](optimizing-performance-application-resources.md)

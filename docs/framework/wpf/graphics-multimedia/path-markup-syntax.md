@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082484"
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
@@ -57,7 +57,7 @@ Caminhos são discutidos [formas e desenho básico no WPF Overview](shapes-and-b
   
 |Termo|Descrição|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Especifica se o <xref:System.Windows.Media.StreamGeometry> usa o <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Especifica o <xref:System.Windows.Media.FillRule.EvenOdd> regra de preenchimento.<br />-   `F1` Especifica o <xref:System.Windows.Media.FillRule.Nonzero> regra de preenchimento.<br /><br /> Se você omitir este comando, o subcaminho usará o comportamento padrão, que é <xref:System.Windows.Media.FillRule.EvenOdd>. Se você especificar este comando, coloque-o primeiro.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Especifica se o <xref:System.Windows.Media.StreamGeometry> usa o <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Especifica o <xref:System.Windows.Media.FillRule.EvenOdd> regra de preenchimento.<br />-   `F1` Especifica o <xref:System.Windows.Media.FillRule.Nonzero> regra de preenchimento.<br /><br /> Se você omitir este comando, o subcaminho usará o comportamento padrão, que é <xref:System.Windows.Media.FillRule.EvenOdd>. Se você especificar este comando, coloque-o primeiro.|  
 |*figureDescription*|Uma figura é composta de um comando mover, desenhar e um comando opcional para fechar.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Um comando de mover que especifica o ponto inicial da figura. Consulte a [comando Mover](#themovecommand) seção.|  
 |*drawCommands*|Um ou mais comandos de desenho que descrevem o conteúdo da figura. Consulte a [comandos desenhar](#drawcommands) seção.|  
@@ -229,5 +229,5 @@ Uma letra maiuscula `V` indica que `y` é um valor absoluto; uma minúscula `v` 
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
 - [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Visão geral da geometria](geometry-overview.md)
-- [Tópicos explicativos ](geometries-how-to-topics.md)
+- [Visão geral de geometria](geometry-overview.md)
+- [Tópicos de instruções](geometries-how-to-topics.md)

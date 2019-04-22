@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57846279"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612674"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Criar um aplicativo Olá, Mundo em Visual Basic com o SDK do .NET Core no Visual Studio 2017
 
@@ -31,7 +31,7 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
 1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto*\*, selecione o nó **Visual Basic** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
 
    ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/vb-with-visual-studio/visual-studio-new-project.png)
-   
+
 1. O Visual Studio usa o modelo para criar seu projeto. O modelo de aplicativo de console em Visual Basic para o .NET Core define automaticamente uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo tempo de execução quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
 
    ![O Visual Studio e o novo projeto HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
@@ -44,6 +44,7 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
+
    Esse código solicita que o usuário pressione qualquer tecla e, em seguida, pausa o programa até que uma tecla seja pressionada.
 
 1. Na barra de menus, selecione **Compilar** > **Compilar Solução**. Isso compila seu programa em uma IL (linguagem intermediária) que é convertida em um código binário por um compilador JIT (Just-In-Time).

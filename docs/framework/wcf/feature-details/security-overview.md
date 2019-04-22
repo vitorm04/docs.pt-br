@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136949"
 ---
 # <a name="security-overview"></a>Visão geral de segurança
@@ -100,7 +100,7 @@ Windows Communication Foundation (WCF) é uma SOAP baseada em mensagens distribu
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Serviços de segurança](../../../../docs/framework/wcf/securing-services.md)
+- [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)
 - [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
@@ -108,9 +108,9 @@ Windows Communication Foundation (WCF) é uma SOAP baseada em mensagens distribu
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Orientação de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Configurando serviços usando arquivos de configuração](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Segurança estendida](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

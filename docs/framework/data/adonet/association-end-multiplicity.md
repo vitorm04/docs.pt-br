@@ -3,10 +3,10 @@ title: multiplicidade da extremidade da associação
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135025"
 ---
 # <a name="association-end-multiplicity"></a>multiplicidade da extremidade da associação
@@ -33,5 +33,5 @@ ms.locfileid: "59135025"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos chave do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

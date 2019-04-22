@@ -7,10 +7,10 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: fa69a03d160e7079f532e8e00245a7af3f3a8999
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088737"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
@@ -44,15 +44,15 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Usar delegados](../../../csharp/programming-guide/delegates/using-delegates.md)  
+-   [Usando delegados](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
 -   [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [Delegados com Métodos Nomeados vs. Métodos anônimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [Delegados com métodos nomeados vs. métodos anônimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
 -   [Métodos anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
--   [Usar variação em delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
+-   [Usando Variação em Delegações](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
 -   [Como: combinar delegados (delegados multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   

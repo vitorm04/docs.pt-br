@@ -14,10 +14,10 @@ ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220481"
 ---
 # <a name="resources-in-net-apps"></a>Recursos em Aplicativos .NET
@@ -66,7 +66,7 @@ Você também pode localizar os recursos do seu aplicativo para culturas especí
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Fundamentos do aplicativo](../../../docs/standard/application-essentials.md)
-- [Criação de arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Criação de assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Recuperando recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
