@@ -7,17 +7,17 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890391"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizando projetos e estendendo My com o Visual Basic
 Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso torna mais fácil para outros desenvolvedores a localizar e usar seus objetos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Estendendo o namespace My no Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Estendendo o Meu Namespace em Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  Descreve como adicionar membros personalizados e valores para o `My` namespace no Visual Basic.  
   
  [Empacotando e implantando minhas extensões personalizadas](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
@@ -39,7 +39,7 @@ Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Descreve quais `My` objetos estão disponíveis em diferentes tipos de projeto por padrão.  
   
- [Compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
  Discute como o compilador usa compilação condicional para selecionar determinadas seções de código para compilar e excluir as outras seções.  
   
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
