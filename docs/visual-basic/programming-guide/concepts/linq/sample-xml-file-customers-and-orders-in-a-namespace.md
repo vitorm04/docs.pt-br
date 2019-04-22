@@ -3,10 +3,10 @@ title: 'Arquivo XML de exemplo: Clientes e pedidos em um Namespace1'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
 ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829506"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Arquivo XML de exemplo: Clientes e ordens em um namespace
