@@ -3,11 +3,11 @@ title: Factory do canal de configuração
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
 ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328069"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975865"
 ---
 # <a name="configuration-channel-factory"></a>Factory do canal de configuração
 Este exemplo aborda o uso do <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. O <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> permite o gerenciamento centralizado de configuração de cliente do WCF. Isso também pode ser útil em cenários em que a configuração é selecionada ou alterada depois que o tempo de carregamento de domínio do aplicativo.

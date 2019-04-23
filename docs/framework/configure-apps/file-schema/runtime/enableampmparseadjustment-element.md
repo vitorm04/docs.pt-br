@@ -1,14 +1,14 @@
 ---
-title: <EnableAmPmParseAdjustment> Elemento
+title: Elemento <EnableAmPmParseAdjustment>
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222504"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > elemento
@@ -84,4 +84,4 @@ Determina se a data e hora de métodos de análise usam um conjunto de regras aj
 ## <a name="see-also"></a>Consulte também
 
 - [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<Configuração > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

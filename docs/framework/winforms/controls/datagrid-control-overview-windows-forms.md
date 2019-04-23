@@ -21,10 +21,10 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304722"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
@@ -57,13 +57,13 @@ ms.locfileid: "59304722"
   
  Fontes de dados válidos para o <xref:System.Windows.Forms.DataGrid> incluem:  
   
--   <xref:System.Data.DataTable> classe  
+-   Classe <xref:System.Data.DataTable>  
   
--   <xref:System.Data.DataView> classe  
+-   Classe <xref:System.Data.DataView>  
   
--   <xref:System.Data.DataSet> classe  
+-   Classe <xref:System.Data.DataSet>  
   
--   <xref:System.Data.DataViewManager> classe  
+-   Classe <xref:System.Data.DataViewManager>  
   
  Se a fonte for um conjunto de dados, ele poderá ser um objeto no formulário ou um objeto passado para o formulário por um serviço Web XML. É possível associar a conjuntos de dados tipados ou não tipados.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59304722"
 ## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Como: Excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Como: Formatar o controle DataGrid do Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)
+- [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como: Adicionar tabelas e colunas para o controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como: Excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como: Formatar o controle DataGrid dos Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)

@@ -3,11 +3,11 @@ title: Atualizações de fluxo personalizadas
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
 ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345242"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977763"
 ---
 # <a name="custom-stream-upgrades"></a>Atualizações de fluxo personalizadas
 Transportes e orientada a Stream como TCP e Pipes nomeados operam em um fluxo contínuo de bytes entre o cliente e servidor. Esse fluxo é realizado uma <xref:System.IO.Stream> objeto. Em uma atualização de fluxo, o cliente quer adicionar uma camada de protocolo opcional para a pilha de canais e solicita que a outra extremidade do canal de comunicação para fazê-lo. A atualização de fluxo consiste em Substituir o original <xref:System.IO.Stream> objeto com um atualizado.  

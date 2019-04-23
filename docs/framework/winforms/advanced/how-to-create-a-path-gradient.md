@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186089"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975748"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Como: criar um gradiente de caminho
 O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você personalize a forma como preencher uma forma alterando as cores gradualmente. Por exemplo, você pode especificar uma cor para o centro de um caminho e outra cor para o limite de um caminho. Você também pode especificar cores separadas para cada um dos vários pontos ao longo do limite de um caminho.  
   
 > [!NOTE]
->  Na [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], um caminho é uma sequência de linhas e curvas mantidas por um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Para mais informações sobre caminhos [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], consulte [Caminhos de gráficos no GDI+](graphics-paths-in-gdi.md) e [Construindo e desenhando caminhos](constructing-and-drawing-paths.md).  
-  
+>  No GDI+, um caminho é uma sequência de linhas e curvas mantidas por um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Para obter mais informações sobre os caminhos de GDI+, consulte [caminhos de gráficos no GDI+](graphics-paths-in-gdi.md) e [Construindo e desenhando caminhos](constructing-and-drawing-paths.md).  
+
+Os exemplos neste artigo são métodos que são chamados de um controle <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Como preencher uma elipse com um gradiente de caminho  
   
 -   O exemplo a seguir preenche uma elipse com pincel de gradiente de caminho. A cor central é definida como azul e a cor do limite é definida como azul-piscina. A ilustração a seguir mostra a elipse preenchida.  
@@ -30,7 +32,7 @@ O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você per
   
      Por padrão, um pincel de gradiente de caminho não é estendido para fora do limite do caminho. Se você usar o pincel de gradiente de caminho para preencher uma figura que se estende para além do limite do caminho, a área da tela fora do caminho não será preenchida.  
   
-     A ilustração a seguir mostra o que acontece se você alterar o <xref:System.Drawing.Graphics.FillEllipse%2A> chamar no código a seguir para `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     A ilustração a seguir mostra o que acontece se você alterar o <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> chamar no código a seguir para `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Caminho de gradiente estendido além do limite do caminho.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

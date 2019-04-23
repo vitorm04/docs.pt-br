@@ -10,21 +10,24 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125015"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977269"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Como: criar um gradiente linear
-O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gradientes lineares horizontais, verticais e diagonais. Por padrão, a cor em um gradiente linear muda uniformemente. No entanto, você pode personalizar um gradiente linear para que a cor mude de maneira não uniforme.  
+GDI+ fornece gradientes lineares horizontais, verticais e diagonais. Por padrão, a cor em um gradiente linear muda uniformemente. No entanto, você pode personalizar um gradiente linear para que a cor mude de maneira não uniforme.  
+
+> [!NOTE]
+> Os exemplos neste artigo são métodos que são chamados de um controle <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+
+O exemplo a seguir preenche uma linha, uma elipse e um retângulo com um pincel de gradiente linear horizontal.  
   
- O exemplo a seguir preenche uma linha, uma elipse e um retângulo com um pincel de gradiente linear horizontal.  
+O <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> construtor recebe quatro argumentos: dois pontos e duas cores. O primeiro ponto (0, 10) é associado à primeira cor (vermelho) e o segundo ponto (200, 10) é associado à segunda cor (azul). Como seria de esperar, a linha desenhada de (10, 0) a (200, 10) muda gradualmente de vermelho para azul.  
   
- O <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> construtor recebe quatro argumentos: dois pontos e duas cores. O primeiro ponto (0, 10) é associado à primeira cor (vermelho) e o segundo ponto (200, 10) é associado à segunda cor (azul). Como seria de esperar, a linha desenhada de (10, 0) a (200, 10) muda gradualmente de vermelho para azul.  
-  
- Os 10s nos pontos (50, 10) e (200, 10) não são importantes. O que é importante é que os dois pontos têm a mesma segunda coordenada: a linha que os conecta é horizontal. A elipse e o retângulo também mudam gradualmente de vermelho para azul conforme a coordenada horizontal vai de 0 a 200.  
+ Os 10s nos pontos de (0, 10) e (200, 10) não são importantes. O que é importante é que os dois pontos têm a mesma segunda coordenada: a linha que os conecta é horizontal. A elipse e o retângulo também mudam gradualmente de vermelho para azul conforme a coordenada horizontal vai de 0 a 200.  
   
  A ilustração a seguir mostra a linha, a elipse e o retângulo. Observe que o gradiente de cores repete-se à medida que a coordenada horizontal aumenta além de 200.  
   
@@ -39,7 +42,7 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gr
   
  No exemplo anterior, os componentes de cor mudam linearmente conforme você vai de uma coordenada horizontal de 0 para uma coordenada horizontal de 200. Por exemplo, um ponto cuja primeira coordenada esteja a meio caminho entre 0 e 200 terá um componente azul a meio caminho entre 0 e 255.  
   
- O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] permite ajustar o modo como a cor varia de uma borda de um gradiente para outra. Suponha que você queira criar um pincel de gradiente que mude de preto para vermelho de acordo com a tabela a seguir.  
+ GDI+ permite que você ajustar a maneira como a cor varia de uma borda de um gradiente para outra. Suponha que você queira criar um pincel de gradiente que mude de preto para vermelho de acordo com a tabela a seguir.  
   
 |Coordenada horizontal|Componentes RGB|  
 |---------------------------|--------------------|  
@@ -49,12 +52,12 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gr
   
  Observe que o componente vermelho está na metade da intensidade quando a coordenada horizontal está a apenas 20% do caminho de 0 a 200.  
   
- O exemplo a seguir define o <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> propriedade de um <xref:System.Drawing.Drawing2D.LinearGradientBrush> objeto para associar três intensidades relativas com três posições relativas. Como na tabela anterior, uma intensidade relativa de 0,5 é associada a uma posição relativa de 0,2. O código preenche uma elipse e um retângulo com o pincel de gradiente.  
+ O exemplo a seguir define o <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A?displayProperty=nameWithType> propriedade para associar três intensidades relativas com três posições relativas. Como na tabela anterior, uma intensidade relativa de 0,5 é associada a uma posição relativa de 0,2. O código preenche uma elipse e um retângulo com o pincel de gradiente.  
   
  A ilustração a seguir mostra o retângulo e elipse resultantes.  
   
  ![Gradiente linear](./media/cslineargradient2.png "cslineargradient2")  
-  
+
 ### <a name="to-customize-linear-gradients"></a>Para personalizar os gradientes lineares  
   
 -   Passe o preto opaco e o vermelho opaco como o terceiro e o quarto argumentos, respectivamente.  

@@ -3,11 +3,11 @@ title: 'Como: usar MetadataExchangeClient para recuperar metadados'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
 ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327874"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977659"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Como: usar MetadataExchangeClient para recuperar metadados
 Use o <xref:System.ServiceModel.Description.MetadataExchangeClient> classe para baixar os metadados usando o protocolo WS-MetadataExchange (MEX). Os arquivos de metadados recuperados são retornados como um <xref:System.ServiceModel.Description.MetadataSet> objeto. Retornado <xref:System.ServiceModel.Description.MetadataSet> objeto contém uma coleção de <xref:System.ServiceModel.Description.MetadataSection> objetos, cada um deles contendo um dialeto de metadados específicas e um identificador. Você pode gravar os metadados retornados em arquivos ou, se os metadados retornados contém documentos de descrição linguagem WSDL (Web Services), você pode importar os metadados usando o <xref:System.ServiceModel.Description.WsdlImporter>.  
