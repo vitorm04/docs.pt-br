@@ -3,12 +3,12 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412299"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612053"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -66,7 +66,7 @@ Após fazer essas alterações, execute `dotnet restore` ([veja a observação](
 
 ## <a name="making-web-requests"></a>Como fazer solicitações da Web
 
-Agora você está pronto para começar a obter dados da Web. Neste aplicativo, você lerá informações da [API do GitHub](https://developer.github.com/v3/). Vamos ler informações sobre os projetos em [.NET Foundation](https://www.dotnetfoundation.org/). Comece fazendo a solicitação à API do GitHub para recuperar informações sobre os projetos. O ponto de extremidade que você usará é: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Você quer obter todas as informações sobre esses projetos, portanto, use uma solicitação HTTP GET.
+Agora você está pronto para começar a obter dados da Web. Neste aplicativo, você lerá informações da [API do GitHub](https://developer.github.com/v3/). Vamos ler informações sobre os projetos em [.NET Foundation](https://www.dotnetfoundation.org/). Comece fazendo a solicitação à API do GitHub para recuperar informações sobre os projetos. O ponto de extremidade que você usará é: <https://api.github.com/orgs/dotnet/repos>. Você quer obter todas as informações sobre esses projetos, portanto, use uma solicitação HTTP GET.
 O navegador também usa solicitações HTTP GET, para que você possa colar essa URL em seu navegador e ver as informações que receberá.
 
 Use a classe <xref:System.Net.Http.HttpClient> para fazer solicitações da Web. Como todas as APIs .NET modernas, a <xref:System.Net.Http.HttpClient> oferece suporte apenas aos métodos assíncronos para suas APIs de longa execução.

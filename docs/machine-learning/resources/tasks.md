@@ -2,21 +2,20 @@
 title: Tarefas de aprendizado de máquina – ML.NET
 description: Explore as diferentes tarefas de aprendizado de máquina e as tarefas associadas compatíveis com o ML.NET.
 ms.custom: seodec18
-ms.date: 01/15/2019
-author: jralexander
-ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 04/12/2019
+author: natke
+ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415696"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613155"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tarefas de aprendizado de máquina no ML.NET
 
-Ao criar um modelo de aprendizado de máquina, primeiro é preciso definir o que você espera conseguir com seus dados. Depois, você pode escolher a tarefa de aprendizado de máquina correta para sua situação. A lista a seguir descreve as diferentes tarefas de aprendizado de máquina que você pode escolher e alguns casos de uso comuns.
+Ao criar um modelo de aprendizado de máquina, primeiro é preciso definir o que você espera conseguir com seus dados. Isso permite escolher a tarefa de aprendizado de máquina correta para sua situação. A lista a seguir descreve as diferentes tarefas de aprendizado de máquina que você pode escolher e alguns casos de uso comuns.
 
-> [!NOTE]
-> O ML.NET está atualmente na Versão Prévia. Não há suporte para todas as tarefas de aprendizado de máquina atualmente. Para enviar uma solicitação para uma determinada tarefa, abra um problema no [dotnet/machinelearning repository](https://github.com/dotnet/machinelearning/issues).
+Depois de decidir a tarefa ideal para seu cenário, será preciso escolher o melhor algoritmo para treinar seu modelo. Os algoritmos disponíveis são listados na seção para cada tarefa.
 
 ## <a name="binary-classification"></a>Classificação binária
 
@@ -29,30 +28,22 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 
 Para obter mais informações, consulte o artigo [Classificação binária](https://en.wikipedia.org/wiki/Binary_classification) na Wikipédia.
 
-Aprendizes recomendados para a classificação binária:
+### <a name="binary-classification-training-algorithms"></a>Algoritmos de treinamento de classificação binária
 
-* AveragedPerceptronTrainer
-* StochasticGradientDescentClassificationTrainer
-* LightGbmBinaryTrainer
-* FastTreeBinaryClassificationTrainer
-* SymSgdClassificationTrainer
+Você pode treinar um modelo de classificação binária usando os seguintes algoritmos:
 
-### <a name="binary-classification-learners"></a>Aprendizes da classificação binária
-
-Os aprendizes a seguir estão disponíveis para tarefas de classificação binária:
-
-* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
-* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
-* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
-* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
-* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
-* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
-* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
-* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
+* <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
 
 ## <a name="multiclass-classification"></a>Classificação multiclasse
 
@@ -64,26 +55,20 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 
 Para obter mais informações, consulte o artigo [Classificação multiclasse](https://en.wikipedia.org/wiki/Multiclass_classification) na Wikipédia.
 
-Aprendizes recomendados para Multiclasse:
-
-* OVA-AveragedPerceptronTrainer
-* SdcaMultiClassTrainer
-* LightGbmMulticlassTrainer
-* OVA-FastTreeBinaryClassificationTrainer
-
 >[!NOTE]
->OVA e PKPD atualizam os [aprendizes de classificação binária](#binary-classification) para atuar em conjuntos de dados multiclasse. Mais informações em [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
+>Uma vs todas as atualizações de [aprendizes de classificação binária](#binary-classification) para atuar em conjuntos de dados multiclasse. Mais informações em [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-learners"></a>Aprendizes da classificação multiclasse
+### <a name="multiclass-classification-training-algorithms"></a>Algoritmos de treinamento de classificação multiclasse
 
-Os aprendizes a seguir estão disponíveis para tarefas de classificação multiclasse:
+Você pode treinar um modelo de classificação multiclasse usando os seguintes algoritmos de treinamento:
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
-* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [Ova](xref:Microsoft.ML.Trainers.Ova)
-* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
-* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ## <a name="regression"></a>Regressão
 
@@ -93,27 +78,19 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 * Previsão de preços futuros de ações com base em dados históricos e tendências atuais do mercado.
 * Previsão de vendas de um produto com base em orçamentos de publicidade.
 
-Aprendizes recomendados para regressão:
+### <a name="regression-training-algorithms"></a>Algoritmos de treinamento de regressão
 
-* FastTreeTweedieTrainer 
-* LightGbmRegressorTrainer 
-* SdcaRegressionTrainer 
-* FastTreeRegressionTrainer
+Você pode treinar um modelo de regressão usando os seguintes algoritmos:
 
-### <a name="regression-learners"></a>Aprendizes de regressão
-
-Os aprendizes a seguir estão disponíveis para tarefas de regressão:
-
-* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
-* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
-* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
-* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
-* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
-* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
-* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 
 ## <a name="clustering"></a>Clustering
 
@@ -123,11 +100,11 @@ Uma tarefa de [aprendizado de máquina não supervisionado](glossary.md#unsuperv
 * Identificar segmentos de clientes e dados demográficos para ajudar a criar campanhas de publicidade segmentadas.
 * Categorizar o inventário com base nas métricas de fabricação.
 
-### <a name="clustering-learners"></a>Aprendizes de clustering
+### <a name="clustering-training-algorithms"></a>Algoritmos de treinamento de clustering
 
-Os aprendizes a seguir estão disponíveis para tarefas de clustering:
+Você pode treinar um modelo de clustering usando os seguintes algoritmos:
 
-* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ## <a name="anomaly-detection"></a>Detecção de anomalias
 
@@ -144,30 +121,29 @@ A detecção de anomalias abrange várias tarefas importantes no aprendizado de 
 
 Como as anomalias são eventos raros por definição, pode ser difícil coletar um exemplo representativo dos dados para usar na modelagem. Os algoritmos incluídos nesta categoria foram especialmente projetados para abordar os principais desafios de criar e treinar modelos usando conjuntos de dados desequilibrados.
 
-### <a name="anomaly-detection-learners"></a>Aprendizes de detecção de anomalias
+### <a name="anomaly-detection-training-algorithms"></a>Algoritmos de treinamento de detecção de anomalias
 
-Os aprendizes a seguir estão disponíveis para tarefas de detecção de anomalias:
+Você pode treinar um modelo de detecção de anomalias usando os seguintes algoritmos:
 
-* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+* <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
 
 ## <a name="ranking"></a>Classificação
 
 Uma tarefa de classificação cria um classificador a partir de um conjunto de exemplos rotulados. Este conjunto de exemplo consiste em grupos de instâncias que podem ser marcados com um determinado critério. Os rótulos de classificação são { 0, 1, 2, 3, 4 } para cada instância.  O classificador é treinado para classificar novos grupos de instâncias com pontuações desconhecidas para cada instância. Os aprendizes de classificação do ML.NET são baseados na [classificação de máquinas aprendidas](https://en.wikipedia.org/wiki/Learning_to_rank).
 
-### <a name="ranking-learners"></a>Aprendizes de classificação
+### <a name="ranking-training-algorithms"></a>Algoritmos de treinamento de classificação
 
-Os aprendizes a seguir estão disponíveis para tarefas de classificação:
+Você pode treinar um modelo de classificação usando os seguintes algoritmos:
 
-* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
 
 ## <a name="recommendation"></a>Recomendação
 
 Uma tarefa de recomendação permite produzir uma lista de produtos ou serviços recomendados. O ML.NET usa a [Fatoração matricial (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), um algoritmo de [filtragem colaborativa](https://en.wikipedia.org/wiki/Collaborative_filtering) para as recomendações quando você tem dados históricos de classificação do produto em seu catálogo. Por exemplo, você tem dados históricos de classificação de filmes para seus usuários e deseja recomendar outros filmes que eles provavelmente assistirão posteriormente.
 
-### <a name="recommendation-learners"></a>Aprendizes de recomendação
+### <a name="recommendation-training-algorithms"></a>Algoritmos de treinamento de recomendação
 
-Os aprendizes a seguir estão disponíveis para tarefas de recomendação:
+Você pode treinar um modelo de recomendação usando os seguintes algoritmos:
 
-* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
-* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)
+* <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
