@@ -4,12 +4,12 @@ description: Entenda as diferenças e os usos do padrão de gateway de API e da 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f1deb453519eec23e4c9bc8c19800e9caedf0c10
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462949"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611816"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -173,25 +173,25 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Charles Richardson. Padrão: gateway de API/back-end para front-end** \
-  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
+  <https://microservices.io/patterns/apigateway.html>
 
 - **Padrão de Gateway de API** \
-  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
 - **Padrão de agregação e composição** \
-  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
+  <https://microservices.io/patterns/data/api-composition.html>
 
 - **Gerenciamento de API do Azure** \
-  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
+  <https://azure.microsoft.com/services/api-management/>
 
 - **Udi Dahan. Composição orientada a serviços** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens Vasters. Mensagens e microsserviços na GOTO 2016 (vídeo)** \
-  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Resumo sobre o Gateway de API** (série de tutoriais do Gateway de API do ASP.NET Core) \
-  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
 >[Anterior](identify-microservice-domain-model-boundaries.md)

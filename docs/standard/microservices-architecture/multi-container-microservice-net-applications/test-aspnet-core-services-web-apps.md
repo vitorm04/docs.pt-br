@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3adf711fd00ac0ab57764a67a08ce453318fd965
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 106e38a3cf3a121c4d7f879b718c832d27e0910f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463131"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611504"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -104,25 +104,25 @@ public class PrimeWebDefaultRequestShould
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **Steve Smith. Testando controladores** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
 - **Steve Smith. Teste de integração** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/test/integration-tests](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+    [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **Teste de unidade no .NET Core usando dotnet test** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Site oficial. \
-    [https://xunit.github.io/](https://xunit.github.io/)
+    <https://xunit.github.io/>
 
 - **Noções básicas de teste de unidade.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**. Repositório do GitHub. \
-    [https://github.com/moq/moq](https://github.com/moq/moq)
+    <https://github.com/moq/moq>
 
 - **NUnit**. Site oficial. \
-    [https://www.nunit.org/](https://www.nunit.org/)
+    <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementar testes de serviço em um aplicativo com vários contêineres
 
@@ -203,10 +203,10 @@ Como você pode ver, esses arquivos docker-compose só iniciam os microsserviço
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Arquivo LEIAME dos testes** no repositório eShopOnContainers no GitHub \
-    [https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
 - **Arquivo LEIAME dos testes de carga** no repositório eShopOnContainers no GitHub \
-    [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
 > [Anterior](subscribe-events.md)

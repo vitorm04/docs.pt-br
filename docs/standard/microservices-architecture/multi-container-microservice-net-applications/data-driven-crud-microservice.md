@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c16b38d7720fb739aa0711d4511afacd7b92c7a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 21a06036609ec4c84b496d58423a111ee658f3aa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465302"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612258"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -213,10 +213,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Consultando dados** \
-  [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
+  [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
 - **Salvando dados** \
-  [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
+  [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>A cadeia de conexão e as variáveis de ambiente do BD usadas pelos contêineres do Docker
 
@@ -297,13 +297,13 @@ Esse mecanismo de controle de versão é simples e depende do roteamento que o s
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Scott Hanselman. Facilitando o controle de versão da API Web RESTful do ASP.NET Core** \
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Controle de versão de uma API Web RESTful** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding. Controle de versão, hipermídia e REST** \
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Gerando metadados de descrição do Swagger para a API Web ASP.NET Core
 
@@ -313,7 +313,7 @@ A essência do Swagger é a especificação do Swagger, que são metadados de de
 
 A especificação é a base da OAS (especificação OpenAPI) e é desenvolvida em uma comunidade aberta, transparente e colaborativa para padronizar a maneira que as interfaces RESTful são definidas.
 
-A especificação define a estrutura de como um serviço pode ser descoberto e como seus recursos são entendidos. Para obter mais informações, incluindo um editor na Web e exemplos de especificações do Swagger de empresas como Spotify, Uber, Slack e Microsoft, confira o site do Swagger ([https://swagger.io](https://swagger.io)).
+A especificação define a estrutura de como um serviço pode ser descoberto e como seus recursos são entendidos. Para obter mais informações, incluindo um editor na Web e exemplos de especificações do Swagger de empresas como Spotify, Uber, Slack e Microsoft, consulte o site do Swagger (<https://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Por que usar Swagger?
 
@@ -423,13 +423,13 @@ A Figura 6-10 mostra os metadados JSON do Swagger gerados por meio do microsserv
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Páginas de Ajuda do ASP.NET Web API usando o Swagger** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 - **Introdução ao Swashbuckle e ao ASP.NET Core** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
 - **Introdução ao NSwag e ao ASP.NET Core** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
 > [Anterior](microservice-application-design.md)

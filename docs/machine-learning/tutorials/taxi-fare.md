@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 49770672ebcff98d8779a888372b5c9f40a55b1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295972"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611803"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever os preços usando um aprendiz de regressão com o ML.NET
 
@@ -148,7 +148,7 @@ Estamos passando dois parâmetros para o método `Train`. Um `MLContext` para o 
 
 ## <a name="load-and-transform-data"></a>Carregar e transformar dados
 
-Carregue os dados, usando o wrapper `MLContext.Data.LoadFromTextFile` do [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Ele retorna um <xref:Microsoft.Data.DataView.IDataView>. 
+Carregue os dados, usando o wrapper `MLContext.Data.LoadFromTextFile` do [método LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Ele retorna um <xref:Microsoft.Data.DataView.IDataView>.
 
 Como a entrada e saída de `Transforms`, um `DataView` é o tipo de pipeline de dados fundamental, comparável ao `IEnumerable` para `LINQ`.
 
@@ -231,6 +231,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 }
 ```
+
 O método `Evaluate` executa as seguintes tarefas:
 
 * Carrega o conjunto de dados de teste.
@@ -302,12 +303,12 @@ Como queremos carregar o modelo do arquivo zip que foi salvo, vamos criar o `Fil
 Enquanto o `model` é um `transformer` que opera em muitas linhas de dados, um cenário de produção muito comum é a necessidade de previsões em exemplos individuais. O <xref:Microsoft.ML.PredictionEngine%602> é um wrapper que é retornado do método `CreatePredictionEngine`. Adicionaremos o seguinte código para criar `PredictionEngine` como a próxima linha no método `TestSinglePrediction`:
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
-  
+
 Este tutorial usa uma viagem de teste dentro dessa classe. Posteriormente, você pode adicionar outros cenários para fazer experiências com o modelo. Adicione uma corrida de teste à previsão do modelo treinado no método `TestSinglePrediction` ao criar uma instância de `TaxiTrip`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- Podemos usar isso para prever as tarifas com base em uma única instância dos dados da corrida de táxi. Para obter uma previsão, use <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> nos dados. Observe que os dados de entrada são uma cadeia de caracteres e o modelo inclui a personalização. Seu pipeline está em sincronia durante o treinamento e a previsão. Você não precisou escrever código de pré-processamento/personalização especificamente para previsões, e a mesma API cuida das previsões de lote e de uso único.
+Podemos usar isso para prever as tarifas com base em uma única instância dos dados da corrida de táxi. Para obter uma previsão, use <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> nos dados. Observe que os dados de entrada são uma cadeia de caracteres e o modelo inclui a personalização. Seu pipeline está em sincronia durante o treinamento e a previsão. Você não precisou escrever código de pré-processamento/personalização especificamente para previsões, e a mesma API cuida das previsões de lote e de uso único.
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
@@ -322,6 +323,7 @@ Parabéns! Agora você criou com sucesso um modelo de aprendizado de máquina pa
 ## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você aprendeu como:
+
 > [!div class="checklist"]
 > * Compreender o problema
 > * Selecionar a tarefa de aprendizado de máquina apropriada
@@ -334,5 +336,6 @@ Neste tutorial, você aprendeu como:
 > * Usar o modelo para previsões
 
 Avance para o próximo tutorial para saber mais.
+
 > [!div class="nextstepaction"]
 > [Clustering de Iris](iris-clustering.md)

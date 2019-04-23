@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9177ac9a79afaea01f0ec21b0a64bad5a94e9966
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464197"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612232"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Projetar a camada de aplicativos de microsserviço e a API Web
 
@@ -38,13 +38,13 @@ Seria preciso outro guia para abordar o SOLID em detalhes. Portanto, este guia e
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **SOLID: princípios OOP fundamentais** \
-  [https://deviq.com/solid/](https://deviq.com/solid/)
+  <https://deviq.com/solid/>
 
 - **Inversão de Contêineres de Controle e o padrão de Injeção de Dependência** \
-  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
+  <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith. New is Glue** \ ("New" é como cola)
-  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
+  <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
 > [Anterior](nosql-database-persistence-infrastructure.md)

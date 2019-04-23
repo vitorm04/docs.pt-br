@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5174f3ac649ef002c7efff2fcc56effa3f84abba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a84c5057b7a35c837f2c597cd3e60cd293a70009
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465289"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611647"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 
@@ -26,16 +26,16 @@ Como uma introdução ao EF Core já está disponível na documentação da Micr
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **Entity Framework Core** \
-  [https://docs.microsoft.com/ef/core/](https://docs.microsoft.com/ef/core/)
+  [https://docs.microsoft.com/ef/core/](/ef/core/)
 
 - **Introdução ao ASP.NET Core e ao Entity Framework Core usando o Visual Studio** \
-  [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+  [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
 - **Classe DbContext** \
-  [https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+  [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
 - **Comparar o EF Core e o EF6.x** \
-  [https://docs.microsoft.com/ef/efcore-and-ef6/index](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+  [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infraestrutura no Entity Framework Core da perspectiva do DDD
 
@@ -235,13 +235,13 @@ Observe que usar o tempo de vida singleton para o repositório poderá causar pr
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo ASP.NET MVC** \
-  [https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 - **Jonathan Allen. Estratégias de implementação para o padrão de repositório com o Entity Framework, o Dapper e o Chain** \
-  [https://www.infoq.com/articles/repository-implementation-strategies](https://www.infoq.com/articles/repository-implementation-strategies)
+  <https://www.infoq.com/articles/repository-implementation-strategies>
 
 - **Cesar de la Torre. Comparando os tempos de vida do serviço de contêiner de IoC do ASP.NET Core com os escopos de instância de contêiner de IoC do Autofac** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapeamento de tabela
 
@@ -452,22 +452,22 @@ Embora não seja recomendado retornar IQueryable de um repositório, é perfeita
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **Mapeamento de tabela** \
-  [https://docs.microsoft.com/ef/core/modeling/relational/tables](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+  [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
 - **Usar HiLo para gerar chaves com o Entity Framework Core** \
-  [https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/](https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+  <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **Campos de backup** \
-  [https://docs.microsoft.com/ef/core/modeling/backing-field](https://docs.microsoft.com/ef/core/modeling/backing-field)
+  [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
 - **Steve Smith. Coleções encapsuladas no Entity Framework Core** \
-  [https://ardalis.com/encapsulated-collections-in-entity-framework-core](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+  <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **Propriedades de sombra** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **O padrão de especificação** \
-  [https://deviq.com/specification-pattern/](https://deviq.com/specification-pattern/)
+  <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
 > [Anterior](infrastructure-persistence-layer-design.md)

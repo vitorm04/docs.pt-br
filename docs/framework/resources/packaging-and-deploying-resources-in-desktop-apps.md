@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357853"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611387"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 
@@ -226,6 +226,7 @@ Quando você executar o exemplo a partir de um sistema cujo idioma for diferente
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>Alternativa de Empacotamento Sugerida
 
 Restrições de tempo ou orçamento podem impedir a criação de um conjunto de recursos para cada subcultura suportada pelo seu aplicativo. Em vez disso, você pode criar um assembly satélite único para uma cultura pai que todos as subculturas relacionadas podem usar. Por exemplo, você pode fornecer um único assembly satélite em inglês (en) que é recuperado por usuários que solicitam recursos em inglês específicos de região e um único assembly satélite alemão (de) para os usuários que solicitam recursos em alemão específica da região. Por exemplo, as solicitações para alemão falado na Alemanha (de-DE), Áustria (de-AT) e da Suíça (de-CH) fariam fallback para o assembly satélite alemão (de). Os recursos padrão são o fallback final e, portanto, devem ser os recursos que serão solicitados pela maioria dos usuários do seu aplicativo, então escolha cuidadosamente esses recursos. Essa abordagem implanta recursos que são menos culturalmente específicos, mas podem reduzir significativamente os custos de localização do seu aplicativo.

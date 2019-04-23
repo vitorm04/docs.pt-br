@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464899"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611478"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projetar um microsserviço orientado a DDD
 
@@ -96,13 +96,13 @@ Esse design de camada deve ser independente de cada microsserviço. Conforme obs
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **DevIQ. Princípio de Ignorância de persistência** \
-  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
+  <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini. Ignorância de infraestrutura** \
-  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
+  <https://ayende.com/blog/3137/infrastructure-ignorance>
 
 - **Angel Lopez. Arquitetura em camadas no design controlado por domínio** \
-  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
 >[Anterior](cqrs-microservice-reads.md)
