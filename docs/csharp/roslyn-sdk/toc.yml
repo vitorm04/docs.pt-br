@@ -1,48 +1,25 @@
-items:
 - name: O SDK do .NET Compiler Platform (APIs do Roslyn)
   href: index.md
   items:
-  - name: Entender o modelo de API do compilador
-    href: compiler-api-model.md
-  - name: Trabalhar com sintaxe
-    href: work-with-syntax.md
-  - name: Trabalhar com semântica
-    href: work-with-semantics.md
-  - name: Trabalhar com um workspace
-    href: work-with-workspace.md
-  - name: Explorar código com o visualizador de sintaxe
-    href: syntax-visualizer.md
-  - name: Inícios Rápidos
-    items:
-    - name: Análise sintática
-      href: get-started/syntax-analysis.md
-    - name: Análise semântica
-      href: get-started/semantic-analysis.md
-    - name: Transformação de sintaxe
-      href: get-started/syntax-transformation.md
-  - name: Tutoriais
-    items:
-    - name: Crie seu primeiro analisador e correção de código
-      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
-    - name: Introdução à escrita de correções de código e analisadores personalizados
-  - name: Tutoriais
-    items:
-    - name: Criar seu primeiro analisador
-    - name: Criar sua primeira correção de código
-    - name: Implantar seu analisador como um VSIX
-    - name: Implantar seu analisador como um pacote do NuGet
-- name: Exemplos
-  items:
-  - name: Pacotes assíncronos
-  - name: Classificador de console
-  - name: Converter em propriedade automática
-  - name: Solução de formato
-  - name: Implementar alterações de notificação de propriedade
-  - name: Criar const
-  - name: Guias de instruções
-ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467791"
+    - name: Entender o modelo de API do compilador
+      href: compiler-api-model.md
+    - name: Trabalhar com sintaxe
+      href: work-with-syntax.md
+    - name: Trabalhar com semântica
+      href: work-with-semantics.md
+    - name: Trabalhar com um workspace
+      href: work-with-workspace.md
+    - name: Explorar código com o visualizador de sintaxe
+      href: syntax-visualizer.md
+    - name: Inícios Rápidos
+      items:
+        - name: Análise sintática
+          href: get-started/syntax-analysis.md
+        - name: Análise semântica
+          href: get-started/semantic-analysis.md
+        - name: Transformação de sintaxe
+          href: get-started/syntax-transformation.md
+    - name: Tutoriais
+      items:
+        - name: Crie seu primeiro analisador e correção de código
+          href: tutorials/how-to-write-csharp-analyzer-code-fix.md

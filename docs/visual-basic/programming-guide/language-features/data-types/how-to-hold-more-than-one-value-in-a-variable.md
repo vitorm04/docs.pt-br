@@ -12,41 +12,41 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332255"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a><span data-ttu-id="c95e6-102">Como: Manter mais de um valor em uma variável (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c95e6-102">How to: Hold More Than One Value in a Variable (Visual Basic)</span></span>
-<span data-ttu-id="c95e6-103">Uma variável contém mais de um valor se você declará-la para ser de um *tipo de dados composto*.</span><span class="sxs-lookup"><span data-stu-id="c95e6-103">A variable holds more than one value if you declare it to be of a *composite data type*.</span></span>  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a><span data-ttu-id="689e5-102">Como: Manter mais de um valor em uma variável (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="689e5-102">How to: Hold More Than One Value in a Variable (Visual Basic)</span></span>
+<span data-ttu-id="689e5-103">Uma variável contém mais de um valor se você declará-la para ser de um *tipo de dados composto*.</span><span class="sxs-lookup"><span data-stu-id="689e5-103">A variable holds more than one value if you declare it to be of a *composite data type*.</span></span>  
   
- <span data-ttu-id="c95e6-104">[Tipos de dados compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluem classes, matrizes e estruturas.</span><span class="sxs-lookup"><span data-stu-id="c95e6-104">[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes.</span></span> <span data-ttu-id="c95e6-105">Uma variável de um tipo de dados composto pode conter uma combinação de tipos de dados elementares e outros tipos compostos.</span><span class="sxs-lookup"><span data-stu-id="c95e6-105">A variable of a composite data type can hold a combination of elementary data types and other composite types.</span></span> <span data-ttu-id="c95e6-106">Estruturas e classes podem conter código, bem como dados.</span><span class="sxs-lookup"><span data-stu-id="c95e6-106">Structures and classes can hold code as well as data.</span></span>  
+ <span data-ttu-id="689e5-104">[Tipos de dados compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluem classes, matrizes e estruturas.</span><span class="sxs-lookup"><span data-stu-id="689e5-104">[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes.</span></span> <span data-ttu-id="689e5-105">Uma variável de um tipo de dados composto pode conter uma combinação de tipos de dados elementares e outros tipos compostos.</span><span class="sxs-lookup"><span data-stu-id="689e5-105">A variable of a composite data type can hold a combination of elementary data types and other composite types.</span></span> <span data-ttu-id="689e5-106">Estruturas e classes podem conter código, bem como dados.</span><span class="sxs-lookup"><span data-stu-id="689e5-106">Structures and classes can hold code as well as data.</span></span>  
   
-### <a name="to-hold-more-than-one-value-in-a-variable"></a><span data-ttu-id="c95e6-107">Para manter mais de um valor em uma variável</span><span class="sxs-lookup"><span data-stu-id="c95e6-107">To hold more than one value in a variable</span></span>  
+### <a name="to-hold-more-than-one-value-in-a-variable"></a><span data-ttu-id="689e5-107">Para manter mais de um valor em uma variável</span><span class="sxs-lookup"><span data-stu-id="689e5-107">To hold more than one value in a variable</span></span>  
   
-1. <span data-ttu-id="c95e6-108">Determine que tipo de dados compostos que você deseja usar para sua variável.</span><span class="sxs-lookup"><span data-stu-id="c95e6-108">Determine what composite data type you want to use for your variable.</span></span>  
+1. <span data-ttu-id="689e5-108">Determine que tipo de dados compostos que você deseja usar para sua variável.</span><span class="sxs-lookup"><span data-stu-id="689e5-108">Determine what composite data type you want to use for your variable.</span></span>  
   
-2. <span data-ttu-id="c95e6-109">Se o tipo de dados compostos já não estiver definido, defini-lo para que sua variável possa usá-lo.</span><span class="sxs-lookup"><span data-stu-id="c95e6-109">If the composite data type is not already defined, define it so that your variable can use it.</span></span>  
+2. <span data-ttu-id="689e5-109">Se o tipo de dados compostos já não estiver definido, defini-lo para que sua variável possa usá-lo.</span><span class="sxs-lookup"><span data-stu-id="689e5-109">If the composite data type is not already defined, define it so that your variable can use it.</span></span>  
   
-    -   <span data-ttu-id="c95e6-110">Definir uma estrutura com um [instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).</span><span class="sxs-lookup"><span data-stu-id="c95e6-110">Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).</span></span>  
+    -   <span data-ttu-id="689e5-110">Definir uma estrutura com um [instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).</span><span class="sxs-lookup"><span data-stu-id="689e5-110">Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).</span></span>  
   
-    -   <span data-ttu-id="c95e6-111">Definir uma matriz com um [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="c95e6-111">Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>  
+    -   <span data-ttu-id="689e5-111">Definir uma matriz com um [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="689e5-111">Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>  
   
-    -   <span data-ttu-id="c95e6-112">Defina uma classe com um [declaração de classe](../../../../visual-basic/language-reference/statements/class-statement.md).</span><span class="sxs-lookup"><span data-stu-id="c95e6-112">Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).</span></span>  
+    -   <span data-ttu-id="689e5-112">Defina uma classe com um [declaração de classe](../../../../visual-basic/language-reference/statements/class-statement.md).</span><span class="sxs-lookup"><span data-stu-id="689e5-112">Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).</span></span>  
   
-3. <span data-ttu-id="c95e6-113">Declare a variável com um `Dim` instrução.</span><span class="sxs-lookup"><span data-stu-id="c95e6-113">Declare your variable with a `Dim` statement.</span></span>  
+3. <span data-ttu-id="689e5-113">Declare a variável com um `Dim` instrução.</span><span class="sxs-lookup"><span data-stu-id="689e5-113">Declare your variable with a `Dim` statement.</span></span>  
   
-4. <span data-ttu-id="c95e6-114">Siga o nome da variável com um `As` cláusula.</span><span class="sxs-lookup"><span data-stu-id="c95e6-114">Follow the variable name with an `As` clause.</span></span>  
+4. <span data-ttu-id="689e5-114">Siga o nome da variável com um `As` cláusula.</span><span class="sxs-lookup"><span data-stu-id="689e5-114">Follow the variable name with an `As` clause.</span></span>  
   
-5. <span data-ttu-id="c95e6-115">Siga o `As` palavra-chave com o nome do tipo de dados compostos apropriado.</span><span class="sxs-lookup"><span data-stu-id="c95e6-115">Follow the `As` keyword with the name of the appropriate composite data type.</span></span>  
+5. <span data-ttu-id="689e5-115">Siga o `As` palavra-chave com o nome do tipo de dados compostos apropriado.</span><span class="sxs-lookup"><span data-stu-id="689e5-115">Follow the `As` keyword with the name of the appropriate composite data type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c95e6-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c95e6-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="689e5-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="689e5-116">See also</span></span>
 
-- [<span data-ttu-id="c95e6-117">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="c95e6-117">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="c95e6-118">Caracteres de tipo</span><span class="sxs-lookup"><span data-stu-id="c95e6-118">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [<span data-ttu-id="c95e6-119">Tipos de dados compostos</span><span class="sxs-lookup"><span data-stu-id="c95e6-119">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [<span data-ttu-id="c95e6-120">Estruturas</span><span class="sxs-lookup"><span data-stu-id="c95e6-120">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="c95e6-121">Matrizes</span><span class="sxs-lookup"><span data-stu-id="c95e6-121">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [<span data-ttu-id="c95e6-122">Objetos e classes</span><span class="sxs-lookup"><span data-stu-id="c95e6-122">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [<span data-ttu-id="c95e6-123">Tipos de valor e referência</span><span class="sxs-lookup"><span data-stu-id="c95e6-123">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [<span data-ttu-id="689e5-117">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="689e5-117">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="689e5-118">Caracteres de Tipo</span><span class="sxs-lookup"><span data-stu-id="689e5-118">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [<span data-ttu-id="689e5-119">Tipos de Dados Compostos</span><span class="sxs-lookup"><span data-stu-id="689e5-119">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [<span data-ttu-id="689e5-120">Estruturas</span><span class="sxs-lookup"><span data-stu-id="689e5-120">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="689e5-121">Matrizes</span><span class="sxs-lookup"><span data-stu-id="689e5-121">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="689e5-122">Objetos e Classes</span><span class="sxs-lookup"><span data-stu-id="689e5-122">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="689e5-123">Tipos de Valor e Tipos de Referência</span><span class="sxs-lookup"><span data-stu-id="689e5-123">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
