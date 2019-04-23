@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176924"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrando com DataView (LINQ to DataSet)
-A capacidade de filtrar dados usando critérios específicos e apresentá-los para um cliente através de um controle da interface do usuário é um aspecto importante da vinculação de dados. <xref:System.Data.DataView> fornece várias maneiras para filtrar dados e retornar subconjuntos de linhas de dados atendem a critérios específicos de filtro. Além de cadeia de caracteres com base em recursos de filtragem <xref:System.Data.DataView> também fornece a capacidade de usar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressões para os critérios de filtragem. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressões de permitem operações de filtragem muito mais poderosas e complexas que a filtragem baseada em cadeia de caracteres.  
+A capacidade de filtrar dados usando critérios específicos e apresentá-los para um cliente através de um controle da interface do usuário é um aspecto importante da vinculação de dados. O <xref:System.Data.DataView> fornece várias maneiras para filtrar dados e retornar subconjuntos de linhas de dados que atendem a critérios específicos de filtro. Além de cadeia de caracteres com base em recursos de filtragem <xref:System.Data.DataView> também fornece a capacidade de usar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressões para os critérios de filtragem. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressões de permitem operações de filtragem muito mais poderosas e complexas que a filtragem baseada em cadeia de caracteres.  
   
  Há duas maneiras para filtrar dados usando um <xref:System.Data.DataView>:  
   
@@ -94,5 +94,5 @@ A capacidade de filtrar dados usando critérios específicos e apresentá-los pa
   
 ## <a name="see-also"></a>Consulte também
 
-- [Associação e LINQ to DataSet de dados](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Classificar com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Associação de dados e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Classificando com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

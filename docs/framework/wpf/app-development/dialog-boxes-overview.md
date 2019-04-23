@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177405"
 ---
 # <a name="dialog-boxes-overview"></a>Visão geral das caixas de diálogo
@@ -45,7 +45,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Para mostrar uma caixa de mensagem, você chama o `static`<xref:System.Windows.MessageBox.Show%2A> método, conforme demonstrado no código a seguir.  
+ Para mostrar uma caixa de mensagem, você chama o `static` <xref:System.Windows.MessageBox.Show%2A> método, conforme demonstrado no código a seguir.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -63,7 +63,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Caixas de diálogo comuns  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa uma variedade de caixas de diálogo reutilizáveis que são comuns a todos os aplicativos, incluindo caixas de diálogo Abrir arquivo, salvar arquivos e impressão. Como essas caixas de diálogo são implementadas pelo sistema operacional, elas podem ser compartilhadas entre todos os aplicativos executados no sistema operacional, o que ajuda na consistência da experiência do usuário. Quando os usuários estiverem familiarizados com o uso de uma caixa de diálogo fornecida pelo sistema operacional em um aplicativo, eles não precisarão aprender a usar a caixa de diálogo em outros aplicativos. Porque essas caixas de diálogo estão disponíveis para todos os aplicativos e como elas ajudam a fornecer uma experiência de usuário consistente, elas são conhecidas como *caixas de diálogo comuns*.  
+ O [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa uma variedade de caixas de diálogo reutilizáveis que são comuns a todos os aplicativos, incluindo caixas de diálogo Abrir Arquivo, Salvar Arquivo e Imprimir. Como essas caixas de diálogo são implementadas pelo sistema operacional, elas podem ser compartilhadas entre todos os aplicativos executados no sistema operacional, o que ajuda na consistência da experiência do usuário. Quando os usuários estiverem familiarizados com o uso de uma caixa de diálogo fornecida pelo sistema operacional em um aplicativo, eles não precisarão aprender a usar a caixa de diálogo em outros aplicativos. Porque essas caixas de diálogo estão disponíveis para todos os aplicativos e como elas ajudam a fornecer uma experiência de usuário consistente, elas são conhecidas como *caixas de diálogo comuns*.  
   
  Windows Presentation Foundation (WPF) encapsula o arquivo aberto, salve o arquivo e caixas de diálogo comuns de impressão e as expõe como classes gerenciadas para uso em aplicativos autônomos. Este tópico fornece uma visão geral breve de cada uma delas.  
   
@@ -208,7 +208,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
  ![Uma caixa de diálogo margens com uma borda vermelha ao redor do valor da margem esquerda inválida.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não restringe um usuário ao controle inválido até que ele tenha inserido dados válidos. Esse é bom comportamento para uma caixa de diálogo; um usuário poderá navegar livremente pelos controles em uma caixa de diálogo, independentemente de os dados serem válidos ou não. No entanto, isso significa que um usuário pode inserir dados inválidos e pressionar o **Okey** botão. Por esse motivo, seu código também precisa validar todos os controles em uma caixa de diálogo caixa quando o **Okey** botão for pressionado, tratando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+ O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não restringe um usuário ao controle inválido até que ele insira dados válidos. Esse é bom comportamento para uma caixa de diálogo; um usuário poderá navegar livremente pelos controles em uma caixa de diálogo, independentemente de os dados serem válidos ou não. No entanto, isso significa que um usuário pode inserir dados inválidos e pressionar o **Okey** botão. Por esse motivo, seu código também precisa validar todos os controles em uma caixa de diálogo caixa quando o **Okey** botão for pressionado, tratando o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -346,4 +346,4 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
 
 - [Visão geral do pop-up](../controls/popup-overview.md)
 - [Amostra de caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)
-- [Exemplo de controle personalizado ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)
+- [Amostra de controle personalizado ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)
