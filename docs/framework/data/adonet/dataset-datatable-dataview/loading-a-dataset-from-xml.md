@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099885"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Carregando um DataSet a partir de XML
@@ -21,7 +21,7 @@ O conteúdo de um <xref:System.Data.DataSet> ADO.NET pode ser criado de um fluxo
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**Automático**|Esse é o padrão. Examina o XML e escolhe a opção mais apropriada na seguinte ordem:<br /><br /> – Se o XML é um DiffGram **DiffGram** é usado.<br />-Se a <xref:System.Data.DataSet> contém um esquema ou o XML contém um esquema embutido, **ReadSchema** é usado.<br />-Se a <xref:System.Data.DataSet> não contém um esquema e o XML não contiver um esquema embutido, **InferSchema** é usado.<br /><br /> Se você souber o formato do XML que está sendo lido, para melhor desempenho é recomendável que você defina uma explícita **XmlReadMode**, em vez de aceitar o **automático** padrão.|  
+|**Auto**|Esse é o padrão. Examina o XML e escolhe a opção mais apropriada na seguinte ordem:<br /><br /> – Se o XML é um DiffGram **DiffGram** é usado.<br />-Se a <xref:System.Data.DataSet> contém um esquema ou o XML contém um esquema embutido, **ReadSchema** é usado.<br />-Se a <xref:System.Data.DataSet> não contém um esquema e o XML não contiver um esquema embutido, **InferSchema** é usado.<br /><br /> Se você souber o formato do XML que está sendo lido, para melhor desempenho é recomendável que você defina uma explícita **XmlReadMode**, em vez de aceitar o **automático** padrão.|  
 |**ReadSchema**|Lê qualquer esquema embutido e carrega os dados e o esquema.<br /><br /> Se o <xref:System.Data.DataSet> já contiver um esquema, novas tabelas serão adicionadas do esquema embutido para o esquema existente no <xref:System.Data.DataSet>. Se qualquer tabela no esquema embutido já existir no <xref:System.Data.DataSet>, uma exceção será gerada. Você não poderá modificar o esquema de uma tabela existente usando **Readschema**.<br /><br /> Se o <xref:System.Data.DataSet> não contiver um esquema, e não houver nenhum esquema embutido, nenhum dado será lido.<br /><br /> O esquema embutido pode ser definido usando o esquema da linguagem XSD. Para obter detalhes sobre como escrever um esquema embutido como o esquema XML, consulte [derivando estrutura relacional do DataSet do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Ignora qualquer esquema embutido e carrega os dados no esquema <xref:System.Data.DataSet> existente. Os dados que não corresponderem ao esquema existente serão descartados. Se nenhum esquema existir no <xref:System.Data.DataSet>, nenhum dado será carregado.<br /><br /> Se os dados forem um DiffGram **IgnoreSchema** tem a mesma funcionalidade **DiffGram** *.*|  
 |**InferSchema**|Ignora qualquer esquema embutido e infere o esquema pela estrutura dos dados XML, para então carregar os dados.<br /><br /> Se o <xref:System.Data.DataSet> já contiver um esquema, o esquema atual será estendido adicionando colunas às tabelas existentes. As tabelas adicionais não serão adicionadas se não houver tabelas existentes. Uma exceção será lançada se uma tabela inferida já existir com um namespace diferente, ou se qualquer coluna inferida estiver em conflito com colunas existentes.<br /><br /> Para obter detalhes sobre como **ReadXmlSchema** infere um esquema de um documento XML, consulte [inferindo estrutura relacional do DataSet do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
@@ -118,10 +118,10 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
-- [Usando XML em um DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)
 - [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [Derivando a estrutura relacional do DataSet do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [Inferir a estrutura relacional do DataSet do esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Carregando informações do esquema de DataSet do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Derivando a estrutura relacional do DataSet do esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Carregando informações de esquema de conjunto de dados de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

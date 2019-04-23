@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099684"
 ---
 # <a name="getting-started-wpf"></a>Introdução (WPF)
@@ -24,10 +24,10 @@ O Windows Presentation Foundation (WPF) é uma estrutura de interface do usuári
 |Como criar a interface do usuário do aplicativo?|[Criando o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
 |Novo no .NET?|[Visão geral do .NET Framework](../../get-started/overview.md)<br /><br /> [Fundamentos do aplicativo .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
 |Quero saber mais sobre o WPF…|[Introdução ao WPF no Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Visão geral de XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controles](../controls/index.md)<br /><br /> [Visão geral da vinculação de dados](../data/data-binding-overview.md)|  
-|Você é um desenvolvedor de Windows Forms?|[Controles dos Windows Forms e controles WPF equivalentes](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interoperação do WPF e dos Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
+|Você é um desenvolvedor de Windows Forms?|[Controles dos Windows Forms e controles WPF equivalentes](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interoperação do WPF e do Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Biblioteca de Classes](../class-library-wpf.md)
-- [Desenvolvimento do aplicativo](../app-development/index.md)
-- [.NET framework Developer Center](https://www.microsoft.com/net)
+- [Biblioteca de classes](../class-library-wpf.md)
+- [Desenvolvimento de aplicativos](../app-development/index.md)
+- [Central de desenvolvedores do .NET Framework](https://www.microsoft.com/net)

@@ -1,12 +1,12 @@
 ---
-title: <httpListener> (Configurações de rede)
+title: Elemento <httpListener> (Configurações de Rede)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099736"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > (configurações de rede)
@@ -43,7 +43,7 @@ Personaliza os parâmetros usados pelo <xref:System.Net.HttpListener> classe.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[configurações](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
  O **unescapeRequestUrl** atributo indica se <xref:System.Net.HttpListener> usa o URI sem escape bruto em vez do URI convertido em que todos os valores codificados por porcentagem são convertidos e outras etapas de normalização são obtidas.  

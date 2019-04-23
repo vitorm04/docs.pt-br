@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097246"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementando lógica de negócios (LINQ te o SQL)
@@ -185,7 +185,7 @@ partial class Customer
   
 ## <a name="see-also"></a>Consulte também
 
-- [Classes parciais e métodos](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
-- [Métodos parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Classes e métodos parciais](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Métodos Parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100074"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
@@ -105,7 +105,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Obtendo o aplicativo atual  
- Porque a funcionalidade dos <xref:System.Windows.Application> classe são compartilhados entre um aplicativo, pode haver apenas uma instância das <xref:System.Windows.Application> classe por <xref:System.AppDomain>. Para impor isso, o <xref:System.Windows.Application> classe é implementada como uma classe singleton (consulte [implementando Singleton no C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), que cria uma única instância de si mesma e fornece acesso compartilhado a com o `static`<xref:System.Windows.Application.Current%2A> propriedade.  
+ Porque a funcionalidade dos <xref:System.Windows.Application> classe são compartilhados entre um aplicativo, pode haver apenas uma instância das <xref:System.Windows.Application> classe por <xref:System.AppDomain>. Para impor isso, o <xref:System.Windows.Application> classe é implementada como uma classe singleton (consulte [implementando Singleton no c#](https://go.microsoft.com/fwlink/?LinkId=100567)), que cria uma única instância de si mesma e fornece acesso compartilhado a com o `static` <xref:System.Windows.Application.Current%2A> propriedade.  
   
  O código a seguir mostra como adquirir uma referência para o <xref:System.Windows.Application> objeto atual <xref:System.AppDomain>.  
   
@@ -357,9 +357,9 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Application>
-- [Visão geral do WPF do Windows](wpf-windows-overview.md)
+- [Visão geral das janelas do WPF](wpf-windows-overview.md)
 - [Visão geral de navegação](navigation-overview.md)
-- [Arquivos de recurso, conteúdo e dados do aplicativo WPF](wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)
-- [Modelo de aplicativo: Tópicos explicativos ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [Desenvolvimento do aplicativo](index.md)
+- [Modelo de aplicativo: Tópicos de instruções](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Desenvolvimento de aplicativos](index.md)

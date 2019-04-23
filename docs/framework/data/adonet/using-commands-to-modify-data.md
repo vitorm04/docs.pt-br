@@ -3,10 +3,10 @@ title: Usar os comandos para modificar dados
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
 ms.openlocfilehash: f2e3d162bfbdcb79cfecefa4ddc8e6a0dc46ee3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102447"
 ---
 # <a name="using-commands-to-modify-data"></a>Usar os comandos para modificar dados
@@ -20,11 +20,11 @@ Usando um provedor de dados .NET Framework, você pode executar os procedimentos
  [Atualizando dados em uma fonte de dados](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
  Descreve como executar comandos ou procedimentos armazenados que modificam dados em um banco de dados.  
   
- [Executar operações de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
+ [Executando operações de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
  Descreve como executar comandos que modificam o esquema de banco de dados.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
 - [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

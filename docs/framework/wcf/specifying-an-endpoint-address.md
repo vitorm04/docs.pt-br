@@ -8,10 +8,10 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097519"
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificando um endereço de ponto de extremidade
@@ -83,6 +83,6 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.EndpointAddress>
-- [Identidade e autenticação de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Autenticação e identidade de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Hospedagem](../../../docs/framework/wcf/feature-details/hosting.md)

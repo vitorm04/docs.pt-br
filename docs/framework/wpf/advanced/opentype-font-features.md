@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104475"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
@@ -22,7 +22,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato de fonte OpenType  
- O formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] é uma extensão do formato de fonte [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], adicionando suporte para dados de fonte PostScript. O formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] foi desenvolvido em conjunto pela [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e pela Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes e o sistema operacional de serviços que o suporte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes fornecem aos usuários uma maneira simples de instalar e usar fontes, se as fontes contêm [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] contornos ou do CFF (PostScript).  
+ O formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] é uma extensão do formato de fonte [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], adicionando suporte para dados de fonte PostScript. O formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] foi desenvolvido em conjunto pela [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e pela Adobe Corporation. As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] e os serviços do sistema operacional que dão suporte a fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] oferecem aos usuários uma maneira simples de usar e instalar fontes, independentemente de elas conterem estruturas de tópico do [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] ou estruturas de tópico do CFF (PostScript).  
   
  O formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] lida com os seguintes desafios do desenvolvedor:  
   
@@ -42,7 +42,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
  Consulte a [Especificação OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) para ver detalhes sobre o formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
 ### <a name="advanced-typographic-extensions"></a>Extensões tipográficas avançadas  
- As tabelas tipográficas avançadas (Tabelas de layout do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) ampliam a funcionalidade de fontes com estruturas de tópicos do [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] ou do CFF. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] As fontes de layout contêm informações adicionais que estende os recursos das fontes para dar suporte à tipografia internacional de alta qualidade. A maioria das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] expõe somente um subconjunto dos recursos totais do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] disponíveis. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes fornecem os seguintes recursos.  
+ As tabelas tipográficas avançadas (Tabelas de layout do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) ampliam a funcionalidade de fontes com estruturas de tópicos do [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] ou do CFF. As fontes de layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contêm informações adicionais que ampliam a capacidade das fontes de dar suporte à tipografia internacional de alta qualidade. A maioria das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] expõe somente um subconjunto dos recursos totais do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] disponíveis. As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fornecem os recursos a seguir.  
   
 -   O mapeamento avançado entre caracteres e glifos dá suporte a ligaduras, formas posicionais, alternativos e outras substituições de fonte.  
   
@@ -88,7 +88,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>Letras maiúsculas  
- As letras maiúsculas são um conjunto de formas tipográficas que renderizam texto em glifos no estilo maiúsculo. Normalmente, quando o texto inteiro é renderizado em letras maiúsculas, o espaçamento entre elas pode parecer muito apertado, e o peso e a proporção das letras, muito pesados. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dá suporte a um número de formatos de estilo para maiusculas, incluindo maiusculas pequenas, minimaiusculas, títulos e espaçamento de letras maiusculas. Esses formatos de estilo permitem controlar a aparência das letras maiúsculas.  
+ As letras maiúsculas são um conjunto de formas tipográficas que renderizam texto em glifos no estilo maiúsculo. Normalmente, quando o texto inteiro é renderizado em letras maiúsculas, o espaçamento entre elas pode parecer muito apertado, e o peso e a proporção das letras, muito pesados. O [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dá suporte a alguns formatos de estilo para letras maiúsculas, incluindo maiúsculas pequenas, minimaiúsculas, títulos e espaçamento de maiúsculas. Esses formatos de estilo permitem controlar a aparência das letras maiúsculas.  
   
  O texto a seguir exibe letras maiúsculas padrão para a fonte Pescadero, seguidas pelas letras nos estilos “SmallCaps” e “AllSmallCaps”. Nesse caso, o mesmo tamanho da fonte é usado para todas as três palavras.  
   
@@ -118,7 +118,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Ligaduras  
- Ligaduras são dois ou mais glifos que formam um único glifo com o objetivo de criar um texto mais legível ou atraente. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes oferecem suporte a quatro tipos de ligaduras:  
+ Ligaduras são dois ou mais glifos que formam um único glifo com o objetivo de criar um texto mais legível ou atraente. As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] oferecem suporte a quatro tipos de ligaduras:  
   
 -   **Ligaduras padrão**. Concebidas para aumentar a legibilidade. As ligaduras padrão incluem “fi”, “fl” e “ff”.  
   
@@ -181,7 +181,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Alternativos  
- Os alternativos são glifos que podem ser substituídos por um glifo padrão. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes, como a fonte Pericles usada nos exemplos a seguir, podem conter glifos alternativos que você pode usar para criar aparências diferentes para o texto. O texto a seguir exibe glifos padrão para a fonte Pericles.  
+ Os alternativos são glifos que podem ser substituídos por um glifo padrão. As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], como a fonte Pericles usada nos exemplos a seguir, pode conter glifos alternativos que você pode usar para criar aparências diferentes para o texto. O texto a seguir exibe glifos padrão para a fonte Pericles.  
   
  ![Texto usando glifos padrão OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "texto usando glifos padrão OpenType")  
 
@@ -224,7 +224,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
  As fontes OpenType dão suporte a um grande número de recursos que podem ser usados com valores numéricos em texto.  
   
 ### <a name="fractions"></a>Frações  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes oferecem suporte a estilos para frações, incluindo cortadas e empilhadas.  
+ As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dão suporte a estilos para frações, incluindo cortadas e empilhadas.  
   
  O texto a seguir exibe estilos de fração para a fonte Palatino Linotype.  
   
@@ -235,7 +235,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Numerais em estilo antigo  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes oferecem suporte a um formato de numerais em estilo antigo. Esse formato é útil para exibir numerais em estilos que não são mais padrão. O texto a seguir exibe uma data do século 18 em formatos de numerais padrão e em estilo antigo para a fonte Palatino Linotype.  
+ As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dão suporte a um formato de numerais em estilo antigo. Esse formato é útil para exibir numerais em estilos que não são mais padrão. O texto a seguir exibe uma data do século 18 em formatos de numerais padrão e em estilo antigo para a fonte Palatino Linotype.  
   
  ![Texto usando numerais em estilo antigos OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "texto usando numerais em estilo antigos OpenType")  
     
@@ -248,7 +248,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Figuras proporcionais e tabulares  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes oferecem suporte a um recurso de figura proporcional e tabular para controlar o alinhamento de larguras ao usar numerais. As figuras proporcionais tratam cada numeral como tendo uma largura diferente — “1” é mais estreito do que “5”. As figuras tabulares são tratadas como numerais de larguras iguais para se alinharem verticalmente, o que aumenta a legibilidade de informações do tipo financeiro.  
+ As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dão suporte a um recurso de figura proporcional e tabular para controlar o alinhamento de larguras ao usar numerais. As figuras proporcionais tratam cada numeral como tendo uma largura diferente — “1” é mais estreito do que “5”. As figuras tabulares são tratadas como numerais de larguras iguais para se alinharem verticalmente, o que aumenta a legibilidade de informações do tipo financeiro.  
   
  O texto a seguir exibe duas figuras proporcionais na primeira coluna, usando a fonte Miramonte. Observe a diferença de largura entre os numerais "5" e "1". A segunda coluna mostra os mesmos dois valores numéricos com suas larguras ajustadas usando o recurso de figura tabular.  
   
@@ -259,7 +259,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Zero cortado  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes oferecem suporte a um cortado formato numérico de zero para enfatizar a diferença entre a letra "O" e o número "0". Muitas vezes, o número zero cortado é utilizado para identificadores em informações financeiras e comerciais.  
+ As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dão suporte a um formato numérico de zero cortado para enfatizar a diferença entre a letra “O” e o número “0”. Muitas vezes, o número zero cortado é utilizado para identificadores em informações financeiras e comerciais.  
   
  O texto a seguir exibe um identificador do pedido de exemplo usando a fonte Miramonte. A primeira linha usa numerais padrão. A segunda linha usada número zero cortado para fornecer um melhor contraste com a letra "O" maiuscula.  
   
@@ -340,5 +340,5 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 - <xref:System.Windows.Documents.Typography>
 - [Especificação OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
 - [Tipografia no WPF](typography-in-wpf.md)
-- [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md)
+- [Pacote de fontes OpenType de exemplo](sample-opentype-font-pack.md)
 - [Empacotando fontes com aplicativos](packaging-fonts-with-applications.md)

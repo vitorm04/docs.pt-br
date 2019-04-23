@@ -11,10 +11,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100906"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Como: desenhar com pincéis opacos e semitransparentes
@@ -33,11 +33,11 @@ Ao preencher uma forma, você deve passar uma <xref:System.Drawing.Brush> objeto
  ![Ilustração que mostra a saída opaca e semitransparente.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Combinação alfa em linhas e preenchimentos](alpha-blending-lines-and-fills.md)
-- [Como: Dar ao controle um segundo plano transparente](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Como: desenhar linhas opacas e semitransparentes](how-to-draw-opaque-and-semitransparent-lines.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Combinação Alfa em Linhas e Preenchimentos](alpha-blending-lines-and-fills.md)
+- [Como: Dar ao controle uma tela de fundo transparente](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Como: Desenhar linhas opacas e semitransparentes](how-to-draw-opaque-and-semitransparent-lines.md)

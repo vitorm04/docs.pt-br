@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105841"
 ---
 # <a name="reflection-and-net-native"></a>Reflexão e .NET Nativo
@@ -29,11 +29,11 @@ No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprograma�
   
 -   [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
--   [Referência da API de Reflexão](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+-   [Referência da API de reflexão](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Compilando aplicativos com o .NET Nativo](../../../docs/framework/net-native/index.md)
-- [Compilação e .NET nativo](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Compilação de aplicativos com o .NET Native](../../../docs/framework/net-native/index.md)
+- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)

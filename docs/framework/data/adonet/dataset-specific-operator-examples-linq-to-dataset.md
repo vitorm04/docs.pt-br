@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8fdd64af-6ad0-46cd-91c8-dbe26620eeb1
 ms.openlocfilehash: 27a48b7ffe5466c52f19f15cf3c1a6cb558028b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097325"
 ---
 # <a name="dataset-specific-operator-examples-linq-to-dataset"></a>Exemplos Conjunto de dados específicos de operador (LINQ to DataSet)
@@ -43,5 +43,5 @@ Os exemplos neste tópico demonstram como usar o método de <xref:System.Data.Da
   
 ## <a name="see-also"></a>Consulte também
 
-- [Carregando dados em um DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
 ms.openlocfilehash: 09af70cd00b4fc88b5cd76f7de920905c5b3a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101823"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Como: Trabalhar com colunas de imagem no controle DataGridView do Windows Forms
@@ -37,4 +37,4 @@ O exemplo de código a seguir mostra como usar o <xref:System.Windows.Forms.Data
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Como: Exibir imagens em células do controle DataGridView do Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Como: Exibir imagens em células do controle DataGridView dos Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

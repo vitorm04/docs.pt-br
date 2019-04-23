@@ -3,10 +3,10 @@ title: Terminologia do Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
 ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104163"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia do Entity Framework
@@ -77,7 +77,7 @@ Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_
   
 ## <a name="see-also"></a>Consulte também
 
-- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
-- [Guia de Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [Recursos do Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)

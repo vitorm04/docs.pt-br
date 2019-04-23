@@ -3,10 +3,10 @@ title: DataSets tipados
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098644"
 ---
 # <a name="typed-datasets"></a>DataSets tipados
@@ -17,7 +17,7 @@ Juntamente com acesso de associação tardia por meio de valores com variáveis 
  Além disso, fortemente tipada **conjunto de dados** fornece acesso aos valores como o tipo correto no tempo de compilação. Com fortemente tipado **conjunto de dados**, erros de incompatibilidade de tipo são capturados quando o código é compilado em vez de no tempo de execução.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Gerando DataSets fortemente tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ [Gerando conjuntos de dados fortemente tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Descreve como criar e usar fortemente tipado **conjunto de dados**.  
   
  [Anotando DataSets tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
@@ -25,5 +25,5 @@ Juntamente com acesso de associação tardia por meio de valores com variáveis 
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

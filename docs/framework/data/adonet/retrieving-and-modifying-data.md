@@ -3,10 +3,10 @@ title: Recuperando e modificando dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097610"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperando e modificando dados no ADO.NET
@@ -16,10 +16,10 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
  [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  Descreve como estabelecer uma conexão com uma fonte de dados e como trabalhar com eventos de conexão.  
   
- [Cadeias de caracteres de conexão](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)  
  Contém os tópicos que descrevem os vários aspectos do uso de cadeias de conexão, incluindo palavras-chave de cadeias de conexão, informações de segurança e seu respectivo armazenamento e recuperação.  
   
- [Pool de conexões](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)  
  Descreve o pool de conexões para provedores de dados .NET Framework.  
   
  [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
@@ -52,16 +52,16 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
  [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)  
  Descreve os contadores de desempenho disponíveis para `SqlClient` e `OracleClient`.  
   
- [Programação assíncrona](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
+ [Programação Assíncrona](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
  Descreve o suporte do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] à programação assíncrona.  
   
- [Suporte de streaming do SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
+ [Suporte de Streaming do SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Discute como escrever aplicativos que transmitir dados do SQL Server sem a necessidade de ele totalmente carregado na memória.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mapeamentos de tipos de dados no ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)
+- [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
 ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105762"
 ---
 # <a name="property-changed-events"></a>Eventos com propriedade alterada
@@ -28,5 +28,5 @@ Se você quiser que o controle envie notificações quando uma propriedade chama
 ## <a name="see-also"></a>Consulte também
 
 - [Eventos](../../../standard/events/index.md)
-- [Eventos em controles dos Windows Forms](events-in-windows-forms-controls.md)
-- [Propriedades em controles dos Windows Forms](properties-in-windows-forms-controls.md)
+- [Eventos em controles do Windows Forms](events-in-windows-forms-controls.md)
+- [Propriedades em controles do Windows Forms](properties-in-windows-forms-controls.md)

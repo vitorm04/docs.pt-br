@@ -13,10 +13,10 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098956"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizando a aparência de um controle existente criando um ControlTemplate
@@ -256,7 +256,7 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Exemplo completo  
- O exemplo a seguir mostra todo <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> que é discutido neste tópico.  
+ O exemplo a seguir mostra todo <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> que é discutido neste tópico.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   

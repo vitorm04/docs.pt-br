@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102733"
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
@@ -271,12 +271,12 @@ End Interface
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: criar um contrato de resposta/solicitação](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Como: criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Como: criar um contrato duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Como: Criar um contrato de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Como: Criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Como: Criar um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Especificando transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Utilizando sessões](../../../docs/framework/wcf/using-sessions.md)
+- [Usando sessões](../../../docs/framework/wcf/using-sessions.md)
 - [Operações síncronas e assíncronas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Serviços confiáveis](../../../docs/framework/wcf/reliable-services.md)
 - [Serviços e transações](../../../docs/framework/wcf/services-and-transactions.md)

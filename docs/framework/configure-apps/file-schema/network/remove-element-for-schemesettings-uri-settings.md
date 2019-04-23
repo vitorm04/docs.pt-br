@@ -1,12 +1,12 @@
 ---
-title: <remove> Elemento para schemeSettings (configurações de Uri)
+title: Elemento <remove> para schemeSettings (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104969"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>\<Remover > elemento para schemeSettings (configurações de Uri)
@@ -41,7 +41,7 @@ Remove uma definição de esquema para um nome de esquema.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<schemeSettings > (configurações de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
+|[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, o <xref:System.Uri?displayProperty=nameWithType> por cento un-escapes de classe codificado delimitadores de caminho antes de executar a compactação de caminho. Isso era implementado como um mecanismo de segurança contra ataques, como o seguinte:  

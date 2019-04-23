@@ -10,10 +10,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
 ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104293"
 ---
 # <a name="using-nested-graphics-containers"></a>Usando contêineres de elementos gráficos aninhados
@@ -59,4 +59,4 @@ ms.locfileid: "59104293"
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Graphics>
-- [Gerenciando o estado de um objeto gráfico](managing-the-state-of-a-graphics-object.md)
+- [Gerenciando o Estado de um Objeto Gráfico](managing-the-state-of-a-graphics-object.md)

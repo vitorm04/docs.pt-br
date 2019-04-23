@@ -13,10 +13,10 @@ ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097521"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Como: Determinar o nome totalmente qualificado de um assembly
@@ -45,8 +45,8 @@ Para descobrir o nome totalmente qualificado de um assembly no cache de assembly
 ## <a name="see-also"></a>Consulte também
 
 - [Nomes de assembly](../../../docs/framework/app-domains/assembly-names.md)
-- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
-- [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Cache de assemblies global](../../../docs/framework/app-domains/gac.md)
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

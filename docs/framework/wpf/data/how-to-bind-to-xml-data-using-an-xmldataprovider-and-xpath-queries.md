@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
 ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097220"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Como: Associar dados XML usando um XMLDataProvider e consultas XPath
@@ -36,13 +36,13 @@ Este exemplo mostra como associar a [!INCLUDE[TLA#tla_xml](../../../../includes/
   
  As propriedades **XPath** no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são manipuladas pelo método XmlNode.SelectNodes. Você pode modificar as consultas **XPath** para obter resultados diferentes. Aqui estão alguns exemplos para o <xref:System.Windows.Data.Binding.XPath%2A> o limite de consulta <xref:System.Windows.Controls.ListBox> do exemplo anterior:  
   
--   `XPath="Book[1]"` retornará o primeiro elemento de livro ("XML in Action"). Observe que os índices **XPath** são baseados em 1, e não em 0.  
+-   O `XPath="Book[1]"` retornará o primeiro elemento de livro ("XML in Action"). Observe que os índices **XPath** são baseados em 1, e não em 0.  
   
--   `XPath="Book[@*]"` Retorna todos os elementos de livro com quaisquer atributos.  
+-   O `XPath="Book[@*]"` retornará todos os elementos de livro com quaisquer atributos.  
   
--   `XPath="Book[last()-1]"` retornará o segundo ao último elemento de livro ("Introducing Microsoft .NET").  
+-   O `XPath="Book[last()-1]"` retornará do segundo ao último elemento de livro ("Introducing Microsoft .NET").  
   
--   `XPath="*[position()>3]"` retornará todos os elementos de livro exceto os 3 primeiros.  
+-   O `XPath="*[position()>3]"` retornará todos os elementos de livro exceto os três primeiros.  
   
  Quando você executa um **XPath** consultar, ele retorna um <xref:System.Xml.XmlNode> ou uma lista de XmlNodes. <xref:System.Xml.XmlNode> é um [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objeto, o que significa que você pode usar o <xref:System.Windows.Data.Binding.Path%2A> propriedade se associar a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propriedades. Considere o exemplo anterior novamente. Se o restante do exemplo permanece a mesma e alterar o <xref:System.Windows.Controls.TextBlock> associação a seguir, você verá os nomes dos XmlNodes retornados no <xref:System.Windows.Controls.ListBox>. Nesse caso, o nome de todos os nós retornados é "*Livro*".  
   
@@ -63,6 +63,6 @@ Este exemplo mostra como associar a [!INCLUDE[TLA#tla_xml](../../../../includes/
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [Associar a XDocument, XElement ou LINQ para resultados de consulta XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [Usar o padrão de detalhes mestre com os dados XML hierárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Visão geral das fontes de associação](binding-sources-overview.md)
+- [Visão geral das origens da associação](binding-sources-overview.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

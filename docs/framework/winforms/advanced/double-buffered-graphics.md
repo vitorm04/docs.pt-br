@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103435"
 ---
 # <a name="double-buffered-graphics"></a>Elementos gráficos em buffer duplo
@@ -37,7 +37,7 @@ A cintilação é um problema comum na programação de gráficos. Operações g
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Como: renderizar elementos gráficos em buffer manualmente](how-to-manually-render-buffered-graphics.md)
-- [Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Como: gerenciar elementos gráficos em buffer manualmente](how-to-manually-manage-buffered-graphics.md)
-- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Como: Renderizar elementos gráficos em buffer manualmente](how-to-manually-render-buffered-graphics.md)
+- [Como: Reduzir a cintilação em elementos gráficos com buffers duplos para formulários e controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Como: Gerenciar elementos gráficos em buffer manualmente](how-to-manually-manage-buffered-graphics.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
