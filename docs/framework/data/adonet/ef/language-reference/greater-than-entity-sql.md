@@ -3,37 +3,37 @@ title: '> (Maior que) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328550"
 ---
-# <a name="-greater-than-entity-sql"></a><span data-ttu-id="5b464-102">> (Maior que) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5b464-102">> (Greater Than) (Entity SQL)</span></span>
-<span data-ttu-id="5b464-103">Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que a expressão da direita.</span><span class="sxs-lookup"><span data-stu-id="5b464-103">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>  
+# <a name="-greater-than-entity-sql"></a><span data-ttu-id="ccc05-102">> (Maior que) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ccc05-102">> (Greater Than) (Entity SQL)</span></span>
+<span data-ttu-id="ccc05-103">Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que a expressão da direita.</span><span class="sxs-lookup"><span data-stu-id="ccc05-103">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b464-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5b464-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccc05-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ccc05-104">Syntax</span></span>  
   
 ```  
 expression > expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="5b464-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="5b464-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="ccc05-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="ccc05-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="5b464-106">Qualquer expressão válida.</span><span class="sxs-lookup"><span data-stu-id="5b464-106">Any valid expression.</span></span> <span data-ttu-id="5b464-107">As duas expressões devem ter os tipos de dados implicitamente conversíveis.</span><span class="sxs-lookup"><span data-stu-id="5b464-107">Both expressions must have implicitly convertible data types.</span></span>  
+ <span data-ttu-id="ccc05-106">Qualquer expressão válida.</span><span class="sxs-lookup"><span data-stu-id="ccc05-106">Any valid expression.</span></span> <span data-ttu-id="ccc05-107">As duas expressões devem ter os tipos de dados implicitamente conversíveis.</span><span class="sxs-lookup"><span data-stu-id="ccc05-107">Both expressions must have implicitly convertible data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="5b464-108">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="5b464-108">Result Types</span></span>  
- `true` <span data-ttu-id="5b464-109">Se a expressão esquerda tem um valor maior que a expressão direita; Caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="5b464-109">if the left expression has a value greater than the right expression; otherwise, `false`.</span></span>  
+## <a name="result-types"></a><span data-ttu-id="ccc05-108">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="ccc05-108">Result Types</span></span>  
+ <span data-ttu-id="ccc05-109">`true` se a expressão esquerda tem um valor maior que a expressão direita; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="ccc05-109">`true` if the left expression has a value greater than the right expression; otherwise, `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5b464-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5b464-110">Example</span></span>  
- <span data-ttu-id="5b464-111">A seguinte consulta SQL Entity usa > operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior que a expressão direita.</span><span class="sxs-lookup"><span data-stu-id="5b464-111">The following Entity SQL query uses > comparison operator to compare two expressions to determine whether the left expression has a value greater than the right expression.</span></span> <span data-ttu-id="5b464-112">A consulta é baseada no modelo de vendas AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="5b464-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="5b464-113">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="5b464-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="ccc05-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ccc05-110">Example</span></span>  
+ <span data-ttu-id="ccc05-111">A seguinte consulta SQL Entity usa > operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior que a expressão direita.</span><span class="sxs-lookup"><span data-stu-id="ccc05-111">The following Entity SQL query uses > comparison operator to compare two expressions to determine whether the left expression has a value greater than the right expression.</span></span> <span data-ttu-id="ccc05-112">A consulta é baseada no modelo de vendas AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="ccc05-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="ccc05-113">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="ccc05-113">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="5b464-114">Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="5b464-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="ccc05-114">Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="ccc05-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="5b464-115">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="5b464-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="ccc05-115">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="ccc05-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#GREATER](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater)]  
   
-## <a name="see-also"></a><span data-ttu-id="5b464-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b464-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ccc05-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ccc05-116">See also</span></span>
 
-- [<span data-ttu-id="5b464-117">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="5b464-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="ccc05-117">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ccc05-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
