@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d66d24da05bc3b8f0c3d0a828456d7c61613d219
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188299"
 ---
-# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="9a6cf-102">Método IMetaDataImport::EnumModuleRefs</span><span class="sxs-lookup"><span data-stu-id="9a6cf-102">IMetaDataImport::EnumModuleRefs Method</span></span>
-<span data-ttu-id="9a6cf-103">Enumera ModuleRef tokens que representam os módulos importados.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
+# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="c2900-102">Método IMetaDataImport::EnumModuleRefs</span><span class="sxs-lookup"><span data-stu-id="c2900-102">IMetaDataImport::EnumModuleRefs Method</span></span>
+<span data-ttu-id="c2900-103">Enumera ModuleRef tokens que representam os módulos importados.</span><span class="sxs-lookup"><span data-stu-id="c2900-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a6cf-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9a6cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2900-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c2900-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumModuleRefs (  
@@ -38,36 +38,36 @@ HRESULT EnumModuleRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a6cf-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9a6cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c2900-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c2900-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="9a6cf-106">[no, out] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="9a6cf-107">Isso deve ser NULL para a primeira chamada desse método.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="c2900-106">[no, out] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="c2900-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="c2900-107">Isso deve ser NULL para a primeira chamada desse método.</span><span class="sxs-lookup"><span data-stu-id="c2900-107">This must be NULL for the first call of this method.</span></span>  
   
  `rModuleRefs`  
- <span data-ttu-id="9a6cf-108">[out] A matriz usada para armazenar os tokens ModuleRef.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-108">[out] The array used to store the ModuleRef tokens.</span></span>  
+ <span data-ttu-id="c2900-108">[out] A matriz usada para armazenar os tokens ModuleRef.</span><span class="sxs-lookup"><span data-stu-id="c2900-108">[out] The array used to store the ModuleRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="9a6cf-109">[in] O tamanho máximo da `rModuleRefs` matriz.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
+ <span data-ttu-id="c2900-109">[in] O tamanho máximo da `rModuleRefs` matriz.</span><span class="sxs-lookup"><span data-stu-id="c2900-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
   
  `pcModuleRefs`  
- <span data-ttu-id="9a6cf-110">[out] O número de tokens ModuleRef retornado no `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
+ <span data-ttu-id="c2900-110">[out] O número de tokens ModuleRef retornado no `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="c2900-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9a6cf-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="9a6cf-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c2900-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="c2900-111">Return Value</span></span>  
   
-|<span data-ttu-id="9a6cf-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9a6cf-112">HRESULT</span></span>|<span data-ttu-id="9a6cf-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="9a6cf-113">Description</span></span>|  
+|<span data-ttu-id="c2900-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c2900-112">HRESULT</span></span>|<span data-ttu-id="c2900-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="c2900-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` <span data-ttu-id="9a6cf-114">retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-114">returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="9a6cf-115">Não há nenhum token para enumerar.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="9a6cf-116">Nesse caso, `pcModuleRefs` é zero.</span><span class="sxs-lookup"><span data-stu-id="9a6cf-116">In that case, `pcModuleRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="c2900-114">`EnumModuleRefs` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="c2900-114">`EnumModuleRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="c2900-115">Não há nenhum token para enumerar.</span><span class="sxs-lookup"><span data-stu-id="c2900-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="c2900-116">Nesse caso, `pcModuleRefs` é zero.</span><span class="sxs-lookup"><span data-stu-id="c2900-116">In that case, `pcModuleRefs` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9a6cf-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a6cf-117">Requirements</span></span>  
- <span data-ttu-id="9a6cf-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a6cf-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2900-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c2900-117">Requirements</span></span>  
+ <span data-ttu-id="c2900-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2900-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a6cf-119">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a6cf-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c2900-119">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c2900-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9a6cf-120">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9a6cf-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c2900-120">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c2900-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="9a6cf-121">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="9a6cf-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c2900-121">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2900-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a6cf-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9a6cf-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2900-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c2900-122">See also</span></span>
 
-- [<span data-ttu-id="9a6cf-123">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="9a6cf-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="9a6cf-124">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="9a6cf-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c2900-123">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="c2900-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c2900-124">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="c2900-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
