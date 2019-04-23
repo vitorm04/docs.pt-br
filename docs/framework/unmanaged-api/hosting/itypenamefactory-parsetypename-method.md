@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cbe5f634a5d0580c7e58b03f318da98a0112fa6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208079"
 ---
-# <a name="itypenamefactoryparsetypename-method"></a><span data-ttu-id="b5bbc-102">Método ITypeNameFactory::ParseTypeName</span><span class="sxs-lookup"><span data-stu-id="b5bbc-102">ITypeNameFactory::ParseTypeName Method</span></span>
-<span data-ttu-id="b5bbc-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="b5bbc-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamefactoryparsetypename-method"></a><span data-ttu-id="25915-102">Método ITypeNameFactory::ParseTypeName</span><span class="sxs-lookup"><span data-stu-id="25915-102">ITypeNameFactory::ParseTypeName Method</span></span>
+<span data-ttu-id="25915-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="25915-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5bbc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b5bbc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25915-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="25915-104">Syntax</span></span>  
   
 ```  
 HRESULT ParseTypeName (  
@@ -37,15 +37,15 @@ HRESULT ParseTypeName (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b5bbc-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b5bbc-105">Requirements</span></span>  
- <span data-ttu-id="b5bbc-106">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5bbc-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25915-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="25915-105">Requirements</span></span>  
+ <span data-ttu-id="25915-106">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25915-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5bbc-107">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b5bbc-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="25915-107">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="25915-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b5bbc-108">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b5bbc-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="25915-108">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="25915-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="b5bbc-109">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b5bbc-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="25915-109">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25915-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5bbc-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b5bbc-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25915-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25915-110">See also</span></span>
 
-- [<span data-ttu-id="b5bbc-111">Interfaces de hospedagem</span><span class="sxs-lookup"><span data-stu-id="b5bbc-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="25915-111">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="25915-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
