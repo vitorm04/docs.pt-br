@@ -14,10 +14,10 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335713"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms e arquitetura de entrada da interoperabilidade do WPF
@@ -94,7 +94,7 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
 -   Teclas de comando e teclas de caixa de diálogo.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] processamento do acelerador.  
+-   Processamento do acelerador [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
  As seções a seguir descrevem essas partes em mais detalhes.  
   
@@ -134,6 +134,6 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Passo a passo: hospedar um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: hospedar um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
+- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)

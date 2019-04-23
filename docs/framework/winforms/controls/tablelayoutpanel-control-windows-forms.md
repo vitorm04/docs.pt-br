@@ -10,10 +10,10 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
 ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337780"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>Controle TableLayoutPanel (Windows Forms)
@@ -32,19 +32,19 @@ O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo e
  [Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  Mostra como ancorar e encaixar controles filho em um <xref:System.Windows.Forms.TableLayoutPanel> controle.  
   
- [Como: Criar um layout do Windows Forms que responda bem à localização](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [Como: Projetar um Layout de formulários do Windows que responde bem à localização](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  Demonstra como usar um <xref:System.Windows.Forms.TableLayoutPanel> controle para criar um formulário que responde bem à localização.  
   
- [Como: Criar um Windows Form redimensionável para entrada de dados](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [Como: Criar um formulário do Windows redimensionável para entrada de dados](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Demonstra como usar um <xref:System.Windows.Forms.TableLayoutPanel> controle para criar um formulário que responde bem ao redimensionamento.  
   
-1. [Como: Alinhar e alongar um controle em um controle TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [Como: Alinhar e Alongar um controle em um controle TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
 2. [Como: Abranger linhas e colunas em um controle TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
 3. [Como: Editar colunas e linhas em um controle TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [Passo a passo: Organizar controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.TableLayoutPanel>  

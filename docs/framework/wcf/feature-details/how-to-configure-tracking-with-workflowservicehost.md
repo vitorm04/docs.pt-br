@@ -3,10 +3,10 @@ title: 'Como: configurar o acompanhamento com WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
 ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336558"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como: configurar o acompanhamento com WorkflowServiceHost
@@ -70,6 +70,6 @@ Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configuração simplificada para serviços do WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+- [Configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Controlando perfis](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Acompanhando perfis](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

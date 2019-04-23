@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336051"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Como: Definir opções de grade para todos os Windows Forms
@@ -31,13 +31,13 @@ Quando você se acostumar a trabalhar no ambiente de desenvolvimento do Visual S
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Geral, Windows Forms Designer, Opções da Caixa de Diálogo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Controles de Windows Forms](index.md)
-- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Organizando controles nos Windows Forms](arranging-controls-on-windows-forms.md)
+- [Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Geral, Designer de formulários do Windows, caixa de diálogo Opções](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Controles dos Windows Forms](index.md)
+- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Organizando Controles nos Windows Forms](arranging-controls-on-windows-forms.md)
 - [Como: Definir a ordem de tabulação nos Windows Forms](how-to-set-the-tab-order-on-windows-forms.md)
-- [Como: Definir o texto exibido por um controle do Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Como: Definir o texto exibido pelo controle de um Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Colocando controles nos Windows Forms](putting-controls-on-windows-forms.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

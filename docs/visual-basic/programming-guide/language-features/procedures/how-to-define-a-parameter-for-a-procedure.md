@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333828"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Como: Definir um parâmetro para um procedimento (Visual Basic)
@@ -57,9 +57,9 @@ Um *parâmetro* permite que o código de chamada passar um valor para o procedim
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)
-- [Como: passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
-- [Passar argumentos por valor e por referência](./passing-arguments-by-value-and-by-reference.md)
-- [Procedimentos recursivos](./recursive-procedures.md)
-- [Sobrecarga de procedimento](./procedure-overloading.md)
-- [Objetos e classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
+- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)
+- [Procedimentos Recursivos](./recursive-procedures.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)

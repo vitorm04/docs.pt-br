@@ -3,10 +3,10 @@ title: Exportando metadados personalizados para uma extensão do WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334504"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportando metadados personalizados para uma extensão do WCF
@@ -43,6 +43,6 @@ No Windows Communication Foundation (WCF), a exportação de metadados é o proc
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Como: exportar declarações de política personalizadas](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
+- [Como: Exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Como: Exportar declarações de política personalizada](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [Importando metadados personalizados para uma extensão do WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

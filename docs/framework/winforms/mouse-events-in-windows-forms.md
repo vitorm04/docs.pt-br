@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
 ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333672"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos do mouse no Windows Forms
@@ -36,31 +36,31 @@ Quando manipula entradas de mouse, você geralmente deseja conhecer a localizaç
 ## <a name="standard-click-event-behavior"></a>Comportamento do evento de clique  
  Se quiser manipular eventos de clique do mouse na ordem correta, você precisará conhecer a ordem em que os eventos de clique são gerados em controles dos Windows Forms. Todos os controles dos Windows Forms geram eventos de clique na mesma ordem quando um botão do mouse é pressionado e liberado (independentemente de qual botão do mouse), exceto onde é indicado na lista a seguir de controles individuais. A lista a seguir mostra a ordem dos eventos gerados por um único clique do botão do mouse:  
   
-1. <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> evento.  
   
-2. <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> evento.  
   
-3. <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> evento.  
   
-4. <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> evento.  
   
  A seguir, temos a ordem dos eventos gerados por um clique duplo do botão do mouse:  
   
-1. <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> evento.  
   
-2. <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> evento.  
   
-3. <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> evento.  
   
-4. <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> evento.  
   
-5. <xref:System.Windows.Forms.Control.MouseDown> .  
+5. <xref:System.Windows.Forms.Control.MouseDown> evento.  
   
-6. <xref:System.Windows.Forms.Control.DoubleClick> . (Isso pode variar, dependendo se o controle em questão tem o <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> definido como bit de estilo `true`. Para obter mais informações sobre como definir um <xref:System.Windows.Forms.ControlStyles> bit, consulte o <xref:System.Windows.Forms.Control.SetStyle%2A> método.)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> evento. (Isso pode variar, dependendo se o controle em questão tem o <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> definido como bit de estilo `true`. Para obter mais informações sobre como definir um <xref:System.Windows.Forms.ControlStyles> bit, consulte o <xref:System.Windows.Forms.Control.SetStyle%2A> método.)  
   
-7. <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> evento.  
   
-8. <xref:System.Windows.Forms.Control.MouseUp> .  
+8. <xref:System.Windows.Forms.Control.MouseUp> evento.  
   
  Para obter um exemplo de código que mostra a ordem do mouse, clique em eventos, consulte [como: Entrada do usuário de identificador de eventos nos Windows Forms a controles](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -93,7 +93,7 @@ Quando manipula entradas de mouse, você geralmente deseja conhecer a localizaç
   
     -   Clique duas vezes à direita: Nenhum evento de clique gerado  
   
--   <xref:System.Windows.Forms.ListView> Controle   
+-   Controle <xref:System.Windows.Forms.ListView>  
   
     > [!NOTE]
     >  O comportamento do evento detalhado a seguir ocorre apenas quando o usuário clica nos itens a <xref:System.Windows.Forms.ListView> controle. Nenhum evento é gerado para cliques em qualquer outro lugar no controle. Além dos eventos descritos mais adiante, existem os <xref:System.Windows.Forms.ListView.BeforeLabelEdit> e <xref:System.Windows.Forms.ListView.AfterLabelEdit> eventos, que podem ser de seu interesse se você quiser usar a validação com o <xref:System.Windows.Forms.ListView> controle.  
@@ -106,7 +106,7 @@ Quando manipula entradas de mouse, você geralmente deseja conhecer a localizaç
   
     -   À direita, clique duas vezes: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
--   <xref:System.Windows.Forms.TreeView> Controle   
+-   Controle <xref:System.Windows.Forms.TreeView>  
   
     > [!NOTE]
     >  O comportamento do evento detalhado a seguir ocorre apenas quando o usuário clica nos próprios itens ou à direita dos itens no <xref:System.Windows.Forms.TreeView> controle. Nenhum evento é gerado para cliques em qualquer outro lugar no controle. Além dos descritos mais adiante, há o <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>, e <xref:System.Windows.Forms.TreeView.AfterLabelEdit> eventos, que podem ser de seu interesse se você quiser usar a validação com o <xref:System.Windows.Forms.TreeView> controle .  
@@ -143,4 +143,4 @@ Quando manipula entradas de mouse, você geralmente deseja conhecer a localizaç
   
 ## <a name="see-also"></a>Consulte também
 
-- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

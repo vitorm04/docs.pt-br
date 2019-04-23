@@ -3,10 +3,10 @@ title: 'Como: criar um serviço de fluxo de trabalho com atividades de mensagens
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337767"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Como: criar um serviço de fluxo de trabalho com atividades de mensagens
@@ -92,5 +92,5 @@ Este tópico descreve como criar um serviço de fluxo de trabalho simples usando
 ## <a name="see-also"></a>Consulte também
 
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Visão geral de serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [Atividades de mensagem](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

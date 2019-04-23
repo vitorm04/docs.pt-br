@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336831"
 ---
 # <a name="how-to-start-services"></a>Como: Iniciar serviços
@@ -79,6 +79,6 @@ Depois que um serviço for instalado, ele precisará ser iniciado. O início cha
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a aplicativos do Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como: Criar serviços Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Como: Adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: criar serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Como: adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

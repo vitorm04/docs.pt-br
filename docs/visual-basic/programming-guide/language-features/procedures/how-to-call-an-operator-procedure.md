@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335479"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Como: Chamar um procedimento de operador (Visual Basic)
@@ -55,13 +55,13 @@ Você pode chamar um procedimento de operador, usando o símbolo do operador em 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Procedimentos do operador](./operator-procedures.md)
-- [Como: definir um operador](./how-to-define-an-operator.md)
-- [Como: definir um operador de conversão](./how-to-define-a-conversion-operator.md)
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Como: Definir um operador](./how-to-define-an-operator.md)
+- [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)
 - [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Ampliação](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Como: Declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Conversões implícitas e explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

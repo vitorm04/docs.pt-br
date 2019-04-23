@@ -3,10 +3,10 @@ title: 'Passo a passo: Acessando a Web usando Async e Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335895"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Passo a passo: Acessando a Web usando Async e Await (Visual Basic)
@@ -20,27 +20,27 @@ ms.locfileid: "59335895"
   
  Neste passo a passo, você realizará as seguintes tarefas:  
   
--   [Para criar um aplicativo do WPF](#CreateWPFApp)  
+-   [Criar um aplicativo WPF](#CreateWPFApp)  
   
--   [Para projetar um simples MainWindow WPF](#MainWindow)  
+-   [Projetar um MainWindow WPF simples](#MainWindow)  
   
--   [Para adicionar uma referência](#AddRef)  
+-   [Adicionar uma referência](#AddRef)  
   
 -   [Para adicionar instruções Imports necessárias](#ImportsState)  
   
--   [Para criar um aplicativo síncrono](#synchronous)  
+-   [Criar um aplicativo síncrono](#synchronous)  
   
--   [Para testar a solução síncrona](#testSynch)  
+-   [Testar a solução síncrona](#testSynch)  
   
--   [Para converter GetURLContents em um método assíncrono](#GetURLContents)  
+-   [Converter GetURLContents em um método assíncrono](#GetURLContents)  
   
--   [Para converter SumPageSizes em um método assíncrono](#SumPageSizes)  
+-   [Converter SumPageSizes em um método assíncrono](#SumPageSizes)  
   
--   [Para converter startButton_Click em um método assíncrono](#startButton)  
+-   [Converter startButton_Click em um método assíncrono](#startButton)  
   
--   [Para testar a solução assíncrona](#testAsynch)  
+-   [Testar a solução assíncrona](#testAsynch)  
   
--   [Para substituir o método GetURLContentsAsync por um método .NET Framework](#GetURLContentsAsync)  
+-   [Substituir o método GetURLContentsAsync por um método .NET Framework](#GetURLContentsAsync)  
   
 -   [Exemplo](#BKMK_CompleteCodeExamples)  
   
@@ -137,13 +137,13 @@ ms.locfileid: "59335895"
   
 3. O código para a solução síncrona contém os quatro métodos a seguir:  
   
-    -   `SumPageSizes`, que obtém uma lista de URLs de página da Web do `SetUpURLList` e, em seguida, chama `GetURLContents` e `DisplayResults` para processar cada URL.  
+    -   `SumPageSizes`, que obtém uma lista de URLs de página da Web de `SetUpURLList` e chama `GetURLContents` e `DisplayResults` para processar cada URL.  
   
-    -   `SetUpURLList`, que cria e retorna uma lista de endereços da web.  
+    -   `SetUpURLList`, que cria e retorna uma lista de endereços web.  
   
     -   `GetURLContents`, que baixa o conteúdo de cada site e retorna o conteúdo como uma matriz de bytes.  
   
-    -   `DisplayResults`, que exibe o número de bytes na matriz de bytes para cada URL.  
+    -   `DisplayResults`, que exibe o número de bytes na matriz de bytes de cada URL.  
   
      Copie os quatro métodos a seguir e, em seguida, cole-os no `startButton_Click` manipulador de eventos no XAML. vb:  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59335895"
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` Retorna um <xref:System.Threading.Tasks.Task%601>. Nesse caso, a *variável de retorno de tarefa*, `TResult`, tem o tipo <xref:System.Net.WebResponse>. A tarefa é uma promessa de produzir um objeto `WebResponse` verdadeiro após os dados solicitados terem sido baixados e a tarefa ter sido executada até a conclusão.  
+2. `GetResponseAsync` retorna um <xref:System.Threading.Tasks.Task%601>. Nesse caso, a *variável de retorno de tarefa*, `TResult`, tem o tipo <xref:System.Net.WebResponse>. A tarefa é uma promessa de produzir um objeto `WebResponse` verdadeiro após os dados solicitados terem sido baixados e a tarefa ter sido executada até a conclusão.  
   
      Para recuperar o `WebResponse` o valor da tarefa, aplique um [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador para a chamada para `GetResponseAsync`, como mostra o código a seguir.  
   
@@ -680,6 +680,6 @@ End Class
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tipos de retorno assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Programação assíncrona baseado em tarefa (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [TAP (programação assíncrona baseada em tarefas)](https://go.microsoft.com/fwlink/?LinkId=204847)
 - [Como: Estender o passo a passo assíncronas usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Como: Fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

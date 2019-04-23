@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
 ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335622"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Definir estilos de linhas alternados para o controle DataGridView do Windows Forms usando o designer
@@ -41,8 +41,8 @@ Dados tabulares geralmente são apresentados em um formato contábil no qual lin
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Estilos de célula no controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formatação básica e estilos no controle DataGridView dos Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Usando o designer com o controle DataGridView dos Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md)
+- [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formatação e estilos básicos no controle DataGridView do Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Usando o Designer com o controle DataGridView dos Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md)
 - [Como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)

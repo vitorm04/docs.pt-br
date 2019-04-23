@@ -8,10 +8,10 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334140"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Passo a passo: Implementando a herança com objetos COM (Visual Basic)
@@ -131,6 +131,6 @@ Você pode derivar classes de Visual Basic de `Public` classes em objetos COM, m
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interoperabilidade COM em aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Interoperabilidade COM em Aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Tipo de dados curto](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Tipo de Dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)

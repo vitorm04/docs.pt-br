@@ -9,10 +9,10 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336311"
 ---
 # <a name="how-to-serialize-an-object"></a>Como: serializar um objeto
@@ -53,4 +53,4 @@ Para serializar um objeto, primeiro crie o objeto a ser serializado e defina seu
 ## <a name="see-also"></a>Consulte também
 
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Como: desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

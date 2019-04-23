@@ -8,10 +8,10 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
 ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334348"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Como: Definir a tela de fundo de um painel do Windows Forms usando o Designer
@@ -41,5 +41,5 @@ Um Windows Forms <xref:System.Windows.Forms.Panel> controle pode exibir uma cor 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Controle de painel](panel-control-windows-forms.md)
-- [Visão geral do controle de painel](panel-control-overview-windows-forms.md)
+- [Visão geral do controle Panel](panel-control-overview-windows-forms.md)
 - [Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer](group-controls-with-wf-panel-control-using-the-designer.md)

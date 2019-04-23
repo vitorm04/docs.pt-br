@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336402"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Como: desenhar texto em um local especificado
@@ -47,7 +47,7 @@ Quando você executa um desenho personalizado, você pode desenhar texto em uma 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: desenhar texto com o GDI](how-to-draw-text-with-gdi.md)
+- [Como: Desenhar texto com GDI](how-to-draw-text-with-gdi.md)
 - [Usando fontes e texto](using-fonts-and-text.md)
-- [Como: construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
-- [Como: desenhar texto ajustado um retângulo](how-to-draw-wrapped-text-in-a-rectangle.md)
+- [Como: Construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
+- [Como: Desenhar texto encapsulado em um retângulo](how-to-draw-wrapped-text-in-a-rectangle.md)

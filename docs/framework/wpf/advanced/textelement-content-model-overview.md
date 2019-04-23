@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336181"
 ---
 # <a name="textelement-content-model-overview"></a>Visão geral do modelo de conteúdo TextElement
@@ -57,9 +57,9 @@ Esta visão geral do modelo de conteúdo descreve o conteúdo com suporte por um
 ## <a name="working-with-textelement-content-programmatically"></a>Trabalhando com conteúdo TextElement programaticamente  
  O conteúdo de um <xref:System.Windows.Documents.TextElement> é composto por coleções e portanto manipular programaticamente o conteúdo de <xref:System.Windows.Documents.TextElement> objetos é feito ao trabalhar com essas coleções. Há três coleções diferentes usadas pelo <xref:System.Windows.Documents.TextElement> -as classes derivadas:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> Define o conteúdo filho permitido dos <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, e <xref:System.Windows.Controls.TextBlock> elementos.  
+-   <xref:System.Windows.Documents.InlineCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> define o conteúdo filho permitido dos elementos <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> e <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> Define o conteúdo filho permitido dos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, e <xref:System.Windows.Documents.Figure> elementos.  
+-   <xref:System.Windows.Documents.BlockCollection>: Representa uma coleção de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> define o conteúdo filho permitido dos elementos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> e <xref:System.Windows.Documents.Figure>.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Um elemento de conteúdo de fluxo que representa um item de conteúdo específico em uma <xref:System.Windows.Documents.List> ordenada ou desordenada.  
   

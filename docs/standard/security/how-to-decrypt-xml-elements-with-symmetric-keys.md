@@ -16,10 +16,10 @@ ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334621"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Como: descriptografar elementos XML com chaves simétricas
@@ -84,4 +84,4 @@ Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Security.Cryptography.Xml>
-- [Como: criptografar elementos XML com chaves simétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [Como: Criptografar elementos XML com chaves simétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
