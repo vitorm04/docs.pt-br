@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
 ms.openlocfilehash: 9b8b18f6c66fdb8f2446d3ddc5c584c5bad44ef3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158789"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>Como: criar uma identidade principal personalizada
@@ -54,5 +54,5 @@ O <xref:System.Security.Permissions.PrincipalPermissionAttribute> é uma forma d
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Como: usar o provedor de função do ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Como: restringir o acesso com a classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Como: Usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Como: Restringir o acesso com a PrincipalPermissionAttribute Class](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

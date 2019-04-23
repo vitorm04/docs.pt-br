@@ -3,12 +3,12 @@ title: Migrando do DNX para a CLI do .NET Core
 description: Migre para mudar do uso de ferramentas de DNX para ferramentas da CLI do .NET Core.
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 006e909be03ec3d090135f32f7ba13311201f81e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160830"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrando do DNX para a CLI do .NET Core (project.json)
 
@@ -46,7 +46,6 @@ Um tempo de execução é referenciado em seu `project.json` adicionando um paco
 Se você estivesse usando o DNX, teria usado comandos de uma das suas três partes (DNX, DNU ou DNVM). Com a CLI, alguns desses comandos mudaram, outros não estão disponíveis e outros ainda permaneceram os mesmos, mas têm semântica ligeiramente diferente.
 
 A tabela a seguir mostra o mapeamento entre os comandos DNX/DNU e seus equivalentes da CLI.
-
 
 | Comando do DNX                    | Comando da CLI    | Descrição                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|

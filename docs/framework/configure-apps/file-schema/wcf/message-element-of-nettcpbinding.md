@@ -3,10 +3,10 @@ title: <message> elemento de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
 ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161012"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<mensagem > elemento \<netTcpBinding >
@@ -74,7 +74,7 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Comentários  
  Mensagem usa a segurança de nível de mensagem para a integridade e confidencialidade da mensagem SOAP e para autenticação mútua dos pares de comunicação. Se esse modo de segurança for selecionado em uma associação, a pilha de canais está configurada com elementos de associação de segurança de mensagem e as mensagens SOAP são protegidas em conformidade com WS-Security * padrões.  

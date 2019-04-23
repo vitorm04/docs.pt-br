@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159517"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Provedor de reflexão (WCF Data Services)
@@ -96,4 +96,4 @@ Além de expor dados de um modelo de dados por meio do Entity Framework, [!INCLU
   
 ## <a name="see-also"></a>Consulte também
 
-- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

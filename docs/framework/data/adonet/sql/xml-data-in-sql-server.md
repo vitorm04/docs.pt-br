@@ -3,10 +3,10 @@ title: Dados XML no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
 ms.openlocfilehash: 75e5f24b0532a1d0da2cfcd4bdc39658db3cee35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158711"
 ---
 # <a name="xml-data-in-sql-server"></a>Dados XML no SQL Server
@@ -16,10 +16,10 @@ SQL Server expõe a funcionalidade do SQLXML dentro do .NET Framework. Os desenv
  [Valores de coluna de XML do SQL](../../../../../docs/framework/data/adonet/sql/sql-xml-column-values.md)  
  Demonstra como recuperar e trabalhar com dados XML recuperados do SQL Server.  
   
- [Especificar valores XML como parâmetros](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
+ [Especificando valores XML como parâmetros](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
  Demonstra como passar dados XML como um parâmetro para um comando.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

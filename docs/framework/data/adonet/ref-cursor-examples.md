@@ -3,10 +3,10 @@ title: Exemplos de REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
 ms.openlocfilehash: dfad86c6d5c99d7a1b99d7cfbde165d5ec39f5f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158932"
 ---
 # <a name="ref-cursor-examples"></a>Exemplos de REF CURSOR
@@ -15,7 +15,7 @@ Os exemplos de REF CURSOR são compostos dos seguintes três exemplos do Microso
 |Amostra|Descrição|  
 |------------|-----------------|  
 |[Parâmetros de REF CURSOR em um OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|Este exemplo executa um procedimento armazenado PL/SQL, que retorna um parâmetro de REF CURSOR e lê o valor como um <xref:System.Data.OracleClient.OracleDataReader>.|  
-|[Recuperar dados de vários REF CURSORs usando um OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Este exemplo executa um procedimento armazenado PL/SQL que retorna dois parâmetros de REF CURSOR e lê os valores usando um **OracleDataReader**.|  
+|[Recuperando dados de vários REF CURSORs usando um OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Este exemplo executa um procedimento armazenado PL/SQL que retorna dois parâmetros de REF CURSOR e lê os valores usando um **OracleDataReader**.|  
 |[Preenchendo um DataSet usando um ou mais REF CURSORs](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|Este exemplo executa um procedimento armazenado PL/SQL, que retorna dois parâmetros de REF CURSOR e preenche um <xref:System.Data.DataSet> com as linhas retornadas.|  
   
  Para usar esses exemplos, você pode precisar criar as tabelas Oracle e deve criar um pacote PL/SQL e o corpo do pacote.  
@@ -82,4 +82,4 @@ END CURSPKG;
 ## <a name="see-also"></a>Consulte também
 
 - [REF CURSORs do Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -3,10 +3,10 @@ title: Escolhendo um padrão de troca de mensagens
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157715"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens
@@ -94,4 +94,4 @@ Os três padrões de troca de mensagens básicas. De cima para baixo: datagrama,
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [Visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)

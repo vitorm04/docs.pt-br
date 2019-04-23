@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 ms.openlocfilehash: f52ff1b669f821d102a65888189d9bbf2c000da8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158477"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obter detalhes de atributos de texto misto usando automação de interface do usuário
@@ -28,9 +28,9 @@ ms.locfileid: "59158477"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de TextPattern de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Acrescentar Conteúdo a um Text Box Utilizando Automação de IU](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Encontre e destaque texto usando automação de interface de usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Visão Geral de Padrões de Controle de Automação de Interface de Usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Padrões de Controle para Clientes de Automação de IU](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Visão geral de TextPattern de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Adicionar conteúdo a uma caixa de texto utilizando automação da interface do usuário](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Localizar e destacar texto usando automação de interface do usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Obter atributos de texto usando automação de interface do usuário](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)

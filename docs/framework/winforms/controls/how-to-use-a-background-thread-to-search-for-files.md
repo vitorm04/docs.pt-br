@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157716"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Como: Usar um thread em segundo plano para pesquisar arquivos
@@ -30,11 +30,11 @@ O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona 
   
 -   `DirectorySearcher` inicia um novo thread para executar a pesquisa. O thread executa o método `ThreadProcedure` que, por sua vez, chama o método `RecurseDirectory` auxiliar para fazer a pesquisa e preencher a caixa de listagem. No entanto, preencher a caixa de listagem exige uma chamada entre threads, conforme explicado nos próximos dois itens com marcadores.  
   
--   `DirectorySearcher` Define o `AddFiles` método para adicionar arquivos a uma caixa de listagem; no entanto, `RecurseDirectory` não é possível invocar diretamente `AddFiles` porque `AddFiles` pode executar somente no thread de STA que criou `DirectorySearcher`.  
+-   `DirectorySearcher` define o método `AddFiles` para adicionar arquivos a uma caixa de listagem; no entanto, `RecurseDirectory` não pode invocar diretamente `AddFiles`, porque `AddFiles` pode executar somente no thread de STA que criou `DirectorySearcher`.  
   
 -   A única maneira `RecurseDirectory` pode chamar `AddFiles` é por meio de uma chamada entre threads — ou seja, chamando <xref:System.Windows.Forms.Control.Invoke%2A> ou <xref:System.Windows.Forms.Control.BeginInvoke%2A> para realizar marshaling `AddFiles` para o thread de criação de `DirectorySearcher`. `RecurseDirectory` usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que a chamada pode ser feita de forma assíncrona.  
   
--   O marshaling de um método requer o equivalente de um ponteiro de função ou retorno de chamada. Isso é feito usando delegados no .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> aceita um delegado como um argumento. `DirectorySearcher` Portanto, define um delegado (`FileListDelegate`), associa `AddFiles` a uma instância do `FileListDelegate` em seu construtor e passa essa instância delegada para <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` também define um representante de evento que tem o marshaling realizado quando a pesquisa é concluída.  
+-   O marshaling de um método requer o equivalente de um ponteiro de função ou retorno de chamada. Isso é feito usando delegados no .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> aceita um delegado como um argumento. `DirectorySearcher` Portanto, define um delegado (`FileListDelegate`), associa `AddFiles` a uma instância do `FileListDelegate` em seu construtor e passa essa instância delegada para <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` também define um delegado de evento terá o marshaling realizado quando a pesquisa for concluída.  
   
 ```vb  
 Option Strict  
@@ -766,4 +766,4 @@ namespace SampleUsage
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Visão geral do padrão assíncrono baseado em evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

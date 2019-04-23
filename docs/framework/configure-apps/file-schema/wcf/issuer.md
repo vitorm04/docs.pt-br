@@ -3,10 +3,10 @@ title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
 ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160817"
 ---
 # <a name="issuer"></a>\<issuer>
@@ -70,9 +70,9 @@ Especifica a Security Token Service (STS) que emite tokens de segurança.
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
-- [Identidade e autenticação de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Identidade e autenticação de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Recursos de segurança com associações personalizadas](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

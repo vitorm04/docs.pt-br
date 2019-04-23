@@ -6,10 +6,10 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159686"
 ---
 # <a name="statusstrip-control"></a>Controle StatusStrip

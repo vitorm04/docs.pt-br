@@ -1,5 +1,5 @@
 ---
-title: <socket> (Configurações de rede)
+title: Elemento <socket> (Configurações de Rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160151"
 ---
 # <a name="socket-element-network-settings"></a>\<soquete > (configurações de rede)
@@ -51,7 +51,7 @@ Especifica se as operações de soquete usam portas de conclusão.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[configurações](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
  O `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` atributos são usados para especificar o comportamento padrão sobre o uso de portas de conclusão pelas classes do <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Portas de conclusão são recomendadas para aplicativos de servidor de alto desempenho.  
@@ -72,7 +72,7 @@ Especifica se as operações de soquete usam portas de conclusão.
   
  Os valores possíveis para o `ipProtectionLevel` configuração do atributo correspondem com os níveis de proteção definido especificados no <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> enumeração da seguinte maneira:  
   
-|**Valor do Atributo**|**Descrição**|  
+|**Valor de atributo**|**Descrição**|  
 |-|-|  
 |EdgeRestricted|O nível de proteção de IP tem restrição de borda. Esse valor seria usado por aplicativos projetados para operar pela Internet. Essa configuração não permite a passagem de NAT (conversão de endereços de rede) usando a implementação do Windows Teredo. Esses aplicativos podem ignorar firewalls IPv4, de modo que os aplicativos devem ser protegidos contra ataques de Internet direcionados à porta aberta. No Windows Server 2003 e Windows XP, o valor padrão para o nível de proteção de IP em um soquete tem restrição de borda.|  
 |Restrito|O nível de proteção de IP é restrito. Esse valor será usado por aplicativos de intranet que não implementam cenários de Internet. Esses aplicativos geralmente não são testados nem protegidos contra ataques do estilo usado na Internet. Essa configuração limitará o tráfego recebido para apenas link-local.|  

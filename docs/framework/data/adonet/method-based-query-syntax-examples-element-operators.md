@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: 49a2665240f5f35e0d4937e55c39eccf04b1444d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157242"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Exemplos de sintaxe de consulta baseada em método: Operadores de elemento (LINQ to DataSet)
@@ -44,7 +44,7 @@ Os exemplos neste tópico demonstram como usar os métodos de <xref:System.Linq.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Carregando dados em um DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [LINQ para exemplos de DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
