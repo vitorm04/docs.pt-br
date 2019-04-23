@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312560"
 ---
 # <a name="application-settings-architecture"></a>Arquitetura das configurações do aplicativo
@@ -151,7 +151,7 @@ Este tópico descreve como a arquitetura das configurações de aplicativo funci
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Visão geral sobre configurações do aplicativo](application-settings-overview.md)
-- [Configurações do aplicativo para controles personalizados](application-settings-for-custom-controls.md)
-- [ClickOnce e configurações de aplicativo](/visualstudio/deployment/clickonce-and-application-settings)
+- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
+- [Configurações do Aplicativo para Controles Personalizados](application-settings-for-custom-controls.md)
+- [O ClickOnce e as configurações de aplicativo](/visualstudio/deployment/clickonce-and-application-settings)
 - [Esquema de configurações de aplicativo](../../configure-apps/file-schema/application-settings-schema.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309674"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Como: hospedar um serviço WCF no IIS
@@ -66,7 +66,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
      Este exemplo especifica explicitamente pontos de extremidade no arquivo de configuração. Se você não adicionar nenhum ponto de extremidade ao serviço, o tempo de execução adicionará pontos de extremidade padrão para você. Para obter mais informações sobre pontos de extremidade padrão, associações e comportamentos ver [configuração simplificado](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Para verificar se que o serviço está hospedado corretamente, abra uma instância do Internet Explorer e navegue até a URL do serviço: `http://localhost/IISHostedCalc/Service.svc`  
+11. Para verificar se o serviço está hospedado corretamente, abra uma instância do Internet Explorer e navegue para a URL do serviço: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Exemplo  
  A listagem a seguir relaciona todo o código do serviço de calculadora hospedado no IIS.  
@@ -77,8 +77,8 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md)
-- [Serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)
+- [Serviços do WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Segurança](../../../../docs/framework/wcf/feature-details/security.md)
-- [Recursos de hospedagem do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

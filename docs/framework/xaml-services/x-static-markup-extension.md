@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295699"
 ---
 # <a name="xstatic-markup-extension"></a>Extensão de marcação x:Static
@@ -69,7 +69,7 @@ Há dois outros usos XAML são tecnicamente possíveis. No entanto, esses usos s
 
 Na implementação de serviços de XAML do .NET Framework, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.Markup.StaticExtension> classe.  
 
-`x:Static` é uma extensão de marcação. Todas as extensões de marcação no uso XAML a `{` e `}` caracteres na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve fornecer um valor. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para visão geral de XAML](markup-extensions-for-xaml-overview.md).  
+`x:Static` é uma extensão da marcação. Todas as extensões de marcação no uso XAML a `{` e `}` caracteres na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve fornecer um valor. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para visão geral de XAML](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
  Namespace XAML padrão, você pode usar para a programação do WPF não contém muitas propriedades estáticas úteis, e a maioria das propriedades estáticas útil tem suporte, como conversores de tipo que facilitam o uso sem a necessidade de `{x:Static}` . Para propriedades estáticas, você deve mapear um prefixo para um namespace XAML, se uma das seguintes opções for verdadeira:  

@@ -3,10 +3,10 @@ title: Processo de aluguer
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313145"
 ---
 # <a name="hiring-process"></a>Processo de aluguer
@@ -18,7 +18,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
  Este exemplo demonstra os seguintes recursos de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence> fluxos de trabalho para modelar processos comerciais.  
+-   <xref:System.Activities.Statements.Flowchart> e fluxos de trabalho <xref:System.Activities.Statements.Sequence> para modelar processos comerciais.  
   
 -   Serviços de fluxo de trabalho.  
   
@@ -38,9 +38,9 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 -   Composição de atividades.  
   
--   <xref:System.Activities.Statements.Parallel> atividades.  
+-   atividades de<xref:System.Activities.Statements.Parallel> .  
   
--   <xref:System.Activities.Statements.CancellationScope> atividade.  
+-   atividade de<xref:System.Activities.Statements.CancellationScope> .  
   
 -   Timers duráveis (atividade de<xref:System.Activities.Statements.Delay> ).  
   
@@ -121,10 +121,10 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 |Composição de atividades|A definição de processo usa a composição livre de <xref:System.Activities.Activity>. O fluxograma contém vários a sequência e as atividades paralelas que contêm ao mesmo tempo outras atividades (e assim por diante).|HiringRequestService|  
 |Atividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> é usado para registrar na caixa de entrada do CEO e gerentes de hora em paralelo (aguardando a etapa de aprovação de dois gerentes de hora).<br />-   <xref:System.Activities.Statements.Parallel> é usado para realizar algumas tarefas de limpeza nas etapas concluídas e descartados|HiringRequestService|  
 |Cancelar modelo|O fluxograma usa <xref:System.Activities.Statements.CancellationScope> para criar o comportamento de cancelamento (neste caso faz qualquer limpeza.)|HiringRequestService|  
-|Participante de persistência do cliente|`HiringRequestPersistenceParticipant` salva os dados de uma variável de fluxo de trabalho a uma tabela armazenada no banco de dados de Contoso hora.|HiringRequestService|  
-|Serviços de fluxo de trabalho|`ResumeRequestService` é implementado usando os serviços de fluxo de trabalho. A definição de fluxo de trabalho e informações de serviço estão contidas em ResumeRequestService.xamlx. O serviço está configurado para usar a persistência e o rastreamento.|ResumeRequestService|  
-|Timers duráveis|`ResumeRequestService` usa timers duráveis para definir a duração de um anúncio de emprego (o emprego é fechado depois que um tempo limite expira,).|ResumeRequestService|  
-|Transações|<xref:System.Activities.Statements.TransactionScope> é usado para garantir a consistência dos dados dentro da execução de várias atividades (quando um novo resumo é recebido).|ResumeRequestService|  
+|Participante de persistência do cliente|`HiringRequestPersistenceParticipant` salva dados de uma variável de fluxo de trabalho a uma tabela armazenada na base de dados de Contoso hora.|HiringRequestService|  
+|Serviços de fluxo de trabalho|`ResumeRequestService` é implementado usando serviços de fluxo de trabalho. A definição de fluxo de trabalho e informações de serviço estão contidas em ResumeRequestService.xamlx. O serviço está configurado para usar a persistência e o rastreamento.|ResumeRequestService|  
+|Timers duráveis|`ResumeRequestService` usa timers duráveis para definir a duração de um anúncio de emprego (uma vez para o tempo limite expirar, o anúncio de emprego é fechado).|ResumeRequestService|  
+|Transações|<xref:System.Activities.Statements.TransactionScope> é usado para garantir a consistência de dados dentro da execução de várias atividades (quando um novo resumo é recebido).|ResumeRequestService|  
 |Transações|O participante personalizado de persistência (`HiringRequestPersistenceParticipant`) e uso personalizado de participante de rastreamento (`HistoryFileTrackingParticipant`) a mesma transação.|HiringRequestService|  
 |Usando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em aplicativos de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .|Fluxos de trabalho são acessados de dois aplicativos de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .|InternalClient/CareersWebSite|  
   

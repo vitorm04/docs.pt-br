@@ -7,10 +7,10 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312144"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Passo a passo: definir o estilo do conteúdo do WPF
@@ -154,7 +154,7 @@ Essa instrução passo a passo mostra como aplicar estilos a um controle WPF (Wi
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
-- [Usando controles WPF](using-wpf-controls.md)
-- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Usando Controles do WPF](using-wpf-controls.md)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Visão geral de XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Estilo e modelagem](../../wpf/controls/styling-and-templating.md)

@@ -17,10 +17,10 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311039"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Como: Personalizar o desenho de um controle ToolStrip
@@ -138,6 +138,6 @@ O <xref:System.Windows.Forms.ToolStrip> controles têm o seguinte associado (pin
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [Controles com suporte de desenho do proprietário interno](controls-with-built-in-owner-drawing-support.md)
-- [Como: Criar e definir um renderizador personalizado para o controle ToolStrip no Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Controles com suporte para desenho do proprietário interno](controls-with-built-in-owner-drawing-support.md)
+- [Como: Criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)

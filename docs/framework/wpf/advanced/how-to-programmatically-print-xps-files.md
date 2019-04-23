@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
 ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312066"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Como: Imprimir arquivos XPS com programação
@@ -67,6 +67,6 @@ Você pode usar uma sobrecarga da <xref:System.Printing.PrintQueue.AddJob%2A> m�
 - [Documentos XPS](/windows/desktop/printdocs/documents)
 - [Imprimindo um documento XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
 - [Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
-- [isXPS.exe (ferramenta de conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [isXPS.exe (conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [Documentos no WPF](documents-in-wpf.md)
-- [Visão geral da impressão](printing-overview.md)
+- [Visão Geral da Impressão](printing-overview.md)

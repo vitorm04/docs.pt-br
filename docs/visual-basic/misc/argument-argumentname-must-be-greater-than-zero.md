@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
 ms.openlocfilehash: 9c5e2526a46ae155d304c08e1460f9a61111e251
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312885"
 ---
 # <a name="argument-argumentname-must-be-greater-than-zero"></a>Argumento '\<argumentname >' deve ser maior que zero
@@ -22,4 +22,4 @@ Um argumento não é válido porque ele é menor que ou igual a zero.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passar argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

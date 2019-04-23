@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311403"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Como: Herdar da classe UserControl
@@ -37,8 +37,8 @@ Para combinar a funcionalidade de um ou mais controles do Windows Forms no modo 
 ## <a name="see-also"></a>Consulte também
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Como: Herdar da classe Control](how-to-inherit-from-the-control-class.md)
-- [Como: Herdar de controles do Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Como: Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Como: Herdar da classe de controle](how-to-inherit-from-the-control-class.md)
+- [Como: Herdar controles de formulários do Windows existentes](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Como: Criar controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

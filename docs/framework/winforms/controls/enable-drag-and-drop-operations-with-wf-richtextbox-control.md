@@ -12,10 +12,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310272"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Como: Habilitar operações do tipo "arrastar e soltar" com o controle RichTextBox do Windows Forms
@@ -167,6 +167,6 @@ Operações de arrastar e soltar com o Windows Forms <xref:System.Windows.Forms.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Como: executar operações de do tipo "arrastar e soltar" entre aplicativos](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Como: Executar operações de arrastar e soltar entre aplicativos](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

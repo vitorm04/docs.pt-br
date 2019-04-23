@@ -16,10 +16,10 @@ helpviewer_keywords:
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295452"
 ---
 # <a name="internet-authentication"></a>Autenticação da Internet
@@ -42,5 +42,5 @@ As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de auten
 ## <a name="see-also"></a>Consulte também
 
 - [Autenticação Básica e Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [Autenticação NTLM e Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Autenticação Kerberos e NTLM](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)

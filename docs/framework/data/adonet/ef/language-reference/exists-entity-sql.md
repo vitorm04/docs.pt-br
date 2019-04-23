@@ -3,10 +3,10 @@ title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
 ms.openlocfilehash: 72d96c5f24fcedf870370de3792680831145a454
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311130"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
@@ -26,7 +26,7 @@ Determina se uma coleção está vazia.
  Especifica que o resultado EXISTS seja negado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se a coleção não está vazia. Caso contrário, `false`.  
+ `true` se a coleção é não vazio; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  EXISTS é um dos operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita. Para obter informações de precedência para a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] conjunto de operadores, consulte [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  

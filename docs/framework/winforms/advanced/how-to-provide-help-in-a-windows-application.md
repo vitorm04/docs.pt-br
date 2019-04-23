@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312704"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Como: fornecer ajuda em um aplicativo do Windows
@@ -57,7 +57,7 @@ Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente para anexa
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: exibir a ajuda pop-up](how-to-display-pop-up-help.md)
-- [Ajuda de controle usando ToolTips](control-help-using-tooltips.md)
-- [Integrando a ajuda do usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Como: Exibir Ajuda pop-up](how-to-display-pop-up-help.md)
+- [Ajuda de Controle Usando ToolTips](control-help-using-tooltips.md)
+- [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

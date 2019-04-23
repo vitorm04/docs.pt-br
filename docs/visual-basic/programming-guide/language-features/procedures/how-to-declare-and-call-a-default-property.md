@@ -11,10 +11,10 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295634"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Como: Declarar e chamar uma propriedade padrão no Visual Basic
@@ -84,12 +84,12 @@ Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu códi
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Padrão](../../../../visual-basic/language-reference/modifiers/default.md)
 - [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)
-- [Como: criar uma propriedade](./how-to-create-a-property.md)
-- [Como: declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Como: chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
-- [Como: inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
-- [Como: obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+- [Como: Criar uma propriedade](./how-to-create-a-property.md)
+- [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Como: Chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
+- [Como: Inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
+- [Como: Obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

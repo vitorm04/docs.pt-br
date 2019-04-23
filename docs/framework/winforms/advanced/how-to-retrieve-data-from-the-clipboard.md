@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
 ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295504"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Como: recuperar dados da área de transferência
@@ -58,5 +58,5 @@ O <xref:System.Windows.Forms.Clipboard> classe fornece métodos que você pode u
   
 ## <a name="see-also"></a>Consulte também
 
-- [Operações de arrastar e soltar e suporte à área de transferência](drag-and-drop-operations-and-clipboard-support.md)
-- [Como: adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)
+- [Operações do Tipo "Arrastar e Soltar" e Suporte à Área de Transferência](drag-and-drop-operations-and-clipboard-support.md)
+- [Como: Adicionar dados à área de transferência](how-to-add-data-to-the-clipboard.md)

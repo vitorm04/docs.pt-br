@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
 ms.openlocfilehash: f19b8cd5f80ba9fd6d1f5a9162b04ee409e24e28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311884"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>O operando 'IsNot' do tipo 'typename' só pode ser comparado a 'Nothing', porque 'typename' é um tipo que permite valor nulo
@@ -35,5 +35,5 @@ End If
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de valor que permitem valor nulo](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)

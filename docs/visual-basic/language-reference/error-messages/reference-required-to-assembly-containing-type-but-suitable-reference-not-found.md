@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310665"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Referência obrigatória ao assembly '\<assemblyidentity >' contendo o tipo '\<typename >', mas não foi possível localizar uma referência adequada devido à ambiguidade entre projetos\<projectname1 >' e '\< projectname2 >'
@@ -32,7 +32,7 @@ Uma expressão usa um tipo, como uma classe, estrutura, interface, enumeração 
 ## <a name="see-also"></a>Consulte também
 
 - [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)
-- [Referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
-- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)
-- [Solucionando Problemas de Referências Quebradas](/visualstudio/ide/troubleshooting-broken-references)
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Solução de Problemas de Referências Quebradas](/visualstudio/ide/troubleshooting-broken-references)

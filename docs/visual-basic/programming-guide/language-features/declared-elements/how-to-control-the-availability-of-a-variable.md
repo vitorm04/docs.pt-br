@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311520"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Como: Controlar a disponibilidade de uma variável (Visual Basic)
@@ -93,4 +93,4 @@ Private numberForMeOnly As Integer
 - [Público](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protegido](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Particular](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Privado](../../../../visual-basic/language-reference/modifiers/private.md)

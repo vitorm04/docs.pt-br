@@ -11,10 +11,10 @@ helpviewer_keywords:
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
 ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312235"
 ---
 # <a name="overload-resolution-visual-basic"></a>Resolução de sobrecarga (Visual Basic)
@@ -60,14 +60,14 @@ Quando o compilador do Visual Basic encontra uma chamada para um procedimento qu
   
 ## <a name="see-also"></a>Consulte também
 
-- [Parâmetros opcionais](./optional-parameters.md)
-- [Matrizes de parâmetros](./parameter-arrays.md)
-- [Sobrecarga de procedimento](./procedure-overloading.md)
-- [Solução de problemas de procedimentos](./troubleshooting-procedures.md)
-- [Como: definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Como: chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
-- [Como: sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Como: sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md)
+- [Parâmetros Opcionais](./optional-parameters.md)
+- [Matrizes de Parâmetros](./parameter-arrays.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
+- [Como: Definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Como: Chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
+- [Como: Sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considerações sobre Procedimentos de Sobrecarga](./considerations-in-overloading-procedures.md)
 - [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Métodos de extensão](./extension-methods.md)
+- [Métodos de Extensão](./extension-methods.md)
