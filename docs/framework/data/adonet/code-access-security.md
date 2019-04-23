@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174103"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
@@ -27,11 +27,11 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
   
  Existem três tipos de permissões de acesso de código:  
   
--   `Code access permissions` derivar o <xref:System.Security.CodeAccessPermission> classe. São necessárias permissões para acessar recursos protegidos, como arquivos e variáveis de ambiente, e executar operações protegidas, como acessar código não gerenciado.  
+-   As `Code access permissions` são derivadas da classe <xref:System.Security.CodeAccessPermission>. São necessárias permissões para acessar recursos protegidos, como arquivos e variáveis de ambiente, e executar operações protegidas, como acessar código não gerenciado.  
   
--   `Identity permissions` representam as características que identificam um assembly. As permissões são concedidas a um assembly com base em evidências, o que pode incluir itens como uma assinatura digital ou a origem do código. As permissões de identidade também são derivadas da classe base <xref:System.Security.CodeAccessPermission>.  
+-   As `Identity permissions` representam características que identificam um assembly. As permissões são concedidas a um assembly com base em evidências, o que pode incluir itens como uma assinatura digital ou a origem do código. As permissões de identidade também são derivadas da classe base <xref:System.Security.CodeAccessPermission>.  
   
--   `Role-based security permissions` se baseiam em se uma entidade tem uma identidade especificada ou é um membro de uma função especificada. A classe <xref:System.Security.Permissions.PrincipalPermission> permite verificações de permissões declarativas e imperativas na entidade de segurança ativa.  
+-   As `Role-based security permissions` são baseadas no fato de uma entidade de segurança ter uma identidade especificada ou ser membro de uma função especificada. A classe <xref:System.Security.Permissions.PrincipalPermission> permite verificações de permissões declarativas e imperativas na entidade de segurança ativa.  
   
  Para determinar se o código está autorizado a acessar um recurso ou executar uma operação, o sistema de segurança do tempo de execução atravessa a pilha de chamadas, comparando as permissões concedidas de cada chamador com a permissão que está sendo exigida. Se algum chamador na pilha de chamadas não tiver a permissão exigida, uma <xref:System.Security.SecurityException> será gerada e o acesso será recusado.  
   
@@ -196,7 +196,7 @@ Failed, as expected: Request failed.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Segurança no código nativo e do .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
-- [Segurança baseada em função](../../../../docs/standard/security/role-based-security.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Segurança no código do .NET Framework e nativos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Segurança baseada em Função](../../../../docs/standard/security/role-based-security.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174012"
 ---
 # <a name="metadata"></a>Metadados
@@ -30,7 +30,7 @@ O Windows Communication Foundation (WCF) fornece uma infraestrutura para exporta
  [Recuperando metadados](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Descreve as diferentes maneiras de recuperar metadados.  
   
- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  Descreve as diferentes maneiras de usar os metadados de serviço.  
   
  [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
