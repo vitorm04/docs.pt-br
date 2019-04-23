@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
 ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155227"
 ---
 # <a name="getting-started"></a>Guia de Introdução
@@ -34,4 +34,4 @@ Usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], voc�
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [Introdução ao LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
 - [Introdução ao LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

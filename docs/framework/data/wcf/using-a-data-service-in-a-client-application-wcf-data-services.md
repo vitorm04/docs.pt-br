@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155929"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usando um serviço de dados em um aplicativo cliente (WCF Data Services)
@@ -21,7 +21,7 @@ Você pode acessar um serviço que expõe um [!INCLUDE[ssODataFull](../../../../
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ajuda a garantir a interoperabilidade entre os serviços que expõem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds e aplicativos que consomem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds. Os aplicativos acessam e alterar dados em um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviço enviando mensagens de solicitação de uma ação de HTTP específica e com um URI que direciona um recurso de entidade com relação à qual a ação deve ser executada. Quando os dados de entidade devem ser fornecidos, eles são fornecidos como uma carga especificamente codificada no corpo da mensagem.  
   
 ### <a name="http-actions"></a>Ações HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dá suporte ao criam as seguintes ações de HTTP para executar, ler, atualizar e excluir operações em dados de entidade que o recurso direcionado representa:  
+ O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] oferece suporte às seguintes ações HTTP para executar operações de criação, leitura, atualização e exclusão nos dados de entidade que o recurso direcionado representa:  
   
 -   **HTTP GET** -isso é a ação padrão quando um recurso é acessado a partir de um navegador. Nenhuma carga é fornecida na mensagem de solicitação, e é retornado um método de resposta com uma carga que contém os dados solicitados.  
   
@@ -53,5 +53,5 @@ Você pode acessar um serviço que expõe um [!INCLUDE[ssODataFull](../../../../
   
 ## <a name="see-also"></a>Consulte também
 
-- [Acessar recursos do serviço de dados](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
-- [Guia de Início Rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Acessando recursos do serviço de dados](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) (Início rápido)

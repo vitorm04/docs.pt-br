@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
 ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156514"
 ---
 # <a name="how-to-use-a-pen-to-draw-lines"></a>Como: usar uma caneta para desenhar linhas
@@ -25,10 +25,10 @@ Para desenhar linhas, você precisa de uma <xref:System.Drawing.Graphics> objeto
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Pen>
 - [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)
-- [Canetas, linhas e retângulos no GDI+](pens-lines-and-rectangles-in-gdi.md)
+- [Canetas, Linhas e Retângulos no GDI+](pens-lines-and-rectangles-in-gdi.md)

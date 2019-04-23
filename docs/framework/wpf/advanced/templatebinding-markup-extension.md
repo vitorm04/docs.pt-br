@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155994"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensão de marcação TemplateBinding
@@ -46,9 +46,9 @@ Vincula o valor de uma propriedade em um modelo de controle para ser o valor de 
   
  A sintaxe de atributo é a sintaxe mais comum usada com essa extensão de marcação. O token da cadeia de caracteres fornecido após a cadeia de caracteres identificadora `TemplateBinding` é atribuído como o valor <xref:System.Windows.TemplateBindingExtension.Property%2A> da classe de extensão subjacente <xref:System.Windows.TemplateBindingExtension>.  
   
- A sintaxe do elemento de objeto é possível, mas não é exibida pois não tem aplicativo realístico. `TemplateBinding` é usado para preencher as expressões de valores dos setters usando avaliadas e usando a sintaxe de elemento de objeto para `TemplateBinding` para preencher `<Setter.Property>` sintaxe de elemento de propriedade é desnecessariamente detalhado.  
+ A sintaxe do elemento de objeto é possível, mas não é exibida pois não tem aplicativo realístico. `TemplateBinding` é usado para preencher os valores dos setters usando expressões avaliadas. Usar a sintaxe do elemento de objeto `TemplateBinding` para preencher a sintaxe do elemento de propriedade `<Setter.Property>` é desnecessariamente detalhado.  
   
- `TemplateBinding` também pode ser usado em um uso de atributo detalhado que especifica o <xref:System.Windows.TemplateBindingExtension.Property%2A> propriedade como uma propriedade = par de valor:  
+ `TemplateBinding` também pode ser usado em um atributo detalhado que especifica a propriedade <xref:System.Windows.TemplateBindingExtension.Property%2A> como sendo o par propriedade=valor:  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -58,7 +58,7 @@ Vincula o valor de uma propriedade em um modelo de controle para ser o valor de 
   
  No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementação do processador XAML, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.TemplateBindingExtension> classe.  
   
- `TemplateBinding` é uma extensão de marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres `{` e `}` na sintaxe de atributo, que é a convenção pela qual o processador XAML reconhece que uma extensão de marcação precisa processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
+ `TemplateBinding` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres `{` e `}` na sintaxe de atributo, que é a convenção pela qual o processador XAML reconhece que uma extensão de marcação precisa processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -66,6 +66,6 @@ Vincula o valor de uma propriedade em um modelo de controle para ser o valor de 
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilo e modelagem](../controls/styling-and-templating.md)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Extensões de marcação e XAML WPF](markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)
 - [RelativeSource MarkupExtension](relativesource-markupextension.md)
 - [Extensão de marcação de associação](binding-markup-extension.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154863"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Como: Compartilhar dados associados entre formulários usando o componente BindingSource
@@ -40,4 +40,4 @@ Você pode compartilhar facilmente dados entre formulários usando o <xref:Syste
 
 - [Componente BindingSource](bindingsource-component.md)
 - [Associação de dados do Windows Forms](../windows-forms-data-binding.md)
-- [Como: Como identificar erros e exceções que ocorram na associação de dados](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Como: Tratar erros e exceções que ocorrem na associação de dados](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
