@@ -13,10 +13,10 @@ ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108947"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Recuperando informações de instalação de um domínio de aplicativo
@@ -39,4 +39,4 @@ Cada instância de um domínio do aplicativo consiste em propriedades e informa�
 ## <a name="see-also"></a>Consulte também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
-- [Usando domínios do aplicativo](../../../docs/framework/app-domains/use.md)
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)

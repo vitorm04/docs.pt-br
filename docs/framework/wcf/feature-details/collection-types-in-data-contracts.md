@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106737"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
@@ -321,12 +321,12 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Tipo de coleção implementa|Chamada de método (s) na serialização|Chamada de método (s) na desserialização|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|Genérico <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Adicionar genérico|  
+|<xref:System.Collections.Generic.IDictionary%602>genérico|`get_Keys`, `get_Values`|Adicionar genérico|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|Genérico <xref:System.Collections.Generic.IList%601>|Genérico <xref:System.Collections.Generic.IList%601> indexador|Adicionar genérico|  
-|Genérico <xref:System.Collections.Generic.ICollection%601>|Enumerador|Adicionar genérico|  
+|<xref:System.Collections.Generic.IList%601>genérico|Genérico <xref:System.Collections.Generic.IList%601> indexador|Adicionar genérico|  
+|<xref:System.Collections.Generic.ICollection%601>genérico|Enumerador|Adicionar genérico|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> Indexador|`Add`|  
-|Genérico <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Um método não estático chamado `Add` que recebe um parâmetro do tipo apropriado (o tipo do parâmetro genérico) ou um de seus tipos base. Esse tipo de método deve existir para o serializador tratar um tipo de coleção como uma coleção durante a serialização e desserialização.|  
+|<xref:System.Collections.Generic.IEnumerable%601>genérico|`GetEnumerator`|Um método não estático chamado `Add` que recebe um parâmetro do tipo apropriado (o tipo do parâmetro genérico) ou um de seus tipos base. Esse tipo de método deve existir para o serializador tratar um tipo de coleção como uma coleção durante a serialização e desserialização.|  
 |<xref:System.Collections.IEnumerable> (e, portanto, <xref:System.Collections.ICollection>, que é derivada dele)|`GetEnumerator`|Um método não estático chamado `Add` que recebe um parâmetro de tipo `Object`. Esse tipo de método deve existir para o serializador tratar um tipo de coleção como uma coleção durante a serialização e desserialização.|  
   
  A tabela anterior lista as interfaces de coleção em ordem decrescente de precedência. Isso significa, por exemplo, que se um tipo implementa ambos <xref:System.Collections.IList> e genéricos <xref:System.Collections.Generic.IEnumerable%601>, a coleção é serializada e desserializada de acordo com o <xref:System.Collections.IList> regras:  

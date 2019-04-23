@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113718"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
@@ -200,9 +200,9 @@ union MYUNION2
   
  No código gerenciado, as uniões são definidas como estruturas. A estrutura `MyUnion` contém dois tipos de valor como membros: um integer e um double. O atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> está definido para controlar a posição precisa de cada membro de dados. O atributo <xref:System.Runtime.InteropServices.FieldOffsetAttribute> indica a posição física dos campos dentro da representação não gerenciada de uma união. Observe que ambos os membros têm os mesmos valores de deslocamento, de modo que os membros podem definir a mesma parte da memória.  
   
- `MyUnion2_1` e `MyUnion2_2` contêm um tipo de valor (número inteiro) e uma cadeia de caracteres, respectivamente. No código gerenciado, não é permitido que os tipos de valor e os tipos de referência se sobreponham. Esta amostra usa a sobrecarga de método para permitir que o chamador use ambos os tipos ao chamar a mesma função não gerenciada. O layout de `MyUnion2_1` é explícito e tem um valor de deslocamento preciso. Por outro lado, `MyUnion2_2` tem um layout sequencial, pois layouts explícitos não são permitidos com tipos de referência. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> define a enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para **ByValTStr**, que é usado para identificar as matrizes de caracteres embutidas e de comprimento fixo que aparecem dentro da representação não gerenciada da união.  
+ `MyUnion2_1` e `MyUnion2_2` contêm um tipo de valor (integer) e uma cadeia de caracteres, respectivamente. No código gerenciado, não é permitido que os tipos de valor e os tipos de referência se sobreponham. Esta amostra usa a sobrecarga de método para permitir que o chamador use ambos os tipos ao chamar a mesma função não gerenciada. O layout de `MyUnion2_1` é explícito e tem um valor de deslocamento preciso. Por outro lado, `MyUnion2_2` tem um layout sequencial, pois layouts explícitos não são permitidos com tipos de referência. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> define a enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para **ByValTStr**, que é usado para identificar as matrizes de caracteres embutidas e de comprimento fixo que aparecem dentro da representação não gerenciada da união.  
   
- A classe `LibWrap` contém os protótipos para os métodos `TestUnion` e `TestUnion2`. `TestUnion2` é sobrecarregado para declarar `MyUnion2_1` ou `MyUnion2_2` como parâmetros.  
+ A classe `LibWrap` contém os protótipos para os métodos `TestUnion` e `TestUnion2`. `TestUnion2` está sobrecarregado para declarar `MyUnion2_1` ou `MyUnion2_2` como parâmetros.  
   
 ### <a name="declaring-prototypes"></a>Declarando Protótipos  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -264,7 +264,7 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- A classe `MyStruct` contém um objeto de cadeia de caracteres ANSI. O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica o formato ANSI. `MyUnsafeStruct`, é uma estrutura que contém um tipo <xref:System.IntPtr> em vez de uma cadeia de caracteres.  
+ A classe `MyStruct` contém um objeto de cadeia de caracteres ANSI. O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica o formato ANSI. `MyUnsafeStruct` é uma estrutura que contém um tipo <xref:System.IntPtr> em vez de uma cadeia de caracteres.  
   
  A classe `LibWrap` contém o método de protótipo `TestOutArrayOfStructs` sobrecarregado. Se um método declara um ponteiro como um parâmetro, a classe deve ser marcada com a palavra-chave `unsafe`. Já que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] não é capaz de usar o código não seguro, o método sobrecarregado, o modificador não seguro e a estrutura `MyUnsafeStruct` são desnecessários.  
   
@@ -290,6 +290,6 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Consulte também
 
-- [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)
-- [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
+- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)
+- [Marshaling em cadeias de caracteres](marshaling-strings.md)
 - [Marshaling de diversos tipos de matrizes](marshaling-different-types-of-arrays.md)

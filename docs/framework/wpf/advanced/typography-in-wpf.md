@@ -5,10 +5,10 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111404"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
@@ -16,7 +16,7 @@ Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tl
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Melhor qualidade e desempenho de texto  
- Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] que melhora a legibilidade do texto em LCDs existentes (monitores), como telas de notebook, telas de Pocket PC e monitores de tela plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] usa uma renderização subpixel que permite que o texto a ser exibido com maior fidelidade para sua forma verdadeira alinhando caracteres numa parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização na direção y, que ajusta a parte superior e inferior de curvas rasas em caracteres de texto. Para obter mais detalhes sobre recursos [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [visão geral de ClearType](cleartype-overview.md).  
+ Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], que melhora a legibilidade do texto em monitores LCD existentes, como telas de notebook, telas de Pocket PC e monitores de tela plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utiliza uma renderização subpixel que permite que o texto seja exibido com maior fidelidade para sua forma verdadeira alinhando caracteres numa parte fracionária de um pixel. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil. Outra melhoria de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é a suavização na direção y, que ajusta a parte superior e inferior de curvas rasas em caracteres de texto. Para obter mais detalhes sobre recursos [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [visão geral de ClearType](cleartype-overview.md).  
   
  ![Texto com suavização para direção de y de ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Texto com suavização da direção y do ClearType  
@@ -157,4 +157,4 @@ Texto com suavização da direção y do ClearType
 - [Desenhando texto formatado](drawing-formatted-text.md)
 - [Formatação de texto avançada](advanced-text-formatting.md)
 - [Texto](optimizing-performance-text.md)
-- [Microsoft Typography](https://docs.microsoft.com/typography/)
+- [Tipografia da Microsoft](https://docs.microsoft.com/typography/)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110787"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Modelo de objeto LINQ to SQL
@@ -65,11 +65,11 @@ No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um model
  Para obter mais informações, consulte a seção atributo de associação [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Métodos e procedimentos armazenados de banco de dados LINQ to SQL  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a procedimentos armazenados e funções definidas pelo usuário. No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], você mapeia essas abstrações definidas pelo banco de dados para objetos de cliente para que você pode acessá-los de maneira fortemente tipada do código do cliente. As assinaturas de método são a mais possível similares às assinaturas dos procedimentos e das funções definidas no banco de dados. É possível usar o IntelliSense para descobrir esses métodos.  
+ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a procedimentos armazenados e a funções definidas pelo usuário. No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], você mapeia essas abstrações definidas pelo banco de dados para objetos de cliente para que você pode acessá-los de maneira fortemente tipada do código do cliente. As assinaturas de método são a mais possível similares às assinaturas dos procedimentos e das funções definidas no banco de dados. É possível usar o IntelliSense para descobrir esses métodos.  
   
  Um conjunto de resultados que é retornado por uma chamada a um procedimento mapeado é uma coleção fortemente tipada.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia procedimentos armazenados e funções para métodos usando o <xref:System.Data.Linq.Mapping.FunctionAttribute> e <xref:System.Data.Linq.Mapping.ParameterAttribute> atributos. Os métodos que representam procedimentos armazenados são diferentes daqueles que representam funções definidas pelo usuário pela propriedade <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Se essa propriedade for definida como `false` (padrão), o método representará um procedimento armazenado. Se ela for definida como `true`, o método representará uma função de banco de dados.  
+ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia procedimentos armazenados e funções para métodos usando os atributos <xref:System.Data.Linq.Mapping.FunctionAttribute> e <xref:System.Data.Linq.Mapping.ParameterAttribute>. Os métodos que representam procedimentos armazenados são diferentes daqueles que representam funções definidas pelo usuário pela propriedade <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Se essa propriedade for definida como `false` (padrão), o método representará um procedimento armazenado. Se ela for definida como `true`, o método representará uma função de banco de dados.  
   
 > [!NOTE]
 >  Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para criar métodos mapeados para procedimentos armazenados e funções definidas pelo usuário.  

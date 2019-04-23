@@ -3,10 +3,10 @@ title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
 ms.openlocfilehash: 9ac2b967e33571cbe0b4ad5ee81e13b009ffddd3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111352"
 ---
 # <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
@@ -55,7 +55,7 @@ Especifica as configurações para uma associação usada para a troca de mensag
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
-- [Como: publicar metadados para um serviço usando um arquivo de configuração](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Publicando e recuperando metadados através de uma associação personalizada](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Metadados](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)

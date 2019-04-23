@@ -3,10 +3,10 @@ title: Cache e fábrica de canal
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106451"
 ---
 # <a name="channel-factory-and-caching"></a>Cache e fábrica de canal
@@ -116,5 +116,5 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - <xref:System.ServiceModel.ClientBase%601>
 - [Compilando clientes](../../../../docs/framework/wcf/building-clients.md)
 - [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)
-- [Usando um cliente WCF para acessar um serviço](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Como: usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Usando um cliente do WCF para acessar serviços](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Como: Usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

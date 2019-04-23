@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107062"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Otimizando desempenho: Layout e design
@@ -57,7 +57,7 @@ O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
 ### <a name="build-your-tree-top-down"></a>Compilar sua árvore de cima para baixo  
  Quando um nó é adicionado ou removido da árvore lógica, invalidações de propriedade são geradas no pai do nó e todos os seus filhos. Como resultado, um padrão de construção de cima para baixo deve sempre ser seguido para evitar o custo de invalidações desnecessárias em nós que já foram validados. A tabela a seguir mostra a diferença no tempo de execução entre compilar uma árvore de cima para baixo versus de baixo para cima, onde a árvore tem 150 níveis de profundidade com um único <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.DockPanel> em cada nível.  
   
-|**Ação**|**Construção da árvore (em ms)**|**Renderizar – inclui a construção da árvore (em ms)**|  
+|**Ação**|**Build da árvore (em ms)**|**Renderizar – inclui o build da árvore (em ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |De baixo para cima|366|454|  
 |De cima para baixo|11|96|  
@@ -72,8 +72,8 @@ O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
 ## <a name="see-also"></a>Consulte também
 
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Planejando-se para desempenho do aplicativo](planning-for-application-performance.md)
-- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Planejando para desempenho do aplicativo](planning-for-application-performance.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)
 - [Recursos do aplicativo](optimizing-performance-application-resources.md)

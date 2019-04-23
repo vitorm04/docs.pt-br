@@ -6,16 +6,16 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106660"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modos de classificação da coluna no controle DataGridView dos Windows Forms
 <xref:System.Windows.Forms.DataGridView> colunas têm três modos de classificação. O modo de classificação para cada coluna é especificado por meio de <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propriedade da coluna, que pode ser definida como um dos seguintes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valores de enumeração.  
   
-|`DataGridViewColumnSortMode` Valor |Descrição|  
+|Valor `DataGridViewColumnSortMode`|Descrição|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Padrão para colunas de caixa de texto. A menos que os cabeçalhos de coluna são usados para seleção, clicar no cabeçalho da coluna automaticamente classifica o <xref:System.Windows.Forms.DataGridView> por esta coluna e exibe um glifo indicando a ordem de classificação.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Padrão para colunas sem caixa de texto. Você pode classificar essa coluna programaticamente. No entanto, ela não se destina à classificação, então nenhum espaço é reservado para o glifo de classificação.|  
@@ -67,5 +67,5 @@ ms.locfileid: "59106660"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Classificando dados no controle DataGridView dos Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Definir os modos de classificação para colunas no controle DataGridView do Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Como: Personalizar a classificação no controle DataGridView do Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Como: Personalizar a classificação no controle DataGridView dos Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

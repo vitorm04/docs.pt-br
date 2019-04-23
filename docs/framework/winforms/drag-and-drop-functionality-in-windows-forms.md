@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
 ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108011"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidade de arrastar e soltar no Windows Forms
@@ -45,4 +45,4 @@ O Windows Forms incluem um conjunto de métodos, eventos e classes que implement
   
 ## <a name="see-also"></a>Consulte também
 
-- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

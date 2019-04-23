@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111144"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  O protocolo de rede para instâncias de usuário deve ser o Pipes Nomeados local. Uma instância de usuário não pode ser iniciada em uma instância remota do SQL Server e os logons do SQL Server não são permitidos.  
   
 ## <a name="connecting-to-a-user-instance"></a>Conectando-se a uma instância de usuário  
- O `User Instance` e `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palavras-chave permitem que um <xref:System.Data.SqlClient.SqlConnection> para se conectar a uma instância de usuário. Instâncias de usuário também são suportadas pelas <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` e `AttachDBFilename` propriedades.  
+ O `User Instance` e `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palavras-chave permitem que um <xref:System.Data.SqlClient.SqlConnection> para se conectar a uma instância de usuário. As instâncias de usuário também têm o suporte das propriedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` e `AttachDBFilename`.  
   
  Observe o seguinte sobre a cadeia de conexão no exemplo mostrado abaixo:  
   
@@ -47,7 +47,7 @@ sp_configure 'user instances enabled','0'
   
 -   A `User Instance` é definida como `true`, o que invoca uma instância de usuário. (O padrão é `false`.)  
   
--   A palavra-chave de cadeia de conexão `AttachDbFileName` é usada para anexar o arquivo de banco de dados primário (.mdf), que deve incluir o nome do caminho completo. `AttachDbFileName` também corresponde a "extended properties" e chaves de "initial file name" dentro de um <xref:System.Data.SqlClient.SqlConnection> cadeia de caracteres de conexão.  
+-   A palavra-chave de cadeia de conexão `AttachDbFileName` é usada para anexar o arquivo de banco de dados primário (.mdf), que deve incluir o nome do caminho completo. `AttachDbFileName` também corresponde às chaves "extended properties" e "initial file name" dentro de uma cadeia de conexão <xref:System.Data.SqlClient.SqlConnection>.  
   
 -   A cadeia de caracteres de substituição `|DataDirectory|` incluída nos símbolos pipe refere-se ao diretório de dados do aplicativo que abre a conexão e fornece um caminho relativo que indica o local do banco de dados .mdf e .ldf e dos arquivos de log. Se você deseja localizar esses arquivos em outro lugar, deverá fornecer o caminho completo para os arquivos.  
   
@@ -58,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Você também pode usar o <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> propriedades para criar uma cadeia de conexão em tempo de execução.  
+>  Você também pode usar as propriedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para compilar uma cadeia de conexão em tempo de execução.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Usando o &#124;DataDirectory&#124; cadeia de caracteres de substituição  
- `AttachDbFileName` foi ampliado no ADO.NET 2.0 com a introdução do `|DataDirectory|` (delimitado por símbolos de pipe) cadeia de caracteres de substituição. `DataDirectory` é usado em conjunto com `AttachDbFileName` para indicar um caminho relativo para um arquivo de dados, permitindo que os desenvolvedores criem cadeias de caracteres de conexão com base em um caminho relativo para a fonte de dados em vez de ser necessária para especificar um caminho completo.  
+ `AttachDbFileName` foi ampliado no ADO.NET 2.0 com a introdução da cadeia de caracteres de substituição `|DataDirectory|` (entre barras verticais). `DataDirectory` é usado em conjunto com `AttachDbFileName` para indicar um caminho relativo para um arquivo de dados, permitindo que os desenvolvedores criem cadeias de conexão que são baseadas em um caminho relativo para a fonte de dados em vez de precisarem especificar um caminho completo.  
   
  A localização física para a qual o `DataDirectory` aponta depende do tipo de aplicativo. Nesse exemplo, o arquivo Northwind.mdf a ser anexado está localizado na pasta \app_data do aplicativo.  
   
@@ -152,7 +152,7 @@ private static void OpenSqlConnection()
   
 ## <a name="see-also"></a>Consulte também
 
-- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Cadeias de caracteres de conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
+- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

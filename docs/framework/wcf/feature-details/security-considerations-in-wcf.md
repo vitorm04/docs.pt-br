@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112210"
 ---
 # <a name="security-considerations-in-wcf"></a>Considerações de segurança no WCF
@@ -29,10 +29,10 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
  Discute a alteração de mensagens ou a entrega de mensagens e como resolvê-la.  
   
- [Ataques por repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  Discute o que acontece quando um invasor copia um fluxo de mensagens entre dois parceiros e repete o fluxo a um ou mais das partes e como mitigar isso.  
   
- [Considerações de segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ [Considerações sobre segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
  Discute os seguintes itens que afetam a segurança ao implementar sessões seguras.  
   
  [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
@@ -48,7 +48,7 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Orientação de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Consulte também
 

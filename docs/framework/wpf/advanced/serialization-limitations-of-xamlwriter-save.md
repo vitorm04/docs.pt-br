@@ -7,10 +7,10 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113276"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitações de serialização de XamlWriter.Save
@@ -30,7 +30,7 @@ O [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Syst
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>A manipulação de eventos não é preservada  
- Quando os manipuladores de eventos que são adicionados por meio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são serializados, eles não são preservados. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sem code-behind (e também sem o mecanismo X:Code relacionado) não tem nenhuma maneira de serializar a lógica de procedimento de tempo de execução. Uma vez que a serialização é independente e limitada à árvore lógica, não há recurso para armazenar os manipuladores de eventos. Como resultado, os atributos de manipulador de eventos, tanto o atributo em si quanto o valor de cadeia de caracteres que nomeia o manipulador, são removidos da saída [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Quando os manipuladores de eventos que são adicionados por meio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são serializados, eles não são preservados. O [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sem code-behind (e também sem o mecanismo x:Code relacionado) não tem como serializar a lógica de procedimento de tempo de execução. Uma vez que a serialização é independente e limitada à árvore lógica, não há recurso para armazenar os manipuladores de eventos. Como resultado, os atributos de manipulador de eventos, tanto o atributo em si quanto o valor de cadeia de caracteres que nomeia o manipulador, são removidos da saída [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Cenários realistas para uso de XAMLWriter.Save  
