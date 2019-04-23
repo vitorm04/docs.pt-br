@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170307"
 ---
 # <a name="binding-markup-extension"></a>Extensão de marcação de associação
@@ -118,7 +118,7 @@ Adia um valor da propriedade para ser um valor de associação de dados, criando
   
  As associações que envolvem a validação de dados geralmente são especificadas pelas explícito `Binding` elemento, em vez de como uma `{Binding ...}` expressão e configuração <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> ou <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> em uma expressão é incomum. Isso ocorre porque a propriedade complementar <xref:System.Windows.Data.Binding.ValidationRules%2A> não podem ser prontamente definida na forma de expressão. Para obter mais informações, consulte [Implementar validação de associação](../data/how-to-implement-binding-validation.md).  
   
- `Binding` é uma extensão de marcação. As extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores e o requisito é mais global do que conversores de tipo atribuídos em certos tipos ou propriedades. Todas as extensões de marcação no XAML usam os caracteres `{` e `}` na sintaxe de atributo, que é a convenção pela qual o processador XAML reconhece que uma extensão de marcação precisa processar o conteúdo da cadeia de caracteres. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
+ `Binding` é uma extensão da marcação. As extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores e o requisito é mais global do que conversores de tipo atribuídos em certos tipos ou propriedades. Todas as extensões de marcação no XAML usam os caracteres `{` e `}` na sintaxe de atributo, que é a convenção pela qual o processador XAML reconhece que uma extensão de marcação precisa processar o conteúdo da cadeia de caracteres. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
   
  `Binding` é uma extensão de marcação atípica em que o <xref:System.Windows.Data.Binding> classe que implementa a funcionalidade de extensão para implementação de XAML do WPF também implementa vários outros métodos e propriedades que não estão relacionadas ao XAML. Os outros membros devem fazer <xref:System.Windows.Data.Binding> uma classe mais versátil e independente que pode solucionar muitos cenários de associação de dados, além de funcionar como uma extensão de marcação XAML.  
   
@@ -127,4 +127,4 @@ Adia um valor da propriedade para ser um valor de associação de dados, criando
 - <xref:System.Windows.Data.Binding>
 - [Visão geral da vinculação de dados](../data/data-binding-overview.md)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Extensões de marcação e XAML WPF](markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)

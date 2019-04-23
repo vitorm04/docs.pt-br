@@ -1,12 +1,12 @@
 ---
-title: <security> De <ws2007HttpBinding>
+title: <security> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 ms.openlocfilehash: bac8b9c4af812e924296008fa81227d181b30c0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170840"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<segurança > de \<ws2007HttpBinding >
@@ -59,7 +59,7 @@ Representa as configurações de segurança usadas com o [ \<ws2007HttpBinding >
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md)|Define as configurações de segurança de transporte. Esse elemento corresponde ao <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> tipo. Essas configurações são aplicadas somente quando o modo é definido como o transporte.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md)|Define as configurações de segurança de transporte. Esse elemento corresponde ao <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> tipo. Essas configurações são aplicadas somente quando o modo é definido como o transporte.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento corresponde ao <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> tipo. Essas configurações não são aplicadas quando o modo é definido como o transporte.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

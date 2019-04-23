@@ -8,10 +8,10 @@ helpviewer_keywords:
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
 ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170359"
 ---
 # <a name="dependency-property-metadata"></a>Metadados de propriedade da dependência
@@ -95,5 +95,5 @@ O sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
-- [Metadados de propriedade de estrutura](framework-property-metadata.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
+- [Metadados de propriedade de Framework](framework-property-metadata.md)

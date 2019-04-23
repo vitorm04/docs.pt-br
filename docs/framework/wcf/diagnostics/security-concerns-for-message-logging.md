@@ -3,10 +3,10 @@ title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170658"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
@@ -111,5 +111,5 @@ Este tópico descreve como você pode proteger dados confidenciais sejam exposta
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro em log de mensagens](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Preocupações de segurança e dicas úteis para rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Questões de segurança e dicas úteis para rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

@@ -3,10 +3,10 @@ title: Protegendo as mensagens com a segurança de mensagens
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171997"
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
@@ -65,7 +65,7 @@ Esta seção aborda a segurança de mensagem do WCF ao usar <xref:System.Service
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mensagens de segurança que usam a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -3,10 +3,10 @@ title: Visão geral do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170047"
 ---
 # <a name="adonet-overview"></a>Visão geral do ADO.NET
@@ -29,10 +29,10 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  [Opções e diretrizes da tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Descreve os produtos e as tecnologias incluídos na plataforma de dados de entidade.  
   
- [LINQ e o ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [LINQ e ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Descreve como a consulta integrada à linguagem (LINQ) é implementada no ADO.NET e fornece links para tópicos relevantes.  
   
- [Provedores de dados .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Provedores de dados do .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Fornece uma visão geral do design do provedor de dados .NET Framework e dos provedores de dados .NET Framework incluídos no ADO.NET.  
   
  [DataSets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
@@ -45,20 +45,20 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  Fornece exemplos de código que recuperam dados usando os provedores de dados ADO.NET.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Novidades no ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+ [What's New in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md) (Novidades no ADO.NET)  
  Apresenta recursos que são novos no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
  Descreve práticas seguras de codificação ao usar o ADO.NET.  
   
- [Mapeamentos de tipos de dados no ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  
  Descreve os mapeamentos de tipo de dados entre os tipos de dados do .NET Framework e os provedores de dados .NET Framework.  
   
- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  Descreve como conectar-se a uma fonte de dados, recuperar dados e modificar dados. Isso inclui `DataReaders` e `DataAdapters`.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

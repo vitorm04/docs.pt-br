@@ -3,10 +3,10 @@ title: Semântica nula
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
 ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172751"
 ---
 # <a name="null-semantics"></a>Semântica nula
@@ -14,11 +14,11 @@ A tabela a seguir fornece links para várias partes do [!INCLUDE[vbtecdlinq](../
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Incompatibilidade de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|A seção "Semântica nula" neste tópico inclui a discussão sobre as três estado SQL booleano versus o dois estados common language runtime (CLR) <xref:System.Boolean>, o literal `Nothing` (Visual Basic) e `null` (C#) e outros semelhantes problemas.|  
-|[Conversão padrão de operador de consulta](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|“A seção de semântica nula” neste tópico descreve as semânticas nula de comparação em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|[Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|A seção "Semântica nula" neste tópico inclui a discussão sobre as três estado SQL booleano versus o dois estados common language runtime (CLR) <xref:System.Boolean>, o literal `Nothing` (Visual Basic) e `null` (C#) e outros semelhantes problemas.|  
+|[Conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|“A seção de semântica nula” neste tópico descreve as semânticas nula de comparação em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
 |[Métodos de System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|As “diferenças a seção .NET” neste tópico descrevem como um retorno de 0 de <xref:System.String.LastIndexOf%2A> pode significar qualquer pessoa que a cadeia de caracteres é nula ou que a posição encontrada é 0.|  
 |[Calcular a soma dos valores em uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|Descreve como o <xref:System.Linq.Enumerable.Sum%2A> operador é avaliado como `null` (`Nothing` no Visual Basic) em vez de 0 para uma sequência que contém somente nulos ou para uma sequência vazia.|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de dados e funções](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

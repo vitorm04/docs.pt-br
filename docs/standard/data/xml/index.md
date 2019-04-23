@@ -6,10 +6,10 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171165"
 ---
 # <a name="xml-documents-and-data"></a>Documentos e dados XML
@@ -58,25 +58,25 @@ O .NET Framework fornece um conjunto de classes abrangente e integrado que permi
 -   **Integração com o ADO.NET.** As classes XML e o [ADO.NET](../../../../docs/framework/data/adonet/index.md) são bem integrados para reunir dados relacionais e XML. A classe de <xref:System.Data.DataSet> é um cache de memória dos dados recuperados de uma base de dados. A classe <xref:System.Data.DataSet> tem a capacidade de ler e escrever XML usando as classes de <xref:System.Xml.XmlReader> e de <xref:System.Xml.XmlWriter> , para manter sua estrutura de esquema relacional como esquemas XML (XSD), e para interpretar a estrutura do esquema de um documento XML.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Opções de processamento XML](../../../../docs/standard/data/xml/xml-processing-options.md)  
+ [XML Processing Options](../../../../docs/standard/data/xml/xml-processing-options.md) (Opções de processamento de XML)  
  Discute opções para processar dados XML.  
   
- [Processamento de Dados XML na memória](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
+ [Processing XML Data In-Memory](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) (Processamento de dados XML na memória)  
  Discute os três modelos para processar dados XML na memória: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), a classe <xref:System.Xml.XmlDocument> (com base no Modelo de Objeto do Documento do W3C) e a classe <xref:System.Xml.XPath.XPathDocument> (com base no modelo de dados do XPath).  
   
  [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  Descreve como usar o processador XSLT.  
   
- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]  
  Descreve as classes usadas para criar e manipular esquemas XML (XSD), fornecendo uma classe <xref:System.Xml.Schema.XmlSchema> para carregar e editar um esquema.  
   
- [Integração XML com dados relacionais e o ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
+ [XML Integration with Relational Data and ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md) (Integração XML com os dados relacionais e o ADO.NET)  
  Descreve como o .NET Framework habilita o acesso síncrono, em tempo real, às representações de dados relacionais e hierárquicas através dos objetos <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument>.  
   
- [Gerenciando namespaces em um documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
+ [Managing Namespaces in an XML Document](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md) (Gerenciando namespaces em um documento XML)  
  Descreve como a classe <xref:System.Xml.XmlNamespaceManager> classe é usada para armazenar e manter as informações do namespace.  
   
- [Digite suporte nas classes de System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ [Type Support in the System.Xml Classes](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md) (Suporte a tipo nas classes System.XML)  
  Descreve como mapa de tipos de dados XML para tipos de CLR, como converter tipos de dados XML e outros recursos de suporte de tipo nas classes <xref:System.Xml>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

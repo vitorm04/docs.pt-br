@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
 ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171672"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Como: Desenhar um único B&#233;Spline de Bézier
@@ -35,4 +35,4 @@ Uma spline de Bézier é definida por quatro pontos: um ponto de início, dois p
 
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [Splines de Bézier no GDI+](bezier-splines-in-gdi.md)
-- [Como: desenhar uma sequência de splines de Bézier](how-to-draw-a-sequence-of-bezier-splines.md)
+- [Como: Desenhar uma sequência de Splines de Bézier](how-to-draw-a-sequence-of-bezier-splines.md)

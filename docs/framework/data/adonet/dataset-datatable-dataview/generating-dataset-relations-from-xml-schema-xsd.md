@@ -3,10 +3,10 @@ title: Gerar relações de DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170216"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Gerar relações de DataSet do esquema XML (XSD)
@@ -81,22 +81,22 @@ msdata:childkey="" />
  Usa o processo de mapeamento a **relacionamento** elemento para criar uma relação pai-filho entre os **OrderNumber** coluna no **ordem** tabela e o **OrderNo** coluna o **OrderDetail** na tabela a **DataSet**. O processo de mapeamento especifica apenas a relação; ele não automaticamente especificar quaisquer restrições nos valores nessas colunas, assim como as restrições de chave estrangeira/chave primárias em bancos de dados relacionais.  
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Mapear relações implícitas entre elementos de esquema aninhados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ [Mapear relações implícita entre elementos de esquema aninhados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  Descreve as restrições e relações são criadas implicitamente em um **conjunto de dados** quando elementos aninhados são encontrados no esquema XML.  
   
- [Mapear relações especificadas para elementos aninhados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ [Mapear relações definidas para elementos aninhados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Descreve como definir explicitamente as relações em um **conjunto de dados** para elementos aninhados no esquema XML.  
   
- [Especificar relações entre elementos sem nenhum aninhamento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [Especificar as relações entre os elementos sem nenhum aninhamento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  Descreve como criar relações em um **conjunto de dados** entre os elementos de esquema XML que não estão aninhados.  
   
 ### <a name="related-sections"></a>Seções relacionadas  
- [Derivando a estrutura relacional do DataSet do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Descreve a estrutura relacional ou o esquema de um **conjunto de dados** que é criado a partir do esquema de (XSD) de linguagem de definição de esquema XML.  
   
- [Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições de chave estrangeiras e exclusivas em uma **conjunto de dados**.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

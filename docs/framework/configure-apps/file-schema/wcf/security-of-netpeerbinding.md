@@ -1,12 +1,12 @@
 ---
-title: <security> De <netPeerBinding>
+title: <security> de <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
 ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170086"
 ---
 # <a name="security-of-netpeerbinding"></a>\<segurança > de \<netPeerBinding >
@@ -52,7 +52,7 @@ Define as configurações de segurança de [ \<netPeerTcpBinding >](../../../../
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|Define o tipo de transporte para mensagens protegidas enviadas pelos pares configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|Define o tipo de transporte para mensagens protegidas enviadas pelos pares configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
 ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172881"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilidade de SQL-CLR
@@ -116,9 +116,9 @@ or col1 != col2
 ### <a name="type-conversion-and-promotion"></a>Conversão de tipos e promoção  
  O SQL suporta um conjunto rico de conversões implícitas em expressões. As expressões semelhantes em C# exigiriam uma conversão explícita. Por exemplo:  
   
--   `Nvarchar` e `DateTime` tipos podem ser comparados em SQL sem nenhuma conversões explícitas; C# requer conversão explícita.  
+-   `Nvarchar` e os tipos de `DateTime` podem ser comparadas em SQL sem nenhuma conversões explícitas; C# requer conversão explícita.  
   
--   `Decimal` é convertido implicitamente em `DateTime` no SQL. C# não permite uma conversão implícita.  
+-   `Decimal` é convertido implicitamente a `DateTime` no SQL. C# não permite uma conversão implícita.  
   
  Também, a precedência de tipo em Transact-SQL difere de precedência de tipo em C# porque o conjunto sendo a base de tipos é diferente. De fato, não há nenhuma relação clara do subconjunto/superconjunto entre as listas de precedência. Por exemplo, `nvarchar` comparar com `varchar` faz com que a conversão implícita da expressão de `varchar` a `nvarchar`. CLR não fornece nenhuma promoção equivalente.  
   
@@ -146,7 +146,7 @@ Where Col1 = Col2
   
  Na verdade, o subclause de agrupamento cria uma *restritos de tipo* que não é substitutable.  
   
- Da mesma forma, a ordem de classificação pode ser significativamente diferente entre sistemas de tipos. Essa diferença afeta a classificação dos resultados. <xref:System.Guid> é classificado em todos os 16 bytes pela ordem lexicographic (`IComparable()`), enquanto T-SQL compara GUIDs na seguinte ordem: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Isso regras que foi feito no SQL 7.0 GUIDs gerado quando NT- tinha uma ordem de octeto. A abordagem de assegurou-se que GUIDs gerado no mesmo conjunto de nó viesse juntos em ordem sequencial de acordo com o carimbo de data/hora. A abordagem também é útil para compilar índices (inserções se tornam append em vez de IOs aleatório). A ordem scrambled posteriormente no Windows devido a interesses privacidade, mas o SQL deve manter compatibilidade. Uma solução alternativa é usar <xref:System.Data.SqlTypes.SqlGuid> em vez de <xref:System.Guid>.  
+ Da mesma forma, a ordem de classificação pode ser significativamente diferente entre sistemas de tipos. Essa diferença afeta a classificação dos resultados. <xref:System.Guid> são classificadas em todos os 16 bytes pela ordem lexicographic (`IComparable()`), enquanto T-SQL compara GUIDs na seguinte ordem: (nó 10-15), relógio- segs. (8-9), Hora- alto (6-7), Hora- mid (4-5), Hora- baixo (0-3). Isso regras que foi feito no SQL 7.0 GUIDs gerado quando NT- tinha uma ordem de octeto. A abordagem de assegurou-se que GUIDs gerado no mesmo conjunto de nó viesse juntos em ordem sequencial de acordo com o carimbo de data/hora. A abordagem também é útil para compilar índices (inserções se tornam append em vez de IOs aleatório). A ordem scrambled posteriormente no Windows devido a interesses privacidade, mas o SQL deve manter compatibilidade. Uma solução alternativa é usar <xref:System.Data.SqlTypes.SqlGuid> em vez de <xref:System.Guid>.  
   
 ### <a name="operator-and-function-differences"></a>Operador e diferenças de função  
  Os operadores e funções que são essencialmente comparáveis têm a semântica ligeiramente diferente. Por exemplo:  
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   Uma conversão fraca a `AND` / `OR` pode causar erros inesperados se o C# expressão depende da avaliação o segundo operando sendo baseado no resultado da avaliação do primeiro operando.  
   
--   `Round()` função possui uma semântica diferente [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] e em T-SQL.  
+-   a função de`Round()` tem a semântica diferente em [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] e em T-SQL.  
   
 -   Iniciar o índice para cadeias de caracteres é 0 em CLR mas 1 no SQL. Portanto, qualquer função que tem a conversão de índice das necessidades de índice.  
   

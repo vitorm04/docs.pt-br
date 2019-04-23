@@ -17,10 +17,10 @@ helpviewer_keywords:
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
 ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172777"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representação matricial de transformações
@@ -105,5 +105,5 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Sistemas de coordenadas e transformações](coordinate-systems-and-transformations.md)
-- [Usando transformações no GDI+ gerenciado](using-transformations-in-managed-gdi.md)
+- [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md)
+- [Usando Transformações no GDI+ Gerenciado](using-transformations-in-managed-gdi.md)

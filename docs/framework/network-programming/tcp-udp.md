@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172543"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
@@ -34,8 +34,8 @@ Os aplicativos podem usar os serviços dos protocolos TCP e UDP com as classes <
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando os serviços TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Usando os serviços UDP](../../../docs/framework/network-programming/using-udp-services.md)
+- [Usando serviços de TCP](../../../docs/framework/network-programming/using-tcp-services.md)
+- [Usando serviços de UDP](../../../docs/framework/network-programming/using-udp-services.md)
 - [Usando fluxos na rede](../../../docs/framework/network-programming/using-streams-on-the-network.md)
 - [Usando um soquete de servidor assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Usando um soquete de cliente assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)

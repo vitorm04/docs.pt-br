@@ -12,10 +12,10 @@ helpviewer_keywords:
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169702"
 ---
 # <a name="enabling-network-tracing"></a>Habilitando o rastreamento de rede
@@ -49,4 +49,4 @@ O rastreamento de rede fornece acesso a informações sobre invocações de mét
 
 - [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-- [Rastreamento e instrumentação de aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

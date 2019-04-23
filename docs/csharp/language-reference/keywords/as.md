@@ -10,10 +10,10 @@ helpviewer_keywords:
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
 ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169917"
 ---
 # <a name="as-c-reference"></a>as (Referência de C#)
@@ -50,7 +50,7 @@ Para obter mais informações, veja [O operador as](~/_csharplang/spec/expressio
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
 - [is](../../../csharp/language-reference/keywords/is.md)
-- [?: Operador](../../../csharp/language-reference/operators/conditional-operator.md)
-- [Palavras-chave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [?: ??](../../../csharp/language-reference/operators/conditional-operator.md)
+- [Palavras-chave do operador](../../../csharp/language-reference/keywords/operator-keywords.md)
