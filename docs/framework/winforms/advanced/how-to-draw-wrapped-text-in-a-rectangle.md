@@ -10,10 +10,10 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301913"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Como: desenhar texto ajustado um retângulo
@@ -46,7 +46,7 @@ Você pode desenhar texto encapsulado em um retângulo usando o <xref:System.Dra
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: desenhar texto com o GDI](how-to-draw-text-with-gdi.md)
+- [Como: Desenhar texto com GDI](how-to-draw-text-with-gdi.md)
 - [Usando fontes e texto](using-fonts-and-text.md)
-- [Como: construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
-- [Como: desenhar texto em um local especificado](how-to-draw-text-at-a-specified-location.md)
+- [Como: Construir fontes e famílias de fontes](how-to-construct-font-families-and-fonts.md)
+- [Como: Desenhar texto em um local especificado](how-to-draw-text-at-a-specified-location.md)

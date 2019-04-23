@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301393"
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
@@ -218,6 +218,6 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Clipboard>
-- [Passo a passo: habilitar arrastar e soltar em um controle de usuário](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Tópicos explicativos ](drag-and-drop-how-to-topics.md)
+- [Passo a passo: Habilitando arrastar e soltar em um controle de usuário](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Tópicos de instruções](drag-and-drop-how-to-topics.md)
 - [Arrastar e soltar](drag-and-drop.md)

@@ -37,10 +37,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301224"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
@@ -149,13 +149,13 @@ Um *tipo genérico* é um único elemento de programação que se adapta ao exec
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Tipos de valor e referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Solucionando problemas de tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Covariância e contravariância](../../concepts/covariance-contravariance/index.md)
-- [Iterators](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Covariância e Contravariância](../../concepts/covariance-contravariance/index.md)
+- [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)

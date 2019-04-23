@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301692"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Como: Bloquear controles nos Windows Forms
@@ -48,8 +48,8 @@ Ao projetar a interface do usuário do seu aplicativo do Windows, você pode blo
   
 ## <a name="see-also"></a>Consulte também
 
-- [Controles de Windows Forms](index.md)
-- [Organizando controles nos Windows Forms](arranging-controls-on-windows-forms.md)
-- [Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Controles dos Windows Forms](index.md)
+- [Organizando Controles nos Windows Forms](arranging-controls-on-windows-forms.md)
+- [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)
