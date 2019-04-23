@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226944"
 ---
-# <a name="textbox"></a><span data-ttu-id="a2c13-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="a2c13-102">TextBox</span></span>
-<span data-ttu-id="a2c13-103">O <xref:System.Windows.Controls.TextBox> controle oferece suporte para entrada de texto básico em aplicativos WPF.</span><span class="sxs-lookup"><span data-stu-id="a2c13-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="7a631-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="7a631-102">TextBox</span></span>
+<span data-ttu-id="7a631-103">O <xref:System.Windows.Controls.TextBox> controle oferece suporte para entrada de texto básico em aplicativos WPF.</span><span class="sxs-lookup"><span data-stu-id="7a631-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2c13-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="a2c13-104">In This Section</span></span>  
- [<span data-ttu-id="a2c13-105">Visão geral de TextBox</span><span class="sxs-lookup"><span data-stu-id="a2c13-105">TextBox Overview</span></span>](textbox-overview.md)  
- [<span data-ttu-id="a2c13-106">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="a2c13-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7a631-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7a631-104">In This Section</span></span>  
+ [<span data-ttu-id="7a631-105">Visão geral de TextBox</span><span class="sxs-lookup"><span data-stu-id="7a631-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="7a631-106">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="7a631-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a2c13-107">Referência</span><span class="sxs-lookup"><span data-stu-id="a2c13-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7a631-107">Referência</span><span class="sxs-lookup"><span data-stu-id="7a631-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "59226944"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="a2c13-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a2c13-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a631-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7a631-108">See also</span></span>
 
-- [<span data-ttu-id="a2c13-109">Exemplo da Galeria de controles do WPF</span><span class="sxs-lookup"><span data-stu-id="a2c13-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="a2c13-110">Estilos e modelos TextBox</span><span class="sxs-lookup"><span data-stu-id="a2c13-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+- [<span data-ttu-id="7a631-109">Exemplo da galeria de controles de WPF</span><span class="sxs-lookup"><span data-stu-id="7a631-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [<span data-ttu-id="7a631-110">Estilos e modelos TextBox</span><span class="sxs-lookup"><span data-stu-id="7a631-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
