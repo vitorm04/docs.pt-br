@@ -6,18 +6,18 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079988"
 ---
 # <a name="cleartype-registry-settings"></a>Configurações do Registro de ClearType
-Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] configurações do registro que são usadas pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
+Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] configurações do registro que são usadas pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Visão geral da tecnologia  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos que renderizam texto para um dispositivo de vídeo usam [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] recursos para fornecer uma experiência aprimorada de leitura. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] que melhora a legibilidade do texto em LCDs existentes (monitores), como telas de notebook, telas de Pocket PC e monitores de tela plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funciona ao acessar os elementos de faixa de cor vertical em cada pixel de uma tela LCD. Para obter mais informações sobre [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [visão geral de ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos que renderizam texto para um dispositivo de vídeo usam [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] recursos para fornecer uma experiência aprimorada de leitura. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], que melhora a legibilidade do texto em monitores LCD existentes, como telas de notebook, telas de Pocket PC e monitores de tela plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funciona ao acessar os elementos individuais da listra de cores vertical em cada pixel de uma tela LCD. Para obter mais informações sobre [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [visão geral de ClearType](cleartype-overview.md).  
   
  Texto que é processado com [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] pode parecer significativamente diferente quando exibido em vários dispositivos de vídeo. Por exemplo, um pequeno número de monitores de implementa os elementos da faixa de cor na ordem azul, verde, vermelho, em vez do mais comum vermelho, verde, azul ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) ordem.  
   
@@ -31,17 +31,17 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Nível|Descreve o nível de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] clareza de cor.|  
+|Nível de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Descreve o nível de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] clareza de cor.|  
 |Nível de gama|Descreve o nível do componente de cor do pixel para um dispositivo de vídeo.|  
 |Estrutura de Pixel|Descreve a disposição dos pixels para um dispositivo de vídeo.|  
 |Nível de contraste do texto|Descreve o nível de contraste para o texto exibido.|  
   
- Essas configurações podem ser acessadas por um utilitário de configuração externo que sabe como referenciar o identificado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] as configurações do registro. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Editor do Registro.  
+ Essas configurações podem ser acessadas por um utilitário de configuração externo que sabe como referenciar o identificado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] as configurações do registro. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Editor do Registro.  
   
- Se o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] configurações de registro não estiverem definidas (que é o estado padrão), o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consultas de aplicativo a [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informações de parâmetros de sistema para as configurações de suavização de fonte.  
+ Se o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] configurações de registro não estiverem definidas (que é o estado padrão), o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consultas de aplicativo a [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informações de parâmetros de sistema para as configurações de suavização de fonte.  
   
 > [!NOTE]
->  Para obter informações sobre a enumeração de nomes de dispositivo de vídeo, consulte o `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
+>  Para obter informações sobre a enumeração de nomes de dispositivo de vídeo, consulte a `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Nível de ClearType  
@@ -82,14 +82,14 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 |Tipo|Valor|Descrição|  
 |----------|-----------|-----------------|  
-|Plano|0|O dispositivo de vídeo não tem uma estrutura de pixel. Isso significa que as fontes de luz para cada cor são distribuídas igualmente na área de pixel — isso é conhecido como renderização em escala de cinza. É assim que um dispositivo de vídeo padrão funciona. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] nunca é aplicada ao texto renderizado.|  
-|RGB|1|O dispositivo de vídeo tem pixels que consistem em três faixas na seguinte ordem: vermelho, verde e azul. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é aplicada ao texto renderizado.|  
-|BGR|2|O dispositivo de vídeo tem pixels que consistem em três faixas na seguinte ordem: azul, verde e vermelho. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é aplicada ao texto renderizado. Observe como a ordem é invertida com relação ao tipo RGB.|  
+|Plano|0|O dispositivo de vídeo não tem uma estrutura de pixel. Isso significa que as fontes de luz para cada cor são distribuídas igualmente na área de pixel — isso é conhecido como renderização em escala de cinza. É assim que um dispositivo de vídeo padrão funciona. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] nunca é aplicado ao texto renderizado.|  
+|RGB|1|O dispositivo de vídeo tem pixels que consistem em três faixas na seguinte ordem: vermelho, verde e azul. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é aplicado ao texto renderizado.|  
+|BGR|2|O dispositivo de vídeo tem pixels que consistem em três faixas na seguinte ordem: azul, verde e vermelho. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é aplicado ao texto renderizado. Observe como a ordem é invertida com relação ao tipo RGB.|  
   
  A estrutura de pixel corresponde a um valor inteiro que vai de 0 a 2. O nível padrão é 0, que representa uma estrutura de pixel plana.  
   
 > [!NOTE]
->  Para obter informações sobre a enumeração de nomes de dispositivo de vídeo, consulte o `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
+>  Para obter informações sobre a enumeração de nomes de dispositivo de vídeo, consulte a `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
   
 ### <a name="registry-setting"></a>Configuração do Registro  
  A localização da configuração do Registro para a estrutura de pixel é uma configuração do computador local que corresponde a um nome de dispositivo de vídeo específico:  

@@ -3,10 +3,10 @@ title: Introdução ao C# – familiarize-se com as ferramentas de desenvolvimen
 description: Este artigo fornece uma introdução básica às ferramentas que você usará para desenvolver aplicativos C# e .NET no seu computador.
 ms.date: 10/23/2018
 ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920656"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Familiarize-se com as ferramentas de desenvolvimento .NET
@@ -26,25 +26,25 @@ Os outros comandos que você usará são [`dotnet build`](../../../core/tools/do
 
 Você pode iniciar com qualquer um dos seguintes tutoriais:
 
-## [<a name="numbers-in-c"></a>Números em C#](numbers-in-csharp-local.md)
+## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Números em C#](numbers-in-csharp-local.md)
 
 No tutorial [Números em C#](numbers-in-csharp-local.md), você aprenderá como os computadores armazenam números e como executar cálculos com diferentes tipos de número. Você aprenderá os conceitos básicos de arredondamento e como executar cálculos matemáticos usando C#.
 
 Esse tutorial pressupõe a conclusão da lição [Olá, Mundo](hello-world.yml).
 
-## [<a name="branches-and-loops"></a>Loops e branches](branches-and-loops-local.md)
+## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Ramificações e loops](branches-and-loops-local.md)
 
 O tutorial [Branches e loops](branches-and-loops-local.md) ensina os conceitos básicos da seleção de diferentes caminhos de execução de código com base nos valores armazenados em variáveis. Você aprenderá os conceitos básicos do fluxo de controle, que são os fundamentos de como os programas tomam decisões e escolhem ações diferentes.
 
 Esse tutorial pressupõe a conclusão das lições [Olá, Mundo](hello-world.yml) e [Números em C#](numbers-in-csharp-local.md).
 
-## [<a name="list-collection"></a>Coleções de lista](arrays-and-collections.md)
+## <a name="list-collectionarrays-and-collectionsmd"></a>[Coleções de lista](arrays-and-collections.md)
 
 A lição [Coleções de lista](arrays-and-collections.md) fornece um tour pelo tipo Coleções de lista que armazena as sequências de dados. Você aprenderá a adicionar e remover itens, pesquisar itens e classificar listas. Você explorará os diferentes tipos de listas. 
 
 Esse tutorial pressupõe a conclusão das lições listadas acima.
 
-## [<a name="introduction-to-classes"></a>Introdução às classes](introduction-to-classes.md)
+## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introdução às classes](introduction-to-classes.md)
 
 Esse tutorial final de introdução ao C# está disponível apenas para execução no seu computador usando seu próprio ambiente de desenvolvimento local e o .NET Core.
 Você compilará um aplicativo de console e verá os recursos básicos orientados para objeto que fazem parte da linguagem C#.

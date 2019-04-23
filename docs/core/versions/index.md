@@ -5,10 +5,10 @@ author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
 ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921280"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
@@ -92,7 +92,7 @@ Depois que uma versão sai, os branches de versão geralmente param de produzir 
 
 O .NET standard consiste em um assembly de referência do .NET. Há várias implementações específicas para cada plataforma. O assembly de referência contém a definição das APIs do .NET que fazem parte de uma determinada versão do .NET Standard. Cada implementação atende o contrato do .NET Standard na plataforma específica. Você pode aprender mais sobre o .NET Standard no artigo sobre [.NET Standard](../../standard/net-standard.md) no Guia do .NET.
 
-O assembly de referência do .NET Standard usa um esquema de controle de versão `MAJOR.MINOR`. `PATCH` O nível não é útil para o .NET Standard porque expõe apenas uma especificação de API (nenhuma implementação), e qualquer alteração à API representaria, por definição, uma alteração no conjunto de recursos e, portanto, uma nova versão `MINOR`.
+O assembly de referência do .NET Standard usa um esquema de controle de versão `MAJOR.MINOR`. O nível `PATCH` não é útil para o .NET Standard porque expõe apenas uma especificação de API (nenhuma implementação) e por definição, qualquer alteração à API representaria uma alteração no conjunto de recursos e, portanto, uma nova versão `MINOR`.
 
 As implementações em cada plataforma podem ser atualizadas, normalmente como parte da versão de plataforma e isso, portanto, não é evidente para os programadores que usam o .NET Standard nessa plataforma.
 
@@ -106,8 +106,8 @@ Cada versão do .NET Core implementa uma versão do .NET Standard. Implementar u
 
 ## <a name="see-also"></a>Consulte também
 
-- [Frameworks de destino](../../standard/frameworks.md)
+- [Estruturas de destino](../../standard/frameworks.md)
 - [Pacote de distribuição do .NET Core](../build/distribution-packaging.md)
-- [Folha informativa sobre o ciclo de vida do suporte ao .NET Core](https://www.microsoft.com/net/core/support)
-- [.NET Core 2+ Associação de versão](https://github.com/dotnet/designs/issues/3)
+- [Folha informativa sobre o ciclo de vida do suporte do .NET Core](https://www.microsoft.com/net/core/support)
+- [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (Associação de versão do .NET Core 2+)
 - [Imagens do Docker para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
 ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079312"
 ---
 # <a name="animation-and-timing-system-overview"></a>Visão geral da animação e do sistema de tempo
@@ -85,5 +85,5 @@ Uma cadeia de composição
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral da animação](animation-overview.md)
-- [Visão geral dos eventos de tempo](timing-events-overview.md)
+- [Visão geral de eventos de tempo](timing-events-overview.md)
 - [Visão geral dos comportamentos de tempo](timing-behaviors-overview.md)

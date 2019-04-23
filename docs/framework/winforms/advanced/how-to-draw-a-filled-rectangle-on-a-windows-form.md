@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
 ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072021"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Como: desenhar um retângulo preenchido em um formulário do Windows
@@ -37,7 +37,7 @@ Este exemplo desenha um retângulo preenchido em um formulário.
 
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Introdução à programação de elementos gráficos](getting-started-with-graphics-programming.md)
-- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Usando uma caneta para desenhar linhas e formas](using-a-pen-to-draw-lines-and-shapes.md)
-- [Pincéis e formas preenchidas no GDI+](brushes-and-filled-shapes-in-gdi.md)
+- [Pincéis e Formas Preenchidas no GDI+](brushes-and-filled-shapes-in-gdi.md)

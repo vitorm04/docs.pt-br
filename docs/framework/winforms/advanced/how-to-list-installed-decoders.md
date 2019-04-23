@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079403"
 ---
 # <a name="how-to-list-installed-decoders"></a>Como: listar os decodificadores instalados
@@ -33,5 +33,5 @@ Você talvez queira listar os decodificadores de imagem disponíveis em um compu
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: listar os codificadores instalados](how-to-list-installed-encoders.md)
-- [Usando codecs de imagem no GDI+ gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [Como: Listar os codificadores instalados](how-to-list-installed-encoders.md)
+- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](using-image-encoders-and-decoders-in-managed-gdi.md)

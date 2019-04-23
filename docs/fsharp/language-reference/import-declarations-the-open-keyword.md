@@ -3,10 +3,10 @@ title: 'Declarações de importação: A palavra-chave open'
 description: Saiba mais sobre F# importar declarações e como elas especificam um módulo ou namespace cujos elementos que você pode referenciar sem usar um nome totalmente qualificado.
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054995"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Declarações de importação: O `open` palavra-chave
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Comentários
 
-Referência de código usando o caminho totalmente qualificado de namespace ou módulo sempre pode criar código que é difícil de escrever, ler e manter. Em vez disso, você pode usar o `open` palavra-chave para usados com frequência módulos e namespaces para que quando você faz referência a um membro desse módulo ou namespace, você pode usar a forma abreviada do nome em vez do nome totalmente qualificado. Essa palavra-chave é semelhante para o `using` palavra-chave em C#, `using namespace` no Visual C++, e `Imports` no Visual Basic.
+Referência de código usando o caminho totalmente qualificado de namespace ou módulo sempre pode criar código que é difícil de escrever, ler e manter. Em vez disso, você pode usar o `open` palavra-chave para usados com frequência módulos e namespaces para que quando você faz referência a um membro desse módulo ou namespace, você pode usar a forma abreviada do nome em vez do nome totalmente qualificado. Essa palavra-chave é semelhante para o `using` palavra-chave em c#, `using namespace` no Visual C++, e `Imports` no Visual Basic.
 
 O módulo ou namespace fornecido deve ser no mesmo projeto ou em um projeto referenciado ou um assembly. Se não for, você pode adicionar uma referência ao projeto ou usar o `-reference` comando`-`opção de linha (ou sua abreviação `-r`). Para obter mais informações, consulte [Opções do compilador](compiler-options.md).
 
@@ -68,6 +68,6 @@ Alguns módulos, registros ou tipos de união podem especificar o `RequireQualif
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência da linguagem F#](index.md)
+- [Referência da Linguagem F#](index.md)
 - [Namespaces](namespaces.md)
 - [Módulos](modules.md)

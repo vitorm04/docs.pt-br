@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 ms.openlocfilehash: ecfd2c3a31b42b380c593aef0bbc23775874cc7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076816"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Populando um DataSet a partir de um DataAdapter
-O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> é uma representação residente na memória de dados que fornece uma consistente relacional programação modelo independente da fonte de dados. O `DataSet` representa um conjunto completo de dados, que inclui tabelas, restrições e relações entre as tabelas. Como `DataSet` é independente da fonte de dados, um `DataSet` pode incluir o local de dados para o aplicativo, e os dados de várias fontes de dados. A interação com fontes de dados existente é controlada com o `DataAdapter`.  
+O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> é uma representação de dados residentes na memória que fornecem um modelo de programação relacional, consistente e independente da fonte de dados. O `DataSet` representa um conjunto completo de dados, que inclui tabelas, restrições e relações entre as tabelas. Como `DataSet` é independente da fonte de dados, um `DataSet` pode incluir o local de dados para o aplicativo, e os dados de várias fontes de dados. A interação com fontes de dados existente é controlada com o `DataAdapter`.  
   
  A propriedade `SelectCommand` do `DataAdapter` é um objeto `Command` que recupera dados da fonte de dados. As propriedades `InsertCommand`, `UpdateCommand`, e `DeleteCommand` do `DataAdapter` são objetos `Command` que gerenciam as atualizações aos dados na fonte de dados de acordo com as alterações feitas aos dados no `DataSet`. Essas propriedades são abordadas em mais detalhes [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- O método `Fill` do `DataAdapter` é usado para preencher um `DataSet` com os resultados do `SelectCommand` do `DataAdapter`. `Fill` usa como argumentos uma `DataSet` a ser preenchido e uma `DataTable` objeto ou o nome da `DataTable` a ser preenchido com as linhas retornadas do `SelectCommand`.  
+ O método `Fill` do `DataAdapter` é usado para preencher um `DataSet` com os resultados do `SelectCommand` do `DataAdapter`. `Fill` utiliza como seus argumentos um `DataSet` a ser preenchido, e um objeto `DataTable`, ou nome do `DataTable` a ser preenchido com as linhas retornadas do `SelectCommand`.  
   
 > [!NOTE]
 >  Usar o `DataAdapter` para recuperar todas as tabelas leva tempo, especialmente se há várias linhas na tabela. Isso ocorre porque acessar o banco de dados, localizar e processar os dados e, em seguida, transferir os dados para o cliente é demorado. Receber todas as tabelas para o cliente também bloqueia todas as linhas no servidor. Para melhorar o desempenho, você pode usar a cláusula `WHERE` para reduzir bastante o número de linhas retornadas para o cliente. Você também pode reduzir a quantidade de dados retornados para o cliente somente listando explicitamente as colunas necessárias na instrução `SELECT`. Outra boa solução alternativa é recuperar as linhas em lotes (como várias centenas de linhas de cada vez) e recuperar somente o próximo lote quando o cliente tiver terminado o lote atual.  
@@ -59,7 +59,7 @@ adapter.Fill(customers, "Customers");
  Se o `DataAdapter` encontrar vários conjuntos de resultados, criará várias tabelas no `DataSet`. As tabelas recebem um nome padrão incremental de tabela*N*, começando com "Table" para Table0. Se um nome de tabela é passado como um argumento para o `Fill` método, as tabelas recebem um nome padrão incremental de TableName*N*, começando com "TableName" para TableName0.  
   
 ## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Populando um DataSet a partir de vários DataAdapters  
- Qualquer número de `DataAdapter` objetos que podem ser usados com um `DataSet`. Cada `DataAdapter` pode ser usado para preencher um ou mais objetos `DataTable` e resolver atualizações de volta para a fonte de dados relevante. `DataRelation` e `Constraint` objetos que podem ser adicionados para o `DataSet` localmente, que permite relacionar dados de fontes de dados diferentes. Por exemplo, um `DataSet` pode conter dados de um banco de dados Microsoft SQL Server, um banco de dados IBM DB2 exposto por meio do OLE DB e uma fonte de dados que transmite XML. Um ou mais objetos `DataAdapter` podem administrar a comunicação para cada fonte de dados.  
+ Qualquer número de `DataAdapter` objetos que podem ser usados com um `DataSet`. Cada `DataAdapter` pode ser usado para preencher um ou mais objetos `DataTable` e resolver atualizações de volta para a fonte de dados relevante. Os objetos `DataRelation` e `Constraint` podem ser adicionados ao `DataSet` localmente, o que permite relacionar dados de fontes de dados não semelhantes. Por exemplo, um `DataSet` pode conter dados de um banco de dados Microsoft SQL Server, um banco de dados IBM DB2 exposto por meio do OLE DB e uma fonte de dados que transmite XML. Um ou mais objetos `DataAdapter` podem administrar a comunicação para cada fonte de dados.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir preenche uma lista de clientes do banco de dados `Northwind` no Microsoft SQL Server, e uma lista de pedidos do banco de dados `Northwind` armazenado no Microsoft Access 2000. As tabelas preenchidas estão relacionadas com um `DataRelation`, e a lista de clientes é exibida com os pedidos para aquele cliente. Para obter mais informações sobre `DataRelation` objetos, consulte [adicionando DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md) e [navegando em DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md).  
@@ -120,7 +120,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>Tipo decimal do SQL Server  
  Por padrão, o `DataSet` armazena dados usando tipos de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Para a maioria dos aplicativos, eles fornecem uma representação conveniente de informações da fonte de dados. No entanto, essa representação pode causar um problema quando o tipo de dados na fonte de dados é um decimal ou um tipo de dados numérico do SQL Server. O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` tipo de dados permite um máximo de 28 dígitos significativos, enquanto que o SQL Server `decimal` tipo de dados permite 38 dígitos significativos. Se o `SqlDataAdapter` determina durante uma operação de `Fill` que a precisão de um campo do SQL Server `decimal` é maior que 28 caracteres, a linha atual não será adicionada ao `DataTable`. Em vez disso, o evento de `FillError` ocorre, o que permite determinar se uma perda de precisão ocorrerá e responder corretamente. Para obter mais informações sobre o `FillError` eventos, consulte [manipulação de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md). Para obter o valor `decimal` do SQL Server, você também poderá usar um objeto <xref:System.Data.SqlClient.SqlDataReader> e chamar o método <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A>.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduzida suporte avançado para <xref:System.Data.SqlTypes> no `DataSet`. Para obter mais informações, consulte [SqlTypes e DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
+ O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu o suporte avançado para <xref:System.Data.SqlTypes> no `DataSet`. Para obter mais informações, consulte [SqlTypes e DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>Capítulos do OLE DB  
  Os conjuntos de linhas hierárquicos ou capítulos (tipo `DBTYPE_HCHAPTER` do OLE DB, tipo `adChapter` do ADO) podem ser usados para preencher o conteúdo de um `DataSet`. Quando o <xref:System.Data.OleDb.OleDbDataAdapter> encontra uma coluna de capítulos durante uma operação de `Fill`, um `DataTable` é criado para a coluna de capítulos e a tabela é preenchida com as colunas e linhas do capítulo. A tabela criada para a coluna de capítulos é nomeada usando o nome da tabela pai e o nome de coluna de capítulos no formato "*ParentTableNameChapteredColumnName*". Se uma tabela já existir no `DataSet` que corresponde ao nome da coluna de capítulos, a tabela atual será preenchida com os dados do capítulo. Se não houver nenhuma coluna em uma tabela existente que corresponde a uma coluna encontrada no capítulo, uma nova coluna será adicionada.  
@@ -184,7 +184,7 @@ adapter.Fill(customers, "Customers");
 ## <a name="see-also"></a>Consulte também
 
 - [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Mapeamentos de tipos de dados no ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [Modificar dados com um DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [Vários conjuntos de resultados ativos (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)
+- [Modificando dados com um DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
+- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

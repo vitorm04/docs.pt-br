@@ -8,10 +8,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073266"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Como: Controlar uma animação usando From, To e By
@@ -41,4 +41,4 @@ Um "de/para/por" ou "animação básica" cria uma transição entre dois valores
 
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
-- [De, para e por amostra de valores de destino de animação](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)

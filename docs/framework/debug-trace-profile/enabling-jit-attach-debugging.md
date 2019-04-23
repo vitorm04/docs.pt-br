@@ -8,10 +8,10 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078778"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitando a depuração por anexação JIT
@@ -21,15 +21,15 @@ A depuração de anexação JIT é a expressão usada para descrever a anexaçã
   
 -   Exceções sem tratamento (no código nativo e gerenciado).  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> método ou [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) função (família do Windows 7).  
+-   Método <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> ou função [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (família Windows 7).  
   
 -   Erros fatais de tempo de execução.  
   
  A depuração de anexação JIT também é disparada por chamadas às seguintes funções e métodos:  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> método.  
+-   Método <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> método.  
+-   Método <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
   
 -   Função [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
   
@@ -38,4 +38,4 @@ A depuração de anexação JIT é a expressão usada para descrever a anexaçã
 ## <a name="see-also"></a>Consulte também
 
 - [Depuração, rastreamento e criação de perfil](../../../docs/framework/debug-trace-profile/index.md)
-- [Facilitar a depuração de uma imagem](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [Facilitando a depuração de uma imagem](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)

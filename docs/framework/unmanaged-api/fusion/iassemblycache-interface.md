@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075621"
 ---
 # <a name="iassemblycache-interface"></a>Interface IAssemblyCache
@@ -46,4 +46,4 @@ Representa o cache de assembly global para uso pela tecnologia de fusão.
 ## <a name="see-also"></a>Consulte também
 
 - [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Cache de assemblies global](../../../../docs/framework/app-domains/gac.md)
+- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
 ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077453"
 ---
 # <a name="collection-type-dependency-properties"></a>Propriedades de dependência do tipo de coleção
@@ -59,6 +59,6 @@ Este tópico fornece diretrizes e padrões sugeridos para como implementar uma p
 - <xref:System.Windows.FreezableCollection%601>
 - [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)
 - [Visão geral da vinculação de dados](../data/data-binding-overview.md)
-- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Metadados de propriedade da dependência](dependency-property-metadata.md)

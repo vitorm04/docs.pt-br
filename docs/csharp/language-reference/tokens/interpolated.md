@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920890"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
@@ -96,7 +96,7 @@ Se não estiver familiarizado com a interpolação de cadeia de caracteres, conf
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [Formatação de composição](../../../standard/base-types/composite-formatting.md)
 - [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
-- [Cadeias de caracteres](../../programming-guide/strings/index.md)
+- [Cadeias de Caracteres](../../programming-guide/strings/index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Caracteres especiais de C#](index.md)
 - [Referência de C#](../index.md)

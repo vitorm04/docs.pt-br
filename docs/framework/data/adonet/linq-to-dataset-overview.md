@@ -3,10 +3,10 @@ title: LINQ para visão geral do DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073670"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ para visão geral do DataSet
@@ -14,7 +14,7 @@ O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados de [!I
   
  Apesar de sua importância, o <xref:System.Data.DataSet> limitou os recursos de consulta. O método <xref:System.Data.DataTable.Select%2A> pode ser usado para filtrar e classificar, e os métodos <xref:System.Data.DataRow.GetChildRows%2A> e <xref:System.Data.DataRow.GetParentRow%2A> podem ser usados para navegação a hierarquia. Para algo mais complexo, no entanto, o desenvolvedor precisa escrever uma consulta personalizada. Isso pode resultar em aplicativos com baixo desempenho e de difícil manutenção.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] torna mais fácil e mais rápida para consultar dados armazenados em cache em um <xref:System.Data.DataSet> objeto. Essas consultas são expressas na própria linguagem de programação, e não como os literais de cadeia de caracteres inseridos no código do aplicativo. Isso significa que os desenvolvedores não precisam aprender uma linguagem de consulta separada. Além disso, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permite que os desenvolvedores do Visual Studio trabalhar de maneira mais produtiva, porque o IDE do Visual Studio fornece verificação de sintaxe em tempo de compilação, digitação estática e suporte ao IntelliSense para [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] também pode ser usado para consultar sobre dados que foram consolidados de uma ou mais fontes de dados. Isso habilita vários cenários que exigem flexibilidade na maneira como dados são representados e tratados. Em particular, genéricos de relatório, análise e aplicativos de business intelligence requerem esse método de manipulação.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] torna mais fácil e mais rápida para consultar dados armazenados em cache em um <xref:System.Data.DataSet> objeto. Essas consultas são expressas na própria linguagem de programação, e não como os literais de cadeia de caracteres inseridos no código do aplicativo. Isso significa que os desenvolvedores não precisam aprender uma linguagem de consulta separada. Além disso, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permite que os desenvolvedores do Visual Studio trabalhar de maneira mais produtiva, porque o IDE do Visual Studio fornece verificação de sintaxe em tempo de compilação, digitação estática e suporte ao IntelliSense para [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. O [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] também pode ser usado para efetuar consultas a dados que foram consolidados de uma ou mais fontes de dados. Isso habilita vários cenários que exigem flexibilidade na maneira como dados são representados e tratados. Em particular, genéricos de relatório, análise e aplicativos de business intelligence requerem esse método de manipulação.  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Consultando DataSets usando o LINQ to DataSet  
  Antes de começar a consultar um <xref:System.Data.DataSet> do objeto usando [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], você deve preencher o <xref:System.Data.DataSet>. Há várias maneiras de carregar dados em um <xref:System.Data.DataSet>, como o uso de <xref:System.Data.Common.DataAdapter> classe ou [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). Depois que os dados foram carregados em um <xref:System.Data.DataSet> do objeto, você pode começar a consultá-lo. Formulação de consultas usando [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] é semelhante a usar [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] em relação a outros [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-habilitado fontes de dados. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consultas podem ser executadas em únicas tabelas em uma <xref:System.Data.DataSet> ou em mais de uma tabela usando o <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A> operadores de consulta padrão.  
@@ -30,7 +30,7 @@ O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados de [!I
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultar DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Consulta integrada à linguagem (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Consulta integrada à linguagem (LINQ) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Consultando DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [LINQ (consulta integrada à linguagem) – C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (consulta integrada à linguagem) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

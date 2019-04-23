@@ -8,10 +8,10 @@ helpviewer_keywords:
 - media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
 ms.openlocfilehash: 200f9d62c67a02088fe5a5789cdb41a04837d430
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079897"
 ---
 # <a name="how-to-play-media-with-animations"></a>Como: Reproduzir mídia com animações
@@ -30,8 +30,8 @@ Este exemplo mostra como reproduzir mídia e animações ao mesmo tempo usando o
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>
-- [Tópicos explicativos ](audio-and-video-how-to-topics.md)
+- [Tópicos de instruções](audio-and-video-how-to-topics.md)
 - [Visão geral de storyboards](storyboards-overview.md)
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
 - [Visão geral da animação](animation-overview.md)
-- [Gráficos e multimídia](index.md)
+- [Elementos gráficos e multimídia](index.md)

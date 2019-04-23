@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920903"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
@@ -216,7 +216,7 @@ O serviço do redis usa o [imagem mais recente do redis público](https://hub.do
 
 Se seu aplicativo tem apenas um único contêiner, basta executá-lo Implantando-o em seu Host do Docker (VM ou servidor físico). No entanto, se seu aplicativo é composto por vários serviços, você precisará *compô-la*também. Vamos ver as diferentes opções.
 
-***Opção A: Executar um único contêiner ou serviço***
+***Opção a: Executar um único contêiner ou serviço***
 
 Você pode executar a imagem do Docker usando o comando docker run, conforme mostrado aqui:
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Para essa implantação específica, podemos irá redirecionar as solicitações enviadas para a porta 80 para a porta interna 5000. Agora o aplicativo está escutando na porta 80 no nível do host externa.
 
-***Opção B: Compor e executar um aplicativo de vários contêineres***
+***Opção b: Compor e executar um aplicativo de vários contêineres***
 
 Na maioria dos cenários empresariais, um aplicativo do Docker será ser composto de vários serviços. Nesses casos, você pode executar o `docker-compose up` comando (Figura 4-27), que usará o arquivo docker-Compose. yml que talvez você tenha criado anteriormente. Executar esse comando implanta um aplicativo composto com todos os seus contêineres relacionados.
 

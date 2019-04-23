@@ -10,10 +10,10 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079663"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Solucionando problemas de aplicativos híbridos
@@ -86,7 +86,7 @@ ms.locfileid: "59079663"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Habilitar estilos visuais  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle não pode ser ativado. O <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método é chamado no modelo para um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicativo. Embora esse método não é chamado por padrão, se você usar [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] para criar um projeto, você obterá [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais para controles, se a versão 6.0 do Comctl32.dll está disponível. Você deve chamar o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método antes de identificadores são criados no thread. Para obter mais informações, confira [Como: Habilitar estilos visuais em um aplicativo híbrido](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle não pode ser habilitado. O <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método é chamado no modelo para um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicativo. Embora esse método não é chamado por padrão, se você usar [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] para criar um projeto, você obterá [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais para controles, se a versão 6.0 do Comctl32.dll está disponível. Você deve chamar o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método antes de identificadores são criados no thread. Para obter mais informações, confira [Como: Habilitar estilos visuais em um aplicativo híbrido](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Controles licenciados  
@@ -118,7 +118,7 @@ ms.locfileid: "59079663"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperabilidade no WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Windows Forms e arquitetura de entrada da interoperabilidade do WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Como: habilitar estilos visuais em um aplicativo híbrido](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Como: Habilitar estilos visuais em um aplicativo híbrido](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [Considerações sobre o layout do elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows Forms e mapeamento de propriedade do WPF](windows-forms-and-wpf-property-mapping.md)
 - [Erros de tempo de design no Designer de Formulários do Windows](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)

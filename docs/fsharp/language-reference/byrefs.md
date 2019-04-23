@@ -3,10 +3,10 @@ title: Byrefs
 description: Saiba mais sobre byref e tipos byref no F#, que são usados para programação de nível baixo.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055359"
 ---
 # <a name="byrefs"></a>Byrefs
@@ -110,19 +110,19 @@ A finalidade de `outref<'T>` é para indicar que o ponteiro só deve ser lidos d
 
 C# é compatível com o `in ref` e `out ref` palavras-chave, além de `ref` retorna. A tabela a seguir mostra como F# interpreta o que C# emite:
 
-|Construção de linguagem C#|F#infere|
+|Construção de linguagem c#|F#infere|
 |------------|---------|
-|`ref` valor de retorno|`outref<'T>`|
-|`ref readonly` valor de retorno|`inref<'T>`|
-|`in ref` parâmetro|`inref<'T>`|
-|`out ref` parâmetro|`outref<'T>`|
+|`ref` Valor de retorno|`outref<'T>`|
+|`ref readonly` Valor de retorno|`inref<'T>`|
+|Parâmetro `in ref`|`inref<'T>`|
+|Parâmetro `out ref`|`outref<'T>`|
 
 A tabela a seguir mostra o que F# emite:
 
 |F#Construir|Construção emitida|
 |------------|-----------------|
 |`inref<'T>` argumento|`[In]` atributo no argumento|
-|`inref<'T>` return|`modreq` atributo de valor|
+|`inref<'T>` Retornar|`modreq` atributo de valor|
 |`inref<'T>` no slot abstrata ou na implementação|`modreq` no argumento ou retorno|
 |`outref<'T>` argumento|`[Out]` atributo no argumento|
 

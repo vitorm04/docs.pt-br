@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076855"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs que dependem de reflexão
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Para ser executado com êxito, esse código requer vários itens de metadados:  
   
--   `Browse` metadados para o tipo cujo método você deseja chamar.  
+-   Metadados `Browse` para o tipo cujo método você deseja chamar.  
   
--   `Browse` metadados para o método que você deseja chamar.  Se for um método público, adicionar metadados `Browse` públicos ao tipo recipiente também inclui o método.  
+-   Metadados `Browse` para o método que você deseja chamar.  Se for um método público, adicionar metadados `Browse` públicos ao tipo recipiente também inclui o método.  
   
 -   Os metadados dinâmicos para o método que você deseja chamar, para que o delegado de invocação de reflexão não seja removido pela cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se os metadados dinâmicos não estiverem presentes para o método, a exceção a seguir é acionada quando o método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> é chamado:  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` metadados para o tipo de matriz é necessário para instanciá-lo dinamicamente.  A diretiva de tempo de execução a seguir permite a instanciação dinâmica do `Class1[]`.  
+ Metadados `Browse` para o tipo de matriz são necessários para instanciá-lo dinamicamente.  A diretiva de tempo de execução a seguir permite a instanciação dinâmica do `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -94,5 +94,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

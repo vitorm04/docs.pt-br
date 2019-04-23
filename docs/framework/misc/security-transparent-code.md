@@ -8,10 +8,10 @@ ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075932"
 ---
 # <a name="security-transparent-code"></a>Código transparente de segurança
@@ -25,11 +25,11 @@ ms.locfileid: "59075932"
   
  Este tópico descreve o modelo de transparência em mais detalhes. Ele contém as seguintes seções:  
   
--   [Finalidade do Modelo de Transparência](#purpose)  
+-   [Finalidade do modelo de transparência](#purpose)  
   
--   [Especificando o Nível de Transparência](#level)  
+-   [Especificando o nível de transparência](#level)  
   
--   [Imposição de Transparência](#enforcement)  
+-   [Imposição de transparência](#enforcement)  
   
 <a name="purpose"></a>   
 ## <a name="purpose-of-the-transparency-model"></a>Finalidade do Modelo de Transparência  

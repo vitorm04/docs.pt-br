@@ -8,10 +8,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
 ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072500"
 ---
 # <a name="path-animation-how-to-topics"></a>Tópicos explicativos de animação do caminho
@@ -32,6 +32,6 @@ Os tópicos nesta seção demonstram como animar um objeto ao longo de um caminh
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gráficos e multimídia](index.md)
+- [Elementos gráficos e multimídia](index.md)
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)

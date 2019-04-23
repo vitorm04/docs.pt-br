@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055307"
 ---
 # <a name="working-with-calendars"></a>Trabalhar com calendários
@@ -30,7 +30,7 @@ Embora um valor de data e hora representem um momento, sua representação de ca
 
 Todos os calendários no .NET derivam o <xref:System.Globalization.Calendar?displayProperty=nameWithType> classe, que fornece a implementação do calendário base. Uma das classes que herda da classe <xref:System.Globalization.Calendar> é a classe <xref:System.Globalization.EastAsianLunisolarCalendar>, a qual é a classe base para todos os calendários lunissolares. O .NET inclui as seguintes implementações de calendar:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>, que representa o calendário Lunissolar chinês.
+* <xref:System.Globalization.ChineseLunisolarCalendar>, que representa o calendário lunissolar chinês.
 
 * <xref:System.Globalization.GregorianCalendar>, que representa o calendário gregoriano. Esse calendário é particionado em subtipos adicionais (como árabe e francês do Oriente Médio) que são definidos pela enumeração <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. A propriedade <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> especifica o subtipo do calendário gregoriano.
 
@@ -40,21 +40,21 @@ Todos os calendários no .NET derivam o <xref:System.Globalization.Calendar?disp
 
 * <xref:System.Globalization.JapaneseCalendar>, que representa o calendário japonês.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>, que representa o calendário Lunissolar japonês.
+* <xref:System.Globalization.JapaneseLunisolarCalendar>, que representa o calendário lunissolar japonês.
 
 * <xref:System.Globalization.JulianCalendar>, que representa o calendário juliano.
 
-* <xref:System.Globalization.KoreanCalendar>, que representa o Calendário coreano.
+* <xref:System.Globalization.KoreanCalendar>, que representa o calendário coreano.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>, que representa o calendário Lunissolar coreano.
+* <xref:System.Globalization.KoreanLunisolarCalendar>, que representa o calendário lunissolar coreano.
 
 * <xref:System.Globalization.PersianCalendar>, que representa o calendário persa.
 
 * <xref:System.Globalization.TaiwanCalendar>, que representa o calendário de Taiwan.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>, que representa o calendário Lunissolar de Taiwan.
+* <xref:System.Globalization.TaiwanLunisolarCalendar>, que representa o calendário lunissolar de Taiwan.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>, que representa o Calendário tailandês budista.
+* <xref:System.Globalization.ThaiBuddhistCalendar>, que representa o calendário tailandês budista.
 
 * <xref:System.Globalization.UmAlQuraCalendar>, que representa o calendário Um Al Qura.
 
@@ -363,5 +363,5 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ## <a name="see-also"></a>Consulte também
 
 - [Como: Exibir datas em calendários não gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [Amostra: Utilitário de intervalo de semana de calendário](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
-- [Classe do calendário](xref:System.Globalization.Calendar)
+- [Exemplo: Utilitário de intervalo de semana de calendário](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Classe de calendário](xref:System.Globalization.Calendar)
