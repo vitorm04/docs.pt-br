@@ -5,21 +5,21 @@ f1_keywords:
 - vbrArgument_InvalidValue
 ms.assetid: dc0be8ab-b2b7-40b7-8c94-7ac9eadb5e94
 ms.openlocfilehash: 9b8a24e4ddb480704fbed77e7252cef040748018
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318007"
 ---
-# <a name="arguments-are-not-valid"></a><span data-ttu-id="08945-102">Argumentos não são válidos</span><span class="sxs-lookup"><span data-stu-id="08945-102">Arguments are not valid</span></span>
-<span data-ttu-id="08945-103">Os argumentos que não são válidos estão sendo passados para uma função ou sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="08945-103">Arguments that are not valid are being passed to a function or subroutine.</span></span>  
+# <a name="arguments-are-not-valid"></a><span data-ttu-id="ea650-102">Argumentos não são válidos</span><span class="sxs-lookup"><span data-stu-id="ea650-102">Arguments are not valid</span></span>
+<span data-ttu-id="ea650-103">Os argumentos que não são válidos estão sendo passados para uma função ou sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="ea650-103">Arguments that are not valid are being passed to a function or subroutine.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="08945-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="08945-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ea650-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="ea650-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="08945-105">Verifique os argumentos para determinar por que eles são inválidos.</span><span class="sxs-lookup"><span data-stu-id="08945-105">Check the arguments to determine why they are invalid.</span></span>  
+1. <span data-ttu-id="ea650-105">Verifique os argumentos para determinar por que eles são inválidos.</span><span class="sxs-lookup"><span data-stu-id="ea650-105">Check the arguments to determine why they are invalid.</span></span>  
   
-2. <span data-ttu-id="08945-106">Se os argumentos são fornecidos pelos cálculos, verifique os valores que processam os cálculos.</span><span class="sxs-lookup"><span data-stu-id="08945-106">If the arguments are supplied by calculations, check the values that the calculations process.</span></span>  
+2. <span data-ttu-id="ea650-106">Se os argumentos são fornecidos pelos cálculos, verifique os valores que processam os cálculos.</span><span class="sxs-lookup"><span data-stu-id="ea650-106">If the arguments are supplied by calculations, check the values that the calculations process.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08945-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="08945-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea650-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ea650-107">See also</span></span>
 
-- [<span data-ttu-id="08945-108">Passar argumentos por valor e por referência</span><span class="sxs-lookup"><span data-stu-id="08945-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="ea650-108">Passando Argumentos por Valor e por Referência</span><span class="sxs-lookup"><span data-stu-id="ea650-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
