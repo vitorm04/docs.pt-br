@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206090"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Como: Dar ao controle um segundo plano transparente
@@ -30,5 +30,5 @@ Em versões anteriores do .NET Framework, controles não oferece suporte à conf
 
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Usando classes de elementos gráficos gerenciadas](../advanced/using-managed-graphics-classes.md)
-- [Como: desenhar linhas opacas e semitransparentes](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Usando Classes de Elementos Gráficos Gerenciadas](../advanced/using-managed-graphics-classes.md)
+- [Como: Desenhar linhas opacas e semitransparentes](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

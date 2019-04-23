@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294802"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Como: criar um fluxo de trabalho da máquina de estado
@@ -193,6 +193,6 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programação do Windows Workflow Foundation](programming.md)
 - [Criando fluxos de trabalho](designing-workflows.md)
-- [Guia de introdução ao tutorial](getting-started-tutorial.md)
-- [Como: criar uma atividade](how-to-create-an-activity.md)
-- [Como: executar um fluxo de trabalho](how-to-run-a-workflow.md)
+- [Tutorial de Introdução](getting-started-tutorial.md)
+- [Como: Criar uma atividade](how-to-create-an-activity.md)
+- [Como: Executar um fluxo de trabalho](how-to-run-a-workflow.md)

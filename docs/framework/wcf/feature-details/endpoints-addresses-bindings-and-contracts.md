@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
 ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207520"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Pontos de extremidade: endereços, associações e contratos
@@ -78,13 +78,13 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
  [Contratos](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Descreve como os contratos definem os métodos de um serviço.  
   
- [Como: criar um ponto de extremidade de serviço em configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Como: Criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Descreve como criar um ponto de extremidade de serviço na configuração.  
   
- [Como: criar um ponto de extremidade de serviço em código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Como: Criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Descreve como criar um ponto de extremidade de serviço no código.  
   
- [Como: usar Svcutil.exe para validar o código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Como: Use Svcutil.exe para validar o código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Descreve como detectar erros em implementações de serviço e as configurações sem hospedar o serviço usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Consulte também

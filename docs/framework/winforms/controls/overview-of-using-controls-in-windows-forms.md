@@ -10,10 +10,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207351"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Visão geral do uso de controles nos Windows Forms
@@ -226,4 +226,4 @@ public class MyForm : Form {
 ## <a name="see-also"></a>Consulte também
 
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Noções básicas sobre o desenvolvimento de controle dos Windows Forms](windows-forms-control-development-basics.md)
+- [Noções básicas sobre o desenvolvimento de controles dos Windows Forms](windows-forms-control-development-basics.md)

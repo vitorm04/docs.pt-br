@@ -14,10 +14,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206402"
 ---
 # <a name="drawings"></a>Desenhos
@@ -25,7 +25,7 @@ ms.locfileid: "59206402"
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral dos objetos de desenho](drawing-objects-overview.md)  
-  [Tópicos explicativos ](drawings-how-to-topics.md)  
+  [Tópicos de instruções](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -33,4 +33,4 @@ ms.locfileid: "59206402"
 - [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)
 - [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Gráficos e multimídia](index.md)
+- [Elementos gráficos e multimídia](index.md)

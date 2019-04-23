@@ -7,10 +7,10 @@ helpviewer_keywords:
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
 ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294971"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Como: substituir o método ToString (Guia de Programação em C#)
@@ -47,10 +47,10 @@ Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. 
 
 - <xref:System.IFormattable>
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Cadeias de caracteres](../../../csharp/programming-guide/strings/index.md)
-- [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md)
+- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
+- [string](../../../csharp/language-reference/keywords/string.md)
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [Formatar tipos](../../../standard/base-types/formatting-types.md)
+- [Formatando Tipos](../../../standard/base-types/formatting-types.md)

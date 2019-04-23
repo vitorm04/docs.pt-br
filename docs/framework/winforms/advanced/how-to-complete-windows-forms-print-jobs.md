@@ -10,10 +10,10 @@ helpviewer_keywords:
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
 ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59293749"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Como: concluir trabalhos de impressão do Windows Forms
@@ -83,4 +83,4 @@ Frequentemente, processadores de texto e outros aplicativos que envolvem impress
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Suporte à impressão no Windows Forms](windows-forms-print-support.md)
+- [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)

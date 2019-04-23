@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294672"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub ou função não definida (Visual Basic)
@@ -32,7 +32,7 @@ Um `Sub` ou `Function` deve ser definido para ser chamado. Possíveis causas do 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)
 - [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)

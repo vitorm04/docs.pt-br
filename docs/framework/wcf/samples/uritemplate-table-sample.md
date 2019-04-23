@@ -3,10 +3,10 @@ title: Exemplo de tabela de UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59293945"
 ---
 # <a name="uritemplate-table-sample"></a>Exemplo de tabela de UriTemplate
@@ -37,5 +37,5 @@ O <xref:System.UriTemplateTable> classe fornece uma estrutura de tabela associat
   
 ## <a name="see-also"></a>Consulte também
 
-- [Dispatcher de tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+- [Dispatcher de Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

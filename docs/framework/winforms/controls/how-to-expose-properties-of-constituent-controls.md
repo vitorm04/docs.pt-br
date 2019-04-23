@@ -11,10 +11,10 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294906"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Como: Expor as propriedades de controles constituintes
@@ -60,5 +60,5 @@ public Color ButtonColor
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.UserControl>
-- [Propriedades em controles dos Windows Forms](properties-in-windows-forms-controls.md)
+- [Propriedades em controles do Windows Forms](properties-in-windows-forms-controls.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

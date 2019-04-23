@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295075"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Como: Trabalhar com controles ActiveX (Visual Basic)
@@ -33,7 +33,7 @@ Controles ActiveX são componentes COM ou objetos que podem ser inseridos em uma
 ## <a name="see-also"></a>Consulte também
 
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Como: Adicionar controles do ActiveX ao Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Como: Adicionar controles ActiveX ao Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Importador de Controle ActiveX do Windows Forms)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Considerações sobre quando hospedar um controle ActiveX em um Windows Form](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
-- [Solucionando problemas de interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Solução de problemas de Interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

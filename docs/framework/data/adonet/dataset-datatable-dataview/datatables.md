@@ -3,10 +3,10 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207312"
 ---
 # <a name="datatables"></a>DataTables
@@ -21,13 +21,13 @@ Um <xref:System.Data.DataSet> é composto de uma coleção tabelas, relações e
  Você pode criar relações pai-filho entre tabelas usando uma ou mais colunas relacionadas nas tabelas. Criar uma relação entre **DataTable** objetos usando um <xref:System.Data.DataRelation>. **DataRelation** objetos, em seguida, podem ser usados para retornar as linhas filho ou pai relacionadas de uma linha específica. Para obter mais informações, consulte [adicionando DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criando uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Criando um DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Explica como criar uma **DataTable** e adicione-o para um **conjunto de dados**.  
   
- [Definição do esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Fornece informações sobre como criar e usar **DataColumn** objetos e restrições.  
   
- [Manipulando dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Explica como adicionar, modificar e excluir dados em uma tabela. Explica como usar **DataTable** eventos para examinar as alterações nos dados na tabela.  
   
  [Manipulação de eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
@@ -37,7 +37,7 @@ Um <xref:System.Data.DataSet> é composto de uma coleção tabelas, relações e
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  Descreve a arquitetura e os componentes do ADO.NET, e como usá-los para acessar fontes de dados existentes e gerenciar dados de aplicativo.  
   
- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
  Fornece informações sobre o ADO.NET **conjunto de dados** incluindo como criar relações entre tabelas.  
   
  <xref:System.Data.Constraint>  
@@ -57,4 +57,4 @@ Um <xref:System.Data.DataSet> é composto de uma coleção tabelas, relações e
   
 ## <a name="see-also"></a>Consulte também
 
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
