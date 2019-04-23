@@ -17,37 +17,37 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da1fc949109455cf50767191a99a8a727116f77c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155188"
 ---
-# <a name="icordebugappdomainenum-interface"></a><span data-ttu-id="84682-102">Interface ICorDebugAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="84682-102">ICorDebugAppDomainEnum Interface</span></span>
+# <a name="icordebugappdomainenum-interface"></a><span data-ttu-id="2d526-102">Interface ICorDebugAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="2d526-102">ICorDebugAppDomainEnum Interface</span></span>
 
-<span data-ttu-id="84682-103">Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` começando no próximo local na enumeração de valores.</span><span class="sxs-lookup"><span data-stu-id="84682-103">Provides the `Next` method, which returns a specified number of `ICorDebugAppDomainEnum` values starting at the next location in the enumeration.</span></span> <span data-ttu-id="84682-104">Essa interface é uma subclasse de "ICorDebugEnum".</span><span class="sxs-lookup"><span data-stu-id="84682-104">This interface is a subclass of "ICorDebugEnum".</span></span>  
+<span data-ttu-id="2d526-103">Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` começando no próximo local na enumeração de valores.</span><span class="sxs-lookup"><span data-stu-id="2d526-103">Provides the `Next` method, which returns a specified number of `ICorDebugAppDomainEnum` values starting at the next location in the enumeration.</span></span> <span data-ttu-id="2d526-104">Essa interface é uma subclasse de "ICorDebugEnum".</span><span class="sxs-lookup"><span data-stu-id="2d526-104">This interface is a subclass of "ICorDebugEnum".</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="84682-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="84682-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2d526-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="2d526-105">Methods</span></span>  
   
-|<span data-ttu-id="84682-106">Método</span><span class="sxs-lookup"><span data-stu-id="84682-106">Method</span></span>|<span data-ttu-id="84682-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="84682-107">Description</span></span>|  
+|<span data-ttu-id="2d526-106">Método</span><span class="sxs-lookup"><span data-stu-id="2d526-106">Method</span></span>|<span data-ttu-id="2d526-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="2d526-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="84682-108">Método Next</span><span class="sxs-lookup"><span data-stu-id="84682-108">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|<span data-ttu-id="84682-109">Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.</span><span class="sxs-lookup"><span data-stu-id="84682-109">Gets the specified number of application domains from the collection, starting at the current cursor position.</span></span>|  
+|[<span data-ttu-id="2d526-108">Método Next</span><span class="sxs-lookup"><span data-stu-id="2d526-108">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|<span data-ttu-id="2d526-109">Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.</span><span class="sxs-lookup"><span data-stu-id="2d526-109">Gets the specified number of application domains from the collection, starting at the current cursor position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="84682-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="84682-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2d526-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="2d526-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="84682-111">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="84682-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="2d526-111">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="2d526-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84682-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="84682-112">Requirements</span></span>  
- <span data-ttu-id="84682-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84682-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d526-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2d526-112">Requirements</span></span>  
+ <span data-ttu-id="2d526-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d526-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84682-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="84682-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2d526-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d526-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="84682-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84682-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2d526-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d526-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="84682-116">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="84682-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="2d526-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d526-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84682-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="84682-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d526-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2d526-117">See also</span></span>
 
-- [<span data-ttu-id="84682-118">Interface ICorDebug</span><span class="sxs-lookup"><span data-stu-id="84682-118">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [<span data-ttu-id="84682-119">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="84682-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2d526-118">Interface ICorDebug</span><span class="sxs-lookup"><span data-stu-id="2d526-118">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="2d526-119">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="2d526-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
