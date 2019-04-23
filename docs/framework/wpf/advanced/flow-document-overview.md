@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303486"
 ---
 # <a name="flow-document-overview"></a>Visão geral do documento de fluxo
@@ -96,7 +96,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
  Cada classe nessas duas categorias é descrita resumidamente abaixo.  
   
 ### <a name="block-derived-classes"></a>Classes derivadas de bloco  
- **Parágrafo**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> normalmente é usado para agrupar o conteúdo em um parágrafo. O uso mais simples e mais comum de Paragraph é criar um parágrafo de texto.  
   
@@ -107,7 +107,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  No entanto, você também pode conter outros elementos derivadas de embutidos, como você verá abaixo. 
   
- **Seção**  
+ **Section**  
   
  <xref:System.Windows.Documents.Section> é usado apenas para conter outros <xref:System.Windows.Documents.Block>-elementos derivados. Ela não aplica nenhuma formatação padrão aos elementos que contém. No entanto, qualquer propriedade valores definidos em um <xref:System.Windows.Documents.Section> aplica-se a seus elementos filho. Você também tem permissão para iterar programaticamente pela coleção filho de uma seção. <xref:System.Windows.Documents.Section> é usado de maneira semelhante para o \<DIV > marca no HTML.  
   
@@ -130,7 +130,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  ![Captura de tela que mostra um UIElement inserido no conteúdo de fluxo.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **Lista**  
+ **List**  
   
  <xref:System.Windows.Documents.List> é usado para criar uma lista com marcador ou numérica. Defina a <xref:System.Windows.Documents.List.MarkerStyle%2A> propriedade para um <xref:System.Windows.TextMarkerStyle> valor de enumeração para determinar o estilo da lista. O exemplo a seguir mostra como criar uma lista simples.  
   
@@ -154,7 +154,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  **Observação:**  A partir de [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], o <xref:System.Windows.Documents.Run.Text%2A> propriedade do <xref:System.Windows.Documents.Run> objeto é uma propriedade de dependência. Você pode associar o <xref:System.Windows.Documents.Run.Text%2A> propriedade aos dados de uma fonte, como um <xref:System.Windows.Controls.TextBlock>. O <xref:System.Windows.Documents.Run.Text%2A> propriedade totalmente compatível com a associação unidirecional. O <xref:System.Windows.Documents.Run.Text%2A> propriedade também dá suporte à associação bidirecional, exceto para <xref:System.Windows.Controls.RichTextBox>. Para ver um exemplo, consulte <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **SPAN**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> agrupa outros elementos de conteúdo embutido. Nenhuma renderização inerente é aplicada ao conteúdo dentro de um <xref:System.Windows.Documents.Span> elemento. No entanto, elementos que herdam de <xref:System.Windows.Documents.Span> incluindo <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> e <xref:System.Windows.Documents.Underline> aplicar formatação ao texto.  
   
@@ -194,7 +194,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  <xref:System.Windows.Documents.Figure> e <xref:System.Windows.Documents.Floater> diferem de várias maneiras e são usados para cenários diferentes.  
   
- **Figura:**  
+ **Figure:**  
   
 -   Pode ser posicionada: Você pode definir suas âncoras horizontais e verticais para encaixá-la em relação à página, conteúdo, coluna ou parágrafo. Você também pode usar sua <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> propriedades para especificar deslocamentos arbitrários.  
   
@@ -350,7 +350,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
 
 - [Texto](optimizing-performance-text.md)
 - [Tipografia no WPF](typography-in-wpf.md)
-- [Tópicos explicativos ](flow-content-elements-how-to-topics.md)
+- [Tópicos de instruções](flow-content-elements-how-to-topics.md)
 - [Visão geral do modelo de conteúdo TextElement](textelement-content-model-overview.md)
 - [Visão geral de RichTextBox](../controls/richtextbox-overview.md)
 - [Documentos no WPF](documents-in-wpf.md)

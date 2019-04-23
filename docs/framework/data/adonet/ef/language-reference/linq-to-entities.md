@@ -3,10 +3,10 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304567"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
@@ -72,26 +72,26 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
   
  [Expressões em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
   
- [Chamando funções em consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
+ [Chamando funções em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
   
  [Consultas compiladas (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
   
- [Execução da Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
+ [Execução de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
  [Resultados da Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
  [Operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [Método CLR ao mapeamento canônico de função](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [Método CLR para mapeamento de função canônica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
- [Métodos suportados e sem suporte LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [Métodos LINQ com e sem suporte (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
  [Problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [Consulta integrada à linguagem (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Consulta integrada à linguagem (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [LINQ e o ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [LINQ (consulta integrada à linguagem) – C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (consulta integrada à linguagem) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [Entity Framework do ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

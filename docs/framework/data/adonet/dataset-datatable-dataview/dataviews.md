@@ -3,10 +3,10 @@ title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215905"
 ---
 # <a name="dataviews"></a>DataViews
@@ -19,7 +19,7 @@ Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos
  Você pode usar um <xref:System.Data.DataView.DataViewManager%2A> para gerenciar as configurações de exibição para todas as tabelas em um **conjunto de dados**. O **DataViewManager** lhe oferece uma maneira conveniente de gerenciar as configurações de exibição padrão para cada tabela. Ao associar um controle a mais de uma tabela de uma **DataSet**, associar a um **DataViewManager** é a opção ideal.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criar um DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+ [Criando um DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  Descreve como criar uma **DataView** para um **DataTable**.  
   
  [Classificando e filtrando dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
@@ -28,19 +28,19 @@ Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos
  [DataRows e DataRowViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  Descreve como acessar os dados apresentados pela **DataView**.  
   
- [Localizar linhas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
+ [Localizando linhas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
  Descreve como localizar uma linha específica em um **DataView**.  
   
  [ChildViews e relações](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  Descreve como criar modos de exibição de dados de uma relação de pai-filho usando um **DataView**.  
   
- [Modificar DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ [Modificando DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  Descreve como modificar os dados subjacentes **DataTable** por meio de **DataView**, incluindo ativar ou desativar atualizações.  
   
- [Manipulação de eventos de DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [Manipulação de eventos de exibição de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  Descreve como usar o **ListChanged** evento para receber notificação quando o conteúdo ou a ordem de uma **DataView** está sendo atualizado.  
   
- [Gerenciar DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ [Gerenciando DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
  Descreve como usar um **DataViewManager** gerenciem **DataView** configurações para cada tabela em um **conjunto de dados**.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -50,7 +50,7 @@ Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos
  [Aplicativos do Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Fornece informações detalhadas sobre como trabalhar com Windows Forms e aplicativos de console.  
   
- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
  Descreve o **conjunto de dados** objeto e como você pode usá-lo para gerenciar dados de aplicativo.  
   
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
@@ -61,4 +61,4 @@ Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos
   
 ## <a name="see-also"></a>Consulte também
 
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

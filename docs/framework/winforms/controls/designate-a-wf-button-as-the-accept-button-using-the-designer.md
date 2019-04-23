@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
 ms.openlocfilehash: e0eaa90c8450888ea325470db5d4adae555f8d82
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304162"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>Como: Designar um botão do Windows Forms como o botão Aceitar usando o designer
@@ -30,7 +30,7 @@ Em qualquer formulário do Windows, você pode designar um <xref:System.Windows.
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Visão geral do controle de botão](button-control-overview-windows-forms.md)
-- [Forma de selecionar um controle de botão dos Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Como: Responder a cliques no botão do Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Como: Designar um botão do Windows Forms como o botão Cancelar usando o designer](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Formas de selecionar um controle de botão dos Windows Forms](ways-to-select-a-windows-forms-button-control.md)
+- [Como: Responder a cliques de botão do Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Como: Designar um botão dos Windows Forms como o botão Cancelar usando o Designer](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Controle de botão](button-control-windows-forms.md)

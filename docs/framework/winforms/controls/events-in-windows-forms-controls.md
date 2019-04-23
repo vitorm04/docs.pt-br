@@ -6,10 +6,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events overview (using code)
 ms.assetid: 7e3d1379-87aa-437c-afce-c99454eff30e
 ms.openlocfilehash: 41ad95de7a65dbd0cb3a0d1af8f5c8cb00c1ccdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215879"
 ---
 # <a name="events-in-windows-forms-controls"></a>Eventos em controles dos Windows Forms
@@ -20,6 +20,6 @@ Um controle dos Windows Forms herda mais de sessenta eventos de <xref:System.Win
 ## <a name="see-also"></a>Consulte também
 
 - [Substituindo o método OnPaint](overriding-the-onpaint-method.md)
-- [Identificando a entrada do usuário](handling-user-input.md)
-- [Definir um evento](defining-an-event-in-windows-forms-controls.md)
+- [Manipulando a entrada do usuário](handling-user-input.md)
+- [Definindo um evento](defining-an-event-in-windows-forms-controls.md)
 - [Eventos](../../../standard/events/index.md)

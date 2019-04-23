@@ -3,10 +3,10 @@ title: 'Como: configurar serviços do WCF para interoperar com clientes WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
 ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303889"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Como: configurar serviços do WCF para interoperar com clientes WSE 3.0
@@ -92,4 +92,4 @@ Serviços Windows Communication Foundation (WCF) são compatíveis com o nível 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: personalizar uma associação fornecida pelo sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [Como: Personalizar uma associação fornecida pelo sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

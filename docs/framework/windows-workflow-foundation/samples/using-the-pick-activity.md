@@ -3,10 +3,10 @@ title: Usando a atividade de picareta
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302966"
 ---
 # <a name="using-the-pick-activity"></a>Usando a atividade de picareta
@@ -17,7 +17,7 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
  Este exemplo solicita um usuário a digite seu nome no console em um período de tempo especificado. A atividade de <xref:System.Activities.Statements.Pick> no exemplo tem duas ramificações de que são executados com base na se o usuário digita em seu nome dentro de 5 segundos ou não. Se o usuário digita em seu nome dentro de 5 segundos, o primeiro ramificação será executado, que contém uma atividade personalizado de `ReadLine` ; se não a outra ramificação é executado, que contém uma atividade de <xref:System.Activities.Statements.Delay> . Uma vez que um nome de usuário é digitado no console, o nome de usuário é impresso no console. Se uma entrada não é inserido em 5 segundos, a operação é esgotado.
 
 ## <a name="demonstrates"></a>Demonstra
- <xref:System.Activities.Statements.Pick> atividade.
+ atividade de<xref:System.Activities.Statements.Pick> .
 
 ## <a name="discussion"></a>Discussão
  O exemplo inclui um fluxo de trabalho do designer e fluxo de trabalho codificado.

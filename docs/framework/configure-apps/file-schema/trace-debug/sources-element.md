@@ -1,5 +1,5 @@
 ---
-title: <sources> Elemento
+title: Elemento <sources>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215775"
 ---
 # <a name="sources-element"></a>\<fontes > elemento
@@ -41,7 +41,7 @@ Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<origem >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obrigatório.<br /><br /> Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obrigatório.<br /><br /> Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -88,4 +88,4 @@ Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<origem >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

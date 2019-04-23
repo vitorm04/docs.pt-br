@@ -3,10 +3,10 @@ title: Resolução de sobrecarga de função (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
 ms.openlocfilehash: 0248fdd3f3ba6afb5c7edca740d9aad3ca74bd03
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302511"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Resolução de sobrecarga de função (Entity SQL)
@@ -33,5 +33,5 @@ Este tópico descreve como as funções de [!INCLUDE[esql](../../../../../../inc
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Visão geral da Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Funções](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

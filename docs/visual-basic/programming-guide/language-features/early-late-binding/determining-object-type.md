@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302706"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinando o tipo de objeto (Visual Basic)
@@ -47,8 +47,8 @@ Variáveis de objeto genérico (ou seja, as variáveis que você declare como `O
 ## <a name="see-also"></a>Consulte também
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
-- [Chamando uma propriedade ou um método usando o nome de uma cadeia de caracteres](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Chamando uma Propriedade ou um Método Usando o Nome de uma Cadeia de Caracteres](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
+- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Instrução If...Then...Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Tipo de dados da cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Tipo de dados inteiro](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Tipo de Dados Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

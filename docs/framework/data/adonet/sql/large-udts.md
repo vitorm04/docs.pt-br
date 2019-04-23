@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303473"
 ---
 # <a name="large-udts"></a>UDTs grandes
@@ -22,9 +22,9 @@ Os tipos definidos pelo usuário (UDTs) permitem que um desenvolvedor estenda o 
   
  Para obter a documentação completa para tipos definidos pelo usuário, consulte a versão dos Manuais Online do SQL Server relativos à versão do SQL Server que você está usando.  
   
- **Manuais Online do SQL Server**  
+ **SQL Server Books Online** (Guias online do SQL Server)  
   
-1. [Tipos definido pelo usuário CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [Tipos CLR definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperando esquemas de UDT usando GetSchema  
  O método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> retorna informações de esquema do banco de dados em um <xref:System.Data.DataTable>. Para obter mais informações, consulte [coleções de esquema do SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurar parâmetros e tipos de dados de parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Configurando parâmetros e tipos de dados de parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Recuperando informações de esquema de banco de dados](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Mapeamentos de tipos de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Dados binários e de valor grande do SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

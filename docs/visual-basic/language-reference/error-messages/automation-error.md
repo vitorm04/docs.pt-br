@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID440
 ms.assetid: 2c4be5c5-2f0d-4a2b-96fe-d1b24f08fc4c
 ms.openlocfilehash: 8370f744b916ce4a797c808ed58c5fc9580e6278
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304305"
 ---
 # <a name="automation-error"></a>Erro de automação
@@ -22,5 +22,5 @@ Ocorreu um erro ao executar um método ou ao obter ou configurar uma propriedade
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Fale conosco](/visualstudio/ide/talk-to-us)

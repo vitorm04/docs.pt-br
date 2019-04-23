@@ -16,10 +16,10 @@ ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303993"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Como: Criar um assembly de arquivo único
@@ -90,7 +90,7 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)
 - [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

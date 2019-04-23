@@ -7,10 +7,10 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
 ms.openlocfilehash: 732267b431c5058fa7039f0fb132e6161c37d4a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303122"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Como: Adicionar ou remover imagens ImageList com o Designer
@@ -40,5 +40,5 @@ Você pode adicionar imagens a um <xref:System.Windows.Forms.ImageList> componen
 ## <a name="see-also"></a>Consulte também
 
 - [Imagens, bitmaps e metarquivos](../advanced/images-bitmaps-and-metafiles.md)
-- [Passo a passo: Executando tarefas comuns usando marcas inteligentes nos controles do Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [Passo a passo: Realizando tarefas comuns usando Smart Tags no Windows, controles de formulários](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [Componente ImageList](imagelist-component-windows-forms.md)
