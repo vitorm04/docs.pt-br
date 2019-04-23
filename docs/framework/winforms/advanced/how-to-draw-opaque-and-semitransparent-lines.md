@@ -11,10 +11,10 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188260"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Como: desenhar linhas opacas e semitransparentes
@@ -33,10 +33,10 @@ Quando você desenha uma linha, você deve passar uma <xref:System.Drawing.Pen> 
  ![Ilustração que mostra a saída opaca e semitransparente](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs>`e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Combinação alfa em linhas e preenchimentos](alpha-blending-lines-and-fills.md)
-- [Como: Dar ao controle um segundo plano transparente](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Como: desenhar com pincéis opacos e semitransparentes](how-to-draw-with-opaque-and-semitransparent-brushes.md)
+- [Combinação Alfa em Linhas e Preenchimentos](alpha-blending-lines-and-fills.md)
+- [Como: Dar ao controle uma tela de fundo transparente](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Como: Desenhar com pincéis opacos e semitransparentes](how-to-draw-with-opaque-and-semitransparent-brushes.md)
