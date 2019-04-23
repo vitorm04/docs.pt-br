@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
 ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211589"
 ---
 # <a name="how-to-handle-a-routed-event"></a>Como: Manipular um evento roteado
@@ -39,5 +39,5 @@ Este exemplo mostra como os eventos de propagação funcionam e como escrever um
 - <xref:System.Windows.RoutedEvent>
 - [Visão geral da entrada](input-overview.md)
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Tópicos explicativos ](events-how-to-topics.md)
+- [Tópicos de instruções](events-how-to-topics.md)
 - [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md)

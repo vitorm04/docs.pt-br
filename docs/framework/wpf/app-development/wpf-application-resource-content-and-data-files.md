@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211914"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
@@ -123,7 +123,7 @@ ms.locfileid: "59211914"
  Você deve usar arquivos de conteúdo quando o aplicativo requer um conjunto específico de arquivos de dados do aplicativo que você deseja ser capaz de atualizar sem recompilar o assembly que os consome.  
   
 ### <a name="configuring-content-files"></a>Configurando arquivos de conteúdo  
- Para adicionar um arquivo de conteúdo a um projeto, um arquivo de dados do aplicativo deve ser incluído como um `Content` item. Além disso, como um arquivo de conteúdo não é compilado diretamente no assembly, você precisa definir o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` elemento de metadados para especificar que o arquivo de conteúdo é copiado para um local que é relativo ao assembly compilado. Se você deseja que o recurso a ser copiado para a pasta de saída de compilação sempre que um projeto é compilado, defina as `CopyToOutputDirectory` o elemento de metadados com o `Always` valor. Caso contrário, você pode garantir que apenas a versão mais recente do recurso é copiada para a pasta de saída de build usando o `PreserveNewest` valor.  
+ Para adicionar um arquivo de conteúdo a um projeto, um arquivo de dados do aplicativo deve ser incluído como um `Content` item. Além disso, como um arquivo de conteúdo não é compilado diretamente no assembly, você precisa definir a [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` elemento de metadados para especificar que o arquivo de conteúdo é copiado para um local que é relativo ao assembly compilado. Se você deseja que o recurso a ser copiado para a pasta de saída de compilação sempre que um projeto é compilado, defina as `CopyToOutputDirectory` o elemento de metadados com o `Always` valor. Caso contrário, você pode garantir que apenas a versão mais recente do recurso é copiada para a pasta de saída de build usando o `PreserveNewest` valor.  
   
  A seguir é mostrado um arquivo que está configurado como um arquivo de conteúdo que é copiado para a pasta de saída de build somente quando uma nova versão do recurso é adicionada ao projeto.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59211914"
 ### <a name="configuring-site-of-origin-files"></a>Configurando arquivos de site de origem  
  Se seu site de arquivos de origem é inexistentes ou desconhecidos em tempo de compilação, você precisará usar tradicionais de implantação de mecanismos para garantir que os arquivos necessários estão disponíveis em tempo de execução, incluindo o uso de qualquer um de `XCopy` programa de linha de comando ou o [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Se você souber em tempo de compilação os arquivos você que gostaria que estivessem localizados no site de origem, mas ainda desejar evitar uma dependência explícita, você pode adicionar esses arquivos em um [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] do projeto como `None` item. Assim como arquivos de conteúdo, você precisa definir a [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` atributo para especificar que o local do arquivo de origem é copiado para um local que é relativo ao assembly compilado, especificando o `Always` valor ou o `PreserveNewest` valor.  
+ Se você souber em tempo de compilação os arquivos você que gostaria que estivessem localizados no site de origem, mas ainda desejar evitar uma dependência explícita, você pode adicionar esses arquivos em um [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] do projeto como `None` item. Assim como arquivos de conteúdo, você precisa definir a [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` atributo para especificar que o local do arquivo de origem é copiado para um local que é relativo ao assembly compilado, especificando as `Always` valor ou o `PreserveNewest` valor.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  

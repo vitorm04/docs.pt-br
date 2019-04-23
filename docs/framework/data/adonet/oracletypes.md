@@ -3,10 +3,10 @@ title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212304"
 ---
 # <a name="oracletypes"></a>OracleTypes
@@ -117,5 +117,5 @@ public void ReadOracleTypesExample(string connectionString)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

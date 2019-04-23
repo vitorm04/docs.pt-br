@@ -3,10 +3,10 @@ title: REF CURSORs do Oracle
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213162"
 ---
 # <a name="oracle-ref-cursors"></a>REF CURSORs do Oracle
@@ -36,7 +36,7 @@ O .NET Framework Data Provider for Oracle dá suporte ao Oracle **REF CURSOR** t
  [Parâmetros de REF CURSOR em um OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
  Demonstra como executar um procedimento armazenado PL/SQL que retorna um parâmetro de REF CURSOR e lê o valor como um **OracleDataReader**.  
   
- [Recuperar dados de vários REF CURSORs usando um OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
+ [Recuperando dados de vários REF CURSORs usando um OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
  Demonstra como executar um procedimento armazenado PL/SQL que retorna dois parâmetros de REF CURSOR e lê os valores usando um **OracleDataReader**.  
   
  [Preenchendo um DataSet usando um ou mais REF CURSORs](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
@@ -44,5 +44,5 @@ O .NET Framework Data Provider for Oracle dá suporte ao Oracle **REF CURSOR** t
   
 ## <a name="see-also"></a>Consulte também
 
-- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

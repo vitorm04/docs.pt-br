@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211472"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associações do Windows Communication Foundation
@@ -24,14 +24,14 @@ Associações de especificam como um ponto de extremidade de serviço do Windows
  [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  Uma associação WCF contém informações importantes que os clientes devem usar para se conectar aos pontos de extremidade de serviço.  
   
- [Configurar associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [Configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  Configuração permite que os instaladores e administradores personalizar as associações para pontos de extremidade de serviço.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Pontos de extremidade: endereços, associações e contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Pontos de extremidade: Endereços, associações e contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Associações](../../../docs/framework/wcf/feature-details/bindings.md)  
   

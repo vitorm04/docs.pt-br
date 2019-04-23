@@ -13,10 +13,10 @@ ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212174"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Como: Descarregar um domínio do aplicativo
@@ -35,4 +35,4 @@ Quando terminar de usar um domínio do aplicativo, descarregue-o usando o métod
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Como: Criar um domínio do aplicativo](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [Usando domínios do aplicativo](../../../docs/framework/app-domains/use.md)
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)

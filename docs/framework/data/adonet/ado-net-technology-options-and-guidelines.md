@@ -3,10 +3,10 @@ title: Opções e diretrizes da tecnologia ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212525"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opções e diretrizes da tecnologia ADO.NET
@@ -37,10 +37,10 @@ A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para dim
  O LINQ to SQL é uma implementação do OR/M (mapeamento relacional de objeto) que permite que você modele um banco de dados SQL Server usando classes do .NET Framework. O LINQ to SQL permite que você consulte seu banco de dados usando LINQ, bem como atualize, insira e exclua dados dele. O LINQ to SQL dá suporte a transações, exibições e procedimentos armazenados, fornecendo uma maneira fácil de integrar regras de validação de dados e de lógica de negócios no modelo de dados. Você pode usar o O/R Designer (Designer Relacional de Objeto) para modelar as classes e as associações de entidades que são baseadas em objetos em um banco de dados. Para obter mais informações, consulte [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Novidades no ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
+- [What's New in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md) (Novidades no ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

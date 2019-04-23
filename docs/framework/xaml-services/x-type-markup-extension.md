@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211628"
 ---
 # <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
@@ -84,4 +84,4 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
 - <xref:System.Windows.Style>
 - [Estilo e modelagem](../wpf/controls/styling-and-templating.md)
 - [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Extensões de marcação e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

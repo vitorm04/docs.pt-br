@@ -9,10 +9,10 @@ helpviewer_keywords:
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
 ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212343"
 ---
 # <a name="how-to-position-a-tooltip"></a>Como: Posicionar um ToolTip
@@ -65,5 +65,5 @@ Este exemplo mostra como especificar a posição de uma dica de ferramenta na te
 
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Tópicos explicativos ](tooltip-how-to-topics.md)
+- [Tópicos de instruções](tooltip-how-to-topics.md)
 - [Visão geral de ToolTip](tooltip-overview.md)

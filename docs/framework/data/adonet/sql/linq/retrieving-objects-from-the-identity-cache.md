@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211225"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperando objetos de cache de identidade
@@ -30,7 +30,7 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
   
  Nesses formulários gerais, `Function1`, `Function2`, e `predicate` são definidos como segue.  
   
- `Function1` pode ser qualquer um dos seguintes:  
+ `Function1` pode ser um destes procedimentos:  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` pode ser qualquer um dos seguintes:  
+ `Function2` pode ser um destes procedimentos:  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` deve ser uma expressão na qual a propriedade de chave primária do objeto é definida como um valor constante. Se um objeto tem uma chave primária definida por mais de uma propriedade, cada propriedade de chave primária deve ser definida como um valor constante. Os seguintes são exemplos de formulário `predicate` devem tomar:  
+ `predicate` deve ser uma expressão na propriedade de chave primária de objeto é definida como um valor constante. Se um objeto tem uma chave primária definida por mais de uma propriedade, cada propriedade de chave primária deve ser definida como um valor constante. Os seguintes são exemplos de formulário `predicate` devem tomar:  
   
 -   `c => c.PK == constant_value`  
   
@@ -66,7 +66,7 @@ Este tópico descreve os tipos LINQ to SQL consulta que retornam um objeto de ca
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consulte conceitos](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213045"
 ---
 # <a name="endmethodenumeration-function"></a>Função EndMethodEnumeration
@@ -69,4 +69,4 @@ O chamador começa a sequência de enumeração usando [função BeginMethodEnum
   
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
