@@ -8,10 +8,10 @@ ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195820"
 ---
 # <a name="assembly-names"></a>Nomes de assembly
@@ -60,8 +60,8 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="see-also"></a>Consulte também
 
 - [Como: Determinar o nome totalmente qualificado de um assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
-- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
-- [Cache de assemblies global](../../../docs/framework/app-domains/gac.md)
+- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

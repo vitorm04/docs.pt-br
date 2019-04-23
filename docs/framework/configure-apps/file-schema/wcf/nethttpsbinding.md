@@ -3,10 +3,10 @@ title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
 ms.openlocfilehash: 400444c0346b47d86ad799d4f8f2e7531b74a94c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195222"
 ---
 # <a name="nethttpsbinding"></a>\<netHttpsBinding>
@@ -84,7 +84,7 @@ Próximo elemento
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.BasicHttpsSecurityElement>. |  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.BasicHttpsSecurityElement>. |  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

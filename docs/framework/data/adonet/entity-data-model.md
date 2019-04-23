@@ -3,10 +3,10 @@ title: Modelo de Dados de Entidade
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197913"
 ---
 # <a name="entity-data-model"></a>Modelo de Dados de Entidade
@@ -19,13 +19,13 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos nesta seção descrevem os conceitos do Modelo de Dados de Entidade. Qualquer DSL que implemente o EDM deve incluir os conceitos descritos aqui. Observe que o [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa CSDL para definir modelos conceituais. Para obter mais informações, consulte [especificação de CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
- [Conceitos chave do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Modelo de Dados de Entidade: Namespaces](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Modelo de dados de entidade: Namespaces](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Modelo de Dados de Entidade: Tipos de dados primitivos](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Modelo de dados de entidade: Tipos de dados primitivos](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Modelo de Dados de Entidade: Herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Modelo de dados de entidade: Herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [extremidade de associação](../../../../docs/framework/data/adonet/association-end.md)  
   
@@ -33,13 +33,13 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [conjunto de associações](../../../../docs/framework/data/adonet/association-set.md)  
   
- [extremidade do conjunto de associação](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [extremidade do conjunto de associações](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [tipo de associação](../../../../docs/framework/data/adonet/association-type.md)  
   
  [tipo complexo](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [contêiner da entidade](../../../../docs/framework/data/adonet/entity-container.md)  
+ [contêiner de entidade](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md)  
   
@@ -53,7 +53,7 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
  [função declarada por modelo](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [função definida por modelo](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [função definida pelo modelo](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [propriedade de navegação](../../../../docs/framework/data/adonet/navigation-property.md)  
   
@@ -63,6 +63,6 @@ O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas de Modelo de Dados de Entidade do ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Ferramentas de modelo de dados de entidade ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Especificação de CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

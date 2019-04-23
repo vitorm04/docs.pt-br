@@ -3,10 +3,10 @@ title: Considerações de implantação (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
 ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199590"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Considerações de implantação (Entity Framework)
@@ -30,5 +30,5 @@ Este tópico fornece informações sobre como implantar aplicativos que usam o A
   
 ## <a name="see-also"></a>Consulte também
 
-- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Considerações de desenvolvimento e implantação](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

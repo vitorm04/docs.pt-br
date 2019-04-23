@@ -3,10 +3,10 @@ title: Extensibilidade de host de serviço do fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196470"
 ---
 # <a name="workflow-service-host-extensibility"></a>Extensibilidade de host de serviço do fluxo de trabalho
@@ -51,4 +51,4 @@ host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action =
 ## <a name="see-also"></a>Consulte também
 
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Atividades de mensagem](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [Atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

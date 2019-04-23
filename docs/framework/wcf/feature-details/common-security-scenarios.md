@@ -5,20 +5,20 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199265"
 ---
 # <a name="common-security-scenarios"></a>Cenários comuns de segurança
 Os tópicos nesta seção uma série de possíveis clientes e as configurações de segurança do serviço de catálogo. As configurações variam de acordo com uma série de fatores. Por exemplo, se um cliente ou serviço estiver em uma intranet, ou se a segurança é fornecida pelo Windows ou de transporte (como HTTPS).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Serviço e cliente de internet desprotegido](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
+ [Serviço e cliente de Internet desprotegido](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
  Um exemplo de um cliente público, não segura e serviço.  
   
- [Cliente e serviço sem segurança na Intranet](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
+ [Serviço e cliente desprotegido de Intranet](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  Um serviço básico do Windows Communication Foundation (WCF) desenvolvido para fornecer informações sobre uma rede privada segura para um aplicativo WCF.  
   
  [Segurança de transporte com autenticação básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
@@ -27,25 +27,25 @@ Os tópicos nesta seção uma série de possíveis clientes e as configurações
  [Segurança de transporte com autenticação do Windows](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
  Mostra um cliente e serviço protegidos pela segurança do Windows.  
   
- [Segurança do transporte com um cliente anônimo](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
+ [Segurança de transporte com um cliente anônimo](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
  Esse cenário usa a segurança de transporte (como HTTPS) para garantir a confidencialidade e integridade.  
   
  [Segurança de transporte com autenticação de certificado](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
  Mostra um cliente e protegido por um certificado de serviço.  
   
- [Mensagem de segurança com um cliente anônimo](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
+ [Segurança de mensagem com um cliente anônimo](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
  Mostra um cliente e serviço protegidos pela segurança de mensagem do WCF.  
   
  [Segurança de mensagem com um nome de usuário cliente](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  O cliente é um aplicativo de formulários do Windows que permite que os clientes façam logon usando um nome de usuário de domínio e uma senha.  
   
- [Segurança da mensagens com um cliente de certificado](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
+ [Segurança de mensagem com um certificado de cliente](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
  Servidores têm certificados e cada cliente tem um certificado. Um contexto de segurança é estabelecido por meio de negociação de segurança de camada de transporte (TLS).  
   
  [Segurança de mensagem com um cliente do Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
  Uma variação do cliente de certificado. Servidores têm certificados e cada cliente tem um certificado. Um contexto de segurança é estabelecido por meio de negociação de TLS.  
   
- [Segurança de mensagem com um cliente Windows sem negociação de credencial](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
+ [Segurança de mensagem com um cliente do Windows sem negociação de credencial](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
  Mostra um cliente e um serviço protegido por um domínio do Kerberos.  
   
  [Segurança de mensagem com certificados mútuos](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
@@ -54,7 +54,7 @@ Os tópicos nesta seção uma série de possíveis clientes e as configurações
  [Segurança de mensagem com tokens emitidos](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
  Segurança federada que permite o estabelecimento da relação de confiança entre domínios independentes.  
   
- [Subsistema de confiança](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
+ [Subsistema confiável](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
  Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web de acessar recursos adicionais (como bancos de dados ou outros serviços da Web) que devem ser protegidos.  
   
 ## <a name="reference"></a>Referência  
@@ -81,5 +81,5 @@ Os tópicos nesta seção uma série de possíveis clientes e as configurações
   
 ## <a name="see-also"></a>Consulte também
 
-- [Orientação de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

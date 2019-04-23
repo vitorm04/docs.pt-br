@@ -1,12 +1,12 @@
 ---
-title: <security> De <netTcpBinding>
+title: <security> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199070"
 ---
 # <a name="security-of-nettcpbinding"></a>\<security> of \<netTcpBinding>
@@ -51,7 +51,7 @@ Define as configurações de segurança para uma associação.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Define as configurações de segurança para o transporte. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Define as configurações de segurança para o transporte. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

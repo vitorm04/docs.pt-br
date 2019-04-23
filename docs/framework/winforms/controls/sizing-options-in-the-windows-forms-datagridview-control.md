@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
 ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197835"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Dimensionando opções no controle DataGridView dos Windows Forms
@@ -156,5 +156,5 @@ ms.locfileid: "59197835"
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Redimensionando colunas e linhas no controle DataGridView dos Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Modo de preenchimento da coluna no controle DataGridView dos Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Como: Definir os modos de dimensionamento do controle DataGridView do Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Modo de preenchimento de coluna no controle DataGridView dos Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Como: Definir os modos de dimensionamento do controle DataGridView dos Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

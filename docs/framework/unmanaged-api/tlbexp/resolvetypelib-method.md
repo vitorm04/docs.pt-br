@@ -16,10 +16,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d734f35b5878ec39e4f2159c326283d168e3be2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197887"
 ---
 # <a name="resolvetypelib-method"></a>Método ResolveTypeLib
@@ -76,5 +76,5 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções auxiliares Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Funções auxiliares do Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
 - [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

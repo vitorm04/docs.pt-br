@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
 ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197055"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Como: Determinar se um congelável está congelado
@@ -30,4 +30,4 @@ Este exemplo mostra como determinar se um <xref:System.Windows.Freezable> objeto
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
 - [Visão geral de objetos congeláveis](freezable-objects-overview.md)
-- [Tópicos explicativos ](base-elements-how-to-topics.md)
+- [Tópicos de instruções](base-elements-how-to-topics.md)

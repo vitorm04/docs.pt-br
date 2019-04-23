@@ -11,10 +11,10 @@ helpviewer_keywords:
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
 ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197146"
 ---
 # <a name="datagrid"></a>DataGrid
@@ -49,11 +49,11 @@ O <xref:System.Windows.Controls.DataGrid> controle lhe permite exibir e editar d
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Passo a passo: exibir dados de um banco de dados do SQL Server em um controle DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Descreve como configurar um novo projeto do WPF, adicione um elemento do Entity Framework, defina a fonte e exibir os dados em um <xref:System.Windows.Controls.DataGrid>.|  
-|[Como: adicionar detalhes de linha a um controle DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Descreve como criar detalhes da linha para um <xref:System.Windows.Controls.DataGrid>.|  
-|[Como: implementar validação com o controle DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Descreve como validar valores em <xref:System.Windows.Controls.DataGrid> células e linhas e comentários de validação de exibição.|  
-|[Teclado padrão e comportamento do mouse no controle DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Descreve como interagir com o <xref:System.Windows.Controls.DataGrid> controle usando o teclado e mouse.|  
-|[Como: agrupar, classificar e filtrar dados no controle DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Descreve como exibir dados em um <xref:System.Windows.Controls.DataGrid> de maneiras diferentes agrupando, classificando e filtrando os dados.|  
+|[Passo a passo: Exibir dados de um banco de dados do SQL Server em um controle DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Descreve como configurar um novo projeto do WPF, adicione um elemento do Entity Framework, defina a fonte e exibir os dados em um <xref:System.Windows.Controls.DataGrid>.|  
+|[Como: Adicionar detalhes de linha para um controle DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Descreve como criar detalhes da linha para um <xref:System.Windows.Controls.DataGrid>.|  
+|[Como: Implementar validação com o controle DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Descreve como validar valores em <xref:System.Windows.Controls.DataGrid> células e linhas e comentários de validação de exibição.|  
+|[Comportamento padrão de teclado e mouse no controle DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Descreve como interagir com o <xref:System.Windows.Controls.DataGrid> controle usando o teclado e mouse.|  
+|[Como: Grupo, classificar e filtrar dados no controle DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Descreve como exibir dados em um <xref:System.Windows.Controls.DataGrid> de maneiras diferentes agrupando, classificando e filtrando os dados.|  
 |[Opções de dimensionamento no controle DataGrid](sizing-options-in-the-datagrid-control.md)|Descreve como controlar o dimensionamento automático e absoluto no <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Consulte também

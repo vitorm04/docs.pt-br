@@ -5,10 +5,10 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196314"
 ---
 # <a name="implementing-service-contracts"></a>Implementando contratos de serviço
@@ -59,7 +59,7 @@ class MathService
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serviços de implantação e projeção](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Como: criar um serviço com uma classe de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [Como: criar um serviço com interface de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
-- [Especificando comportamento de tempo de execução de serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Como: Criar um serviço com uma classe de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [Como: Criar um serviço com uma Interface de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Especificando o comportamento em tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
