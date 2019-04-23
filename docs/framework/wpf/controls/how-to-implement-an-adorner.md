@@ -8,27 +8,27 @@ helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
 ms.openlocfilehash: da318fee42b4628351217774de2a2225cfb21ee1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120803"
 ---
-# <a name="how-to-implement-an-adorner"></a><span data-ttu-id="8ec3b-102">Como: Implementar um adorno</span><span class="sxs-lookup"><span data-stu-id="8ec3b-102">How to: Implement an Adorner</span></span>
-<span data-ttu-id="8ec3b-103">Este exemplo mostra uma implementação mínima de adorno.</span><span class="sxs-lookup"><span data-stu-id="8ec3b-103">This example shows a minimal adorner implementation.</span></span>  
+# <a name="how-to-implement-an-adorner"></a><span data-ttu-id="b73b7-102">Como: Implementar um adorno</span><span class="sxs-lookup"><span data-stu-id="b73b7-102">How to: Implement an Adorner</span></span>
+<span data-ttu-id="b73b7-103">Este exemplo mostra uma implementação mínima de adorno.</span><span class="sxs-lookup"><span data-stu-id="b73b7-103">This example shows a minimal adorner implementation.</span></span>  
   
-## <a name="notes-for-implementers"></a><span data-ttu-id="8ec3b-104">Observações para implementadores</span><span class="sxs-lookup"><span data-stu-id="8ec3b-104">Notes for Implementers</span></span>  
- <span data-ttu-id="8ec3b-105">É importante observar que adornos não incluem nenhum comportamento de renderização inerente; garantir que um adorno seja renderizado é responsabilidade do implementador do adorno.</span><span class="sxs-lookup"><span data-stu-id="8ec3b-105">It is important to note that adorners do not include any inherent rendering behavior; ensuring that an adorner renders is the responsibility of the adorner implementer.</span></span>   <span data-ttu-id="8ec3b-106">Uma maneira comum de implementar o comportamento de renderização é substituir a <xref:System.Windows.UIElement.OnRender%2A> método e o uso de um ou mais <xref:System.Windows.Media.DrawingContext> objetos para renderizar os visuais do adorno conforme necessário (como mostrado neste exemplo).</span><span class="sxs-lookup"><span data-stu-id="8ec3b-106">A common way of implementing rendering behavior is to override the <xref:System.Windows.UIElement.OnRender%2A> method and use one or more <xref:System.Windows.Media.DrawingContext> objects to render the adorner's visuals as needed (as shown in this example).</span></span>  
+## <a name="notes-for-implementers"></a><span data-ttu-id="b73b7-104">Observações para implementadores</span><span class="sxs-lookup"><span data-stu-id="b73b7-104">Notes for Implementers</span></span>  
+ <span data-ttu-id="b73b7-105">É importante observar que adornos não incluem nenhum comportamento de renderização inerente; garantir que um adorno seja renderizado é responsabilidade do implementador do adorno.</span><span class="sxs-lookup"><span data-stu-id="b73b7-105">It is important to note that adorners do not include any inherent rendering behavior; ensuring that an adorner renders is the responsibility of the adorner implementer.</span></span>   <span data-ttu-id="b73b7-106">Uma maneira comum de implementar o comportamento de renderização é substituir a <xref:System.Windows.UIElement.OnRender%2A> método e o uso de um ou mais <xref:System.Windows.Media.DrawingContext> objetos para renderizar os visuais do adorno conforme necessário (como mostrado neste exemplo).</span><span class="sxs-lookup"><span data-stu-id="b73b7-106">A common way of implementing rendering behavior is to override the <xref:System.Windows.UIElement.OnRender%2A> method and use one or more <xref:System.Windows.Media.DrawingContext> objects to render the adorner's visuals as needed (as shown in this example).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8ec3b-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8ec3b-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b73b7-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b73b7-107">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="8ec3b-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="8ec3b-108">Description</span></span>  
- <span data-ttu-id="8ec3b-109">Um adorno personalizado é criado implementando uma classe que herda de abstrata <xref:System.Windows.Documents.Adorner> classe.</span><span class="sxs-lookup"><span data-stu-id="8ec3b-109">A custom adorner is created by implementing a class that inherits from the abstract <xref:System.Windows.Documents.Adorner> class.</span></span>  <span data-ttu-id="8ec3b-110">O adorno de exemplo simplesmente adorna os cantos de um <xref:System.Windows.UIElement> com círculos, substituindo o <xref:System.Windows.UIElement.OnRender%2A> método.</span><span class="sxs-lookup"><span data-stu-id="8ec3b-110">The example adorner simply adorns the corners of a <xref:System.Windows.UIElement> with circles by overriding the <xref:System.Windows.UIElement.OnRender%2A> method.</span></span>  
+### <a name="description"></a><span data-ttu-id="b73b7-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="b73b7-108">Description</span></span>  
+ <span data-ttu-id="b73b7-109">Um adorno personalizado é criado implementando uma classe que herda de abstrata <xref:System.Windows.Documents.Adorner> classe.</span><span class="sxs-lookup"><span data-stu-id="b73b7-109">A custom adorner is created by implementing a class that inherits from the abstract <xref:System.Windows.Documents.Adorner> class.</span></span>  <span data-ttu-id="b73b7-110">O adorno de exemplo simplesmente adorna os cantos de um <xref:System.Windows.UIElement> com círculos, substituindo o <xref:System.Windows.UIElement.OnRender%2A> método.</span><span class="sxs-lookup"><span data-stu-id="b73b7-110">The example adorner simply adorns the corners of a <xref:System.Windows.UIElement> with circles by overriding the <xref:System.Windows.UIElement.OnRender%2A> method.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="8ec3b-111">Código</span><span class="sxs-lookup"><span data-stu-id="8ec3b-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="b73b7-111">Código</span><span class="sxs-lookup"><span data-stu-id="b73b7-111">Code</span></span>  
  [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
  [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
-## <a name="see-also"></a><span data-ttu-id="8ec3b-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ec3b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b73b7-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b73b7-112">See also</span></span>
 
-- [<span data-ttu-id="8ec3b-113">Visão geral de adornos</span><span class="sxs-lookup"><span data-stu-id="8ec3b-113">Adorners Overview</span></span>](adorners-overview.md)
+- [<span data-ttu-id="b73b7-113">Visão geral de adornos</span><span class="sxs-lookup"><span data-stu-id="b73b7-113">Adorners Overview</span></span>](adorners-overview.md)

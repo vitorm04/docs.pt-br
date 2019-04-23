@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c398663b84637d2551b0d94bd59b9e0994721ba5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124755"
 ---
-# <a name="strongnamesignatureverification-function"></a><span data-ttu-id="3d512-102">Função StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="3d512-102">StrongNameSignatureVerification Function</span></span>
-<span data-ttu-id="3d512-103">Obtém um valor que indica se o manifesto do assembly no caminho fornecido contém uma assinatura de nome forte, que é verificada de acordo com os sinalizadores especificados.</span><span class="sxs-lookup"><span data-stu-id="3d512-103">Gets a value indicating whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
+# <a name="strongnamesignatureverification-function"></a><span data-ttu-id="cba2a-102">Função StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="cba2a-102">StrongNameSignatureVerification Function</span></span>
+<span data-ttu-id="cba2a-103">Obtém um valor que indica se o manifesto do assembly no caminho fornecido contém uma assinatura de nome forte, que é verificada de acordo com os sinalizadores especificados.</span><span class="sxs-lookup"><span data-stu-id="cba2a-103">Gets a value indicating whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
   
- <span data-ttu-id="3d512-104">Essa função foi preterida.</span><span class="sxs-lookup"><span data-stu-id="3d512-104">This function has been deprecated.</span></span> <span data-ttu-id="3d512-105">Use o [iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="3d512-105">Use the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method instead.</span></span>  
+ <span data-ttu-id="cba2a-104">Essa função foi preterida.</span><span class="sxs-lookup"><span data-stu-id="cba2a-104">This function has been deprecated.</span></span> <span data-ttu-id="cba2a-105">Use o [iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="cba2a-105">Use the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3d512-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3d512-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cba2a-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="cba2a-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureVerification (  
@@ -38,44 +38,44 @@ BOOLEAN StrongNameSignatureVerification (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3d512-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3d512-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cba2a-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="cba2a-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="3d512-108">[in] O caminho para o arquivo executável portátil (. dll ou .exe) para o assembly verificar.</span><span class="sxs-lookup"><span data-stu-id="3d512-108">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
+ <span data-ttu-id="cba2a-108">[in] O caminho para o arquivo executável portátil (. dll ou .exe) para o assembly verificar.</span><span class="sxs-lookup"><span data-stu-id="cba2a-108">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="3d512-109">[in] Sinalizadores para modificar o comportamento de verificação.</span><span class="sxs-lookup"><span data-stu-id="3d512-109">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="3d512-110">Há suporte para os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="3d512-110">The following values are supported:</span></span>  
+ <span data-ttu-id="cba2a-109">[in] Sinalizadores para modificar o comportamento de verificação.</span><span class="sxs-lookup"><span data-stu-id="cba2a-109">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="cba2a-110">Há suporte para os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="cba2a-110">The following values are supported:</span></span>  
   
--   `SN_INFLAG_FORCE_VER` <span data-ttu-id="3d512-111">(0x00000001) - força a verificação, mesmo se for necessário substituir as configurações do registro.</span><span class="sxs-lookup"><span data-stu-id="3d512-111">(0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+-   <span data-ttu-id="cba2a-111">`SN_INFLAG_FORCE_VER` (0x00000001) - força a verificação, mesmo se for necessário substituir as configurações do registro.</span><span class="sxs-lookup"><span data-stu-id="cba2a-111">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
--   `SN_INFLAG_INSTALL` <span data-ttu-id="3d512-112">(0x00000002) - Especifica que esta é a primeira vez que o manifesto é verificado.</span><span class="sxs-lookup"><span data-stu-id="3d512-112">(0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
+-   <span data-ttu-id="cba2a-112">`SN_INFLAG_INSTALL` (0x00000002) - Especifica que esta é a primeira vez que o manifesto é verificado.</span><span class="sxs-lookup"><span data-stu-id="cba2a-112">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
   
--   `SN_INFLAG_ADMIN_ACCESS` <span data-ttu-id="3d512-113">(0x00000004) - Especifica que o cache permitirá o acesso somente aos usuários que têm privilégios administrativos.</span><span class="sxs-lookup"><span data-stu-id="3d512-113">(0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+-   <span data-ttu-id="cba2a-113">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Especifica que o cache permitirá o acesso somente aos usuários que têm privilégios administrativos.</span><span class="sxs-lookup"><span data-stu-id="cba2a-113">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
--   `SN_INFLAG_USER_ACCESS` <span data-ttu-id="3d512-114">(0x00000008) - Especifica que o assembly será acessível somente para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="3d512-114">(0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+-   <span data-ttu-id="cba2a-114">`SN_INFLAG_USER_ACCESS` (0x00000008) - Especifica que o assembly será acessível somente para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="cba2a-114">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
--   `SN_INFLAG_ALL_ACCESS` <span data-ttu-id="3d512-115">(0x00000010) - Especifica que o cache não será fornecer nenhuma garantia de restrição de acesso.</span><span class="sxs-lookup"><span data-stu-id="3d512-115">(0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+-   <span data-ttu-id="cba2a-115">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Especifica que o cache não será fornecer nenhuma garantia de restrição de acesso.</span><span class="sxs-lookup"><span data-stu-id="cba2a-115">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
--   `SN_INFLAG_RUNTIME` <span data-ttu-id="3d512-116">(0x80000000) - reservado para a depuração.</span><span class="sxs-lookup"><span data-stu-id="3d512-116">(0x80000000) - Reserved for internal debugging.</span></span>  
+-   <span data-ttu-id="cba2a-116">`SN_INFLAG_RUNTIME` (0x80000000) - reservado para a depuração.</span><span class="sxs-lookup"><span data-stu-id="cba2a-116">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="3d512-117">[out] Sinalizadores que indica se a assinatura de nome forte foi verificada.</span><span class="sxs-lookup"><span data-stu-id="3d512-117">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="3d512-118">Há suporte para o seguinte valor:</span><span class="sxs-lookup"><span data-stu-id="3d512-118">The following value is supported:</span></span>  
+ <span data-ttu-id="cba2a-117">[out] Sinalizadores que indica se a assinatura de nome forte foi verificada.</span><span class="sxs-lookup"><span data-stu-id="cba2a-117">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="cba2a-118">Há suporte para o seguinte valor:</span><span class="sxs-lookup"><span data-stu-id="cba2a-118">The following value is supported:</span></span>  
   
--   `SN_OUTFLAG_WAS_VERIFIED` <span data-ttu-id="3d512-119">(0x00000001) - esse valor é definido como `false` para especificar que a verificação for bem-sucedida devido a configurações de registro.</span><span class="sxs-lookup"><span data-stu-id="3d512-119">(0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+-   <span data-ttu-id="cba2a-119">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - esse valor é definido como `false` para especificar que a verificação for bem-sucedida devido a configurações de registro.</span><span class="sxs-lookup"><span data-stu-id="cba2a-119">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3d512-120">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="3d512-120">Return Value</span></span>  
- `true` <span data-ttu-id="3d512-121">Se a verificação for bem-sucedida; Caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="3d512-121">if the verification was successful; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cba2a-120">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="cba2a-120">Return Value</span></span>  
+ <span data-ttu-id="cba2a-121">`true` Se a verificação for bem-sucedida; Caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="cba2a-121">`true` if the verification was successful; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3d512-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3d512-122">Requirements</span></span>  
- <span data-ttu-id="3d512-123">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d512-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cba2a-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cba2a-122">Requirements</span></span>  
+ <span data-ttu-id="cba2a-123">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cba2a-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3d512-124">**Cabeçalho:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="3d512-124">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="cba2a-124">**Cabeçalho:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="cba2a-124">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="3d512-125">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="3d512-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cba2a-125">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="cba2a-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="3d512-126">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="3d512-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="cba2a-126">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cba2a-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d512-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3d512-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cba2a-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cba2a-127">See also</span></span>
 
-- [<span data-ttu-id="3d512-128">Método StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="3d512-128">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [<span data-ttu-id="3d512-129">Método StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="3d512-129">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="3d512-130">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="3d512-130">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="cba2a-128">Método StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="cba2a-128">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="cba2a-129">Método StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="cba2a-129">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="cba2a-130">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="cba2a-130">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

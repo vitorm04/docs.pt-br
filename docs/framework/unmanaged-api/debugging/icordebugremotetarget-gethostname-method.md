@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ca7aee79b5b8c3d58b4beb8f1ff886a7d55afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127576"
 ---
-# <a name="icordebugremotetargetgethostname-method"></a><span data-ttu-id="639e3-102">Método ICorDebugRemoteTarget::GetHostName</span><span class="sxs-lookup"><span data-stu-id="639e3-102">ICorDebugRemoteTarget::GetHostName Method</span></span>
-<span data-ttu-id="639e3-103">Retorna o nome de domínio totalmente qualificado ou endereço IPv4 do computador de destino de depuração remota.</span><span class="sxs-lookup"><span data-stu-id="639e3-103">Returns the fully qualified domain name or IPv4 address of the remote debugging target machine.</span></span> <span data-ttu-id="639e3-104">Não há suporte para IPv6 neste momento.</span><span class="sxs-lookup"><span data-stu-id="639e3-104">IPV6 is not supported at this time.</span></span>  
+# <a name="icordebugremotetargetgethostname-method"></a><span data-ttu-id="96dde-102">Método ICorDebugRemoteTarget::GetHostName</span><span class="sxs-lookup"><span data-stu-id="96dde-102">ICorDebugRemoteTarget::GetHostName Method</span></span>
+<span data-ttu-id="96dde-103">Retorna o nome de domínio totalmente qualificado ou endereço IPv4 do computador de destino de depuração remota.</span><span class="sxs-lookup"><span data-stu-id="96dde-103">Returns the fully qualified domain name or IPv4 address of the remote debugging target machine.</span></span> <span data-ttu-id="96dde-104">Não há suporte para IPv6 neste momento.</span><span class="sxs-lookup"><span data-stu-id="96dde-104">IPV6 is not supported at this time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="639e3-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="639e3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96dde-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="96dde-105">Syntax</span></span>  
   
 ```  
 HRESULT GetHostName (  
@@ -37,36 +37,36 @@ HRESULT GetHostName (
             WCHAR szHostName[]  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="639e3-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="639e3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96dde-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="96dde-106">Parameters</span></span>  
  `cchHostName`  
- <span data-ttu-id="639e3-107">[in] O tamanho, em caracteres, da `szHostName` buffer.</span><span class="sxs-lookup"><span data-stu-id="639e3-107">[in] The size, in characters, of the `szHostName` buffer.</span></span> <span data-ttu-id="639e3-108">Se esse parâmetro for 0 (zero), `szHostName` deve ser nulo.</span><span class="sxs-lookup"><span data-stu-id="639e3-108">If this parameter is 0 (zero), `szHostName` must be null.</span></span>  
+ <span data-ttu-id="96dde-107">[in] O tamanho, em caracteres, da `szHostName` buffer.</span><span class="sxs-lookup"><span data-stu-id="96dde-107">[in] The size, in characters, of the `szHostName` buffer.</span></span> <span data-ttu-id="96dde-108">Se esse parâmetro for 0 (zero), `szHostName` deve ser nulo.</span><span class="sxs-lookup"><span data-stu-id="96dde-108">If this parameter is 0 (zero), `szHostName` must be null.</span></span>  
   
  `pcchHostName`  
- <span data-ttu-id="639e3-109">[out] O número de caracteres, incluindo um terminador nulo, o nome do host ou endereço IP.</span><span class="sxs-lookup"><span data-stu-id="639e3-109">[out] The number of characters, including a null terminator, in the host name or IP address.</span></span> <span data-ttu-id="639e3-110">Este parâmetro pode ser nulo.</span><span class="sxs-lookup"><span data-stu-id="639e3-110">This parameter can be null.</span></span>  
+ <span data-ttu-id="96dde-109">[out] O número de caracteres, incluindo um terminador nulo, o nome do host ou endereço IP.</span><span class="sxs-lookup"><span data-stu-id="96dde-109">[out] The number of characters, including a null terminator, in the host name or IP address.</span></span> <span data-ttu-id="96dde-110">Este parâmetro pode ser nulo.</span><span class="sxs-lookup"><span data-stu-id="96dde-110">This parameter can be null.</span></span>  
   
  `szHostName`  
- <span data-ttu-id="639e3-111">[out] Buffer que contém o nome do host ou endereço IP.</span><span class="sxs-lookup"><span data-stu-id="639e3-111">[out] Buffer that contains the host name or IP address.</span></span>  
+ <span data-ttu-id="96dde-111">[out] Buffer que contém o nome do host ou endereço IP.</span><span class="sxs-lookup"><span data-stu-id="96dde-111">[out] Buffer that contains the host name or IP address.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="639e3-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="639e3-112">Return Value</span></span>  
- <span data-ttu-id="639e3-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="639e3-113">S_OK</span></span>  
- <span data-ttu-id="639e3-114">O nome do host ou endereço IP foi retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="639e3-114">The host name or IP address was successfully returned.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="96dde-112">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="96dde-112">Return Value</span></span>  
+ <span data-ttu-id="96dde-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="96dde-113">S_OK</span></span>  
+ <span data-ttu-id="96dde-114">O nome do host ou endereço IP foi retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="96dde-114">The host name or IP address was successfully returned.</span></span>  
   
- <span data-ttu-id="639e3-115">E_FAIL (ou outros códigos de retorno e _)</span><span class="sxs-lookup"><span data-stu-id="639e3-115">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="639e3-116">Não é possível retornar o nome do host ou endereço IP.</span><span class="sxs-lookup"><span data-stu-id="639e3-116">Unable to return the host name or IP address.</span></span>  
+ <span data-ttu-id="96dde-115">E_FAIL (ou outros códigos de retorno e _)</span><span class="sxs-lookup"><span data-stu-id="96dde-115">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="96dde-116">Não é possível retornar o nome do host ou endereço IP.</span><span class="sxs-lookup"><span data-stu-id="96dde-116">Unable to return the host name or IP address.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="639e3-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="639e3-117">Remarks</span></span>  
- <span data-ttu-id="639e3-118">Esse método é implementado pelo gravador do depurador.</span><span class="sxs-lookup"><span data-stu-id="639e3-118">This method is implemented by the debugger writer.</span></span> <span data-ttu-id="639e3-119">Ele deve seguir o paradigma de várias chamadas: Na primeira chamada, o chamador passa nulo para ambos `cchHostName` e `szHostName`, e `pcchHostName` retorna o tamanho do buffer necessário.</span><span class="sxs-lookup"><span data-stu-id="639e3-119">It must follow the multiple call paradigm: On the first call, the caller passes null to both `cchHostName` and `szHostName`, and `pcchHostName` returns the size of the required buffer.</span></span> <span data-ttu-id="639e3-120">Na segunda chamada, o tamanho que foi retornado anteriormente é passado `cchHostName`, e um buffer adequadamente dimensionado é passado no `szHostName`.</span><span class="sxs-lookup"><span data-stu-id="639e3-120">On the second call, the size that was previously returned is passed in `cchHostName`, and an appropriately sized buffer is passed in `szHostName`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96dde-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="96dde-117">Remarks</span></span>  
+ <span data-ttu-id="96dde-118">Esse método é implementado pelo gravador do depurador.</span><span class="sxs-lookup"><span data-stu-id="96dde-118">This method is implemented by the debugger writer.</span></span> <span data-ttu-id="96dde-119">Ele deve seguir o paradigma de várias chamadas: Na primeira chamada, o chamador passa nulo para ambos `cchHostName` e `szHostName`, e `pcchHostName` retorna o tamanho do buffer necessário.</span><span class="sxs-lookup"><span data-stu-id="96dde-119">It must follow the multiple call paradigm: On the first call, the caller passes null to both `cchHostName` and `szHostName`, and `pcchHostName` returns the size of the required buffer.</span></span> <span data-ttu-id="96dde-120">Na segunda chamada, o tamanho que foi retornado anteriormente é passado `cchHostName`, e um buffer adequadamente dimensionado é passado no `szHostName`.</span><span class="sxs-lookup"><span data-stu-id="96dde-120">On the second call, the size that was previously returned is passed in `cchHostName`, and an appropriately sized buffer is passed in `szHostName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="639e3-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="639e3-121">Requirements</span></span>  
- <span data-ttu-id="639e3-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="639e3-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96dde-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="96dde-121">Requirements</span></span>  
+ <span data-ttu-id="96dde-122">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96dde-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="639e3-123">**Cabeçalho:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="639e3-123">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="96dde-123">**Cabeçalho:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="96dde-123">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="639e3-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="639e3-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96dde-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96dde-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="639e3-125">**Versões do .NET framework:** 3,5 SP1</span><span class="sxs-lookup"><span data-stu-id="639e3-125">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="96dde-125">**Versões do .NET framework:** 3,5 SP1</span><span class="sxs-lookup"><span data-stu-id="96dde-125">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="639e3-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="639e3-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96dde-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="96dde-126">See also</span></span>
 
-- [<span data-ttu-id="639e3-127">Interface ICorDebugRemoteTarget</span><span class="sxs-lookup"><span data-stu-id="639e3-127">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [<span data-ttu-id="639e3-128">Interface ICorDebug</span><span class="sxs-lookup"><span data-stu-id="639e3-128">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="96dde-127">Interface ICorDebugRemoteTarget</span><span class="sxs-lookup"><span data-stu-id="96dde-127">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="96dde-128">Interface ICorDebug</span><span class="sxs-lookup"><span data-stu-id="96dde-128">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
