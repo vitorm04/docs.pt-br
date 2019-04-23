@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218765"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptando entrada a partir da caneta
@@ -72,5 +72,5 @@ O <xref:System.Windows.Input.StylusPlugIns> arquitetura fornece um mecanismo par
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tratamento de tinta avançado](advanced-ink-handling.md)
-- [Acessando e manipulando entrada de caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+- [Tratamento avançado de tinta](advanced-ink-handling.md)
+- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
