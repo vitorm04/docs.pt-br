@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226944"
 ---
 # <a name="textbox"></a>TextBox
@@ -19,7 +19,7 @@ O <xref:System.Windows.Controls.TextBox> controle oferece suporte para entrada d
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de TextBox](textbox-overview.md)  
- [Tópicos explicativos ](textbox-how-to-topics.md)  
+ [Tópicos de instruções](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.TextBox>  
@@ -32,5 +32,5 @@ O <xref:System.Windows.Controls.TextBox> controle oferece suporte para entrada d
   
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplo da Galeria de controles do WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Estilos e modelos TextBox](textbox-styles-and-templates.md)

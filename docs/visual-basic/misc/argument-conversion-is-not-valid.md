@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_InvalidVbStrConv
 ms.assetid: a5497ad5-25be-4ac7-91fb-ad117d683efe
 ms.openlocfilehash: c04a481fd15bec2cf4581d4b76859ba1731fbb01
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306164"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773708"
 ---
 # <a name="argument-conversion-is-not-valid"></a>O argumento 'Conversion' não é válido
 Um valor para o `VbStrConv` enumeração não é válida, possivelmente porque ele é menor que zero. Valores de enumeração devem ser maior que ou igual a zero.  

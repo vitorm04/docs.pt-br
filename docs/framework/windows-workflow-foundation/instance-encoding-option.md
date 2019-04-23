@@ -3,11 +3,11 @@ title: Padrão de codificação de instância
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
 ms.openlocfilehash: c4de7c45d899f45a7b5b71d563257d9accb8fdbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315615"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773838"
 ---
 # <a name="instance-encoding-option"></a>Padrão de codificação de instância
 O **a opção de codificação de instância** propriedade de Store de instância de fluxo de trabalho do SQL permite que você especifique se o provedor de persistência do SQL deve compactar as informações de estado da instância de fluxo de trabalho usando o algoritmo de GZip antes de salvar o informações no banco de dados de persistência. Os valores permitidos para essa propriedade são: GZip e None. O valor padrão é None. A lista a seguir descreve as opções.  

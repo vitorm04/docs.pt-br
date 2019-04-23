@@ -16,10 +16,10 @@ ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226931"
 ---
 # <a name="applying-interop-attributes"></a>Aplicando atributos de interoperabilidade
@@ -70,7 +70,7 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices>
-- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Atributos](../../../docs/standard/attributes/index.md)
-- [Qualificando tipos do .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
-- [Empacotando um assembly para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [Empacotando um assembly para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
