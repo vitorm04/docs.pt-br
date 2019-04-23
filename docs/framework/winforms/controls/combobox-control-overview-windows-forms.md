@@ -10,10 +10,10 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211563"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Visão geral do controle ComboBox (Windows Forms)
@@ -28,9 +28,9 @@ Os formulários do Windows <xref:System.Windows.Forms.ComboBox> controle é usad
 - <xref:System.Windows.Forms.ComboBox>
 - [Visão geral do controle ListBox](listbox-control-overview-windows-forms.md)
 - [Quando usar um ComboBox dos Windows Forms em vez de um ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Como: Adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
-- [Como: Classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Como: Acessar itens específicos em um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
-- [Como: Associar um controle ComboBox ou ListBox do Windows Forms aos dados](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Como: Adicionar e remover itens de um Windows Forms ComboBox, ListBox ou CheckedListBox controle](add-and-remove-items-from-a-wf-combobox.md)
+- [Como: Classificar o conteúdo de um Windows Forms ComboBox, ListBox ou CheckedListBox controle](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Como: Acessar específicos de itens em um Windows Forms ComboBox, ListBox ou CheckedListBox controle](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [Como: Associar um ComboBox dos Windows Forms ou um controle ListBox a dados](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)
-- [Como: Criar uma tabela de pesquisa para um controle ComboBox, ListBox ou CheckedListBox do Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Como: Criar uma tabela de pesquisa para um Windows Forms ComboBox, ListBox ou CheckedListBox controle](create-a-lookup-table-for-a-wf-combobox-listbox.md)

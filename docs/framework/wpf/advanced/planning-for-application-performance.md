@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210198"
 ---
 # <a name="planning-for-application-performance"></a>Planejando-se para desempenho do aplicativo
@@ -30,12 +30,12 @@ O sucesso de alcançar suas metas de desempenho depende de quão bem você desen
 ## <a name="build-towards-graphical-richness"></a>Compilando com foco em riqueza gráfica  
  Uma técnica-chave para criar uma abordagem escalonável para atingir desempenho do aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é criar pensando em riqueza e complexidade gráficas. Sempre comece usando os recursos com uso menos intenso de desempenho para atingir suas metas de cenário. Depois que você atingir essas metas, compile para obter riqueza gráfica usando recursos com uso mais intenso de desempenho, sempre mantendo suas metas de cenário em mente. Lembre-se de que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é uma plataforma muito sofisticada e oferece recursos gráficos muito ricos. Utilizar recursos com uso intenso de desempenho sem pensar pode afetar negativamente o desempenho geral do aplicativo.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os controles são inerentemente extensíveis permitindo ampla personalização de sua aparência, sem alterar o comportamento do controle. Ao aproveitar estilos, modelos de dados e modelos de controle, você pode criar e incrementalmente aprimorar um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] personalizável que se adapta às suas necessidades de desempenho.  
+ Controles do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são inerentemente extensíveis permitindo ampla personalização de sua aparência sem alterar o comportamento do controle. Ao aproveitar estilos, modelos de dados e modelos de controle, você pode criar e incrementalmente aprimorar um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] personalizável que se adapta às suas necessidades de desempenho.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)
-- [Aproveitar o hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Aproveitando o hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)
 - [Elementos gráficos e geração de imagens 2D](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)

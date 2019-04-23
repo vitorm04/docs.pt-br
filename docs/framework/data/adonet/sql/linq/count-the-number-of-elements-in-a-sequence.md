@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
 ms.openlocfilehash: b39b0a1487c9f250e32b13330f2f70b7e3c7c877
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209522"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>Conta todas o número de elementos em uma sequência
@@ -33,5 +33,5 @@ Use o operador de <xref:System.Linq.Enumerable.Count%2A> para contar o número d
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultas de agregação](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

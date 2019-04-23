@@ -9,10 +9,10 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210679"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Como: criar uma coleção de fontes privada
@@ -41,7 +41,7 @@ O <xref:System.Drawing.Text.PrivateFontCollection> herda o <xref:System.Drawing.
   
  ![Captura de tela que mostra o texto em várias fontes.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Arial.tff (adicionada à coleção de fontes privadas no exemplo de código a seguir) é o arquivo de fonte do estilo regular da fonte Arial. No entanto, observe que a saída de programa mostra vários estilos disponíveis além de regular para família de fonte Arial. Isso ocorre porque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode simular os estilos negrito, itálico e negrito e itálico do estilo normal. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] também pode produzir sublinhados e riscados do estilo normal.  
+ Arial.tff (adicionada à coleção de fontes privadas no exemplo de código a seguir) é o arquivo de fonte do estilo regular da fonte Arial. No entanto, observe que a saída de programa mostra vários estilos disponíveis além de regular para família de fonte Arial. Isso ocorre porque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode simular os estilos negrito, itálico e negrito e itálico do estilo normal. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] também pode produzir sublinhados e riscados do estilo regular.  
   
  Da mesma forma, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pode simular o estilo negrito e itálico do estilo negrito ou do estilo itálico. A saída do programa mostra que o estilo negrito e itálico está disponível para a família Times, embora TimesBd.tff (Times New Roman, negrito) seja o único arquivo Times na coleção.  
   

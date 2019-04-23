@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209145"
 ---
 # <a name="fromtoby-animations-overview"></a>Visão geral de animações de/para/por
@@ -36,11 +36,11 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
   
  Classes de animação de/para/por pertencem ao <xref:System.Windows.Media.Animation> namespace e use a seguinte convenção de nomenclatura:  
   
- *\<tipo >* `Animation`  
+ *\<Type>* `Animation`  
   
  Em que *\<Type>* é o tipo de valor animado pela classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece as seguintes classes de animação de/para/por.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de/para/por a seguir.  
   
 |Tipo de propriedade|Classe de animação De/Para/Por correspondente|  
 |-------------------|------------------------------------------------|  
@@ -147,6 +147,6 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral de storyboards](storyboards-overview.md)
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
-- [Visão geral de animações do caminho](path-animations-overview.md)
+- [Visão geral de animações de caminho](path-animations-overview.md)
 - [Visão geral de animações personalizadas](custom-animations-overview.md)
-- [De, para e por amostra de valores de destino de animação](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)

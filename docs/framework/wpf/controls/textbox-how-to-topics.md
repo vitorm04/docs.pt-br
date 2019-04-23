@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211420"
 ---
 # <a name="textbox-how-to-topics"></a>Tópicos explicativos TextBox
@@ -30,7 +30,7 @@ Esta seção fornece exemplos que demonstram como realizar tarefas comuns usando
  [Habilitar verificação ortográfica em um controle de edição de texto](how-to-enable-spell-checking-in-a-text-editing-control.md)  
  [Usar um menu de contexto personalizado com um TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)  
  [Usar verificação ortográfica com um menu de contexto](how-to-use-spell-checking-with-a-context-menu.md)  
- [Adicionar uma marca-d'água a um TextBox](how-to-add-a-watermark-to-a-textbox.md)  
+ [Adicionar uma marca d'água a um TextBox](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.TextBox>  
@@ -43,5 +43,5 @@ Esta seção fornece exemplos que demonstram como realizar tarefas comuns usando
   
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplo da Galeria de controles do WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Estilos e modelos TextBox](textbox-styles-and-templates.md)
