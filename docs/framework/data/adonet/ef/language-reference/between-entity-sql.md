@@ -3,10 +3,10 @@ title: ENTRE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
 ms.openlocfilehash: eae4387bcd5cbaf381ebf7169b6bc54d60328377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309297"
 ---
 # <a name="between-entity-sql"></a>ENTRE (Entity SQL)
@@ -20,13 +20,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Qualquer expressão válida para testar no intervalo definido por `begin_expression` e por `end_expression`. `expression` deve ser o mesmo tipo que `begin_expression` e `end_expression`.  
+ Qualquer expressão válida para testar no intervalo definido por `begin_expression` e por `end_expression`. `expression` deve ser do mesmo tipo de `begin_expression` e `end_expression`.  
   
  `begin_expression`  
- Qualquer expressão válida. `begin_expression` deve ser o mesmo tipo que `expression` e `end_expression`. `begin_expression` deve ser menor que `end_expression`, caso contrário o valor retornado será negado.  
+ Qualquer expressão válida. `begin_expression` deve ser do mesmo tipo de `expression` e `end_expression`. `begin_expression` deve ser menor que `end_expression`, o valor de retorno será negado mais.  
   
  `end_expression`  
- Qualquer expressão válida. `end_expression` deve ser o mesmo tipo que `expression` e `begin_expression`.  
+ Qualquer expressão válida. `end_expression` deve ser do mesmo tipo de `expression` e `begin_expression`.  
   
  NOT  
  Especifica que o resultado de ENTER é negado.  
@@ -35,7 +35,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  Atua como um espaço reservado que indica que `expression` deve estar dentro do intervalo indicado por `begin_expression` e por `end_expression`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se `expression` está entre o intervalo indicado por `begin_expression` e `end_expression`; caso contrário, `false`. `null` será retornado se `expression` está `null` ou se `begin_expression` ou `end_expression` é `null`.  
+ `true` se `expression` está entre o intervalo indicado por `begin_expression` e `end_expression`; caso contrário, `false`. `null` será retornado se `expression` é `null` ou se `begin_expression` ou `end_expression` são `null`.  
   
 ## <a name="remarks"></a>Comentários  
  Para especificar um intervalo exclusivo, use o maior que (>) e menor que (<) operadores em vez de BETWEEN.  
