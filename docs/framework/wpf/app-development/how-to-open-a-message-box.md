@@ -9,21 +9,21 @@ helpviewer_keywords:
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
 ms.openlocfilehash: cf7534cdee5e17d53e95294573023d660135e395
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101101"
 ---
-# <a name="how-to-open-a-message-box"></a><span data-ttu-id="99bb2-102">Como: Abrir uma caixa de mensagem</span><span class="sxs-lookup"><span data-stu-id="99bb2-102">How to: Open a Message Box</span></span>
-<span data-ttu-id="99bb2-103">Este exemplo mostra como abrir uma caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="99bb2-103">This example shows how to open a message box.</span></span>  
+# <a name="how-to-open-a-message-box"></a><span data-ttu-id="f9b6c-102">Como: Abrir uma caixa de mensagem</span><span class="sxs-lookup"><span data-stu-id="f9b6c-102">How to: Open a Message Box</span></span>
+<span data-ttu-id="f9b6c-103">Este exemplo mostra como abrir uma caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="f9b6c-103">This example shows how to open a message box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99bb2-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="99bb2-104">Example</span></span>  
- <span data-ttu-id="99bb2-105">Uma caixa de mensagem é uma caixa de diálogo modal pré-fabricada para exibir informações aos usuários.</span><span class="sxs-lookup"><span data-stu-id="99bb2-105">A message box is a prefabricated modal dialog box for displaying information to users.</span></span> <span data-ttu-id="99bb2-106">Uma caixa de mensagem é aberta chamando estático <xref:System.Windows.MessageBox.Show%2A> método da <xref:System.Windows.MessageBox> classe.</span><span class="sxs-lookup"><span data-stu-id="99bb2-106">A message box is opened by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class.</span></span> <span data-ttu-id="99bb2-107">Quando <xref:System.Windows.MessageBox.Show%2A> é chamado, a mensagem é passada usando um parâmetro de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="99bb2-107">When <xref:System.Windows.MessageBox.Show%2A> is called, the message is passed using a string parameter.</span></span> <span data-ttu-id="99bb2-108">Várias sobrecargas de <xref:System.Windows.MessageBox.Show%2A> permitem que você configure como uma caixa de mensagem será exibida (consulte <xref:System.Windows.MessageBox>).</span><span class="sxs-lookup"><span data-stu-id="99bb2-108">Several overloads of <xref:System.Windows.MessageBox.Show%2A> allow you to configure how a message box will appear (see <xref:System.Windows.MessageBox>).</span></span>  
+## <a name="example"></a><span data-ttu-id="f9b6c-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f9b6c-104">Example</span></span>  
+ <span data-ttu-id="f9b6c-105">Uma caixa de mensagem é uma caixa de diálogo modal pré-fabricada para exibir informações aos usuários.</span><span class="sxs-lookup"><span data-stu-id="f9b6c-105">A message box is a prefabricated modal dialog box for displaying information to users.</span></span> <span data-ttu-id="f9b6c-106">Uma caixa de mensagem é aberta chamando estático <xref:System.Windows.MessageBox.Show%2A> método da <xref:System.Windows.MessageBox> classe.</span><span class="sxs-lookup"><span data-stu-id="f9b6c-106">A message box is opened by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class.</span></span> <span data-ttu-id="f9b6c-107">Quando <xref:System.Windows.MessageBox.Show%2A> é chamado, a mensagem é passada usando um parâmetro de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="f9b6c-107">When <xref:System.Windows.MessageBox.Show%2A> is called, the message is passed using a string parameter.</span></span> <span data-ttu-id="f9b6c-108">Várias sobrecargas de <xref:System.Windows.MessageBox.Show%2A> permitem que você configure como uma caixa de mensagem será exibida (consulte <xref:System.Windows.MessageBox>).</span><span class="sxs-lookup"><span data-stu-id="f9b6c-108">Several overloads of <xref:System.Windows.MessageBox.Show%2A> allow you to configure how a message box will appear (see <xref:System.Windows.MessageBox>).</span></span>  
   
  [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
-## <a name="see-also"></a><span data-ttu-id="99bb2-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="99bb2-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9b6c-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f9b6c-109">See also</span></span>
 
-- [<span data-ttu-id="99bb2-110">Amostra de MessageBox</span><span class="sxs-lookup"><span data-stu-id="99bb2-110">MessageBox Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160023)
+- [<span data-ttu-id="f9b6c-110">Amostra de MessageBox</span><span class="sxs-lookup"><span data-stu-id="f9b6c-110">MessageBox Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160023)

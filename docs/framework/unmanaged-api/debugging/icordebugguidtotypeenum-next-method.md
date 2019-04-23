@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f48c142b2b3742d01a8f796f11d5c9174529a041
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105810"
 ---
-# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="82799-102">Método ICorDebugGuidToTypeEnum::Next</span><span class="sxs-lookup"><span data-stu-id="82799-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
-<span data-ttu-id="82799-103">Obtém o número especificado de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instâncias que mapeiam as GUIDs para informações de tipo.</span><span class="sxs-lookup"><span data-stu-id="82799-103">Gets the specified number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
+# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="c9396-102">Método ICorDebugGuidToTypeEnum::Next</span><span class="sxs-lookup"><span data-stu-id="c9396-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
+<span data-ttu-id="c9396-103">Obtém o número especificado de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instâncias que mapeiam as GUIDs para informações de tipo.</span><span class="sxs-lookup"><span data-stu-id="c9396-103">Gets the specified number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82799-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="82799-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9396-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c9396-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -37,28 +37,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="82799-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="82799-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9396-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c9396-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="82799-106">[in] O número de objetos de mapeamento de tipo de GUID a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="82799-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
+ <span data-ttu-id="c9396-106">[in] O número de objetos de mapeamento de tipo de GUID a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="c9396-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="82799-107">[out] Uma matriz de ponteiros, cada qual apontando para um [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objeto que mapeia um [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID para seu objeto correspondente do ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="82799-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) object that maps a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID to its corresponding ICorDebugType object.</span></span>  
+ <span data-ttu-id="c9396-107">[out] Uma matriz de ponteiros, cada qual apontando para um [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objeto que mapeia um [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID para seu objeto correspondente do ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="c9396-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) object that maps a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID to its corresponding ICorDebugType object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="82799-108">[out] Um ponteiro para o número de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objetos, na verdade, são retornados em `values`.</span><span class="sxs-lookup"><span data-stu-id="82799-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
+ <span data-ttu-id="c9396-108">[out] Um ponteiro para o número de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objetos, na verdade, são retornados em `values`.</span><span class="sxs-lookup"><span data-stu-id="c9396-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="82799-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="82799-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9396-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9396-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82799-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="82799-110">Requirements</span></span>  
- **<span data-ttu-id="82799-111">Plataformas:</span><span class="sxs-lookup"><span data-stu-id="82799-111">Platforms:</span></span>** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+## <a name="requirements"></a><span data-ttu-id="c9396-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c9396-110">Requirements</span></span>  
+ <span data-ttu-id="c9396-111">**Plataformas:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9396-111">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
   
- <span data-ttu-id="82799-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="82799-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9396-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9396-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="82799-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82799-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9396-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9396-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="82799-114">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="82799-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="c9396-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9396-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82799-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82799-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9396-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9396-115">See also</span></span>
 
-- [<span data-ttu-id="82799-116">Interface ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="82799-116">ICorDebugGuidToTypeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
-- [<span data-ttu-id="82799-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="82799-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c9396-116">Interface ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="c9396-116">ICorDebugGuidToTypeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
+- [<span data-ttu-id="c9396-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="c9396-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
