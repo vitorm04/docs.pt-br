@@ -3,23 +3,23 @@ title: Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
 ms.date: 03/30/2017
 ms.assetid: ada4baa5-b60d-46b8-ad46-4d69f8d8a9fa
 ms.openlocfilehash: 02e275fa212128c65beda4bc3703949e75ea5092
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220884"
 ---
-# <a name="microsofttransactionstransactionbridgepreparemessageretry"></a><span data-ttu-id="6c3a5-102">Microsoft.Transactions.TransactionBridge.PrepareMessageRetry</span><span class="sxs-lookup"><span data-stu-id="6c3a5-102">Microsoft.Transactions.TransactionBridge.PrepareMessageRetry</span></span>
-<span data-ttu-id="6c3a5-103">Uma tentativa de preparação de mensagem foi enviada a um participante sem resposta.</span><span class="sxs-lookup"><span data-stu-id="6c3a5-103">A prepare message retry was sent to an unresponsive participant.</span></span>  
+# <a name="microsofttransactionstransactionbridgepreparemessageretry"></a><span data-ttu-id="96b02-102">Microsoft.Transactions.TransactionBridge.PrepareMessageRetry</span><span class="sxs-lookup"><span data-stu-id="96b02-102">Microsoft.Transactions.TransactionBridge.PrepareMessageRetry</span></span>
+<span data-ttu-id="96b02-103">Uma tentativa de preparação de mensagem foi enviada a um participante sem resposta.</span><span class="sxs-lookup"><span data-stu-id="96b02-103">A prepare message retry was sent to an unresponsive participant.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6c3a5-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="6c3a5-104">Description</span></span>  
- <span data-ttu-id="6c3a5-105">Rastreados se o Gerenciador de transações local necessário reenviar uma mensagem de preparação para um participante subordinado porque não recebeu uma resposta em uma determinada quantidade de tempo.</span><span class="sxs-lookup"><span data-stu-id="6c3a5-105">Traced if the local Transaction Manager needed to resend a Prepare message to a subordinate participant because it did not receive a response in a given amount of time.</span></span>  
+## <a name="description"></a><span data-ttu-id="96b02-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="96b02-104">Description</span></span>  
+ <span data-ttu-id="96b02-105">Rastreados se o Gerenciador de transações local necessário reenviar uma mensagem de preparação para um participante subordinado porque não recebeu uma resposta em uma determinada quantidade de tempo.</span><span class="sxs-lookup"><span data-stu-id="96b02-105">Traced if the local Transaction Manager needed to resend a Prepare message to a subordinate participant because it did not receive a response in a given amount of time.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="6c3a5-106">Solução de problemas</span><span class="sxs-lookup"><span data-stu-id="6c3a5-106">Troubleshooting</span></span>  
- <span data-ttu-id="6c3a5-107">Investigar os potencial rede ou problemas do produto que evitar que sejam entregues em tempo de resposta.</span><span class="sxs-lookup"><span data-stu-id="6c3a5-107">Investigate potential network or product issues that prevent the response from being delivered on time.</span></span>  <span data-ttu-id="6c3a5-108">Se muitas dessas mensagens são vistas, isso pode indicar problemas de infraestrutura ou tempos de resposta anormalmente longo.</span><span class="sxs-lookup"><span data-stu-id="6c3a5-108">If many of these messages are seen, it can indicate infrastructure problems or abnormally long response times.</span></span> <span data-ttu-id="6c3a5-109">Os dois problemas podem reduzir drasticamente a taxa de transferência de transações no sistema.</span><span class="sxs-lookup"><span data-stu-id="6c3a5-109">Both issues can drastically reduce the throughput of transactions within the system.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="96b02-106">Solução de problemas</span><span class="sxs-lookup"><span data-stu-id="96b02-106">Troubleshooting</span></span>  
+ <span data-ttu-id="96b02-107">Investigar os potencial rede ou problemas do produto que evitar que sejam entregues em tempo de resposta.</span><span class="sxs-lookup"><span data-stu-id="96b02-107">Investigate potential network or product issues that prevent the response from being delivered on time.</span></span>  <span data-ttu-id="96b02-108">Se muitas dessas mensagens são vistas, isso pode indicar problemas de infraestrutura ou tempos de resposta anormalmente longo.</span><span class="sxs-lookup"><span data-stu-id="96b02-108">If many of these messages are seen, it can indicate infrastructure problems or abnormally long response times.</span></span> <span data-ttu-id="96b02-109">Os dois problemas podem reduzir drasticamente a taxa de transferência de transações no sistema.</span><span class="sxs-lookup"><span data-stu-id="96b02-109">Both issues can drastically reduce the throughput of transactions within the system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c3a5-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6c3a5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96b02-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="96b02-110">See also</span></span>
 
-- [<span data-ttu-id="6c3a5-111">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="6c3a5-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="6c3a5-112">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="6c3a5-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="6c3a5-113">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="6c3a5-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="96b02-111">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="96b02-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="96b02-112">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="96b02-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="96b02-113">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="96b02-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

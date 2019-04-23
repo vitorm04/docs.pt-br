@@ -11,27 +11,27 @@ helpviewer_keywords:
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
 ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143176"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977607"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="54519-102">Como: Selecionar um item no controle ListView do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="54519-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
-<span data-ttu-id="54519-103">Este exemplo demonstra como selecionar programaticamente um item em um Windows Forms <xref:System.Windows.Forms.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="54519-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="54519-104">Selecionar um item por meio de programação não altera automaticamente o foco para o <xref:System.Windows.Forms.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="54519-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="54519-105">Por esse motivo, você normalmente também desejará definir o item focados ao selecionar um item.</span><span class="sxs-lookup"><span data-stu-id="54519-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="b9bf0-102">Como: Selecionar um item no controle ListView do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9bf0-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
+<span data-ttu-id="b9bf0-103">Este exemplo demonstra como selecionar programaticamente um item em um Windows Forms <xref:System.Windows.Forms.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="b9bf0-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="b9bf0-104">Selecionar um item por meio de programação não altera automaticamente o foco para o <xref:System.Windows.Forms.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="b9bf0-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="b9bf0-105">Por esse motivo, você normalmente também desejará definir o item focados ao selecionar um item.</span><span class="sxs-lookup"><span data-stu-id="b9bf0-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="54519-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="54519-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b9bf0-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b9bf0-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="54519-107">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="54519-107">Compiling the Code</span></span>  
- <span data-ttu-id="54519-108">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="54519-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b9bf0-107">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="b9bf0-107">Compiling the Code</span></span>  
+ <span data-ttu-id="b9bf0-108">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="b9bf0-108">This example requires:</span></span>  
   
--   <span data-ttu-id="54519-109">Um <xref:System.Windows.Forms.ListView> controle chamado `listView1` que contém pelo menos um item.</span><span class="sxs-lookup"><span data-stu-id="54519-109">A <xref:System.Windows.Forms.ListView> control named `listView1` that contains at least one item.</span></span>  
+-   <span data-ttu-id="b9bf0-109">Um <xref:System.Windows.Forms.ListView> controle chamado `listView1` que contém pelo menos um item.</span><span class="sxs-lookup"><span data-stu-id="b9bf0-109">A <xref:System.Windows.Forms.ListView> control named `listView1` that contains at least one item.</span></span>  
   
--   <span data-ttu-id="54519-110">Referências aos namespaces <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="54519-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces.</span></span>  
+-   <span data-ttu-id="b9bf0-110">Referências aos namespaces <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b9bf0-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54519-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54519-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9bf0-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b9bf0-111">See also</span></span>
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

@@ -9,189 +9,203 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156072"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977308"
 ---
-# <a name="security-transparent-code-level-2"></a><span data-ttu-id="23199-102">Código transparente de segurança, nível 2</span><span class="sxs-lookup"><span data-stu-id="23199-102">Security-Transparent Code, Level 2</span></span>
-<a name="top"></a>
-[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
-  
- <span data-ttu-id="23199-103">Transparência de nível 2 foi introduzida no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23199-103">Level 2 transparency was introduced in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="23199-104">Os três tenets desse modelo são código transparente, código segurança-seguro-crítica e código de segurança crítica.</span><span class="sxs-lookup"><span data-stu-id="23199-104">The three tenets of this model are transparent code, security-safe-critical code, and security-critical code.</span></span>  
-  
--   <span data-ttu-id="23199-105">Código transparente, incluindo o código que está em execução em confiança total, pode chamar outro código transparente ou somente código segurança-seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="23199-105">Transparent code, including code that is running as full trust, can call other transparent code or security-safe-critical code only.</span></span> <span data-ttu-id="23199-106">Ele só pode executar ações permitidas pela permissão de confiança parcial do domínio definido (se houver).</span><span class="sxs-lookup"><span data-stu-id="23199-106">It can only perform actions allowed by the domain’s partial trust permission set (if one exists).</span></span> <span data-ttu-id="23199-107">O código transparente não pode fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="23199-107">Transparent code cannot do the following:</span></span>  
-  
-    -   <span data-ttu-id="23199-108">Executar um <xref:System.Security.CodeAccessPermission.Assert%2A> ou elevação de privilégio.</span><span class="sxs-lookup"><span data-stu-id="23199-108">Perform an <xref:System.Security.CodeAccessPermission.Assert%2A> or elevation of privilege.</span></span>  
-  
-    -   <span data-ttu-id="23199-109">Contém código não seguro ou não verificável.</span><span class="sxs-lookup"><span data-stu-id="23199-109">Contain unsafe or unverifiable code.</span></span>  
-  
-    -   <span data-ttu-id="23199-110">Chame um código crítico diretamente.</span><span class="sxs-lookup"><span data-stu-id="23199-110">Directly call critical code.</span></span>  
-  
-    -   <span data-ttu-id="23199-111">Chamar código nativo ou código com o <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atributo.</span><span class="sxs-lookup"><span data-stu-id="23199-111">Call native code or code with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute.</span></span>  
-  
-    -   <span data-ttu-id="23199-112">Chamar um membro que é protegido por um <xref:System.Security.Permissions.SecurityAction.LinkDemand>.</span><span class="sxs-lookup"><span data-stu-id="23199-112">Call a member that is protected by a <xref:System.Security.Permissions.SecurityAction.LinkDemand>.</span></span>  
-  
-    -   <span data-ttu-id="23199-113">Herda de tipos críticos.</span><span class="sxs-lookup"><span data-stu-id="23199-113">Inherit from critical types.</span></span>  
-  
-     <span data-ttu-id="23199-114">Além disso, os métodos transparentes não podem substituir métodos virtuais críticos ou implementar métodos críticos da interface.</span><span class="sxs-lookup"><span data-stu-id="23199-114">In addition, transparent methods cannot override critical virtual methods or implement critical interface methods.</span></span>  
-  
--   <span data-ttu-id="23199-115">Código crítico de segurança é totalmente confiável, mas pode ser chamado pelo código transparent.</span><span class="sxs-lookup"><span data-stu-id="23199-115">Safe-critical code is fully trusted but is callable by transparent code.</span></span> <span data-ttu-id="23199-116">Ele expõe uma área da superfície limitada de código de confiança total; verificações de exatidão e segurança ocorrem no código crítico.</span><span class="sxs-lookup"><span data-stu-id="23199-116">It exposes a limited surface area of full-trust code; correctness and security verifications happen in safe-critical code.</span></span>  
-  
--   <span data-ttu-id="23199-117">Código de segurança crítica pode chamar qualquer código e é totalmente confiável, mas ele não pode ser chamado pelo código transparent.</span><span class="sxs-lookup"><span data-stu-id="23199-117">Security-critical code can call any code and is fully trusted, but it cannot be called by transparent code.</span></span>  
-  
- <span data-ttu-id="23199-118">Esse tópico contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="23199-118">This topic contains the following sections:</span></span>  
-  
--   [<span data-ttu-id="23199-119">Exemplos de uso e comportamentos</span><span class="sxs-lookup"><span data-stu-id="23199-119">Usage Examples and Behaviors</span></span>](#examples)  
-  
--   [<span data-ttu-id="23199-120">Substituir padrões</span><span class="sxs-lookup"><span data-stu-id="23199-120">Override Patterns</span></span>](#override)  
-  
--   [<span data-ttu-id="23199-121">Regras de herança</span><span class="sxs-lookup"><span data-stu-id="23199-121">Inheritance Rules</span></span>](#inheritance)  
-  
--   [<span data-ttu-id="23199-122">Informações adicionais e regras</span><span class="sxs-lookup"><span data-stu-id="23199-122">Additional Information and Rules</span></span>](#additional)  
-  
-<a name="examples"></a>   
-## <a name="usage-examples-and-behaviors"></a><span data-ttu-id="23199-123">Exemplos de Uso e Comportamentos</span><span class="sxs-lookup"><span data-stu-id="23199-123">Usage Examples and Behaviors</span></span>  
- <span data-ttu-id="23199-124">Para especificar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras (transparência de nível 2), use a anotação a seguir para um assembly:</span><span class="sxs-lookup"><span data-stu-id="23199-124">To specify [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules (level 2 transparency), use the following annotation for an assembly:</span></span>  
-  
-```  
-[assembly: SecurityRules(SecurityRuleSet.Level2)]  
-```  
-  
- <span data-ttu-id="23199-125">Para bloquear nas regras do .NET Framework 2.0 (transparência de nível 1), use a anotação a seguir:</span><span class="sxs-lookup"><span data-stu-id="23199-125">To lock into the .NET Framework 2.0 rules (level 1 transparency), use the following annotation:</span></span>  
-  
-```  
-[assembly: SecurityRules(SecurityRuleSet.Level1)]  
-```  
-  
- <span data-ttu-id="23199-126">Se você não fazer anotações em um assembly, o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras são usadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="23199-126">If you do not annotate an assembly, the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules are used by default.</span></span> <span data-ttu-id="23199-127">No entanto, a prática recomendada é usar o <xref:System.Security.SecurityRulesAttribute> de atributo, em vez de dependendo do padrão.</span><span class="sxs-lookup"><span data-stu-id="23199-127">However, the recommended best practice is to use the <xref:System.Security.SecurityRulesAttribute> attribute instead of depending on the default.</span></span>  
-  
-### <a name="assembly-wide-annotation"></a><span data-ttu-id="23199-128">Anotação de todo o assembly</span><span class="sxs-lookup"><span data-stu-id="23199-128">Assembly-wide Annotation</span></span>  
- <span data-ttu-id="23199-129">As seguintes regras se aplicam ao uso de atributos no nível de assembly:</span><span class="sxs-lookup"><span data-stu-id="23199-129">The following rules apply to the use of attributes at the assembly level:</span></span>  
-  
--   <span data-ttu-id="23199-130">Nenhum atributo: Se você não especificar todos os atributos, o tempo de execução interpreta todos os códigos como crítico de segurança, exceto onde sendo crítico para segurança viola uma regra de herança (por exemplo, quando a substituição ou implementando um transparente virtual ou o método de interface).</span><span class="sxs-lookup"><span data-stu-id="23199-130">No attributes: If you do not specify any attributes, the runtime interprets all code as security-critical, except where being security-critical violates an inheritance rule (for example, when overriding or implementing a transparent virtual or interface method).</span></span> <span data-ttu-id="23199-131">Nesses casos, os métodos são seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="23199-131">In those cases, the methods are safe-critical.</span></span> <span data-ttu-id="23199-132">Não especificar nenhum atributo faz com que o common language runtime determinar as regras de transparência para você.</span><span class="sxs-lookup"><span data-stu-id="23199-132">Specifying no attribute causes the common language runtime to determine the transparency rules for you.</span></span>  
-  
--   <span data-ttu-id="23199-133">`SecurityTransparent`: Todo o código é transparente; todo o assembly não fará nada com privilégios ou que não é segura.</span><span class="sxs-lookup"><span data-stu-id="23199-133">`SecurityTransparent`: All code is transparent; the entire assembly will not do anything privileged or unsafe.</span></span>  
-  
--   <span data-ttu-id="23199-134">`SecurityCritical`: Todo o código que é introduzido pelos tipos neste assembly é essencial; todos os outros códigos é transparente.</span><span class="sxs-lookup"><span data-stu-id="23199-134">`SecurityCritical`: All code that is introduced by types in this assembly is critical; all other code is transparent.</span></span> <span data-ttu-id="23199-135">Esse cenário é semelhante à especificação não todos os atributos; No entanto, o common language runtime não determina automaticamente as regras de transparência.</span><span class="sxs-lookup"><span data-stu-id="23199-135">This scenario is similar to not specifying any attributes; however, the common language runtime does not automatically determine the transparency rules.</span></span> <span data-ttu-id="23199-136">Por exemplo, se você substituir um método virtual ou abstract ou implementa um método de interface, por padrão, esse método é transparente.</span><span class="sxs-lookup"><span data-stu-id="23199-136">For example, if you override a virtual or abstract method or implement an interface method, by default, that method is transparent.</span></span> <span data-ttu-id="23199-137">Você deve anotar explicitamente o método como `SecurityCritical` ou `SecuritySafeCritical`; caso contrário, um <xref:System.TypeLoadException> será lançada no tempo de carregamento.</span><span class="sxs-lookup"><span data-stu-id="23199-137">You must explicitly annotate the method as `SecurityCritical` or `SecuritySafeCritical`; otherwise, a <xref:System.TypeLoadException> will be thrown at load time.</span></span> <span data-ttu-id="23199-138">Essa regra também se aplica quando a classe base e a classe derivada estão no mesmo assembly.</span><span class="sxs-lookup"><span data-stu-id="23199-138">This rule also applies when both the base class and the derived class are in the same assembly.</span></span>  
-  
--   <span data-ttu-id="23199-139">`AllowPartiallyTrustedCallers` (nível 2 somente): Todo o código padrão é transparente.</span><span class="sxs-lookup"><span data-stu-id="23199-139">`AllowPartiallyTrustedCallers` (level 2 only): All code defaults to transparent.</span></span> <span data-ttu-id="23199-140">No entanto, os membros e tipos individuais podem ter outros atributos.</span><span class="sxs-lookup"><span data-stu-id="23199-140">However, individual types and members can have other attributes.</span></span>  
-  
- <span data-ttu-id="23199-141">A tabela a seguir compara o comportamento de nível de assembly para o nível 2 com o nível 1.</span><span class="sxs-lookup"><span data-stu-id="23199-141">The following table compares the assembly level behavior for Level 2 with Level 1.</span></span>  
-  
-|<span data-ttu-id="23199-142">Atributo de assembly</span><span class="sxs-lookup"><span data-stu-id="23199-142">Assembly attribute</span></span>|<span data-ttu-id="23199-143">Nível 2</span><span class="sxs-lookup"><span data-stu-id="23199-143">Level 2</span></span>|<span data-ttu-id="23199-144">Nível 1</span><span class="sxs-lookup"><span data-stu-id="23199-144">Level 1</span></span>|  
-|------------------------|-------------|-------------|  
-|<span data-ttu-id="23199-145">Nenhum atributo em um assembly parcialmente confiável</span><span class="sxs-lookup"><span data-stu-id="23199-145">No attribute on a partially trusted assembly</span></span>|<span data-ttu-id="23199-146">Tipos e membros são por padrão transparente, mas podem ser crítico para segurança ou segurança-seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="23199-146">Types and members are by default transparent, but can be security-critical or security-safe-critical.</span></span>|<span data-ttu-id="23199-147">Todos os tipos e membros são transparentes.</span><span class="sxs-lookup"><span data-stu-id="23199-147">All types and members are transparent.</span></span>|  
-|<span data-ttu-id="23199-148">Nenhum atributo</span><span class="sxs-lookup"><span data-stu-id="23199-148">No attribute</span></span>|<span data-ttu-id="23199-149">Não especificar nenhum atributo faz com que o common language runtime determinar as regras de transparência para você.</span><span class="sxs-lookup"><span data-stu-id="23199-149">Specifying no attribute causes the common language runtime to determine the transparency rules for you.</span></span> <span data-ttu-id="23199-150">Todos os tipos e membros são críticos para segurança, exceto onde sendo crítico para segurança viola uma regra de herança.</span><span class="sxs-lookup"><span data-stu-id="23199-150">All types and members are security-critical, except where being security-critical violates an inheritance rule.</span></span>|<span data-ttu-id="23199-151">Em um assembly totalmente confiável (no cache de assembly global ou identificado como confiança total no `AppDomain`) todos os tipos são transparentes e todos os membros são segurança-seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="23199-151">On a fully trusted assembly (in the global assembly cache or identified as full trust in the `AppDomain`) all types are transparent and all members are security-safe-critical.</span></span>|  
-|`SecurityTransparent`|<span data-ttu-id="23199-152">Todos os tipos e membros são transparentes.</span><span class="sxs-lookup"><span data-stu-id="23199-152">All types and members are transparent.</span></span>|<span data-ttu-id="23199-153">Todos os tipos e membros são transparentes.</span><span class="sxs-lookup"><span data-stu-id="23199-153">All types and members are transparent.</span></span>|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|<span data-ttu-id="23199-154">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="23199-154">Not applicable.</span></span>|<span data-ttu-id="23199-155">Todos os tipos e membros são críticos para segurança.</span><span class="sxs-lookup"><span data-stu-id="23199-155">All types and members are security-critical.</span></span>|  
-|`SecurityCritical`|<span data-ttu-id="23199-156">Todo o código que é introduzido pelos tipos neste assembly é essencial; todos os outros códigos é transparente.</span><span class="sxs-lookup"><span data-stu-id="23199-156">All code that is introduced by types in this assembly is critical; all other code is transparent.</span></span> <span data-ttu-id="23199-157">Se você substituir um método virtual ou abstract ou implementa um método de interface, você deve anotar explicitamente o método como `SecurityCritical` ou `SecuritySafeCritical`.</span><span class="sxs-lookup"><span data-stu-id="23199-157">If you override a virtual or abstract method or implement an interface method, you must explicitly annotate the method as `SecurityCritical` or `SecuritySafeCritical`.</span></span>|<span data-ttu-id="23199-158">Todo o código padrão é transparente.</span><span class="sxs-lookup"><span data-stu-id="23199-158">All code defaults to transparent.</span></span> <span data-ttu-id="23199-159">No entanto, os membros e tipos individuais podem ter outros atributos.</span><span class="sxs-lookup"><span data-stu-id="23199-159">However, individual types and members can have other attributes.</span></span>|  
-  
-### <a name="type-and-member-annotation"></a><span data-ttu-id="23199-160">Tipo e Anotação do Membro</span><span class="sxs-lookup"><span data-stu-id="23199-160">Type and Member Annotation</span></span>  
- <span data-ttu-id="23199-161">Os atributos de segurança que são aplicados a um tipo também se aplicam aos membros que são introduzidos pelo tipo.</span><span class="sxs-lookup"><span data-stu-id="23199-161">The security attributes that are applied to a type also apply to the members that are introduced by the type.</span></span> <span data-ttu-id="23199-162">No entanto, eles não se aplicam ao virtual ou abstract substitui das implementações de interface ou classe base.</span><span class="sxs-lookup"><span data-stu-id="23199-162">However, they do not apply to virtual or abstract overrides of the base class or interface implementations.</span></span> <span data-ttu-id="23199-163">As seguintes regras se aplicam ao uso de atributos no nível do tipo e membro:</span><span class="sxs-lookup"><span data-stu-id="23199-163">The following rules apply to the use of attributes at the type and member level:</span></span>  
-  
--   <span data-ttu-id="23199-164">`SecurityCritical`: O tipo ou membro é crítico e pode ser chamado somente pelo código de confiança total.</span><span class="sxs-lookup"><span data-stu-id="23199-164">`SecurityCritical`: The type or member is critical and can be called only by full-trust code.</span></span> <span data-ttu-id="23199-165">Métodos que são introduzidos em um tipo crítico de segurança são essenciais.</span><span class="sxs-lookup"><span data-stu-id="23199-165">Methods that are introduced in a security-critical type are critical.</span></span>  
-  
-    > [!IMPORTANT]
-    >  <span data-ttu-id="23199-166">Métodos abstratos e virtuais que são introduzidos em interfaces ou classes base e substituídos ou implementados em uma classe de segurança críticas são transparentes por padrão.</span><span class="sxs-lookup"><span data-stu-id="23199-166">Virtual and abstract methods that are introduced in base classes or interfaces, and overridden or implemented in a security-critical class are transparent by default.</span></span> <span data-ttu-id="23199-167">Eles devem ser identificados como `SecuritySafeCritical` ou `SecurityCritical`.</span><span class="sxs-lookup"><span data-stu-id="23199-167">They must be identified as either `SecuritySafeCritical` or `SecurityCritical`.</span></span>  
-  
--   <span data-ttu-id="23199-168">`SecuritySafeCritical`: O tipo ou membro é crítico.</span><span class="sxs-lookup"><span data-stu-id="23199-168">`SecuritySafeCritical`: The type or member is safe-critical.</span></span> <span data-ttu-id="23199-169">No entanto, o tipo ou membro pode ser chamado no código transparent de (parcialmente confiável) e é tão potentes quanto qualquer outro código crítico.</span><span class="sxs-lookup"><span data-stu-id="23199-169">However, the type or member can be called from transparent (partially trusted) code and is as capable as any other critical code.</span></span> <span data-ttu-id="23199-170">O código deve ser auditado para segurança.</span><span class="sxs-lookup"><span data-stu-id="23199-170">The code must be audited for security.</span></span>  
-  
- [<span data-ttu-id="23199-171">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="23199-171">Back to top</span></span>](#top)  
-  
-<a name="override"></a>   
-## <a name="override-patterns"></a><span data-ttu-id="23199-172">Substituir Padrões</span><span class="sxs-lookup"><span data-stu-id="23199-172">Override Patterns</span></span>  
- <span data-ttu-id="23199-173">A tabela a seguir mostra as substituições de método permitidas para a transparência de nível 2.</span><span class="sxs-lookup"><span data-stu-id="23199-173">The following table shows the method overrides allowed for level 2 transparency.</span></span>  
-  
-|<span data-ttu-id="23199-174">Membro de base virtuais/interface</span><span class="sxs-lookup"><span data-stu-id="23199-174">Base virtual/interface member</span></span>|<span data-ttu-id="23199-175">Substituição/interface</span><span class="sxs-lookup"><span data-stu-id="23199-175">Override/interface</span></span>|  
-|------------------------------------|-------------------------|  
-|`Transparent`|`Transparent`|  
-|`Transparent`|`SafeCritical`|  
-|`SafeCritical`|`Transparent`|  
-|`SafeCritical`|`SafeCritical`|  
-|`Critical`|`Critical`|  
-  
- [<span data-ttu-id="23199-176">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="23199-176">Back to top</span></span>](#top)  
-  
-<a name="inheritance"></a>   
-## <a name="inheritance-rules"></a><span data-ttu-id="23199-177">Regras de Herança</span><span class="sxs-lookup"><span data-stu-id="23199-177">Inheritance Rules</span></span>  
- <span data-ttu-id="23199-178">Nesta seção, a ordem a seguir é atribuída a `Transparent`, `Critical`, e `SafeCritical` código com base no acesso e recursos:</span><span class="sxs-lookup"><span data-stu-id="23199-178">In this section, the following order is assigned to `Transparent`, `Critical`, and `SafeCritical` code based on access and capabilities:</span></span>  
-  
- `Transparent` < `SafeCritical` < `Critical`  
-  
--   <span data-ttu-id="23199-179">Regras para tipos: Saindo da esquerda para a direita, o acesso se torna mais restritivo.</span><span class="sxs-lookup"><span data-stu-id="23199-179">Rules for types: Going from left to right, access becomes more restrictive.</span></span> <span data-ttu-id="23199-180">Tipos derivados devam ser, pelo menos, tão restritivos quanto o tipo base.</span><span class="sxs-lookup"><span data-stu-id="23199-180">Derived types must be at least as restrictive as the base type.</span></span>  
-  
--   <span data-ttu-id="23199-181">Regras para métodos: Métodos derivados não podem alterar a acessibilidade do método base.</span><span class="sxs-lookup"><span data-stu-id="23199-181">Rules for methods: Derived methods cannot change accessibility from the base method.</span></span> <span data-ttu-id="23199-182">Para o comportamento padrão, todos os métodos derivados que não são anotados são `Transparent`.</span><span class="sxs-lookup"><span data-stu-id="23199-182">For default behavior, all derived methods that are not annotated are `Transparent`.</span></span> <span data-ttu-id="23199-183">Derivados de tipos critical causam uma exceção seja gerada se o método substituído não é anotado explicitamente como `SecurityCritical`.</span><span class="sxs-lookup"><span data-stu-id="23199-183">Derivatives of critical types cause an exception to be thrown if the overridden method is not explicitly annotated as `SecurityCritical`.</span></span>  
-  
- <span data-ttu-id="23199-184">A tabela a seguir mostra o tipo permitido padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="23199-184">The following table shows the allowed type inheritance patterns.</span></span>  
-  
-|<span data-ttu-id="23199-185">Classe base</span><span class="sxs-lookup"><span data-stu-id="23199-185">Base class</span></span>|<span data-ttu-id="23199-186">Classe derivada pode ser</span><span class="sxs-lookup"><span data-stu-id="23199-186">Derived class can be</span></span>|  
-|----------------|--------------------------|  
-|`Transparent`|`Transparent`|  
-|`Transparent`|`SafeCritical`|  
-|`Transparent`|`Critical`|  
-|`SafeCritical`|`SafeCritical`|  
-|`SafeCritical`|`Critical`|  
-|`Critical`|`Critical`|  
-  
- <span data-ttu-id="23199-187">A tabela a seguir mostra o tipo não permitido em padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="23199-187">The following table shows the disallowed type inheritance patterns.</span></span>  
-  
-|<span data-ttu-id="23199-188">Classe base</span><span class="sxs-lookup"><span data-stu-id="23199-188">Base class</span></span>|<span data-ttu-id="23199-189">Classe derivada não pode ser</span><span class="sxs-lookup"><span data-stu-id="23199-189">Derived class cannot be</span></span>|  
-|----------------|-----------------------------|  
-|`SafeCritical`|`Transparent`|  
-|`Critical`|`Transparent`|  
-|`Critical`|`SafeCritical`|  
-  
- <span data-ttu-id="23199-190">A tabela a seguir mostra o método permitido padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="23199-190">The following table shows the allowed method inheritance patterns.</span></span>  
-  
-|<span data-ttu-id="23199-191">Método base</span><span class="sxs-lookup"><span data-stu-id="23199-191">Base method</span></span>|<span data-ttu-id="23199-192">Método derivado pode ser</span><span class="sxs-lookup"><span data-stu-id="23199-192">Derived method can be</span></span>|  
-|-----------------|---------------------------|  
-|`Transparent`|`Transparent`|  
-|`Transparent`|`SafeCritical`|  
-|`SafeCritical`|`Transparent`|  
-|`SafeCritical`|`SafeCritical`|  
-|`Critical`|`Critical`|  
-  
- <span data-ttu-id="23199-193">A tabela a seguir mostra o método não permitido em padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="23199-193">The following table shows the disallowed method inheritance patterns.</span></span>  
-  
-|<span data-ttu-id="23199-194">Método base</span><span class="sxs-lookup"><span data-stu-id="23199-194">Base method</span></span>|<span data-ttu-id="23199-195">Método derivado não pode ser</span><span class="sxs-lookup"><span data-stu-id="23199-195">Derived method cannot be</span></span>|  
-|-----------------|------------------------------|  
-|`Transparent`|`Critical`|  
-|`SafeCritical`|`Critical`|  
-|`Critical`|`Transparent`|  
-|`Critical`|`SafeCritical`|  
-  
-> [!NOTE]
->  <span data-ttu-id="23199-196">Essas regras de herança se aplicam a membros e tipos de nível 2.</span><span class="sxs-lookup"><span data-stu-id="23199-196">These inheritance rules apply to level 2 types and members.</span></span> <span data-ttu-id="23199-197">Tipos em assemblies de nível 1 podem herdar de membros e tipos de segurança crítica de nível 2.</span><span class="sxs-lookup"><span data-stu-id="23199-197">Types in level 1 assemblies can inherit from level 2 security-critical types and members.</span></span> <span data-ttu-id="23199-198">Portanto, os membros e tipos de nível 2 devem ter demandas de herança separados para os herdeiros de nível 1.</span><span class="sxs-lookup"><span data-stu-id="23199-198">Therefore, level 2 types and members must have separate inheritance demands for level 1 inheritors.</span></span>  
-  
- [<span data-ttu-id="23199-199">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="23199-199">Back to top</span></span>](#top)  
-  
-<a name="additional"></a>   
-## <a name="additional-information-and-rules"></a><span data-ttu-id="23199-200">Informações Adicionais e Regras</span><span class="sxs-lookup"><span data-stu-id="23199-200">Additional Information and Rules</span></span>  
-  
-### <a name="linkdemand-support"></a><span data-ttu-id="23199-201">Suporte LinkDemand</span><span class="sxs-lookup"><span data-stu-id="23199-201">LinkDemand Support</span></span>  
- <span data-ttu-id="23199-202">O modelo de transparência de nível 2 substitui o <xref:System.Security.Permissions.SecurityAction.LinkDemand> com o <xref:System.Security.SecurityCriticalAttribute> atributo.</span><span class="sxs-lookup"><span data-stu-id="23199-202">The level 2 transparency model replaces the <xref:System.Security.Permissions.SecurityAction.LinkDemand> with the <xref:System.Security.SecurityCriticalAttribute> attribute.</span></span> <span data-ttu-id="23199-203">No código herdado (nível 1), uma <xref:System.Security.Permissions.SecurityAction.LinkDemand> são tratados automaticamente como um <xref:System.Security.Permissions.SecurityAction.Demand>.</span><span class="sxs-lookup"><span data-stu-id="23199-203">In legacy (level 1) code, a <xref:System.Security.Permissions.SecurityAction.LinkDemand> is automatically treated as a <xref:System.Security.Permissions.SecurityAction.Demand>.</span></span>  
-  
-### <a name="reflection"></a><span data-ttu-id="23199-204">Reflexão</span><span class="sxs-lookup"><span data-stu-id="23199-204">Reflection</span></span>  
- <span data-ttu-id="23199-205">Invocar um método crítico ou a leitura de um campo crítica aciona uma demanda para confiança total (como se você invocou um método particular ou campo).</span><span class="sxs-lookup"><span data-stu-id="23199-205">Invoking a critical method or reading a critical field triggers a demand for full trust (just as if you were invoking a private method or field).</span></span> <span data-ttu-id="23199-206">Portanto, o código de confiança total pode invocar um método crítico, enquanto o código de confiança parcial não pode.</span><span class="sxs-lookup"><span data-stu-id="23199-206">Therefore, full-trust code can invoke a critical method, whereas partial-trust code cannot.</span></span>  
-  
- <span data-ttu-id="23199-207">As propriedades a seguir foram adicionadas para o <xref:System.Reflection> namespace para determinar se o tipo, método ou campo é `SecurityCritical`, `SecuritySafeCritical`, ou `SecurityTransparent`: <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>.</span><span class="sxs-lookup"><span data-stu-id="23199-207">The following properties have been added to the <xref:System.Reflection> namespace to determine whether the type, method, or field is `SecurityCritical`, `SecuritySafeCritical`, or `SecurityTransparent`:  <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, and <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>.</span></span> <span data-ttu-id="23199-208">Use essas propriedades para determinar a transparência por meio de reflexão em vez de verificar a presença do atributo.</span><span class="sxs-lookup"><span data-stu-id="23199-208">Use these properties to determine transparency by using reflection instead of checking for the presence of the attribute.</span></span> <span data-ttu-id="23199-209">As regras de transparência são complexas e verificando o atributo pode não ser suficiente.</span><span class="sxs-lookup"><span data-stu-id="23199-209">The transparency rules are complex, and checking for the attribute may not be sufficient.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="23199-210">Um `SafeCritical` retorn `true` para ambos <xref:System.Type.IsSecurityCritical%2A> e <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, pois `SafeCritical` é realmente fundamental (ele tem os mesmos recursos que o código critical, mas ele pode ser chamado no código transparent).</span><span class="sxs-lookup"><span data-stu-id="23199-210">A `SafeCritical` method returns `true` for both <xref:System.Type.IsSecurityCritical%2A> and <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, because `SafeCritical` is indeed critical (it has the same capabilities as critical code, but it can be called from transparent code).</span></span>  
-  
- <span data-ttu-id="23199-211">Métodos dinâmicos herdam a transparência dos módulos que eles são anexados a; eles não herdam a transparência do tipo (se eles são anexados a um tipo).</span><span class="sxs-lookup"><span data-stu-id="23199-211">Dynamic methods inherit the transparency of the modules they are attached to; they do not inherit the transparency of the type (if they are attached to a type).</span></span>  
-  
-### <a name="skip-verification-in-full-trust"></a><span data-ttu-id="23199-212">Ignorar Verificação em Confiança Total</span><span class="sxs-lookup"><span data-stu-id="23199-212">Skip Verification in Full Trust</span></span>  
- <span data-ttu-id="23199-213">Você pode ignorar a verificação de assemblies transparentes totalmente confiáveis, definindo o <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> propriedade para `true` no <xref:System.Security.SecurityRulesAttribute> atributo:</span><span class="sxs-lookup"><span data-stu-id="23199-213">You can skip verification for fully trusted transparent assemblies by setting the <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> property to `true` in the <xref:System.Security.SecurityRulesAttribute> attribute:</span></span>  
-  
- `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`  
-  
- <span data-ttu-id="23199-214">O <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> é de propriedade `false` por padrão, portanto, a propriedade deve ser definida como `true` para ignorar a verificação.</span><span class="sxs-lookup"><span data-stu-id="23199-214">The <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> property is `false` by default, so the property must be set to `true` to skip verification.</span></span> <span data-ttu-id="23199-215">Isso deve ser feito para apenas para fins de otimização.</span><span class="sxs-lookup"><span data-stu-id="23199-215">This should be done for optimization purposes only.</span></span> <span data-ttu-id="23199-216">Você deve garantir que o código transparente no assembly é verificável usando o `transparent` opção de [ferramenta PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).</span><span class="sxs-lookup"><span data-stu-id="23199-216">You should ensure that the transparent code in the assembly is verifiable by using the `transparent` option in the [PEVerify tool](../../../docs/framework/tools/peverify-exe-peverify-tool.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="23199-217">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23199-217">See also</span></span>
+# <a name="security-transparent-code-level-2"></a><span data-ttu-id="8ed41-102">Código transparente de segurança, nível 2</span><span class="sxs-lookup"><span data-stu-id="8ed41-102">Security-Transparent Code, Level 2</span></span>
 
-- [<span data-ttu-id="23199-218">Código transparente de segurança, nível 1</span><span class="sxs-lookup"><span data-stu-id="23199-218">Security-Transparent Code, Level 1</span></span>](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [<span data-ttu-id="23199-219">Alterações de segurança</span><span class="sxs-lookup"><span data-stu-id="23199-219">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)
+<a name="top"></a>
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
+<span data-ttu-id="8ed41-103">Transparência de nível 2 foi introduzida no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8ed41-103">Level 2 transparency was introduced in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="8ed41-104">Os três tenets desse modelo são código transparente, código segurança-seguro-crítica e código de segurança crítica.</span><span class="sxs-lookup"><span data-stu-id="8ed41-104">The three tenets of this model are transparent code, security-safe-critical code, and security-critical code.</span></span>
+
+- <span data-ttu-id="8ed41-105">Código transparente, incluindo o código que está em execução em confiança total, pode chamar outro código transparente ou somente código segurança-seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="8ed41-105">Transparent code, including code that is running as full trust, can call other transparent code or security-safe-critical code only.</span></span> <span data-ttu-id="8ed41-106">Ele só pode executar ações permitidas pela permissão de confiança parcial do domínio definido (se houver).</span><span class="sxs-lookup"><span data-stu-id="8ed41-106">It can only perform actions allowed by the domain’s partial trust permission set (if one exists).</span></span> <span data-ttu-id="8ed41-107">O código transparente não pode fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="8ed41-107">Transparent code cannot do the following:</span></span>
+
+  - <span data-ttu-id="8ed41-108">Executar um <xref:System.Security.CodeAccessPermission.Assert%2A> ou elevação de privilégio.</span><span class="sxs-lookup"><span data-stu-id="8ed41-108">Perform an <xref:System.Security.CodeAccessPermission.Assert%2A> or elevation of privilege.</span></span>
+
+  - <span data-ttu-id="8ed41-109">Contém código não seguro ou não verificável.</span><span class="sxs-lookup"><span data-stu-id="8ed41-109">Contain unsafe or unverifiable code.</span></span>
+
+  - <span data-ttu-id="8ed41-110">Chame um código crítico diretamente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-110">Directly call critical code.</span></span>
+
+  - <span data-ttu-id="8ed41-111">Chamar código nativo ou código com o <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> atributo.</span><span class="sxs-lookup"><span data-stu-id="8ed41-111">Call native code or code with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute.</span></span>
+
+  - <span data-ttu-id="8ed41-112">Chamar um membro que é protegido por um <xref:System.Security.Permissions.SecurityAction.LinkDemand>.</span><span class="sxs-lookup"><span data-stu-id="8ed41-112">Call a member that is protected by a <xref:System.Security.Permissions.SecurityAction.LinkDemand>.</span></span>
+
+  - <span data-ttu-id="8ed41-113">Herda de tipos críticos.</span><span class="sxs-lookup"><span data-stu-id="8ed41-113">Inherit from critical types.</span></span>
+
+  <span data-ttu-id="8ed41-114">Além disso, os métodos transparentes não podem substituir métodos virtuais críticos ou implementar métodos críticos da interface.</span><span class="sxs-lookup"><span data-stu-id="8ed41-114">In addition, transparent methods cannot override critical virtual methods or implement critical interface methods.</span></span>
+
+- <span data-ttu-id="8ed41-115">Código crítico de segurança é totalmente confiável, mas pode ser chamado pelo código transparent.</span><span class="sxs-lookup"><span data-stu-id="8ed41-115">Safe-critical code is fully trusted but is callable by transparent code.</span></span> <span data-ttu-id="8ed41-116">Ele expõe uma área da superfície limitada de código de confiança total; verificações de exatidão e segurança ocorrem no código crítico.</span><span class="sxs-lookup"><span data-stu-id="8ed41-116">It exposes a limited surface area of full-trust code; correctness and security verifications happen in safe-critical code.</span></span>
+
+- <span data-ttu-id="8ed41-117">Código de segurança crítica pode chamar qualquer código e é totalmente confiável, mas ele não pode ser chamado pelo código transparent.</span><span class="sxs-lookup"><span data-stu-id="8ed41-117">Security-critical code can call any code and is fully trusted, but it cannot be called by transparent code.</span></span>
+
+<span data-ttu-id="8ed41-118">Esse tópico contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="8ed41-118">This topic contains the following sections:</span></span>
+
+- [<span data-ttu-id="8ed41-119">Exemplos de uso e comportamentos</span><span class="sxs-lookup"><span data-stu-id="8ed41-119">Usage Examples and Behaviors</span></span>](#examples)
+
+- [<span data-ttu-id="8ed41-120">Substituir padrões</span><span class="sxs-lookup"><span data-stu-id="8ed41-120">Override Patterns</span></span>](#override)
+
+- [<span data-ttu-id="8ed41-121">Regras de herança</span><span class="sxs-lookup"><span data-stu-id="8ed41-121">Inheritance Rules</span></span>](#inheritance)
+
+- [<span data-ttu-id="8ed41-122">Informações adicionais e regras</span><span class="sxs-lookup"><span data-stu-id="8ed41-122">Additional Information and Rules</span></span>](#additional)
+
+<a name="examples"></a>
+
+## <a name="usage-examples-and-behaviors"></a><span data-ttu-id="8ed41-123">Exemplos de Uso e Comportamentos</span><span class="sxs-lookup"><span data-stu-id="8ed41-123">Usage Examples and Behaviors</span></span>
+
+<span data-ttu-id="8ed41-124">Para especificar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras (transparência de nível 2), use a anotação a seguir para um assembly:</span><span class="sxs-lookup"><span data-stu-id="8ed41-124">To specify [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules (level 2 transparency), use the following annotation for an assembly:</span></span>
+
+```csharp
+[assembly: SecurityRules(SecurityRuleSet.Level2)]
+```
+
+<span data-ttu-id="8ed41-125">Para bloquear nas regras do .NET Framework 2.0 (transparência de nível 1), use a anotação a seguir:</span><span class="sxs-lookup"><span data-stu-id="8ed41-125">To lock into the .NET Framework 2.0 rules (level 1 transparency), use the following annotation:</span></span>
+
+```csharp
+[assembly: SecurityRules(SecurityRuleSet.Level1)]
+```
+
+<span data-ttu-id="8ed41-126">Se você não fazer anotações em um assembly, o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] regras são usadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="8ed41-126">If you do not annotate an assembly, the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules are used by default.</span></span> <span data-ttu-id="8ed41-127">No entanto, a prática recomendada é usar o <xref:System.Security.SecurityRulesAttribute> de atributo, em vez de dependendo do padrão.</span><span class="sxs-lookup"><span data-stu-id="8ed41-127">However, the recommended best practice is to use the <xref:System.Security.SecurityRulesAttribute> attribute instead of depending on the default.</span></span>
+
+### <a name="assembly-wide-annotation"></a><span data-ttu-id="8ed41-128">Anotação de todo o assembly</span><span class="sxs-lookup"><span data-stu-id="8ed41-128">Assembly-wide Annotation</span></span>
+
+<span data-ttu-id="8ed41-129">As seguintes regras se aplicam ao uso de atributos no nível de assembly:</span><span class="sxs-lookup"><span data-stu-id="8ed41-129">The following rules apply to the use of attributes at the assembly level:</span></span>
+
+- <span data-ttu-id="8ed41-130">Nenhum atributo: Se você não especificar todos os atributos, o tempo de execução interpreta todos os códigos como crítico de segurança, exceto onde sendo crítico para segurança viola uma regra de herança (por exemplo, quando a substituição ou implementando um transparente virtual ou o método de interface).</span><span class="sxs-lookup"><span data-stu-id="8ed41-130">No attributes: If you do not specify any attributes, the runtime interprets all code as security-critical, except where being security-critical violates an inheritance rule (for example, when overriding or implementing a transparent virtual or interface method).</span></span> <span data-ttu-id="8ed41-131">Nesses casos, os métodos são seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="8ed41-131">In those cases, the methods are safe-critical.</span></span> <span data-ttu-id="8ed41-132">Não especificar nenhum atributo faz com que o common language runtime determinar as regras de transparência para você.</span><span class="sxs-lookup"><span data-stu-id="8ed41-132">Specifying no attribute causes the common language runtime to determine the transparency rules for you.</span></span>
+
+- <span data-ttu-id="8ed41-133">`SecurityTransparent`: Todo o código é transparente; todo o assembly não fará nada com privilégios ou que não é segura.</span><span class="sxs-lookup"><span data-stu-id="8ed41-133">`SecurityTransparent`: All code is transparent; the entire assembly will not do anything privileged or unsafe.</span></span>
+
+- <span data-ttu-id="8ed41-134">`SecurityCritical`: Todo o código que é introduzido pelos tipos neste assembly é essencial; todos os outros códigos é transparente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-134">`SecurityCritical`: All code that is introduced by types in this assembly is critical; all other code is transparent.</span></span> <span data-ttu-id="8ed41-135">Esse cenário é semelhante à especificação não todos os atributos; No entanto, o common language runtime não determina automaticamente as regras de transparência.</span><span class="sxs-lookup"><span data-stu-id="8ed41-135">This scenario is similar to not specifying any attributes; however, the common language runtime does not automatically determine the transparency rules.</span></span> <span data-ttu-id="8ed41-136">Por exemplo, se você substituir um método virtual ou abstract ou implementa um método de interface, por padrão, esse método é transparente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-136">For example, if you override a virtual or abstract method or implement an interface method, by default, that method is transparent.</span></span> <span data-ttu-id="8ed41-137">Você deve anotar explicitamente o método como `SecurityCritical` ou `SecuritySafeCritical`; caso contrário, um <xref:System.TypeLoadException> será lançada no tempo de carregamento.</span><span class="sxs-lookup"><span data-stu-id="8ed41-137">You must explicitly annotate the method as `SecurityCritical` or `SecuritySafeCritical`; otherwise, a <xref:System.TypeLoadException> will be thrown at load time.</span></span> <span data-ttu-id="8ed41-138">Essa regra também se aplica quando a classe base e a classe derivada estão no mesmo assembly.</span><span class="sxs-lookup"><span data-stu-id="8ed41-138">This rule also applies when both the base class and the derived class are in the same assembly.</span></span>
+
+- <span data-ttu-id="8ed41-139">`AllowPartiallyTrustedCallers` (nível 2 somente): Todo o código padrão é transparente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-139">`AllowPartiallyTrustedCallers` (level 2 only): All code defaults to transparent.</span></span> <span data-ttu-id="8ed41-140">No entanto, os membros e tipos individuais podem ter outros atributos.</span><span class="sxs-lookup"><span data-stu-id="8ed41-140">However, individual types and members can have other attributes.</span></span>
+
+<span data-ttu-id="8ed41-141">A tabela a seguir compara o comportamento de nível de assembly para o nível 2 com o nível 1.</span><span class="sxs-lookup"><span data-stu-id="8ed41-141">The following table compares the assembly level behavior for Level 2 with Level 1.</span></span>
+
+|<span data-ttu-id="8ed41-142">Atributo de assembly</span><span class="sxs-lookup"><span data-stu-id="8ed41-142">Assembly attribute</span></span>|<span data-ttu-id="8ed41-143">Nível 2</span><span class="sxs-lookup"><span data-stu-id="8ed41-143">Level 2</span></span>|<span data-ttu-id="8ed41-144">Nível 1</span><span class="sxs-lookup"><span data-stu-id="8ed41-144">Level 1</span></span>|
+|------------------------|-------------|-------------|
+|<span data-ttu-id="8ed41-145">Nenhum atributo em um assembly parcialmente confiável</span><span class="sxs-lookup"><span data-stu-id="8ed41-145">No attribute on a partially trusted assembly</span></span>|<span data-ttu-id="8ed41-146">Tipos e membros são por padrão transparente, mas podem ser crítico para segurança ou segurança-seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="8ed41-146">Types and members are by default transparent, but can be security-critical or security-safe-critical.</span></span>|<span data-ttu-id="8ed41-147">Todos os tipos e membros são transparentes.</span><span class="sxs-lookup"><span data-stu-id="8ed41-147">All types and members are transparent.</span></span>|
+|<span data-ttu-id="8ed41-148">Nenhum atributo</span><span class="sxs-lookup"><span data-stu-id="8ed41-148">No attribute</span></span>|<span data-ttu-id="8ed41-149">Não especificar nenhum atributo faz com que o common language runtime determinar as regras de transparência para você.</span><span class="sxs-lookup"><span data-stu-id="8ed41-149">Specifying no attribute causes the common language runtime to determine the transparency rules for you.</span></span> <span data-ttu-id="8ed41-150">Todos os tipos e membros são críticos para segurança, exceto onde sendo crítico para segurança viola uma regra de herança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-150">All types and members are security-critical, except where being security-critical violates an inheritance rule.</span></span>|<span data-ttu-id="8ed41-151">Em um assembly totalmente confiável (no cache de assembly global ou identificado como confiança total no `AppDomain`) todos os tipos são transparentes e todos os membros são segurança-seguro-crítica.</span><span class="sxs-lookup"><span data-stu-id="8ed41-151">On a fully trusted assembly (in the global assembly cache or identified as full trust in the `AppDomain`) all types are transparent and all members are security-safe-critical.</span></span>|
+|`SecurityTransparent`|<span data-ttu-id="8ed41-152">Todos os tipos e membros são transparentes.</span><span class="sxs-lookup"><span data-stu-id="8ed41-152">All types and members are transparent.</span></span>|<span data-ttu-id="8ed41-153">Todos os tipos e membros são transparentes.</span><span class="sxs-lookup"><span data-stu-id="8ed41-153">All types and members are transparent.</span></span>|
+|`SecurityCritical(SecurityCriticalScope.Everything)`|<span data-ttu-id="8ed41-154">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="8ed41-154">Not applicable.</span></span>|<span data-ttu-id="8ed41-155">Todos os tipos e membros são críticos para segurança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-155">All types and members are security-critical.</span></span>|
+|`SecurityCritical`|<span data-ttu-id="8ed41-156">Todo o código que é introduzido pelos tipos neste assembly é essencial; todos os outros códigos é transparente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-156">All code that is introduced by types in this assembly is critical; all other code is transparent.</span></span> <span data-ttu-id="8ed41-157">Se você substituir um método virtual ou abstract ou implementa um método de interface, você deve anotar explicitamente o método como `SecurityCritical` ou `SecuritySafeCritical`.</span><span class="sxs-lookup"><span data-stu-id="8ed41-157">If you override a virtual or abstract method or implement an interface method, you must explicitly annotate the method as `SecurityCritical` or `SecuritySafeCritical`.</span></span>|<span data-ttu-id="8ed41-158">Todo o código padrão é transparente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-158">All code defaults to transparent.</span></span> <span data-ttu-id="8ed41-159">No entanto, os membros e tipos individuais podem ter outros atributos.</span><span class="sxs-lookup"><span data-stu-id="8ed41-159">However, individual types and members can have other attributes.</span></span>|
+
+### <a name="type-and-member-annotation"></a><span data-ttu-id="8ed41-160">Tipo e Anotação do Membro</span><span class="sxs-lookup"><span data-stu-id="8ed41-160">Type and Member Annotation</span></span>
+
+<span data-ttu-id="8ed41-161">Os atributos de segurança que são aplicados a um tipo também se aplicam aos membros que são introduzidos pelo tipo.</span><span class="sxs-lookup"><span data-stu-id="8ed41-161">The security attributes that are applied to a type also apply to the members that are introduced by the type.</span></span> <span data-ttu-id="8ed41-162">No entanto, eles não se aplicam ao virtual ou abstract substitui das implementações de interface ou classe base.</span><span class="sxs-lookup"><span data-stu-id="8ed41-162">However, they do not apply to virtual or abstract overrides of the base class or interface implementations.</span></span> <span data-ttu-id="8ed41-163">As seguintes regras se aplicam ao uso de atributos no nível do tipo e membro:</span><span class="sxs-lookup"><span data-stu-id="8ed41-163">The following rules apply to the use of attributes at the type and member level:</span></span>
+
+- <span data-ttu-id="8ed41-164">`SecurityCritical`: O tipo ou membro é crítico e pode ser chamado somente pelo código de confiança total.</span><span class="sxs-lookup"><span data-stu-id="8ed41-164">`SecurityCritical`: The type or member is critical and can be called only by full-trust code.</span></span> <span data-ttu-id="8ed41-165">Métodos que são introduzidos em um tipo crítico de segurança são essenciais.</span><span class="sxs-lookup"><span data-stu-id="8ed41-165">Methods that are introduced in a security-critical type are critical.</span></span>
+
+    > [!IMPORTANT]
+    > <span data-ttu-id="8ed41-166">Métodos abstratos e virtuais que são introduzidos em interfaces ou classes base e substituídos ou implementados em uma classe de segurança críticas são transparentes por padrão.</span><span class="sxs-lookup"><span data-stu-id="8ed41-166">Virtual and abstract methods that are introduced in base classes or interfaces, and overridden or implemented in a security-critical class are transparent by default.</span></span> <span data-ttu-id="8ed41-167">Eles devem ser identificados como `SecuritySafeCritical` ou `SecurityCritical`.</span><span class="sxs-lookup"><span data-stu-id="8ed41-167">They must be identified as either `SecuritySafeCritical` or `SecurityCritical`.</span></span>
+
+- <span data-ttu-id="8ed41-168">`SecuritySafeCritical`: O tipo ou membro é crítico.</span><span class="sxs-lookup"><span data-stu-id="8ed41-168">`SecuritySafeCritical`: The type or member is safe-critical.</span></span> <span data-ttu-id="8ed41-169">No entanto, o tipo ou membro pode ser chamado no código transparent de (parcialmente confiável) e é tão potentes quanto qualquer outro código crítico.</span><span class="sxs-lookup"><span data-stu-id="8ed41-169">However, the type or member can be called from transparent (partially trusted) code and is as capable as any other critical code.</span></span> <span data-ttu-id="8ed41-170">O código deve ser auditado para segurança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-170">The code must be audited for security.</span></span>
+
+[<span data-ttu-id="8ed41-171">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="8ed41-171">Back to top</span></span>](#top)
+
+<a name="override"></a>
+
+## <a name="override-patterns"></a><span data-ttu-id="8ed41-172">Substituir Padrões</span><span class="sxs-lookup"><span data-stu-id="8ed41-172">Override Patterns</span></span>
+
+<span data-ttu-id="8ed41-173">A tabela a seguir mostra as substituições de método permitidas para a transparência de nível 2.</span><span class="sxs-lookup"><span data-stu-id="8ed41-173">The following table shows the method overrides allowed for level 2 transparency.</span></span>
+
+|<span data-ttu-id="8ed41-174">Membro de base virtuais/interface</span><span class="sxs-lookup"><span data-stu-id="8ed41-174">Base virtual/interface member</span></span>|<span data-ttu-id="8ed41-175">Substituição/interface</span><span class="sxs-lookup"><span data-stu-id="8ed41-175">Override/interface</span></span>|
+|------------------------------------|-------------------------|
+|`Transparent`|`Transparent`|
+|`Transparent`|`SafeCritical`|
+|`SafeCritical`|`Transparent`|
+|`SafeCritical`|`SafeCritical`|
+|`Critical`|`Critical`|
+
+[<span data-ttu-id="8ed41-176">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="8ed41-176">Back to top</span></span>](#top)
+
+<a name="inheritance"></a>
+
+## <a name="inheritance-rules"></a><span data-ttu-id="8ed41-177">Regras de Herança</span><span class="sxs-lookup"><span data-stu-id="8ed41-177">Inheritance Rules</span></span>
+
+<span data-ttu-id="8ed41-178">Nesta seção, a ordem a seguir é atribuída a `Transparent`, `Critical`, e `SafeCritical` código com base no acesso e recursos:</span><span class="sxs-lookup"><span data-stu-id="8ed41-178">In this section, the following order is assigned to `Transparent`, `Critical`, and `SafeCritical` code based on access and capabilities:</span></span>
+
+`Transparent` < `SafeCritical` < `Critical`
+
+- <span data-ttu-id="8ed41-179">Regras para tipos: Saindo da esquerda para a direita, o acesso se torna mais restritivo.</span><span class="sxs-lookup"><span data-stu-id="8ed41-179">Rules for types: Going from left to right, access becomes more restrictive.</span></span> <span data-ttu-id="8ed41-180">Tipos derivados devam ser, pelo menos, tão restritivos quanto o tipo base.</span><span class="sxs-lookup"><span data-stu-id="8ed41-180">Derived types must be at least as restrictive as the base type.</span></span>
+
+- <span data-ttu-id="8ed41-181">Regras para métodos: Métodos derivados não podem alterar a acessibilidade do método base.</span><span class="sxs-lookup"><span data-stu-id="8ed41-181">Rules for methods: Derived methods cannot change accessibility from the base method.</span></span> <span data-ttu-id="8ed41-182">Para o comportamento padrão, todos os métodos derivados que não são anotados são `Transparent`.</span><span class="sxs-lookup"><span data-stu-id="8ed41-182">For default behavior, all derived methods that are not annotated are `Transparent`.</span></span> <span data-ttu-id="8ed41-183">Derivados de tipos critical causam uma exceção seja gerada se o método substituído não é anotado explicitamente como `SecurityCritical`.</span><span class="sxs-lookup"><span data-stu-id="8ed41-183">Derivatives of critical types cause an exception to be thrown if the overridden method is not explicitly annotated as `SecurityCritical`.</span></span>
+
+<span data-ttu-id="8ed41-184">A tabela a seguir mostra o tipo permitido padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-184">The following table shows the allowed type inheritance patterns.</span></span>
+
+|<span data-ttu-id="8ed41-185">Classe base</span><span class="sxs-lookup"><span data-stu-id="8ed41-185">Base class</span></span>|<span data-ttu-id="8ed41-186">Classe derivada pode ser</span><span class="sxs-lookup"><span data-stu-id="8ed41-186">Derived class can be</span></span>|
+|----------------|--------------------------|
+|`Transparent`|`Transparent`|
+|`Transparent`|`SafeCritical`|
+|`Transparent`|`Critical`|
+|`SafeCritical`|`SafeCritical`|
+|`SafeCritical`|`Critical`|
+|`Critical`|`Critical`|
+
+<span data-ttu-id="8ed41-187">A tabela a seguir mostra o tipo não permitido em padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-187">The following table shows the disallowed type inheritance patterns.</span></span>
+
+|<span data-ttu-id="8ed41-188">Classe base</span><span class="sxs-lookup"><span data-stu-id="8ed41-188">Base class</span></span>|<span data-ttu-id="8ed41-189">Classe derivada não pode ser</span><span class="sxs-lookup"><span data-stu-id="8ed41-189">Derived class cannot be</span></span>|
+|----------------|-----------------------------|
+|`SafeCritical`|`Transparent`|
+|`Critical`|`Transparent`|
+|`Critical`|`SafeCritical`|
+
+<span data-ttu-id="8ed41-190">A tabela a seguir mostra o método permitido padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-190">The following table shows the allowed method inheritance patterns.</span></span>
+
+|<span data-ttu-id="8ed41-191">Método base</span><span class="sxs-lookup"><span data-stu-id="8ed41-191">Base method</span></span>|<span data-ttu-id="8ed41-192">Método derivado pode ser</span><span class="sxs-lookup"><span data-stu-id="8ed41-192">Derived method can be</span></span>|
+|-----------------|---------------------------|
+|`Transparent`|`Transparent`|
+|`Transparent`|`SafeCritical`|
+|`SafeCritical`|`Transparent`|
+|`SafeCritical`|`SafeCritical`|
+|`Critical`|`Critical`|
+
+<span data-ttu-id="8ed41-193">A tabela a seguir mostra o método não permitido em padrões de herança.</span><span class="sxs-lookup"><span data-stu-id="8ed41-193">The following table shows the disallowed method inheritance patterns.</span></span>
+
+|<span data-ttu-id="8ed41-194">Método base</span><span class="sxs-lookup"><span data-stu-id="8ed41-194">Base method</span></span>|<span data-ttu-id="8ed41-195">Método derivado não pode ser</span><span class="sxs-lookup"><span data-stu-id="8ed41-195">Derived method cannot be</span></span>|
+|-----------------|------------------------------|
+|`Transparent`|`Critical`|
+|`SafeCritical`|`Critical`|
+|`Critical`|`Transparent`|
+|`Critical`|`SafeCritical`|
+
+> [!NOTE]
+> <span data-ttu-id="8ed41-196">Essas regras de herança se aplicam a membros e tipos de nível 2.</span><span class="sxs-lookup"><span data-stu-id="8ed41-196">These inheritance rules apply to level 2 types and members.</span></span> <span data-ttu-id="8ed41-197">Tipos em assemblies de nível 1 podem herdar de membros e tipos de segurança crítica de nível 2.</span><span class="sxs-lookup"><span data-stu-id="8ed41-197">Types in level 1 assemblies can inherit from level 2 security-critical types and members.</span></span> <span data-ttu-id="8ed41-198">Portanto, os membros e tipos de nível 2 devem ter demandas de herança separados para os herdeiros de nível 1.</span><span class="sxs-lookup"><span data-stu-id="8ed41-198">Therefore, level 2 types and members must have separate inheritance demands for level 1 inheritors.</span></span>
+
+[<span data-ttu-id="8ed41-199">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="8ed41-199">Back to top</span></span>](#top)
+
+<a name="additional"></a>
+
+## <a name="additional-information-and-rules"></a><span data-ttu-id="8ed41-200">Informações Adicionais e Regras</span><span class="sxs-lookup"><span data-stu-id="8ed41-200">Additional Information and Rules</span></span>
+
+### <a name="linkdemand-support"></a><span data-ttu-id="8ed41-201">Suporte LinkDemand</span><span class="sxs-lookup"><span data-stu-id="8ed41-201">LinkDemand Support</span></span>
+
+<span data-ttu-id="8ed41-202">O modelo de transparência de nível 2 substitui o <xref:System.Security.Permissions.SecurityAction.LinkDemand> com o <xref:System.Security.SecurityCriticalAttribute> atributo.</span><span class="sxs-lookup"><span data-stu-id="8ed41-202">The level 2 transparency model replaces the <xref:System.Security.Permissions.SecurityAction.LinkDemand> with the <xref:System.Security.SecurityCriticalAttribute> attribute.</span></span> <span data-ttu-id="8ed41-203">No código herdado (nível 1), uma <xref:System.Security.Permissions.SecurityAction.LinkDemand> são tratados automaticamente como um <xref:System.Security.Permissions.SecurityAction.Demand>.</span><span class="sxs-lookup"><span data-stu-id="8ed41-203">In legacy (level 1) code, a <xref:System.Security.Permissions.SecurityAction.LinkDemand> is automatically treated as a <xref:System.Security.Permissions.SecurityAction.Demand>.</span></span>
+
+### <a name="reflection"></a><span data-ttu-id="8ed41-204">Reflexão</span><span class="sxs-lookup"><span data-stu-id="8ed41-204">Reflection</span></span>
+
+<span data-ttu-id="8ed41-205">Invocar um método crítico ou a leitura de um campo crítica aciona uma demanda para confiança total (como se você invocou um método particular ou campo).</span><span class="sxs-lookup"><span data-stu-id="8ed41-205">Invoking a critical method or reading a critical field triggers a demand for full trust (just as if you were invoking a private method or field).</span></span> <span data-ttu-id="8ed41-206">Portanto, o código de confiança total pode invocar um método crítico, enquanto o código de confiança parcial não pode.</span><span class="sxs-lookup"><span data-stu-id="8ed41-206">Therefore, full-trust code can invoke a critical method, whereas partial-trust code cannot.</span></span>
+
+<span data-ttu-id="8ed41-207">As propriedades a seguir foram adicionadas para o <xref:System.Reflection> namespace para determinar se o tipo, método ou campo é `SecurityCritical`, `SecuritySafeCritical`, ou `SecurityTransparent`: <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>.</span><span class="sxs-lookup"><span data-stu-id="8ed41-207">The following properties have been added to the <xref:System.Reflection> namespace to determine whether the type, method, or field is `SecurityCritical`, `SecuritySafeCritical`, or `SecurityTransparent`:  <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, and <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>.</span></span> <span data-ttu-id="8ed41-208">Use essas propriedades para determinar a transparência por meio de reflexão em vez de verificar a presença do atributo.</span><span class="sxs-lookup"><span data-stu-id="8ed41-208">Use these properties to determine transparency by using reflection instead of checking for the presence of the attribute.</span></span> <span data-ttu-id="8ed41-209">As regras de transparência são complexas e verificando o atributo pode não ser suficiente.</span><span class="sxs-lookup"><span data-stu-id="8ed41-209">The transparency rules are complex, and checking for the attribute may not be sufficient.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="8ed41-210">Um `SafeCritical` retorn `true` para ambos <xref:System.Type.IsSecurityCritical%2A> e <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, pois `SafeCritical` é realmente fundamental (ele tem os mesmos recursos que o código critical, mas ele pode ser chamado no código transparent).</span><span class="sxs-lookup"><span data-stu-id="8ed41-210">A `SafeCritical` method returns `true` for both <xref:System.Type.IsSecurityCritical%2A> and <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, because `SafeCritical` is indeed critical (it has the same capabilities as critical code, but it can be called from transparent code).</span></span>
+
+<span data-ttu-id="8ed41-211">Métodos dinâmicos herdam a transparência dos módulos que eles são anexados a; eles não herdam a transparência do tipo (se eles são anexados a um tipo).</span><span class="sxs-lookup"><span data-stu-id="8ed41-211">Dynamic methods inherit the transparency of the modules they are attached to; they do not inherit the transparency of the type (if they are attached to a type).</span></span>
+
+### <a name="skip-verification-in-full-trust"></a><span data-ttu-id="8ed41-212">Ignorar Verificação em Confiança Total</span><span class="sxs-lookup"><span data-stu-id="8ed41-212">Skip Verification in Full Trust</span></span>
+
+<span data-ttu-id="8ed41-213">Você pode ignorar a verificação de assemblies transparentes totalmente confiáveis, definindo o <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> propriedade para `true` no <xref:System.Security.SecurityRulesAttribute> atributo:</span><span class="sxs-lookup"><span data-stu-id="8ed41-213">You can skip verification for fully trusted transparent assemblies by setting the <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> property to `true` in the <xref:System.Security.SecurityRulesAttribute> attribute:</span></span>
+
+`[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
+
+<span data-ttu-id="8ed41-214">O <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> é de propriedade `false` por padrão, portanto, a propriedade deve ser definida como `true` para ignorar a verificação.</span><span class="sxs-lookup"><span data-stu-id="8ed41-214">The <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> property is `false` by default, so the property must be set to `true` to skip verification.</span></span> <span data-ttu-id="8ed41-215">Isso deve ser feito para apenas para fins de otimização.</span><span class="sxs-lookup"><span data-stu-id="8ed41-215">This should be done for optimization purposes only.</span></span> <span data-ttu-id="8ed41-216">Você deve garantir que o código transparente no assembly é verificável usando o `transparent` opção de [ferramenta PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).</span><span class="sxs-lookup"><span data-stu-id="8ed41-216">You should ensure that the transparent code in the assembly is verifiable by using the `transparent` option in the [PEVerify tool](../../../docs/framework/tools/peverify-exe-peverify-tool.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="8ed41-217">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ed41-217">See also</span></span>
+
+- [<span data-ttu-id="8ed41-218">Código transparente de segurança, nível 1</span><span class="sxs-lookup"><span data-stu-id="8ed41-218">Security-Transparent Code, Level 1</span></span>](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [<span data-ttu-id="8ed41-219">Alterações de segurança</span><span class="sxs-lookup"><span data-stu-id="8ed41-219">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)
