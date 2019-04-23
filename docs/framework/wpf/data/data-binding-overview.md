@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315316"
 ---
 # <a name="data-binding-overview"></a>Visão geral da vinculação de dados
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associação de dados fornece uma maneira simple e consistente para os aplicativos apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>tais como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>tais como <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> tem uma funcionalidade interna para permitir a estilização flexível de um único item de dados ou coleções de itens de dados. É possível gerar exibições com classificação, filtragem e agrupamento dos dados.  
+A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>tais como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>tais como <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> tem uma funcionalidade interna para permitir a estilização flexível de um único item de dados ou coleções de itens de dados. É possível gerar exibições com classificação, filtragem e agrupamento dos dados.  
   
  A funcionalidade de vinculação de dados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem várias vantagens sobre modelos tradicionais, incluindo uma ampla gama de propriedades que herdam suporte a vinculação de dados, representação de dados de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] flexível e separação clara entre a lógica de negócios e a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59315316"
   
 -   A propriedade de destino deve ser uma propriedade de dependência. A maioria dos <xref:System.Windows.UIElement> propriedades são propriedades de dependência e a maioria das propriedades de dependência, exceto as somente leitura, dão suporte à vinculação de dados por padrão. (Somente <xref:System.Windows.DependencyObject> tipos podem definir as propriedades de dependência e todos os <xref:System.Windows.UIElement>s derivam de <xref:System.Windows.DependencyObject>.)  
   
--   Embora não especificado na figura, deve-se observar que o objeto de origem da associação não é restrito a ser um objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personalizado. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associação de dados oferece suporte a dados na forma de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objetos e [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Para dar alguns exemplos, sua origem da associação pode ser um <xref:System.Windows.UIElement>, qualquer objeto de lista, uma [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto está associado [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] dados ou serviços da Web ou um XmlNode que contém seu [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados. Para obter mais informações, consulte [Visão geral de origens da associação](binding-sources-overview.md).  
+-   Embora não especificado na figura, deve-se observar que o objeto de origem da associação não é restrito a ser um objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personalizado. A vinculação de dados do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte a dados na forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Para dar alguns exemplos, sua origem da associação pode ser um <xref:System.Windows.UIElement>, qualquer objeto de lista, uma [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto está associado [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] dados ou serviços da Web ou um XmlNode que contém seu [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados. Para obter mais informações, consulte [Visão geral de origens da associação](binding-sources-overview.md).  
   
  Conforme você lê outros tópicos do [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], é importante lembrar que quando você está estabelecendo uma associação, você está associando um destino da associação *a* uma origem da associação. Por exemplo, se você estiver exibindo alguns subjacente [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados em um <xref:System.Windows.Controls.ListBox> usando a associação de dados, você está associando seu <xref:System.Windows.Controls.ListBox> para o [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "59315316"
   
 -   [Obter o objeto de associação de uma propriedade de destino associada](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [Controlar quando o texto de TextBox atualiza a origem](how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [Controlar quando o texto da caixa de texto atualiza a origem](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Conversão de dados  
@@ -430,9 +430,9 @@ ms.locfileid: "59315316"
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [Novidades do WPF versão 4.5](../getting-started/whats-new.md)
+- [Novidades no WPF versão 4.5](../getting-started/whats-new.md)
 - [Associar aos resultados de uma consulta LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Associação de dados](../advanced/optimizing-performance-data-binding.md)
 - [Demonstração de associação de dados](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)
 - [Associar a uma fonte de dados ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

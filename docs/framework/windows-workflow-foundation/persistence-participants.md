@@ -3,10 +3,10 @@ title: Participantes de persistência
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316356"
 ---
 # <a name="persistence-participants"></a>Participantes de persistência
@@ -58,8 +58,8 @@ Um participante de persistência pode participar em uma operação de persistên
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Como: criar um participante de persistência personalizado](how-to-create-a-custom-persistence-participant.md)  
+-   [Como: Criar um participante personalizado de persistência](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Extensibilidade de Store](store-extensibility.md)
+- [Extensibilidade de repositório](store-extensibility.md)

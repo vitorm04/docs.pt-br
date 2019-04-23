@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316447"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros (Visual Basic)
@@ -56,12 +56,12 @@ Se um procedimento tem um [ParamArray](../../../../visual-basic/language-referen
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos](./index.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
-- [Parâmetros opcionais](./optional-parameters.md)
-- [Matrizes de parâmetros](./parameter-arrays.md)
-- [Sobrecarga de procedimento](./procedure-overloading.md)
-- [Solução de problemas de procedimentos](./troubleshooting-procedures.md)
-- [Como: definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Como: chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
-- [Como: sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Resolução de sobrecarga](./overload-resolution.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros Opcionais](./optional-parameters.md)
+- [Matrizes de Parâmetros](./parameter-arrays.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
+- [Como: Definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Como: Chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md)
+- [Como: Sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Resolução de Sobrecarga](./overload-resolution.md)

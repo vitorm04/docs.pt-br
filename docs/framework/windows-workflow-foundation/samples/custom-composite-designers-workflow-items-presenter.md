@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344865"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Designer de compostos personalizados - apresentador de itens de fluxo de trabalho
@@ -36,7 +36,7 @@ ms.locfileid: "59344865"
 
 -   A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Algumas coisas para indicar:
 
-    -   Observe o uso de associação de dados de WPF associar a `ModelItem.Branches`. `ModelItem` é a propriedade em `WorkflowElementDesigner` que se refere ao objeto subjacente que o designer está sendo usado para, nesse caso, nossa `Parallel`.
+    -   Observe o uso de associação de dados de WPF associar a `ModelItem.Branches`. `ModelItem` é a propriedade em `WorkflowElementDesigner` que refere-se ao objeto subjacente que o designer está sendo usado para, nesse caso, nosso `Parallel`.
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> pode ser usado para colocar um visual para exibir entre os itens individuais na coleção.
 
@@ -160,4 +160,4 @@ End Sub
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [Desenvolvendo aplicativos com designers de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345892"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Como: Deixar o controle invisível em tempo de execução
@@ -43,4 +43,4 @@ Há vezes em que você quer criar um controle de usuário invisível em tempo de
 
 - <xref:System.Windows.Forms.Control.Visible%2A>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Como: Dar ao controle um segundo plano transparente](how-to-give-your-control-a-transparent-background.md)
+- [Como: Dar ao controle uma tela de fundo transparente](how-to-give-your-control-a-transparent-background.md)

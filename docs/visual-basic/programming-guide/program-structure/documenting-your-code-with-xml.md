@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 ms.openlocfilehash: 6b9fe9994b7bdf2259dcdb1ecef906e0f9955c8f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480619"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentando o código com XML (Visual Basic)
@@ -41,13 +41,13 @@ Para obter detalhes sobre como criar um arquivo XML com comentários de document
 
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 
-- [marcações de comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
 
-- [Processar o arquivo XML](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)
+- [Processando o Arquivo XML](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)
 
-- [Como: criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Como: Criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 
-- [Ferramentas XML no (Visual Studio)](/visualstudio/xml-tools/xml-tools-in-visual-studio)
+- [Ferramentas XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 
 ## <a name="see-also"></a>Consulte também
 

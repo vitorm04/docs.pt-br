@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346126"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como: usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
@@ -59,5 +59,5 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Ferramenta de Definição de Esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Como: serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como: desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
 ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313587"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency em um aplicativo ASP.NET
@@ -60,4 +60,4 @@ O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependen
 ## <a name="see-also"></a>Consulte também
 
 - [Notificações de consulta no SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

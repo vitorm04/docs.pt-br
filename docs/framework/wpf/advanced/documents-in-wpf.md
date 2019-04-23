@@ -11,18 +11,18 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313951"
 ---
 # <a name="documents-in-wpf"></a>Documentos no WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece uma ampla gama de recursos de documento que permitem a criação de conteúdo de alta fidelidade que é projetado para ser mais facilmente acessado e lido que nas gerações anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Além das capacidades e da qualidade aprimoradas, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece serviços integrados para exibição, empacotamento e segurança de documentos. Este tópico fornece uma introdução aos tipos de documento e ao empacotamento de documento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece uma ampla gama de recursos de documento que permitem a criação de conteúdo de alta fidelidade, projetado para ser mais facilmente acessado e lido que nas gerações anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Além das capacidades e da qualidade aprimoradas, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece serviços integrados para exibição, empacotamento e segurança de documentos. Este tópico fornece uma introdução aos tipos de documento e ao empacotamento de documento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>Tipos de documentos  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] divide os documentos em duas amplas categorias com base em seu uso pretendido; Essas categorias de documentos são chamadas de "documentos estáticos" e "documentos dinâmicos".  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] divide os documentos em duas grandes categorias com base em seu uso pretendido. Essas categorias de documentos são chamadas de "documentos estáticos" e "documentos dinâmicos".  
   
  Os documentos estáticos são destinados para aplicações que exigem uma apresentação [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] precisa, independente do hardware de vídeo ou da impressora usada. Os usos típicos de documentos estáticos incluem a editoração eletrônica, o processamento de texto e o layout de formulário, nos quais a aderência ao design original da página é essencial. Como parte de seu layout, um documento estático mantém o posicionamento preciso dos elementos de conteúdo, independente do dispositivo de impressão ou de exibição em uso. Por exemplo, uma página de documento estático exibida em uma tela de 96 dpi parecerá exatamente a mesma quando enviada a uma impressora a laser de 600 dpi ou quando for enviada para uma fotocompositora de 4800 dpi. O layout da página permanece o mesmo em todos os casos, embora a qualidade do documento seja maximizada para as capacidades de cada dispositivo.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59313951"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Texto na interface do usuário  
- Além de adicionar texto a documentos, o texto também pode ser usado, obviamente, na interface do usuário do aplicativo, como em formulários. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações. Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado quando suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> pode ser usado quando suporte mínimo a texto é necessário. Para obter mais informações, consulte [Visão geral do TextBlock](../controls/textblock-overview.md).  
+ Além de adicionar texto a documentos, o texto também pode ser usado, obviamente, na interface do usuário do aplicativo, como em formulários. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações. Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado quando suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> pode ser usado quando suporte mínimo a texto é necessário. Para obter mais informações, consulte [Visão geral do TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Empacotamento de documento  
@@ -61,7 +61,7 @@ ms.locfileid: "59313951"
   
  A arquitetura de pacote do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] serve como base para várias tecnologias-chave:  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] documentos em conformidade com o [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+-   Conformidade de documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] com o [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
 -   Formato de documentos Microsoft Office "12" Open XML (.docx).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59313951"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>Documentos XPS  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] documento é um pacote que contém um ou mais documentos estáticos junto com todos os recursos e as informações necessárias para a renderização.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] também é nativo [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] formato de arquivo de spool de impressão.  Um <xref:System.Windows.Xps.Packaging.XpsDocument> é armazenada no conjunto de dados ZIP padrão e pode incluir uma combinação de componentes XML e binários, como arquivos de imagem e fontes. Os [PackageRelationships](#PackageRelationships) são usados para definir as dependências entre o conteúdo e os recursos necessários para renderizar completamente o documento.  O <xref:System.Windows.Xps.Packaging.XpsDocument> design fornece uma solução de documento único e de alta fidelidade que dá suporte a vários usos:  
+ O documento [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] é um pacote que contém um ou mais documentos estáticos junto com todos os recursos e informações necessárias para a renderização.  O [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] também é o formato de arquivo de spool de impressão nativo do [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Um <xref:System.Windows.Xps.Packaging.XpsDocument> é armazenada no conjunto de dados ZIP padrão e pode incluir uma combinação de componentes XML e binários, como arquivos de imagem e fontes. Os [PackageRelationships](#PackageRelationships) são usados para definir as dependências entre o conteúdo e os recursos necessários para renderizar completamente o documento.  O <xref:System.Windows.Xps.Packaging.XpsDocument> design fornece uma solução de documento único e de alta fidelidade que dá suporte a vários usos:  
   
 -   Leitura, gravação e armazenamento de conteúdo e recursos de documento estático como um arquivo simples, portátil e de fácil distribuição.  
   
@@ -144,5 +144,5 @@ ms.locfileid: "59313951"
 - <xref:System.Windows.Controls.DocumentViewer>
 - [Texto](optimizing-performance-text.md)
 - [Visão geral do documento de fluxo](flow-document-overview.md)
-- [Visão geral da impressão](printing-overview.md)
-- [Serialização e armazenamento do documento](document-serialization-and-storage.md)
+- [Visão Geral da Impressão](printing-overview.md)
+- [Serialização e armazenamento de documentos](document-serialization-and-storage.md)

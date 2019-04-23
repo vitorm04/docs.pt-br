@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
 ms.openlocfilehash: e87017f3698bc88a123d8a0ba0df5dbe2b7bbfd9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314861"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Como: Alterar o tipo de uma coluna DataGridView do Windows Forms usando o designer
@@ -38,4 +38,4 @@ ms.locfileid: "59314861"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - [Como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)

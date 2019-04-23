@@ -4,10 +4,10 @@ description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481087"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#
@@ -61,7 +61,7 @@ Há muito mais para aprender sobre C#.  Os tópicos a seguir fornecem uma visão
   - Você usa ***instruções*** para expressar as ações de um programa.
 * [Classes e objetos](classes-and-objects.md)
   - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
-* [Structs](structs.md)
+* [Estruturas](structs.md)
   - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
 * [Matrizes](arrays.md)
   - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.

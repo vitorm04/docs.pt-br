@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315134"
 ---
 # <a name="how-to-create-an-activity"></a>Como: criar uma atividade
@@ -46,7 +46,7 @@ As atividades são a unidade principal de comportamento no [!INCLUDE[wf1](../../
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > A atividade `ReadInt` é derivada de <xref:System.Activities.NativeActivity%601> em vez de <xref:System.Activities.CodeActivity>, que é o padrão para o modelo de atividade de código. <xref:System.Activities.CodeActivity%601> pode ser usado se a atividade fornece um único resultado, o que é exposto por meio de <xref:System.Activities.Activity%601.Result%2A> argumento, mas <xref:System.Activities.CodeActivity%601> não oferece suporte ao uso de indicadores, portanto, <xref:System.Activities.NativeActivity%601> é usado.
+    > A atividade `ReadInt` é derivada de <xref:System.Activities.NativeActivity%601> em vez de <xref:System.Activities.CodeActivity>, que é o padrão para o modelo de atividade de código. <xref:System.Activities.CodeActivity%601> poderá ser usado se a atividade fornecer um único resultado, que é exposto através do argumento <xref:System.Activities.Activity%601.Result%2A>, mas <xref:System.Activities.CodeActivity%601> não oferece suporte ao uso de indicadores, portanto <xref:System.Activities.NativeActivity%601> será usado.
 
 ## <a name="create-the-prompt-activity"></a>Criar a atividade de Prompt
 
@@ -107,6 +107,6 @@ Para obter instruções sobre como criar um fluxo de trabalho por meio dessas at
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
 - [Criando e implementando atividades personalizadas](designing-and-implementing-custom-activities.md)
-- [Guia de introdução ao tutorial](getting-started-tutorial.md)
-- [Como: criar um fluxo de trabalho](how-to-create-a-workflow.md)
+- [Tutorial de Introdução](getting-started-tutorial.md)
+- [Como: Criar um fluxo de trabalho](how-to-create-a-workflow.md)
 - [Usando o ExpressionTextBox em um designer personalizado de atividades](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

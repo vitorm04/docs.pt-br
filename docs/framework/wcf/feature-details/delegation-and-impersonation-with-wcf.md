@@ -9,10 +9,10 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345515"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
@@ -111,7 +111,7 @@ ms.locfileid: "59345515"
   
  A tabela a seguir especifica o nível de representação que o serviço obtém a representação de um token em cache.  
   
-|`AllowedImpersonationLevel` Valor |Serviço tem `SeImpersonatePrivilege`|Serviço e cliente são capazes de delegação|Token em cache `ImpersonationLevel`|  
+|Valor `AllowedImpersonationLevel`|Serviço tem `SeImpersonatePrivilege`|Serviço e cliente são capazes de delegação|Token em cache `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anônimo|Sim|N/D|Representação|  
 |Anônimo|Não|N/D|Identificação|  
@@ -220,7 +220,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [Utilizando Personificação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [Representando o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [Como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Usando a representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

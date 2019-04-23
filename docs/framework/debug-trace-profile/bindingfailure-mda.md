@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480944"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
@@ -52,7 +52,7 @@ A primeira etapa é determinar por que o CLR não pôde ser associado ao assembl
 
 - Resolva a causa conforme a determinação anterior. As possíveis opções de resolução são as seguintes:
 
-  - Instale o assembly solicitado no cache de assembly global e chame o <xref:System.Reflection.Assembly.Load%2A> método para carregar o assembly por identidade.
+  - Instale o assembly solicitado no cache de assembly global e chame o método <xref:System.Reflection.Assembly.Load%2A> para carregar o assembly por identidade.
 
   - Copie o assembly solicitado para o diretório do aplicativo e chame o método <xref:System.Reflection.Assembly.Load%2A> para carregar o assembly por identidade.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Consulte também
 
-- [Diagnosticando erros com assistentes de depuração gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

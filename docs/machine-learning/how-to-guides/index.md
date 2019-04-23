@@ -4,10 +4,10 @@ description: Saiba como realizar tarefas específicas para ajudar na criação d
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427537"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guia de instruções de aprendizado de máquina .NET – ML.NET
@@ -24,13 +24,13 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 ### <a name="prepare-the-data"></a>Preparar os dados
 
-* [Pré-processar dados de treinamento com normalizadores a ser usados no processamento de dados.](normalizers-preprocess-data-ml-net.md)
+* [Pré-processar dados de treinamento com normalizadores a serem usados no processamento de dados.](normalizers-preprocess-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Treinar o modelo
 
-* [Treinar um modelo de aprendizado de máquina usando dados que não estão em um arquivo de texto.](load-non-file-training-data-ml-net.md)
+* [Treinar um modelo de machine learning usando dados que não estão em um arquivo de texto.](load-non-file-training-data-ml-net.md)
 
-* [Treinar um modelo de aprendizado de máquina usando validação cruzada.](train-cross-validation-ml-net.md)
+* [Treinar um modelo de machine learning usando validação cruzada.](train-cross-validation-ml-net.md)
 
 * [Treinar um modelo de regressão para prever um valor usando ML.NET.](train-regression-model-ml-net.md)
 
@@ -42,7 +42,7 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 * [Determinar a importância de recursos de modelos com Importância de recursos de permutação.](determine-global-feature-importance-in-model.md)
 
-* [Usar Modelos aditivos generalizados e funções de forma para explicação do modelo.](use-gams-for-model-explainability.md)
+* [Usar modelos aditivos generalizados e funções de forma para explicação do modelo.](use-gams-for-model-explainability.md)
 
 ### <a name="feature-engineering"></a>Engenharia de recursos
 
@@ -54,7 +54,7 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 * [Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET.](inspect-intermediate-data-ml-net.md)
 
-* [Operacionalizar um modelo de aprendizado de máquina treinado em aplicativos.](consuming-model-ml-net.md)
+* [Operacionalizar um modelo de machine learning treinado em aplicativos.](consuming-model-ml-net.md)
 
 * [Usar o PredictionFunction para fazer uma previsão por vez.](single-predict-model-ml-net.md)
 

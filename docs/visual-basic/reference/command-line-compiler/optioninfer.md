@@ -9,10 +9,10 @@ helpviewer_keywords:
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315498"
 ---
 # <a name="-optioninfer"></a>-optioninfer
@@ -55,10 +55,10 @@ vbc -optioninfer+ test.vb
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Linhas de comando de compilação de exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Inferência de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Página de Compilação, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Compilando a partir da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [Compilando da Linha de Comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

@@ -3,12 +3,12 @@ title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817249"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480723"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -57,6 +57,9 @@ Dimensione e orquestre contêineres do Linux usando o Kubernetes.
 
 * [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/containers/)\
 Implante aplicativos Web ou APIs usando contêineres do Linux em um ambiente PaaS.
+
+* [Instâncias de Contêiner do Azure](https://azure.microsoft.com/services/container-instances/)\
+Hospede seu contêiner na nuvem sem qualquer serviço de gerenciamento de nível superior.
 
 * [Lote do Azure](https://azure.microsoft.com/services/batch/)\
 Execute trabalhos de computação repetitivos usando contêineres.

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
 ms.openlocfilehash: bac3ff5f08d6dc31b87191934eb5547289fb606d
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517740"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerações sobre o LINQ (WCF Data Services)
@@ -135,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Os dois exemplos anteriores são convertidos no URI de consulta: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Expandir  
+### <a name="expand"></a>Expand  
  Quando consulta um serviço de dados [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você pode solicitar que as entidades relacionadas à entidade destinada pela consulta sejam incluídas no feed retornado. O método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> é chamado no <xref:System.Data.Services.Client.DataServiceQuery%601> do conjunto de entidades definido pela consulta LINQ, com o nome do conjunto de entidades relacionadas fornecido como o parâmetro `path`. Para obter mais informações, consulte [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
  Os exemplos a seguir mostram maneiras equivalentes de usar o método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> em uma consulta:  

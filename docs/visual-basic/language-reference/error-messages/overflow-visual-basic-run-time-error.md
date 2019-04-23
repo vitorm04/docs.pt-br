@@ -5,10 +5,10 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345541"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Estouro (erro de tempo de execução do Visual Basic)
@@ -27,4 +27,4 @@ Um estouro durante a tentativa de uma atribuição que excede os limites do dest
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
-- [Tipos de erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)

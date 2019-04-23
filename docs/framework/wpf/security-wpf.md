@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313561"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
@@ -274,8 +274,8 @@ ms.locfileid: "59313561"
 ## <a name="see-also"></a>Consulte também
 
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
-- [Estratégia de segurança do WPF - segurança da plataforma](wpf-security-strategy-platform-security.md)
-- [Estratégia de segurança do WPF - engenharia de segurança](wpf-security-strategy-security-engineering.md)
+- [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
+- [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)
 - [Padrões e práticas de orientação de segurança para aplicativos](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [Segurança de acesso do código](../misc/code-access-security.md)
 - [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)

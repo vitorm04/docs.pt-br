@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314542"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
@@ -41,11 +41,11 @@ ms.locfileid: "59314542"
   
  Para criar seu primeiro aplicativo ASP.NET com reconhecimento de declarações usando o WIF, siga as instruções em uma destas referências:  
   
--   [Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Como: Criar aplicativo de Web do ASP.NET MVC com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação Baseada em Formulários](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Como: Criar um aplicativo de ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Consulte também
 

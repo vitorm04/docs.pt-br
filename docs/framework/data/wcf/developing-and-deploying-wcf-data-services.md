@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481373"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante o WCF Data Services
@@ -40,7 +40,7 @@ Este tópico aborda primeiramente o desenvolvimento e implantação dos serviço
 
 Ao desenvolver um WCF Data Service como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo ou [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site da Web usando o Visual Studio 2015, você tem a opção de servidores Web no qual executar o serviço de dados durante o desenvolvimento. Os seguintes servidores Web integram ao Visual Studio para torná-lo mais fácil de testar e depurar seus serviços de dados no computador local.
 
-1. **Servidor de IIS local**
+1. **Servidor IIS local**
 
      Quando você cria um serviço de dados que é um aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou um site do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que é executado nos Serviços de Informações da Internet (IIS), recomendamos que você desenvolva e teste o serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar seu serviço de dados no IIS, você deve torna-se de que o IIS e o Windows Communication Foundation (WCF) são instalados e configurados corretamente e conceder acesso às contas do IIS no sistema de arquivos e bancos de dados. Para obter mais informações, confira [Como: Desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
@@ -68,7 +68,7 @@ Ao desenvolver um WCF Data Service como um [!INCLUDE[vstecasp](../../../../inclu
     > [!TIP]
     > Mesmo que você pode usar o Visual Studio Development Server para testar seus serviços de dados durante o desenvolvimento, você deve testá-los novamente após implantar em um servidor Web que está executando o IIS.
 
-3. **Ambiente de desenvolvimento do Microsoft Azure**
+3. **Ambiente de desenvolvimento do Azure do Windows**
 
      Ferramentas do Windows Azure para Visual Studio inclui um conjunto integrado de ferramentas para desenvolvimento de serviços do Windows Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Microsoft Azure e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados que é executado na plataforma Windows Azure. Você pode baixar ferramentas do Windows Azure para Visual Studio a partir de [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre como desenvolver um serviço de dados que é executado no Windows Azure, consulte a postagem [Implantando um OData Service no Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -90,17 +90,17 @@ Você deve considerar o seguinte ao desenvolver um serviço de dados:
 
 O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o serviço de dados. Você pode usar o Visual Studio para implantar um serviço de dados para as seguintes plataformas:
 
-- **Servidor Web hospedado no IIS**
+- **IIS-Hosted Web Server**
 
     Quando um serviço de dados é desenvolvido como um projeto do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], ele pode ser implantado em um servidor Web no IIS usando os processos de implantação padrão do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  O Visual Studio fornece as seguintes tecnologias de implantação para [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], dependendo do tipo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto que hospeda o serviço de dados que você está implantando.
 
-  - **Tecnologias de implantação para aplicativos Web ASP.NET**
+  - **Tecnologias de implantação para aplicativos Web do ASP.NET**
 
     - [Como: Criar um pacote de implantação da Web no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
     - [Como: Implantar uma Web de publicação de projeto usando um único clique no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
-  - **Tecnologias de implantação para sites Web ASP.NET**
+  - **Tecnologias de implantação para Sites da Web ASP.NET**
 
     - [Como: Copiar arquivos de Site da Web com a ferramenta Copy Web Site](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
@@ -113,7 +113,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
     > [!TIP]
     > Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, confira [Como: Desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Windows Azure**
 
      Você pode implantar um serviço de dados para o Windows Azure usando ferramentas do Windows Azure para Visual Studio. Você pode baixar ferramentas do Windows Azure para Visual Studio a partir de [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre como implantar um serviço de dados para o Windows Azure, consulte a postagem [Implantando um OData Service no Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -127,6 +127,6 @@ Você deve considerar o seguinte ao implantar um serviço de dados:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedar o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+- [Hospedagem o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
 - [Protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)

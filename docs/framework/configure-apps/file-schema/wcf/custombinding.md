@@ -3,10 +3,10 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481113"
 ---
 # <a name="custombinding"></a>\<customBinding>
@@ -193,7 +193,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai
 |[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Especifica o sistema de mensagens bidirecional para a associação personalizada. Ele é usado com os transportes que não permitem comunicações duplex nativamente, por exemplo, HTTP. TCP, por outro lado, permite que as comunicações duplex nativamente e não requer o uso desse elemento de associação para o serviço enviar mensagens para um cliente.<br /><br /> O cliente deve expor um endereço para o serviço para que entre em contato com e estabelecer uma conexão. Esse endereço de cliente é fornecido pelo `ClientBaseAddress` atributo.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Especifica um resolvedor de nome de pares de protocolo de resolução de nome de ponto a ponto (PNRP). Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Especifica a configuração para mensagens WS-Reliable. Quando esse elemento é adicionado a uma ligação personalizada, o canal resultante pode dar suporte a exatamente-uma vez as garantias de entrega. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança da associação personalizada. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança da associação personalizada. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Especifica as configurações de segurança para uma associação de fluxo SSL. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
 |[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Especifica que a associação dá suporte ao fluxo de transações e o protocolo a ser usado pelo `transactionProtocol` atributo. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Especifica as opções de segurança da associação personalizada de fluxo. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|

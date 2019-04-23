@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427442"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -18,7 +18,7 @@ Há diversas vantagens para escrever testes de unidade; eles ajudam com a regres
 
 Neste guia, você aprenderá algumas melhores práticas ao escrever testes de unidade para manter seus testes resilientes e fáceis de entender.
 
-Por [John Reese](https://reese.dev) com agradecimentos especiais a [Roy Osherove](http://osherove.com/)
+Por [John Reese](https://reese.dev) com agradecimentos especiais a [Roy Osherove](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>Por que o teste de unidade?
 
@@ -250,17 +250,17 @@ Considere o seguinte caso
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-Sua primeira reação pode ser começar a escrever um teste para `trimInput` porque você deseja certificar-se de que o método está funcionando conforme o esperado. No entanto, é totalmente possível que `ParseLogLine` manipule `sanitizedInput` de uma maneira inesperada, tornando um teste em relação a `trimInput` inútil. 
+Sua primeira reação pode ser começar a escrever um teste para `TrimInput` porque você deseja certificar-se de que o método está funcionando conforme o esperado. No entanto, é totalmente possível que `ParseLogLine` manipule `sanitizedInput` de uma maneira inesperada, tornando um teste em relação a `TrimInput` inútil. 
 
 O teste real deve ser feito em relação ao método voltado para o público `ParseLogLine`, porque esse é o que importa no fim das contas. 
 

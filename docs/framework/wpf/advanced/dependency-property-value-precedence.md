@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315680"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
@@ -39,9 +39,9 @@ ms.locfileid: "59315680"
 ## <a name="dependency-property-setting-precedence-list"></a>Lista de precedências de configuração das propriedades de dependência  
  Veja a seguir a ordem definitiva que o sistema de propriedades usa ao atribuir os valores de tempo de execução das propriedades de dependência. A precedência mais alta é listada primeiro. Essa lista se expande em algumas das generalizações feitas na [Visão geral das propriedades de dependência](dependency-properties-overview.md).  
   
-1. **Coerção do sistema de propriedade.** Para obter detalhes sobre coerção, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
+1. **Coerção do sistema de propriedades.** Para obter detalhes sobre coerção, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
   
-2. **Animações ativas ou animações com um comportamento em espera.** Para obter um efeito prático, uma animação de uma propriedade deve conseguir ter precedência sobre o valor base (não animado), mesmo que esse valor tenha sido definido localmente. Para obter detalhes, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
+2. **Animações ativas ou animações com um comportamento Em Espera.** Para obter um efeito prático, uma animação de uma propriedade deve conseguir ter precedência sobre o valor base (não animado), mesmo que esse valor tenha sido definido localmente. Para obter detalhes, consulte [Coerção, animação e valor base](#animations) mais adiante neste tópico.  
   
 3. **Valor local.** Um valor local pode ser definido por meio da conveniência da propriedade "wrapper", que também equivale à configuração como um elemento de propriedade ou atributo em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ou por uma chamada para o <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] usando uma propriedade de uma instância específica. Se você definir um valor local usando uma associação ou um recurso, cada um deles atuará na precedência como se um valor direto fosse definido.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59315680"
   
 10. **Herança.** Algumas propriedades de dependência herdam seus valores do elemento pai para os elementos filho, de modo que elas não precisam ser definidas especificamente em cada elemento em todo o aplicativo. Para obter detalhes, consulte [Herança do valor da propriedade](property-value-inheritance.md).  
   
-11. **Valor padrão de metadados de propriedade de dependência.** Uma propriedade de dependência específica pode ter um valor padrão, conforme estabelecido pelo registro do sistema de propriedades dessa propriedade específica. Além disso, as classes derivadas que herdam uma propriedade de dependência têm a opção de substituir esses metadados (incluindo o valor padrão) por tipo. Consulte [Metadados de propriedades de dependência](dependency-property-metadata.md) para obter mais informações. Como a herança é verificada antes do valor padrão em uma propriedade herdada, o valor padrão de um elemento pai tem precedência sobre um elemento filho.  Consequentemente, se uma propriedade herdável não for definida em nenhum lugar, o valor padrão especificado na raiz ou no pai será usado em vez do valor padrão do elemento filho.  
+11. **Valor padrão dos metadados de propriedades de dependência.** Uma propriedade de dependência específica pode ter um valor padrão, conforme estabelecido pelo registro do sistema de propriedades dessa propriedade específica. Além disso, as classes derivadas que herdam uma propriedade de dependência têm a opção de substituir esses metadados (incluindo o valor padrão) por tipo. Consulte [Metadados de propriedades de dependência](dependency-property-metadata.md) para obter mais informações. Como a herança é verificada antes do valor padrão em uma propriedade herdada, o valor padrão de um elemento pai tem precedência sobre um elemento filho.  Consequentemente, se uma propriedade herdável não for definida em nenhum lugar, o valor padrão especificado na raiz ou no pai será usado em vez do valor padrão do elemento filho.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -129,6 +129,6 @@ ms.locfileid: "59315680"
 
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
-- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Retornos de chamada da propriedade de dependência e validação](dependency-property-callbacks-and-validation.md)

@@ -4,12 +4,12 @@ description: Soberania de dados por microsserviço é um dos pontos principais d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464029"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611231"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 
@@ -50,16 +50,16 @@ A DDD se beneficia dos microsserviços ao obter limites reais na forma de micros
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Chris Richardson. Padrão: Database per service** \ (Padrão: banco de dados por serviço)
-  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
+  <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler. BoundedContext** \
-  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
+  <https://martinfowler.com/bliki/BoundedContext.html>
 
 - **Martin Fowler. PolyglotPersistence** \
-  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
 - **Alberto Brandolini. Design controlado por domínio estratégico com mapeamento de contexto** \
-  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
+  <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
 >[Anterior](microservices-architecture.md)

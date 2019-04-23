@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
 ms.openlocfilehash: 231dd322fd0eadb6fa13d58b527c0b047cc0e3f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315277"
 ---
 # <a name="set-not-permitted"></a>Definição não permitida
@@ -20,4 +20,4 @@ Você tentou alterar uma propriedade cujas configurações tanto não podem ser 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
 ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345502"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Como: exportar metadados para pontos de extremidade de serviço
@@ -58,5 +58,5 @@ Este tópico explica como exportar metadados de pontos de extremidade de serviç
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral da arquitetura de metadados](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Utilizando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344995"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Como: navegar por dados nos Windows Forms
@@ -52,7 +52,7 @@ Em um aplicativo do Windows, a maneira mais fácil de navegar pelos registros em
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fontes de dados com suporte do Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Notificação de alteração na associação de dados do Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)
+- [Fontes de dados com suporte nos Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)

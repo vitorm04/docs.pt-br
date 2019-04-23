@@ -12,10 +12,10 @@ helpviewer_keywords:
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
 ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314016"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Como: Adicionar Recursos de Pesquisa a um Controle ListView

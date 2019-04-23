@@ -18,10 +18,10 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314302"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Como: Criar chaves de acesso com controles de rótulo do Windows Forms
@@ -65,6 +65,6 @@ Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Dimensionar um controle de rótulo do Windows Forms para encaixar o conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Visão geral do controle de rótulo](label-control-overview-windows-forms.md)
+- [Como: Dimensionar um controle de rótulo do Windows Forms para ajustar seu conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Visão geral do controle Label](label-control-overview-windows-forms.md)
 - [Controle de rótulo](label-control-windows-forms.md)

@@ -3,12 +3,12 @@ title: Depurar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Visual Basic com o Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463417"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610711"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017
 
@@ -154,6 +154,7 @@ Para definir um ponto de interrupção condicional e testar o que acontece quand
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![Janela Imediata retornando um valor igual a true após a execução da instrução – Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Selecione o botão **Continuar** na barra de ferramentas para continuar a execução do programa.

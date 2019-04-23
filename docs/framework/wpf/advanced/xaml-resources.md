@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344917"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
@@ -128,7 +128,7 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
 -   A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Se a propriedade deve ser suportada por um <xref:System.Windows.DependencyProperty>.  
   
--   A referência é para um valor dentro de um <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   A referência é para um valor em uma <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.Freezable> que é fornecido como um valor de uma <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> propriedade, ou um <xref:System.Windows.Setter> valor.  
   
@@ -144,7 +144,7 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Esse estilo realmente tem uma chave: a chave implícita `typeof(`<xref:System.Windows.Controls.Button>`)`. Na marcação, você pode especificar uma <xref:System.Windows.Style.TargetType%2A> diretamente, como o tipo de nome (ou, opcionalmente, você pode usar [{... x: Type}](../../xaml-services/x-type-markup-extension.md) para retornar um <xref:System.Type>.  
+ Esse estilo realmente tem uma chave: a chave implícita `typeof(` <xref:System.Windows.Controls.Button> `)`. Na marcação, você pode especificar uma <xref:System.Windows.Style.TargetType%2A> diretamente, como o tipo de nome (ou, opcionalmente, você pode usar [{... x: Type}](../../xaml-services/x-type-markup-extension.md) para retornar um <xref:System.Type>.  
   
  Por meio dos mecanismos de estilo de tema padrão usados pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], esse estilo é aplicado como o estilo de tempo de execução de um <xref:System.Windows.Controls.Button> na página, mesmo que o <xref:System.Windows.Controls.Button> não tente especificar sua <xref:System.Windows.FrameworkElement.Style%2A> propriedade ou um recurso específico fazer referência ao estilo. O estilo definido na página é encontrado anteriormente na sequência de pesquisa que o estilo de dicionário de tema, usando a mesma chave que tem o estilo de dicionário de tema. Você poderá especificar `<Button>Hello</Button>` em qualquer lugar na página e o estilo definido com <xref:System.Windows.Style.TargetType%2A> de `Button` se aplica a esse botão. Se você quiser, você pode ainda explicitamente uma chave para o estilo com o mesmo valor de tipo que <xref:System.Windows.Style.TargetType%2A>, para maior clareza na sua marcação, mas isso é opcional.  
   
@@ -158,7 +158,7 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
 - [Recursos do aplicativo](optimizing-performance-application-resources.md)
 - [Recursos e código](resources-and-code.md)
 - [Definir e referenciar um recurso](how-to-define-and-reference-a-resource.md)
-- [Visão geral de gerenciamento do aplicativo](../app-development/application-management-overview.md)
+- [Visão geral do gerenciamento de aplicativos](../app-development/application-management-overview.md)
 - [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md)
 - [Extensão de marcação StaticResource](staticresource-markup-extension.md)
 - [Extensão de marcação DynamicResource](dynamicresource-markup-extension.md)

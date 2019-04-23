@@ -7,10 +7,10 @@ helpviewer_keywords:
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480853"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
@@ -54,9 +54,9 @@ O valor padrão da opção do compilador **-subsystemversion** depende das condi
 
 - O valor padrão é 6.02 se qualquer opção do compilador na lista a seguir for definida:
 
-  - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
 
-  - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
@@ -72,4 +72,4 @@ Para definir a **- subsystemversion** opção de compilador no Visual Studio, ab
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 
-- [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Propriedades MSBuild](/visualstudio/msbuild/msbuild-properties)

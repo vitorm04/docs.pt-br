@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
 ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427169"
 ---
 # <a name="configuring-http-and-https"></a>Configurando HTTP e HTTPS
@@ -62,4 +62,4 @@ A API do servidor HTTP tem algumas configurações avançadas que não estão di
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Como: configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Como: Configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md)

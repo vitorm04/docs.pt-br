@@ -13,10 +13,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346048"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Passo a passo: Validando dados no controle DataGridView do Windows Forms
@@ -92,7 +92,7 @@ Ao exibir a funcionalidade de entrada de dados para usuários, frequentemente é
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Entrada de dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Como: Validar dados no controle DataGridView do Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Passo a passo: Identificando Erros que Ocorrem Durante a Entrada de Dados no Controle DataGridView do Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Entrada de Dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Como: Validar dados no controle DataGridView dos Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Passo a passo: Tratamento de erros que ocorrem durante a entrada de dados no controle DataGridView dos Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md)

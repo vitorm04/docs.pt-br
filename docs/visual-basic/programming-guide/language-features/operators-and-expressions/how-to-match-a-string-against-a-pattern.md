@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316265"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Como: Corresponder uma cadeia de caracteres com um padrão (Visual Basic)
@@ -80,7 +80,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 ## <a name="see-also"></a>Consulte também
 
-- [Operadores de comparação](../../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Operadores e expressões](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operadores de Comparação](../../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Operadores e Expressões](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operador Like](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [Tipo de dados da cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314406"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperação Win32 e WPF
-Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece um ambiente rico para a criação de aplicativos. No entanto, quando você tem um investimento significativo em código do [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], pode ser mais eficiente reutilizar parte desse código.  
+Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento significativo em código do [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], pode ser mais eficiente reutilizar parte desse código.  
 
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>Noções básicas de interoperação entre o Win32 e o WPF  
@@ -29,7 +29,7 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Projetos de interoperação do WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2scódigo gerenciado, mas a maioria já existentes [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programas são escritos não gerenciado [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].enNão é possível chamar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de um programa realmente não gerenciado.nNo entanto, usando a opção `/clr` com o compilador [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], você pode criar um programa misto gerenciado e não gerenciado no qual pode misturar perfeitamente chamadas de [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] gerenciadas e não gerenciadas.  
+ As [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são códigos gerenciados, mas a maioria dos programas do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] existentes são gravados em [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] não gerenciado.  Não é possível chamar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de um programa realmente não gerenciado. No entanto, usando a opção `/clr` com o compilador [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], você pode criar um programa misto gerenciado e não gerenciado no qual pode misturar perfeitamente chamadas de [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] gerenciadas e não gerenciadas.  
   
  Uma complicação no nível do projeto é que você não pode compilar arquivos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] em um projeto [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Há várias técnicas de divisão de projeto para compensar isso.  
   
@@ -62,7 +62,7 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
   
 2. Implementar um aplicativo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] com [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Se você está começando com um aplicativo [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] não gerenciado existente, normalmente, é possível habilitá-lo para chamar o código gerenciado alterando as configurações do projeto para incluir o sinalizador do compilador `/clr` (o escopo completo do que pode ser necessário para dar suporte à compilação `/clr` não está descrita neste tópico).  
   
-3. Defina o modelo de threading para STA (Single-Threaded Apartment). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa esse modelo de threading.  
+3. Defina o modelo de threading para STA (Single-Threaded Apartment). O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa esse modelo de threading.  
   
 4. Identifique a notificação WM_CREATE no seu procedimento de janela.  
   
@@ -159,5 +159,5 @@ Este tópico fornece uma visão geral de como interoperar o código do [!INCLUDE
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [Passo a passo: hospedar um controle Win32 no WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [Passo a passo: hospedar conteúdo do WPF no Win32](walkthrough-hosting-wpf-content-in-win32.md)
+- [Passo a passo: Hospedando um controle Win32 no WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [Passo a passo: Hospedando conteúdo do WPF no Win32](walkthrough-hosting-wpf-content-in-win32.md)

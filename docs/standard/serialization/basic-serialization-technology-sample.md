@@ -3,10 +3,10 @@ title: Exemplo de tecnologia de serialização básica
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315004"
 ---
 # <a name="basic-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica
@@ -58,7 +58,7 @@ ms.locfileid: "59315004"
   
  Por exemplo:  
   
- **Serialize.exe - sb Test.bin 10000 > somefile**  
+ **Serialize.exe -sb Test.bin 10000 >somefile.txt**  
   
  Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas por esse exemplo.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59315004"
   
     -   <xref:System.IO.Stream> Usado para serializar e desserializar. O tipo de fluxo específico usado nesse exemplo é o tipo <xref:System.IO.FileStream>. No entanto, a serialização pode ser usada com qualquer tipo derivado de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Usado para criar <xref:System.IO.FileStream> objetos para ler e criar arquivos no disco.  
+    -   <xref:System.IO.File> Usado para criar objetos <xref:System.IO.FileStream> para ler e criar arquivos em disco.  
   
     -   <xref:System.IO.FileStream> Usado para serializar e desserializar listas vinculadas.  
   

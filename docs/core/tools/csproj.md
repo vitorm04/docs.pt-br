@@ -1,13 +1,13 @@
 ---
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654647"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517324"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -15,7 +15,7 @@ Este documento descreve as alterações adicionadas aos arquivos de projeto como
 
 ## <a name="implicit-package-references"></a>Referências de pacote implícitas
 
-Os metapacotes são referenciados implicitamente de acordo com as estruturas de destino especificadas na propriedade `<TargetFramework>` ou `<TargetFrameworks>` do arquivo de projeto. `<TargetFrameworks>` será ignorado se `<TargetFramework>` for especificado, independente da ordem.
+Os metapacotes são referenciados implicitamente de acordo com as estruturas de destino especificadas na propriedade `<TargetFramework>` ou `<TargetFrameworks>` do arquivo de projeto. `<TargetFrameworks>` será ignorado se `<TargetFramework>` for especificado, independente da ordem. Para obter mais informações, veja [Pacotes, metapacotes e estruturas](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ Os metapacotes são referenciados implicitamente de acordo com as estruturas de 
 
 ### <a name="recommendations"></a>Recomendações
 
-Como os metapacotes `Microsoft.NETCore.App` ou `NetStandard.Library` são referenciados implicitamente, estas são nossas melhores práticas:
+Como os metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` são referenciados implicitamente, estas são nossas melhores práticas:
 
-* Durante o direcionamento do .NET Core ou do .NET Standard, nunca tenha uma referência explícita aos metapacotes `Microsoft.NETCore.App` ou `NetStandard.Library` por meio de um item `<PackageReference>` no arquivo de projeto.
+* Durante o direcionamento do .NET Core ou do .NET Standard, nunca tenha uma referência explícita aos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` por meio de um item `<PackageReference>` no arquivo de projeto.
 * Se precisar de uma versão específica do tempo de execução ao direcionar o .NET Core, use a propriedade `<RuntimeFrameworkVersion>` no projeto (por exemplo, `1.0.4`) em vez de referenciar o metapacote.
-    * Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do tempo de execução do 1.0.0 LTS, por exemplo.
-* Se precisar de uma versão específica do metapacote `NetStandard.Library` ao direcionar o .NET Core, use a propriedade `<NetStandardImplicitPackageVersion>` e defina a versão necessária.
-* Não adicione explicitamente nem atualize referências a nenhum dos metapacotes `Microsoft.NETCore.App` ou `NetStandard.Library` em projetos do .NET Framework. Se uma versão do `NetStandard.Library` for necessária ao usar um pacote NuGet baseado no .NET Standard, o NuGet automaticamente instalará essa versão.
+  * Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do tempo de execução do 1.0.0 LTS, por exemplo.
+* Se precisar de uma versão específica do metapacote `NETStandard.Library` ao direcionar o .NET Core, use a propriedade `<NetStandardImplicitPackageVersion>` e defina a versão necessária.
+* Não adicione explicitamente nem atualize referências a nenhum dos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` em projetos do .NET Framework. Se uma versão do `NETStandard.Library` for necessária ao usar um pacote NuGet baseado no .NET Standard, o NuGet automaticamente instalará essa versão.
+
+## <a name="implicit-version-for-some-package-references"></a>Versão implícita para algumas referências de pacote
+
+A maioria dos usos de [`<PackageReference>`](#packagereference) requer a configuração do atributo `Version` para especificar a versão do pacote NuGet a ser usada. Ao usar o .NET Core 2.1 ou 2.2 e referenciar [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) ou [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), no entanto, o atributo é desnecessário. O SDK do .NET Core pode selecionar automaticamente a versão desses pacotes que deve ser usada.
+
+### <a name="recommendation"></a>Recomendação
+
+Ao fazer referência aos pacotes `Microsoft.AspNetCore.App` ou `Microsoft.AspNetCore.All`, não especifique a versão. Se uma versão for especificada, o SDK poderá apresentar um aviso NETSDK1071. Para corrigir esse aviso, remova a versão do pacote, como no exemplo a seguir:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> Problema conhecido: o SDK do .NET Core 2.1 tem suporte apenas para esta sintaxe, mas o projeto também usa o Microsoft.NET.Sdk.Web. Esse problema foi solucionado no SDK do .NET Core 2.2.
+
+Essas referências aos metapacotes do ASP.NET Core têm um comportamento ligeiramente diferente da maioria dos pacotes normais do NuGet. [Implantações dependentes da estrutura](../deploying/index.md#framework-dependent-deployments-fdd) de aplicativos que usam metapacotes aproveitam automaticamente a estrutura compartilhada do ASP.NET Core. Quando você usa os metapacotes, **nenhum** ativo dos pacotes NuGet do ASP.NET Core referenciados é implantado com o aplicativo porque a estrutura compartilhada do ASP.NET Core contém esses ativos. Os ativos na estrutura compartilhada são otimizados para a plataforma de destino para melhorar o tempo de inicialização do aplicativo. Para obter mais informações sobre a estrutura compartilhada, confira [Empacotamento de distribuição do .NET Core](../build/distribution-packaging.md).
+
+Se uma versão *for* especificada, ela será tratada como a *versão mínima* da estrutura compartilhada do ASP.NET Core para implantações dependentes de estrutura e como uma versão *exata* para implementações autossuficientes. Isso pode ter as seguintes consequências:
+
+* Se a versão do ASP.NET Core instalada no servidor for menor que a versão especificada no PackageReference, o processo do .NET Core falhará ao iniciar. Atualizações para o metapacote estão frequentemente disponíveis no NuGet.org antes de as atualizações serem disponibilizadas em ambientes de hospedagem como o Azure. A atualização da versão no PackageReference para o ASP.NET Core pode fazer com que um aplicativo implantado falhe.
+* Se o aplicativo for implantado como uma [implantação autossuficiente](../deploying/index.md#self-contained-deployments-scd), ele poderá não conter as atualizações de segurança mais recentes para o .NET Core. Quando uma versão não é especificada, o SDK pode incluir automaticamente a versão mais recente do ASP.NET Core na implantação autossuficiente.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusões de compilação padrão em projetos do .NET Core
+
 Com a mudança para o formato *csproj* nas últimas versões do SDK, mudamos as inclusões e exclusões padrão de itens de compilação e recursos inseridos dos arquivos de propriedades do SDK. Isso significa que você não precisa mais especificar esses itens no arquivo de projeto.
 
 O principal motivo disso é reduzir a desordem no arquivo de projeto. Os padrões presentes no SDK devem abranger os casos de uso mais comuns e, portanto, não há necessidade de repeti-los em cada projeto criado. Isso resulta em arquivos de projeto menores que são mais fáceis de serem entendidos, bem como editados manualmente, se necessário.
@@ -100,6 +124,7 @@ Quando o projeto tem várias estruturas de destino, os resultados do comando dev
 ## <a name="additions"></a>Adições
 
 ### <a name="sdk-attribute"></a>Atributo do SDK
+
 O elemento `<Project>` raiz do arquivo *.csproj* tem um novo atributo chamado `Sdk`. `Sdk` especifica qual SDK será usado pelo projeto. O SDK, como o [documento de camadas](cli-msbuild-architecture.md) descreve, é um conjunto de [tarefas](/visualstudio/msbuild/msbuild-tasks) e [destinos](/visualstudio/msbuild/msbuild-targets) do MSBuild que podem compilar o código do .NET Core. Fornecemos três SDKs principais com as ferramentas do .NET Core:
 
 1. O SDK do .NET Core com a ID `Microsoft.NET.Sdk`
@@ -282,7 +307,6 @@ Você precisará garantir o fornecimento do arquivo de licença adicionando-o ex
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
 Uma URL para a licença aplicável ao pacote. (_preterida desde o Visual Studio 15.9.4, SDK 2.1.502 e 2.2.101 do .NET_)
-
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 

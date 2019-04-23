@@ -9,10 +9,10 @@ helpviewer_keywords:
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
 ms.openlocfilehash: f2306e3405aa0ff37060d987bdc82b58fbaa7784
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345554"
 ---
 # <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Como: Acessar a fonte HTML no Modelo de Objeto do Documento HTML gerenciado
@@ -47,5 +47,5 @@ As propriedades <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando o Document Object Model HTML gerenciado](using-the-managed-html-document-object-model.md)
+- [Usando o Modelo de Objeto do Documento HTML gerenciado](using-the-managed-html-document-object-model.md)
 - [Visão geral do controle WebBrowser](webbrowser-control-overview.md)

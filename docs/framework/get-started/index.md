@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314965"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introdução ao .NET Framework
@@ -79,10 +79,10 @@ Para obter mais informações sobre o desenvolvimento de aplicativos direcionado
 
 | Título | Descrição |
 | ----- |------------ |
-| [Visão geral](overview.md) | Fornece informações detalhadas para desenvolvedores que criam aplicativos direcionados ao .NET Framework. |
+| [Visão Geral](overview.md) | Fornece informações detalhadas para desenvolvedores que criam aplicativos direcionados ao .NET Framework. |
 | [Guia de instalação](../install/index.md) | Fornece informações sobre como instalar o .NET Framework. |  
 | [O .NET Framework e lançamentos fora da banda](the-net-framework-and-out-of-band-releases.md) | Descreve os lançamentos fora de banda do .NET Framework e como usá-los em seu aplicativo. |
-| [Requisitos de sistema](system-requirements.md) | Lista os requisitos de hardware e software para executar o .NET Framework. |
+| [Requisitos do sistema](system-requirements.md) | Lista os requisitos de hardware e software para executar o .NET Framework. |
 | [.NET Core e software livre](net-core-and-open-source.md) | Descreve o .NET Core em relação ao .NET Framework e como acessar os projetos de software livre do .NET Core. |
 | [Documentação do .NET Core](../../core/index.md) | Fornece a documentação conceitual e de referência de API para .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Discute .NET padrão, uma especificação de versão que dá suporte a implementações de .NET individuais para garantir que um conjunto consistente de APIs sejam disponíveis em várias plataformas.
@@ -90,6 +90,6 @@ Para obter mais informações sobre o desenvolvimento de aplicativos direcionado
 ## <a name="see-also"></a>Consulte também
 
 - [Guia do .NET Framework](../index.md)
-- [O Que Há de Novo](../whats-new/index.md)
-- [Navegador de API .NET](../../../api/index.md)
+- [Novidades](../whats-new/index.md)
+- [Navegador de API do .NET](../../../api/index.md)
 - [Guia de desenvolvimento](../development-guide.md)
