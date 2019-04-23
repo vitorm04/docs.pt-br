@@ -3,10 +3,10 @@ title: Bases de dados de exemplo de transferência (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
 ms.openlocfilehash: 1ef5a5ceac6a7f819551f6221b63197786ab4f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339704"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Bases de dados de exemplo de transferência (LINQ to DataSet)
@@ -75,4 +75,4 @@ Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../..
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+- [Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

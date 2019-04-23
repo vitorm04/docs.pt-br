@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
 ms.openlocfilehash: 119d17e1aea974a0c40451260e671994653cee46
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342306"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Fora do espaço da cadeia de caracteres (Visual Basic)
@@ -22,5 +22,5 @@ Com o Visual Basic, você pode usar cadeias de caracteres muito grandes. No enta
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de erro](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [Resumo de manipulação da cadeia de caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Resumo de Manipulação da Cadeia de Caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

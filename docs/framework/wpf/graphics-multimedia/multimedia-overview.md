@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340484"
 ---
 # <a name="multimedia-overview"></a>Visão geral de multimídia
@@ -99,7 +99,7 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ### <a name="controlling-mediaplayer"></a>Controlando o Media Player  
  Porque <xref:System.Windows.Media.MediaPlayer> é sem monitoração de estado, há apenas duas maneiras para controlar a reprodução de mídia.  
   
-1. Métodos de controle interativo. Em vigor quando no modo independente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> propriedade).  
+1. Métodos de controle interativo. Em vigor quando no modo independente (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> propriedade).  
   
 2. <xref:System.Windows.Media.MediaClock>. Em vigor quando a mídia tem um <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -114,4 +114,4 @@ Recursos de multimídia no [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 
 - <xref:System.Windows.Media.DrawingGroup>
 - [Layout](../advanced/layout.md)
-- [Tópicos explicativos ](audio-and-video-how-to-topics.md)
+- [Tópicos de instruções](audio-and-video-how-to-topics.md)

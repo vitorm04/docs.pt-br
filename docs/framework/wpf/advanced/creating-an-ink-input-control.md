@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323844"
 ---
 # <a name="creating-an-ink-input-control"></a>Criando um controle de entrada de tinta
@@ -100,5 +100,5 @@ Você pode criar um controle personalizado que renderiza a tinta de forma dinâm
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tratamento de tinta avançado](advanced-ink-handling.md)
-- [Acessando e manipulando entrada de caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+- [Tratamento avançado de tinta](advanced-ink-handling.md)
+- [Acessar e manipular a entrada à caneta](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

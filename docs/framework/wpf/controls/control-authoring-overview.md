@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340016"
 ---
 # <a name="control-authoring-overview"></a>Visão geral da criação de controle
@@ -41,7 +41,7 @@ A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../..
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>Modelos para criação de controles  
- O modelo de conteúdo sofisticado, estilos, modelos e gatilhos minimizam a necessidade de criar um novo controle. No entanto, se você precisar criar um novo controle, será importante compreender os diferentes modelos de criação no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece três modelos gerais para a criação de um controle, cada um deles fornece um conjunto diferente de recursos e o nível de flexibilidade. A base de classes para os três modelos são <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, e <xref:System.Windows.FrameworkElement>.  
+ O modelo de conteúdo sofisticado, estilos, modelos e gatilhos minimizam a necessidade de criar um novo controle. No entanto, se você precisar criar um novo controle, será importante compreender os diferentes modelos de criação no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece três modelos gerais para criar um controle, cada um deles fornece um conjunto de recursos e um nível de flexibilidade diferentes. A base de classes para os três modelos são <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, e <xref:System.Windows.FrameworkElement>.  
   
 ### <a name="deriving-from-usercontrol"></a>Derivar de UserControl  
  A maneira mais simples para criar um controle no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é derivar de <xref:System.Windows.Controls.UserControl>. Quando você compila um controle que herda de <xref:System.Windows.Controls.UserControl>, você adiciona componentes existentes para o <xref:System.Windows.Controls.UserControl>, nomeie os componentes e referencie os manipuladores de eventos em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Em seguida, você pode referenciar os elementos nomeados e definir os manipuladores de eventos no código. Este modelo de desenvolvimento é muito semelhante ao modelo usado para o desenvolvimento de aplicativos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -112,7 +112,7 @@ A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../..
   
 -   Defina uma propriedade wrapper [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] chamada `Value`, que é o mesmo nome usado para registrar a propriedade de dependência pela implementação dos acessadores `get` e `set` da propriedade. Observe que o `get` e `set` acessadores só chamar <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> , respectivamente. É recomendável que os acessadores de propriedades de dependência não contenham lógica adicional, porque os clientes e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podem ignorar os acessadores e chamar <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> diretamente. Por exemplo, quando uma propriedade é associada a uma fonte de dados, o acessador `set` da propriedade não é chamado.  Em vez de adicionar lógica adicional para obter e definir acessadores, use o <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, e <xref:System.Windows.PropertyChangedCallback> delegados para responder ou verificar o valor quando ele é alterado.  Para obter mais informações sobre esses retornos de chamada, consulte [Retornos de chamada de propriedade de dependência e validação](../advanced/dependency-property-callbacks-and-validation.md).  
   
--   Definir um método para o <xref:System.Windows.CoerceValueCallback> chamado `CoerceValue`. `CoerceValue` garante que `Value` é maior ou igual a `MinValue` e menor ou igual a `MaxValue`.  
+-   Definir um método para o <xref:System.Windows.CoerceValueCallback> chamado `CoerceValue`. `CoerceValue` garante que `Value` seja maior ou igual a `MinValue` e menor ou igual a `MaxValue`.  
   
 -   Definir um método para o <xref:System.Windows.PropertyChangedCallback>, denominado `OnValueChanged`. `OnValueChanged` cria uma <xref:System.Windows.RoutedPropertyChangedEventArgs%601> do objeto e o prepara para acionar o `ValueChanged` evento roteado. Eventos roteados são abordados na próxima seção.  
   
@@ -182,7 +182,7 @@ A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../..
   
 -   Implemente um par de métodos CLR `public` `static` chamados `Set`*PropertyName* e `Get`*PropertyName*. Ambos os métodos devem aceitar uma classe derivada de <xref:System.Windows.DependencyProperty> como o primeiro argumento. O método `Set`*PropertyName* também aceita um argumento cujo tipo corresponde ao tipo de dados registrado para a propriedade. O método `Get`*PropertyName* deve retornar um valor do mesmo tipo. Se o método `Set`*PropertyName* estiver ausente, a propriedade será somente leitura.  
   
--   `Set` **PropertyName* e `Get` *PropertyName* deve rotear diretamente para o <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> métodos em que a dependência de destino do objeto, respectivamente.DDesigners podem acessar a propriedade anexada chamando-a por meio dos métodos wrapper ou fazendo uma chamada direta para o objeto de dependência de destino.  
+-   `Set` *PropertyName* e `Get` *PropertyName* deve rotear diretamente para o <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> métodos em que a dependência de destino do objeto, respectivamente. Designers podem acessar a propriedade anexada chamando-a por meio dos métodos wrapper ou fazendo uma chamada direta para o objeto de dependência de destino.  
   
  Para obter mais informações sobre as propriedades anexadas, consulte [Visão geral das propriedades anexadas](../advanced/attached-properties-overview.md).  
   
@@ -268,6 +268,6 @@ A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../..
   
 ## <a name="see-also"></a>Consulte também
 
-- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [URIs "pack://" no WPF](../app-development/pack-uris-in-wpf.md)
 - [Personalização do controle](control-customization.md)

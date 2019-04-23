@@ -7,10 +7,10 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342083"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: herdar formulários usando a caixa de diálogo Selecionador de Herança
@@ -60,5 +60,5 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
 
 - [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Efeitos da modificação da aparência de um formulário base](effects-of-modifying-base-form-appearance.md)
-- [Herança visual dos Windows Forms](windows-forms-visual-inheritance.md)
+- [Efeitos da Modificação da Aparência de um Formulário Base](effects-of-modifying-base-form-appearance.md)
+- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)

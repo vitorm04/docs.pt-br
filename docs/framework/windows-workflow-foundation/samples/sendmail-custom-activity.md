@@ -3,10 +3,10 @@ title: Atividade personalizado de SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321855"
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
@@ -28,7 +28,7 @@ Este exemplo demonstra como criar uma atividade personalizada que derive de <xre
 |Para|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários desta mensagem de email.|  
 |CÓPIA CARBONO|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Trata da coleção que contém os destinatários CC (cópia carbono) desta mensagem de email.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários com cópia oculta (Cco) desta mensagem de email.|  
-|Tokens|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Tokens a substituição no corpo. Esse recurso permite que os usuários especifiquem alguns valores no corpo do que pode ser substituído pelos tokens fornecidos posteriormente usando essa propriedade.|  
+|Tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadeia de caracteres, cadeia de caracteres >>|Tokens a substituição no corpo. Esse recurso permite que os usuários especifiquem alguns valores no corpo do que pode ser substituído pelos tokens fornecidos posteriormente usando essa propriedade.|  
 |BodyTemplateFilePath|Cadeia de Caracteres|Caminho de um modelo para o corpo. A atividade de `SendMail` copia o conteúdo do arquivo a sua propriedade body.<br /><br /> O modelo pode conter os tokens que são substituídos pelos conteúdos da propriedade tokens.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando essa propriedade é definida, todos os emails são enviados para o endereço especificado nele.<br /><br /> Esta propriedade destina-se a ser usada ao testar fluxos de trabalho. Por exemplo, quando você deseja ter certeza de que todos os emails são enviados sem enviar aos destinatários reais.|  
 |TestDropPath|Cadeia de Caracteres|Quando essa propriedade é definida, todos os emails também são salvas no arquivo especificado.<br /><br /> Esta propriedade destina-se a ser usado quando você está testando ou depurando fluxos de trabalho, para certificar-se de que o formato e o conteúdo dos emails de saída é apropriada.|  

@@ -3,10 +3,10 @@ title: 'Como: Criar Assemblies amigáveis não assinados (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339171"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Como: Criar Assemblies amigáveis não assinados (Visual Basic)
@@ -88,6 +88,6 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
-- [Assemblies amigáveis](../../../../standard/assembly/friend-assemblies.md)
+- [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
 - [Como: Criar Assemblies amigáveis assinados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Conceitos do guia de programação](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0358450024607a985f38564ec9743ba964949e8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234341"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803096"
 ---
 ### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>ClickOnce é compatível com SHA-256 em aplicativos destinados ao 4.0
 

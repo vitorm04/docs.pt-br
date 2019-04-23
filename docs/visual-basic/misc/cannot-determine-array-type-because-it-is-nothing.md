@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_ArrayNotInitialized
 ms.assetid: de70697d-e2aa-4661-bfbb-f7ba34539516
 ms.openlocfilehash: 2aae38ca9d0ba8aaab942f5b15a0807ab469a7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323727"
 ---
 # <a name="cannot-determine-array-type-because-it-is-nothing"></a>Não é possível determinar o tipo de matriz porque ele é Nothing
@@ -21,4 +21,4 @@ O tipo da matriz não pode ser determinado porque ele foi definido para o valor 
 ## <a name="see-also"></a>Consulte também
 
 - [Matrizes](../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [nada](../../visual-basic/language-reference/nothing.md)
+- [Nothing](../../visual-basic/language-reference/nothing.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: b092532e-7346-469f-b9a1-897f9bea4fb7
 ms.openlocfilehash: 9806583fda60f1cb8a5ef2d97f42eba158593f61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322713"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page"></a>Como: Adicionar um controle a uma página da guia
@@ -32,6 +32,6 @@ Você pode usar os formulários do Windows <xref:System.Windows.Forms.TabControl
 
 - [Controle TabControl](tabcontrol-control-windows-forms.md)
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Como: Alterar a aparência do TabControl do Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Como: Alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [Como: Desabilitar páginas de guia](how-to-disable-tab-pages.md)
-- [Como: Adicionar e remover guias com o controle TabControl do Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Como: Adicionar e remover guias com o TabControl dos Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

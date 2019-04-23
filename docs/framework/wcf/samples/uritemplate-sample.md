@@ -3,10 +3,10 @@ title: Exemplo de UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322609"
 ---
 # <a name="uritemplate-sample"></a>Exemplo de UriTemplate
@@ -36,4 +36,4 @@ O <xref:System.UriTemplate> classe fornece métodos para trabalhar com conjuntos
 ## <a name="see-also"></a>Consulte também
 
 - [Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [Dispatcher de tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+- [Dispatcher de Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341719"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Novidades do .NET Core 3.0 (Versão Prévia 2)
 
@@ -31,10 +31,9 @@ Para obter mais informações sobre o que foi lançado com cada versão, confira
 
 O .NET Core 3.0 dá suporte ao C# 8 e, no .NET Core 3.0 Versão Prévia 2 em diante, ele dá suporte a essas novas funcionalidades. Para obter mais informações sobre as funcionalidades do C# 8.0, confira as seguintes postagens no blog:
 
-- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/) (Faça mais com padrões no C# 8.0)
-- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/) (Leve o C# 8.0 para dar uma volta)
-- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/) (Compilando o C# 8.0)
-
+- [Faça mais com padrões no C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [Leve o C# 8.0 para dar uma volta](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [Compilando o C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 ### <a name="ranges-and-indices"></a>Intervalos e índices
 
@@ -71,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 Além de poder `await foreach`, você também pode criar iteradores assíncronos, por exemplo, um iterador que retorne um `IAsyncEnumerable/IAsyncEnumerator` em que é possível aplicar `await` e `yield`. Para objetos que precisam ser descartados, você pode usar `IAsyncDisposable`, que vários tipos BCL implementam, como `Stream` e `Timer`.
 
->[!NOTE]
->Você precisará que o .NET Core 3.0 Versão Prévia 2 use fluxos assíncronos caso deseje fazer o desenvolvimento com o Visual Studio 2019 Preview 2 ou a última versão prévia da [extensão do C# para Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Se você estiver usando o .NET Core 3.0 Versão Prévia 2 na linha de comando, tudo funcionará conforme esperado.
+> [!NOTE]
+> Você precisará que o .NET Core 3.0 Versão Prévia 2 use fluxos assíncronos caso deseje fazer o desenvolvimento com o Visual Studio 2019 ou a última versão prévia da [extensão do C# para Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Se você estiver usando o .NET Core 3.0 Versão Prévia 2 na linha de comando, tudo funcionará conforme esperado.
 
 ### <a name="using-declarations"></a>Declarações using
 
@@ -171,7 +170,6 @@ Durante `dotnet build` ou `dotnet publish`, um arquivo executável é criado, de
 
 Há algumas operações, como vinculação e publicação de página do razor, que ainda exigem publicação.
 
-
 ## <a name="local-dotnet-tools"></a>Ferramentas dotnet locais
 
 >[!WARNING]
@@ -269,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-O Visual Studio 2019 Preview 2 adiciona modelos de **Novo Projeto** ao Windows Forms e WPF no .NET Core 3.0. Ainda não há suporte para designers. Além disso, é possível abrir, iniciar e depurar esses projetos no Visual Studio 2019.
+O Visual Studio 2019 adiciona modelos de **Novo Projeto** ao Windows Forms e WPF no .NET Core 3.0. Ainda não há suporte para designers. Além disso, é possível abrir, iniciar e depurar esses projetos no Visual Studio 2019.
 
 O Visual Studio 2017 15.9 adiciona a capacidade de [habilitar versões prévias do .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), mas você precisa ativar essa funcionalidade e esse não é um cenário compatível.
 
@@ -309,7 +307,7 @@ Compartilhe seus comentários nos repositórios [dotnet/winforms](https://github
 
 O [MSIX](https://docs.microsoft.com/windows/msix/) é um novo formato de pacote do aplicativo do Windows. Ele pode ser usado para implantar aplicativos da área de trabalho do .NET Core 3.0 no Windows 10.
 
-O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019 Preview 2, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#self-contained-deployments-scd).
+O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#self-contained-deployments-scd).
 
 >Observação: O arquivo de projeto do .NET Core precisa especificar os tempos de execução compatíveis na propriedade `<RuntimeIdentifiers>`:
 ```xml
@@ -381,7 +379,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` fornece um modo de alto desempenho, não armazenado em cache, somente avanço para escrita de texto JSON codificado em UTF-8 com base em tipos .NET comuns como `String`, `Int32` e `DateTime`. Assim como o leitor, o gravador é um tipo fundamental de baixo nível que pode ser utilizado para criar serializadores personalizados. A escrita de um conteúdo em JSON usando o novo `Utf8JsonWriter` é 30-80% mais rápido do que o uso do gravador no **Json.NET** e não faz alocações.
+`System.Text.Json.Utf8JsonWriter` fornece um modo de alto desempenho, não armazenado em cache, somente de encaminhamento para escrita de texto JSON codificado em UTF-8 com base em tipos .NET comuns como `String`, `Int32` e `DateTime`. Assim como o leitor, o gravador é um tipo fundamental de baixo nível que pode ser utilizado para criar serializadores personalizados. A escrita de um conteúdo em JSON usando o novo `Utf8JsonWriter` é 30-80% mais rápido do que o uso do gravador no **Json.NET** e não faz alocações.
 
 Este é um uso de exemplo do `Utf8JsonWriter` que pode ser usado como ponto de partida:
 
@@ -484,7 +482,6 @@ O Windows oferece uma API nativa sofisticada, na forma de APIs C simples, COM e 
 
 Veja um exemplo de como usar o COM com o [código-fonte de Demonstração do Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
-
 ## <a name="type-sequencereader"></a>Tipo: SequenceReader
 
 `System.Buffers.SequenceReader` foi adicionado ao .NET Core 3.0, podendo ser usado como um leitor para `ReadOnlySequence<T>`. Isso permite uma análise fácil, de baixa alocação e de alto desempenho dos dados `System.IO.Pipelines`, que pode cruzar vários buffers de backup. 
@@ -524,7 +521,7 @@ Adicionamos o tipo `MetadataLoadContext`, permitindo a leitura de metadados de a
 
 `MetdataLoadContext` está disponível no [pacote System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext). Este é um pacote do .NET Standard 2.0.
 
-O `MetadataLoadContext` expõe APIs semelhantes ao tipo <xref:System.Runtime.Loader.AssemblyLoadContext>, mas não é baseado nesse tipo. Assim como <xref:System.Runtime.Loader.AssemblyLoadContext>, o `MetadataLoadContext` permite o carregamento de assemblies dentro de um universo de carregamento de assemblies isolado. APIs `MetdataLoadContext` retornam objetos <xref:System.Reflection.Assembly>, permitindo o uso de APIs de reflexão familiares. APIs orientadas a execução, como [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), não são permitidas e emitirão InvalidOperationException.
+O `MetadataLoadContext` expõe APIs semelhantes ao tipo <xref:System.Runtime.Loader.AssemblyLoadContext>, mas não é baseado nesse tipo. Assim como <xref:System.Runtime.Loader.AssemblyLoadContext>, o `MetadataLoadContext` permite o carregamento de assemblies dentro de um universo de carregamento de assemblies isolado. `MetdataLoadContext` APIs retornam objetos <xref:System.Reflection.Assembly>, permitindo o uso de APIs de reflexão conhecidas. APIs orientadas a execução, como [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), não são permitidas e emitirão InvalidOperationException.
 
 O exemplo a seguir demonstra como localizar tipos concretos em um assembly que implementa determinada interface:
 
@@ -773,7 +770,6 @@ Dois novos pacotes foram lançados para o NuGet, que podem ser usados para a pro
 Os Pacotes de GPIO incluem APIs para dispositivos GPIO, SPI, I2C e PWM. O pacote de associações de IoT inclui [associações de dispositivo](https://github.com/dotnet/iot/blob/master/src/devices/README.md) para vários chips e sensores, as mesmas disponíveis em [dotnet/iot – src/devices](https://github.com/dotnet/iot/tree/master/src/devices).
 
 As APIs de porta serial atualizadas que foram anunciadas como parte do .NET Core 3.0 Versão Prévia 1 não fazem parte desses pacotes, mas estão disponíveis como parte da plataforma .NET Core.
-
 
 ## <a name="platform-support"></a>Suporte de plataforma
 

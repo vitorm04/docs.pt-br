@@ -3,10 +3,10 @@ title: Tratando a reentrada em aplicativos assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324780"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Tratando a reentrada em aplicativos assíncronos (Visual Basic)
@@ -14,15 +14,15 @@ Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possi
   
  **Neste tópico**  
   
--   [Reconhecendo Reentrada](#BKMK_RecognizingReentrancy)  
+-   [Reconhecendo a reentrância](#BKMK_RecognizingReentrancy)  
   
--   [Tratando Reentrada](#BKMK_HandlingReentrancy)  
+-   [Tratando a reentrância](#BKMK_HandlingReentrancy)  
   
-    -   [Desabilitar o Botão Iniciar](#BKMK_DisableTheStartButton)  
+    -   [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton)  
   
-    -   [Cancelar e Reiniciar a Operação](#BKMK_CancelAndRestart)  
+    -   [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart)  
   
-    -   [Executar Várias Operações e Enfileirar a Saída](#BKMK_RunMultipleOperations)  
+    -   [Executar várias operações e colocar a saída na fila](#BKMK_RunMultipleOperations)  
   
 -   [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample)  
   
@@ -89,15 +89,15 @@ TOTAL bytes returned:  890591
 ## <a name="BKMK_HandlingReentrancy"></a> Tratando a reentrância  
  É possível tratar a reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça. Este tópico apresenta os exemplos a seguir:  
   
--   [Desabilitar o Botão Iniciar](#BKMK_DisableTheStartButton)  
+-   [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton)  
   
      Desabilitar o botão **Iniciar** enquanto a operação estiver em execução para que o usuário não possa interrompê-la.  
   
--   [Cancelar e Reiniciar a Operação](#BKMK_CancelAndRestart)  
+-   [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart)  
   
      Cancelar qualquer operação que ainda estiver em execução quando o usuário escolher o botão **Iniciar** novamente e, em seguida, permitir que a operação solicitada mais recentemente continue.  
   
--   [Executar Várias Operações e Enfileirar a Saída](#BKMK_RunMultipleOperations)  
+-   [Executar várias operações e colocar a saída na fila](#BKMK_RunMultipleOperations)  
   
      Permitir que todas as operações solicitadas sejam executadas de forma assíncrona, mas coordenar a exibição da saída, de forma que os resultados de cada operação apareçam juntos e em ordem.  
   
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>O método AccessTheWebAsync  
  Este exemplo divide o `AccessTheWebAsync` em dois métodos. O primeiro método, `AccessTheWebAsync`, inicia todas as tarefas de download de um grupo e configura `pendingWork` para controlar o processo de exibição. O método usa uma LINQ (consulta integrada à linguagem) e um <xref:System.Linq.Enumerable.ToArray%2A> para iniciar todas as tarefas de download ao mesmo tempo.  
   
- `AccessTheWebAsync` em seguida, chama `FinishOneGroupAsync` para aguardar a conclusão de cada download e exibir seu comprimento.  
+ Em seguida, o `AccessTheWebAsync` chama `FinishOneGroupAsync` para aguardar a conclusão de cada download e exibir seu comprimento.  
   
- `FinishOneGroupAsync` Retorna uma tarefa que é atribuída a `pendingWork` em `AccessTheWebAsync`. Esse valor impede a interrupção por outra operação antes que a tarefa seja concluída.  
+ O `FinishOneGroupAsync` retorna uma tarefa que é atribuída a `pendingWork` em `AccessTheWebAsync`. Esse valor impede a interrupção por outra operação antes que a tarefa seja concluída.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  

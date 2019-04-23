@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340328"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Como: Criar Controles para o Windows Forms
@@ -53,10 +53,10 @@ Um controle representa um link gráfico entre o usuário e o programa. Um contro
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Criar um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Passo a passo: Herdar de um controle do Windows Forms com Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Passo a passo: Criando um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Como: Herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Como: Herdar da classe Control](how-to-inherit-from-the-control-class.md)
-- [Como: Herdar de controles do Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Como: Herdar da classe de controle](how-to-inherit-from-the-control-class.md)
+- [Como: Herdar controles de formulários do Windows existentes](how-to-inherit-from-existing-windows-forms-controls.md)
 - [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

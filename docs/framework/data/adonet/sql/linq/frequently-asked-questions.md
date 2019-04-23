@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323234"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
@@ -50,12 +50,12 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
 ## <a name="unexpected-query-results"></a>Resultados inesperados da consulta  
  P. Minha consulta está retornando resultados inesperados. Como posso inspecionar o que está ocorrendo?  
   
- R. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece várias ferramentas para inspecionar o código SQL gerado. Um dos mais importantes é <xref:System.Data.Linq.DataContext.Log%2A>. Para obter mais informações, consulte [suporte de depuração](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ R. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece várias ferramentas para inspecionar o código SQL que produz. Um dos mais importantes é <xref:System.Data.Linq.DataContext.Log%2A>. Para obter mais informações, consulte [suporte de depuração](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Resultados inesperados de procedimentos armazenados  
  P. Tenho um procedimento armazenado cujo valor de retorno é calculado por `MAX()`. Quando eu arrasto o procedimento armazenado para a superfície do [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)], o valor de retorno não está correto.  
   
- R. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece duas maneiras para retornar valores gerados por banco de dados por meio de procedimentos armazenados:  
+ R. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece duas maneiras de retornar valores gerados por banco de dados por meio de procedimentos armazenados:  
   
 -   Nomeando o resultado de saída.  
   
@@ -112,7 +112,7 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Evitando a configuração explícita de valores gerados por banco de dados em Insert ou Update  
  P. Tenho uma tabela de banco de dados com uma coluna `DateCreated` que usa como padrão o `Getdate()` do SQL. Quando tento inserir um novo registro usando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], o valor é definido como `NULL`. Eu gostaria que ele fosse definido como o padrão do banco de dados.  
   
- R. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] manipula essa situação automaticamente para a identidade (incremento automático) e rowguidcol (GUID gerado por banco de dados) e colunas de carimbo de hora. Em outros casos, você deve definir manualmente <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` e <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> propriedades.  
+ R. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trata essa situação automaticamente para colunas de identidade (incremento automático) e rowguidcol (GUID gerado por banco de dados) e carimbo de data/hora. Em outros casos, você deve definir manualmente <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` e <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> propriedades.  
   
 ## <a name="multiple-dataloadoptions"></a>Vários DataLoadOptions  
  P. Posso especificar opções de carregamento adicionais sem substituir as primeiras?  
@@ -149,7 +149,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="sql-injection-attacks"></a>Ataques de injeção de SQL  
  P. Como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é protegido contra ataques de injeção de SQL?  
   
- R. A injeção de SQL tem sido um risco significativo para consultas tradicionais de SQL formadas por meio da concatenação da entrada do usuário. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] evita essa injeção usando <xref:System.Data.SqlClient.SqlParameter> em consultas. A entrada do usuário é transformada em valores de parâmetro. Essa abordagem impede que os comandos mal-intencionados sejam usados da entrada do cliente.  
+ R. A injeção de SQL tem sido um risco significativo para consultas tradicionais de SQL formadas por meio da concatenação da entrada do usuário. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] evita essa injeção usando o <xref:System.Data.SqlClient.SqlParameter> em consultas. A entrada do usuário é transformada em valores de parâmetro. Essa abordagem impede que os comandos mal-intencionados sejam usados da entrada do cliente.  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>Alterando o sinalizador somente leitura em arquivos DBML  
  P. Como posso eliminar configuradores de algumas propriedades quando crio um modelo de objeto de um arquivo DBML?  
@@ -175,7 +175,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="mapping-data-from-multiple-tables"></a>Dados de mapeamento de várias tabelas  
  P. Os dados na minha entidade vêm de várias tabelas. Como posso mapeá-los?  
   
- R. Você pode criar uma exibição em um banco de dados e mapear a entidade para a exibição. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gera o mesmo SQL para modos de exibição, como faz para tabelas.  
+ R. Você pode criar uma exibição em um banco de dados e mapear a entidade para a exibição. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gera o mesmo SQL para exibições da mesma forma que faz para tabelas.  
   
 > [!NOTE]
 >  O uso de exibições nesse cenário tem limitações. Essa abordagem funciona com mais segurança quando as operações realizadas no <xref:System.Data.Linq.Table%601> têm suporte pela exibição subjacente. Somente você sabe quais operações são desejadas. Por exemplo, a maioria dos aplicativos são somente leitura, e outro número grande realiza `Create` / `Update` / `Delete` operações somente usando os procedimentos armazenados em modos de exibição.  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>O segundo DataContext não é atualizado  
  P. Eu usei uma instância do <xref:System.Data.Linq.DataContext> para armazenar valores no banco de dados. No entanto, um segundo <xref:System.Data.Linq.DataContext> no mesmo banco de dados não reflete os valores atualizados. A segunda instância do <xref:System.Data.Linq.DataContext> parece retornar os valores armazenados em cache.  
   
- R. Esse comportamento é padrão. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continua a retornar os mesmas instâncias/valores que você viu na primeira instância. Quando você faz atualizações, usa a simultaneidade otimista. Os dados originais são usados para verificar o estado atual do banco de dados e declarar que ainda estão de fato inalterados. Se eles forem alterados, um conflito ocorre e seu aplicativo deve resolvê-lo. Uma opção do aplicativo é redefinir o estado original para o estado atual do banco de dados e tentar novamente a atualização. Para obter mais informações, confira [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ R. Esse comportamento é padrão. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continua a retornar as mesmas instâncias/valores que você viu na primeira instância. Quando você faz atualizações, usa a simultaneidade otimista. Os dados originais são usados para verificar o estado atual do banco de dados e declarar que ainda estão de fato inalterados. Se eles forem alterados, um conflito ocorre e seu aplicativo deve resolvê-lo. Uma opção do aplicativo é redefinir o estado original para o estado atual do banco de dados e tentar novamente a atualização. Para obter mais informações, confira [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Você também pode definir o <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> como falso, o que desativa o cache e o controle de alterações. Você pode então recuperar os valores mais recentes toda vez que consultar.  
   

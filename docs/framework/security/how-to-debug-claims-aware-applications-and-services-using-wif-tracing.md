@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321543"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Como: depurar serviços e aplicativos baseados em declarações usando o rastreamento do WIF
@@ -102,10 +102,10 @@ ms.locfileid: "59321543"
   
 1. Examine a tabela a seguir de exceções do WIF e as ações necessárias para corrigir os problemas.  
   
-|**ID do erro**|**Mensagem de erro**|**Ação necessária para corrigir o erro**|  
+|**ID de erro**|**Mensagem de erro**|**Ação necessária para corrigir o erro**|  
 |-|-|-|  
 |ID4175|O emissor do token de segurança não foi reconhecido pelo IssuerNameRegistry.  Para aceitar tokens de segurança desse emissor, configure o IssuerNameRegistry para retornar um nome válido para esse emissor.|Esse erro pode ser causado pela ação de copiar uma impressão digital do snap-in do MMC e colá-la no arquivo *Web.config*. Especificamente, você pode obter um caractere extra não imprimível na cadeia de texto ao copiar da janela de propriedades do certificado. Esse caractere extra faz com que a correspondência da impressão digital falhe. O procedimento para copiar corretamente a impressão digital pode ser encontrado em [logon único baseado em declarações-para a Web e o Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Itens relacionados  
   
--   [Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+-   [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

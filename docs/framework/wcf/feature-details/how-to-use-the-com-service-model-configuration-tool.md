@@ -5,10 +5,10 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322583"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Como: usar a ferramenta de configuração do modelo de serviço COM+
@@ -111,4 +111,4 @@ Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferra
   
 ## <a name="see-also"></a>Consulte também
 
-- [Integração com visão geral de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Visão geral da integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

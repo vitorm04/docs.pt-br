@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
 ms.openlocfilehash: 1b41699d8da1c99705f6796105dab6f3ab1d727d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341628"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Como: Inserir um MenuStrip um Menu suspenso MDI (Windows Forms)
@@ -27,15 +27,15 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
   
 2. Adicionar um <xref:System.Windows.Forms.MenuStrip> para `Form1` e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade o <xref:System.Windows.Forms.MenuStrip> para `true`.  
   
-3. Adicionar um item de menu de nível superior para o `Form1`<xref:System.Windows.Forms.MenuStrip> e defina sua <xref:System.Windows.Forms.Control.Text%2A> propriedade `&File`.  
+3. Adicionar um item de menu de nível superior para o `Form1` <xref:System.Windows.Forms.MenuStrip> e defina seu <xref:System.Windows.Forms.Control.Text%2A> propriedade `&File`.  
   
 4. Adicione três itens de submenu para o `&File` item de menu e defina seus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedades a serem `&Open`, `&Import from`, e `E&xit`.  
   
 5. Adicione dois itens de submenu para o `&Import from` item de submenu e defina seus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedades a serem `&Word` e `&Excel`.  
   
-6. Adicionar um formulário ao projeto, adicione uma <xref:System.Windows.Forms.MenuStrip> para o formulário e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade da `Form2`<xref:System.Windows.Forms.MenuStrip> para `true`.  
+6. Adicionar um formulário ao projeto, adicione uma <xref:System.Windows.Forms.MenuStrip> para o formulário e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade da `Form2` <xref:System.Windows.Forms.MenuStrip> para `true`.  
   
-7. Adicionar um item de menu de nível superior para o `Form2`<xref:System.Windows.Forms.MenuStrip> e defina sua <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade `&File`.  
+7. Adicionar um item de menu de nível superior para o `Form2` <xref:System.Windows.Forms.MenuStrip> e defina seu <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriedade `&File`.  
   
 8. Adicionar itens de submenu para o `&File` menu de `Form2` na seguinte ordem: um <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`e outro <xref:System.Windows.Forms.ToolStripSeparator>.  
   
@@ -49,7 +49,7 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
     |Salvar e Fechar|Inserir|4|  
     |Separador|Inserir|5|  
   
-10. Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. No manipulador de eventos, insira um código semelhante ao exemplo de código a seguir para criar e exibir novas instâncias de `Form2` como filhos MDI de `Form1`.  
   
@@ -75,7 +75,7 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
     }  
     ```  
   
-12. Coloque um código semelhante ao seguinte exemplo de código no `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar o manipulador de eventos.  
+12. Coloque um código semelhante ao seguinte exemplo de código na `&Open` <xref:System.Windows.Forms.ToolStripMenuItem> para registrar o manipulador de eventos.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -97,6 +97,6 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Como: criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)
+- [Como: Criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Como: Criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)
 - [Visão geral do controle MenuStrip](menustrip-control-overview-windows-forms.md)

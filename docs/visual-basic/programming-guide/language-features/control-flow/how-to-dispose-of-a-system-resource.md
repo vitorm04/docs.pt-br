@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341901"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como: Descartar um recurso do sistema (Visual Basic)
@@ -47,9 +47,9 @@ Você pode usar um `Using` bloco para garantir que o sistema de descarte de um r
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Data.SqlClient.SqlConnection>
-- [Fluxo de controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Estruturas de decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Estruturas de loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Outras estruturas de controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [Estruturas de controle aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Estruturas de Controle Aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Instrução Using](../../../../visual-basic/language-reference/statements/using-statement.md)

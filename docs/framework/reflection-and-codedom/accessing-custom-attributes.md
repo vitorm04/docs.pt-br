@@ -13,10 +13,10 @@ ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321725"
 ---
 # <a name="accessing-custom-attributes"></a>Acessando atributos personalizados
@@ -77,4 +77,4 @@ public class LocalizationExtenderProvider
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Considerações sobre segurança relacionadas à reflexão](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)

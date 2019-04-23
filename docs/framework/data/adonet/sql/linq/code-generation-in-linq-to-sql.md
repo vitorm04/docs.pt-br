@@ -3,10 +3,10 @@ title: Geração de código em LINQ para SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
 ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321582"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Geração de código em LINQ para SQL
@@ -272,7 +272,7 @@ elementFormDefault="qualified" >
 ## <a name="see-also"></a>Consulte também
 
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Como: gerar o modelo de objeto como um arquivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Como: Gerar o modelo de objeto como um arquivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
 - [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

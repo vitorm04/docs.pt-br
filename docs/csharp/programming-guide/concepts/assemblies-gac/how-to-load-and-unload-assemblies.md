@@ -3,10 +3,10 @@ title: 'Como: Carregar e descarregar assemblies (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
 ms.openlocfilehash: 52f7173efe497ab286c607db681f256983adc077
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342031"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Como: Carregar e descarregar assemblies (C#)

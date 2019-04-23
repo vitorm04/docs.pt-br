@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
 ms.openlocfilehash: 5fe880a44afdbd79116541809972d1456aefb9c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323233"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Como: Associar um ContextMenuStrip a um controle
@@ -46,5 +46,5 @@ Depois de criar os seus controles e menus de atalho, use os procedimentos a segu
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Como: Adicionar itens de menu a um ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [Como: Adicionar itens de Menu a um ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
 - [Controle ContextMenuStrip](contextmenustrip-control.md)

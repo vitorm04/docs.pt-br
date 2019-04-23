@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342161"
 ---
 # <a name="how-keyboard-input-works"></a>Como a entrada do teclado funciona
@@ -63,9 +63,9 @@ O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em res
 |Tarefa|Método|  
 |----------|------------|  
 |Interceptar uma tecla de navegação e gerar um <xref:System.Windows.Forms.Control.KeyDown> eventos. Por exemplo, você deseja que as teclas TAB e Enter sejam identificadas em uma caixa de texto.|Substitua <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Observação:**  Como alternativa, você pode lidar com o <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e o conjunto <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> da <xref:System.Windows.Forms.PreviewKeyDownEventArgs> para `true` para a tecla ou teclas que você deseja.|  
-|Execute tratamento de navegação ou entrada especial em um controle. Por exemplo, você deseja usar as teclas de seta no controle de lista para alterar o item selecionado.|Substituições <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Execute tratamento de navegação ou entrada especial em um controle. Por exemplo, você deseja usar as teclas de seta no controle de lista para alterar o item selecionado.|Override <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Interceptar uma tecla de navegação e gerar um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em um controle de caixa de rotação você deseja o pressionamento de várias teclas de seta para acelerar a progressão pelos itens.|Substitua <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Executar a manipulação de navegação ou entrada especial durante um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em uma controle de lista, manter pressionada a tecla "r" ignora os itens que começam com a letra r.|Substituições <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Executar a manipulação de navegação ou entrada especial durante um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em uma controle de lista, manter pressionada a tecla "r" ignora os itens que começam com a letra r.|Override <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Execute o tratamento mnemônico personalizado. Por exemplo, você deseja manipular mnemônicos em botões desenhados pelo proprietário contidos em uma barra de ferramentas.|Substitua <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Consulte também
@@ -74,5 +74,5 @@ O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em res
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [Objeto My.Computer.Keyboard](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
-- [Acessar o teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
+- [Acessando o Teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
 - [Usando eventos do teclado](using-keyboard-events.md)

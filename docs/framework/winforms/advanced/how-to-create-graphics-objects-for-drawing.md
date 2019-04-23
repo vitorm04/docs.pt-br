@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324195"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Como: criar objetos gráficos para desenho
@@ -165,14 +165,14 @@ Antes que você possa desenhar linhas e formas, renderizar texto ou exibir e man
   
     |Para renderizar|Consulte|  
     |---------------|---------|  
-    |Linhas|[Como: desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formas|[Como: desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)|  
-    |Texto|[Como: desenhar texto em um formulário do Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Imagens|[Como: renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)|  
+    |Linhas|[Como: Desenhar uma linha em um formulário do Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formas|[Como: Desenhar uma forma delineada](how-to-draw-an-outlined-shape.md)|  
+    |Texto|[Como: Desenhar texto em um formulário do Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Imagens|[Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução à programação de elementos gráficos](getting-started-with-graphics-programming.md)
-- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Linhas, curvas e formas](lines-curves-and-shapes.md)
-- [Como: renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)
+- [Introdução à Programação de Elementos Gráficos](getting-started-with-graphics-programming.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
+- [Como: Renderizar imagens com o GDI+](how-to-render-images-with-gdi.md)

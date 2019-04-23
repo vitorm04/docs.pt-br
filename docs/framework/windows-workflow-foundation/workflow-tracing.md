@@ -3,10 +3,10 @@ title: Rastreamento de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321660"
 ---
 # <a name="workflow-tracing"></a>Rastreamento de fluxo de trabalho
@@ -23,7 +23,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
   
 4. O tamanho do buffer analítico padrão de rastreamento é apenas 4 quilobytes de (KB); é recomendável aumentar o tamanho para 32 KB. Para fazer isso, execute as seguintes etapas.  
   
-    1.  Execute o seguinte comando no diretório do framework atual (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Execute o seguinte comando no diretório atual do framework (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0 .21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  Alterar o \<bufferSize > valor no arquivo do Windows a 32.  
   
@@ -35,7 +35,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
                   </channel>  
         ```  
   
-    3.  Execute o seguinte comando no diretório do framework atual (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Execute o seguinte comando no diretório atual do framework (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0 .21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  Se você estiver usando o .NET Framework 4 Client Profile, você deve primeiro registrar o manifesto ETW executando o seguinte comando do diretório .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  

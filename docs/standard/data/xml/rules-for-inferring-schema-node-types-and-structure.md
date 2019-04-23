@@ -6,10 +6,10 @@ ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338703"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regras para inferir tipos de nó e estrutura de esquema
@@ -149,7 +149,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]
 - [Inferindo um esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
 - [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regras para inferir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

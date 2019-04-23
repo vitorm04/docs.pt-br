@@ -4,12 +4,12 @@ description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# 
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890547"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613441"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
@@ -93,6 +93,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 1. Para adicionar uma nova classe, clique com o botão direito do mouse no VSCode Explorer e selecione **Novo Arquivo**. Isso adiciona um novo arquivo à pasta que você abriu no VSCode.
 2. Nomeie o arquivo como `MyClass.cs`. Salve-o com uma extensão `.cs` no final para que ele seja reconhecido como um arquivo csharp.
 3. Adicione o código a seguir para criar sua primeira classe. Certifique-se de incluir o namespace correto, para poder fazer referência a ele no seu arquivo `Program.cs`.
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. Salve as alterações e execute o programa novamente. A nova mensagem deve aparecer com a cadeia de caracteres acrescentada.
+
 ```console
 > dotnet run
 Hello World! Happy coding!
@@ -140,5 +142,5 @@ A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar p
 
 ## <a name="see-also"></a>Consulte também
 
-- [Configurar o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Depurar no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+- [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

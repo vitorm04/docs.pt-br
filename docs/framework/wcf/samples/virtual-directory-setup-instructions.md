@@ -3,10 +3,10 @@ title: Instruções de definição de diretório virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325339"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instruções de definição de diretório virtual
@@ -192,4 +192,4 @@ Os exemplos do Windows Communication Foundation (WCF) destinam-se para compartil
   
 ## <a name="see-also"></a>Consulte também
 
-- [Instruções de hospedagem de serviço de informação de internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
