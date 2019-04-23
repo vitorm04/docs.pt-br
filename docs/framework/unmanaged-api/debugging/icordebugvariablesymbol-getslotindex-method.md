@@ -5,10 +5,10 @@ ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138782"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>Método ICorDebugVariableSymbol::GetSlotIndex
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] Um ponteiro para o índice de slot da variável local.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se for bem-sucedido. `E_FAIL` Se a variável é um argumento de função.  
+ `S_OK` se bem-sucedido. `E_FAIL` Se a variável é um argumento de função.  
   
 ## <a name="remarks"></a>Comentários  
  O índice de slot gerenciado de uma variável local pode ser usado para recuperar informações de metadados da variável  

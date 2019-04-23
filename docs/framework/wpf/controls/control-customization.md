@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135376"
 ---
 # <a name="control-customization"></a>Personalização do controle
@@ -20,7 +20,7 @@ Esta categoria abrange as várias classes base, interfaces e outros elementos e 
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral da criação de controle](control-authoring-overview.md)  
  [Diretrizes para criar controles com estilo](guidelines-for-designing-stylable-controls.md)  
- [Adornos](adorners.md)  
+ [Adorners](adorners.md)  
  [Estilos e modelos de controle](control-styles-and-templates.md)  
  [Automação de interface do usuário de um controle personalizado do WPF](ui-automation-of-a-wpf-custom-control.md)  
   

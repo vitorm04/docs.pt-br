@@ -9,10 +9,10 @@ helpviewer_keywords:
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
 ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139952"
 ---
 # <a name="using-the-world-transformation"></a>Usando a transformação global
@@ -44,5 +44,5 @@ A transformação global é uma propriedade do <xref:System.Drawing.Graphics> cl
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Drawing2D.Matrix>
-- [Sistemas de coordenadas e transformações](coordinate-systems-and-transformations.md)
-- [Usando transformações no GDI+ gerenciado](using-transformations-in-managed-gdi.md)
+- [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md)
+- [Usando Transformações no GDI+ Gerenciado](using-transformations-in-managed-gdi.md)

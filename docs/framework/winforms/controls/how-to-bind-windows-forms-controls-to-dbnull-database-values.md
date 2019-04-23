@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137755"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Como: Como associar controles do Windows Forms a valores de banco de dados DBNull
@@ -37,5 +37,5 @@ Quando você associa os controles dos Windows Forms a uma fonte de dados e a fon
 ## <a name="see-also"></a>Consulte também
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Como: Como identificar erros e exceções que ocorram na associação de dados](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Como: Associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como: Tratar erros e exceções que ocorrem na associação de dados](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Como: Associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

@@ -9,10 +9,10 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135857"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW no CLR
@@ -25,7 +25,7 @@ Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para
  Para obter mais informações sobre os provedores, consulte [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Eventos de informação de tempo de execução](../../../docs/framework/performance/runtime-information-etw-events.md)  
+ [Eventos de informações de tempo de execução](../../../docs/framework/performance/runtime-information-etw-events.md)  
  Captura informações sobre o tempo de execução, incluindo a SKU, o número de versão, a maneira pela qual o tempo de execução foi ativado, os parâmetros de linha de comando com os quais ele foi iniciado, o GUID (se aplicável) e outras informações relevantes.  
   
  [Evento Exception Thrown_V1](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
@@ -65,7 +65,7 @@ Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para
 
 - [Melhorar a depuração e ajuste de desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
 - [Blog de desempenho do Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
-- [Controlando o registro em log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)
-- [Provedores ETW no CLR](../../../docs/framework/performance/clr-etw-providers.md)
-- [Palavras-chave e níveis ETW no CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
+- [Controlando o log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)
+- [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)
+- [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
 - [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

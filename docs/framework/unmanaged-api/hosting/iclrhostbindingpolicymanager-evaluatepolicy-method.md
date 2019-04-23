@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad7856a9376880f867e35f1e63bc2cac1ca216fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130126"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>Método ICLRHostBindingPolicyManager::EvaluatePolicy
@@ -65,7 +65,7 @@ HRESULT EvaluatePolicy (
 |-------------|-----------------|  
 |S_OK|A avaliação foi concluída com êxito.|  
 |E_INVALIDARG|Tanto `pwzReferenceIdentity` ou `pbApplicationPolicy` é uma referência nula.|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` é muito pequeno.|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` é pequeno demais.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  

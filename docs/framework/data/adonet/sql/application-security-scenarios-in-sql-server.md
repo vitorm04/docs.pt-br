@@ -3,10 +3,10 @@ title: Cenários de segurança do aplicativo no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130129"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Cenários de segurança do aplicativo no SQL Server
@@ -47,18 +47,18 @@ Não há nenhuma maneira correta de única para criar um aplicativo de cliente s
  [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  Descreve como usar EXECUTE AS cláusula para representar outro usuário. Representação alterna o contexto de execução do chamador para o usuário especificado.  
   
- [Conceder permissões de nível de linha no SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [Concedendo permissões de nível de linha no SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  Descreve como implementar as permissões de nível de linha para restringir o acesso a dados.  
   
  [Criando funções de aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Descreve os recursos e funcionalidade de funções de aplicativo.  
   
- [Habilitando o acesso entre bancos de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [Habilitando o acesso ao banco de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Descreve como habilitar o acesso entre bancos de dados sem comprometer a segurança.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Segurança do SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server Security](../../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
 - [Visão geral de segurança do SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Protegendo aplicativos ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

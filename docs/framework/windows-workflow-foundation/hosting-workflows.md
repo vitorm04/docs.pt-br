@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
 ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137742"
 ---
 # <a name="hosting-workflows"></a>Hospedando fluxos de trabalho
@@ -24,7 +24,7 @@ Os tópicos desta seção discutem a hospedagem de fluxos de trabalho.
  [Inspeção da árvore de atividade](activity-tree-inspection.md)  
  Descreve como os autores de host de fluxo de trabalho podem inspecionar um fluxo de trabalho usando <xref:System.Activities.WorkflowInspectionServices>.  
   
- [Serializando fluxos de trabalho e atividades para e do XAML](serializing-workflows-and-activities-to-and-from-xaml.md)  
+ [Serializando fluxos de trabalho e atividades de/para XAML](serializing-workflows-and-activities-to-and-from-xaml.md)  
  Descreve como serializar fluxos de trabalho para XAML e trabalhar com definições de fluxo de trabalho serializados.  
   
  [Usando WorkflowIdentity e controle de versão](using-workflowidentity-and-versioning.md)  

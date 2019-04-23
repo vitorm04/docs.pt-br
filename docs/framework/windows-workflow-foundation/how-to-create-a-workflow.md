@@ -3,10 +3,10 @@ title: 'Como: criar um fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134791"
 ---
 # <a name="how-to-create-a-workflow"></a>Como: criar um fluxo de trabalho
@@ -19,13 +19,13 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 >  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: criar um fluxo de trabalho sequencial](how-to-create-a-sequential-workflow.md)  
+ [Como: Criar um fluxo de trabalho sequencial](how-to-create-a-sequential-workflow.md)  
  Descreve como criar um fluxo de trabalho sequencial usando a atividade de <xref:System.Activities.Statements.Sequence> .  
   
- [Como: criar um fluxo de trabalho de fluxograma](how-to-create-a-flowchart-workflow.md)  
+ [Como: Criar um fluxo de trabalho de fluxograma](how-to-create-a-flowchart-workflow.md)  
  Descreve como criar um fluxo de trabalho do fluxograma usando a atividade de <xref:System.Activities.Statements.Flowchart> .  
   
- [Como: criar um fluxo de trabalho da máquina de estado](how-to-create-a-state-machine-workflow.md)  
+ [Como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md)  
  Descreve como criar um fluxo de trabalho do computador de estado usando a atividade de <xref:System.Activities.Statements.StateMachine> .  
   
 ## <a name="see-also"></a>Consulte também

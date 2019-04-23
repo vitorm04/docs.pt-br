@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
 ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139133"
 ---
 # <a name="xarray-markup-extension"></a>Extensão de marcação x:Array
@@ -44,7 +44,7 @@ Fornece suporte geral para matrizes de objetos por meio de uma extensão de marc
   
  `x:Array` é que mais destinado geral extensibilidade de linguagem no XAML. Mas `x:Array` também pode ser útil para especificar valores XAML de determinadas propriedades que usam coleções de suporte para XAML como sua propriedade estruturada conteúdo. Por exemplo, você pode especificar o conteúdo de um <xref:System.Collections.IEnumerable> propriedade com um `x:Array` uso.  
   
- `x:Array` é uma extensão de marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. `x:Array` é uma exceção a essa regra parcialmente, porque em vez de fornecer manipulação de valor de atributo alternativo, `x:Array` fornece tratamento alternativo de seu conteúdo de texto interno. Esse comportamento permite que os tipos que não podem ter suporte por um modelo de conteúdo existente para ser agrupadas em uma matriz e referenciado mais tarde no code-behind, acessando a matriz nomeada; Você pode chamar <xref:System.Array> métodos para obter os itens individuais da matriz.  
+ `x:Array` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. `x:Array` é uma exceção a essa regra parcialmente, porque em vez de fornecer manipulação de valor de atributo alternativo, `x:Array` fornece tratamento alternativo de seu conteúdo de texto interno. Esse comportamento permite que os tipos que não podem ter suporte por um modelo de conteúdo existente para ser agrupadas em uma matriz e referenciado mais tarde no code-behind, acessando a matriz nomeada; Você pode chamar <xref:System.Array> métodos para obter os itens individuais da matriz.  
   
  Todas as extensões de marcação no XAML usam as chaves ({,} `)` na sintaxe de atributo, que é a convenção pela qual um processador XAML reconhece que uma extensão de marcação precisa processar o valor do atributo. Para obter mais informações sobre extensões de marcação em geral, consulte [conversores de tipo e extensões de marcação para XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
@@ -71,5 +71,5 @@ Fornece suporte geral para matrizes de objetos por meio de uma extensão de marc
   
 ## <a name="see-also"></a>Consulte também
 
-- [Extensões de marcação e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Tipos migrados do WPF para System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

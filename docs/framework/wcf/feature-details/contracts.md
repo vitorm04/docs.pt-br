@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134882"
 ---
 # <a name="contracts"></a>Contratos
@@ -67,6 +67,6 @@ Esta seção mostra como definir e implementar contratos do Windows Communicatio
   
 ## <a name="see-also"></a>Consulte também
 
-- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md)
 - [Implementando contratos de serviço](../../../../docs/framework/wcf/implementing-service-contracts.md)

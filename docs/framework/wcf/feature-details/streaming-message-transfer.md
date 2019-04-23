@@ -3,10 +3,10 @@ title: Transmissão de transferência de mensagem
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136871"
 ---
 # <a name="streaming-message-transfer"></a>Transmissão de transferência de mensagem
@@ -48,4 +48,4 @@ Transportes do Windows Communication Foundation (WCF) dão suporte a dois modos 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: habilitar a transmissão](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Como: Habilitar o Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

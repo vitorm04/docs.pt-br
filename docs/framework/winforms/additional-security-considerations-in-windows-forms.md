@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139523"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerações adicionais sobre Segurança do Windows Forms
@@ -52,7 +52,7 @@ ms.locfileid: "59139523"
 |<xref:System.Windows.Forms.Control>|-Obtendo o <xref:System.Windows.Forms.Control.Parent%2A> propriedade.<br />-Definir o `Region` propriedade.<br />-O chamando o <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> e <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, ou <xref:System.Windows.Forms.Control.SetTopLevel%2A> método.<br />-O chamando o <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> método se o controle retornado não é um filho do controle de chamada.<br />-Modificar o foco do controle dentro de um controle de contêiner.|  
 |<xref:System.Windows.Forms.Cursor>|-Definir o <xref:System.Windows.Forms.Cursor.Clip%2A> propriedade.<br />-O chamando o <xref:System.Windows.Forms.Control.Hide%2A> método.|  
 |<xref:System.Windows.Forms.DataGrid>|-O chamando o <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> método.|  
-|<xref:System.Windows.Forms.Form>|-Obtendo as <xref:System.Windows.Forms.Form.ActiveForm%2A> ou <xref:System.Windows.Forms.Form.MdiParent%2A> propriedade.<br />-Definir as <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, ou <xref:System.Windows.Forms.Form.TopMost%2A> propriedade.<br />-Definir o <xref:System.Windows.Forms.Form.Opacity%2A> propriedade abaixo de 50%.<br />-Definir as <xref:System.Windows.Forms.Form.WindowState%2A> propriedade para <xref:System.Windows.Forms.FormWindowState.Minimized> programaticamente.<br />-O chamando o <xref:System.Windows.Forms.Form.Activate%2A> método.<br />-O usando o <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, e <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> valores de enumeração.|  
+|<xref:System.Windows.Forms.Form>|-Obtendo as <xref:System.Windows.Forms.Form.ActiveForm%2A> ou <xref:System.Windows.Forms.Form.MdiParent%2A> propriedade.<br />-Definir as <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, ou <xref:System.Windows.Forms.Form.TopMost%2A> propriedade.<br />-Definir o <xref:System.Windows.Forms.Form.Opacity%2A> propriedade abaixo de 50%.<br />-Definir as <xref:System.Windows.Forms.Form.WindowState%2A> propriedade para <xref:System.Windows.Forms.FormWindowState.Minimized> programaticamente.<br />-O chamando o <xref:System.Windows.Forms.Form.Activate%2A> método.<br />-O usando o <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, e <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> valores de enumeração.|  
 |<xref:System.Windows.Forms.NotifyIcon>|-O usando o <xref:System.Windows.Forms.NotifyIcon> componente é totalmente restrito.|  
   
  O <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> valor restringe as ações listadas na tabela a seguir, além disso, para as restrições colocadas pelo <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> valor.  
@@ -90,8 +90,8 @@ ms.locfileid: "59139523"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Acesso mais seguro a arquivos e dados no Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
+- [Acesso mais seguro a arquivos e a dados nos Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Visão geral da Segurança do Windows Forms](security-in-windows-forms-overview.md)
+- [Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)
 - [Segurança do Windows Forms](windows-forms-security.md)
 - [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

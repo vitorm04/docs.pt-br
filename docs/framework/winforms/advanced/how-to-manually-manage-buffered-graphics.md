@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
 ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138665"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Como: gerenciar elementos gráficos em buffer manualmente
@@ -40,5 +40,5 @@ Para cenários mais avançados de armazenamento em buffer duplos, é possível u
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.BufferedGraphicsContext>
-- [Elementos gráficos em buffer duplo](double-buffered-graphics.md)
-- [Como: renderizar elementos gráficos em buffer manualmente](how-to-manually-render-buffered-graphics.md)
+- [Elementos Gráficos em Buffer Duplo](double-buffered-graphics.md)
+- [Como: Renderizar elementos gráficos em buffer manualmente](how-to-manually-render-buffered-graphics.md)

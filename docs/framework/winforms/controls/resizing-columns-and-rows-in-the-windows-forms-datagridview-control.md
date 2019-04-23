@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138106"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Redimensionando colunas e linhas no controle DataGridView dos Windows Forms
@@ -21,19 +21,19 @@ O controle `DataGridView` fornece diversas opções para personalizar o comporta
  O controle `DataGridView` fornece propriedades, métodos e eventos que permitem personalizar ou desabilitar todos esses comportamentos causados voltados para o usuário. Além disso, é possível redimensionar linhas, colunas e cabeçalhos com programação para ajustar o conteúdo ou configurá-los para redimensionarem a si próprios automaticamente sempre que seu conteúdo mudar. Você também pode configurar colunas para dividir automaticamente a largura disponível do controle em proporções especificadas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Dimensionando opções no controle DataGridView dos Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)  
+ [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md) (Opções de dimensionamento no controle DataGridView dos Windows Forms)  
  Descreve as opções para dimensionar linhas, colunas e cabeçalhos. Também fornece detalhes sobre os métodos e propriedades relacionados ao dimensionamento e descreve os cenários comuns de uso.  
   
- [Modo de preenchimento da coluna no controle DataGridView dos Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [Modo de preenchimento de coluna no controle DataGridView dos Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
  Descreve o modo de preenchimento de coluna em detalhes e fornece código de demonstração que pode ser usado para experimentar o modo de preenchimento de coluna e outros modos.  
   
- [Como: Definir os modos de dimensionamento do controle DataGridView do Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ [Como: Definir os modos de dimensionamento do controle DataGridView dos Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  Descreve como configurar os modos de dimensionamento para fins comuns.  
   
- [Como: Redimensionar de forma programática as células para que o conteúdo caiba no controle DataGridView do Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [Como: Redimensionar de forma programática as células para ajustar o conteúdo no controle DataGridView dos Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  Fornece código de demonstração que pode ser usado para experimentar o redimensionamento com programação.  
   
- [Como: Redimensionar automaticamente células quando o conteúdo é alterado no controle DataGridView do Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [Como: Redimensionar automaticamente células quando o conteúdo é alterado no controle DataGridView dos Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Fornece código de demonstração que pode ser usado para experimentar os modos de dimensionamento automáticos.  
   
 ## <a name="reference"></a>Referência  

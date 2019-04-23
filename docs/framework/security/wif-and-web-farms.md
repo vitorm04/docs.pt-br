@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135350"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web Farms
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- O código a seguir mostra a implementação do serviço de cache do WCF. Neste exemplo, o padrão, o cache de token de sessão na memória implementado pelo WIF, é usado. Como alternativa, você pode implementar um cache durável com suporte de um banco de dados. `ISessionSecurityTokenCacheService` Define a interface mostrada acima. Neste exemplo, nem todos os métodos necessários para implementar a interface são mostrados, para fins de brevidade.  
+ O código a seguir mostra a implementação do serviço de cache do WCF. Neste exemplo, o padrão, o cache de token de sessão na memória implementado pelo WIF, é usado. Como alternativa, você pode implementar um cache durável com suporte de um banco de dados. `ISessionSecurityTokenCacheService` define a interface mostrada acima. Neste exemplo, nem todos os métodos necessários para implementar a interface são mostrados, para fins de brevidade.  
   
 ```  
 using System;  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [Gerenciamento de sessões do WIF](../../../docs/framework/security/wif-session-management.md)
+- [Gerenciamento de sessões WIF](../../../docs/framework/security/wif-session-management.md)

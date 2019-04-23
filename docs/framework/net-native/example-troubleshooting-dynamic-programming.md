@@ -5,10 +5,10 @@ ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137885"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Exemplo: solução de problemas de programação dinâmica
@@ -62,5 +62,5 @@ AppViewModel.Current.LayoutVM.PageMap
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Exemplo: lidar com exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Exemplo: Tratamento de exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

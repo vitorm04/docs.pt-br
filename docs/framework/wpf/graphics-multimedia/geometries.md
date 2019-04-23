@@ -10,19 +10,19 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140212"
 ---
 # <a name="geometries"></a>Geometrias
 <xref:System.Windows.Media.Geometry> é uma classe versátil, usada para renderizar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] gráficos, objetos de teste de clique e definir regiões de recorte  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Sintaxe de marcação do caminho](path-markup-syntax.md)  
- [Visão geral da geometria](geometry-overview.md)  
- [Tópicos explicativos ](geometries-how-to-topics.md)  
+ [Sintaxe de marcação de caminho](path-markup-syntax.md)  
+ [Visão geral de geometria](geometry-overview.md)  
+ [Tópicos de instruções](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -30,4 +30,4 @@ ms.locfileid: "59140212"
 - <xref:System.Windows.Shapes.Shape>
 - [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Gráficos e multimídia](index.md)
+- [Elementos gráficos e multimídia](index.md)

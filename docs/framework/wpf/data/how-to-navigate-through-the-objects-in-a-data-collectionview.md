@@ -10,10 +10,10 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138171"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Como: Navegar pelos objetos em um CollectionView de dados
@@ -35,4 +35,4 @@ As exibições permitem que a mesma coleção de dados seja visualizada de difer
 - [Classificar dados em uma exibição](how-to-sort-data-in-a-view.md)
 - [Filtrar dados em uma exibição](how-to-filter-data-in-a-view.md)
 - [Classificar e agrupar dados usando uma exibição em XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

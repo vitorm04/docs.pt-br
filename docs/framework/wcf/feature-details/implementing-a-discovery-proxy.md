@@ -3,10 +3,10 @@ title: Implementando um proxy de descoberta
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
 ms.openlocfilehash: 5d9296d8ba70d4c9e8d8339fa3a032d9c4c62826
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140992"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementando um proxy de descoberta
@@ -17,19 +17,19 @@ Esta seção descreve as etapas necessárias para implementar um proxy de descob
  O proxy de descoberta implementado aqui é como qualquer outro serviço do WCF, em que você também pode fazer o proxy de descoberta podem ser descobertos e fazer com que os clientes localizar seus pontos de extremidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: implementar um proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Como: Implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
  Descreve como implementar um proxy de descoberta.  
   
- [Como: implementar um serviço de descoberta que registra usando o proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Como: Implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
  Descreve como implementar um serviço WCF de descoberta que registra com o proxy de descoberta.  
   
- [Como: implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [Como: Implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
  Descreve como implementar um aplicativo de cliente do WCF que usa o proxy de descoberta para pesquisar para um serviço.  
   
- [Como: testar o proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
+ [Como: O Proxy de descoberta de teste](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
  Descreve como testar o código escrito em três tópicos anteriores.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Descoberta de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Como: adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)
+- [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Como: Adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)

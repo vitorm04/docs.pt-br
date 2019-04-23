@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e322f5c7119d13c8a872bd87d00c1e55324b581
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135753"
 ---
 # <a name="metahostconfigflags-enumeration"></a>Enumeração METAHOST_CONFIG_FLAGS
@@ -59,6 +59,6 @@ typedef enum {
   
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedando enumerações](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
 - [Método GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)
-- [\<inicialização > elemento](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+- [Elemento \<startup>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
