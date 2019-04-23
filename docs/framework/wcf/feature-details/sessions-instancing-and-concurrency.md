@@ -3,10 +3,10 @@ title: Sessões,instanciação e simultaneidade
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229063"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
@@ -109,9 +109,9 @@ public class CalculatorService : ICalculatorConcurrency
   
 ## <a name="see-also"></a>Consulte também
 
-- [Utilizando sessões](../../../../docs/framework/wcf/using-sessions.md)
-- [Como: criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Como: controlar instanciação de serviço](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [Concorrência](../../../../docs/framework/wcf/samples/concurrency.md)
+- [Usando sessões](../../../../docs/framework/wcf/using-sessions.md)
+- [Como: Criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Como: Controlar instanciação de serviço](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Instanciação](../../../../docs/framework/wcf/samples/instancing.md)
-- [Session](../../../../docs/framework/wcf/samples/session.md)
+- [Sessão](../../../../docs/framework/wcf/samples/session.md)

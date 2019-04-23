@@ -12,10 +12,10 @@ helpviewer_keywords:
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187441"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Esquema de configurações de compilador e de provedor de linguagem
@@ -23,7 +23,7 @@ As configurações do compilador e do provedor de linguagem especificam os eleme
   
  O .NET Framework define as configurações do compilador iniciais no arquivo de configuração do computador (Machine.config). Os desenvolvedores e fornecedores do compilador podem adicionar parâmetros de configuração em uma nova implementação do <xref:System.CodeDom.Compiler.CodeDomProvider>. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar programaticamente as definições de configuração do compilador e do provedor de linguagem em um computador.  
   
- [\<Configuração > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
   
@@ -61,4 +61,4 @@ As configurações do compilador e do provedor de linguagem especificam os eleme
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compilador > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

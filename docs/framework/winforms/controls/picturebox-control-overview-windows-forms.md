@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
 ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227846"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>Visão geral do controle PictureBox (Windows Forms)
@@ -24,7 +24,7 @@ Os formulários do Windows <xref:System.Windows.Forms.PictureBox> controle é us
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Como: Carregar uma imagem usando o designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Como: Modificar o tamanho ou o posicionamento de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Como: Carregar uma imagem usando o Designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Como: Definir imagens em tempo de execução](how-to-set-pictures-at-run-time-windows-forms.md)
 - [Controle PictureBox](picturebox-control-windows-forms.md)

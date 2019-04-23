@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296089"
 ---
 # <a name="ws-transaction-flow"></a>Fluxo de transação WS
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   A segunda `Subtract` solicitação é executada dentro de um novo escopo de transação declarado com o `TransactionScopeOption.Suppress` opção. Isso elimina a transação do cliente inicial externa e a solicitação não fluir uma transação para o serviço. Essa abordagem permite que um cliente explicitamente recusar e proteger contra o fluxo de uma transação para um serviço quando não é necessária. Ações do serviço ocorrem dentro do escopo de uma transação nova e desconectada.  
   
--   O `Multiply` solicitação não fluir uma transação para o serviço porque a definição de gerada do cliente do `ICalculator` interface inclui um <xref:System.ServiceModel.TransactionFlowAttribute> definido como <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   O `Multiply` solicitação não fluir uma transação para o serviço porque a definição de gerada do cliente do `ICalculator` interface inclui um <xref:System.ServiceModel.TransactionFlowAttribute> definido como <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
   
 -   O `Divide` solicitação não fluir uma transação para o serviço porque novamente o cliente gerada pelo definição do `ICalculator` interface não incluir um `TransactionFlowAttribute`. Ações de serviço novamente ocorrem dentro do escopo de outra transação nova e desconectada.  
   

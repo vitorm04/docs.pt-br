@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228582"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importando esquema para gerar classes
@@ -175,9 +175,9 @@ Para gerar classes de esquemas que podem ser usadas com o Windows Communication 
 #### <a name="import-options-advanced-options"></a>Opções de importação: Opções avançadas  
  A seguir é opções avançadas de importação:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> propriedade. Especifique o <xref:System.CodeDom.Compiler.CodeDomProvider> usar para gerar o código para as classes geradas. O mecanismo de importação tenta evitar recursos que o <xref:System.CodeDom.Compiler.CodeDomProvider> não oferece suporte. Se o <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> não for definido, o conjunto completo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] recursos é usado sem restrições.  
+-   Propriedade <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Especifique o <xref:System.CodeDom.Compiler.CodeDomProvider> usar para gerar o código para as classes geradas. O mecanismo de importação tenta evitar recursos que o <xref:System.CodeDom.Compiler.CodeDomProvider> não oferece suporte. Se o <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> não for definido, o conjunto completo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] recursos é usado sem restrições.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> propriedade. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> implementação pode ser especificada com essa propriedade. O <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza o processo de importação. Para obter mais informações, consulte [substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
+-   Propriedade <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> implementação pode ser especificada com essa propriedade. O <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza o processo de importação. Para obter mais informações, consulte [substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -186,7 +186,7 @@ Para gerar classes de esquemas que podem ser usadas com o Windows Communication 
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
-- [Substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
-- [Importação e exportação de esquemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
-- [Exportando esquemas de classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Alternativas de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Exportação e importação de esquema](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
 - [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

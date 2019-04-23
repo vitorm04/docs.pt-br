@@ -7,10 +7,10 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295868"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escrevendo a primeira consulta LINQ (Visual Basic)
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a LINQ no Visual Basic](getting-started-with-linq.md)
-- [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Introdução ao LINQ no Visual Basic](getting-started-with-linq.md)
+- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
-- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

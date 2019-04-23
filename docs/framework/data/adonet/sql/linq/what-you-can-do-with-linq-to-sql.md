@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231572"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>O que você pode fazer com LINQ to SQL
@@ -53,5 +53,5 @@ ms.locfileid: "59231572"
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
-- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Guia de Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

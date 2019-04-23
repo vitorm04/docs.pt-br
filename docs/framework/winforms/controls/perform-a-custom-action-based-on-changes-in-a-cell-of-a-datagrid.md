@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
 ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229154"
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Como: Realizar uma ação personalizada com base em alterações em uma célula do controle DataGridView do Windows Forms
@@ -46,4 +46,4 @@ O <xref:System.Windows.Forms.DataGridView> controle tem um número de eventos qu
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
 - [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Passo a passo: Validando dados no controle DataGridView do Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Passo a passo: Validando dados no controle DataGridView dos Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

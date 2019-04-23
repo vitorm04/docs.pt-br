@@ -3,10 +3,10 @@ title: Migrando de .NET Remoting para o WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296193"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
@@ -105,7 +105,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
 -   [Configurando serviços usando arquivos de configuração](configuring-services-using-configuration-files.md)  
   
--   [Serviços de hospedagem](hosting-services.md)  
+-   [Hospedando serviços](hosting-services.md)  
   
 ### <a name="client-implementation-comparison"></a>Comparação de implementação do cliente  
   
@@ -142,7 +142,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
  Este exemplo mostra como ele é mais semelhante ao exemplo a comunicação remota de programação no nível do canal. Também está disponível de **adicionar referência de serviço** abordagem no Visual Studio que gera código para simplificar a programação do cliente. Para mais informações, consulte os seguintes tópicos:  
   
--   [Programação de nível de canal cliente](./extending/client-channel-level-programming.md)  
+-   [Programação de nível de canal do cliente](./extending/client-channel-level-programming.md)  
   
 -   [Como: Adicionar, atualizar ou remover uma referência de serviço](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   

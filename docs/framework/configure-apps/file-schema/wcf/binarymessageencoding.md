@@ -3,10 +3,10 @@ title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
 ms.openlocfilehash: e02ed6ef79fcf52bbe9c33bd9b36a14113e19d1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228374"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding>
@@ -70,7 +70,7 @@ Define um codificador de mensagem binária que codifica mensagens do Windows Com
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
-- [Decodificador de mensagens](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Codificação de mensagens](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [Escolhendo um codificador de mensagem](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)

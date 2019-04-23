@@ -8,10 +8,10 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297246"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Usando um cliente WCF para acessar um serviço
@@ -189,11 +189,11 @@ Quando esses tipos de exceções ocorrem, a melhor maneira de resolver o problem
 ## <a name="see-also"></a>Consulte também
 
 - [Como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Como: acessar serviços com um contrato duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Como: chamar operações de serviço de forma assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Como: acessar os serviços com contratos unidirecionais e de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Como: acessar um serviço WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Noções básicas de código de cliente gerado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Como: melhorar o tempo de inicialização dos aplicativos do cliente WCF usando o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [Especificando a execução do cliente- Comportamento do tempo](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Como: Serviços do Access com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Como: Chamar operações de serviço de forma assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Como: Acessar os serviços com unidirecional e contratos de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Como: Acessar um WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Entendendo o código do cliente gerado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
+- [Como: Melhorar o tempo de inicialização do WCF cliente aplicativos usando o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Especificando o comportamento em tempo de execução do cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configurando comportamentos do cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)

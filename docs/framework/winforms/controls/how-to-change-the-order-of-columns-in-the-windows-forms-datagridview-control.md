@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
 ms.openlocfilehash: 90d262e738f092215e88e38e31169d74059e4401
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228790"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms
@@ -40,5 +40,5 @@ Quando você usa um <xref:System.Windows.Forms.DataGridView> para exibir dados d
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Associar dados ao controle DataGridView do Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Associar dados ao controle DataGridView dos Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

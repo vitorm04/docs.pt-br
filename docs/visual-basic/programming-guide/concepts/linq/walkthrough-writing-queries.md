@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296063"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Passo a passo: Escrevendo consultas em Visual Basic
@@ -134,7 +134,7 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
 ## <a name="additional-information"></a>Informações adicionais  
  Depois de se familiarizar com os conceitos básicos de como trabalhar com consultas, você está pronto para ler a documentação e exemplos para o tipo específico de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provedor que você está interessado:  
   
- [Objetos LINQ to](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
@@ -145,10 +145,10 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

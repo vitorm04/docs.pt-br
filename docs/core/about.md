@@ -3,12 +3,12 @@ title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296401"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -24,7 +24,7 @@ O .NET Core tem as seguintes características:
 
 ## <a name="languages"></a>Linguagens
 
-As linguagens C#, Visual Basic e F# podem ser usadas para escrever aplicativos e bibliotecas para o .NET Core. Essas linguagens são ou podem ser integradas aos seus editores de texto e IDEs favoritos, incluindo [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text e Vim. Essa integração é fornecida, em parte, pelas equipes dos projetos [OmniSharp](https://www.omnisharp.net/) e [Ionide](http://ionide.io).
+As linguagens C#, Visual Basic e F# podem ser usadas para escrever aplicativos e bibliotecas para o .NET Core. Essas linguagens são ou podem ser integradas aos seus editores de texto e IDEs favoritos, incluindo [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text e Vim. Essa integração é fornecida, em parte, pelas equipes dos projetos [OmniSharp](https://www.omnisharp.net/) e [Ionide](http://ionide.io).
 
 ## <a name="apis"></a>APIs
 

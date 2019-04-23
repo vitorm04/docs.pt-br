@@ -3,10 +3,10 @@ title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
 ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228231"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
@@ -79,7 +79,7 @@ O `namedPipeTransport` elemento é o ponto de partida para criar uma associaçã
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associações](../../../../../docs/framework/wcf/bindings.md)
 - [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)

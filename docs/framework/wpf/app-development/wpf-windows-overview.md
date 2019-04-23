@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296115"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
@@ -108,9 +108,9 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurar uma definição de janela para MSBuild  
  Como você implementa sua janela determina como ela é configurada para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para uma janela que é definida usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e code-behind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` itens.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens.  
   
--   Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` itens.  
+-   Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` itens.  
   
  Isso é mostrado na seguinte [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] arquivo de projeto.  
   
@@ -257,7 +257,7 @@ Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) 
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- O <xref:System.Windows.Window.Closing> manipulador de eventos recebe um <xref:System.ComponentModel.CancelEventArgs>, que implementa o `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> que você definir a propriedade `true` para impedir que uma janela seja fechada.  
+ O <xref:System.Windows.Window.Closing> manipulador de eventos recebe um <xref:System.ComponentModel.CancelEventArgs>, que implementa o `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade definida como `true` para impedir que uma janela seja fechada.  
   
  Se <xref:System.Windows.Window.Closing> não for tratada, ou é tratado mas não cancelado, a janela será fechada. Antes de uma janela realmente fechar, <xref:System.Windows.Window.Closed> é gerado. Neste ponto, uma janela não pode ser impedida de fechar.  
   
@@ -486,4 +486,4 @@ A aparência padrão de uma janela inclui um botão de barra de tarefas, como a 
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
 - [Visão geral das caixas de diálogo](dialog-boxes-overview.md)
-- [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md)
+- [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)

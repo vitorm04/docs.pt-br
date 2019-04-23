@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
 ms.openlocfilehash: 392855e3db2ea10c90784a6f9003805b79db74a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230571"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Adicionando um DataTable a um DataSet
@@ -34,5 +34,5 @@ O ADO.NET permite que você crie objetos <xref:System.Data.DataTable> e adicione
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

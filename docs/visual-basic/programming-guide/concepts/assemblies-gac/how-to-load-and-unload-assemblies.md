@@ -3,10 +3,10 @@ title: 'Como: Carregar e descarregar Assemblies (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
 ms.openlocfilehash: efd8ddbe45323e1f80cec54379d61b5aa8a435cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297377"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Como: Carregar e descarregar Assemblies (Visual Basic)
@@ -26,6 +26,6 @@ Os assemblies referenciados pelo seu programa serão automaticamente carregados 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos de programação](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Como: Carregar assemblies em um domínio do aplicativo](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

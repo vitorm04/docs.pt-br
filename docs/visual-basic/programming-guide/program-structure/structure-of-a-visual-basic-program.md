@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295764"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estrutura de um programa Visual Basic
@@ -22,9 +22,9 @@ Um programa Visual Basic é compilado para cima de blocos de construção padrã
 ## <a name="file-level-programming-elements"></a>Elementos de programação de nível de arquivo  
  Quando você iniciar um projeto ou arquivo e abra o editor de código, você verá algum código já está em vigor e na ordem correta. Qualquer código que você escreve deve seguir a sequência a seguir:  
   
-1. `Option` instruções  
+1. `Option` Instruções  
   
-2. `Imports` instruções  
+2. `Imports` Instruções  
   
 3. `Namespace` instruções e os elementos de nível de namespace  
   

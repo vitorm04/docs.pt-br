@@ -11,10 +11,10 @@ helpviewer_keywords:
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
 ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228894"
 ---
 # <a name="system-information-and-windows-forms"></a>Informações do sistema e o Windows Forms
@@ -45,4 +45,4 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.SystemInformation>
-- [Gerenciamento de energia no Windows Forms](power-management-in-windows-forms.md)
+- [Gerenciamento de Energia nos Windows Forms](power-management-in-windows-forms.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228868"
 ---
 # <a name="denial-of-service"></a>Negação de serviço
@@ -85,6 +85,6 @@ Negação de serviço ocorre quando um sistema está sobrecarregado de tal forma
 - [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Ataques por repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296518"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Passo a passo: mapear propriedades usando o elemento WindowsFormsHost
@@ -83,7 +83,7 @@ O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento fornece o pa
 
      O `AddClipMapping` método adiciona um novo mapeamento para o <xref:System.Windows.UIElement.Clip%2A> propriedade.
 
-     O `OnClipChange` método traduz a <xref:System.Windows.UIElement.Clip%2A> propriedade para o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> propriedade.
+     O `OnClipChange` método traduz a <xref:System.Windows.UIElement.Clip%2A> propriedade para o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> propriedade.
 
      O `Window1_SizeChanged` método lida com a janela <xref:System.Windows.FrameworkElement.SizeChanged> eventos e dimensiona a região de recorte para caber na janela do aplicativo.
 
@@ -113,7 +113,7 @@ Substituir um mapeamento de propriedade padrão removendo o mapeamento padrão e
 
      O `ReplaceFlowDirectionMapping` método substitui o mapeamento padrão para o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade.
 
-     O `OnFlowDirectionChange` método traduz a <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade para o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade.
+     O `OnFlowDirectionChange` método traduz a <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade para o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade.
 
      O `cb_CheckedChanged` identificadores de método de <xref:System.Windows.Forms.CheckBox.CheckedChanged> evento no <xref:System.Windows.Forms.CheckBox> controle. Ele atribui a <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade com base no valor da <xref:System.Windows.Forms.CheckBox.CheckState%2A> propriedade
 
@@ -145,7 +145,7 @@ Configure seus mapeamentos de propriedades chamando os métodos descritos anteri
 
      O `WindowLoaded` identificadores de método a <xref:System.Windows.FrameworkElement.Loaded> eventos e realiza a seguinte inicialização.
 
-    -   Cria um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> controle.
+    -   Cria uma [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> controle.
 
     -   Chama os métodos definidos anteriormente no passo a passo para configurar os mapeamentos de propriedade.
 
@@ -159,5 +159,5 @@ Configure seus mapeamentos de propriedades chamando os métodos descritos anteri
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows Forms e mapeamento de propriedade do WPF](windows-forms-and-wpf-property-mapping.md)
-- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Passo a passo: hospedar um controle do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Passo a passo: Hospedando um controle de formulários do Windows no WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

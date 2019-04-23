@@ -3,10 +3,10 @@ title: Funções canônicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228764"
 ---
 # <a name="math-canonical-functions"></a>Funções canônicas matemáticas
@@ -17,11 +17,11 @@ Entity SQL inclui as seguintes funções canônicas de matemáticas:
 
 Retorna o valor absoluto de `value`.
 
-**Arguments**
+**Argumentos**
 
 Uma `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, e `Decimal`.
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -33,11 +33,11 @@ O tipo de `value`.
 
 Retorna o número inteiro o menor que não é menor que `value`.
 
-**Arguments**
+**Argumentos**
 
 Um `Single`, `Double`, e `Decimal`.
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -50,11 +50,11 @@ O tipo de `value`.
 
 Retorna o número inteiro maior que não é maior do que `value`.
 
-**Arguments**
+**Argumentos**
 
 Um `Single`, `Double`, e `Decimal`.
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -67,14 +67,14 @@ O tipo de `value`.
 
 Retorna o resultado de `value` especificado a `exponent`especificado.
 
-**Arguments**
+**Argumentos**
 
 |  |  |
 |--|--|
 |`value` | Um `Int32, Int64, Double` ou `Decimal`. |
 |`exponent` | Uma `Int64`, `Double`, ou `Decimal`. |
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -86,11 +86,11 @@ O tipo de `value`.
 
 Retorna a parte inteira de `value`, arredondada para o inteiro mais próximo.
 
-**Arguments**
+**Argumentos**
 
 Um `Single`, `Double`, e `Decimal`.
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -102,14 +102,14 @@ O tipo de `value`.
 
 Retorna `value`, arredondado a `digits`especificado o mais próximo.
 
-**Arguments**
+**Argumentos**
 
 |  |  |
 |--|--|
 |`value`|`Double` ou `Decimal`.|
 |`digits`|`Int16` ou `Int32`.|
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -121,14 +121,14 @@ O tipo de `value`.
 
 Retorna `value`, truncado a `digits`especificado o mais próximo.
 
-**Arguments**
+**Argumentos**
 
 |  |  |
 |--|--|
 |`value`|`Double` ou `Decimal`.|
 |`digits`|`Int16` ou `Int32`.|
 
-**Valor de retorno**
+**Valor retornado**
 
 O tipo de `value`.
 
@@ -142,4 +142,4 @@ O tipo de `value`.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) (Funções canônicas)

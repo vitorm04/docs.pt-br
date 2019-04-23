@@ -16,10 +16,10 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296154"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Como: Converter em números as entradas numéricas do usuário em controles da Web
@@ -74,4 +74,4 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuário
 ## <a name="see-also"></a>Consulte também
 
 - [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Analisar cadeias de caracteres numéricas](../../../docs/standard/base-types/parsing-numeric.md)
+- [Analisando cadeias de caracteres numéricas](../../../docs/standard/base-types/parsing-numeric.md)

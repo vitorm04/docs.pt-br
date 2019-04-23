@@ -1,5 +1,5 @@
 ---
-title: <providerOption> Elemento
+title: Elemento <providerOption>
 ms.date: 03/30/2017
 f1_keywords:
 - provideroption
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
 ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229778"
 ---
 # <a name="provideroption-element"></a>\<providerOption > elemento
@@ -50,10 +50,10 @@ Especifica os atributos de versão do compilador para um provedor de linguagem.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Configuração > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|O elemento raiz em todos os arquivos de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|  
+|[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|O elemento raiz em todos os arquivos de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|  
 |[\<System. CodeDom > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|  
 |[\<compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contêiner para elementos de configuração do compilador; contém zero ou mais `<compiler>` elementos.|  
-|[\<compilador > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Especifica os atributos de configuração do compilador para um provedor de linguagem.|  
+|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Especifica os atributos de configuração do compilador para um provedor de linguagem.|  
   
 ## <a name="remarks"></a>Comentários  
  No .NET Framework versão 3.5, provedores de código de Code Document Object Model (CodeDOM) podem dar suporte a opções específicas do provedor usando o `<providerOption>` elemento.  

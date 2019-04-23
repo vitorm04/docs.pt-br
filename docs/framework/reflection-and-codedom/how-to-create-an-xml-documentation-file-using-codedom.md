@@ -12,10 +12,10 @@ ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297519"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como: Criar um arquivo de documentação XML usando o CodeDOM
@@ -81,6 +81,6 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
   
 ## <a name="see-also"></a>Consulte também
 
-- [Documentar o código com XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Documentando o Código com XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [Comentários da documentação XML](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [Documentação XML](/cpp/ide/xml-documentation-visual-cpp)
