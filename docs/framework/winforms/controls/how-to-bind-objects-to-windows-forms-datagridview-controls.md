@@ -10,10 +10,10 @@ helpviewer_keywords:
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
 ms.openlocfilehash: 02c4f94eddfcf782d7d2323787d9b6a9b18db2d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180252"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Como: Associar objetos a controles DataGridView do Windows Forms
@@ -33,5 +33,5 @@ O exemplo de código a seguir demonstra como associar uma coleção de objetos p
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Acessar objetos associados às linhas de DataGridView do Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Acessar objetos associados ao Windows Forms DataGridView linhas](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

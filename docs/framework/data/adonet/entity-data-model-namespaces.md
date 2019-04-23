@@ -3,10 +3,10 @@ title: 'Modelo de Dados de Entidade: Namespaces'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
 ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180551"
 ---
 # <a name="entity-data-model-namespaces"></a>Modelo de Dados de Entidade: Namespaces
@@ -19,5 +19,5 @@ Um namespace em modelo de dados de entidade (EDM) é um contêiner abstrata para
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos chave do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
