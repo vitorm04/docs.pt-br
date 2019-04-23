@@ -10,10 +10,10 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194975"
 ---
 # <a name="images"></a>Imagens
@@ -21,7 +21,7 @@ ms.locfileid: "59194975"
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral da geração de imagens](imaging-overview.md)  
- [Tópicos explicativos ](imaging-how-to-topics.md)  
+ [Tópicos de instruções](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Image>  
@@ -33,4 +33,4 @@ ms.locfileid: "59194975"
 ## <a name="see-also"></a>Consulte também
 
 - [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Gráficos e multimídia](index.md)
+- [Elementos gráficos e multimídia](index.md)
