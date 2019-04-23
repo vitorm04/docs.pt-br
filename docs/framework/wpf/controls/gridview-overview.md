@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201293"
 ---
 # <a name="gridview-overview"></a>Visão geral de GridView
@@ -73,26 +73,26 @@ ms.locfileid: "59201293"
   
  A lista a seguir discute mais detalhadamente os recursos do uso <xref:System.Windows.Controls.GridView> interação do usuário:  
   
--   **Reordene colunas usando o método de arrastar e soltar.**  
+-   **Reordene colunas usando o método do tipo "arrastar e soltar".**  
   
      Os usuários podem reordenar colunas em um <xref:System.Windows.Controls.GridView> pressionando o botão esquerdo do mouse enquanto está sobre um cabeçalho de coluna e, em seguida, arrastando essa coluna para uma nova posição. Enquanto o usuário arrasta o cabeçalho da coluna, uma versão flutuante do cabeçalho é exibida, bem como uma linha preta sólida que mostra onde inserir a coluna.  
   
      Se você quiser modificar o estilo padrão para a versão de um cabeçalho flutuante, especifique um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.GridViewColumnHeader> tipo que é disparado quando o <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> estiver definida como <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Para mais informações, consulte [Criar um estilo para um cabeçalho de coluna GridView arrastado](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Redimensione uma coluna para o seu conteúdo.**  
+-   **Redimensionar uma coluna para seu conteúdo.**  
   
      Os usuários podem clicar duas vezes na garra à direita do cabeçalho da coluna para redimensionar uma coluna para caber seu conteúdo.  
   
     > [!NOTE]
     >  Você pode definir as <xref:System.Windows.Controls.GridViewColumn.Width%2A> propriedade para `Double.NaN` para produzir o mesmo efeito.  
   
--   **Selecione os itens de linha.**  
+-   **Selecionar os itens de linha.**  
   
      Os usuários podem selecionar um ou mais itens em um <xref:System.Windows.Controls.GridView>.  
   
      Se você quiser alterar o <xref:System.Windows.Style> de um item selecionado, consulte [usar gatilhos para o estilo de itens selecionados em um ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Barra de rolagem para exibir o conteúdo que não é visível inicialmente na tela.**  
+-   **Barra de rolagem para exibir o conteúdo que não está visível inicialmente na tela.**  
   
      Se o tamanho do <xref:System.Windows.Controls.GridView> é não grande o suficiente para exibir todos os itens, os usuários podem rolar horizontalmente ou verticalmente usando barras de rolagem, que são fornecidas por um <xref:System.Windows.Controls.ScrollViewer> controle. Um <xref:System.Windows.Controls.Primitives.ScrollBar> fica oculto se todo o conteúdo estiver visível em uma direção específica. Cabeçalhos de coluna não rolam com uma barra de rolagem vertical, mas rolam horizontalmente.  
   
@@ -133,4 +133,4 @@ ms.locfileid: "59201293"
 - <xref:System.Windows.Controls.ViewBase>
 - [Visão geral de ListView](listview-overview.md)
 - [Classificar uma coluna GridView quando um cabeçalho é clicado](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Tópicos explicativos ](listview-how-to-topics.md)
+- [Tópicos de instruções](listview-how-to-topics.md)

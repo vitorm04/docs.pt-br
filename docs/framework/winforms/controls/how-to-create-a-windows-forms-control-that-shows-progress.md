@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202008"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Como: Criar um controle do Windows Forms que mostre o progresso
@@ -28,9 +28,9 @@ O exemplo de código a seguir mostra um controle personalizado chamado `FlashTra
   
 -   Substituindo o <xref:System.Windows.Forms.Control.OnPaint%2A> método para fornecer a lógica para desenhar o controle.  
   
--   Calculando a área disponível para desenhar o controle usando seu <xref:System.Windows.Forms.Control.ClientRectangle%2A> propriedade. `FlashTrackBar` faz isso no seu `OptimizedInvalidate` método.  
+-   Calculando a área disponível para desenhar o controle usando seu <xref:System.Windows.Forms.Control.ClientRectangle%2A> propriedade. `FlashTrackBar` faz isso no seu método `OptimizedInvalidate`.  
   
--   Implementação de serialização ou persistência em uma propriedade quando ela for alterada no Designer de Formulários do Windows. `FlashTrackBar` Define o `ShouldSerializeStartColor` e `ShouldSerializeEndColor` métodos para serializar seus `StartColor` e `EndColor` propriedades.  
+-   Implementação de serialização ou persistência em uma propriedade quando ela for alterada no Designer de Formulários do Windows. `FlashTrackBar` define os métodos `ShouldSerializeStartColor` e `ShouldSerializeEndColor` para serializar suas propriedades `StartColor` e `EndColor`.  
   
  A tabela a seguir mostra as propriedades personalizadas definidas por `FlashTrackBar`.  
   
@@ -94,5 +94,5 @@ O exemplo de código a seguir mostra um controle personalizado chamado `FlashTra
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estendendo o suporte para tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Noções básicas sobre o desenvolvimento de controle dos Windows Forms](windows-forms-control-development-basics.md)
+- [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Noções básicas sobre o desenvolvimento de controles dos Windows Forms](windows-forms-control-development-basics.md)

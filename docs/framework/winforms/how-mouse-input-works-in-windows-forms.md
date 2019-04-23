@@ -6,10 +6,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203009"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Como a entrada do mouse funciona no Windows Forms
@@ -54,6 +54,6 @@ Receber e manipular entradas de mouse é uma parte importante qualquer aplicativ
   
 ## <a name="see-also"></a>Consulte também
 
-- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Captura do mouse no Windows Forms](mouse-capture-in-windows-forms.md)
-- [Ponteiros do mouse no Windows Forms](mouse-pointers-in-windows-forms.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Captura do mouse nos Windows Forms](mouse-capture-in-windows-forms.md)
+- [Ponteiros do mouse nos Windows Forms](mouse-pointers-in-windows-forms.md)

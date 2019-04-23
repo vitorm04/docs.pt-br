@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47968d7550c3d16d201680caab705c0d7c85c784
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200136"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>Método ICorDebugNativeFrame2::GetStackParameterSize
@@ -45,7 +45,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |S_OK|O tamanho da pilha foi retornado com êxito.|  
 |S_FALSE|`GetStackParameterSize` foi chamado em uma plataforma não x86.|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
-|E_INVALIDARG|`pSize` Is `null`.|  
+|E_INVALIDARG|`pSize` é `null`.|  
   
 ## <a name="exceptions"></a>Exceções  
   

@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201267"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Método ICorProfilerInfo2::GetArrayObjectInfo
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] Uma matriz que contém números inteiros, cada um representando o inferior associado de uma dimensão da matriz.  
   
  `ppData`  
- [out] Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com a convenção de C++.  
+ [out] Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com o C++ convenção.  
   
 ## <a name="remarks"></a>Comentários  
  O `pDimensionSizes` e `pDimensionLowerBounds` são matrizes paralelas, portanto, os elementos localizados no mesmo índice em cada matriz são características da mesma entidade.  

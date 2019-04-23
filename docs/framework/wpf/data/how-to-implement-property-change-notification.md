@@ -11,10 +11,10 @@ helpviewer_keywords:
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
 ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204348"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Como: Implementar notificação de alteração da propriedade
@@ -30,6 +30,6 @@ Para dar suporte à <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:Syste
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral das fontes de associação](binding-sources-overview.md)
+- [Visão geral das origens da associação](binding-sources-overview.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

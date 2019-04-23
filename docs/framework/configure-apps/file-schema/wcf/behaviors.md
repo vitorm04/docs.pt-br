@@ -3,10 +3,10 @@ title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
 ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204231"
 ---
 # <a name="behaviors"></a>\<comportamentos >
@@ -56,6 +56,6 @@ Este elemento define duas coleções filhas nomeadas `endpointBehaviors` e `serv
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
 - [Configurando e estendendo o tempo de execução com comportamentos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
 - [Configurando comportamentos do cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [Especificando a execução do cliente- Comportamento do tempo](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Especificando comportamento de tempo de execução de serviço](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Especificando o comportamento em tempo de execução do cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Especificando o comportamento em tempo de execução do serviço](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
 - [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

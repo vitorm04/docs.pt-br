@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
 ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200513"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Como: Produzir um valor com base em uma lista de itens associados
@@ -31,10 +31,10 @@ ms.locfileid: "59200513"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` Implementa o <xref:System.Windows.Data.IMultiValueConverter> interface. `NameConverter` usa os valores das associações individuais e os armazena na matriz de valores de objetos. A ordem na qual o <xref:System.Windows.Data.Binding> elementos aparecem sob o <xref:System.Windows.Data.MultiBinding> elemento é a ordem na qual esses valores são armazenados na matriz. O valor da <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> atributo é referenciado pelo argumento do parâmetro a <xref:System.Windows.Data.MultiBinding.Converter%2A> método, que executa uma troca no parâmetro para determinar como formatar o nome.  
+ `NameConverter` implementa a interface <xref:System.Windows.Data.IMultiValueConverter>. O `NameConverter` usa os valores das associações individuais e os armazena na matriz de objetos de valores. A ordem na qual o <xref:System.Windows.Data.Binding> elementos aparecem sob o <xref:System.Windows.Data.MultiBinding> elemento é a ordem na qual esses valores são armazenados na matriz. O valor da <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> atributo é referenciado pelo argumento do parâmetro a <xref:System.Windows.Data.MultiBinding.Converter%2A> método, que executa uma troca no parâmetro para determinar como formatar o nome.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Converter dados associados](how-to-convert-bound-data.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

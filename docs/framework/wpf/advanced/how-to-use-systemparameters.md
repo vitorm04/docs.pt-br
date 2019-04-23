@@ -8,10 +8,10 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
 ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199850"
 ---
 # <a name="how-to-use-systemparameters"></a>Como: Usar SystemParameters
@@ -37,4 +37,4 @@ Este exemplo mostra como acessar e usar as propriedades de <xref:System.Windows.
 - [Pintar uma área com um pincel de sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Usar SystemFonts](how-to-use-systemfonts.md)
 - [Usar chaves de parâmetros do sistema](how-to-use-system-parameters-keys.md)
-- [Tópicos explicativos ](resources-how-to-topics.md)
+- [Tópicos de instruções](resources-how-to-topics.md)
