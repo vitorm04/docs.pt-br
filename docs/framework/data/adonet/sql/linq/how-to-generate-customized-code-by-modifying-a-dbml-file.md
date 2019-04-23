@@ -3,10 +3,10 @@ title: 'Como: gerar código personalizado modificando um arquivo DBML'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
 ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338417"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Como: gerar código personalizado modificando um arquivo DBML
@@ -40,6 +40,6 @@ sqlmetal /namespace:nwind /code:nwind.cs /language:csharp DBMLFile.dbml
   
 ## <a name="see-also"></a>Consulte também
 
-- [Geração de código em LINQ para SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [Geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
 - [Criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)

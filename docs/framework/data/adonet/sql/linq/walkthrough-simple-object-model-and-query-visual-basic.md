@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338066"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Passo a passo: modelo e consulta de objeto simples (Visual Basic)
@@ -91,7 +91,7 @@ Este passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdl
   
 -   Você designa a propriedade `CustomerID` como a representação de uma coluna de chave primária no banco de dados.  
   
--   Você designa os campos `_CustomerID` e `_City` para armazenamento particular. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode, em seguida, armazenar e recuperar valores diretamente, em vez de usar acessadores públicos, que podem incluir a lógica de negócios.  
+-   Você designa os campos `_CustomerID` e `_City` para armazenamento particular. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode então armazenar e recuperar valores diretamente, em vez de usar acessadores públicos, que podem incluir lógica de negócios.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Para representar características de duas colunas do banco de dados  
   

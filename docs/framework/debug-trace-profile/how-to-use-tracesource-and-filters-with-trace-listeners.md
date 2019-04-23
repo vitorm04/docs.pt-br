@@ -17,14 +17,14 @@ ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338573"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Como: usar TraceSource e filtros com ouvintes de rastreamento
-Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreamento aprimorado. A premissa básica permanece inalterada: mensagens de rastreamento são enviadas por meio de comutadores para ouvintes, que relatam os dados para um meio de saída associado. Uma diferença principal para a versão 2.0 é que os rastreamentos podem ser iniciados por meio de instâncias da classe <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> foi desenvolvida para funcionar como um sistema de rastreamento aprimorado e pode ser usado no lugar dos métodos estáticos das antigas <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> classes de rastreamento. As classes <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> familiares ainda existem, mas a prática recomendada é usar a classe <xref:System.Diagnostics.TraceSource> para o rastreamento.  
+Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreamento aprimorado. A premissa básica permanece inalterada: mensagens de rastreamento são enviadas por meio de comutadores para ouvintes, que relatam os dados para um meio de saída associado. Uma diferença principal para a versão 2.0 é que os rastreamentos podem ser iniciados por meio de instâncias da classe <xref:System.Diagnostics.TraceSource>. A <xref:System.Diagnostics.TraceSource> destina-se a funcionar como um sistema de rastreamento aprimorado e pode ser usada no lugar dos métodos estáticos das classes de rastreamento antigas <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>. As classes <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> familiares ainda existem, mas a prática recomendada é usar a classe <xref:System.Diagnostics.TraceSource> para o rastreamento.  
   
  Este tópico descreve o uso de um <xref:System.Diagnostics.TraceSource> juntamente com um arquivo de configuração de aplicativo.  É possível, embora não recomendado, rastrear usando um <xref:System.Diagnostics.TraceSource> sem o uso de um arquivo de configuração. Para obter informações sobre rastreamento sem um arquivo de configuração, consulte [como: Criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
@@ -169,5 +169,5 @@ Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreament
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Como: criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Como: Criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
 - [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
