@@ -10,27 +10,27 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194975"
 ---
-# <a name="images"></a><span data-ttu-id="25d44-102">Imagens</span><span class="sxs-lookup"><span data-stu-id="25d44-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="25d44-103">fornece suporte interno para vários formatos de imagem, renderização de imagem de alta fidelidade e extensibilidade de codec.</span><span class="sxs-lookup"><span data-stu-id="25d44-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="fe894-102">Imagens</span><span class="sxs-lookup"><span data-stu-id="fe894-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="fe894-103">fornece suporte interno para vários formatos de imagem, renderização de imagem de alta fidelidade e extensibilidade de codec.</span><span class="sxs-lookup"><span data-stu-id="fe894-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="25d44-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="25d44-104">In This Section</span></span>  
- [<span data-ttu-id="25d44-105">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="25d44-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="25d44-106">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="25d44-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fe894-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="fe894-104">In This Section</span></span>  
+ [<span data-ttu-id="fe894-105">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="fe894-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="fe894-106">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="fe894-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="25d44-107">Referência</span><span class="sxs-lookup"><span data-stu-id="25d44-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fe894-107">Referência</span><span class="sxs-lookup"><span data-stu-id="fe894-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="25d44-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25d44-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe894-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fe894-108">See also</span></span>
 
-- [<span data-ttu-id="25d44-109">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="25d44-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="25d44-110">Gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="25d44-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="fe894-109">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="fe894-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="fe894-110">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="fe894-110">Graphics and Multimedia</span></span>](index.md)
