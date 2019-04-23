@@ -1,24 +1,24 @@
 ---
-title: <security> De <netNamedPipeBinding>
+title: <security> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203386"
 ---
-# <a name="security-of-netnamedpipebinding"></a><span data-ttu-id="c2a04-102">\<security> of \<netNamedPipeBinding></span><span class="sxs-lookup"><span data-stu-id="c2a04-102">\<security> of \<netNamedPipeBinding></span></span>
-<span data-ttu-id="c2a04-103">Define as configurações de segurança para uma associação.</span><span class="sxs-lookup"><span data-stu-id="c2a04-103">Defines the security settings for a binding.</span></span>  
+# <a name="security-of-netnamedpipebinding"></a><span data-ttu-id="5763a-102">\<security> of \<netNamedPipeBinding></span><span class="sxs-lookup"><span data-stu-id="5763a-102">\<security> of \<netNamedPipeBinding></span></span>
+<span data-ttu-id="5763a-103">Define as configurações de segurança para uma associação.</span><span class="sxs-lookup"><span data-stu-id="5763a-103">Defines the security settings for a binding.</span></span>  
   
- <span data-ttu-id="c2a04-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c2a04-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c2a04-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="c2a04-105">\<bindings></span></span>  
-<span data-ttu-id="c2a04-106">\<netNamedPipeBinding></span><span class="sxs-lookup"><span data-stu-id="c2a04-106">\<netNamedPipeBinding></span></span>  
-<span data-ttu-id="c2a04-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="c2a04-107">\<binding></span></span>  
-<span data-ttu-id="c2a04-108">\<segurança ></span><span class="sxs-lookup"><span data-stu-id="c2a04-108">\<security></span></span>  
+ <span data-ttu-id="5763a-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5763a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5763a-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="5763a-105">\<bindings></span></span>  
+<span data-ttu-id="5763a-106">\<netNamedPipeBinding></span><span class="sxs-lookup"><span data-stu-id="5763a-106">\<netNamedPipeBinding></span></span>  
+<span data-ttu-id="5763a-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="5763a-107">\<binding></span></span>  
+<span data-ttu-id="5763a-108">\<segurança ></span><span class="sxs-lookup"><span data-stu-id="5763a-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2a04-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c2a04-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5763a-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5763a-109">Syntax</span></span>  
   
 ```xml  
 <netNamedPipeBinding>
@@ -30,36 +30,36 @@ ms.locfileid: "59203386"
 </netNamedPipeBinding>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c2a04-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="c2a04-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c2a04-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="c2a04-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5763a-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="5763a-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="5763a-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="5763a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c2a04-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="c2a04-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5763a-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="5763a-112">Attributes</span></span>  
   
-|<span data-ttu-id="c2a04-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="c2a04-113">Attribute</span></span>|<span data-ttu-id="c2a04-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="c2a04-114">Description</span></span>|  
+|<span data-ttu-id="5763a-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="5763a-113">Attribute</span></span>|<span data-ttu-id="5763a-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="5763a-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c2a04-115">modo</span><span class="sxs-lookup"><span data-stu-id="c2a04-115">mode</span></span>|<span data-ttu-id="c2a04-116">Especifica o tipo de segurança que é aplicada a essa associação.</span><span class="sxs-lookup"><span data-stu-id="c2a04-116">Specifies the type of security that is applied to this binding.</span></span> <span data-ttu-id="c2a04-117">Os valores válidos incluem o seguinte:</span><span class="sxs-lookup"><span data-stu-id="c2a04-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c2a04-118">-None: Isso desabilita a segurança.</span><span class="sxs-lookup"><span data-stu-id="c2a04-118">-   None: This disables security.</span></span><br /><span data-ttu-id="c2a04-119">-Transporte: Segurança é fornecida usando a segurança de transporte com base subjacente.</span><span class="sxs-lookup"><span data-stu-id="c2a04-119">-   Transport: Security is provided using underlying transport based security.</span></span> <span data-ttu-id="c2a04-120">É possível controlar o nível de proteção com esse modo.</span><span class="sxs-lookup"><span data-stu-id="c2a04-120">It is possible to control the protection level with this mode.</span></span><br /><span data-ttu-id="c2a04-121">-O valor padrão é o transporte.</span><span class="sxs-lookup"><span data-stu-id="c2a04-121">-   The default value is Transport.</span></span> <span data-ttu-id="c2a04-122">Esse atributo é do tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="c2a04-122">This attribute is of type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span></span>|  
+|<span data-ttu-id="5763a-115">modo</span><span class="sxs-lookup"><span data-stu-id="5763a-115">mode</span></span>|<span data-ttu-id="5763a-116">Especifica o tipo de segurança que é aplicada a essa associação.</span><span class="sxs-lookup"><span data-stu-id="5763a-116">Specifies the type of security that is applied to this binding.</span></span> <span data-ttu-id="5763a-117">Os valores válidos incluem o seguinte:</span><span class="sxs-lookup"><span data-stu-id="5763a-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="5763a-118">-None: Isso desabilita a segurança.</span><span class="sxs-lookup"><span data-stu-id="5763a-118">-   None: This disables security.</span></span><br /><span data-ttu-id="5763a-119">-Transporte: Segurança é fornecida usando a segurança de transporte com base subjacente.</span><span class="sxs-lookup"><span data-stu-id="5763a-119">-   Transport: Security is provided using underlying transport based security.</span></span> <span data-ttu-id="5763a-120">É possível controlar o nível de proteção com esse modo.</span><span class="sxs-lookup"><span data-stu-id="5763a-120">It is possible to control the protection level with this mode.</span></span><br /><span data-ttu-id="5763a-121">-O valor padrão é o transporte.</span><span class="sxs-lookup"><span data-stu-id="5763a-121">-   The default value is Transport.</span></span> <span data-ttu-id="5763a-122">Esse atributo é do tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="5763a-122">This attribute is of type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c2a04-123">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="c2a04-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5763a-123">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="5763a-123">Child Elements</span></span>  
   
-|<span data-ttu-id="c2a04-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="c2a04-124">Element</span></span>|<span data-ttu-id="c2a04-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="c2a04-125">Description</span></span>|  
+|<span data-ttu-id="5763a-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="5763a-124">Element</span></span>|<span data-ttu-id="5763a-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="5763a-125">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c2a04-126">transporte</span><span class="sxs-lookup"><span data-stu-id="c2a04-126">transport</span></span>|<span data-ttu-id="c2a04-127">Define as configurações de segurança para o transporte.</span><span class="sxs-lookup"><span data-stu-id="c2a04-127">Defines the security settings for the transport.</span></span> <span data-ttu-id="c2a04-128">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="c2a04-128">This element is of type <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span></span>|  
+|<span data-ttu-id="5763a-126">transporte</span><span class="sxs-lookup"><span data-stu-id="5763a-126">transport</span></span>|<span data-ttu-id="5763a-127">Define as configurações de segurança para o transporte.</span><span class="sxs-lookup"><span data-stu-id="5763a-127">Defines the security settings for the transport.</span></span> <span data-ttu-id="5763a-128">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="5763a-128">This element is of type <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="c2a04-129">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="c2a04-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5763a-129">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="5763a-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="c2a04-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="c2a04-130">Element</span></span>|<span data-ttu-id="c2a04-131">Descrição</span><span class="sxs-lookup"><span data-stu-id="c2a04-131">Description</span></span>|  
+|<span data-ttu-id="5763a-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="5763a-130">Element</span></span>|<span data-ttu-id="5763a-131">Descrição</span><span class="sxs-lookup"><span data-stu-id="5763a-131">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c2a04-132">associação</span><span class="sxs-lookup"><span data-stu-id="c2a04-132">binding</span></span>|<span data-ttu-id="c2a04-133">O elemento de associação do [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="c2a04-133">The binding element of the [\<netNamedPipeBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>|  
+|<span data-ttu-id="5763a-132">associação</span><span class="sxs-lookup"><span data-stu-id="5763a-132">binding</span></span>|<span data-ttu-id="5763a-133">O elemento de associação do [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="5763a-133">The binding element of the [\<netNamedPipeBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c2a04-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c2a04-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5763a-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5763a-134">See also</span></span>
 
 - <xref:System.ServiceModel.NetNamedPipeSecurity>
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [<span data-ttu-id="c2a04-135">Protegendo serviços e clientes</span><span class="sxs-lookup"><span data-stu-id="c2a04-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="c2a04-136">Selecionando um tipo de credencial</span><span class="sxs-lookup"><span data-stu-id="c2a04-136">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [<span data-ttu-id="c2a04-137">Associações</span><span class="sxs-lookup"><span data-stu-id="c2a04-137">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="c2a04-138">Configurando associações fornecidas pelo sistema</span><span class="sxs-lookup"><span data-stu-id="c2a04-138">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="c2a04-139">Usando associações para configurar serviços e clientes</span><span class="sxs-lookup"><span data-stu-id="c2a04-139">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="c2a04-140">\<binding></span><span class="sxs-lookup"><span data-stu-id="c2a04-140">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+- [<span data-ttu-id="5763a-135">Protegendo serviços e clientes</span><span class="sxs-lookup"><span data-stu-id="5763a-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="5763a-136">Selecionando um tipo de credencial</span><span class="sxs-lookup"><span data-stu-id="5763a-136">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [<span data-ttu-id="5763a-137">Associações</span><span class="sxs-lookup"><span data-stu-id="5763a-137">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="5763a-138">Configurando associações fornecidas pelo sistema</span><span class="sxs-lookup"><span data-stu-id="5763a-138">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="5763a-139">Usando associações para configurar serviços e clientes</span><span class="sxs-lookup"><span data-stu-id="5763a-139">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="5763a-140">\<binding></span><span class="sxs-lookup"><span data-stu-id="5763a-140">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
