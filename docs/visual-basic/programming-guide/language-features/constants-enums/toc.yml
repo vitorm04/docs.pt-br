@@ -1,36 +1,29 @@
-items:
 - name: Constantes e enumerações
   href: index.md
   items:
-  - name: Visão geral de constantes
-    href: constants-overview.md
-    items:
-    - name: 'Como: declarar uma constante'
-      href: how-to-declare-a-constant.md
-    - name: Constantes definidas pelo usuário
-      href: user-defined-constants.md
-    - name: Tipos de dados constante e literal
-      href: constant-and-literal-data-types.md
-    - name: 'Como: agrupar valores constantes relacionados'
-      href: how-to-group-related-constant-values-together.md
-  - name: Visão geral de enumerações
-    href: enumerations-overview.md
-    items:
-    - name: 'Como: declarar enumerações'
-      href: how-to-declare-enumerations.md
-    - name: 'Como: fazer referência a um membro de enumeração'
-      href: how-to-refer-to-an-enumeration-member.md
-    - name: Enumerações e qualificação de nome
-      href: enumerations-and-name-qualification.md
-    - name: 'Como: iterar em uma enumeração'
-      href: how-to-iterate-through-an-enumeration.md
-    - name: 'Como: determinar a cadeia de caracteres associada a um valor de enumeração'
-      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
-    - name: Quando usar uma enumeração
-      href: when-to-use-an-enumeration.md
-ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468071"
+    - name: Visão geral de constantes
+      href: constants-overview.md
+      items:
+        - name: 'Como: declarar uma constante'
+          href: how-to-declare-a-constant.md
+        - name: Constantes definidas pelo usuário
+          href: user-defined-constants.md
+        - name: Tipos de dados constante e literal
+          href: constant-and-literal-data-types.md
+        - name: 'Como: agrupar valores constantes relacionados'
+          href: how-to-group-related-constant-values-together.md
+    - name: Visão geral de enumerações
+      href: enumerations-overview.md
+      items:
+        - name: 'Como: declarar enumerações'
+          href: how-to-declare-enumerations.md
+        - name: 'Como: fazer referência a um membro de enumeração'
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: Enumerações e qualificação de nome
+          href: enumerations-and-name-qualification.md
+        - name: 'Como: iterar em uma enumeração'
+          href: how-to-iterate-through-an-enumeration.md
+        - name: 'Como: determinar a cadeia de caracteres associada a um valor de enumeração'
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: Quando usar uma enumeração
+          href: when-to-use-an-enumeration.md

@@ -1,61 +1,54 @@
-items:
 - name: Programação dinâmica
   href: index.md
   items:
-  - name: Reflexão
-    href: reflection.md
-    items:
-    - name: Exibindo informações de tipo
-      href: viewing-type-information.md
-    - name: Reflexão e tipos genéricos
-      href: reflection-and-generic-types.md
-    - name: 'Como: Examinar tipos genéricos e criar instâncias deles com a reflexão'
-      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
-    - name: Considerações sobre segurança relacionadas à reflexão
-      href: security-considerations-for-reflection.md
-    - name: Carregando e usando tipos dinamicamente
-      href: dynamically-loading-and-using-types.md
-    - name: 'Como: Carregar assemblies no contexto somente de reflexão'
-      href: how-to-load-assemblies-into-the-reflection-only-context.md
-    - name: Acessando atributos personalizados
-      href: accessing-custom-attributes.md
-    - name: Especificando nomes de tipo totalmente qualificados
-      href: specifying-fully-qualified-type-names.md
-    - name: 'Como: Conectar um delegado usando a reflexão'
-      href: how-to-hook-up-a-delegate-using-reflection.md
-    - name: Reflexão no .NET Framework para aplicativos da Windows Store
-      href: reflection-for-windows-store-apps.md
-  - name: Emitindo métodos e assemblies dinâmicos
-    href: emitting-dynamic-methods-and-assemblies.md
-    items:
-    - name: Problemas de segurança na emissão de reflexão
-      href: security-issues-in-reflection-emit.md
-    - name: 'Passo a passo: Emitindo o código em cenários de confiança parcial'
-      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
-    - name: 'Como: Definir e executar métodos dinâmicos'
-      href: how-to-define-and-execute-dynamic-methods.md
-    - name: 'Como: Definir um tipo genérico com a emissão de reflexão'
-      href: how-to-define-a-generic-type-with-reflection-emit.md
-    - name: 'Como: Definir um método genérico com a emissão de reflexão'
-      href: how-to-define-a-generic-method-with-reflection-emit.md
-    - name: Assemblies de coleção para geração de tipos dinâmicos
-      href: collectible-assemblies.md
-  - name: Visão geral do Dynamic Language Runtime
-    href: dynamic-language-runtime-overview.md
-  - name: Geração e compilação de código-fonte dinâmico
-    href: dynamic-source-code-generation-and-compilation.md
-    items:
-    - name: Usando o CodeDOM
-      href: using-the-codedom.md
-    - name: Gerando e compilando código-fonte de um gráfico CodeDOM
-      href: generating-and-compiling-source-code-from-a-codedom-graph.md
-    - name: 'Como: Criar um arquivo de documentação XML usando o CodeDOM'
-      href: how-to-create-an-xml-documentation-file-using-codedom.md
-    - name: 'Como: Criar uma classe usando o CodeDOM'
-      href: how-to-create-a-class-using-codedom.md
-ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467681"
+    - name: Reflexão
+      href: reflection.md
+      items:
+        - name: Exibindo informações de tipo
+          href: viewing-type-information.md
+        - name: Reflexão e tipos genéricos
+          href: reflection-and-generic-types.md
+        - name: 'Como: Examinar tipos genéricos e criar instâncias deles com a reflexão'
+          href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+        - name: Considerações sobre segurança relacionadas à reflexão
+          href: security-considerations-for-reflection.md
+        - name: Carregando e usando tipos dinamicamente
+          href: dynamically-loading-and-using-types.md
+        - name: 'Como: Carregar assemblies no contexto somente de reflexão'
+          href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: Acessando atributos personalizados
+          href: accessing-custom-attributes.md
+        - name: Especificando nomes de tipo totalmente qualificados
+          href: specifying-fully-qualified-type-names.md
+        - name: 'Como: Conectar um delegado usando a reflexão'
+          href: how-to-hook-up-a-delegate-using-reflection.md
+        - name: Reflexão no .NET Framework para aplicativos da Windows Store
+          href: reflection-for-windows-store-apps.md
+    - name: Emitindo métodos e assemblies dinâmicos
+      href: emitting-dynamic-methods-and-assemblies.md
+      items:
+        - name: Problemas de segurança na emissão de reflexão
+          href: security-issues-in-reflection-emit.md
+        - name: 'Passo a passo: Emitindo o código em cenários de confiança parcial'
+          href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+        - name: 'Como: Definir e executar métodos dinâmicos'
+          href: how-to-define-and-execute-dynamic-methods.md
+        - name: 'Como: Definir um tipo genérico com a emissão de reflexão'
+          href: how-to-define-a-generic-type-with-reflection-emit.md
+        - name: 'Como: Definir um método genérico com a emissão de reflexão'
+          href: how-to-define-a-generic-method-with-reflection-emit.md
+        - name: Assemblies de coleção para geração de tipos dinâmicos
+          href: collectible-assemblies.md
+    - name: Visão geral do Dynamic Language Runtime
+      href: dynamic-language-runtime-overview.md
+    - name: Geração e compilação de código-fonte dinâmico
+      href: dynamic-source-code-generation-and-compilation.md
+      items:
+        - name: Usando o CodeDOM
+          href: using-the-codedom.md
+        - name: Gerando e compilando código-fonte de um gráfico CodeDOM
+          href: generating-and-compiling-source-code-from-a-codedom-graph.md
+        - name: 'Como: Criar um arquivo de documentação XML usando o CodeDOM'
+          href: how-to-create-an-xml-documentation-file-using-codedom.md
+        - name: 'Como: Criar uma classe usando o CodeDOM'
+          href: how-to-create-a-class-using-codedom.md

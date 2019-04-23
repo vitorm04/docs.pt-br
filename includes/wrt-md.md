@@ -1,1 +1,9 @@
-<span data-ttu-id="542d8-101">Tempo de Execução do Windows</span><span class="sxs-lookup"><span data-stu-id="542d8-101">Windows Runtime</span></span>
+---
+ms.openlocfilehash: 176562ff7a9ca628c45f66dfe5d7eb18c0c0ff3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698350"
+---
+<span data-ttu-id="63bab-101">Tempo de Execução do Windows</span><span class="sxs-lookup"><span data-stu-id="63bab-101">Windows Runtime</span></span>

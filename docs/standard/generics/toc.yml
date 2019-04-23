@@ -1,18 +1,11 @@
-items:
 - name: Genéricos
   href: index.md
   items:
-  - name: Coleções genéricas no .NET
-    href: collections.md
-  - name: Delegados genéricos para manipulação de matrizes e listas
-    href: delegates-for-manipulating-arrays-and-lists.md
-  - name: Interfaces genéricas
-    href: interfaces.md
-  - name: Covariância e contravariância
-    href: covariance-and-contravariance.md
-ms.openlocfilehash: 84f8686eb8c70ecc4b36a2335f673319bcc2dd4a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467746"
+    - name: Coleções genéricas no .NET
+      href: collections.md
+    - name: Delegados genéricos para manipulação de matrizes e listas
+      href: delegates-for-manipulating-arrays-and-lists.md
+    - name: Interfaces genéricas
+      href: interfaces.md
+    - name: Covariância e contravariância
+      href: covariance-and-contravariance.md

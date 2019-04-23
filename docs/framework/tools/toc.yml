@@ -1,80 +1,73 @@
-items:
 - name: Ferramentas
   href: index.md
   items:
-  - name: Al.exe (Assembly Linker)
-    href: al-exe-assembly-linker.md
-  - name: Aximp.exe (Importador de Controle ActiveX do Windows Forms)
-    href: aximp-exe-windows-forms-activex-control-importer.md
-  - name: Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
-    href: caspol-exe-code-access-security-policy-tool.md
-  - name: Cert2spc.exe (Ferramenta de Teste de Certificado do Fornecedor do Software)
-    href: cert2spc-exe-software-publisher-certificate-test-tool.md
-  - name: Certmgr.exe (ferramenta Gerenciador de Certificados)
-    href: certmgr-exe-certificate-manager-tool.md
-  - name: Clrver.exe (Ferramenta de Versão do CLR)
-    href: clrver-exe-clr-version-tool.md
-  - name: Prompts de comando
-    href: developer-command-prompt-for-vs.md
-  - name: CorFlags.exe (Ferramenta de Conversão de CorFlags)
-    href: corflags-exe-corflags-conversion-tool.md
-  - name: Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
-    href: fuslogvw-exe-assembly-binding-log-viewer.md
-  - name: Gacutil.exe (Ferramenta do Cache de Assemblies Global)
-    href: gacutil-exe-gac-tool.md
-  - name: Ilasm.exe (IL Assembler)
-    href: ilasm-exe-il-assembler.md
-  - name: Ildasm.exe (IL Disassembler)
-    href: ildasm-exe-il-disassembler.md
-  - name: Installutil.exe (Ferramenta de Instalação)
-    href: installutil-exe-installer-tool.md
-  - name: Lc.exe (Compilador de Licença)
-    href: lc-exe-license-compiler.md
-  - name: Mage.exe (Ferramenta de Geração e Edição de Manifesto)
-    href: mage-exe-manifest-generation-and-editing-tool.md
-  - name: MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
-    href: mageui-exe-manifest-generation-and-editing-tool-graphical-client.md
-  - name: MDbg.exe (Depurador de Linha de Comando do .NET Framework)
-    href: mdbg-exe.md
-  - name: Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
-    href: mgmtclassgen-exe.md
-  - name: Mpgo.exe (Ferramenta de Otimização Guiada por Perfil Gerenciado)
-    href: mpgo-exe-managed-profile-guided-optimization-tool.md
-  - name: Ngen.exe (Gerador de Imagens Nativas)
-    href: ngen-exe-native-image-generator.md
-  - name: Peverify.exe (Ferramenta PEVerify)
-    href: peverify-exe-peverify-tool.md
-  - name: Regasm.exe (Ferramenta de Registro de Assembly)
-    href: regasm-exe-assembly-registration-tool.md
-  - name: Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
-    href: regsvcs-exe-net-services-installation-tool.md
-  - name: Resgen.exe (Gerador de Arquivo de Recurso)
-    href: resgen-exe-resource-file-generator.md
-  - name: SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)
-    href: secannotate-exe-net-security-annotator-tool.md
-  - name: SignTool.exe (Ferramenta de Assinatura)
-    href: signtool-exe.md
-  - name: Sn.exe (Ferramenta de Nome Forte)
-    href: sn-exe-strong-name-tool.md
-  - name: SOS.dll (Extensão de Depuração SOS)
-    href: sos-dll-sos-debugging-extension.md
-  - name: SqlMetal.exe (ferramenta de geração de código)
-    href: sqlmetal-exe-code-generation-tool.md
-  - name: Storeadm.exe (Ferramenta de Armazenamento Isolado)
-    href: storeadm-exe-isolated-storage-tool.md
-  - name: Tlbexp.exe (Exportador de Biblioteca de Tipos)
-    href: tlbexp-exe-type-library-exporter.md
-  - name: Tlbimp.exe (Importador de Biblioteca de Tipos)
-    href: tlbimp-exe-type-library-importer.md
-  - name: Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
-    href: winmdexp-exe-windows-runtime-metadata-export-tool.md
-  - name: Mensagens de erro do winmdexp.exe
-    href: winmdexp-exe-error-messages.md
-  - name: Winres.exe (Editor de Recursos do Windows Forms)
-    href: winres-exe-windows-forms-resource-editor.md
-ms.openlocfilehash: 1e8fb586651d9372e6811ee3d632a49319b142c2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467760"
+    - name: Al.exe (Assembly Linker)
+      href: al-exe-assembly-linker.md
+    - name: Aximp.exe (Importador de Controle ActiveX do Windows Forms)
+      href: aximp-exe-windows-forms-activex-control-importer.md
+    - name: Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
+      href: caspol-exe-code-access-security-policy-tool.md
+    - name: Cert2spc.exe (Ferramenta de Teste de Certificado do Fornecedor do Software)
+      href: cert2spc-exe-software-publisher-certificate-test-tool.md
+    - name: Certmgr.exe (ferramenta Gerenciador de Certificados)
+      href: certmgr-exe-certificate-manager-tool.md
+    - name: Clrver.exe (Ferramenta de Versão do CLR)
+      href: clrver-exe-clr-version-tool.md
+    - name: Prompts de comando
+      href: developer-command-prompt-for-vs.md
+    - name: CorFlags.exe (Ferramenta de Conversão de CorFlags)
+      href: corflags-exe-corflags-conversion-tool.md
+    - name: Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
+      href: fuslogvw-exe-assembly-binding-log-viewer.md
+    - name: Gacutil.exe (Ferramenta do Cache de Assemblies Global)
+      href: gacutil-exe-gac-tool.md
+    - name: Ilasm.exe (IL Assembler)
+      href: ilasm-exe-il-assembler.md
+    - name: Ildasm.exe (IL Disassembler)
+      href: ildasm-exe-il-disassembler.md
+    - name: Installutil.exe (Ferramenta de Instalação)
+      href: installutil-exe-installer-tool.md
+    - name: Lc.exe (Compilador de Licença)
+      href: lc-exe-license-compiler.md
+    - name: Mage.exe (Ferramenta de Geração e Edição de Manifesto)
+      href: mage-exe-manifest-generation-and-editing-tool.md
+    - name: 'MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)'
+      href: mageui-exe-manifest-generation-and-editing-tool-graphical-client.md
+    - name: MDbg.exe (Depurador de Linha de Comando do .NET Framework)
+      href: mdbg-exe.md
+    - name: Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
+      href: mgmtclassgen-exe.md
+    - name: Mpgo.exe (Ferramenta de Otimização Guiada por Perfil Gerenciado)
+      href: mpgo-exe-managed-profile-guided-optimization-tool.md
+    - name: Ngen.exe (Gerador de Imagens Nativas)
+      href: ngen-exe-native-image-generator.md
+    - name: Peverify.exe (Ferramenta PEVerify)
+      href: peverify-exe-peverify-tool.md
+    - name: Regasm.exe (Ferramenta de Registro de Assembly)
+      href: regasm-exe-assembly-registration-tool.md
+    - name: Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
+      href: regsvcs-exe-net-services-installation-tool.md
+    - name: Resgen.exe (Gerador de Arquivo de Recurso)
+      href: resgen-exe-resource-file-generator.md
+    - name: SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)
+      href: secannotate-exe-net-security-annotator-tool.md
+    - name: SignTool.exe (Ferramenta de Assinatura)
+      href: signtool-exe.md
+    - name: Sn.exe (Ferramenta de Nome Forte)
+      href: sn-exe-strong-name-tool.md
+    - name: SOS.dll (Extensão de Depuração SOS)
+      href: sos-dll-sos-debugging-extension.md
+    - name: SqlMetal.exe (ferramenta de geração de código)
+      href: sqlmetal-exe-code-generation-tool.md
+    - name: Storeadm.exe (Ferramenta de Armazenamento Isolado)
+      href: storeadm-exe-isolated-storage-tool.md
+    - name: Tlbexp.exe (Exportador de Biblioteca de Tipos)
+      href: tlbexp-exe-type-library-exporter.md
+    - name: Tlbimp.exe (Importador de Biblioteca de Tipos)
+      href: tlbimp-exe-type-library-importer.md
+    - name: Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
+      href: winmdexp-exe-windows-runtime-metadata-export-tool.md
+    - name: Mensagens de erro do winmdexp.exe
+      href: winmdexp-exe-error-messages.md
+    - name: Winres.exe (Editor de Recursos do Windows Forms)
+      href: winres-exe-windows-forms-resource-editor.md

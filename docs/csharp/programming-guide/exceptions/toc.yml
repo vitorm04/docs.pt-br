@@ -1,24 +1,17 @@
-items:
 - name: Exceções e tratamento de exceções
   href: index.md
   items:
-  - name: Usar exceções
-    href: using-exceptions.md
-  - name: Tratamento de Exceção
-    href: exception-handling.md
-  - name: Criar e lançar exceções
-    href: creating-and-throwing-exceptions.md
-  - name: Exceções geradas pelo compilador
-    href: compiler-generated-exceptions.md
-  - name: 'Como: manipular uma exceção usando try/catch'
-    href: how-to-handle-an-exception-using-try-catch.md
-  - name: 'Como: executar código de limpeza usando finally'
-    href: how-to-execute-cleanup-code-using-finally.md
-  - name: 'Como: Capturar uma exceção não CLS'
-    href: how-to-catch-a-non-cls-exception.md
-ms.openlocfilehash: 391605df4d623451a4a1c830a48322c7a14eef7c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467654"
+    - name: Usar exceções
+      href: using-exceptions.md
+    - name: Tratamento de Exceção
+      href: exception-handling.md
+    - name: Criar e lançar exceções
+      href: creating-and-throwing-exceptions.md
+    - name: Exceções geradas pelo compilador
+      href: compiler-generated-exceptions.md
+    - name: 'Como: manipular uma exceção usando try/catch'
+      href: how-to-handle-an-exception-using-try-catch.md
+    - name: 'Como: executar código de limpeza usando finally'
+      href: how-to-execute-cleanup-code-using-finally.md
+    - name: 'Como: Capturar uma exceção não CLS'
+      href: how-to-catch-a-non-cls-exception.md

@@ -1,15 +1,8 @@
-items:
 - name: Esquema de configurações Web
   href: index.md
   items:
-  - name: Elemento <system.web> (Configurações da Web)
-    href: system-web-element-web-settings.md
-    items:
-    - name: Elemento <applicationPool> (configurações da Web)
-      href: applicationpool-element-web-settings.md
-ms.openlocfilehash: d47abec64d32f6b285c4d3494c169bc19114063b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467655"
+    - name: Elemento <system.web> (Configurações da Web)
+      href: system-web-element-web-settings.md
+      items:
+        - name: Elemento <applicationPool> (configurações da Web)
+          href: applicationpool-element-web-settings.md

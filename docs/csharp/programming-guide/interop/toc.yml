@@ -1,22 +1,15 @@
-items:
 - name: Interoperabilidade
   href: index.md
   items:
-  - name: Visão geral da interoperabilidade
-    href: interoperability-overview.md
-  - name: 'Como: acessar objetos de interoperabilidade do Office usando recursos do Visual C#'
-    href: how-to-access-office-onterop-objects.md
-  - name: 'Como: usar propriedades indexadas na programação para interoperabilidade COM'
-    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
-  - name: 'Como: usar a invocação de plataforma para reproduzir um arquivo wave'
-    href: how-to-use-platform-invoke-to-play-a-wave-file.md
-  - name: 'Passo a passo: Programação do Office (C# e Visual Basic)'
-    href: walkthrough-office-programming.md
-  - name: Exemplo de classe COM
-    href: example-com-class.md
-ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467785"
+    - name: Visão geral da interoperabilidade
+      href: interoperability-overview.md
+    - name: 'Como: acessar objetos de interoperabilidade do Office usando recursos do Visual C#'
+      href: how-to-access-office-onterop-objects.md
+    - name: 'Como: usar propriedades indexadas na programação para interoperabilidade COM'
+      href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+    - name: 'Como: usar a invocação de plataforma para reproduzir um arquivo wave'
+      href: how-to-use-platform-invoke-to-play-a-wave-file.md
+    - name: 'Passo a passo: Programação do Office (C# e Visual Basic)'
+      href: walkthrough-office-programming.md
+    - name: Exemplo de classe COM
+      href: example-com-class.md

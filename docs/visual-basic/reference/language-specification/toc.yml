@@ -1,40 +1,33 @@
-items:
 - name: Especificação da linguagem Visual Basic
   href: index.md
   items:
-  - name: Introdução
-    href: ../../../../_vblang/spec/introduction.md
-  - name: Gramática lexical
-    href: ../../../../_vblang/spec/lexical-grammar.md
-  - name: Pré-processando diretivas
-    href: ../../../../_vblang/spec/preprocessing-directives.md
-  - name: Conceitos gerais
-    href: ../../../../_vblang/spec/general-concepts.md
-  - name: Atributos
-    href: ../../../../_vblang/spec/attributes.md
-  - name: Arquivos de origem e namespaces
-    href: ../../../../_vblang/spec/source-files-and-namespaces.md
-  - name: Tipos
-    href: ../../../../_vblang/spec/types.md
-  - name: Conversões
-    href: ../../../../_vblang/spec/conversions.md
-  - name: Membros de tipo
-    href: ../../../../_vblang/spec/type-members.md
-  - name: Instruções
-    href: ../../../../_vblang/spec/statements.md
-  - name: Expressões
-    href: ../../../../_vblang/spec/expressions.md
-  - name: Comentários de documentação
-    href: ../../../../_vblang/spec/documentation-comments.md
-  - name: Gramática
-    items:
-    - name: vb.html
-      href: https://ljw1004.github.io/vbspec/vb.html
-    - name: vb.g4 – formato ANTLR
-      href: https://ljw1004.github.io/vbspec/vb.g4?raw=true
-ms.openlocfilehash: 03281728455fee8303e6e1c4750779a0695130de
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467729"
+    - name: Introdução
+      href: ../../../../_vblang/spec/introduction.md
+    - name: Gramática lexical
+      href: ../../../../_vblang/spec/lexical-grammar.md
+    - name: Pré-processando diretivas
+      href: ../../../../_vblang/spec/preprocessing-directives.md
+    - name: Conceitos gerais
+      href: ../../../../_vblang/spec/general-concepts.md
+    - name: Atributos
+      href: ../../../../_vblang/spec/attributes.md
+    - name: Arquivos de origem e namespaces
+      href: ../../../../_vblang/spec/source-files-and-namespaces.md
+    - name: Tipos
+      href: ../../../../_vblang/spec/types.md
+    - name: Conversões
+      href: ../../../../_vblang/spec/conversions.md
+    - name: Membros de tipo
+      href: ../../../../_vblang/spec/type-members.md
+    - name: Instruções
+      href: ../../../../_vblang/spec/statements.md
+    - name: Expressões
+      href: ../../../../_vblang/spec/expressions.md
+    - name: Comentários de documentação
+      href: ../../../../_vblang/spec/documentation-comments.md
+    - name: Gramática
+      items:
+        - name: vb.html
+          href: 'https://ljw1004.github.io/vbspec/vb.html'
+        - name: vb.g4 – formato ANTLR
+          href: 'https://ljw1004.github.io/vbspec/vb.g4?raw=true'

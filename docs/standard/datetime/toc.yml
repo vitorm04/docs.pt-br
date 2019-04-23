@@ -1,48 +1,41 @@
-items:
-- name: Datas, horas e fusos horários
+- name: 'Datas, horas e fusos horários'
   href: index.md
   items:
-  - name: Visão geral do fuso horário
-    href: time-zone-overview.md
-  - name: Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
-    href: choosing-between-datetime.md
-  - name: Encontrando os fusos horários definidos em um sistema local
-    href: finding-the-time-zones-on-local-system.md
-  - name: 'Como: enumerar os fusos horários presentes em um computador'
-    href: enumerate-time-zones.md
-  - name: 'Como: acessar os objetos de fuso horário predefinidos UTC e local'
-    href: access-utc-and-local.md
-  - name: 'Como: criar uma instância de um objeto TimeZoneInfo'
-    href: instantiate-time-zone-info.md
-  - name: Criando uma instância de um objeto DateTimeOffset
-    href: instantiating-a-datetimeoffset-object.md
-  - name: 'Como: criar fusos horários sem regras de ajuste'
-    href: create-time-zones-without-adjustment-rules.md
-  - name: 'Como: criar fusos horários com regras de ajuste'
-    href: create-time-zones-with-adjustment-rules.md
-  - name: Salvar e restaurar fusos horários
-    href: saving-and-restoring-time-zones.md
-  - name: 'Como: salvar fusos horários em um recurso inserido'
-    href: save-time-zones-to-an-embedded-resource.md
-  - name: 'Como: restaurar fusos horários de um recurso inserido'
-    href: restore-time-zones-from-an-embedded-resource.md
-  - name: Trabalhar com calendários
-    href: working-with-calendars.md
-  - name: Executando operações aritméticas com datas e horários
-    href: performing-arithmetic-operations.md
-  - name: 'Como: usar fusos horários em aritmética de data e hora'
-    href: use-time-zones-in-arithmetic.md
-  - name: Convertendo entre DateTime e DateTimeOffset
-    href: converting-between-datetime-and-offset.md
-  - name: Converter horários entre fusos horários
-    href: converting-between-time-zones.md
-  - name: 'Como: resolver horários ambíguos'
-    href: resolve-ambiguous-times.md
-  - name: 'Como: permitir que os usuários resolvam horários ambíguos'
-    href: let-users-resolve-ambiguous-times.md
-ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467783"
+    - name: Visão geral do fuso horário
+      href: time-zone-overview.md
+    - name: 'Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo'
+      href: choosing-between-datetime.md
+    - name: Encontrando os fusos horários definidos em um sistema local
+      href: finding-the-time-zones-on-local-system.md
+    - name: 'Como: enumerar os fusos horários presentes em um computador'
+      href: enumerate-time-zones.md
+    - name: 'Como: acessar os objetos de fuso horário predefinidos UTC e local'
+      href: access-utc-and-local.md
+    - name: 'Como: criar uma instância de um objeto TimeZoneInfo'
+      href: instantiate-time-zone-info.md
+    - name: Criando uma instância de um objeto DateTimeOffset
+      href: instantiating-a-datetimeoffset-object.md
+    - name: 'Como: criar fusos horários sem regras de ajuste'
+      href: create-time-zones-without-adjustment-rules.md
+    - name: 'Como: criar fusos horários com regras de ajuste'
+      href: create-time-zones-with-adjustment-rules.md
+    - name: Salvar e restaurar fusos horários
+      href: saving-and-restoring-time-zones.md
+    - name: 'Como: salvar fusos horários em um recurso inserido'
+      href: save-time-zones-to-an-embedded-resource.md
+    - name: 'Como: restaurar fusos horários de um recurso inserido'
+      href: restore-time-zones-from-an-embedded-resource.md
+    - name: Trabalhar com calendários
+      href: working-with-calendars.md
+    - name: Executando operações aritméticas com datas e horários
+      href: performing-arithmetic-operations.md
+    - name: 'Como: usar fusos horários em aritmética de data e hora'
+      href: use-time-zones-in-arithmetic.md
+    - name: Convertendo entre DateTime e DateTimeOffset
+      href: converting-between-datetime-and-offset.md
+    - name: Converter horários entre fusos horários
+      href: converting-between-time-zones.md
+    - name: 'Como: resolver horários ambíguos'
+      href: resolve-ambiguous-times.md
+    - name: 'Como: permitir que os usuários resolvam horários ambíguos'
+      href: let-users-resolve-ambiguous-times.md

@@ -1,4 +1,3 @@
-items:
 - name: ADO.NET Entity Framework
   href: index.md
 - name: Visão geral do Entity Framework
@@ -6,21 +5,21 @@ items:
 - name: Modelando e mapeando
   href: modeling-and-mapping.md
   items:
-  - name: Gerador de EDM (EdmGen.exe)
-    href: edm-generator-edmgen-exe.md
-    items:
-    - name: 'Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento'
-      href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-    - name: 'Como: usar EdmGen.exe para gerar código de objetos camada'
-      href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-    - name: 'Como: usar EdmGen.exe para validar o modelo e arquivos de mapeamento'
-      href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-  - name: 'Como: definir a cadeia de conexão'
-    href: how-to-define-the-connection-string.md
-  - name: 'Como: tornar arquivos de modelo e mapeamento recursos inseridos'
-    href: how-to-make-model-and-mapping-files-embedded-resources.md
-  - name: Trabalhando com a linguagem de definição de dados
-    href: working-with-data-definition-language.md
+    - name: Gerador de EDM (EdmGen.exe)
+      href: edm-generator-edmgen-exe.md
+      items:
+        - name: 'Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento'
+          href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+        - name: 'Como: usar EdmGen.exe para gerar código de objetos camada'
+          href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+        - name: 'Como: usar EdmGen.exe para validar o modelo e arquivos de mapeamento'
+          href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+    - name: 'Como: definir a cadeia de conexão'
+      href: how-to-define-the-connection-string.md
+    - name: 'Como: tornar arquivos de modelo e mapeamento recursos inseridos'
+      href: how-to-make-model-and-mapping-files-embedded-resources.md
+    - name: Trabalhando com a linguagem de definição de dados
+      href: working-with-data-definition-language.md
 - name: Consultando um modelo conceitual
   href: querying-a-conceptual-model.md
 - name: Trabalhando com objetos
@@ -28,88 +27,88 @@ items:
 - name: Trabalhando com provedores de dados
   href: working-with-data-providers.md
   items:
-  - name: Cadeias de caracteres de conexão
-    href: connection-strings.md
-  - name: Provedores de dados do Entity Framework
-    href: data-providers.md
-    items:
-    - name: Provedor EntityClient para Entity Framework
-      href: entityclient-provider-for-the-entity-framework.md
+    - name: Cadeias de caracteres de conexão
+      href: connection-strings.md
+    - name: Provedores de dados do Entity Framework
+      href: data-providers.md
       items:
-      - name: 'Como: criar uma cadeia de conexão EntityConnection'
-        href: how-to-build-an-entityconnection-connection-string.md
-      - name: 'Como: executar uma consulta que retorna resultados de PrimitiveType'
-        href: how-to-execute-a-query-that-returns-primitivetype-results.md
-      - name: 'Como: executar uma consulta que retorna resultados de StructuralType'
-        href: how-to-execute-a-query-that-returns-structuraltype-results.md
-      - name: 'Como: executar uma consulta que retorna resultados de RefType'
-        href: how-to-execute-a-query-that-returns-reftype-results.md
-      - name: 'Como: executar uma consulta que retorna tipos complexos'
-        href: how-to-execute-a-query-that-returns-complex-types.md
-      - name: 'Como: executar uma consulta que retorna aninhados coleções'
-        href: how-to-execute-a-query-that-returns-nested-collections.md
-      - name: 'Como: executar uma consulta Entity SQL parametrizada usando EntityCommand'
-        href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-      - name: 'Como: executar um procedimento armazenado parametrizado usando EntityCommand'
-        href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-      - name: 'Como: executar uma consulta polimorfo'
-        href: how-to-execute-a-polymorphic-query.md
-      - name: 'Como: navegar em relações com o operador navegar'
-        href: how-to-navigate-relationships-with-the-navigate-operator.md
-    - name: SqlClient para Entity Framework
-      href: sqlclient-for-the-entity-framework.md
+        - name: Provedor EntityClient para Entity Framework
+          href: entityclient-provider-for-the-entity-framework.md
+          items:
+            - name: 'Como: criar uma cadeia de conexão EntityConnection'
+              href: how-to-build-an-entityconnection-connection-string.md
+            - name: 'Como: executar uma consulta que retorna resultados de PrimitiveType'
+              href: how-to-execute-a-query-that-returns-primitivetype-results.md
+            - name: 'Como: executar uma consulta que retorna resultados de StructuralType'
+              href: how-to-execute-a-query-that-returns-structuraltype-results.md
+            - name: 'Como: executar uma consulta que retorna resultados de RefType'
+              href: how-to-execute-a-query-that-returns-reftype-results.md
+            - name: 'Como: executar uma consulta que retorna tipos complexos'
+              href: how-to-execute-a-query-that-returns-complex-types.md
+            - name: 'Como: executar uma consulta que retorna aninhados coleções'
+              href: how-to-execute-a-query-that-returns-nested-collections.md
+            - name: 'Como: executar uma consulta Entity SQL parametrizada usando EntityCommand'
+              href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+            - name: 'Como: executar um procedimento armazenado parametrizado usando EntityCommand'
+              href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+            - name: 'Como: executar uma consulta polimorfo'
+              href: how-to-execute-a-polymorphic-query.md
+            - name: 'Como: navegar em relações com o operador navegar'
+              href: how-to-navigate-relationships-with-the-navigate-operator.md
+        - name: SqlClient para Entity Framework
+          href: sqlclient-for-the-entity-framework.md
+          items:
+            - name: SqlClient para funções de Entity Framework
+              href: sqlclient-for-ef-functions.md
+              items:
+                - name: Modelo conceitual canônico a mapeamento de funções do SQL Server
+                  href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+                - name: Funções agregadas
+                  href: aggregate-functions-sqlclient-for-entity-framework.md
+                - name: Funções de data e hora
+                  href: date-and-time-functions.md
+                - name: Funções matemáticas
+                  href: mathematical-functions.md
+                - name: Funções da cadeia de caracteres
+                  href: string-functions.md
+                - name: Funções do sistema
+                  href: system-functions.md
+            - name: SqlClient para a entidade FrameworkTypes
+              href: sqlclient-for-ef-types.md
+            - name: Problemas conhecidos em SqlClient para Entity Framework
+              href: known-issues-in-sqlclient-for-entity-framework.md
+    - name: Escrevendo um provedor de dados do Entity Framework
+      href: writing-an-ef-data-provider.md
       items:
-      - name: SqlClient para funções de Entity Framework
-        href: sqlclient-for-ef-functions.md
-        items:
-        - name: Modelo conceitual canônico a mapeamento de funções do SQL Server
-          href: conceptual-model-canonical-to-sql-server-functions-mapping.md
-        - name: Funções agregadas
-          href: aggregate-functions-sqlclient-for-entity-framework.md
-        - name: Funções de data e hora
-          href: date-and-time-functions.md
-        - name: Funções matemáticas
-          href: mathematical-functions.md
-        - name: Funções da cadeia de caracteres
-          href: string-functions.md
-        - name: Funções do sistema
-          href: system-functions.md
-      - name: SqlClient para a entidade FrameworkTypes
-        href: sqlclient-for-ef-types.md
-      - name: Problemas conhecidos em SqlClient para Entity Framework
-        href: known-issues-in-sqlclient-for-entity-framework.md
-  - name: Escrevendo um provedor de dados do Entity Framework
-    href: writing-an-ef-data-provider.md
-    items:
-    - name: Geração SQL
-      href: sql-generation.md
-      items:
-      - name: A forma das árvores de comando
-        href: the-shape-of-the-command-trees.md
-      - name: Gerando SQL das árvores de comando - práticas recomendadas
-        href: generating-sql-from-command-trees-best-practices.md
-      - name: Geração SQL no provedor exemplo
-        href: sql-generation-in-the-sample-provider.md
-        items:
-        - name: Arquitetura e design
-          href: architecture-and-design.md
-        - name: 'Passo a passo: Geração SQL'
-          href: walkthrough-sql-generation.md
-    - name: Geração de alteração SQL
-      href: modification-sql-generation.md
-    - name: Especificação do manifesto do provedor
-      href: provider-manifest-specification.md
+        - name: Geração SQL
+          href: sql-generation.md
+          items:
+            - name: A forma das árvores de comando
+              href: the-shape-of-the-command-trees.md
+            - name: Gerando SQL das árvores de comando - práticas recomendadas
+              href: generating-sql-from-command-trees-best-practices.md
+            - name: Geração SQL no provedor exemplo
+              href: sql-generation-in-the-sample-provider.md
+              items:
+                - name: Arquitetura e design
+                  href: architecture-and-design.md
+                - name: 'Passo a passo: Geração SQL'
+                  href: walkthrough-sql-generation.md
+        - name: Geração de alteração SQL
+          href: modification-sql-generation.md
+        - name: Especificação do manifesto do provedor
+          href: provider-manifest-specification.md
 - name: Considerações de desenvolvimento e implantação
   href: development-and-deployment-considerations.md
   items:
-  - name: Considerações sobre segurança
-    href: security-considerations.md
-  - name: Considerações sobre desempenho
-    href: performance-considerations.md
-  - name: Considerações sobre migração
-    href: migration-considerations.md
-  - name: Considerações de implantação
-    href: deployment-considerations.md
+    - name: Considerações sobre segurança
+      href: security-considerations.md
+    - name: Considerações sobre desempenho
+      href: performance-considerations.md
+    - name: Considerações sobre migração
+      href: migration-considerations.md
+    - name: Considerações de implantação
+      href: deployment-considerations.md
 - name: Recursos do Entity Framework
   href: resources.md
 - name: Terminologia do Entity Framework
@@ -118,9 +117,3 @@ items:
   href: getting-started.md
 - name: Referência de linguagem
   href: language-reference/index.md
-ms.openlocfilehash: 7b6de341e548ca64690cf9a17281fcbb30f160cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468057"

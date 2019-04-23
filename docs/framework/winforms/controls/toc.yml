@@ -1,1233 +1,1226 @@
-items:
 - name: Controles de Windows Forms
   href: index.md
   items:
-  - name: Organizando controles nos Windows Forms
-    href: arranging-controls-on-windows-forms.md
-    items:
-    - name: 'Como: Alinhar vários controles nos Windows Forms'
-      href: how-to-align-multiple-controls-on-windows-forms.md
-    - name: 'Como: Ancorar controles nos Windows Forms'
-      href: how-to-anchor-controls-on-windows-forms.md
-    - name: 'Como: Copiar controles entre Windows Forms'
-      href: how-to-copy-controls-between-windows-forms.md
-    - name: 'Como: Encaixar controles nos Windows Forms'
-      href: how-to-dock-controls-on-windows-forms.md
-    - name: 'Como: Colocar objetos em camadas nos Windows Forms'
-      href: how-to-layer-objects-on-windows-forms.md
-    - name: 'Como: Bloquear controles nos Windows Forms'
-      href: how-to-lock-controls-to-windows-forms.md
-    - name: 'Como: Posicionar controles nos Windows Forms'
-      href: how-to-position-controls-on-windows-forms.md
-    - name: 'Como: Redimensionar controles nos Windows Forms'
-      href: how-to-resize-controls-on-windows-forms.md
-    - name: 'Como: Definir opções de grade para todos os Windows Forms'
-      href: how-to-set-grid-options-for-all-windows-forms.md
-    - name: 'Como: Definir a ordem de tabulação nos Windows Forms'
-      href: how-to-set-the-tab-order-on-windows-forms.md
-    - name: 'Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento'
-      href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-    - name: 'Como: Organizar controles com guias de alinhamento e a grade nos Windows Forms'
-      href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
-    - name: 'Como: Transferir controles existentes a um pai diferente'
-      href: how-to-reassign-existing-controls-to-a-different-parent.md
-    - name: 'Passo a passo: Definir o layout de controles do Windows Forms com preenchimento, margens e a propriedade AutoSize'
-      href: windows-forms-controls-padding-autosize.md
-  - name: Colocando controles nos Windows Forms
-    href: putting-controls-on-windows-forms.md
-    items:
-    - name: 'Como: Adicionar Controles ao Windows Forms'
-      href: how-to-add-controls-to-windows-forms.md
-    - name: 'Como: Adicionar controles sem uma interface do usuário ao Windows Forms'
-      href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
-    - name: 'Como: Adicionar a ou remover de uma coleção de controles em tempo de execução'
-      href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
-    - name: 'Passo a passo: Preencher de forma automática a caixa de ferramentas com componentes personalizados'
-      href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-    - name: 'Como: Adicionar controles do ActiveX ao Windows Forms'
-      href: how-to-add-activex-controls-to-windows-forms.md
-    - name: Considerações sobre quando hospedar um controle ActiveX em um Windows Form
-      href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-  - name: Identificando controles do Windows Forms individuais e fornecendo atalhos para eles
-    href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
-    items:
-    - name: 'Como: Criar chaves de acesso para controles do Windows Forms'
-      href: how-to-create-access-keys-for-windows-forms-controls.md
-    - name: 'Como: Criar teclas de acesso para controles do Windows Forms usando o Designer'
-      href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-    - name: 'Como: Definir o texto exibido por um controle do Windows Forms'
-      href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-    - name: 'Como: Definir o texto exibido por um controle do Windows Forms usando o Designer'
-      href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-    - name: 'Como: Definir a imagem exibida por um controle do Windows Forms'
-      href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-    - name: 'Como: Definir a imagem exibida por um controle do Windows Forms usando o Designer'
-      href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-    - name: Fornecendo informações de acessibilidade para controles em um Windows Form
-      href: providing-accessibility-information-for-controls-on-a-windows-form.md
-  - name: Controles a serem usados nos Windows Forms
-    href: controls-to-use-on-windows-forms.md
-    items:
-    - name: Controles do Windows Forms por função
+    - name: Organizando controles nos Windows Forms
+      href: arranging-controls-on-windows-forms.md
+      items:
+        - name: 'Como: Alinhar vários controles nos Windows Forms'
+          href: how-to-align-multiple-controls-on-windows-forms.md
+        - name: 'Como: Ancorar controles nos Windows Forms'
+          href: how-to-anchor-controls-on-windows-forms.md
+        - name: 'Como: Copiar controles entre Windows Forms'
+          href: how-to-copy-controls-between-windows-forms.md
+        - name: 'Como: Encaixar controles nos Windows Forms'
+          href: how-to-dock-controls-on-windows-forms.md
+        - name: 'Como: Colocar objetos em camadas nos Windows Forms'
+          href: how-to-layer-objects-on-windows-forms.md
+        - name: 'Como: Bloquear controles nos Windows Forms'
+          href: how-to-lock-controls-to-windows-forms.md
+        - name: 'Como: Posicionar controles nos Windows Forms'
+          href: how-to-position-controls-on-windows-forms.md
+        - name: 'Como: Redimensionar controles nos Windows Forms'
+          href: how-to-resize-controls-on-windows-forms.md
+        - name: 'Como: Definir opções de grade para todos os Windows Forms'
+          href: how-to-set-grid-options-for-all-windows-forms.md
+        - name: 'Como: Definir a ordem de tabulação nos Windows Forms'
+          href: how-to-set-the-tab-order-on-windows-forms.md
+        - name: 'Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento'
+          href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
+        - name: 'Como: Organizar controles com guias de alinhamento e a grade nos Windows Forms'
+          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
+        - name: 'Como: Transferir controles existentes a um pai diferente'
+          href: how-to-reassign-existing-controls-to-a-different-parent.md
+        - name: 'Passo a passo: Definir o layout de controles do Windows Forms com preenchimento, margens e a propriedade AutoSize'
+          href: windows-forms-controls-padding-autosize.md
+    - name: Colocando controles nos Windows Forms
+      href: putting-controls-on-windows-forms.md
+      items:
+        - name: 'Como: Adicionar Controles ao Windows Forms'
+          href: how-to-add-controls-to-windows-forms.md
+        - name: 'Como: Adicionar controles sem uma interface do usuário ao Windows Forms'
+          href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
+        - name: 'Como: Adicionar a ou remover de uma coleção de controles em tempo de execução'
+          href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
+        - name: 'Passo a passo: Preencher de forma automática a caixa de ferramentas com componentes personalizados'
+          href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
+        - name: 'Como: Adicionar controles do ActiveX ao Windows Forms'
+          href: how-to-add-activex-controls-to-windows-forms.md
+        - name: Considerações sobre quando hospedar um controle ActiveX em um Windows Form
+          href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
+    - name: Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles
+      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+      items:
+        - name: 'Como: Criar chaves de acesso para controles do Windows Forms'
+          href: how-to-create-access-keys-for-windows-forms-controls.md
+        - name: 'Como: Criar teclas de acesso para controles do Windows Forms usando o Designer'
+          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
+        - name: 'Como: Definir o texto exibido por um controle do Windows Forms'
+          href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
+        - name: 'Como: Definir o texto exibido por um controle do Windows Forms usando o Designer'
+          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
+        - name: 'Como: Definir a imagem exibida por um controle do Windows Forms'
+          href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
+        - name: 'Como: Definir a imagem exibida por um controle do Windows Forms usando o Designer'
+          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
+        - name: Fornecendo informações de acessibilidade para controles em um Windows Form
+          href: providing-accessibility-information-for-controls-on-a-windows-form.md
+    - name: Controles a serem usados nos Windows Forms
+      href: controls-to-use-on-windows-forms.md
+      items:
+        - name: Controles dos Windows Forms por função
+          href: windows-forms-controls-by-function.md
+        - name: Controles com suporte de desenho do proprietário interno
+          href: controls-with-built-in-owner-drawing-support.md
+        - name: Componente BackgroundWorker
+          href: backgroundworker-component.md
+          items:
+            - name: Visão geral do componente BackgroundWorker
+              href: backgroundworker-component-overview.md
+            - name: 'Como: Executar uma operação em segundo plano'
+              href: how-to-run-an-operation-in-the-background.md
+            - name: 'Como: Como baixar um arquivo em segundo plano'
+              href: how-to-download-a-file-in-the-background.md
+            - name: 'Como: Implementar um formulário que usa uma operação em segundo plano'
+              href: how-to-implement-a-form-that-uses-a-background-operation.md
+            - name: 'Passo a passo: Executando uma operação em segundo plano'
+              href: walkthrough-running-an-operation-in-the-background.md
+            - name: 'Passo a passo: Implementando um formulário que usa uma operação em segundo plano'
+              href: walkthrough-implementing-a-form-that-uses-a-background-operation.md
+        - name: Controle BindingNavigator
+          href: bindingnavigator-control-windows-forms.md
+          items:
+            - name: Visão geral do controle BindingNavigator
+              href: bindingnavigator-control-overview-windows-forms.md
+            - name: 'Como: Navegar em dados com o controle BindingNavigator do Windows Forms'
+              href: how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md
+            - name: 'Como: Avançar em um DataSet com o controle BindingNavigator do Windows Forms'
+              href: move-through-a-dataset-with-wf-bindingnavigator-control.md
+            - name: 'Como: Adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms'
+              href: load-save-and-cancel-bindingnavigator.md
+        - name: Componente BindingSource
+          href: bindingsource-component.md
+          items:
+            - name: Visão geral do componente BindingSource
+              href: bindingsource-component-overview.md
+            - name: Arquitetura do componente BindingSource
+              href: bindingsource-component-architecture.md
+            - name: 'Como: Associar um controle do Windows Forms a um objeto de alocador'
+              href: how-to-bind-a-windows-forms-control-to-a-factory-object.md
+            - name: 'Como: Associar um controle do Windows Forms a um tipo'
+              href: how-to-bind-a-windows-forms-control-to-a-type.md
+            - name: 'Como: Associar um controle do Windows Forms a um tipo usando o Designer'
+              href: how-to-bind-a-windows-forms-control-to-a-type-using-the-designer.md
+            - name: 'Como: Associar a um serviço Web usando o BindingSource do Windows Forms'
+              href: how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md
+            - name: 'Como: Como associar controles do Windows Forms a valores de banco de dados DBNull'
+              href: how-to-bind-windows-forms-controls-to-dbnull-database-values.md
+            - name: 'Como: Associar controles do Windows Forms ao componente BindingSource usando o designer'
+              href: bind-wf-controls-with-the-bindingsource.md
+            - name: 'Como: Criar uma tabela de pesquisa com o componente BindingSource do Windows Forms'
+              href: how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md
+            - name: 'Como: Como personalizar a adição de item com o BindingSource do Windows Forms'
+              href: how-to-customize-item-addition-with-the-windows-forms-bindingsource.md
+            - name: 'Como: Como identificar erros e exceções que ocorram na associação de dados'
+              href: how-to-handle-errors-and-exceptions-that-occur-with-databinding.md
+            - name: 'Como: Gerar notificações de alteração usando um BindingSource e a interface INotifyPropertyChanged'
+              href: raise-change-notifications--bindingsource.md
+            - name: 'Como: Acionar notificações de alteração usando o método BindingSource ResetItem'
+              href: how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md
+            - name: 'Como: Refletir atualizações feitas na fonte de dados em um controle do Windows Forms com o BindingSource'
+              href: reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md
+            - name: 'Como: Compartilhar dados associados entre formulários usando o componente BindingSource'
+              href: how-to-share-bound-data-across-forms-using-the-bindingsource-component.md
+            - name: 'Como: Classificar e filtrar dados ADO.NET com o componente BindingSource do Windows Forms'
+              href: sort-and-filter-ado-net-data-with-wf-bindingsource-component.md
+        - name: Controle de botão
+          href: button-control-windows-forms.md
+          items:
+            - name: Visão geral do controle de botão
+              href: button-control-overview-windows-forms.md
+            - name: 'Como: Designar um botão do Windows Forms como o botão Aceitar'
+              href: how-to-designate-a-windows-forms-button-as-the-accept-button.md
+            - name: 'Como: Designar um botão do Windows Forms como o botão Aceitar usando o designer'
+              href: designate-a-wf-button-as-the-accept-button-using-the-designer.md
+            - name: 'Como: Designar um botão do Windows Forms como o botão Cancelar'
+              href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
+            - name: 'Como: Designar um botão do Windows Forms como o botão Cancelar usando o designer'
+              href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
+            - name: 'Como: Responder a cliques no botão do Windows Forms'
+              href: how-to-respond-to-windows-forms-button-clicks.md
+            - name: Forma de selecionar um controle de botão dos Windows Forms
+              href: ways-to-select-a-windows-forms-button-control.md
+        - name: Controle de CheckBox
+          href: checkbox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle CheckBox
+              href: checkbox-control-overview-windows-forms.md
+            - name: 'Como: Responder a cliques CheckBox do Windows Forms'
+              href: how-to-respond-to-windows-forms-checkbox-clicks.md
+            - name: 'Como: Definir opções com controles CheckBox do Windows Forms'
+              href: how-to-set-options-with-windows-forms-checkbox-controls.md
+        - name: Controle CheckedListBox
+          href: checkedlistbox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle CheckedListBox
+              href: checkedlistbox-control-overview-windows-forms.md
+            - name: 'Como: Determinar itens verificados no controle CheckedListBox do Windows Forms'
+              href: how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md
+        - name: Componente ColorDialog
+          href: colordialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente ColorDialog
+              href: colordialog-component-overview-windows-forms.md
+            - name: 'Como: Alterar a aparência do componente ColorDialog do Windows Forms'
+              href: how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md
+            - name: 'Como: Mostrar uma paleta de cores com o componente ColorDialog'
+              href: how-to-show-a-color-palette-with-the-colordialog-component.md
+        - name: Controle ComboBox
+          href: combobox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle ComboBox
+              href: combobox-control-overview-windows-forms.md
+            - name: 'Como: Criar texto dimensionado da variável em um controle ComboBox'
+              href: how-to-create-variable-sized-text-in-a-combobox-control.md
+        - name: Componente ContextMenu
+          href: contextmenu-component-windows-forms.md
+          items:
+            - name: Visão geral do componente ContextMenu
+              href: contextmenu-component-overview-windows-forms.md
+            - name: 'Como: Adicionar e remover itens de menu com o componente ContextMenu do Windows Forms'
+              href: add-and-remove-menu-items-with-wf-contextmenu-component.md
+        - name: Controle ContextMenuStrip
+          href: contextmenustrip-control.md
+          items:
+            - name: Visão geral do controle ContextMenuStrip
+              href: contextmenustrip-control-overview.md
+            - name: 'Como: Associar um ContextMenuStrip a um controle'
+              href: how-to-associate-a-contextmenustrip-with-a-control.md
+            - name: 'Como: Adicionar itens de menu a um ContextMenuStrip'
+              href: how-to-add-menu-items-to-a-contextmenustrip.md
+            - name: 'Como: Configurar margens de imagem e margens de verificação ContextMenuStrip'
+              href: how-to-configure-contextmenustrip-check-margins-and-image-margins.md
+            - name: 'Como: Habilitar margens de verificação e de imagem em controles ContextMenuStrip'
+              href: how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md
+            - name: 'Como: Identificar o evento de abertura ContextMenuStrip'
+              href: how-to-handle-the-contextmenustrip-opening-event.md
+        - name: Controle DataGrid
+          href: datagrid-control-windows-forms.md
+          items:
+            - name: Visão geral do controle DataGrid
+              href: datagrid-control-overview-windows-forms.md
+            - name: 'Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms'
+              href: how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md
+            - name: 'Como: Adicionar tabelas e colunas do controle DataGrid do Windows Forms usando o Designer'
+              href: add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md
+            - name: 'Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados'
+              href: how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md
+            - name: 'Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados usando o Designer'
+              href: bind-wf-datagrid-control-to-a-data-source-using-the-designer.md
+            - name: 'Como: Alterar os dados exibidos em tempo de execução no controle DataGrid do Windows Forms'
+              href: change-displayed-data-at-run-time-wf-datagrid-control.md
+            - name: 'Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms'
+              href: how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md
+            - name: 'Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms usando o Designer'
+              href: create-master-details-lists-with-wf-datagrid-control-using-the-designer.md
+            - name: 'Como: Excluir ou ocultar colunas no controle DataGrid do Windows Forms'
+              href: how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md
+            - name: 'Como: Formatar o controle DataGrid do Windows Forms'
+              href: how-to-format-the-windows-forms-datagrid-control.md
+            - name: 'Como: Formatar o controle DataGrid do Windows Forms usando o Designer'
+              href: how-to-format-the-windows-forms-datagrid-control-using-the-designer.md
+            - name: 'Como: Responder a cliques no controle DataGrid do Windows Forms'
+              href: how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md
+            - name: 'Como: Validar a entrada com o controle DataGrid do Windows Forms'
+              href: how-to-validate-input-with-the-windows-forms-datagrid-control.md
+            - name: Atalhos de teclado para o controle DataGrid dos Windows Forms
+              href: keyboard-shortcuts-for-the-windows-forms-datagrid-control.md
+        - name: Controle DataGridView
+          href: datagridview-control-windows-forms.md
+          items:
+            - name: Usando o designer com o controle DataGridView dos Windows Forms
+              href: using-the-designer-with-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o designer'
+                  href: add-and-remove-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Associar dados ao controle DataGridView do Windows Forms usando o designer'
+                  href: bind-data-to-the-datagrid-using-the-designer.md
+                - name: 'Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms usando o designer'
+                  href: change-the-order-of-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Alterar o tipo de uma coluna DataGridView do Windows Forms usando o designer'
+                  href: change-the-type-of-a-wf-datagridview-column-using-the-designer.md
+                - name: 'Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms usando o designer'
+                  href: enable-column-reordering-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Congelar colunas no controle DataGridView do Windows Forms usando o designer'
+                  href: freeze-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Ocultar colunas no controle DataGridView do Windows Forms usando o designer'
+                  href: hide-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Deixar as colunas somente leitura no controle DataGridView do Windows Forms usando o designer'
+                  href: make-columns-read-only-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms usando o designer'
+                  href: prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md
+                - name: 'Como: Definir estilos de linhas alternados para o controle DataGridView do Windows Forms usando o designer'
+                  href: set-alternating-row-styles-for-the-datagrid-using-the-designer.md
+                - name: 'Como: Definir estilos de célula padrão e formatos de dados para o controle DataGridView do Windows Forms usando o designer'
+                  href: default-cell-styles-datagridview.md
+            - name: Visão geral do controle DataGridView
+              href: datagridview-control-overview-windows-forms.md
+              items:
+                - name: Resumo de tecnologia do controle DataGridView
+                  href: datagridview-control-technology-summary-windows-forms.md
+                - name: Arquitetura de controle DataGridView
+                  href: datagridview-control-architecture-windows-forms.md
+                - name: Cenários do controle DataGridView
+                  href: datagridview-control-scenarios-windows-forms.md
+                - name: Diretório de código do controle DataGridView
+                  href: datagridview-control-code-directory-windows-forms.md
+            - name: Funcionalidade padrão no controle DataGridView dos Windows Forms
+              href: default-functionality-in-the-windows-forms-datagridview-control.md
+            - name: Tipos de coluna no controle DataGridView dos Windows Forms
+              href: column-types-in-the-windows-forms-datagridview-control.md
+            - name: 'Funcionalidades de coluna, linha e célula básicas no controle DataGridView dos Windows Forms'
+              href: basic-column-row-and-cell-features-wf-datagridview-control.md
+              items:
+                - name: 'Como: Ocultar colunas no controle DataGridView do Windows Forms'
+                  href: how-to-hide-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Ocultar cabeçalhos no controle DataGridView do Windows Forms'
+                  href: how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms'
+                  href: how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Congelar colunas no controle DataGridView do Windows Forms'
+                  href: how-to-freeze-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Tornar colunas somente leitura no controle DataGridView do Windows Forms'
+                  href: how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms'
+                  href: prevent-row-addition-and-deletion-datagridview.md
+                - name: 'Como: Obter e definir a célula atual no controle DataGridView do Windows Forms'
+                  href: get-and-set-the-current-cell-wf-datagridview-control.md
+                - name: 'Como: Exibir imagens em células do controle DataGridView do Windows Forms'
+                  href: how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md
+            - name: Formatação básica e estilos no controle DataGridView dos Windows Forms
+              href: basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Como: Alterar a borda e os estilos da linha de grade no tempo de execução no controle DataGridView do Windows Forms'
+                  href: change-the-border-and-gridline-styles-in-the-datagrid.md
+                - name: Estilos de célula no controle DataGridView dos Windows Forms
+                  href: cell-styles-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Definir estilos de célula padrão para o controle DataGridView do Windows Forms'
+                  href: how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md
+                - name: 'Como: Formatar dados no controle DataGridView do Windows Forms'
+                  href: how-to-format-data-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Definir estilos de fonte e cor no controle DataGridView do Windows Forms'
+                  href: how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Definir estilos de linha alternados para o controle DataGridView do Windows Forms'
+                  href: how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md
+                - name: 'Como: Usar o modelo da linha para personalizar linhas no controle DataGridView do Windows Forms'
+                  href: use-the-row-template-to-customize-rows-in-the-datagrid.md
+            - name: Exibindo dados no controle DataGridView dos Windows Forms
+              href: displaying-data-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Modos de exibição dos dados no controle DataGridView dos Windows Forms
+                  href: data-display-modes-in-the-windows-forms-datagridview-control.md
+                - name: Formatação de dados no controle DataGridView dos Windows Forms
+                  href: data-formatting-in-the-windows-forms-datagridview-control.md
+                - name: 'Passo a passo: Criar um controle não associado DataGridView do Windows Forms'
+                  href: walkthrough-creating-an-unbound-windows-forms-datagridview-control.md
+                  items:
+                    - name: 'Como: Criar um controle não associado DataGridView do Windows Forms'
+                      href: how-to-create-an-unbound-windows-forms-datagridview-control.md
+                - name: 'Como: Associar dados ao controle DataGridView do Windows Forms'
+                  href: how-to-bind-data-to-the-windows-forms-datagridview-control.md
+                - name: 'Como: Gerar automaticamente colunas em um controle DataGridView associado a dados do Windows Forms'
+                  href: autogenerate-columns-in-a-data-bound-wf-datagridview-control.md
+                - name: 'Como: Remover colunas geradas automaticamente de um controle DataGridView do Windows Forms'
+                  href: remove-autogenerated-columns-from-a-wf-datagridview-control.md
+                - name: 'Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms'
+                  href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Adicionar uma coluna não associada a um controle DataGridView do Windows Forms associado a dados'
+                  href: unbound-column-to-a-data-bound-datagridview.md
+                - name: 'Como: Associar objetos a controles DataGridView do Windows Forms'
+                  href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
+                - name: 'Como: Acessar objetos associados às linhas de DataGridView do Windows Forms'
+                  href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
+                - name: 'Como: Acessar objetos de acesso em uma lista suspensa DataGridViewComboBoxCell do Windows Forms'
+                  href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
+                - name: 'Passo a passo: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms'
+                  href: creating-a-master-detail-form-using-two-datagridviews.md
+                  items:
+                    - name: 'Como: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms'
+                      href: create-a-master-detail-form-using-two-datagridviews.md
+                - name: 'Como: Personalizar a formatação de dados no controle DataGridView do Windows Forms'
+                  href: how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md
+            - name: Redimensionando colunas e linhas no controle DataGridView dos Windows Forms
+              href: resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Dimensionando opções no controle DataGridView dos Windows Forms
+                  href: sizing-options-in-the-windows-forms-datagridview-control.md
+                - name: Modo de preenchimento da coluna no controle DataGridView dos Windows Forms
+                  href: column-fill-mode-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Definir os modos de dimensionamento do controle DataGridView do Windows Forms'
+                  href: how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md
+                - name: 'Como: Redimensionar de forma programática as células para que o conteúdo caiba no controle DataGridView do Windows Forms'
+                  href: programmatically-resize-cells-to-fit-content-in-the-datagrid.md
+                - name: 'Como: Redimensionar automaticamente células quando o conteúdo é alterado no controle DataGridView do Windows Forms'
+                  href: automatically-resize-cells-when-content-changes-in-the-datagrid.md
+            - name: Classificando dados no controle DataGridView dos Windows Forms
+              href: sorting-data-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Modos de classificação da coluna no controle DataGridView dos Windows Forms
+                  href: column-sort-modes-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Definir os modos de classificação para colunas no controle DataGridView do Windows Forms'
+                  href: set-the-sort-modes-for-columns-wf-datagridview-control.md
+                - name: 'Como: Personalizar a classificação no controle DataGridView do Windows Forms'
+                  href: how-to-customize-sorting-in-the-windows-forms-datagridview-control.md
+            - name: Entrada de dados no controle DataGridView dos Windows Forms
+              href: data-entry-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Como: Especificar o modo de edição do controle DataGridView do Windows Forms'
+                  href: how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md
+                - name: 'Como: Especificar valores padrão para novas linhas no controle DataGridView do Windows Forms'
+                  href: specify-default-values-for-new-rows-in-the-datagrid.md
+                - name: Usando a linha para novos registros no controle DataGridView dos Windows Forms
+                  href: using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md
+                - name: 'Passo a passo: Validando dados no controle DataGridView do Windows Forms'
+                  href: walkthrough-validating-data-in-the-windows-forms-datagridview-control.md
+                  items:
+                    - name: 'Como: Validar dados no controle DataGridView do Windows Forms'
+                      href: how-to-validate-data-in-the-windows-forms-datagridview-control.md
+                - name: 'Passo a passo: Identificando Erros que Ocorrem Durante a Entrada de Dados no Controle DataGridView do Windows Forms'
+                  href: handling-errors-that-occur-during-data-entry-in-the-datagrid.md
+                  items:
+                    - name: 'Como: Identificar Erros que Ocorrem Durante a Entrada de Dados no Controle DataGridView do Windows Forms'
+                      href: handle-errors-that-occur-during-data-entry-in-the-datagrid.md
+            - name: Seleção e uso da Área de Transferência com o controle DataGridView dos Windows Forms
+              href: selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md
+              items:
+                - name: Modos de seleção no controle DataGridView dos Windows Forms
+                  href: selection-modes-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Definir o modo de seleção do controle DataGridView do Windows Forms'
+                  href: how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md
+                - name: 'Como: Obter as células, as linhas e as colunas selecionadas no controle DataGridView do Windows Forms'
+                  href: selected-cells-rows-and-columns-datagridview.md
+                - name: 'Como: Habilitar usuários para copiarem várias células na Área de Transferência usando o controle DataGridView do Windows Forms'
+                  href: enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md
+            - name: 'Programando com células, linhas e colunas no controle DataGridView dos Windows Forms'
+              href: programming-with-cells-rows-and-columns-in-the-datagrid.md
+              items:
+                - name: 'Como: Adicionar ToolTips a células individuais em um controle DataGridView do Windows Forms'
+                  href: add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md
+                - name: 'Como: Realizar uma ação personalizada com base em alterações em uma célula do controle DataGridView do Windows Forms'
+                  href: perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md
+                - name: 'Como: Manipular bandas no controle DataGridView do Windows Forms'
+                  href: how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Manipular linhas no controle DataGridView do Windows Forms'
+                  href: how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Manipular colunas no controle DataGridView do Windows Forms'
+                  href: how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Como: Trabalhar com colunas de imagem no controle DataGridView do Windows Forms'
+                  href: how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md
+            - name: Personalizando o controle DataGridView dos Windows Forms
+              href: customizing-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Como: Personalizar a aparência de células no controle DataGridView do Windows Forms'
+                  href: customize-the-appearance-of-cells-in-the-datagrid.md
+                - name: 'Como: Personalizar a aparência de linhas no controle DataGridView do Windows Forms'
+                  href: customize-the-appearance-of-rows-in-the-datagrid.md
+                - name: 'Como: Personalizar células e colunas no controle DataGridView do Windows Forms estendendo o comportamento e a aparência'
+                  href: customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md
+                - name: 'Como: Desabilitar botões em uma coluna de botão no controle DataGridView do Windows Forms'
+                  href: disable-buttons-in-a-button-column-in-the-datagrid.md
+                - name: 'Como: Hospedar controles em células DataGridView do Windows Forms'
+                  href: how-to-host-controls-in-windows-forms-datagridview-cells.md
+            - name: Ajuste de desempenho no controle DataGridView dos Windows Forms
+              href: performance-tuning-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms
+                  href: best-practices-for-scaling-the-windows-forms-datagridview-control.md
+                - name: Modo virtual no controle DataGridView dos Windows Forms
+                  href: virtual-mode-in-the-windows-forms-datagridview-control.md
+                - name: 'Passo a passo: Implementando o modo virtual no controle DataGridView do Windows Forms'
+                  href: implementing-virtual-mode-wf-datagridview-control.md
+                  items:
+                    - name: 'Como: Implementar o modo virtual no controle DataGridView do Windows Forms'
+                      href: how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md
+                - name: Implementando o modo virtual com carregamento de dados Just-In-Time no controle DataGridView dos Windows Forms
+                  href: implementing-virtual-mode-jit-data-loading-in-the-datagrid.md
+                  items:
+                    - name: 'Como: Implementar o modo virtual com carregamento de dados Just-In-Time no controle DataGridView do Windows Forms'
+                      href: virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md
+            - name: Tratamento de teclado e mouse padrão no controle DataGridView dos Windows Forms
+              href: default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md
+            - name: Diferenças entre os controles DataGridView e DataGrid dos Windows Forms
+              href: differences-between-the-windows-forms-datagridview-and-datagrid-controls.md
+        - name: Controle DateTimePicker
+          href: datetimepicker-control-windows-forms.md
+          items:
+            - name: Visão geral do controle DateTimePicker
+              href: datetimepicker-control-overview-windows-forms.md
+            - name: 'Como: Exibir uma data em um formato personalizado com o controle DateTimePicker do Windows Forms'
+              href: display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md
+            - name: 'Como: Definir e retornar datas com o controle DateTimePicker do Windows Forms'
+              href: how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md
+            - name: 'Como: Exibir a hora com o controle DateTimePicker'
+              href: how-to-display-time-with-the-datetimepicker-control.md
+        - name: Controles e componentes da caixa de diálogo
+          href: dialog-box-controls-and-components-windows-forms.md
+        - name: Controle DomainUpDown
+          href: domainupdown-control-windows-forms.md
+          items:
+            - name: Visão geral do controle DomainUpDown
+              href: domainupdown-control-overview-windows-forms.md
+            - name: 'Como: Adicionar itens a controles DomainUpDown do Windows Forms de forma programática'
+              href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
+            - name: 'Como: Remover itens de controles DomainUpDown do Windows Forms'
+              href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
+        - name: Componente ErrorProvider
+          href: errorprovider-component-windows-forms.md
+          items:
+            - name: Visão geral do componente ErrorProvider
+              href: errorprovider-component-overview-windows-forms.md
+            - name: 'Como: Exibir ícones de erro para validação de formulário com o componente ErrorProvider do Windows Forms'
+              href: display-error-icons-for-form-validation-with-wf-errorprovider.md
+            - name: 'Como: Exibir erros dentro de um DataSet com o componente ErrorProvider do Windows Forms'
+              href: view-errors-within-a-dataset-with-wf-errorprovider-component.md
+        - name: Classe FileDialog
+          href: filedialog-class.md
+          items:
+            - name: 'Como: Recusar a atualização automática da caixa de diálogo do arquivo'
+              href: how-to-opt-out-of-file-dialog-box-automatic-upgrade.md
+            - name: 'Como: Adicionar um local personalizado a uma caixa de diálogo Arquivo'
+              href: how-to-add-a-custom-place-to-a-file-dialog-box.md
+            - name: GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
+              href: known-folder-guids-for-file-dialog-custom-places.md
+        - name: Controle FlowLayoutPanel
+          href: flowlayoutpanel-control-windows-forms.md
+          items:
+            - name: Visão geral do controle FlowLayoutPanel
+              href: flowlayoutpanel-control-overview.md
+            - name: 'Como: Ancorar e encaixar controles filho em um controle FlowLayoutPanel'
+              href: how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md
+            - name: 'Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel'
+              href: walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md
+        - name: Componente FolderBrowserDialog
+          href: folderbrowserdialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente FolderBrowserDialog (Windows Forms)
+              href: folderbrowserdialog-component-overview-windows-forms.md
+            - name: 'Como: Escolher pastas com o componente FolderBrowserDialog do Windows Forms'
+              href: how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md
+        - name: Componente FontDialog
+          href: fontdialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente FontDialog
+              href: fontdialog-component-overview-windows-forms.md
+            - name: 'Como: Mostrar uma lista de fontes ao componente FontDialog'
+              href: how-to-show-a-font-list-with-the-fontdialog-component.md
+        - name: Controle GroupBox
+          href: groupbox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle GroupBox
+              href: groupbox-control-overview-windows-forms.md
+            - name: 'Como: Agrupar controles com o controle GroupBox do Windows Forms'
+              href: how-to-group-controls-with-the-windows-forms-groupbox-control.md
+        - name: Componente HelpProvider
+          href: helpprovider-component-windows-forms.md
+          items:
+            - name: Visão geral do componente HelpProvider
+              href: helpprovider-component-overview-windows-forms.md
+        - name: Controles HScrollBar e VScrollBar
+          href: hscrollbar-and-vscrollbar-controls-windows-forms.md
+          items:
+            - name: Visão geral dos controles HScrollBar e VScrollBar
+              href: hscrollbar-and-vscrollbar-controls-overview-windows-forms.md
+        - name: Componente ImageList
+          href: imagelist-component-windows-forms.md
+          items:
+            - name: Visão geral do componente ImageList
+              href: imagelist-component-overview-windows-forms.md
+            - name: 'Como: Adicionar ou remover imagens com o componente ImageList do Windows Forms'
+              href: how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md
+            - name: 'Como: Adicionar ou remover imagens ImageList com o Designer'
+              href: how-to-add-or-remove-imagelist-images-with-the-designer.md
+        - name: Controle de rótulo
+          href: label-control-windows-forms.md
+          items:
+            - name: Visão geral do controle de rótulo
+              href: label-control-overview-windows-forms.md
+            - name: 'Como: Criar chaves de acesso com controles de rótulo do Windows Forms'
+              href: how-to-create-access-keys-with-windows-forms-label-controls.md
+            - name: 'Como: Dimensionar um controle de rótulo do Windows Forms para encaixar o conteúdo'
+              href: how-to-size-a-windows-forms-label-control-to-fit-its-contents.md
+        - name: Controle LinkLabel
+          href: linklabel-control-windows-forms.md
+          items:
+            - name: Visão geral do controle LinkLabel
+              href: linklabel-control-overview-windows-forms.md
+            - name: 'Como: Alterar a aparência do controle LinkLabel do Windows Forms'
+              href: how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md
+            - name: 'Como: Vincular a um objeto ou página da Web com o controle LinkLabel do Windows Forms'
+              href: link-to-an-object-or-web-page-with-wf-linklabel-control.md
+            - name: 'Como: Exibir uma página da Web com um controle LinkLabel do Windows Forms (Visual Basic)'
+              href: display-a-web-page-from-a-wf-linklabel-control-visual-basic.md
+        - name: Controle ListBox
+          href: listbox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle ListBox
+              href: listbox-control-overview-windows-forms.md
+        - name: Controle ListView
+          href: listview-control-windows-forms.md
+          items:
+            - name: Visão geral do controle ListView
+              href: listview-control-overview-windows-forms.md
+            - name: 'Como: Adicionar e remover itens com o controle ListView do Windows Forms'
+              href: how-to-add-and-remove-items-with-the-windows-forms-listview-control.md
+            - name: 'Como: Adicionar e remover itens com o controle ListView do Windows Forms usando o Designer'
+              href: add-and-remove-items-with-wf-listview-control-using-the-designer.md
+            - name: 'Como: Adicionar colunas ao controle ListView do Windows Forms'
+              href: how-to-add-columns-to-the-windows-forms-listview-control.md
+            - name: 'Como: Adicionar colunas ao controle ListView do Windows Forms usando o Designer'
+              href: how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md
+            - name: 'Como: Adicionar Recursos de Pesquisa a um Controle ListView'
+              href: how-to-add-search-capabilities-to-a-listview-control.md
+            - name: 'Como: Exibir Ícones do Controle ListView do Windows Forms'
+              href: how-to-display-icons-for-the-windows-forms-listview-control.md
+            - name: 'Como: Exibir Subitens em Colunas com o Controle ListView do Windows Forms'
+              href: how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md
+            - name: 'Como: Habilitar a exibição de bloco em um controle ListView do Windows Forms'
+              href: how-to-enable-tile-view-in-a-windows-forms-listview-control.md
+            - name: 'Como: Habilitar exibição lado a lado em um controle ListView do Windows Forms usando o designer'
+              href: enable-tile-view-in-a-wf-listview-control-using-the-designer.md
+            - name: 'Como: Agrupar itens em um controle ListView do Windows Forms'
+              href: how-to-group-items-in-a-windows-forms-listview-control.md
+            - name: 'Como: Agrupar itens em um controle ListView do Windows Forms usando o Designer'
+              href: how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md
+            - name: 'Como: Exibir uma marca de inserção em um controle ListView do Windows Forms'
+              href: how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md
+            - name: 'Como: Selecionar um item no controle ListView do Windows Forms'
+              href: how-to-select-an-item-in-the-windows-forms-listview-control.md
+            - name: 'Passo a passo: Criar uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer'
+              href: creating-an-explorer-style-interface-with-the-listview-and-treeview.md
+        - name: Componente MainMenu
+          href: mainmenu-component-windows-forms.md
+          items:
+            - name: Visão geral do componente MainMenu
+              href: mainmenu-component-overview-windows-forms.md
+        - name: Controle MaskedTextBox
+          href: maskedtextbox-control-windows-forms.md
+          items:
+            - name: 'Passo a passo: Trabalhando com o controle MaskedTextBox'
+              href: walkthrough-working-with-the-maskedtextbox-control.md
+            - name: 'Como: Associar dados ao controle MaskedTextBox'
+              href: how-to-bind-data-to-the-maskedtextbox-control.md
+            - name: 'Como: Definir a máscara de entrada'
+              href: how-to-set-the-input-mask.md
+        - name: Controle MenuStrip
+          href: menustrip-control-windows-forms.md
+          items:
+            - name: Visão geral do controle MenuStrip
+              href: menustrip-control-overview-windows-forms.md
+            - name: 'Como: Adicionar melhorias a ToolStripMenuItems'
+              href: how-to-add-enhancements-to-toolstripmenuitems.md
+            - name: 'Como: Acrescentar um MenuStrip a uma janela pai MDI'
+              href: how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md
+            - name: 'Como: Copiar ToolStripMenuItems'
+              href: how-to-copy-toolstripmenuitems.md
+            - name: 'Como: Criar uma lista de janelas MDI com MenuStrip'
+              href: how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md
+            - name: 'Como: Desabilitar ToolStripMenuItems'
+              href: how-to-disable-toolstripmenuitems.md
+            - name: 'Como: Desabilitar ToolStripMenuItems usando o designer'
+              href: how-to-disable-toolstripmenuitems-using-the-designer.md
+            - name: 'Como: Exibir botões de opção em um MenuStrip'
+              href: how-to-display-option-buttons-in-a-menustrip-windows-forms.md
+            - name: 'Como: Ocultar ToolStripMenuItems'
+              href: how-to-hide-toolstripmenuitems.md
+            - name: 'Como: Ocultar ToolStripMenuItems usando o designer'
+              href: how-to-hide-toolstripmenuitems-using-the-designer.md
+            - name: 'Como: Inserir um MenuStrip em um menu suspenso MDI'
+              href: how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md
+            - name: 'Como: Remover um ToolStripMenuItem de um menu suspenso MDI'
+              href: how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md
+            - name: 'Como: Mover ToolStripMenuItems'
+              href: how-to-move-toolstripmenuitems.md
+            - name: 'Como: Configurar margens de imagem e margens de verificação MenuStrip'
+              href: how-to-configure-menustrip-check-margins-and-image-margins.md
+            - name: 'Como: Fornecer itens de menu padrão para um formulário'
+              href: how-to-provide-standard-menu-items-to-a-form.md
+            - name: 'Como: Configurar a mesclagem de menu automática para aplicativos MDI'
+              href: how-to-set-up-automatic-menu-merging-for-mdi-applications.md
+            - name: Mesclando itens de menu no controle MenuStrip dos Windows Forms
+              href: merging-menu-items-in-the-windows-forms-menustrip-control.md
+            - name: 'Passo a passo: Fornecer itens de menu padrão para um formulário'
+              href: walkthrough-providing-standard-menu-items-to-a-form.md
+        - name: Controle MonthCalendar
+          href: monthcalendar-control-windows-forms.md
+          items:
+            - name: Visão geral do controle MonthCalendar
+              href: monthcalendar-control-overview-windows-forms.md
+            - name: 'Como: Alterar a aparência do controle MonthCalendar do Windows Forms'
+              href: how-to-change-monthcalendar-control-appearance.md
+            - name: 'Como: Exibir mais de um mês no controle MonthCalendar do Windows Forms'
+              href: display-more-than-one-month-wf-monthcalendar-control.md
+            - name: 'Como: Exibir dias específicos em negrito com o controle MonthCalendar do Windows Forms'
+              href: display-specific-days-in-bold-with-wf-monthcalendar-control.md
+            - name: 'Como: Selecionar um intervalo de datas no controle MonthCalendar do Windows Forms'
+              href: how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md
+        - name: Componente NotifyIcon
+          href: notifyicon-component-windows-forms.md
+          items:
+            - name: Visão geral do componente NotifyIcon
+              href: notifyicon-component-overview-windows-forms.md
+            - name: 'Como: Adicionar ícones do aplicativo à TaskBar com o componente NotifyIcon do Windows Forms'
+              href: app-icons-to-the-taskbar-with-wf-notifyicon.md
+            - name: 'Como: Associar um menu de atalho a um componente NotifyIcon do Windows Forms'
+              href: how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md
+        - name: Controle NumericUpDown
+          href: numericupdown-control-windows-forms.md
+          items:
+            - name: Visão geral do controle NumericUpDown
+              href: numericupdown-control-overview-windows-forms.md
+            - name: 'Como: Definir e retornar valores numéricos com o controle NumericUpDown do Windows Forms'
+              href: set-and-return-numeric-values-with-wf-numericupdown-control.md
+            - name: 'Como: Definir o formato para o controle NumericUpDown do Windows Forms'
+              href: how-to-set-the-format-for-the-windows-forms-numericupdown-control.md
+        - name: Componente OpenFileDialog
+          href: openfiledialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente OpenFileDialog
+              href: openfiledialog-component-overview-windows-forms.md
+            - name: 'Como: Como abrir arquivos usando o componente OpenFileDialog'
+              href: how-to-open-files-using-the-openfiledialog-component.md
+        - name: Componente PageSetupDialog
+          href: pagesetupdialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente PageSetupDialog
+              href: pagesetupdialog-component-overview-windows-forms.md
+            - name: 'Como: Determinar propriedades de página usando o componente PageSetupDialog'
+              href: how-to-determine-page-properties-using-the-pagesetupdialog-component.md
+        - name: Controle de painel
+          href: panel-control-windows-forms.md
+          items:
+            - name: Visão geral do controle de painel
+              href: panel-control-overview-windows-forms.md
+            - name: 'Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer'
+              href: group-controls-with-wf-panel-control-using-the-designer.md
+            - name: 'Como: Definir a tela de fundo de um painel'
+              href: how-to-set-the-background-of-a-windows-forms-panel.md
+            - name: 'Como: Definir a tela de fundo de um painel do Windows Forms usando o Designer'
+              href: how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md
+        - name: Controle PictureBox
+          href: picturebox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle PictureBox
+              href: picturebox-control-overview-windows-forms.md
+            - name: 'Como: Carregar uma imagem usando o designer'
+              href: how-to-load-a-picture-using-the-designer-windows-forms.md
+            - name: 'Como: Modificar o tamanho ou o posicionamento de uma imagem em tempo de execução'
+              href: how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md
+            - name: 'Como: Definir imagens em tempo de execução'
+              href: how-to-set-pictures-at-run-time-windows-forms.md
+        - name: Componente PrintDialog
+          href: printdialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente PrintDialog
+              href: printdialog-component-overview-windows-forms.md
+            - name: 'Como: Exibir o componente PrintDialog'
+              href: how-to-display-the-printdialog-component.md
+        - name: Componente PrintDocument
+          href: printdocument-component-windows-forms.md
+          items:
+            - name: Visão geral do componente PrintDocument
+              href: printdocument-component-overview-windows-forms.md
+        - name: Controle PrintPreviewControl
+          href: printpreviewcontrol-control-windows-forms.md
+          items:
+            - name: Visão geral do controle PrintPreviewControl
+              href: printpreviewcontrol-control-overview-windows-forms.md
+        - name: Controle PrintPreviewDialog
+          href: printpreviewdialog-control-windows-forms.md
+          items:
+            - name: Visão geral do controle PrintPreviewDialog
+              href: printpreviewdialog-control-overview-windows-forms.md
+            - name: 'Como: Exibir visualização de impressão em aplicativos do Windows Forms'
+              href: how-to-display-print-preview-in-windows-forms-applications.md
+        - name: Controle ProgressBar
+          href: progressbar-control-windows-forms.md
+          items:
+            - name: Visão geral do controle ProgressBar
+              href: progressbar-control-overview-windows-forms.md
+            - name: 'Como: Definir o valor exibido pelo controle ProgressBar do Windows Forms'
+              href: how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md
+        - name: Controle RadioButton
+          href: radiobutton-control-windows-forms.md
+          items:
+            - name: Visão geral do controle RadioButton
+              href: radiobutton-control-overview-windows-forms.md
+            - name: 'Como: Agrupar controles RadioButton do Windows Forms para funcionarem como um conjunto'
+              href: how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md
+        - name: Controle RichTextBox
+          href: richtextbox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle RichTextBox
+              href: richtextbox-control-overview-windows-forms.md
+            - name: 'Como: Determinar quando os atributos de formatação mudam no controle RichTextBox do Windows Forms'
+              href: determine-when-formatting-attributes-change-wf-richtextbox-control.md
+            - name: 'Como: Exibir barras de rolagem no controle RichTextBox do Windows Forms'
+              href: how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md
+            - name: 'Como: Exibir links em estilo da Web com o controle RichTextBox do Windows Forms'
+              href: how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md
+            - name: 'Como: Habilitar operações do tipo "arrastar e soltar" com o controle RichTextBox do Windows Forms'
+              href: enable-drag-and-drop-operations-with-wf-richtextbox-control.md
+            - name: 'Como: Carregar arquivos no controle RichTextBox do Windows Forms'
+              href: how-to-load-files-into-the-windows-forms-richtextbox-control.md
+            - name: 'Como: Salvar arquivos com o controle RichTextBox do Windows Forms'
+              href: how-to-save-files-with-the-windows-forms-richtextbox-control.md
+            - name: 'Como: Definir atributos de fonte para o controle RichTextBox do Windows Forms'
+              href: how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md
+            - name: 'Como: Definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox do Windows Forms'
+              href: set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md
+        - name: Componente SaveFileDialog
+          href: savefiledialog-component-windows-forms.md
+          items:
+            - name: Visão geral do componente SaveFileDialog
+              href: savefiledialog-component-overview-windows-forms.md
+            - name: 'Como: Salvar arquivos usando o componente SaveFileDialog'
+              href: how-to-save-files-using-the-savefiledialog-component.md
+        - name: Classe SoundPlayer
+          href: soundplayer-class.md
+          items:
+            - name: Visão geral da classe SoundPlayer
+              href: soundplayer-class-overview.md
+            - name: 'Como: Reproduzir um som de um Windows Form'
+              href: how-to-play-a-sound-from-a-windows-form.md
+            - name: 'Como: Reproduzir um aviso sonoro de um Windows Form'
+              href: how-to-play-a-beep-from-a-windows-form.md
+            - name: 'Como: Reproduzir um som inserido em um recurso de um Windows Form'
+              href: how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md
+            - name: 'Como: Reproduzir um som do sistema de um Windows Form'
+              href: how-to-play-a-system-sound-from-a-windows-form.md
+            - name: 'Como: Carregar um som de forma assíncrona dentro de um Windows Form'
+              href: how-to-load-a-sound-asynchronously-within-a-windows-form.md
+            - name: 'Como: Fazer Loop de um Som Tocado em um Formulário do Windows'
+              href: how-to-loop-a-sound-playing-on-a-windows-form.md
+        - name: Controle SplitContainer
+          href: splitcontainer-control-windows-forms.md
+          items:
+            - name: Visão geral do controle SplitContainer
+              href: splitcontainer-control-overview-windows-forms.md
+            - name: 'Como: Criar uma Interface do Usuário com Vários Painéis nos Windows Forms'
+              href: how-to-create-a-multipane-user-interface-with-windows-forms.md
+            - name: 'Como: Criar uma interface do usuário com vários painéis com o Windows Forms usando o designer'
+              href: create-a-multipane-user-interface-with-wf-using-the-designer.md
+            - name: 'Como: Criar uma interface no estilo do Windows Explorer em Windows Forms'
+              href: how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md
+            - name: 'Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida'
+              href: how-to-define-resize-and-positioning-behavior-in-a-split-window.md
+            - name: 'Como: Dividir uma janela horizontalmente'
+              href: how-to-split-a-window-horizontally.md
+            - name: 'Como: Dividir uma janela horizontalmente o designer'
+              href: how-to-split-a-window-horizontally-using-the-designer.md
+        - name: Controle Divisor
+          href: splitter-control-windows-forms.md
+          items:
+            - name: Visão geral do controle Divisor
+              href: splitter-control-overview-windows-forms.md
+        - name: Controle StatusBar
+          href: statusbar-control-windows-forms.md
+          items:
+            - name: Visão geral do controle StatusBar
+              href: statusbar-control-overview-windows-forms.md
+            - name: 'Como: Adicionar painéis a um controle StatusBar'
+              href: how-to-add-panels-to-a-statusbar-control.md
+            - name: 'Como: Determinar qual painel no controle StatusBar do Windows Forms foi clicado'
+              href: determine-which-panel-wf-statusbar-control-was-clicked.md
+            - name: 'Como: Definir o tamanho de painéis da barra de status'
+              href: how-to-set-the-size-of-status-bar-panels.md
+            - name: 'Passo a passo: Atualizando informações da barra de status em tempo de execução'
+              href: walkthrough-updating-status-bar-information-at-run-time.md
+        - name: Controle StatusStrip
+          href: statusstrip-control.md
+          items:
+            - name: Visão geral do controle StatusStrip
+              href: statusstrip-control-overview.md
+            - name: 'Como: Usar a propriedade Spring de forma interativa em um StatusStrip'
+              href: how-to-use-the-spring-property-interactively-in-a-statusstrip.md
+        - name: Controle TabControl
+          href: tabcontrol-control-windows-forms.md
+          items:
+            - name: Visão geral do controle TabControl
+              href: tabcontrol-control-overview-windows-forms.md
+            - name: 'Como: Adicionar um controle a uma página da guia'
+              href: how-to-add-a-control-to-a-tab-page.md
+            - name: 'Como: Adicionar um controle a uma página de guia usando o Designer'
+              href: how-to-add-a-control-to-a-tab-page-using-the-designer.md
+            - name: 'Como: Adicionar e remover guias com o controle TabControl do Windows Forms'
+              href: how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md
+            - name: 'Como: Adicionar e remover guias com o TabControl do Windows Forms usando o designer'
+              href: add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md
+            - name: 'Como: Alterar a aparência do TabControl do Windows Forms'
+              href: how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md
+            - name: 'Como: Desabilitar páginas de guia'
+              href: how-to-disable-tab-pages.md
+            - name: 'Como: Exibir guias alinhadas lateralmente com TabControl'
+              href: how-to-display-side-aligned-tabs-with-tabcontrol.md
+        - name: Controle TableLayoutPanel
+          href: tablelayoutpanel-control-windows-forms.md
+          items:
+            - name: Visão geral do controle TableLayoutPanel
+              href: tablelayoutpanel-control-overview.md
+            - name: Comportamento de AutoSize no controle TableLayoutPanel
+              href: autosize-behavior-in-the-tablelayoutpanel-control.md
+            - name: Práticas recomendadas para o controle TableLayoutPanel
+              href: best-practices-for-the-tablelayoutpanel-control.md
+            - name: 'Como: Alinhar e alongar um controle em um controle TableLayoutPanel'
+              href: how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md
+            - name: 'Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel'
+              href: how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md
+            - name: 'Como: Criar um Windows Form redimensionável para entrada de dados'
+              href: how-to-create-a-resizable-windows-form-for-data-entry.md
+            - name: 'Como: Criar um layout do Windows Forms que responda bem à localização'
+              href: how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md
+            - name: 'Como: Editar colunas e linhas em um controle TableLayoutPanel'
+              href: how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md
+            - name: 'Como: Abranger linhas e colunas em um controle TableLayoutPanel'
+              href: how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md
+            - name: 'Passo a passo: Organizar controles nos Windows Forms usando um TableLayoutPanel'
+              href: walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md
+        - name: Controle TextBox
+          href: textbox-control-windows-forms.md
+          items:
+            - name: Visão geral do controle TextBox
+              href: textbox-control-overview-windows-forms.md
+            - name: 'Como: Controlar o ponto de inserção em um controle TextBox do Windows Forms'
+              href: how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md
+            - name: 'Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms'
+              href: how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md
+            - name: 'Como: Criar uma caixa de texto somente leitura'
+              href: how-to-create-a-read-only-text-box-windows-forms.md
+            - name: 'Como: Inserir aspas em uma cadeia de caracteres'
+              href: how-to-put-quotation-marks-in-a-string-windows-forms.md
+            - name: 'Como: Selecionar texto no controle TextBox do Windows Forms'
+              href: how-to-select-text-in-the-windows-forms-textbox-control.md
+            - name: 'Como: Exibir várias linhas no controle TextBox do Windows Forms'
+              href: how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md
+        - name: Componente de Temporizador
+          href: timer-component-windows-forms.md
+          items:
+            - name: Visão geral do componente de temporizador
+              href: timer-component-overview-windows-forms.md
+            - name: Limitações da propriedade de intervalo do componente de temporizador dos Windows Forms
+              href: limitations-of-the-timer-component-interval-property.md
+            - name: 'Como: Executar procedimentos em intervalos definidos com o componente de temporizador do Windows Forms'
+              href: run-procedures-at-set-intervals-with-wf-timer-component.md
+        - name: Controle ToolBar
+          href: toolbar-control-windows-forms.md
+          items:
+            - name: Visão geral do controle ToolBar
+              href: toolbar-control-overview-windows-forms.md
+            - name: 'Como: Adicionar botões a um controle ToolBar'
+              href: how-to-add-buttons-to-a-toolbar-control.md
+            - name: 'Como: Adicionar botões a um controle ToolBar usando o designer'
+              href: how-to-add-buttons-to-a-toolbar-control-using-the-designer.md
+            - name: 'Como: Definir um ícone para um botão de barra de ferramentas'
+              href: how-to-define-an-icon-for-a-toolbar-button.md
+            - name: 'Como: Definir um ícone para um botão de barra de ferramentas usando o Designer'
+              href: how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md
+            - name: 'Como: Disparar eventos de menu para botões da barra de ferramentas'
+              href: how-to-trigger-menu-events-for-toolbar-buttons.md
+        - name: Controle ToolStrip
+          href: toolstrip-control-windows-forms.md
+          items:
+            - name: Visão geral do controle ToolStrip
+              href: toolstrip-control-overview-windows-forms.md
+            - name: Resumo da tecnologia de ToolStrip
+              href: toolstrip-technology-summary.md
+            - name: Arquitetura de controle ToolStrip
+              href: toolstrip-control-architecture.md
+            - name: 'Como: Adicionar itens do ToolStrip de forma dinâmica'
+              href: how-to-add-toolstrip-items-dynamically.md
+            - name: 'Como: Criar um ToolStrip básico com itens padrão usando o designer'
+              href: create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md
+            - name: 'Como: Criar um controle ToolStrip com estilo profissional'
+              href: how-to-create-a-professionally-styled-toolstrip-control.md
+            - name: 'Como: Criar um formulário MDI com mesclagem de menu e controles ToolStrip'
+              href: how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
+            - name: 'Como: Criar um formulário MDI com controles ToolStripPanel'
+              href: how-to-create-an-mdi-form-with-toolstrippanel-controls.md
+            - name: 'Como: Alterar a aparência de texto e imagens de ToolStrip nos Windows Forms'
+              href: how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md
+            - name: 'Como: Alterar o espaçamento e o alinhamento de itens ToolStrip no Windows Forms'
+              href: how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md
+            - name: 'Como: Criar e definir um renderizador personalizado para o controle ToolStrip no Windows Forms'
+              href: create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md
+            - name: 'Como: Criar botões de alternância em controles ToolStrip'
+              href: how-to-create-toggle-buttons-in-toolstrip-controls.md
+            - name: 'Como: Personalizar o desenho de um controle ToolStrip'
+              href: how-to-custom-draw-a-toolstrip-control.md
+            - name: 'Como: Personalizar cores em aplicativos ToolStrip'
+              href: how-to-customize-colors-in-toolstrip-applications.md
+            - name: 'Como: Definir a organização Z de controles ToolStrip encaixados'
+              href: how-to-define-z-ordering-of-docked-toolstrip-controls.md
+            - name: 'Como: Detectar quando o ponteiro do mouse passa sobre um ToolStripItem'
+              href: how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md
+            - name: 'Como: Habilitar AutoComplete em controles ToolStrip'
+              href: how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md
+            - name: 'Como: Habilitar a reorganização de itens ToolStrip no tempo de execução'
+              href: how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md
+            - name: 'Como: Habilitar a tecla TAB para deixar um controle ToolStrip'
+              href: how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md
+            - name: 'Como: Implementar um ToolStripRenderer personalizado'
+              href: how-to-implement-a-custom-toolstriprenderer.md
+            - name: 'Como: Gerenciar o estouro de ToolStrip'
+              href: how-to-manage-toolstrip-overflow-in-windows-forms.md
+            - name: 'Como: Remover um ToolStrip de um ToolStripContainer para um formulário'
+              href: how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md
+            - name: 'Como: Posicionar um ToolStripItem em um ToolStrip'
+              href: how-to-position-a-toolstripitem-on-a-toolstrip.md
+            - name: 'Como: Definir o renderizador ToolStrip em tempo de execução'
+              href: how-to-set-the-toolstrip-renderer-at-run-time.md
+            - name: 'Como: Definir o renderizador ToolStrip para um aplicativo'
+              href: how-to-set-the-toolstrip-renderer-for-an-application.md
+            - name: 'Como: Alongar um ToolStripTextBox para preencher a largura restante de um ToolStrip'
+              href: stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-wf.md
+            - name: 'Como: Usar ToolTips em controles ToolStrip'
+              href: how-to-use-tooltips-in-toolstrip-controls.md
+            - name: 'Como: Encapsular um controle do Windows Forms com ToolStripControlHost'
+              href: how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md
+            - name: 'Passo a passo: Criar um controle ToolStrip com estilo profissional'
+              href: walkthrough-creating-a-professionally-styled-toolstrip-control.md
+            - name: 'Passo a passo: Criar um formulário MDI com mesclagem de menu e controles ToolStrip'
+              href: walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
+        - name: Controle ToolStripContainer
+          href: toolstripcontainer-control.md
+          items:
+            - name: Visão geral do controle ToolStripContainer
+              href: toolstripcontainer-control-overview.md
+            - name: 'Como: Adicionar um ToolStripContainer a um formulário'
+              href: how-to-add-a-toolstripcontainer-to-a-form.md
+            - name: 'Como: Adicionar um controle a um ToolStripContentPanel'
+              href: how-to-add-a-control-to-a-toolstripcontentpanel.md
+        - name: Controle ToolStripPanel
+          href: toolstrippanel-control.md
+          items:
+            - name: Visão geral do controle ToolStripPanel
+              href: toolstrippanel-control-overview.md
+            - name: 'Como: Unir ToolStripPanels'
+              href: how-to-join-toolstrippanels.md
+            - name: 'Como: Usar ToolStripPanels para MDI'
+              href: how-to-use-toolstrippanels-for-mdi.md
+        - name: Controle ToolStripProgressBar
+          href: toolstripprogressbar-control.md
+          items:
+            - name: Visão geral do controle ToolStripProgressBar
+              href: toolstripprogressbar-control-overview.md
+        - name: Controle ToolStripStatusLabel
+          href: toolstripstatuslabel-control.md
+          items:
+            - name: Visão geral do controle ToolStripStatusLabel
+              href: toolstripstatuslabel-control-overview.md
+        - name: Componente ToolTip
+          href: tooltip-component-windows-forms.md
+          items:
+            - name: Visão geral do componente ToolTip
+              href: tooltip-component-overview-windows-forms.md
+            - name: 'Como: Definir ToolTips para controles em um Windows Form no momento do design'
+              href: how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md
+            - name: 'Como: Alterar o atraso do componente ToolTip do Windows Forms'
+              href: how-to-change-the-delay-of-the-windows-forms-tooltip-component.md
+        - name: Controle TrackBar
+          href: trackbar-control-windows-forms.md
+          items:
+            - name: Visão geral do controle TrackBar
+              href: trackbar-control-overview-windows-forms.md
+        - name: Controle TreeView
+          href: treeview-control-windows-forms.md
+          items:
+            - name: Visão geral do controle TreeView
+              href: treeview-control-overview-windows-forms.md
+            - name: 'Como: Adicionar e remover nós com o controle TreeView do Windows Forms'
+              href: how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md
+            - name: 'Como: Adicionar e remover nós com o componente TreeView do Windows Forms usando o designer'
+              href: add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md
+            - name: 'Como: Anexar um menu ShortCut a um nó TreeView'
+              href: how-to-attach-a-shortcut-menu-to-a-treeview-node.md
+            - name: 'Como: Anexar um menu de atalho a um TreeNode usando o designer'
+              href: how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md
+            - name: 'Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)'
+              href: add-custom-information-to-a-treeview-or-listview-control-wf.md
+            - name: 'Como: Determinar qual nó TreeView foi clicado'
+              href: how-to-determine-which-treeview-node-was-clicked-windows-forms.md
+            - name: 'Como: Iterar em todos os nós de um controle TreeView do Windows Forms'
+              href: how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md
+            - name: 'Como: Definir ícones para o controle TreeView do Windows Forms'
+              href: how-to-set-icons-for-the-windows-forms-treeview-control.md
+        - name: Controle WebBrowser
+          href: webbrowser-control-windows-forms.md
+          items:
+            - name: Visão geral do controle WebBrowser
+              href: webbrowser-control-overview.md
+            - name: Segurança de WebBrowser
+              href: webbrowser-security.md
+            - name: 'Como: Navegar até uma URL com o controle WebBrowser'
+              href: how-to-navigate-to-a-url-with-the-webbrowser-control.md
+            - name: 'Como: Imprimir com um controle WebBrowser'
+              href: how-to-print-with-a-webbrowser-control.md
+            - name: 'Como: Adicionar recursos do navegador da Web a um Aplicativo do Windows Forms'
+              href: how-to-add-web-browser-capabilities-to-a-windows-forms-application.md
+            - name: 'Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms'
+              href: how-to-create-an-html-document-viewer-in-a-windows-forms-application.md
+            - name: 'Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente'
+              href: implement-two-way-com-between-dhtml-and-client.md
+            - name: Usando o Document Object Model HTML gerenciado
+              href: using-the-managed-html-document-object-model.md
+              items:
+                - name: 'Como: Acessar o Modelo de Objeto do Documento HTML gerenciado'
+                  href: how-to-access-the-managed-html-document-object-model.md
+                - name: 'Como: Acessar a fonte HTML no Modelo de Objeto do Documento HTML gerenciado'
+                  href: how-to-access-the-html-source-in-the-managed-html-document-object-model.md
+                - name: 'Como: Alterar estilos em um elemento no Modelo de Objeto do Documento HTML gerenciado'
+                  href: how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md
+                - name: Acessando quadros no Document Object Model HTML gerenciado
+                  href: accessing-frames-in-the-managed-html-document-object-model.md
+                - name: Acessando membros não expostos no Document Object Model HTML gerenciado
+                  href: accessing-unexposed-members-on-the-managed-html-document-object-model.md
+        - name: Controles dos Windows Forms usados para listar opções
+          href: windows-forms-controls-used-to-list-options.md
+          items:
+            - name: Quando usar um ComboBox dos Windows Forms em vez de um ListBox
+              href: when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md
+            - name: 'Como: Acessar itens específicos em um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
+              href: access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md
+            - name: 'Como: Adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
+              href: add-and-remove-items-from-a-wf-combobox.md
+            - name: 'Como: Criar uma tabela de pesquisa para um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
+              href: create-a-lookup-table-for-a-wf-combobox-listbox.md
+            - name: 'Como: Associar um controle ComboBox ou ListBox do Windows Forms aos dados'
+              href: how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md
+            - name: 'Como: Classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
+              href: sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md
+    - name: Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework
+      href: developing-custom-windows-forms-controls.md
+      items:
+        - name: Visão geral do uso de controles nos Windows Forms
+          href: overview-of-using-controls-in-windows-forms.md
+        - name: Variedades de controles personalizados
+          href: varieties-of-custom-controls.md
+          items:
+            - name: Recomendações do tipo de controle
+              href: control-type-recommendations.md
+        - name: Noções básicas sobre o desenvolvimento de controle dos Windows Forms
+          href: windows-forms-control-development-basics.md
+          items:
+            - name: 'Como: Desenvolver um controle simples do Windows Forms'
+              href: how-to-develop-a-simple-windows-forms-control.md
+            - name: 'Como: Criar um controle do Windows Forms que mostre o progresso'
+              href: how-to-create-a-windows-forms-control-that-shows-progress.md
+            - name: Desenvolvendo um controle dos Windows Forms composto
+              href: developing-a-composite-windows-forms-control.md
+        - name: Propriedades em controles dos Windows Forms
+          href: properties-in-windows-forms-controls.md
+          items:
+            - name: Definir uma propriedade
+              href: defining-a-property-in-windows-forms-controls.md
+            - name: Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
+              href: defining-default-values-with-the-shouldserialize-and-reset-methods.md
+            - name: Eventos com propriedade alterada
+              href: property-changed-events.md
+            - name: 'Como: Expor as propriedades de controles constituintes'
+              href: how-to-expose-properties-of-constituent-controls.md
+            - name: Implementação do método em controles personalizados
+              href: method-implementation-in-custom-controls.md
+        - name: Eventos em controles dos Windows Forms
+          href: events-in-windows-forms-controls.md
+          items:
+            - name: Substituindo o método OnPaint
+              href: overriding-the-onpaint-method.md
+            - name: Identificando a entrada do usuário
+              href: handling-user-input.md
+            - name: Definir um evento
+              href: defining-an-event-in-windows-forms-controls.md
+        - name: Atributos em controles dos Windows Forms
+          href: attributes-in-windows-forms-controls.md
+          items:
+            - name: 'Como: Aplicar atributos a controles do Windows Forms'
+              href: how-to-apply-attributes-in-windows-forms-controls.md
+        - name: Pintura e renderização de controle personalizada
+          href: custom-control-painting-and-rendering.md
+          items:
+            - name: Renderizando um controle dos Windows Forms
+              href: rendering-a-windows-forms-control.md
+            - name: Controles desenhados pelo usuário
+              href: user-drawn-controls.md
+            - name: Controles constituintes
+              href: constituent-controls.md
+            - name: 'Como: Deixar o controle invisível em tempo de execução'
+              href: how-to-make-your-control-invisible-at-run-time.md
+            - name: 'Como: Dar ao controle um segundo plano transparente'
+              href: how-to-give-your-control-a-transparent-background.md
+            - name: Renderizando controles com estilos visuais
+              href: rendering-controls-with-visual-styles.md
+              items:
+                - name: 'Como: Usar uma classe de renderização do controle'
+                  href: how-to-use-a-control-rendering-class.md
+                - name: 'Como: Renderizar um elemento de estilo visual'
+                  href: how-to-render-a-visual-style-element.md
+        - name: Layout em controles dos Windows Forms
+          href: layout-in-windows-forms-controls.md
+          items:
+            - name: Visão geral da propriedade AutoSize
+              href: autosize-property-overview.md
+            - name: 'Como: Alinhar um controle às bordas de formulários'
+              href: how-to-align-a-control-to-the-edges-of-forms.md
+            - name: Margem e preenchimento em controles dos Windows Forms
+              href: margin-and-padding-in-windows-forms-controls.md
+            - name: 'Como: Criar uma borda em torno de um controle do Windows Forms usando preenchimento'
+              href: how-to-create-a-border-around-a-windows-forms-control-using-padding.md
+            - name: 'Como: Implementar um mecanismo de layout personalizado'
+              href: how-to-implement-a-custom-layout-engine.md
+        - name: Multithread em controles dos Windows Forms
+          href: multithreading-in-windows-forms-controls.md
+          items:
+            - name: 'Como: Chamadas thread-safe para controles do Windows Forms'
+              href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
+            - name: 'Como: Usar um thread em segundo plano para pesquisar arquivos'
+              href: how-to-use-a-background-thread-to-search-for-files.md
+    - name: Controles do Windows Forms no .NET Framework por função
       href: windows-forms-controls-by-function.md
-    - name: Controles com suporte de desenho do proprietário interno
-      href: controls-with-built-in-owner-drawing-support.md
-    - name: Componente BackgroundWorker
-      href: backgroundworker-component.md
-      items:
-      - name: Visão geral do componente BackgroundWorker
-        href: backgroundworker-component-overview.md
-      - name: 'Como: Executar uma operação em segundo plano'
-        href: how-to-run-an-operation-in-the-background.md
-      - name: 'Como: Como baixar um arquivo em segundo plano'
-        href: how-to-download-a-file-in-the-background.md
-      - name: 'Como: Implementar um formulário que usa uma operação em segundo plano'
-        href: how-to-implement-a-form-that-uses-a-background-operation.md
-      - name: 'Passo a passo: Executando uma operação em segundo plano'
-        href: walkthrough-running-an-operation-in-the-background.md
-      - name: 'Passo a passo: Implementando um formulário que usa uma operação em segundo plano'
-        href: walkthrough-implementing-a-form-that-uses-a-background-operation.md
-    - name: Controle BindingNavigator
-      href: bindingnavigator-control-windows-forms.md
-      items:
-      - name: Visão geral do controle BindingNavigator
-        href: bindingnavigator-control-overview-windows-forms.md
-      - name: 'Como: Navegar em dados com o controle BindingNavigator do Windows Forms'
-        href: how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md
-      - name: 'Como: Avançar em um DataSet com o controle BindingNavigator do Windows Forms'
-        href: move-through-a-dataset-with-wf-bindingnavigator-control.md
-      - name: 'Como: Adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms'
-        href: load-save-and-cancel-bindingnavigator.md
-    - name: Componente BindingSource
-      href: bindingsource-component.md
-      items:
-      - name: Visão geral do componente BindingSource
-        href: bindingsource-component-overview.md
-      - name: Arquitetura do componente BindingSource
-        href: bindingsource-component-architecture.md
-      - name: 'Como: Associar um controle do Windows Forms a um objeto de alocador'
-        href: how-to-bind-a-windows-forms-control-to-a-factory-object.md
-      - name: 'Como: Associar um controle do Windows Forms a um tipo'
-        href: how-to-bind-a-windows-forms-control-to-a-type.md
-      - name: 'Como: Associar um controle do Windows Forms a um tipo usando o Designer'
-        href: how-to-bind-a-windows-forms-control-to-a-type-using-the-designer.md
-      - name: 'Como: Associar a um serviço Web usando o BindingSource do Windows Forms'
-        href: how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md
-      - name: 'Como: Como associar controles do Windows Forms a valores de banco de dados DBNull'
-        href: how-to-bind-windows-forms-controls-to-dbnull-database-values.md
-      - name: 'Como: Associar controles do Windows Forms ao componente BindingSource usando o designer'
-        href: bind-wf-controls-with-the-bindingsource.md
-      - name: 'Como: Criar uma tabela de pesquisa com o componente BindingSource do Windows Forms'
-        href: how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md
-      - name: 'Como: Como personalizar a adição de item com o BindingSource do Windows Forms'
-        href: how-to-customize-item-addition-with-the-windows-forms-bindingsource.md
-      - name: 'Como: Como identificar erros e exceções que ocorram na associação de dados'
-        href: how-to-handle-errors-and-exceptions-that-occur-with-databinding.md
-      - name: 'Como: Gerar notificações de alteração usando um BindingSource e a interface INotifyPropertyChanged'
-        href: raise-change-notifications--bindingsource.md
-      - name: 'Como: Acionar notificações de alteração usando o método BindingSource ResetItem'
-        href: how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md
-      - name: 'Como: Refletir atualizações feitas na fonte de dados em um controle do Windows Forms com o BindingSource'
-        href: reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md
-      - name: 'Como: Compartilhar dados associados entre formulários usando o componente BindingSource'
-        href: how-to-share-bound-data-across-forms-using-the-bindingsource-component.md
-      - name: 'Como: Classificar e filtrar dados ADO.NET com o componente BindingSource do Windows Forms'
-        href: sort-and-filter-ado-net-data-with-wf-bindingsource-component.md
-    - name: Controle de botão
-      href: button-control-windows-forms.md
-      items:
-      - name: Visão geral do controle de botão
-        href: button-control-overview-windows-forms.md
-      - name: 'Como: Designar um botão do Windows Forms como o botão Aceitar'
-        href: how-to-designate-a-windows-forms-button-as-the-accept-button.md
-      - name: 'Como: Designar um botão do Windows Forms como o botão Aceitar usando o designer'
-        href: designate-a-wf-button-as-the-accept-button-using-the-designer.md
-      - name: 'Como: Designar um botão do Windows Forms como o botão Cancelar'
-        href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
-      - name: 'Como: Designar um botão do Windows Forms como o botão Cancelar usando o designer'
-        href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-      - name: 'Como: Responder a cliques no botão do Windows Forms'
-        href: how-to-respond-to-windows-forms-button-clicks.md
-      - name: Forma de selecionar um controle de botão do Windows Forms
-        href: ways-to-select-a-windows-forms-button-control.md
-    - name: Controle de CheckBox
-      href: checkbox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle CheckBox
-        href: checkbox-control-overview-windows-forms.md
-      - name: 'Como: Responder a cliques CheckBox do Windows Forms'
-        href: how-to-respond-to-windows-forms-checkbox-clicks.md
-      - name: 'Como: Definir opções com controles CheckBox do Windows Forms'
-        href: how-to-set-options-with-windows-forms-checkbox-controls.md
-    - name: Controle CheckedListBox
-      href: checkedlistbox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle CheckedListBox
-        href: checkedlistbox-control-overview-windows-forms.md
-      - name: 'Como: Determinar itens verificados no controle CheckedListBox do Windows Forms'
-        href: how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md
-    - name: Componente ColorDialog
-      href: colordialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente ColorDialog
-        href: colordialog-component-overview-windows-forms.md
-      - name: 'Como: Alterar a aparência do componente ColorDialog do Windows Forms'
-        href: how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md
-      - name: 'Como: Mostrar uma paleta de cores com o componente ColorDialog'
-        href: how-to-show-a-color-palette-with-the-colordialog-component.md
-    - name: Controle ComboBox
-      href: combobox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle ComboBox
-        href: combobox-control-overview-windows-forms.md
-      - name: 'Como: Criar texto dimensionado da variável em um controle ComboBox'
-        href: how-to-create-variable-sized-text-in-a-combobox-control.md
-    - name: Componente ContextMenu
-      href: contextmenu-component-windows-forms.md
-      items:
-      - name: Visão geral do componente ContextMenu
-        href: contextmenu-component-overview-windows-forms.md
-      - name: 'Como: Adicionar e remover itens de menu com o componente ContextMenu do Windows Forms'
-        href: add-and-remove-menu-items-with-wf-contextmenu-component.md
-    - name: Controle ContextMenuStrip
-      href: contextmenustrip-control.md
-      items:
-      - name: Visão geral do controle ContextMenuStrip
-        href: contextmenustrip-control-overview.md
-      - name: 'Como: Associar um ContextMenuStrip a um controle'
-        href: how-to-associate-a-contextmenustrip-with-a-control.md
-      - name: 'Como: Adicionar itens de menu a um ContextMenuStrip'
-        href: how-to-add-menu-items-to-a-contextmenustrip.md
-      - name: 'Como: Configurar margens de imagem e margens de verificação ContextMenuStrip'
-        href: how-to-configure-contextmenustrip-check-margins-and-image-margins.md
-      - name: 'Como: Habilitar margens de verificação e de imagem em controles ContextMenuStrip'
-        href: how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md
-      - name: 'Como: Identificar o evento de abertura ContextMenuStrip'
-        href: how-to-handle-the-contextmenustrip-opening-event.md
-    - name: Controle DataGrid
-      href: datagrid-control-windows-forms.md
-      items:
-      - name: Visão geral do controle DataGrid
-        href: datagrid-control-overview-windows-forms.md
-      - name: 'Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms'
-        href: how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md
-      - name: 'Como: Adicionar tabelas e colunas do controle DataGrid do Windows Forms usando o Designer'
-        href: add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md
-      - name: 'Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados'
-        href: how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md
-      - name: 'Como: Associar o controle DataGrid do Windows Forms a uma fonte de dados usando o Designer'
-        href: bind-wf-datagrid-control-to-a-data-source-using-the-designer.md
-      - name: 'Como: Alterar os dados exibidos em tempo de execução no controle DataGrid do Windows Forms'
-        href: change-displayed-data-at-run-time-wf-datagrid-control.md
-      - name: 'Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms'
-        href: how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md
-      - name: 'Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms usando o Designer'
-        href: create-master-details-lists-with-wf-datagrid-control-using-the-designer.md
-      - name: 'Como: Excluir ou ocultar colunas no controle DataGrid do Windows Forms'
-        href: how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md
-      - name: 'Como: Formatar o controle DataGrid do Windows Forms'
-        href: how-to-format-the-windows-forms-datagrid-control.md
-      - name: 'Como: Formatar o controle DataGrid do Windows Forms usando o Designer'
-        href: how-to-format-the-windows-forms-datagrid-control-using-the-designer.md
-      - name: 'Como: Responder a cliques no controle DataGrid do Windows Forms'
-        href: how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md
-      - name: 'Como: Validar a entrada com o controle DataGrid do Windows Forms'
-        href: how-to-validate-input-with-the-windows-forms-datagrid-control.md
-      - name: Atalhos de teclado para o controle DataGrid do Windows Forms
-        href: keyboard-shortcuts-for-the-windows-forms-datagrid-control.md
-    - name: Controle DataGridView
-      href: datagridview-control-windows-forms.md
-      items:
-      - name: Usando o designer com o controle DataGridView do Windows Forms
-        href: using-the-designer-with-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o designer'
-          href: add-and-remove-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Associar dados ao controle DataGridView do Windows Forms usando o designer'
-          href: bind-data-to-the-datagrid-using-the-designer.md
-        - name: 'Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms usando o designer'
-          href: change-the-order-of-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Alterar o tipo de uma coluna DataGridView do Windows Forms usando o designer'
-          href: change-the-type-of-a-wf-datagridview-column-using-the-designer.md
-        - name: 'Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms usando o designer'
-          href: enable-column-reordering-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Congelar colunas no controle DataGridView do Windows Forms usando o designer'
-          href: freeze-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Ocultar colunas no controle DataGridView do Windows Forms usando o designer'
-          href: hide-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Deixar as colunas somente leitura no controle DataGridView do Windows Forms usando o designer'
-          href: make-columns-read-only-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms usando o designer'
-          href: prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md
-        - name: 'Como: Definir estilos de linhas alternados para o controle DataGridView do Windows Forms usando o designer'
-          href: set-alternating-row-styles-for-the-datagrid-using-the-designer.md
-        - name: 'Como: Definir estilos de célula padrão e formatos de dados para o controle DataGridView do Windows Forms usando o designer'
-          href: default-cell-styles-datagridview.md
-      - name: Visão geral do controle DataGridView
-        href: datagridview-control-overview-windows-forms.md
-        items:
-        - name: Resumo de tecnologia do controle DataGridView
-          href: datagridview-control-technology-summary-windows-forms.md
-        - name: Arquitetura de controle DataGridView
-          href: datagridview-control-architecture-windows-forms.md
-        - name: Cenários do controle DataGridView
-          href: datagridview-control-scenarios-windows-forms.md
-        - name: Diretório de código do controle DataGridView
-          href: datagridview-control-code-directory-windows-forms.md
-      - name: Funcionalidade padrão no controle DataGridView do Windows Forms
-        href: default-functionality-in-the-windows-forms-datagridview-control.md
-      - name: Tipos de coluna no controle DataGridView do Windows Forms
-        href: column-types-in-the-windows-forms-datagridview-control.md
-      - name: Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms
-        href: basic-column-row-and-cell-features-wf-datagridview-control.md
-        items:
-        - name: 'Como: Ocultar colunas no controle DataGridView do Windows Forms'
-          href: how-to-hide-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Ocultar cabeçalhos no controle DataGridView do Windows Forms'
-          href: how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms'
-          href: how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Congelar colunas no controle DataGridView do Windows Forms'
-          href: how-to-freeze-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Tornar colunas somente leitura no controle DataGridView do Windows Forms'
-          href: how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms'
-          href: prevent-row-addition-and-deletion-datagridview.md
-        - name: 'Como: Obter e definir a célula atual no controle DataGridView do Windows Forms'
-          href: get-and-set-the-current-cell-wf-datagridview-control.md
-        - name: 'Como: Exibir imagens em células do controle DataGridView do Windows Forms'
-          href: how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md
-      - name: Formatação básica e estilos no controle DataGridView do Windows Forms
-        href: basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Como: Alterar a borda e os estilos da linha de grade no tempo de execução no controle DataGridView do Windows Forms'
-          href: change-the-border-and-gridline-styles-in-the-datagrid.md
-        - name: Estilos de célula no controle DataGridView do Windows Forms
-          href: cell-styles-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Definir estilos de célula padrão para o controle DataGridView do Windows Forms'
-          href: how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md
-        - name: 'Como: Formatar dados no controle DataGridView do Windows Forms'
-          href: how-to-format-data-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Definir estilos de fonte e cor no controle DataGridView do Windows Forms'
-          href: how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Definir estilos de linha alternados para o controle DataGridView do Windows Forms'
-          href: how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md
-        - name: 'Como: Usar o modelo da linha para personalizar linhas no controle DataGridView do Windows Forms'
-          href: use-the-row-template-to-customize-rows-in-the-datagrid.md
-      - name: Exibindo dados no controle DataGridView do Windows Forms
-        href: displaying-data-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Modos de exibição dos dados no controle DataGridView do Windows Forms
-          href: data-display-modes-in-the-windows-forms-datagridview-control.md
-        - name: Formatação de dados no controle DataGridView do Windows Forms
-          href: data-formatting-in-the-windows-forms-datagridview-control.md
-        - name: 'Passo a passo: Criar um controle não associado DataGridView do Windows Forms'
-          href: walkthrough-creating-an-unbound-windows-forms-datagridview-control.md
-          items:
-          - name: 'Como: Criar um controle não associado DataGridView do Windows Forms'
-            href: how-to-create-an-unbound-windows-forms-datagridview-control.md
-        - name: 'Como: Associar dados ao controle DataGridView do Windows Forms'
-          href: how-to-bind-data-to-the-windows-forms-datagridview-control.md
-        - name: 'Como: Gerar automaticamente colunas em um controle DataGridView associado a dados do Windows Forms'
-          href: autogenerate-columns-in-a-data-bound-wf-datagridview-control.md
-        - name: 'Como: Remover colunas geradas automaticamente de um controle DataGridView do Windows Forms'
-          href: remove-autogenerated-columns-from-a-wf-datagridview-control.md
-        - name: 'Como: Alterar a ordem de colunas no controle DataGridView do Windows Forms'
-          href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Adicionar uma coluna não associada a um controle DataGridView do Windows Forms associado a dados'
-          href: unbound-column-to-a-data-bound-datagridview.md
-        - name: 'Como: Associar objetos a controles DataGridView do Windows Forms'
-          href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-        - name: 'Como: Acessar objetos associados às linhas de DataGridView do Windows Forms'
-          href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
-        - name: 'Como: Acessar objetos de acesso em uma lista suspensa DataGridViewComboBoxCell do Windows Forms'
-          href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
-        - name: 'Passo a passo: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms'
-          href: creating-a-master-detail-form-using-two-datagridviews.md
-          items:
-          - name: 'Como: Criar um formulário mestre/de detalhes usando dois controles DataGridView do Windows Forms'
-            href: create-a-master-detail-form-using-two-datagridviews.md
-        - name: 'Como: Personalizar a formatação de dados no controle DataGridView do Windows Forms'
-          href: how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md
-      - name: Redimensionando colunas e linhas no controle DataGridView do Windows Forms
-        href: resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Dimensionando opções no controle DataGridView do Windows Forms
-          href: sizing-options-in-the-windows-forms-datagridview-control.md
-        - name: Modo de preenchimento da coluna no controle DataGridView do Windows Forms
-          href: column-fill-mode-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Definir os modos de dimensionamento do controle DataGridView do Windows Forms'
-          href: how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md
-        - name: 'Como: Redimensionar de forma programática as células para que o conteúdo caiba no controle DataGridView do Windows Forms'
-          href: programmatically-resize-cells-to-fit-content-in-the-datagrid.md
-        - name: 'Como: Redimensionar automaticamente células quando o conteúdo é alterado no controle DataGridView do Windows Forms'
-          href: automatically-resize-cells-when-content-changes-in-the-datagrid.md
-      - name: Classificando dados no controle DataGridView do Windows Forms
-        href: sorting-data-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Modos de classificação da coluna no controle DataGridView do Windows Forms
-          href: column-sort-modes-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Definir os modos de classificação para colunas no controle DataGridView do Windows Forms'
-          href: set-the-sort-modes-for-columns-wf-datagridview-control.md
-        - name: 'Como: Personalizar a classificação no controle DataGridView do Windows Forms'
-          href: how-to-customize-sorting-in-the-windows-forms-datagridview-control.md
-      - name: Entrada de dados no controle DataGridView do Windows Forms
-        href: data-entry-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Como: Especificar o modo de edição do controle DataGridView do Windows Forms'
-          href: how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md
-        - name: 'Como: Especificar valores padrão para novas linhas no controle DataGridView do Windows Forms'
-          href: specify-default-values-for-new-rows-in-the-datagrid.md
-        - name: Usando a linha para novos registros no controle DataGridView do Windows Forms
-          href: using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md
-        - name: 'Passo a passo: Validando dados no controle DataGridView do Windows Forms'
-          href: walkthrough-validating-data-in-the-windows-forms-datagridview-control.md
-          items:
-          - name: 'Como: Validar dados no controle DataGridView do Windows Forms'
-            href: how-to-validate-data-in-the-windows-forms-datagridview-control.md
-        - name: 'Passo a passo: Identificando Erros que Ocorrem Durante a Entrada de Dados no Controle DataGridView do Windows Forms'
-          href: handling-errors-that-occur-during-data-entry-in-the-datagrid.md
-          items:
-          - name: 'Como: Identificar Erros que Ocorrem Durante a Entrada de Dados no Controle DataGridView do Windows Forms'
-            href: handle-errors-that-occur-during-data-entry-in-the-datagrid.md
-      - name: Seleção e uso da Área de Transferência com o controle DataGridView do Windows Forms
-        href: selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md
-        items:
-        - name: Modos de seleção no controle DataGridView do Windows Forms
-          href: selection-modes-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Definir o modo de seleção do controle DataGridView do Windows Forms'
-          href: how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md
-        - name: 'Como: Obter as células, as linhas e as colunas selecionadas no controle DataGridView do Windows Forms'
-          href: selected-cells-rows-and-columns-datagridview.md
-        - name: 'Como: Habilitar usuários para copiarem várias células na Área de Transferência usando o controle DataGridView do Windows Forms'
-          href: enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md
-      - name: Programando com células, linhas e colunas no controle DataGridView do Windows Forms
-        href: programming-with-cells-rows-and-columns-in-the-datagrid.md
-        items:
-        - name: 'Como: Adicionar ToolTips a células individuais em um controle DataGridView do Windows Forms'
-          href: add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md
-        - name: 'Como: Realizar uma ação personalizada com base em alterações em uma célula do controle DataGridView do Windows Forms'
-          href: perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md
-        - name: 'Como: Manipular bandas no controle DataGridView do Windows Forms'
-          href: how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Manipular linhas no controle DataGridView do Windows Forms'
-          href: how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Manipular colunas no controle DataGridView do Windows Forms'
-          href: how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Como: Trabalhar com colunas de imagem no controle DataGridView do Windows Forms'
-          href: how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md
-      - name: Personalizando o controle DataGridView do Windows Forms
-        href: customizing-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Como: Personalizar a aparência de células no controle DataGridView do Windows Forms'
-          href: customize-the-appearance-of-cells-in-the-datagrid.md
-        - name: 'Como: Personalizar a aparência de linhas no controle DataGridView do Windows Forms'
-          href: customize-the-appearance-of-rows-in-the-datagrid.md
-        - name: 'Como: Personalizar células e colunas no controle DataGridView do Windows Forms estendendo o comportamento e a aparência'
-          href: customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md
-        - name: 'Como: Desabilitar botões em uma coluna de botão no controle DataGridView do Windows Forms'
-          href: disable-buttons-in-a-button-column-in-the-datagrid.md
-        - name: 'Como: Hospedar controles em células DataGridView do Windows Forms'
-          href: how-to-host-controls-in-windows-forms-datagridview-cells.md
-      - name: Ajuste de desempenho no controle DataGridView do Windows Forms
-        href: performance-tuning-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Práticas recomendadas para dimensionamento do controle DataGridView do Windows Forms
-          href: best-practices-for-scaling-the-windows-forms-datagridview-control.md
-        - name: Modo virtual no controle DataGridView do Windows Forms
-          href: virtual-mode-in-the-windows-forms-datagridview-control.md
-        - name: 'Passo a passo: Implementando o modo virtual no controle DataGridView do Windows Forms'
-          href: implementing-virtual-mode-wf-datagridview-control.md
-          items:
-          - name: 'Como: Implementar o modo virtual no controle DataGridView do Windows Forms'
-            href: how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md
-        - name: Implementando o modo virtual com carregamento de dados Just-In-Time no controle DataGridView do Windows Forms
-          href: implementing-virtual-mode-jit-data-loading-in-the-datagrid.md
-          items:
-          - name: 'Como: Implementar o modo virtual com carregamento de dados Just-In-Time no controle DataGridView do Windows Forms'
-            href: virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md
-      - name: Tratamento de teclado e mouse padrão no controle DataGridView do Windows Forms
-        href: default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md
-      - name: Diferenças entre os controles DataGridView e DataGrid do Windows Forms
-        href: differences-between-the-windows-forms-datagridview-and-datagrid-controls.md
-    - name: Controle DateTimePicker
-      href: datetimepicker-control-windows-forms.md
-      items:
-      - name: Visão geral do controle DateTimePicker
-        href: datetimepicker-control-overview-windows-forms.md
-      - name: 'Como: Exibir uma data em um formato personalizado com o controle DateTimePicker do Windows Forms'
-        href: display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md
-      - name: 'Como: Definir e retornar datas com o controle DateTimePicker do Windows Forms'
-        href: how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md
-      - name: 'Como: Exibir a hora com o controle DateTimePicker'
-        href: how-to-display-time-with-the-datetimepicker-control.md
-    - name: Controles e componentes da caixa de diálogo
-      href: dialog-box-controls-and-components-windows-forms.md
-    - name: Controle DomainUpDown
-      href: domainupdown-control-windows-forms.md
-      items:
-      - name: Visão geral do controle DomainUpDown
-        href: domainupdown-control-overview-windows-forms.md
-      - name: 'Como: Adicionar itens a controles DomainUpDown do Windows Forms de forma programática'
-        href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
-      - name: 'Como: Remover itens de controles DomainUpDown do Windows Forms'
-        href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
-    - name: Componente ErrorProvider
-      href: errorprovider-component-windows-forms.md
-      items:
-      - name: Visão geral do componente ErrorProvider
-        href: errorprovider-component-overview-windows-forms.md
-      - name: 'Como: Exibir ícones de erro para validação de formulário com o componente ErrorProvider do Windows Forms'
-        href: display-error-icons-for-form-validation-with-wf-errorprovider.md
-      - name: 'Como: Exibir erros dentro de um DataSet com o componente ErrorProvider do Windows Forms'
-        href: view-errors-within-a-dataset-with-wf-errorprovider-component.md
-    - name: Classe FileDialog
-      href: filedialog-class.md
-      items:
-      - name: 'Como: Recusar a atualização automática da caixa de diálogo do arquivo'
-        href: how-to-opt-out-of-file-dialog-box-automatic-upgrade.md
-      - name: 'Como: Adicionar um local personalizado a uma caixa de diálogo Arquivo'
-        href: how-to-add-a-custom-place-to-a-file-dialog-box.md
-      - name: GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
-        href: known-folder-guids-for-file-dialog-custom-places.md
-    - name: Controle FlowLayoutPanel
-      href: flowlayoutpanel-control-windows-forms.md
-      items:
-      - name: Visão geral do controle FlowLayoutPanel
-        href: flowlayoutpanel-control-overview.md
-      - name: 'Como: Ancorar e encaixar controles filho em um controle FlowLayoutPanel'
-        href: how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md
-      - name: 'Passo a passo: Organizando controles nos Windows Forms utilizando um FlowLayoutPanel'
-        href: walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md
-    - name: Componente FolderBrowserDialog
-      href: folderbrowserdialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente FolderBrowserDialog (Windows Forms)
-        href: folderbrowserdialog-component-overview-windows-forms.md
-      - name: 'Como: Escolher pastas com o componente FolderBrowserDialog do Windows Forms'
-        href: how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md
-    - name: Componente FontDialog
-      href: fontdialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente FontDialog
-        href: fontdialog-component-overview-windows-forms.md
-      - name: 'Como: Mostrar uma lista de fontes ao componente FontDialog'
-        href: how-to-show-a-font-list-with-the-fontdialog-component.md
-    - name: Controle GroupBox
-      href: groupbox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle GroupBox
-        href: groupbox-control-overview-windows-forms.md
-      - name: 'Como: Agrupar controles com o controle GroupBox do Windows Forms'
-        href: how-to-group-controls-with-the-windows-forms-groupbox-control.md
-    - name: Componente HelpProvider
-      href: helpprovider-component-windows-forms.md
-      items:
-      - name: Visão geral do componente HelpProvider
-        href: helpprovider-component-overview-windows-forms.md
-    - name: Controles HScrollBar e VScrollBar
-      href: hscrollbar-and-vscrollbar-controls-windows-forms.md
-      items:
-      - name: Visão geral dos controles HScrollBar e VScrollBar
-        href: hscrollbar-and-vscrollbar-controls-overview-windows-forms.md
-    - name: Componente ImageList
-      href: imagelist-component-windows-forms.md
-      items:
-      - name: Visão geral do componente ImageList
-        href: imagelist-component-overview-windows-forms.md
-      - name: 'Como: Adicionar ou remover imagens com o componente ImageList do Windows Forms'
-        href: how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md
-      - name: 'Como: Adicionar ou remover imagens ImageList com o Designer'
-        href: how-to-add-or-remove-imagelist-images-with-the-designer.md
-    - name: Controle de rótulo
-      href: label-control-windows-forms.md
-      items:
-      - name: Visão geral do controle de rótulo
-        href: label-control-overview-windows-forms.md
-      - name: 'Como: Criar chaves de acesso com controles de rótulo do Windows Forms'
-        href: how-to-create-access-keys-with-windows-forms-label-controls.md
-      - name: 'Como: Dimensionar um controle de rótulo do Windows Forms para encaixar o conteúdo'
-        href: how-to-size-a-windows-forms-label-control-to-fit-its-contents.md
-    - name: Controle LinkLabel
-      href: linklabel-control-windows-forms.md
-      items:
-      - name: Visão geral do controle LinkLabel
-        href: linklabel-control-overview-windows-forms.md
-      - name: 'Como: Alterar a aparência do controle LinkLabel do Windows Forms'
-        href: how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md
-      - name: 'Como: Vincular a um objeto ou página da Web com o controle LinkLabel do Windows Forms'
-        href: link-to-an-object-or-web-page-with-wf-linklabel-control.md
-      - name: 'Como: Exibir uma página da Web com um controle LinkLabel do Windows Forms (Visual Basic)'
-        href: display-a-web-page-from-a-wf-linklabel-control-visual-basic.md
-    - name: Controle ListBox
-      href: listbox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle ListBox
-        href: listbox-control-overview-windows-forms.md
-    - name: Controle ListView
-      href: listview-control-windows-forms.md
-      items:
-      - name: Visão geral do controle ListView
-        href: listview-control-overview-windows-forms.md
-      - name: 'Como: Adicionar e remover itens com o controle ListView do Windows Forms'
-        href: how-to-add-and-remove-items-with-the-windows-forms-listview-control.md
-      - name: 'Como: Adicionar e remover itens com o controle ListView do Windows Forms usando o Designer'
-        href: add-and-remove-items-with-wf-listview-control-using-the-designer.md
-      - name: 'Como: Adicionar colunas ao controle ListView do Windows Forms'
-        href: how-to-add-columns-to-the-windows-forms-listview-control.md
-      - name: 'Como: Adicionar colunas ao controle ListView do Windows Forms usando o Designer'
-        href: how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md
-      - name: 'Como: Adicionar Recursos de Pesquisa a um Controle ListView'
-        href: how-to-add-search-capabilities-to-a-listview-control.md
-      - name: 'Como: Exibir Ícones do Controle ListView do Windows Forms'
-        href: how-to-display-icons-for-the-windows-forms-listview-control.md
-      - name: 'Como: Exibir Subitens em Colunas com o Controle ListView do Windows Forms'
-        href: how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md
-      - name: 'Como: Habilitar a exibição de bloco em um controle ListView do Windows Forms'
-        href: how-to-enable-tile-view-in-a-windows-forms-listview-control.md
-      - name: 'Como: Habilitar exibição lado a lado em um controle ListView do Windows Forms usando o designer'
-        href: enable-tile-view-in-a-wf-listview-control-using-the-designer.md
-      - name: 'Como: Agrupar itens em um controle ListView do Windows Forms'
-        href: how-to-group-items-in-a-windows-forms-listview-control.md
-      - name: 'Como: Agrupar itens em um controle ListView do Windows Forms usando o Designer'
-        href: how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md
-      - name: 'Como: Exibir uma marca de inserção em um controle ListView do Windows Forms'
-        href: how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md
-      - name: 'Como: Selecionar um item no controle ListView do Windows Forms'
-        href: how-to-select-an-item-in-the-windows-forms-listview-control.md
-      - name: 'Passo a passo: Criar uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer'
-        href: creating-an-explorer-style-interface-with-the-listview-and-treeview.md
-    - name: Componente MainMenu
-      href: mainmenu-component-windows-forms.md
-      items:
-      - name: Visão geral do componente MainMenu
-        href: mainmenu-component-overview-windows-forms.md
-    - name: Controle MaskedTextBox
-      href: maskedtextbox-control-windows-forms.md
-      items:
-      - name: 'Passo a passo: Trabalhando com o controle MaskedTextBox'
-        href: walkthrough-working-with-the-maskedtextbox-control.md
-      - name: 'Como: Associar dados ao controle MaskedTextBox'
-        href: how-to-bind-data-to-the-maskedtextbox-control.md
-      - name: 'Como: Definir a máscara de entrada'
-        href: how-to-set-the-input-mask.md
-    - name: Controle MenuStrip
-      href: menustrip-control-windows-forms.md
-      items:
-      - name: Visão geral do controle MenuStrip
-        href: menustrip-control-overview-windows-forms.md
-      - name: 'Como: Adicionar melhorias a ToolStripMenuItems'
-        href: how-to-add-enhancements-to-toolstripmenuitems.md
-      - name: 'Como: Acrescentar um MenuStrip a uma janela pai MDI'
-        href: how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md
-      - name: 'Como: Copiar ToolStripMenuItems'
-        href: how-to-copy-toolstripmenuitems.md
-      - name: 'Como: Criar uma lista de janelas MDI com MenuStrip'
-        href: how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md
-      - name: 'Como: Desabilitar ToolStripMenuItems'
-        href: how-to-disable-toolstripmenuitems.md
-      - name: 'Como: Desabilitar ToolStripMenuItems usando o designer'
-        href: how-to-disable-toolstripmenuitems-using-the-designer.md
-      - name: 'Como: Exibir botões de opção em um MenuStrip'
-        href: how-to-display-option-buttons-in-a-menustrip-windows-forms.md
-      - name: 'Como: Ocultar ToolStripMenuItems'
-        href: how-to-hide-toolstripmenuitems.md
-      - name: 'Como: Ocultar ToolStripMenuItems usando o designer'
-        href: how-to-hide-toolstripmenuitems-using-the-designer.md
-      - name: 'Como: Inserir um MenuStrip em um menu suspenso MDI'
-        href: how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md
-      - name: 'Como: Remover um ToolStripMenuItem de um menu suspenso MDI'
-        href: how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md
-      - name: 'Como: Mover ToolStripMenuItems'
-        href: how-to-move-toolstripmenuitems.md
-      - name: 'Como: Configurar margens de imagem e margens de verificação MenuStrip'
-        href: how-to-configure-menustrip-check-margins-and-image-margins.md
-      - name: 'Como: Fornecer itens de menu padrão para um formulário'
-        href: how-to-provide-standard-menu-items-to-a-form.md
-      - name: 'Como: Configurar a mesclagem de menu automática para aplicativos MDI'
-        href: how-to-set-up-automatic-menu-merging-for-mdi-applications.md
-      - name: Mesclando itens de menu no controle MenuStrip do Windows Forms
-        href: merging-menu-items-in-the-windows-forms-menustrip-control.md
-      - name: 'Passo a passo: Fornecer itens de menu padrão para um formulário'
-        href: walkthrough-providing-standard-menu-items-to-a-form.md
-    - name: Controle MonthCalendar
-      href: monthcalendar-control-windows-forms.md
-      items:
-      - name: Visão geral do controle MonthCalendar
-        href: monthcalendar-control-overview-windows-forms.md
-      - name: 'Como: Alterar a aparência do controle MonthCalendar do Windows Forms'
-        href: how-to-change-monthcalendar-control-appearance.md
-      - name: 'Como: Exibir mais de um mês no controle MonthCalendar do Windows Forms'
-        href: display-more-than-one-month-wf-monthcalendar-control.md
-      - name: 'Como: Exibir dias específicos em negrito com o controle MonthCalendar do Windows Forms'
-        href: display-specific-days-in-bold-with-wf-monthcalendar-control.md
-      - name: 'Como: Selecionar um intervalo de datas no controle MonthCalendar do Windows Forms'
-        href: how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md
-    - name: Componente NotifyIcon
-      href: notifyicon-component-windows-forms.md
-      items:
-      - name: Visão geral do componente NotifyIcon
-        href: notifyicon-component-overview-windows-forms.md
-      - name: 'Como: Adicionar ícones do aplicativo à TaskBar com o componente NotifyIcon do Windows Forms'
-        href: app-icons-to-the-taskbar-with-wf-notifyicon.md
-      - name: 'Como: Associar um menu de atalho a um componente NotifyIcon do Windows Forms'
-        href: how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md
-    - name: Controle NumericUpDown
-      href: numericupdown-control-windows-forms.md
-      items:
-      - name: Visão geral do controle NumericUpDown
-        href: numericupdown-control-overview-windows-forms.md
-      - name: 'Como: Definir e retornar valores numéricos com o controle NumericUpDown do Windows Forms'
-        href: set-and-return-numeric-values-with-wf-numericupdown-control.md
-      - name: 'Como: Definir o formato para o controle NumericUpDown do Windows Forms'
-        href: how-to-set-the-format-for-the-windows-forms-numericupdown-control.md
-    - name: Componente OpenFileDialog
-      href: openfiledialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente OpenFileDialog
-        href: openfiledialog-component-overview-windows-forms.md
-      - name: 'Como: Como abrir arquivos usando o componente OpenFileDialog'
-        href: how-to-open-files-using-the-openfiledialog-component.md
-    - name: Componente PageSetupDialog
-      href: pagesetupdialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente PageSetupDialog
-        href: pagesetupdialog-component-overview-windows-forms.md
-      - name: 'Como: Determinar propriedades de página usando o componente PageSetupDialog'
-        href: how-to-determine-page-properties-using-the-pagesetupdialog-component.md
-    - name: Controle de painel
-      href: panel-control-windows-forms.md
-      items:
-      - name: Visão geral do controle de painel
-        href: panel-control-overview-windows-forms.md
-      - name: 'Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer'
-        href: group-controls-with-wf-panel-control-using-the-designer.md
-      - name: 'Como: Definir a tela de fundo de um painel'
-        href: how-to-set-the-background-of-a-windows-forms-panel.md
-      - name: 'Como: Definir a tela de fundo de um painel do Windows Forms usando o Designer'
-        href: how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md
-    - name: Controle PictureBox
-      href: picturebox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle PictureBox
-        href: picturebox-control-overview-windows-forms.md
-      - name: 'Como: Carregar uma imagem usando o designer'
-        href: how-to-load-a-picture-using-the-designer-windows-forms.md
-      - name: 'Como: Modificar o tamanho ou o posicionamento de uma imagem em tempo de execução'
-        href: how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md
-      - name: 'Como: Definir imagens em tempo de execução'
-        href: how-to-set-pictures-at-run-time-windows-forms.md
-    - name: Componente PrintDialog
-      href: printdialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente PrintDialog
-        href: printdialog-component-overview-windows-forms.md
-      - name: 'Como: Exibir o componente PrintDialog'
-        href: how-to-display-the-printdialog-component.md
-    - name: Componente PrintDocument
-      href: printdocument-component-windows-forms.md
-      items:
-      - name: Visão geral do componente PrintDocument
-        href: printdocument-component-overview-windows-forms.md
-    - name: Controle PrintPreviewControl
-      href: printpreviewcontrol-control-windows-forms.md
-      items:
-      - name: Visão geral do controle PrintPreviewControl
-        href: printpreviewcontrol-control-overview-windows-forms.md
-    - name: Controle PrintPreviewDialog
-      href: printpreviewdialog-control-windows-forms.md
-      items:
-      - name: Visão geral do controle PrintPreviewDialog
-        href: printpreviewdialog-control-overview-windows-forms.md
-      - name: 'Como: Exibir visualização de impressão em aplicativos do Windows Forms'
-        href: how-to-display-print-preview-in-windows-forms-applications.md
-    - name: Controle ProgressBar
-      href: progressbar-control-windows-forms.md
-      items:
-      - name: Visão geral do controle ProgressBar
-        href: progressbar-control-overview-windows-forms.md
-      - name: 'Como: Definir o valor exibido pelo controle ProgressBar do Windows Forms'
-        href: how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md
-    - name: Controle RadioButton
-      href: radiobutton-control-windows-forms.md
-      items:
-      - name: Visão geral do controle RadioButton
-        href: radiobutton-control-overview-windows-forms.md
-      - name: 'Como: Agrupar controles RadioButton do Windows Forms para funcionarem como um conjunto'
-        href: how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md
-    - name: Controle RichTextBox
-      href: richtextbox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle RichTextBox
-        href: richtextbox-control-overview-windows-forms.md
-      - name: 'Como: Determinar quando os atributos de formatação mudam no controle RichTextBox do Windows Forms'
-        href: determine-when-formatting-attributes-change-wf-richtextbox-control.md
-      - name: 'Como: Exibir barras de rolagem no controle RichTextBox do Windows Forms'
-        href: how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md
-      - name: 'Como: Exibir links em estilo da Web com o controle RichTextBox do Windows Forms'
-        href: how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md
-      - name: 'Como: Habilitar operações do tipo "arrastar e soltar" com o controle RichTextBox do Windows Forms'
-        href: enable-drag-and-drop-operations-with-wf-richtextbox-control.md
-      - name: 'Como: Carregar arquivos no controle RichTextBox do Windows Forms'
-        href: how-to-load-files-into-the-windows-forms-richtextbox-control.md
-      - name: 'Como: Salvar arquivos com o controle RichTextBox do Windows Forms'
-        href: how-to-save-files-with-the-windows-forms-richtextbox-control.md
-      - name: 'Como: Definir atributos de fonte para o controle RichTextBox do Windows Forms'
-        href: how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md
-      - name: 'Como: Definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox do Windows Forms'
-        href: set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md
-    - name: Componente SaveFileDialog
-      href: savefiledialog-component-windows-forms.md
-      items:
-      - name: Visão geral do componente SaveFileDialog
-        href: savefiledialog-component-overview-windows-forms.md
-      - name: 'Como: Salvar arquivos usando o componente SaveFileDialog'
-        href: how-to-save-files-using-the-savefiledialog-component.md
-    - name: Classe SoundPlayer
-      href: soundplayer-class.md
-      items:
-      - name: Visão geral da classe SoundPlayer
-        href: soundplayer-class-overview.md
-      - name: 'Como: Reproduzir um som de um Windows Form'
-        href: how-to-play-a-sound-from-a-windows-form.md
-      - name: 'Como: Reproduzir um aviso sonoro de um Windows Form'
-        href: how-to-play-a-beep-from-a-windows-form.md
-      - name: 'Como: Reproduzir um som inserido em um recurso de um Windows Form'
-        href: how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md
-      - name: 'Como: Reproduzir um som do sistema de um Windows Form'
-        href: how-to-play-a-system-sound-from-a-windows-form.md
-      - name: 'Como: Carregar um som de forma assíncrona dentro de um Windows Form'
-        href: how-to-load-a-sound-asynchronously-within-a-windows-form.md
-      - name: 'Como: Fazer Loop de um Som Tocado em um Formulário do Windows'
-        href: how-to-loop-a-sound-playing-on-a-windows-form.md
-    - name: Controle SplitContainer
-      href: splitcontainer-control-windows-forms.md
-      items:
-      - name: Visão geral do controle SplitContainer
-        href: splitcontainer-control-overview-windows-forms.md
-      - name: 'Como: Criar uma Interface do Usuário com Vários Painéis nos Windows Forms'
-        href: how-to-create-a-multipane-user-interface-with-windows-forms.md
-      - name: 'Como: Criar uma interface do usuário com vários painéis com o Windows Forms usando o designer'
-        href: create-a-multipane-user-interface-with-wf-using-the-designer.md
-      - name: 'Como: Criar uma interface no estilo do Windows Explorer em Windows Forms'
-        href: how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md
-      - name: 'Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida'
-        href: how-to-define-resize-and-positioning-behavior-in-a-split-window.md
-      - name: 'Como: Dividir uma janela horizontalmente'
-        href: how-to-split-a-window-horizontally.md
-      - name: 'Como: Dividir uma janela horizontalmente o designer'
-        href: how-to-split-a-window-horizontally-using-the-designer.md
-    - name: Controle Divisor
-      href: splitter-control-windows-forms.md
-      items:
-      - name: Visão geral do controle Divisor
-        href: splitter-control-overview-windows-forms.md
-    - name: Controle StatusBar
-      href: statusbar-control-windows-forms.md
-      items:
-      - name: Visão geral do controle StatusBar
-        href: statusbar-control-overview-windows-forms.md
-      - name: 'Como: Adicionar painéis a um controle StatusBar'
-        href: how-to-add-panels-to-a-statusbar-control.md
-      - name: 'Como: Determinar qual painel no controle StatusBar do Windows Forms foi clicado'
-        href: determine-which-panel-wf-statusbar-control-was-clicked.md
-      - name: 'Como: Definir o tamanho de painéis da barra de status'
-        href: how-to-set-the-size-of-status-bar-panels.md
-      - name: 'Passo a passo: Atualizando informações da barra de status em tempo de execução'
-        href: walkthrough-updating-status-bar-information-at-run-time.md
-    - name: Controle StatusStrip
-      href: statusstrip-control.md
-      items:
-      - name: Visão geral do controle StatusStrip
-        href: statusstrip-control-overview.md
-      - name: 'Como: Usar a propriedade Spring de forma interativa em um StatusStrip'
-        href: how-to-use-the-spring-property-interactively-in-a-statusstrip.md
-    - name: Controle TabControl
-      href: tabcontrol-control-windows-forms.md
-      items:
-      - name: Visão geral do controle TabControl
-        href: tabcontrol-control-overview-windows-forms.md
-      - name: 'Como: Adicionar um controle a uma página da guia'
-        href: how-to-add-a-control-to-a-tab-page.md
-      - name: 'Como: Adicionar um controle a uma página de guia usando o Designer'
-        href: how-to-add-a-control-to-a-tab-page-using-the-designer.md
-      - name: 'Como: Adicionar e remover guias com o controle TabControl do Windows Forms'
-        href: how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md
-      - name: 'Como: Adicionar e remover guias com o TabControl do Windows Forms usando o designer'
-        href: add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md
-      - name: 'Como: Alterar a aparência do TabControl do Windows Forms'
-        href: how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md
-      - name: 'Como: Desabilitar páginas de guia'
-        href: how-to-disable-tab-pages.md
-      - name: 'Como: Exibir guias alinhadas lateralmente com TabControl'
-        href: how-to-display-side-aligned-tabs-with-tabcontrol.md
-    - name: Controle TableLayoutPanel
-      href: tablelayoutpanel-control-windows-forms.md
-      items:
-      - name: Visão geral do controle TableLayoutPanel
-        href: tablelayoutpanel-control-overview.md
-      - name: Comportamento de AutoSize no controle TableLayoutPanel
-        href: autosize-behavior-in-the-tablelayoutpanel-control.md
-      - name: Práticas recomendadas para o controle TableLayoutPanel
-        href: best-practices-for-the-tablelayoutpanel-control.md
-      - name: 'Como: Alinhar e alongar um controle em um controle TableLayoutPanel'
-        href: how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md
-      - name: 'Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel'
-        href: how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md
-      - name: 'Como: Criar um Windows Form redimensionável para entrada de dados'
-        href: how-to-create-a-resizable-windows-form-for-data-entry.md
-      - name: 'Como: Criar um layout do Windows Forms que responda bem à localização'
-        href: how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md
-      - name: 'Como: Editar colunas e linhas em um controle TableLayoutPanel'
-        href: how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md
-      - name: 'Como: Abranger linhas e colunas em um controle TableLayoutPanel'
-        href: how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md
-      - name: 'Passo a passo: Organizar controles nos Windows Forms usando um TableLayoutPanel'
-        href: walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md
-    - name: Controle TextBox
-      href: textbox-control-windows-forms.md
-      items:
-      - name: Visão geral do controle TextBox
-        href: textbox-control-overview-windows-forms.md
-      - name: 'Como: Controlar o ponto de inserção em um controle TextBox do Windows Forms'
-        href: how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md
-      - name: 'Como: Criar uma caixa de texto de senha com o controle TextBox do Windows Forms'
-        href: how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md
-      - name: 'Como: Criar uma caixa de texto somente leitura'
-        href: how-to-create-a-read-only-text-box-windows-forms.md
-      - name: 'Como: Inserir aspas em uma cadeia de caracteres'
-        href: how-to-put-quotation-marks-in-a-string-windows-forms.md
-      - name: 'Como: Selecionar texto no controle TextBox do Windows Forms'
-        href: how-to-select-text-in-the-windows-forms-textbox-control.md
-      - name: 'Como: Exibir várias linhas no controle TextBox do Windows Forms'
-        href: how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md
-    - name: Componente de Temporizador
-      href: timer-component-windows-forms.md
-      items:
-      - name: Visão geral do componente de temporizador
-        href: timer-component-overview-windows-forms.md
-      - name: Limitações da propriedade de intervalo do componente de temporizador do Windows Forms
-        href: limitations-of-the-timer-component-interval-property.md
-      - name: 'Como: Executar procedimentos em intervalos definidos com o componente de temporizador do Windows Forms'
-        href: run-procedures-at-set-intervals-with-wf-timer-component.md
-    - name: Controle ToolBar
-      href: toolbar-control-windows-forms.md
-      items:
-      - name: Visão geral do controle ToolBar
-        href: toolbar-control-overview-windows-forms.md
-      - name: 'Como: Adicionar botões a um controle ToolBar'
-        href: how-to-add-buttons-to-a-toolbar-control.md
-      - name: 'Como: Adicionar botões a um controle ToolBar usando o designer'
-        href: how-to-add-buttons-to-a-toolbar-control-using-the-designer.md
-      - name: 'Como: Definir um ícone para um botão de barra de ferramentas'
-        href: how-to-define-an-icon-for-a-toolbar-button.md
-      - name: 'Como: Definir um ícone para um botão de barra de ferramentas usando o Designer'
-        href: how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md
-      - name: 'Como: Disparar eventos de menu para botões da barra de ferramentas'
-        href: how-to-trigger-menu-events-for-toolbar-buttons.md
-    - name: Controle ToolStrip
-      href: toolstrip-control-windows-forms.md
-      items:
-      - name: Visão geral do controle ToolStrip
-        href: toolstrip-control-overview-windows-forms.md
-      - name: Resumo da tecnologia de ToolStrip
-        href: toolstrip-technology-summary.md
-      - name: Arquitetura de controle ToolStrip
-        href: toolstrip-control-architecture.md
-      - name: 'Como: Adicionar itens do ToolStrip de forma dinâmica'
-        href: how-to-add-toolstrip-items-dynamically.md
-      - name: 'Como: Criar um ToolStrip básico com itens padrão usando o designer'
-        href: create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md
-      - name: 'Como: Criar um controle ToolStrip com estilo profissional'
-        href: how-to-create-a-professionally-styled-toolstrip-control.md
-      - name: 'Como: Criar um formulário MDI com mesclagem de menu e controles ToolStrip'
-        href: how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
-      - name: 'Como: Criar um formulário MDI com controles ToolStripPanel'
-        href: how-to-create-an-mdi-form-with-toolstrippanel-controls.md
-      - name: 'Como: Alterar a aparência de texto e imagens de ToolStrip nos Windows Forms'
-        href: how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md
-      - name: 'Como: Alterar o espaçamento e o alinhamento de itens ToolStrip no Windows Forms'
-        href: how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md
-      - name: 'Como: Criar e definir um renderizador personalizado para o controle ToolStrip no Windows Forms'
-        href: create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md
-      - name: 'Como: Criar botões de alternância em controles ToolStrip'
-        href: how-to-create-toggle-buttons-in-toolstrip-controls.md
-      - name: 'Como: Personalizar o desenho de um controle ToolStrip'
-        href: how-to-custom-draw-a-toolstrip-control.md
-      - name: 'Como: Personalizar cores em aplicativos ToolStrip'
-        href: how-to-customize-colors-in-toolstrip-applications.md
-      - name: 'Como: Definir a organização Z de controles ToolStrip encaixados'
-        href: how-to-define-z-ordering-of-docked-toolstrip-controls.md
-      - name: 'Como: Detectar quando o ponteiro do mouse passa sobre um ToolStripItem'
-        href: how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md
-      - name: 'Como: Habilitar AutoComplete em controles ToolStrip'
-        href: how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md
-      - name: 'Como: Habilitar a reorganização de itens ToolStrip no tempo de execução'
-        href: how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md
-      - name: 'Como: Habilitar a tecla TAB para deixar um controle ToolStrip'
-        href: how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md
-      - name: 'Como: Implementar um ToolStripRenderer personalizado'
-        href: how-to-implement-a-custom-toolstriprenderer.md
-      - name: 'Como: Gerenciar o estouro de ToolStrip'
-        href: how-to-manage-toolstrip-overflow-in-windows-forms.md
-      - name: 'Como: Remover um ToolStrip de um ToolStripContainer para um formulário'
-        href: how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md
-      - name: 'Como: Posicionar um ToolStripItem em um ToolStrip'
-        href: how-to-position-a-toolstripitem-on-a-toolstrip.md
-      - name: 'Como: Definir o renderizador ToolStrip em tempo de execução'
-        href: how-to-set-the-toolstrip-renderer-at-run-time.md
-      - name: 'Como: Definir o renderizador ToolStrip para um aplicativo'
-        href: how-to-set-the-toolstrip-renderer-for-an-application.md
-      - name: 'Como: Alongar um ToolStripTextBox para preencher a largura restante de um ToolStrip'
-        href: stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-wf.md
-      - name: 'Como: Usar ToolTips em controles ToolStrip'
-        href: how-to-use-tooltips-in-toolstrip-controls.md
-      - name: 'Como: Encapsular um controle do Windows Forms com ToolStripControlHost'
-        href: how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md
-      - name: 'Passo a passo: Criar um controle ToolStrip com estilo profissional'
-        href: walkthrough-creating-a-professionally-styled-toolstrip-control.md
-      - name: 'Passo a passo: Criar um formulário MDI com mesclagem de menu e controles ToolStrip'
-        href: walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
-    - name: Controle ToolStripContainer
-      href: toolstripcontainer-control.md
-      items:
-      - name: Visão geral do controle ToolStripContainer
-        href: toolstripcontainer-control-overview.md
-      - name: 'Como: Adicionar um ToolStripContainer a um formulário'
-        href: how-to-add-a-toolstripcontainer-to-a-form.md
-      - name: 'Como: Adicionar um controle a um ToolStripContentPanel'
-        href: how-to-add-a-control-to-a-toolstripcontentpanel.md
-    - name: Controle ToolStripPanel
-      href: toolstrippanel-control.md
-      items:
-      - name: Visão geral do controle ToolStripPanel
-        href: toolstrippanel-control-overview.md
-      - name: 'Como: Unir ToolStripPanels'
-        href: how-to-join-toolstrippanels.md
-      - name: 'Como: Usar ToolStripPanels para MDI'
-        href: how-to-use-toolstrippanels-for-mdi.md
-    - name: Controle ToolStripProgressBar
-      href: toolstripprogressbar-control.md
-      items:
-      - name: Visão geral do controle ToolStripProgressBar
-        href: toolstripprogressbar-control-overview.md
-    - name: Controle ToolStripStatusLabel
-      href: toolstripstatuslabel-control.md
-      items:
-      - name: Visão geral do controle ToolStripStatusLabel
-        href: toolstripstatuslabel-control-overview.md
-    - name: Componente ToolTip
-      href: tooltip-component-windows-forms.md
-      items:
-      - name: Visão geral do componente ToolTip
-        href: tooltip-component-overview-windows-forms.md
-      - name: 'Como: Definir ToolTips para controles em um Windows Form no momento do design'
-        href: how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md
-      - name: 'Como: Alterar o atraso do componente ToolTip do Windows Forms'
-        href: how-to-change-the-delay-of-the-windows-forms-tooltip-component.md
-    - name: Controle TrackBar
-      href: trackbar-control-windows-forms.md
-      items:
-      - name: Visão geral do controle TrackBar
-        href: trackbar-control-overview-windows-forms.md
-    - name: Controle TreeView
-      href: treeview-control-windows-forms.md
-      items:
-      - name: Visão geral do controle TreeView
-        href: treeview-control-overview-windows-forms.md
-      - name: 'Como: Adicionar e remover nós com o controle TreeView do Windows Forms'
-        href: how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md
-      - name: 'Como: Adicionar e remover nós com o componente TreeView do Windows Forms usando o designer'
-        href: add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md
-      - name: 'Como: Anexar um menu ShortCut a um nó TreeView'
-        href: how-to-attach-a-shortcut-menu-to-a-treeview-node.md
-      - name: 'Como: Anexar um menu de atalho a um TreeNode usando o designer'
-        href: how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md
-      - name: 'Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)'
-        href: add-custom-information-to-a-treeview-or-listview-control-wf.md
-      - name: 'Como: Determinar qual nó TreeView foi clicado'
-        href: how-to-determine-which-treeview-node-was-clicked-windows-forms.md
-      - name: 'Como: Iterar em todos os nós de um controle TreeView do Windows Forms'
-        href: how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md
-      - name: 'Como: Definir ícones para o controle TreeView do Windows Forms'
-        href: how-to-set-icons-for-the-windows-forms-treeview-control.md
-    - name: Controle WebBrowser
-      href: webbrowser-control-windows-forms.md
-      items:
-      - name: Visão geral do controle WebBrowser
-        href: webbrowser-control-overview.md
-      - name: Segurança de WebBrowser
-        href: webbrowser-security.md
-      - name: 'Como: Navegar até uma URL com o controle WebBrowser'
-        href: how-to-navigate-to-a-url-with-the-webbrowser-control.md
-      - name: 'Como: Imprimir com um controle WebBrowser'
-        href: how-to-print-with-a-webbrowser-control.md
-      - name: 'Como: Adicionar recursos do navegador da Web a um Aplicativo do Windows Forms'
-        href: how-to-add-web-browser-capabilities-to-a-windows-forms-application.md
-      - name: 'Como: Criar um visualizador de documento HTML em um Aplicativo do Windows Forms'
-        href: how-to-create-an-html-document-viewer-in-a-windows-forms-application.md
-      - name: 'Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente'
-        href: implement-two-way-com-between-dhtml-and-client.md
-      - name: Usando o Document Object Model HTML gerenciado
-        href: using-the-managed-html-document-object-model.md
-        items:
-        - name: 'Como: Acessar o Modelo de Objeto do Documento HTML gerenciado'
-          href: how-to-access-the-managed-html-document-object-model.md
-        - name: 'Como: Acessar a fonte HTML no Modelo de Objeto do Documento HTML gerenciado'
-          href: how-to-access-the-html-source-in-the-managed-html-document-object-model.md
-        - name: 'Como: Alterar estilos em um elemento no Modelo de Objeto do Documento HTML gerenciado'
-          href: how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md
-        - name: Acessando quadros no Document Object Model HTML gerenciado
-          href: accessing-frames-in-the-managed-html-document-object-model.md
-        - name: Acessando membros não expostos no Document Object Model HTML gerenciado
-          href: accessing-unexposed-members-on-the-managed-html-document-object-model.md
-    - name: Controles do Windows Forms usados para listar opções
-      href: windows-forms-controls-used-to-list-options.md
-      items:
-      - name: Quando usar um ComboBox do Windows Forms em vez de um ListBox
-        href: when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md
-      - name: 'Como: Acessar itens específicos em um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
-        href: access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md
-      - name: 'Como: Adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
-        href: add-and-remove-items-from-a-wf-combobox.md
-      - name: 'Como: Criar uma tabela de pesquisa para um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
-        href: create-a-lookup-table-for-a-wf-combobox-listbox.md
-      - name: 'Como: Associar um controle ComboBox ou ListBox do Windows Forms aos dados'
-        href: how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md
-      - name: 'Como: Classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox do Windows Forms'
-        href: sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md
-  - name: Desenvolvendo controles do Windows Forms personalizados com o .NET Framework
-    href: developing-custom-windows-forms-controls.md
-    items:
-    - name: Visão geral do uso de controles nos Windows Forms
-      href: overview-of-using-controls-in-windows-forms.md
-    - name: Variedades de controles personalizados
-      href: varieties-of-custom-controls.md
-      items:
-      - name: Recomendações do tipo de controle
-        href: control-type-recommendations.md
-    - name: Noções básicas sobre o desenvolvimento de controle do Windows Forms
-      href: windows-forms-control-development-basics.md
-      items:
-      - name: 'Como: Desenvolver um controle simples do Windows Forms'
-        href: how-to-develop-a-simple-windows-forms-control.md
-      - name: 'Como: Criar um controle do Windows Forms que mostre o progresso'
-        href: how-to-create-a-windows-forms-control-that-shows-progress.md
-      - name: Desenvolvendo um controle do Windows Forms composto
-        href: developing-a-composite-windows-forms-control.md
-    - name: Propriedades em controles do Windows Forms
-      href: properties-in-windows-forms-controls.md
-      items:
-      - name: Definir uma propriedade
-        href: defining-a-property-in-windows-forms-controls.md
-      - name: Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
-        href: defining-default-values-with-the-shouldserialize-and-reset-methods.md
-      - name: Eventos com propriedade alterada
-        href: property-changed-events.md
-      - name: 'Como: Expor as propriedades de controles constituintes'
-        href: how-to-expose-properties-of-constituent-controls.md
-      - name: Implementação do método em controles personalizados
-        href: method-implementation-in-custom-controls.md
-    - name: Eventos em controles do Windows Forms
-      href: events-in-windows-forms-controls.md
-      items:
-      - name: Substituindo o método OnPaint
-        href: overriding-the-onpaint-method.md
-      - name: Identificando a entrada do usuário
-        href: handling-user-input.md
-      - name: Definir um evento
-        href: defining-an-event-in-windows-forms-controls.md
-    - name: Atributos em controles do Windows Forms
-      href: attributes-in-windows-forms-controls.md
-      items:
-      - name: 'Como: Aplicar atributos a controles do Windows Forms'
-        href: how-to-apply-attributes-in-windows-forms-controls.md
-    - name: Pintura e renderização de controle personalizada
-      href: custom-control-painting-and-rendering.md
-      items:
-      - name: Renderizando um controle do Windows Forms
-        href: rendering-a-windows-forms-control.md
-      - name: Controles desenhados pelo usuário
-        href: user-drawn-controls.md
-      - name: Controles constituintes
-        href: constituent-controls.md
-      - name: 'Como: Deixar o controle invisível em tempo de execução'
-        href: how-to-make-your-control-invisible-at-run-time.md
-      - name: 'Como: Dar ao controle um segundo plano transparente'
-        href: how-to-give-your-control-a-transparent-background.md
-      - name: Renderizando controles com estilos visuais
-        href: rendering-controls-with-visual-styles.md
-        items:
-        - name: 'Como: Usar uma classe de renderização do controle'
-          href: how-to-use-a-control-rendering-class.md
-        - name: 'Como: Renderizar um elemento de estilo visual'
-          href: how-to-render-a-visual-style-element.md
-    - name: Layout em controles do Windows Forms
-      href: layout-in-windows-forms-controls.md
-      items:
-      - name: Visão geral da propriedade AutoSize
-        href: autosize-property-overview.md
-      - name: 'Como: Alinhar um controle às bordas de formulários'
-        href: how-to-align-a-control-to-the-edges-of-forms.md
-      - name: Margem e preenchimento em controles do Windows Forms
-        href: margin-and-padding-in-windows-forms-controls.md
-      - name: 'Como: Criar uma borda em torno de um controle do Windows Forms usando preenchimento'
-        href: how-to-create-a-border-around-a-windows-forms-control-using-padding.md
-      - name: 'Como: Implementar um mecanismo de layout personalizado'
-        href: how-to-implement-a-custom-layout-engine.md
-    - name: Multithread em controles do Windows Forms
-      href: multithreading-in-windows-forms-controls.md
-      items:
-      - name: 'Como: Chamadas thread-safe para controles do Windows Forms'
-        href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
-      - name: 'Como: Usar um thread em segundo plano para pesquisar arquivos'
-        href: how-to-use-a-background-thread-to-search-for-files.md
-  - name: Controles do Windows Forms no .NET Framework por função
-    href: windows-forms-controls-by-function.md
-  - name: Desenvolvendo controles do Windows Forms na hora de design
-    href: developing-windows-forms-controls-at-design-time.md
-    items:
-    - name: 'Passo a passo: Criar um controle composto com o Visual Basic'
-      href: walkthrough-authoring-a-composite-control-with-visual-basic.md
-    - name: 'Passo a passo: Criar um controle composto com o Visual C#'
-      href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
-    - name: 'Passo a passo: Herdar de um controle do Windows Forms com Visual Basic'
-      href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
-    - name: 'Passo a passo: Herdar de um controle do Windows Forms com Visual C#'
-      href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-    - name: 'Passo a passo: Executar tarefas comuns usando smart tags em controles do Windows Forms'
-      href: performing-common-tasks-using-smart-tags-on-wf-controls.md
-    - name: 'Passo a passo: Serializar coleções de tipos padrão com a DesignerSerializationVisibilityAttribute'
-      href: serializing-collections-designerserializationvisibilityattribute.md
-    - name: 'Passo a passo: Depurar controles personalizados do Windows Forms em tempo de design'
-      href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
-    - name: 'Passo a passo: Criar um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio'
-      href: creating-a-wf-control-design-time-features.md
-    - name: 'Como: Criar Controles para o Windows Forms'
-      href: how-to-author-controls-for-windows-forms.md
-    - name: 'Como: Criar controles compostos'
-      href: how-to-author-composite-controls.md
-    - name: 'Como: Herdar da classe UserControl'
-      href: how-to-inherit-from-the-usercontrol-class.md
-    - name: 'Como: Herdar de controles do Windows Forms existentes'
-      href: how-to-inherit-from-existing-windows-forms-controls.md
-    - name: 'Como: Herdar da classe Control'
-      href: how-to-inherit-from-the-control-class.md
-    - name: 'Como: Alinhar um controle às bordas de formulários no tempo de design'
-      href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
-    - name: 'Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas'
-      href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
-    - name: 'Como: Fornecer um bitmap da caixa de ferramentas para um controle'
-      href: how-to-provide-a-toolbox-bitmap-for-a-control.md
-    - name: 'Como: Testar o comportamento de tempo de execução de um UserControl'
-      href: how-to-test-the-run-time-behavior-of-a-usercontrol.md
-    - name: Erros de tempo de design no Designer de Formulários do Windows
-      href: design-time-errors-in-the-windows-forms-designer.md
-    - name: Solucionando problemas de criação do controle e do componente
-      href: troubleshooting-control-and-component-authoring.md
-ms.openlocfilehash: b61b1fa3f7e772db4bd29f1ce34e1df76b325831
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467742"
+    - name: Desenvolvendo controles dos Windows Forms na hora de design
+      href: developing-windows-forms-controls-at-design-time.md
+      items:
+        - name: 'Passo a passo: Criar um controle composto com o Visual Basic'
+          href: walkthrough-authoring-a-composite-control-with-visual-basic.md
+        - name: 'Passo a passo: Criar um controle composto com o Visual C#'
+          href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
+        - name: 'Passo a passo: Herdar de um controle do Windows Forms com Visual Basic'
+          href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
+        - name: 'Passo a passo: Herdar de um controle do Windows Forms com Visual C#'
+          href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
+        - name: 'Passo a passo: Executar tarefas comuns usando smart tags em controles do Windows Forms'
+          href: performing-common-tasks-using-smart-tags-on-wf-controls.md
+        - name: 'Passo a passo: Serializar coleções de tipos padrão com a DesignerSerializationVisibilityAttribute'
+          href: serializing-collections-designerserializationvisibilityattribute.md
+        - name: 'Passo a passo: Depurar controles personalizados do Windows Forms em tempo de design'
+          href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
+        - name: 'Passo a passo: Criar um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio'
+          href: creating-a-wf-control-design-time-features.md
+        - name: 'Como: Criar Controles para o Windows Forms'
+          href: how-to-author-controls-for-windows-forms.md
+        - name: 'Como: Criar controles compostos'
+          href: how-to-author-composite-controls.md
+        - name: 'Como: Herdar da classe UserControl'
+          href: how-to-inherit-from-the-usercontrol-class.md
+        - name: 'Como: Herdar de controles do Windows Forms existentes'
+          href: how-to-inherit-from-existing-windows-forms-controls.md
+        - name: 'Como: Herdar da classe Control'
+          href: how-to-inherit-from-the-control-class.md
+        - name: 'Como: Alinhar um controle às bordas de formulários no tempo de design'
+          href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
+        - name: 'Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas'
+          href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
+        - name: 'Como: Fornecer um bitmap da caixa de ferramentas para um controle'
+          href: how-to-provide-a-toolbox-bitmap-for-a-control.md
+        - name: 'Como: Testar o comportamento de tempo de execução de um UserControl'
+          href: how-to-test-the-run-time-behavior-of-a-usercontrol.md
+        - name: Erros de tempo de design no Designer de Formulários do Windows
+          href: design-time-errors-in-the-windows-forms-designer.md
+        - name: Solucionando problemas de criação do controle e do componente
+          href: troubleshooting-control-and-component-authoring.md

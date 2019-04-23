@@ -1,28 +1,21 @@
-items:
 - name: Sistema de arquivos e Registro
   href: index.md
   items:
-  - name: 'Como: iterar em uma árvore de diretórios'
-    href: how-to-iterate-through-a-directory-tree.md
-  - name: 'Como: obter informações sobre arquivos, pastas e unidades'
-    href: how-to-get-information-about-files-folders-and-drives.md
-  - name: 'Como: criar um arquivo ou uma pasta'
-    href: how-to-create-a-file-or-folder.md
-  - name: 'Como: copiar, excluir e mover arquivos e pastas'
-    href: how-to-copy-delete-and-move-files-and-folders.md
-  - name: 'Como: fornecer uma caixa de diálogo de progresso para operações de arquivo'
-    href: how-to-provide-a-progress-dialog-box-for-file-operations.md
-  - name: 'Como: gravar em um arquivo de texto'
-    href: how-to-write-to-a-text-file.md
-  - name: 'Como: ler de um arquivo de texto'
-    href: how-to-read-from-a-text-file.md
-  - name: 'Como: Ler um arquivo de texto uma linha de cada vez (Visual C#)'
-    href: how-to-read-a-text-file-one-line-at-a-time.md
-  - name: 'Como: Criar uma chave no Registro (Visual C#)'
-    href: how-to-create-a-key-in-the-registry.md
-ms.openlocfilehash: 779f7fad6c2ba693a27f2657fc55c5db55ce00ed
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467703"
+    - name: 'Como: iterar em uma árvore de diretórios'
+      href: how-to-iterate-through-a-directory-tree.md
+    - name: 'Como: obter informações sobre arquivos, pastas e unidades'
+      href: how-to-get-information-about-files-folders-and-drives.md
+    - name: 'Como: criar um arquivo ou uma pasta'
+      href: how-to-create-a-file-or-folder.md
+    - name: 'Como: copiar, excluir e mover arquivos e pastas'
+      href: how-to-copy-delete-and-move-files-and-folders.md
+    - name: 'Como: fornecer uma caixa de diálogo de progresso para operações de arquivo'
+      href: how-to-provide-a-progress-dialog-box-for-file-operations.md
+    - name: 'Como: gravar em um arquivo de texto'
+      href: how-to-write-to-a-text-file.md
+    - name: 'Como: ler de um arquivo de texto'
+      href: how-to-read-from-a-text-file.md
+    - name: 'Como: Ler um arquivo de texto uma linha de cada vez (Visual C#)'
+      href: how-to-read-a-text-file-one-line-at-a-time.md
+    - name: 'Como: Criar uma chave no Registro (Visual C#)'
+      href: how-to-create-a-key-in-the-registry.md

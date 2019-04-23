@@ -1,20 +1,13 @@
-items:
 - name: Matrizes no Visual Basic
   href: index.md
   items:
-  - name: Dimensões da matriz
-    href: array-dimensions.md
-  - name: 'Como: inicializar uma variável de matriz'
-    href: how-to-initialize-an-array-variable.md
-  - name: 'Como: classificar uma matriz'
-    href: how-to-sort-an-array.md
-  - name: 'Como: atribuir uma matriz a outra matriz'
-    href: how-to-assign-one-array-to-another-array.md
-  - name: Solução de problemas de matrizes
-    href: troubleshooting-arrays.md
-ms.openlocfilehash: cec0bed9cd5de72b0b48d6e8392715bb792e0836
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467649"
+    - name: Dimensões da matriz
+      href: array-dimensions.md
+    - name: 'Como: inicializar uma variável de matriz'
+      href: how-to-initialize-an-array-variable.md
+    - name: 'Como: classificar uma matriz'
+      href: how-to-sort-an-array.md
+    - name: 'Como: atribuir uma matriz a outra matriz'
+      href: how-to-assign-one-array-to-another-array.md
+    - name: Solução de problemas de matrizes
+      href: troubleshooting-arrays.md

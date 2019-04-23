@@ -1,16 +1,9 @@
-items:
 - name: Namespaces
   href: index.md
   items:
-  - name: Usar namespaces
-    href: using-namespaces.md
-  - name: 'Como: Usar o alias de namespace global'
-    href: how-to-use-the-global-namespace-alias.md
-  - name: 'Como: Usar o My Namespace'
-    href: how-to-use-the-my-namespace.md
-ms.openlocfilehash: 289817c09457dd50111d9d7514d27802d337cb79
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467754"
+    - name: Usar namespaces
+      href: using-namespaces.md
+    - name: 'Como: Usar o alias de namespace global'
+      href: how-to-use-the-global-namespace-alias.md
+    - name: 'Como: Usar o My Namespace'
+      href: how-to-use-the-my-namespace.md

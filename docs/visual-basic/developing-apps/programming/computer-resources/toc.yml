@@ -1,58 +1,51 @@
-items:
 - name: Acessar recursos de computador
   href: index.md
   items:
-  - name: Executando sons
-    href: playing-sounds.md
-  - name: Armazenar dados e ler da área de transferência
-    href: storing-data-to-and-reading-from-the-clipboard.md
-  - name: Obter informações sobre o computador
-    href: getting-information-about-the-computer.md
-  - name: Acessar o teclado
-    href: accessing-the-keyboard.md
-    items:
-    - name: 'Como: iniciar um aplicativo e enviar pressionamentos de tecla'
-      href: how-to-start-an-application-and-send-it-keystrokes.md
-  - name: Acessar o mouse
-    href: accessing-the-mouse.md
-  - name: Realizar operações de rede
-    href: performing-network-operations.md
-    items:
-    - name: 'Como: carregar um arquivo'
-      href: how-to-upload-a-file.md
-    - name: 'Como: baixar um arquivo'
-      href: how-to-download-a-file.md
-    - name: 'Como: Verificar o status da conexão'
-      href: how-to-check-connection-status.md
-  - name: Acessar as portas do computador
-    href: accessing-the-computer-s-ports.md
-    items:
-    - name: 'Como: mostrar portas seriais disponíveis'
-      href: how-to-show-available-serial-ports.md
-    - name: 'Como: discar modems anexados a portas seriais'
-      href: how-to-dial-modems-attached-to-serial-ports.md
-    - name: 'Como: enviar cadeias de caracteres para portas seriais'
-      href: how-to-send-strings-to-serial-ports.md
-    - name: 'Como: receber cadeias de caracteres de portas seriais'
-      href: how-to-receive-strings-from-serial-ports.md
-    - name: Operações de porta no .NET Framework
-      href: port-operations-in-the-net-framework.md
-  - name: Ler e gravar no Registro
-    href: reading-from-and-writing-to-the-registry.md
-    items:
-    - name: 'Como: Criar uma chave do Registro e definir seu valor'
-      href: how-to-create-a-registry-key-and-set-its-value.md
-    - name: 'Como: ler um valor de uma chave do Registro'
-      href: how-to-read-a-value-from-a-registry-key.md
-    - name: 'Como: Excluir uma Chave do Registro'
-      href: how-to-delete-a-registry-key.md
-    - name: Ler e gravar no Registro usando o namespace Microsoft.Win32
-      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
-    - name: Segurança e Registro
-      href: security-and-the-registry.md
-ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467635"
+    - name: Executando sons
+      href: playing-sounds.md
+    - name: Armazenar dados e ler da área de transferência
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: Obter informações sobre o computador
+      href: getting-information-about-the-computer.md
+    - name: Acessar o teclado
+      href: accessing-the-keyboard.md
+      items:
+        - name: 'Como: iniciar um aplicativo e enviar pressionamentos de tecla'
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: Acessar o mouse
+      href: accessing-the-mouse.md
+    - name: Realizar operações de rede
+      href: performing-network-operations.md
+      items:
+        - name: 'Como: carregar um arquivo'
+          href: how-to-upload-a-file.md
+        - name: 'Como: baixar um arquivo'
+          href: how-to-download-a-file.md
+        - name: 'Como: Verificar o status da conexão'
+          href: how-to-check-connection-status.md
+    - name: Acessar as portas do computador
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: 'Como: mostrar portas seriais disponíveis'
+          href: how-to-show-available-serial-ports.md
+        - name: 'Como: discar modems anexados a portas seriais'
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: 'Como: enviar cadeias de caracteres para portas seriais'
+          href: how-to-send-strings-to-serial-ports.md
+        - name: 'Como: receber cadeias de caracteres de portas seriais'
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: Operações de porta no .NET Framework
+          href: port-operations-in-the-net-framework.md
+    - name: Ler e gravar no Registro
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: 'Como: Criar uma chave do Registro e definir seu valor'
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: 'Como: ler um valor de uma chave do Registro'
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: 'Como: Excluir uma Chave do Registro'
+          href: how-to-delete-a-registry-key.md
+        - name: Ler e gravar no Registro usando o namespace Microsoft.Win32
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: Segurança e Registro
+          href: security-and-the-registry.md

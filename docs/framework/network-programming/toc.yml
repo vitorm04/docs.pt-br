@@ -1,235 +1,228 @@
-items:
 - name: Programação de rede no .NET Framework
   href: index.md
   items:
-  - name: Tópicos explicativos de programação de rede
-    href: network-programming-how-to-topics.md
-  - name: Apresentando protocolos conectáveis
-    href: introducing-pluggable-protocols.md
-  - name: Solicitando dados
-    href: requesting-data.md
-    items:
-    - name: Criando solicitações da Internet
-      href: creating-internet-requests.md
-    - name: 'Como: Solicitar uma página da Web e recuperar os resultados como um fluxo'
-      href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
-    - name: 'Como: Solicitar dados usando a classe WebRequest'
-      href: how-to-request-data-using-the-webrequest-class.md
-    - name: 'Como: Enviar dados usando a classe WebRequest'
-      href: how-to-send-data-using-the-webrequest-class.md
-    - name: 'Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest'
-      href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
-    - name: Usando fluxos na rede
-      href: using-streams-on-the-network.md
-    - name: Fazer solicitações assíncronas
-      href: making-asynchronous-requests.md
-    - name: Manipulando erros
-      href: handling-errors.md
-  - name: Programando protocolos conectáveis
-    href: programming-pluggable-protocols.md
-    items:
-    - name: 'Como: Registrar um protocolo personalizado usando WebRequest'
-      href: how-to-register-a-custom-protocol-using-webrequest.md
-    - name: 'Como: Fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo'
-      href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
-    - name: Derivando de WebRequest
-      href: deriving-from-webrequest.md
-    - name: Derivando de WebResponse
-      href: deriving-from-webresponse.md
-  - name: Usando protocolos de aplicativo
-    href: using-application-protocols.md
-    items:
-    - name: HTTP
-      href: http.md
+    - name: Tópicos explicativos de programação de rede
+      href: network-programming-how-to-topics.md
+    - name: Apresentando protocolos conectáveis
+      href: introducing-pluggable-protocols.md
+    - name: Solicitando dados
+      href: requesting-data.md
       items:
-      - name: HttpListener
-        href: httplistener.md
-    - name: 'Como: Acessar propriedades específicas de HTTP'
-      href: how-to-access-http-specific-properties.md
-    - name: Gerenciando conexões
-      href: managing-connections.md
+        - name: Criando solicitações da Internet
+          href: creating-internet-requests.md
+        - name: 'Como: Solicitar uma página da Web e recuperar os resultados como um fluxo'
+          href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
+        - name: 'Como: Solicitar dados usando a classe WebRequest'
+          href: how-to-request-data-using-the-webrequest-class.md
+        - name: 'Como: Enviar dados usando a classe WebRequest'
+          href: how-to-send-data-using-the-webrequest-class.md
+        - name: 'Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest'
+          href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
+        - name: Usando fluxos na rede
+          href: using-streams-on-the-network.md
+        - name: Fazer solicitações assíncronas
+          href: making-asynchronous-requests.md
+        - name: Manipulando erros
+          href: handling-errors.md
+    - name: Programando protocolos conectáveis
+      href: programming-pluggable-protocols.md
       items:
-      - name: Agrupamento de conexão
-        href: connection-grouping.md
-      - name: 'Como: Atribuir informações de usuário a conexões de grupo'
-        href: how-to-assign-user-information-to-group-connections.md
-    - name: TCP-UDP
-      href: tcp-udp.md
+        - name: 'Como: Registrar um protocolo personalizado usando WebRequest'
+          href: how-to-register-a-custom-protocol-using-webrequest.md
+        - name: 'Como: Fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo'
+          href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
+        - name: Derivando de WebRequest
+          href: deriving-from-webrequest.md
+        - name: Derivando de WebResponse
+          href: deriving-from-webresponse.md
+    - name: Usando protocolos de aplicativo
+      href: using-application-protocols.md
       items:
-      - name: Usando os serviços TCP
-        href: using-tcp-services.md
-      - name: Usando os serviços UDP
-        href: using-udp-services.md
-    - name: Soquetes
-      href: sockets.md
+        - name: HTTP
+          href: http.md
+          items:
+            - name: HttpListener
+              href: httplistener.md
+        - name: 'Como: Acessar propriedades específicas de HTTP'
+          href: how-to-access-http-specific-properties.md
+        - name: Gerenciando conexões
+          href: managing-connections.md
+          items:
+            - name: Agrupamento de conexão
+              href: connection-grouping.md
+            - name: 'Como: Atribuir informações de usuário a conexões de grupo'
+              href: how-to-assign-user-information-to-group-connections.md
+        - name: TCP-UDP
+          href: tcp-udp.md
+          items:
+            - name: Usando os serviços TCP
+              href: using-tcp-services.md
+            - name: Usando os serviços UDP
+              href: using-udp-services.md
+        - name: Soquetes
+          href: sockets.md
+          items:
+            - name: 'Como: Criar um soquete'
+              href: how-to-create-a-socket.md
+            - name: Usando soquetes de cliente
+              href: using-client-sockets.md
+              items:
+                - name: Usando um soquete de cliente síncrono
+                  href: using-a-synchronous-client-socket.md
+                - name: Usando um soquete de cliente assíncrono
+                  href: using-an-asynchronous-client-socket.md
+            - name: Escutando com soquetes
+              href: listening-with-sockets.md
+              items:
+                - name: Usando um soquete de servidor síncrono
+                  href: using-a-synchronous-server-socket.md
+                - name: Usando um soquete de servidor assíncrono
+                  href: using-an-asynchronous-server-socket.md
+            - name: Exemplos de código de soquete
+              href: socket-code-examples.md
+              items:
+                - name: Exemplo de soquete de cliente síncrono
+                  href: synchronous-client-socket-example.md
+                - name: Exemplo de soquete de servidor síncrono
+                  href: synchronous-server-socket-example.md
+                - name: Exemplo de soquete de cliente assíncrono
+                  href: asynchronous-client-socket-example.md
+                - name: Exemplo de soquete de servidor assíncrono
+                  href: asynchronous-server-socket-example.md
+        - name: FTP
+          href: ftp.md
+          items:
+            - name: 'Como: baixar arquivos com FTP'
+              href: how-to-download-files-with-ftp.md
+            - name: 'Como: carregar arquivos com FTP'
+              href: how-to-upload-files-with-ftp.md
+            - name: 'Como: Listar o conteúdo do diretório com FTP'
+              href: how-to-list-directory-contents-with-ftp.md
+        - name: Noções básicas sobre problemas e exceções de WebRequest
+          href: understanding-webrequest-problems-and-exceptions.md
+    - name: Protocolo IP versão 6
+      href: internet-protocol-version-6.md
       items:
-      - name: 'Como: Criar um soquete'
-        href: how-to-create-a-socket.md
-      - name: Usando soquetes de cliente
-        href: using-client-sockets.md
-        items:
-        - name: Usando um soquete de cliente síncrono
-          href: using-a-synchronous-client-socket.md
-        - name: Usando um soquete de cliente assíncrono
-          href: using-an-asynchronous-client-socket.md
-      - name: Escutando com soquetes
-        href: listening-with-sockets.md
-        items:
-        - name: Usando um soquete de servidor síncrono
-          href: using-a-synchronous-server-socket.md
-        - name: Usando um soquete de servidor assíncrono
-          href: using-an-asynchronous-server-socket.md
-      - name: Exemplos de código de soquete
-        href: socket-code-examples.md
-        items:
-        - name: Exemplo de soquete de cliente síncrono
-          href: synchronous-client-socket-example.md
-        - name: Exemplo de soquete de servidor síncrono
-          href: synchronous-server-socket-example.md
-        - name: Exemplo de soquete de cliente assíncrono
-          href: asynchronous-client-socket-example.md
-        - name: Exemplo de soquete de servidor assíncrono
-          href: asynchronous-server-socket-example.md
-    - name: FTP
-      href: ftp.md
+        - name: Endereçamento IPv6
+          href: ipv6-addressing.md
+        - name: Roteamento IPv6
+          href: ipv6-routing.md
+        - name: Configuração automática de endereço IPv6
+          href: ipv6-auto-configuration.md
+        - name: Habilitando e desabilitando o IPv6
+          href: enabling-and-disabling-ipv6.md
+        - name: 'Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6'
+          href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
+    - name: Configurando aplicativos da Internet
+      href: configuring-internet-applications.md
+    - name: Rastreamento de rede no .NET Framework
+      href: network-tracing.md
       items:
-      - name: 'Como: baixar arquivos com FTP'
-        href: how-to-download-files-with-ftp.md
-      - name: 'Como: carregar arquivos com FTP'
-        href: how-to-upload-files-with-ftp.md
-      - name: 'Como: Listar o conteúdo do diretório com FTP'
-        href: how-to-list-directory-contents-with-ftp.md
-    - name: Noções básicas sobre problemas e exceções de WebRequest
-      href: understanding-webrequest-problems-and-exceptions.md
-  - name: Protocolo IP versão 6
-    href: internet-protocol-version-6.md
-    items:
-    - name: Endereçamento IPv6
-      href: ipv6-addressing.md
-    - name: Roteamento IPv6
-      href: ipv6-routing.md
-    - name: Configuração automática de endereço IPv6
-      href: ipv6-auto-configuration.md
-    - name: Habilitando e desabilitando o IPv6
-      href: enabling-and-disabling-ipv6.md
-    - name: 'Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6'
-      href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
-  - name: Configurando aplicativos da Internet
-    href: configuring-internet-applications.md
-  - name: Rastreamento de rede no .NET Framework
-    href: network-tracing.md
-    items:
-    - name: Interpretando o rastreamento de rede
-      href: interpreting-network-tracing.md
-    - name: Habilitando o rastreamento de rede
-      href: enabling-network-tracing.md
-    - name: 'Como: Configurar o rastreamento de rede'
-      href: how-to-configure-network-tracing.md
-  - name: Gerenciamento de cache para aplicativos de rede
-    href: cache-management-for-network-applications.md
-    items:
-    - name: Política de cache
-      href: cache-policy.md
-    - name: Políticas de cache baseadas na localização
-      href: location-based-cache-policies.md
-    - name: Políticas de cache baseadas em tempo
-      href: time-based-cache-policies.md
+        - name: Interpretando o rastreamento de rede
+          href: interpreting-network-tracing.md
+        - name: Habilitando o rastreamento de rede
+          href: enabling-network-tracing.md
+        - name: 'Como: Configurar o rastreamento de rede'
+          href: how-to-configure-network-tracing.md
+    - name: Gerenciamento de cache para aplicativos de rede
+      href: cache-management-for-network-applications.md
       items:
-      - name: Interação da política de cache – idade máxima e desatualização máxima
-        href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
-      - name: Interação da política de cache – idade máxima e atualização mínima
-        href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
-    - name: Configurando o cache em aplicativos de rede
-      href: configuring-caching-in-network-applications.md
+        - name: Política de cache
+          href: cache-policy.md
+        - name: Políticas de cache baseadas na localização
+          href: location-based-cache-policies.md
+        - name: Políticas de cache baseadas em tempo
+          href: time-based-cache-policies.md
+          items:
+            - name: Interação da política de cache – idade máxima e desatualização máxima
+              href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
+            - name: Interação da política de cache – idade máxima e atualização mínima
+              href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
+        - name: Configurando o cache em aplicativos de rede
+          href: configuring-caching-in-network-applications.md
+          items:
+            - name: 'Como: Definir uma política de cache baseada na localização para um aplicativo'
+              href: how-to-set-a-location-based-cache-policy-for-an-application.md
+            - name: 'Como: Definir uma política de cache baseada em tempo padrão para um aplicativo'
+              href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
+            - name: 'Como: Personalizar uma política de cache baseada em tempo'
+              href: how-to-customize-a-time-based-cache-policy.md
+            - name: 'Como: Definir uma política de cache para uma solicitação'
+              href: how-to-set-cache-policy-for-a-request.md
+    - name: Segurança na programação de rede
+      href: security-in-network-programming.md
       items:
-      - name: 'Como: Definir uma política de cache baseada na localização para um aplicativo'
-        href: how-to-set-a-location-based-cache-policy-for-an-application.md
-      - name: 'Como: Definir uma política de cache baseada em tempo padrão para um aplicativo'
-        href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
-      - name: 'Como: Personalizar uma política de cache baseada em tempo'
-        href: how-to-customize-a-time-based-cache-policy.md
-      - name: 'Como: Definir uma política de cache para uma solicitação'
-        href: how-to-set-cache-policy-for-a-request.md
-  - name: Segurança na programação de rede
-    href: security-in-network-programming.md
-    items:
-    - name: Melhores práticas do TLS (protocolo TLS)
-      href: tls.md
-    - name: Usando o protocolo SSL
-      href: using-secure-sockets-layer.md
+        - name: Melhores práticas do TLS (protocolo TLS)
+          href: tls.md
+        - name: Usando o protocolo SSL
+          href: using-secure-sockets-layer.md
+          items:
+            - name: Seleção e validação de certificado
+              href: certificate-selection-and-validation.md
+        - name: Autenticação da Internet
+          href: internet-authentication.md
+          items:
+            - name: Autenticação Básica e Digest
+              href: basic-and-digest-authentication.md
+            - name: Autenticação NTLM e Kerberos
+              href: ntlm-and-kerberos-authentication.md
+        - name: Permissões da Web e de soquete
+          href: web-and-socket-permissions.md
+    - name: Melhores práticas para classes System.Net
+      href: best-practices-for-system-net-classes.md
+    - name: Acessando a Internet por meio de um proxy
+      href: accessing-the-internet-through-a-proxy.md
       items:
-      - name: Seleção e validação de certificado
-        href: certificate-selection-and-validation.md
-    - name: Autenticação da Internet
-      href: internet-authentication.md
+        - name: Configuração de proxy
+          href: proxy-configuration.md
+        - name: Detecção automática de proxy
+          href: automatic-proxy-detection.md
+        - name: 'Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet'
+          href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
+        - name: 'Como: Substituir uma seleção de proxy global'
+          href: how-to-override-a-global-proxy-selection.md
+    - name: NetworkInformation
+      href: networkinformation.md
       items:
-      - name: Autenticação Básica e Digest
-        href: basic-and-digest-authentication.md
-      - name: Autenticação NTLM e Kerberos
-        href: ntlm-and-kerberos-authentication.md
-    - name: Permissões da Web e de soquete
-      href: web-and-socket-permissions.md
-  - name: Melhores práticas para classes System.Net
-    href: best-practices-for-system-net-classes.md
-  - name: Acessando a Internet por meio de um proxy
-    href: accessing-the-internet-through-a-proxy.md
-    items:
-    - name: Configuração de proxy
-      href: proxy-configuration.md
-    - name: Detecção automática de proxy
-      href: automatic-proxy-detection.md
-    - name: 'Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet'
-      href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
-    - name: 'Como: Substituir uma seleção de proxy global'
-      href: how-to-override-a-global-proxy-selection.md
-  - name: NetworkInformation
-    href: networkinformation.md
-    items:
-    - name: 'Como: Detectar a disponibilidade de rede e alterações de endereço'
-      href: how-to-detect-network-availability-and-address-changes.md
-    - name: 'Como: obter informações de interface e de protocolo'
-      href: how-to-get-interface-and-protocol-information.md
-    - name: 'Como: executar ping em um host'
-      href: how-to-ping-a-host.md
-  - name: Alterações no namespace System.Uri na versão 2.0
-    href: changes-to-the-system-uri-namespace-in-version-2-0.md
-  - name: Suporte ao International Resource Identifier em System.Uri
-    href: international-resource-identifier-support-in-system-uri.md
-  - name: Melhorias do desempenho de soquete na versão 3.5
-    href: socket-performance-enhancements-in-version-3-5.md
-  - name: Protocolo PNRP
-    href: peer-name-resolution-protocol.md
-    items:
-    - name: Nomes de par e IDs de PNRP
-      href: peer-names-and-pnrp-ids.md
-    - name: Resolução e publicação de nome de par
-      href: peer-name-publication-and-resolution.md
-    - name: Nuvens PNRP
-      href: pnrp-clouds.md
-    - name: Caches PNRP
-      href: pnrp-caches.md
-    - name: PNRP no desenvolvimento do aplicativo
-      href: pnrp-in-application-development.md
-  - name: Colaboração ponto a ponto
-    href: peer-to-peer-collaboration.md
-    items:
-    - name: Sobre o namespace System.Net.PeerToPeer.Collaboration
-      href: about-the-system-net-peertopeer-collaboration-namespace.md
-    - name: Cenários de rede ponto a ponto
-      href: peer-to-peer-networking-scenarios.md
-  - name: Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
-    href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
-  - name: Autenticação Integrada do Windows com proteção estendida
-    href: integrated-windows-authentication-with-extended-protection.md
-  - name: Passagem de NAT usando IPv6 e Teredo
-    href: nat-traversal-using-ipv6-and-teredo.md
-  - name: Isolamento de rede para Aplicativos da Windows Store
-    href: network-isolation-for-windows-store-apps.md
-  - name: Amostras de programação de rede
-    href: network-programming-samples.md
-ms.openlocfilehash: 9f44403f015f28fe92aed3309584abc51156db3a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467637"
+        - name: 'Como: Detectar a disponibilidade de rede e alterações de endereço'
+          href: how-to-detect-network-availability-and-address-changes.md
+        - name: 'Como: obter informações de interface e de protocolo'
+          href: how-to-get-interface-and-protocol-information.md
+        - name: 'Como: executar ping em um host'
+          href: how-to-ping-a-host.md
+    - name: Alterações no namespace System.Uri na versão 2.0
+      href: changes-to-the-system-uri-namespace-in-version-2-0.md
+    - name: Suporte ao International Resource Identifier em System.Uri
+      href: international-resource-identifier-support-in-system-uri.md
+    - name: Melhorias do desempenho de soquete na versão 3.5
+      href: socket-performance-enhancements-in-version-3-5.md
+    - name: Protocolo PNRP
+      href: peer-name-resolution-protocol.md
+      items:
+        - name: Nomes de par e IDs de PNRP
+          href: peer-names-and-pnrp-ids.md
+        - name: Resolução e publicação de nome de par
+          href: peer-name-publication-and-resolution.md
+        - name: Nuvens PNRP
+          href: pnrp-clouds.md
+        - name: Caches PNRP
+          href: pnrp-caches.md
+        - name: PNRP no desenvolvimento do aplicativo
+          href: pnrp-in-application-development.md
+    - name: Colaboração ponto a ponto
+      href: peer-to-peer-collaboration.md
+      items:
+        - name: Sobre o namespace System.Net.PeerToPeer.Collaboration
+          href: about-the-system-net-peertopeer-collaboration-namespace.md
+        - name: Cenários de rede ponto a ponto
+          href: peer-to-peer-networking-scenarios.md
+    - name: Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
+      href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
+    - name: Autenticação Integrada do Windows com proteção estendida
+      href: integrated-windows-authentication-with-extended-protection.md
+    - name: Passagem de NAT usando IPv6 e Teredo
+      href: nat-traversal-using-ipv6-and-teredo.md
+    - name: Isolamento de rede para Aplicativos da Windows Store
+      href: network-isolation-for-windows-store-apps.md
+    - name: Amostras de programação de rede
+      href: network-programming-samples.md

@@ -1,58 +1,51 @@
-items:
 - name: Padrões de programação assíncrona
   href: index.md
   items:
-  - name: Padrão assíncrono baseado em tarefa (TAP)
-    href: task-based-asynchronous-pattern-tap.md
-    items:
-    - name: Implementando o padrão assíncrono baseado em tarefa
-      href: implementing-the-task-based-asynchronous-pattern.md
-    - name: Consumindo o padrão assíncrono baseado em tarefa
-      href: consuming-the-task-based-asynchronous-pattern.md
-    - name: Interoperabilidade com outros tipos e padrões assíncronos
-      href: interop-with-other-asynchronous-patterns-and-types.md
-  - name: Padrão assíncrono baseado em evento (EAP)
-    href: event-based-asynchronous-pattern-eap.md
-    items:
-    - name: Visão geral do padrão assíncrono baseado em evento
-      href: event-based-asynchronous-pattern-overview.md
-    - name: Implementando o padrão assíncrono baseado em evento
-      href: implementing-the-event-based-asynchronous-pattern.md
-    - name: Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
-      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
-    - name: Decidindo quando implementar o padrão assíncrono baseado em evento
-      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-    - name: 'Como: Implementar um componente compatível com o padrão assíncrono baseado em evento'
-      href: component-that-supports-the-event-based-asynchronous-pattern.md
-    - name: 'Como: Implementar um cliente do padrão assíncrono baseado em evento'
-      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-    - name: 'Como: Usar componentes compatíveis com o padrão assíncrono baseado em evento'
-      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
-  - name: Modelo de programação assíncrona (APM)
-    href: asynchronous-programming-model-apm.md
-    items:
-    - name: Chamando métodos assíncronos usando IAsyncResult
-      href: calling-asynchronous-methods-using-iasyncresult.md
+    - name: Padrão assíncrono baseado em tarefa (TAP)
+      href: task-based-asynchronous-pattern-tap.md
       items:
-      - name: Bloqueando a execução de aplicativos com um AsyncWaitHandle
-        href: blocking-application-execution-using-an-asyncwaithandle.md
-      - name: Bloqueando a execução de um aplicativo finalizando uma operação assíncrona
-        href: blocking-application-execution-by-ending-an-async-operation.md
-      - name: Sondando o status de uma operação assíncrona
-        href: polling-for-the-status-of-an-asynchronous-operation.md
-      - name: Usando um delegado AsyncCallback para finalizar uma operação assíncrona
-        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
-        items:
-        - name: Usando um delegado AsyncCallback e um objeto de estado
-          href: using-an-asynccallback-delegate-and-state-object.md
-    - name: Programação assíncrona usando delegados
-      href: asynchronous-programming-using-delegates.md
+        - name: Implementando o padrão assíncrono baseado em tarefa
+          href: implementing-the-task-based-asynchronous-pattern.md
+        - name: Consumindo o padrão assíncrono baseado em tarefa
+          href: consuming-the-task-based-asynchronous-pattern.md
+        - name: Interoperabilidade com outros tipos e padrões assíncronos
+          href: interop-with-other-asynchronous-patterns-and-types.md
+    - name: Padrão assíncrono baseado em evento (EAP)
+      href: event-based-asynchronous-pattern-eap.md
       items:
-      - name: Chamando métodos síncronos de forma assíncrona
-        href: calling-synchronous-methods-asynchronously.md
-ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467759"
+        - name: Visão geral do padrão assíncrono baseado em evento
+          href: event-based-asynchronous-pattern-overview.md
+        - name: Implementando o padrão assíncrono baseado em evento
+          href: implementing-the-event-based-asynchronous-pattern.md
+        - name: Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
+          href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+        - name: Decidindo quando implementar o padrão assíncrono baseado em evento
+          href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+        - name: 'Como: Implementar um componente compatível com o padrão assíncrono baseado em evento'
+          href: component-that-supports-the-event-based-asynchronous-pattern.md
+        - name: 'Como: Implementar um cliente do padrão assíncrono baseado em evento'
+          href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+        - name: 'Como: Usar componentes compatíveis com o padrão assíncrono baseado em evento'
+          href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+    - name: Modelo de programação assíncrona (APM)
+      href: asynchronous-programming-model-apm.md
+      items:
+        - name: Chamando métodos assíncronos usando IAsyncResult
+          href: calling-asynchronous-methods-using-iasyncresult.md
+          items:
+            - name: Bloqueando a execução de aplicativos com um AsyncWaitHandle
+              href: blocking-application-execution-using-an-asyncwaithandle.md
+            - name: Bloqueando a execução de um aplicativo finalizando uma operação assíncrona
+              href: blocking-application-execution-by-ending-an-async-operation.md
+            - name: Sondando o status de uma operação assíncrona
+              href: polling-for-the-status-of-an-asynchronous-operation.md
+            - name: Usando um delegado AsyncCallback para finalizar uma operação assíncrona
+              href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+              items:
+                - name: Usando um delegado AsyncCallback e um objeto de estado
+                  href: using-an-asynccallback-delegate-and-state-object.md
+        - name: Programação assíncrona usando delegados
+          href: asynchronous-programming-using-delegates.md
+          items:
+            - name: Chamando métodos síncronos de forma assíncrona
+              href: calling-synchronous-methods-asynchronously.md

@@ -1,79 +1,72 @@
-items:
 - name: Segurança
   href: index.md
   items:
-  - name: Conceitos principais de segurança
-    href: key-security-concepts.md
-  - name: Segurança baseada em função
-    href: role-based-security.md
-    items:
-    - name: Objetos Principal e Identity
-      href: principal-and-identity-objects.md
-    - name: 'Como: criar um objeto WindowsPrincipal'
-      href: how-to-create-a-windowsprincipal-object.md
-    - name: 'Como: criar objetos GenericPrincipal e GenericIdentity'
-      href: how-to-create-genericprincipal-and-genericidentity-objects.md
-    - name: Substituindo um objeto Principal
-      href: replacing-a-principal-object.md
-    - name: Representando e revertendo
-      href: impersonating-and-reverting.md
-  - name: Modelo de criptografia
-    href: cryptography-model.md
-    items:
-    - name: Serviços criptográficos
-      href: cryptographic-services.md
-    - name: Gerando chaves para criptografia e descriptografia
-      href: generating-keys-for-encryption-and-decryption.md
-    - name: 'Como: armazenar chaves assimétricas em um contêiner de chave'
-      href: how-to-store-asymmetric-keys-in-a-key-container.md
-    - name: Criptografando dados
-      href: encrypting-data.md
-    - name: Descriptografando dados
-      href: decrypting-data.md
-    - name: Assinaturas criptográficas
-      href: cryptographic-signatures.md
-    - name: Assegurando a integridade dos dados com códigos hash
-      href: ensuring-data-integrity-with-hash-codes.md
-    - name: Criando um esquema criptográfico
-      href: creating-a-cryptographic-scheme.md
-    - name: 'Como: criptografar elementos XML com chaves simétricas'
-      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-    - name: 'Como: descriptografar elementos XML com chaves simétricas'
-      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-    - name: 'Como: criptografar elementos XML com chaves assimétricas'
-      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-    - name: 'Como: descriptografar elementos XML com chaves assimétricas'
-      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-    - name: 'Como: criptografar elementos XML com certificados X.509'
-      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-    - name: 'Como: descriptografar elementos XML com certificados X.509'
-      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-    - name: 'Como: assinar documento XML com assinaturas digitais'
-      href: how-to-sign-xml-documents-with-digital-signatures.md
-    - name: 'Como: verificar as assinaturas digitais de documentos XML'
-      href: how-to-verify-the-digital-signatures-of-xml-documents.md
-    - name: 'Como: usar a proteção de dados'
-      href: how-to-use-data-protection.md
-    - name: 'Como: acessar dispositivos de criptografia de hardware'
-      href: how-to-access-hardware-encryption-devices.md
-    - name: 'Passo a passo: criar um aplicativo criptográfico'
-      href: walkthrough-creating-a-cryptographic-application.md
-  - name: Diretrizes de codificação segura
-    href: secure-coding-guidelines.md
-    items:
-    - name: Protegendo dados de estado
-      href: securing-state-data.md
-    - name: Segurança e entrada do usuário
-      href: security-and-user-input.md
-    - name: Segurança e condições de corrida
-      href: security-and-race-conditions.md
-    - name: Segurança e geração de código durante a execução
-      href: security-and-on-the-fly-code-generation.md
-    - name: Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento
-      href: vulnerabilities-cbc-mode.md
-ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467857"
+    - name: Conceitos principais de segurança
+      href: key-security-concepts.md
+    - name: Segurança baseada em função
+      href: role-based-security.md
+      items:
+        - name: Objetos Principal e Identity
+          href: principal-and-identity-objects.md
+        - name: 'Como: criar um objeto WindowsPrincipal'
+          href: how-to-create-a-windowsprincipal-object.md
+        - name: 'Como: criar objetos GenericPrincipal e GenericIdentity'
+          href: how-to-create-genericprincipal-and-genericidentity-objects.md
+        - name: Substituindo um objeto Principal
+          href: replacing-a-principal-object.md
+        - name: Representando e revertendo
+          href: impersonating-and-reverting.md
+    - name: Modelo de criptografia
+      href: cryptography-model.md
+      items:
+        - name: Serviços criptográficos
+          href: cryptographic-services.md
+        - name: Gerando chaves para criptografia e descriptografia
+          href: generating-keys-for-encryption-and-decryption.md
+        - name: 'Como: armazenar chaves assimétricas em um contêiner de chave'
+          href: how-to-store-asymmetric-keys-in-a-key-container.md
+        - name: Criptografando dados
+          href: encrypting-data.md
+        - name: Descriptografando dados
+          href: decrypting-data.md
+        - name: Assinaturas criptográficas
+          href: cryptographic-signatures.md
+        - name: Assegurando a integridade dos dados com códigos hash
+          href: ensuring-data-integrity-with-hash-codes.md
+        - name: Criando um esquema criptográfico
+          href: creating-a-cryptographic-scheme.md
+        - name: 'Como: criptografar elementos XML com chaves simétricas'
+          href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+        - name: 'Como: descriptografar elementos XML com chaves simétricas'
+          href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+        - name: 'Como: criptografar elementos XML com chaves assimétricas'
+          href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+        - name: 'Como: descriptografar elementos XML com chaves assimétricas'
+          href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+        - name: 'Como: criptografar elementos XML com certificados X.509'
+          href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+        - name: 'Como: descriptografar elementos XML com certificados X.509'
+          href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+        - name: 'Como: assinar documento XML com assinaturas digitais'
+          href: how-to-sign-xml-documents-with-digital-signatures.md
+        - name: 'Como: verificar as assinaturas digitais de documentos XML'
+          href: how-to-verify-the-digital-signatures-of-xml-documents.md
+        - name: 'Como: usar a proteção de dados'
+          href: how-to-use-data-protection.md
+        - name: 'Como: acessar dispositivos de criptografia de hardware'
+          href: how-to-access-hardware-encryption-devices.md
+        - name: 'Passo a passo: criar um aplicativo criptográfico'
+          href: walkthrough-creating-a-cryptographic-application.md
+    - name: Diretrizes de codificação segura
+      href: secure-coding-guidelines.md
+      items:
+        - name: Protegendo dados de estado
+          href: securing-state-data.md
+        - name: Segurança e entrada do usuário
+          href: security-and-user-input.md
+        - name: Segurança e condições de corrida
+          href: security-and-race-conditions.md
+        - name: Segurança e geração de código durante a execução
+          href: security-and-on-the-fly-code-generation.md
+        - name: Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento
+          href: vulnerabilities-cbc-mode.md
