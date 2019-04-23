@@ -3,10 +3,10 @@ title: Validação de segurança
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334647"
 ---
 # <a name="security-validation"></a>Validação de segurança
@@ -108,4 +108,4 @@ public void Validate(ServiceDescription serviceDescription,
   
 ## <a name="see-also"></a>Consulte também
 
-- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

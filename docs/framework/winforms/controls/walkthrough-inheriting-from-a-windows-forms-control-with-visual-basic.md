@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320633"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Passo a passo: Herdar de um controle do Windows Forms com Visual Basic
@@ -140,7 +140,7 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
   
 11. No menu **Depuração**, selecione **Iniciar Depuração**.  
   
-     `Form1` é exibida.  
+     `Form1` é exibido.  
   
 12. Clique em `Valuebutton1`.  
   
@@ -148,7 +148,7 @@ Com o Visual Basic, você pode criar controles personalizados avançados por mei
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Criar um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Passo a passo: Criando um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
 - [Noções básicas de herança (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319918"
 ---
 # <a name="how-to-run-a-workflow"></a>Como: executar um fluxo de trabalho
@@ -62,7 +62,7 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Esse código de hospedagem gerado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> Fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado apenas para fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> Fornece um modelo mais rico para executar fluxos de trabalho que inclui a notificação de eventos de ciclo de vida, controle de execução, retomada do indicador e persistência. Este exemplo usa indicadores e o <xref:System.Activities.WorkflowApplication> é usado para hospedar o fluxo de trabalho. Adicione o seguinte `using` ou **Imports** instrução na parte superior da **Program.cs** ou **Module1.vb** abaixo das **usando** ou **importações** instruções.
+     Esse código de hospedagem gerado usa <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado somente para os fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> fornece um modelo mais avançado para executar fluxos de trabalho que incluem a notificação de eventos de ciclo de vida, o controle de execução, o reinício do indicador e a persistência. Este exemplo usa indicadores e o <xref:System.Activities.WorkflowApplication> é usado para hospedar o fluxo de trabalho. Adicione o seguinte `using` ou **Imports** instrução na parte superior da **Program.cs** ou **Module1.vb** abaixo das **usando** ou **importações** instruções.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -164,8 +164,8 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Programação do Windows Workflow Foundation](programming.md)
-- [Guia de introdução ao tutorial](getting-started-tutorial.md)
-- [Como: criar um fluxo de trabalho](how-to-create-a-workflow.md)
-- [Como: criar e executar um fluxo de trabalho de execução prolongada](how-to-create-and-run-a-long-running-workflow.md)
-- [Entrada de espera em um fluxo de trabalho](waiting-for-input-in-a-workflow.md)
+- [Tutorial de Introdução](getting-started-tutorial.md)
+- [Como: Criar um fluxo de trabalho](how-to-create-a-workflow.md)
+- [Como: Criar e executar uma longa em execução de fluxo de trabalho](how-to-create-and-run-a-long-running-workflow.md)
+- [Esperando entrada em um fluxo de trabalho](waiting-for-input-in-a-workflow.md)
 - [Hospedando fluxos de trabalho](hosting-workflows.md)

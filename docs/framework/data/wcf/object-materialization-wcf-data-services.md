@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335388"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialização de objeto (WCF Data Services)
@@ -48,5 +48,5 @@ Quando você usa o **adicionar referência de serviço** caixa de diálogo para 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
 - [Projeções de consulta](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

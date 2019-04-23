@@ -6,10 +6,10 @@ ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320412"
 ---
 # <a name="xslt-extension-objects"></a>Objetos de extensão XSLT
@@ -41,4 +41,4 @@ Os objetos de extensão são usados para estender a funcionalidade de folhas de 
 ## <a name="see-also"></a>Consulte também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Considerações de segurança XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+- [Considerações de segurança de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

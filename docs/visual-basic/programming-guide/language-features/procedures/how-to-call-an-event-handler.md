@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
 ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320165"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Como: Chamar um manipulador de eventos no Visual Basic
@@ -58,5 +58,5 @@ Uma *evento* é uma ação ou ocorrência — como um mouse clique ou um limite 
 - [Subprocedimentos](./sub-procedures.md)
 - [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Operador AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Como: criar um procedimento](./how-to-create-a-procedure.md)
-- [Como: chamar um procedimento que não retorne um valor](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [Como: Criar um procedimento](./how-to-create-a-procedure.md)
+- [Como: Chamar um procedimento que não retorna um valor](./how-to-call-a-procedure-that-does-not-return-a-value.md)

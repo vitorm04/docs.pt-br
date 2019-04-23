@@ -25,10 +25,10 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320009"
 ---
 # <a name="input-overview"></a>Visão geral da entrada
@@ -58,7 +58,7 @@ ms.locfileid: "59320009"
  O <xref:System.Windows.Input.Mouse> e <xref:System.Windows.Input.Keyboard> classes são abordadas em mais detalhes nesta visão geral.
 
 ### <a name="stylus-input"></a>Entrada de caneta
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem suporte integrado para o <xref:System.Windows.Input.Stylus>.  O <xref:System.Windows.Input.Stylus> é uma entrada de caneta popularizada pelo [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos podem tratar a caneta como um mouse com o mouse [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], mas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também expõe uma abstração de dispositivo de caneta que usam um modelo semelhante ao teclado e mouse.  Todas as [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas à caneta contêm a palavra "Caneta".
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem suporte integrado para o <xref:System.Windows.Input.Stylus>.  O <xref:System.Windows.Input.Stylus> é uma entrada de caneta popularizada pelo [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podem tratar a caneta como um mouse, usando a [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] do mouse, mas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também expõe uma abstração de dispositivo de caneta que usa um modelo semelhante ao teclado e ao mouse.  Todas as [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas à caneta contêm a palavra "Caneta".
 
  Já que a caneta pode atuar como um mouse, aplicativos que dão suporte apenas à entrada de mouse ainda podem obter algum nível de suporte à caneta automaticamente. Quando a caneta é usada desse modo, o aplicativo tem a oportunidade de manipular o evento de caneta apropriado e, em seguida, manipular o evento de mouse correspondente. Além disso, os serviços de alto nível, por exemplo, a entrada de tinta, também estão disponíveis por meio da abstração do dispositivo de caneta.  Para obter mais informações sobre a tinta como entrada, consulte [Introdução à tinta](getting-started-with-ink.md).
 
@@ -66,9 +66,9 @@ ms.locfileid: "59320009"
 ## <a name="event-routing"></a>Roteamento de eventos
  Um <xref:System.Windows.FrameworkElement> pode conter outros elementos como elementos filho em seu modelo de conteúdo, formando uma árvore de elementos.  Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o elemento pai pode participar de uma entrada direcionada a seus elementos filho ou outros descendentes por meio da manipulação de eventos. Isso é especialmente útil para a criação de controles com base em controles menores, um processo conhecido como "composição de controle" ou "composição". Para obter mais informações sobre árvores de elementos e como árvores de elementos se relacionam a rotas de evento, consulte [Árvores no WPF](trees-in-wpf.md).
 
- Roteamento de eventos é o processo de encaminhamento de eventos para vários elementos para que um determinado objeto ou elemento ao longo da rota possa optar por oferecer uma resposta significativa (por meio de manipulação) a um evento que possa ter sido originado de um elemento diferente.  Eventos roteados usam um de três mecanismos de roteamento: direto, por propagação e por túnel.  No roteamento direto, o elemento de origem é o único elemento notificado e o evento não será roteado para nenhum outro elemento. No entanto, o evento roteado de modo direto ainda oferece alguns recursos adicionais que só estão presentes para eventos roteados, ao contrário do que acontece para eventos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] padrão. O roteamento por propagação ocorre de baixo para cima na árvore de elementos, notificando primeiro o elemento que originou o evento, depois o elemento pai e assim por diante.  O roteamento por túnel começa na raiz da árvore de elementos prossegue de cima para baixo, terminando com o elemento de origem original.  Para obter mais informações sobre os eventos roteados, consulte [Visão geral de eventos roteados](routed-events-overview.md).
+ Roteamento de eventos é o processo de encaminhamento de eventos para vários elementos para que um determinado objeto ou elemento ao longo da rota possa optar por oferecer uma resposta significativa (por meio de manipulação) a um evento que possa ter sido originado de um elemento diferente.  Eventos roteados usam um de três mecanismos de roteamento: direto, por propagação e por túnel.  No roteamento direto, o elemento de origem é o único elemento notificado e o evento não será roteado para nenhum outro elemento. No entanto, o evento roteado de modo direto ainda oferece alguns recursos adicionais que só estão presentes para eventos roteados, ao contrário do que acontece para eventos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] padrão. O roteamento por propagação ocorre de baixo para cima na árvore de elementos, notificando primeiro o elemento que originou o evento, depois o elemento pai e assim por diante.  O roteamento por túnel começa na raiz da árvore de elementos prossegue de cima para baixo, terminando com o elemento de origem original.  Para obter mais informações sobre eventos roteados, consulte [Visão geral de eventos roteados](routed-events-overview.md).
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos de entrada geralmente vêm em pares que consiste em um evento por túnel e um evento de propagação.  Eventos por túnel são diferenciados dos eventos por propagação com o prefixo "Preview".  Por exemplo, <xref:System.Windows.Input.Mouse.PreviewMouseMove> é a versão de túnel de um evento de movimentação do mouse e <xref:System.Windows.Input.Mouse.MouseMove> é a versão por propagação desse evento. Esse emparelhamento de eventos é uma convenção que é implementada no nível de elemento e não é uma funcionalidade inerente ao sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obter detalhes, consulte a seção Eventos WPF de entrada em [Visão geral de eventos roteados](routed-events-overview.md).
+ Eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de entrada geralmente vêm em pares que consistem em um evento por túnel e um evento por propagação.  Eventos por túnel são diferenciados dos eventos por propagação com o prefixo "Preview".  Por exemplo, <xref:System.Windows.Input.Mouse.PreviewMouseMove> é a versão de túnel de um evento de movimentação do mouse e <xref:System.Windows.Input.Mouse.MouseMove> é a versão por propagação desse evento. Esse emparelhamento de eventos é uma convenção que é implementada no nível de elemento e não é uma funcionalidade inerente ao sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obter detalhes, consulte a seção Eventos WPF de entrada em [Visão geral de eventos roteados](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Manipulação de eventos de entrada
@@ -137,9 +137,9 @@ ms.locfileid: "59320009"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Toque e manipulação
- Novo hardware e a API no sistema operacional Windows 7 fornecem a aplicativos a capacidade de receber entradas de vários toques simultaneamente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que os aplicativos detectem e respondam ao toque de maneira semelhante à que respondem a outras entradas, como o mouse ou teclado, acionando eventos quando o toque ocorre.
+ Novo hardware e a API no sistema operacional Windows 7 fornecem a aplicativos a capacidade de receber entradas de vários toques simultaneamente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que os aplicativos detectem e respondam ao toque de maneira semelhante à que respondem a outras entradas como o mouse ou teclado, acionando eventos quando o toque ocorre.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expõe dois tipos de eventos quando o toque ocorre: eventos e eventos de manipulação de toque. Eventos de toque fornecem dados brutos sobre cada dedo e seu movimento em uma tela touch. Eventos de manipulação interpretam a entrada como determinadas ações. Ambos os tipos de eventos são discutidos nesta seção.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expõe dois tipos de eventos quando o toque ocorre: eventos de toque e eventos de manipulação. Eventos de toque fornecem dados brutos sobre cada dedo e seu movimento em uma tela touch. Eventos de manipulação interpretam a entrada como determinadas ações. Ambos os tipos de eventos são discutidos nesta seção.
 
 ### <a name="prerequisites"></a>Pré-requisitos
  Você precisará dos componentes a seguir para desenvolver um aplicativo que responde ao toque.
@@ -240,7 +240,7 @@ ms.locfileid: "59320009"
 
  É possível que mais de um tipo de manipulação ocorram simultaneamente.
 
- Quando você faz com que objetos respondam a manipulações, você pode fazer com que o objeto pareça ter inércia. Isso pode fazer com que seus objetos simulem o mundo físico. Por exemplo, quando você empurra um livro por uma mesa, o livro continua a mover-se depois de você liberá-lo, caso você o empurre com força suficiente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que você simule esse comportamento, acionando eventos de manipulação após os dedos do usuário libera o objeto.
+ Quando você faz com que objetos respondam a manipulações, você pode fazer com que o objeto pareça ter inércia. Isso pode fazer com que seus objetos simulem o mundo físico. Por exemplo, quando você empurra um livro por uma mesa, o livro continua a mover-se depois de você liberá-lo, caso você o empurre com força suficiente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite simular esse comportamento, acionando eventos de manipulação após os dedos do usuário liberarem o objeto.
 
  Para obter informações sobre como criar um aplicativo que permite que o usuário mover, redimensionar e girar um objeto, consulte [passo a passo: Criando seu primeiro aplicativo do Touch](walkthrough-creating-your-first-touch-application.md).
 
@@ -392,7 +392,7 @@ ms.locfileid: "59320009"
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral do foco](focus-overview.md)
-- [Visão geral dos comandos](commanding-overview.md)
+- [Visão geral de comandos](commanding-overview.md)
 - [Visão geral de eventos roteados](routed-events-overview.md)
 - [Visão geral de elementos base](base-elements-overview.md)
 - [Propriedades](properties-wpf.md)

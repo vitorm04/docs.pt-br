@@ -14,10 +14,10 @@ ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321049"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Como: criar e inicializar ouvintes de rastreamento
@@ -98,5 +98,5 @@ As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:
 
 - [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Como: adicionar instruções de rastreamento ao código de um aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Rastreamento e instrumentação de aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

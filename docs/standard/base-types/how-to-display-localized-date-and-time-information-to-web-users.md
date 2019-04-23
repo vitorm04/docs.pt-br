@@ -16,10 +16,10 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320152"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como: Exibir informações localizadas de data e hora para usuários da Web
@@ -116,4 +116,4 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações
 - [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Analisar cadeias de caracteres de Data e Hora](../../../docs/standard/base-types/parsing-datetime.md)
+- [Analisando cadeias de caracteres de data e hora](../../../docs/standard/base-types/parsing-datetime.md)

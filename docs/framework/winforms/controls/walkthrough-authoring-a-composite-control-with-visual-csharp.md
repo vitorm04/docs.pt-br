@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321023"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Passo a passo: Criando um controle composto com o Visual C\#
@@ -30,7 +30,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 2. Na lista de projetos do Visual c#, selecione a **biblioteca de controle do Windows Forms** modelo de projeto, digite `ctlClockLib` no **nome** caixa e, em seguida, clique em **Okey**.  
   
-     O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecerem componentes chamados `ctlClock`, você pode especificar seu `ctlClock` usando o componente `ctlClockLib.ctlClock.`  
+     O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecem componentes chamados `ctlClock`, será possível especificar o componente `ctlClock` usando `ctlClockLib.ctlClock.`  
   
 3. No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.cs** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.cs`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.  
   
@@ -407,5 +407,5 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
 ## <a name="see-also"></a>Consulte também
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Passo a passo: Herdando um controle do Windows Forms com Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

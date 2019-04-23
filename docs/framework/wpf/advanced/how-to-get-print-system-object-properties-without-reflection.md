@@ -8,10 +8,10 @@ helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
 ms.openlocfilehash: bb906dafd98e75708764b5f0f009900719f6a475
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335193"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>Como: Obter propriedades do objeto do sistema de impressão sem reflexão
@@ -43,4 +43,4 @@ Usando a reflexão para relacionar as propriedades (e os tipos dessas propriedad
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
 - [Documentos no WPF](documents-in-wpf.md)
-- [Visão geral da impressão](printing-overview.md)
+- [Visão Geral da Impressão](printing-overview.md)

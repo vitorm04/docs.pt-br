@@ -9,10 +9,10 @@ helpviewer_keywords:
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
 ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214034"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Como: acessar coleções indexadas por chave no Windows Forms
@@ -54,4 +54,4 @@ ms.locfileid: "59214034"
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)
-- [Como: Adicionar ou remover imagens com o componente ImageList do Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Como: Adicionar ou remover imagens com o componente ImageList dos Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

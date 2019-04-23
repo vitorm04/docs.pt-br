@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320646"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implantando um aplicativo do WPF (WPF)
@@ -21,9 +21,9 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
 -   Implantação do XCopy.  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] implantação.  
+-   Implantação [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] implantação.  
+-   Implantação [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Implantação do XCopy  
@@ -39,15 +39,15 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite que aplicativos sejam empacotados como executáveis independentes que podem ser facilmente distribuídos aos clientes e executados. Além disso, o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] é instalado com [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e permite integração com a área de trabalho, o menu Iniciar e o painel de controle Programas.  
+ O [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite que aplicativos sejam empacotados como executáveis independentes que podem ser distribuídos facilmente para os clientes e executados. Além disso, o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] é instalado com [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e permite integração com a área de trabalho, o menu Iniciar e o painel de controle Programas.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica a instalação e desinstalação de aplicativos, mas ele não fornece recursos para garantir que os aplicativos instalados sejam mantidos atualizados de um ponto de vista do controle de versão.  
+ O [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica a instalação e a desinstalação de aplicativos, mas não fornece recursos para garantir que os aplicativos instalados sejam mantidos atualizados do ponto de vista do controle de versão.  
   
  Para obter mais informações sobre o Windows Installer, consulte [implantação do Windows Installer](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] permite que o estilo da Web para a implantação de aplicativos não-Web. Os aplicativos são publicados e implantados de servidores Web ou de arquivos. Embora o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] não dê suporte a toda a gama de recursos de cliente a que aplicativos instalados por [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] dão, ele dá suporte a um subconjunto que inclui o seguinte:  
+ O [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] permite uma implantação com estilo Web da para aplicativos que não são Web. Os aplicativos são publicados e implantados de servidores Web ou de arquivos. Embora o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] não dê suporte a toda a gama de recursos de cliente a que aplicativos instalados por [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] dão, ele dá suporte a um subconjunto que inclui o seguinte:  
   
 -   Integração com o menu Iniciar e o painel de controle Programas.  
   
@@ -87,7 +87,7 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Implantando aplicativos de navegador XAML  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] são aplicativos compilados que exigem os três arquivos a serem implantados a seguir:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] são aplicativos compilados que exigem que os três arquivos a seguir sejam implantados:  
   
 -   *ApplicationName*.exe: O arquivo de aplicativo do assembly executável.  
   
@@ -124,5 +124,5 @@ Depois de aplicativos do Windows Presentation Foundation (WPF) são criados, ele
   
 ## <a name="see-also"></a>Consulte também
 
-- [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md)
+- [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)
 - [Segurança](../security-wpf.md)

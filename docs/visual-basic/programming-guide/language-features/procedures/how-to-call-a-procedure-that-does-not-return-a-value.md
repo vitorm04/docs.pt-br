@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335466"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Como: Chamar um procedimento que não retorna um valor (Visual Basic)
@@ -34,8 +34,8 @@ Um `Sub` procedimento não retornar um valor para o código de chamada. Você ch
 - <xref:System.ArgumentException>
 - [Procedimentos](./index.md)
 - [Subprocedimentos](./sub-procedures.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Como: criar um procedimento](./how-to-create-a-procedure.md)
-- [Como: chamar um procedimento que retorna um valor](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Como: Criar um procedimento](./how-to-create-a-procedure.md)
+- [Como: Chamar um procedimento que retorna um valor](./how-to-call-a-procedure-that-returns-a-value.md)
 - [Como: Chamar um manipulador de eventos no Visual Basic](./how-to-call-an-event-handler.md)

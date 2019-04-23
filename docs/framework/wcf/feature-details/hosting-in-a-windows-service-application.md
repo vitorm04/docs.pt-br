@@ -3,10 +3,10 @@ title: Hospedando um aplicativo de serviço do Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335362"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
@@ -39,8 +39,8 @@ Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) for
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceProcess>
-- [Passo a passo: Criando um aplicativo de serviço do Windows no Designer de componentes](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [Como: hospedar um serviço WCF em um serviço Windows gerenciado](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Host de serviço do Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)
-- [Arquitetura de programação do aplicativo de serviço](https://go.microsoft.com/fwlink/?LinkId=94876)
-- [Recursos de hospedagem do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Passo a passo: Criando um aplicativo de serviço Windows no Designer de Componentes](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [Como: Hospedar um serviço WCF em um serviço Windows gerenciado](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Host de serviço Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [Arquitetura de programação de aplicativo de serviço](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
