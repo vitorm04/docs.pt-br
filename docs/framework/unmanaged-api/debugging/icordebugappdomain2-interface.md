@@ -17,37 +17,37 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c6ef901f43cd6568f17657ed8e58bc2cc2cc0a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186050"
 ---
-# <a name="icordebugappdomain2-interface"></a><span data-ttu-id="2d261-102">Interface ICorDebugAppDomain2</span><span class="sxs-lookup"><span data-stu-id="2d261-102">ICorDebugAppDomain2 Interface</span></span>
+# <a name="icordebugappdomain2-interface"></a><span data-ttu-id="88c9f-102">Interface ICorDebugAppDomain2</span><span class="sxs-lookup"><span data-stu-id="88c9f-102">ICorDebugAppDomain2 Interface</span></span>
 
-<span data-ttu-id="2d261-103">Fornece métodos para trabalhar com matrizes, ponteiros, ponteiros de função e tipos de referência.</span><span class="sxs-lookup"><span data-stu-id="2d261-103">Provides methods to work with arrays, pointers, function pointers, and reference types.</span></span> <span data-ttu-id="2d261-104">Essa interface é uma extensão da interface ICorDebugAppDomain.</span><span class="sxs-lookup"><span data-stu-id="2d261-104">This interface is an extension of the ICorDebugAppDomain interface.</span></span>  
+<span data-ttu-id="88c9f-103">Fornece métodos para trabalhar com matrizes, ponteiros, ponteiros de função e tipos de referência.</span><span class="sxs-lookup"><span data-stu-id="88c9f-103">Provides methods to work with arrays, pointers, function pointers, and reference types.</span></span> <span data-ttu-id="88c9f-104">Essa interface é uma extensão da interface ICorDebugAppDomain.</span><span class="sxs-lookup"><span data-stu-id="88c9f-104">This interface is an extension of the ICorDebugAppDomain interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2d261-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="2d261-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="88c9f-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="88c9f-105">Methods</span></span>  
   
-|<span data-ttu-id="2d261-106">Método</span><span class="sxs-lookup"><span data-stu-id="2d261-106">Method</span></span>|<span data-ttu-id="2d261-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="2d261-107">Description</span></span>|  
+|<span data-ttu-id="88c9f-106">Método</span><span class="sxs-lookup"><span data-stu-id="88c9f-106">Method</span></span>|<span data-ttu-id="88c9f-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="88c9f-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2d261-108">Método GetArrayOrPointerType</span><span class="sxs-lookup"><span data-stu-id="2d261-108">GetArrayOrPointerType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|<span data-ttu-id="2d261-109">Obtém uma matriz do tipo especificado, ou um ponteiro ou referência ao tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="2d261-109">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>|  
-|[<span data-ttu-id="2d261-110">GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="2d261-110">GetFunctionPointerType</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|<span data-ttu-id="2d261-111">Obtém um ponteiro para uma função que tem uma determinada assinatura.</span><span class="sxs-lookup"><span data-stu-id="2d261-111">Gets a pointer to a function that has a given signature.</span></span>|  
+|[<span data-ttu-id="88c9f-108">Método GetArrayOrPointerType</span><span class="sxs-lookup"><span data-stu-id="88c9f-108">GetArrayOrPointerType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|<span data-ttu-id="88c9f-109">Obtém uma matriz do tipo especificado, ou um ponteiro ou referência ao tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="88c9f-109">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>|  
+|[<span data-ttu-id="88c9f-110">GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="88c9f-110">GetFunctionPointerType</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|<span data-ttu-id="88c9f-111">Obtém um ponteiro para uma função que tem uma determinada assinatura.</span><span class="sxs-lookup"><span data-stu-id="88c9f-111">Gets a pointer to a function that has a given signature.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2d261-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="2d261-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="88c9f-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="88c9f-112">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2d261-113">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="2d261-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="88c9f-113">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="88c9f-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d261-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2d261-114">Requirements</span></span>  
- <span data-ttu-id="2d261-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d261-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88c9f-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="88c9f-114">Requirements</span></span>  
+ <span data-ttu-id="88c9f-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88c9f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d261-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d261-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="88c9f-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="88c9f-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2d261-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d261-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="88c9f-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="88c9f-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="2d261-118">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="2d261-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="88c9f-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88c9f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d261-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2d261-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88c9f-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="88c9f-119">See also</span></span>
 
-- [<span data-ttu-id="2d261-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="2d261-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="88c9f-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="88c9f-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

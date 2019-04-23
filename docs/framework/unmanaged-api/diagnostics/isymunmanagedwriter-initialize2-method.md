@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e645f79018d4ad41451faa07eba860e68b917539
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187012"
 ---
-# <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="48848-102">Método ISymUnmanagedWriter::Initialize2</span><span class="sxs-lookup"><span data-stu-id="48848-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
-<span data-ttu-id="48848-103">Define a interface do emissor de metadados com o qual este gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados.</span><span class="sxs-lookup"><span data-stu-id="48848-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="48848-104">Esse método também permite definir o local final do arquivo de banco de dados (PDB) do programa.</span><span class="sxs-lookup"><span data-stu-id="48848-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  
+# <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="d93d6-102">Método ISymUnmanagedWriter::Initialize2</span><span class="sxs-lookup"><span data-stu-id="d93d6-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
+<span data-ttu-id="d93d6-103">Define a interface do emissor de metadados com o qual este gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados.</span><span class="sxs-lookup"><span data-stu-id="d93d6-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="d93d6-104">Esse método também permite definir o local final do arquivo de banco de dados (PDB) do programa.</span><span class="sxs-lookup"><span data-stu-id="d93d6-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48848-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="48848-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d93d6-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d93d6-105">Syntax</span></span>  
   
 ```  
 HRESULT Initialize2(  
@@ -38,29 +38,29 @@ HRESULT Initialize2(
     [in] const WCHAR  *finalfilename);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48848-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="48848-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d93d6-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d93d6-106">Parameters</span></span>  
  `emitter`  
- <span data-ttu-id="48848-107">[in] Um ponteiro para a interface do emissor de metadados.</span><span class="sxs-lookup"><span data-stu-id="48848-107">[in] A pointer to the metadata emitter interface.</span></span>  
+ <span data-ttu-id="d93d6-107">[in] Um ponteiro para a interface do emissor de metadados.</span><span class="sxs-lookup"><span data-stu-id="d93d6-107">[in] A pointer to the metadata emitter interface.</span></span>  
   
  `tempfilename`  
- <span data-ttu-id="48848-108">[in] Um ponteiro para um `WCHAR` que contém o nome do arquivo no qual os símbolos de depuração são gravados.</span><span class="sxs-lookup"><span data-stu-id="48848-108">[in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written.</span></span> <span data-ttu-id="48848-109">Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.</span><span class="sxs-lookup"><span data-stu-id="48848-109">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
+ <span data-ttu-id="d93d6-108">[in] Um ponteiro para um `WCHAR` que contém o nome do arquivo no qual os símbolos de depuração são gravados.</span><span class="sxs-lookup"><span data-stu-id="d93d6-108">[in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written.</span></span> <span data-ttu-id="d93d6-109">Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.</span><span class="sxs-lookup"><span data-stu-id="d93d6-109">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="48848-110">[in] Se for especificado, o gravador de símbolo emite os símbolos para o determinado <xref:System.Runtime.InteropServices.ComTypes.IStream> em vez de para o arquivo especificado no `filename` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="48848-110">[in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="48848-111">O parâmetro `pIStream` é opcional.</span><span class="sxs-lookup"><span data-stu-id="48848-111">The `pIStream` parameter is optional.</span></span>  
+ <span data-ttu-id="d93d6-110">[in] Se for especificado, o gravador de símbolo emite os símbolos para o determinado <xref:System.Runtime.InteropServices.ComTypes.IStream> em vez de para o arquivo especificado no `filename` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="d93d6-110">[in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="d93d6-111">O parâmetro `pIStream` é opcional.</span><span class="sxs-lookup"><span data-stu-id="d93d6-111">The `pIStream` parameter is optional.</span></span>  
   
  `fFullBuild`  
- <span data-ttu-id="48848-112">[in] `true` quando se trata de uma recompilação completa; `false` quando se trata de uma compilação incremental.</span><span class="sxs-lookup"><span data-stu-id="48848-112">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
+ <span data-ttu-id="d93d6-112">[in] `true` quando se trata de uma recompilação completa; `false` quando se trata de uma compilação incremental.</span><span class="sxs-lookup"><span data-stu-id="d93d6-112">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
   
  `finalfilename`  
- <span data-ttu-id="48848-113">[in] Um ponteiro para um `WCHAR` que é a cadeia de caracteres de caminho para o local final do arquivo PDB.</span><span class="sxs-lookup"><span data-stu-id="48848-113">[in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.</span></span>  
+ <span data-ttu-id="d93d6-113">[in] Um ponteiro para um `WCHAR` que é a cadeia de caracteres de caminho para o local final do arquivo PDB.</span><span class="sxs-lookup"><span data-stu-id="d93d6-113">[in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="48848-114">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="48848-114">Return Value</span></span>  
- <span data-ttu-id="48848-115">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="48848-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d93d6-114">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="d93d6-114">Return Value</span></span>  
+ <span data-ttu-id="d93d6-115">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="d93d6-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48848-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="48848-116">Requirements</span></span>  
- <span data-ttu-id="48848-117">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="48848-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d93d6-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d93d6-116">Requirements</span></span>  
+ <span data-ttu-id="d93d6-117">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d93d6-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48848-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="48848-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d93d6-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d93d6-118">See also</span></span>
 
-- [<span data-ttu-id="48848-119">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="48848-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="48848-120">Método Initialize</span><span class="sxs-lookup"><span data-stu-id="48848-120">Initialize Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+- [<span data-ttu-id="d93d6-119">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="d93d6-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="d93d6-120">Método Initialize</span><span class="sxs-lookup"><span data-stu-id="d93d6-120">Initialize Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)

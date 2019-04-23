@@ -6,26 +6,26 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
 ms.openlocfilehash: 6c91661db92b31e291ede46a509acf8e7bc4b34d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181747"
 ---
-# <a name="printing-and-print-system-management"></a><span data-ttu-id="5c1f7-102">Impressão e gerenciamento do sistema de impressão</span><span class="sxs-lookup"><span data-stu-id="5c1f7-102">Printing and Print System Management</span></span>
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] <span data-ttu-id="5c1f7-103">e o Microsoft .NET Framework introduz um novo caminho de impressão — uma alternativa à [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] impressão — e um conjunto muito maior de gerenciamento do sistema de impressão [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5c1f7-103">and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="printing-and-print-system-management"></a><span data-ttu-id="ecd42-102">Impressão e gerenciamento do sistema de impressão</span><span class="sxs-lookup"><span data-stu-id="ecd42-102">Printing and Print System Management</span></span>
+[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] <span data-ttu-id="ecd42-103">e o Microsoft .NET Framework introduz um novo caminho de impressão — uma alternativa à [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] impressão — e um conjunto muito maior de gerenciamento do sistema de impressão [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ecd42-103">and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5c1f7-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5c1f7-104">In This Section</span></span>  
- [<span data-ttu-id="5c1f7-105">Visão geral da impressão</span><span class="sxs-lookup"><span data-stu-id="5c1f7-105">Printing Overview</span></span>](printing-overview.md)  
- <span data-ttu-id="5c1f7-106">Uma discussão sobre o novo caminho de impressão e [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5c1f7-106">A discussion of the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ecd42-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="ecd42-104">In This Section</span></span>  
+ [<span data-ttu-id="ecd42-105">Visão Geral da Impressão</span><span class="sxs-lookup"><span data-stu-id="ecd42-105">Printing Overview</span></span>](printing-overview.md)  
+ <span data-ttu-id="ecd42-106">Uma discussão sobre o novo caminho de impressão e [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ecd42-106">A discussion of the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
- [<span data-ttu-id="5c1f7-107">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="5c1f7-107">How-to Topics</span></span>](printing-how-to-topics.md)  
- <span data-ttu-id="5c1f7-108">Um conjunto de artigos que mostram como usar o novo caminho de impressão e [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5c1f7-108">A set of articles showing how to use the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+ [<span data-ttu-id="ecd42-107">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="ecd42-107">How-to Topics</span></span>](printing-how-to-topics.md)  
+ <span data-ttu-id="ecd42-108">Um conjunto de artigos que mostram como usar o novo caminho de impressão e [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ecd42-108">A set of articles showing how to use the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c1f7-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5c1f7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ecd42-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ecd42-109">See also</span></span>
 
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>
-- [<span data-ttu-id="5c1f7-110">Documentos no WPF</span><span class="sxs-lookup"><span data-stu-id="5c1f7-110">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="5c1f7-111">Documentos XPS</span><span class="sxs-lookup"><span data-stu-id="5c1f7-111">XPS Documents</span></span>](/windows/desktop/printdocs/documents)
+- [<span data-ttu-id="ecd42-110">Documentos no WPF</span><span class="sxs-lookup"><span data-stu-id="ecd42-110">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="ecd42-111">Documentos XPS</span><span class="sxs-lookup"><span data-stu-id="ecd42-111">XPS Documents</span></span>](/windows/desktop/printdocs/documents)
