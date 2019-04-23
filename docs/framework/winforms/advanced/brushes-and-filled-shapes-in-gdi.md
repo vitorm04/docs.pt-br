@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115304"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pincéis e formas preenchidas no GDI+
@@ -59,7 +59,7 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
  ![Forma Preenchida](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Pincéis de Gradiente  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece dois tipos de pincéis de gradiente: linear e o caminho. É possível usar um pincel de gradiente linear para preencher uma forma com uma cor que muda gradualmente à medida que a forma é movida horizontal, vertical ou diagonalmente. O exemplo de código a seguir mostra como preencher uma elipse com um pincel de gradiente horizontal que muda de azul para verde ao mover da borda esquerda para a borda direita da elipse.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oferece dois tipos de pincéis de gradiente: linear e de caminho. É possível usar um pincel de gradiente linear para preencher uma forma com uma cor que muda gradualmente à medida que a forma é movida horizontal, vertical ou diagonalmente. O exemplo de código a seguir mostra como preencher uma elipse com um pincel de gradiente horizontal que muda de azul para verde ao mover da borda esquerda para a borda direita da elipse.  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
@@ -82,6 +82,6 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
-- [Linhas, curvas e formas](lines-curves-and-shapes.md)
-- [Como: desenhar um retângulo preenchido em um formulário do Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Como: desenhar uma elipse preenchida em um formulário do Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
+- [Como: Desenhar um retângulo preenchido em um formulário do Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Como: Desenhar uma elipse preenchida em um formulário do Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118190"
 ---
 # <a name="windows-communication-foundation-security"></a>Segurança do Windows Communication Foundation
@@ -52,7 +52,7 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
  [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Descreve como fazer a auditoria de eventos de segurança.  
   
- [Orientação de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Diretrizes para criação de aplicativos seguros do WCF.  
   
 ## <a name="reference"></a>Referência  
@@ -61,14 +61,14 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Detalhes de funcionalidades do WCF](../../../../docs/framework/wcf/feature-details/index.md)  
+ [Detalhes de recursos do WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Programação de WCF básica](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Guia de introdução ao tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Visão geral conceitual](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [Configurar seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

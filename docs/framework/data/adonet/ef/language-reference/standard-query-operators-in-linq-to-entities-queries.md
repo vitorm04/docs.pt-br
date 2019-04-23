@@ -3,10 +3,10 @@ title: Operadores de consulta padrão em consultas LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118138"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta padrão em consultas LINQ to Entities
@@ -69,7 +69,7 @@ Em uma consulta, você especifica as informações que deseja recuperar da fonte
 ## <a name="type-methods"></a>Métodos de tipo  
  Os dois métodos LINQ que lidam com conversão de tipo e de teste têm suporte no contexto do Entity Framework. Isso significa que os únicos tipos com suporte são tipos que são mapeados para o tipo apropriado do Entity Framework. Para obter uma lista desses tipos, consulte [tipos de modelo conceituais (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Os métodos de tipo são `Convert` e `OfType`.  
   
- `OfType` há suporte para tipos de entidade. `Convert` há suporte para tipos primitivos do modelo conceitual.  Também há suporte para os métodos C# `is` e `as`.  
+ Há suporte para `OfType` em tipos de entidade. Há suporte para `Convert` em tipos primitivos de modelo conceitual.  Também há suporte para os métodos C# `is` e `as`.  
   
 ## <a name="paging-methods"></a>Métodos de paginação  
  Operações de paginação retornam um único elemento ou em vários elementos de uma sequência. Os métodos de paginação com suporte são `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, e `Take`.  
@@ -78,5 +78,5 @@ Em uma consulta, você especifica as informações que deseja recuperar da fonte
   
 ## <a name="see-also"></a>Consulte também
 
-- [Métodos suportados e sem suporte LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Visão geral dos operadores de consulta padrão](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [Métodos LINQ com e sem suporte (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
+- [Visão Geral de Operadores de Consulta Padrão](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

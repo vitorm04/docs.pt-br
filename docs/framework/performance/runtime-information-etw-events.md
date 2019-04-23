@@ -8,10 +8,10 @@ ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117398"
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de informações de tempo de execução
@@ -46,4 +46,4 @@ Esses eventos ETW registram informações sobre o tempo de execução, incluindo
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

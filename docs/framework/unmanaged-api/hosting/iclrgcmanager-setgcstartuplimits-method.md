@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ffbe29db96cbb6162adc3b4cc77b45dcef27a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117281"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>Método ICLRGCManager::SetGCStartupLimits
@@ -75,7 +75,7 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciamento automático de memória](../../../../docs/standard/automatic-memory-management.md)
-- [Coleta de Lixo](../../../../docs/standard/garbage-collection/index.md)
+- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
+- [Coleta de lixo](../../../../docs/standard/garbage-collection/index.md)
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interface ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

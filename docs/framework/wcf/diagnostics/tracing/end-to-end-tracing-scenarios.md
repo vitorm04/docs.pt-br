@@ -3,10 +3,10 @@ title: Cenários de rastreamento ponta a ponta
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
 ms.openlocfilehash: 6e2f62841e610d6eab95b908088f24cf2fec0c34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113575"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Cenários de rastreamento ponta a ponta
@@ -28,7 +28,7 @@ Esta seção contém tópicos que descrevem os diferentes cenários de uso de ra
   
 -   [Propagação de ID de atividade](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
   
--   [Cenários síncronos utilizando HTTP, TCP ou pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [Cenários síncronos utilizando HTTP, TCP ou Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
 -   [Cenários assíncronos usando HTTP, TCP ou pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
@@ -40,5 +40,5 @@ Esta seção contém tópicos que descrevem os diferentes cenários de uso de ra
   
 ## <a name="see-also"></a>Consulte também
 
-- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
