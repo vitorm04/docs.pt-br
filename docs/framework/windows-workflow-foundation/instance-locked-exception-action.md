@@ -3,10 +3,10 @@ title: Ação bloqueado de exceção de instância
 ms.date: 03/30/2017
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
 ms.openlocfilehash: 0cb39c51436271999c66c30210e0da79adc92e72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326145"
 ---
 # <a name="instance-locked-exception-action"></a>Ação bloqueado de exceção de instância
@@ -20,7 +20,7 @@ A propriedade de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceSt
   
  O recurso protegido instância de ação de exceção oferece suporte aos seguintes cenários. Em todos os cenários, se a propriedade de instanceLockedExceptionAction de SqlWorkflowInstanceStore é definida como <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> ou a <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>, o host tentar de novo transparente para adquirir periodicamente o bloqueio em instâncias.  
   
-1. **Ativando o desligamento elegante e reciclagem sobrepostos domínios de aplicativo.** Suponha que um **AppDomain** com um host de serviço executando instâncias do serviço de fluxo de trabalho está sendo reciclado e novo **AppDomain** é colocado até as novas solicitações em paralelo, enquanto o antigo  **AppDomain** for desativado normalmente. O desligamento espera até que as instâncias de serviço de fluxo de trabalho são ociosos, e então descarrega e persistir as instâncias. Todas as tentativas por hosts em novo **AppDomain** bloquear uma instância fará com que um <xref:System.Runtime.DurableInstancing.InstanceLockedException>.  
+1. **Habilitar desligamento elegante e reciclagem sobrepostos domínios de aplicativo.** Suponha que um **AppDomain** com um host de serviço executando instâncias do serviço de fluxo de trabalho está sendo reciclado e novo **AppDomain** é colocado até as novas solicitações em paralelo, enquanto o antigo  **AppDomain** for desativado normalmente. O desligamento espera até que as instâncias de serviço de fluxo de trabalho são ociosos, e então descarrega e persistir as instâncias. Todas as tentativas por hosts em novo **AppDomain** bloquear uma instância fará com que um <xref:System.Runtime.DurableInstancing.InstanceLockedException>.  
   
 2. **Horizontalmente dimensionamento fluxos de trabalho duráveis através de um farm de servidores homogêneo.** Suponha que um nó de um farm de servidores em que uma instância de fluxo de trabalho está executando falhas e o host de fluxo de trabalho não pode remover os bloqueios na instância que está executando. Quando uma execução do host serviço em outro nó de farm recebe uma mensagem para essa instância do fluxo de trabalho, tentar adquirir bloqueios nessas instâncias que receberá <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Os bloqueios expirarão após algum tempo porque o host que foi suponha renovar o bloqueio ainda não existir.  
   

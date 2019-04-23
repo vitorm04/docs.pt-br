@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330812"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
@@ -25,11 +25,11 @@ Este guia mostra como criar um aplicativo Web do ASP.NET Core e testes de unidad
 
 ### <a name="tutorials"></a>Tutoriais
 
-**[Gravação de aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/using-with-xplat-cli.md)**
+**[Escrevendo aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/using-with-xplat-cli.md)**
 
 Este guia mostra como usar as ferramentas de CLI do .NET Core para criar aplicativos de console de plataforma cruzada. Ele começa com o aplicativo de console básico e, por fim, abrange vários projetos, incluindo testes. Você adiciona recursos passo a passo, ampliando seu conhecimento durante o processo. O [exemplo completo](https://github.com/dotnet/samples/tree/master/core/console-apps) está disponível no repositório de exemplos/dotnet no GitHub.
 
-**[Gravação de Bibliotecas com Ferramentas de Plataforma Cruzada](../core/tutorials/libraries.md)**
+**[Gravando Bibliotecas com Ferramentas de Plataforma Cruzada](../core/tutorials/libraries.md)**
 
 Esse exemplo aborda como escrever bibliotecas para .NET usando ferramentas de CLI de plataforma cruzada. Essas ferramentas proporcionam uma experiência eficiente e de nível baixo que funciona em qualquer sistema operacional com suporte. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) está disponível no repositório de exemplos/dotnet no GitHub.
 
@@ -41,7 +41,7 @@ Confira os [tutoriais do ASP.NET Core](/aspnet/core/tutorials/). Muitos artigos 
 
 ### <a name="samples"></a>Exemplos
 
-**[Iterators](../csharp/iterators.md)**
+**[Iteradores](../csharp/iterators.md)**
 
 Este exemplo demonstra a sintaxe e os recursos para criar e consumir iteradores C#. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/iterators) está disponível no repositório de exemplos/dotnet no GitHub.
 
@@ -49,15 +49,15 @@ Este exemplo demonstra a sintaxe e os recursos para criar e consumir iteradores 
 
 Este exemplo demonstra o uso de muitos recursos de indexadores C#. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/indexers) está disponível no repositório de exemplos/dotnet no GitHub.
 
-**[Representantes e eventos](../csharp/delegates-events.md)**
+**[Delegados e Eventos](../csharp/delegates-events.md)**
 
 Este exemplo demonstra a sintaxe e os recursos para eventos e delegados C#. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) está disponível no repositório de exemplos/dotnet no GitHub. Um [segundo exemplo](https://github.com/dotnet/samples/tree/master/csharp/events), voltado para eventos, também está no mesmo repositório.
 
-**[Árvores de expressão](../csharp/expression-trees.md)**
+**[Árvores de Expressão](../csharp/expression-trees.md)**
 
 Este exemplo demonstra vários dos problemas que podem ser resolvidos usando árvores de expressão. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) está disponível no repositório de exemplos/dotnet no GitHub.
 
-**Exemplos do LINQ**
+**Exemplos LINQ**
 
 Essa série de exemplos demonstra muitos dos recursos da LINQ (Consulta Integrada à Linguagem). O [exemplo completo](https://github.com/dotnet/samples/tree/master/core/linq/csharp) está disponível no repositório de exemplos/dotnet no GitHub.
 
@@ -67,7 +67,7 @@ O exemplo [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensi
 
 ### <a name="tutorials"></a>Tutoriais
 
-**[Aplicativo do Console](../csharp/tutorials/console-teleprompter.md)**
+**[Aplicativo de Console](../csharp/tutorials/console-teleprompter.md)**
 
 Este tutorial demonstra a E/S do Console, a estrutura de um aplicativo de console e os conceitos básicos do modelo de programação assíncrono baseado em tarefa. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) está disponível no repositório de exemplos/dotnet no GitHub.
 
@@ -87,17 +87,17 @@ Este tutorial mostra como compilar um aplicativo de console simples do .NET Core
 
 Este tutorial mostra como compilar uma solução completa do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
 
-**[Criação de um aplicativo do .NET Core compatível com plugins](../core/tutorials/creating-app-with-plugin-support.md)**
+**[Criar um aplicativo do .NET Core compatível com plug-ins](../core/tutorials/creating-app-with-plugin-support.md)**
 
 Este tutorial mostra como criar um aplicativo simples no .NET Core compatível com uma arquitetura de plug-in. O [exemplo completo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) está disponível no repositório de exemplos/dotnet no GitHub.
 
 ## <a name="deploying-to-containers"></a>Implantação em contêineres
 
-**[Execução de aplicativos ASP.NET MVC em contêineres do Windows Docker](../framework/docker/aspnetmvc.md)**
+**[Executando aplicativos ASP.NET MVC em contêineres do Windows Docker](../framework/docker/aspnetmvc.md)**
 
 Este tutorial demonstra como implantar um aplicativo ASP.NET MVC existente em um contêiner do Windows Docker. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) está disponível no repositório de exemplos/dotnet no GitHub.
 
-**[Execução de aplicativos de console do .NET Framework em contêineres do Windows](../framework/docker/console.md)**
+**[Executando aplicativos de console do .NET Framework em contêineres do Windows](../framework/docker/console.md)**
 
 Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) está disponível no repositório de exemplos/dotnet no GitHub.
 

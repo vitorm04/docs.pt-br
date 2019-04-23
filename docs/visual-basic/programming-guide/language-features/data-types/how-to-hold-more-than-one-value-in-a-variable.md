@@ -12,10 +12,10 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332255"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Como: Manter mais de um valor em uma variável (Visual Basic)
@@ -44,9 +44,9 @@ Uma variável contém mais de um valor se você declará-la para ser de um *tipo
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
-- [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Tipos de dados compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Objetos e classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Tipos de valor e referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

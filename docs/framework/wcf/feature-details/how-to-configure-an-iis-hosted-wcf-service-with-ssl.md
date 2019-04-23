@@ -3,10 +3,10 @@ title: 'Como: configurar um serviço do WCF hospedado no IIS com SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
 ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326444"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Como: configurar um serviço do WCF hospedado no IIS com SSL
@@ -146,7 +146,7 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
   
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Instruções de hospedagem de serviço de informação de internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
-- [Práticas recomendadas de hospedagem dos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [Hospedagem do IIS utilizando código embutido](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332580"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Como: Criar uma nova variável (Visual Basic)
@@ -58,10 +58,10 @@ Crie uma variável com um [instrução Dim](../../../../visual-basic/language-re
 ## <a name="see-also"></a>Consulte também
 
 - [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Declaração de variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Nomes de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Características do elemento declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Tipos de valor e referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Características do Elemento Declarado](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Instruções](../../../../visual-basic/language-reference/statements/index.md)
-- [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

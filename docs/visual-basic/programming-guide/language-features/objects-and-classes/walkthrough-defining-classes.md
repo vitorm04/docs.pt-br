@@ -16,10 +16,10 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
 ms.openlocfilehash: 3129824f6e4047420c422503cc366a1c8d28b7e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326210"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>Passo a passo: Definindo Classes (Visual Basic)
@@ -82,4 +82,4 @@ Este passo a passo demonstra como definir classes, que você pode usar para cria
 ## <a name="see-also"></a>Consulte também
 
 - [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)
-- [Objetos e classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

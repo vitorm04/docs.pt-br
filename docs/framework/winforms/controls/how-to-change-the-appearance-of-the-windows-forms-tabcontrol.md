@@ -12,10 +12,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331332"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Como: Alterar a aparência do TabControl do Windows Forms
@@ -71,4 +71,4 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Como: Adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
 - [Como: Desabilitar páginas de guia](how-to-disable-tab-pages.md)
-- [Como: Adicionar e remover guias com o controle TabControl do Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Como: Adicionar e remover guias com o TabControl dos Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

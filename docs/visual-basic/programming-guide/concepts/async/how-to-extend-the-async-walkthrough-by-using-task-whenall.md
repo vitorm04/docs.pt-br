@@ -3,10 +3,10 @@ title: 'Como: Estender o passo a passo assíncronas usando Task. WhenAll (Visual
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331878"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Como: Estender o passo a passo assíncronas usando Task. WhenAll (Visual Basic)
@@ -75,7 +75,7 @@ Melhore o desempenho da solução assíncrona em [Passo a passo: Acessando a Web
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. Aplique `Task.WhenAll` à coleção de tarefas `downloadTasks`. `Task.WhenAll` Retorna uma única tarefa que termina quando todas as tarefas na coleção de tarefas forem concluídas.  
+4. Aplique `Task.WhenAll` à coleção de tarefas `downloadTasks`. O `Task.WhenAll` retorna uma única tarefa que será terminada quando todas as tarefas na coleção de tarefas forem concluídas.  
   
      No exemplo a seguir, a expressão `Await` aguarda a conclusão da única tarefa que o `WhenAll` retorna. A expressão é avaliada para uma matriz de inteiros, em que cada inteiro é o comprimento de um site baixado. Adicione o seguinte código ao `SumPageSizesAsync`, logo após o código que você adicionou na etapa anterior.  
   
@@ -148,7 +148,7 @@ Melhore o desempenho da solução assíncrona em [Passo a passo: Acessando a Web
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. Em seguida, aplique `Task.WhenAll` à coleção de tarefas `downloadTasks`. `Task.WhenAll` Retorna uma única tarefa que termina quando todas as tarefas na coleção de tarefas forem concluídas.  
+4. Em seguida, aplique `Task.WhenAll` à coleção de tarefas `downloadTasks`. O `Task.WhenAll` retorna uma única tarefa que será terminada quando todas as tarefas na coleção de tarefas forem concluídas.  
   
      No exemplo a seguir, a expressão `Await` aguarda a conclusão da única tarefa que o `WhenAll` retorna. Quando concluída, a expressão `Await` é avaliada para uma matriz de inteiros, em que cada inteiro é o comprimento de um site baixado. Adicione o seguinte código ao `SumPageSizesAsync`, logo após o código que você adicionou na etapa anterior.  
   

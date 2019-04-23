@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331475"
 ---
 # <a name="how-to-display-pop-up-help"></a>Como: exibir a ajuda pop-up
@@ -44,6 +44,6 @@ Uma maneira de exibir a Ajuda no Windows Forms é por meio de **ajuda** botão, 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ajuda de controle usando ToolTips](control-help-using-tooltips.md)
-- [Integrando a ajuda do usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Ajuda de Controle Usando ToolTips](control-help-using-tooltips.md)
+- [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

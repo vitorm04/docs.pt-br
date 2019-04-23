@@ -5,10 +5,10 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331800"
 ---
 # <a name="securing-clients"></a>Protegendo clientes
@@ -152,9 +152,9 @@ No Windows Communication Foundation (WCF), o serviço determina os requisitos de
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
-- [Ferramenta Configuration Editor (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [Serviços de segurança](../../../docs/framework/wcf/securing-services.md)
-- [Usando um cliente WCF para acessar um serviço](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Como: especificar valores de credenciais de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Como: especificar o tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)
+- [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Como: Especificar valores de credenciais de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Como: Especificar o tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

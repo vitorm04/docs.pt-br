@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332138"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
@@ -35,7 +35,7 @@ Um valor nulo em um banco de dados relacional é usado quando o valor em uma col
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Noções básicas sobre a opção ANSI_NULLS  
- <xref:System.Data.SqlTypes> fornece a mesma semântica que quando a opção ANSI_NULLS é definida no SQL Server. Todos os operadores aritméticos (+, -, *, /, %), operadores bit a bit (~, &, &#124;), e a maioria das funções de retorno nulo se qualquer um dos operandos ou argumentos for nulo, exceto para a propriedade `IsNull`.  
+ <xref:System.Data.SqlTypes> fornece a mesma semântica do que a proporcionada quando a opção ANSI_NULLS é definida no SQL Server. Todos os operadores aritméticos (+, -, *, /, %), operadores bit a bit (~, &, &#124;), e a maioria das funções de retorno nulo se qualquer um dos operandos ou argumentos for nulo, exceto para a propriedade `IsNull`.  
   
  O padrão ANSI SQL-92 não suporta *columnName* = NULL em uma cláusula WHERE. No SQL Server, a opção ANSI_NULLS controla a nulidade padrão no banco de dados e a avaliação das comparações com valores nulos. Se ANSI_NULLS for ativado (o padrão), o operador IS NULL deverá ser usado nas expressões durante o teste de valores nulos. Por exemplo, a comparação a seguir sempre produzirá unknown quando ANSI_NULLS for ativado:  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  Não há suporte no momento para a estrutura `Nullable<T>` ou <xref:System.Nullable> no `DataSet`.  
   
 ### <a name="multiple-column-row-assignment"></a>Atribuição de várias colunas (linha)  
- `DataTable.Add`, `DataTable.LoadDataRow`, ou outras APIs que aceitam um <xref:System.Data.DataRow.ItemArray%2A> que é mapeado para uma linha, 'null' para o valor padrão de DataColumn do mapa. Se um objeto na matriz contiver `DbNull.Value` ou seu equivalente fortemente tipado, as mesmas regras serão aplicadas conforme descrito acima.  
+ `DataTable.Add`, `DataTable.LoadDataRow` ou outras APIs que aceitam um <xref:System.Data.DataRow.ItemArray%2A> que é mapeado para uma linha mapeiam 'null' para o valor padrão de DataColumn. Se um objeto na matriz contiver `DbNull.Value` ou seu equivalente fortemente tipado, as mesmas regras serão aplicadas conforme descrito acima.  
   
  Além disso, as seguintes regras se aplicam a uma instância de atribuições nulas de `DataRow.["columnName"]`:  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Comparando valores nulos com SqlTypes e os tipos CLR  
- Durante a comparação dos valores nulos, é importante compreender a diferença entre a maneira como o método `Equals` avalia os valores nulos no <xref:System.Data.SqlTypes> e a maneira como ele funciona nos tipos CLR. Todos os <xref:System.Data.SqlTypes>`Equals` métodos usam a semântica de banco de dados para avaliar valores nulos: se um ou ambos os valores for nulo, a comparação resulta em null. Por outro lado, o uso do método CLR `Equals` em dois <xref:System.Data.SqlTypes> produzirá verdadeiro se ambos forem nulos. Isso refletirá a diferença entre o uso de um método de instância, como o método CLR `String.Equals`, e o uso do método estático/compartilhado, `SqlString.Equals`.  
+ Durante a comparação dos valores nulos, é importante compreender a diferença entre a maneira como o método `Equals` avalia os valores nulos no <xref:System.Data.SqlTypes> e a maneira como ele funciona nos tipos CLR. Todos os métodos <xref:System.Data.SqlTypes>`Equals` usam a semântica de banco de dados para avaliar valores nulos: se qualquer um ou ambos os valores forem nulos, a comparação produzirá um valor nulo. Por outro lado, o uso do método CLR `Equals` em dois <xref:System.Data.SqlTypes> produzirá verdadeiro se ambos forem nulos. Isso refletirá a diferença entre o uso de um método de instância, como o método CLR `String.Equals`, e o uso do método estático/compartilhado, `SqlString.Equals`.  
   
  O exemplo a seguir mostra a diferença nos resultados entre os métodos `SqlString.Equals` e `String.Equals` quando cada um recebe um par de valores nulos e, em seguida, um par de cadeias de caracteres vazias.  
   
@@ -143,5 +143,5 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de dados do SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Data Types and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md) (Tipos de dados do SQL Server e o ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

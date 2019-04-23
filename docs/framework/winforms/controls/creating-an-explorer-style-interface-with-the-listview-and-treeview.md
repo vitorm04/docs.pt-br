@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332112"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Passo a passo: Criar uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer
@@ -46,7 +46,7 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
   
     1.  Defina a propriedade <xref:System.Windows.Forms.Control.Dock%2A> como <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Defina o <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade `imagelist1.`  
+    2.  Defina a propriedade <xref:System.Windows.Forms.TreeView.ImageList%2A> como `imagelist1.`  
   
 7. Adicionar um <xref:System.Windows.Forms.ListView> controle chamado `listView1` para o formulário e posicione-o no lado direito do <xref:System.Windows.Forms.SplitContainer> controle. Na janela Propriedades para `listview1`, faça o seguinte:  
   
@@ -56,7 +56,7 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
   
     3.  Abra o Editor de coleção ColumnHeader clicando nas reticências (![captura de tela VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) na <xref:System.Windows.Forms.ListView.Columns%2A> propriedade **.** Adicione três colunas e defina suas <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriedade para `Name`, `Type`, e `Last Modified`, respectivamente. Clique em **OK** para fechar a caixa de diálogo.  
   
-    4.  Defina o <xref:System.Windows.Forms.ListView.SmallImageList%2A> propriedade `imageList1.`  
+    4.  Defina a propriedade <xref:System.Windows.Forms.ListView.SmallImageList%2A> como `imageList1.`  
   
 8. Implementar o código para preencher o <xref:System.Windows.Forms.TreeView> conosco e subnós. Adicione este código à classe `Form1`.  
   
@@ -96,15 +96,15 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
   
 -   [Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Como: Adicionar Recursos de Pesquisa a um Controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Como: Adicionar recursos de pesquisa a um controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Como: Anexar um menu ShortCut a um nó TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Como: Anexar um Menu de atalho para um nó TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [Controle ListView](listview-control-windows-forms.md)
-- [Como: Adicionar e remover nós com o controle TreeView do Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Como: Adicionar e remover nós com o controle TreeView dos Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
 - [Como: Adicionar e remover itens com o controle ListView do Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Como: Adicionar colunas ao controle ListView do Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Como: Adicionar colunas para o controle ListView do Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
