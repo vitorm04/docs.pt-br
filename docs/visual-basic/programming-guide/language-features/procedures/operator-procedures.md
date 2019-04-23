@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175013"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimentos do operador (Visual Basic)
@@ -85,9 +85,9 @@ Um procedimento de operador é uma série de instruções do Visual Basic que de
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Como: definir um operador](./how-to-define-an-operator.md)
-- [Como: definir um operador de conversão](./how-to-define-a-conversion-operator.md)
-- [Como: chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
-- [Como: usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Como: Definir um operador](./how-to-define-an-operator.md)
+- [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)
+- [Como: Chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
+- [Como: Usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)

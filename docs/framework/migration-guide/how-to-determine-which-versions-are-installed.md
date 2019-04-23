@@ -12,10 +12,10 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176300"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como: Determinar quais versões do .NET Framework estão instaladas
@@ -41,11 +41,11 @@ Para obter uma lista das versões do .NET Framework instaladas em um computador,
  
 - Encontre versões mais recentes do .NET Framework (4.5 e posterior): 
      - [Usar o Editor do Registro para encontrar versões do .NET Framework](#net_b)  
-     - [Usar o código para consultar versões do .NET Framework no registro](#net_d)  
-     - [Usar o PowerShell para consultar versões do .NET Framework no registro](#ps_a)
+     - [Usar o código para consultar versões do .NET Framework no Registro](#net_d)  
+     - [Usar o PowerShell para consultar versões do .NET Framework no Registro](#ps_a)
 - Encontre versões mais antigas do .NET Framework (1&#8211;4):
      - [Usar o Editor do Registro para encontrar versões do .NET Framework](#net_a)
-     - [Usar o código para consultar versões do .NET Framework no registro](#net_c)   
+     - [Usar o código para consultar versões do .NET Framework no Registro](#net_c)   
 
 Para obter uma lista das versões do CLR instaladas em um computador, use uma ferramenta ou o código:  
   
