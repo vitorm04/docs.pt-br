@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a0372afe6718e5b8cf4d5ed99b3198a8163ae7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214761"
 ---
-# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="8156f-102">Enumeração ECLRAssemblyIdentityFlags</span><span class="sxs-lookup"><span data-stu-id="8156f-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
-<span data-ttu-id="8156f-103">Indica o tipo de identidade de um assembly.</span><span class="sxs-lookup"><span data-stu-id="8156f-103">Indicates the type of an assembly's identity.</span></span>  
+# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="dd079-102">Enumeração ECLRAssemblyIdentityFlags</span><span class="sxs-lookup"><span data-stu-id="dd079-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
+<span data-ttu-id="dd079-103">Indica o tipo de identidade de um assembly.</span><span class="sxs-lookup"><span data-stu-id="dd079-103">Indicates the type of an assembly's identity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8156f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8156f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd079-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dd079-104">Syntax</span></span>  
   
 ```  
 typedef enum _CLRAssemblyIdentityFlags {  
@@ -34,19 +34,19 @@ typedef enum _CLRAssemblyIdentityFlags {
 } ECLRAssemblyIdentityFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8156f-105">Membros</span><span class="sxs-lookup"><span data-stu-id="8156f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dd079-105">Membros</span><span class="sxs-lookup"><span data-stu-id="dd079-105">Members</span></span>  
   
-|<span data-ttu-id="8156f-106">Membro</span><span class="sxs-lookup"><span data-stu-id="8156f-106">Member</span></span>|<span data-ttu-id="8156f-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="8156f-107">Description</span></span>|  
+|<span data-ttu-id="dd079-106">Membro</span><span class="sxs-lookup"><span data-stu-id="dd079-106">Member</span></span>|<span data-ttu-id="dd079-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="dd079-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="8156f-108">A identidade é padronizada.</span><span class="sxs-lookup"><span data-stu-id="8156f-108">The identity is canonicalized.</span></span>|  
+|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="dd079-108">A identidade é padronizada.</span><span class="sxs-lookup"><span data-stu-id="dd079-108">The identity is canonicalized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8156f-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8156f-109">Requirements</span></span>  
- <span data-ttu-id="8156f-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8156f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd079-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dd079-109">Requirements</span></span>  
+ <span data-ttu-id="dd079-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd079-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8156f-111">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8156f-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dd079-111">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dd079-111">**Header:** MSCorEE.h</span></span>  
   
- **<span data-ttu-id="8156f-112">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="8156f-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="dd079-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd079-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8156f-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8156f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd079-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd079-113">See also</span></span>
 
-- [<span data-ttu-id="8156f-114">Hospedando enumerações</span><span class="sxs-lookup"><span data-stu-id="8156f-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="dd079-114">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="dd079-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
