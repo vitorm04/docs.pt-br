@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332203"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de linha de comando (Guia de Programação em C#)
 Você pode enviar argumentos para o método `Main` definindo o método de uma das seguintes maneiras:  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas:  
   
-1.  Cole o código a seguir em qualquer editor de texto e, em seguida, salve o arquivo como um arquivo de texto com o nome `Factorial.cs`.  
+1. Cole o código a seguir em qualquer editor de texto e, em seguida, salve o arquivo como um arquivo de texto com o nome `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  Na tela **Inicial** ou no menu **Iniciar**, abra uma janela de **Prompt de Comando do Desenvolvedor** do Visual Studio e, em seguida, navegue até a pasta que contém o arquivo que você acabou de criar.  
+2. Na tela **Inicial** ou no menu **Iniciar**, abra uma janela de **Prompt de Comando do Desenvolvedor** do Visual Studio e, em seguida, navegue até a pasta que contém o arquivo que você acabou de criar.  
   
-3.  Digite o seguinte comando para compilar o aplicativo.  
+3. Digite o seguinte comando para compilar o aplicativo.  
   
      `csc Factorial.cs`  
   
      Se seu aplicativo não tiver erros de compilação, um arquivo executável chamado `Factorial.exe` será criado.  
   
-4.  Digite o seguinte comando para calcular o fatorial de 3:  
+4. Digite o seguinte comando para calcular o fatorial de 3:  
   
      `Factorial 3`  
   
-5.  O comando produz esta saída: `The factorial of 3 is 6.`  
+5. O comando produz esta saída: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](/visualstudio/ide/reference/debug-page-project-designer).  
@@ -81,5 +81,5 @@ long num = Convert.ToInt64(s);
 - [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)
 - [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Como: acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
-- [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [Valores retornados de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320906"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Expondo componentes do COM para o .NET Framework
 Esta seção resume o processo necessário para expor um componente COM existente ao código gerenciado. Para obter detalhes sobre como escrever servidores COM que são totalmente integrados ao .NET Framework, consulte [Considerações sobre design para interoperação](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -22,25 +22,26 @@ Esta seção resume o processo necessário para expor um componente COM existent
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>Para expor componentes COM ao .NET Framework  
   
-1.  [Importe uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md).  
+1. [Importe uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md).  
   
      O Common Language Runtime exige metadados para todos os tipos, incluindo tipos COM. Há várias maneiras de obter um assembly que contém tipos COM importados como metadados.  
   
-2.  [Use tipos COM em código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
+2. [Use tipos COM em código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
   
      É possível inspecionar tipos COM, ativar instâncias e invocar métodos no objeto COM da mesma maneira que você faria com qualquer tipo gerenciado.  
   
-3.  [Compile um projeto de interoperabilidade](compiling-an-interop-project.md).  
+3. [Compile um projeto de interoperabilidade](compiling-an-interop-project.md).  
   
      O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornece compiladores para várias linguagens em conformidade com CLS (Common Language Specification), incluindo [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++.  
   
-4.  [Implante um aplicativo de interoperabilidade](deploying-an-interop-application.md).  
+4. [Implante um aplicativo de interoperabilidade](deploying-an-interop-application.md).  
   
      Os aplicativos de interoperabilidade são mais bem implantados como assemblies assinados [de nome forte](../app-domains/strong-named-assemblies.md) no cache de assembly global.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interoperação com código não gerenciado](index.md)
 - [Considerações sobre design para interoperação](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
-- [Amostra de interoperabilidade COM: cliente .NET e servidor COM](com-interop-sample-net-client-and-com-server.md)
-- [Componentes de independência de linguagem e componentes independentes da linguagem](../../standard/language-independence-and-language-independent-components.md)
+- [Exemplo de interoperabilidade COM: cliente .NET e servidor COM](com-interop-sample-net-client-and-com-server.md)
+- [Independência da linguagem e componentes independentes da linguagem](../../standard/language-independence-and-language-independent-components.md)
 - [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../tools/gacutil-exe-gac-tool.md)

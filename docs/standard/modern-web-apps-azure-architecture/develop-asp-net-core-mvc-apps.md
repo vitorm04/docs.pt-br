@@ -4,17 +4,17 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128382"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
 > "Não é importante acertar na primeira vez. É extremamente importante acertar na última vez."  
-> _- Andrew Hunt e David Thomas_
+> _– Andrew Hunt e David Thomas_
 
 O ASP.NET Core é uma estrutura multiplataforma de software livre para a criação de aplicativos Web modernos otimizados para a nuvem. Os aplicativos ASP.NET Core são leves e modulares, com suporte interno para a injeção de dependência, o que aumenta a capacidade de teste e a facilidade de manutenção. Combinado com o MVC, que é compatível com a criação de APIs Web modernas, além de aplicativos baseados em exibição, o ASP.NET Core é uma estrutura avançada para a criação de aplicativos Web empresariais.
 
@@ -102,7 +102,7 @@ Os projetos de API Web devem considerar o uso do atributo `[ApiController]`, que
 >
 > - **Ações de roteamento para o controlador**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Model binding**
+> - **Model Binding**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Validação de modelo**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
@@ -425,7 +425,6 @@ Você pode criar seu próprio serviço de autenticação, integrar ao Azure AD e
 #### <a name="custom-security"></a>Segurança personalizada
 
 Tenha um cuidado especial ao "distribuir sua própria" implementação de criptografia, associação de usuário ou sistema de geração de token. Há várias alternativas comerciais e de software livre disponíveis, que certamente terão uma segurança melhor do que uma implementação personalizada.
-
 
 > ### <a name="references--security"></a>Referências – Segurança
 >

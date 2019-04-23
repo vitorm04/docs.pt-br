@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300691"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
 
@@ -34,17 +34,17 @@ Assembly de nome forte só pode usar tipos de outros assemblies de nome forte. C
 
 O cenário a seguir descreve o processo de assinar um assembly com um nome forte e posteriormente referencia-lo por esse nome.
 
-1.  O Assembly A é criado com um nome forte usando um dos seguintes métodos:
+1. O Assembly A é criado com um nome forte usando um dos seguintes métodos:
 
     -   Usando um ambiente de desenvolvimento que dá suporte à criação de nomes fortes, tal como o Visual Studio.
 
     -   Criando um par de chaves de criptografia usando a [ferramenta Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e atribuindo esse par de chaves ao assembly usando um compilador de linha de comando ou o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). O Software Development Kit do Windows (SDK do Windows) fornece o Sn.exe e AI.exe.
 
-2.  O ambiente de desenvolvimento ou a ferramenta assina o hash do arquivo que contém o manifesto do assembly com a chave privada do desenvolvedor. Esta assinatura digital é armazenada no arquivo PE que contém o manifesto do Assembly A.
+2. O ambiente de desenvolvimento ou a ferramenta assina o hash do arquivo que contém o manifesto do assembly com a chave privada do desenvolvedor. Esta assinatura digital é armazenada no arquivo PE que contém o manifesto do Assembly A.
 
-3.  O Assembly B é um consumidor do Assembly A. A seção de referência do manifesto do Assembly B inclui um token que representa a chave pública do Assembly A. Um token é uma parte da chave pública completa e é usado em vez da chave em si para economizar espaço.
+3. O Assembly B é um consumidor do Assembly A. A seção de referência do manifesto do Assembly B inclui um token que representa a chave pública do Assembly A. Um token é uma parte da chave pública completa e é usado em vez da chave em si para economizar espaço.
 
-4.  O Common Language Runtime verifica a assinatura do nome forte quando o assembly é colocado no cache de assembly global. Ao associar por nome forte no tempo de execução, o Common Language Runtime compara a chave armazenada no manifesto do Assembly B com a chave usada para gerar o nome forte do Assembly A. Se as verificações de segurança do .NET Framework e a associação forem bem-sucedidas, o Assembly B terá uma garantia de que os bits do Assembly A não foram violados e que esses bits na verdade vêm dos desenvolvedores do Assembly A.
+4. O Common Language Runtime verifica a assinatura do nome forte quando o assembly é colocado no cache de assembly global. Ao associar por nome forte no tempo de execução, o Common Language Runtime compara a chave armazenada no manifesto do Assembly B com a chave usada para gerar o nome forte do Assembly A. Se as verificações de segurança do .NET Framework e a associação forem bem-sucedidas, o Assembly B terá uma garantia de que os bits do Assembly A não foram violados e que esses bits na verdade vêm dos desenvolvedores do Assembly A.
 
 > [!NOTE]
 > Este cenário não aborda problemas de confiança. Os assemblies podem carregar assinaturas Microsoft Authenticode completas além de um nome forte. As assinaturas Authenticode incluem um certificado que estabelece a relação de confiança. É importante observar que os nomes fortes não exigem que o código esteja assinado dessa maneira. Os nomes fortes apenas fornecem uma identidade exclusiva.
@@ -63,18 +63,18 @@ O recurso de desvio se aplica a qualquer assembly que está assinado com um nome
 
 -   Não assinado com atraso.
 
-Esse recurso pode ser desabilitado para aplicativos individuais ou para um computador. Consulte [Como desabilitar o recurso de desvio de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
+Esse recurso pode ser desabilitado para aplicativos individuais ou para um computador. Confira [Como desabilitar a funcionalidade de bypass de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
-|[Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descreve como criar um assembly de nome forte.|
-|[Aprimoramento da nomenclatura forte](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
-|[Como referenciar um assembly de nome forte](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Descreve como referenciar tipos ou recursos em um assembly de nome forte no tempo de compilação ou no tempo de execução.|
-|[Como desabilitar o recurso de desvio de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Descreve como desabilitar o recurso que ignora a validação de assinaturas de nome forte. Esse recurso pode ser desabilitado para todos ou para aplicativos específicos.|
-|[Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)|Fornece uma visão geral dos assemblies de arquivo único e vários arquivos.|
+|[Como: Criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
+|[Como: assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descreve como criar um assembly de nome forte.|
+|[Nomeação forte aprimorada](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Como: Referenciar um assembly de nome forte](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Descreve como referenciar tipos ou recursos em um assembly de nome forte no tempo de compilação ou no tempo de execução.|
+|[Como: Desabilitar a funcionalidade de bypass de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Descreve como desabilitar o recurso que ignora a validação de assinaturas de nome forte. Esse recurso pode ser desabilitado para todos ou para aplicativos específicos.|
+|[Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)|Fornece uma visão geral dos assemblies de arquivo único e vários arquivos.|
 |[Como atrasar a assinatura de um assembly no Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explica como assinar um assembly com um nome forte, depois que o assembly foi criado.|
-|[Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Descreve a ferramenta incluída no .NET Framework que ajuda a criar assemblies com nomes fortes. Esta ferramenta oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.|
+|[Sn.exe (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Descreve a ferramenta incluída no .NET Framework que ajuda a criar assemblies com nomes fortes. Esta ferramenta oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.|
 |[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Descreve a ferramenta incluída no .NET Framework que gera um arquivo que tem um manifesto do assembly de módulos ou arquivos de recurso.|

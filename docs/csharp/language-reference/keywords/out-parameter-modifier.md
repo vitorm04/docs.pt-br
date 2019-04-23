@@ -1,19 +1,19 @@
 ---
 title: Modificador de parâmetro out – Referência de C#
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 8aebe0492728f3ef87256f5d8c4859220d9106cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125733"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador de parâmetro out (Referência de C#)
-A palavra-chave `out` faz com que os argumentos sejam passados por referência. É como a palavra-chave [ref](ref.md), exceto pelo fato de que `ref` requer que a variável seja inicializada antes de ser passada. Também é como a palavra-chave [in](in-parameter-modifier.md), exceto que `in` não permite que o método chamado modifique o valor do argumento. Para usar um parâmetro `out`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `out`. Por exemplo:  
+A palavra-chave `out` faz com que os argumentos sejam passados por referência. Ela torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. É como a palavra-chave [ref](ref.md), exceto pelo fato de que `ref` requer que a variável seja inicializada antes de ser passada. Também é como a palavra-chave [in](in-parameter-modifier.md), exceto que `in` não permite que o método chamado modifique o valor do argumento. Para usar um parâmetro `out`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `out`. Por exemplo:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
@@ -22,7 +22,7 @@ A palavra-chave `out` faz com que os argumentos sejam passados por referência. 
   
 Variáveis passadas como argumentos `out` não precisam ser inicializadas antes de serem passadas em uma chamada de método. No entanto, o método chamado é necessário para atribuir um valor antes que o método seja retornado.  
   
-Embora as palavras-chave `in`, `ref` e `out` causem um comportamento de tempo de execução diferente, elas não são consideradas parte da assinatura do método no tempo de compilação. Portanto, os métodos não poderão ser sobrecarregados se a única diferença for que um método usa um argumento `ref` ou `in` e o outro usa um argumento `out`. Por exemplo, o código a seguir, não será compilado:  
+As palavras-chave `in`, `ref` e `out` não são consideradas parte da assinatura do método para fins de resolução de sobrecarga. Portanto, os métodos não poderão ser sobrecarregados se a única diferença for que um método usa um argumento `ref` ou `in` e o outro usa um argumento `out`. Por exemplo, o código a seguir, não será compilado:  
   
 ```csharp
 class CS0663_Example
@@ -48,14 +48,12 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
   
 -   Métodos de iterador, que incluem uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
 
-## <a name="declaring-out-arguments"></a>Declarando argumentos `out`   
+## <a name="declaring-out-parameters"></a>Declarando parâmetros `out`   
 
- Declarar um método com argumentos `out` é útil quando você deseja que um método retorne vários valores. O exemplo a seguir usa `out` para retornar três variáveis com uma única chamada de método. Observe que o terceiro argumento é atribuído a null. Isso permite que os métodos retornem valores opcionalmente.  
+Declarar um método com argumentos `out` é uma solução clássica para retornar vários valores. Começando com o C# 7.0, considere [tuplas](../../tuples.md) para cenários semelhantes. O exemplo a seguir usa `out` para retornar três variáveis com uma única chamada de método. Observe que o terceiro argumento é atribuído a null. Isso permite que os métodos retornem valores opcionalmente.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- O [padrão Try](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods) envolve retornar um `bool` para indicar se uma operação teve êxito ou falhou, bem como retornar o valor produzido pela operação em um argumento `out`. Diversos métodos de análise, como o método [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)), usam esse padrão.
-   
 ## <a name="calling-a-method-with-an-out-argument"></a>Chamando um método com um argumento `out`
 
 No C# 6 e em versões anteriores, você precisa declarar uma variável em uma instrução separada antes de passá-lo como um argumento `out`. O exemplo a seguir declara uma variável chamada `number` antes de passá-la para o método [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)), que tenta converter uma cadeia de caracteres em um número.
@@ -77,5 +75,5 @@ No exemplo anterior, a variável `number` é fortemente tipada como um `int`. Vo
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
 - [Parâmetros de método](../../../csharp/language-reference/keywords/method-parameters.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103006"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexão no .NET Framework para aplicativos da Windows Store
 Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  
@@ -42,5 +42,6 @@ Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework i
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [.NET para aplicativos da Windows Store – APIs com suporte](https://go.microsoft.com/fwlink/?LinkID=225700)

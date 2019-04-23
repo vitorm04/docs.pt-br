@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654595"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341069"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  
@@ -75,11 +75,11 @@ A execução lado a lado é a capacidade de executar várias versões de um apli
   
  Se houver um arquivo de configuração de aplicativo, o tempo de execução determinará a versão do tempo de execução apropriada a ser carregada com base nos resultados do processo a seguir:  
   
-1.  O tempo de execução examina o elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no arquivo de configuração de aplicativo. Se uma ou mais das versões com suporte no tempo de execução especificadas no elementos **\<supportedRuntime>** existirem, o tempo de execução carrega a versão de tempo de execução especificada pelo primeiro elementos **\<supportedRuntime>**. Se essa versão não estiver disponível, o tempo de execução examina o próximo elemento  **\<supportedRuntime>** e tenta carregar a versão de tempo de execução especificada nele. Se esta versão do tempo de execução não estiver disponível, os elementos **\<supportedRuntime>** subsequentes serão examinados. Se nenhuma das versões com suporte no tempo de execução estiver disponível, ele não poderá carregar uma versão de tempo de execução e exibirá uma mensagem para o usuário (consulte a etapa 3).  
+1. O tempo de execução examina o elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no arquivo de configuração de aplicativo. Se uma ou mais das versões com suporte no tempo de execução especificadas no elementos **\<supportedRuntime>** existirem, o tempo de execução carrega a versão de tempo de execução especificada pelo primeiro elementos **\<supportedRuntime>**. Se essa versão não estiver disponível, o tempo de execução examina o próximo elemento  **\<supportedRuntime>** e tenta carregar a versão de tempo de execução especificada nele. Se esta versão do tempo de execução não estiver disponível, os elementos **\<supportedRuntime>** subsequentes serão examinados. Se nenhuma das versões com suporte no tempo de execução estiver disponível, ele não poderá carregar uma versão de tempo de execução e exibirá uma mensagem para o usuário (consulte a etapa 3).  
   
-2.  O tempo de execução lê o cabeçalho do arquivo PE do arquivo executável do aplicativo. Se a versão do tempo de execução especificada pelo cabeçalho do arquivo PE estiver disponível, o tempo de execução carregará a versão. Se a versão de tempo de execução especificada não estiver disponível, o tempo de execução procurará por uma versão de tempo de execução determinada pela Microsoft como compatível com a versão de tempo de execução no cabeçalho PE. Se tal versão não for encontrada, o processo continua na etapa 3.  
+2. O tempo de execução lê o cabeçalho do arquivo PE do arquivo executável do aplicativo. Se a versão do tempo de execução especificada pelo cabeçalho do arquivo PE estiver disponível, o tempo de execução carregará a versão. Se a versão de tempo de execução especificada não estiver disponível, o tempo de execução procurará por uma versão de tempo de execução determinada pela Microsoft como compatível com a versão de tempo de execução no cabeçalho PE. Se tal versão não for encontrada, o processo continua na etapa 3.  
   
-3.  O tempo de execução exibe uma mensagem informando que a versão de tempo de execução com suporte no aplicativo está indisponível. O tempo de execução não está carregado.  
+3. O tempo de execução exibe uma mensagem informando que a versão de tempo de execução com suporte no aplicativo está indisponível. O tempo de execução não está carregado.  
   
     > [!NOTE]
     >  Você pode suprimir a exibição dessa mensagem usando o valor de NoGuiFromShim na chave do Registro HKLM\Software\Microsoft\\.NETFramework ou usando a variável de ambiente COMPLUS_NoGuiFromShim. Por exemplo, você pode suprimir a mensagem para aplicativos que normalmente não interagem com o usuário, como instalações autônomas ou serviços do Windows. Quando a exibição dessa mensagem é suprimida, o tempo de execução grava uma mensagem no log de eventos.  Defina o valor do Registro NoGuiFromShim como 1 para suprimir esta mensagem para todos os aplicativos em um computador. Outra opção é definir a variável de ambiente COMPLUS_NoGuiFromShim como 1 para suprimir a mensagem para aplicativos executados em um contexto de usuário específico.  
@@ -113,11 +113,11 @@ publicKeyToken=...,
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
-|[Configurando o redirecionamento de associação de assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
+|[Como: Habilitar e desabilitar o redirecionamento automático de associação](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
+|[Configurando o redirecionamento de associações de assemblies](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
 |[Execução lado a lado em processo](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de tempo de execução lado a lado em processo para executar várias versões do CLR em um único processo.|  
 |[Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Fornece uma visão geral conceitual de assemblies.|  
 |[Domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md)|Fornece uma visão geral conceitual de domínios de aplicativos.|  
   
 ## <a name="reference"></a>Referência  
- Elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+ [\<Elemento supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

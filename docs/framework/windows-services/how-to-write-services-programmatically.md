@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672906"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328420"
 ---
 # <a name="how-to-write-services-programmatically"></a>Como: Escrever serviços de forma programática
 Quando você opta por não usar o modelo de projeto de Serviço Windows, é possível escrever seus próprios serviços configurando a herança e outros elementos de infraestrutura por conta própria. Ao criar um serviço de forma programática, você precisa executar várias etapas que o modelo executaria para você:  
@@ -27,7 +27,7 @@ Quando você opta por não usar o modelo de projeto de Serviço Windows, é poss
   
 ### <a name="to-write-a-service-programmatically"></a>Para escrever um serviço de forma programático  
   
-1.  Criar um projeto vazio e crie uma referência aos namespaces necessários seguindo estas etapas:  
+1. Criar um projeto vazio e crie uma referência aos namespaces necessários seguindo estas etapas:  
   
     1.  Em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Referências** e clique em **Adicionar Referência**.  
   
@@ -37,31 +37,31 @@ Quando você opta por não usar o modelo de projeto de Serviço Windows, é poss
   
     4.  Clique em **OK**.  
   
-2.  Adicione uma classe e configure-a para ser herdada de <xref:System.ServiceProcess.ServiceBase>:  
+2. Adicione uma classe e configure-a para ser herdada de <xref:System.ServiceProcess.ServiceBase>:  
   
      [!code-csharp[VbRadconService#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#7)]
      [!code-vb[VbRadconService#7](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#7)]  
   
-3.  Adicione o código a seguir para configurar sua classe de serviço:  
+3. Adicione o código a seguir para configurar sua classe de serviço:  
   
      [!code-csharp[VbRadconService#8](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#8)]
      [!code-vb[VbRadconService#8](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#8)]  
   
-4.  Crie um método `Main` para sua classe e use-o para definir o serviço que a classe conterá. `userService1` é o nome da classe:  
+4. Crie um método `Main` para sua classe e use-o para definir o serviço que a classe conterá. `userService1` é o nome da classe:  
   
      [!code-csharp[VbRadconService#9](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#9)]
      [!code-vb[VbRadconService#9](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#9)]  
   
-5.  Substitua o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e defina o processamento que deverá ocorrer quando o serviço for iniciado.  
+5. Substitua o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e defina o processamento que deverá ocorrer quando o serviço for iniciado.  
   
      [!code-csharp[VbRadconService#10](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#10)]
      [!code-vb[VbRadconService#10](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#10)]  
   
-6.  Substitua quaisquer outros métodos para os quais deseje definir um processamento personalizado e escreva o código para determinar as ações que o serviço deve executar em cada caso.  
+6. Substitua quaisquer outros métodos para os quais deseje definir um processamento personalizado e escreva o código para determinar as ações que o serviço deve executar em cada caso.  
   
-7.  Adicionar os instaladores necessários para seu aplicativo de serviço. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7. Adicionar os instaladores necessários para seu aplicativo de serviço. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-8.  Compile o projeto selecionando **Compilar Solução** no menu **Compilar**.  
+8. Compile o projeto selecionando **Compilar Solução** no menu **Compilar**.  
   
     > [!NOTE]
     >  Pressione F5 para executar seu projeto. Você não pode executar um projeto de serviço dessa maneira.  
@@ -71,8 +71,9 @@ Quando você opta por não usar o modelo de projeto de Serviço Windows, é poss
 10. Instale o serviço. Para obter mais informações, confira [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Consulte também
-- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como: criar serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Como: adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+
+- [Introdução a aplicativos do Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: Criar serviços Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Como: Adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
 - [Como: Registrar em log informações sobre serviços](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
 - [Passo a passo: Criando um aplicativo de serviço Windows no Designer de Componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342331"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 Para implantar seu aplicativo .NET Framework com êxito, você deve entender como o Common Language Runtime localiza e associa aos assemblies que compõem seu aplicativo. Por padrão, o tempo de execução tenta associar com a versão exata de um assembly com o qual o aplicativo foi criado. Esse comportamento padrão pode ser substituído pelas configurações do arquivo de configuração.  
@@ -40,16 +40,16 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
   
  O tempo de execução usa as seguintes etapas para resolver uma referência de assembly:  
   
-1.  [Determina a versão do assembly correta](#step1) examinando arquivos de configuração aplicáveis, inclusive o arquivo de configuração de aplicativo, o arquivo de política de publicador e o arquivo de configuração de computador. Se o arquivo de configuração estiver localizado em um computador remoto, o tempo de execução deverá localizar e baixar o arquivo de configuração de aplicativo primeiro.  
+1. [Determina a versão do assembly correta](#step1) examinando arquivos de configuração aplicáveis, inclusive o arquivo de configuração de aplicativo, o arquivo de política de publicador e o arquivo de configuração de computador. Se o arquivo de configuração estiver localizado em um computador remoto, o tempo de execução deverá localizar e baixar o arquivo de configuração de aplicativo primeiro.  
   
-2.  [Verifica se o nome do assembly foi associado antes](#step2) e, em caso afirmativo, usa o assembly carregado anteriormente. Se uma solicitação anterior para carregar o assembly falhou, a solicitação falhará imediatamente sem tentar carregar o assembly.  
+2. [Verifica se o nome do assembly foi associado antes](#step2) e, em caso afirmativo, usa o assembly carregado anteriormente. Se uma solicitação anterior para carregar o assembly falhou, a solicitação falhará imediatamente sem tentar carregar o assembly.  
   
     > [!NOTE]
     >  O cache de falhas de associação de assembly é uma novidade no .NET Framework versão 2.0.  
   
-3.  [Verifica o cache de assembly global](#step3). Se o assembly for encontrado lá, o tempo de execução usará esse assembly.  
+3. [Verifica o cache de assembly global](#step3). Se o assembly for encontrado lá, o tempo de execução usará esse assembly.  
   
-4.  [Investiga o assembly](#step4) usando as seguintes etapas:  
+4. [Investiga o assembly](#step4) usando as seguintes etapas:  
   
     1.  Se a política do publicador e a configuração não afetam a referência original e se a solicitação de associação foi criada usando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, o tempo de execução procura dicas de localização.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Etapa 4: Localizando o assembly por meio de bases de código ou investigação  
  Depois de determinar a versão do assembly correta usando as informações na referência do assembly realizando a chamada e nos arquivos de configuração e após ela ter feito check-in do cache de assembly global (somente para assemblies de nome forte), o Common Language Runtime tenta localizar o assembly. O processo de localização de um assembly envolve as seguintes etapas:  
   
-1.  Se um elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento for encontrado no arquivo de configuração de aplicativo, o tempo de execução verificará o local especificado. Se uma correspondência for encontrada, esse assembly será usado e nenhuma investigação ocorrerá. Se o assembly não for encontrado lá, a solicitação de associação falhará.  
+1. Se um elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento for encontrado no arquivo de configuração de aplicativo, o tempo de execução verificará o local especificado. Se uma correspondência for encontrada, esse assembly será usado e nenhuma investigação ocorrerá. Se o assembly não for encontrado lá, a solicitação de associação falhará.  
   
-2.  O tempo de execução investiga em busca do assembly referenciado usando as regras especificadas posteriormente nesta seção.  
+2. O tempo de execução investiga em busca do assembly referenciado usando as regras especificadas posteriormente nesta seção.  
   
 > [!NOTE]
 >  Se você tiver várias versões de um assembly em um diretório e desejar referenciar uma determinada versão desse assembly, deverá usar o elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) em vez do atributo `privatePath` do elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Se você usar o elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), o tempo de execução interromperá a investigação na primeira vez que encontrar um assembly que corresponde ao nome de assembly simples referenciado, independentemente de ser uma correspondência correta ou não. Se for uma correspondência correta, esse assembly será usado. Se não for uma correspondência correta, a investigação parará e a associação falhará.  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Por exemplo, se o Assembly1 fizer referência ao Assembly2 e o Assembly1 tiver sido baixado de `http://www.code.microsoft.com/utils`, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. Em seguida, o tempo de execução procura pelo assembly em `http://www.code.microsoft.com/utils/Assembly2.dll` e `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Se Assembly2 não for encontrado em um desses locais, o tempo de execução de consultará o Windows Installer.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Implantação](../../../docs/framework/deployment/index.md)

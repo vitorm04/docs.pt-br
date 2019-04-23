@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151262"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importando uma biblioteca de tipos como um assembly
 Definições de tipo COM geralmente residem em uma biblioteca de tipos. Por outro lado, os compiladores em conformidade com CLS produzem metadados de tipo em um assembly. As duas fontes de informações de tipo são muito diferentes. Este tópico descreve técnicas para a geração de metadados de uma biblioteca de tipos. O assembly resultante é chamado de um assembly de interoperabilidade e as informações de tipo contidas nele permitem que aplicativos do .NET Framework usem tipos COM.  
@@ -50,7 +50,7 @@ Definições de tipo COM geralmente residem em uma biblioteca de tipos. Por outr
   
      O importador da biblioteca de tipos fornece opções de linha de comando para ajustar os metadados no arquivo de interoperabilidade resultante, importa tipos de uma biblioteca de tipos existente e gera um assembly de interoperabilidade e um namespace. Para obter instruções, veja [Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   Classe <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> classe  
   
      Essa classe fornece métodos para converter coclasses e interfaces em uma biblioteca de tipos para metadados em um assembly. Ela produz a mesma saída de metadados que Tlbimp.exe. No entanto, ao contrário de Tlbimp.exe, a classe <xref:System.Runtime.InteropServices.TypeLibConverter> pode converter uma biblioteca de tipos na memória em metadados.  
   
@@ -71,13 +71,14 @@ Definições de tipo COM geralmente residem em uma biblioteca de tipos. Por outr
  Para obter mais informações sobre o processo de importação de interoperabilidade COM, consulte [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Expondo componentes do COM ao .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Expondo componentes do COM para o .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Customizing Standard Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)) (Personalizando wrappers padrão)
+- [Personalizando wrappers padrão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [Implantação de um aplicativo de interoperabilidade](../../../docs/framework/interop/deploying-an-interop-application.md)
+- [Implantando um aplicativo de interoperabilidade](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Como: Adicionar referências a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)

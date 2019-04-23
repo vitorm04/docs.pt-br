@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1721d32f8cdc9b6ea4b4732e38afa56a8a532600
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234597"
+---
 ### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>DbParameter.Precision e DbParameter.Scale agora são membros virtuais públicos
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versão|4.5.1|
 |Tipo|Redirecionando|
 |APIs afetadas|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
-

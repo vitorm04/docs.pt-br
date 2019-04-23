@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214735"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
@@ -27,7 +27,7 @@ Se o componente estiver de acordo com a Common Language Specification, ele será
 
 Neste artigo:
 
-* [Regras de conformidade da CLS](#cls-compliance-rules)
+* [Regras de conformidade com CLS](#cls-compliance-rules)
 
     * [Tipos e assinaturas de membro de tipo](#types-and-type-member-signatures)
 
@@ -59,7 +59,7 @@ Neste artigo:
 
     * [Atributos](#attributes)
 
-* [O atributo CLSCompliantAttribute](#the-clscompliantattribute-attribute)
+* [Atributo CLSCompliantAttribute](#the-clscompliantattribute-attribute)
 
 * [Interoperabilidade em qualquer idioma](#cross-language-interoperability)
 
@@ -171,8 +171,8 @@ Eventos | [Eventos](#events) | Os métodos `add` e `remove` de um evento deverã
 Eventos | [Eventos](#events) | Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um, cujo tipo defina o tipo do evento e ele deverá ser derivado de [System.Delegate](xref:System.Delegate). |32
 Eventos | [Eventos](#events) | Os eventos deverão respeitar um padrão de nomenclatura específico. O atributo SpecialName mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.  |33
 Exceções | [Exceções](#exceptions) | Os atributos acionados deverão ser do tipo [System.Exception](xref:System.Exception) ou de um tipo herdado dele. Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção. | 40
-Geral | [Regras de conformidade da CLS](#cls-compliance-rules) | As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição. | 1
-Geral | [Regras de conformidade da CLS](#cls-compliance-rules) | Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS. | 2
+Geral | [Regras de conformidade com CLS](#cls-compliance-rules) | As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição. | 1
+Geral | [Regras de conformidade com CLS](#cls-compliance-rules) | Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS. | 2
 Genéricos | [Tipos e membros genéricos](#generic-types-and-members) | Os tipos aninhados deverão ter, pelo menos, tantos parâmetros genéricos quanto o tipo delimitador. Os parâmetros genéricos em um tipo aninhado correspondem, por posição, aos parâmetros genéricos no tipo delimitador.  | 42
 Genéricos | [Tipos e membros genéricos](#generic-types-and-members) | O nome de um tipo genérico deverá codificar o número de parâmetros de tipo declarados no tipo não aninhado ou recém-introduzidos no tipo, se aninhado, de acordo com as regras definidas anteriormente. | 43
 Genéricos | [Tipos e membros genéricos](#generic-types-and-members) | Um tipo genérico deverá redeclarar restrições suficientes para assegurar que todas as restrições no tipo base ou nas interfaces sejam atendidas pelas restrições de tipo genérico. | 44
@@ -323,11 +323,11 @@ Tipo compatível com CLS | Descrição
 [Int64](xref:System.Int64) | Inteiro com sinal de 64 bits
 [Simples](xref:System.Single) | Valor do ponto flutuante de precisão simples
 [Duplo](xref:System.Double) | Valor do ponto flutuante de precisão dupla
-[Booliano](xref:System.Boolean) | tipo de valor verdadeiro ou falso
+[Boolean](xref:System.Boolean) | tipo de valor verdadeiro ou falso
 [Char](xref:System.Char) | unidade de código codificado UTF-16
 [Decimal](xref:System.Decimal) | Número decimal de ponto não flutuante
 [IntPtr](xref:System.IntPtr) | Ponteiro ou identificador de um tamanho definido por plataforma
-[Cadeia de caracteres](xref:System.String) | Coleção de zero, um ou mais objetos Char
+[Cadeia de Caracteres](xref:System.String) | Coleção de zero, um ou mais objetos Char
 
 Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.
 
@@ -1632,7 +1632,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -1644,7 +1643,6 @@ Assembly: CLSCompliant(True)>
 
 <CLSCompliant(False)> Public Class BaseClass
 End Class
-
 
 Public Class BaseCollection(Of T As BaseClass)
 End Class
@@ -1764,7 +1762,6 @@ using System;
 
 [assembly:CLSCompliant(true)]
 
-
 public class Number<T> where T : struct
 {
    // use Double as the underlying type, since its range is a superset of
@@ -1852,7 +1849,7 @@ End Class
 
 A Common Language Specification impõe um modelo por instanciação conservador para tipos aninhados e membros protegidos. Tipos genéricos abertos não podem expor campos ou membros com assinaturas que contenham uma instanciação específica de um tipo genérico aninhado, protegido. Tipos não genéricos que estendam uma instanciação específica de uma interface ou classe base genérica não podem expor campos ou membros com assinaturas que contenham uma instanciação diferente de um tipo genérico aninhado e protegido.
 
-O exemplo a seguir define um tipo genérico, `C1<T>`, e uma classe protegida, `C1<T>.N`. `C1<T>` possui dois métodos, `M1` e `M2`. No entanto, `M1` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` de `C1<T>`. Uma segunda classe, `C2`, é derivada de`C1<long>`. Tem dois métodos, `M3` e `M4`. `M3` não é compatível com CLS porque tenta retornar um `C1<int>.N` objeto de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.
+O exemplo a seguir define um tipo genérico, `C1<T>`, e uma classe protegida, `C1<T>.N`. `C1<T>` tem dois métodos, `M1` e `M2`. No entanto, `M1` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` de `C1<T>`. Uma segunda classe, `C2`, é derivada de`C1<long>`. Tem dois métodos, `M3` e `M4`. `M3` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.
 
 ```csharp
 using System;
@@ -1893,7 +1890,6 @@ Public Class C1(Of T)
    Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
                                              ' accessible from within C1(Of T) in all
    End Sub                                   ' languages
-
 
    Protected Sub M2(n As C1(Of T).N)     ' CLS-compliant – C1(Of T).N accessible
    End Sub                               ' inside C1(Of T)
@@ -2568,7 +2564,7 @@ End Structure
 
 O construtor ou as propriedades de um atributo compatível com CLS podem expor somente os seguintes tipos:
 
-* [Booliano](xref:System.Boolean)
+* [Boolean](xref:System.Boolean)
 
 * [Byte](xref:System.Byte)
 
@@ -2584,7 +2580,7 @@ O construtor ou as propriedades de um atributo compatível com CLS podem expor s
 
 * [Simples](xref:System.Single)
 
-* [Cadeia de caracteres](xref:System.String)
+* [Cadeia de Caracteres](xref:System.String)
 
 * [Tipo](xref:System.Type)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345086"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opções do compilador C#)
 Esta opção fornece uma maneira conveniente de relatar um erro interno do compilador do C# à Microsoft.  
@@ -28,13 +28,13 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **none**  
+ **nenhum**  
  Relatórios sobre erros internos do compilador não serão coletados ou enviados à Microsoft.  
   
  **prompt**  
  Solicita que você envie um relatório quando um erro interno do compilador for recebido. **prompt** é o padrão quando você compila um aplicativo no ambiente de desenvolvimento.  
   
- **queue**  
+ **fila**  
  Enfileira o relatório de erros. Quando você faz logon com credenciais administrativas, pode relatar falhas desde a última vez que você fez logon. Não será solicitado que você envie relatórios de falhas mais de uma vez a cada três dias. **queue** é o padrão quando você compila um aplicativo na linha de comando.  
   
  **send**  
@@ -51,13 +51,13 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a página **Propriedades** do projeto. Para obter mais informações, consulte [Página Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Abra a página **Propriedades** do projeto. Para obter mais informações, consulte [Página Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Clique na página de propriedades **Compilar**.  
+2. Clique na página de propriedades **Compilar**.  
   
-3.  Clique no botão **Avançado**.  
+3. Clique no botão **Avançado**.  
   
-4.  Modifique a propriedade **Relatório de Erros do Compilador Interno**.  
+4. Modifique a propriedade **Relatório de Erros do Compilador Interno**.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

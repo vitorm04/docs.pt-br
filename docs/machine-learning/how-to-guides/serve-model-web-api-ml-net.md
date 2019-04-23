@@ -3,12 +3,12 @@ title: Usar um modelo de Machine Learning em ASP.NET Core Web API
 description: Usar um modelo de Machine Learning para Análise de Sentimento com ML.NET pela internet usando o ASP.NET Web API
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307909"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321219"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Como fazer: Usar um modelo de Machine Learning por meio do ASP.NET Web API
 
@@ -21,7 +21,7 @@ Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10**
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
+- [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
 - Powershell.
 - Modelo previamente treinado.
     - Use o [tutorial de Análise de Sentimento com ML.NET](../tutorials/sentiment-analysis.md) para criar seu próprio modelo.

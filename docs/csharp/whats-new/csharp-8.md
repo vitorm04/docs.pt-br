@@ -2,19 +2,19 @@
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427273"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
 Há vários aprimoramentos na linguagem C# que você já pode experimentar na versão prévia 2. Os novos recursos adicionados na versão prévia 2 são:
 
 - [Aprimoramentos de correspondência de padrões](#more-patterns-in-more-places):
-  * [Expressões Switch](#switch-expressions)
+  * [Expressões switch](#switch-expressions)
   * [Padrões da propriedade](#property-patterns)
   * [Padrões de tupla](#tuple-patterns)
   * [Padrões posicionais](#positional-patterns)
@@ -24,7 +24,7 @@ Há vários aprimoramentos na linguagem C# que você já pode experimentar na ve
 
 Os recursos de linguagem a seguir apareceram pela primeira vez no C# 8.0 versão prévia 1:
 
-- [Tipos de referência nula](#nullable-reference-types)
+- [Tipos de referência anuláveis](#nullable-reference-types)
 - [Fluxos assíncronos](#asynchronous-streams)
 - [Índices e intervalos](#indices-and-ranges)
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-Você poderia converter um valor `Rainbow` em valores RGB usando o seguinte método que contém uma expressão switch:
+Se seu aplicativo definiu um tipo `RGBColor` que é construído a partir dos componentes `R`, `G` e `B`, você poderia converter um valor `Rainbow` em seus valores RGB usando o método a seguir que contém uma expressão de opção:
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 No exemplo anterior, o arquivo é descartado quando a chave de fechamento do método é atingida. Esse é o final do escopo no qual `file` é declarado. O código anterior é equivalente ao código a seguir usando as [instruções using](../language-reference/keywords/using-statement.md) clássicas:
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

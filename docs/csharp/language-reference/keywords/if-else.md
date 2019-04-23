@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294413"
 ---
 # <a name="if-else-c-reference"></a>if-else (Referência de C#)
 
@@ -82,7 +82,7 @@ O exemplo a seguir determina se um caractere de entrada é um número, uma letra
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Assim como uma instrução no bloco else ou no bloco then pode ser qualquer instrução válida, você pode usar qualquer expressão booliana válida para a condição. Você pode usar operadores lógicos como [&&](../operators/conditional-and-operator.md), [&](../operators/and-operator.md), [&#124;&#124;](../operators/conditional-or-operator.md), [&#124;](../operators/or-operator.md) e [!](../operators/logical-negation-operator.md) para criar condições compostas. O código a seguir mostra exemplos.
+Assim como uma instrução no bloco else ou no bloco then pode ser qualquer instrução válida, você pode usar qualquer expressão booliana válida para a condição. Você pode usar [operadores lógicos](../operators/boolean-logical-operators.md) tais como `!`, `&&`, `||`, `&`, `|`, e `^` para criar condições compostas. O código a seguir mostra exemplos.
 
 ```csharp
 // NOT
@@ -139,7 +139,7 @@ if (!(m >= n || m >= p))
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
-- [?: ??](../operators/conditional-operator.md)
+- [Palavras-chave C#](index.md)
+- [?: Operador](../operators/conditional-operator.md)
 - [Instrução if-else (C++)](/cpp/cpp/if-else-statement-cpp)
 - [switch](switch.md)

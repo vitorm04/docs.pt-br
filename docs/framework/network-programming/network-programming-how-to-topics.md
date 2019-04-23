@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121986"
 ---
 # <a name="network-programming-how-to-topics"></a>Tópicos explicativos de programação de rede
 A lista a seguir inclui links para os tópicos Como fazer encontrados na documentação conceitual para programação de rede.  
@@ -39,13 +39,13 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 -   [Como: Criar um soquete](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
   
--   [Como: Baixar arquivos com FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
+-   [Como: baixar arquivos com FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
   
--   [Como: Carregar arquivos com FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
+-   [Como: carregar arquivos com FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
   
 -   [Como: Listar o conteúdo do diretório com FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- **Protocolo IP versão 6:**  
+ **Protocolo da Internet Versão 6:**  
   
 -   [Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -63,7 +63,7 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 -   [Como: Definir uma política de cache para uma solicitação](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- **Usar proxies:**  
+ **Uso de proxies:**  
   
 -   [Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
@@ -73,11 +73,12 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 -   [Como: Detectar a disponibilidade de rede e alterações de endereço](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
   
--   [Como: Obter informações de interface e de protocolo](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
+-   [Como: obter informações de interface e de protocolo](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
   
--   [Como: Executar ping em um host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+-   [Como: executar ping em um host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Exemplos de rede do .NET na Galeria de Códigos do MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

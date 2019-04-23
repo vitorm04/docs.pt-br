@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488507"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517532"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -69,7 +69,7 @@ As opções a seguir são válidas para arquivos *.exe*, *.dll* e *.winmd* apena
 |**/classlist**|Inclui uma lista de classes definidas no módulo.|
 |**/forward**|Usa declaração da classe de encaminhamento.|
 |**/headers**|Inclui informações de cabeçalho do arquivo na saída.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Desmonta o seguinte, dependendo do argumento fornecido:<br /><br /> –   Desmonta o `class` especificado.<br />–   Desmonta o `member` especificado da `class`.<br />–   Desmonta o `member` da `class` com a assinatura especificada `sig`. O formato de `sig` é:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Observação** No .NET Framework versões 1.0 e 1.1, `sig` deve ser seguido de um parêntese de fechamento: `(sig)`. Desde o Net Framework 2.0, o parêntese de fechamento deve ser omitido: (`sig`.|
+|**/item:** `class`[**::** `member`[`(sig`]]|Desmonta o seguinte, dependendo do argumento fornecido:<br /><br /> –   Desmonta o `class` especificado.<br />–   Desmonta o `member` especificado da `class`.<br />–   Desmonta o `member` da `class` com a assinatura especificada `sig`. O formato de `sig` é:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Observação** No .NET Framework versões 1.0 e 1.1, `sig` deve ser seguido de um parêntese de fechamento: `(sig)`. Desde o .NET Framework 2.0, o parêntese de fechamento deve ser omitido: `(sig`.|
 |**/noil**|Suprime saída de código do assembly IL.|
 |**/stats**|Inclui estatísticas na imagem.|
 |**/typelist**|Produz a lista completa de tipos, para preservar a ordenação de tipos em uma viagem de ida e volta.|

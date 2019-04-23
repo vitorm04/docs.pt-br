@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307711"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Como: Migrar código DCOM gerenciado para o WCF
 O WCF (Windows Communication Foundation) é a opção recomendada e uma escolha segura no lugar do DCOM (Distributed Component Object Model) para chamadas de código gerenciado entre servidores e clientes em um ambiente distribuído. Este artigo mostra como migrar código de DCOM para o WCF para os cenários a seguir.  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Etapa 3: Configurar e iniciar os serviços WCF  
  Para hospedar esses serviços, você precisará fazer as adições a seguir ao arquivo de configuração do servidor (web.config).  
   
-1.  Adicione uma seção `<client>` que descreve o ponto de extremidade para o objeto de sessão.  Nesse cenário, o servidor também atua como um cliente e deve ser configurado para permitir isso.  
+1. Adicione uma seção `<client>` que descreve o ponto de extremidade para o objeto de sessão.  Nesse cenário, o servidor também atua como um cliente e deve ser configurado para permitir isso.  
   
-2.  Na seção `<services>`, declare pontos de extremidade de serviço para a o objeto de fábrica e de sessão.  Isso permite que o cliente se comunique com os pontos de extremidade de serviço, adquira o <xref:System.ServiceModel.EndpointAddress10> e crie o canal de sessão.  
+2. Na seção `<services>`, declare pontos de extremidade de serviço para a o objeto de fábrica e de sessão.  Isso permite que o cliente se comunique com os pontos de extremidade de serviço, adquira o <xref:System.ServiceModel.EndpointAddress10> e crie o canal de sessão.  
   
  A seguir está um exemplo de arquivo de configuração com essas configurações:  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Para chamar o serviço, adicione o código ao cliente para fazer o seguinte:  
   
-1.  Crie um canal para o serviço `ISessionBoundFactory`.  
+1. Crie um canal para o serviço `ISessionBoundFactory`.  
   
-2.  Use o canal para invocar o serviço `ISessionBoundFactory` e obter um objeto <xref:System.ServiceModel.EndpointAddress10>.  
+2. Use o canal para invocar o serviço `ISessionBoundFactory` e obter um objeto <xref:System.ServiceModel.EndpointAddress10>.  
   
-3.  Use o <xref:System.ServiceModel.EndpointAddress10> para criar um canal para obter um objeto de sessão.  
+3. Use o <xref:System.ServiceModel.EndpointAddress10> para criar um canal para obter um objeto de sessão.  
   
-4.  Chame os métodos `SetCurrentValue` e `GetCurrentValue` para demonstrar que ela permanece a mesma instância do objeto que é usada em várias chamadas.  
+4. Chame os métodos `SetCurrentValue` e `GetCurrentValue` para demonstrar que ela permanece a mesma instância do objeto que é usada em várias chamadas.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,7 +422,8 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)
+
+- [Programação de WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Serviços de implantação e projeção](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Compilando clientes](../../../docs/framework/wcf/building-clients.md)
-- [Serviços duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Serviços de duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)

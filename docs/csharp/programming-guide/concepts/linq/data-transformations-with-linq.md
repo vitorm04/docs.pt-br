@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: be488b262764480b519e291727a21830d7a18e8f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326054"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformações de dados com LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] não se trata apenas de recuperação de dados. Também é uma ferramenta poderosa para transformação de dados. Ao usar uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você pode usar uma sequência de origem como entrada e modificá-la de várias maneiras para criar uma nova sequência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
@@ -44,14 +44,14 @@ ms.locfileid: "57201424"
 ## <a name="selecting-a-subset-of-each-source-element"></a>Selecionando um Subconjunto de Cada Elemento de Origem  
  Há duas maneiras principais de selecionar um subconjunto de cada elemento na sequência de origem:  
   
-1.  Para selecionar apenas um membro do elemento de origem, use a operação de ponto. No exemplo a seguir, suponha que um objeto `Customer` contém várias propriedades públicas, incluindo uma cadeia de caracteres denominada `City`. Quando executada, essa consulta produzirá uma sequência de saída de cadeias de caracteres.  
+1. Para selecionar apenas um membro do elemento de origem, use a operação de ponto. No exemplo a seguir, suponha que um objeto `Customer` contém várias propriedades públicas, incluindo uma cadeia de caracteres denominada `City`. Quando executada, essa consulta produzirá uma sequência de saída de cadeias de caracteres.  
   
     ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  Para criar elementos que contenham mais de uma propriedade do elemento de origem, você pode usar um inicializador de objeto com um objeto nomeado ou um tipo anônimo. O exemplo a seguir mostra o uso de um tipo anônimo para encapsular duas propriedades de cada elemento `Customer`:  
+2. Para criar elementos que contenham mais de uma propriedade do elemento de origem, você pode usar um inicializador de objeto com um objeto nomeado ou um tipo anônimo. O exemplo a seguir mostra o uso de um tipo anônimo para encapsular duas propriedades de cada elemento `Customer`:  
   
     ```csharp
     var query = from cust in Customer  
@@ -61,7 +61,7 @@ ms.locfileid: "57201424"
  Para obter mais informações, consulte [Inicializadores de coleção e de objeto](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) e [Tipos anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformando Objetos na Memória em XML  
- As consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilitam a transformação de dados entre estruturas de dados na memória, bancos de dados SQL, conjuntos de dados [!INCLUDE[vstecado](~/includes/vstecado-md.md)] e fluxos ou documentos XML. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] As consultas facilitam a transformação de dados entre estruturas de dados na memória, bancos de dados SQL, conjuntos de dados [!INCLUDE[vstecado](~/includes/vstecado-md.md)] e fluxos ou documentos XML. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "57201424"
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

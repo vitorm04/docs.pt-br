@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303356"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -20,11 +20,11 @@ Este artigo fornece um histórico de cada versão principal da linguagem C#. A e
 As ferramentas de compilação do C# consideram a versão mais recente da linguagem principal como a versão padrão da linguagem. Pode haver versões de ponto entre as versões principais, detalhadas em outros artigos nesta seção. Para usar as últimas funcionalidades em uma versão de ponto, você precisa [configurar a versão da linguagem do compilador](../language-reference/configure-language-version.md) e selecionar a versão. Já houve três versões de ponto desde o C# 7.0:
 
 * [C# 7.3](csharp-7-3.md):
-  - O C# 7.3 está disponível atualmente no [Visual Studio 2017 versão 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) e no [SDK 2.1.300 do .NET Core 2.1 RC1](../../core/whats-new/index.md).
+  - O C# 7.3 está disponível a partir do [Visual Studio 2017 versão 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md):
-  - O C#7.2 está disponível atualmente no [Visual Studio 2017 versão 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
+  - O C# 7.2 está disponível a partir do [Visual Studio 2017 versão 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md):
-  - Esses recursos foram adicionados no [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
+  - O C# 7.1 está disponível a partir do [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
@@ -37,7 +37,7 @@ A versão 1.0 do C# parecia ter poucos recursos, em comparação com os dias de 
 Os principais recursos do C# 1.0 incluíam:
 
 - [Classes](../programming-guide/classes-and-structs/classes.md)
-- [Estruturas](../programming-guide/classes-and-structs/structs.md)
+- [Structs](../programming-guide/classes-and-structs/structs.md)
 - [Interfaces](../programming-guide/interfaces/index.md)
 - [Eventos](../events-overview.md)
 - [Propriedades](../properties.md)
@@ -59,7 +59,7 @@ Neste momento, as coisas começam a ficar interessantes. Vamos dar uma olhada em
 - [Tipos parciais](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Métodos anônimos](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Tipos que permitem valor nulo](../programming-guide/nullable-types/index.md)
-- [Iteradores](../programming-guide/concepts/iterators.md)
+- [Iterators](../programming-guide/concepts/iterators.md)
 - [Covariância e contravariância](../programming-guide/concepts/covariance-contravariance/index.md)
 
 Outros recursos do C# 2.0 adicionaram funcionalidades a recursos existentes:
@@ -87,9 +87,9 @@ O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, p
 - [Expressões lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Árvores de expressão](../expression-trees.md)
 - [Métodos de extensão](../programming-guide/classes-and-structs/extension-methods.md)
-- [Variáveis locais implicitamente tipadas](../language-reference/keywords/var.md)
+- [Variáveis locais de tipo implícito](../language-reference/keywords/var.md)
 - [Métodos parciais](../language-reference/keywords/partial-method.md)
-- [Inicializadores de objeto e de coleção](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Inicializadores de coleção e de objeto](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Numa retrospectiva, muitos desses recursos parecerem inevitáveis e inseparáveis. Todos eles se encaixam estrategicamente. Costuma-se pensar que o recurso irresistível dessa versão do C# foi a expressão de consulta, também conhecida como LINQ (consulta integrada à linguagem).
 
@@ -140,8 +140,8 @@ Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma li
 - [Inicializadores de propriedade automática](./csharp-6.md#auto-property-initializers)
 - [Membros aptos para expressão](./csharp-6.md#expression-bodied-function-members)
 - [Propagador nulo](./csharp-6.md#null-conditional-operators)
-- [Interpolação de cadeia de caracteres](./csharp-6.md#string-interpolation)
-- [Operador nameof](./csharp-6.md#the-nameof-expression)
+- [Interpolação de cadeias de caracteres](./csharp-6.md#string-interpolation)
+- [operador nameof](./csharp-6.md#the-nameof-expression)
 - [Inicializadores de índice](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Outros novos recursos incluem:
@@ -157,7 +157,7 @@ Fizeram ainda outra coisa com esta versão, embora não seja um recurso de lingu
 
 A versão principal mais recente do C# é a versão 7.0. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
 
-- [Variáveis Out](./csharp-7.md#out-variables)
+- [Variáveis out](./csharp-7.md#out-variables)
 - [Tuplas e desconstrução](./csharp-7.md#tuples)
 - [Correspondência de padrões](./csharp-7.md#pattern-matching)
 - [Funções locais](./csharp-7.md#local-functions)
@@ -166,7 +166,7 @@ A versão principal mais recente do C# é a versão 7.0. Esta versão tem alguma
 
 Outros recursos incluíam:
 
-- [Descarta](./csharp-7.md#discards)
+- [Descartes](./csharp-7.md#discards)
 - [Literais binários e os separadores de dígito](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Expressões throw](./csharp-7.md#throw-expressions)
 

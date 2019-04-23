@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200357"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>O que é o ML.NET e como compreender os conceitos básicos de Machine Learning?
 
@@ -24,7 +24,6 @@ O ML.NET é uma estrutura de machine learning grátis, de software livre e multi
 Aprendizado de máquina é uma técnica de ciência de dados que permite que os computadores usem os dados existentes para prever tendências, resultados e comportamentos futuros. Usando aprendizado de máquina, os computadores aprendem sem serem explicitamente programados.
 
 Previsões de aprendizado de máquina podem tornar aplicativos e dispositivos mais inteligentes. Quando você faz compras online, o aprendizado de máquina ajuda a recomendar outros produtos que talvez você goste com base no que comprou. Ao passar o seu cartão de crédito, o aprendizado de máquina compara a transação com um banco de dados de transações e ajuda a detectar fraudes. Quando seu robô aspirador de pó limpa uma sala, o aprendizado de máquina o ajuda a decidir se o trabalho está concluído.
-
 
 ## <a name="short-videos-on-data-science"></a>Vídeos curtos sobre ciência de dados 
 

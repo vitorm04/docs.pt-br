@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213123"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
 A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gerar rapidamente uma classe gerenciada Early Bound para uma classe WMI (Instrumentação de Gerenciamento do Windows) especificada. A classe gerada simplifica o código que você deve gravar para acessar uma instância da classe WMI.  
@@ -64,13 +64,13 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Simples**|  
 |CIM_REAL64|**Duplo**|  
-|CIM_BOOLEAN|**Booliano**|  
-|CIM_String|**Cadeia de caracteres**|  
+|CIM_BOOLEAN|**Boolean**|  
+|CIM_String|**Cadeia de Caracteres**|  
 |CIM_DATETIME|**DateTime** ou **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Object**|  
+|CIM_IUNKNOWN|**Objeto**|  
 |CIM_ARRAY|Matriz dos objetos mencionados acima|  
   
  Observer os seguintes comportamentos quando você gera uma classe WMI:  
@@ -151,8 +151,9 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

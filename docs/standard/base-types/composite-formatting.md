@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517676"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314003"
 ---
 # <a name="composite-formatting"></a>Formatação composta
 
@@ -90,8 +90,8 @@ O recurso de formatação de composição tem suporte de métodos como:
 |Tipo ou categoria de tipo|Consulte|  
 |---------------------------|---------|  
 |Tipos de data e hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipos de enumeração (todos os tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadeias de Caracteres de Formato de Enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipos de enumeração (todos os tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadeias de caracteres de formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Cadeias de caracteres de formato TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -100,15 +100,15 @@ O recurso de formatação de composição tem suporte de métodos como:
   
  A forma como as chaves de escape são interpretadas pode levar a resultados inesperados. Por exemplo, considere o item de formato "{{{0:D}}}", que deve exibir uma chave de abertura, um valor numérico formatado como número decimal e uma chave de fechamento. No entanto, o item de formato na verdade é interpretado da seguinte forma:  
   
-1.  As duas primeiras chaves de abertura ("{{") são escapadas e produzem uma chave de abertura.  
+1. As duas primeiras chaves de abertura ("{{") são escapadas e produzem uma chave de abertura.  
   
-2.  Os três caracteres seguintes ("{0:") são interpretados como o início de um item de formato.  
+2. Os três caracteres seguintes ("{0:") são interpretados como o início de um item de formato.  
   
-3.  O caractere seguinte ("D") seria interpretado como o especificador de formato numérico Decimal padrão, mas as duas chaves de escape seguintes ("}} ") produzem uma única chave. Como a cadeia de caracteres resultante ("D}") não é um especificador de formato numérico padrão, ela é interpretada como uma cadeia de formato personalizado que visa exibir a cadeia de caracteres literal "D}".  
+3. O caractere seguinte ("D") seria interpretado como o especificador de formato numérico Decimal padrão, mas as duas chaves de escape seguintes ("}} ") produzem uma única chave. Como a cadeia de caracteres resultante ("D}") não é um especificador de formato numérico padrão, ela é interpretada como uma cadeia de formato personalizado que visa exibir a cadeia de caracteres literal "D}".  
   
-4.  A última chave ("}") é interpretada como o final do item de formato.  
+4. A última chave ("}") é interpretada como o final do item de formato.  
   
-5.  O resultado final que é exibido é a cadeia de caracteres literal, "{D}". O valor numérico que deveria ser formatado não é exibido.  
+5. O resultado final que é exibido é a cadeia de caracteres literal, "{D}". O valor numérico que deveria ser formatado não é exibido.  
   
  Uma maneira de escrever seu código para evitar a interpretação incorreta de chaves de escape e itens de formato é formatar as chaves e os itens de formato separadamente. Ou seja, na primeira operação de formato exibir uma chave de abertura literal, na operação seguinte exibir o resultado do item de formato e, na operação final, exibir uma chave de fechamento literal. O exemplo a seguir ilustra esta abordagem.  
   
@@ -120,11 +120,11 @@ O recurso de formatação de composição tem suporte de métodos como:
   
  Cada valor na lista de parâmetros que corresponde a um item de formato é convertido em uma cadeia de caracteres da seguinte maneira:  
   
-1.  Se o valor a ser formatado for `null`, uma cadeia de caracteres vazia <xref:System.String.Empty?displayProperty=nameWithType> será retornada.  
+1. Se o valor a ser formatado for `null`, uma cadeia de caracteres vazia <xref:System.String.Empty?displayProperty=nameWithType> será retornada.  
   
-2.  Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Ele passará ao método o valor *formatString* do item de formato, se houver ou `null` se não houver, junto com a implementação de <xref:System.IFormatProvider>. Se a chamada ao método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retorna `null`, a execução continua para a próxima etapa; caso contrário, o resultado da chamada <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> é retornado.
+2. Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Ele passará ao método o valor *formatString* do item de formato, se houver ou `null` se não houver, junto com a implementação de <xref:System.IFormatProvider>. Se a chamada ao método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retorna `null`, a execução continua para a próxima etapa; caso contrário, o resultado da chamada <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> é retornado.
   
-3.  Se o valor implementa a interface <xref:System.IFormattable>, o método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> da interface é chamado. O método receberá o valor *formatString* se houver um no item de formato, ou `null` se não houver. O argumento <xref:System.IFormatProvider> é determinado da seguinte forma:  
+3. Se o valor implementa a interface <xref:System.IFormattable>, o método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> da interface é chamado. O método receberá o valor *formatString* se houver um no item de formato, ou `null` se não houver. O argumento <xref:System.IFormatProvider> é determinado da seguinte forma:  
   
     -   Para um valor numérico, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.NumberFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.NumberFormatInfo> para a cultura do thread atual será usado.  
   
@@ -132,7 +132,7 @@ O recurso de formatação de composição tem suporte de métodos como:
   
     -   Para objetos de outros tipos, se um método de formatação de composição for chamado com um argumento <xref:System.IFormatProvider>, seu valor é passado diretamente para a implementação <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. Caso contrário, `null` é passado para a implementação <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
-4.  O método sem parâmetros `ToString` do tipo, o qual substitui <xref:System.Object.ToString?displayProperty=nameWithType> ou herda o comportamento da sua classe base, é chamado. Nesse caso, a cadeia de caracteres de formato especificada pelo componente *formatString* no item de formato, se houver, será ignorada.  
+4. O método sem parâmetros `ToString` do tipo, o qual substitui <xref:System.Object.ToString?displayProperty=nameWithType> ou herda o comportamento da sua classe base, é chamado. Nesse caso, a cadeia de caracteres de formato especificada pelo componente *formatString* no item de formato, se houver, será ignorada.  
   
  O alinhamento é aplicado após as etapas anteriores terem sido executadas.  
   
@@ -165,11 +165,11 @@ O recurso de formatação de composição tem suporte de métodos como:
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Interpolação de cadeia de caracteres (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Interpolação de cadeia de caracteres (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Cadeias de Caracteres de Formato de Enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Cadeias de caracteres de formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)

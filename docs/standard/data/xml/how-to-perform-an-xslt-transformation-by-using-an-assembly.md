@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345398"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como: Executar uma transformação XSLT usando um assembly
 O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly. O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -132,7 +132,7 @@ O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly.
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Para compilar a folha de estilos com o script habilitado.  
   
-1.  A execução do comando a seguir a partir da linha de comando cria dois assemblies nomeados `Transform.dll` e `Transform_Script1.dll` (Esse é o comportamento padrão. A menos que de outra forma especificado, o nome da classe e do assembly usa como padrão o nome da folha de estilos principal):  
+1. A execução do comando a seguir a partir da linha de comando cria dois assemblies nomeados `Transform.dll` e `Transform_Script1.dll` (Esse é o comportamento padrão. A menos que de outra forma especificado, o nome da classe e do assembly usa como padrão o nome da folha de estilos principal):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Para incluir o assembly compilado como uma referência ao compilar o código.  
   
-1.  Você pode incluir um assembly no Visual Studio adicionando uma referência do Gerenciador de Soluções ou da linha de comando.  
+1. Você pode incluir um assembly no Visual Studio adicionando uma referência do Gerenciador de Soluções ou da linha de comando.  
   
-2.  Para a linha de comando com C#, use o seguinte:  
+2. Para a linha de comando com C#, use o seguinte:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  Para a linha de comando com Visual Basic, use o seguinte:  
+3. Para a linha de comando com Visual Basic, use o seguinte:  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Para usar o assembly compilado em seu código.  
   
-1.  O exemplo a seguir mostra como executar a transformação XSLT usando a folha de estilos compilada.  
+1. O exemplo a seguir mostra como executar a transformação XSLT usando a folha de estilos compilada.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
@@ -179,11 +179,11 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- no exemplo anterior. Para obter mais informações sobre o método Assembly.Load, consulte <xref:System.Reflection.Assembly.Load%2A>  
+ no exemplo anterior. Para obter mais informações sobre o método Assembly.Load, confira <xref:System.Reflection.Assembly.Load%2A>  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Build pela linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Compilando pela linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

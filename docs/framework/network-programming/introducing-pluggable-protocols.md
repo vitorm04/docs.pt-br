@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146140"
 ---
 # <a name="introducing-pluggable-protocols"></a>Apresentando protocolos conectáveis
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Classes de acesso à Internet nos namespaces <xref:System.Net> e <xref:System.Net.Sockets> podem ser usadas para implementar tanto aplicativos baseados na Web quanto baseados na Internet.  
@@ -67,6 +67,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Os desenvolvedores familiarizados com a interface do Windows Sockets ou aqueles que precisam de controle fornecido por programação no nível de soquete descobrirão que as classes **Sockets** satisfazem suas necessidades. As classes **Sockets** são um ponto de transição de código gerenciado para código nativo dentro das classes **System.Net**. Na maioria dos casos, classes **Sockets** realizam marshaling de dados em seus equivalentes do Windows de 32 bits, além de lidarem com quaisquer verificações de segurança necessárias.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)

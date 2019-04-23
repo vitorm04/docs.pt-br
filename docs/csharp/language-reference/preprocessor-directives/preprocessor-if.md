@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318969"
 ---
 # <a name="if-c-reference"></a>#if (Referência de C#)
 
@@ -24,7 +24,7 @@ Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualme
 #endif
 ```
 
-É possível usar os operadores [==](../operators/equality-operators.md#equality-operator-) (igualdade) e [!=](../operators/equality-operators.md#inequality-operator-) (desigualdade) apenas para testar [true](../keywords/true.md) ou [false](../keywords/false.md). True significa que o símbolo foi definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. É possível usar os operadores [&&](../operators/conditional-and-operator.md) (e), [&#124;&#124;](../operators/conditional-or-operator.md) (ou) e [!](../operators/logical-negation-operator.md) (não) para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
+É possível usar os operadores [==](../operators/equality-operators.md#equality-operator-) (igualdade) e [!=](../operators/equality-operators.md#inequality-operator-) (desigualdade) apenas para testar [true](../keywords/true.md) ou [false](../keywords/false.md). True significa que o símbolo foi definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. É possível usar os operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (e), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (ou) e [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (não) para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
 
 ## <a name="remarks"></a>Comentários
 
@@ -32,7 +32,7 @@ Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualme
 
 Uma diretiva condicional que começa com uma diretiva `#if` deverá ser explicitamente encerrada com uma diretiva `#endif`.
 
-A diretiva `#define` permite definir um símbolo. Ao usar o símbolo como a expressão passada para a diretiva `#if`, a expressão será avaliada como `true`.
+`#define` permite definir um símbolo. Ao usar o símbolo como a expressão passada para a diretiva `#if`, a expressão será avaliada como `true`.
 
 Você também pode definir um símbolo com a opção do compilador [-define](../compiler-options/define-compiler-option.md). É possível excluir um símbolo com [#undef](preprocessor-undef.md).
 
@@ -91,5 +91,5 @@ public class MyClass
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Diretivas do pré-processador do C#](index.md)
+- [Diretivas de pré-processador em C#](index.md)
 - [Como: compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

@@ -3,12 +3,12 @@ title: Árvores de Expressão Explicadas
 description: Saiba mais sobre árvores de expressão e como elas são úteis em algoritmos de conversão para execução externa e inspeção do código antes de executá-lo.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 97cba9e5ec388729d23fb2689dfc1842a42af9b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216863"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481425"
 ---
 # <a name="expression-trees-explained"></a>Árvores de Expressão Explicadas
 
@@ -16,9 +16,10 @@ ms.locfileid: "33216863"
 
 Uma Árvore de expressão é uma estrutura de dados que define o código. Elas se baseiam nas mesmas estruturas que um compilador usa para analisar o código e gerar a saída compilada. Ao ler este tutorial, você notará certa semelhança entre árvores de expressão e os tipos usados nas APIs Roslyn para criar [Analyzers e CodeFixes](https://github.com/dotnet/roslyn-analyzers).
 (Analyzers e CodeFixes são pacotes NuGet que realizam análise estática no código e podem sugerir possíveis correções para um desenvolvedor). Os conceitos são semelhantes e o resultado final é uma estrutura de dados que permite o exame do código-fonte de uma maneira significativa. No entanto, as árvores de expressão são baseadas em um conjunto de classes e APIs totalmente diferente das APIs Roslyn.
-    
+
 Vejamos um exemplo simples.
 Aqui está uma linha de código:
+
 ```csharp
 var sum = 1 + 2;
 ```
@@ -26,21 +27,22 @@ Se você analisar isso como uma árvore de expressão, a árvore contém vários
 O nó mais externo é uma instrução de declaração de variável com atribuição (`var sum = 1 + 2;`). Esse nó mais externo contém vários nós filho: uma declaração de variável, um operador de atribuição e uma expressão que representa o lado direito do sinal de igual. Essa expressão é ainda subdividida em expressões que representam a operação de adição e os operandos esquerdo e direito da adição.
 
 Vamos detalhar um pouco mais as expressões que compõem o lado direito do sinal de igual.
-A expressão é `1 + 2`. Essa é uma expressão binária. Mais especificamente, ela é uma expressão de adição binária. Uma expressão de adição binária tem dois filhos, que representam os nós esquerdo e direito da expressão de adição. Aqui, ambos os nós são expressões constantes: o operando esquerdo é o valor `1` e o operando direito é o valor `2`.
+A expressão é `1 + 2`. Essa é uma expressão binária. Mais especificamente, ela é uma expressão de adição binária. Uma expressão de adição binária tem dois filhos, que representam os nós esquerdo e direito da expressão de adição. Aqui, os dois nós são expressões constantes: o operando esquerdo é o valor `1` e o operando direito é o valor `2`.
 
 Visualmente, a declaração inteira é uma árvore: você pode começar no nó raiz e viajar até cada nó da árvore para ver o código que constitui a instrução:
 
 - Instrução de declaração de variável com atribuição (`var sum = 1 + 2;`)
-    * Declaração de tipo de variável implícita (`var sum`)
-        - Palavra-chave var implícita (`var`)
-        - Declaração de nome de variável (`sum`)
-    * Operador de atribuição (`=`)
-    * Expressão de adição binária (`1 + 2`)
-        - Operando esquerdo (`1`)
-        - Operador de adição (`+`)
-        - Operando direito (`2`)
+  * Declaração de tipo de variável implícita (`var sum`)
+    - Palavra-chave var implícita (`var`)
+    - Declaração de nome de variável (`sum`)
+  * Operador de atribuição (`=`)
+  * Expressão de adição binária (`1 + 2`)
+    - Operando esquerdo (`1`)
+    - Operador de adição (`+`)
+    - Operando direito (`2`)
 
 Isso pode parecer complicado, mas é muito eficiente. Seguindo o mesmo processo, você pode decompor expressões muito mais complicadas. Considere esta expressão:
+
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
@@ -64,6 +66,6 @@ Você também pode converter uma árvore de expressão em um delegado executáve
 
 As APIs para árvores de expressão permitem criar árvores que representam quase todos os constructos de código válidos. No entanto, para manter as coisas o mais simples possível, algumas expressões de C# não podem ser criadas em uma árvore de expressão. Um exemplo são as expressões assíncronas (usando as palavras-chave `async` e `await`). Se suas necessidades requerem algoritmos assíncronos, você precisa manipular diretamente os objetos `Task`, em vez de contar com o suporte do compilador. Outro exemplo é na criação de loops. Normalmente, você os cria usando loops `for`, `foreach`, `while` ou `do`. Como você verá [mais adiante nesta série](expression-trees-building.md), as APIs para árvores de expressão oferecem suporte a uma única expressão de loop, com expressões `break` e `continue` que controlam a repetição do loop.
 
-A única coisa que você não pode fazer é modificar uma árvore de expressão.  As árvores de expressão são estruturas de dados imutáveis. Se quiser modificar (alterar) uma árvore de expressão, você deverá criar uma nova árvore, que seja uma cópia da original, com as alterações desejadas. 
+A única coisa que você não pode fazer é modificar uma árvore de expressão.  As árvores de expressão são estruturas de dados imutáveis. Se quiser modificar (alterar) uma árvore de expressão, você deverá criar uma nova árvore, que seja uma cópia da original, com as alterações desejadas.
 
 [Próximo – Tipos de estruturas que dão suporte às árvores de expressão](expression-classes.md)

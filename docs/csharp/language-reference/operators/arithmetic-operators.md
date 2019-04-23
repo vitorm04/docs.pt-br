@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301120"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (Referência de C#)
 
@@ -93,7 +93,7 @@ O operador de multiplicação `*` calcula o produto dos operandos:
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-O operador unário `*` é um [operador de indireção de ponteiro](multiplication-operator.md#pointer-indirection-operator).
+O operador unário `*` é o [operador de indireção de ponteiro](multiplication-operator.md#pointer-indirection-operator).
 
 ## <a name="division-operator-"></a>Operador de divisão /
 
@@ -239,7 +239,7 @@ Para obter mais informações, confira os comentários nas páginas de referênc
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Os tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) os operadores aritméticos unários (`++`, `--`, `+` e `-`) e binários (`*`, `/`, `%`, `+` e `-`). Quando um operador binário está sobrecarregado, o operador de atribuição composta correspondente também é implicitamente sobrecarregado. Um tipo definido pelo usuário não pode sobrecarregar explicitamente um operador de atribuição composta.
+Um tipo definido pelo usuário pode [sobrecarregar](../keywords/operator.md) os operadores aritméticos unários (`++`, `--`, `+` e `-`) e binários (`*`, `/`, `%`, `+` e `-`). Quando um operador binário está sobrecarregado, o operador de atribuição composta correspondente também é implicitamente sobrecarregado. Um tipo definido pelo usuário não pode sobrecarregar explicitamente um operador de atribuição composta.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
@@ -261,7 +261,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Operadores do C#](index.md)
+- [Operadores em C#](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
 - [Numéricos no .NET](../../../standard/numerics.md)

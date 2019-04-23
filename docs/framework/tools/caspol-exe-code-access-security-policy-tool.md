@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3e6057d1ce6b5d0e961449ef298b1a50c7a407ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200526"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
@@ -51,7 +51,7 @@ caspol [options]
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> ou<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Adiciona um novo grupo de códigos à hierarquia do grupo de códigos. É possível especificar o *parent_label* ou o *parent_name*. O argumento *parent_label* especifica o rótulo (como 1. ou 1.1) o nome do grupo de códigos que é o pai do grupo de códigos sendo adicionado. O argumento *parent_name* especifica o nome do grupo de códigos que é o pai do grupo de códigos sendo adicionado. Como *parent_label* e *parent_name* podem ser usados alternadamente, o Caspol.exe deve ser capaz de diferenciá-los. Por isso, *parent_name* não pode começar com um número. Além disso, *parent_name* só pode conter A-Z, 0-9 e o caractere de sublinhado.<br /><br /> O argumento *mship* especifica a condição de associação para o novo grupo de códigos. Para obter mais informações, consulte a tabela de argumentos *mship* posteriormente nesta seção.<br /><br /> O argumento *pset_name* é o nome do conjunto de permissões que será associado ao novo grupo de códigos. Também é possível definir um ou mais *flags* para o novo grupo. Para obter mais informações, consulte a tabela de argumentos *flags* posteriormente nesta seção.|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> ou<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|Adicione um novo conjunto de permissões nomeadas à política. O conjunto de permissões deve ser criado em XML e armazenado em um arquivo .xml. Se o arquivo XML contiver o nome do conjunto de permissões, apenas esse arquivo (*psfile*) será especificado. Se o arquivo XML não contiver o nome do conjunto de permissões, você deverá especificar o nome do arquivo XML (*psfile*) e o nome do conjunto de permissões (*pset_name*).<br /><br /> Observe que todas as permissões usadas em um conjunto de permissões devem ser definidas em assemblies contidos no cache de assembly global.|  
 |**-a**[**ll**]|Indica que todas as opções depois dessa se aplicam a esse computador, ao usuário e a políticas da empresa. A opção **-all** sempre referencia a política do usuário conectado no momento. Veja a opção **-customall** para consultar a política de um usuário diferente do usuário atual.|  
-|**-chggroup** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *flags* `}`<br /><br /> ou<br /><br /> **-cg** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *flags* `}`|Altera uma condição de associação do grupo de códigos, o conjunto de permissões ou as configurações dos sinalizadores **exclusive**, **levelfinal**, **name** ou **description**. É possível especificar o *label* ou o *name*. O argumento *label* especifica o rótulo (como 1. ou 1.1.) do grupo de códigos. O argumento *name* especifica o nome do grupo de códigos a ser alterado. Como *label* e *name* podem ser usados alternadamente, o Caspol.exe deve ser capaz de diferenciá-los. Por isso, *name* não pode começar com um número. Além disso, *name* só pode conter A-Z, 0-9 e o caractere de sublinhado.<br /><br /> O argumento *pset_name* especifica o nome do conjunto de permissões a ser associado ao grupo de códigos. Consulte as tabelas posteriormente nesta seção para obter informações sobre os argumentos *mship* e *flags*.|  
+|**-chggroup** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *sinalizadores* `}`<br /><br /> ou<br /><br /> **-cg** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *sinalizadores* `}`|Altera uma condição de associação do grupo de códigos, o conjunto de permissões ou as configurações dos sinalizadores **exclusive**, **levelfinal**, **name** ou **description**. É possível especificar o *label* ou o *name*. O argumento *label* especifica o rótulo (como 1. ou 1.1.) do grupo de códigos. O argumento *name* especifica o nome do grupo de códigos a ser alterado. Como *label* e *name* podem ser usados alternadamente, o Caspol.exe deve ser capaz de diferenciá-los. Por isso, *name* não pode começar com um número. Além disso, *name* só pode conter A-Z, 0-9 e o caractere de sublinhado.<br /><br /> O argumento *pset_name* especifica o nome do conjunto de permissões a ser associado ao grupo de códigos. Consulte as tabelas posteriormente nesta seção para obter informações sobre os argumentos *mship* e *flags*.|  
 |**-chgpset**  *psfile pset_name*<br /><br /> ou<br /><br /> **-cp** *psfile pset_name*|Altera um conjunto de permissões nomeadas. O argumento *psfile* fornece a nova definição do conjunto de permissões. Ele é um arquivo do conjunto de permissões serializado no formato XML. O argumento *pset_name* especifica o nome do conjunto de permissões que você deseja alterar.|  
 |**-customall**  *path*<br /><br /> ou<br /><br /> **-ca**  *path*|Indica que todas as opções depois dessa se aplicam a esse computador, empresa e políticas de usuário personalizadas especificadas. Você deve especificar o local do arquivo de configuração de segurança do usuário personalizado com o argumento *path*.|  
 |**-cu**[**stomuser**] *path*|Permite a administração de uma política de usuário personalizada que não pertence ao usuário em nome do qual Caspol.exe está em execução no momento. Você deve especificar o local do arquivo de configuração de segurança do usuário personalizado com o argumento *path*.|  
@@ -247,5 +247,6 @@ caspol -all -resolveperm testassembly
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](index.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Prompts de comando](developer-command-prompt-for-vs.md)

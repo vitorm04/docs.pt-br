@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310558"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 <a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.  
@@ -84,7 +84,7 @@ ms.locfileid: "47397970"
 -   [O uso da CPU durante uma coleta de lixo é alto demais](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: uma exceção de falta de memória é lançada  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Uma exceção de falta de memória é lançada  
  Há dois casos legítimos para um <xref:System.OutOfMemoryException> gerenciado ser lançado:  
   
 -   Falta de memória virtual.  
@@ -118,7 +118,7 @@ ms.locfileid: "47397970"
 |[Determine a quantidade de memória virtual que pode ser reservada.](#GetVM)<br /><br /> [Determine a quantidade de memória que o heap gerenciado está confirmando.](#ManagedHeapCommit)<br /><br /> [Determine a quantidade de memória que o heap gerenciado reserva.](#ManagedHeapReserve)<br /><br /> [Determine objetos grandes na geração 2.](#ExamineGen2)<br /><br /> [Determine referências para os objetos.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problema: o coletor de lixo não recupera objetos com rapidez suficiente  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problema: O coletor de lixo não recupera objetos com rapidez suficiente  
  Quando ele é exibido como se objetos não estivessem sendo recuperados conforme o esperado para coleta de lixo, determine se há quaisquer referências fortes a esses objetos.  
   
  Você também poderá encontrar esse problema caso não tenha havido nenhuma coleta de lixo para a geração que contém um objeto inativo, o que indicará que o finalizador do objeto inativo não foi executado. Por exemplo, isso é possível quando você está executando um aplicativo STA (single-threaded apartment) e o thread que cuida da fila de finalizadores não é capaz de chamá-la.  
@@ -128,7 +128,7 @@ ms.locfileid: "47397970"
 |[Verifique as referências para os objetos.](#ObjRef)<br /><br /> [Determine se um finalizador foi executado.](#Induce)<br /><br /> [Determine se há objetos aguardando finalização.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: o heap gerenciado está fragmentado demais  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: O heap gerenciado está fragmentado demais  
  O nível de fragmentação é calculado como a proporção entre o espaço livre e o total de memória alocada para a geração. Para a geração 2, um nível aceitável de fragmentação é de não mais que 20%. Já que a geração 2 pode ficar muito grande, a taxa de fragmentação é mais importante do que o valor absoluto.  
   
  Ter muito espaço livre na geração 0 não é um problema, pois esta é a geração em que novos objetos são alocados.  
@@ -156,7 +156,7 @@ ms.locfileid: "47397970"
  Se você acha que não há nenhuma causa legítima para a fragmentação, entre em contato com o Serviço de Suporte e Atendimento ao Cliente Microsoft.  
   
 <a name="Issue_LongPauses"></a>   
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: as pausas na coleta de lixo são longas demais  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: As pausas na coleta de lixo são longas demais  
  A coleta de lixo opera em tempo real flexível, de modo que um aplicativo deve ser capaz de tolerar algumas pausas. Um critério para o tempo real flexível é que 95% das operações deve terminar no prazo.  
   
  Na coleta de lixo simultânea, a execução de threads gerenciados é permitida durante uma coleta, o que significa que as pausas são realmente mínimas.  
@@ -172,11 +172,11 @@ ms.locfileid: "47397970"
 |[Determine a duração de uma coleta de lixo.](#TimeInGC)<br /><br /> [Determine o que causou uma coleta de lixo.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### <a name="issue-generation-0-is-too-big"></a>Problema: a geração 0 é grande demais  
+### <a name="issue-generation-0-is-too-big"></a>Problema: A geração 0 é grande demais  
  É provável que a geração 0 tenha um número maior de objetos em um sistema de 64 bits, especialmente quando você usa a coleta de lixo do servidor em vez de uma coleta de lixo de estação de trabalho. Isso ocorre porque o limite para disparar uma coleta de lixo de geração 0 é maior nesses ambientes e as coletas da geração 0 podem ficar muito maiores. O desempenho é aprimorado quando um aplicativo aloca mais memória antes de uma coleta de lixo ser disparada.  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: o uso da CPU durante uma coleta de lixo é alto demais  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: O uso da CPU durante uma coleta de lixo é alto demais  
  O uso da CPU será alto durante uma coleta de lixo. Se uma quantidade significativa de tempo de processamento é gasto em uma coleta de lixo, isso indica que o número de coletas é frequente demais ou que a coleta é longa demais. Uma maior taxa de alocação de objetos no heap gerenciado faz com que a coleta de lixo ocorra com mais frequência. Diminuir a taxa de alocação reduz a frequência de coletas de lixo.  
   
  Você pode monitorar as taxas de alocação usando o contador de desempenho de `Allocated Bytes/second`. Para obter mais informações, consulte [Contadores de desempenho no .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
@@ -278,7 +278,7 @@ ms.locfileid: "47397970"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar se a exceção de falta de memória é gerenciada  
   
-1.  No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando de exceção de impressão (**pe**):  
+1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando de exceção de impressão (**pe**):  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397970"
     StackTrace (generated):  
     ```  
   
-2.  Se a saída não especificar uma exceção, você precisará determinar de qual thread é a exceção de falta de memória. Digite o comando a seguir no depurador para mostrar todos os threads com suas pilhas de chamadas:  
+2. Se a saída não especificar uma exceção, você precisará determinar de qual thread é a exceção de falta de memória. Digite o comando a seguir no depurador para mostrar todos os threads com suas pilhas de chamadas:  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397970"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Você pode usar o comando a seguir para despejar exceções aninhadas.  
+3. Você pode usar o comando a seguir para despejar exceções aninhadas.  
   
      **!pe -nested**  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47397970"
   
      Neste exemplo, o tamanho da maior região livre é aproximadamente 24.000 KB (3A980 em hexadecimal). Essa região é menor do que o tamanho requerido pelo coletor de lixo para um segmento.  
   
-     -ou-  
+     - ou -  
   
 -   Use o comando **vmstat**:  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397970"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar se há memória física suficiente  
   
-1.  Inicie o Gerenciador de tarefas do Windows.  
+1. Inicie o Gerenciador de tarefas do Windows.  
   
-2.  Na guia **Desempenho**, examine o valor confirmado. (No Windows 7, examine **Confirmar (KB)** no **grupo Sistema**.)  
+2. Na guia **Desempenho**, examine o valor confirmado. (No Windows 7, examine **Confirmar (KB)** no **grupo Sistema**.)  
   
      Se o **Total** está próximo do **Limite**, você está com pouca memória física.  
   
@@ -494,13 +494,13 @@ ms.locfileid: "47397970"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar se há objetos aguardando a finalização  
   
-1.  No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
+1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:  
   
      **!finalizequeue**  
   
      Observe o número de objetos que estão prontos para finalização. Se o número for alto, você deverá examinar o motivo pelo qual esses finalizadores não são capazes de avançar em absoluto ou não são capazes de avançar suficientemente rápido.  
   
-2.  Para obter uma saída de threads, digite o seguinte comando:  
+2. Para obter uma saída de threads, digite o seguinte comando:  
   
      **threads -special**  
   
@@ -780,4 +780,4 @@ ms.locfileid: "47397970"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)
+- [Coleta de Lixo](../../../docs/standard/garbage-collection/index.md)

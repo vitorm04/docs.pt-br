@@ -11,21 +11,21 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341862"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Como: Definir uma política de cache baseada na localização para um aplicativo
 Políticas de cache com base no local permitem que um aplicativo defina explicitamente o comportamento do cache com base na localização do recurso solicitado. Este tópico demonstra como definir a política de cache programaticamente. Para obter informações sobre como configurar a política para um aplicativo usando os arquivos de configuração, veja o [elemento \<requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Para definir uma política de cache baseada na localização para um aplicativo  
   
-1.  Crie um objeto <xref:System.Net.Cache.RequestCachePolicy> ou <xref:System.Net.Cache.HttpRequestCachePolicy>.  
+1. Crie um objeto <xref:System.Net.Cache.RequestCachePolicy> ou <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
-2.  Defina o objeto de política como o padrão para o domínio do aplicativo.  
+2. Defina o objeto de política como o padrão para o domínio do aplicativo.  
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Para definir uma política que toma recursos solicitados de um cache  
   
@@ -154,8 +154,9 @@ Políticas de cache com base no local permitem que um aplicativo defina explicit
     ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
 - [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
 - [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+- [\<Elemento requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

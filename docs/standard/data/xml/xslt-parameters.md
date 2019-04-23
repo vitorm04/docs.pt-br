@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306295"
 ---
 # <a name="xslt-parameters"></a>Parâmetros XSLT
 Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Um nome qualificado e URI de namespace são associados com o objeto de parâmetro no momento.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Para usar um parâmetro XSLT  
   
-1.  Crie um objeto de <xref:System.Xml.Xsl.XsltArgumentList> e adicione o parâmetro usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> .  
+1. Crie um objeto de <xref:System.Xml.Xsl.XsltArgumentList> e adicione o parâmetro usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> .  
   
-2.  Chame o parâmetro folha de estilos.  
+2. Chame o parâmetro folha de estilos.  
   
-3.  Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
+3. Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
   
 ## <a name="parameter-types"></a>Tipos de parâmetro  
  O objeto de parâmetro deve corresponder a um tipo W3C. A tabela seguinte mostra tipos correspondentes W3C, as classes equivalentes do Microsoft.NET (tipo), e se o tipo W3C é um tipo XPath ou tipo de fonte.  
@@ -40,7 +40,7 @@ Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> us
   
  os *This são equivalentes a um nó definida que contém um único nó.  
   
- Se o objeto de parâmetro não é uma das classes anterior, ele é convertido de acordo com as regras a seguir. Os tipos numéricos do Common Language Runtime (CLR) são convertidos a <xref:System.Double>. O tipo <xref:System.DateTime> é convertido em <xref:System.String>. Os tipos <xref:System.Xml.XPath.IXPathNavigable> são convertidos em <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** é convertido em <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Se o objeto de parâmetro não é uma das classes anterior, ele é convertido de acordo com as regras a seguir. Os tipos numéricos do Common Language Runtime (CLR) são convertidos a <xref:System.Double>. O tipo <xref:System.DateTime> é convertido em <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> Os tipos são convertidos em <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** é convertido em <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Todos os outros tipos lançam um erro.  
   

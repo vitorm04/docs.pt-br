@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346100"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 Os caracteres são entidades abstratas que podem ser representadas de muitas maneiras diferentes. Uma codificação de caracteres é um sistema que emparelha cada caractere em um conjunto de caracteres com suporte com algum valor que representa esse caractere. Por exemplo, o código Morse é uma codificação de caracteres que emparelha cada caractere do alfabeto romano com um padrão de pontos e traços adequados para transmissão por linhas telegráficas. Uma codificação de caracteres para computadores emparelha cada caractere em um conjunto de caracteres com suporte com um valor numérico que representa esse caractere. Uma codificação de caracteres tem dois componentes distintos:  
@@ -215,11 +215,11 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
   
  Além disso, você pode implementar uma solução personalizada que usa o fallback de melhor ajuste, fallback de substituição ou fallback de exceção seguindo estas etapas:  
   
-1.  Derive uma classe de <xref:System.Text.EncoderFallback> para operações de codificação e de <xref:System.Text.DecoderFallback> para operações de decodificação.  
+1. Derive uma classe de <xref:System.Text.EncoderFallback> para operações de codificação e de <xref:System.Text.DecoderFallback> para operações de decodificação.  
   
-2.  Derive uma classe de <xref:System.Text.EncoderFallbackBuffer> para operações de codificação e de <xref:System.Text.DecoderFallbackBuffer> para operações de decodificação.  
+2. Derive uma classe de <xref:System.Text.EncoderFallbackBuffer> para operações de codificação e de <xref:System.Text.DecoderFallbackBuffer> para operações de decodificação.  
   
-3.  Para o fallback de exceção, se as classes predefinidas <xref:System.Text.EncoderFallbackException> e <xref:System.Text.DecoderFallbackException> não atenderem às suas necessidades, derive uma classe de um objeto de exceção como <xref:System.Exception> ou <xref:System.ArgumentException>.  
+3. Para o fallback de exceção, se as classes predefinidas <xref:System.Text.EncoderFallbackException> e <xref:System.Text.DecoderFallbackException> não atenderem às suas necessidades, derive uma classe de um objeto de exceção como <xref:System.Exception> ou <xref:System.ArgumentException>.  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>Derivando de EncoderFallback ou DecoderFallback  
  Para implementar uma solução de fallback personalizada, você deverá criar uma classe herdada de <xref:System.Text.EncoderFallback> para operações de codificação e de <xref:System.Text.DecoderFallback> para operações de decodificação. As instâncias dessas classes são passadas para o método <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> e servem como um intermediário entre a classe de codificação e a implementação de fallback.  

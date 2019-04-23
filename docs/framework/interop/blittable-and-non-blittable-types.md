@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115369"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos blittable e não blittable
 A maioria dos tipos de dados tem uma representação comum na memória gerenciada e não gerenciada e não exige manipulação especial pelo marshaler de interoperabilidade. Esses tipos são chamados *tipos blittable* porque não exigem conversão quando são passados entre o código gerenciado e não gerenciado.  
@@ -74,4 +74,5 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
  Há suporte para tipos de objeto e de classe apenas na interoperabilidade COM. Para tipos correspondentes no [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, consulte a [Visão geral da biblioteca de classes](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)

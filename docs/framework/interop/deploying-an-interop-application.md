@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192076"
 ---
 # <a name="deploying-an-interop-application"></a>Implantando um aplicativo de interoperabilidade
 Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do .NET, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipos COM e um ou mais componentes COM registrados. O Visual Studio e o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornecem ferramentas para importar e converter uma biblioteca de tipos em um assembly de interoperabilidade, conforme abordado em [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md). Há duas maneiras de implantar um aplicativo de interoperabilidade:  
@@ -46,7 +46,8 @@ Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do 
  Assemblies que são compartilhados por vários aplicativos devem ser instalados em um repositório centralizado chamado cache de assembly global. Os clientes do .NET podem acessar a mesma cópia do assembly de interoperabilidade, que é assinada e instalada no cache de assembly global. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
-- [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
+
+- [Expondo componentes do COM para o .NET Framework](exposing-com-components.md)
 - [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)

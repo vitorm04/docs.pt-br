@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219614"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326275"
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
 Ao realizar marshaling dos dados, o marshaler de interoperabilidade pode copiar ou fixar os dados com marshaling. A cópia dos dados coloca uma cópia dos dados de um local de memória em outro local de memória. A ilustração a seguir mostra as diferenças entre a cópia de um tipo de valor e a cópia de um tipo passado por referência da memória gerenciada para a não gerenciada.  
   
- ![Tipos de valor passados por valor e por referência](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Tipos de valor passados por valor e por referência  
+ ![Diagrama que mostra como o valor e os tipos de referência são copiados.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Os argumentos de método passados por valor têm o marshaling realizado para o código não gerenciado como valores na pilha. O processo de cópia é direto. Os argumentos passados por referência são passados como ponteiros na pilha. Tipos de referência também são passados por valor e por referência. Como mostra a ilustração a seguir, os tipos de referência passados por valor são copiados ou fixados.  
+ Os argumentos de método passados por valor têm o marshaling realizado para o código não gerenciado como valores na pilha. O processo de cópia é direto. Os argumentos passados por referência são passados como ponteiros na pilha. Tipos de referência também são passados por valor e por referência. Como mostra a ilustração a seguir, os tipos de referência passados por valor são copiados ou fixados: 
   
- ![Interoperabilidade COM](./media/interopmarshalpin.gif "interopmarshalpin")  
-Tipos de referência passados por valor e por referência  
+ ![Diagrama mostrando os tipos de referência passados por valor e por referência.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  A anexação temporária bloqueia os dados em seu local atual de memória, impedindo, portanto, que eles sejam relocados pelo coletor de lixo do Common Language Runtime. O marshaler fixa os dados para reduzir a sobrecarga da cópia e melhorar o desempenho. O tipo dos dados determina se eles são copiados ou fixados durante o processo de marshaling.  A anexação é executada automaticamente durante o marshaling de objetos, como <xref:System.String>. No entanto, também é possível fixar a memória manualmente usando a classe <xref:System.Runtime.InteropServices.GCHandle>.  
   
@@ -78,6 +76,7 @@ Tipos de referência passados por valor e por referência
  Quando um <xref:System.Text.StringBuilder?displayProperty=nameWithType> é passado por valor, o marshaler passa uma referência ao buffer interno do **StringBuilder** diretamente para o chamador. O chamador e o receptor devem concordar com o tamanho do buffer. O chamador é responsável pela criação de um **StringBuilder** de tamanho adequado. O receptor deve tomar as precauções necessárias para garantir que o buffer não tenha estouro. **StringBuilder** é uma exceção à regra em que os tipos de referência passados por valor são passados como parâmetros de Entrada por padrão. Ele é sempre passado como Entrada/Saída.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Marshaling de interoperabilidade](interop-marshaling.md)
+- [Realizando marshaling de interoperabilidade](interop-marshaling.md)

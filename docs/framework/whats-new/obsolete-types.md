@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114683"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
 <a name="introduction"></a>As tabelas deste artigo listam os tipos que estão obsoletos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizados por assembly. Use os links a seguir para ver uma lista dos tipos obsoletos e das alternativas recomendadas em cada assembly. Como esses tipos são obsoletos, todos seus membros também estão obsoletos. Para obter uma lista de membros obsoletos adicionais na biblioteca de classes .NET Framework, confira [Membros obsoletos](obsolete-members.md).
@@ -153,8 +153,8 @@ ms.locfileid: "58412338"
 
 |Tipo|Mensagem|
 |----------|-------------|
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> foi preterido.|
-|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> foi preterido.|
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> foi preterida.|
+|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> foi preterida.|
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|A classe <xref:System.Data.TypedDataSetGenerator> será removida em uma versão futura. Use <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> em System.Design.dll.|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|A classe <xref:System.Xml.XmlDataDocument> será removida em uma versão futura.|
 
@@ -165,14 +165,14 @@ ms.locfileid: "58412338"
 
 |Tipo|Mensagem|
 |----------|-------------|
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> foi preterido.|
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> foi preterido.|
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> foi preterido.|
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> foi preterido.|
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> foi preterido.|
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> foi preterido.|
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> foi preterido.|
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> foi preterido.|
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> foi preterida.|
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> foi preterida.|
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> foi preterida.|
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> foi preterida.|
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> foi preterida.|
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> foi preterida.|
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> foi preterida.|
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> foi preterida.|
 
  [Voltar ao início](#introduction)
 
@@ -578,7 +578,7 @@ ms.locfileid: "58412338"
 
 |Tipo|Mensagem|
 |----------|-------------|
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> foi preterido. Essa interface não é mais usada.|
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> foi preterida. Essa interface não é mais usada.|
 
  [Voltar ao início](#introduction)
 
@@ -779,5 +779,6 @@ Para obter informações sobre a migração do Visual Basic 6, consulte [Centro 
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll é um assembly obsoleto e existe somente para compatibilidade com versões anteriores.|
 
 ## <a name="see-also"></a>Consulte também
-- [O que está obsoleto na Biblioteca de Classes](whats-obsolete.md)
+
+- [O que está obsoleto na biblioteca de classes](whats-obsolete.md)
 - [Membros obsoletos](obsolete-members.md)

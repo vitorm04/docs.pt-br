@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d00f86c492a7d32344b1067a48c8e53aa2a43426
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 38c774417fc94fa080bf2b82c04d575e9068cdcb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234080"
 ---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>Os objetos Reflection não podem mais ser passados de código gerenciado para clientes DCOM fora do processo
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761232"
 |Escopo|Secundário|
 |Versão|4.6|
 |Tipo|Tempo de execução|
-

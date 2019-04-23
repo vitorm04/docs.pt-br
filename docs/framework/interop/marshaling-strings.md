@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223024"
 ---
 # <a name="marshaling-strings"></a>Realizando marshaling de cadeias de caracteres
 A invocação de plataforma copia parâmetros de cadeia de caracteres, convertendo-os do formato do .NET Framework (Unicode) para o formato não gerenciado (ANSI), se necessário. Já que as cadeias de caracteres gerenciadas são imutáveis, a invocação de plataforma não as copia de volta da memória não gerenciada para a memória gerenciada quando a função retorna.  
@@ -28,10 +28,10 @@ A invocação de plataforma copia parâmetros de cadeia de caracteres, converten
 |Cadeia de Caracteres|Descrição|Amostra|  
 |------------|-----------------|------------|  
 |Por valor.|Passa cadeias de caracteres como parâmetros In.|[MsgBox](msgbox-sample.md)|  
-|Como resultado.|Retorna cadeias de caracteres de código não gerenciado.|[Cadeias de Caracteres](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|Como resultado.|Retorna cadeias de caracteres de código não gerenciado.|[Cadeias de caracteres](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
 |Por referência.|Passa cadeias de caracteres como parâmetros In/Out usando <xref:System.Text.StringBuilder>.|[Buffers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
-|Em uma estrutura por valor.|Passa cadeias de caracteres em uma estrutura que é um parâmetro In.|[Estruturas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
-|Em uma estrutura por referência **(char\*)**.|Passa cadeias de caracteres em uma estrutura que é um parâmetro In/Out. A função não gerenciada espera um ponteiro para um buffer de caracteres e o tamanho do buffer é um membro da estrutura.|[Cadeias de Caracteres](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|Em uma estrutura por valor.|Passa cadeias de caracteres em uma estrutura que é um parâmetro In.|[Structs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
+|Em uma estrutura por referência **(char\*)**.|Passa cadeias de caracteres em uma estrutura que é um parâmetro In/Out. A função não gerenciada espera um ponteiro para um buffer de caracteres e o tamanho do buffer é um membro da estrutura.|[Cadeias de caracteres](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
 |Em uma estrutura por referência **(char[])**.|Passa cadeias de caracteres em uma estrutura que é um parâmetro In/Out. A função não gerenciada espera um buffer de caracteres inserido.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
 |Em uma classe por valor **(char\*)**.|Passa cadeias de caracteres em uma classe (uma classe é um parâmetro In/Out). A função não gerenciada espera um ponteiro para um buffer de caracteres.|[OpenFileDlg](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
 |Em uma classe por valor **(char[])**.|Passa cadeias de caracteres em uma classe (uma classe é um parâmetro In/Out). A função não gerenciada espera um buffer de caracteres inserido.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
@@ -39,7 +39,8 @@ A invocação de plataforma copia parâmetros de cadeia de caracteres, converten
 |Como uma matriz de estruturas que contêm cadeias de caracteres por valor.|Cria uma matriz de estruturas que contêm cadeias de caracteres e a matriz é transmitida por valor.|[Matrizes](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Consulte também
-- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)
+
+- [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)
 - [Marshaling de classes, estruturas e uniões](marshaling-classes-structures-and-unions.md)
 - [Marshaling de diversos tipos de matrizes](marshaling-different-types-of-arrays.md)
 - [Exemplos diversos de marshaling](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

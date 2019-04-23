@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315758"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Se uma interface não for de um objeto conhecido, o marshaler fará o seguinte:  
   
-1.  O marshaler consulta o objeto em busca da interface **IProvideClassInfo2**. Se for fornecido, o marshaler usará o CLSID retornado de **IProvideClassInfo2.GetGUID** para identificar a coclass que fornece a interface. Com o CLSID, o marshaler pode localizar o wrapper no Registro, caso o assembly já tenha sido registrado anteriormente.  
+1. O marshaler consulta o objeto em busca da interface **IProvideClassInfo2**. Se for fornecido, o marshaler usará o CLSID retornado de **IProvideClassInfo2.GetGUID** para identificar a coclass que fornece a interface. Com o CLSID, o marshaler pode localizar o wrapper no Registro, caso o assembly já tenha sido registrado anteriormente.  
   
-2.  O marshaler consulta a interface em busca da interface **IProvideClassInfo**. Se for fornecido, o marshaler usará o **ITypeInfo** retornado de **IProvideClassInfo.GetClassinfo** para determinar o CLSID da classe que expõe a interface. O marshaler pode usar o CLSID para localizar os metadados do wrapper.  
+2. O marshaler consulta a interface em busca da interface **IProvideClassInfo**. Se for fornecido, o marshaler usará o **ITypeInfo** retornado de **IProvideClassInfo.GetClassinfo** para determinar o CLSID da classe que expõe a interface. O marshaler pode usar o CLSID para localizar os metadados do wrapper.  
   
-3.  Se o marshaler ainda não puder identificar a classe, ele encapsulará a interface com uma classe wrapper genérica chamada **System.__ComObject**.  
+3. Se o marshaler ainda não puder identificar a classe, ele encapsulará a interface com uma classe wrapper genérica chamada **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Marshaling padrão para representantes  
  Um representante gerenciado tem o marshaling realizado como uma interface COM ou como um ponteiro de função, com base no mecanismo de chamada:  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
 - [Copiando e fixando](copying-and-pinning.md)
 - [Marshaling padrão para matrizes](default-marshaling-for-arrays.md)

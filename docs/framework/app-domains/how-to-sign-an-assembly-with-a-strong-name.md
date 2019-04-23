@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303412"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como: assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  
@@ -35,13 +35,13 @@ Há vários modos de assinar um assembly com um nome forte:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Para criar e assinar um assembly com um nome forte usando o Visual Studio.  
   
-1.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto e, em seguida, escolha **Propriedades**.  
+1. No **Gerenciador de Soluções**, abra o menu de atalho do projeto e, em seguida, escolha **Propriedades**.  
   
-2.  Escolha a guia **Assinatura**.  
+2. Escolha a guia **Assinatura**.  
   
-3.  Marque a caixa **Assinar o assembly**.  
+3. Marque a caixa **Assinar o assembly**.  
   
-4.  Na caixa **Escolher um arquivo de chave com nome forte**, selecione **\<Procurar…>** e, em seguida, navegue até o arquivo de chave. Para criar um novo arquivo de chave, selecione **\<Novo…>** e digite o nome na caixa de diálogo **Criar Chave de Nome Forte**.  
+4. Na caixa **Escolher um arquivo de chave com nome forte**, selecione **\<Procurar…>** e, em seguida, navegue até o arquivo de chave. Para criar um novo arquivo de chave, selecione **\<Novo…>** e digite o nome na caixa de diálogo **Criar Chave de Nome Forte**.  
   
 > [!NOTE]
 >  Para [assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md), escolha um arquivo de chave pública.  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Para assinar um assembly com um nome forte usando atributos  
   
-1.  Adicione o atributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> ou <xref:System.Reflection.AssemblyKeyNameAttribute> ao seu arquivo de código-fonte e especifique o nome do arquivo ou contêiner que contém o par de chaves a ser usado ao assinar o assembly com um nome forte.  
+1. Adicione o atributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> ou <xref:System.Reflection.AssemblyKeyNameAttribute> ao seu arquivo de código-fonte e especifique o nome do arquivo ou contêiner que contém o par de chaves a ser usado ao assinar o assembly com um nome forte.  
   
-2.  Compile o arquivo de código-fonte normalmente.  
+2. Compile o arquivo de código-fonte normalmente.  
   
 > [!NOTE]
 >  Os compiladores de C# e Visual Basic emitem avisos do compilador (CS1699 e BC41008, respectivamente) quando encontram o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> no código-fonte. Você pode ignorar os avisos.  
@@ -101,9 +101,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+
+- [Criando e usando assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Como: Criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Atrasando a assinatura de um assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Gerenciando Assinatura de Assembly e Manifesto](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [Página de Assinatura, Designer de Projeto](/visualstudio/ide/reference/signing-page-project-designer)

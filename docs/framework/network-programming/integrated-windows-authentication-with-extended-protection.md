@@ -2,12 +2,12 @@
 title: Autenticação Integrada do Windows com proteção estendida
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325716"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticação Integrada do Windows com proteção estendida
 Foram feitas melhorias que afetam a maneira como a autenticação integrada do Windows é controlada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no <xref:System.Net> e por namespaces relacionados. Foi adicionado suporte à proteção estendida a fim de aprimorar a segurança.  
@@ -25,17 +25,17 @@ Foram feitas melhorias que afetam a maneira como a autenticação integrada do W
   
  Os objetivos gerais são os seguintes:  
   
-1.  Se o cliente é atualizado para dar suporte a proteção estendida, os aplicativos devem fornecer informações de associação de serviço e de associação de canal para todos os protocolos de autenticação com suporte. Informações de associação de canal só podem ser fornecidas quando há um canal (TLS) ao qual se associar. Informações de associação de serviço sempre devem ser fornecidas.  
+1. Se o cliente é atualizado para dar suporte a proteção estendida, os aplicativos devem fornecer informações de associação de serviço e de associação de canal para todos os protocolos de autenticação com suporte. Informações de associação de canal só podem ser fornecidas quando há um canal (TLS) ao qual se associar. Informações de associação de serviço sempre devem ser fornecidas.  
   
-2.  Servidores atualizados que estão configurados corretamente poderão verificar as e informações de associação de serviço e de associação de canal quando elas estiverem presentes no token de autenticação de cliente e rejeitar a tentativa de autenticação se as associações de canal não corresponderem. Dependendo do cenário de implantação, os servidores podem verificar a associação de canal, a associação de serviço ou ambas.  
+2. Servidores atualizados que estão configurados corretamente poderão verificar as e informações de associação de serviço e de associação de canal quando elas estiverem presentes no token de autenticação de cliente e rejeitar a tentativa de autenticação se as associações de canal não corresponderem. Dependendo do cenário de implantação, os servidores podem verificar a associação de canal, a associação de serviço ou ambas.  
   
-3.  Servidores atualizados têm a capacidade de aceitar ou rejeitar solicitações de cliente de nível inferior que não contêm as informações de associação de canal com base em política.  
+3. Servidores atualizados têm a capacidade de aceitar ou rejeitar solicitações de cliente de nível inferior que não contêm as informações de associação de canal com base em política.  
   
  Informações usadas pela proteção estendida consistem em uma ou ambas as duas partes a seguir:  
   
-1.  Um token de associação de canal ou CBT.  
+1. Um token de associação de canal ou CBT.  
   
-2.  Informações de associação de serviço na forma de um nome da entidade de serviço ou SPN.  
+2. Informações de associação de serviço na forma de um nome da entidade de serviço ou SPN.  
   
  Informações de associação de serviço são uma indicação da intenção do cliente para autenticar para um ponto de extremidade de serviço específico. Elas são comunicadas de cliente para servidor com as seguintes propriedades:  
   
@@ -122,11 +122,11 @@ Foram feitas melhorias que afetam a maneira como a autenticação integrada do W
   
  Nessa configuração, quando uma solicitação é feita ao servidor por meio de um canal seguro externo, o canal externo é consultado para uma associação de canal. A associação de canal é passada para chamadas SSPI de autenticação, que validam que a associação de canal no blob de autenticação é correspondente. Existem três desfechos possíveis:  
   
-1.  O sistema operacional subjacente do servidor não dá suporte à proteção estendida. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
+1. O sistema operacional subjacente do servidor não dá suporte à proteção estendida. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
   
-2.  A chamada SSPI falha indicando que o cliente especificou uma associação de canal que não correspondeu ao valor esperado recuperado do canal externo ou então indicando que o cliente falhou ao fornecer uma associação de canal quando a política de proteção estendida do servidor foi configurada para <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. Em ambos os casos, a solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
+2. A chamada SSPI falha indicando que o cliente especificou uma associação de canal que não correspondeu ao valor esperado recuperado do canal externo ou então indicando que o cliente falhou ao fornecer uma associação de canal quando a política de proteção estendida do servidor foi configurada para <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. Em ambos os casos, a solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
   
-3.  O cliente especifica a associação de canal correta ou tem permissão para se conectar sem especificar uma associação de canal, já que a política de proteção estendida do servidor é configurada com <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. A solicitação é retornada ao aplicativo para processamento. Nenhuma verificação de nome de serviço é executada automaticamente. Um aplicativo pode optar por executar sua própria validação de nome de serviço usando a propriedade <xref:System.Net.HttpListenerRequest.ServiceName%2A>, mas sob essas circunstâncias, isso é redundante.  
+3. O cliente especifica a associação de canal correta ou tem permissão para se conectar sem especificar uma associação de canal, já que a política de proteção estendida do servidor é configurada com <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>. A solicitação é retornada ao aplicativo para processamento. Nenhuma verificação de nome de serviço é executada automaticamente. Um aplicativo pode optar por executar sua própria validação de nome de serviço usando a propriedade <xref:System.Net.HttpListenerRequest.ServiceName%2A>, mas sob essas circunstâncias, isso é redundante.  
   
  Se um aplicativo faz suas próprias chamadas SSPI para realizar a autenticação com base em blobs passados bidirecionalmente dentro do corpo de uma solicitação HTTP e deseja dar suporte a associação de canal, ele precisa recuperar a associação de canal esperada do canal seguro externo usando <xref:System.Net.HttpListener> para passá-la para a função [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) de Win32 nativo. Para fazer isso, use a propriedade <xref:System.Net.HttpListenerRequest.TransportContext%2A> e chame o método <xref:System.Net.TransportContext.GetChannelBinding%2A> para recuperar o CBT. Há suporte apenas para associações de ponto de extremidade. Se qualquer coisa diferente de <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> for especificada, uma <xref:System.NotSupportedException> será gerada. Se o sistema operacional subjacente dá suporte à associação de canal, o método <xref:System.Net.TransportContext.GetChannelBinding%2A> retornará um <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> encapsulando um ponteiro para uma associação de canal adequada para ser passada para a função [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) como o membro pvBuffer de uma estrutura SecBuffer passada no parâmetro `pInput`. A propriedade <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> contém o comprimento, em bytes, da associação de canal. Se o sistema operacional subjacente não dá suporte a associações de canal, a função retornará `null`.  
   
@@ -136,18 +136,19 @@ Foram feitas melhorias que afetam a maneira como a autenticação integrada do W
   
  Nessa configuração, quando uma solicitação é feita ao servidor sem um canal externo seguro, a autenticação continua normalmente sem uma verificação de associação de canal. Se a autenticação for bem-sucedida, o contexto será consultado para o nome do serviço que o cliente forneceu e validado mediante a lista de nomes de serviço aceitáveis. Existem quatro desfechos possíveis:  
   
-1.  O sistema operacional subjacente do servidor não dá suporte à proteção estendida. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
+1. O sistema operacional subjacente do servidor não dá suporte à proteção estendida. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
   
-2.  O sistema operacional subjacente do cliente não dá suporte à proteção estendida. Na configuração <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>, a tentativa de autenticação será bem-sucedida e a solicitação será retornada para o aplicativo. Na configuração <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, a tentativa de autenticação falhará. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
+2. O sistema operacional subjacente do cliente não dá suporte à proteção estendida. Na configuração <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>, a tentativa de autenticação será bem-sucedida e a solicitação será retornada para o aplicativo. Na configuração <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, a tentativa de autenticação falhará. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
   
-3.  O sistema operacional subjacente do cliente dá suporte à proteção estendida, mas o aplicativo não especificou uma associação de serviço. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
+3. O sistema operacional subjacente do cliente dá suporte à proteção estendida, mas o aplicativo não especificou uma associação de serviço. A solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
   
-4.  O cliente especificou uma associação de serviço. A associação de serviço é comparada com a lista de associações de serviço permitidas. Se ela for correspondente, a solicitação será retornada ao aplicativo. Caso contrário, a solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada automaticamente ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
+4. O cliente especificou uma associação de serviço. A associação de serviço é comparada com a lista de associações de serviço permitidas. Se ela for correspondente, a solicitação será retornada ao aplicativo. Caso contrário, a solicitação não será exposta para o aplicativo e uma resposta de não autorizado (401) será retornada automaticamente ao cliente. Uma mensagem será registrada para a origem do rastreamento <xref:System.Net.HttpListener> especificando o motivo da falha.  
   
  Se essa abordagem simples usando uma lista de nomes de serviço aceitáveis com permissão for insuficiente, um aplicativo poderá fornecer sua própria validação de nome de serviço consultando a propriedade <xref:System.Net.HttpListenerRequest.ServiceName%2A>. Nos casos 1 e 2 acima, a propriedade retornará `null`. No caso 3, ela retornará uma cadeia de caracteres vazia. No caso 4, o nome do serviço especificado pelo cliente será retornado.  
   
  Esses recursos de proteção estendida também podem ser usados por aplicativos para servidores para autenticação com outros tipos de solicitações e quando proxies confiáveis são usados.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

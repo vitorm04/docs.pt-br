@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 805d35ddb74fca847d47298cf283913031af67c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109416"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
@@ -130,9 +130,10 @@ tlbexp Sample.dll
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Regasm.exe (Ferramenta de Registro de Assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
 - [Resumo da conversão de assemblies em bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

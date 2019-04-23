@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333353"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em evento
 Se você estiver escrevendo uma classe com algumas operações que possam causar atrasos notáveis, considere a opção de fornecer funcionalidade assíncrona Implementando a [Visão geral de padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -75,7 +75,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
   
  Para cada assinatura de método _MethodName_**Async** separada:  
   
-1.  Defina o evento a seguir na mesma classe que o método:  
+1. Defina o evento a seguir na mesma classe que o método:  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Defina o representante a seguir e <xref:System.ComponentModel.AsyncCompletedEventArgs>. Provavelmente, eles serão definidos fora da própria classe, mas no mesmo namespace.  
+2. Defina o representante a seguir e <xref:System.ComponentModel.AsyncCompletedEventArgs>. Provavelmente, eles serão definidos fora da própria classe, mas no mesmo namespace.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -160,7 +160,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
   
 -   Nomeie esse evento da seguinte maneira:  
   
-    -   `ProgressChanged` se a classe tiver várias operações assíncronas (ou exista a expectativa de crescimento a fim de incluir várias operações assíncronas em versões futuras);  
+    -   `ProgressChanged` caso a classe tenha várias operações assíncronas (ou exista a expectativa de crescimento a fim de incluir várias operações assíncronas em versões futuras);  
   
     -   _MethodName_**ProgressChanged** se a classe tiver uma única operação assíncrona.  
   
@@ -205,9 +205,9 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
   
  Em um método síncrono *MethodName*:  
   
--   Os parâmetros `out` para *MethodName* não devem fazer parte de _MethodName_**Async**. Em vez disso, devem fazer parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).  
+-   `out` Os parâmetros para *MethodName* não devem fazer parte de _MethodName_**Async**. Em vez disso, devem fazer parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).  
   
--   Os parâmetros `ref` para *MethodName* devem aparecer como parte de _MethodName_**Async** e como parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).  
+-   `ref` Os parâmetros para *MethodName* devem aparecer como parte de _MethodName_**Async** e como parte de _MethodName_**CompletedEventArgs** com o mesmo nome que seu parâmetro equivalente em *MethodName* (a menos que haja um nome mais apropriado).  
   
  Por exemplo, com base em:  
   
@@ -250,9 +250,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Como: implementar um componente compatível com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Como: Implementar um componente compatível com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
 - [Como: Executar uma operação em segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [Como: Implementar um formulário que usa uma operação em segundo plano](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Decidindo quando implementar o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [Práticas recomendadas para a implementação do Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Decidindo quando implementar o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Padrão assíncrono baseado em evento (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

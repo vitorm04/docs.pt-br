@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163417"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e software livre
 Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra como você pode encontrar mais informações. Para obter a lista completa de tópicos sobre o .NET Core, visite o [Guia do .NET Core](../../core/index.md).
@@ -46,6 +46,7 @@ Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra 
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Home page do .NET Core](https://www.microsoft.com/net/core)
 - [Guia do .NET Core](../../core/index.md)
 - [Documentação do ASP.NET Core](/aspnet/core/)

@@ -2,12 +2,12 @@
 title: Noções básicas sobre problemas e exceções de WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215008"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Noções básicas sobre problemas e exceções de WebRequest
 <xref:System.Net.WebRequest> e suas classes derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> e <xref:System.Net.FileWebRequest>) geram exceções para sinalizar uma condição anormal. Às vezes, a resolução desses problemas não é óbvia.  
@@ -29,6 +29,7 @@ ms.locfileid: "54587522"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|A resposta do servidor não é uma resposta HTTP válida. Esse problema ocorre quando o .NET Framework detecta que a resposta do servidor não é compatível com o HTTP 1.1 RFC. Esse problema pode ocorrer quando a resposta contém cabeçalhos incorretos ou delimitadores de cabeçalho incorretos. O RFC 2616 define o HTTP 1.1 e o formato válido para a resposta do servidor. Para saber mais, confira [RFC 2616 - Hypertext Transfer Protocol – HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/).|Obtenha um rastreamento de rede da transação e examine os cabeçalhos na resposta.<br /><br /> Se o aplicativo exigir a resposta do servidor sem a análise (isso pode ser um problema de segurança), defina `useUnsafeHeaderParsing` como `true` no arquivo de configuração. Consulte Elemento [\<httpWebRequest> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

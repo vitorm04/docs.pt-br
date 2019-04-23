@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8731e90a66c20f06e8afcd7458349cbc0b93484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084096"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Executando aplicativos de intranet em confiança total
-A partir do .NET Framework versão 3.5 SP1 (Service Pack 1), os aplicativos e seus assemblies de bibliotecas podem ser executados como assemblies de confiança total de um compartilhamento de rede. A evidência de zona <xref:System.Security.SecurityZone.MyComputer> é automaticamente adicionada a assemblies que são carregados de um compartilhamento na intranet. Essa evidência fornece a esses assemblies o mesmo conjunto de concessões (que geralmente é de confiança total) que os assemblies que residem no computador. Essa funcionalidade não se aplica aos aplicativos ClickOnce ou que são projetados para serem executados em um host.  
+A partir do .NET Framework versão 3.5 SP1 (Service Pack 1), os aplicativos e seus assemblies de bibliotecas podem ser executados como assemblies de confiança total de um compartilhamento de rede. <xref:System.Security.SecurityZone.MyComputer> A evidência de zona é automaticamente adicionada a assemblies que são carregados de um compartilhamento na intranet. Essa evidência fornece a esses assemblies o mesmo conjunto de concessões (que geralmente é de confiança total) que os assemblies que residem no computador. Essa funcionalidade não se aplica aos aplicativos ClickOnce ou que são projetados para serem executados em um host.  
   
 ## <a name="rules-for-library-assemblies"></a>Regras para assemblies de bibliotecas  
  As seguintes regras se aplicam a assemblies que são carregados por um executável em um compartilhamento de rede:  
@@ -35,4 +35,5 @@ A partir do .NET Framework versão 3.5 SP1 (Service Pack 1), os aplicativos e se
 -   Em computadores de 64 bits, crie uma subchave sob a chave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework no Registro do sistema. Use o nome de chave LegacyMyComputerZone com um valor DWORD de 1. Crie a mesma subchave sob a chave HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

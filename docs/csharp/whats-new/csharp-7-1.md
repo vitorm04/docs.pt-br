@@ -1,13 +1,13 @@
 ---
 title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728648"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480957"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
 
@@ -17,12 +17,14 @@ O C# 7.1 adiciona a [seleção de versão da linguagem](../language-reference/co
 
 Os novos recursos de linguagem nesta versão são:
 
-* [`async` Método `Main`](#async-main)
+* [`async` `Main` method](#async-main)
   - O ponto de entrada para um aplicativo pode ter o modificador `async`.
 * [`default` Expressões literais](#default-literal-expressions)
   - Use expressões literais padrão em expressões de valor padrão quando o tipo de destino pode ser inferido.
 * [Nomes de elementos de tupla inferidos](#inferred-tuple-element-names)
   - Em muitos casos, os nomes dos elementos de tupla podem ser inferidos com base na inicialização da tupla.
+* [Restrições em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
+  - Você pode usar expressões de correspondência de padrão em variáveis cujo tipo é um parâmetro de tipo genérico.
 
 Por fim, o compilador traz duas opções `/refout` e `/refonly`, que controlam a [geração de assembly de referência](#reference-assembly-generation).
 
@@ -77,7 +79,7 @@ Agora você pode omitir o tipo no lado direito da inicialização:
 Func<string, bool> whereClause = default;
 ```
 
-Saiba mais sobre essa melhoria no tópico do Guia de Programação do C# em [expressões de valor padrão](../programming-guide/statements-expressions-operators/default-value-expressions.md).
+Saiba mais sobre essa melhoria no artigo do Guia de Programação do C# em [expressões de valor padrão](../programming-guide/statements-expressions-operators/default-value-expressions.md).
 
 Essa melhoria também altera algumas das regras de análise da [palavra-chave padrão](../language-reference/keywords/default.md).
 
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Saiba mais sobre esse recurso no tópico [Tuplas](../tuples.md).
+Saiba mais sobre esse recurso no artigo [Tuplas](../tuples.md).
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>Restrições em parâmetros de tipo genérico
+
+A partir do C# 7.1, a expressão de padrão para o padrão de tipo `is` e `switch` pode ter o tipo de um parâmetro de tipo genérico. Isso pode ser mais útil ao verificar tipos que podem ser do tipo `struct` ou `class` e você deseja evitar conversão boxing.
 
 ## <a name="reference-assembly-generation"></a>Geração de assembly de referência
 
 Há duas novas opções do compilador que geram *assemblies somente de referência*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) e [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-Os tópicos vinculados explicam essas opções e os assemblies de referência mais detalhadamente.
+Os artigos vinculados explicam essas opções e os assemblies de referência mais detalhadamente.

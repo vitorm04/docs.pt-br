@@ -3,12 +3,12 @@ title: Tipos de Framework com suporte a árvores de expressão
 description: Saiba mais sobre tipos de estrutura com suporte a árvores de expressão, criando árvores de expressão e técnicas para trabalhar com APIs de árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198459"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de Framework com suporte a árvores de expressão
 
@@ -18,7 +18,7 @@ Há uma grande lista de classes do .NET Core Framework que funcionam com árvore
 Veja a lista completa em <xref:System.Linq.Expressions>.
 Em vez de percorrer a lista completa, vamos entender como as classes de estrutura foram projetadas.
 
-No design de linguagem, uma expressão é um corpo de código que calcula e retorna um valor. As expressões podem ser muito simples: a expressão constante `1` retorna o valor constante de 1. Elas podem ser mais complicados: a expressão `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` retorna uma raiz de uma equação quadrática (no caso em que a equação tem uma solução).  
+No design de linguagem, uma expressão é um corpo de código que calcula e retorna um valor. As expressões podem ser muito simples: a expressão constante `1` retorna o valor constante de 1. Elas podem ser mais complicadas: a expressão `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` retorna uma raiz de uma equação quadrática (no caso em que a equação tem uma solução).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Tudo começa com System.Linq.Expression
 
@@ -65,4 +65,3 @@ Há tipos de Nó de expressão que mapeiam para quase todos os elementos de sint
 Você encontrará mais ao examinar cada uma dessas três áreas. Invariavelmente, você encontrará o que precisa ao começar com uma dessas três etapas.
  
  [Próximo – Executar árvores de expressão](expression-trees-execution.md)
- 

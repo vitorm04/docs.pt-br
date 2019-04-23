@@ -4,12 +4,12 @@ description: Saiba como definir e usar os valores ref return e ref local
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081821"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -59,7 +59,6 @@ O valor retornado de ref é um alias para outra variável no escopo do método c
 - Se o retornar *por referência*, você retornará um alias para a mesma variável.
 - Se o passar para outro método *por referência*, você passará uma referência à variável da qual ele é um alias.
 - Ao criar um alias de [referência local](#ref-locals), você cria um novo alias para a mesma variável.
-
 
 ## <a name="ref-locals"></a>Ref locals
 

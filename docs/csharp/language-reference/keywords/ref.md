@@ -1,19 +1,19 @@
 ---
 title: Palavra-chave ref – Referência de C#
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116250"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -24,10 +24,9 @@ A palavra-chave `ref` indica um valor que é passado por referência. Ela é usa
 - Em um corpo de membro, para indicar que um valor retornado por referência é armazenado localmente como uma referência que o chamador pretende modificar ou, em geral, uma variável local acessa outro valor por referência. Para obter mais informações, veja [Locais de referência](#ref-locals).
 - Em uma declaração `struct` para declarar um `ref struct` ou um `ref readonly struct`. Para obter mais informações, veja [tipos ref struct](#ref-struct-types).
 
-
 ## <a name="passing-an-argument-by-reference"></a>Passando um argumento por referência
 
-Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. O efeito de passar por referência é que qualquer alteração no argumento do método chamado será refletida no método chamado. Por exemplo, se o chamador passa uma expressão variável local ou uma expressão de acesso do elemento de matriz e o método chamado substituir o objeto ao qual o parâmetro ref se refere, então a variável local do chamador ou o elemento da matriz fará agora referência ao novo objeto quando o método retornar.
+Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passa uma expressão variável local ou uma expressão de acesso do elemento de matriz e o método chamado substituir o objeto ao qual o parâmetro ref se refere, então a variável local do chamador ou o elemento da matriz fará agora referência ao novo objeto quando o método retornar.
 
 > [!NOTE]
 > Não confunda o conceito de passar por referência com o conceito de tipos de referência. Os dois conceitos não são iguais. Um parâmetro de método pode ser modificado por `ref`, independentemente de ele ser um tipo de valor ou um tipo de referência. Não há nenhuma conversão boxing de um tipo de valor quando ele é passado por referência.  
@@ -138,7 +137,7 @@ Adicionar o modificador `ref` a uma declaração `struct` define que instâncias
 A meta de manter um tipo `ref struct` como uma variável alocada na pilha apresenta várias regras que o compilador aplica para todos os tipos `ref struct`.
 
 - Você não pode encaixotar um `ref struct`. Você não pode atribuir um tipo `ref struct` a uma variável do tipo `object`, `dynamic` ou de qualquer tipo de interface.
-- Tipos `ref struct` não podem implementar interfaces.
+- `ref struct` Tipos não podem implementar interfaces.
 - Você não pode declarar um `ref struct` como um membro de uma classe ou de um struct normal.
 - Você não pode declarar variáveis locais que são do tipo `ref struct` em métodos assíncronos. Você pode declará-las em métodos síncronos que retornam tipos semelhantes a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
 - Você não pode declarar as variáveis locais `ref struct` em iteradores.
@@ -155,11 +154,11 @@ Você pode combinar modificadores para declarar um struct como `readonly ref`. U
 ## <a name="see-also"></a>Consulte também
 
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
-- [Retornos de ref e locais de ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Ref returns e ref locals](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
 - [Operador de atribuição ref](../operators/assignment-operator.md#ref-assignment-operator)
-- [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Passar parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parâmetros de método](method-parameters.md)
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [Palavras-chave C#](index.md)

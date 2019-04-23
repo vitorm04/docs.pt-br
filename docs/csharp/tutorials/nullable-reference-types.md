@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296141"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador beta do C# 8.0. O compilador beta do C# 8 está disponível com o [Visual Studio 2019 versão prévia 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou o [.NET Core 3.0 versão prévia 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador beta do C# 8.0. O compilador beta do C# 8 está disponível com o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou a mais recente [.NET Core 3.0 versão prévia 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -45,7 +45,6 @@ Crie um novo aplicativo de console no Visual Studio ou na linha de comando usand
 
 > [!NOTE]
 > Quando C# 8 for lançado (não no modo de versão prévia), o elemento `NullableContextOptions` será adicionado por novos modelos de projeto. Até lá, será necessário adicioná-lo manualmente.
-
 
 ### <a name="design-the-types-for-the-application"></a>Criar os tipos para o aplicativo
 

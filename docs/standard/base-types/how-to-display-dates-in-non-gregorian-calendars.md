@@ -1,5 +1,5 @@
 ---
-title: Como exibir datas em calendários não gregorianos
+title: 'Como: exibir datas em calendários não gregorianos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313301"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Como exibir datas em calendários não gregorianos
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Como: exibir datas em calendários não gregorianos
 Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendário gregoriano como seu calendário padrão. Isso significa que chamar o método `ToString` de um valor de data e hora exibe a representação de cadeia de caracteres da data e hora no calendário gregoriano, mesmo que a data e hora tenha sido criada usando outro calendário. Isso é ilustrado no exemplo a seguir, que usa duas maneiras diferentes para criar um valor de data e hora com o calendário persa, mas ainda exibe esses valores de data e hora no calendário gregoriano quando chama o método <xref:System.DateTime.ToString%2A>. Este exemplo reflete duas técnicas comumente usadas, mas incorretas, para exibir a data em um calendário específico.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -30,26 +30,26 @@ Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendári
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Para exibir a data do calendário padrão de uma cultura  
   
-1.  Crie uma instância de um objeto de calendário derivado da classe <xref:System.Globalization.Calendar> que representa o calendário a ser usado.  
+1. Crie uma instância de um objeto de calendário derivado da classe <xref:System.Globalization.Calendar> que representa o calendário a ser usado.  
   
-2.  Crie uma instância de um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cuja formatação será usada para exibir a data.  
+2. Crie uma instância de um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cuja formatação será usada para exibir a data.  
   
-3.  Chame o método <xref:System.Array.Exists%2A?displayProperty=nameWithType> para determinar se o objeto de calendário é um membro da matriz retornada pela propriedade <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Isso indica que o calendário pode servir como calendário padrão para o objeto <xref:System.Globalization.CultureInfo>. Se ele não for membro da matriz, siga as instruções na seção "Para exibir a data em qualquer calendário".  
+3. Chame o método <xref:System.Array.Exists%2A?displayProperty=nameWithType> para determinar se o objeto de calendário é um membro da matriz retornada pela propriedade <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Isso indica que o calendário pode servir como calendário padrão para o objeto <xref:System.Globalization.CultureInfo>. Se ele não for membro da matriz, siga as instruções na seção "Para exibir a data em qualquer calendário".  
   
-4.  Atribua o objeto de calendário à propriedade <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> do objeto <xref:System.Globalization.DateTimeFormatInfo> retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+4. Atribua o objeto de calendário à propriedade <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> do objeto <xref:System.Globalization.DateTimeFormatInfo> retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  A classe <xref:System.Globalization.CultureInfo> também tem uma propriedade <xref:System.Globalization.CultureInfo.Calendar%2A>. No entanto, ela é somente leitura e constante; não é alterada para refletir o novo calendário padrão atribuído à propriedade <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
   
-5.  Chame o método <xref:System.DateTime.ToString%2A> ou <xref:System.DateTime.ToString%2A> e passe-o para o objeto <xref:System.Globalization.CultureInfo> cujo calendário padrão foi modificado na etapa anterior.  
+5. Chame o método <xref:System.DateTime.ToString%2A> ou <xref:System.DateTime.ToString%2A> e passe-o para o objeto <xref:System.Globalization.CultureInfo> cujo calendário padrão foi modificado na etapa anterior.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Para exibir a data em qualquer calendário  
   
-1.  Crie uma instância de um objeto de calendário derivado da classe <xref:System.Globalization.Calendar> que representa o calendário a ser usado.  
+1. Crie uma instância de um objeto de calendário derivado da classe <xref:System.Globalization.Calendar> que representa o calendário a ser usado.  
   
-2.  Determine quais elementos de data e hora devem aparecer na representação de cadeia de caracteres do valor de data e hora.  
+2. Determine quais elementos de data e hora devem aparecer na representação de cadeia de caracteres do valor de data e hora.  
   
-3.  Para cada elemento de data e hora que você deseja exibir, chame o método `Get` do objeto de calendário... método. Os métodos a seguir estão disponíveis:  
+3. Para cada elemento de data e hora que você deseja exibir, chame o método `Get` do objeto de calendário... método. Os métodos a seguir estão disponíveis:  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>, para exibir o ano no calendário apropriado.  
   
@@ -63,7 +63,7 @@ Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendári
   
     -   <xref:System.Globalization.Calendar.GetSecond%2A>, para exibir os segundos do minuto no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, para exibir os milissegundos do segundo no calendário apropriado.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , para exibir os milissegundos do segundo no calendário apropriado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo exibe uma data usando dois calendários diferentes. Ele exibe a data após definir o calendário islâmico como calendário padrão para a cultura ar-JO e exibe a data usando o calendário persa, que não tem suporte como calendário opcional pela cultura fa-IR.  

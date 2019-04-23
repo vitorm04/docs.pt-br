@@ -1,34 +1,33 @@
 ---
 title: Modificador de parâmetro in – Referência de C#
 ms.custom: seodec18
-ms.date: 02/12/2019
+ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112639"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador de parâmetro in (referência do C#)
 
-A palavra-chave `in` faz com que os argumentos sejam passados por referência. É como as palavras-chave [ref](ref.md) ou [out](out-parameter-modifier.md), exceto que os argumentos `in` não podem ser modificados pelo método chamado. Enquanto os argumentos `ref` podem ser modificados, os argumentos `out` devem ser modificados pelo método chamado, e essas modificações podem ser observadas no contexto da chamada.
+A palavra-chave `in` faz com que os argumentos sejam passados por referência. Ela torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. É como as palavras-chave [ref](ref.md) ou [out](out-parameter-modifier.md), exceto que os argumentos `in` não podem ser modificados pelo método chamado. Enquanto os argumentos `ref` podem ser modificados, os argumentos `out` devem ser modificados pelo método chamado, e essas modificações podem ser observadas no contexto da chamada.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
 O exemplo anterior demonstra que o modificador `in` é geralmente desnecessário no site de chamada. Ele apenas é necessário na declaração do método.
 
-
 > [!NOTE] 
 > A palavra-chave `in` também pode ser usada com um parâmetro de tipo genérico para especificar que o parâmetro de tipo é contravariante, como parte de uma instrução `foreach` ou como parte de uma cláusula `join` em uma consulta LINQ. Para obter mais informações sobre o uso da palavra-chave `in` nesses contextos, confira [in](in.md) que fornece links para todos esses usos.
   
- As variáveis passadas como argumentos `in` precisam ser inicializadas antes de serem passadas em uma chamada de método. No entanto, o método chamado não pode atribuir um valor nem modificar o argumento.  
+As variáveis passadas como argumentos `in` precisam ser inicializadas antes de serem passadas em uma chamada de método. No entanto, o método chamado não pode atribuir um valor nem modificar o argumento.  
 
 O modificador de parâmetro `in` está disponível no C# 7.2 e posteriores. As versões anteriores geravam o erro de compilador `CS8107` ("o recurso 'referências somente leitura' não está disponível no C# 7.0. Use a linguagem na versão 7.2 ou posteriores"). Confira como configurar a versão de linguagem do compilador em [Selecionar a versão da linguagem C#](../configure-language-version.md).
 
- Embora as palavras-chave `in`, `ref` e `out` causem um comportamento de tempo de execução diferente, elas não são consideradas parte da assinatura do método no tempo de compilação. Portanto, os métodos não poderão ser sobrecarregados se a única diferença for que um método usa um argumento `ref` ou `in` e o outro usa um argumento `out`. Por exemplo, o código a seguir, não será compilado:  
+As palavras-chave `in`, `ref` e `out` não são consideradas parte da assinatura do método para fins de resolução de sobrecarga. Portanto, os métodos não poderão ser sobrecarregados se a única diferença for que um método usa um argumento `ref` ou `in` e o outro usa um argumento `out`. Por exemplo, o código a seguir, não será compilado:  
   
 ```csharp
 class CS0663_Example
@@ -126,6 +125,6 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [Palavras-chave C#](index.md)
 - [Parâmetros de método](method-parameters.md)
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)

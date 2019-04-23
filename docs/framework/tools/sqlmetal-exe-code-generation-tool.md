@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206415"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
 A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Aplicando-se opções exibidas mais à frente neste tópico, é possível instruir SqlMetal para executar diversas ações diferentes, dentre as quais estão:  
@@ -41,7 +41,7 @@ sqlmetal [options] [<input file>]
 ## <a name="options"></a>Opções  
  Para exibir a lista de opções mais atual, digite `sqlmetal /?` em um prompt de comando no local instalado.  
   
- **Opções de Conexão**  
+ **Opções de conexão**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -79,7 +79,7 @@ sqlmetal [options] [<input file>]
 |**/pluralize**|Pluraliza ou singulariza automaticamente nomes de classe e de membro.<br /><br /> Essa opção só está disponível na versão em inglês  dos EUA.|  
 |**/serialization:** *\<option>*|Gera classes serializáveis.<br /><br /> *\<opção>* válida: nenhum, unidirecional. Valor padrão: nenhuma.<br /><br /> Para obter mais informações, consulte [Serialização](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
- **Arquivo de Entrada**  
+ **Arquivo de entrada**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -133,6 +133,7 @@ sqlmetal [options] [<input file>]
 >  Ao usar a opção **/pluralize** com o banco de dados de exemplo Northwind, observe o comportamento a seguir. Quando SqlMetal cria nomes de tipo de linha para tabelas, os nomes de tabela são singulares. Quando ele cria propriedades <xref:System.Data.Linq.DataContext> para tabelas, os nomes de tabela serão plurais. Coincidentemente, as tabelas no banco de dados de exemplo Northwind já são plurais. Por isso, você não vê essa parte funcionando. Embora seja uma prática comum nomear tabelas de banco de dados singulares, também é uma prática comum no .NET nomear as coleções plurais.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Como: gerar o modelo de objeto em Visual Basic ou em C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [Geração de código em LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Mapeamento Externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Geração de código em LINQ para SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Mapeamento externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

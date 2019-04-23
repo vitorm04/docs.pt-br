@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337273"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes .NET Framework
 O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos tipos e membros de tipo que oferecem uma nova funcionalidade. Tipos existentes e seus membros também mudam com o passar do tempo. Por exemplo, alguns tipos se tornam menos importantes conforme a tecnologia compatível é substituída por uma nova tecnologia e alguns métodos são substituídos por métodos mais novos que sejam mais práticos ou mais repletos de recursos.  
@@ -42,9 +42,9 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
   
  Você pode optar por não recompilar o código existente em comparação com uma versão posterior do .NET Framework. Em vez disso, você pode especificar a versão do .NET Framework na qual o código existente compilado é executado. Por exemplo, suponhamos que você tenha um aplicativo chamado app1.exe compilado no [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], mas queira que o aplicativo seja executado no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Isso exige as seguintes etapas:  
   
-1.  Crie um arquivo de configuração para o executável principal e denomine-o *appName*.exe.config, em que *appName* é o nome do executável do aplicativo. Para o aplicativo chamado app1.exe em nosso exemplo, você criaria um arquivo de configuração chamado app1.exe.config.  
+1. Crie um arquivo de configuração para o executável principal e denomine-o *appName*.exe.config, em que *appName* é o nome do executável do aplicativo. Para o aplicativo chamado app1.exe em nosso exemplo, você criaria um arquivo de configuração chamado app1.exe.config.  
   
-2.  Adicione o seguinte ao arquivo de configuração.  
+2. Adicione o seguinte ao arquivo de configuração.  
   
     ```xml  
     <configuration>  
@@ -56,7 +56,7 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
   
  A tabela a seguir lista os valores da cadeia de caracteres que você pode atribuir ao atributo `version` para segmentar uma versão específica do .NET Framework.  
   
-|Versão do .NET Framework|Cadeia de caracteres `version`|
+|Versão do .NET Framework|`version` cadeia de caracteres|
 |-|-|  
 |4.7 (incluindo 4.7.1 e 4.7.2)|v4.0|  
 |4.6 (incluindo 4.6.1 e 4.6.2)|v4.0|  
@@ -82,4 +82,5 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
  [Lista obsoleta do .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Consulte também
-- Elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)
+
+- [\<Elemento supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)

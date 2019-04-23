@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307451"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
 
@@ -63,13 +63,13 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identidade|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negação|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negação lógica|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Negação lógica|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negação bit a bit|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Pré-incremento|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pré-decremento|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Converte explicitamente x no tipo T|  
   
- **Operadores multiplicativos**  
+ **Operadores de multiplicação**  
   
 |Expressão|Descrição|  
 |----------------|-----------------|  
@@ -84,7 +84,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Adição, concatenação de cadeia de caracteres, combinação de delegados|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Subtração, remoção de delegado|  
   
- **Operadores shift**  
+ **Operadores Shift**  
   
 |Expressão|Descrição|  
 |----------------|-----------------|  
@@ -107,7 +107,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |Expressão|Descrição|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Igual|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Não é igual a|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Diferente de|  
   
  **Operadores lógicos, condicionais e nulos**  
   
@@ -116,8 +116,8 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |AND lógico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND bit a bit inteiro, AND lógico booliano|  
 |XOR lógico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR bit a bit inteiro, XOR lógico booliano|  
 |OR lógico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR bit a bit inteiro, OR lógico booliano|  
-|AND condicional|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Avalia y somente se x for true|  
-|OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Avalia y somente se x for false|  
+|AND condicional|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Avalia y somente se x for true|  
+|OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Avalia y somente se x for false|  
 |Coalescência nula|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|Avalia como y se x for nulo, caso contrário, como x|  
 |Condicional|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Avalia como y se x for true, z se x for false|  
   

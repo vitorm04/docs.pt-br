@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207507"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 A reflexão fornece a capacidade de obter informações sobre tipos e membros e de acessar membros (ou seja, chamar métodos e construtores, obter e definir valores de propriedade, adicionar e remover manipuladores de eventos e assim por diante). O uso da reflexão para obter informações sobre tipos e membros não é restrito. Todo o código pode usar reflexões para realizar as seguintes tarefas:  
@@ -36,7 +36,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
     -   Membros protegidos de classes base do código de chamada. (Na reflexão, isso é chamado de acesso de nível familiar.)  
   
-    -   Membros `internal` (membros `Friend` no Visual Basic) no assembly do código de chamada. (Na reflexão, isso é chamado de acesso no nível do assembly.)  
+    -   `internal` Membros (membros `Friend` no Visual Basic) no assembly do código de chamada. (Na reflexão, isso é chamado de acesso no nível do assembly.)  
   
     -   Membros privados de outras instâncias da classe que contém o código de chamada.  
   
@@ -105,6 +105,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
 -   A partir do [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], usar reflexão para obter informações sobre tipos e membros não públicos não requer permissões. Em versões anteriores, o <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> é obrigatório.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>

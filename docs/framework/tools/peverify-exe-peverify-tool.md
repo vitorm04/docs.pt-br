@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ff03eb830a02b05dd128da4c072a8c2c918921
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128722"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
 A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermediate Language) (como gravadores de compiladores, desenvolvedores de mecanismos de script etc.) a determinar se o código MSIL e os metadados associados atendem aos requisitos de segurança de tipo. Alguns compiladores só gerarão código fortemente tipado verificável se você evitar usar determinados constructos de linguagem. Se, como desenvolvedor, estiver usando um compilador assim, você talvez queira verificar se não comprometeu a segurança de tipo do código. Nessa situação, é possível executar a ferramenta PEVerify nos arquivos para verificar MSIL e metadados.  
@@ -121,7 +121,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Escrevendo um código fortemente tipado verificável](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
 - [Segurança de tipos e proteção](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

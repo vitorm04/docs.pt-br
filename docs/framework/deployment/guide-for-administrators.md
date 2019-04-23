@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309505"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 Este artigo passo a passo descreve como um administrador de sistemas pode implantar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas dependências de sistema pela rede usando o Microsoft System Center Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -26,10 +26,10 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  [O processo de implantação](#the_deployment_process)  
  [Implantando o .NET Framework](#deploying_in_a_test_environment)  
- [Criar uma coleção](#creating_a_collection)  
- [Criar um pacote e um programa](#creating_a_package)  
- [Selecionar um ponto de distribuição](#select_dist_point)  
- [Implantar o pacote](#deploying_package)  
+ [Crie uma coleção](#creating_a_collection)  
+ [Crie um pacote e programa](#creating_a_package)  
+ [Selecione um ponto de distribuição](#select_dist_point)  
+ [Implante o pacote](#deploying_package)  
 [Recursos](#resources)  
 [Solução de problemas](#troubleshooting)  
   
@@ -52,13 +52,13 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ## <a name="deploying-the-net-framework"></a>Implantando o .NET Framework  
  Você pode usar o System Center 2012 Configuration Manager para implantar uma instalação silenciosa do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], onde os usuários não interagem com o processo de instalação. Siga estas etapas:  
   
-1.  [Crie uma coleção](#creating_a_collection).  
+1. [Crie uma coleção](#creating_a_collection).  
   
-2.  [Crie um pacote e um programa para o .NET Framework redistribuível](#creating_a_package).  
+2. [Crie um pacote e um programa para o .NET Framework redistribuível](#creating_a_package).  
   
-3.  [Selecione um ponto de distribuição](#select_dist_point).  
+3. [Selecione um ponto de distribuição](#select_dist_point).  
   
-4.  [Implante o pacote](#deploying_package).  
+4. [Implante o pacote](#deploying_package).  
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Crie uma coleção  
@@ -66,21 +66,21 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  Para criar uma coleção:  
   
-1.  No console do Configuration Manager, escolha **Ativos e Conformidade**.  
+1. No console do Configuration Manager, escolha **Ativos e Conformidade**.  
   
-2.  No workspace **Ativos e Conformidade**, escolha **Coleções de Dispositivos**.  
+2. No workspace **Ativos e Conformidade**, escolha **Coleções de Dispositivos**.  
   
-3.  Na guia **Início** do grupo **Criar**, escolha **Criar Coleção de Dispositivos**.  
+3. Na guia **Início** do grupo **Criar**, escolha **Criar Coleção de Dispositivos**.  
   
-4.  Na página **Geral** do **Assistente de Criação de Coleção de Dispositivos**, insira um nome para a coleção.  
+4. Na página **Geral** do **Assistente de Criação de Coleção de Dispositivos**, insira um nome para a coleção.  
   
-5.  Escolha **Procurar** para especificar uma coleção de restrição.  
+5. Escolha **Procurar** para especificar uma coleção de restrição.  
   
-6.  Na página **Regras de Associação**, escolha **Adicionar Regra** e escolha **Regra Direta** para abrir o **Assistente de Criação de Regra de Associação Direta**. Escolha **Avançar**.  
+6. Na página **Regras de Associação**, escolha **Adicionar Regra** e escolha **Regra Direta** para abrir o **Assistente de Criação de Regra de Associação Direta**. Escolha **Avançar**.  
   
-7.  Na página **Pesquisar Recursos**, na lista **Classe de recurso**, escolha **Recurso do Sistema**. Na lista **Nome do atributo**, escolha **Nome**. No campo **Valor**, insira `%` e escolha **Avançar**.  
+7. Na página **Pesquisar Recursos**, na lista **Classe de recurso**, escolha **Recurso do Sistema**. Na lista **Nome do atributo**, escolha **Nome**. No campo **Valor**, insira `%` e escolha **Avançar**.  
   
-8.  Na página **Selecionar Recursos**, marque a caixa de seleção para cada computador no qual você deseja implantar o .NET Framework. Escolha **Avançar** e conclua o assistente.  
+8. Na página **Selecionar Recursos**, marque a caixa de seleção para cada computador no qual você deseja implantar o .NET Framework. Escolha **Avançar** e conclua o assistente.  
   
 9. Na página **Regras de Associação** do **Assistente de Criação de Coleção de Dispositivos**, escolha **Avançar** e conclua o assistente.  
   
@@ -90,13 +90,13 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  Para criar um pacote:  
   
-1.  No console do Configuration Manager, escolha **Biblioteca de Software**.  
+1. No console do Configuration Manager, escolha **Biblioteca de Software**.  
   
-2.  No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.  
+2. No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.  
   
-3.  Na guia **Início**, no grupo **Criar**, escolha **Criar Pacote**.  
+3. Na guia **Início**, no grupo **Criar**, escolha **Criar Pacote**.  
   
-4.  Na página **Pacote** do **Assistente para Criar Pacote e Programa**, insira as seguintes informações:  
+4. Na página **Pacote** do **Assistente para Criar Pacote e Programa**, insira as seguintes informações:  
   
     -   Nome: `.NET Framework 4.5`  
   
@@ -104,11 +104,11 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
     -   Idioma. `English (US)`  
   
-5.  Escolha **Este pacote contém arquivos de origem** e **Procurar** para selecionar a pasta de rede ou local que contém os arquivos de instalação do .NET Framework. Após selecionar a pasta, escolha **OK** e **Avançar**.  
+5. Escolha **Este pacote contém arquivos de origem** e **Procurar** para selecionar a pasta de rede ou local que contém os arquivos de instalação do .NET Framework. Após selecionar a pasta, escolha **OK** e **Avançar**.  
   
-6.  Na página **Tipo de Programa** do assistente, escolha **Programa Padrão** e **Avançar**.  
+6. Na página **Tipo de Programa** do assistente, escolha **Programa Padrão** e **Avançar**.  
   
-7.  Na página **Programa** do **Assistente para Criar Pacote e Programa**, insira as seguintes informações:  
+7. Na página **Programa** do **Assistente para Criar Pacote e Programa**, insira as seguintes informações:  
   
     1.  **Nome:** `.NET Framework 4.5`  
   
@@ -118,7 +118,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
     4.  **O programa pode ser executado:** Escolha a opção que especifica que o programa pode ser executado independentemente de um usuário estar conectado.  
   
-8.  Na página **Requisitos**, escolha **Avançar** para aceitar os valores padrão e conclua o assistente.  
+8. Na página **Requisitos**, escolha **Avançar** para aceitar os valores padrão e conclua o assistente.  
   
  A tabela a seguir descreve as opções de linha de comando especificadas na etapa 7.  
   
@@ -136,21 +136,21 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  Use as etapas a seguir para selecionar um ponto de distribuição para o pacote .NET Framework 4.5 criado na seção anterior:  
   
-1.  No console do Configuration Manager, escolha **Biblioteca de Software**.  
+1. No console do Configuration Manager, escolha **Biblioteca de Software**.  
   
-2.  No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.  
+2. No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.  
   
-3.  Na lista de pacotes, selecione o pacote **.NET Framework 4.5** que você criou na seção anterior.  
+3. Na lista de pacotes, selecione o pacote **.NET Framework 4.5** que você criou na seção anterior.  
   
-4.  Na guia **Início** do grupo **Implantação**, escolha **Distribuir Conteúdo**.  
+4. Na guia **Início** do grupo **Implantação**, escolha **Distribuir Conteúdo**.  
   
-5.  Na guia **Geral** do **Assistente para Distribuir Conteúdo**, escolha **Avançar**.  
+5. Na guia **Geral** do **Assistente para Distribuir Conteúdo**, escolha **Avançar**.  
   
-6.  Na página **Destino de Conteúdo** do assistente, escolha **Adicionar** e **Ponto de Distribuição**.  
+6. Na página **Destino de Conteúdo** do assistente, escolha **Adicionar** e **Ponto de Distribuição**.  
   
-7.  Na caixa de diálogo **Adicionar Pontos de Distribuição**, selecione os pontos de distribuição que hospedarão o pacote e o programa e escolha **OK**.  
+7. Na caixa de diálogo **Adicionar Pontos de Distribuição**, selecione os pontos de distribuição que hospedarão o pacote e o programa e escolha **OK**.  
   
-8.  Conclua o assistente.  
+8. Conclua o assistente.  
   
  O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de você implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição. Veja a seção "Monitorar Conteúdo" em [Monitorar conteúdo distribuído com o System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) na biblioteca de documentação do Configuration Manager.  
   
@@ -158,21 +158,21 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ### <a name="deploy-the-package"></a>Implante o pacote  
  Para implantar o pacote e o programa .NET Framework 4.5:  
   
-1.  No console do Configuration Manager, escolha **Biblioteca de Software**.  
+1. No console do Configuration Manager, escolha **Biblioteca de Software**.  
   
-2.  No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.  
+2. No workspace **Biblioteca de Software**, expanda **Gerenciamento de Aplicativos** e escolha **Pacotes**.  
   
-3.  Na lista de pacotes, selecione o pacote criado e denominado **.NET Framework 4.5**.  
+3. Na lista de pacotes, selecione o pacote criado e denominado **.NET Framework 4.5**.  
   
-4.  Na guia **Início**, no grupo **Implantação**, escolha **Implantar**.  
+4. Na guia **Início**, no grupo **Implantação**, escolha **Implantar**.  
   
-5.  Na página **Geral** do **Assistente de Implantação de Software**, escolha **Procurar** e selecione a coleção anteriormente criada. Escolha **Avançar**.  
+5. Na página **Geral** do **Assistente de Implantação de Software**, escolha **Procurar** e selecione a coleção anteriormente criada. Escolha **Avançar**.  
   
-6.  Na página **Conteúdo** do assistente, verifique se o ponto do qual você deseja distribuir o software é exibido e escolha **Avançar**.  
+6. Na página **Conteúdo** do assistente, verifique se o ponto do qual você deseja distribuir o software é exibido e escolha **Avançar**.  
   
-7.  Na página **Configurações de Implantação** do assistente, confirme se a **Ação** está definida como **Instalar** e a **Finalidade** como **Obrigatório**. Isso garantirá que o pacote de software seja uma instalação obrigatória nos computadores de destino. Escolha **Avançar**.  
+7. Na página **Configurações de Implantação** do assistente, confirme se a **Ação** está definida como **Instalar** e a **Finalidade** como **Obrigatório**. Isso garantirá que o pacote de software seja uma instalação obrigatória nos computadores de destino. Escolha **Avançar**.  
   
-8.  Na página **Agendamento** do assistente, especifique quando você deseja que o .NET Framework seja instalado. Você pode escolher **Nova** para atribuir uma hora de instalação ou instruir o software a ser instalado quando o usuário fizer logon, logoff ou assim que possível. Escolha **Avançar**.  
+8. Na página **Agendamento** do assistente, especifique quando você deseja que o .NET Framework seja instalado. Você pode escolher **Nova** para atribuir uma hora de instalação ou instruir o software a ser instalado quando o usuário fizer logon, logoff ou assim que possível. Escolha **Avançar**.  
   
 9. Na página **Experiência do Usuário** do assistente, use os valores padrão e escolha **Avançar**.  
   
@@ -191,7 +191,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  **Active Directory, DNS, DHCP:**  
   
--   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
+-   [Serviços de Domínio do Active Directory](/windows/desktop/ad/active-directory-domain-services)  
   
 -   [DNS (Sistema de Nomes de Domínio)](/windows-server/networking/dns/dns-top)  
   
@@ -203,7 +203,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
 -   [Visão geral de segurança do SQL Server 2008 para administradores de banco de dados](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
- **System Center 2012 Configuration Manager (Ponto de Gerenciamento, Ponto de Distribuição):**  
+ **System Center 2012 Configuration Manager (ponto de gerenciamento, ponto de distribuição):**  
   
 -   [Administração de site do System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
@@ -261,4 +261,4 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md)

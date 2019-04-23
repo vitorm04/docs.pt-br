@@ -1,6 +1,6 @@
 ---
 title: Instrução switch do C#
-ms.date: 08/14/2018
+ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463248"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481451"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -29,7 +29,7 @@ A instrução `switch` geralmente é usada como uma alternativa para um construc
 
 [!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
-Ele é equivalente ao exemplo a seguir que usa um constructo `if`-`else`.
+Ela é equivalente ao exemplo a seguir que usa um constructo `if`-`else`.
 
 [!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
@@ -41,7 +41,7 @@ A expressão de correspondência fornece o valor para corresponder aos padrões 
    switch (expr)
 ```
 
-No C# 6, a expressão de correspondência deve ser uma expressão que retorna um valor dos seguintes tipos:
+No C# 6 e versões anteriores, a expressão de correspondência deve ser uma expressão que retorna um valor dos seguintes tipos:
 
 - um [char](char.md).
 - um [string](string.md).
@@ -57,7 +57,7 @@ Uma instrução `switch` inclui uma ou mais seções do comutador. Cada seção 
 
 Uma instrução `switch` pode incluir qualquer número de seções switch e cada seção pode ter um ou mais rótulos case, conforme mostrado no exemplo a seguir. No entanto, dois rótulos case não podem conter a mesma expressão.
 
-[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+[!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
 Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo de caso para outro (\<case label>) para outro."
 
@@ -74,9 +74,9 @@ switch (caseSwitch)
 }
 ```
 
-Esse requisito é atendido normalmente saindo explicitamente da seção switch usando uma instrução [break](break.md), [goto](goto.md) ou [return](return.md). No entanto, o código a seguir também é válido, pois garante que o controle do programa não pode passar para a seção switch `default`.
+Esse requisito é atendido normalmente saindo explicitamente da seção switch usando uma instrução [break](break.md), [goto](goto.md) ou [return](return.md). No entanto, o código a seguir também é válido porque garante que o controle do programa não pode passar para a seção switch `default`.
 
-[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+[!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
 A execução da lista de instruções na seção switch com um rótulo case que corresponde à expressão de correspondência começa com a primeira instrução e continua pela lista de instruções, normalmente até uma instrução de salto como `break`, `goto case`, `goto label`, `return` ou `throw` ser atingida. Nesse ponto, o controle é transferido para fora da instrução `switch` ou para outro rótulo case. Se uma instrução `goto` for usada, ela deverá transferir controle para um rótulo de constante. Essa restrição é necessária, já que tentar transferir o controle para um rótulo não constante pode ter efeitos colaterais indesejáveis, tais como transferência do controle para um local não intencional no código ou criação de um loop infinito.
 
@@ -92,7 +92,7 @@ No entanto, no C# 7.0, como há suporte para outros padrões, os rótulos case n
 
 O exemplo a seguir ilustra uma instrução `switch` que usa uma variedade de padrões não mutuamente exclusivos. Se você mover a seção switch `case 0:` para que ela não seja mais a primeira seção na instrução `switch`, o C# gera um erro do compilador porque um inteiro cujo valor é zero é um subconjunto de todos os inteiros, que é o padrão definido pela instrução `case int val`.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
+[!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
 Você pode corrigir esse problema e eliminar o aviso do compilador em uma das duas maneiras:
 
@@ -135,11 +135,11 @@ A expressão de constante é avaliada da seguinte forma:
 
 O exemplo a seguir usa o padrão de constante para determinar se uma data específica é um final de semana, o primeiro dia, o último dia ou o meio da semana de trabalho. Ele avalia a propriedade <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> do dia atual em relação aos membros da enumeração <xref:System.DayOfWeek>.
 
-[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 O exemplo a seguir usa o padrão de constante para manipular a entrada do usuário em um aplicativo de console que simula uma máquina de café automática.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
+[!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>Padrão de tipo
 
@@ -149,7 +149,7 @@ O padrão de tipo permite a conversão e a avaliação do tipo concisa. Quando u
    case type varname
 ```
 
-em que *type* é o nome do tipo no qual o resultado de *expr* deverá ser convertido e *varname* é o objeto para o qual o resultado de *expr* é convertido se a correspondência é bem-sucedida.
+em que *type* é o nome do tipo no qual o resultado de *expr* deverá ser convertido e *varname* é o objeto para o qual o resultado de *expr* é convertido se a correspondência é bem-sucedida. O tipo de tempo de compilação *expr* pode ser um parâmetro de tipo genérico, começando com C# 7.1.
 
 A expressão `case` será `true` se qualquer uma das condições seguintes for verdadeira:
 
@@ -173,6 +173,12 @@ O exemplo a seguir usa o padrão de tipo para fornecer informações sobre vári
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
+Em vez de `object`, você poderia empregar um método genérico, usando o tipo da coleção como o parâmetro de tipo, conforme mostrado no código a seguir:
+
+[!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
+
+A versão genérica é diferente da primeira amostra de duas maneiras. Primeiro, você não pode usar o case `null`. Você não pode usar nenhum case constante porque o compilador não pode converter qualquer tipo arbitrário de `T` para qualquer tipo diferente de `object`. O que tinha sido o case `default` agora testa para um `object` não nulo. Isso significa que o case `default` testa apenas para `null`.
+
 Sem a correspondência de padrões, esse código pode ser escrito da seguinte maneira. O uso da correspondência de padrões de tipo produz um código mais compacto e legível eliminando a necessidade de testar se o resultado de uma conversão é um `null` ou executar conversões repetidas.
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
@@ -181,7 +187,7 @@ Sem a correspondência de padrões, esse código pode ser escrito da seguinte ma
 
 A partir do C# 7.0, como as instruções case não precisam ser mutuamente exclusivas, você pode usar a adição de uma cláusula `when` para especificar uma condição adicional que precisa ser atendida para que a instrução case seja avaliada como true. A cláusula `when` pode ser qualquer expressão que retorna um valor booliano.
 
-O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que deriva de `Shape` e uma classe `Square` que deriva de `Rectangle`. Ele usa a cláusula `when` para garantir que o `ShowShapeInfo` trata um objeto `Rectangle` que recebeu comprimentos e larguras como um `Square` mesmo se ele não tiver sido instanciado como um objeto `Square`. O método não tenta exibir informações a sobre um objeto que é `null` ou uma forma cuja área é zero.
+O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que deriva de `Shape` e uma classe `Square` que deriva de `Rectangle`. Ele usa a cláusula `when` para garantir que o `ShowShapeInfo` trata um objeto `Rectangle` que recebeu comprimentos e larguras como um `Square` mesmo se ele não tiver sido instanciado como um objeto `Square`. O método não tenta exibir informações sobre um objeto que é `null` ou uma forma cuja área é zero.
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
@@ -195,6 +201,6 @@ Para obter mais informações, consulte [A instrução switch](~/_csharplang/spe
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [Palavras-chave C#](index.md)
 - [if-else](if-else.md)
-- [Correspondência Padrão](../../pattern-matching.md)
+- [Correspondência padrão](../../pattern-matching.md)

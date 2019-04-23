@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226567"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Como: Definir uma política de cache para uma solicitação
 O exemplo a seguir demonstra como definir uma política de cache para uma solicitação. A entrada de exemplo é um URI, como `http://www.contoso.com/`.  
@@ -106,8 +106,9 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
 - [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
 - [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+- [\<Elemento requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

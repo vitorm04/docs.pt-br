@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168162"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -135,7 +135,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- Os modificadores <xref:System.Security.Permissions.SecurityAction> funcionam corretamente se são colocados em uma classe que contém (encapsula) a chamada da invocação de plataforma.  
+ <xref:System.Security.Permissions.SecurityAction> Os modificadores funcionam corretamente se são colocados em uma classe que contém (encapsula) a chamada da invocação de plataforma.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -156,7 +156,7 @@ class PInvokeWrapper
 }  
 ```  
   
- Os modificadores <xref:System.Security.Permissions.SecurityAction> também funcionam corretamente em um cenário aninhado em que são colocados no chamador da chamada de invocação de plataforma:  
+ <xref:System.Security.Permissions.SecurityAction> Os modificadores também funcionam corretamente em um cenário aninhado em que são colocados no chamador da chamada de invocação de plataforma:  
   
 ```cpp  
       {  
@@ -235,6 +235,7 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
 - [Especificando um ponto de entrada](specifying-an-entry-point.md)
 - [Especificando um conjunto de caracteres](specifying-a-character-set.md)

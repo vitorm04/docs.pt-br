@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169020"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrando assemblies com o COM
 Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de registro do Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar ou cancelar o registro de um assembly para uso com o COM. Regasm.exe adiciona informações sobre a classe no registro do sistema para que clientes COM possam usar a classe do .NET Framework de forma transparente. A classe <xref:System.Runtime.InteropServices.RegistrationServices> fornece a funcionalidade equivalente.  
@@ -44,7 +44,8 @@ Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de re
  Para a subchave `InprocServer32`, uma referência a Mscoree.dll é exibida no lugar de uma biblioteca de tipos COM tradicional para indicar que o Common Language Runtime cria o objeto gerenciado.  
   
 ## <a name="see-also"></a>Consulte também
-- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
+
+- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
 - [Como: Referenciar tipos .NET por meio do COM](how-to-reference-net-types-from-com.md)
-- [Calling a .NET Object](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) (Chamando um objeto .NET)
+- [Chamando um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

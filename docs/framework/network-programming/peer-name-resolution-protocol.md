@@ -2,12 +2,12 @@
 title: Protocolo PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119061"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
@@ -47,6 +47,7 @@ O protocolo PNRP demonstra as seguintes propriedades:
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para seus pontos de extremidade de rede, incluindo métodos síncronos e assíncronos para a resolução.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)

@@ -3,12 +3,12 @@ title: Usar o recurso de correspondência de padrões para estender padrões de 
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308595"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
 
@@ -23,7 +23,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar o computador para executar o .NET Core, incluindo o compilador da versão prévia do C# 8.0. O compilador da versão prévia do C#8 está disponível na última [versão prévia do Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou na última [versão prévia do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Você precisará configurar o computador para executar o .NET Core, incluindo o compilador da versão prévia do C# 8.0. O compilador da versão prévia do C# 8 está disponível no último [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou na última [versão prévia do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 

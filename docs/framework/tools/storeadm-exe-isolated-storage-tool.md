@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13640e508dafe28b53f4254656afe744b90a2eb2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092260"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Ferramenta de Armazenamento Isolado)
 A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.  
@@ -61,6 +61,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  Independentemente do roaming estar efetivamente habilitado para o usuário, isso não afeta a administração de Storeadm.exe. A execução da ferramenta sem opções se aplica a todas as ações no repositório local. A execução da ferramenta com a opção **/roaming** se aplica a todas as ações no repositório compatível com roaming. A execução da ferramenta com a opção **/machine** se aplica a todas as ações no repositório do computador.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

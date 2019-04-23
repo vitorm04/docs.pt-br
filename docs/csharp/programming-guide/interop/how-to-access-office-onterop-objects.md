@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302992"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como: acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
 O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Office. Os novos recursos incluem argumentos nomeados e opcionais, um novo tipo chamado `dynamic` e a capacidade de passar argumentos para parâmetros de referência em métodos COM como se fossem parâmetros de valor.  
@@ -30,65 +30,65 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
 ## <a name="to-create-a-new-console-application"></a>Para criar um novo aplicativo de console  
   
-1.  Inicie o Visual Studio.  
+1. Inicie o Visual Studio.  
   
-2.  No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. A caixa de diálogo **Novo Projeto** é exibida.  
+2. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. A caixa de diálogo **Novo Projeto** é exibida.  
   
-3.  No painel **Modelos Instalados**, expanda **Visual C#** e, em seguida, selecione **Windows**.  
+3. No painel **Modelos Instalados**, expanda **Visual C#** e, em seguida, selecione **Windows**.  
   
-4.  Observe a parte superior da caixa de diálogo **Novo Projeto** para verificar se **.NET Framework 4** (ou versão posterior) está selecionado como uma estrutura de destino.  
+4. Observe a parte superior da caixa de diálogo **Novo Projeto** para verificar se **.NET Framework 4** (ou versão posterior) está selecionado como uma estrutura de destino.  
   
-5.  No painel **Modelos**, clique em **Aplicativo de Console**.  
+5. No painel **Modelos**, clique em **Aplicativo de Console**.  
   
-6.  Digite um nome para o projeto no campo **Nome**.  
+6. Digite um nome para o projeto no campo **Nome**.  
   
-7.  Clique em **OK**.  
+7. Clique em **OK**.  
   
      O novo projeto aparece no **Gerenciador de Soluções**.  
   
 ## <a name="to-add-references"></a>Para adicionar referências  
   
-1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nome do projeto e, em seguida, clique em **Adicionar Referência**. A caixa de diálogo **Adicionar Referência** é exibida.  
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nome do projeto e, em seguida, clique em **Adicionar Referência**. A caixa de diálogo **Adicionar Referência** é exibida.  
   
-2.  Na página **Assemblies**, selecione **Microsoft.Office.Interop.Word** na lista **Nome do Componente** e, mantendo a tecla CTRL pressionada, selecione **Microsoft.Office.Interop.Excel**.  Se você não vir os assemblies, talvez seja necessário verificar se eles estão instalados e exibidos (confira [Como Instalar assemblies de interoperabilidade primários do Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
+2. Na página **Assemblies**, selecione **Microsoft.Office.Interop.Word** na lista **Nome do Componente** e, mantendo a tecla CTRL pressionada, selecione **Microsoft.Office.Interop.Excel**.  Se você não vir os assemblies, talvez seja necessário verificar se eles estão instalados e exibidos (confira [Como Instalar assemblies de interoperabilidade primários do Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
   
-3.  Clique em **OK**.  
+3. Clique em **OK**.  
   
 ## <a name="to-add-necessary-using-directives"></a>Para adicionar as diretivas using necessárias  
   
-1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Program.cs** e, em seguida, clique em **Exibir Código**.  
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Program.cs** e, em seguida, clique em **Exibir Código**.  
   
-2.  Adicione as seguintes diretivas `using` na parte superior do arquivo de código.  
+2. Adicione as seguintes diretivas `using` na parte superior do arquivo de código.  
   
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>Para criar uma lista de contas bancárias  
   
-1.  Cole a seguinte definição de classe em **Program.cs**, na classe `Program`.  
+1. Cole a seguinte definição de classe em **Program.cs**, na classe `Program`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
-2.  Adicione o seguinte código ao método `Main` para criar uma lista `bankAccounts` que contenha duas contas.  
+2. Adicione o seguinte código ao método `Main` para criar uma lista `bankAccounts` que contenha duas contas.  
   
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Para declarar um método que exporta as informações de conta para o Excel  
   
-1.  Adicione o método a seguir à classe `Program` para configurar uma planilha do Excel.  
+1. Adicione o método a seguir à classe `Program` para configurar uma planilha do Excel.  
   
      O método <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> tem um parâmetro opcional para especificar um modelo específico. Parâmetros opcionais, novos no [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], permitem omitir o argumento para esse parâmetro, se você deseja usar o valor padrão do parâmetro. Como nenhum argumento é enviado no código a seguir, `Add` usa o modelo padrão e cria uma nova pasta de trabalho. A instrução equivalente em versões anteriores do C# requer um argumento de espaço reservado: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
-2.  Adicione o código a seguir no final de `DisplayInExcel`. O código insere valores nas duas primeiras colunas da primeira linha da planilha.  
+2. Adicione o código a seguir no final de `DisplayInExcel`. O código insere valores nas duas primeiras colunas da primeira linha da planilha.  
   
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
-3.  Adicione o código a seguir no final de `DisplayInExcel`. O loop `foreach` coloca as informações da lista de contas nas duas primeiras colunas de sucessivas linhas da planilha.  
+3. Adicione o código a seguir no final de `DisplayInExcel`. O loop `foreach` coloca as informações da lista de contas nas duas primeiras colunas de sucessivas linhas da planilha.  
   
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
-4.  Adicione o seguinte código no final de `DisplayInExcel` para ajustar as larguras das colunas para adequar o conteúdo.  
+4. Adicione o seguinte código no final de `DisplayInExcel` para ajustar as larguras das colunas para adequar o conteúdo.  
   
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
@@ -96,23 +96,23 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] e versões posteriores, converterá o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Inserir Tipos Interop** do Excel estiver definida como true. True é o valor padrão para essa propriedade.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]e versões posteriores converterão o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Embed Interop Types** estiver definida como true. True é o valor padrão para essa propriedade.  
   
 ## <a name="to-run-the-project"></a>Para executar o projeto  
   
-1.  Adicione a seguinte linha no final de `Main`.  
+1. Adicione a seguinte linha no final de `Main`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
-2.  Pressione CTRL+F5.  
+2. Pressione CTRL+F5.  
   
      Uma planilha do Excel é exibida contendo os dados das duas contas.  
   
 ## <a name="to-add-a-word-document"></a>Para adicionar um documento do Word  
   
-1.  Para ilustrar maneiras adicionais na quais [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versões posteriores, aprimora a programação do Office, o código a seguir abre um aplicativo Word e cria um ícone vinculado à planilha do Excel.  
+1. Para ilustrar maneiras adicionais na quais [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versões posteriores, aprimora a programação do Office, o código a seguir abre um aplicativo Word e cria um ícone vinculado à planilha do Excel.  
   
-     Cole o método `CreateIconInWordDoc`, fornecido posteriormente nesta etapa, na classe `Program`. O `CreateIconInWordDoc` usa argumentos nomeados e opcionais para reduzir a complexidade das chamadas de método a <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Essas chamadas incorporam dois novos recursos apresentados em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplificam as chamadas para métodos COM que possuem parâmetros de referência. Primeiro, você pode enviar argumentos para os parâmetros de referência como se fossem parâmetros de valor. Ou seja, você pode enviar valores diretamente, sem criar uma variável para cada parâmetro de referência. O compilador gera variáveis temporárias para conter os valores de argumento e descarta as variáveis quando você retornar da chamada. Em segundo lugar, você pode omitir a palavra-chave `ref` na lista de argumentos.  
+     Cole o método `CreateIconInWordDoc`, fornecido posteriormente nesta etapa, na classe `Program`. `CreateIconInWordDoc` usa argumentos nomeados e opcionais para reduzir a complexidade das chamadas de método a <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Essas chamadas incorporam dois novos recursos apresentados em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplificam as chamadas para métodos COM que possuem parâmetros de referência. Primeiro, você pode enviar argumentos para os parâmetros de referência como se fossem parâmetros de valor. Ou seja, você pode enviar valores diretamente, sem criar uma variável para cada parâmetro de referência. O compilador gera variáveis temporárias para conter os valores de argumento e descarta as variáveis quando você retornar da chamada. Em segundo lugar, você pode omitir a palavra-chave `ref` na lista de argumentos.  
   
      O método `Add` tem quatro parâmetros de referência que são opcionais. No [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], ou versões posteriores, você poderá omitir argumentos para alguns ou todos os parâmetros se desejar usar os valores padrão. Em [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versões anteriores, um argumento deve ser fornecido para cada parâmetro e o argumento deve ser uma variável, pois os parâmetros são parâmetros de referência.  
   
@@ -124,21 +124,21 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
-2.  Adicione a instrução a seguir no final de `Main`.  
+2. Adicione a instrução a seguir no final de `Main`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
-3.  Adicione a instrução a seguir no final de `DisplayInExcel`. O método `Copy` adiciona a planilha na área de transferência.  
+3. Adicione a instrução a seguir no final de `DisplayInExcel`. O método `Copy` adiciona a planilha na área de transferência.  
   
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
-4.  Pressione CTRL+F5.  
+4. Pressione CTRL+F5.  
   
      Um documento do Word é exibido contendo um ícone. Clique duas vezes no ícone para colocar a planilha no primeiro plano.  
   
 ## <a name="to-set-the-embed-interop-types-property"></a>Para definir a propriedade Inserir Tipos Interop  
   
-1.  Melhorias adicionais são possíveis quando você chama um tipo COM que não requer um assembly de interoperabilidade primário (PIA) no tempo de execução. A remoção da dependência nos PIAs resulta na independência de versão e em uma implantação mais fácil. Para saber mais sobre as vantagens de programação sem PIAs, confira [Instruções passo a passo: inserir tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+1. Melhorias adicionais são possíveis quando você chama um tipo COM que não requer um assembly de interoperabilidade primário (PIA) no tempo de execução. A remoção da dependência nos PIAs resulta na independência de versão e em uma implantação mais fácil. Para saber mais sobre as vantagens de programação sem PIAs, confira [Instruções passo a passo: inserir tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
      Além disso, a programação é mais fácil porque os tipos necessários e retornados por métodos COM podem ser representados usando o tipo `dynamic`, em vez de `Object`. Variáveis com o tipo `dynamic` não são avaliadas até o tempo de execução, o que elimina a necessidade de conversão explícita. Para obter mais informações, veja [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -146,15 +146,15 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-2.  Para alterar o padrão e usar PIAs em vez de inserir informações de tipo, expanda o nó **Referências** no **Gerenciador de Soluções** e, em seguida, selecione **Microsoft.Office.Interop.Excel** ou **Microsoft.Office.Interop.Word**.  
+2. Para alterar o padrão e usar PIAs em vez de inserir informações de tipo, expanda o nó **Referências** no **Gerenciador de Soluções** e, em seguida, selecione **Microsoft.Office.Interop.Excel** ou **Microsoft.Office.Interop.Word**.  
   
-3.  Se você não conseguir ver a janela **Propriedades**, pressione **F4**.  
+3. Se você não conseguir ver a janela **Propriedades**, pressione **F4**.  
   
-4.  Localize **Inserir Tipos Interop** na lista de propriedades e altere seu valor para **False**. De maneira equivalente, você pode compilar usando a opção do compilador [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) em vez de [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) em um prompt de comando.  
+4. Localize **Inserir Tipos Interop** na lista de propriedades e altere seu valor para **False**. De maneira equivalente, você pode compilar usando a opção do compilador [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) em vez de [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) em um prompt de comando.  
   
 ## <a name="to-add-additional-formatting-to-the-table"></a>Para adicionar formatação adicional à tabela  
   
-1.  Substitua as duas chamadas para `AutoFit` em `DisplayInExcel` pela instrução a seguir.  
+1. Substitua as duas chamadas para `AutoFit` em `DisplayInExcel` pela instrução a seguir.  
   
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
@@ -162,9 +162,9 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
-2.  Pressione CTRL + F5 para ver o resultado. Outros formatos estão listados na enumeração <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.  
+2. Pressione CTRL + F5 para ver o resultado. Outros formatos estão listados na enumeração <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.  
   
-3.  Compare a instrução na etapa 1 com o código a seguir, que mostra os argumentos que são necessários em [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ou versões anteriores.  
+3. Compare a instrução na etapa 1 com o código a seguir, que mostra os argumentos que são necessários em [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ou versões anteriores.  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   
@@ -176,7 +176,7 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dinâmica](../../../csharp/language-reference/keywords/dynamic.md)
+- [Usar o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Como: usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

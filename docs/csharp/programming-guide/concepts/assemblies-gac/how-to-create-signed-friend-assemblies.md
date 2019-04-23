@@ -2,21 +2,21 @@
 title: 'Como: Criar assemblies amigáveis com sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325196"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Como: Criar assemblies amigáveis com sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para criar um assembly assinado e um assembly amigável  
   
-1.  Abra um prompt de comando.  
+1. Abra um prompt de comando.  
   
-2.  Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
+2. Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Gere uma chave de nome forte para este exemplo e armazene-a no arquivo FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Crie um arquivo do C# chamado `friend_signed_A` que contenha o seguinte código. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly autorizado.  
+3. Crie um arquivo do C# chamado `friend_signed_A` que contenha o seguinte código. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly autorizado.  
   
      A ferramenta Nome Forte gera uma nova chave pública sempre que for executada. Portanto, você deve substituir a chave pública no código a seguir com a chave pública que você acabou de gerar, conforme mostrado no exemplo a seguir.  
   
@@ -51,13 +51,13 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
     }  
     ```  
   
-4.  Compile e assine o friend_signed_A usando o seguinte comando.  
+4. Compile e assine o friend_signed_A usando o seguinte comando.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Crie um arquivo do C# chamado `friend_signed_B` e que contenha o código a seguir. Como o friend_signed_A especifica o friend_signed_B como um assembly amigável, o código em friend_signed_B pode acessar tipos `internal` e membros do friend_signed_A. O arquivo contém o seguinte código.  
+5. Crie um arquivo do C# chamado `friend_signed_B` e que contenha o código a seguir. Como o friend_signed_A especifica o friend_signed_B como um assembly amigável, o código em friend_signed_B pode acessar tipos `internal` e membros do friend_signed_A. O arquivo contém o seguinte código.  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
     }  
     ```  
   
-6.  Compile e assine o friend_signed_B, usando o comando a seguir.  
+6. Compile e assine o friend_signed_B, usando o comando a seguir.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
   
      O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`.  Para obter mais informações, consulte [/out (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-7.  Execute o arquivo friend_signed_B.exe.  
+7. Execute o arquivo friend_signed_B.exe.  
   
      O programa imprime a cadeia de caracteres "Class1.Test".  
   
@@ -92,9 +92,9 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
-- [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
-- [Como: Criar assemblies amigáveis sem sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Assemblies amigáveis](../../../../standard/assembly/friend-assemblies.md)
+- [Como: criar assemblies amigáveis sem sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
-- [Sn.exe (Ferramenta Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Criar e usar assemblies de nomes fortes](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Sn.exe (Ferramenta de Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)
+- [Criando e usando assemblies de nomes fortes](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)

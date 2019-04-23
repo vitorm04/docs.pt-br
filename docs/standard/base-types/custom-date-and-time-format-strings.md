@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838567"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345424"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
@@ -632,7 +632,7 @@ Os seguintes caracteres de uma cadeia de caracteres de formato de data e hora pe
 |F|H|M|M|d|
 |f|g|h|m|s|
 |t|y|z|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 Todos os outros caracteres sempre são interpretados como literais de caracteres e, em uma operação de formatação, são incluídos na cadeia de caracteres de resultado inalterada.  Em uma operação de análise, eles devem corresponder exatamente aos caracteres na cadeia de entrada; a comparação diferencia maiúsculas de minúsculas.
 
@@ -698,6 +698,6 @@ A cadeia de caracteres de resultado produzida por muitos dos especificadores de 
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Exemplo: Utilitário de Formatação do .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

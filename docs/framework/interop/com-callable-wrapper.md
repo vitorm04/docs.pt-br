@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309479"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -27,7 +27,7 @@ Quando um cliente COM chama um objeto .NET, o Common Language Runtime cria o obj
 
 O tempo de execução cria exatamente um CCW para um objeto gerenciado, independentemente do número de clientes COM que solicita seus serviços. Como mostra a ilustração a seguir, vários clientes COM podem conter uma referência ao CCW que expõe a interface INew. O CCW, por sua vez, contém uma única referência ao objeto gerenciado que implementa a interface e é coletada como lixo. Os clientes COM e .NET podem fazer solicitações no mesmo objeto gerenciado simultaneamente.
 
-![COM Callable Wrapper](./media/ccw.gif "ccw") Como acessar objetos .NET por meio do COM Callable Wrapper
+![Vários clientes COM que contêm uma referência ao CCW que expõe INew.](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 COM Callable Wrappers são invisíveis para outras classes em execução no .NET Framework. Sua finalidade principal é realizar marshaling de chamadas entre o código gerenciado e não gerenciado; no entanto, os CCWs também gerenciam a identidade e o tempo de vida dos objetos gerenciados encapsulados por eles.
 
@@ -45,7 +45,7 @@ O CCW expõe todas as interfaces públicas visíveis para o COM, os tipos de dad
 
 Para criar essa abordagem direta, o CCW fabrica interfaces COM tradicionais, como **IUnknown** e **IDispatch**. Como mostra a ilustração a seguir, o CCW mantém uma única referência no objeto .NET encapsulado por ele. O cliente COM e o objeto .NET interagem mutuamente por meio do proxy e da construção de stub do CCW.
 
-![Interfaces COM](./media/ccwwithinterfaces.gif "ccwwithinterfaces") Interfaces COM e COM Callable Wrapper
+![Diagrama que mostra como a CCW fabrica interfaces COM.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 Além de expor as interfaces que são implementadas explicitamente por uma classe no ambiente gerenciado, o .NET Framework fornece implementações das interfaces COM listadas na tabela a seguir em nome do objeto. Uma classe .NET pode substituir o comportamento padrão fornecendo sua própria implementação dessas interfaces. No entanto, o tempo de execução sempre fornece a implementação para as interfaces **IUnknown** e **IDispatch**.
 
@@ -198,6 +198,6 @@ Se o seu aplicativo exigir chamadas early-bound para métodos de interface de ev
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Wrappers COM](com-wrappers.md)
-- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)
+- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
+- [Qualificando tipos do .NET para interoperação](qualifying-net-types-for-interoperation.md)
 - [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)

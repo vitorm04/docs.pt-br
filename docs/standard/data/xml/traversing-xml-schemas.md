@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305033"
 ---
 # <a name="traversing-xml-schemas"></a>Percorrer esquemas XML
 Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece acesso aos elementos, a atributos, e tipos armazenados no SOM. Percorrer um esquema XML carregado no SOM também é a primeira etapa em editar um esquema XML usando o SOM API.  
@@ -29,7 +29,7 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> ou <xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (provê acesso a todos os elementos, atributos, e tipos de nível globais).|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (fornece acesso a todos os elementos, atributos e tipos de nível global).|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
 |<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (fornece acesso aos atributos que não pertencem ao namespace de esquema)|  
@@ -43,19 +43,19 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
   
  O exemplo passa pelo esquema de cliente nas seguintes etapas.  
   
-1.  Adiciona o esquema de cliente a um novo objeto de <xref:System.Xml.Schema.XmlSchemaSet> e compilá-lo em seguida. Todos os avisos de validação de esquema e leitura ou compilação encontrada erros o esquema são tratados pelo delegado de <xref:System.Xml.Schema.ValidationEventHandler> .  
+1. Adiciona o esquema de cliente a um novo objeto de <xref:System.Xml.Schema.XmlSchemaSet> e compilá-lo em seguida. Todos os avisos de validação de esquema e leitura ou compilação encontrada erros o esquema são tratados pelo delegado de <xref:System.Xml.Schema.ValidationEventHandler> .  
   
-2.  Recupera o objeto compilada de <xref:System.Xml.Schema.XmlSchema> de <xref:System.Xml.Schema.XmlSchemaSet> iterando sobre a propriedade de <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> . Porque o esquema é compilado, as propriedades de (PSCI) de POST-Esquema- compilação - Infoset são acessíveis.  
+2. Recupera o objeto compilada de <xref:System.Xml.Schema.XmlSchema> de <xref:System.Xml.Schema.XmlSchemaSet> iterando sobre a propriedade de <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> . Porque o esquema é compilado, as propriedades de (PSCI) de POST-Esquema- compilação - Infoset são acessíveis.  
   
-3.  Efetua iterações sobre cada <xref:System.Xml.Schema.XmlSchemaElement> na coleção de <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de coleção de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de POST-esquema- compilação que grava o nome de cada elemento no console.  
+3. Efetua iterações sobre cada <xref:System.Xml.Schema.XmlSchemaElement> na coleção de <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de coleção de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de POST-esquema- compilação que grava o nome de cada elemento no console.  
   
-4.  Obtém o tipo complexo do elemento de `Customer` usando a classe de <xref:System.Xml.Schema.XmlSchemaComplexType> .  
+4. Obtém o tipo complexo do elemento de `Customer` usando a classe de <xref:System.Xml.Schema.XmlSchemaComplexType> .  
   
-5.  Se o tipo complexo tem quaisquer atributos, obtém <xref:System.Collections.IDictionaryEnumerator> para enumerar sobre cada <xref:System.Xml.Schema.XmlSchemaAttribute> e escreve seu nome no console.  
+5. Se o tipo complexo tem quaisquer atributos, obtém <xref:System.Collections.IDictionaryEnumerator> para enumerar sobre cada <xref:System.Xml.Schema.XmlSchemaAttribute> e escreve seu nome no console.  
   
-6.  Obtém a partícula a sequência de tipo complexo usando a classe de <xref:System.Xml.Schema.XmlSchemaSequence> .  
+6. Obtém a partícula a sequência de tipo complexo usando a classe de <xref:System.Xml.Schema.XmlSchemaSequence> .  
   
-7.  Efetua iterações sobre cada <xref:System.Xml.Schema.XmlSchemaElement> na coleção de <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> que grava o nome de cada elemento filho no console.  
+7. Efetua iterações sobre cada <xref:System.Xml.Schema.XmlSchemaElement> na coleção de <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> que grava o nome de cada elemento filho no console.  
   
  A seguir está o exemplo de código completo.  
   
@@ -69,10 +69,10 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Visão geral do modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [Esquemas XML de edição](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Incluindo ou importando um esquema XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Compilação Infoset de pré esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

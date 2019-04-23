@@ -6,24 +6,24 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332672"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipos genéricos (C#)
-As consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são baseadas em tipos genéricos, que foram introduzidos na versão 2.0 do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Não é necessário um conhecimento profundo sobre os genéricos antes de começar a escrever consultas. No entanto, convém entender dois conceitos básicos:  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] As consultas são baseadas em tipos genéricos, que foram introduzidos na versão 2.0 do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Não é necessário um conhecimento profundo sobre os genéricos antes de começar a escrever consultas. No entanto, convém entender dois conceitos básicos:  
   
-1.  Quando você cria uma instância de uma classe de coleção genérica, como <xref:System.Collections.Generic.List%601>, substitua o "T" pelo tipo dos objetos que a lista bloqueia. Por exemplo, uma lista de cadeias de caracteres é expressa como `List<string>` e uma lista de objetos `Customer` é expressa como `List<Customer>`. Uma lista genérica é fortemente tipada e oferece muitos benefícios em coleções que armazenam seus elementos como <xref:System.Object>. Se tentar adicionar um `Customer` em uma `List<string>`, você obterá um erro em tempo de compilação. É fácil usar coleções genéricas, porque você não precisa realizar a conversão de tipo em tempo de execução.  
+1. Quando você cria uma instância de uma classe de coleção genérica, como <xref:System.Collections.Generic.List%601>, substitua o "T" pelo tipo dos objetos que a lista bloqueia. Por exemplo, uma lista de cadeias de caracteres é expressa como `List<string>` e uma lista de objetos `Customer` é expressa como `List<Customer>`. Uma lista genérica é fortemente tipada e oferece muitos benefícios em coleções que armazenam seus elementos como <xref:System.Object>. Se tentar adicionar um `Customer` em uma `List<string>`, você obterá um erro em tempo de compilação. É fácil usar coleções genéricas, porque você não precisa realizar a conversão de tipo em tempo de execução.  
   
-2.  A <xref:System.Collections.Generic.IEnumerable%601> é a interface que permite que as classes de coleção genérica sejam enumeradas usando a instrução `foreach`. Classes de coleção genéricas dão suporte a <xref:System.Collections.Generic.IEnumerable%601> do mesmo modo que classes de coleção não genéricas, tais como <xref:System.Collections.ArrayList>, dão suporte a <xref:System.Collections.IEnumerable>.  
+2. <xref:System.Collections.Generic.IEnumerable%601> é a interface que permite que as classes de coleção genérica sejam enumeradas usando a instrução `foreach`. Classes de coleção genéricas dão suporte a <xref:System.Collections.Generic.IEnumerable%601> do mesmo modo que classes de coleção não genéricas, tais como <xref:System.Collections.ArrayList>, dão suporte a <xref:System.Collections.IEnumerable>.  
   
  Para obter mais informações sobre os genéricos, consulte [Genéricos](../../../../csharp/programming-guide/generics/index.md).  
   
 ## <a name="ienumerablet-variables-in-linq-queries"></a>Variáveis IEnumerable<T\> em consultas LINQ  
- Variáveis de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são digitadas como <xref:System.Collections.Generic.IEnumerable%601> ou um tipo derivado, por exemplo, <xref:System.Linq.IQueryable%601>. Ao se deparar com uma variável de consulta que é tipada como `IEnumerable<Customer>`, significa apenas que a consulta, quando for executada, produzirá uma sequência de zero ou mais objetos `Customer`.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Variáveis de consulta são digitadas como <xref:System.Collections.Generic.IEnumerable%601> ou um tipo derivado, por exemplo, <xref:System.Linq.IQueryable%601>. Ao se deparar com uma variável de consulta que é tipada como `IEnumerable<Customer>`, significa apenas que a consulta, quando for executada, produzirá uma sequência de zero ou mais objetos `Customer`.  
   
  [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   

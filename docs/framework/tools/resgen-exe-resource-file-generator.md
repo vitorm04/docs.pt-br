@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b134b4c875a2360712d14bc0b6c11ad0e13a89e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178874"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Gerador de Arquivo de Recurso)
 O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt ou .restext) e arquivos de recurso com base em XML (.resx) em arquivos binários do Common Language Runtime (.resources) que podem ser inseridos em um executável binário do tempo de execução ou em um assembly satélite. (Consulte [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -116,13 +116,13 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Realizando Tarefas de Resgen.exe Específicas  
  É possível usar Resgen.exe de várias formas: compilar um arquivo de recurso com base em texto ou XML em um arquivo binário, converter entre formatos de arquivo de recurso e gerar uma classe que encapsule a funcionalidade <xref:System.Resources.ResourceManager> e dá acesso aos recursos. Esta seção fornece informações detalhadas sobre cada tarefa:  
   
--   [Compilando recursos em um arquivo binário](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+-   [Compilando Recursos em um Arquivo Binário](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Convertendo entre tipos de arquivo de recurso](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+-   [Convertendo Entre Tipos de Arquivo de Recurso](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
 -   [Compilando ou Convertendo Vários Arquivos](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Exportando recursos para um arquivo .resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+-   [Exportando Recursos para um Arquivo .resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
 -   [Compilando Recursos Condicionalmente](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
@@ -246,7 +246,7 @@ resgen MyApp.exe Win8Resources
 ### <a name="conditionally-compiling-resources"></a>Compilando Recursos Condicionalmente  
  Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resgen.exe dá suporte à compilação condicional de recursos de cadeia de caracteres em arquivos de texto (.txt e .restext). Isso permite usar um arquivo de recurso com base em texto único em várias configurações de compilação.  
   
- Em um arquivo .txt ou .restext, você usa o constructo `#ifdef`...`#endif` para incluir um recurso no arquivo .resources binário se um símbolo é definido e usa o constructo `#if !`... `#endif` para incluir um recurso se um símbolo não é definido. No momento da compilação, você define símbolos usando a opção `/define:` seguido de uma lista delimitada por vírgulas de símbolos. A comparação diferencia maiúsculas de minúsculas; o uso de maiúsculas e minúsculas nos símbolos definidos por `/define` deve corresponder ao uso de maiúsculas e minúsculas de símbolos nos arquivos de texto que serão compilados.  
+ Em um arquivo .txt ou .restext, você usa o `#ifdef`...`#endif` para incluir um recurso no arquivo .resources binário se um símbolo é definido e usa o constructo `#if !`... `#endif` para incluir um recurso se um símbolo não é definido. No momento da compilação, você define símbolos usando a opção `/define:` seguido de uma lista delimitada por vírgulas de símbolos. A comparação diferencia maiúsculas de minúsculas; o uso de maiúsculas e minúsculas nos símbolos definidos por `/define` deve corresponder ao uso de maiúsculas e minúsculas de símbolos nos arquivos de texto que serão compilados.  
   
  Por exemplo, o arquivo a seguir chamado UIResources.rext inclui um recurso de cadeia de caracteres chamado `AppTitle` que pode utilizar um dos três valores, dependendo da possibilidade dos símbolos chamados `PRODUCTION`, `CONSULT` ou `RETAIL` estarem definidos.  
   
@@ -293,7 +293,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Se `inputFilename` for um arquivo .resources, Resgen.exe copiará o arquivo .resources se `outputFilename` também for um arquivo .resources. Se `outputFilename` for omitido, Resgen.exe substituirá `inputFilename` por um arquivo .resources idêntico.  
   
- *language*  
+ *linguagem*  
  A linguagem na qual o código-fonte da classe de recurso fortemente tipado deve ser gerado. Os valores possíveis são `cs`, `C#` e `csharp` para código C#, `vb` e `visualbasic` para código Visual Basic, `vbs` e `vbscript` para código VBScript e `c++`, `mc` e `cpp` para código C++.  
   
  *namespace*  
@@ -330,8 +330,9 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
-- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Criação de arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

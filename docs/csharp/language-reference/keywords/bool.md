@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334166"
 ---
 # <a name="bool-c-reference"></a>bool (Referência de C#)
 
 A palavra-chave `bool` é um alias de <xref:System.Boolean?displayProperty=nameWithType>. Ela é usada para declarar variáveis para armazenar os valores boolianos: [true](true-literal.md) e [false](false-literal.md).
 
 > [!NOTE]
-> Se você precisar de uma variável booliana que também pode ter um valor de `null`, use `bool?`. Para mais informações, confira a seção [O tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) do artigo [Como usar tipos que permitem valor nulo](../../programming-guide/nullable-types/using-nullable-types.md).
+> Use o tipo `bool?`, se você precisar oferecer suporte à lógica de três valores, por exemplo, ao trabalhar com bancos de dados que dão suporte a um tipo booliano de três valores. Para os operandos `bool?`, os operadores `&` e `|` predefinidos oferecem suporte à lógica de três valores. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](../operators/boolean-logical-operators.md).
 
 ## <a name="literals"></a>Literais
 
@@ -54,7 +54,7 @@ Neste exemplo, você insere um caractere do teclado e o programa verifica se o c
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
 - [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)
 - [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

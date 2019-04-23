@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076154"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling padrão para objetos
 Os parâmetros e os campos tipados como <xref:System.Object?displayProperty=nameWithType> podem ser expostos para um código não gerenciado como um dos seguintes tipos:  
@@ -314,6 +314,7 @@ Variantes passadas por valor e por referência
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de Referência**  *o*|Somente se o tipo não foi alterado.|  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
 - [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

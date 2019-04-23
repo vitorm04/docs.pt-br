@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119191"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de Controle ActiveX do Windows Forms)
 O Importador de Controle ActiveX converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
@@ -38,7 +38,7 @@ aximp [options]{file.dll | file.ocx}
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|*file*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
+|*Arquivo *|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -80,5 +80,6 @@ aximp c:\systemroot\system32\msdxm.ocx
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

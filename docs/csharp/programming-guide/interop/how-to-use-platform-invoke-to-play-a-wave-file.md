@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967211"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323805"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Como: usar invocação de plataforma para executar um arquivo wave (Guia de Programação em C#)
 O exemplo de código C# a seguir ilustra como usar os serviços de invocação de plataforma para reproduzir um arquivo de som wave no sistema operacional Windows.  
@@ -31,15 +31,15 @@ O exemplo de código C# a seguir ilustra como usar os serviços de invocação d
   
 ### <a name="to-compile-the-code"></a>Para compilar o código  
   
-1.  Crie um novo projeto de aplicativos do Windows do C# no Visual Studio e dê o nome de **WinSound**.  
+1. Crie um novo projeto de aplicativos do Windows do C# no Visual Studio e dê o nome de **WinSound**.  
   
-2.  Copie o código acima e cole-o sobre o conteúdo do arquivo `Form1.cs`.  
+2. Copie o código acima e cole-o sobre o conteúdo do arquivo `Form1.cs`.  
   
-3.  Copie o seguinte código e cole-o no arquivo `Form1.Designer.cs`, no método `InitializeComponent()`, após qualquer código existente.  
+3. Copie o seguinte código e cole-o no arquivo `Form1.Designer.cs`, no método `InitializeComponent()`, após qualquer código existente.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  Compile e execute o código.  
+4. Compile e execute o código.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para obter mais informações, confira [Segurança no .NET](../../../standard/security/index.md).  
@@ -47,6 +47,6 @@ O exemplo de código C# a seguir ilustra como usar os serviços de invocação d
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Visão geral sobre interoperabilidade](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [Visão geral da interoperabilidade](../../../csharp/programming-guide/interop/interoperability-overview.md)
 - [Um olhar detalhado sobre invocação de plataforma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
-- [Marshaling de dados com a invocação de plataforma](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+- [Marshaling de dados com invocação de plataforma](../../../framework/interop/marshaling-data-with-platform-invoke.md)

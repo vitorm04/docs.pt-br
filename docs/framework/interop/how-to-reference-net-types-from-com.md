@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5151d89feccbe68daa5a8de4aa3b75a42511899
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198394"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Como: Referenciar tipos .NET por meio do COM
 Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET Framework e o COM são bastante invisíveis. Os clientes do Microsoft Visual Basic podem exibir um objeto .NET no Pesquisador de Objetos, que expõe os métodos de objeto e a sintaxe, propriedades e campos exatamente como se fosse qualquer outro objeto COM.  
@@ -44,7 +44,8 @@ Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET 
     ```  
   
 ## <a name="see-also"></a>Consulte também
-- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Registrando assemblies usando COM](registering-assemblies-with-com.md)
-- [Calling a .NET Object](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) (Chamando um objeto .NET)
+
+- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
+- [Registrando assemblies com o COM](registering-assemblies-with-com.md)
+- [Chamando um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

@@ -159,12 +159,12 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 983d7b9a89346a89a89b5e8de23049287f719026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99fa84b8dea326bc7a32ff4f3c3187acc9883748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121635"
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensagens de erro do winmdexp.exe
 O processo de build chama [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando você usa o modelo **Componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]** no Visual Studio 2012, portanto, as mensagens de erro de Winmdexp.exe aparecem na **Lista de Erros**. O Winmdexp.exe opera em um módulo compilado com a opção `/target:winmdobj`. Como ele requer um módulo compilado como entrada, suas mensagens de erro não aparecerão se a compilação for bem-sucedida.  
@@ -174,5 +174,6 @@ O processo de build chama [Winmdexp.exe (Ferramenta de Exportação de Metadados
  Se o erro não for abordado neste artigo e você achar que a mensagem não contém informações suficientes para resolver o problema, use o link de comentários nesse artigo e inclua a mensagem de erro. Outra opção é registrar um bug no [Site do Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Você também pode procurar mais informações nos [Fóruns da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Consulte também
-- [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+
+- [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnosticando condições de erro do componente do Tempo de Execução do Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127)

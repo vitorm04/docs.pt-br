@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341381"
 ---
 # <a name="where-clause-c-reference"></a>Cláusula where (Referência de C#)
 
@@ -27,7 +27,7 @@ No exemplo a seguir, a cláusula `where` filtra todos os números, exceto aquele
 
 ## <a name="example"></a>Exemplo
 
-Dentro de uma única cláusula `where`, você pode especificar tantos predicados quanto necessário usando os operadores [&&](../operators/conditional-and-operator.md) e [&#124;&#124;](../operators/conditional-or-operator.md). No exemplo a seguir, a consulta especifica dois predicados para selecionar apenas os números pares que são menores que cinco.
+Dentro de uma única cláusula `where`, você pode especificar tantos predicados quanto necessário usando os operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) e [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-). No exemplo a seguir, a consulta especifica dois predicados para selecionar apenas os números pares que são menores que cinco.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -48,8 +48,8 @@ Em tempo de compilação, a palavra-chave `where` é convertida em uma chamada p
 ## <a name="see-also"></a>Consulte também
 
 - [Palavras-chave de Consulta (LINQ)](query-keywords.md)
-- [Cláusula From](from-clause.md)
+- [Cláusula from](from-clause.md)
 - [Cláusula select](select-clause.md)
-- [Filtrando Dados](../../programming-guide/concepts/linq/filtering-data.md)
+- [Filtrar dados](../../programming-guide/concepts/linq/filtering-data.md)
 - [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [Introdução a LINQ em C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

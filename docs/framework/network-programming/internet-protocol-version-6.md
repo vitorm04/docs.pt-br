@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 6cd35ae50d76ec2276fdd08760d088cf6be1658e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135d87f126dcdb9689c23adbaaa4786bc69a3e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182319"
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo IP versão 6
 O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet. O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros. O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto. Estes são os principais problemas do protocolo IPv4 atual:  
@@ -58,6 +58,7 @@ O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a c
  Você também pode encontrar informações relacionadas ao IPv6 em [Versão 6 do IP (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Amostra de soquetes IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Soquetes](../../../docs/framework/network-programming/sockets.md)

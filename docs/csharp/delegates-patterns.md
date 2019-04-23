@@ -3,16 +3,16 @@ title: Padrões Comuns para Delegados
 description: Saiba mais sobre os padrões comuns para usar delegados em seu código para evitar acoplamento forte entre os componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095692"
 ---
 # <a name="common-patterns-for-delegates"></a>Padrões Comuns para Delegados
 
-[Anterior](delegates-strongly-typed.md)
+[Voltar](delegates-strongly-typed.md)
 
 Os delegados fornecem um mecanismo que permite designs de software que envolvem acoplamento mínimo entre os componentes.
 
@@ -70,7 +70,7 @@ Até agora, nossa amostra é bastante simples, mas ainda demonstra algumas das d
 
 Usar os tipos de delegados definidos no Core Framework torna mais fácil para os usuários trabalhem com os delegados. Você não precisa definir novos tipos e os desenvolvedores que usam sua biblioteca não precisam aprender novos tipos de delegados especializadas.
 
-As interfaces usadas são tão mínimas e flexíveis quanto possível: para criar um novo agente de saída, você precisa criar um método. O método pode ser um método estático ou um método de instância. Ele pode ter qualquer acesso.
+As interfaces utilizadas são tão mínimas e flexíveis quanto possível: Para criar um novo agente de saída, você deve criar um método. O método pode ser um método estático ou um método de instância. Ele pode ter qualquer acesso.
 
 ## <a name="formatting-output"></a>Saída de formatação
 
@@ -98,7 +98,6 @@ O componente de Log estará indo bem. Vamos adicionar mais um mecanismo de saíd
 Este é um agente baseado em arquivo:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 Após ter criado essa classe, você pode instanciá-la e ela anexa o método LogMessage ao componente do agente:
 

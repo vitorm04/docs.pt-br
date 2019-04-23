@@ -3,12 +3,12 @@ title: Tipos e variáveis do C# - um tour pela linguagem C#
 description: Saiba mais sobre como definir tipos e declarar variáveis em C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846604"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481074"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
@@ -19,30 +19,30 @@ Os tipos de valor do C# são divididos em *tipos simples*, *tipos de enum*, *tip
 O exemplo a seguir fornece uma visão geral do sistema de tipos do C#.
 
 * Tipos de valor
-    - Tipos simples
-        * Integral com sinal: `sbyte`, `short`, `int`,`long`
-        * Integral sem sinal: `byte`, `ushort`, `uint`,`ulong`
-        * Caracteres Unicode: `char`
-        * Ponto flutuante IEEE: `float`, `double`
-        * Decimal de alta precisão:`decimal`
-        * Booliano: `bool`
-    - Tipos enum
-        * Tipos definidos pelo usuário do formulário `enum E {...}`
-    - Tipos struct
-        * Tipos definidos pelo usuário do formulário `struct S {...}`
-    - Tipos de valor anuláveis
-        * Extensões de todos os outros tipos de valor com um valor `null`
+  - Tipos simples
+    * Integral com sinal: `sbyte`, `short`, `int`, `long`
+    * Integral sem sinal: `byte`, `ushort`, `uint`, `ulong`
+    * Caracteres Unicode: `char`
+    * Ponto flutuante IEEE: `float`, `double`
+    * Decimal de alta precisão: `decimal`
+    * Booliano: `bool`
+  - Tipos enum
+    * Tipos definidos pelo usuário do formulário `enum E {...}`
+  - Tipos struct
+    * Tipos definidos pelo usuário do formulário `struct S {...}`
+  - Tipos de valor anuláveis
+    * Extensões de todos os outros tipos de valor com um valor `null`
 * Tipos de referência
-    - Tipos de classe
-        * Classe base definitiva de todos os outros tipos: `object`
-        * Cadeia de caracteres Unicode: `string`
-        * Tipos definidos pelo usuário do formulário `class C {...}`
-    - Tipos de interface
-        * Tipos definidos pelo usuário do formulário `interface I {...}`
-    - Tipos de matriz
-        * Unidimensional e multidimensional, por exemplo, `int[]` e `int[,]`
-    - Tipos delegados
-        * Tipos definidos pelo usuário do formulário `delegate int D(...)`
+  - Tipos de classe
+    * Classe base definitiva de todos os outros tipos: `object`
+    * Cadeia de caracteres Unicode: `string`
+    * Tipos definidos pelo usuário do formulário `class C {...}`
+  - Tipos de interface
+    * Tipos definidos pelo usuário do formulário `interface I {...}`
+  - Tipos de matriz
+    * Unidimensional e multidimensional, por exemplo, `int[]` e `int[,]`
+  - Tipos delegados
+    * Tipos definidos pelo usuário do formulário `delegate int D(...)`
 
 Os tipos integrais oito dão suporte a valores de 8 bits, 16 bits, 32 bits e 64 bits no formulário com ou sem sinal.
 
@@ -57,20 +57,20 @@ O processamento de cadeia de caracteres e caracteres em C# usa codificação Uni
 Isso resume os tipos numéricos do C#.
 
 * Integral assinado
-    - `sbyte`:  8 bits, intervalo de -128 a 127
-    - `short`: 16 bits, intervalo de -32.768 a 32.767
-    - `int`  : 32 bits, intervalo de -2.147.483.648 a 2.147.483.647
-    - `long`: 64 bits, intervalo de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
+  - `sbyte`:  8 bits, intervalo de -128 a 127
+  - `short`: 16 bits, intervalo de -32.768 a 32.767
+  - `int`  : 32 bits, intervalo de -2.147.483.648 a 2.147.483.647
+  - `long` : 64 bits, intervalo de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
 * Integral sem sinal
-    - `byte`   :  8 bits, intervalo de 0 a 255
-    - `ushort`: 16 bits, intervalo de 0 a 65.535
-    - `uint`   : 32 bits, intervalo de 0 a 4.294.967.295
-    - `ulong`  : 64 bits, intervalo de 0 a 18.446.744.073.709.551.615
+  - `byte`   :  8 bits, intervalo de 0 a 255
+  - `ushort` : 16 bits, intervalo de 0 a 65.535
+  - `uint`   : 32 bits, intervalo de 0 a 4.294.967.295
+  - `ulong`  : 64 bits, intervalo de 0 a 18.446.744.073.709.551.615
 * Ponto flutuante
-    - `float`  : 32 bits, intervalo de 1,5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisão de 7 dígitos
-    - `double`: 64 bits, intervalo de 5,0 × 10<sup>-324</sup> a 1,7x 10<sup>308</sup>, precisão de 15 dígitos
+  - `float`  : 32 bits, intervalo de 1,5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisão de 7 dígitos
+  - `double` : 64 bits, intervalo de 5,0 × 10<sup>-324</sup> a 1,7x 10<sup>308</sup>, precisão de 15 dígitos
 * Decimal
-    - `decimal`: 128 bits, intervalo de pelos menos -7,9 × 10<sup>-28</sup> a 7,9 × 10<sup>28</sup>, com precisão de pelo menos 28 dígitos
+  - `decimal` : 128 bits, intervalo de pelos menos -7,9 × 10<sup>-28</sup> a 7,9 × 10<sup>28</sup>, com precisão de pelo menos 28 dígitos
 
 Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma declaração de tipo especifica o nome e os membros do novo tipo. Cinco das categorias do C# de tipos são tipos definidos pelo usuário: tipos de classe, tipos struct, tipos de interface, tipos enum e tipos delegados.
 
@@ -101,19 +101,19 @@ O sistema de tipo unificado do C# significa que os tipos de valor podem se torna
 Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matriz, variáveis locais e parâmetros. As variáveis representam os locais de armazenamento e cada variável tem um tipo que determina quais valores podem ser armazenados na variável, conforme mostrado abaixo.
 
 * Tipo de valor não nulo
-    - Um valor de tipo exato
+  - Um valor de tipo exato
 * Tipos de valor anulável
-    - Um valor `null` ou um valor do tipo exato
+  - Um valor `null` ou um valor do tipo exato
 * objeto
-    - Uma referência `null`, uma referência a um objeto de qualquer tipo de referência ou uma referência a um valor de qualquer tipo de valor demarcado
+  - Uma referência `null`, uma referência a um objeto de qualquer tipo de referência ou uma referência a um valor de qualquer tipo de valor demarcado
 * Tipo de classe
-    - Uma referência `null`, uma referência a uma instância desse tipo de classe ou uma referência a uma instância de uma classe derivada desse tipo de classe
+  - Uma referência `null`, uma referência a uma instância desse tipo de classe ou uma referência a uma instância de uma classe derivada desse tipo de classe
 * Tipo de interface
-    - Uma referência `null`, uma referência a uma instância de um tipo de classe que implementa esse tipo de interface ou uma referência a um valor demarcado de um tipo de valor que implementa esse tipo de interface
+  - Uma referência `null`, uma referência a uma instância de um tipo de classe que implementa esse tipo de interface ou uma referência a um valor demarcado de um tipo de valor que implementa esse tipo de interface
 * Tipo de matriz
-    - Uma referência `null`, uma referência a uma instância desse tipo de matriz ou uma referência a uma instância de um tipo de matriz compatível
+  - Uma referência `null`, uma referência a uma instância desse tipo de matriz ou uma referência a uma instância de um tipo de matriz compatível
 * Tipo delegado
-    - Uma referência `null` ou uma referência a uma instância de um tipo de delegado compatível
+  - Uma referência `null` ou uma referência a uma instância de um tipo de delegado compatível
 
 > [!div class="step-by-step"]
 > [Anterior](program-structure.md)

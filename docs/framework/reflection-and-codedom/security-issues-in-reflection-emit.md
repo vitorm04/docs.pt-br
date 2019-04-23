@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074515"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -154,5 +154,6 @@ O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três man
  Desde o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], não é necessária nenhuma permissão para obter informações sobre membros e tipos não públicos. A reflexão é usada para obter as informações necessárias para emitir métodos dinâmicos. Por exemplo, os objetos <xref:System.Reflection.MethodInfo> são usados para emitir chamadas de método. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obter mais informações, consulte [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão).  
   
 ## <a name="see-also"></a>Consulte também
-- [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)
-- [Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+
+- [Considerações sobre segurança relacionadas à reflexão](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [Emitindo métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

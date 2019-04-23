@@ -4,12 +4,12 @@ description: Saiba mais sobre as práticas recomendadas para fazer interface com
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196652"
 ---
 # <a name="native-interoperability-best-practices"></a>Práticas recomendadas de interoperabilidade nativa
 
@@ -44,7 +44,7 @@ Lembre-se de marcar `[DllImport]` como `Charset.Unicode`, a menos que você quei
 
 **❌ NÃO** use parâmetros `[Out] string`. Os parâmetros de cadeia de caracteres passados por valor com o atributo `[Out]` podem desestabilizar o tempo de execução se a cadeia de caracteres for uma cadeia de caracteres internada. Veja mais informações sobre a centralização da cadeia de caracteres na documentação do <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ EVITE** parâmetros `StringBuilder`. O marshalling de `StringBuilder` *sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
+**❌ EVITE** parâmetros `StringBuilder`. `StringBuilder` O marshalling *sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
 
 1. Criar um SB da capacidade desejada (aloca capacidade gerenciada) **{1}**
 2. Chamar
@@ -187,7 +187,6 @@ Os tipos a seguir são do mesmo tamanho no Windows de 32 e 64 bits, apesar de se
 | 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
-
 
 Os tipos a seguir, sendo ponteiros, seguem a largura da plataforma. Use `IntPtr`/`UIntPtr` para eles.
 

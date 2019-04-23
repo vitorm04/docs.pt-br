@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 160403b938a95ae5bb03703f73fa906de5fc3ded
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337546"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -33,26 +33,26 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
 ## <a name="exposing-com-components-to-c"></a>Expondo componentes COM ao C\#
  Você pode consumir um componente COM de um projeto do C#. As etapas gerais são as seguintes:  
   
-1.  Localize um componente COM para usar e registre-o. Use regsvr32.exe para registrar ou cancelar o registro de uma DLL do COM.  
+1. Localize um componente COM para usar e registre-o. Use regsvr32.exe para registrar ou cancelar o registro de uma DLL do COM.  
   
-2.  Adicione ao projeto uma referência ao componente COM ou à biblioteca de tipo.  
+2. Adicione ao projeto uma referência ao componente COM ou à biblioteca de tipo.  
   
      Quando você adiciona a referência, o Visual Studio usa o [Tlbimp.exe (Importador da biblioteca de tipos)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que usa uma biblioteca de tipos como entrada para produzir um assembly de interoperabilidade do .NET Framework. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O Visual Studio adiciona ao projeto uma referência ao assembly gerado.  
   
-3.  Crie uma instância de uma classe que esteja definida no RCW. Isso, por sua vez, criará uma instância do objeto COM.  
+3. Crie uma instância de uma classe que esteja definida no RCW. Isso, por sua vez, criará uma instância do objeto COM.  
   
-4.  Use o objeto da mesma maneira que usa outros objetos gerenciados. Quando o objeto é recuperado pela coleta de lixo, a instância do objeto COM também é liberada da memória.  
+4. Use o objeto da mesma maneira que usa outros objetos gerenciados. Quando o objeto é recuperado pela coleta de lixo, a instância do objeto COM também é liberada da memória.  
   
  Para obter mais informações, consulte [Expondo componentes COM para o .NET Framework](../../../../docs/framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>Expondo o C# para o COM  
  Os clientes COM podem consumir tipos do C# que foram expostos corretamente. As etapas básicas para expor os tipos do C# são as seguintes:  
   
-1.  Adicione atributos de interoperabilidade no projeto do C#.  
+1. Adicione atributos de interoperabilidade no projeto do C#.  
   
      Você pode tornar visível um assembly COM ao modificar as propriedades do projeto do Visual C#. Para obter mais informações, consulte [Caixa de diálogo de informações do assembly](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
-2.  Gere e registre uma biblioteca de tipos COM para ser usada pelo COM.  
+2. Gere e registre uma biblioteca de tipos COM para ser usada pelo COM.  
   
      Você pode modificar as propriedades do projeto do Visual C# para registrar automaticamente o assembly do C# para a interoperabilidade COM. O Visual Studio usa a [Regasm.exe (ferramenta Assembly Registration)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), com a opção de linha de comando `/tlb`, que usa um assembly gerenciado como entrada para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
   

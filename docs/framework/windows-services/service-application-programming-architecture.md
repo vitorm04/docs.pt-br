@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216380"
 ---
 # <a name="service-application-programming-architecture"></a>Arquitetura de programação do aplicativo de serviço
 Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Você substitui os métodos dessa classe e define funcionalidades para eles para determinar o comportamento do seu serviço.  
@@ -67,5 +67,6 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
  Você também pode usar um componente chamado <xref:System.ServiceProcess.ServiceController> para comunicar-se com um serviço existente e controlar seu comportamento.  
   
 ## <a name="see-also"></a>Consulte também
-- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como: criar serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+
+- [Introdução a aplicativos do Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: Criar serviços Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

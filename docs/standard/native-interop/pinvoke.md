@@ -4,12 +4,12 @@ description: Saiba como chamar funções nativas via P/Invoke no .NET.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409231"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517857"
 ---
 # <a name="platform-invoke-pinvoke"></a>Invocação de plataforma (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 O exemplo anterior é simples, mas mostra o que é necessário para invocar funções não gerenciadas de um código gerenciado. Vamos analisar o exemplo:
 
 *   A linha 1 mostra a instrução de uso para o namespace `System.Runtime.InteropServices` que contém todos os itens necessários.
-*   A linha 7 apresenta o atributo `DllImport`. Esse atributo é crucial, pois informa ao tempo de execução que deve carregar a DLL não gerenciada. A cadeia de caracteres passada é a DLL na qual nossa função de destino está incluída.
+*   A linha 7 apresenta o atributo `DllImport`. Esse atributo é crucial, pois informa ao tempo de execução que deve carregar a DLL não gerenciada. A cadeia de caracteres passada é a DLL na qual nossa função de destino está incluída. Além disso, especifica qual [conjunto de caracteres](./charset.md) deve ser usado para realizar marshaling de cadeias de caracteres. Por fim, especifica que essa função chama [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) e que o tempo de execução deve capturar esse código de erro para que o usuário possa recuperá-lo via <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
 *   A linha 8 é o ponto crucial do trabalho do P/Invoke. Define um método gerenciado que tem **exatamente a mesma assinatura** que o não gerenciado. A declaração tem uma nova palavra-chave que você pode observar, `extern`, que informa ao tempo de execução que é um método externo; quando invocado, o tempo de execução deve encontrá-la na DLL especificada no atributo `DllImport`.
 
 O restante do exemplo é simplesmente chamar o método como você faria com qualquer outro método gerenciado.
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 Os exemplos anteriores dependem de parâmetros e, em ambos os casos, os parâmetros são fornecidos como tipos gerenciados. O tempo de execução faz a "coisa certa" e processa esses parâmetros em seus equivalentes no outro lado. Saiba mais sobre como os tipos realizam marshaling para código nativo em nossa página, no artigo [Realizar marshaling de tipo](type-marshalling.md).
-
 
 ## <a name="more-resources"></a>Mais recursos
 

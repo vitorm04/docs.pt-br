@@ -9,39 +9,39 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 73cb9249343b02c937c3e4e652021c7a6dbb4386
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311468"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como: definir a igualdade de valor para um tipo (Guia de Programação em C#)
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  
   
-1.  `x.Equals(x)` retorna `true`. Isso é chamado de propriedade reflexiva.  
+1. `x.Equals(x)` Retorna `true`. Isso é chamado de propriedade reflexiva.  
   
-2.  `x.Equals(y)` retorna o mesmo valor que `y.Equals(x)`. Isso é chamado de propriedade simétrica.  
+2. `x.Equals(y)` retorna o mesmo valor que `y.Equals(x)`. Isso é chamado de propriedade simétrica.  
   
-3.  se `(x.Equals(y) && y.Equals(z))` retornar `true`, então `x.Equals(z)` retornará `true`. Isso é chamado de propriedade transitiva.  
+3. se `(x.Equals(y) && y.Equals(z))` retornar `true`, então `x.Equals(z)` retornará `true`. Isso é chamado de propriedade transitiva.  
   
-4.  Invocações sucessivas de `x.Equals(y)` retornam o mesmo valor, contanto que os objetos referenciados por x e y não sejam modificados.  
+4. Invocações sucessivas de `x.Equals(y)` retornam o mesmo valor, contanto que os objetos referenciados por x e y não sejam modificados.  
   
-5.  `x.Equals(null)` retorna `false`. No entanto, `null.Equals(null)` gera uma exceção; não obedece à regra número dois acima.  
+5. `x.Equals(null)` Retorna `false`. No entanto, `null.Equals(null)` gera uma exceção; não obedece à regra número dois acima.  
   
  Qualquer struct que você define já tem uma implementação padrão de igualdade de valor que ele herda da substituição <xref:System.ValueType?displayProperty=nameWithType> do método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Essa implementação usa a reflexão para examinar todos os campos e propriedades no tipo. Embora essa implementação produza resultados corretos, ela é relativamente lenta em comparação com uma implementação personalizada escrita especificamente para o tipo.  
   
  Os detalhes de implementação para a igualdade de valor são diferentes para classes e struct. No entanto, as classes e structs exigem as mesmas etapas básicas para implementar a igualdade:  
   
-1.  Substitua o método [virtual](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Na maioria dos casos, sua implementação de `bool Equals( object obj )` deve apenas chamar o método `Equals` específico do tipo que é a implementação da interface <xref:System.IEquatable%601?displayProperty=nameWithType>. (Consulte a etapa 2.)  
+1. Substitua o método [virtual](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Na maioria dos casos, sua implementação de `bool Equals( object obj )` deve apenas chamar o método `Equals` específico do tipo que é a implementação da interface <xref:System.IEquatable%601?displayProperty=nameWithType>. (Consulte a etapa 2.)  
   
-2.  Implemente a interface <xref:System.IEquatable%601?displayProperty=nameWithType> fornecendo um método `Equals` específico do tipo. Isso é o local em que a comparação de equivalência de fato é realizada. Por exemplo, você pode decidir definir a igualdade comparando apenas um ou dois campos em seu tipo. Não lance exceções de `Equals`. Para classes somente: esse método deve examinar somente os campos que são declarados na classe. Ele deve chamar `base.Equals` para examinar os campos que estão na classe base. (Não faça isso se o tipo herda diretamente de <xref:System.Object>, pois a implementação <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> executa uma verificação de igualdade de referência.)  
+2. Implemente a interface <xref:System.IEquatable%601?displayProperty=nameWithType> fornecendo um método `Equals` específico do tipo. Isso é o local em que a comparação de equivalência de fato é realizada. Por exemplo, você pode decidir definir a igualdade comparando apenas um ou dois campos em seu tipo. Não lance exceções de `Equals`. Para classes somente: esse método deve examinar somente os campos que são declarados na classe. Ele deve chamar `base.Equals` para examinar os campos que estão na classe base. (Não faça isso se o tipo herda diretamente de <xref:System.Object>, pois a implementação <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> executa uma verificação de igualdade de referência.)  
   
-3.  Opcional, mas recomendável: Sobrecarregar os operadores [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) e [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
+3. Opcional, mas recomendável: Sobrecarregar os operadores [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) e [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
-4.  Substitua <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> para que os dois objetos que têm a igualdade de valor produzam o mesmo código hash.  
+4. Substitua <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> para que os dois objetos que têm a igualdade de valor produzam o mesmo código hash.  
   
-5.  Opcional: para dar suporte às definições para “maior que” ou “menor que”, implemente a interface <xref:System.IComparable%601> para seu tipo e também sobrecarregue os operadores [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5. Opcional: para dar suporte às definições para “maior que” ou “menor que”, implemente a interface <xref:System.IComparable%601> para seu tipo e também sobrecarregue os operadores [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
  O primeiro exemplo a seguir mostra uma implementação da classe. O segundo exemplo mostra uma implementação de struct.  
   

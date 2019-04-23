@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208118"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisando Cadeias de Caracteres de Data e Hora no .NET
 
@@ -32,7 +32,6 @@ A análise de cadeias de caracteres para convertê-las em objetos <xref:System.D
 1. Você pode especificar como os componentes ausentes na representação de texto serão definidos na data e hora.
 
 Os métodos <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.TryParse%2A> convertem muitas representações comuns de data e hora. Os métodos <xref:System.DateTime.ParseExact%2A> e <xref:System.DateTime.TryParseExact%2A> convertem uma representação em cadeia de caracteres que cumpra o padrão especificado por uma cadeia de caracteres de formato de data e hora. (Consulte os artigos sobre [cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md) e [cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md) para maiores detalhes).
-
 
 O objeto <xref:System.Globalization.DateTimeFormatInfo> atual fornece mais controle sobre como o texto deve ser interpretado como data e hora. As propriedades de um <xref:System.Globalization.DateTimeFormatInfo> descrevem os separadores de data e hora e os nomes dos meses, dias e eras, bem como o formato das designações "AM" e "PM". A cultura do thread atual fornece um <xref:System.Globalization.DateTimeFormatInfo> que representa a cultura atual. Se você quer uma cultura específica ou configurações personalizadas, é necessário especificar o parâmetro <xref:System.IFormatProvider> de um método de análise. Para o parâmetro <xref:System.IFormatProvider>, especifique um objeto <xref:System.Globalization.CultureInfo>, o qual representa uma cultura ou um objeto <xref:System.Globalization.DateTimeFormatInfo>.
 
@@ -85,12 +84,12 @@ No exemplo a seguir, o método <xref:System.DateTime.ParseExact%2A?displayProper
 [!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-Cada sobrecarga dos métodos <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.ParseExact%2A> também tem um parâmetro <xref:System.IFormatProvider> que oferece informações específicas da cultura sobre a formatação da cadeia de caracteres. Esse objeto <xref:System.IFormatProvider> é um objeto <xref:System.Globalization.CultureInfo> que representa uma cultura padrão ou um objeto <xref:System.Globalization.DateTimeFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  O <xref:System.DateTime.ParseExact%2A> também usa uma cadeia de caracteres adicional ou um argumento de matriz de cadeia de caracteres que define um ou mais formatos de data e hora personalizados.  
+Cada sobrecarga dos métodos <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.ParseExact%2A> também tem um parâmetro <xref:System.IFormatProvider> que oferece informações específicas da cultura sobre a formatação da cadeia de caracteres. Esse objeto <xref:System.IFormatProvider> é um objeto <xref:System.Globalization.CultureInfo> que representa uma cultura padrão ou um objeto <xref:System.Globalization.DateTimeFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> Também usa uma cadeia de caracteres adicional ou um argumento de matriz de cadeia de caracteres que define um ou mais formatos de data e hora personalizados.  
 
 ## <a name="see-also"></a>Consulte também
 
 - [Análise de cadeias de caracteres](parsing-strings.md)
-- [Formatando Tipos](formatting-types.md)
+- [Formatar tipos](formatting-types.md)
 - [Conversão de tipo no .NET](type-conversion.md)
 - [Formatos de data e hora padrão](standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)

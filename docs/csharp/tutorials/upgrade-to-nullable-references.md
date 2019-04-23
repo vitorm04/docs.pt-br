@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427286"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrar o código existente com tipos de referência anuláveis
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador beta do C# 8.0. O compilador do C# 8 beta está disponível com o [Visual Studio 2019 versão prévia 2 e posterior](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou com o [.NET Core 3.0 versão prévia 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Você precisará configurar seu computador para executar o .NET Core, incluindo o compilador beta do C# 8.0. O compilador beta do C# 8 está disponível com o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou a mais recente [.NET Core 3.0 versão prévia 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -81,7 +81,7 @@ Essas duas propriedades causam `CS8618`, "Propriedade não anulável não inicia
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Há muita coisa acontecendo no bloco de código anterior. Esse aplicativo usa o pacote NuGet [AutoMapper](http://automapper.org/) para construir um item de notícias a partir de um `ISyndicationItem`. Você descobriu que os itens de notícias são construídos, e as propriedades são definidas nessa instrução. Isso significa que o design do `NewsStoryViewModel` indica que essas propriedades nunca devem ter o valor `null`. Essas propriedades devem ser **tipos de referência não anuláveis**. Isso expressa melhor a intenção do design original. Na verdade, qualquer `NewsStoryViewModel` *é* corretamente instanciada com valores não nulos. Isso torna o código de inicialização a seguir uma correção válida:
+Há muita coisa acontecendo no bloco de código anterior. Esse aplicativo usa o pacote NuGet [AutoMapper](https://automapper.org/) para construir um item de notícias a partir de um `ISyndicationItem`. Você descobriu que os itens de notícias são construídos, e as propriedades são definidas nessa instrução. Isso significa que o design do `NewsStoryViewModel` indica que essas propriedades nunca devem ter o valor `null`. Essas propriedades devem ser **tipos de referência não anuláveis**. Isso expressa melhor a intenção do design original. Na verdade, qualquer `NewsStoryViewModel` *é* corretamente instanciada com valores não nulos. Isso torna o código de inicialização a seguir uma correção válida:
 
 ```csharp
 public class NewsStoryViewModel

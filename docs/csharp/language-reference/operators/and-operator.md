@@ -1,5 +1,5 @@
 ---
-title: Operador – Referência de C#
+title: Operador &amp; – Referência de C#
 ms.custom: seodec18
 ms.date: 10/29/2018
 f1_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: a799c0e37d6607e8ff72ab984ff5e540a4e11063
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236369"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310038"
 ---
 # <a name="amp-operator-c-reference"></a>Operador &amp; (Referência de C#)
 
@@ -46,9 +46,9 @@ O operador `&` avalia os dois operandos, mesmo se o primeiro operando for avalia
 
 [!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
 
-O [operador AND condicional](conditional-and-operator.md) `&&` também computa o AND lógico e seus operandos, mas avaliará o segundo operando somente se o primeiro for avaliado como `true`.
+O [operador AND condicional](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` também computa o AND lógico e seus operandos, mas não avalia o segundo operando se o primeiro for avaliado como `false`.
 
-Para operandos bool que permitem valor nulo, o comportamento do operador `&` é consistente com a lógica de três valores do SQL. Para obter mais informações, veja a seção [O tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) do artigo [Usando tipos que permitem valor nulo](../../programming-guide/nullable-types/using-nullable-types.md).
+Para operandos bool que permitem valor nulo, o comportamento do operador `&` é consistente com a lógica de três valores do SQL. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](boolean-logical-operators.md).
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -62,9 +62,9 @@ Para obter mais informações, veja as seções [O operador address-of](~/_cshar
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Operadores do C#](index.md)
+- [Operadores em C#](index.md)
+- [Operadores lógicos boolianos](boolean-logical-operators.md)
 - [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Operador |](or-operator.md)
 - [Operador ^](xor-operator.md)
 - [Operador ~](bitwise-complement-operator.md)
-- [Operador &&](conditional-and-operator.md)

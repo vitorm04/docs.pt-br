@@ -2,12 +2,12 @@
 title: Habilitando e desabilitando o IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083680"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitando e desabilitando o IPv6
 Para usar o protocolo IPv6, verifique se você está executando uma versão do sistema operacional que dá suporte ao IPv6 e se o sistema operacional e as classes de rede estão configuradas corretamente.  
@@ -45,7 +45,8 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
  Para o .NET Framework versão 2.0 e posterior, se o Windows der suporte ao IPv6, os membros da classe <xref:System.Net.Dns?displayProperty=nameWithType>, (por exemplo, o método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>), retornarão endereços IPv6 com uma limitação. Os membros obsoletos do DNS <xref:System.Net.Dns?displayProperty=nameWithType> (por exemplo, o método <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) lerão e reconhecerão o valor no arquivo de configuração para a configuração ipv6 enabled.  
   
 ## <a name="see-also"></a>Consulte também
-- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+
+- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Soquetes](../../../docs/framework/network-programming/sockets.md)
 - [Esquema de configurações de rede](../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [\<Elemento ipv6> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

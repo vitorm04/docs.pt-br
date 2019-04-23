@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295751"
 ---
 # <a name="automatic-proxy-detection"></a>Detecção automática de proxy
 A detecção automática de proxy é um processo pelo qual um servidor proxy Web é identificado pelo sistema e usado para enviar solicitações em nome do cliente. Esse recurso também é conhecido como WPAD (Descoberta Automática de Proxy Web). Quando a detecção automática de proxy está habilitada, o sistema tenta localizar um script de configuração de proxy que é responsável por retornar o conjunto de proxies que pode ser usado para a solicitação. Se o script de configuração de proxy for encontrado, o script será baixado, compilado e executado no computador local quando as informações de proxy, o fluxo da solicitação ou a resposta for obtida de uma solicitação que usa uma instância <xref:System.Net.WebProxy>.  
@@ -31,13 +31,13 @@ A detecção automática de proxy é um processo pelo qual um servidor proxy Web
   
  Quando a detecção automática de proxy está habilitada, a classe <xref:System.Net.WebProxy> tenta localizar o script de configuração de proxy da seguinte maneira:  
   
-1.  A função `InternetQueryOption` de WinINet é usada para localizar o script de configuração de proxy detectado mais recentemente pelo Internet Explorer.  
+1. A função `InternetQueryOption` de WinINet é usada para localizar o script de configuração de proxy detectado mais recentemente pelo Internet Explorer.  
   
-2.  Se o script não for localizado, a classe <xref:System.Net.WebProxy> usará o protocolo DHCP para localizar o script. O servidor DHCP pode responder com o local (nome do host) do script ou com a URL completa do script.  
+2. Se o script não for localizado, a classe <xref:System.Net.WebProxy> usará o protocolo DHCP para localizar o script. O servidor DHCP pode responder com o local (nome do host) do script ou com a URL completa do script.  
   
-3.  Se o DHCP não identificar o host do WPAD, o DNS será consultado em busca de um host com o WPAD como seu nome ou alias.  
+3. Se o DHCP não identificar o host do WPAD, o DNS será consultado em busca de um host com o WPAD como seu nome ou alias.  
   
-4.  Se o host não for identificado e o local de um script de configuração de proxy for especificado pelas configurações de LAN do Internet Explorer ou por um arquivo de configuração, esse local será usado.  
+4. Se o host não for identificado e o local de um script de configuração de proxy for especificado pelas configurações de LAN do Internet Explorer ou por um arquivo de configuração, esse local será usado.  
   
 > [!NOTE]
 >  Os aplicativos em execução como um Serviço NT ou como parte do ASP.NET usam as configurações do servidor proxy do Internet Explorer (se disponíveis) do usuário que faz a invocação. Essas configurações podem não estar disponíveis para todos os aplicativos de serviço.  
@@ -68,6 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  As solicitações que não têm um proxy usam o proxy padrão do domínio do aplicativo, que está disponível na propriedade <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- Elemento [\<system.Net> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<Elemento system.Net> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

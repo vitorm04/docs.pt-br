@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199993"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Depurador de Linha de Comando do .NET Framework)
 O Depurador de Linha de Comando do .NET Framework ajuda fornecedores de ferramentas e desenvolvedores de aplicativos na localização e na correção de bugs em programas com o Common Language Runtime do .NET Framework como destino. Essa ferramenta usa a API de depuração do tempo de execução para fornecer serviços de depuração. É possível usar MDbg.exe para depurar apenas o código gerenciado; não há suporte para depurar o código não gerenciado.  
@@ -105,5 +105,6 @@ mdbg>
  Depois que você estiver no depurador, use os comandos e os argumentos descritos na seção anterior.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

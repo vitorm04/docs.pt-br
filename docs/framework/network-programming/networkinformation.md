@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230974"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 O namespace <xref:System.Net.NetworkInformation> permite que você colete informações sobre eventos, alterações, estatísticas e propriedades de rede. Você também pode determinar se um host remoto está acessível usando a classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -24,6 +24,7 @@ O namespace <xref:System.Net.NetworkInformation> permite que você colete inform
  Você pode usar a classe <xref:System.Net.NetworkInformation.Ping> para determinar se um Host remoto está funcionando, se está na rede e se pode ser acessado. Para obter mais informações, confira [Como: Executar ping em um host](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Amostra de tecnologia da informação de rede](https://go.microsoft.com/fwlink/?LinkID=179564)
 - [Amostra de tecnologia de ferramenta NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)

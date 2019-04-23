@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093535"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336571"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
@@ -28,9 +28,9 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
 ### <a name="to-create-an-application-manifest"></a>Para criar um manifesto do aplicativo  
   
-1.  Usando um editor de XML, crie (ou modifique) o manifesto do aplicativo pertencente ao aplicativo COM que interopera com um ou mais componentes gerenciados.  
+1. Usando um editor de XML, crie (ou modifique) o manifesto do aplicativo pertencente ao aplicativo COM que interopera com um ou mais componentes gerenciados.  
   
-2.  Insira o seguinte cabeçalho padrão no início do arquivo:  
+2. Insira o seguinte cabeçalho padrão no início do arquivo:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
      Para obter informações sobre e elementos de manifesto e seus atributos, confira [Manifestos de aplicativo](/windows/desktop/SbsCs/application-manifests).  
   
-3.  Identifique o proprietário do manifesto. No exemplo a seguir, `myComApp` versão 1 possui o arquivo de manifesto.  
+3. Identifique o proprietário do manifesto. No exemplo a seguir, `myComApp` versão 1 possui o arquivo de manifesto.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
       />  
     ```  
   
-4.  Identifique os assemblies dependentes. No exemplo a seguir, `myComApp` depende de `myManagedComp`.  
+4. Identifique os assemblies dependentes. No exemplo a seguir, `myComApp` depende de `myManagedComp`.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     </assembly>  
     ```  
   
-5.  Salve e nomeie o arquivo de manifesto. O nome de um manifesto do aplicativo é o nome do executável do assembly seguido pela extensão .manifest. Por exemplo, o nome do arquivo de manifesto do aplicativo para myComApp.exe é myComApp.exe.manifest.  
+5. Salve e nomeie o arquivo de manifesto. O nome de um manifesto do aplicativo é o nome do executável do assembly seguido pela extensão .manifest. Por exemplo, o nome do arquivo de manifesto do aplicativo para myComApp.exe é myComApp.exe.manifest.  
   
  Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo COM. Como alternativa, adicione-o como um recurso ao arquivo .exe do aplicativo. Para obter informações adicionais, confira [Sobre assemblies lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Para criar um manifesto do componente  
   
-1.  Usando um editor de XML, crie um manifesto do componente para descrever o assembly gerenciado.  
+1. Usando um editor de XML, crie um manifesto do componente para descrever o assembly gerenciado.  
   
-2.  Insira o seguinte cabeçalho padrão no início do arquivo:  
+2. Insira o seguinte cabeçalho padrão no início do arquivo:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Identifique o proprietário do arquivo. O elemento `<assemblyIdentity>` do elemento `<dependentAssembly>` no arquivo de manifesto do aplicativo deve corresponder àquele no manifesto do componente. No exemplo a seguir, `myManagedComp` versão 1.2.3.4 possui o arquivo de manifesto.  
+3. Identifique o proprietário do arquivo. O elemento `<assemblyIdentity>` do elemento `<dependentAssembly>` no arquivo de manifesto do aplicativo deve corresponder àquele no manifesto do componente. No exemplo a seguir, `myManagedComp` versão 1.2.3.4 possui o arquivo de manifesto.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +103,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
            />  
     ```  
   
-4.  Identifique cada classe no assembly. Use o elemento `<clrClass>` para identificar cada classe exclusivamente no assembly gerenciado. O elemento, que é um subelemento do elemento `<assembly>`, tem os atributos descritos na tabela a seguir.  
+4. Identifique cada classe no assembly. Use o elemento `<clrClass>` para identificar cada classe exclusivamente no assembly gerenciado. O elemento, que é um subelemento do elemento `<assembly>`, tem os atributos descritos na tabela a seguir.  
   
     |Atributo|Descrição|Necessária|  
     |---------------|-----------------|--------------|  
@@ -146,25 +146,25 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     </assembly>  
     ```  
   
-5.  Salve e nomeie o arquivo de manifesto. O nome de um manifesto do componente é o nome da biblioteca de assemblies seguido pela extensão .manifest. Por exemplo, a myManagedComp.dll é myManagedComp.manifest.  
+5. Salve e nomeie o arquivo de manifesto. O nome de um manifesto do componente é o nome da biblioteca de assemblies seguido pela extensão .manifest. Por exemplo, a myManagedComp.dll é myManagedComp.manifest.  
   
  É necessário inserir o manifesto do componente como um recurso no assembly.  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Para inserir um manifesto do componente em um assembly gerenciado  
   
-1.  Crie um script de recurso que contém a seguinte instrução:  
+1. Crie um script de recurso que contém a seguinte instrução:  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      Nessa instrução, `myManagedComp.manifest` é o nome do manifesto do componente que está sendo inserido. Neste exemplo, o nome do arquivo de script é `myresource.rc`.  
   
-2.  Compile o script usando o Compilador de Recurso do Microsoft Windows (Rc.exe). No prompt de comando, digite o seguinte comando:  
+2. Compile o script usando o Compilador de Recurso do Microsoft Windows (Rc.exe). No prompt de comando, digite o seguinte comando:  
   
      `rc myresource.rc`  
   
      O Rc.exe gera o arquivo de recurso `myresource.res`.  
   
-3.  Compile o arquivo de origem do assembly novamente e especifique o arquivo de recurso usando a opção **/win32res**:  
+3. Compile o arquivo de origem do assembly novamente e especifique o arquivo de recurso usando a opção **/win32res**:  
   
     ```  
     /win32res:myresource.res  
@@ -173,6 +173,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
      Novamente, `myresource.res` é o nome do arquivo de recurso que contém o recurso inserido.  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Interoperabilidade COM sem registro](registration-free-com-interop.md)
 - [Requisitos para interoperabilidade COM sem registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [Configurando componentes COM para ativação sem registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))

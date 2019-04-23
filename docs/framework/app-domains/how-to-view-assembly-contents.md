@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72778f769c2c3f030de0cd31d087e0a90ba6f508
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675030"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330071"
 ---
 # <a name="how-to-view-assembly-contents"></a>Como: Exibir o conteúdo do assembly
 Você pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para exibir informações MSIL (Microsoft Intermediate Language) em um arquivo. Se o arquivo que estiver sendo examinado for um assembly, essas informações poderão incluir os atributos do assembly, bem como as referências a outros módulos e assemblies. Essas informações podem ser úteis para determinar se um arquivo é um assembly ou parte de um assembly e se o arquivo possui referências a outros módulos ou assemblies.  
   
 ### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Para exibir o conteúdo de um assembly usando Ildasm.exe  
   
-1.  Digite **ildasm** \<*nome do assembly*> no prompt de comando. Por exemplo, o comando a seguir desmonta o assembly `Hello.exe`.  
+1. Digite **ildasm** \<*nome do assembly*> no prompt de comando. Por exemplo, o comando a seguir desmonta o assembly `Hello.exe`.  
   
     ```  
     ildasm Hello.exe  
@@ -36,7 +36,7 @@ Você pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/i
   
 ### <a name="to-view-assembly-manifest-information"></a>Para exibir informações do manifesto do assembly  
   
-1.  Clique duas vezes no ícone MANIFESTO da janela Desmontador de MSIL.  
+1. Clique duas vezes no ícone MANIFESTO da janela Desmontador de MSIL.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir inicia com um programa básico "Hello, World". Após a compilação do programa, use Ildasm.exe para desmontar o assembly Hello.exe e exibir o manifesto do assembly.  
@@ -89,6 +89,7 @@ Você pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/i
  Um manifesto do assembly pode conter várias diretivas diferentes, dependendo do conteúdo do assembly. Para obter uma lista extensa das diretivas no manifesto do assembly, confira a documentação da ECMA, especialmente "Partição II: Definição de metadados e semântica" e "Partição III: Conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
   
 ## <a name="see-also"></a>Consulte também
-- [Domínios do aplicativo e assemblies](application-domains.md#application-domains-and-assemblies)
+
+- [Domínios de aplicativo e assemblies](application-domains.md#application-domains-and-assemblies)
 - [Tópicos explicativos sobre domínios do aplicativo e assemblies](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

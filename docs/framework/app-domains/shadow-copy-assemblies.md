@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204556"
 ---
 # <a name="shadow-copying-assemblies"></a>Criando cópias de sombra de assemblies
 A criação de cópias de sombra permite que os assemblies usados em um domínio de aplicativo sejam atualizados sem descarregar o domínio de aplicativo. Isso é particularmente útil para aplicativos que devem estar disponíveis continuamente, como sites do ASP.NET.  
@@ -78,6 +78,7 @@ A criação de cópias de sombra permite que os assemblies usados em um domínio
  A classe <xref:System.AppDomain> tem vários métodos, como <xref:System.AppDomain.SetShadowCopyFiles%2A> e <xref:System.AppDomain.ClearShadowCopyPath%2A>, que podem ser usados para controlar a cópia de sombra em um domínio do aplicativo, mas eles foram marcados como obsoletos no .NET Framework versão 2.0. A maneira recomendada de configurar um domínio do aplicativo para a cópia de sombra é usar as propriedades da classe <xref:System.AppDomainSetup>.  
   
 ## <a name="see-also"></a>Consulte também
+
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>

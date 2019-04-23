@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427351"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Como: escrever um loop Parallel.ForEach simples
 
@@ -51,7 +51,7 @@ No Visual Studio, há modelos de aplicativo de console do Visual Basic e do C# p
 
 Na linha de comando, você pode usar o .NET Core e as ferramentas da CLI dele (por exemplo, `dotnet new console` ou `dotnet new console -lang vb`) ou criar o arquivo e usar o compilador de linha de comando para um aplicativo do .NET Framework.
 
-Para um projeto do .NET Core, você precisa referenciar o pacote **System.Drawing.Common** do NuGet. No Visual Studio, use o Gerenciador de Pacotes do NuGet para instalar o pacote. Como alternativa, você pode adicionar uma referência ao pacote no arquivo *.* csproj* ou *.* vbproj*:
+Para um projeto do .NET Core, você precisa referenciar o pacote **System.Drawing.Common** do NuGet. No Visual Studio, use o Gerenciador de Pacotes do NuGet para instalar o pacote. Como alternativa, você pode adicionar uma referência ao pacote no arquivo \*.csproj* ou \*.vbproj*:
  
 ```xml
 <ItemGroup>
@@ -67,4 +67,4 @@ Para executar o aplicativo de console do Visual Studio, pressione **F5**.
 
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Programação paralela](../../../docs/standard/parallel-programming/index.md)
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [LINQ paralelo (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

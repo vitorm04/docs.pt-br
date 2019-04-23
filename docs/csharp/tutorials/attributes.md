@@ -4,12 +4,12 @@ description: Saiba como os atributos funcionam em C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975596"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481225"
 ---
 # <a name="using-attributes-in-c"></a>Usando atributos em C\#
 
@@ -147,4 +147,4 @@ No código acima, você não precisa ter uma cadeia de caracteres `"Name"` liter
 
 ## <a name="summary"></a>Resumo
 
-Os atributos fornecem poder declarativo ao C#. Mas eles são uma forma de código como metadados e não agem por si.
+Atributos trazem poder declarativo para C#, mas eles são uma forma de metadados de código e não agem sozinhos.

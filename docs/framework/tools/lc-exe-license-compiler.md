@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298962"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
 O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  
@@ -52,19 +52,19 @@ O Compilador de Licença lê arquivos de texto que contêm informações de lice
   
 ## <a name="example"></a>Exemplo  
   
-1.  Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe`*,* você poderá criar `HostAppLic.txt` que contém o seguinte.  
+1. Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe`*,* você poderá criar `HostAppLic.txt` que contém o seguinte.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Crie o arquivo .licenses chamado `HostApp.exe.licenses` usando o comando a seguir.  
+2. Crie o arquivo .licenses chamado `HostApp.exe.licenses` usando o comando a seguir.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Compile `HostApp.exe` incluindo o arquivo .licenses como um recurso. Se estivesse compilando um aplicativo do C#, você usaria o comando a seguir para compilar o aplicativo.  
+3. Compile `HostApp.exe` incluindo o arquivo .licenses como um recurso. Se estivesse compilando um aplicativo do C#, você usaria o comando a seguir para compilar o aplicativo.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>Consulte também
+
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

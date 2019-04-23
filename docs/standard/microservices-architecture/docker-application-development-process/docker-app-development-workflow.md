@@ -4,12 +4,12 @@ description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921085"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553869"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -51,7 +51,7 @@ O desenvolvimento de um aplicativo do Docker é semelhante à forma como você d
 
 Para começar, instale o [Docker CE (Community Edition)](https://docs.docker.com/docker-for-windows/) para Windows, conforme explicado nas instruções a seguir:
 
-[Introdução ao Docker CE for Windows](https://docs.docker.com/docker-for-windows/)
+[Introdução ao Docker CE para Windows](https://docs.docker.com/docker-for-windows/)
 
 Além disso, você precisa do Visual Studio 2017 versão 15.7 ou posterior com a carga de trabalho **Desenvolvimento multiplataforma do .NET Core** instalada, conforme mostrado na Figura 5-2.
 
@@ -67,7 +67,7 @@ Você pode iniciar a codificação do aplicativo no .NET simples (normalmente no
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 – Escrever Dockerfiles](./media/image4.png)
 
@@ -193,26 +193,26 @@ O Dockerfile inicial pode ser como este:
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 E estes são os detalhes, linha por linha:
 
-1.  Inicie um estágio com uma imagem base "pequena" somente em tempo de execução, chamando-a de **base** para referência.
-2.  Crie o diretório **/app** na imagem.
-3.  Exponha a porta **80**.
+1. Inicie um estágio com uma imagem base "pequena" somente em tempo de execução, chamando-a de **base** para referência.
+2. Crie o diretório **/app** na imagem.
+3. Exponha a porta **80**.
 <!-- skip -->
-5.  Inicie um novo estágio com imagem "grande" para build/publicação, chamando-a de **build** para referência.
-6.  Crie o diretório **/src** na imagem.
-7.  Até a linha 16, copie os arquivos de projetos **.csproj** referenciados, para poder restaurar os pacotes mais tarde.
+5. Inicie um novo estágio com imagem "grande" para build/publicação, chamando-a de **build** para referência.
+6. Crie o diretório **/src** na imagem.
+7. Até a linha 16, copie os arquivos de projetos **.csproj** referenciados, para poder restaurar os pacotes mais tarde.
 <!-- skip -->
 17. Restaure os pacotes do projeto **Catalog.API** e os projetos referenciados.
 18. Copie **toda a árvores de diretórios da solução** (exceto os arquivos/diretórios incluídos no arquivo **.dockerignore**) para o diretório **/src** na imagem.
@@ -524,7 +524,7 @@ Se você estiver desenvolvendo por meio da abordagem de editor/CLI, a depuraçã
 - **Depurando aplicativos em um contêiner do Docker local** \
   [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-- **Steve Lasker. Compilar, depurar, implantar aplicativos ASP.NET Core com o Docker.** Vídeo. \
+- **Steve Lasker. Compilar, depurar, implantar aplicativos do ASP.NET Core com o Docker.** Vídeo. \
   [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Fluxo de trabalho simplificado ao desenvolver contêineres com o Visual Studio

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298390"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Passo a passo: Filtrando a saída de My.Application.Log (Visual Basic)
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.  
@@ -21,17 +21,17 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 #### <a name="to-build-the-sample-application"></a>Para compilar o aplicativo de exemplo  
   
-1.  Abra um novo projeto de aplicativo do Windows Visual Basic.  
+1. Abra um novo projeto de aplicativo do Windows Visual Basic.  
   
-2.  Adicione um botão denominado Button1 a Form1.  
+2. Adicione um botão denominado Button1 a Form1.  
   
-3.  No manipulador de eventos <xref:System.Windows.Forms.Control.Click> de Button1, adicione o seguinte código:  
+3. No manipulador de eventos <xref:System.Windows.Forms.Control.Click> de Button1, adicione o seguinte código:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Execute o aplicativo no depurador.  
+4. Execute o aplicativo no depurador.  
   
-5.  Pressione **Button1**.  
+5. Pressione **Button1**.  
   
      O aplicativo grava as informações a seguir no arquivo de log e na saída da depuração do aplicativo.  
   
@@ -39,7 +39,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Feche o aplicativo.  
+6. Feche o aplicativo.  
   
      Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre a localização do arquivo de log do aplicativo, confira [Passo a passo: Determinando o local em que My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
@@ -71,7 +71,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 #### <a name="to-log-only-activity-tracing-events"></a>Para registrar em log apenas eventos de rastreamento de atividade  
   
-1.  Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.  
+1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.  
   
      - ou -  
   
@@ -83,15 +83,15 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
     3.  Clique em **Adicionar**.  
   
-2.  Localize a seção `<switches>`, que está na seção `<system.diagnostics>`, que está na seção `<configuration>` superior.  
+2. Localize a seção `<switches>`, que está na seção `<system.diagnostics>`, que está na seção `<configuration>` superior.  
   
-3.  Localize o elemento que adiciona `DefaultSwitch` à coleção de opções. Ele deve ser semelhante a este:  
+3. Localize o elemento que adiciona `DefaultSwitch` à coleção de opções. Ele deve ser semelhante a este:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Altere o valor do atributo `value` para "ActivityTracing".  
+4. Altere o valor do atributo `value` para "ActivityTracing".  
   
-5.  O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:  
+5. O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
     </configuration>  
     ```  
   
-6.  Execute o aplicativo no depurador.  
+6. Execute o aplicativo no depurador.  
   
-7.  Pressione **Button1**.  
+7. Pressione **Button1**.  
   
      O aplicativo grava as informações a seguir no arquivo de log e na saída da depuração do aplicativo:  
   
@@ -130,7 +130,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Feche o aplicativo.  
+8. Feche o aplicativo.  
   
 9. Altere o valor do atributo `value` de volta para "Information".  
   
@@ -146,7 +146,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 #### <a name="to-log-only-activity-tracing-events"></a>Para registrar em log apenas eventos de rastreamento de atividade  
   
-1.  Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
+1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
   
      - ou -  
   
@@ -158,11 +158,11 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
     3.  Clique em **Adicionar**.  
   
-2.  Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções**. Escolha **Abrir**.  
+2. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções**. Escolha **Abrir**.  
   
-3.  Localize a seção `<listeners>`, na seção `<source>` com o atributo de `name` "DefaultSource", que está na seção `<sources>`. A seção `<sources>` está na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
+3. Localize a seção `<listeners>`, na seção `<source>` com o atributo de `name` "DefaultSource", que está na seção `<sources>`. A seção `<sources>` está na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   
-4.  Adicione esse elemento à seção `<listeners>`:  
+4. Adicione esse elemento à seção `<listeners>`:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
     <add name="NewDefault"/>  
     ```  
   
-5.  Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
+5. Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   
-6.  Adicione esse elemento a essa seção `<sharedListeners>`:  
+6. Adicione esse elemento a essa seção `<sharedListeners>`:  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
      O filtro <xref:System.Diagnostics.EventTypeFilter> escolhe um dos valores de enumeração <xref:System.Diagnostics.SourceLevels> como seu atributo `initializeData`.  
   
-7.  O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:  
+7. O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
     </configuration>  
     ```  
   
-8.  Execute o aplicativo no depurador.  
+8. Execute o aplicativo no depurador.  
   
 9. Pressione **Button1**.  
   
@@ -249,9 +249,9 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Passo a passo: criando ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Passo a passo: determinar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Passo a passo: criar ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
 - [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)
-- [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Registrar informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)

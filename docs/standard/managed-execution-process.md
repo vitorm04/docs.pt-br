@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336142"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
   
-1.  [Escolhendo um compilador](#choosing_a_compiler).  
+1. [Escolhendo um compilador](#choosing_a_compiler).  
   
      Para obter as vantagens fornecidas pelo Common Language Runtime, você deve usar um ou mais compiladores de linguagem que selecionam o tempo de execução.  
   
-2.  [Compilando seu código em MSIL](#compiling_to_msil).  
+2. [Compilando seu código em MSIL](#compiling_to_msil).  
   
      A compilação converte seu código-fonte em MSIL (Microsoft Intermediate Language) e gera os metadados necessários.  
   
-3.  [Compilando MSIL em código nativo](#compiling_msil_to_native_code).  
+3. [Compilando MSIL em código nativo](#compiling_msil_to_native_code).  
   
      No tempo de execução, uma compilação JIT (just-in-time) converte o MSIL em código nativo. Durante essa compilação, o código deve passar por um processo de verificação que examina o MSIL e os metadados para descobrir se o código pode ser considerado fortemente tipado.  
   
-4.  [Executando o código](#running_code).  
+4. [Executando o código](#running_code).  
   
      O Common Language Runtime fornece a infraestrutura que permite que a execução ocorra e os serviços que podem ser usados durante a execução.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652007"
   
  No Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] e [!INCLUDE[windowsver](../../includes/windowsver-md.md)], o carregador do sistema operacional verifica módulos gerenciados examinando um bit no cabeçalho COFF. Se o bit estiver definido, o módulo será gerenciado. Se o carregador detecta módulos gerenciados, ele carrega mscoree.dll e `_CorValidateImage`, e `_CorImageUnloading` notifica o carregador quando as imagens do módulo gerenciado são carregadas e descarregadas. `_CorValidateImage` executa as seguintes ações:  
   
-1.  Garante que o código seja um código gerenciado válido.  
+1. Garante que o código seja um código gerenciado válido.  
   
-2.  Altera o ponto de entrada na imagem para um ponto de entrada no ambiente de execução.  
+2. Altera o ponto de entrada na imagem para um ponto de entrada no ambiente de execução.  
   
  No Windows 64 bits, `_CorValidateImage` modifica a imagem que está na memória transformando-a do formato PE32 para o formato PE32+.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54652007"
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral](../../docs/framework/get-started/overview.md)
-- [Componentes de independência de linguagem e componentes independentes da linguagem](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Independência da linguagem e componentes independentes da linguagem](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadados e componentes autodescritivos](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Segurança](../../docs/standard/security/index.md)

@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: e41b92239f0ba1a94190262c337f09eedaddab31
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149832"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -94,6 +94,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 >Se os exemplos usassem o modificador `async` no método `Main`, o compilador geraria o mesmo código.
 
 ## <a name="see-also"></a>Consulte também
+
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Referência de C#](../index.md)
 - [Main() e argumentos de linha de comando](index.md)

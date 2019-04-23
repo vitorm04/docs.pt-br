@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335011"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -113,7 +113,7 @@ Para obter mais informações, veja [.NET Framework compatibility mode](../core/
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Bibliotecas do .NET standard e Visual Studio
 
-Para criar bibliotecas do .NET Standard no Visual Studio, verifique se tem o [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ou posterior instalado no Windows ou o [Visual Studio para Mac versão 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) ou posterior instalado no macOS.
+Para criar bibliotecas do .NET Standard no Visual Studio, verifique se tem o [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ou posterior instalado no Windows ou o [Visual Studio para Mac versão 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ou posterior instalado no macOS.
 
 Se você precisar apenas consumir as bibliotecas do .NET Standard 2.0 em seus projetos, também será possível fazer isso no Visual Studio 2015. No entanto, é necessário ter o NuGet cliente 3.6 ou posterior instalado. É possível baixar o cliente do NuGet para Visual Studio 2015 na página [downloads do NuGet](https://www.nuget.org/downloads).
 

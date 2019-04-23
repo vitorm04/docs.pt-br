@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: fe7cf3cf1982060d22f648c5e17d002b1a695ac0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d2e89c842ae83a5be65c7500e47beb7f302e23be
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427182"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (Guia de Programação em C#)
 O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectangle` e `Color`. Embora seja conveniente representar um ponto como uma [classe](../../../csharp/language-reference/keywords/class.md) com [Propriedades Auto-implementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), um [struct](../../../csharp/language-reference/keywords/struct.md) pode ser mais eficiente em alguns cenários. Por exemplo, se você declarar uma matriz de 1000 objetos `Point`, alocará memória adicional para referenciar cada objeto, nesse caso, um struct será mais barato. Como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contém um objeto chamado <xref:System.Drawing.Point>, o struct deste exemplo é chamado "Coords".  
@@ -19,7 +19,7 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
   
  É um erro ao definir um construtor (sem parâmetros) padrão para um struct. Também é um erro ao inicializar um campo de instância em um corpo de struct. Você pode inicializar membros de struct externamente acessíveis somente por meio de um construtor com parâmetros, do construtor padrão implícito, de um [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) ou acessando os membros individualmente depois que o struct é declarado. Todos os membros particulares ou, de outro modo, inacessíveis exigem o uso de construtores exclusivamente.
   
- Quando você cria um objeto de struct usando o operador [new](../../../csharp/language-reference/keywords/new.md), ele é criado e o construtor apropriado é chamado de acordo com a [assinatura do construtor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio de propriedades autoimplementadas.
+ Quando você cria um objeto de struct usando o operador [new](../../../csharp/language-reference/keywords/new.md), ele é criado e o construtor apropriado é chamado de acordo com a [assinatura do construtor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio de propriedades.
  
  Se você criar uma instância de um objeto de struct usando o construtor sem parâmetros padrão, todos os membros serão atribuídos de acordo com seus [valores padrão](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
   
@@ -54,5 +54,5 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)

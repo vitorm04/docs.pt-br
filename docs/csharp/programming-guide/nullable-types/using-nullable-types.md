@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306645"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Usando tipos que permitem valor nulo (Guia de programação em C#)
 
@@ -29,7 +29,7 @@ Como um tipo de valor pode ser convertido implicitamente no tipo que permite val
 
 Use as seguintes propriedades readonly para examinar se uma instância de um tipo que permite valor nulo é nula e recuperar um valor de um tipo subjacente:  
   
-- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> Indica se uma instância de um tipo que permite valor nulo tem um valor de seu tipo subjacente.
+- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> indica se uma instância de um tipo que permite valor nulo tem um valor de seu tipo subjacente.
   
 - <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> obtém o valor de um tipo subjacente quando <xref:System.Nullable%601.HasValue%2A> é `true`. Quando <xref:System.Nullable%601.HasValue%2A> é `false`, a propriedade <xref:System.Nullable%601.Value%2A> gera uma <xref:System.InvalidOperationException>.
   
@@ -66,6 +66,9 @@ Um tipo de valor que não permite valor nulo é convertido implicitamente no tip
 Os operadores unários e binários predefinidos e os operadores definidos pelo usuário que existem para tipos de valor também podem ser usados por tipos que permitem valor nulo. Esses operadores produzem um valor nulo quando um ou ambos os operandos são nulos. Caso contrário, o operador usa os valores contidos para calcular o resultado. Por exemplo:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> Para o tipo `bool?`, os operadores predefinidos `&` e `|` não seguem as regras descritas nessa seção: o resultado de uma avaliação de operador pode ser não nulo, mesmo quando um dos operandos é nulo. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](../../language-reference/operators/boolean-logical-operators.md).
   
 Para os operadores relacionais (`<`, `>`, `<=` e `>=`), quando um ou ambos os operandos são nulos, o resultado é `false`. Não presuma que como uma comparação (por exemplo, `<=`) retorna `false`, a comparação oposta (`>`) retorna `true`. O exemplo a seguir mostra que 10
 
@@ -75,6 +78,8 @@ Para os operadores relacionais (`<`, `>`, `<=` e `>=`), quando um ou ambos os op
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 O exemplo acima também mostra que uma comparação de igualdade de dois tipos que permitem valor nulo e são nulos é avaliada como `true`.
+
+Para obter mais informações, confira a seção [Operadores suspensos](~/_csharplang/spec/expressions.md#lifted-operators) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Conversões boxing e unboxing
 
@@ -87,31 +92,8 @@ Você pode aplicar a conversão unboxing no tipo de valor que passou pela conver
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>O tipo bool?
-
-O tipo que permite valor nulo `bool?` pode conter três valores diferentes: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) e [null](../../language-reference/keywords/null.md). O tipo `bool?` é como o tipo de variável booliano que é usado em SQL. Para garantir que os resultados produzidos pelos operadores `&` e `|` são consistentes com o tipo booliano de três valores no SQL, os seguintes operadores predefinidos são fornecidos:
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-A semântica desses operadores é definida pela tabela a seguir:  
-  
-|x|y|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|false|false|true|  
-|true|nulo|nulo|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|nulo|false|nulo|  
-|nulo|true|nulo|true|  
-|nulo|false|false|nulo|  
-|nulo|nulo|nulo|nulo|  
-
-Observe que esses dois operadores não seguem as regras descritas na seção [Operadores](#operators): o resultado de uma avaliação de operador pode ser não nulo, mesmo quando um dos operandos é nulo.
-  
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos que permitem valor nulo](index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [O que exatamente "levantado" significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [O que exatamente “suspenso” significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

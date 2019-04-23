@@ -12,17 +12,17 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 8bc366e6c88c8ea378504535bb259e81dad83306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307646"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relacionamentos de tipo em operações de consulta LINQ (C#)
 Para escrever consultas com eficiência, você precisa entender como os tipos de variáveis em uma operação de consulta completa se relacionam entre si. Se compreender esses relacionamentos, você compreenderá com maior facilidade os exemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e exemplos de código na documentação. Além disso, você compreenderá o que ocorre nos bastidores quando variáveis são tipadas de forma implícita usando `var`.  
   
- Operações de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são fortemente tipadas na fonte de dados, na própria consulta e na execução da consulta. O tipo das variáveis na consulta deve ser compatível com o tipo dos elementos na fonte de dados e com o tipo da variável de iteração na instrução `foreach`. Essa tipagem forte garante que erros de tipo sejam capturados em tempo de compilação, quando podem ser corrigidos antes que os usuários os encontrem.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Operações de consulta são fortemente tipadas na fonte de dados, na própria consulta e na execução da consulta. O tipo das variáveis na consulta deve ser compatível com o tipo dos elementos na fonte de dados e com o tipo da variável de iteração na instrução `foreach`. Essa tipagem forte garante que erros de tipo sejam capturados em tempo de compilação, quando podem ser corrigidos antes que os usuários os encontrem.  
   
  Para demonstrar essas relações de tipo, a maioria dos exemplos a seguir usam tipagem explícita para todas as variáveis. O último exemplo mostra como os mesmos princípios se aplicam mesmo quando você usa tipagem implícita usando [var](../../../../csharp/language-reference/keywords/var.md).  
   
@@ -31,32 +31,32 @@ Para escrever consultas com eficiência, você precisa entender como os tipos de
   
  ![Relação dos tipos de dados em uma consulta LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
   
-1.  O argumento de tipo da fonte de dados determina o tipo da variável de intervalo.  
+1. O argumento de tipo da fonte de dados determina o tipo da variável de intervalo.  
   
-2.  O tipo do objeto selecionado determina o tipo da variável de consulta. Esta é uma cadeia de caracteres `name`. Portanto, a variável de consulta é um `IEnumerable<string>`.  
+2. O tipo do objeto selecionado determina o tipo da variável de consulta. Esta é uma cadeia de caracteres `name`. Portanto, a variável de consulta é um `IEnumerable<string>`.  
   
-3.  A variável de consulta é iterada na instrução `foreach`. Como a variável de consulta é uma sequência de cadeias de caracteres, a variável de iteração também é uma cadeia de caracteres.  
+3. A variável de consulta é iterada na instrução `foreach`. Como a variável de consulta é uma sequência de cadeias de caracteres, a variável de iteração também é uma cadeia de caracteres.  
   
 ## <a name="queries-that-transform-the-source-data"></a>Consultas que transformam os dados de origem  
  A ilustração a seguir mostra uma operação de consulta de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que executa transformações simples nos dados. A consulta usa uma sequência de objetos `Customer` como entrada e seleciona somente a propriedade `Name` no resultado. Como `Name` é uma cadeia de caracteres, a consulta produz uma sequência de cadeias de caracteres como saída.  
   
  ![Uma consulta que transforma o tipo de dados](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
   
-1.  O argumento de tipo da fonte de dados determina o tipo da variável de intervalo.  
+1. O argumento de tipo da fonte de dados determina o tipo da variável de intervalo.  
   
-2.  A instrução `select` retorna a propriedade `Name` em vez do objeto `Customer` completo. Como `Name` é uma cadeia de caracteres, o argumento de tipo de `custNameQuery` é `string` e não `Customer`.  
+2. A instrução `select` retorna a propriedade `Name` em vez do objeto `Customer` completo. Como `Name` é uma cadeia de caracteres, o argumento de tipo de `custNameQuery` é `string` e não `Customer`.  
   
-3.  Como `custNameQuery` é uma sequência de cadeias de caracteres, a variável de iteração do loop `foreach` também deve ser um `string`.  
+3. Como `custNameQuery` é uma sequência de cadeias de caracteres, a variável de iteração do loop `foreach` também deve ser um `string`.  
   
  A ilustração a seguir mostra uma transformação um pouco mais complexa. A instrução `select` retorna um tipo anônimo que captura apenas dois membros do objeto `Customer` original.  
   
  ![Uma consulta que transforma o tipo de dados](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
   
-1.  O argumento de tipo da fonte de dados sempre é o tipo da variável de intervalo na consulta.  
+1. O argumento de tipo da fonte de dados sempre é o tipo da variável de intervalo na consulta.  
   
-2.  Como a instrução `select` produz um tipo anônimo, a variável de consulta deve ser tipada implicitamente usando `var`.  
+2. Como a instrução `select` produz um tipo anônimo, a variável de consulta deve ser tipada implicitamente usando `var`.  
   
-3.  Como o tipo da variável de consulta é implícito, a variável de iteração no loop `foreach` também deve ser implícito.  
+3. Como o tipo da variável de consulta é implícito, a variável de iteração no loop `foreach` também deve ser implícito.  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>Deixando o compilador inferir informações de tipo  
  Embora você precise entender as relações de tipo em uma operação de consulta, você tem a opção de permitir que o compilador fazer todo o trabalho. A palavra-chave [var](../../../../csharp/language-reference/keywords/var.md) pode ser usada para qualquer variável local em uma operação de consulta. A ilustração a seguir é semelhante ao exemplo número 2 que foi discutido anteriormente. No entanto, o compilador fornece o tipo forte para cada variável na operação de consulta.  

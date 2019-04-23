@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 65d9edc1e7377a86f8185ebf28bb5bee3a3f887d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235055"
+---
 ### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open falha no Windows 7 com BSP ou LSP Winsock não IFS presente
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versão|4.5|
 |Tipo|Tempo de execução|
 |APIs afetadas|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
-
