@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182293"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
@@ -23,7 +23,7 @@ ms.locfileid: "59182293"
   
 -   Quando você tem um objeto cuja criação é dispendiosa e você deseja adiar a criação até após a conclusão de outras operações dispendiosas. Por exemplo, suponha que seu programa carrega várias instâncias de objeto quando ele é iniciado, mas apenas algumas delas são necessárias imediatamente. Você pode melhorar o desempenho de inicialização do programa, adiando a inicialização dos objetos que não são necessários até que os objetos necessários tenham sido criados.  
   
- Embora você possa escrever seu próprio código para executar a inicialização lenta, recomendamos que você use <xref:System.Lazy%601> em vez disso. <xref:System.Lazy%601> e seus tipos relacionados também dão suporte a acesso thread-safe e fornecem uma política de propagação de exceção consistente.  
+ Embora você possa escrever seu próprio código para executar a inicialização lenta, recomendamos que você use <xref:System.Lazy%601> em vez disso. <xref:System.Lazy%601> e seus tipos relacionados também dão suporte a segurança do thread e fornecem uma política de propagação de exceção consistente.  
   
  A tabela a seguir lista os tipos que o .NET Framework versão 4 fornece para permitir a inicialização lenta em cenários diferentes.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59182293"
   
  Alguns construtores <xref:System.Lazy%601> têm um parâmetro <xref:System.Threading.LazyThreadSafetyMode> chamado `mode`. Esses construtores fornecem um modo adicional de acesso thread-safe. A tabela a seguir mostra como o acesso thread-safe de um objeto <xref:System.Lazy%601> é afetado pelos parâmetros de construtor que especificam o acesso thread-safe. Cada construtor tem no máximo um desses parâmetros.  
   
-|Acesso thread-safe do objeto|`LazyThreadSafetyMode` `mode` parâmetro|Parâmetro `isThreadSafe` booliano|Sem parâmetros de acesso thread-safe|  
+|Acesso thread-safe do objeto|Parâmetro de `mode` `LazyThreadSafetyMode`|Parâmetro `isThreadSafe` booliano|Sem parâmetros de acesso thread-safe|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Totalmente thread-safe; apenas um thread por vez tenta inicializar o valor.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sim.|  
 |Não é thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Não aplicável.|  
@@ -156,5 +156,5 @@ ms.locfileid: "59182293"
 
 - [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
 - [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)
-- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Como: executar a inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Como: Executar a inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

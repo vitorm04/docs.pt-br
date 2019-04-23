@@ -3,10 +3,10 @@ title: LINQ (Consulta Integrada à Linguagem) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186622"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Consulta Integrada à Linguagem)
@@ -35,7 +35,7 @@ O exemplo a seguir mostra a operação de consulta completa. A operação comple
   
 -   Algumas operações de consulta, como <xref:System.Linq.Enumerable.Count%2A> ou <xref:System.Linq.Enumerable.Max%2A>, não apresentam cláusulas de expressão de consulta equivalentes e, portanto, devem ser expressas como chamadas de método. A sintaxe de método pode ser combinada com a sintaxe de consulta de várias maneiras. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](query-syntax-and-method-syntax-in-linq.md).  
   
--   As expressões de consulta podem ser compiladas para árvores de expressão ou delegados, dependendo do tipo ao qual a consulta é aplicada. <xref:System.Collections.Generic.IEnumerable%601> consultas são compiladas para delegados. <xref:System.Linq.IQueryable> e as consultas <xref:System.Linq.IQueryable%601> são compiladas para árvores de expressão. Para obter mais informações, consulte [Árvores de expressão](../../../expression-trees.md).  
+-   As expressões de consulta podem ser compiladas para árvores de expressão ou delegados, dependendo do tipo ao qual a consulta é aplicada. As consultas <xref:System.Collections.Generic.IEnumerable%601> são compiladas para representantes. As consultas <xref:System.Linq.IQueryable> e <xref:System.Linq.IQueryable%601> são compiladas para árvores de expressão. Para obter mais informações, consulte [Árvores de expressão](../../../expression-trees.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 

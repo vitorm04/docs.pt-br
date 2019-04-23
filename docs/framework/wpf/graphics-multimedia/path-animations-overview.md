@@ -9,10 +9,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182462"
 ---
 # <a name="path-animations-overview"></a>Visão geral de animações do caminho
@@ -45,11 +45,11 @@ ms.locfileid: "59182462"
   
  Classes de animação de caminho pertencem ao <xref:System.Windows.Media.Animation> namespace e use a seguinte convenção de nomenclatura:  
   
- *\<tipo >* `AnimationUsingPath`  
+ *\<Type>* `AnimationUsingPath`  
   
  Em que *\<Type>* é o tipo de valor animado pela classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece classes de animação de caminho a seguir.  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de caminho a seguir.  
   
 |Tipo de propriedade|Classe de animação de caminho correspondente|Exemplo|  
 |-------------------|----------------------------------------|-------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "59182462"
 ## <a name="see-also"></a>Consulte também
 
 - [Exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Sintaxe de marcação do caminho](path-markup-syntax.md)
+- [Sintaxe de marcação de caminho](path-markup-syntax.md)
 - [Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral das técnicas de animação da propriedade](property-animation-techniques-overview.md)

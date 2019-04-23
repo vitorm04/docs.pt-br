@@ -5,10 +5,10 @@ helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
 ms.openlocfilehash: 97836cef12cd1f220e97d2c38d2dca1b878d7484
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183064"
 ---
 # <a name="publishing-metadata"></a>Publicando metadados
@@ -28,10 +28,10 @@ Serviços Windows Communication Foundation (WCF) publicam metadados, um ou mais 
  Para adicionar um ponto de extremidade de metadados para o serviço que responde a solicitações HTTP/GET, defina a <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propriedade sobre a <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> para `true`. Você também pode configurar um ponto de extremidade de metadados que usa HTTPS, definindo o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> propriedade em de <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> para `true`.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  Demonstra como configurar um serviço WCF para publicar metadados para que os clientes podem recuperar os metadados usando um WS-MetadataExchange ou uma solicitação HTTP/GET usando o `?wsdl` cadeia de caracteres de consulta.  
   
- [Como: publicar metadados utilizando código para um serviço](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Como: Publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  Demonstra como habilitar a publicação de metadados para um serviço WCF em código para que os clientes podem recuperar os metadados usando um WS-MetadataExchange ou uma solicitação HTTP/GET usando o `?wsdl` cadeia de caracteres de consulta.  
   
 ## <a name="reference"></a>Referência  

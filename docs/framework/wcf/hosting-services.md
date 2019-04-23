@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185530"
 ---
 # <a name="hosting-services"></a>Serviços de hospedagem
@@ -63,10 +63,10 @@ Para se tornar ativo, um serviço deve ser hospedado dentro de um ambiente de te
   
 ## <a name="see-also"></a>Consulte também
 
-- [Requisitos de sistema](../../../docs/framework/wcf/wcf-system-requirements.md)
+- [Requisitos do sistema](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [Como: hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Como: hospedar um serviço WCF no WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Como: hospedar um serviço WCF em um serviço Windows gerenciado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Como: hospedar um serviço do WCF em um aplicativo gerenciado](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Como: Hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Como: Hospedar um serviço WCF no WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Como: Hospedar um serviço WCF em um serviço Windows gerenciado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

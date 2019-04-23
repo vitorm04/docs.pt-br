@@ -9,10 +9,10 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
 ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181695"
 ---
 # <a name="how-to-enable-a-command"></a>Como: Habilitar um comando
@@ -41,4 +41,4 @@ O exemplo a seguir demonstra como usar comandos em [!INCLUDE[TLA#tla_winclient](
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral dos comandos](commanding-overview.md)
+- [Visão geral de comandos](commanding-overview.md)

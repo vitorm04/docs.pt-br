@@ -1,5 +1,5 @@
 ---
-title: <supportPortability> Elemento
+title: Elemento <supportPortability>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -8,10 +8,10 @@ ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183932"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > elemento
@@ -80,5 +80,5 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
   
 ## <a name="see-also"></a>Consulte também
 
-- [/appconfig (opções do compilador C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Visão geral da unificação de assemblies no .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [/AppConfig (opções do compilador c#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Visão geral da Unificação de assemblies do framework .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

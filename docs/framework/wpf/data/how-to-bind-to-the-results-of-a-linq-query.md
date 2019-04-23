@@ -6,10 +6,10 @@ helpviewer_keywords:
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
 ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185894"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Como: Associar aos resultados de uma consulta LINQ
@@ -26,12 +26,12 @@ Este exemplo demonstra como executar uma consulta LINQ e associar aos resultados
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- A segunda caixa de listagem associado a essa coleção porque seu <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valor é definido como `{Binding}`. Como resultado, ele exibe a coleção retornada (com base no `myTaskTemplate`<xref:System.Windows.DataTemplate>).  
+ A segunda caixa de listagem associado a essa coleção porque seu <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valor é definido como `{Binding}`. Como resultado, ele exibe a coleção retornada (com base nas `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Disponibilizar dados para associação em XAML](how-to-make-data-available-for-binding-in-xaml.md)
 - [Associar a uma coleção e exibir informações com base na seleção](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [Novidades do WPF versão 4.5](../getting-started/whats-new.md)
+- [Novidades no WPF versão 4.5](../getting-started/whats-new.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

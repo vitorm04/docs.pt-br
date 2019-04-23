@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181760"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Como: usar procedimentos armazenados que usam parâmetros
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia parâmetros de saída para fazer referência a parâmetros e para tipos de valor declara o parâmetro como anulável.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia parâmetros de saída para definições de referência, e para tipos de valor declara o parâmetro como anulável.  
   
  Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de linhas, consulte [como: Retornar conjuntos de linhas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
@@ -42,6 +42,6 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Usando tipos anuláveis](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Tipos de valor que permitem valor nulo](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Usando tipos que permitem valor nulo](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Tipos de Valor Anulável](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

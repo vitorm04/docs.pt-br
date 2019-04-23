@@ -3,10 +3,10 @@ title: Configuração simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184048"
 ---
 # <a name="simplified-configuration"></a>Configuração simplificada
@@ -116,8 +116,8 @@ Configurar serviços Windows Communication Foundation (WCF) pode ser uma tarefa 
 ## <a name="see-also"></a>Consulte também
 
 - [Configurando serviços usando arquivos de configuração](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [Configurar associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Configurando associações fornecidas pelo sistema](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Configurando serviços](../../../docs/framework/wcf/configuring-services.md)
 - [Configurando serviços WCF](configuring-services.md)
-- [Configurando serviços WCF em código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+- [Configurando serviços do WCF em código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
