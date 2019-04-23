@@ -1,39 +1,32 @@
-items:
 - name: Código não gerenciado e ponteiros
   href: index.md
   items:
-  - name: Buffers de tamanho fixo
-    href: fixed-size-buffers.md
-  - name: Tipos de ponteiro
-    href: pointer-types.md
-    items:
-    - name: Conversões de ponteiro
-      href: pointer-conversions.md
-    - name: Expressões de ponteiro
-      href: pointer-expressions.md
+    - name: Buffers de tamanho fixo
+      href: fixed-size-buffers.md
+    - name: Tipos de ponteiro
+      href: pointer-types.md
       items:
-      - name: 'Como: obter o valor de uma variável de ponteiro'
-        href: how-to-obtain-the-value-of-a-pointer-variable.md
-      - name: 'Como: obter o endereço de uma variável'
-        href: how-to-obtain-the-address-of-a-variable.md
-      - name: 'Como: acessar um membro com um ponteiro'
-        href: how-to-access-a-member-with-a-pointer.md
-      - name: 'Como: acessar um elemento de matriz com um ponteiro'
-        href: how-to-access-an-array-element-with-a-pointer.md
-      - name: Manipular ponteiros
-        href: manipulating-pointers.md
-        items:
-        - name: 'Como: incrementar e diminuir ponteiros'
-          href: how-to-increment-and-decrement-pointers.md
-        - name: Operações aritméticas em ponteiros
-          href: arithmetic-operations-on-pointers.md
-        - name: Comparação de ponteiros
-          href: pointer-comparison.md
-    - name: 'Como: usar ponteiros para copiar uma matriz de bytes'
-      href: how-to-use-pointers-to-copy-an-array-of-bytes.md
-ms.openlocfilehash: 094fa68222bcb4d92ab19a57373789a8234d2606
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467796"
+        - name: Conversões de ponteiro
+          href: pointer-conversions.md
+        - name: Expressões de ponteiro
+          href: pointer-expressions.md
+          items:
+            - name: 'Como: obter o valor de uma variável de ponteiro'
+              href: how-to-obtain-the-value-of-a-pointer-variable.md
+            - name: 'Como: obter o endereço de uma variável'
+              href: how-to-obtain-the-address-of-a-variable.md
+            - name: 'Como: acessar um membro com um ponteiro'
+              href: how-to-access-a-member-with-a-pointer.md
+            - name: 'Como: acessar um elemento de matriz com um ponteiro'
+              href: how-to-access-an-array-element-with-a-pointer.md
+            - name: Manipular ponteiros
+              href: manipulating-pointers.md
+              items:
+                - name: 'Como: incrementar e diminuir ponteiros'
+                  href: how-to-increment-and-decrement-pointers.md
+                - name: Operações aritméticas em ponteiros
+                  href: arithmetic-operations-on-pointers.md
+                - name: Comparação de ponteiros
+                  href: pointer-comparison.md
+        - name: 'Como: usar ponteiros para copiar uma matriz de bytes'
+          href: how-to-use-pointers-to-copy-an-array-of-bytes.md

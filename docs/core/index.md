@@ -8,8 +8,8 @@ ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614447"
 ---
 # <a name="net-core-guide"></a>Guia do .NET Core
 

@@ -1,18 +1,11 @@
-items:
 - name: Delegados
   href: index.md
   items:
-  - name: Usar delegados
-    href: using-delegates.md
-  - name: Delegados com Métodos Nomeados vs. Métodos anônimos
-    href: delegates-with-named-vs-anonymous-methods.md
-  - name: 'Como: combinar delegados (delegados multicast) (Guia de Programação em C#)'
-    href: how-to-combine-delegates-multicast-delegates.md
-  - name: 'Como: declarar, instanciar e usar um delegado'
-    href: how-to-declare-instantiate-and-use-a-delegate.md
-ms.openlocfilehash: f9857a805966b3b3c9d1c6776027c77c6183235b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468066"
+    - name: Usar delegados
+      href: using-delegates.md
+    - name: Delegados com Métodos Nomeados vs. Métodos anônimos
+      href: delegates-with-named-vs-anonymous-methods.md
+    - name: 'Como: combinar delegados (delegados multicast) (Guia de Programação em C#)'
+      href: how-to-combine-delegates-multicast-delegates.md
+    - name: 'Como: declarar, instanciar e usar um delegado'
+      href: how-to-declare-instantiate-and-use-a-delegate.md

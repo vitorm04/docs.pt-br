@@ -15,11 +15,11 @@ ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969787"
 ---
 # <a name="extending-metadata-using-attributes"></a>Estendendo metadados por meio de atributos
 O Common Language Runtime permite adicionar declarações descritivas parecidas com palavras, chamadas atributos, para anotar elementos de programação como tipos, campos, métodos e propriedades. Quando você compila seu código para o tempo de execução, ele é convertido em MSIL (Microsoft Intermediate Language) e colocado dentro de um arquivo PE (executável portátil) com metadados gerados pelo compilador. Os atributos permitem colocar informações descritivas extras em metadados que podem ser extraídos usando serviços de reflexão de tempo de execução. O compilador cria atributos quando você declara instâncias de classes especiais que derivam de <xref:System.Attribute?displayProperty=nameWithType>.  
@@ -34,7 +34,7 @@ O Common Language Runtime permite adicionar declarações descritivas parecidas 
 |[Escrevendo atributos personalizados](../../../docs/standard/attributes/writing-custom-attributes.md)|Descreve como criar classes de atributos personalizados.|  
 |[Recuperando informações armazenadas em atributos](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Descreve como recuperar atributos personalizados para o código que é carregado no contexto de execução.|  
 |[Metadados e componentes autodescritivos](../../../docs/standard/metadata-and-self-describing-components.md)|Fornece uma visão geral dos metadados e descreve como eles são implementados em um arquivo executável PE (executável portátil) do .NET Framework.|  
-|[Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Explica como recuperar informações de atributos personalizados no contexto somente reflexão.|  
+|[Como: Carregar assemblies no contexto somente de reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Explica como recuperar informações de atributos personalizados no contexto somente reflexão.|  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Attribute?displayProperty=nameWithType>

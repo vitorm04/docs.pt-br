@@ -1,35 +1,28 @@
-items:
 - name: Windows Presentation Foundation
   href: index.md
   items:
-  - name: Guia de Introdução
-    href: getting-started/
-  - name: Desenvolvimento do aplicativo
-    href: app-development/
-  - name: Avançado
-    href: advanced/
-  - name: Controles
-    href: controls/
-  - name: Dados
-    href: data/
-  - name: Gráficos e multimídia
-    href: graphics-multimedia/
-  - name: Segurança
-    href: security-wpf.md
-    items:
-    - name: Segurança parcialmente confiável do WPF
-      href: wpf-partial-trust-security.md
-    - name: Estratégia de segurança do WPF - segurança da plataforma
-      href: wpf-security-strategy-platform-security.md
-    - name: Estratégia de segurança do WPF - engenharia de segurança
-      href: wpf-security-strategy-security-engineering.md
-  - name: Exemplos WPF
-    href: wpf-samples.md
-  - name: Biblioteca de Classes
-    href: class-library-wpf.md
-ms.openlocfilehash: 1e228336e8538f045cbcd2574850a9cf7fac4f21
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467799"
+    - name: Guia de Introdução
+      href: getting-started/
+    - name: Desenvolvimento do aplicativo
+      href: app-development/
+    - name: Avançado
+      href: advanced/
+    - name: Controles
+      href: controls/
+    - name: Dados
+      href: data/
+    - name: Gráficos e multimídia
+      href: graphics-multimedia/
+    - name: Segurança
+      href: security-wpf.md
+      items:
+        - name: Segurança parcialmente confiável do WPF
+          href: wpf-partial-trust-security.md
+        - name: Estratégia de segurança do WPF - segurança da plataforma
+          href: wpf-security-strategy-platform-security.md
+        - name: Estratégia de segurança do WPF - engenharia de segurança
+          href: wpf-security-strategy-security-engineering.md
+    - name: Exemplos WPF
+      href: wpf-samples.md
+    - name: Biblioteca de Classes
+      href: class-library-wpf.md

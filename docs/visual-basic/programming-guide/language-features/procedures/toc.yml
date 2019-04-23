@@ -1,121 +1,114 @@
-items:
 - name: Procedimentos no Visual Basic
   href: index.md
   items:
-  - name: 'Como: criar um procedimento'
-    href: how-to-create-a-procedure.md
-  - name: Subprocedimentos
-    href: sub-procedures.md
-    items:
-    - name: 'Como: chamar um procedimento que não retorne um valor'
-      href: how-to-call-a-procedure-that-does-not-return-a-value.md
-    - name: 'Como: chamar um manipulador de eventos'
-      href: how-to-call-an-event-handler.md
-  - name: Procedimentos de Função
-    href: function-procedures.md
-    items:
-    - name: 'Como: criar um procedimento que retorne um valor'
-      href: how-to-create-a-procedure-that-returns-a-value.md
-    - name: 'Como: retornar um valor de um procedimento'
-      href: how-to-return-a-value-from-a-procedure.md
-    - name: 'Como: chamar um procedimento que retorna um valor'
-      href: how-to-call-a-procedure-that-returns-a-value.md
-  - name: Procedimentos de Propriedade
-    href: property-procedures.md
-    items:
-    - name: Propriedades autoimplementadas
-      href: auto-implemented-properties.md
-    - name: Diferenças entre Propriedades e Variáveis
-      href: differences-between-properties-and-variables.md
-    - name: 'Como: criar uma propriedade'
-      href: how-to-create-a-property.md
-    - name: 'Como: declarar uma propriedade com níveis de acesso mistos'
-      href: how-to-declare-a-property-with-mixed-access-levels.md
-    - name: 'Como: chamar um procedimento de propriedade'
-      href: how-to-call-a-property-procedure.md
-    - name: 'Como: declarar e chamar uma propriedade padrão'
-      href: how-to-declare-and-call-a-default-property.md
-    - name: 'Como: inserir um valor em uma propriedade'
-      href: how-to-put-a-value-in-a-property.md
-    - name: 'Como: obter um valor de uma propriedade'
-      href: how-to-get-a-value-from-a-property.md
-  - name: Procedimentos do operador
-    href: operator-procedures.md
-    items:
-    - name: 'Como: definir um operador'
-      href: how-to-define-an-operator.md
-    - name: 'Como: definir um operador de conversão'
-      href: how-to-define-a-conversion-operator.md
-    - name: 'Como: chamar um procedimento de operador'
-      href: how-to-call-an-operator-procedure.md
-    - name: 'Como: usar uma classe que define operadores'
-      href: how-to-use-a-class-that-defines-operators.md
-  - name: Parâmetros e argumentos de procedimento
-    href: procedure-parameters-and-arguments.md
-    items:
-    - name: Diferenças entre parâmetros e argumentos
-      href: differences-between-parameters-and-arguments.md
-    - name: 'Como: definir um parâmetro para um procedimento'
-      href: how-to-define-a-parameter-for-a-procedure.md
-    - name: 'Como: passar argumentos para um procedimento'
-      href: how-to-pass-arguments-to-a-procedure.md
-    - name: Passar argumentos por valor e por referência
-      href: passing-arguments-by-value-and-by-reference.md
+    - name: 'Como: criar um procedimento'
+      href: how-to-create-a-procedure.md
+    - name: Subprocedimentos
+      href: sub-procedures.md
       items:
-      - name: Diferenças entre argumentos modificáveis e não modificáveis
-        href: differences-between-modifiable-and-nonmodifiable-arguments.md
-      - name: Diferenças entre passar um argumento por valor e por referência
-        href: differences-between-passing-an-argument-by-value-and-by-reference.md
-      - name: 'Como: alterar o valor de um argumento de procedimento'
-        href: how-to-change-the-value-of-a-procedure-argument.md
-      - name: 'Como: proteger um argumento de procedimento contra alterações de valor'
-        href: how-to-protect-a-procedure-argument-against-value-changes.md
-      - name: 'Como: forçar um argumento a ser passado por valor'
-        href: how-to-force-an-argument-to-be-passed-by-value.md
-    - name: Passar argumentos por posição e nome
-      href: passing-arguments-by-position-and-by-name.md
-    - name: Parâmetros opcionais
-      href: optional-parameters.md
-    - name: Matrizes de parâmetros
-      href: parameter-arrays.md
-  - name: Valores retornados por referência
-    href: ref-return-values.md
-  - name: Procedimentos recursivos
-    href: recursive-procedures.md
-  - name: Sobrecarga de procedimento
-    href: procedure-overloading.md
-    items:
-    - name: 'Como: definir várias versões de um procedimento'
-      href: how-to-define-multiple-versions-of-a-procedure.md
-    - name: 'Como: chamar um procedimento sobrecarregado'
-      href: how-to-call-an-overloaded-procedure.md
-    - name: 'Como: sobrecarregar um procedimento que usa parâmetros opcionais'
-      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
-    - name: 'Como: sobrecarregar um procedimento que usa um número indefinido de parâmetros'
-      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
-    - name: Considerações sobre procedimentos de sobrecarga
-      href: considerations-in-overloading-procedures.md
-    - name: Resolução de sobrecarga
-      href: overload-resolution.md
-  - name: Solução de problemas de procedimentos
-    href: troubleshooting-procedures.md
-  - name: Métodos de extensão
-    href: extension-methods.md
-    items:
-    - name: 'Como: escrever um método de extensão'
-      href: how-to-write-an-extension-method.md
-    - name: 'Como: chamar um método de extensão'
-      href: how-to-call-an-extension-method.md
-  - name: Expressões lambda
-    href: lambda-expressions.md
-    items:
-    - name: 'Como: criar uma expressão lambda'
-      href: how-to-create-a-lambda-expression.md
-  - name: Métodos parciais
-    href: partial-methods.md
-ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467701"
+        - name: 'Como: chamar um procedimento que não retorne um valor'
+          href: how-to-call-a-procedure-that-does-not-return-a-value.md
+        - name: 'Como: chamar um manipulador de eventos'
+          href: how-to-call-an-event-handler.md
+    - name: Procedimentos de Função
+      href: function-procedures.md
+      items:
+        - name: 'Como: criar um procedimento que retorne um valor'
+          href: how-to-create-a-procedure-that-returns-a-value.md
+        - name: 'Como: retornar um valor de um procedimento'
+          href: how-to-return-a-value-from-a-procedure.md
+        - name: 'Como: chamar um procedimento que retorna um valor'
+          href: how-to-call-a-procedure-that-returns-a-value.md
+    - name: Procedimentos de Propriedade
+      href: property-procedures.md
+      items:
+        - name: Propriedades autoimplementadas
+          href: auto-implemented-properties.md
+        - name: Diferenças entre Propriedades e Variáveis
+          href: differences-between-properties-and-variables.md
+        - name: 'Como: criar uma propriedade'
+          href: how-to-create-a-property.md
+        - name: 'Como: declarar uma propriedade com níveis de acesso mistos'
+          href: how-to-declare-a-property-with-mixed-access-levels.md
+        - name: 'Como: chamar um procedimento de propriedade'
+          href: how-to-call-a-property-procedure.md
+        - name: 'Como: declarar e chamar uma propriedade padrão'
+          href: how-to-declare-and-call-a-default-property.md
+        - name: 'Como: inserir um valor em uma propriedade'
+          href: how-to-put-a-value-in-a-property.md
+        - name: 'Como: obter um valor de uma propriedade'
+          href: how-to-get-a-value-from-a-property.md
+    - name: Procedimentos do operador
+      href: operator-procedures.md
+      items:
+        - name: 'Como: definir um operador'
+          href: how-to-define-an-operator.md
+        - name: 'Como: definir um operador de conversão'
+          href: how-to-define-a-conversion-operator.md
+        - name: 'Como: chamar um procedimento de operador'
+          href: how-to-call-an-operator-procedure.md
+        - name: 'Como: usar uma classe que define operadores'
+          href: how-to-use-a-class-that-defines-operators.md
+    - name: Parâmetros e argumentos de procedimento
+      href: procedure-parameters-and-arguments.md
+      items:
+        - name: Diferenças entre parâmetros e argumentos
+          href: differences-between-parameters-and-arguments.md
+        - name: 'Como: definir um parâmetro para um procedimento'
+          href: how-to-define-a-parameter-for-a-procedure.md
+        - name: 'Como: passar argumentos para um procedimento'
+          href: how-to-pass-arguments-to-a-procedure.md
+        - name: Passar argumentos por valor e por referência
+          href: passing-arguments-by-value-and-by-reference.md
+          items:
+            - name: Diferenças entre argumentos modificáveis e não modificáveis
+              href: differences-between-modifiable-and-nonmodifiable-arguments.md
+            - name: Diferenças entre passar um argumento por valor e por referência
+              href: differences-between-passing-an-argument-by-value-and-by-reference.md
+            - name: 'Como: alterar o valor de um argumento de procedimento'
+              href: how-to-change-the-value-of-a-procedure-argument.md
+            - name: 'Como: proteger um argumento de procedimento contra alterações de valor'
+              href: how-to-protect-a-procedure-argument-against-value-changes.md
+            - name: 'Como: forçar um argumento a ser passado por valor'
+              href: how-to-force-an-argument-to-be-passed-by-value.md
+        - name: Passar argumentos por posição e nome
+          href: passing-arguments-by-position-and-by-name.md
+        - name: Parâmetros opcionais
+          href: optional-parameters.md
+        - name: Matrizes de parâmetros
+          href: parameter-arrays.md
+    - name: Valores retornados por referência
+      href: ref-return-values.md
+    - name: Procedimentos recursivos
+      href: recursive-procedures.md
+    - name: Sobrecarga de procedimento
+      href: procedure-overloading.md
+      items:
+        - name: 'Como: definir várias versões de um procedimento'
+          href: how-to-define-multiple-versions-of-a-procedure.md
+        - name: 'Como: chamar um procedimento sobrecarregado'
+          href: how-to-call-an-overloaded-procedure.md
+        - name: 'Como: sobrecarregar um procedimento que usa parâmetros opcionais'
+          href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+        - name: 'Como: sobrecarregar um procedimento que usa um número indefinido de parâmetros'
+          href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+        - name: Considerações sobre procedimentos de sobrecarga
+          href: considerations-in-overloading-procedures.md
+        - name: Resolução de sobrecarga
+          href: overload-resolution.md
+    - name: Solução de problemas de procedimentos
+      href: troubleshooting-procedures.md
+    - name: Métodos de extensão
+      href: extension-methods.md
+      items:
+        - name: 'Como: escrever um método de extensão'
+          href: how-to-write-an-extension-method.md
+        - name: 'Como: chamar um método de extensão'
+          href: how-to-call-an-extension-method.md
+    - name: Expressões lambda
+      href: lambda-expressions.md
+      items:
+        - name: 'Como: criar uma expressão lambda'
+          href: how-to-create-a-lambda-expression.md
+    - name: Métodos parciais
+      href: partial-methods.md

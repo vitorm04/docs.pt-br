@@ -1,13 +1,19 @@
 ---
-title: 'Tipos que permitem valor nulo – Guia de Programação em C#'
+title: Tipos que permitem valor nulo – Guia de Programação em C#
 ms.custom: seodec18
-description: 'Saiba mais sobre os tipos que permitem valor nulo C# e como usá-los'
+description: Saiba mais sobre os tipos que permitem valor nulo C# e como usá-los
 ms.date: 07/30/2018
 helpviewer_keywords:
-  - 'nullable types [C#]'
-  - 'C# language, nullable types'
-  - 'types [C#], nullable'
+- nullable types [C#]
+- C# language, nullable types
+- types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
+ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710141"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que permitem valor nulo (Guia de Programação em C#)
 

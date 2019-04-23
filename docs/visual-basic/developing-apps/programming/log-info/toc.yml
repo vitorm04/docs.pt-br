@@ -1,32 +1,25 @@
-items:
 - name: Registrar informações em log no aplicativo
   href: index.md
   items:
-  - name: 'Como: gravar mensagens de log'
-    href: how-to-write-log-messages.md
-  - name: 'Como: registrar exceções em log'
-    href: how-to-log-exceptions.md
-  - name: 'Como: registrar mensagens em log quando o aplicativo é iniciado ou encerrado'
-    href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
-  - name: 'Como: gravar em um Log de Eventos do Aplicativo'
-    href: how-to-write-to-an-application-event-log.md
-  - name: 'Como: gravar informações de evento em um arquivo de texto'
-    href: how-to-write-event-information-to-a-text-file.md
-  - name: Trabalhar com logs do aplicativo
-    href: working-with-application-logs.md
-  - name: 'Passo a passo: determinar o local no qual My.Application.Log grava informações'
-    href: walkthrough-determining-where-my-application-log-writes-information.md
-  - name: 'Passo a passo: alterar o local no qual My.Application.Log grava informações'
-    href: walkthrough-changing-where-my-application-log-writes-information.md
-  - name: 'Passo a passo: filtrar a saída de My.Application.Log'
-    href: walkthrough-filtering-my-application-log-output.md
-  - name: 'Passo a passo: criar ouvintes de log personalizados'
-    href: walkthrough-creating-custom-log-listeners.md
-  - name: 'Solução de problemas: ouvintes de log'
-    href: troubleshooting-log-listeners.md
-ms.openlocfilehash: 9b1d9ae3a2fdda80723180e7eef1b31aa06a28ea
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467829"
+    - name: 'Como: gravar mensagens de log'
+      href: how-to-write-log-messages.md
+    - name: 'Como: registrar exceções em log'
+      href: how-to-log-exceptions.md
+    - name: 'Como: registrar mensagens em log quando o aplicativo é iniciado ou encerrado'
+      href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
+    - name: 'Como: gravar em um Log de Eventos do Aplicativo'
+      href: how-to-write-to-an-application-event-log.md
+    - name: 'Como: gravar informações de evento em um arquivo de texto'
+      href: how-to-write-event-information-to-a-text-file.md
+    - name: Trabalhar com logs do aplicativo
+      href: working-with-application-logs.md
+    - name: 'Passo a passo: determinar o local no qual My.Application.Log grava informações'
+      href: walkthrough-determining-where-my-application-log-writes-information.md
+    - name: 'Passo a passo: alterar o local no qual My.Application.Log grava informações'
+      href: walkthrough-changing-where-my-application-log-writes-information.md
+    - name: 'Passo a passo: filtrar a saída de My.Application.Log'
+      href: walkthrough-filtering-my-application-log-output.md
+    - name: 'Passo a passo: criar ouvintes de log personalizados'
+      href: walkthrough-creating-custom-log-listeners.md
+    - name: 'Solução de problemas: ouvintes de log'
+      href: troubleshooting-log-listeners.md

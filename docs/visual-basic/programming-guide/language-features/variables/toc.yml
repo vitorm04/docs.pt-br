@@ -1,51 +1,44 @@
-items:
 - name: Variáveis no Visual Basic
   href: index.md
   items:
-  - name: Declaração de variável
-    href: variable-declaration.md
-    items:
-    - name: 'Como: criar uma nova variável'
-      href: how-to-create-a-new-variable.md
-    - name: 'Como: criar uma variável que não se altera no valor'
-      href: how-to-create-a-variable-that-does-not-change-in-value.md
-    - name: 'Como: inserir e remover dados de uma variável'
-      href: how-to-move-data-into-and-out-of-a-variable.md
-  - name: Variáveis de objeto
-    href: object-variables.md
-    items:
-    - name: 'Como: agilizar o acesso a um objeto com um demarcador de qualificação longo'
-      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
-  - name: Declaração de variável do objeto
-    href: object-variable-declaration.md
-    items:
-    - name: 'Como: acessar membros de um objeto'
-      href: how-to-access-members-of-an-object.md
-    - name: Atribuição de variável do objeto
-      href: object-variable-assignment.md
+    - name: Declaração de variável
+      href: variable-declaration.md
       items:
-      - name: 'Como: declarar uma variável de objeto e atribuir um objeto a ela'
-        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-      - name: 'Como: fazer uma variável de objeto não se referir a nenhuma instância'
-        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
-    - name: Valores de variável de objeto
-      href: object-variable-values.md
+        - name: 'Como: criar uma nova variável'
+          href: how-to-create-a-new-variable.md
+        - name: 'Como: criar uma variável que não se altera no valor'
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: 'Como: inserir e remover dados de uma variável'
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: Variáveis de objeto
+      href: object-variables.md
       items:
-      - name: 'Como: fazer referência à instância atual de um objeto'
-        href: how-to-refer-to-the-current-instance-of-an-object.md
-      - name: 'Como: determinar a que tipo uma variável de objeto se refere'
-        href: how-to-determine-what-type-an-object-variable-refers-to.md
-      - name: 'Como: determinar se dois objetos estão relacionados'
-        href: how-to-determine-whether-two-objects-are-related.md
-      - name: 'Como: determinar se dois objetos são idênticos'
-        href: how-to-determine-whether-two-objects-are-identical.md
-  - name: Inferência de tipo local
-    href: local-type-inference.md
-  - name: Solução de problemas de variáveis
-    href: troubleshooting-variables.md
-ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467853"
+        - name: 'Como: agilizar o acesso a um objeto com um demarcador de qualificação longo'
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: Declaração de variável do objeto
+      href: object-variable-declaration.md
+      items:
+        - name: 'Como: acessar membros de um objeto'
+          href: how-to-access-members-of-an-object.md
+        - name: Atribuição de variável do objeto
+          href: object-variable-assignment.md
+          items:
+            - name: 'Como: declarar uma variável de objeto e atribuir um objeto a ela'
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: 'Como: fazer uma variável de objeto não se referir a nenhuma instância'
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: Valores de variável de objeto
+          href: object-variable-values.md
+          items:
+            - name: 'Como: fazer referência à instância atual de um objeto'
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: 'Como: determinar a que tipo uma variável de objeto se refere'
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: 'Como: determinar se dois objetos estão relacionados'
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: 'Como: determinar se dois objetos são idênticos'
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: Inferência de tipo local
+      href: local-type-inference.md
+    - name: Solução de problemas de variáveis
+      href: troubleshooting-variables.md

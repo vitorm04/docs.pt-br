@@ -1,38 +1,31 @@
-items:
 - name: Gerenciamento de memória e coleta de lixo
   href: memory-management-and-gc.md
   items:
-  - name: Limpando recursos não gerenciados
-    href: unmanaged.md
-    items:
-    - name: Implementando um método Dispose
-      href: implementing-dispose.md
-    - name: Usar objetos que implementam IDisposable
-      href: using-objects.md
-  - name: Coleta de Lixo
-    href: index.md
-    items:
-    - name: Noções básicas da coleta de lixo
-      href: fundamentals.md
-    - name: O heap de Objeto Grande
-      href: large-object-heap.md
-    - name: Coleta de lixo e desempenho
-      href: performance.md
-    - name: Coletas induzidas
-      href: induced.md
-    - name: Modos de latência
-      href: latency.md
-    - name: Otimização da hospedagem Web compartilhada
-      href: optimization-for-shared-web-hosting.md
-    - name: Notificações sobre a coleta de lixo
-      href: notifications.md
-    - name: Monitoramento de recursos de domínio de aplicativo
-      href: app-domain-resource-monitoring.md
-    - name: Referências fracas
-      href: weak-references.md
-ms.openlocfilehash: ad426c53df40be9a5222bd0e5a6292d8f1ec8e30
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468074"
+    - name: Limpando recursos não gerenciados
+      href: unmanaged.md
+      items:
+        - name: Implementando um método Dispose
+          href: implementing-dispose.md
+        - name: Usar objetos que implementam IDisposable
+          href: using-objects.md
+    - name: Coleta de Lixo
+      href: index.md
+      items:
+        - name: Noções básicas da coleta de lixo
+          href: fundamentals.md
+        - name: O heap de Objeto Grande
+          href: large-object-heap.md
+        - name: Coleta de lixo e desempenho
+          href: performance.md
+        - name: Coletas induzidas
+          href: induced.md
+        - name: Modos de latência
+          href: latency.md
+        - name: Otimização da hospedagem Web compartilhada
+          href: optimization-for-shared-web-hosting.md
+        - name: Notificações sobre a coleta de lixo
+          href: notifications.md
+        - name: Monitoramento de recursos de domínio de aplicativo
+          href: app-domain-resource-monitoring.md
+        - name: Referências fracas
+          href: weak-references.md

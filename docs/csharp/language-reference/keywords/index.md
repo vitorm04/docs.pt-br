@@ -1,14 +1,20 @@
 ---
-title: 'Palavras-chave C#'
+title: Palavras-chave C#
 ms.date: 03/07/2017
 f1_keywords:
-  - cs.keywords
+- cs.keywords
 helpviewer_keywords:
-  - 'keywords [C#]'
-  - 'C# language, keywords'
-  - 'Visual C#, keywords'
-  - '@ keyword'
+- keywords [C#]
+- C# language, keywords
+- Visual C#, keywords
+- '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
+ms.openlocfilehash: c590a33b83a9c6d1b839ecb496e8eb08488b2598
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661393"
 ---
 # <a name="c-keywords"></a>Palavras-chave C#
 As palavras-chave são identificadores reservados predefinidos com significados especiais para o compilador. Elas não podem ser usadas como identificadores em seu programa, a não ser que incluam `@` como prefixo. Por exemplo, `@if` é um identificador válido, mas `if` não é porque `if` é uma palavra-chave.  

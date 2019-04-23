@@ -4,8 +4,13 @@ description: Saiba como compilar o .NET Core e a CLI do .NET Core no código-fon
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650876"
 ---
-
 # <a name="build-net-core-from-source"></a>Compilar Build .NET Core da origem
 
 A capacidade de criar o .NET Core do seu código-fonte é importante de várias maneiras: facilita compatibilizar o .NET Core com novas plataformas, permite contribuições e correções no produto e permite a criação de versões personalizadas do .NET.

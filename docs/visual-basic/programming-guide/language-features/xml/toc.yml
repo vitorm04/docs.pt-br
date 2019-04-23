@@ -1,49 +1,42 @@
-items:
 - name: XML no Visual Basic
   href: index.md
   items:
-  - name: Visão Geral de LINQ to XML
-    href: overview-of-linq-to-xml.md
-  - name: Criar XML
-    href: creating-xml.md
-    items:
-    - name: Visão geral de literais XML
-      href: xml-literals-overview.md
-    - name: Expressões inseridas em XML
-      href: embedded-expressions-in-xml.md
-    - name: Nomes de elementos e atributos xml declarados
-      href: names-of-declared-xml-elements-and-attributes.md
-    - name: Especificação dos literais XML e do XML 1.0
-      href: xml-literals-and-the-xml-1-0-specification.md
-    - name: Espaço em branco em literais XML
-      href: white-space-in-xml-literals.md
-    - name: 'Como: criar literais XML'
-      href: how-to-create-xml-literals.md
-    - name: 'Como: inserir expressões em literais XML'
-      href: how-to-embed-expressions-in-xml-literals.md
-  - name: Manipular XML
-    href: manipulating-xml.md
-    items:
-    - name: 'Como: carregar XML de um arquivo, cadeia de caracteres ou fluxo'
-      href: how-to-load-xml-from-a-file-string-or-stream.md
-    - name: 'Como: transformar XML usando LINQ'
-      href: how-to-transform-xml-by-using-linq.md
-    - name: 'Como: modificar literais XML'
-      href: how-to-modify-xml-literals.md
-  - name: Acessar XML
-    href: accessing-xml.md
-    items:
-    - name: 'Como: acessar elementos descendentes XML'
-      href: how-to-access-xml-descendant-elements.md
-    - name: 'Como: acessar elementos filho XML'
-      href: how-to-access-xml-child-elements.md
-    - name: 'Como: acessar atributos XML'
-      href: how-to-access-xml-attributes.md
-    - name: 'Como: declarar e usar prefixos de namespace de XML'
-      href: how-to-declare-and-use-xml-namespace-prefixes.md
-ms.openlocfilehash: 7d2d931b5f88e9af9a2cdef92168d907e3fd6ce6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467798"
+    - name: Visão Geral de LINQ to XML
+      href: overview-of-linq-to-xml.md
+    - name: Criar XML
+      href: creating-xml.md
+      items:
+        - name: Visão geral de literais XML
+          href: xml-literals-overview.md
+        - name: Expressões inseridas em XML
+          href: embedded-expressions-in-xml.md
+        - name: Nomes de elementos e atributos xml declarados
+          href: names-of-declared-xml-elements-and-attributes.md
+        - name: Especificação dos literais XML e do XML 1.0
+          href: xml-literals-and-the-xml-1-0-specification.md
+        - name: Espaço em branco em literais XML
+          href: white-space-in-xml-literals.md
+        - name: 'Como: criar literais XML'
+          href: how-to-create-xml-literals.md
+        - name: 'Como: inserir expressões em literais XML'
+          href: how-to-embed-expressions-in-xml-literals.md
+    - name: Manipular XML
+      href: manipulating-xml.md
+      items:
+        - name: 'Como: carregar XML de um arquivo, cadeia de caracteres ou fluxo'
+          href: how-to-load-xml-from-a-file-string-or-stream.md
+        - name: 'Como: transformar XML usando LINQ'
+          href: how-to-transform-xml-by-using-linq.md
+        - name: 'Como: modificar literais XML'
+          href: how-to-modify-xml-literals.md
+    - name: Acessar XML
+      href: accessing-xml.md
+      items:
+        - name: 'Como: acessar elementos descendentes XML'
+          href: how-to-access-xml-descendant-elements.md
+        - name: 'Como: acessar elementos filho XML'
+          href: how-to-access-xml-child-elements.md
+        - name: 'Como: acessar atributos XML'
+          href: how-to-access-xml-attributes.md
+        - name: 'Como: declarar e usar prefixos de namespace de XML'
+          href: how-to-declare-and-use-xml-namespace-prefixes.md

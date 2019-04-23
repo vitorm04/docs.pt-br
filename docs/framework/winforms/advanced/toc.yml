@@ -1,422 +1,415 @@
-items:
 - name: Aprimorando aplicativos do Windows Forms
   href: index.md
   items:
-  - name: Elementos gráficos e desenho no Windows Forms
-    href: graphics-and-drawing-in-windows-forms.md
-    items:
-    - name: Visão geral de elementos gráficos
-      href: graphics-overview-windows-forms.md
+    - name: Elementos gráficos e desenho no Windows Forms
+      href: graphics-and-drawing-in-windows-forms.md
       items:
-      - name: Visão geral de elementos gráficos
-        href: overview-of-graphics.md
-      - name: Três categorias de serviços gráficos
-        href: three-categories-of-graphics-services.md
-      - name: Estrutura da interface gráfica
-        href: structure-of-the-graphics-interface.md
-    - name: Sobre código gerenciado no GDI+
-      href: about-gdi-managed-code.md
+        - name: Visão geral de elementos gráficos
+          href: graphics-overview-windows-forms.md
+          items:
+            - name: Visão geral de elementos gráficos
+              href: overview-of-graphics.md
+            - name: Três categorias de serviços gráficos
+              href: three-categories-of-graphics-services.md
+            - name: Estrutura da interface gráfica
+              href: structure-of-the-graphics-interface.md
+        - name: Sobre código gerenciado no GDI+
+          href: about-gdi-managed-code.md
+          items:
+            - name: 'Linhas, curvas e formas'
+              href: lines-curves-and-shapes.md
+              items:
+                - name: Visão geral de gráficos vetoriais
+                  href: vector-graphics-overview.md
+                - name: 'Canetas, linhas e retângulos no GDI+'
+                  href: pens-lines-and-rectangles-in-gdi.md
+                - name: Elipses e arcos no GDI+
+                  href: ellipses-and-arcs-in-gdi.md
+                - name: Polígonos no GDI+
+                  href: polygons-in-gdi.md
+                - name: Splines cardinais no GDI+
+                  href: cardinal-splines-in-gdi.md
+                - name: Splines de Bézier no GDI+
+                  href: bezier-splines-in-gdi.md
+                - name: demarcadores de elementos gráficos no GDI+
+                  href: graphics-paths-in-gdi.md
+                - name: Pincéis e formas preenchidas no GDI+
+                  href: brushes-and-filled-shapes-in-gdi.md
+                - name: Curvas abertas e fechadas no GDI+
+                  href: open-and-closed-curves-in-gdi.md
+                - name: Regiões no GDI+
+                  href: regions-in-gdi.md
+                - name: Restringindo a superfície de desenho no GDI+
+                  href: restricting-the-drawing-surface-in-gdi.md
+                - name: Suavização com linhas e curvas
+                  href: antialiasing-with-lines-and-curves.md
+            - name: 'Imagens, bitmaps e metarquivos'
+              href: images-bitmaps-and-metafiles.md
+              items:
+                - name: Tipos de bitmaps
+                  href: types-of-bitmaps.md
+                - name: Metarquivos no GDI+
+                  href: metafiles-in-gdi.md
+                - name: 'Desenhando, posicionando e clonando imagens no GDI+'
+                  href: drawing-positioning-and-cloning-images-in-gdi.md
+                - name: Cortando e dimensionando imagens no GDI+
+                  href: cropping-and-scaling-images-in-gdi.md
+            - name: Sistemas de coordenadas e transformações
+              href: coordinate-systems-and-transformations.md
+              items:
+                - name: Tipos de sistemas de coordenadas
+                  href: types-of-coordinate-systems.md
+                - name: Representação matricial de transformações
+                  href: matrix-representation-of-transformations.md
+                - name: Transformações globais e locais
+                  href: global-and-local-transformations.md
+        - name: Usando classes de elementos gráficos gerenciadas
+          href: using-managed-graphics-classes.md
+          items:
+            - name: Introdução à programação de elementos gráficos
+              href: getting-started-with-graphics-programming.md
+              items:
+                - name: 'Como: criar objetos gráficos para desenho'
+                  href: how-to-create-graphics-objects-for-drawing.md
+                - name: 'Como: criar uma caneta'
+                  href: how-to-create-a-pen.md
+                - name: 'Como: definir a cor de uma caneta'
+                  href: how-to-set-the-color-of-a-pen.md
+                - name: 'Como: criar um pincel sólido'
+                  href: how-to-create-a-solid-brush.md
+                - name: 'Como: desenhar uma linha em um formulário do Windows'
+                  href: how-to-draw-a-line-on-a-windows-form.md
+                - name: 'Como: desenhar uma forma delineada'
+                  href: how-to-draw-an-outlined-shape.md
+                - name: 'Como: desenhar um retângulo preenchido em um formulário do Windows'
+                  href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
+                - name: 'Como: desenhar uma elipse preenchida em um formulário do Windows'
+                  href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
+                - name: 'Como: desenhar texto em um formulário do Windows'
+                  href: how-to-draw-text-on-a-windows-form.md
+                - name: 'Como: desenhar texto vertical em um formulário do Windows'
+                  href: how-to-draw-vertical-text-on-a-windows-form.md
+                - name: 'Como: renderizar imagens com o GDI+'
+                  href: how-to-render-images-with-gdi.md
+                - name: 'Como: criar um formulário do Windows com uma forma'
+                  href: how-to-create-a-shaped-windows-form.md
+                - name: 'Como: copiar pixels para reduzir a cintilação no Windows Forms'
+                  href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
+            - name: Usando uma caneta para desenhar linhas e formas
+              href: using-a-pen-to-draw-lines-and-shapes.md
+              items:
+                - name: 'Como: usar uma caneta para desenhar linhas'
+                  href: how-to-use-a-pen-to-draw-lines.md
+                - name: 'Como: usar uma caneta para desenhar retângulos'
+                  href: how-to-use-a-pen-to-draw-rectangles.md
+                - name: 'Como: definir a largura e o alinhamento de uma caneta'
+                  href: how-to-set-pen-width-and-alignment.md
+                - name: 'Como: desenhar uma linha com terminações'
+                  href: how-to-draw-a-line-with-line-caps.md
+                - name: 'Como: unir linhas'
+                  href: how-to-join-lines.md
+                - name: 'Como: desenhar uma linha tracejada personalizada'
+                  href: how-to-draw-a-custom-dashed-line.md
+                - name: 'Como: desenhar uma linha preenchida com uma textura'
+                  href: how-to-draw-a-line-filled-with-a-texture.md
+            - name: Usando um pincel para preencher formas
+              href: using-a-brush-to-fill-shapes.md
+              items:
+                - name: 'Como: preencher uma forma com uma cor sólida'
+                  href: how-to-fill-a-shape-with-a-solid-color.md
+                - name: 'Como: preencher uma forma com um padrão em hachura'
+                  href: how-to-fill-a-shape-with-a-hatch-pattern.md
+                - name: 'Como: preencher uma forma com uma textura de imagem'
+                  href: how-to-fill-a-shape-with-an-image-texture.md
+                - name: 'Como: Organizar lado a lado uma forma com uma imagem'
+                  href: how-to-tile-a-shape-with-an-image.md
+            - name: Usando um pincel de gradiente para preencher formas
+              href: using-a-gradient-brush-to-fill-shapes.md
+              items:
+                - name: 'Como: criar um gradiente linear'
+                  href: how-to-create-a-linear-gradient.md
+                - name: 'Como: criar um gradiente de caminho'
+                  href: how-to-create-a-path-gradient.md
+                - name: 'Como: aplicar correção gama em um gradiente'
+                  href: how-to-apply-gamma-correction-to-a-gradient.md
+            - name: 'Trabalhando com imagens, bitmaps, ícones e metarquivos'
+              href: working-with-images-bitmaps-icons-and-metafiles.md
+              items:
+                - name: 'Como: desenhar um bitmap existente na tela'
+                  href: how-to-draw-an-existing-bitmap-to-the-screen.md
+                - name: 'Como: carregar e exibir metarquivos'
+                  href: how-to-load-and-display-metafiles.md
+                - name: 'Como: cortar e dimensionar imagens'
+                  href: how-to-crop-and-scale-images.md
+                - name: 'Como: girar, refletir e distorcer imagens'
+                  href: how-to-rotate-reflect-and-skew-images.md
+                - name: 'Como: usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento'
+                  href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
+                - name: 'Como: criar imagens em miniatura'
+                  href: how-to-create-thumbnail-images.md
+                - name: 'Como: melhorar o desempenho evitando o dimensionamento automático'
+                  href: how-to-improve-performance-by-avoiding-automatic-scaling.md
+                - name: 'Como: ler metadados de imagem'
+                  href: how-to-read-image-metadata.md
+                - name: 'Como: criar um bitmap em tempo de execução'
+                  href: how-to-create-a-bitmap-at-run-time.md
+                - name: 'Como: extrair o ícone associado a um arquivo no Windows Forms'
+                  href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
+            - name: Combinação alfa em linhas e preenchimentos
+              href: alpha-blending-lines-and-fills.md
+              items:
+                - name: 'Como: desenhar linhas opacas e semitransparentes'
+                  href: how-to-draw-opaque-and-semitransparent-lines.md
+                - name: 'Como: desenhar com pincéis opacos e semitransparentes'
+                  href: how-to-draw-with-opaque-and-semitransparent-brushes.md
+                - name: 'Como: usar o modo de composição para controlar a combinação alfa'
+                  href: how-to-use-compositing-mode-to-control-alpha-blending.md
+                - name: 'Como: usar uma matriz de cores para definir valores alfa em imagens'
+                  href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
+            - name: Usando fontes e texto
+              href: using-fonts-and-text.md
+              items:
+                - name: 'Como: construir fontes e famílias de fontes'
+                  href: how-to-construct-font-families-and-fonts.md
+                - name: 'Como: desenhar texto em um local especificado'
+                  href: how-to-draw-text-at-a-specified-location.md
+                - name: 'Como: desenhar texto ajustado um retângulo'
+                  href: how-to-draw-wrapped-text-in-a-rectangle.md
+                - name: 'Como: desenhar texto com o GDI'
+                  href: how-to-draw-text-with-gdi.md
+                - name: 'Como: alinhar um texto desenhado'
+                  href: how-to-align-drawn-text.md
+                - name: 'Como: criar texto vertical'
+                  href: how-to-create-vertical-text.md
+                - name: 'Como: definir paradas de tabulação em um texto desenhado'
+                  href: how-to-set-tab-stops-in-drawn-text.md
+                - name: 'Como: enumerar as fontes instaladas'
+                  href: how-to-enumerate-installed-fonts.md
+                - name: 'Como: criar uma coleção de fontes privada'
+                  href: how-to-create-a-private-font-collection.md
+                - name: 'Como: obter métricas de fontes'
+                  href: how-to-obtain-font-metrics.md
+                - name: 'Como: usar suavização com texto'
+                  href: how-to-use-antialiasing-with-text.md
+            - name: Construindo e desenhando curvas
+              href: constructing-and-drawing-curves.md
+              items:
+                - name: 'Como: desenhar splines cardinais'
+                  href: how-to-draw-cardinal-splines.md
+                - name: 'Como: desenhar um único spline de Bézier'
+                  href: how-to-draw-a-single-bezier-spline.md
+                - name: 'Como: desenhar uma sequência de splines de Bézier'
+                  href: how-to-draw-a-sequence-of-bezier-splines.md
+            - name: Construindo e desenhando demarcadores
+              href: constructing-and-drawing-paths.md
+              items:
+                - name: 'Como: criar figuras usando linhas, curvas e formas'
+                  href: how-to-create-figures-from-lines-curves-and-shapes.md
+                - name: 'Como: preencher figuras abertas'
+                  href: how-to-fill-open-figures.md
+                - name: 'Como: nivelar um caminho curvo em uma linha'
+                  href: how-to-flatten-a-curved-path-into-a-line.md
+            - name: Usando transformações no GDI+ gerenciado
+              href: using-transformations-in-managed-gdi.md
+              items:
+                - name: Usando a transformação global
+                  href: using-the-world-transformation.md
+                - name: Por que a ordem das transformações é importante
+                  href: why-transformation-order-is-significant.md
+            - name: Usando contêineres de elementos gráficos
+              href: using-graphics-containers.md
+              items:
+                - name: Gerenciando o estado de um objeto gráfico
+                  href: managing-the-state-of-a-graphics-object.md
+                - name: Usando contêineres de elementos gráficos aninhados
+                  href: using-nested-graphics-containers.md
+            - name: Usando regiões
+              href: using-regions.md
+              items:
+                - name: 'Como: usar um teste de clique com uma região'
+                  href: how-to-use-hit-testing-with-a-region.md
+                - name: 'Como: usar recorte com uma região'
+                  href: how-to-use-clipping-with-a-region.md
+            - name: Recolorindo imagens
+              href: recoloring-images.md
+              items:
+                - name: 'Como: usar uma matriz de cores para transformar uma única cor'
+                  href: how-to-use-a-color-matrix-to-transform-a-single-color.md
+                - name: 'Como: converter cores de imagens'
+                  href: how-to-translate-image-colors.md
+                - name: Usando transformações para ajustar a escala de cores
+                  href: using-transformations-to-scale-colors.md
+                - name: 'Como: girar cores'
+                  href: how-to-rotate-colors.md
+                - name: 'Como: distorcer cores'
+                  href: how-to-shear-colors.md
+                - name: 'Como: usar uma tabela de remapeamento de cores'
+                  href: how-to-use-a-color-remap-table.md
+            - name: Usando codecs de imagem no GDI+ gerenciado
+              href: using-image-encoders-and-decoders-in-managed-gdi.md
+              items:
+                - name: 'Como: listar os codificadores instalados'
+                  href: how-to-list-installed-encoders.md
+                - name: 'Como: listar os decodificadores instalados'
+                  href: how-to-list-installed-decoders.md
+                - name: 'Como: determinar os parâmetros com suporte de um codificador'
+                  href: how-to-determine-the-parameters-supported-by-an-encoder.md
+                - name: 'Como: converter uma imagem BMP em uma imagem PNG'
+                  href: how-to-convert-a-bmp-image-to-a-png-image.md
+                - name: 'Como: definir o nível de compactação de JPEG'
+                  href: how-to-set-jpeg-compression-level.md
+            - name: Usando buffers duplos
+              href: using-double-buffering.md
+              items:
+                - name: Elementos gráficos em buffer duplo
+                  href: double-buffered-graphics.md
+                - name: 'Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles'
+                  href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
+                - name: 'Como: gerenciar elementos gráficos em buffer manualmente'
+                  href: how-to-manually-manage-buffered-graphics.md
+                - name: 'Como: renderizar elementos gráficos em buffer manualmente'
+                  href: how-to-manually-render-buffered-graphics.md
+    - name: Configurações do aplicativo para o Windows Forms
+      href: application-settings-for-windows-forms.md
       items:
-      - name: Linhas, curvas e formas
-        href: lines-curves-and-shapes.md
-        items:
-        - name: Visão geral de gráficos vetoriais
-          href: vector-graphics-overview.md
-        - name: Canetas, linhas e retângulos no GDI+
-          href: pens-lines-and-rectangles-in-gdi.md
-        - name: Elipses e arcos no GDI+
-          href: ellipses-and-arcs-in-gdi.md
-        - name: Polígonos no GDI+
-          href: polygons-in-gdi.md
-        - name: Splines cardinais no GDI+
-          href: cardinal-splines-in-gdi.md
-        - name: Splines de Bézier no GDI+
-          href: bezier-splines-in-gdi.md
-        - name: demarcadores de elementos gráficos no GDI+
-          href: graphics-paths-in-gdi.md
-        - name: Pincéis e formas preenchidas no GDI+
-          href: brushes-and-filled-shapes-in-gdi.md
-        - name: Curvas abertas e fechadas no GDI+
-          href: open-and-closed-curves-in-gdi.md
-        - name: Regiões no GDI+
-          href: regions-in-gdi.md
-        - name: Restringindo a superfície de desenho no GDI+
-          href: restricting-the-drawing-surface-in-gdi.md
-        - name: Suavização com linhas e curvas
-          href: antialiasing-with-lines-and-curves.md
-      - name: Imagens, bitmaps e metarquivos
-        href: images-bitmaps-and-metafiles.md
-        items:
-        - name: Tipos de bitmaps
-          href: types-of-bitmaps.md
-        - name: Metarquivos no GDI+
-          href: metafiles-in-gdi.md
-        - name: Desenhando, posicionando e clonando imagens no GDI+
-          href: drawing-positioning-and-cloning-images-in-gdi.md
-        - name: Cortando e dimensionando imagens no GDI+
-          href: cropping-and-scaling-images-in-gdi.md
-      - name: Sistemas de coordenadas e transformações
-        href: coordinate-systems-and-transformations.md
-        items:
-        - name: Tipos de sistemas de coordenadas
-          href: types-of-coordinate-systems.md
-        - name: Representação matricial de transformações
-          href: matrix-representation-of-transformations.md
-        - name: Transformações globais e locais
-          href: global-and-local-transformations.md
-    - name: Usando classes de elementos gráficos gerenciadas
-      href: using-managed-graphics-classes.md
+        - name: Visão geral sobre configurações do aplicativo
+          href: application-settings-overview.md
+        - name: Arquitetura das configurações do aplicativo
+          href: application-settings-architecture.md
+        - name: Atributos de configurações do aplicativo
+          href: application-settings-attributes.md
+        - name: Configurações do aplicativo para controles personalizados
+          href: application-settings-for-custom-controls.md
+        - name: Usando configurações do aplicativo e configurações do usuário
+          href: using-application-settings-and-user-settings.md
+          items:
+            - name: 'Como: criar uma nova configuração em tempo de design'
+              href: how-to-create-a-new-setting-at-design-time.md
+            - name: 'Como: alterar o valor de uma configuração existente em tempo de design'
+              href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
+            - name: 'Como: alterar o valor de uma configuração entre sessões do aplicativo'
+              href: how-to-change-the-value-of-a-setting-between-application-sessions.md
+            - name: 'Como: ler configurações em tempo de execução com C#'
+              href: how-to-read-settings-at-run-time-with-csharp.md
+            - name: 'Como: gravar configurações do usuário em tempo de execução com C#'
+              href: how-to-write-user-settings-at-run-time-with-csharp.md
+            - name: 'Como: adicionar vários conjuntos de configurações a um aplicativo em C#'
+              href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
+        - name: 'Como: criar configurações de aplicativo'
+          href: how-to-create-application-settings.md
+        - name: 'Como: validar configurações de aplicativo'
+          href: how-to-validate-application-settings.md
+    - name: Suporte à impressão no Windows Forms
+      href: windows-forms-print-support.md
       items:
-      - name: Introdução à programação de elementos gráficos
-        href: getting-started-with-graphics-programming.md
-        items:
-        - name: 'Como: criar objetos gráficos para desenho'
-          href: how-to-create-graphics-objects-for-drawing.md
-        - name: 'Como: criar uma caneta'
-          href: how-to-create-a-pen.md
-        - name: 'Como: definir a cor de uma caneta'
-          href: how-to-set-the-color-of-a-pen.md
-        - name: 'Como: criar um pincel sólido'
-          href: how-to-create-a-solid-brush.md
-        - name: 'Como: desenhar uma linha em um formulário do Windows'
-          href: how-to-draw-a-line-on-a-windows-form.md
-        - name: 'Como: desenhar uma forma delineada'
-          href: how-to-draw-an-outlined-shape.md
-        - name: 'Como: desenhar um retângulo preenchido em um formulário do Windows'
-          href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
-        - name: 'Como: desenhar uma elipse preenchida em um formulário do Windows'
-          href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
-        - name: 'Como: desenhar texto em um formulário do Windows'
-          href: how-to-draw-text-on-a-windows-form.md
-        - name: 'Como: desenhar texto vertical em um formulário do Windows'
-          href: how-to-draw-vertical-text-on-a-windows-form.md
-        - name: 'Como: renderizar imagens com o GDI+'
-          href: how-to-render-images-with-gdi.md
-        - name: 'Como: criar um formulário do Windows com uma forma'
-          href: how-to-create-a-shaped-windows-form.md
-        - name: 'Como: copiar pixels para reduzir a cintilação no Windows Forms'
-          href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
-      - name: Usando uma caneta para desenhar linhas e formas
-        href: using-a-pen-to-draw-lines-and-shapes.md
-        items:
-        - name: 'Como: usar uma caneta para desenhar linhas'
-          href: how-to-use-a-pen-to-draw-lines.md
-        - name: 'Como: usar uma caneta para desenhar retângulos'
-          href: how-to-use-a-pen-to-draw-rectangles.md
-        - name: 'Como: definir a largura e o alinhamento de uma caneta'
-          href: how-to-set-pen-width-and-alignment.md
-        - name: 'Como: desenhar uma linha com terminações'
-          href: how-to-draw-a-line-with-line-caps.md
-        - name: 'Como: unir linhas'
-          href: how-to-join-lines.md
-        - name: 'Como: desenhar uma linha tracejada personalizada'
-          href: how-to-draw-a-custom-dashed-line.md
-        - name: 'Como: desenhar uma linha preenchida com uma textura'
-          href: how-to-draw-a-line-filled-with-a-texture.md
-      - name: Usando um pincel para preencher formas
-        href: using-a-brush-to-fill-shapes.md
-        items:
-        - name: 'Como: preencher uma forma com uma cor sólida'
-          href: how-to-fill-a-shape-with-a-solid-color.md
-        - name: 'Como: preencher uma forma com um padrão em hachura'
-          href: how-to-fill-a-shape-with-a-hatch-pattern.md
-        - name: 'Como: preencher uma forma com uma textura de imagem'
-          href: how-to-fill-a-shape-with-an-image-texture.md
-        - name: 'Como: Organizar lado a lado uma forma com uma imagem'
-          href: how-to-tile-a-shape-with-an-image.md
-      - name: Usando um pincel de gradiente para preencher formas
-        href: using-a-gradient-brush-to-fill-shapes.md
-        items:
-        - name: 'Como: criar um gradiente linear'
-          href: how-to-create-a-linear-gradient.md
-        - name: 'Como: criar um gradiente de caminho'
-          href: how-to-create-a-path-gradient.md
-        - name: 'Como: aplicar correção gama em um gradiente'
-          href: how-to-apply-gamma-correction-to-a-gradient.md
-      - name: Trabalhando com imagens, bitmaps, ícones e metarquivos
-        href: working-with-images-bitmaps-icons-and-metafiles.md
-        items:
-        - name: 'Como: desenhar um bitmap existente na tela'
-          href: how-to-draw-an-existing-bitmap-to-the-screen.md
-        - name: 'Como: carregar e exibir metarquivos'
-          href: how-to-load-and-display-metafiles.md
-        - name: 'Como: cortar e dimensionar imagens'
-          href: how-to-crop-and-scale-images.md
-        - name: 'Como: girar, refletir e distorcer imagens'
-          href: how-to-rotate-reflect-and-skew-images.md
-        - name: 'Como: usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento'
-          href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
-        - name: 'Como: criar imagens em miniatura'
-          href: how-to-create-thumbnail-images.md
-        - name: 'Como: melhorar o desempenho evitando o dimensionamento automático'
-          href: how-to-improve-performance-by-avoiding-automatic-scaling.md
-        - name: 'Como: ler metadados de imagem'
-          href: how-to-read-image-metadata.md
-        - name: 'Como: criar um bitmap em tempo de execução'
-          href: how-to-create-a-bitmap-at-run-time.md
-        - name: 'Como: extrair o ícone associado a um arquivo no Windows Forms'
-          href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
-      - name: Combinação alfa em linhas e preenchimentos
-        href: alpha-blending-lines-and-fills.md
-        items:
-        - name: 'Como: desenhar linhas opacas e semitransparentes'
-          href: how-to-draw-opaque-and-semitransparent-lines.md
-        - name: 'Como: desenhar com pincéis opacos e semitransparentes'
-          href: how-to-draw-with-opaque-and-semitransparent-brushes.md
-        - name: 'Como: usar o modo de composição para controlar a combinação alfa'
-          href: how-to-use-compositing-mode-to-control-alpha-blending.md
-        - name: 'Como: usar uma matriz de cores para definir valores alfa em imagens'
-          href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
-      - name: Usando fontes e texto
-        href: using-fonts-and-text.md
-        items:
-        - name: 'Como: construir fontes e famílias de fontes'
-          href: how-to-construct-font-families-and-fonts.md
-        - name: 'Como: desenhar texto em um local especificado'
-          href: how-to-draw-text-at-a-specified-location.md
-        - name: 'Como: desenhar texto ajustado um retângulo'
-          href: how-to-draw-wrapped-text-in-a-rectangle.md
-        - name: 'Como: desenhar texto com o GDI'
-          href: how-to-draw-text-with-gdi.md
-        - name: 'Como: alinhar um texto desenhado'
-          href: how-to-align-drawn-text.md
-        - name: 'Como: criar texto vertical'
-          href: how-to-create-vertical-text.md
-        - name: 'Como: definir paradas de tabulação em um texto desenhado'
-          href: how-to-set-tab-stops-in-drawn-text.md
-        - name: 'Como: enumerar as fontes instaladas'
-          href: how-to-enumerate-installed-fonts.md
-        - name: 'Como: criar uma coleção de fontes privada'
-          href: how-to-create-a-private-font-collection.md
-        - name: 'Como: obter métricas de fontes'
-          href: how-to-obtain-font-metrics.md
-        - name: 'Como: usar suavização com texto'
-          href: how-to-use-antialiasing-with-text.md
-      - name: Construindo e desenhando curvas
-        href: constructing-and-drawing-curves.md
-        items:
-        - name: 'Como: desenhar splines cardinais'
-          href: how-to-draw-cardinal-splines.md
-        - name: 'Como: desenhar um único spline de Bézier'
-          href: how-to-draw-a-single-bezier-spline.md
-        - name: 'Como: desenhar uma sequência de splines de Bézier'
-          href: how-to-draw-a-sequence-of-bezier-splines.md
-      - name: Construindo e desenhando demarcadores
-        href: constructing-and-drawing-paths.md
-        items:
-        - name: 'Como: criar figuras usando linhas, curvas e formas'
-          href: how-to-create-figures-from-lines-curves-and-shapes.md
-        - name: 'Como: preencher figuras abertas'
-          href: how-to-fill-open-figures.md
-        - name: 'Como: nivelar um caminho curvo em uma linha'
-          href: how-to-flatten-a-curved-path-into-a-line.md
-      - name: Usando transformações no GDI+ gerenciado
-        href: using-transformations-in-managed-gdi.md
-        items:
-        - name: Usando a transformação global
-          href: using-the-world-transformation.md
-        - name: Por que a ordem das transformações é importante
-          href: why-transformation-order-is-significant.md
-      - name: Usando contêineres de elementos gráficos
-        href: using-graphics-containers.md
-        items:
-        - name: Gerenciando o estado de um objeto gráfico
-          href: managing-the-state-of-a-graphics-object.md
-        - name: Usando contêineres de elementos gráficos aninhados
-          href: using-nested-graphics-containers.md
-      - name: Usando regiões
-        href: using-regions.md
-        items:
-        - name: 'Como: usar um teste de clique com uma região'
-          href: how-to-use-hit-testing-with-a-region.md
-        - name: 'Como: usar recorte com uma região'
-          href: how-to-use-clipping-with-a-region.md
-      - name: Recolorindo imagens
-        href: recoloring-images.md
-        items:
-        - name: 'Como: usar uma matriz de cores para transformar uma única cor'
-          href: how-to-use-a-color-matrix-to-transform-a-single-color.md
-        - name: 'Como: converter cores de imagens'
-          href: how-to-translate-image-colors.md
-        - name: Usando transformações para ajustar a escala de cores
-          href: using-transformations-to-scale-colors.md
-        - name: 'Como: girar cores'
-          href: how-to-rotate-colors.md
-        - name: 'Como: distorcer cores'
-          href: how-to-shear-colors.md
-        - name: 'Como: usar uma tabela de remapeamento de cores'
-          href: how-to-use-a-color-remap-table.md
-      - name: Usando codecs de imagem no GDI+ gerenciado
-        href: using-image-encoders-and-decoders-in-managed-gdi.md
-        items:
-        - name: 'Como: listar os codificadores instalados'
-          href: how-to-list-installed-encoders.md
-        - name: 'Como: listar os decodificadores instalados'
-          href: how-to-list-installed-decoders.md
-        - name: 'Como: determinar os parâmetros com suporte de um codificador'
-          href: how-to-determine-the-parameters-supported-by-an-encoder.md
-        - name: 'Como: converter uma imagem BMP em uma imagem PNG'
-          href: how-to-convert-a-bmp-image-to-a-png-image.md
-        - name: 'Como: definir o nível de compactação de JPEG'
-          href: how-to-set-jpeg-compression-level.md
-      - name: Usando buffers duplos
-        href: using-double-buffering.md
-        items:
-        - name: Elementos gráficos em buffer duplo
-          href: double-buffered-graphics.md
-        - name: 'Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles'
-          href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
-        - name: 'Como: gerenciar elementos gráficos em buffer manualmente'
-          href: how-to-manually-manage-buffered-graphics.md
-        - name: 'Como: renderizar elementos gráficos em buffer manualmente'
-          href: how-to-manually-render-buffered-graphics.md
-  - name: Configurações do aplicativo para o Windows Forms
-    href: application-settings-for-windows-forms.md
-    items:
-    - name: Visão geral sobre configurações do aplicativo
-      href: application-settings-overview.md
-    - name: Arquitetura das configurações do aplicativo
-      href: application-settings-architecture.md
-    - name: Atributos de configurações do aplicativo
-      href: application-settings-attributes.md
-    - name: Configurações do aplicativo para controles personalizados
-      href: application-settings-for-custom-controls.md
-    - name: Usando configurações do aplicativo e configurações do usuário
-      href: using-application-settings-and-user-settings.md
+        - name: 'Como: criar trabalhos de impressão padrão do Windows Forms'
+          href: how-to-create-standard-windows-forms-print-jobs.md
+        - name: 'Como: capturar a entrada do usuário de um PrintDialog em tempo de execução'
+          href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
+        - name: 'Como: escolher as impressoras conectadas ao computador de um usuário no Windows Forms'
+          href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
+        - name: 'Como: imprimir elementos gráficos no Windows Forms'
+          href: how-to-print-graphics-in-windows-forms.md
+        - name: 'Como: imprimir um arquivo de texto de várias páginas nos Windows Forms'
+          href: how-to-print-a-multi-page-text-file-in-windows-forms.md
+        - name: 'Como: concluir trabalhos de impressão do Windows Forms'
+          href: how-to-complete-windows-forms-print-jobs.md
+        - name: 'Como: imprimir um Windows Form'
+          href: how-to-print-a-windows-form.md
+        - name: 'Como: imprimir nos Windows Forms usando visualização de impressão'
+          href: how-to-print-in-windows-forms-using-print-preview.md
+    - name: Operações de arrastar e soltar e suporte à área de transferência
+      href: drag-and-drop-operations-and-clipboard-support.md
       items:
-      - name: 'Como: criar uma nova configuração em tempo de design'
-        href: how-to-create-a-new-setting-at-design-time.md
-      - name: 'Como: alterar o valor de uma configuração existente em tempo de design'
-        href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
-      - name: 'Como: alterar o valor de uma configuração entre sessões do aplicativo'
-        href: how-to-change-the-value-of-a-setting-between-application-sessions.md
-      - name: 'Como: ler configurações em tempo de execução com C#'
-        href: how-to-read-settings-at-run-time-with-csharp.md
-      - name: 'Como: gravar configurações do usuário em tempo de execução com C#'
-        href: how-to-write-user-settings-at-run-time-with-csharp.md
-      - name: 'Como: adicionar vários conjuntos de configurações a um aplicativo em C#'
-        href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
-    - name: 'Como: criar configurações de aplicativo'
-      href: how-to-create-application-settings.md
-    - name: 'Como: validar configurações de aplicativo'
-      href: how-to-validate-application-settings.md
-  - name: Suporte à impressão no Windows Forms
-    href: windows-forms-print-support.md
-    items:
-    - name: 'Como: criar trabalhos de impressão padrão do Windows Forms'
-      href: how-to-create-standard-windows-forms-print-jobs.md
-    - name: 'Como: capturar a entrada do usuário de um PrintDialog em tempo de execução'
-      href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
-    - name: 'Como: escolher as impressoras conectadas ao computador de um usuário no Windows Forms'
-      href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
-    - name: 'Como: imprimir elementos gráficos no Windows Forms'
-      href: how-to-print-graphics-in-windows-forms.md
-    - name: 'Como: imprimir um arquivo de texto de várias páginas nos Windows Forms'
-      href: how-to-print-a-multi-page-text-file-in-windows-forms.md
-    - name: 'Como: concluir trabalhos de impressão do Windows Forms'
-      href: how-to-complete-windows-forms-print-jobs.md
-    - name: 'Como: imprimir um Windows Form'
-      href: how-to-print-a-windows-form.md
-    - name: 'Como: imprimir nos Windows Forms usando visualização de impressão'
-      href: how-to-print-in-windows-forms-using-print-preview.md
-  - name: Operações de arrastar e soltar e suporte à área de transferência
-    href: drag-and-drop-operations-and-clipboard-support.md
-    items:
-    - name: 'Passo a passo: executar uma operação do tipo "arrastar e soltar" no Windows Forms'
-      href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
-    - name: 'Como: executar operações de do tipo "arrastar e soltar" entre aplicativos'
-      href: how-to-perform-drag-and-drop-operations-between-applications.md
-    - name: 'Como: adicionar dados à área de transferência'
-      href: how-to-add-data-to-the-clipboard.md
-    - name: 'Como: recuperar dados da área de transferência'
-      href: how-to-retrieve-data-from-the-clipboard.md
-  - name: Sistemas de rede em aplicativos do Windows Forms
-    href: networking-in-windows-forms-applications.md
-  - name: Globalizando o Windows Forms
-    href: globalizing-windows-forms.md
-    items:
-    - name: Codificação e globalização de formulários do Windows Forms
-      href: encoding-and-windows-forms-globalization.md
-    - name: Fontes internacionais em formulários e controles do Windows Forms
-      href: international-fonts-in-windows-forms-and-controls.md
-    - name: Suporte bidirecional para aplicativos do Windows Forms
-      href: bi-directional-support-for-windows-forms-applications.md
-    - name: Exibição de caracteres asiáticos com a propriedade ImeMode
-      href: display-of-asian-characters-with-the-imemode-property.md
-  - name: Windows Forms e aplicativos não gerenciados
-    href: windows-forms-and-unmanaged-applications.md
-    items:
-    - name: Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
-      href: windows-forms-and-unmanaged-applications-overview.md
-    - name: 'Como: dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado'
-      href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
-    - name: 'Como: dar suporte à interoperabilidade COM exibindo um formulário do Windows com o método ShowDialog'
-      href: com-interop-by-displaying-a-windows-form-shadow.md
-  - name: Informações do sistema e o Windows Forms
-    href: system-information-and-windows-forms.md
-  - name: Gerenciamento de energia no Windows Forms
-    href: power-management-in-windows-forms.md
-  - name: Sistemas de Ajuda em aplicativos do Windows Forms
-    href: help-systems-in-windows-forms-applications.md
-  - name: Herança visual do Windows Forms
-    href: windows-forms-visual-inheritance.md
-    items:
-    - name: 'Como: herdar Windows Forms'
-      href: how-to-inherit-windows-forms.md
-    - name: 'Como: herdar formulários usando a caixa de diálogo Selecionador de Herança'
-      href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
-    - name: Efeitos da modificação da aparência de um formulário base
-      href: effects-of-modifying-base-form-appearance.md
-    - name: 'Passo a passo: demonstrando herança visual'
-      href: walkthrough-demonstrating-visual-inheritance.md
-    - name: 'Como: usar os modificadores e as propriedades GenerateMember'
-      href: how-to-use-the-modifiers-and-generatemember-properties.md
-  - name: Aplicativos de Interface de Documentos Múltiplos (MDI)
-    href: multiple-document-interface-mdi-applications.md
-    items:
-    - name: 'Como: criar formulários pai MDI'
-      href: how-to-create-mdi-parent-forms.md
-    - name: 'Como: criar formulários filho MDI'
-      href: how-to-create-mdi-child-forms.md
-    - name: 'Como: determinar o filho MDI ativo'
-      href: how-to-determine-the-active-mdi-child.md
-    - name: 'Como: enviar dados para o filho MDI ativo'
-      href: how-to-send-data-to-the-active-mdi-child.md
-    - name: 'Como: organizar formulários MDI filho'
-      href: how-to-arrange-mdi-child-forms.md
-  - name: Integrando a ajuda do usuário nos Windows Forms
-    href: integrating-user-help-in-windows-forms.md
-    items:
-    - name: 'Como: fornecer ajuda em um aplicativo do Windows'
-      href: how-to-provide-help-in-a-windows-application.md
-    - name: 'Como: exibir a ajuda pop-up'
-      href: how-to-display-pop-up-help.md
-    - name: Ajuda de controle usando ToolTips
-      href: control-help-using-tooltips.md
-  - name: Acessibilidade do Windows Forms
-    href: windows-forms-accessibility.md
-    items:
-    - name: 'Passo a passo: criar um aplicativo baseado no Windows acessível'
-      href: walkthrough-creating-an-accessible-windows-based-application.md
+        - name: 'Passo a passo: executar uma operação do tipo "arrastar e soltar" no Windows Forms'
+          href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
+        - name: 'Como: executar operações de do tipo "arrastar e soltar" entre aplicativos'
+          href: how-to-perform-drag-and-drop-operations-between-applications.md
+        - name: 'Como: adicionar dados à área de transferência'
+          href: how-to-add-data-to-the-clipboard.md
+        - name: 'Como: recuperar dados da área de transferência'
+          href: how-to-retrieve-data-from-the-clipboard.md
+    - name: Sistemas de rede em aplicativos do Windows Forms
+      href: networking-in-windows-forms-applications.md
+    - name: Globalizando o Windows Forms
+      href: globalizing-windows-forms.md
       items:
-      - name: Propriedades em controles do Windows Forms de suporte a diretrizes de acessibilidade
-        href: properties-on-windows-forms-controls-that-support-accessibility-guidelines.md
-  - name: Usando controles WPF
-    href: using-wpf-controls.md
-    items:
-    - name: 'Como: copiar e colar um controle ElementHost em tempo de design'
-      href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
-    - name: 'Passo a passo: organizar conteúdo WPF no Windows Forms na hora do design'
-      href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
-    - name: 'Passo a passo: criar novo conteúdo WPF no Windows Forms na hora do design'
-      href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
-    - name: 'Passo a passo: atribuir conteúdo WPF no Windows Forms na hora do design'
-      href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
-    - name: 'Passo a passo: definir o estilo do conteúdo do WPF'
-      href: walkthrough-styling-wpf-content.md
-ms.openlocfilehash: 59e8cc574aa2fd90e3c79385865aacd75c63fa08
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468055"
+        - name: Codificação e globalização de formulários do Windows Forms
+          href: encoding-and-windows-forms-globalization.md
+        - name: Fontes internacionais em formulários e controles do Windows Forms
+          href: international-fonts-in-windows-forms-and-controls.md
+        - name: Suporte bidirecional para aplicativos do Windows Forms
+          href: bi-directional-support-for-windows-forms-applications.md
+        - name: Exibição de caracteres asiáticos com a propriedade ImeMode
+          href: display-of-asian-characters-with-the-imemode-property.md
+    - name: Windows Forms e aplicativos não gerenciados
+      href: windows-forms-and-unmanaged-applications.md
+      items:
+        - name: Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
+          href: windows-forms-and-unmanaged-applications-overview.md
+        - name: 'Como: dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado'
+          href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
+        - name: 'Como: dar suporte à interoperabilidade COM exibindo um formulário do Windows com o método ShowDialog'
+          href: com-interop-by-displaying-a-windows-form-shadow.md
+    - name: Informações do sistema e o Windows Forms
+      href: system-information-and-windows-forms.md
+    - name: Gerenciamento de energia no Windows Forms
+      href: power-management-in-windows-forms.md
+    - name: Sistemas de Ajuda em aplicativos do Windows Forms
+      href: help-systems-in-windows-forms-applications.md
+    - name: Herança visual dos Windows Forms
+      href: windows-forms-visual-inheritance.md
+      items:
+        - name: 'Como: herdar Windows Forms'
+          href: how-to-inherit-windows-forms.md
+        - name: 'Como: herdar formulários usando a caixa de diálogo Selecionador de Herança'
+          href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
+        - name: Efeitos da modificação da aparência de um formulário base
+          href: effects-of-modifying-base-form-appearance.md
+        - name: 'Passo a passo: demonstrando herança visual'
+          href: walkthrough-demonstrating-visual-inheritance.md
+        - name: 'Como: usar os modificadores e as propriedades GenerateMember'
+          href: how-to-use-the-modifiers-and-generatemember-properties.md
+    - name: Aplicativos de Interface de Documentos Múltiplos (MDI)
+      href: multiple-document-interface-mdi-applications.md
+      items:
+        - name: 'Como: criar formulários pai MDI'
+          href: how-to-create-mdi-parent-forms.md
+        - name: 'Como: criar formulários filho MDI'
+          href: how-to-create-mdi-child-forms.md
+        - name: 'Como: determinar o filho MDI ativo'
+          href: how-to-determine-the-active-mdi-child.md
+        - name: 'Como: enviar dados para o filho MDI ativo'
+          href: how-to-send-data-to-the-active-mdi-child.md
+        - name: 'Como: organizar formulários MDI filho'
+          href: how-to-arrange-mdi-child-forms.md
+    - name: Integrando a ajuda do usuário nos Windows Forms
+      href: integrating-user-help-in-windows-forms.md
+      items:
+        - name: 'Como: fornecer ajuda em um aplicativo do Windows'
+          href: how-to-provide-help-in-a-windows-application.md
+        - name: 'Como: exibir a ajuda pop-up'
+          href: how-to-display-pop-up-help.md
+        - name: Ajuda de controle usando ToolTips
+          href: control-help-using-tooltips.md
+    - name: Acessibilidade dos Windows Forms
+      href: windows-forms-accessibility.md
+      items:
+        - name: 'Passo a passo: criar um aplicativo baseado no Windows acessível'
+          href: walkthrough-creating-an-accessible-windows-based-application.md
+          items:
+            - name: Propriedades em controles dos Windows Forms de suporte a diretrizes de acessibilidade
+              href: properties-on-windows-forms-controls-that-support-accessibility-guidelines.md
+    - name: Usando controles WPF
+      href: using-wpf-controls.md
+      items:
+        - name: 'Como: copiar e colar um controle ElementHost em tempo de design'
+          href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
+        - name: 'Passo a passo: organizar conteúdo WPF no Windows Forms na hora do design'
+          href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
+        - name: 'Passo a passo: criar novo conteúdo WPF no Windows Forms na hora do design'
+          href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
+        - name: 'Passo a passo: atribuir conteúdo WPF no Windows Forms na hora do design'
+          href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
+        - name: 'Passo a passo: definir o estilo do conteúdo do WPF'
+          href: walkthrough-styling-wpf-content.md

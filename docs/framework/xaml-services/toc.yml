@@ -1,102 +1,95 @@
-items:
 - name: Serviços XAML
   href: index.md
   items:
-  - name: Namespace XAML (x:) Funcionalidades de linguagem
-    href: xaml-namespace-x-language-features.md
-    items:
-    - name: Recursos de linguagem XAML 2009
-      href: xaml-2009-language-features.md
+    - name: 'Namespace XAML (x:) Funcionalidades de linguagem'
+      href: xaml-namespace-x-language-features.md
       items:
-      - name: Tipos inseridos para primitivos de linguagem XML comuns
-        href: built-in-types-for-common-xaml-language-primitives.md
-      - name: Diretiva x:Arguments
-        href: x-arguments-directive.md
-      - name: Diretiva x:FactoryMethod
-        href: x-factorymethod-directive.md
-      - name: Extensão de marcação x:Reference
-        href: x-reference-markup-extension.md
-    - name: Extensão de marcação x:Array
-      href: x-array-markup-extension.md
-    - name: Diretiva x:Class
-      href: x-class-directive.md
-    - name: Diretiva x:ClassModifier
-      href: x-classmodifier-directive.md
-    - name: Tipo intrínseco x:Code (XAML)
-      href: x-code-intrinsic-xaml-type.md
-    - name: Diretiva x:FieldModifier
-      href: x-fieldmodifier-directive.md
-    - name: Diretiva x:Key
-      href: x-key-directive.md
-    - name: Diretiva x:Member
-      href: x-member-directive.md
-    - name: Diretiva x:Members
-      href: x-members-directive.md
-    - name: Diretiva x:Name
-      href: x-name-directive.md
-    - name: Extensão de marcação x:Null
-      href: x-null-markup-extension.md
-    - name: Diretiva x:Property
-      href: x-property-directive.md
-    - name: Atributo x:Shared
-      href: x-shared-attribute.md
-    - name: Extensão de marcação x:Static
-      href: x-static-markup-extension.md
-    - name: Diretiva x:Subclass
-      href: x-subclass-directive.md
-    - name: Extensão de marcação x:Type
-      href: x-type-markup-extension.md
-    - name: Diretiva x:TypeArguments
-      href: x-typearguments-directive.md
-    - name: Diretiva x:Uid
-      href: x-uid-directive.md
-    - name: Tipo intrínseco x:XData (XAML)
-      href: x-xdata-intrinsic-xaml-type.md
-    - name: Gramática XamlName
-      href: xamlname-grammar.md
-    - name: '{} Sequência de escape /extensão de marcação'
-      href: escape-sequence-markup-extension.md
-    - name: Tratamento de xml:lang em XAML
-      href: xml-lang-handling-in-xaml.md
-    - name: Tratamento de xml:space em XAML
-      href: xml-space-handling-in-xaml.md
-  - name: Tipos migrados do WPF para System.Xaml
-    href: types-migrated-from-wpf-to-system-xaml.md
-  - name: Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
-    href: understanding-xaml-node-stream-structures-and-concepts.md
-  - name: Leitura e gravação XAML básico e de classe de serviços XAML
-    href: xamlservices-class-and-basic-xaml-reading-or-writing.md
-  - name: Conversores de tipo e extensões de marcação para XAML
-    href: type-converters-and-markup-extensions-for-xaml.md
-    items:
-    - name: Visão geral das extensões de marcação para XAML
-      href: markup-extensions-for-xaml-overview.md
-    - name: Visão geral de conversores de tipo para XAML
-      href: type-converters-for-xaml-overview.md
-    - name: Contextos de serviço disponíveis para conversores de tipo e extensões de marcação
-      href: service-contexts-available-to-type-converters-and-markup-extensions.md
-  - name: Genéricos em XAML
-    href: generics-in-xaml.md
-  - name: Definindo tipos personalizados para uso com serviços XAML do .NET Framework
-    href: defining-custom-types-for-use-with-net-framework-xaml-services.md
-    items:
-    - name: Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
-      href: xaml-related-clr-attributes-for-custom-types-and-libraries.md
-    - name: Coleções e tipos de coleção para XAML
-      href: collections-and-collection-types-for-xaml.md
-  - name: Namespaces XAML
-    href: xaml-namespaces-for-net-framework-xaml-services.md
-  - name: Contexto do esquema XML padrão e contexto do esquema XAML WPF
-    href: default-xaml-schema-context-and-wpf-xaml-schema-context.md
-  - name: Considerações sobre segurança XAML
-    href: xaml-security-considerations.md
-  - name: Processamento de espaço em branco em XAML
-    href: whitespace-processing-in-xaml.md
-  - name: Entidades e XAML de caractere XML
-    href: xml-character-entities-and-xaml.md
-ms.openlocfilehash: a2e6b523cc59b668a00b2090d6fe4369b558cefc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467712"
+        - name: Recursos de linguagem XAML 2009
+          href: xaml-2009-language-features.md
+          items:
+            - name: Tipos inseridos para primitivos de linguagem XML comuns
+              href: built-in-types-for-common-xaml-language-primitives.md
+            - name: 'Diretiva x:Arguments'
+              href: x-arguments-directive.md
+            - name: 'Diretiva x:FactoryMethod'
+              href: x-factorymethod-directive.md
+            - name: 'Extensão de marcação x:Reference'
+              href: x-reference-markup-extension.md
+        - name: 'Extensão de marcação x:Array'
+          href: x-array-markup-extension.md
+        - name: 'Diretiva x:Class'
+          href: x-class-directive.md
+        - name: 'Diretiva x:ClassModifier'
+          href: x-classmodifier-directive.md
+        - name: 'Tipo intrínseco x:Code (XAML)'
+          href: x-code-intrinsic-xaml-type.md
+        - name: 'Diretiva x:FieldModifier'
+          href: x-fieldmodifier-directive.md
+        - name: 'Diretiva x:Key'
+          href: x-key-directive.md
+        - name: 'Diretiva x:Member'
+          href: x-member-directive.md
+        - name: 'Diretiva x:Members'
+          href: x-members-directive.md
+        - name: 'Diretiva x:Name'
+          href: x-name-directive.md
+        - name: 'Extensão de marcação x:Null'
+          href: x-null-markup-extension.md
+        - name: 'Diretiva x:Property'
+          href: x-property-directive.md
+        - name: 'Atributo x:Shared'
+          href: x-shared-attribute.md
+        - name: 'Extensão de marcação x:Static'
+          href: x-static-markup-extension.md
+        - name: 'Diretiva x:Subclass'
+          href: x-subclass-directive.md
+        - name: 'Extensão de marcação x:Type'
+          href: x-type-markup-extension.md
+        - name: 'Diretiva x:TypeArguments'
+          href: x-typearguments-directive.md
+        - name: 'Diretiva x:Uid'
+          href: x-uid-directive.md
+        - name: 'Tipo intrínseco x:XData (XAML)'
+          href: x-xdata-intrinsic-xaml-type.md
+        - name: Gramática XamlName
+          href: xamlname-grammar.md
+        - name: '{} Sequência de escape /extensão de marcação'
+          href: escape-sequence-markup-extension.md
+        - name: 'Tratamento de xml:lang em XAML'
+          href: xml-lang-handling-in-xaml.md
+        - name: 'Tratamento de xml:space em XAML'
+          href: xml-space-handling-in-xaml.md
+    - name: Tipos migrados do WPF para System.Xaml
+      href: types-migrated-from-wpf-to-system-xaml.md
+    - name: Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
+      href: understanding-xaml-node-stream-structures-and-concepts.md
+    - name: Leitura e gravação XAML básico e de classe de serviços XAML
+      href: xamlservices-class-and-basic-xaml-reading-or-writing.md
+    - name: Conversores de tipo e extensões de marcação para XAML
+      href: type-converters-and-markup-extensions-for-xaml.md
+      items:
+        - name: Visão geral das extensões de marcação para XAML
+          href: markup-extensions-for-xaml-overview.md
+        - name: Visão geral de conversores de tipo para XAML
+          href: type-converters-for-xaml-overview.md
+        - name: Contextos de serviço disponíveis para conversores de tipo e extensões de marcação
+          href: service-contexts-available-to-type-converters-and-markup-extensions.md
+    - name: Genéricos em XAML
+      href: generics-in-xaml.md
+    - name: Definindo tipos personalizados para uso com serviços XAML do .NET Framework
+      href: defining-custom-types-for-use-with-net-framework-xaml-services.md
+      items:
+        - name: Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
+          href: xaml-related-clr-attributes-for-custom-types-and-libraries.md
+        - name: Coleções e tipos de coleção para XAML
+          href: collections-and-collection-types-for-xaml.md
+    - name: Namespaces XAML
+      href: xaml-namespaces-for-net-framework-xaml-services.md
+    - name: Contexto do esquema XML padrão e contexto do esquema XAML WPF
+      href: default-xaml-schema-context-and-wpf-xaml-schema-context.md
+    - name: Considerações sobre segurança XAML
+      href: xaml-security-considerations.md
+    - name: Processamento de espaço em branco em XAML
+      href: whitespace-processing-in-xaml.md
+    - name: Entidades e XAML de caractere XML
+      href: xml-character-entities-and-xaml.md

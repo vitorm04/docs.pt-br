@@ -5,15 +5,15 @@ author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
 ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644285"
 ---
 # <a name="net-core-additional-tools-overview"></a>Visão geral das ferramentas adicionais do .NET Core
 
-Esta seção compila uma lista de ferramentas de suporte e estende a funcionalidade do .NET Core, além das ferramentas da [CLI (interface de linha de comando) do .NET Core](../tools/index.md).
+Esta seção compila uma lista de ferramentas de suporte e estender a funcionalidade do .NET Core, além das ferramentas da [CLI (interface de linha de comando) do .NET Core](../tools/index.md).
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Ferramenta WCF Web Service Reference](wcf-web-service-reference-guide.md)
 

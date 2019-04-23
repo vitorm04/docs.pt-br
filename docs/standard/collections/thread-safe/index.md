@@ -8,11 +8,11 @@ ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644658"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
 O [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o tempo de execução do .NET Framework 1.1 ou anterior.  

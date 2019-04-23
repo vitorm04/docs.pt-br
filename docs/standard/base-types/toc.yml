@@ -1,140 +1,133 @@
-items:
 - name: Tipos base
   href: index.md
   items:
-  - name: Common Type System
-    href: common-type-system.md
-  - name: Conversão de tipo no .NET
-    href: type-conversion.md
-    items:
-    - name: Tabelas de conversão de tipos
-      href: conversion-tables.md
-  - name: Formatar tipos
-    href: formatting-types.md
-    items:
-    - name: Cadeias de caracteres de formato numérico padrão
-      href: standard-numeric-format-strings.md
-    - name: Cadeias de caracteres de formato numérico personalizado
-      href: custom-numeric-format-strings.md
-    - name: Cadeias de caracteres de formato de data e hora padrão
-      href: standard-date-and-time-format-strings.md
-    - name: Cadeias de caracteres de formato de data e hora personalizado
-      href: custom-date-and-time-format-strings.md
-    - name: Cadeias de caracteres de formato TimeSpan padrão
-      href: standard-timespan-format-strings.md
-    - name: Cadeias de caracteres de formato TimeSpan personalizado
-      href: custom-timespan-format-strings.md
-    - name: Cadeias de caracteres de formato de enumeração
-      href: enumeration-format-strings.md
-    - name: Formatação composta
-      href: composite-formatting.md
-    - name: Executando operações de formatação
-      href: performing-formatting-operations.md
+    - name: Common Type System
+      href: common-type-system.md
+    - name: Conversão de tipo no .NET
+      href: type-conversion.md
       items:
-      - name: 'Como: Preencher um número com zeros à esquerda'
-        href: how-to-pad-a-number-with-leading-zeros.md
-      - name: 'Como: Extrair o dia da semana de uma data específica'
-        href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-      - name: 'Como: definir e usar provedores de formatos numéricos personalizados'
-        href: how-to-define-and-use-custom-numeric-format-providers.md
-      - name: 'Como: Valores de data e hora de viagem de ida e volta'
-        href: how-to-round-trip-date-and-time-values.md
-      - name: 'Como: Converter em números as entradas numéricas do usuário em controles da Web'
-        href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-      - name: 'Como: Exibir informações localizadas de data e hora para usuários da Web'
-        href: how-to-display-localized-date-and-time-information-to-web-users.md
-      - name: 'Como: Exibir milissegundos em valores de data e hora'
-        href: how-to-display-milliseconds-in-date-and-time-values.md
-      - name: 'Como: exibir datas em calendários não gregorianos'
-        href: how-to-display-dates-in-non-gregorian-calendars.md
-  - name: Manipular cadeias de caracteres
-    href: manipulating-strings.md
-    items:
-    - name: Melhores práticas para o uso de cadeias de caracteres
-      href: best-practices-strings.md
-    - name: Operações básicas de cadeias de caracteres
-      href: basic-string-operations.md
+        - name: Tabelas de conversão de tipos
+          href: conversion-tables.md
+    - name: Formatar tipos
+      href: formatting-types.md
       items:
-      - name: Criar novas cadeias de caracteres
-        href: creating-new.md
-      - name: Cortar e remover caracteres
-        href: trimming.md
-      - name: Preencher cadeias de caracteres
-        href: padding.md
-      - name: Comparando cadeias de caracteres
-        href: comparing.md
-      - name: Alterar a definição de maiúsculas e minúsculas
-        href: changing-case.md
-      - name: Uso da classe StringBuilder
-        href: stringbuilder.md
-      - name: 'Como: executar manipulações de cadeias de caracteres básicas'
-        href: basic-manipulations.md
-    - name: Expressões regulares no .NET
-      href: regular-expressions.md
+        - name: Cadeias de caracteres de formato numérico padrão
+          href: standard-numeric-format-strings.md
+        - name: Cadeias de caracteres de formato numérico personalizado
+          href: custom-numeric-format-strings.md
+        - name: Cadeias de caracteres de formato de data e hora padrão
+          href: standard-date-and-time-format-strings.md
+        - name: Cadeias de caracteres de formato de data e hora personalizado
+          href: custom-date-and-time-format-strings.md
+        - name: Cadeias de caracteres de formato TimeSpan padrão
+          href: standard-timespan-format-strings.md
+        - name: Cadeias de caracteres de formato TimeSpan personalizado
+          href: custom-timespan-format-strings.md
+        - name: Cadeias de caracteres de formato de enumeração
+          href: enumeration-format-strings.md
+        - name: Formatação composta
+          href: composite-formatting.md
+        - name: Executando operações de formatação
+          href: performing-formatting-operations.md
+          items:
+            - name: 'Como: Preencher um número com zeros à esquerda'
+              href: how-to-pad-a-number-with-leading-zeros.md
+            - name: 'Como: Extrair o dia da semana de uma data específica'
+              href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
+            - name: 'Como: definir e usar provedores de formatos numéricos personalizados'
+              href: how-to-define-and-use-custom-numeric-format-providers.md
+            - name: 'Como: Valores de data e hora de viagem de ida e volta'
+              href: how-to-round-trip-date-and-time-values.md
+            - name: 'Como: Converter em números as entradas numéricas do usuário em controles da Web'
+              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
+            - name: 'Como: Exibir informações localizadas de data e hora para usuários da Web'
+              href: how-to-display-localized-date-and-time-information-to-web-users.md
+            - name: 'Como: Exibir milissegundos em valores de data e hora'
+              href: how-to-display-milliseconds-in-date-and-time-values.md
+            - name: 'Como: exibir datas em calendários não gregorianos'
+              href: how-to-display-dates-in-non-gregorian-calendars.md
+    - name: Manipular cadeias de caracteres
+      href: manipulating-strings.md
       items:
-      - name: Linguagem de expressões regulares - referência rápida
-        href: regular-expression-language-quick-reference.md
-        items:
-        - name: Escapes de caracteres
-          href: character-escapes-in-regular-expressions.md
-        - name: Classes de caracteres
-          href: character-classes-in-regular-expressions.md
-        - name: Âncoras
-          href: anchors-in-regular-expressions.md
-        - name: Constructos de agrupamento
-          href: grouping-constructs-in-regular-expressions.md
-        - name: Quantificadores
-          href: quantifiers-in-regular-expressions.md
-        - name: Construtores de referência inversa
-          href: backreference-constructs-in-regular-expressions.md
-        - name: Construtores de alternância
-          href: alternation-constructs-in-regular-expressions.md
-        - name: Substituições
-          href: substitutions-in-regular-expressions.md
-        - name: Opções de expressões regulares
-          href: regular-expression-options.md
-        - name: Constructos diversos
-          href: miscellaneous-constructs-in-regular-expressions.md
-      - name: Melhores práticas para expressões regulares
-        href: best-practices.md
-      - name: O modelo de objeto de expressão regular
-        href: the-regular-expression-object-model.md
-      - name: Detalhes do comportamento de expressões regulares
-        href: details-of-regular-expression-behavior.md
-        items:
-        - name: Retrocesso
-          href: backtracking-in-regular-expressions.md
-        - name: Compilação e reutilização
-          href: compilation-and-reuse-in-regular-expressions.md
-        - name: Segurança de threads
-          href: thread-safety-in-regular-expressions.md
-      - name: Exemplos de expressões regulares
-        href: regular-expression-examples.md
-        items:
-        - name: 'Exemplo: Verificação de HREFs'
-          href: regular-expression-example-scanning-for-hrefs.md
-        - name: 'Exemplo: alterar formatos de data'
-          href: regular-expression-example-changing-date-formats.md
-        - name: 'Como: extrair um protocolo e um número da porta de uma URL'
-          href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-        - name: 'Como: retirar caracteres inválidos de uma cadeia de caracteres'
-          href: how-to-strip-invalid-characters-from-a-string.md
-        - name: 'Como: Verificar se as cadeias de caracteres estão em um formato de email válido'
-          href: how-to-verify-that-strings-are-in-valid-email-format.md
-    - name: Codificação de caracteres no .NET
-      href: character-encoding.md
-  - name: Análise de cadeias de caracteres
-    href: parsing-strings.md
-    items:
-    - name: Analisar cadeias de caracteres numéricas
-      href: parsing-numeric.md
-    - name: Analisar cadeias de caracteres de Data e Hora
-      href: parsing-datetime.md
-    - name: Analisando outras cadeias de caracteres
-      href: parsing-other.md
-ms.openlocfilehash: 893959894168d56c05f525a167773ee9e69e9f1b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467646"
+        - name: Melhores práticas para o uso de cadeias de caracteres
+          href: best-practices-strings.md
+        - name: Operações básicas de cadeias de caracteres
+          href: basic-string-operations.md
+          items:
+            - name: Criar novas cadeias de caracteres
+              href: creating-new.md
+            - name: Cortar e remover caracteres
+              href: trimming.md
+            - name: Preencher cadeias de caracteres
+              href: padding.md
+            - name: Comparando cadeias de caracteres
+              href: comparing.md
+            - name: Alterar a definição de maiúsculas e minúsculas
+              href: changing-case.md
+            - name: Uso da classe StringBuilder
+              href: stringbuilder.md
+            - name: 'Como: executar manipulações de cadeias de caracteres básicas'
+              href: basic-manipulations.md
+        - name: Expressões regulares no .NET
+          href: regular-expressions.md
+          items:
+            - name: Linguagem de expressões regulares – referência rápida
+              href: regular-expression-language-quick-reference.md
+              items:
+                - name: Escapes de caracteres
+                  href: character-escapes-in-regular-expressions.md
+                - name: Classes de caracteres
+                  href: character-classes-in-regular-expressions.md
+                - name: Âncoras
+                  href: anchors-in-regular-expressions.md
+                - name: Constructos de agrupamento
+                  href: grouping-constructs-in-regular-expressions.md
+                - name: Quantificadores
+                  href: quantifiers-in-regular-expressions.md
+                - name: Construtores de referência inversa
+                  href: backreference-constructs-in-regular-expressions.md
+                - name: Construtores de alternância
+                  href: alternation-constructs-in-regular-expressions.md
+                - name: Substituições
+                  href: substitutions-in-regular-expressions.md
+                - name: Opções de expressões regulares
+                  href: regular-expression-options.md
+                - name: Constructos diversos
+                  href: miscellaneous-constructs-in-regular-expressions.md
+            - name: Melhores práticas para expressões regulares
+              href: best-practices.md
+            - name: O modelo de objeto de expressão regular
+              href: the-regular-expression-object-model.md
+            - name: Detalhes do comportamento de expressões regulares
+              href: details-of-regular-expression-behavior.md
+              items:
+                - name: Retrocesso
+                  href: backtracking-in-regular-expressions.md
+                - name: Compilação e reutilização
+                  href: compilation-and-reuse-in-regular-expressions.md
+                - name: Segurança de threads
+                  href: thread-safety-in-regular-expressions.md
+            - name: Exemplos de expressões regulares
+              href: regular-expression-examples.md
+              items:
+                - name: 'Exemplo: Verificação de HREFs'
+                  href: regular-expression-example-scanning-for-hrefs.md
+                - name: 'Exemplo: alterar formatos de data'
+                  href: regular-expression-example-changing-date-formats.md
+                - name: 'Como: extrair um protocolo e um número da porta de uma URL'
+                  href: how-to-extract-a-protocol-and-port-number-from-a-url.md
+                - name: 'Como: retirar caracteres inválidos de uma cadeia de caracteres'
+                  href: how-to-strip-invalid-characters-from-a-string.md
+                - name: 'Como: Verificar se as cadeias de caracteres estão em um formato de email válido'
+                  href: how-to-verify-that-strings-are-in-valid-email-format.md
+        - name: Codificação de caracteres no .NET
+          href: character-encoding.md
+    - name: Análise de cadeias de caracteres
+      href: parsing-strings.md
+      items:
+        - name: Analisar cadeias de caracteres numéricas
+          href: parsing-numeric.md
+        - name: Analisar cadeias de caracteres de Data e Hora
+          href: parsing-datetime.md
+        - name: Analisando outras cadeias de caracteres
+          href: parsing-other.md

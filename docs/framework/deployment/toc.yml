@@ -1,43 +1,36 @@
-items:
 - name: Implantação
   href: index.md
   items:
-  - name: Implantando o .NET Framework
-    href: deploying-the-net-framework.md
-    items:
-    - name: Guia de implantação para desenvolvedores
-      href: deployment-guide-for-developers.md
-    - name: Guia de implantação para administradores
-      href: guide-for-administrators.md
-    - name: Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
-      href: reducing-system-restarts.md
-    - name: 'Como: Acompanhar o progresso do Instalador do .NET Framework 4.5'
-      href: how-to-get-progress-from-the-dotnet-installer.md
-    - name: 'Erros de inicialização do .NET Framework: gerenciar a experiência do usuário'
-      href: initialization-errors-managing-the-user-experience.md
-    - name: 'Como: depurar problemas de ativação do CLR'
-      href: how-to-debug-clr-activation-issues.md
-  - name: Implantando aplicativos .NET Framework
-    href: net-framework-applications.md
-    items:
-    - name: Como o tempo de execução localiza assemblies
-      href: how-the-runtime-locates-assemblies.md
-    - name: Práticas recomendadas para carregamento de assemblies
-      href: best-practices-for-assembly-loading.md
-  - name: .NET Framework Client Profile
-    href: client-profile.md
-  - name: Execução lado a lado
-    href: side-by-side-execution.md
-    items:
-    - name: Configurando o redirecionamento de associações de assemblies
-      href: configuring-assembly-binding-redirection.md
-    - name: Diretrizes para criação de componentes para execução lado a lado
-      href: guidelines-for-creating-components-for-side-by-side-execution.md
-    - name: Execução lado a lado em processo
-      href: in-process-side-by-side-execution.md
-ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467792"
+    - name: Implantando o .NET Framework
+      href: deploying-the-net-framework.md
+      items:
+        - name: Guia de implantação para desenvolvedores
+          href: deployment-guide-for-developers.md
+        - name: Guia de implantação para administradores
+          href: guide-for-administrators.md
+        - name: Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
+          href: reducing-system-restarts.md
+        - name: 'Como: Acompanhar o progresso do Instalador do .NET Framework 4.5'
+          href: how-to-get-progress-from-the-dotnet-installer.md
+        - name: 'Erros de inicialização do .NET Framework: gerenciar a experiência do usuário'
+          href: initialization-errors-managing-the-user-experience.md
+        - name: 'Como: depurar problemas de ativação do CLR'
+          href: how-to-debug-clr-activation-issues.md
+    - name: Implantando aplicativos .NET Framework
+      href: net-framework-applications.md
+      items:
+        - name: Como o tempo de execução localiza assemblies
+          href: how-the-runtime-locates-assemblies.md
+        - name: Práticas recomendadas para carregamento de assemblies
+          href: best-practices-for-assembly-loading.md
+    - name: .NET Framework Client Profile
+      href: client-profile.md
+    - name: Execução lado a lado
+      href: side-by-side-execution.md
+      items:
+        - name: Configurando o redirecionamento de associações de assemblies
+          href: configuring-assembly-binding-redirection.md
+        - name: Diretrizes para criação de componentes para execução lado a lado
+          href: guidelines-for-creating-components-for-side-by-side-execution.md
+        - name: Execução lado a lado em processo
+          href: in-process-side-by-side-execution.md

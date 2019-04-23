@@ -1,16 +1,9 @@
-items:
 - name: Atributos
   href: index.md
   items:
-  - name: Aplicando atributos
-    href: applying-attributes.md
-  - name: Escrevendo atributos personalizados
-    href: writing-custom-attributes.md
-  - name: Recuperando informações armazenadas em atributos
-    href: retrieving-information-stored-in-attributes.md
-ms.openlocfilehash: d86731782c3b35fe265ef21ae3d32ced4bd8b6d6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467872"
+    - name: Aplicando atributos
+      href: applying-attributes.md
+    - name: Escrevendo atributos personalizados
+      href: writing-custom-attributes.md
+    - name: Recuperando informações armazenadas em atributos
+      href: retrieving-information-stored-in-attributes.md

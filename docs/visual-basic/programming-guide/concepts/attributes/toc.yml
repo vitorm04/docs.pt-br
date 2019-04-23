@@ -1,21 +1,14 @@
-items:
 - name: Atributos
   href: index.md
   items:
-  - name: Criar atributos personalizados
-    href: creating-custom-attributes.md
-    items:
-    - name: AttributeUsage
-      href: attributeusage.md
-  - name: Acessar atributos usando reflexão
-    href: accessing-attributes-by-using-reflection.md
-  - name: 'Como: criar uma união de C/C++ usando atributos'
-    href: how-to-create-a-c-cpp-union-by-using-attributes.md
-  - name: Atributos comuns
-    href: common-attributes.md
-ms.openlocfilehash: 3a416d1213d043be76b6ab2b59b6dc5918331a69
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467773"
+    - name: Criar atributos personalizados
+      href: creating-custom-attributes.md
+      items:
+        - name: AttributeUsage
+          href: attributeusage.md
+    - name: Acessar atributos usando reflexão
+      href: accessing-attributes-by-using-reflection.md
+    - name: 'Como: criar uma união de C/C++ usando atributos'
+      href: how-to-create-a-c-cpp-union-by-using-attributes.md
+    - name: Atributos comuns
+      href: common-attributes.md

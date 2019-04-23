@@ -1,111 +1,104 @@
-items:
 - name: Diretrizes de design de estrutura
   href: index.md
   items:
-  - name: Diretrizes de nomenclatura
-    href: naming-guidelines.md
-    items:
-    - name: Convenções de maiúsculas e minúsculas
-      href: capitalization-conventions.md
-    - name: Convenções de nomenclatura gerais
-      href: general-naming-conventions.md
-    - name: Nomes de Assemblies e DLLs
-      href: names-of-assemblies-and-dlls.md
-    - name: Nomes de namespaces
-      href: names-of-namespaces.md
-    - name: Nomes de classes, structs e interfaces
-      href: names-of-classes-structs-and-interfaces.md
-    - name: Nomes de membros de tipo
-      href: names-of-type-members.md
-    - name: Parâmetros de nomeação
-      href: naming-parameters.md
-    - name: Recursos de nomenclatura
-      href: naming-resources.md
-  - name: Diretrizes de Design de tipo
-    href: type.md
-    items:
-    - name: Escolher entre Classe e Struct
-      href: choosing-between-class-and-struct.md
-    - name: Design de classe abstrata
-      href: abstract-class.md
-    - name: Design de classe estática
-      href: static-class.md
-    - name: Design de interface
-      href: interface.md
-    - name: Design de Struct
-      href: struct.md
-    - name: Design de enumeração
-      href: enum.md
-    - name: Tipos aninhados
-      href: nested-types.md
-  - name: Diretrizes de design de membro
-    href: member.md
-    items:
-    - name: Sobrecarga de membro
-      href: member-overloading.md
-    - name: Design de propriedade
-      href: property.md
-    - name: Design do construtor
-      href: constructor.md
-    - name: Design de eventos
-      href: event.md
-    - name: Design de campo
-      href: field.md
-    - name: Métodos de extensão
-      href: extension-methods.md
-    - name: Sobrecargas de operador
-      href: operator-overloads.md
-    - name: Design de parâmetro
-      href: parameter-design.md
-  - name: Designer voltado para extensibilidade
-    href: designing-for-extensibility.md
-    items:
-    - name: Classes não seladas
-      href: unsealed-classes.md
-    - name: Membros protegidos
-      href: protected-members.md
-    - name: Eventos e retornos de chamada
-      href: events-and-callbacks.md
-    - name: Membros virtuais
-      href: virtual-members.md
-    - name: Abstrações (tipos e interfaces abstratos)
-      href: abstractions-abstract-types-and-interfaces.md
-    - name: Classes base para implementar abstrações
-      href: base-classes-for-implementing-abstractions.md
-    - name: Selar
-      href: sealing.md
-  - name: Diretrizes de design para exceções
-    href: exceptions.md
-    items:
-    - name: Gerar exceções
-      href: exception-throwing.md
-    - name: Usar tipos de exceção padrão
-      href: using-standard-exception-types.md
-    - name: Exceções e desempenho
-      href: exceptions-and-performance.md
-  - name: Diretrizes de uso
-    href: usage-guidelines.md
-    items:
-    - name: Matrizes
-      href: arrays.md
-    - name: Atributos
-      href: attributes.md
-    - name: Coleções
-      href: guidelines-for-collections.md
-    - name: Serialização
-      href: serialization.md
-    - name: Uso de System.XML
-      href: system-xml-usage.md
-    - name: Operadores de igualdade
-      href: equality-operators.md
-  - name: Padrões comuns de Design
-    href: common-design-patterns.md
-    items:
-    - name: Propriedades de Dependência
-      href: dependency-properties.md
-ms.openlocfilehash: 07d831cd24d35a3876b2d7f2d7465aa663d6f3e0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467727"
+    - name: Diretrizes de nomenclatura
+      href: naming-guidelines.md
+      items:
+        - name: Convenções de maiúsculas e minúsculas
+          href: capitalization-conventions.md
+        - name: Convenções de nomenclatura gerais
+          href: general-naming-conventions.md
+        - name: Nomes de Assemblies e DLLs
+          href: names-of-assemblies-and-dlls.md
+        - name: Nomes de namespaces
+          href: names-of-namespaces.md
+        - name: 'Nomes de classes, structs e interfaces'
+          href: names-of-classes-structs-and-interfaces.md
+        - name: Nomes de membros de tipo
+          href: names-of-type-members.md
+        - name: Parâmetros de nomeação
+          href: naming-parameters.md
+        - name: Recursos de nomenclatura
+          href: naming-resources.md
+    - name: Diretrizes de Design de tipo
+      href: type.md
+      items:
+        - name: Escolher entre Classe e Struct
+          href: choosing-between-class-and-struct.md
+        - name: Design de classe abstrata
+          href: abstract-class.md
+        - name: Design de classe estática
+          href: static-class.md
+        - name: Design de interface
+          href: interface.md
+        - name: Design de Struct
+          href: struct.md
+        - name: Design de enumeração
+          href: enum.md
+        - name: Tipos aninhados
+          href: nested-types.md
+    - name: Diretrizes de design de membro
+      href: member.md
+      items:
+        - name: Sobrecarga de membro
+          href: member-overloading.md
+        - name: Design de propriedade
+          href: property.md
+        - name: Design do construtor
+          href: constructor.md
+        - name: Design de eventos
+          href: event.md
+        - name: Design de campo
+          href: field.md
+        - name: Métodos de extensão
+          href: extension-methods.md
+        - name: Sobrecargas de operador
+          href: operator-overloads.md
+        - name: Design de parâmetro
+          href: parameter-design.md
+    - name: Designer voltado para extensibilidade
+      href: designing-for-extensibility.md
+      items:
+        - name: Classes não seladas
+          href: unsealed-classes.md
+        - name: Membros protegidos
+          href: protected-members.md
+        - name: Eventos e retornos de chamada
+          href: events-and-callbacks.md
+        - name: Membros virtuais
+          href: virtual-members.md
+        - name: Abstrações (tipos e interfaces abstratos)
+          href: abstractions-abstract-types-and-interfaces.md
+        - name: Classes base para implementar abstrações
+          href: base-classes-for-implementing-abstractions.md
+        - name: Selar
+          href: sealing.md
+    - name: Diretrizes de design para exceções
+      href: exceptions.md
+      items:
+        - name: Gerar exceções
+          href: exception-throwing.md
+        - name: Usar tipos de exceção padrão
+          href: using-standard-exception-types.md
+        - name: Exceções e desempenho
+          href: exceptions-and-performance.md
+    - name: Diretrizes de uso
+      href: usage-guidelines.md
+      items:
+        - name: Matrizes
+          href: arrays.md
+        - name: Atributos
+          href: attributes.md
+        - name: Coleções
+          href: guidelines-for-collections.md
+        - name: Serialização
+          href: serialization.md
+        - name: Uso de System.XML
+          href: system-xml-usage.md
+        - name: Operadores de igualdade
+          href: equality-operators.md
+    - name: Padrões comuns de Design
+      href: common-design-patterns.md
+      items:
+        - name: Propriedades de Dependência
+          href: dependency-properties.md

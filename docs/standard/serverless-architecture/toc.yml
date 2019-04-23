@@ -1,42 +1,35 @@
-items:
 - name: Livro eletrônico sobre aplicativos sem servidor
   href: index.md
   items:
-  - name: Abordagens de arquitetura
-    href: architecture-approaches.md
-    items:
-    - name: Abordagens de implantação de arquitetura
-      href: architecture-deployment-approaches.md
-  - name: Arquitetura sem servidor
-    href: serverless-architecture.md
-    items:
-    - name: Considerações sobre a arquitetura sem servidor
-      href: serverless-architecture-considerations.md
-    - name: Exemplos de design sem servidor
-      href: serverless-design-examples.md
-  - name: A plataforma sem servidor do Azure
-    href: azure-serverless-platform.md
-    items:
-    - name: Verificação de
-      href: azure-functions.md
-    - name: Informações do aplicativo
-      href: application-insights.md
-    - name: Aplicativos Lógicos do Azure
-      href: logic-apps.md
-    - name: Grade de Eventos do Azure
-      href: event-grid.md
-  - name: Funções duráveis do Azure
-    href: durable-azure-functions.md
-    items:
-    - name: Padrões de orquestração
-      href: orchestration-patterns.md
-  - name: Casos de uso e cenários de negócios sem servidor
-    href: serverless-business-scenarios.md
-  - name: Conclusão
-    href: serverless-conclusion.md
-ms.openlocfilehash: d8d15dc77dd19b6e32319a98be21ddfa43073202
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58467863"
+    - name: Abordagens de arquitetura
+      href: architecture-approaches.md
+      items:
+        - name: Abordagens de implantação de arquitetura
+          href: architecture-deployment-approaches.md
+    - name: Arquitetura sem servidor
+      href: serverless-architecture.md
+      items:
+        - name: Considerações sobre a arquitetura sem servidor
+          href: serverless-architecture-considerations.md
+        - name: Exemplos de design sem servidor
+          href: serverless-design-examples.md
+    - name: A plataforma sem servidor do Azure
+      href: azure-serverless-platform.md
+      items:
+        - name: Verificação de
+          href: azure-functions.md
+        - name: Informações do aplicativo
+          href: application-insights.md
+        - name: Aplicativos Lógicos do Azure
+          href: logic-apps.md
+        - name: Grade de Eventos do Azure
+          href: event-grid.md
+    - name: Funções duráveis do Azure
+      href: durable-azure-functions.md
+      items:
+        - name: Padrões de orquestração
+          href: orchestration-patterns.md
+    - name: Casos de uso e cenários de negócios sem servidor
+      href: serverless-business-scenarios.md
+    - name: Conclusão
+      href: serverless-conclusion.md
