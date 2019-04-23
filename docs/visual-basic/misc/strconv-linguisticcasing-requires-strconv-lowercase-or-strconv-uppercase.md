@@ -5,15 +5,15 @@ f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
 ms.openlocfilehash: d06f2dcaf892fcceeb6bac8e2a8860b64cf6e21c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322407"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978465"
 ---
-# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a><span data-ttu-id="5c096-102">'StrConv. LinguisticCasing' requer 'StrConv. LowerCase' ou 'StrConv. UpperCase'</span><span class="sxs-lookup"><span data-stu-id="5c096-102">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>
-<span data-ttu-id="5c096-103">Você tentou usar `StrConv.LinguisticCasing`, que só é válido em combinação com `StrConv.LowerCase` ou `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="5c096-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
+# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a><span data-ttu-id="588c7-102">'StrConv. LinguisticCasing' requer 'StrConv. LowerCase' ou 'StrConv. UpperCase'</span><span class="sxs-lookup"><span data-stu-id="588c7-102">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>
+<span data-ttu-id="588c7-103">Você tentou usar `StrConv.LinguisticCasing`, que só é válido em combinação com `StrConv.LowerCase` ou `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="588c7-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5c096-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5c096-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="588c7-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="588c7-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="5c096-105">Use `StrConv.LowerCase` ou `StrConv.UpperCase` em conjunto com `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="5c096-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
+1. <span data-ttu-id="588c7-105">Use `StrConv.LowerCase` ou `StrConv.UpperCase` em conjunto com `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="588c7-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
