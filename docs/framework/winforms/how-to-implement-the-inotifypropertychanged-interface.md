@@ -8,10 +8,10 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
 ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225593"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>Como: implementar a interface INotifyPropertyChanged
@@ -23,7 +23,7 @@ O exemplo de código a seguir demonstra como implementar o <xref:System.Componen
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: aplicar o padrão PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)
+- [Como: Aplicar o padrão PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)
 - [Associação de dados do Windows Forms](windows-forms-data-binding.md)
-- [Como: Gerar notificações de alteração usando um BindingSource e a interface INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
-- [Notificação de alteração na associação de dados do Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Como: Gerar notificações de alteração usando um BindingSource e a Interface INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
+- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)

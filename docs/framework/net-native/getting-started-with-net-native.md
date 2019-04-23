@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298468"
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Nativo
@@ -106,18 +106,18 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
   
  Para ver alguns exemplos específicos de como lidar com exceções e outros problemas que ocorrem ao testar seu aplicativo, consulte:  
   
--   [Exemplo: lidar com exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Exemplo: Tratamento de exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Exemplo: solução de problemas de programação dinâmica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Exemplo: Solução de problemas de programação dinâmica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Exceções em tempo de execução em aplicativos do .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Instalação e configuração do .NET Nativo](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [Compilação e .NET nativo](../../../docs/framework/net-native/net-native-and-compilation.md)
-- [Reflexão e .NET Nativo](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configuração e instalação do .NET nativa](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Serialização e metadados](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Migrando seu aplicativo da Windows Store para .NET Nativo](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Migrando seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

@@ -30,10 +30,10 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298884"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
@@ -302,7 +302,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label> é outra classe derivada de <xref:System.Windows.Controls.Control>, e se você tivesse especificado `Label.Background` dentro de um <xref:System.Windows.Controls.Label> elemento de objeto, esse uso teria funcionado. No entanto, porque <xref:System.Windows.Controls.Label> não é a classe ou classe base <xref:System.Windows.Controls.Button>, o comportamento do processador XAML especificado é processar `Label.Background` como uma propriedade anexada. `Label.Background` não é uma propriedade anexada disponível, e esse uso falha.  
+ <xref:System.Windows.Controls.Label> é outra classe derivada de <xref:System.Windows.Controls.Control>, e se você tivesse especificado `Label.Background` dentro de um <xref:System.Windows.Controls.Label> elemento de objeto, esse uso teria funcionado. No entanto, porque <xref:System.Windows.Controls.Label> não é a classe ou classe base <xref:System.Windows.Controls.Button>, o comportamento do processador XAML especificado é processar `Label.Background` como uma propriedade anexada. `Label.Background` não é uma propriedade anexada disponível e esse uso falha.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Elementos de propriedade baseTypeName.memberName  
  De maneira semelhante ao modo como o formulário *typeName*.*memberName* funciona para a sintaxe de atributo, uma sintaxe *baseTypeName*.*memberName* funciona para a sintaxe de elemento de propriedade. Por exemplo, a sintaxe a seguir funciona:  
@@ -316,8 +316,8 @@ Este tópico define os termos que são usados para descrever os elementos da sin
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Namespace XAML (x:) Funcionalidades de linguagem](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Namespace de XAML (x) Recursos de linguagem](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Extensões XAML WPF](wpf-xaml-extensions.md)
-- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
 - [TypeConverters e XAML](typeconverters-and-xaml.md)
 - [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

@@ -3,10 +3,10 @@ title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
 ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300639"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
@@ -20,7 +20,7 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 |Componente|Descrição|
 |---------------|-----------------|
 |Tempo de execução de rastreamento|Fornece a infraestrutura para emitir registros de rastreamento.|
-|Participantes de rastreamento|Acessa os registros de rastreamento. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] é fornecido com um participante de rastreamento que grava registros de rastreamento como eventos do Event Tracing for Windows (ETW).|
+|Participantes de rastreamento|Acessa os registros de rastreamento. vem de[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] com um participante de rastreamento que grava registros de rastreamento como o rastreamento de evento para eventos do Windows (ETW).|
 |Controlando o perfil|Um mecanismo de filtragem que permite que um participante de rastreamento assine para um subconjunto de registros de rastreamento emissores de uma instância de fluxo de trabalho.|
 
  A tabela a seguir detalha os registros de rastreamento que o tempo de execução de fluxo de trabalho se emite.
@@ -151,4 +151,4 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
   
 ## <a name="see-also"></a>Consulte também
 
-- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

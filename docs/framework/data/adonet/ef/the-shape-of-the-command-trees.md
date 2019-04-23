@@ -2,12 +2,12 @@
 title: A forma das árvores de comando
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378542"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980077"
 ---
 # <a name="the-shape-of-the-command-trees"></a>A forma das árvores de comando
 
@@ -85,9 +85,9 @@ DbNewInstanceExpression pode ocorrer somente nos dois seguintes casos:
 
 - Como a propriedade de projeção de DbProjectExpression.  Quando usadas como esta'n as seguintes limitações se aplicam:
 
-    - O tipo do resultado deve ser um tipo de linha.
+  - O tipo do resultado deve ser um tipo de linha.
 
-    - Cada um dos argumentos é uma expressão que gerencia um resultado com um tipo primitivo. Normalmente, cada argumento é uma expressão escalar, como um PropertyExpression sobre um DbVariableReferenceExpression, uma chamada de função, ou uma computação aritmética de DbPropertyExpression sobre um DbVariableReferenceExpression ou uma chamada de função. No entanto, uma expressão que representa um subconsulta escalar também pode ocorrer na lista de argumentos para um DbNewInstanceExpression. Uma expressão que representa um subconsulta escalar é uma árvore de expressão que representa uma subconsulta que retorna exatamente uma linha e uma coluna de um tipo primitivo com uma raiz do objeto DbElementExpression
+  - Cada um dos argumentos é uma expressão que gerencia um resultado com um tipo primitivo. Normalmente, cada argumento é uma expressão escalar, como um PropertyExpression sobre um DbVariableReferenceExpression, uma chamada de função, ou uma computação aritmética de DbPropertyExpression sobre um DbVariableReferenceExpression ou uma chamada de função. No entanto, uma expressão que representa um subconsulta escalar também pode ocorrer na lista de argumentos para um DbNewInstanceExpression. Uma expressão que representa um subconsulta escalar é uma árvore de expressão que representa uma subconsulta que retorna exatamente uma linha e uma coluna de um tipo primitivo com uma raiz do objeto DbElementExpression
 
 - Com um tipo de retorno da coleção, nesse caso define uma nova coleção de expressões fornecidas como argumentos.
 

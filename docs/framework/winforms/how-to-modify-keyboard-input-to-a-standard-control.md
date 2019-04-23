@@ -11,10 +11,10 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
 ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225775"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Como: modificar a entrada do teclado para um controle padrão
@@ -69,6 +69,6 @@ O Windows Forms fornece a capacidade de consumir e modificar as entradas do tecl
   
 ## <a name="see-also"></a>Consulte também
 
-- [Entrada do teclado em um aplicativo do Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Entrada do usuário em um aplicativo do Windows Forms](user-input-in-a-windows-forms-application.md)
+- [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+- [Entrada do usuário em um aplicativo dos Windows Forms](user-input-in-a-windows-forms-application.md)
 - [Como a entrada do teclado funciona](how-keyboard-input-works.md)

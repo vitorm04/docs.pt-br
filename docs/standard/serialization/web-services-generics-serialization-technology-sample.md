@@ -3,14 +3,14 @@ title: Exemplo de tecnologia de serialização genérica de serviços Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
 ms.openlocfilehash: 6549dc1c3d428a5fb74fe0212549ef3f3f6510d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299651"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Exemplo de tecnologia de serialização genérica de serviços Web
-[Baixar exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[Baixar Exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
  Esse exemplo mostra como usar e controlar a serialização de genéricos em Serviços Web ASP.NET.  
   
@@ -69,4 +69,4 @@ ms.locfileid: "59299651"
 - <xref:System.Web.Services>
 - <xref:System.Xml.Serialization>
 - [Serialização](../../../docs/standard/serialization/index.md)
-- [Serviços Web XML criados usando ASP.NET e clientes de serviço Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))
+- [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

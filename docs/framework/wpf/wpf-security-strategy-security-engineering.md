@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300561"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estratégia de segurança do WPF - engenharia de segurança
@@ -75,7 +75,7 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Técnicas de teste  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa uma variedade de técnicas que incluem o teste de segurança:  
+ O [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa uma variedade de técnicas teste de segurança que incluem:  
   
 -   **Testes caixa branca**: Testadores Exibir código-fonte e, em seguida, criam testes de exploração  
   
@@ -93,6 +93,6 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
 
 - [Segurança](security-wpf.md)
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
-- [Estratégia de segurança do WPF - segurança da plataforma](wpf-security-strategy-platform-security.md)
+- [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
 - [Computação confiável](https://www.microsoft.com/mscorp/twc/default.mspx)
 - [Segurança no .NET](../../standard/security/index.md)

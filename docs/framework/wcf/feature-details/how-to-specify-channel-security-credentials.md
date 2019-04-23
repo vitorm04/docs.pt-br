@@ -3,10 +3,10 @@ title: 'Como: especificar credenciais de segurança de canal'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297974"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Como: especificar credenciais de segurança de canal
@@ -134,7 +134,7 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
 ## <a name="see-also"></a>Consulte também
 
 - [Federação](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Como: configurar credenciais em um serviço de federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

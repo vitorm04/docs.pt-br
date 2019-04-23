@@ -5,10 +5,10 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223821"
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
@@ -66,9 +66,9 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
  Para obter as etapas usadas para configurar o tratamento de erros, consulte [How To: Tratamento de erro](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Como: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Como: Controle de versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Como: fornecer particionamento de dados](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Como: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [Como: Atualização dinâmica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   

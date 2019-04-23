@@ -10,10 +10,10 @@ helpviewer_keywords:
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298312"
 ---
 # <a name="how-to-localize-an-application"></a>Como: Localizar um aplicativo
@@ -211,5 +211,5 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 ## <a name="see-also"></a>Consulte também
 
-- [Globalização do WPF](globalization-for-wpf.md)
+- [Globalização para WPF](globalization-for-wpf.md)
 - [Visão geral do uso de layout automático](use-automatic-layout-overview.md)

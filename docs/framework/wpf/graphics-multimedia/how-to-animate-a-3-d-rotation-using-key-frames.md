@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
 ms.openlocfilehash: e72ec94f830f0f5001a77e7492aa1326a47b309d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297987"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Como: Animar uma rotação 3D usando quadros-chave
@@ -31,5 +31,5 @@ No exemplo a seguir, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsi
 - [Visão geral das animações de quadro-chave](key-frame-animations-overview.md)
 - [Animar uma rotação 3D usando storyboards](how-to-animate-a-3-d-rotation-using-storyboards.md)
 - [Animar uma rotação 3D usando Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [Animar uma rotação 3D usando quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [Animar uma rotação 3D usando Quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
 - [Animar uma rotação 3D usando quadros principais (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)

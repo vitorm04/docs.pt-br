@@ -11,10 +11,10 @@ ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299235"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Trabalhar com arquivos .resx de forma programática
@@ -87,6 +87,6 @@ Não é possível inserir um arquivo .resx em um executável do tempo de execuç
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criação de arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Resgen.exe (Gerador de Arquivo de Recurso)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)

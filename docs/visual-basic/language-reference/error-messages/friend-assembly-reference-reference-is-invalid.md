@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
 ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298988"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Referência de assembly Friend \<referência > é inválido
@@ -28,4 +28,4 @@ Referência de assembly Friend \<referência > é inválido. O nome forte assina
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Reflection.AssemblyName>
-- [Assemblies amigáveis](../../../standard/assembly/friend-assemblies.md)
+- [Assemblies Amigáveis](../../../standard/assembly/friend-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: <nameEntry> Elemento
+title: Elemento <nameEntry>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225320"
 ---
 # <a name="nameentry-element"></a>\<nameEntry> Element
@@ -38,7 +38,7 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**name**|Atributo obrigatório.<br /><br /> Especifica o nome amigável do algoritmo que implementa a classe de criptografia.|  
-|**classe**|Atributo obrigatório.<br /><br /> Especifica o valor para o **nome** atributo na [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
+|**class**|Atributo obrigatório.<br /><br /> Especifica o valor para o **nome** atributo na [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

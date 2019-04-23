@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300522"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Como: Herdar de controles do Windows Forms existentes
@@ -86,9 +86,9 @@ Se você quiser estender a funcionalidade de um controle existente, poderá cria
 ## <a name="see-also"></a>Consulte também
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Como: Herdar da classe Control](how-to-inherit-from-the-control-class.md)
+- [Como: Herdar da classe de controle](how-to-inherit-from-the-control-class.md)
 - [Como: Herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Como: Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Como: Criar controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Passo a passo: Herdar de um controle do Windows Forms com Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Passo a passo: Herdando um controle do Windows Forms com Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
