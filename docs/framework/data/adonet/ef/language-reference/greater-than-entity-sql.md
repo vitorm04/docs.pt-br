@@ -3,10 +3,10 @@ title: '> (Maior que) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328550"
 ---
 # <a name="-greater-than-entity-sql"></a>> (Maior que) (Entity SQL)
@@ -23,7 +23,7 @@ expression > expression
  Qualquer expressão válida. As duas expressões devem ter os tipos de dados implicitamente conversíveis.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- `true` Se a expressão esquerda tem um valor maior que a expressão direita; Caso contrário, `false`.  
+ `true` se a expressão esquerda tem um valor maior que a expressão direita; caso contrário, `false`.  
   
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa > operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior que a expressão direita. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  

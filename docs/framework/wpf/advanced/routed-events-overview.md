@@ -16,10 +16,10 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330429"
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
@@ -195,7 +195,7 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
 ## <a name="wpf-input-events"></a>Eventos de entrada WPF  
  Uma aplicação frequente de eventos roteados dentro da plataforma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é para eventos de entrada. Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], nomes de eventos roteados por túnel são prefixados com a palavra "Preview", por convenção. Eventos de entrada geralmente vêm em pares, com um deles sendo um evento por propagação e o outro sendo um evento por túnel. Por exemplo, o <xref:System.Windows.ContentElement.KeyDown> evento e o <xref:System.Windows.ContentElement.PreviewKeyDown> eventos têm a mesma assinatura, com o primeiro sendo o evento de entrada por propagação e o segundo sendo o túnel de evento de entrada. Ocasionalmente, eventos de entrada só têm uma versão por propagação ou talvez somente uma versão roteada de modo direto. Na documentação, tópicos do evento roteado fazem referência cruzada a eventos roteados similares com estratégias alternativas de roteamento desde que tais eventos roteados existam, enquanto seções nas páginas de referência gerenciada esclarecem a estratégia de roteamento de cada evento roteado.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos de entrada que vêm em pares são implementados para que uma única ação do usuário de entrada, como um pressionamento de botão do mouse, irá gerar os dois eventos roteados do par na sequência. Primeiro, o evento por túnel é acionado e desloca-se por sua rota. Então o evento por propagação é acionado e desloca-se por sua rota. Os dois eventos literalmente compartilham a mesma instância de dados de evento, porque o <xref:System.Windows.UIElement.RaiseEvent%2A> chamada de método na classe de implementação que aciona o evento por propagação escuta os dados de evento do evento por túnel e reutiliza-os no novo evento acionado. Ouvintes com manipuladores para o evento por túnel têm a primeira oportunidade de marcar o evento roteado como manipulado (manipuladores de classe em primeiro lugar, em seguida, manipuladores de instância). Se um elemento na rota de túnel marcou o evento roteado como manipulado, os dados do evento já manipulado são enviados para o evento roteado por propagação e os manipuladores típicos anexados para os eventos de entrada por propagação equivalentes não são invocados. A aparência externa será como se o evento por propagação manipulado ainda não tivesse sido acionado. Esse comportamento de manipulação é útil para composição de controle, em que você pode desejar que todos os eventos de entrada baseados em teste de clique ou eventos de entrada baseados em foco, em vez de suas partes compostas, sejam relatados para seu controle final. O elemento de controle final é mais próximo da raiz na composição e, portanto, tem a oportunidade de realizar primeiro a manipulação de classe do evento por túnel e, talvez, de "substituir" esse evento roteado por um evento de controle mais específico, como parte do código que dá suporte à classe de controle.  
+ Eventos de entrada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que vêm em pares são implementados para que uma única ação de usuário de entrada, por exemplo um pressionamento de botão do mouse, acione em sequência ambos os eventos roteados do par. Primeiro, o evento por túnel é acionado e desloca-se por sua rota. Então o evento por propagação é acionado e desloca-se por sua rota. Os dois eventos literalmente compartilham a mesma instância de dados de evento, porque o <xref:System.Windows.UIElement.RaiseEvent%2A> chamada de método na classe de implementação que aciona o evento por propagação escuta os dados de evento do evento por túnel e reutiliza-os no novo evento acionado. Ouvintes com manipuladores para o evento por túnel têm a primeira oportunidade de marcar o evento roteado como manipulado (manipuladores de classe em primeiro lugar, em seguida, manipuladores de instância). Se um elemento na rota de túnel marcou o evento roteado como manipulado, os dados do evento já manipulado são enviados para o evento roteado por propagação e os manipuladores típicos anexados para os eventos de entrada por propagação equivalentes não são invocados. A aparência externa será como se o evento por propagação manipulado ainda não tivesse sido acionado. Esse comportamento de manipulação é útil para composição de controle, em que você pode desejar que todos os eventos de entrada baseados em teste de clique ou eventos de entrada baseados em foco, em vez de suas partes compostas, sejam relatados para seu controle final. O elemento de controle final é mais próximo da raiz na composição e, portanto, tem a oportunidade de realizar primeiro a manipulação de classe do evento por túnel e, talvez, de "substituir" esse evento roteado por um evento de controle mais específico, como parte do código que dá suporte à classe de controle.  
   
  Como uma ilustração de como um evento de entrada funciona, considere o exemplo de evento de entrada a seguir. Na ilustração de árvore a seguir, o `leaf element #2` é a origem de um evento `PreviewMouseDown` e depois de um evento `MouseDown`.  
   
@@ -206,13 +206,13 @@ Processamento de eventos de entrada por túnel e por propagação
   
 1. `PreviewMouseDown` (túnel) no elemento raiz.  
   
-2. `PreviewMouseDown` (túnel) no elemento intermediário #1.  
+2. `PreviewMouseDown` (túnel) no elemento intermediário No. 1.  
   
-3. `PreviewMouseDown` (túnel) no elemento origem #2.  
+3. `PreviewMouseDown` (túnel) no elemento de origem No. 2.  
   
-4. `MouseDown` (propagação) no elemento origem #2.  
+4. `MouseDown` (propagação) no elemento de origem No. 2.  
   
-5. `MouseDown` (propagação) no elemento intermediário #1.  
+5. `MouseDown` (propagação) no elemento intermediário No. 1.  
   
 6. `MouseDown` (propagação) no elemento raiz.  
   
@@ -251,7 +251,7 @@ Processamento de eventos de entrada por túnel e por propagação
 - <xref:System.Windows.RoutedEventArgs>
 - [Marcando eventos roteados como manipulados e tratamento de classes](marking-routed-events-as-handled-and-class-handling.md)
 - [Visão geral da entrada](input-overview.md)
-- [Visão geral dos comandos](commanding-overview.md)
+- [Visão geral de comandos](commanding-overview.md)
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Árvores no WPF](trees-in-wpf.md)
 - [Padrões de evento fraco](weak-event-patterns.md)

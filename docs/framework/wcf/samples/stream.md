@@ -3,10 +3,10 @@ title: Fluxo
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330214"
 ---
 # <a name="stream"></a>Fluxo
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Processamento de dados quando ele é distribuído  
  As operações `GetStream`, `UploadStream` e `EchoStream` todos lidam com o envio de dados diretamente de um arquivo ou salvar dados recebidos diretamente para um arquivo. No entanto, em alguns casos, há um requisito para enviar ou receber grandes quantidades de dados e executar algum processamento em partes dos dados enquanto ele é enviado ou recebido. Uma maneira de resolver esses cenários é gravar um fluxo personalizado (uma classe que deriva de <xref:System.IO.Stream>) que processa os dados conforme ela é lida ou gravada. O `GetReversedStream` operação e `ReverseStream` classe são um exemplo disso.  
   
- `GetReversedStream` Cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre conforme o sistema lê do que `ReverseStream` objeto. O `ReverseStream.Read` implementação lê um bloco de bytes do arquivo subjacente, reverta e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo como o conteúdo está sendo lidos ou gravados de e para o fluxo.  
+ `GetReversedStream` cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre conforme o sistema lê do que `ReverseStream` objeto. O `ReverseStream.Read` implementação lê um bloco de bytes do arquivo subjacente, reverta e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo como o conteúdo está sendo lidos ou gravados de e para o fluxo.  
   
 ```csharp
 class ReverseStream : Stream  

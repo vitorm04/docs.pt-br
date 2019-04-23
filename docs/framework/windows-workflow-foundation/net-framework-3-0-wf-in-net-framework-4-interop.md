@@ -3,10 +3,10 @@ title: Usando atividades do .NET Framework 3.0 WF no .NET Framework 4 com a ativ
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329408"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Usando atividades do .NET Framework 3.0 WF no .NET Framework 4 com a atividade de Interoperabilidade
@@ -34,13 +34,13 @@ A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Limitações de usar uma atividade de WF 3 em uma atividade de Interoperabilidade  
  O WF 3 sistema forneceu atividades não pode diretamente ser empacotado em uma atividade de <xref:System.Activities.Statements.Interop> . Para atividades de qualquer WF 3, como <xref:System.Workflow.Activities.DelayActivity>, isso ocorre porque há uma atividade análoga de WF 4,5. Para outro, isso ocorre porque a funcionalidade de atividade não é suportada. Muitos WF 3 sistema fornecidos atividades podem ser usados dentro de fluxos de trabalho envolvidos pela atividade de <xref:System.Activities.Statements.Interop> , sujeitos às restrições:  
   
-1. <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.Receive> não pode ser usado em um <xref:System.Activities.Statements.Interop> atividade.  
+1. <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.Receive> não podem ser usados em uma atividade de <xref:System.Activities.Statements.Interop> .  
   
-2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, e <xref:System.Workflow.Activities.WebServiceFaultActivity> não pode ser usado dentro de um <xref:System.Activities.Statements.Interop> atividade.  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, e <xref:System.Workflow.Activities.WebServiceFaultActivity> não podem ser usados em uma atividade de <xref:System.Activities.Statements.Interop> .  
   
-3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> não pode ser usado dentro de um <xref:System.Activities.Statements.Interop> atividade.  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> não pode ser usado em uma atividade de <xref:System.Activities.Statements.Interop> .  
   
-4. <xref:System.Workflow.ComponentModel.SuspendActivity> não pode ser usado dentro de um <xref:System.Activities.Statements.Interop> atividade.  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> não pode ser usado em uma atividade de <xref:System.Activities.Statements.Interop> .  
   
 5. As atividades relacionadas Compensação- não podem ser usadas em uma atividade de <xref:System.Activities.Statements.Interop> .  
   
@@ -50,6 +50,6 @@ A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [
   
 2. O tempo de execução de WF 4,5 não faz estado da instância de fluxo de trabalho de nível de verificação quando uma transação começa, independentemente de onde a transação (começa dentro ou fora de uma atividade de <xref:System.Activities.Statements.Interop> ).  
   
-3. Os registros de rastreamento de WF 3 para atividades em uma atividade de <xref:System.Activities.Statements.Interop> são fornecidos para os participantes através de WF 4,5 como objetos de <xref:System.Activities.Tracking.InteropTrackingRecord> . <xref:System.Activities.Tracking.InteropTrackingRecord> é um derivativo de <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+3. Os registros de rastreamento de WF 3 para atividades em uma atividade de <xref:System.Activities.Statements.Interop> são fornecidos para os participantes através de WF 4,5 como objetos de <xref:System.Activities.Tracking.InteropTrackingRecord> . <xref:System.Activities.Tracking.InteropTrackingRecord> é derivado de um <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
 4. Uma atividade personalizado de WF 3 pode acessar dados usando filas de fluxo de trabalho no ambiente de interoperação exatamente a mesma forma como no tempo de execução do fluxo de trabalho WF 3. Nenhuma alteração de código personalizado de atividade é necessária. No host, os dados são enviados a fila para uma fila de fluxo de trabalho WF 3 continuando <xref:System.Activities.Bookmark>. O nome do marcador é a forma de cadeia de caracteres o nome da fila de fluxo de trabalho de <xref:System.IComparable> .

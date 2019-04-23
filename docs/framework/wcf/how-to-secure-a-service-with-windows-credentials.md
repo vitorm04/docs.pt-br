@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329343"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Como: proteger um serviço com credenciais do Windows
@@ -150,7 +150,7 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.WSHttpBinding>
-- [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Serviços de segurança](../../../docs/framework/wcf/securing-services.md)
+- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)
 - [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327302"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: organizar conteúdo WPF no Windows Forms na hora do design
@@ -152,8 +152,8 @@ Esta instrução passo a passo mostra como usar os recursos de layout dos Window
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Como: Alinhar um controle às bordas de formulários no tempo de design](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Passo a passo: Organizar controles nos Windows Forms usando linhas de alinhamento](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Como: Alinhar um controle às bordas de formulários no tempo de Design](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
-- [Usando controles WPF](using-wpf-controls.md)
-- [Criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Usando Controles do WPF](using-wpf-controls.md)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

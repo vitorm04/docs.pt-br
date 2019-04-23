@@ -3,10 +3,10 @@ title: 'Como: criar um contrato de resposta/solicitação'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327471"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Como: criar um contrato de resposta/solicitação
@@ -51,4 +51,4 @@ public interface ICalculator
 
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Como: criar um contrato duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Como: Criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

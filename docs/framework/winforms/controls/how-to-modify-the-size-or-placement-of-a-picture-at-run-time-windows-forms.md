@@ -12,10 +12,10 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328329"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Como: Modificar o tamanho ou a colocação de uma imagem em tempo de execução (Windows Forms)
@@ -85,7 +85,7 @@ Se você usar o Windows Forms <xref:System.Windows.Forms.PictureBox> controle em
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Como: Carregar uma imagem usando o designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Como: Carregar uma imagem usando o Designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Visão geral do controle PictureBox](picturebox-control-overview-windows-forms.md)
 - [Como: Definir imagens em tempo de execução](how-to-set-pictures-at-run-time-windows-forms.md)
 - [Controle PictureBox](picturebox-control-windows-forms.md)

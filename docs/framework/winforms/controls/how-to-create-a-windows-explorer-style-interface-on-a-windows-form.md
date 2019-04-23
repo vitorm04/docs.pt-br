@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327367"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Como: Criar uma interface no estilo do Windows Explorer em Windows Forms
@@ -52,7 +52,7 @@ O Windows Explorer é uma opção de interface do usuário comum para aplicativo
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Como: Criar uma Interface do Usuário com Vários Painéis nos Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Como: Definir o comportamento de redimensionamento e posicionamento em uma janela dividida](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Como: Criar uma Interface do usuário Multipainel com Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Como: Definir redimensionamento e posicionamento de comportamento em uma janela dividida](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
 - [Como: Dividir uma janela horizontalmente](how-to-split-a-window-horizontally.md)
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)
