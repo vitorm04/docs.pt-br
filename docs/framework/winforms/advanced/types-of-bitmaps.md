@@ -21,10 +21,10 @@ helpviewer_keywords:
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
 ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089146"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de bitmaps
@@ -53,7 +53,7 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
  ![Exemplo de bitmap](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de arquivos gráficos  
- Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] suporta o arquivo gráfico formatos descritos nos parágrafos a seguir.  
+ Há muitos formatos padrão para salvar os bitmaps nos arquivos do disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dá suporte a formatos de arquivo gráfico descritos nos parágrafos a seguir.  
   
 ### <a name="bmp"></a>BMP  
  BMP é um formato padrão usado pelo Windows para armazenar imagens independente de dispositivo e aplicativo. O número de bits por pixel (1, 4, 8, 15, 24, 32 ou 64) para um determinado arquivo BMP é especificado no cabeçalho do arquivo. Arquivos BMP com 24 bits por pixel são comuns. Arquivos BMP geralmente não são compactados e, portanto, não são adequados para a transferência pela Internet.  
@@ -91,4 +91,4 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
-- [Trabalhando com imagens, bitmaps, ícones e metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](working-with-images-bitmaps-icons-and-metafiles.md)

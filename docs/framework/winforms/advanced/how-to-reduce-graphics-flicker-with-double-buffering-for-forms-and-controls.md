@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
 ms.openlocfilehash: ef05b72b33d3f28d1811389dfae65554a1567d43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096947"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Como: reduzir a cintilação em elementos gráficos com buffers duplos em formulários e controles
@@ -38,5 +38,5 @@ O buffer duplo usa um buffer de memória para resolver os problemas de cintilaç
 
 - <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
 - <xref:System.Windows.Forms.Control.SetStyle%2A>
-- [Elementos gráficos em buffer duplo](double-buffered-graphics.md)
-- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Elementos Gráficos em Buffer Duplo](double-buffered-graphics.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)

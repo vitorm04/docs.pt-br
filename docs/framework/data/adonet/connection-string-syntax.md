@@ -3,10 +3,10 @@ title: Sintaxe da cadeia de conexão
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084943"
 ---
 # <a name="connection-string-syntax"></a>Sintaxe da cadeia de conexão
@@ -43,7 +43,7 @@ Cada provedor de dados .NET Framework tem um objeto de `Connection` que herda de
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` gera uma exceção quando usado com o `OleDb` provedor.  
+>  O `Integrated Security=true` gera uma exceção quando usado com o provedor `OleDb`.  
   
 ## <a name="sqlclient-connection-strings"></a>Cadeias de conexão do SqlClient  
 A sintaxe para uma cadeia de conexão <xref:System.Data.SqlClient.SqlConnection> está documentada na propriedade <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Você pode usar a propriedade <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> para obter ou definir uma cadeia de conexão para um banco de dados do SQL Server. Se você precisar de conexão a uma versão anterior do SQL Server, você deve usar o provedor de dados .NET Framework para OleDb (<xref:System.Data.OleDb>). A maioria das palavras-chave de cadeia de conexão também mapeiam para as propriedades no <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Consulte também
 
-- [Cadeias de caracteres de conexão](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

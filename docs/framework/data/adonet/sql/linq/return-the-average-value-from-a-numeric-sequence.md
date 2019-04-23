@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
 ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095081"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Retornar o valor médio de uma sequência numérica
@@ -116,4 +116,4 @@ O operador de <xref:System.Linq.Enumerable.Average%2A> calcula a média de uma s
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultas de agregação](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

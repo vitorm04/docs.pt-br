@@ -10,10 +10,10 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083823"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Carregamento de XAML e propriedades da dependência
@@ -42,7 +42,7 @@ A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
 - [Metadados de propriedade da dependência](dependency-property-metadata.md)
 - [Propriedades de dependência do tipo de coleção](collection-type-dependency-properties.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
 ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085188"
 ---
 # <a name="cleartype-overview"></a>Visão geral de ClearType
@@ -17,7 +17,7 @@ Este tópico fornece uma visão geral da tecnologia [!INCLUDE[TLA#tla_ct](../../
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Visão geral da tecnologia  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] que melhora a legibilidade do texto em LCDs existentes (monitores), como telas de notebook, telas de Pocket PC e monitores de tela plana.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funciona ao acessar os elementos de faixa de cor vertical em cada pixel de uma tela LCD. Antes de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], o menor nível de detalhe que um computador poderia exibir era um único pixel, mas com [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em execução em um monitor LCD, podemos agora exibir recursos de texto tão pequenos quanto uma fração de um pixel de largura. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] é uma tecnologia de software desenvolvida por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], que melhora a legibilidade do texto em monitores LCD existentes, como telas de laptop, telas de Pocket PC e monitores de tela plana.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funciona ao acessar os elementos individuais da listra de cores vertical em cada pixel de uma tela LCD. Antes de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], o menor nível de detalhe que um computador poderia exibir era um único pixel, mas com [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em execução em um monitor LCD, podemos agora exibir recursos de texto tão pequenos quanto uma fração de um pixel de largura. A resolução extra aumenta a nitidez dos detalhes mínimos na exibição de texto, tornando a leitura por longos períodos muito mais fácil.  
   
  O [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] disponível em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é a última geração de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], que tem diversas melhorias em relação à versão encontrada em [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].  
   
@@ -53,9 +53,9 @@ Texto com suavização da direção y do ClearType
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Aceleração de hardware  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode tirar proveito de aceleração de hardware para melhorar o desempenho e reduzir os requisitos de memória de sistema e de carga de CPU. Usando os sombreadores de pixel e a memória de vídeo de um cartão gráfico, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fornece renderização mais rápida de texto, em particular quando a animação é usada.  
+ O [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode aproveitar a aceleração de hardware para melhorar o desempenho e reduzir os requisitos de carga de CPU e memória do sistema. Usando os sombreadores de pixel e a memória de vídeo de um cartão gráfico, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fornece renderização mais rápida de texto, em particular quando a animação é usada.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica o todo o sistema [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] configurações. Desabilitar o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] define a suavização do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para o modo escala de cinza. Além disso, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ O [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em todo o sistema. Desabilitar o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] define a suavização do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para o modo escala de cinza. Além disso, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Uma das decisões de design arquitetônico do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é fazer com que o layout de resolução independente dê um suporte melhor para os monitores DPI de resolução mais alta, que estão se tornando mais difundidos. Como consequência, o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não dá suporte de renderização de texto com alias ou para bitmaps em algumas fontes da Ásia Oriental porque ambos são dependentes de resolução.  
   
@@ -67,4 +67,4 @@ Texto com suavização da direção y do ClearType
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurações do Registro de ClearType](cleartype-registry-settings.md)
+- [Configurações do Registro ClearType](cleartype-registry-settings.md)

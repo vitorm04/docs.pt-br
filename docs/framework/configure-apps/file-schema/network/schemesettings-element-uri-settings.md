@@ -1,12 +1,12 @@
 ---
-title: <schemeSettings> (Configurações de Uri)
+title: Elemento <schemeSettings> (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094223"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > (configurações de Uri)
@@ -33,7 +33,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[adicionar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Adiciona uma configuração de esquema para um nome de esquema.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Adiciona uma configuração de esquema para um nome de esquema.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Limpa todas as configurações existentes do esquema.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Remove uma definição de esquema para um nome de esquema.|  
   

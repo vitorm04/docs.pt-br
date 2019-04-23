@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096043"
 ---
 # <a name="understanding-protection-level"></a>Noções básicas de nível de proteção
@@ -103,7 +103,7 @@ O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como
 - <xref:System.ServiceModel.MessageHeaderAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
-- [Serviços de segurança](../../../docs/framework/wcf/securing-services.md)
-- [Como: definir a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)
+- [Como: Defina a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Utilizando contratos de mensagem](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Usando contratos de mensagem](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

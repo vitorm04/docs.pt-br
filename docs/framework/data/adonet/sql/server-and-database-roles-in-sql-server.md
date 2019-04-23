@@ -3,10 +3,10 @@ title: Funções de servidor e banco de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087970"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Funções de servidor e banco de dados no SQL Server
@@ -16,7 +16,7 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
  As funções de servidor fixas têm um conjunto fixo de permissões e escopo no servidor. Elas são destinadas para uso em administrar o SQL Server e as permissões atribuídas a elas não podem ser modificadas. Os logons podem ser atribuídos às funções de servidor fixas sem ter uma conta de usuário em um banco de dados.  
   
 > [!IMPORTANT]
->  A função de servidor fixa `sysadmin` aborda todas as outras funções e tem escopo ilimitado. Não adicione entidades de segurança a essa função a menos que elas sejam altamente confiáveis. `sysadmin` membros da função tenham privilégios administrativos irrevogáveis em todos os bancos de dados do servidor e recursos.  
+>  A função de servidor fixa `sysadmin` aborda todas as outras funções e tem escopo ilimitado. Não adicione entidades de segurança a essa função a menos que elas sejam altamente confiáveis. Os membros de função `sysadmin` têm privilégios administrativos irrevogáveis em todos os bancos de dados e recursos do servidor.  
   
  Seja seletivo ao adicionar usuários a funções de servidor fixas. Por exemplo, a função `bulkadmin` permite que os usuários insiram o conteúdo do qualquer arquivo local em uma tabela, o que pode prejudicar a integridade de dados. Consulte os Manuais Online do SQL Server para obter uma lista de funções de servidor fixas e permissões.  
   
@@ -63,9 +63,9 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protegendo aplicativos ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticação no SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Propriedade e separação do esquema do usuário no SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [Propriedade e separação do esquema de usuário no SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [Autorização e permissões no SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

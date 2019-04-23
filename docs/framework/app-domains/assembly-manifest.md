@@ -11,10 +11,10 @@ ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087528"
 ---
 # <a name="assembly-manifest"></a>Manifesto de um assembly
@@ -55,7 +55,7 @@ Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que d
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conteúdo de um assembly](../../../docs/framework/app-domains/assembly-contents.md)
-- [Controle de versão de assemblies](../../../docs/framework/app-domains/assembly-versioning.md)
-- [Criação de assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Conteúdo do assembly](../../../docs/framework/app-domains/assembly-contents.md)
+- [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md)
+- [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)

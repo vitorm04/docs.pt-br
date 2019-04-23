@@ -3,10 +3,10 @@ title: Opção de compilador
 description: Use F# opções do compilador de linha de comando para controlar a compilação de seu F# aplicativos e bibliotecas.
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089751"
 ---
 # <a name="compiler-options"></a>Opção de compilador
@@ -71,4 +71,4 @@ A tabela a seguir mostra as opções do compilador listadas em ordem alfabética
 |Título|Descrição|
 |-----|-----------|
 |[Opções do F# Interativo](fsharp-interactive-options.md)|Descreve as opções de linha de comando com suporte a F# interpretador, fsi.exe.|
-|[Referência de propriedades de projeto](/visualstudio/ide/reference/project-properties-reference)|Descreve a interface do usuário para projetos, incluindo páginas de propriedades de projeto que fornecem opções de compilação.|
+|[Referência de Propriedades do Projeto](/visualstudio/ide/reference/project-properties-reference)|Descreve a interface do usuário para projetos, incluindo páginas de propriedades de projeto que fornecem opções de compilação.|

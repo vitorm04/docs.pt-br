@@ -3,10 +3,10 @@ title: Store instância de fluxo de trabalho do SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086566"
 ---
 # <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
@@ -22,20 +22,20 @@ Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-m
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Propriedades de instância Store de fluxo de trabalho do SQL](properties-of-sql-workflow-instance-store.md)  
+-   [Propriedades do repositório de instâncias de fluxo de trabalho do SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Como: Habilitar a persistência do SQL para fluxos de trabalho e serviços de fluxo de trabalho](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Ativação de instância](instance-activation.md)  
   
 -   [Suporte para consultas](support-for-queries.md)  
   
--   [Extensibilidade de Store](store-extensibility.md)  
+-   [Extensibilidade de repositório](store-extensibility.md)  
   
 -   [Segurança](security.md)  
   
--   [A base de dados do SQL Server](sql-server-persistence-database.md)  
+-   [Banco de dados de persistência do SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Persistência Exemplos](https://go.microsoft.com/fwlink/?LinkID=177735)
+- [Persistência exemplos](https://go.microsoft.com/fwlink/?LinkID=177735)

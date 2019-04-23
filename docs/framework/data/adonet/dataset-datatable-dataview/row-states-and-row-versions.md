@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092897"
 ---
 # <a name="row-states-and-row-versions"></a>Estados de linha e versões de linha
@@ -23,7 +23,7 @@ O ADO.NET gerencia linhas nas tabelas usando estados de linha e versões. Um est
 |<xref:System.Data.DataRowState.Added>|A linha foi adicionada à tabela, mas `AcceptChanges` não foi chamado.|  
 |<xref:System.Data.DataRowState.Modified>|Algum elemento da linha foi alterado.|  
 |<xref:System.Data.DataRowState.Deleted>|A linha foi excluída da tabela e `AcceptChanges` não foi chamado.|  
-|<xref:System.Data.DataRowState.Detached>|A linha não faz parte de nenhum `DataRowCollection`. O `RowState` de uma linha recém-criada é definido como `Detached`. Após o novo `DataRow` ser adicionado ao `DataRowCollection` chamando o método `Add`, o valor da propriedade `RowState` é definido como `Added`.<br /><br /> `Detached` também é definido para uma linha que foi removida de um `DataRowCollection` usando o `Remove` método, ou o `Delete` método seguido pelo `AcceptChanges` método.|  
+|<xref:System.Data.DataRowState.Detached>|A linha não faz parte de nenhum `DataRowCollection`. O `RowState` de uma linha recém-criada é definido como `Detached`. Após o novo `DataRow` ser adicionado ao `DataRowCollection` chamando o método `Add`, o valor da propriedade `RowState` é definido como `Added`.<br /><br /> `Detached` também são definidos para uma linha que foi removida de um `DataRowCollection` usando o método `Remove` ou o método `Delete` seguido pelo método `AcceptChanges`.|  
   
  Quando `AcceptChanges` tiver sido chamado em um <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow>, todas as linhas com um estado de linha de `Deleted` serão removidas. As linhas restantes recebem um estado de linha de `Unchanged` e os valores na versão de linha `Original` são substituídos pelos valores da versão de linha `Current`. Quando `RejectChanges` tiver sido chamado, todas as linhas com um estado de `Added` serão removidas. As linhas restantes recebem um estado de linha de `Unchanged` e os valores na versão de linha `Current` são substituídos pelos valores da versão de linha `Original`.  
   
@@ -50,7 +50,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Você pode testar se um `DataRow` tem uma versão de linha específica chamando o método <xref:System.Data.DataRow.HasVersion%2A> e passando `DataRowVersion` como argumento. Por exemplo, `DataRow.HasVersion(DataRowVersion.Original)` retornará `false` para linhas recém-adicionadas antes que `AcceptChanges` tenha sido chamado.  
   
- O exemplo de código a seguir exibe os valores em todas as linhas excluídas de uma tabela. `Deleted` linhas não têm uma `Current` versão de linha, portanto, você deve passar `DataRowVersion.Original` ao acessar os valores da coluna.  
+ O exemplo de código a seguir exibe os valores em todas as linhas excluídas de uma tabela. As linhas `Deleted` não têm uma versão de linha `Current`; portanto, você deve passar `DataRowVersion.Original` ao acessar os valores de coluna.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -96,7 +96,7 @@ foreach (DataRow delRow in delRows)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Manipulando dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [DataSets, DataTables e DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
 - [DataAdapters e DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092274"
 ---
 # <a name="administration-and-diagnostics"></a>Administração e diagnósticos
@@ -41,15 +41,15 @@ Windows Communication Foundation (WCF) fornece um rico conjunto de funcionalidad
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
-- [Implantando serviços](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
+- [Configurar seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [Serviços de implantação](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Referência de exceções](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [Registro de eventos em log](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Registro em log de mensagens](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Ferramenta Configuration Editor (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Ferramenta de registro de ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Usando a Instrumentação de Gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Contadores de desempenho](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Ferramentas do Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

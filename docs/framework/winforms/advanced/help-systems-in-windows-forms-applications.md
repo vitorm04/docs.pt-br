@@ -9,10 +9,10 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
 ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087256"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Sistemas de Ajuda em aplicativos do Windows Forms
@@ -25,7 +25,7 @@ Uma das cortesias mais importantes que você, como desenvolvedor de aplicativos,
   
 ## <a name="see-also"></a>Consulte também
 
-- [Integrando a ajuda do usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Componente HelpProvider](../controls/helpprovider-component-windows-forms.md)
 - [Componente ToolTip](../controls/tooltip-component-windows-forms.md)
 - [Visão geral dos Windows Forms](../windows-forms-overview.md)

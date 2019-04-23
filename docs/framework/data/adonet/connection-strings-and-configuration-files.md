@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088828"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
@@ -171,9 +171,9 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
   
 ## <a name="see-also"></a>Consulte também
 
-- [Construtores de cadeia de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configuração de aplicativos](../../../../docs/framework/configure-apps/index.md)
-- [Administração de Site da Web do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Configurando aplicativos](../../../../docs/framework/configure-apps/index.md)
+- [Administração de site ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

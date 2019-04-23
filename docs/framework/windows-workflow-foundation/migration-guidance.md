@@ -3,14 +3,14 @@ title: Orientação de migração
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083160"
 ---
 # <a name="migration-guidance"></a>Orientação de migração
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft está lançando a segunda versão principal do Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi lançado em [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Isso inclui os tipos nos namespaces do Workflow; agora é referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas existe ao lado da nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; chamada como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft está lançando a segunda versão principal do Windows Workflow Foundation (WF). O [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi liberado no [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (isso inclui os tipos nos namespaces System.Workflow.*; agora referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas existe ao lado da nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; chamada como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
   
 -   O WF3 tem suporte completo do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
@@ -23,13 +23,13 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft
 ## <a name="wf-migration-whitepapers-and-cookbooks"></a>Artigos e livros de receitas de migração do WF  
  O [visão geral da migração de WF](https://go.microsoft.com/fwlink/?LinkId=153873) tópico fornece uma visão geral da relação entre WF3 e WF4 e estratégias de migração. Os tópicos complementares aprofundam tópicos específicos.  
   
- [Visão geral de migração do WF](https://go.microsoft.com/fwlink/?LinkId=153873)  
+ [Visão geral da migração de WF](https://go.microsoft.com/fwlink/?LinkId=153873)  
  Descreve a relação entre WF3 e WF4, e as opções que você tem como usuário ou usuário potencial da tecnologia de fluxo de trabalho no .NET 4.  
   
  [Migração de WF: Melhores práticas de desenvolvimento do WF3](https://go.microsoft.com/fwlink/?LinkId=153852)  
  Discute como criar os artefatos do WF3 para que eles possam ser migrados mais facilmente para o WF4.  
   
- [Orientação de WF: Regras](https://go.microsoft.com/fwlink/?LinkId=153854)  
+ [Orientação de WF: regras](https://go.microsoft.com/fwlink/?LinkId=153854)  
  Discute como transformar investimentos relacionadas a regras em soluções do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
  [Orientação de WF: Máquina de estado](https://go.microsoft.com/fwlink/?LinkId=153855)  
@@ -37,13 +37,13 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft
   
  Observe que essa orientação somente se aplica a projetos de fluxo de trabalho destinados ao .NET Framework 4. Os fluxos de trabalho da máquina de estado eram adicionados no .NET 4.0.1 com a versão de atualização 1 da plataforma, e foram incluídos como parte do .NET Framework 4.5. Para obter mais informações sobre fluxos de trabalho de máquina de estado no .NET 4.0.1 - 4.0.3 e .NET Framework 4.5, consulte [atualização 4.0.1 para recursos do Microsoft .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) e [fluxos de trabalho de máquina de estado](state-machine-workflows.md).  
   
- [Livro de receitas de migração de WF: Atividades personalizados](https://go.microsoft.com/fwlink/?LinkId=153856)  
+ [Livro de receitas de migração de WF: Atividades personalizadas](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Fornece exemplos e instruções para recriar as atividades personalizadas do WF3 no WF4.  
   
  [Livro de receitas de migração de WF: Atividades personalizadas avançadas](https://go.microsoft.com/fwlink/?LinkId=275560)  
  Fornece orientação para reformatar as atividades personalizadas avançadas do WF3 que usam filas do WF3 e agendar atividades filho como atividades personalizadas do WF4.  
   
- [Livro de receitas de migração de WF: Fluxos de Trabalho](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ [Livro de receitas de migração de WF: Fluxos de trabalho](https://go.microsoft.com/fwlink/?LinkId=153858)  
  Fornece exemplos e instruções para recriar os fluxos de trabalho do WF3 no WF4.  
   
  [Livro de receitas de migração de WF: Hospedagem de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkId=275561)  

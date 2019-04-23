@@ -1,5 +1,5 @@
 ---
-title: <add> elemento para <sharedListeners>
+title: Elemento <add> para <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095627"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<Adicionar > elemento para \<sharedListeners >
@@ -80,7 +80,7 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners` é uma col
  Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar `<add>` elementos a serem adicionados a <xref:System.Diagnostics.TextWriterTraceListener>`textListener` para o `sharedListeners` coleção.   `textListener` é adicionado por nome para o `Listeners` coleção para a origem de rastreamento `TraceSourceApp`. O `textListener` ouvinte grava a saída de rastreamento para o arquivo myListener.log.  
+ O exemplo a seguir mostra como usar `<add>` elementos a serem adicionados a <xref:System.Diagnostics.TextWriterTraceListener> `textListener` para o `sharedListeners` coleção.   `textListener` é adicionado por nome para o `Listeners` coleção para a origem de rastreamento `TraceSourceApp`. O `textListener` ouvinte grava a saída de rastreamento para o arquivo myListener.log.  
   
 ```xml  
 <configuration>  

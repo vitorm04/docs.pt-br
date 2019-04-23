@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
 ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089908"
 ---
 # <a name="group-elements-in-a-sequence"></a>Agrupar os elementos em uma sequência
@@ -75,4 +75,4 @@ O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma s
 ## <a name="see-also"></a>Consulte também
 
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097402"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtendo um DbProviderFactory
@@ -98,6 +98,6 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
 ## <a name="see-also"></a>Consulte também
 
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Cadeias de caracteres de conexão](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
-- [Visão geral do ADO.NET](ado-net-overview.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
