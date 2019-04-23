@@ -8,10 +8,10 @@ ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150755"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de rastreamento JIT
@@ -151,4 +151,4 @@ ms.locfileid: "59150755"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos ETW no CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

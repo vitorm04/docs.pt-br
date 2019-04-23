@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141746"
 ---
 # <a name="accessibility-domain-c-reference"></a>Domínio de acessibilidade (Referência de C#)
@@ -29,12 +29,12 @@ O domínio de acessibilidade de um membro especifica em que seções do programa
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
 - [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)
 - [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md)
 - [Restrições ao uso de níveis de acessibilidade](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [públicos](../../../csharp/language-reference/keywords/public.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
 - [private](../../../csharp/language-reference/keywords/private.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)
-- [interno](../../../csharp/language-reference/keywords/internal.md)
+- [internal](../../../csharp/language-reference/keywords/internal.md)

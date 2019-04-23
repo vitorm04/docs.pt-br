@@ -12,10 +12,10 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144515"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Como: Classificar e agrupar dados usando uma exibição em XAML
@@ -43,4 +43,4 @@ Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INC
 - <xref:System.Windows.Data.CollectionViewSource>
 - [Obter a exibição padrão de uma coleta de dados](how-to-get-the-default-view-of-a-data-collection.md)
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147102"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurando aplicativos usando arquivos de configuração 
@@ -101,7 +101,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
 -   Arquivo de configuração de política de usuário: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Localizar assemblies usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Como: Localizar Assemblies usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Descreve como direcionar o tempo de execução para usar a variável de ambiente DEVPATH ao procurar por assemblies.  
   
  [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -124,7 +124,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
 - [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Especificando o local de um assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Administração de Site da Web do ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Administração de site ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Gerenciamento de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
+- [Caspol.exe (Ferramenta de Política de Segurança de Acesso do Código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

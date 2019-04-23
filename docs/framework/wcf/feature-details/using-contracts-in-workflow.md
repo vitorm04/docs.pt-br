@@ -3,10 +3,10 @@ title: Utilizando contratos no fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150053"
 ---
 # <a name="using-contracts-in-workflow"></a>Utilizando contratos no fluxo de trabalho
@@ -34,6 +34,6 @@ Ao implementar um serviço, você pode definir um número de contratos que descr
 ## <a name="see-also"></a>Consulte também
 
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Atividades de mensagem](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
-- [Como: criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+- [Atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [Como: Criar um serviço de fluxo de trabalho com atividades de mensagem](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Como: Criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

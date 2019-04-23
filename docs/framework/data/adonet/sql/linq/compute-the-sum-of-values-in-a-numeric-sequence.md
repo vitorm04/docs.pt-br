@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
 ms.openlocfilehash: 2f66b996a0e688205d61f5fca476c0335616ee38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143566"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>Calcular a soma dos valores em uma sequência numérica
@@ -41,5 +41,5 @@ Use o operador <xref:System.Linq.Enumerable.Sum%2A> para calcular a soma de valo
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultas de agregação](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

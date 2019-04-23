@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
 ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145399"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Como: Usar gatilhos para moldar itens selecionados em um ListView
@@ -34,6 +34,6 @@ Este exemplo mostra como definir <xref:System.Windows.Style.Triggers%2A> para um
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Tópicos explicativos ](listview-how-to-topics.md)
+- [Tópicos de instruções](listview-how-to-topics.md)
 - [Visão geral de ListView](listview-overview.md)
 - [Visão geral de GridView](gridview-overview.md)

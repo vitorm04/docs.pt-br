@@ -12,10 +12,10 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145607"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Como: Exibir uma marca de inserção em um controle ListView do Windows Forms
@@ -49,4 +49,4 @@ A marca de inserção no <xref:System.Windows.Forms.ListView> controle mostra ao
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [Controle ListView](listview-control-windows-forms.md)
 - [Visão geral do controle ListView](listview-control-overview-windows-forms.md)
-- [Passo a passo: executar uma operação do tipo "arrastar e soltar" no Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Passo a passo: Executando uma operação de arrastar e soltar no Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

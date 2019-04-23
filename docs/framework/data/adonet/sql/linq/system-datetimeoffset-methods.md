@@ -3,10 +3,10 @@ title: Métodos de System.DateTimeOffset
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
 ms.openlocfilehash: 288a0d99feecdeccc0d215ec3c14ec31bb3ccb54
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149715"
 ---
 # <a name="systemdatetimeoffset-methods"></a>Métodos de System.DateTimeOffset
@@ -28,6 +28,6 @@ Mapeado uma vez no modelo de objeto ou no arquivo de mapeamento externo, LINQ to
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consulte conceitos](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Mapeamento de tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [Mapeamento de tipo CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

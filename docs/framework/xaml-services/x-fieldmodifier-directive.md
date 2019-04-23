@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144541"
 ---
 # <a name="xfieldmodifier-directive"></a>Diretiva x:FieldModifier
@@ -55,5 +55,5 @@ Modifica o comportamento de compilação de XAML para que os campos para referê
 - [XAML e classes personalizadas para WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Code-behind e XAML no WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [Diretiva x:Name](x-name-directive.md)
-- [Compilando um aplicativo WPF (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [Como compilar um aplicativo WPF (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
 - [Diretiva x:ClassModifier](x-classmodifier-directive.md)

@@ -10,10 +10,10 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143761"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Diretrizes de codificação segura para código não gerenciado
@@ -47,8 +47,8 @@ Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, 
   
 |Palavra-chave|Considerações sobre segurança|  
 |-------------|-----------------------------|  
-|**Safe**|É totalmente inofensivo que qualquer código, até mesmo mal-intencionado, o chame. Pode ser usado exatamente como outro código gerenciado. Por exemplo, uma função que obtém a hora do dia é normalmente segura.|  
-|**nativa**|Neutro em termos de segurança, ou seja, código não gerenciado que requer permissão de código não gerenciado para chamar. A segurança é verificada, o que impede um chamador não autorizado.|  
+|**seguro**|É totalmente inofensivo que qualquer código, até mesmo mal-intencionado, o chame. Pode ser usado exatamente como outro código gerenciado. Por exemplo, uma função que obtém a hora do dia é normalmente segura.|  
+|**nativo**|Neutro em termos de segurança, ou seja, código não gerenciado que requer permissão de código não gerenciado para chamar. A segurança é verificada, o que impede um chamador não autorizado.|  
 |**unsafe**|Ponto de entrada de código não gerenciado potencialmente perigoso com segurança suprimida. Os desenvolvedores devem ter o máximo de cuidado ao usar código não gerenciado desse tipo, verificando se outras proteções estão em vigor para evitar uma vulnerabilidade de segurança. Os desenvolvedores devem ser responsáveis, pois essa palavra-chave substitui o sistema de segurança.|  
   
 ## <a name="see-also"></a>Consulte também

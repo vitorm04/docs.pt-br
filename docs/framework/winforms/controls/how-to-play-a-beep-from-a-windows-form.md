@@ -12,10 +12,10 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
 ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146218"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Como: Reproduzir um aviso sonoro de um Windows Form
@@ -46,5 +46,5 @@ public void onePing()
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [Como: Reproduzir um som do sistema de um Windows Form](how-to-play-a-system-sound-from-a-windows-form.md)
-- [Como: Reproduzir um som de um Windows Form](how-to-play-a-sound-from-a-windows-form.md)
+- [Como: Reproduzir um som do sistema de um formulário do Windows](how-to-play-a-system-sound-from-a-windows-form.md)
+- [Como: Reproduzir um som de um formulário do Windows](how-to-play-a-sound-from-a-windows-form.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150534"
 ---
 # <a name="how-to-repeat-an-animation"></a>Como: Repetir uma animação
@@ -34,4 +34,4 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.Timeline.Re
 - [Especificar se uma linha do tempo é revertida automaticamente](how-to-specify-whether-a-timeline-automatically-reverses.md)
 - [Tópicos explicativos de animação e tempo](animation-and-timing-how-to-topics.md)
 - [Visão geral da animação](animation-overview.md)
-- [Exemplo de comportamento de tempo de animação](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)

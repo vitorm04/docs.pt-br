@@ -3,10 +3,10 @@ title: Utilizando Personificação com segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151431"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizando Personificação com segurança de transporte
@@ -58,5 +58,5 @@ ms.locfileid: "59151431"
 
 - [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Noções básicas de autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+- [Como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Entendendo a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

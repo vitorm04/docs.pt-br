@@ -5,10 +5,10 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147518"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximizar desempenho 3D do WPF
@@ -45,7 +45,7 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
 |<xref:System.Windows.Media.Media3D.Light>|Velocidade da luz (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Tente manter os tamanhos das malhas abaixo desses limites:<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20.001 <xref:System.Windows.Media.Media3D.Point3D> instâncias<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60,003 <xref:System.Int32> instâncias|  
 |<xref:System.Windows.Media.Media3D.Material>|Velocidade do material (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D não descarta pincéis invisíveis (pincéis de ambiente pretos, pincéis de limpeza, etc.) de maneira consistente.  Considere omiti-los da sua cena.|  
+|<xref:System.Windows.Media.Brush>|O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D não descarta pincéis invisíveis (pincéis de ambiente pretos, pincéis de limpeza, etc.) de uma maneira consistente.  Considere omiti-los da sua cena.|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|Cada <xref:System.Windows.Media.Media3D.Material> em um <xref:System.Windows.Media.Media3D.MaterialGroup> faz com que outra passagem de renderização, então, incluir vários materiais, até mesmo materiais simples, pode aumentar drasticamente as demandas de preenchimento na sua GPU.  Minimizar o número de materiais em seu <xref:System.Windows.Media.Media3D.MaterialGroup>.|  
   
 ## <a name="performance-impact-low"></a>Impacto de desempenho: Baixo  

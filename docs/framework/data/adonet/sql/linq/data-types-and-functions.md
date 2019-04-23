@@ -3,10 +3,10 @@ title: Tipos de dados e funções
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151938"
 ---
 # <a name="data-types-and-functions"></a>Tipos de dados e funções
@@ -16,11 +16,11 @@ Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para mem
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Mapeamento de tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Fornece uma matriz detalhada de mapeamentos entre os tipos de CLR e SQL Server.|  
+|[Mapeamento de tipo CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Fornece uma matriz detalhada de mapeamentos entre os tipos de CLR e SQL Server.|  
 |[Tipos de dados básicos](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Tipos de dados booleano](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
+|[Tipos de dados booliano](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Semântica nula](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Fornece links para os tópicos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que discutem problemas de nulo e anulável.|  
-|[Numérico e operadores de comparação](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
+|[Operadores numéricos e de comparação](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Operadores de sequência](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Métodos de System.Convert](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|Resume as diferenças de comportamento do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Métodos de System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|Descreve suporte do LINQ to SQL para membros de estrutura <xref:System.DateTime?displayProperty=nameWithType>.|  
@@ -33,5 +33,5 @@ Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para mem
   
 ## <a name="see-also"></a>Consulte também
 
-- [Incompatibilidade de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

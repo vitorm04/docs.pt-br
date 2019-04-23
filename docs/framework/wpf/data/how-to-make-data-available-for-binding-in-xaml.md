@@ -9,10 +9,10 @@ helpviewer_keywords:
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
 ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145360"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Como: Disponibilizar dados para associação em XAML
@@ -45,4 +45,4 @@ Este tópico discute várias maneiras que você pode tornar dados disponíveis p
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)

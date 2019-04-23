@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
 ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148974"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Como: recuperar informações como somente leitura
@@ -28,6 +28,6 @@ Quando você não pretende modificar os dados, você pode aumentar o desempenho 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consulte conceitos](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Consultando o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
-- [Adiado contra a carga immediate](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+- [Carregamento adiado versus imediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)

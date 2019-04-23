@@ -3,10 +3,10 @@ title: Resolvedor peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151613"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
@@ -35,7 +35,7 @@ Para se conectar a uma malha, um nó par exige que os endereços IP dos outros n
  Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado Peer Channel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Sobre o CustomPeerResolverService: registros de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [O custompeerresolverservice: Registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Consulte também
 

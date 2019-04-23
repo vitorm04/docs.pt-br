@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152874"
 ---
 # <a name="how-to-map-database-relationships"></a>Como: mapear relações de banco de dados
@@ -28,7 +28,7 @@ Você pode codificar como referências de propriedade em sua classe de entidade 
   
 -   Muitos-para-muitos: Em relações muitos-para-muitos, a chave primária da tabela de link (também chamado de *junção* tabela) é formada geralmente por uma composição das chaves estrangeiras das outras duas tabelas.  
   
-     Por exemplo, considere uma `Employee` - `Project` formado de relação muitos-para-muitos usando a tabela de link `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requer que essa relação seja modelada por meio de três classes: `Employee`, `Project`, e `EmployeeProject`. Nesse caso, alterar a relação entre um `Employee` e um `Project` pode parecer exigir uma atualização da chave primária `EmployeeProject`. No entanto, essa situação é melhor modelada como excluindo um `EmployeeProject` existente e criando um novo `EmployeeProject`.  
+     Por exemplo, considere uma `Employee` - `Project` formado de relação muitos-para-muitos usando a tabela de link `EmployeeProject`. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige que essa relação seja modelada por meio de três classes: `Employee`, `Project` e `EmployeeProject`. Nesse caso, alterar a relação entre um `Employee` e um `Project` pode parecer exigir uma atualização da chave primária `EmployeeProject`. No entanto, essa situação é melhor modelada como excluindo um `EmployeeProject` existente e criando um novo `EmployeeProject`.  
   
     > [!NOTE]
     >  As relações em bancos de dados relacionais são normalmente modeladas como os valores de chave estrangeira que referenciam as chaves primárias em outras tabelas. Para navegar entre eles você associa explicitamente as duas tabelas usando um relacional *junção* operação.  
@@ -55,5 +55,5 @@ Você pode codificar como referências de propriedade em sua classe de entidade 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: personalizar classes de entidade usando o editor de códigos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [Modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
