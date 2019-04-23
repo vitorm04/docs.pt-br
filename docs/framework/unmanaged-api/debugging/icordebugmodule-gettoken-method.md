@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c28182feff8e4b7d49b7d068da1496d44fa2f917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150352"
 ---
-# <a name="icordebugmodulegettoken-method"></a><span data-ttu-id="9a022-102">Método ICorDebugModule::GetToken</span><span class="sxs-lookup"><span data-stu-id="9a022-102">ICorDebugModule::GetToken Method</span></span>
-<span data-ttu-id="9a022-103">Obtém o token para a entrada da tabela para esse módulo.</span><span class="sxs-lookup"><span data-stu-id="9a022-103">Gets the token for the table entry for this module.</span></span>  
+# <a name="icordebugmodulegettoken-method"></a><span data-ttu-id="aecdd-102">Método ICorDebugModule::GetToken</span><span class="sxs-lookup"><span data-stu-id="aecdd-102">ICorDebugModule::GetToken Method</span></span>
+<span data-ttu-id="aecdd-103">Obtém o token para a entrada da tabela para esse módulo.</span><span class="sxs-lookup"><span data-stu-id="aecdd-103">Gets the token for the table entry for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a022-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9a022-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aecdd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="aecdd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetToken(  
@@ -35,22 +35,22 @@ HRESULT GetToken(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a022-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9a022-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aecdd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="aecdd-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="9a022-106">[out] Um ponteiro para o `mdModule` token que faz referência a metadados do módulo.</span><span class="sxs-lookup"><span data-stu-id="9a022-106">[out] A pointer to the `mdModule` token that references the module's metadata.</span></span>  
+ <span data-ttu-id="aecdd-106">[out] Um ponteiro para o `mdModule` token que faz referência a metadados do módulo.</span><span class="sxs-lookup"><span data-stu-id="aecdd-106">[out] A pointer to the `mdModule` token that references the module's metadata.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a022-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="9a022-107">Remarks</span></span>  
- <span data-ttu-id="9a022-108">O token pode ser passado para o [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), e [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaces de importação de metadados.</span><span class="sxs-lookup"><span data-stu-id="9a022-108">The token can be passed to the [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), and [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) metadata import interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aecdd-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="aecdd-107">Remarks</span></span>  
+ <span data-ttu-id="aecdd-108">O token pode ser passado para o [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), e [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaces de importação de metadados.</span><span class="sxs-lookup"><span data-stu-id="aecdd-108">The token can be passed to the [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), and [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) metadata import interfaces.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a022-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a022-109">Requirements</span></span>  
- <span data-ttu-id="9a022-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a022-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aecdd-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="aecdd-109">Requirements</span></span>  
+ <span data-ttu-id="aecdd-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aecdd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a022-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a022-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aecdd-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aecdd-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a022-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a022-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aecdd-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aecdd-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="9a022-113">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="9a022-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="aecdd-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aecdd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a022-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9a022-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aecdd-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="aecdd-114">See also</span></span>
 
-- [<span data-ttu-id="9a022-115">Metadados</span><span class="sxs-lookup"><span data-stu-id="9a022-115">Metadata</span></span>](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [<span data-ttu-id="aecdd-115">Metadados</span><span class="sxs-lookup"><span data-stu-id="aecdd-115">Metadata</span></span>](../../../../docs/framework/unmanaged-api/metadata/index.md)

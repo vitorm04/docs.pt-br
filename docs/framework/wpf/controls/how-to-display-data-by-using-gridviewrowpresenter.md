@@ -6,23 +6,23 @@ helpviewer_keywords:
 - GridViewRowPresenter [WPF]
 ms.assetid: bdb785a5-a262-44d5-a517-ea14383e5f70
 ms.openlocfilehash: 0e471df3ab6fd10417fc58ece4cdb8ff1c457c95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149143"
 ---
-# <a name="how-to-display-data-by-using-gridviewrowpresenter"></a><span data-ttu-id="43d6a-102">Como: Exibir dados usando GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="43d6a-102">How to: Display Data by Using GridViewRowPresenter</span></span>
-<span data-ttu-id="43d6a-103">Este exemplo mostra como usar o <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objetos para exibir dados em colunas.</span><span class="sxs-lookup"><span data-stu-id="43d6a-103">This example shows how to use the <xref:System.Windows.Controls.GridViewRowPresenter> and <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objects to display data in columns.</span></span>  
+# <a name="how-to-display-data-by-using-gridviewrowpresenter"></a><span data-ttu-id="6e418-102">Como: Exibir dados usando GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="6e418-102">How to: Display Data by Using GridViewRowPresenter</span></span>
+<span data-ttu-id="6e418-103">Este exemplo mostra como usar o <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objetos para exibir dados em colunas.</span><span class="sxs-lookup"><span data-stu-id="6e418-103">This example shows how to use the <xref:System.Windows.Controls.GridViewRowPresenter> and <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objects to display data in columns.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="43d6a-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="43d6a-104">Example</span></span>  
- <span data-ttu-id="43d6a-105">O exemplo a seguir mostra como especificar uma <xref:System.Windows.Controls.GridViewColumnCollection> que exibe as <xref:System.DateTime.DayOfWeek%2A> e <xref:System.DateTime.Year%2A> de uma <xref:System.DateTime> objeto usando <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objetos.</span><span class="sxs-lookup"><span data-stu-id="43d6a-105">The following example shows how to specify a <xref:System.Windows.Controls.GridViewColumnCollection> that displays the <xref:System.DateTime.DayOfWeek%2A> and <xref:System.DateTime.Year%2A> of a <xref:System.DateTime> object by using <xref:System.Windows.Controls.GridViewRowPresenter> and <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objects.</span></span> <span data-ttu-id="43d6a-106">O exemplo também define um <xref:System.Windows.Style> para o <xref:System.Windows.Controls.GridViewColumn.Header%2A> de um <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="43d6a-106">The example also defines a <xref:System.Windows.Style> for the <xref:System.Windows.Controls.GridViewColumn.Header%2A> of a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
+## <a name="example"></a><span data-ttu-id="6e418-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6e418-104">Example</span></span>  
+ <span data-ttu-id="6e418-105">O exemplo a seguir mostra como especificar uma <xref:System.Windows.Controls.GridViewColumnCollection> que exibe as <xref:System.DateTime.DayOfWeek%2A> e <xref:System.DateTime.Year%2A> de uma <xref:System.DateTime> objeto usando <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objetos.</span><span class="sxs-lookup"><span data-stu-id="6e418-105">The following example shows how to specify a <xref:System.Windows.Controls.GridViewColumnCollection> that displays the <xref:System.DateTime.DayOfWeek%2A> and <xref:System.DateTime.Year%2A> of a <xref:System.DateTime> object by using <xref:System.Windows.Controls.GridViewRowPresenter> and <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objects.</span></span> <span data-ttu-id="6e418-106">O exemplo também define um <xref:System.Windows.Style> para o <xref:System.Windows.Controls.GridViewColumn.Header%2A> de um <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="6e418-106">The example also defines a <xref:System.Windows.Style> for the <xref:System.Windows.Controls.GridViewColumn.Header%2A> of a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
  [!code-xaml[GridViewRowPresenterSample#GridViewRowPresenter](~/samples/snippets/csharp/VS_Snippets_Wpf/GridViewRowPresenterSample/CS/Window1.xaml#gridviewrowpresenter)]  
   
-## <a name="see-also"></a><span data-ttu-id="43d6a-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43d6a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e418-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6e418-107">See also</span></span>
 
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewColumnCollection>
-- [<span data-ttu-id="43d6a-108">Visão geral de GridView</span><span class="sxs-lookup"><span data-stu-id="43d6a-108">GridView Overview</span></span>](gridview-overview.md)
+- [<span data-ttu-id="6e418-108">Visão geral de GridView</span><span class="sxs-lookup"><span data-stu-id="6e418-108">GridView Overview</span></span>](gridview-overview.md)
