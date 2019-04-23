@@ -6,36 +6,36 @@ dev_langs:
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
 ms.openlocfilehash: e213046955c2c4e720c56adb96da29078ea3c48d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226846"
 ---
-# <a name="method-based-query-syntax-examples-ordering"></a><span data-ttu-id="80a16-102">Exemplos de sintaxe de consulta baseada em método: Ordenando</span><span class="sxs-lookup"><span data-stu-id="80a16-102">Method-Based Query Syntax Examples: Ordering</span></span>
-<span data-ttu-id="80a16-103">Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.ThenBy%2A> método para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de consulta com base em método.</span><span class="sxs-lookup"><span data-stu-id="80a16-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.ThenBy%2A> method to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using method-based query syntax.</span></span> <span data-ttu-id="80a16-104">O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="80a16-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="method-based-query-syntax-examples-ordering"></a><span data-ttu-id="c38fe-102">Exemplos de sintaxe de consulta baseada em método: Ordenando</span><span class="sxs-lookup"><span data-stu-id="c38fe-102">Method-Based Query Syntax Examples: Ordering</span></span>
+<span data-ttu-id="c38fe-103">Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.ThenBy%2A> método para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de consulta com base em método.</span><span class="sxs-lookup"><span data-stu-id="c38fe-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.ThenBy%2A> method to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using method-based query syntax.</span></span> <span data-ttu-id="c38fe-104">O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="c38fe-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="80a16-105">Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:</span><span class="sxs-lookup"><span data-stu-id="80a16-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="c38fe-105">Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:</span><span class="sxs-lookup"><span data-stu-id="c38fe-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="thenby"></a><span data-ttu-id="80a16-106">ThenBy</span><span class="sxs-lookup"><span data-stu-id="80a16-106">ThenBy</span></span>  
+## <a name="thenby"></a><span data-ttu-id="c38fe-106">ThenBy</span><span class="sxs-lookup"><span data-stu-id="c38fe-106">ThenBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="80a16-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="80a16-107">Example</span></span>  
- <span data-ttu-id="80a16-108">O exemplo a seguir na sintaxe da consulta com base em método usa <xref:System.Linq.Queryable.OrderBy%2A> e <xref:System.Linq.Queryable.ThenBy%2A> para retornar uma lista de contatos ordenados por sobrenome e em seguida pelo nome.</span><span class="sxs-lookup"><span data-stu-id="80a16-108">The following example in method-based query syntax uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
+### <a name="example"></a><span data-ttu-id="c38fe-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c38fe-107">Example</span></span>  
+ <span data-ttu-id="c38fe-108">O exemplo a seguir na sintaxe da consulta com base em método usa <xref:System.Linq.Queryable.OrderBy%2A> e <xref:System.Linq.Queryable.ThenBy%2A> para retornar uma lista de contatos ordenados por sobrenome e em seguida pelo nome.</span><span class="sxs-lookup"><span data-stu-id="c38fe-108">The following example in method-based query syntax uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderByThenBy_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbythenby_mq)]
  [!code-vb[DP L2E Examples#OrderByThenBy_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbythenby_mq)]  
   
-## <a name="thenbydescending"></a><span data-ttu-id="80a16-109">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="80a16-109">ThenByDescending</span></span>  
+## <a name="thenbydescending"></a><span data-ttu-id="c38fe-109">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="c38fe-109">ThenByDescending</span></span>  
   
-### <a name="example"></a><span data-ttu-id="80a16-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="80a16-110">Example</span></span>  
- <span data-ttu-id="80a16-111">O seguinte exemplo usa os métodos de <xref:System.Linq.Queryable.OrderBy%2A> e de <xref:System.Linq.Queryable.ThenByDescending%2A> para o primeiro tipo pelo custo da tabela e em seguida, executar uma descida meio de nomes do produto.</span><span class="sxs-lookup"><span data-stu-id="80a16-111">The following example uses the <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenByDescending%2A> methods to first sort by list price, and then perform a descending sort of the product names.</span></span>  
+### <a name="example"></a><span data-ttu-id="c38fe-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c38fe-110">Example</span></span>  
+ <span data-ttu-id="c38fe-111">O seguinte exemplo usa os métodos de <xref:System.Linq.Queryable.OrderBy%2A> e de <xref:System.Linq.Queryable.ThenByDescending%2A> para o primeiro tipo pelo custo da tabela e em seguida, executar uma descida meio de nomes do produto.</span><span class="sxs-lookup"><span data-stu-id="c38fe-111">The following example uses the <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenByDescending%2A> methods to first sort by list price, and then perform a descending sort of the product names.</span></span>  
   
  [!code-csharp[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescending_mq)]
  [!code-vb[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescending_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="80a16-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="80a16-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c38fe-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c38fe-112">See also</span></span>
 
-- [<span data-ttu-id="80a16-113">Consultas no LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="80a16-113">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [<span data-ttu-id="c38fe-113">Consultas no LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="c38fe-113">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

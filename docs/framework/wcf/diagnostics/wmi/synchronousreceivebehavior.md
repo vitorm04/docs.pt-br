@@ -3,16 +3,16 @@ title: SynchronousReceiveBehavior
 ms.date: 03/30/2017
 ms.assetid: b31a26a9-ae96-4df0-8406-e07d6f59087c
 ms.openlocfilehash: 7ad7387789d1616802cfa8854f1e3454c771934b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116755"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979765"
 ---
-# <a name="synchronousreceivebehavior"></a><span data-ttu-id="e032d-102">SynchronousReceiveBehavior</span><span class="sxs-lookup"><span data-stu-id="e032d-102">SynchronousReceiveBehavior</span></span>
-<span data-ttu-id="e032d-103">SynchronousReceiveBehavior</span><span class="sxs-lookup"><span data-stu-id="e032d-103">SynchronousReceiveBehavior</span></span>  
+# <a name="synchronousreceivebehavior"></a><span data-ttu-id="9b130-102">SynchronousReceiveBehavior</span><span class="sxs-lookup"><span data-stu-id="9b130-102">SynchronousReceiveBehavior</span></span>
+<span data-ttu-id="9b130-103">SynchronousReceiveBehavior</span><span class="sxs-lookup"><span data-stu-id="9b130-103">SynchronousReceiveBehavior</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e032d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e032d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b130-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9b130-104">Syntax</span></span>  
   
 ```csharp
 class SynchronousReceiveBehavior : Behavior  
@@ -20,15 +20,15 @@ class SynchronousReceiveBehavior : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="e032d-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="e032d-105">Methods</span></span>  
- <span data-ttu-id="e032d-106">A classe SynchronousReceiveBehavior herda o comportamento, mas não define as propriedades ou métodos adicionais.</span><span class="sxs-lookup"><span data-stu-id="e032d-106">The SynchronousReceiveBehavior class inherits from Behavior but does not define additional methods or properties.</span></span>  
+## <a name="methods"></a><span data-ttu-id="9b130-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="9b130-105">Methods</span></span>  
+ <span data-ttu-id="9b130-106">A classe SynchronousReceiveBehavior herda o comportamento, mas não define as propriedades ou métodos adicionais.</span><span class="sxs-lookup"><span data-stu-id="9b130-106">The SynchronousReceiveBehavior class inherits from Behavior but does not define additional methods or properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e032d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e032d-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b130-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9b130-107">Requirements</span></span>  
   
-|<span data-ttu-id="e032d-108">MOF</span><span class="sxs-lookup"><span data-stu-id="e032d-108">MOF</span></span>|<span data-ttu-id="e032d-109">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="e032d-109">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="9b130-108">MOF</span><span class="sxs-lookup"><span data-stu-id="9b130-108">MOF</span></span>|<span data-ttu-id="9b130-109">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="9b130-109">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="e032d-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="e032d-110">Namespace</span></span>|<span data-ttu-id="e032d-111">Definido no root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e032d-111">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="9b130-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="9b130-110">Namespace</span></span>|<span data-ttu-id="9b130-111">Definido no root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9b130-111">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e032d-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e032d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b130-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9b130-112">See also</span></span>
 
 - <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
