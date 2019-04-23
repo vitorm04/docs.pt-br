@@ -12,10 +12,10 @@ ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127693"
 ---
 # <a name="msgbox-sample"></a>Exemplo de MsgBox
@@ -46,7 +46,7 @@ Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
+- [Marshaling em cadeias de caracteres](marshaling-strings.md)
 - [Marshaling padrão para cadeias de caracteres](default-marshaling-for-strings.md)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
 - [Especificando um conjunto de caracteres](specifying-a-character-set.md)

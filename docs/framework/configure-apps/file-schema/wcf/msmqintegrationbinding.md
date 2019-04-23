@@ -5,10 +5,10 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130033"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
@@ -86,7 +86,7 @@ msmqIntegrationBinding
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Define as configurações de segurança para a associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125925"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>Método ICorDebugCode3::GetReturnValueLiveOffset
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  A função retorna o `HRESULT` valores mostrados na tabela a seguir.  
   
-|`HRESULT` Valor |Descrição|  
+|Valor `HRESULT`|Descrição|  
 |---------------------|-----------------|  
 |`S_OK`|Êxito.|  
 |`CORDBG_E_INVALID_OPCODE`|O site de deslocamento IL determinado não é uma instrução de chamada ou a função retornará `void`.|  

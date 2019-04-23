@@ -5,12 +5,12 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126081"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testar a saída publicada com dotnet vstest
 
@@ -37,6 +37,7 @@ dotnet vstest out/MyProject.Tests.dll
 > Observação: Se o aplicativo for direcionado a uma estrutura diferente de `netcoreapp`, você ainda poderá executar o comando `dotnet vstest` passando a estrutura de destino com um sinalizador de estrutura. Por exemplo, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. No Visual Studio 2017 Atualização 5, a estrutura desejada é detectada automaticamente.
 
 ## <a name="see-also"></a>Consulte também
+
 - [Teste de unidade com dotnet test e xUnit](unit-testing-with-dotnet-test.md)
 - [Teste de unidade com dotnet test e NUnit](unit-testing-with-nunit.md)
 - [Teste de unidade com dotnet test e MSTest](unit-testing-with-mstest.md)

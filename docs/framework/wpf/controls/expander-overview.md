@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130397"
 ---
 # <a name="expander-overview"></a>Visão geral do expansor
@@ -28,7 +28,7 @@ Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de forne
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Definindo a direção da área de conteúdo de expansão  
- Você pode definir a área de conteúdo de um <xref:System.Windows.Controls.Expander> controle para expandir em uma das quatro direções (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, ou <xref:System.Windows.Controls.ExpandDirection.Right>) usando o <xref:System.Windows.Controls.ExpandDirection> propriedade. Quando a área de conteúdo estiver recolhida, apenas o <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e seu botão de alternância aparecem. Um <xref:System.Windows.Controls.Button> controle que exibe uma seta direcional é usado como um botão de alternância para expandir ou recolher a área de conteúdo. Quando expandido, o <xref:System.Windows.Controls.Expander> tenta exibir todo o seu conteúdo em uma área tipo janela.  
+ Você pode definir a área de conteúdo de um <xref:System.Windows.Controls.Expander> controle para expandir em uma das quatro direções (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, ou <xref:System.Windows.Controls.ExpandDirection.Right>) usando o <xref:System.Windows.Controls.ExpandDirection> propriedade. Quando a área de conteúdo estiver recolhida, apenas o <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e seu botão de alternância aparecem. Um <xref:System.Windows.Controls.Button> controle que exibe uma seta direcional é usado como um botão de alternância para expandir ou recolher a área de conteúdo. Quando expandido, o <xref:System.Windows.Controls.Expander> tenta exibir todo o seu conteúdo em uma área tipo janela.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Controlando o tamanho de um expansor em um painel  
@@ -62,4 +62,4 @@ Um <xref:System.Windows.Controls.Expander> controle fornece uma maneira de forne
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Tópicos explicativos ](expander-how-to-topics.md)
+- [Tópicos de instruções](expander-how-to-topics.md)

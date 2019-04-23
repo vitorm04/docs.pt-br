@@ -10,10 +10,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
 ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122779"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Ponteiros do mouse no Windows Forms
@@ -33,5 +33,5 @@ O *ponteiro* do mouse, que às vezes é conhecido como o cursor, é um bitmap qu
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Cursor>
-- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Funcionalidade de arrastar e soltar no Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Funcionalidade do tipo "arrastar e soltar" no Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

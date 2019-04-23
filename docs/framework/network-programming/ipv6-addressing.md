@@ -27,10 +27,10 @@ helpviewer_keywords:
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121947"
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
@@ -74,5 +74,5 @@ No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um mot
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Soquetes](../../../docs/framework/network-programming/sockets.md)

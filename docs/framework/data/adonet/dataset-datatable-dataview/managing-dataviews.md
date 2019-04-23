@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
 ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127706"
 ---
 # <a name="managing-dataviews"></a>Gerenciar DataViews
@@ -126,4 +126,4 @@ grid.SetDataBinding(viewManager, "Customers");
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

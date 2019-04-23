@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
 ms.openlocfilehash: 7e458d95f81893d61bcf19f7fe611e3424f27e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126731"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ComboBox
@@ -66,7 +66,7 @@ ms.locfileid: "59126731"
 ## <a name="required-events"></a>Eventos necessários  
  A seguinte tabela lista o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventos devem ser suportados por todos os controles de caixa de combinação. Para obter mais informações sobre eventos, consulte [visão geral de eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte|Observações|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Evento|Suporte|Observações|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessária|Nenhum|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de propriedade alterada.|Necessária|Nenhum|  
@@ -79,5 +79,5 @@ ms.locfileid: "59126731"
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Automation.ControlType.ComboBox>
-- [Visão Geral dos Tipos de Controle de Automação de Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Visão geral de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

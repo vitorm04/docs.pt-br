@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120718"
 ---
 # <a name="securing-services-and-clients"></a>Protegendo serviços e clientes
@@ -40,7 +40,7 @@ As informações nesta seção se concentra na programação de segurança no Wi
 ## <a name="related-sections"></a>Seções relacionadas  
  [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
- [Segurança estendida](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
   
  [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
   
@@ -48,11 +48,11 @@ As informações nesta seção se concentra na programação de segurança no Wi
   
  [Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
   
- [Segurança estendida](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
   
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação de WCF básica](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

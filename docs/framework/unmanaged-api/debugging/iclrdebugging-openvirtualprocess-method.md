@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122571"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Método ICLRDebugging::OpenVirtualProcess
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|E_POINTER|`pDataTarget` is `null`.|  
+|E_POINTER|`pDataTarget` é `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|O [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) retorno de chamada retornará um erro ou não fornecer um identificador válido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` não implementa as interfaces de destino de dados necessários para esta versão do tempo de execução.|  
 |CORDBG_E_NOT_CLR|O módulo indicado não é um módulo CLR. O HRESULT também é retornado quando um módulo CLR não pode ser detectado porque a memória foi corrompida, o módulo não está disponível ou a versão do CLR é posterior à versão de shim.|  

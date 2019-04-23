@@ -11,14 +11,14 @@ helpviewer_keywords:
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
 ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125015"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Como: criar um gradiente linear
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece gradientes lineares horizontais, verticais e diagonais. Por padrão, a cor em um gradiente linear muda uniformemente. No entanto, você pode personalizar um gradiente linear para que a cor mude de maneira não uniforme.  
+O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gradientes lineares horizontais, verticais e diagonais. Por padrão, a cor em um gradiente linear muda uniformemente. No entanto, você pode personalizar um gradiente linear para que a cor mude de maneira não uniforme.  
   
  O exemplo a seguir preenche uma linha, uma elipse e um retângulo com um pincel de gradiente linear horizontal.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59125015"
   
  No exemplo anterior, os componentes de cor mudam linearmente conforme você vai de uma coordenada horizontal de 0 para uma coordenada horizontal de 200. Por exemplo, um ponto cuja primeira coordenada esteja a meio caminho entre 0 e 200 terá um componente azul a meio caminho entre 0 e 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] permite que você ajustar a maneira como a cor varia de uma borda de um gradiente para outra. Suponha que você queira criar um pincel de gradiente que mude de preto para vermelho de acordo com a tabela a seguir.  
+ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] permite ajustar o modo como a cor varia de uma borda de um gradiente para outra. Suponha que você queira criar um pincel de gradiente que mude de preto para vermelho de acordo com a tabela a seguir.  
   
 |Coordenada horizontal|Componentes RGB|  
 |---------------------------|--------------------|  
@@ -79,5 +79,5 @@ ms.locfileid: "59125015"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando um pincel de gradiente para preencher formas](using-a-gradient-brush-to-fill-shapes.md)
-- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Usando um Pincel de Gradiente para Preencher Formas](using-a-gradient-brush-to-fill-shapes.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)

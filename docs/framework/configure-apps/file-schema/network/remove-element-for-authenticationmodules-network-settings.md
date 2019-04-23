@@ -1,5 +1,5 @@
 ---
-title: <remove> Elemento para authenticationModules (configurações de rede)
+title: Elemento <remove> para authenticationModules (Configurações de Rede)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125247"
 ---
 # <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Remover > elemento para authenticationModules (configurações de rede)
@@ -40,7 +40,7 @@ Remove um módulo de autenticação do aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|**tipo**|O nome do módulo de autenticação a ser removido.|  
+|**type**|O nome do módulo de autenticação a ser removido.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

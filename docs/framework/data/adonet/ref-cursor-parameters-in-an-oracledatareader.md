@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
 ms.openlocfilehash: 0c949f0d1ed43b66f72afc4059014c92293f3d75
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121843"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Parâmetros de REF CURSOR em um OracleDataReader
@@ -46,4 +46,4 @@ End Sub
 ## <a name="see-also"></a>Consulte também
 
 - [REF CURSORs do Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

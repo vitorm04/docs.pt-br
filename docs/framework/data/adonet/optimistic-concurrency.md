@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
 ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126211"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Atualizando fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
 - [Informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
 - [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

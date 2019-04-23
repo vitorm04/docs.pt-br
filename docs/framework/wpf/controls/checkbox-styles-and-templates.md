@@ -10,10 +10,10 @@ helpviewer_keywords:
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
 ms.openlocfilehash: b3f417a676b141a4a6dbccfe51bf5b7abe669198
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120049"
 ---
 # <a name="checkbox-styles-and-templates"></a>Estilos e modelos CheckBox
@@ -33,9 +33,9 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Disabled|CommonStates|O controle está desabilitado.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
-|Selecionado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `true`.|  
-|Não Selecionado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `false`.|  
-|Indeterminado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> está `true`, e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `null`.|  
+|Selecionado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `true`.|  
+|Não Selecionado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `false`.|  
+|Indeterminado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> é `true` e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `null`.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
 |InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
 |InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  

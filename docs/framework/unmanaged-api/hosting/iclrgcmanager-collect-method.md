@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1746527a2667676dfeab89e72874204460bcd33c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126666"
 ---
 # <a name="iclrgcmanagercollect-method"></a>Método ICLRGCManager::Collect
@@ -64,10 +64,10 @@ HRESULT Collect (
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciamento automático de memória](../../../../docs/standard/automatic-memory-management.md)
-- [Coleta de Lixo](../../../../docs/standard/garbage-collection/index.md)
+- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
+- [Coleta de lixo](../../../../docs/standard/garbage-collection/index.md)
 - [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interface ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [Interfaces de hospedagem CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
 ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123052"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>Como: Criar uma linha usando um LineGeometry
@@ -32,6 +32,6 @@ Uma LineGeometry desenhada de (10,20) para (100,130)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral da geometria](geometry-overview.md)
+- [Visão geral de geometria](geometry-overview.md)
 - [Criar uma forma composta](how-to-create-a-composite-shape.md)
 - [Criar uma forma usando um PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

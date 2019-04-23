@@ -9,10 +9,10 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125140"
 ---
 # <a name="staticresource-markup-extension"></a>Extensão de marcação StaticResource
@@ -55,7 +55,7 @@ Fornece um valor para qualquer atributo de propriedade [!INCLUDE[TLA2#tla_xaml](
   
  `StaticResource` pode ser usado na sintaxe de elemento de objeto. Nesse caso, especificando o valor da <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propriedade é necessária.  
   
- `StaticResource` também pode ser usado em um uso de atributo detalhado que especifica o <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propriedade como uma propriedade = par de valor:  
+ `StaticResource` também pode ser usado em um atributo detalhado que especifica a propriedade <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> como sendo o par propriedade=valor:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
@@ -65,12 +65,12 @@ Fornece um valor para qualquer atributo de propriedade [!INCLUDE[TLA2#tla_xaml](
   
  No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementação do processador, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.StaticResourceExtension> classe.  
   
- `StaticResource` é uma extensão de marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usam os caracteres { e } na sintaxe de atributo, que é a convenção pela qual um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconhece que uma extensão de marcação deve processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
+ `StaticResource` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usam os caracteres { e } na sintaxe de atributo, que é a convenção pela qual um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconhece que uma extensão de marcação deve processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Estilo e modelagem](../controls/styling-and-templating.md)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Extensões de marcação e XAML WPF](markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)
 - [Recursos XAML](xaml-resources.md)
 - [Recursos e código](resources-and-code.md)

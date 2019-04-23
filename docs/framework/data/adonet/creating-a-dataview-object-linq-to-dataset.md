@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121648"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Criando um objeto de DataView (LINQ to DataSet)
@@ -17,7 +17,7 @@ Há duas maneiras de criar <xref:System.Data.DataView> no contexto de [!INCLUDE[
   
  Após <xref:System.Data.DataView> foi criado, você pode associá-lo a um controle de interface do usuário em um aplicativo de formulários do Windows ou um aplicativo ASP.NET, ou alterar as configurações de filtro e classificação.  
   
- <xref:System.Data.DataView> constrói um índice, o que aumenta significativamente o desempenho de operações que podem usar o índice, como filtragem e classificação. O índice de um <xref:System.Data.DataView> é compilado quando <xref:System.Data.DataView> é criado e quando qualquer informação de classificação ou de filtragem é modificada. Criar <xref:System.Data.DataView> e então defina a classificação ou informações de filtragem causam posteriormente o índice a ser compilado pelo menos duas vezes: uma vez que quando <xref:System.Data.DataView> é criado, e novamente quando algumas de tipo ou propriedades de filtragem são alteradas.  
+ <xref:System.Data.DataView> constrói um índice, que aumenta significativamente o desempenho das operações que podem usar o índice, como filtragem e classificação. O índice de um <xref:System.Data.DataView> é compilado quando <xref:System.Data.DataView> é criado e quando qualquer informação de classificação ou de filtragem é modificada. Criar <xref:System.Data.DataView> e então defina a classificação ou informações de filtragem causam posteriormente o índice a ser compilado pelo menos duas vezes: uma vez que quando <xref:System.Data.DataView> é criado, e novamente quando algumas de tipo ou propriedades de filtragem são alteradas.  
   
  Para obter mais informações sobre filtragem e classificação com <xref:System.Data.DataView>, consulte [filtrando com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) e [classificando com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
@@ -72,6 +72,6 @@ Há duas maneiras de criar <xref:System.Data.DataView> no contexto de [!INCLUDE[
   
 ## <a name="see-also"></a>Consulte também
 
-- [Associação e LINQ to DataSet de dados](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtrar com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Classificar com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Associação de dados e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Filtrando com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Classificando com DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

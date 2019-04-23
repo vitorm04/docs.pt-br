@@ -9,10 +9,10 @@ helpviewer_keywords:
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
 ms.openlocfilehash: 2e3390c3e387e75168958f946472a5a24a4bd440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129266"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interoperação do WPF e dos Windows Forms
@@ -48,7 +48,7 @@ ms.locfileid: "59129266"
   
 -   Em alguns casos, os controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não podem ser redimensionados ou podem ser dimensionados somente para dimensões específicas. Por exemplo, uma [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> controle dá suporte a apenas uma única altura, que é definida pelo tamanho da fonte do controle. Em um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout dinâmico, que assume que elementos podem alongar verticalmente, hospedado <xref:System.Windows.Forms.ComboBox> controle não será alongado conforme o esperado.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles não podem ser girados ou inclinados. Por exemplo, quando você rotaciona sua interface do usuário em 90 graus, os controles hospedados [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] manterão sua posição vertical.  
+-   Os controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não podem ser girados ou inclinados. Por exemplo, quando você rotaciona sua interface do usuário em 90 graus, os controles hospedados [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] manterão sua posição vertical.  
   
 -   Na maioria dos casos, os controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não dão suporte ao dimensionamento proporcional. Embora as dimensões gerais do controle sejam dimensionadas, os controles filho e os elementos de componentes do controle podem não ser redimensionados conforme o esperado. Essa limitação depende de quanto cada controle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dá suporte ao dimensionamento.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "59129266"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Passo a passo: hospedar um controle do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Passo a passo: hospedar um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: hospedar um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Passo a passo: Hospedando um controle de formulários do Windows no WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Passo a passo: Hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Passo a passo: Hospedando um controle composto do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Windows Forms e mapeamento de propriedade do WPF](windows-forms-and-wpf-property-mapping.md)

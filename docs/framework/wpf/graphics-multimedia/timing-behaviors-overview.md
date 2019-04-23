@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129581"
 ---
 # <a name="timing-behaviors-overview"></a>Visão geral dos comportamentos de tempo
@@ -126,6 +126,6 @@ Este tópico descreve os comportamentos de temporização de animações e outro
 
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)
-- [Visão geral dos eventos de tempo](timing-events-overview.md)
-- [Tópicos explicativos ](animation-and-timing-how-to-topics.md)
-- [Exemplo de comportamento de tempo de animação](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Visão geral de eventos de tempo](timing-events-overview.md)
+- [Tópicos de instruções](animation-and-timing-how-to-topics.md)
+- [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129799"
 ---
 # <a name="iapartmentcallback-interface"></a>Interface IApartmentCallback
@@ -43,4 +43,4 @@ Fornece métodos para fazer retornos de chamada dentro de um apartamento. Uma *a
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

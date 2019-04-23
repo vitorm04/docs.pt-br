@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
 ms.openlocfilehash: b7a2588b9e5082915dff4d371adff2ad3d232d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122753"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Localizar o valor máximo em uma sequência numérica
@@ -73,5 +73,5 @@ Use o operador de <xref:System.Linq.Enumerable.Max%2A> para localizar o valor ma
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultas de agregação](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

@@ -3,10 +3,10 @@ title: Aplicativos cliente seguros
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119607"
 ---
 # <a name="secure-client-applications"></a>Aplicativos cliente seguros
@@ -24,7 +24,7 @@ Aplicativos geralmente consistem em várias partes que precisam ser protegidos c
  [Validação de entrada do usuário em páginas da Web do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Visão geral da validação de entrada do usuário usando controles de validação ASP.NET.  
   
- [Entrada do usuário no Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Entrada do usuário nos Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Fornece links e informações de validação de mouse e teclado de entrada em um aplicativo Windows Forms.  
   
  [Expressões regulares do .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
@@ -36,10 +36,10 @@ Aplicativos geralmente consistem em várias partes que precisam ser protegidos c
  [Segurança do Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Discute como proteger aplicativos de formulários do Windows e fornece links para tópicos relacionados.  
   
- [Windows Forms e aplicativos não gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Descreve como interagir com aplicativos não gerenciados em um aplicativo Windows Forms.  
   
- [Implantação do ClickOnce para o Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
+ [Implantação do ClickOnce para Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Descreve como usar `ClickOnce` implantação em um aplicativo Windows Forms e discute as implicações de segurança.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET e XML Web Services  
@@ -63,12 +63,12 @@ Aplicativos geralmente consistem em várias partes que precisam ser protegidos c
 |--------------|-----------------|  
 |[Configuração de aplicativos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Discute como configurar aplicativos de comunicação remota para evitar problemas comuns.|  
 |[Segurança na comunicação remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Descreve a autenticação e criptografia, bem como tópicos de segurança adicionais relevantes para a comunicação remota.|  
-|[Considerações sobre segurança e comunicação remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Descreve problemas de segurança com objetos protegidos e o cruzamento de domínio de aplicativo.|  
+|[Segurança e considerações de comunicação remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Descreve problemas de segurança com objetos protegidos e o cruzamento de domínio de aplicativo.|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protegendo aplicativos](/visualstudio/ide/securing-applications)
 - [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

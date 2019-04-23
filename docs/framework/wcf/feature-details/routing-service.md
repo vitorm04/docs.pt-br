@@ -3,10 +3,10 @@ title: Serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129435"
 ---
 # <a name="routing-service"></a>Serviço de roteamento
@@ -108,5 +108,5 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
 ## <a name="see-also"></a>Consulte também
 
 - [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
-- [Contratos de roteamento](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [Roteando contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
 - [Filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md)

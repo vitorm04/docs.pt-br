@@ -9,10 +9,10 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125287"
 ---
 # <a name="tilebrush-overview"></a>Visão geral de TileBrush
@@ -127,7 +127,7 @@ Componentes de um TileBrush com um TileMode de bloco
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
 - [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)
-- [Tópicos explicativos ](brushes-how-to-topics.md)
+- [Tópicos de instruções](brushes-how-to-topics.md)
 - [Visão geral de objetos congeláveis](../advanced/freezable-objects-overview.md)
 - [Exemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Exemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

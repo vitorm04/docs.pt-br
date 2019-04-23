@@ -1,5 +1,5 @@
 ---
-title: <runtime> Elemento
+title: Elemento <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 ms.openlocfilehash: 3ac5fdeaebfd67d6ad4f68166fda588b9e58ca98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119509"
 ---
 # <a name="runtime-element"></a>\<tempo de execução > elemento
@@ -76,7 +76,7 @@ Fornece informações usadas pelo common language runtime para configurar os apl
 |[<TimeSpan_LegacyFormatMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element.md)|Especifica se o tempo de execução usa uma formatação herdada para valores de <xref:System.TimeSpan>.|  
 |[\<useLegacyJit>](../../../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)|Determina se o Common Language Runtime usa o compilador JIT de 64 bits herdado para uma compilação just-in-time.|  
 |[\<UseRandomizedStringHashAlgorithm>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Especifica se o tempo de execução calcula códigos hash para sequências com base no domínio do aplicativo.|  
-|[\<UseSmallInternalThreadStacks >](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|As solicitações que o tempo de execução usa para explicitar os tamanhos das pilhas ao criar certos threads usados internamente, em vez do tamanho de pilha padrão.|  
+|[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|As solicitações que o tempo de execução usa para explicitar os tamanhos das pilhas ao criar certos threads usados internamente, em vez do tamanho de pilha padrão.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

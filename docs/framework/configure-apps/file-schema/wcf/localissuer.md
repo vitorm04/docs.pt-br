@@ -3,10 +3,10 @@ title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
 ms.openlocfilehash: 9a51387cd75d57a6828ecde1dcd788b056f7e27a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122870"
 ---
 # <a name="localissuer"></a>\<localIssuer>
@@ -83,11 +83,11 @@ seção endpointBehaviors
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
 - [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Como: configurar um emissor local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Identidade e autenticação de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Como: Configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Como: criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: Criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

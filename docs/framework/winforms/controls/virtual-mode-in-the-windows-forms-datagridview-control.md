@@ -5,10 +5,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
 ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124716"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtual no controle DataGridView dos Windows Forms
@@ -66,7 +66,7 @@ Com o modo virtual, você pode gerenciar a interação entre o <xref:System.Wind
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Ajuste de desempenho no controle DataGridView dos Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Passo a passo: Implementando o modo virtual no controle DataGridView do Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Ajuste de desempenho no controle DataGridView do Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Passo a passo: Implementando o modo Virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
 - [Implementando o modo virtual com carregamento de dados Just-In-Time no controle DataGridView dos Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

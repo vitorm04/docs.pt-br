@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124144"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Entrada do usuário em um aplicativo do Windows Forms
@@ -32,6 +32,6 @@ No Windows Forms, a entrada do usuário é enviada para aplicativos na forma de 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Entrada do usuário no Windows Forms](user-input-in-windows-forms.md)
-- [Entrada do teclado em um aplicativo do Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Entrada do mouse em um aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entrada do usuário nos Windows Forms](user-input-in-windows-forms.md)
+- [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

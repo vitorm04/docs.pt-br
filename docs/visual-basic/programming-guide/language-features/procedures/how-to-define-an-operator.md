@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126107"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Como: Definir um operador (Visual Basic)
@@ -38,11 +38,11 @@ Se você tiver definido uma classe ou estrutura, você pode definir o comportame
 
 ## <a name="see-also"></a>Consulte também
 
-- [Procedimentos do operador](./operator-procedures.md)
-- [Como: definir um operador de conversão](./how-to-define-a-conversion-operator.md)
-- [Como: chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
-- [Como: usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Como: Definir um operador de conversão](./how-to-define-a-conversion-operator.md)
+- [Como: Chamar um procedimento de operador](./how-to-call-an-operator-procedure.md)
+- [Como: Usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md)
 - [Instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Como: Declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Operador Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)

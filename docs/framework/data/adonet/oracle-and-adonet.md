@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
 ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120660"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
@@ -37,13 +37,13 @@ csc /r:System.Data.OracleClient.dll
 ```  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Requisitos de sistema](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
+ [Requisitos do sistema](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Descreve requisitos de uso do Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle, além de uma série de questões a serem consideradas ao usá-lo.  
   
  [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Descreve a classe <xref:System.Data.OracleClient.OracleBFile>, que é usada no trabalho com o tipo de dados Oracle BFILE.  
   
- [Oracle LOBs](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [LOBs do Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Descreve a classe <xref:System.Data.OracleClient.OracleLob>, que é usada para no trabalho com tipos de dados Oracle LOB.  
   
  [REF CURSORs do Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
@@ -62,16 +62,16 @@ csc /r:System.Data.OracleClient.dll
  Descreve como o objeto <xref:System.Data.OracleClient.OracleConnection> automaticamente se inscreve em uma transação distribuída existente caso determine que uma transação está ativa.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Protegendo aplicativos ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
  Descreve práticas seguras de codificação ao usar o [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
  Descreve como criar e usar `DataSets`, `DataSets` tipados, `DataTables` e `DataViews`.  
   
- [Recuperando e modificando dados no ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  Descreve como trabalhar com dados no ADO.NET.  
   
- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
+ [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
  Descreve como trabalhar com recursos e funcionalidades que são específicos ao SQL Server.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
@@ -80,4 +80,4 @@ csc /r:System.Data.OracleClient.dll
 ## <a name="see-also"></a>Consulte também
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -1,12 +1,12 @@
 ---
-title: <security> De <msmqIntegrationBinding>
+title: <security> de <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 ms.openlocfilehash: 8d79523db2a1567283b934abbd3de1adbbe6b0b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125782"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<segurança > de \<msmqIntegrationBinding >
@@ -49,7 +49,7 @@ msmqIntegrationBinding
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Define as configurações de segurança para o transporte de integração de enfileiramento de mensagens. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Define as configurações de segurança para o transporte de integração de enfileiramento de mensagens. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

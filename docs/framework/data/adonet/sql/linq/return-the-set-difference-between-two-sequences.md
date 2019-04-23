@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
 ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124274"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>Retornar a diferença entre duas sequências ajustada
@@ -26,4 +26,4 @@ Use o operador de <xref:System.Linq.Queryable.Except%2A> para retornar a diferen
 ## <a name="see-also"></a>Consulte também
 
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Conversão padrão de operador de consulta](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Conversão de operador de consulta padrão](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

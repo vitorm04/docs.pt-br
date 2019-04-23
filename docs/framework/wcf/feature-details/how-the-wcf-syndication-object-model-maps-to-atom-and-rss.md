@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127381"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Como o modelo de objeto de sindicalização do WCF mapeia para Atom e RSS
@@ -401,6 +401,6 @@ Ao desenvolver um serviço de distribuição do Windows Communication Foundation
 
 - [Visão geral de sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Arquitetura de sindicalização](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [Como: criar um RSS Feed básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
-- [Como: criar um feed Atom básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [Como: expor um feed como Atom e RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [Como: Criar um RSS Feed básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [Como: Criar um Feed Atom básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [Como: Expor um Feed como Atom e RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

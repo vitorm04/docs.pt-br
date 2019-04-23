@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129110"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Visão geral do controle RadioButton (Windows Forms)
@@ -27,10 +27,10 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> controles apresentam um co
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RadioButton>
-- [Visão geral do controle de painel](panel-control-overview-windows-forms.md)
+- [Visão geral do controle Panel](panel-control-overview-windows-forms.md)
 - [Visão geral do controle GroupBox](groupbox-control-overview-windows-forms.md)
 - [Visão geral do controle CheckBox](checkbox-control-overview-windows-forms.md)
-- [Como: Criar chaves de acesso para controles do Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Como: Definir o texto exibido por um controle do Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Como: Agrupar controles RadioButton do Windows Forms para funcionarem como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Como: Criar chaves de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Como: Definir o texto exibido pelo controle de um Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Como: Controles de botão de opção do grupo Windows Forms para funcionarem como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [Controle RadioButton](radiobutton-control-windows-forms.md)

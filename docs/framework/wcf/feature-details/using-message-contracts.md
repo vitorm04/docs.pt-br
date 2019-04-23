@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121973"
 ---
 # <a name="using-message-contracts"></a>Utilizando contratos de mensagem
@@ -450,4 +450,4 @@ public class OperationDetails
 ## <a name="see-also"></a>Consulte também
 
 - [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serviços de implantação e projeção](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)

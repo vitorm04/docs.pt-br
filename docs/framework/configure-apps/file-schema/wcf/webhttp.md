@@ -3,10 +3,10 @@ title: <webHttp>
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
 ms.openlocfilehash: 795e61b9054d2ea9276970988018c50099bcbe17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129643"
 ---
 # <a name="webhttp"></a>\<webHttp>
@@ -50,5 +50,5 @@ Esse elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior
 
 - <xref:System.ServiceModel.Configuration.WebHttpElement>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [Integração de AJAX e suporte para JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [Integração AJAX e suporte para JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
 - [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)

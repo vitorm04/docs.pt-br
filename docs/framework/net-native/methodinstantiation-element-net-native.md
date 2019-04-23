@@ -1,14 +1,14 @@
 ---
-title: <MethodInstantiation> (.NET nativo)
+title: <MethodInstantiation> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121687"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > (.NET nativo)
@@ -68,7 +68,7 @@ Aplica a política de reflexão de tempo de execução a um método genérico co
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -76,7 +76,7 @@ Aplica a política de reflexão de tempo de execução a um método genérico co
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<Método > elemento](../../../docs/framework/net-native/method-element-net-native.md)
+- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)

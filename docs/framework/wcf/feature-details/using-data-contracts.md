@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129929"
 ---
 # <a name="using-data-contracts"></a>Usando contratos de dados
@@ -74,10 +74,10 @@ Um *contrato de dados* é um contrato formal entre um serviço e um cliente que 
 - [Nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
 - [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Tipos de contratos de dados conhecidos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Contratos de dados compatíveis com encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Retornos de chamada de serialização tolerantes à versão](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Valores padrões de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
-- [Tipos com suporte fornecido pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [Como: criar um contrato de dados básicos para uma classe ou estrutura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Valores de padrão de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
+- [Tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Como: Criar um contrato de dados básicos para uma classe ou estrutura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
