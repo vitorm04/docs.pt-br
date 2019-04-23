@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178029"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Exemplos de sintaxe de expressão de consulta: Projeção
-Os exemplos neste tópico demonstram como usar o `Select` método e o `From … From …` palavras-chave para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de expressão de consulta. `From … From …` é a consulta com base equivalente a `SelectMany` método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
+Os exemplos neste tópico demonstram como usar o `Select` método e o `From … From …` palavras-chave para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de expressão de consulta. `From … From …` é o equivalente baseado em consulta do método `SelectMany`. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
   

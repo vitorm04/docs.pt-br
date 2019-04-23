@@ -3,10 +3,10 @@ title: Armazenamento em cache do plano de consulta (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178172"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Armazenamento em cache do plano de consulta (Entity SQL)
@@ -36,7 +36,7 @@ Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consul
   
 -   O texto da consulta deve ser um padrão constante, de preferência um cadeia de caracteres constante ou um recurso.  
   
--   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> devem ser usadas sempre que um valor fornecido pelo usuário deve ser passado.  
+-   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> devem ser usados em qualquer lugar que um valor de fornecido deve ser passado.  
   
  Você deve evitar os seguintes padrões de consulta, que consomem desnecessariamente slots no cache do plano de consulta:  
   
@@ -50,4 +50,4 @@ Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consul
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral da Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
