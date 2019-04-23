@@ -7,24 +7,24 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169241"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="7237d-102">Fontes (WPF)</span><span class="sxs-lookup"><span data-stu-id="7237d-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="7237d-103">inclui suporte para apresentação de texto usando rica [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes.</span><span class="sxs-lookup"><span data-stu-id="7237d-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="7237d-104">Um pacote de exemplo do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes está incluído com o [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7237d-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="be542-102">Fontes (WPF)</span><span class="sxs-lookup"><span data-stu-id="be542-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="be542-103">inclui suporte para apresentação de texto usando rica [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes.</span><span class="sxs-lookup"><span data-stu-id="be542-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="be542-104">Um pacote de exemplo do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes está incluído com o [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="be542-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7237d-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7237d-105">In This Section</span></span>  
- [<span data-ttu-id="7237d-106">Recursos de fonte OpenType</span><span class="sxs-lookup"><span data-stu-id="7237d-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="7237d-107">Empacotando fontes com aplicativos</span><span class="sxs-lookup"><span data-stu-id="7237d-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="7237d-108">Pacote de fontes OpenType de amostra</span><span class="sxs-lookup"><span data-stu-id="7237d-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="7237d-109">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="7237d-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="be542-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="be542-105">In This Section</span></span>  
+ [<span data-ttu-id="be542-106">Recursos de fonte OpenType</span><span class="sxs-lookup"><span data-stu-id="be542-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="be542-107">Empacotando fontes com aplicativos</span><span class="sxs-lookup"><span data-stu-id="be542-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="be542-108">Pacote de fontes OpenType de amostra</span><span class="sxs-lookup"><span data-stu-id="be542-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="be542-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="be542-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7237d-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7237d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be542-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="be542-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="7237d-111">Documentos no WPF</span><span class="sxs-lookup"><span data-stu-id="7237d-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="7237d-112">Tipografia no WPF</span><span class="sxs-lookup"><span data-stu-id="7237d-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="be542-111">Documentos no WPF</span><span class="sxs-lookup"><span data-stu-id="be542-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="be542-112">Tipografia no WPF</span><span class="sxs-lookup"><span data-stu-id="be542-112">Typography in WPF</span></span>](typography-in-wpf.md)

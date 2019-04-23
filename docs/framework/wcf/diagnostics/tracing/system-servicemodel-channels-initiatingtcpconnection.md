@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.InitiatingTcpConnection
 ms.date: 03/30/2017
 ms.assetid: d0a2749d-3f97-41b8-ac08-37b5069fe41e
 ms.openlocfilehash: b9316f677b68ee1e7c8c166a87eb849a1b28e48b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166615"
 ---
-# <a name="systemservicemodelchannelsinitiatingtcpconnection"></a><span data-ttu-id="c9896-102">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="c9896-102">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>
-<span data-ttu-id="c9896-103">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="c9896-103">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>  
+# <a name="systemservicemodelchannelsinitiatingtcpconnection"></a><span data-ttu-id="b3915-102">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="b3915-102">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>
+<span data-ttu-id="b3915-103">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="b3915-103">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c9896-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="c9896-104">Description</span></span>  
- <span data-ttu-id="c9896-105">Iniciando uma conexão TCP.</span><span class="sxs-lookup"><span data-stu-id="c9896-105">Initiating a TCP connection.</span></span>  
+## <a name="description"></a><span data-ttu-id="b3915-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="b3915-104">Description</span></span>  
+ <span data-ttu-id="b3915-105">Iniciando uma conexão TCP.</span><span class="sxs-lookup"><span data-stu-id="b3915-105">Initiating a TCP connection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9896-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9896-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3915-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b3915-106">See also</span></span>
 
-- [<span data-ttu-id="c9896-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="c9896-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="c9896-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="c9896-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="c9896-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="c9896-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="b3915-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="b3915-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="b3915-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="b3915-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="b3915-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="b3915-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
