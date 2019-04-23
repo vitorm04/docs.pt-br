@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
 ms.openlocfilehash: 7a870eb0c85fa6ed208341a3ac10dce8bb0724bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164418"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Provedores de serviços de dados (WCF Data Services)
@@ -21,7 +21,7 @@ ms.locfileid: "59164418"
 |--------------|-----------------|  
 |Provedor de Entity Framework|Este provedor usa o ADO.NET Entity Framework para permitir que você use dados relacionais com um serviço de dados definindo um modelo de dados que é mapeado para dados relacionais. Sua fonte de dados pode ser o SQL Server ou qualquer outra fonte de dados com suporte a provedores de terceiros para o Entity Framework. Você deverá usar o provedor de Entity Framework quando tiver uma fonte de dados relacional, como um banco de dados do SQL Server. Para obter mais informações, consulte [provedor do Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).|  
 |Provedor de reflexão|Este provedor usa a reflexão para permitir que você defina um modelo de dados com base em classes de dados existentes que podem ser expostas como instâncias da interface <xref:System.Linq.IQueryable%601>. As atualizações são habilitadas com a implementação da interface <xref:System.Data.Services.IUpdatable>. Você deve usar esse provedor quando tem classes de dados estáticas que são definidas em tempo de execução, como aquelas geradas pelo LINQ to SQL ou definidas por um DataSet tipado. Para obter mais informações, consulte [provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).|  
-|Provedores de serviços de dados personalizados|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui um conjunto de provedores que permitem que você defina dinamicamente um modelo de dados com base nos tipos de dados de associação tardia. Você deve implementar essas interfaces quando os dados que estão sendo expostos não são conhecidos quando o aplicativo é criado ou quando os provedores de Entity Framework ou reflexão não são suficientes. Para obter mais informações, consulte [provedores de serviço de dados personalizado](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
+|Provedores de serviços de dados personalizados|O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui um conjunto de provedores que permitem que você defina dinamicamente um modelo de dados baseado em tipos de dados de associação tardia. Você deve implementar essas interfaces quando os dados que estão sendo expostos não são conhecidos quando o aplicativo é criado ou quando os provedores de Entity Framework ou reflexão não são suficientes. Para obter mais informações, consulte [provedores de serviço de dados personalizado](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Outros provedores de serviços de dados  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tem o seguinte provedor de serviços de dados adicionais que aprimora o desempenho de uma fonte de dados definido usando um dos outros provedores.  
@@ -32,6 +32,6 @@ ms.locfileid: "59164418"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Configurar o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
-- [Hospedar o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+- [Hospedagem o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

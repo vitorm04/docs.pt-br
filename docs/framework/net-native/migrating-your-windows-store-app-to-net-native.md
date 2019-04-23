@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163131"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
@@ -153,7 +153,7 @@ ms.locfileid: "59163131"
   
 -   O <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> método analisa corretamente as cadeias de caracteres que contêm datas curtas em .NET Native. Contudo, ele não mantém a compatibilidade com as alterações na análise de data e hora descritas no artigos da Base de Dados de Conhecimento Microsoft [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correé arredondado corretamente em .NET Native. Em algumas versões do CLR, a cadeia de caracteres de resultado é truncada em vez de arredondada.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` é arredondado corretamente em .NET Native. Em algumas versões do CLR, a cadeia de caracteres de resultado é truncada em vez de arredondada.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Diferenças do HttpClient  
@@ -199,7 +199,7 @@ ms.locfileid: "59163131"
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>Diferenças de interoperabilidade  
- **APIs obsoletas**  
+ **APIs preteridas**  
   
  Várias APIs pouco usadas para a interoperabilidade com código gerenciado foram preteridas. Quando usado com o .NET Native, essas APIs pode gerar uma <xref:System.NotImplementedException> ou <xref:System.PlatformNotSupportedException> exceção, ou resultar em um erro do compilador. Em aplicativos .NET para Windows Store, essas APIs são marcadas como obsoletas, embora chamá-las gere um aviso do compilador em vez de um erro do compilador.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "59163131"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> é suportado, mas ele gerará uma exceção em alguns cenários, como quando ele é usado com [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) ou variantes byref.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> tem suporte, porém gera uma exceção em alguns cenários, por exemplo, quando usado com [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) ou variantes byref.  
   
  APIs preteridas para [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) suporte incluem:  
   
@@ -574,11 +574,11 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
      O tipo `InnerType` não é conhecido pelo serializador, pois os membros da classe base não são percorridos durante a serialização.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> não conseguem serializar uma classe ou estrutura que implementa o <xref:System.Collections.Generic.IEnumerable%601> interface. Por exemplo, os seguintes tipos falham ao serializar ou desserializar:  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> não conseguem serializar uma classe ou estrutura que implementa a interface <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, os seguintes tipos falham ao serializar ou desserializar:  
 
--   <xref:System.Xml.Serialization.XmlSerializer> Falha ao serializar o seguinte valor de objeto, porque não sabe o tipo exato de objeto a ser serializado:  
+-   <xref:System.Xml.Serialization.XmlSerializer> falha ao serializar o valor de objeto a seguir, porque não sabe o tipo exato de objeto a ser serializado:  
 
--   <xref:System.Xml.Serialization.XmlSerializer> Falha ao serializar ou desserializar se o tipo do objeto serializado for <xref:System.Xml.XmlQualifiedName>.  
+-   <xref:System.Xml.Serialization.XmlSerializer> falha ao serializar ou desserializar se o tipo do objeto serializado é <xref:System.Xml.XmlQualifiedName>.  
   
 -   Todos os serializadores (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>) falham ao gerar o código de serialização para tipo <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> ou para um tipo que contém <xref:System.Xml.Linq.XElement>. Eles exibem erros de tempo de compilação em vez disso.  
   
@@ -606,7 +606,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> Falha ao gerar o código para um tipo que tem métodos atribuídos com qualquer um dos seguintes atributos:  
+-   O <xref:System.Xml.Serialization.XmlSerializer> falha ao gerar o código para um tipo que tem métodos atribuídos com qualquer um dos seguintes atributos:  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -616,7 +616,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> não aceita o <xref:System.Xml.Serialization.IXmlSerializable> interface de serialização personalizada. Se você tiver uma classe que implementa essa interface, <xref:System.Xml.Serialization.XmlSerializer> considera o tipo como um objeto CLR (POCO) antigo simples, serializando apenas suas propriedades públicas.  
+-   O <xref:System.Xml.Serialization.XmlSerializer> não aceita a interface de serialização personalizada <xref:System.Xml.Serialization.IXmlSerializable>. Se você tiver uma classe que implementa essa interface, <xref:System.Xml.Serialization.XmlSerializer> considera o tipo como um objeto CLR (POCO) antigo simples, serializando apenas suas propriedades públicas.  
   
 -   Serializando uma sem formatação <xref:System.Exception> objeto não funciona bem com <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
@@ -634,7 +634,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
  Use as ferramentas de criação x86 usadas por padrão pelo Visual Studio. Não recomendamos usar as ferramentas AMD64 MSBuild, que se encontram em C:\Program Files (x86)\MSBuild\12.0\bin\amd64, pois podem criar problemas de compilação.  
   
- **Criadores de perfis**  
+ **Criadores de perfil**  
   
 -   O criador de perfil de CPU do Visual Studio e o criador de perfil de memória XAML não exibem o Just-My-Code corretamente.  
   
@@ -648,7 +648,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Visão geral de aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime ](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

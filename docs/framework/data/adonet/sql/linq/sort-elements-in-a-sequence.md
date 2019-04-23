@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
 ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169007"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Elementos de tipo em uma sequência
@@ -91,4 +91,4 @@ Use o operador de <xref:System.Linq.Enumerable.OrderBy%2A> para classificar uma 
 ## <a name="see-also"></a>Consulte também
 
 - [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Baixar bancos de dados de amostra](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

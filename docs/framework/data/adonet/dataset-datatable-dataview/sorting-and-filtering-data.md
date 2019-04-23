@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166238"
 ---
 # <a name="sorting-and-filtering-data"></a>Classificando e filtrando dados
@@ -30,13 +30,13 @@ O <xref:System.Data.DataView> fornece várias maneiras de classificar e filtrar 
     |Opções de DataViewRowState|Descrição|  
     |------------------------------|-----------------|  
     |**CurrentRows**|O **atual** versão de linha de todas as **inalterado**, **adicionado**, e **modificado** linhas. Esse é o padrão.|  
-    |**Added**|O **atual** versão de linha de todas as **adicionado** linhas.|  
-    |**Deleted**|O **Original** versão de linha de todas as **Deleted** linhas.|  
+    |**Adicionado**|O **atual** versão de linha de todas as **adicionado** linhas.|  
+    |**Excluído**|O **Original** versão de linha de todas as **Deleted** linhas.|  
     |**ModifiedCurrent**|O **atual** versão de linha de todas as **modificado** linhas.|  
     |**ModifiedOriginal**|O **Original** versão de linha de todas as **modificado** linhas.|  
     |**Nenhum**|Nenhuma linha.|  
     |**OriginalRows**|O **Original** versão de linha de todas as **inalterado**, **modificado**, e **Deleted** linhas.|  
-    |**Unchanged**|O **atual** versão de linha de todas as **inalterado** linhas.|  
+    |**inalterado**|O **atual** versão de linha de todas as **inalterado** linhas.|  
   
  Para obter mais informações sobre estados de linha e versões de linha, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
@@ -63,4 +63,4 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

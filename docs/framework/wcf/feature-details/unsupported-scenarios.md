@@ -3,10 +3,10 @@ title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178770"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
@@ -115,4 +115,4 @@ Por vários motivos, o Windows Communication Foundation (WCF) não oferece supor
 - [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Ataques por repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

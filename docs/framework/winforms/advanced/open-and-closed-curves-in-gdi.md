@@ -11,10 +11,10 @@ helpviewer_keywords:
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
 ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165107"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Curvas abertas e fechadas no GDI+
@@ -53,6 +53,6 @@ A ilustração a seguir mostra duas curvas: uma aberta e outra fechada.
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
-- [Linhas, curvas e formas](lines-curves-and-shapes.md)
-- [Como: criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
+- [Linhas, Curvas e Formas](lines-curves-and-shapes.md)
+- [Como: Criar objetos gráficos para desenho](how-to-create-graphics-objects-for-drawing.md)
 - [Construindo e desenhando demarcadores](constructing-and-drawing-paths.md)

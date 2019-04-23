@@ -10,26 +10,26 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162497"
 ---
 # <a name="integrating-with-com-applications"></a>Integração com COM+ Aplicativos
 Windows Communication Foundation (WCF) fornece um ambiente avançado para criar aplicativos distribuídos. Se você tiver um investimento substancial em lógica de aplicativo baseado em componente hospedada em COM+, você pode usar o WCF para estender sua lógica existente em vez de precisar reescrevê-la. Os tópicos nesta seção descrevem como usar COM+ com o WCF.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Integração com visão geral de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [Visão geral da integração de aplicativos COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  Fornece uma visão geral de quando e como integrar os componentes COM+.  
   
- [Como: usar a ferramenta de configuração do modelo de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ [Como: Use a ferramenta de configuração de modelo de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
  Explica como usar a ferramenta de linha de comando de configuração de modelo de serviço COM+ (ComSvcConfig.exe) para configurar as interfaces de aplicativo que você deseja que sejam expostas como serviços WCF.  
   
- [Como: definir configurações de serviço de COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [Como: Definir as configurações de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
  Explica como configurar um objeto COM+ como um serviço WCF.  
   
- [Como: implantar um aplicativo de integração COM+](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ [Como: Implantar um aplicativo COM+ Integration](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  Explica como mover um aplicativo de integração COM+.  
   
 ## <a name="reference"></a>Referência  
@@ -37,4 +37,4 @@ Windows Communication Foundation (WCF) fornece um ambiente avançado para criar 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Integração com aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [Integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

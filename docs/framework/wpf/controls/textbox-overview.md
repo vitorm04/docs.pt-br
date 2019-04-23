@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162640"
 ---
 # <a name="textbox-overview"></a>Visão geral de TextBox
@@ -67,5 +67,5 @@ O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tópicos explicativos ](textbox-how-to-topics.md)
+- [Tópicos de instruções](textbox-how-to-topics.md)
 - [Visão geral de RichTextBox](richtextbox-overview.md)

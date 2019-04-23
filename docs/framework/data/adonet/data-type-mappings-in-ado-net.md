@@ -3,10 +3,10 @@ title: Mapeamentos de tipos de dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
 ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178692"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapeamentos de tipos de dados no ADO.NET
@@ -20,7 +20,7 @@ O .NET Framework é baseado no Common Type System, que define como os tipos são
 >  Valores nulos para tipos de dados do provedor de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] são representados por `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Mapeamentos de tipos de dados do SQL Server](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Mapeamentos de tipo de dados do SQL Server](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  As listas inferiram mapeamentos de tipos de dados e de métodos de acessador de dados para <xref:System.Data.SqlClient>.  
   
  [Mapeamentos de tipo de dados do OLE DB](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
@@ -37,9 +37,9 @@ O .NET Framework é baseado no Common Type System, que define como os tipos são
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de dados do SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Configurar parâmetros e tipos de dados de parâmetro](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [SQL Server Data Types and ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md) (Tipos de dados do SQL Server e o ADO.NET)
+- [Configurando parâmetros e tipos de dados de parâmetro](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Common Type System](../../../../docs/standard/base-types/common-type-system.md)
 - [Convertendo tipos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166888"
 ---
 # <a name="bitmap-effects-overview"></a>Visão geral dos efeitos de bitmap
@@ -34,10 +34,10 @@ Efeitos de bitmap permitem que designers e desenvolvedores apliquem efeitos visu
 -   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> cria um mapeamento de rugosidade de um <xref:System.Windows.Media.Visual> para dar a impressão de profundida e textura de uma fonte de luz artificial.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] efeitos de bitmap são renderizados no modo de software. Qualquer objeto que aplique um efeito também será renderizado em software. A maior redução de desempenho acontece ao usar efeitos de Bitmap em visuais grandes ou ao animar propriedades de um efeito de Bitmap. Isso é não quer dizer que você não deva usar efeitos de Bitmap desta forma, mas deve ter cuidado e testar totalmente para garantir que os usuários tenham a experiência esperada.  
+>  Os efeitos de bitmap [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são renderizados em um modo de software. Qualquer objeto que aplique um efeito também será renderizado em software. A maior redução de desempenho acontece ao usar efeitos de Bitmap em visuais grandes ou ao animar propriedades de um efeito de Bitmap. Isso é não quer dizer que você não deva usar efeitos de Bitmap desta forma, mas deve ter cuidado e testar totalmente para garantir que os usuários tenham a experiência esperada.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Efeitos de bitmap não têm suporte para execução em confiança parcial. Um aplicativo deve ter permissões de confiança total para usar efeitos de bitmap.  
+>  Os efeitos de bitmap [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não têm suporte para execução em confiança parcial. Um aplicativo deve ter permissões de confiança total para usar efeitos de bitmap.  
   
 <a name="applyeffects"></a>   
 ## <a name="how-to-apply-an-effect"></a>Como aplicar um efeito  
@@ -56,7 +56,7 @@ Efeitos de bitmap permitem que designers e desenvolvedores apliquem efeitos visu
   
 <a name="customeffects"></a>   
 ## <a name="creating-custom-effects"></a>Criando efeitos personalizados  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] também fornece interfaces não gerenciadas para criar efeitos personalizados que podem ser usados em gerenciado [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos. Para material de referência adicional para a criação de efeitos de bitmap personalizados, consulte a documentação [Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) (Efeito de bitmap WPF não gerenciado).  
+ O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] também fornece interfaces não gerenciadas para criar efeitos personalizados que podem ser usados em aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gerenciados. Para material de referência adicional para a criação de efeitos de bitmap personalizados, consulte a documentação [Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) (Efeito de bitmap WPF não gerenciado).  
   
 ## <a name="see-also"></a>Consulte também
 

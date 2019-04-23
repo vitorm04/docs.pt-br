@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165263"
 ---
 # <a name="binding-declarations-overview"></a>Visão geral das declarações de associação
@@ -34,7 +34,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Uso da extensão de marcação  
- <xref:System.Windows.Data.Binding> é uma extensão de marcação. Quando você usa a extensão de associação para declarar uma associação, a declaração consiste em uma série de cláusulas após a palavra-chave `Binding` separadas por vírgulas (,). As cláusulas na declaração da associação podem estar em qualquer ordem e há várias combinações possíveis. As cláusulas são *nome*=*valor* pares onde *nome* é o nome da <xref:System.Windows.Data.Binding> propriedade e *valor* é o valor que você está definindo a propriedade.  
+ <xref:System.Windows.Data.Binding> é uma extensão da marcação. Quando você usa a extensão de associação para declarar uma associação, a declaração consiste em uma série de cláusulas após a palavra-chave `Binding` separadas por vírgulas (,). As cláusulas na declaração da associação podem estar em qualquer ordem e há várias combinações possíveis. As cláusulas são *nome*=*valor* pares onde *nome* é o nome da <xref:System.Windows.Data.Binding> propriedade e *valor* é o valor que você está definindo a propriedade.  
   
  Ao criar cadeias de caracteres de declaração de associação em marcação, elas devem ser anexadas à propriedade de dependência específica de um objeto de destino. O exemplo a seguir mostra como associar o <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propriedade usando a extensão de associação, especificando as <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.Path%2A> propriedades.  
   
@@ -79,7 +79,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 -   Os indexadores de uma propriedade podem ser especificados dentro de colchetes após o nome da propriedade na qual o indexador é aplicado. Por exemplo, a cláusula `Path=ShoppingCart[0]` define a associação ao índice que corresponde a como a indexação interna de sua propriedade lida com a cadeia de caracteres literal "0". Os indexadores aninhados também têm suporte.  
   
--   Indexadores e subpropriedades podem ser combinadas um `Path` cláusula; por exemplo, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Os indexadores e as subpropriedades podem ser combinados em uma cláusula `Path`. Por exemplo,`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Dentro dos indexadores, você pode ter vários parâmetros de indexador separados por vírgulas (,). O tipo de cada parâmetro pode ser especificado com parênteses. Por exemplo, você pode ter `Path="[(sys:Int32)42,(sys:Int32)24]"`, em que `sys` é mapeado para o namespace `System`.  
   
@@ -126,6 +126,6 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos explicativos ](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)
 - [Associação de dados](../advanced/optimizing-performance-data-binding.md)
-- [Sintaxe PropertyPath (XAML)](../advanced/propertypath-xaml-syntax.md)
+- [Sintaxe PropertyPath XAML](../advanced/propertypath-xaml-syntax.md)
