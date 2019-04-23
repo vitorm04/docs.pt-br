@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
 ms.openlocfilehash: 4cec733490e2a9dc5d54b3b253ac38a5090ac885
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207962"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768742"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Como: Determinar se um formato de dados está presente em um objeto de dados
 Os exemplos a seguir mostram como usar os vários <xref:System.Windows.DataObject.GetDataPresent%2A> sobrecargas do método para consultar se um formato específico de dados está presente em um objeto de dados.  

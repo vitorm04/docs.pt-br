@@ -1,15 +1,15 @@
 ---
-title: Concedendo permissões de nível de linha no SQL Server
+title: Conceder permissões de nível de linha no SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844763"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973077"
 ---
-# <a name="granting-row-level-permissions-in-sql-server"></a>Concedendo permissões de nível de linha no SQL Server
+# <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permissões de nível de linha no SQL Server
 
 Em alguns cenários, há um requisito para controlar o acesso a dados em um nível mais granular do que simplesmente concedendo, revogando ou negando permissões fornece. Por exemplo, um aplicativo de banco de dados do hospital pode exigir médicos individuais serão restritas a acesso a informações relacionadas ao somente seus pacientes. Existem requisitos semelhantes em muitos ambientes, incluindo finanças, lei, governo e militares aplicativos. Para ajudar a lidar com esses cenários, o SQL Server 2016 fornece uma [segurança em nível de linha](/sql/relational-databases/security/row-level-security) recurso que simplifica e centraliza a lógica de acesso de nível de linha em uma política de segurança. Para versões anteriores do SQL Server, uma funcionalidade semelhante pode ser obtida usando modos de exibição para aplicar a filtragem de nível de linha.
 
@@ -23,35 +23,35 @@ O exemplo a seguir descreve como configurar a filtragem de nível de linha com b
 
 - Habilite a filtragem de nível de linha:
 
-    - Se você estiver usando o SQL Server 2016 ou superior, ou [banco de dados SQL](https://docs.microsoft.com/azure/sql-database/), crie uma política de segurança que adiciona um predicado na tabela de restringir as linhas retornadas para aquelas que correspondem a um o atual usuário de banco de dados (usando o CURRENT_USER() função interna) ou o nome de logon atual (usando a função interna de suser_sname ()):
+  - Se você estiver usando o SQL Server 2016 ou superior, ou [banco de dados SQL](https://docs.microsoft.com/azure/sql-database/), crie uma política de segurança que adiciona um predicado na tabela de restringir as linhas retornadas para aquelas que correspondem a um o atual usuário de banco de dados (usando o CURRENT_USER() função interna) ou o nome de logon atual (usando a função interna de suser_sname ()):
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - Se você estiver usando uma versão do SQL Server antes de 2016, você pode obter funcionalidade semelhante usando um modo de exibição:
+  - Se você estiver usando uma versão do SQL Server antes de 2016, você pode obter funcionalidade semelhante usando um modo de exibição:
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - Crie procedimentos armazenados para selecionar, inserir, atualizar e excluir dados. Se a filtragem é imposta por uma política de segurança, os procedimentos armazenados devem executar essas operações na tabela base diretamente. Caso contrário, se a filtragem é imposta por uma exibição, os procedimentos armazenados devem operar em vez disso, com base na exibição. A política de segurança ou a exibição filtrarão automaticamente as linhas retornadas ou modificados por consultas de usuário e o procedimento armazenado fornece um limite de segurança mais difícil para impedir que os usuários com acesso de consulta direta com êxito a execução de consultas que podem inferir o existência de dados filtrados.
 
