@@ -3,20 +3,20 @@ title: System.ServiceModel.Security.SecuritySessionServerCloseSent
 ms.date: 03/30/2017
 ms.assetid: 712716fd-6c89-4dea-9398-d2c5b30f6563
 ms.openlocfilehash: f9e929af7e7983ae1028537a8709999f3eb6691a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140446"
 ---
-# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="a32d6-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="a32d6-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
-<span data-ttu-id="a32d6-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="a32d6-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="8699e-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="8699e-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
+<span data-ttu-id="8699e-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="8699e-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a32d6-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="a32d6-104">Description</span></span>  
- <span data-ttu-id="a32d6-105">A sessão de segurança do servidor enviada perto de cliente.</span><span class="sxs-lookup"><span data-stu-id="a32d6-105">The server security session sent Close to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="8699e-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="8699e-104">Description</span></span>  
+ <span data-ttu-id="8699e-105">A sessão de segurança do servidor enviada perto de cliente.</span><span class="sxs-lookup"><span data-stu-id="8699e-105">The server security session sent Close to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a32d6-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a32d6-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8699e-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8699e-106">See also</span></span>
 
-- [<span data-ttu-id="a32d6-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="a32d6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="a32d6-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="a32d6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="a32d6-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="a32d6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="8699e-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="8699e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="8699e-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="8699e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="8699e-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="8699e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

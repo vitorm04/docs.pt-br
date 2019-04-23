@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 998d4baf03123f1ffc174b2a7aeed0ff4a25b001
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133464"
 ---
-# <a name="icordebugmdagetdescription-method"></a><span data-ttu-id="ec99e-102">Método ICorDebugMDA::GetDescription</span><span class="sxs-lookup"><span data-stu-id="ec99e-102">ICorDebugMDA::GetDescription Method</span></span>
-<span data-ttu-id="ec99e-103">Obtém uma cadeia de caracteres que contém a descrição do Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="ec99e-103">Gets a string containing the description of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetdescription-method"></a><span data-ttu-id="17cee-102">Método ICorDebugMDA::GetDescription</span><span class="sxs-lookup"><span data-stu-id="17cee-102">ICorDebugMDA::GetDescription Method</span></span>
+<span data-ttu-id="17cee-103">Obtém uma cadeia de caracteres que contém a descrição do Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="17cee-103">Gets a string containing the description of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec99e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ec99e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17cee-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="17cee-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDescription (  
@@ -38,29 +38,29 @@ HRESULT GetDescription (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ec99e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ec99e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17cee-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="17cee-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="ec99e-106">[in] O tamanho do buffer de cadeia de caracteres que armazenará a descrição.</span><span class="sxs-lookup"><span data-stu-id="ec99e-106">[in] The size of the string buffer that will store the description.</span></span>  
+ <span data-ttu-id="17cee-106">[in] O tamanho do buffer de cadeia de caracteres que armazenará a descrição.</span><span class="sxs-lookup"><span data-stu-id="17cee-106">[in] The size of the string buffer that will store the description.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="ec99e-107">[out] Um ponteiro para o número de bytes retornados no buffer de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="ec99e-107">[out] A pointer to the number of bytes returned in the string buffer.</span></span>  
+ <span data-ttu-id="17cee-107">[out] Um ponteiro para o número de bytes retornados no buffer de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="17cee-107">[out] A pointer to the number of bytes returned in the string buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="ec99e-108">[out] Um buffer de cadeia de caracteres que contém a descrição do que o MDA.</span><span class="sxs-lookup"><span data-stu-id="ec99e-108">[out] A string buffer containing the description of the MDA.</span></span>  
+ <span data-ttu-id="17cee-108">[out] Um buffer de cadeia de caracteres que contém a descrição do que o MDA.</span><span class="sxs-lookup"><span data-stu-id="17cee-108">[out] A string buffer containing the description of the MDA.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ec99e-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="ec99e-109">Remarks</span></span>  
- <span data-ttu-id="ec99e-110">A cadeia de caracteres pode ser zero em comprimento.</span><span class="sxs-lookup"><span data-stu-id="ec99e-110">The string can be zero in length.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="17cee-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="17cee-109">Remarks</span></span>  
+ <span data-ttu-id="17cee-110">A cadeia de caracteres pode ser zero em comprimento.</span><span class="sxs-lookup"><span data-stu-id="17cee-110">The string can be zero in length.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec99e-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ec99e-111">Requirements</span></span>  
- <span data-ttu-id="ec99e-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec99e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17cee-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="17cee-111">Requirements</span></span>  
+ <span data-ttu-id="17cee-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17cee-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec99e-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec99e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17cee-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17cee-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ec99e-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec99e-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17cee-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17cee-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="ec99e-115">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ec99e-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="17cee-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17cee-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec99e-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ec99e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17cee-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="17cee-116">See also</span></span>
 
-- [<span data-ttu-id="ec99e-117">Interface ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="ec99e-117">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="ec99e-118">Diagnosticando erros com assistentes de depuração gerenciados</span><span class="sxs-lookup"><span data-stu-id="ec99e-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="17cee-117">Interface ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="17cee-117">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="17cee-118">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="17cee-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

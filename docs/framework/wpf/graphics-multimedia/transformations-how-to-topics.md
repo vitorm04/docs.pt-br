@@ -10,29 +10,29 @@ helpviewer_keywords:
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140862"
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="46d72-102">Tópicos explicativos de transformações</span><span class="sxs-lookup"><span data-stu-id="46d72-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="46d72-103">Os tópicos nesta seção descrevem como aplicar diferentes transformações em objetos.</span><span class="sxs-lookup"><span data-stu-id="46d72-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="65a15-102">Tópicos explicativos de transformações</span><span class="sxs-lookup"><span data-stu-id="65a15-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="65a15-103">Os tópicos nesta seção descrevem como aplicar diferentes transformações em objetos.</span><span class="sxs-lookup"><span data-stu-id="65a15-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="46d72-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="46d72-104">In This Section</span></span>  
- [<span data-ttu-id="46d72-105">Aplicar uma transformação a um elemento quando ocorre um evento</span><span class="sxs-lookup"><span data-stu-id="46d72-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="46d72-106">Aplicar várias transformações a um objeto</span><span class="sxs-lookup"><span data-stu-id="46d72-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="46d72-107">Criar um giro do elemento in-loco</span><span class="sxs-lookup"><span data-stu-id="46d72-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="46d72-108">Girar um objeto</span><span class="sxs-lookup"><span data-stu-id="46d72-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
- [<span data-ttu-id="46d72-109">Dimensionar um elemento</span><span class="sxs-lookup"><span data-stu-id="46d72-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
- [<span data-ttu-id="46d72-110">Inclinar um elemento</span><span class="sxs-lookup"><span data-stu-id="46d72-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
- [<span data-ttu-id="46d72-111">Especificar a origem de uma transformação usando valores relativos</span><span class="sxs-lookup"><span data-stu-id="46d72-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="46d72-112">Converter um elemento</span><span class="sxs-lookup"><span data-stu-id="46d72-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
- [<span data-ttu-id="46d72-113">Usar um MatrixTransform para criar transformações personalizadas</span><span class="sxs-lookup"><span data-stu-id="46d72-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="65a15-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="65a15-104">In This Section</span></span>  
+ [<span data-ttu-id="65a15-105">Aplicar uma transformação a um elemento quando ocorre um evento</span><span class="sxs-lookup"><span data-stu-id="65a15-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="65a15-106">Aplicar várias transformações a um objeto</span><span class="sxs-lookup"><span data-stu-id="65a15-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="65a15-107">Criar um giro do elemento in-loco</span><span class="sxs-lookup"><span data-stu-id="65a15-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="65a15-108">Girar um objeto</span><span class="sxs-lookup"><span data-stu-id="65a15-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
+ [<span data-ttu-id="65a15-109">Dimensionar um elemento</span><span class="sxs-lookup"><span data-stu-id="65a15-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
+ [<span data-ttu-id="65a15-110">Inclinar um elemento</span><span class="sxs-lookup"><span data-stu-id="65a15-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
+ [<span data-ttu-id="65a15-111">Especificar a origem de uma transformação usando valores relativos</span><span class="sxs-lookup"><span data-stu-id="65a15-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="65a15-112">Converter um elemento</span><span class="sxs-lookup"><span data-stu-id="65a15-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
+ [<span data-ttu-id="65a15-113">Usar um MatrixTransform para criar transformações personalizadas</span><span class="sxs-lookup"><span data-stu-id="65a15-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="46d72-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="46d72-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65a15-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="65a15-114">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="46d72-115">Gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="46d72-115">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="46d72-116">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="46d72-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="46d72-117">Layout</span><span class="sxs-lookup"><span data-stu-id="46d72-117">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="65a15-115">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="65a15-115">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="65a15-116">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="65a15-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="65a15-117">Layout</span><span class="sxs-lookup"><span data-stu-id="65a15-117">Layout</span></span>](../advanced/layout.md)
