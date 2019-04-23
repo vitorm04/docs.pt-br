@@ -6,111 +6,111 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344540"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a><span data-ttu-id="ad0a8-102">Como: Criar uma expressão Lambda (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad0a8-102">How to: Create a Lambda Expression (Visual Basic)</span></span>
-<span data-ttu-id="ad0a8-103">Um *expressão lambda* é uma função ou sub-rotina que não tem um nome.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-103">A *lambda expression* is a function or subroutine that does not have a name.</span></span> <span data-ttu-id="ad0a8-104">Uma expressão lambda pode ser usada sempre que um tipo de delegado é válido.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-104">A lambda expression can be used wherever a delegate type is valid.</span></span>  
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a><span data-ttu-id="7640f-102">Como: Criar uma expressão Lambda (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7640f-102">How to: Create a Lambda Expression (Visual Basic)</span></span>
+<span data-ttu-id="7640f-103">Um *expressão lambda* é uma função ou sub-rotina que não tem um nome.</span><span class="sxs-lookup"><span data-stu-id="7640f-103">A *lambda expression* is a function or subroutine that does not have a name.</span></span> <span data-ttu-id="7640f-104">Uma expressão lambda pode ser usada sempre que um tipo de delegado é válido.</span><span class="sxs-lookup"><span data-stu-id="7640f-104">A lambda expression can be used wherever a delegate type is valid.</span></span>  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a><span data-ttu-id="ad0a8-105">Para criar uma função de expressão lambda de linha única</span><span class="sxs-lookup"><span data-stu-id="ad0a8-105">To create a single-line lambda expression function</span></span>  
+### <a name="to-create-a-single-line-lambda-expression-function"></a><span data-ttu-id="7640f-105">Para criar uma função de expressão lambda de linha única</span><span class="sxs-lookup"><span data-stu-id="7640f-105">To create a single-line lambda expression function</span></span>  
   
-1. <span data-ttu-id="ad0a8-106">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="ad0a8-106">In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:</span></span>  
+1. <span data-ttu-id="7640f-106">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="7640f-106">In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:</span></span>  
   
-     `Dim add1 =`   `Function`  
+     <span data-ttu-id="7640f-107">`Dim add1 =`   `Function`</span><span class="sxs-lookup"><span data-stu-id="7640f-107">`Dim add1 =`   `Function`</span></span>  
   
-2. <span data-ttu-id="ad0a8-107">Entre parênteses, diretamente após `Function`, digite os parâmetros da função.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-107">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="ad0a8-108">Observe que você não especificar um nome após `Function`.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-108">Notice that you do not specify a name after `Function`.</span></span>  
+2. <span data-ttu-id="7640f-108">Entre parênteses, diretamente após `Function`, digite os parâmetros da função.</span><span class="sxs-lookup"><span data-stu-id="7640f-108">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="7640f-109">Observe que você não especificar um nome após `Function`.</span><span class="sxs-lookup"><span data-stu-id="7640f-109">Notice that you do not specify a name after `Function`.</span></span>  
   
-     `Dim add1 = Function`   `(num As Integer)`  
+     <span data-ttu-id="7640f-110">`Dim add1 = Function`   `(num As Integer)`</span><span class="sxs-lookup"><span data-stu-id="7640f-110">`Dim add1 = Function`   `(num As Integer)`</span></span>  
   
-3. <span data-ttu-id="ad0a8-109">A seguir a lista de parâmetros, digite uma única expressão como corpo da função.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-109">Following the parameter list, type a single expression as the body of the function.</span></span> <span data-ttu-id="ad0a8-110">O valor que avalia a expressão é o valor retornado pela função.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-110">The value that the expression evaluates to is the value returned by the function.</span></span> <span data-ttu-id="ad0a8-111">Você não usar um `As` cláusula para especificar o tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-111">You do not use an `As` clause to specify the return type.</span></span>  
+3. <span data-ttu-id="7640f-111">A seguir a lista de parâmetros, digite uma única expressão como corpo da função.</span><span class="sxs-lookup"><span data-stu-id="7640f-111">Following the parameter list, type a single expression as the body of the function.</span></span> <span data-ttu-id="7640f-112">O valor que avalia a expressão é o valor retornado pela função.</span><span class="sxs-lookup"><span data-stu-id="7640f-112">The value that the expression evaluates to is the value returned by the function.</span></span> <span data-ttu-id="7640f-113">Você não usar um `As` cláusula para especificar o tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="7640f-113">You do not use an `As` clause to specify the return type.</span></span>  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     <span data-ttu-id="ad0a8-112">Para chamar a expressão lambda, passando um argumento de inteiro.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-112">You call the lambda expression by passing in an integer argument.</span></span>  
+     <span data-ttu-id="7640f-114">Para chamar a expressão lambda, passando um argumento de inteiro.</span><span class="sxs-lookup"><span data-stu-id="7640f-114">You call the lambda expression by passing in an integer argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. <span data-ttu-id="ad0a8-113">Como alternativa, o mesmo resultado é realizado pelo exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="ad0a8-113">Alternatively, the same result is accomplished by the following example:</span></span>  
+4. <span data-ttu-id="7640f-115">Como alternativa, o mesmo resultado é realizado pelo exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="7640f-115">Alternatively, the same result is accomplished by the following example:</span></span>  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a><span data-ttu-id="ad0a8-114">Para criar uma sub-rotina de expressão lambda de linha única</span><span class="sxs-lookup"><span data-stu-id="ad0a8-114">To create a single-line lambda expression subroutine</span></span>  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a><span data-ttu-id="7640f-116">Para criar uma sub-rotina de expressão lambda de linha única</span><span class="sxs-lookup"><span data-stu-id="7640f-116">To create a single-line lambda expression subroutine</span></span>  
   
-1. <span data-ttu-id="ad0a8-115">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-115">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.</span></span>  
+1. <span data-ttu-id="7640f-117">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="7640f-117">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.</span></span>  
   
-     `Dim add1 =`   `Sub`  
+     <span data-ttu-id="7640f-118">`Dim add1 =`   `Sub`</span><span class="sxs-lookup"><span data-stu-id="7640f-118">`Dim add1 =`   `Sub`</span></span>  
   
-2. <span data-ttu-id="ad0a8-116">Entre parênteses, diretamente após `Sub`, digite os parâmetros da sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-116">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="ad0a8-117">Observe que você não especificar um nome após `Sub`.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-117">Notice that you do not specify a name after `Sub`.</span></span>  
+2. <span data-ttu-id="7640f-119">Entre parênteses, diretamente após `Sub`, digite os parâmetros da sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="7640f-119">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="7640f-120">Observe que você não especificar um nome após `Sub`.</span><span class="sxs-lookup"><span data-stu-id="7640f-120">Notice that you do not specify a name after `Sub`.</span></span>  
   
-     `Dim add1 = Sub`   `(msg As String)`  
+     <span data-ttu-id="7640f-121">`Dim add1 = Sub`   `(msg As String)`</span><span class="sxs-lookup"><span data-stu-id="7640f-121">`Dim add1 = Sub`   `(msg As String)`</span></span>  
   
-3. <span data-ttu-id="ad0a8-118">A seguir a lista de parâmetros, digite uma única instrução, como o corpo da sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-118">Following the parameter list, type a single statement as the body of the subroutine.</span></span>  
+3. <span data-ttu-id="7640f-122">A seguir a lista de parâmetros, digite uma única instrução, como o corpo da sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="7640f-122">Following the parameter list, type a single statement as the body of the subroutine.</span></span>  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     <span data-ttu-id="ad0a8-119">Para chamar a expressão lambda, passando um argumento de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-119">You call the lambda expression by passing in a string argument.</span></span>  
+     <span data-ttu-id="7640f-123">Para chamar a expressão lambda, passando um argumento de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="7640f-123">You call the lambda expression by passing in a string argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a><span data-ttu-id="ad0a8-120">Para criar uma função de expressão lambda com várias linhas</span><span class="sxs-lookup"><span data-stu-id="ad0a8-120">To create a multiline lambda expression function</span></span>  
+### <a name="to-create-a-multiline-lambda-expression-function"></a><span data-ttu-id="7640f-124">Para criar uma função de expressão lambda com várias linhas</span><span class="sxs-lookup"><span data-stu-id="7640f-124">To create a multiline lambda expression function</span></span>  
   
-1. <span data-ttu-id="ad0a8-121">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-121">In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.</span></span>  
+1. <span data-ttu-id="7640f-125">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="7640f-125">In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.</span></span>  
   
-     `Dim add1 =`   `Function`  
+     <span data-ttu-id="7640f-126">`Dim add1 =`   `Function`</span><span class="sxs-lookup"><span data-stu-id="7640f-126">`Dim add1 =`   `Function`</span></span>  
   
-2. <span data-ttu-id="ad0a8-122">Entre parênteses, diretamente após `Function`, digite os parâmetros da função.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-122">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="ad0a8-123">Observe que você não especificar um nome após `Function`.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-123">Notice that you do not specify a name after `Function`.</span></span>  
+2. <span data-ttu-id="7640f-127">Entre parênteses, diretamente após `Function`, digite os parâmetros da função.</span><span class="sxs-lookup"><span data-stu-id="7640f-127">In parentheses, directly after `Function`, type the parameters of the function.</span></span> <span data-ttu-id="7640f-128">Observe que você não especificar um nome após `Function`.</span><span class="sxs-lookup"><span data-stu-id="7640f-128">Notice that you do not specify a name after `Function`.</span></span>  
   
-     `Dim add1 = Function`   `(index As Integer)`  
+     <span data-ttu-id="7640f-129">`Dim add1 = Function`   `(index As Integer)`</span><span class="sxs-lookup"><span data-stu-id="7640f-129">`Dim add1 = Function`   `(index As Integer)`</span></span>  
   
-3. <span data-ttu-id="ad0a8-124">Pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-124">Press ENTER.</span></span> <span data-ttu-id="ad0a8-125">O `End Function` instrução é adicionada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-125">The `End Function` statement is automatically added.</span></span>  
+3. <span data-ttu-id="7640f-130">Pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="7640f-130">Press ENTER.</span></span> <span data-ttu-id="7640f-131">O `End Function` instrução é adicionada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="7640f-131">The `End Function` statement is automatically added.</span></span>  
   
-4. <span data-ttu-id="ad0a8-126">Dentro do corpo da função, adicione o seguinte código para criar uma expressão e o valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-126">Within the body of the function, add the following code to create an expression and return the value.</span></span> <span data-ttu-id="ad0a8-127">Você não usar um `As` cláusula para especificar o tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-127">You do not use an `As` clause to specify the return type.</span></span>  
+4. <span data-ttu-id="7640f-132">Dentro do corpo da função, adicione o seguinte código para criar uma expressão e o valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="7640f-132">Within the body of the function, add the following code to create an expression and return the value.</span></span> <span data-ttu-id="7640f-133">Você não usar um `As` cláusula para especificar o tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="7640f-133">You do not use an `As` clause to specify the return type.</span></span>  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     <span data-ttu-id="ad0a8-128">Para chamar a expressão lambda, passando um argumento de inteiro.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-128">You call the lambda expression by passing in an integer argument.</span></span>  
+     <span data-ttu-id="7640f-134">Para chamar a expressão lambda, passando um argumento de inteiro.</span><span class="sxs-lookup"><span data-stu-id="7640f-134">You call the lambda expression by passing in an integer argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a><span data-ttu-id="ad0a8-129">Para criar uma sub-rotina de expressão lambda com várias linhas</span><span class="sxs-lookup"><span data-stu-id="ad0a8-129">To create a multiline lambda expression subroutine</span></span>  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a><span data-ttu-id="7640f-135">Para criar uma sub-rotina de expressão lambda com várias linhas</span><span class="sxs-lookup"><span data-stu-id="7640f-135">To create a multiline lambda expression subroutine</span></span>  
   
-1. <span data-ttu-id="ad0a8-130">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="ad0a8-130">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:</span></span>  
+1. <span data-ttu-id="7640f-136">Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="7640f-136">In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:</span></span>  
   
-     `Dim add1 =`   `Sub`  
+     <span data-ttu-id="7640f-137">`Dim add1 =`   `Sub`</span><span class="sxs-lookup"><span data-stu-id="7640f-137">`Dim add1 =`   `Sub`</span></span>  
   
-2. <span data-ttu-id="ad0a8-131">Entre parênteses, diretamente após `Sub`, digite os parâmetros da sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-131">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="ad0a8-132">Observe que você não especificar um nome após `Sub`.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-132">Notice that you do not specify a name after `Sub`.</span></span>  
+2. <span data-ttu-id="7640f-138">Entre parênteses, diretamente após `Sub`, digite os parâmetros da sub-rotina.</span><span class="sxs-lookup"><span data-stu-id="7640f-138">In parentheses, directly after `Sub`, type the parameters of the subroutine.</span></span> <span data-ttu-id="7640f-139">Observe que você não especificar um nome após `Sub`.</span><span class="sxs-lookup"><span data-stu-id="7640f-139">Notice that you do not specify a name after `Sub`.</span></span>  
   
-     `Dim add1 = Sub`  `(msg As String)`  
+     <span data-ttu-id="7640f-140">`Dim add1 = Sub`  `(msg As String)`</span><span class="sxs-lookup"><span data-stu-id="7640f-140">`Dim add1 = Sub`  `(msg As String)`</span></span>  
   
-3. <span data-ttu-id="ad0a8-133">Pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-133">Press ENTER.</span></span> <span data-ttu-id="ad0a8-134">O `End Sub` instrução é adicionada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-134">The `End Sub` statement is automatically added.</span></span>  
+3. <span data-ttu-id="7640f-141">Pressione ENTER.</span><span class="sxs-lookup"><span data-stu-id="7640f-141">Press ENTER.</span></span> <span data-ttu-id="7640f-142">O `End Sub` instrução é adicionada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="7640f-142">The `End Sub` statement is automatically added.</span></span>  
   
-4. <span data-ttu-id="ad0a8-135">Dentro do corpo da função, adicione o seguinte código para ser executado quando a sub-rotina é invocada.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-135">Within the body of the function, add the following code to execute when the subroutine is invoked.</span></span>  
+4. <span data-ttu-id="7640f-143">Dentro do corpo da função, adicione o seguinte código para ser executado quando a sub-rotina é invocada.</span><span class="sxs-lookup"><span data-stu-id="7640f-143">Within the body of the function, add the following code to execute when the subroutine is invoked.</span></span>  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     <span data-ttu-id="ad0a8-136">Para chamar a expressão lambda, passando um argumento de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-136">You call the lambda expression by passing in a string argument.</span></span>  
+     <span data-ttu-id="7640f-144">Para chamar a expressão lambda, passando um argumento de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="7640f-144">You call the lambda expression by passing in a string argument.</span></span>  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
-## <a name="example"></a><span data-ttu-id="ad0a8-137">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ad0a8-137">Example</span></span>  
- <span data-ttu-id="ad0a8-138">Um uso comum de expressões lambda é definir uma função que pode ser passada como o argumento para um parâmetro cujo tipo é `Delegate`.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-138">A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`.</span></span> <span data-ttu-id="ad0a8-139">No exemplo a seguir, o <xref:System.Diagnostics.Process.GetProcesses%2A> método retorna uma matriz de processos em execução no computador local.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-139">In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer.</span></span> <span data-ttu-id="ad0a8-140">O <xref:System.Linq.Enumerable.Where%2A> método a partir de <xref:System.Linq.Enumerable> classe requer um `Boolean` delegar como seu argumento.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-140">The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument.</span></span> <span data-ttu-id="ad0a8-141">A expressão lambda no exemplo é usada para essa finalidade.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-141">The lambda expression in the example is used for that purpose.</span></span> <span data-ttu-id="ad0a8-142">Ele retorna `True` para cada processo que tem apenas um thread, e eles estão selecionados em `filteredList`.</span><span class="sxs-lookup"><span data-stu-id="ad0a8-142">It returns `True` for each process that has only one thread, and those are selected in `filteredList`.</span></span>  
+## <a name="example"></a><span data-ttu-id="7640f-145">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7640f-145">Example</span></span>  
+ <span data-ttu-id="7640f-146">Um uso comum de expressões lambda é definir uma função que pode ser passada como o argumento para um parâmetro cujo tipo é `Delegate`.</span><span class="sxs-lookup"><span data-stu-id="7640f-146">A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`.</span></span> <span data-ttu-id="7640f-147">No exemplo a seguir, o <xref:System.Diagnostics.Process.GetProcesses%2A> método retorna uma matriz de processos em execução no computador local.</span><span class="sxs-lookup"><span data-stu-id="7640f-147">In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer.</span></span> <span data-ttu-id="7640f-148">O <xref:System.Linq.Enumerable.Where%2A> método a partir de <xref:System.Linq.Enumerable> classe requer um `Boolean` delegar como seu argumento.</span><span class="sxs-lookup"><span data-stu-id="7640f-148">The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument.</span></span> <span data-ttu-id="7640f-149">A expressão lambda no exemplo é usada para essa finalidade.</span><span class="sxs-lookup"><span data-stu-id="7640f-149">The lambda expression in the example is used for that purpose.</span></span> <span data-ttu-id="7640f-150">Ele retorna `True` para cada processo que tem apenas um thread, e eles estão selecionados em `filteredList`.</span><span class="sxs-lookup"><span data-stu-id="7640f-150">It returns `True` for each process that has only one thread, and those are selected in `filteredList`.</span></span>  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- <span data-ttu-id="ad0a8-143">O exemplo anterior é equivalente ao código a seguir, que é escrito em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sintaxe:</span><span class="sxs-lookup"><span data-stu-id="ad0a8-143">The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:</span></span>  
+ <span data-ttu-id="7640f-151">O exemplo anterior é equivalente ao código a seguir, que é escrito em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sintaxe:</span><span class="sxs-lookup"><span data-stu-id="7640f-151">The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:</span></span>  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="ad0a8-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ad0a8-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7640f-152">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7640f-152">See also</span></span>
 
 - <xref:System.Linq.Enumerable>
-- [<span data-ttu-id="ad0a8-145">Expressões lambda</span><span class="sxs-lookup"><span data-stu-id="ad0a8-145">Lambda Expressions</span></span>](./lambda-expressions.md)
-- [<span data-ttu-id="ad0a8-146">Instrução Function</span><span class="sxs-lookup"><span data-stu-id="ad0a8-146">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="ad0a8-147">Instrução Sub</span><span class="sxs-lookup"><span data-stu-id="ad0a8-147">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="ad0a8-148">Delegados</span><span class="sxs-lookup"><span data-stu-id="ad0a8-148">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="ad0a8-149">Como: Passar procedimentos para outro procedimento no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ad0a8-149">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [<span data-ttu-id="ad0a8-150">Instrução Delegate</span><span class="sxs-lookup"><span data-stu-id="ad0a8-150">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="ad0a8-151">Introdução a LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ad0a8-151">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="7640f-153">Expressões Lambda</span><span class="sxs-lookup"><span data-stu-id="7640f-153">Lambda Expressions</span></span>](./lambda-expressions.md)
+- [<span data-ttu-id="7640f-154">Instrução Function</span><span class="sxs-lookup"><span data-stu-id="7640f-154">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="7640f-155">Instrução Sub</span><span class="sxs-lookup"><span data-stu-id="7640f-155">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="7640f-156">Delegados</span><span class="sxs-lookup"><span data-stu-id="7640f-156">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="7640f-157">Como: Passar procedimentos para outro procedimento no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7640f-157">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [<span data-ttu-id="7640f-158">Instrução Delegate</span><span class="sxs-lookup"><span data-stu-id="7640f-158">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="7640f-159">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7640f-159">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
