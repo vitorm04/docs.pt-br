@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
 ms.openlocfilehash: 0e7dffa45dc8d3ac467129d44a7c73a8c4b4bfa2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192908"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Como: Personalizar a classificação no controle DataGridView do Windows Forms
@@ -51,4 +51,4 @@ O <xref:System.Windows.Forms.DataGridView> controle proporciona classificação 
 - <xref:System.Windows.Forms.DataGridView>
 - [Classificando dados no controle DataGridView dos Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
 - [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Como: Definir os modos de classificação para colunas no controle DataGridView do Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Como: Definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)

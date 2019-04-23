@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194416"
 ---
 # <a name="spawnderivedclass-function"></a>Função SpawnDerivedClass
@@ -62,7 +62,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Uma operação inválida, como a geração de uma classe de uma instância, foi solicitada. |
 | `WBEM_E_INCOMPLETE_CLASS` | A classe de origem não completamente foi definida ou está registrada com o gerenciamento do Windows, portanto, uma nova classe derivada não é permitida. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` is `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` é `null`. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
@@ -82,4 +82,4 @@ O novo objeto retornado no `ppNewClass` automaticamente se torna uma subclasse d
   
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

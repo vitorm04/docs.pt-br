@@ -6,26 +6,26 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191319"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conhecidos e considerações no LINQ to Entities
 Esta seção fornece informações sobre problemas conhecidos com consultas do [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Consultas LINQ que não podem ser armazenadas em cache](#LINQQueriesThatAreNotCached)  
+-   [Consultas LINQ que não podem ser armazenados em cache](#LINQQueriesThatAreNotCached)  
   
 -   [Informações de ordenação perdidas](#OrderingInfoLost)  
   
--   [Inteiros sem sinal não suportados](#UnsignedIntsUnsupported)  
+-   [Inteiros sem sinal não tem suportados](#UnsignedIntsUnsupported)  
   
--   [Erros de conversão de tipos](#TypeConversionErrors)  
+-   [Erros de conversão de tipo](#TypeConversionErrors)  
   
--   [Referenciando variáveis não escalares não suportadas](#RefNonScalarClosures)  
+-   [Referenciando variáveis não escalares não tem suportadas](#RefNonScalarClosures)  
   
--   [Pode haver falha em consultas aninhadas com o SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Consultas aninhadas podem falhar com o SQL Server 2000](#NestedQueriesSQL2000)  
   
 -   [Projetando para um tipo anônimo](#ProjectToAnonymousType)  
   

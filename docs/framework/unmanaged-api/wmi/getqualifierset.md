@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193090"
 ---
 # <a name="getqualifierset-function"></a>Função GetQualifierSet
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
 `ppQualSet`  
-[out] Recebe o ponteiro de interface que permite o acesso para os qualificadores do objeto da classe. `ppQualSet` Não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é deixado inalterado. 
+[out] Recebe o ponteiro de interface que permite o acesso para os qualificadores do objeto da classe. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é deixado inalterado. 
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -76,4 +76,4 @@ O [IWbemQualifierSet ponteiro](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqual
   
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

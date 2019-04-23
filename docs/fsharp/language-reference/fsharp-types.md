@@ -3,10 +3,10 @@ title: Tipos F#
 description: Saiba mais sobre os tipos que são usados em F# e como F# tipos são chamados e descritos.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193584"
 ---
 # <a name="f-types"></a>Tipos F#
@@ -53,15 +53,15 @@ A tabela a seguir mostra os aspectos da sintaxe de tipo F# tipos.
 
 |Tópico|Descrição|
 |-----|-----------|
-|[Tipos primitivos](primitive-types.md)|Descreve os tipos simples internos como tipos integrais, o tipo booleano e tipos de caracteres.|
-|[Tipo unit](unit-type.md)|Descreve o `unit` tipo, um tipo que tem um valor e que é indicado por (); equivalente à `void` em C# e `Nothing` no Visual Basic.|
+|[Tipos Primitivos](primitive-types.md)|Descreve os tipos simples internos como tipos integrais, o tipo booleano e tipos de caracteres.|
+|[Tipo Unit](unit-type.md)|Descreve o `unit` tipo, um tipo que tem um valor e que é indicado por (); equivalente à `void` em C# e `Nothing` no Visual Basic.|
 |[Tuplas](tuples.md)|Descreve o tipo de tupla, um tipo que consiste em valores associados de qualquer tipo agrupados em pares, triplos, quadruples e assim por diante.|
 |[Opções](options.md)|Descreve o tipo de opção, um tipo que pode ter um valor ou estar vazio.|
 |[Listas](lists.md)|Descreve as listas, que são série imutável, ordenada, de elementos todos do mesmo tipo.|
 |[Matrizes](arrays.md)|Descreve matrizes, que são conjuntos ordenados de mutáveis elementos do mesmo tipo que ocupam um bloco contíguo de memória e são de tamanho fixo.|
 |[Sequências](sequences.md)|Descreve o tipo de sequência, que representa uma série de lógica de valores; os valores individuais são computados somente quando necessário.|
 |[Registros](records.md)|Descreve o tipo de registro, uma pequena agregação de valores nomeados.|
-|[Uniões discriminadas](discriminated-unions.md)|Descreve o tipo de união discriminado, um tipo cujos valores podem ser qualquer um de um conjunto de tipos possíveis.|
+|[Uniões Discriminadas](discriminated-unions.md)|Descreve o tipo de união discriminado, um tipo cujos valores podem ser qualquer um de um conjunto de tipos possíveis.|
 |[Funções](functions/index.md)|Descreve os valores de função.|
 |[Classes](classes.md)|Descreve o tipo de classe, um tipo de objeto que corresponde a um tipo de referência do .NET. Tipos de classe podem conter membros, propriedades, interfaces implementadas e um tipo base.|
 |[Estruturas](structures.md)|Descreve o `struct` tipo, um tipo de objeto que corresponde a um tipo de valor do .NET. O `struct` tipo normalmente representa uma agregação pequena de dados.|
@@ -69,4 +69,4 @@ A tabela a seguir mostra os aspectos da sintaxe de tipo F# tipos.
 |[Delegados](delegates.md)|Descreve o tipo de delegado, que representa uma função como um objeto.|
 |[Enumerações](enumerations.md)|Descreve os tipos de enumeração cujos valores pertencem a um conjunto de valores nomeados.|
 |[Atributos](attributes.md)|Descreve os atributos que são usados para especificar os metadados de outro tipo.|
-|[Tipos de exceção](exception-handling/exception-types.md)|Descreve exceções, que especificam as informações de erro.|
+|[Tipos de Exceção](exception-handling/exception-types.md)|Descreve exceções, que especificam as informações de erro.|

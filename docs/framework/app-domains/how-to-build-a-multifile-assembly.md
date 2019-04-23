@@ -20,10 +20,10 @@ ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187792"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Como: Criar um assembly de vários arquivos
@@ -99,7 +99,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
 - [Como: Exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)

@@ -3,10 +3,10 @@ title: Parâmetros (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
 ms.openlocfilehash: 47a1514933904daa623adc151d50525f011e07a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187662"
 ---
 # <a name="parameters-entity-sql"></a>Parâmetros (Entity SQL)
@@ -25,4 +25,4 @@ select c
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Visão geral da Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

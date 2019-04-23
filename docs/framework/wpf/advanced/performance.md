@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188481"
 ---
 # <a name="performance"></a>Desempenho
@@ -19,7 +19,7 @@ Alcançar o desempenho ideal do aplicativo requer reflexões no design do aplica
 ## <a name="in-this-section"></a>Nesta seção  
  [Camadas de renderização de gráficos](graphics-rendering-tiers.md)  
  [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md)  
- [Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [Passo a passo: Cache de dados de aplicativo em um aplicativo WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Media.RenderCapability>  

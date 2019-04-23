@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191427"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Como: Tornar um congelável somente leitura
@@ -41,4 +41,4 @@ Este exemplo mostra como fazer uma <xref:System.Windows.Freezable> somente leitu
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Visão geral de objetos congeláveis](freezable-objects-overview.md)
-- [Tópicos explicativos ](base-elements-how-to-topics.md)
+- [Tópicos de instruções](base-elements-how-to-topics.md)

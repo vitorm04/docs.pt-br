@@ -11,10 +11,10 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188507"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Como: Fazer Loop de um Som Tocado em um Formulário do Windows
@@ -56,5 +56,5 @@ O exemplo de código a seguir toca um som repetidamente. Quando o código a `sto
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Como: Reproduzir um som de um Windows Form](how-to-play-a-sound-from-a-windows-form.md)
+- [Como: Reproduzir um som de um formulário do Windows](how-to-play-a-sound-from-a-windows-form.md)
 - [Visão geral da classe SoundPlayer](soundplayer-class-overview.md)

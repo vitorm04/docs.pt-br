@@ -9,10 +9,10 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193701"
 ---
 # <a name="security-in-windows-forms-overview"></a>Visão geral da Segurança do Windows Forms
@@ -20,7 +20,7 @@ Antes do lançamento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
   
  O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] apresenta uma infraestrutura chamada Segurança de acesso do código, que permite diferenciar as permissões ou direitos que o código tem, dos direitos que o usuário tem. Por padrão, o código proveniente da Internet e da intranet somente pode executar no que é conhecido como confiança parcial. A confiança parcial sujeita um aplicativo a uma série de restrições: entre outras coisas, um aplicativo é impedido de acessar o disco rígido local e não pode executar código não gerenciado. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] controla os recursos que o código tem permissão para acessar com base na identidade do código: de onde ele veio, se ele tem [Assemblies de nome forte](../app-domains/strong-named-assemblies.md), se está assinado com um certificado e assim por diante.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] a tecnologia, que você usa para implantar aplicativos do Windows Forms, ajuda a tornar mais fácil para você desenvolver aplicativos que são executados em confiança parcial, em confiança total ou em confiança parcial com permissões elevadas. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] fornece recursos como elevação de permissões e implantação de aplicativos confiáveis para que seu aplicativo possa solicitar confiança total ou permissões elevadas ao usuário local de uma maneira responsável.  
+ A tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], que você usa para implantar aplicativos dos Windows Forms, ajuda a facilitar o desenvolvimento de aplicativos que são executados em confiança parcial, em confiança total ou em confiança parcial com permissões elevadas. O [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] fornece recursos como Elevação de permissão e Implantação de aplicativo confiável para que seu aplicativo possa solicitar confiança total ou permissões elevadas ao usuário local de uma maneira responsável.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>Noções básicas sobre segurança no .NET Framework  
  A segurança de acesso do código permite que o código seja confiável em graus variáveis, dependendo da origem do código e de outros aspectos de sua identidade. Para obter mais informações sobre a evidência que o Common Language Runtime usa para determinar a política de segurança, consulte [Evidências](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)). Ele ajuda a proteger os sistemas do computador contra código mal-intencionado e ajuda a proteger o código confiável contra intencionalmente ou acidentalmente comprometer a segurança. A segurança de acesso do código também oferece mais controle sobre quais ações seu aplicativo pode realizar, porque você pode especificar somente as permissões que você precisa que seu aplicativo tenha. A segurança de acesso do código afeta todo código gerenciado que se destina ao Common Language Runtime, mesmo que esse código não faça nenhuma verificação de permissão de segurança de acesso do código. Para obter mais informações sobre segurança no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte [Conceitos fundamentais de segurança](../../standard/security/key-security-concepts.md) e [Noções básicas de segurança de acesso do código](../misc/code-access-security-basics.md).  
@@ -62,9 +62,9 @@ Antes do lançamento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Implantando um aplicativo com as permissões apropriadas  
- O meio mais comum de implantar um aplicativo dos Windows Forms em um computador cliente é com o [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], uma tecnologia de implantação que descreve todos os componentes que seu aplicativo precisa para ser executado. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] usa arquivos XML chamados manifestos para descrever os assemblies e arquivos que compõem seu aplicativo, e também as permissões que seu aplicativo requer.  
+ O meio mais comum de implantar um aplicativo dos Windows Forms em um computador cliente é com o [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], uma tecnologia de implantação que descreve todos os componentes que seu aplicativo precisa para ser executado. O [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] usa arquivos XML chamados manifestos para descrever os assemblies e arquivos que compõem seu aplicativo e também as permissões que seu aplicativo requer.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tem duas tecnologias para solicitar permissões elevadas em um computador cliente. As duas tecnologias contam com o uso de certificados Authenticode. Os certificados ajudam a fornecer alguma garantia para os usuários de que o aplicativo é proveniente de uma fonte confiável.  
+ O [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tem duas tecnologias para solicitar permissões elevadas em um computador cliente. As duas tecnologias contam com o uso de certificados Authenticode. Os certificados ajudam a fornecer alguma garantia para os usuários de que o aplicativo é proveniente de uma fonte confiável.  
   
  A tabela a seguir descreve essas tecnologias.  
   
@@ -85,8 +85,8 @@ Antes do lançamento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
 ## <a name="see-also"></a>Consulte também
 
 - [Segurança do Windows Forms](windows-forms-security.md)
-- [Noções básicas da segurança de acesso do código](../misc/code-access-security-basics.md)
+- [Noções Básicas da Segurança de Acesso do Código](../misc/code-access-security-basics.md)
 - [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview)
-- [Mage.exe (Ferramenta de Geração e Edição de Manifesto)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (Manifest Generation and Editing Tool)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

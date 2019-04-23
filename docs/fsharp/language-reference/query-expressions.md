@@ -3,10 +3,10 @@ title: Expressões de consulta
 description: Saiba mais sobre o suporte de expressão de consulta do LINQ no F# linguagem de programação.
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191556"
 ---
 # <a name="query-expressions"></a>Expressões de consulta
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> with <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> com o <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -2423,6 +2423,6 @@ end
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência da linguagem F#](index.md)
+- [Referência da Linguagem F#](index.md)
 - [Classe LINQ. querybuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
-- [Expressões de computação](Computation-Expressions.md)
+- [Expressões de Computação](Computation-Expressions.md)

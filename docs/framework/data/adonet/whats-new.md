@@ -3,10 +3,10 @@ title: Novidades no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191432"
 ---
 # <a name="whats-new-in-adonet"></a>Novidades no ADO.NET
@@ -41,7 +41,7 @@ Os recursos a seguir são novos no [!INCLUDE[vstecado](../../../../includes/vste
   
 -   O SqlClient dá suporte a conexões com bancos de dados LocalDB. Para obter mais informações, consulte [suporte do SqlClient para LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;` é o novo valor para passar para o `Type System Version` propriedade de conexão. O valor `Type System Version=Latest;` agora é obsoleto e agora é equivalente ao `Type System Version=SQL Server 2008;`. Para obter mais informações, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` é o novo valor para passar para a propriedade de conexão `Type System Version`. O valor `Type System Version=Latest;` agora é obsoleto e agora é equivalente ao `Type System Version=SQL Server 2008;`. Para obter mais informações, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 -   O SqlClient fornece suporte adicional a colunas esparsas, um recurso que foi adicionado no SQL Server 2008. Se o aplicativo já acessa dados em uma tabela que usa colunas esparsas, você deverá ver um aumento no desempenho. A coluna IsColumnSet do <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se uma coluna é uma esparsa que é membro de um conjunto de colunas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Indica se uma coluna é uma coluna esparsa (consulte [coleções de esquema do SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) para obter mais informações). Para obter mais informações sobre colunas esparsas, consulte [usando colunas esparsas](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
@@ -53,7 +53,7 @@ Os recursos a seguir são novos no [!INCLUDE[vstecado](../../../../includes/vste
 ## <a name="see-also"></a>Consulte também
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Visão geral do ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
+- [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
 - [O que há de novo no WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

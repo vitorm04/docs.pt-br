@@ -3,10 +3,10 @@ title: Decodificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190568"
 ---
 # <a name="custom-encoders"></a>Decodificadores personalizados
@@ -98,4 +98,4 @@ Este tópico discute como criar codificadores personalizados.
 - <xref:System.ServiceModel.Channels.MessageEncoder>
 - [Visão geral da arquitetura de transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
 - [Escolhendo um codificador de mensagem](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
