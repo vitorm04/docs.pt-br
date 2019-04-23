@@ -3,20 +3,20 @@ title: System.ServiceModel.PortSharing.TransportListenerStop
 ms.date: 03/30/2017
 ms.assetid: 7404a8e8-55c2-4b48-943d-a5df22ae79f9
 ms.openlocfilehash: dedccd964f8b96f3b16323900dcd6188cd4ce7e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194871"
 ---
-# <a name="systemservicemodelportsharingtransportlistenerstop"></a><span data-ttu-id="50db5-102">System.ServiceModel.PortSharing.TransportListenerStop</span><span class="sxs-lookup"><span data-stu-id="50db5-102">System.ServiceModel.PortSharing.TransportListenerStop</span></span>
-<span data-ttu-id="50db5-103">System.ServiceModel.PortSharing.TransportListenerStop</span><span class="sxs-lookup"><span data-stu-id="50db5-103">System.ServiceModel.PortSharing.TransportListenerStop</span></span>  
+# <a name="systemservicemodelportsharingtransportlistenerstop"></a><span data-ttu-id="c2006-102">System.ServiceModel.PortSharing.TransportListenerStop</span><span class="sxs-lookup"><span data-stu-id="c2006-102">System.ServiceModel.PortSharing.TransportListenerStop</span></span>
+<span data-ttu-id="c2006-103">System.ServiceModel.PortSharing.TransportListenerStop</span><span class="sxs-lookup"><span data-stu-id="c2006-103">System.ServiceModel.PortSharing.TransportListenerStop</span></span>  
   
-## <a name="description"></a><span data-ttu-id="50db5-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="50db5-104">Description</span></span>  
- <span data-ttu-id="50db5-105">O TransportListener interrompe a escuta agora.</span><span class="sxs-lookup"><span data-stu-id="50db5-105">The TransportListener stops listening now.</span></span>  
+## <a name="description"></a><span data-ttu-id="c2006-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="c2006-104">Description</span></span>  
+ <span data-ttu-id="c2006-105">O TransportListener interrompe a escuta agora.</span><span class="sxs-lookup"><span data-stu-id="c2006-105">The TransportListener stops listening now.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50db5-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="50db5-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2006-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c2006-106">See also</span></span>
 
-- [<span data-ttu-id="50db5-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="50db5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="50db5-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="50db5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="50db5-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="50db5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="c2006-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="c2006-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="c2006-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="c2006-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c2006-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="c2006-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5382341a8c0c6455438af9e8c476348ab2467a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189034"
 ---
-# <a name="ihosttasksetpriority-method"></a><span data-ttu-id="1d8b6-102">Método IHostTask::SetPriority</span><span class="sxs-lookup"><span data-stu-id="1d8b6-102">IHostTask::SetPriority Method</span></span>
-<span data-ttu-id="1d8b6-103">Solicitações que o host de ajustar a prioridade do thread de nível para a tarefa representada por atual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-103">Requests that the host adjust the thread priority level for the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.</span></span>  
+# <a name="ihosttasksetpriority-method"></a><span data-ttu-id="e51cb-102">Método IHostTask::SetPriority</span><span class="sxs-lookup"><span data-stu-id="e51cb-102">IHostTask::SetPriority Method</span></span>
+<span data-ttu-id="e51cb-103">Solicitações que o host de ajustar a prioridade do thread de nível para a tarefa representada por atual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância.</span><span class="sxs-lookup"><span data-stu-id="e51cb-103">Requests that the host adjust the thread priority level for the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d8b6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1d8b6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e51cb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e51cb-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPriority (  
@@ -35,59 +35,59 @@ HRESULT SetPriority (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1d8b6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1d8b6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e51cb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e51cb-105">Parameters</span></span>  
  `newPriority`  
- <span data-ttu-id="1d8b6-106">[in] Um inteiro que representa o valor de prioridade de thread solicitada para a tarefa representada por atual `IHostTask` instância.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-106">[in] An integer that represents the requested thread priority value for the task represented by the current `IHostTask` instance.</span></span>  
+ <span data-ttu-id="e51cb-106">[in] Um inteiro que representa o valor de prioridade de thread solicitada para a tarefa representada por atual `IHostTask` instância.</span><span class="sxs-lookup"><span data-stu-id="e51cb-106">[in] An integer that represents the requested thread priority value for the task represented by the current `IHostTask` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1d8b6-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="1d8b6-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e51cb-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="e51cb-107">Return Value</span></span>  
   
-|<span data-ttu-id="1d8b6-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1d8b6-108">HRESULT</span></span>|<span data-ttu-id="1d8b6-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="1d8b6-109">Description</span></span>|  
+|<span data-ttu-id="e51cb-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e51cb-108">HRESULT</span></span>|<span data-ttu-id="e51cb-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="e51cb-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1d8b6-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="1d8b6-110">S_OK</span></span>|`SetPriority` <span data-ttu-id="1d8b6-111">retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-111">returned successfully.</span></span>|  
-|<span data-ttu-id="1d8b6-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1d8b6-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1d8b6-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1d8b6-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1d8b6-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1d8b6-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-115">The call timed out.</span></span>|  
-|<span data-ttu-id="1d8b6-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1d8b6-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1d8b6-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1d8b6-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1d8b6-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1d8b6-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="1d8b6-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1d8b6-120">E_FAIL</span></span>|<span data-ttu-id="1d8b6-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1d8b6-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1d8b6-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="e51cb-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e51cb-110">S_OK</span></span>|<span data-ttu-id="e51cb-111">`SetPriority` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="e51cb-111">`SetPriority` returned successfully.</span></span>|  
+|<span data-ttu-id="e51cb-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e51cb-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e51cb-113">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="e51cb-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="e51cb-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e51cb-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e51cb-115">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="e51cb-115">The call timed out.</span></span>|  
+|<span data-ttu-id="e51cb-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e51cb-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e51cb-117">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="e51cb-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="e51cb-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e51cb-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e51cb-119">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="e51cb-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="e51cb-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e51cb-120">E_FAIL</span></span>|<span data-ttu-id="e51cb-121">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="e51cb-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e51cb-122">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="e51cb-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e51cb-123">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e51cb-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1d8b6-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="1d8b6-124">Remarks</span></span>  
- <span data-ttu-id="1d8b6-125">Threads de processamento são concedidas tempo usando um sistema de rodízio parcialmente com base no nível de prioridade do thread.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-125">Threads are granted processing time using a round-robin system that is partly based on a thread's priority level.</span></span> `SetPriority` <span data-ttu-id="1d8b6-126">permite que o CLR definir esse nível de prioridade de thread para a tarefa atual.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-126">allows the CLR to set that thread priority level for the current task.</span></span> <span data-ttu-id="1d8b6-127">O seguinte `newPriority` valores têm suporte.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-127">The following `newPriority` values are supported.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e51cb-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="e51cb-124">Remarks</span></span>  
+ <span data-ttu-id="e51cb-125">Threads de processamento são concedidas tempo usando um sistema de rodízio parcialmente com base no nível de prioridade do thread.</span><span class="sxs-lookup"><span data-stu-id="e51cb-125">Threads are granted processing time using a round-robin system that is partly based on a thread's priority level.</span></span> <span data-ttu-id="e51cb-126">`SetPriority` permite que o CLR definir esse nível de prioridade de thread para a tarefa atual.</span><span class="sxs-lookup"><span data-stu-id="e51cb-126">`SetPriority` allows the CLR to set that thread priority level for the current task.</span></span> <span data-ttu-id="e51cb-127">O seguinte `newPriority` valores têm suporte.</span><span class="sxs-lookup"><span data-stu-id="e51cb-127">The following `newPriority` values are supported.</span></span>  
   
--   <span data-ttu-id="1d8b6-128">THREAD_PRIORITY_ABOVE_NORMAL</span><span class="sxs-lookup"><span data-stu-id="1d8b6-128">THREAD_PRIORITY_ABOVE_NORMAL</span></span>  
+-   <span data-ttu-id="e51cb-128">THREAD_PRIORITY_ABOVE_NORMAL</span><span class="sxs-lookup"><span data-stu-id="e51cb-128">THREAD_PRIORITY_ABOVE_NORMAL</span></span>  
   
--   <span data-ttu-id="1d8b6-129">THREAD_PRIORITY_BELOW_NORMAL</span><span class="sxs-lookup"><span data-stu-id="1d8b6-129">THREAD_PRIORITY_BELOW_NORMAL</span></span>  
+-   <span data-ttu-id="e51cb-129">THREAD_PRIORITY_BELOW_NORMAL</span><span class="sxs-lookup"><span data-stu-id="e51cb-129">THREAD_PRIORITY_BELOW_NORMAL</span></span>  
   
--   <span data-ttu-id="1d8b6-130">THREAD_PRIORITY_HIGHEST</span><span class="sxs-lookup"><span data-stu-id="1d8b6-130">THREAD_PRIORITY_HIGHEST</span></span>  
+-   <span data-ttu-id="e51cb-130">THREAD_PRIORITY_HIGHEST</span><span class="sxs-lookup"><span data-stu-id="e51cb-130">THREAD_PRIORITY_HIGHEST</span></span>  
   
--   <span data-ttu-id="1d8b6-131">THREAD_PRIORITY_IDLE</span><span class="sxs-lookup"><span data-stu-id="1d8b6-131">THREAD_PRIORITY_IDLE</span></span>  
+-   <span data-ttu-id="e51cb-131">THREAD_PRIORITY_IDLE</span><span class="sxs-lookup"><span data-stu-id="e51cb-131">THREAD_PRIORITY_IDLE</span></span>  
   
--   <span data-ttu-id="1d8b6-132">THREAD_PRIORITY_LOWEST</span><span class="sxs-lookup"><span data-stu-id="1d8b6-132">THREAD_PRIORITY_LOWEST</span></span>  
+-   <span data-ttu-id="e51cb-132">THREAD_PRIORITY_LOWEST</span><span class="sxs-lookup"><span data-stu-id="e51cb-132">THREAD_PRIORITY_LOWEST</span></span>  
   
--   <span data-ttu-id="1d8b6-133">THREAD_PRIORITY_NORMAL</span><span class="sxs-lookup"><span data-stu-id="1d8b6-133">THREAD_PRIORITY_NORMAL</span></span>  
+-   <span data-ttu-id="e51cb-133">THREAD_PRIORITY_NORMAL</span><span class="sxs-lookup"><span data-stu-id="e51cb-133">THREAD_PRIORITY_NORMAL</span></span>  
   
--   <span data-ttu-id="1d8b6-134">THREAD_PRIORITY_TIME_CRITICAL</span><span class="sxs-lookup"><span data-stu-id="1d8b6-134">THREAD_PRIORITY_TIME_CRITICAL</span></span>  
+-   <span data-ttu-id="e51cb-134">THREAD_PRIORITY_TIME_CRITICAL</span><span class="sxs-lookup"><span data-stu-id="e51cb-134">THREAD_PRIORITY_TIME_CRITICAL</span></span>  
   
- <span data-ttu-id="1d8b6-135">O CLR chama `SetPriority` quando o valor da <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> é modificado pelo código do usuário.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-135">The CLR calls `SetPriority` when the value of the <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> is modified by user code.</span></span> <span data-ttu-id="1d8b6-136">Um host pode definir seus próprios algoritmos para atribuição de prioridade de thread e está livre para ignorar essa solicitação.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-136">A host can define its own algorithms for thread priority assignment, and is free to ignore this request.</span></span>  
+ <span data-ttu-id="e51cb-135">O CLR chama `SetPriority` quando o valor da <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> é modificado pelo código do usuário.</span><span class="sxs-lookup"><span data-stu-id="e51cb-135">The CLR calls `SetPriority` when the value of the <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> is modified by user code.</span></span> <span data-ttu-id="e51cb-136">Um host pode definir seus próprios algoritmos para atribuição de prioridade de thread e está livre para ignorar essa solicitação.</span><span class="sxs-lookup"><span data-stu-id="e51cb-136">A host can define its own algorithms for thread priority assignment, and is free to ignore this request.</span></span>  
   
 > [!NOTE]
->  `SetPriority` <span data-ttu-id="1d8b6-137">não relata se o nível de prioridade de thread foi alterado.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-137">does not report whether the thread priority level was changed.</span></span> <span data-ttu-id="1d8b6-138">Chame [ihosttask:: Getpriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) para determinar o valor do nível de prioridade do thread da tarefa.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-138">Call [IHostTask::GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) to determine the value of the task's thread priority level.</span></span>  
+>  <span data-ttu-id="e51cb-137">`SetPriority` não relata se o nível de prioridade de thread foi alterado.</span><span class="sxs-lookup"><span data-stu-id="e51cb-137">`SetPriority` does not report whether the thread priority level was changed.</span></span> <span data-ttu-id="e51cb-138">Chame [ihosttask:: Getpriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) para determinar o valor do nível de prioridade do thread da tarefa.</span><span class="sxs-lookup"><span data-stu-id="e51cb-138">Call [IHostTask::GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) to determine the value of the task's thread priority level.</span></span>  
   
- <span data-ttu-id="1d8b6-139">Valores de nível de prioridade de thread são definidos pelo Win32 `SetThreadPriority` função.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-139">Thread priority level values are defined by the Win32 `SetThreadPriority` function.</span></span> <span data-ttu-id="1d8b6-140">Para obter mais informações sobre a prioridade de thread, consulte a documentação da plataforma Windows.</span><span class="sxs-lookup"><span data-stu-id="1d8b6-140">For more information about thread priority, see the Windows Platform documentation.</span></span>  
+ <span data-ttu-id="e51cb-139">Valores de nível de prioridade de thread são definidos pelo Win32 `SetThreadPriority` função.</span><span class="sxs-lookup"><span data-stu-id="e51cb-139">Thread priority level values are defined by the Win32 `SetThreadPriority` function.</span></span> <span data-ttu-id="e51cb-140">Para obter mais informações sobre a prioridade de thread, consulte a documentação da plataforma Windows.</span><span class="sxs-lookup"><span data-stu-id="e51cb-140">For more information about thread priority, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d8b6-141">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1d8b6-141">Requirements</span></span>  
- <span data-ttu-id="1d8b6-142">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d8b6-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e51cb-141">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e51cb-141">Requirements</span></span>  
+ <span data-ttu-id="e51cb-142">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e51cb-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d8b6-143">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1d8b6-143">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e51cb-143">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e51cb-143">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1d8b6-144">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="1d8b6-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e51cb-144">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e51cb-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="1d8b6-145">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="1d8b6-145">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="e51cb-145">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e51cb-145">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d8b6-146">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1d8b6-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e51cb-146">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e51cb-146">See also</span></span>
 
 - <xref:System.Threading.Thread>
-- [<span data-ttu-id="1d8b6-147">Interface ICLRTask</span><span class="sxs-lookup"><span data-stu-id="1d8b6-147">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="1d8b6-148">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="1d8b6-148">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="1d8b6-149">Interface IHostTask</span><span class="sxs-lookup"><span data-stu-id="1d8b6-149">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="1d8b6-150">Método GetPriority</span><span class="sxs-lookup"><span data-stu-id="1d8b6-150">GetPriority Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)
-- [<span data-ttu-id="1d8b6-151">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="1d8b6-151">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="e51cb-147">Interface ICLRTask</span><span class="sxs-lookup"><span data-stu-id="e51cb-147">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="e51cb-148">Interface ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="e51cb-148">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="e51cb-149">Interface IHostTask</span><span class="sxs-lookup"><span data-stu-id="e51cb-149">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="e51cb-150">Método GetPriority</span><span class="sxs-lookup"><span data-stu-id="e51cb-150">GetPriority Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)
+- [<span data-ttu-id="e51cb-151">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="e51cb-151">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
