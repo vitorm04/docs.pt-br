@@ -15,10 +15,10 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343006"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentários no código (Visual Basic)
@@ -62,7 +62,7 @@ ms.locfileid: "59343006"
 ## <a name="see-also"></a>Consulte também
 
 - [Instintos básicos - documentando seu código com comentários XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Como: criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [marcações de comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
-- [Estrutura do programa e convenções de código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Como: Criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Instrução REM](../../../visual-basic/language-reference/statements/rem-statement.md)

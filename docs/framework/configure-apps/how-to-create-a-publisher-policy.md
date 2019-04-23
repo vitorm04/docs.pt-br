@@ -8,10 +8,10 @@ helpviewer_keywords:
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344657"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
@@ -61,7 +61,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
   
     -   O *publisherPolicyAssemblyFile* argumento é o nome do assembly da diretiva de editor que é o resultado desse comando. O nome de arquivo do assembly deve seguir o formato:  
   
-         **política.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   O *keyPairFile* argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly de política do publicador com o mesmo par de chaves.  
   
@@ -104,7 +104,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
 
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurando aplicativos usando arquivos de configuração ](../../../docs/framework/configure-apps/index.md)
+- [Configurando aplicativos usando arquivos de configuração](../../../docs/framework/configure-apps/index.md)
 - [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

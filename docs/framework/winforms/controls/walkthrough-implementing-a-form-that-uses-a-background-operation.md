@@ -16,10 +16,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343396"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Passo a passo: Implementando um formulário que usa uma operação em segundo plano
@@ -168,7 +168,7 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
 - [Threading gerenciado](../../../standard/threading/index.md)
 - [Práticas recomendadas de threading gerenciado](../../../standard/threading/managed-threading-best-practices.md)
-- [Visão geral do padrão assíncrono baseado em evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Passo a passo: Executando uma operação em segundo plano](walkthrough-running-an-operation-in-the-background.md)
 - [Componente BackgroundWorker](backgroundworker-component.md)

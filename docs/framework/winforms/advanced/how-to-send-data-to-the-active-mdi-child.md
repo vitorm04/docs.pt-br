@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
 ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343708"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Como: enviar dados para o filho MDI ativo
@@ -93,8 +93,8 @@ Muitas vezes, dentro do contexto de [aplicativos de Interface de documentos múl
   
 ## <a name="see-also"></a>Consulte também
 
-- [Aplicativos de Interface de Documentos Múltiplos (MDI)](multiple-document-interface-mdi-applications.md)
-- [Como: criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
-- [Como: criar formulários filho MDI](how-to-create-mdi-child-forms.md)
-- [Como: determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
-- [Como: organizar formulários MDI filho](how-to-arrange-mdi-child-forms.md)
+- [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
+- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
 ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344306"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Congelar colunas no controle DataGridView do Windows Forms usando o designer
@@ -39,8 +39,8 @@ Quando os usuários exibem os dados exibidos em um Windows Forms <xref:System.Wi
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
-- [Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms usando o designer](enable-column-reordering-in-the-datagrid-using-the-designer.md)
+- [Como: Adicionar e remover colunas no controle DataGridView do Windows Forms usando o Designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Como: Habilitar a reorganização de colunas no controle DataGridView do Windows Forms usando o Designer](enable-column-reordering-in-the-datagrid-using-the-designer.md)
 - [Como: Exibir o texto da direita para a esquerda nos Windows Forms para globalização](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
 - [Como: Criar um projeto de aplicativo do Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Como: Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Como: Adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)

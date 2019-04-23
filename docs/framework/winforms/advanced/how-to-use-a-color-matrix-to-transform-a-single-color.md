@@ -9,10 +9,10 @@ helpviewer_keywords:
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
 ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342850"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Como: usar uma matriz de cores para transformar uma única cor
@@ -20,7 +20,7 @@ ms.locfileid: "59342850"
   
  Um vetor de cor é uma tupla de 4 do formulário (vermelho, verde, azul, alfa). Por exemplo, o vetor de cor (0, 255, 0, 255) representa uma cor opaca que não tem nenhum vermelho nem azul, mas tem verde na intensidade total.  
   
- Outra convenção para representar cores usa o número 1 para intensidade total. Usando essa convenção, a cor descrita no parágrafo anterior seria representada pelo vetor (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa a convenção de 1 como intensidade total quando executa transformações de cor.  
+ Outra convenção para representar cores usa o número 1 para intensidade total. Usando essa convenção, a cor descrita no parágrafo anterior seria representada pelo vetor (0, 1, 0, 1). O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa a convenção de 1 como intensidade total quando executa transformações de cor.  
   
  Você pode aplicar transformações lineares (rotação, colocação em escala e assim por diante) em vetores de cor multiplicando os vetores de cor por uma matriz de 4 x 4. No entanto, você não pode usar uma matriz de 4 x 4 para realizar uma translação (não linear). Se você adicionar uma quinta coordenada fictícia (por exemplo, o número 1) a cada um dos vetores de cor, poderá usar uma matriz de 5 × 5 para aplicar qualquer combinação de transformações lineares e translações. Uma transformação que consiste em uma transformação linear seguida por uma translação é chamada de transformação afim.  
   
@@ -65,5 +65,5 @@ ms.locfileid: "59342850"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Recolorindo imagens](recoloring-images.md)
-- [Sistemas de coordenadas e transformações](coordinate-systems-and-transformations.md)
+- [Recolorindo Imagens](recoloring-images.md)
+- [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md)

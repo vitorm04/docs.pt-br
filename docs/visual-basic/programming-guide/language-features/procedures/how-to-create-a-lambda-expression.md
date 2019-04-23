@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344540"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Como: Criar uma expressão Lambda (Visual Basic)
@@ -107,10 +107,10 @@ Um *expressão lambda* é uma função ou sub-rotina que não tem um nome. Uma e
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.Enumerable>
-- [Expressões lambda](./lambda-expressions.md)
+- [Expressões Lambda](./lambda-expressions.md)
 - [Instrução Function](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Como: Passar procedimentos para outro procedimento no Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Instrução Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
