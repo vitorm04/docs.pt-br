@@ -8,10 +8,10 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
 ms.openlocfilehash: 857e61bc89e072aebcf34793d7e8504ece3318c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307244"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Como: Agrupar controles RadioButton do Windows Forms para funcionarem como um conjunto
@@ -29,7 +29,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> controles são projetados 
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Visão geral do controle RadioButton](radiobutton-control-overview-windows-forms.md)
-- [Visão geral do controle de painel](panel-control-overview-windows-forms.md)
+- [Visão geral do controle Panel](panel-control-overview-windows-forms.md)
 - [Visão geral do controle GroupBox](groupbox-control-overview-windows-forms.md)
 - [Visão geral do controle CheckBox](checkbox-control-overview-windows-forms.md)
 - [Controle RadioButton](radiobutton-control-windows-forms.md)

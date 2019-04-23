@@ -10,10 +10,10 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
 ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319593"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Como: Combinar dados com LINQ com junções (Visual Basic)
@@ -82,7 +82,7 @@ O Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa c
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introdução a LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Cláusula Join](../../../../visual-basic/language-reference/queries/join-clause.md)
 - [Cláusula Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)
 - [Cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md)

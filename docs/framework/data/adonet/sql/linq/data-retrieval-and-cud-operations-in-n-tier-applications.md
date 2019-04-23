@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318423"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperação de dados e operações de COMIDA RUMINADA em aplicativos de n camadas (LINQ to SQL)
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Atualizando dados  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a atualizações nesses cenários que envolvem concorrência otimista:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta atualizações nesses cenários que envolvem concorrência otimista:  
   
 -   Concorrência otimista com base em carimbos de data/hora ou em números de RowVersion.  
   
@@ -408,5 +408,5 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Aplicativos de n camadas e remoto com LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

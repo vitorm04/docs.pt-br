@@ -9,10 +9,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305955"
 ---
 # <a name="how-to-create-application-settings"></a>Como: criar configurações de aplicativo
@@ -50,5 +50,5 @@ Usando código gerenciado, é possível criar novas configurações de aplicativ
 
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Visão geral sobre configurações do aplicativo](application-settings-overview.md)
-- [Como: validar configurações de aplicativo](how-to-validate-application-settings.md)
+- [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)
+- [Como: Validar configurações do aplicativo](how-to-validate-application-settings.md)

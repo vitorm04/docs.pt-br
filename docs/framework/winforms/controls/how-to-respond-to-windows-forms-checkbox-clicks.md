@@ -13,10 +13,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
 ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319892"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Como: Responder a cliques CheckBox do Windows Forms
@@ -139,5 +139,5 @@ Sempre que um usuário clica em um Windows Forms <xref:System.Windows.Forms.Chec
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Visão geral do controle CheckBox](checkbox-control-overview-windows-forms.md)
-- [Como: Definir opções com controles CheckBox do Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Controle de CheckBox](checkbox-control-windows-forms.md)
+- [Como: Definir opções com controles CheckBox dos Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Controle CheckBox](checkbox-control-windows-forms.md)

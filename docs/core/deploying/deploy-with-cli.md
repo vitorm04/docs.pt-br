@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306060"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicar aplicativos .NET Core com a CLI
 
@@ -33,8 +33,7 @@ Procurando uma ajuda rápida de como usar a CLI? A tabela a seguir mostra alguns
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*Ao usar a versão 3.0 do SDK, o executável dependente de estrutura será o modo de publicação padrão durante a execução do comando `dotnet publish` básico. Isso se aplica somente a projetos direcionados ao **.NET Core 2.1** ou ao **.NET Core 3.0**.
+\* Ao usar a versão 3.0 do SDK, o executável dependente de estrutura será o modo de publicação padrão durante a execução do comando `dotnet publish` básico. Isso só se aplica quando o projeto visa o **.NET Core 2.1** ou o **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Noções básicas de publicação
 
@@ -129,7 +128,8 @@ A publicação de um FDE cria um aplicativo que efetua roll forward automaticame
 
 Você precisará (exceto para o .NET Core 3.x quando você definir a plataforma atual como destino) usar as seguintes opções com o comando `dotnet publish` para publicar um FDE:
 
-- `-r <RID>` Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+- `-r <RID>`
+  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
 - `--self-contained false` Essa opção instrui o SDK do .NET Core a criar um executável como um FDE.
 
@@ -148,15 +148,15 @@ A publicação de uma SCD cria um aplicativo que não efetua roll forward para o
 
 É necessário usar as seguintes opções com o comando `dotnet publish` para publicar uma SCD:
 
-- `-r <RID>` Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+- `-r <RID>`
+  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
 - `--self-contained true` Essa opção instrui o SDK do .NET Core a criar um executável como uma SCD.
 
 > [!NOTE]
 > Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, confira [Modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral da implantação de aplicativos .NET Core](index.md)
-- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+- [Catálogo do RID (Identificador de Tempo de Execução) do .NET Core](../rid-catalog.md)

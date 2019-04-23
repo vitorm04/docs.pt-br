@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318787"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Sem espaço na pilha (Visual Basic)
@@ -30,4 +30,4 @@ A pilha é uma área de trabalho de memória que aumenta e diminui dinamicamente
   
 ## <a name="see-also"></a>Consulte também
 
-- [Janelas de memória](/visualstudio/debugger/memory-windows)
+- [Janelas de Memória](/visualstudio/debugger/memory-windows)

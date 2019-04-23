@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675855"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327159"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Como: Portar um aplicativo da área de trabalho do Windows Forms para o .NET Core
 
@@ -27,7 +27,7 @@ Neste artigo, vários nomes são usados a fim de identificar os tipos de arquivo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio de 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core) para qualquer trabalho de designer que você queira fazer.
+- [Visual Studio de 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) para qualquer trabalho de designer que você queira fazer.
 
   Instale as seguintes cargas de trabalho do Visual Studio:
   - Desenvolvimento de área de trabalho do .NET
@@ -37,9 +37,8 @@ Neste artigo, vários nomes são usados a fim de identificar os tipos de arquivo
 - Seu projeto deve ser codificado em C#. 
 - Instale a versão prévia mais recente do [.NET Core 3.0](https://aka.ms/netcore3download).
 
-
 >[!NOTE]
->O **Visual Studio 2017** não oferece suporte a projetos do .NET Core 3.0. A **versão prévia/RC do Visual Studio 2019** oferece suporte a projetos do .NET Core 3.0, mas ainda não dá suporte ao designer visual para projetos do Windows Forms do .NET Core 3.0. Para usar o designer visual, você deve ter um projeto do Windows Forms do .NET em sua solução que compartilhe os arquivos de formulários com o projeto do .NET Core.
+>O **Visual Studio 2017** não oferece suporte a projetos do .NET Core 3.0. O **Visual Studio 2019** oferece suporte a projetos do .NET Core 3.0, mas ainda não dá suporte ao designer visual para projetos do Windows Forms do .NET Core 3.0. Para usar o designer visual, você deve ter um projeto do Windows Forms do .NET em sua solução que compartilhe os arquivos de formulários com o projeto do .NET Core.
 
 ### <a name="consider"></a>Considerações
 
@@ -61,7 +60,7 @@ Ao portar um aplicativo do Windows Forms do .NET Framework, há alguns pontos a 
 
     É sempre uma boa prática usar as versões mais recentes dos pacotes do NuGet antes de qualquer migração. Se seu aplicativo faz referência a pacotes do NuGet, atualize-os para a versão mais recente. Certifique-se de que seu aplicativo foi compilado com êxito. Após a atualização, se houver erros de pacote, faça downgrade do pacote para a versão mais recente que não interrompa seu código.
 
-01. A versão prévia/RC do Visual Studio 2019 ainda não oferece suporte ao Designer de Formulários do .NET Core 3.0
+01. O Visual Studio 2019 ainda não oferece suporte ao Designer de Formulários do .NET Core 3.0
 
     No momento, você precisa manter seu arquivo de projeto existente do Windows Forms do .NET Framework caso queira usar o Designer de Formulários do Visual Studio.
 
@@ -295,7 +294,7 @@ O comando anterior adiciona o seguinte ao projeto **MyFormsCore.csproj**:
 
 ## <a name="windows-forms-designer"></a>Designer de Formulários do Windows
 
-Conforme detalhado neste artigo, a versão prévia/RC do Visual Studio 2019 oferece suporte ao Designer de Formulários apenas em projetos do .NET Framework. Ao criar um projeto do .NET Core lado a lado, você pode testar seu projeto com o .NET Core enquanto usa o projeto do .NET Framework para criar formulários. Seu arquivo de solução inclui projetos do .NET Framework e do .NET Core. Adicione e crie seus formulários e controles no projeto do .NET Framework e, com base nos padrões glob de arquivos que adicionamos aos projetos do .NET Core, todos os arquivos novos ou alterados serão incluídos automaticamente nos projetos do .NET Core.
+Conforme detalhado neste artigo, o Visual Studio 2019 oferece suporte ao Designer de Formulários apenas em projetos do .NET Framework. Ao criar um projeto do .NET Core lado a lado, você pode testar seu projeto com o .NET Core enquanto usa o projeto do .NET Framework para criar formulários. Seu arquivo de solução inclui projetos do .NET Framework e do .NET Core. Adicione e crie seus formulários e controles no projeto do .NET Framework e, com base nos padrões glob de arquivos que adicionamos aos projetos do .NET Core, todos os arquivos novos ou alterados serão incluídos automaticamente nos projetos do .NET Core.
 
 Depois que o Visual Studio 2019 oferecer suporte ao Designer de Formulários do Windows, você poderá copiar/colar o conteúdo do arquivo de projeto do .NET Core no arquivo de projeto do .NET Framework. Depois, poderá excluir os padrões glob de arquivo adicionados com os itens `<Source>` e `<EmbeddedResource>`. Corrija os caminhos de qualquer referência de projeto usada pelo seu aplicativo. Isso atualiza efetivamente o projeto do .NET Framework para um projeto do .NET Core.
  

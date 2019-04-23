@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
 ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317799"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Como: Chamar um procedimento sobrecarregado (Visual Basic)
@@ -35,12 +35,12 @@ A vantagem de sobrecarregar um procedimento é a flexibilidade da chamada. O có
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos](./index.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
-- [Sobrecarga de procedimento](./procedure-overloading.md)
-- [Solução de problemas de procedimentos](./troubleshooting-procedures.md)
-- [Como: definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Como: sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Como: sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md)
-- [Resolução de sobrecarga](./overload-resolution.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
+- [Como: Definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Como: Sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considerações sobre Procedimentos de Sobrecarga](./considerations-in-overloading-procedures.md)
+- [Resolução de Sobrecarga](./overload-resolution.md)
 - [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)

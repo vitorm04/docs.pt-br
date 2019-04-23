@@ -10,10 +10,10 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318930"
 ---
 # <a name="decision-structures-visual-basic"></a>Estruturas de decisão (Visual Basic)
@@ -47,8 +47,8 @@ Visual Basic permite testar condições e executar operações diferentes depend
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fluxo de controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Estruturas de loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Outras estruturas de controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [Estruturas de controle aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Estruturas de Controle Aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Operador If](../../../../visual-basic/language-reference/operators/if-operator.md)

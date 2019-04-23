@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316733"
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
@@ -46,11 +46,11 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
  As classes de animação de quadro-chave pertencem ao <xref:System.Windows.Media.Animation> namespace e seguem Esta convenção de nomenclatura:  
   
- *\<tipo >* `AnimationUsingKeyFrames`  
+ *\<Type>* `AnimationUsingKeyFrames`  
   
  Em que *\<Type>* é o tipo de valor animado pela classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece as seguintes classes de animação de quadro-chave.  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de quadro-chave a seguir.  
   
 |Tipo de propriedade|Classe de animação De/Para/Por correspondente|Métodos de interpolação com suporte|  
 |-------------------|------------------------------------------------|-------------------------------------|  

@@ -3,10 +3,10 @@ title: Rastreamento personalizada
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307599"
 ---
 # <a name="custom-tracking"></a>Rastreamento personalizada
@@ -18,7 +18,7 @@ Este exemplo demonstra como criar um participante personalizado de rastreamento 
 |Componente|Descrição|
 |---------------|-----------------|
 |Tempo de execução de rastreamento|Fornece a infraestrutura para emitir registros de rastreamento.|
-|Participantes de rastreamento|Consome os registros de rastreamento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] é fornecido com um participante de rastreamento que grava registros de rastreamento como eventos do Event Tracing for Windows (ETW).|
+|Participantes de rastreamento|Consome os registros de rastreamento. vem de[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] com um participante de rastreamento que grava registros de rastreamento como o rastreamento de evento para eventos do Windows (ETW).|
 |Controlando o perfil|Um mecanismo de filtragem que permite que um participante de rastreamento assine para um subconjunto de registros de rastreamento emissores de uma instância de fluxo de trabalho.|
 
  A tabela a seguir detalha os registros de rastreamento que o tempo de execução de fluxo de trabalho se emite.
@@ -150,4 +150,4 @@ context.Track(customRecord);
   
 ## <a name="see-also"></a>Consulte também
 
-- [AppFabric que monitora Exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

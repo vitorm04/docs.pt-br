@@ -8,10 +8,10 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306710"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Como: Criar uma propriedade (Visual Basic)
@@ -64,10 +64,10 @@ Coloque uma definição de propriedade entre um `Property` instrução e um `End
 
 - [Procedimentos](./index.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)
-- [Como: declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Como: chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
+- [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Como: Chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
 - [Como: Declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Como: inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
-- [Como: obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+- [Como: Inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
+- [Como: Obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

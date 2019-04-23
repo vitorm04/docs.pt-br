@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
 ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318819"
 ---
 # <a name="permission-denied-visual-basic"></a>Permissão negada (Visual Basic)
@@ -24,4 +24,4 @@ Foi feita uma tentativa para gravar em um disco protegido contra gravação ou p
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)

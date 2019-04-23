@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317097"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificando dados de valores grandes (max) no ADO.NET
@@ -19,9 +19,9 @@ Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linh
   
  A tabela a seguir fornece links para a documentação nos Manuais Online do SQL Server.  
   
- **Manuais Online do SQL Server**  
+ **SQL Server Books Online** (Guias online do SQL Server)  
   
-1. [Usando tipos de dados de valores grandes](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Usando tipos de dados de valor grande](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrições de tipo de valores grandes  
  As seguintes restrições aplicam-se a tipos de dados `max`, que não existem para tipos de dados menores:  
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |If|Then|  
 |--------|----------|  
 |A expressão é definida como NULL|`@Length` é ignorado e o valor em *column_name* será truncado no local especificado `@Offset`.|  
-|`@Offset` is NULL|A operação de atualização acrescentará a expressão no final da existente *column_name* valor e `@Length` será ignorado.|  
-|`@Offset` é maior que o comprimento do valor column_name|O SQL Server retornará um erro.|  
-|`@Length` is NULL|A operação de atualização remove todos os dados de `@Offset` para o final do valor `column_name`.|  
+|`@Offset` é nulo|A operação de atualização acrescentará a expressão no final da existente *column_name* valor e `@Length` será ignorado.|  
+|`@Offset` é maior do que o comprimento do valor column_name|O SQL Server retornará um erro.|  
+|`@Length` é nulo|A operação de atualização remove todos os dados de `@Offset` para o final do valor `column_name`.|  
   
 > [!NOTE]
 >  Nem `@Offset` ou `@Length` pode ser um número negativo.  
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>Consulte também
 
-- [Dados binários e de valor grande do SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Mapeamentos de tipos de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Operações de dados do SQL Server no ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)
+- [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [SQL Server Data Operations in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md) (Operações de dados do SQL Server no ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -3,10 +3,10 @@ title: 'Como: configurar um comportamento de exceção sem tratamento de fluxo d
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
 ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318735"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Como: configurar um comportamento de exceção sem tratamento de fluxo de trabalho com WorkflowServiceHost
@@ -37,13 +37,13 @@ O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBeh
   
      O `action` atributo da <`workflowUnhandledException`> elemento pode ser definido como um dos seguintes valores:  
   
-     **abandonar**  
+     **abandon**  
      Anula a instância na memória sem tocar o estado da instância persistentes (isto é, reverter para o último ponto de persistência).  
   
      **abandonAndSuspend**  
      Anula a instância na memória e atualiza a instância persistida deve ser suspensa.  
   
-     **cancelar**  
+     **cancel**  
      Chama os manipuladores de cancelamento para a instância e, em seguida, conclui a instância na memória, que também pode removê-lo do repositório de instância  
   
      **terminate**  
@@ -53,5 +53,5 @@ O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBeh
   
 ## <a name="see-also"></a>Consulte também
 
-- [Extensibilidade de host de serviço do fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+- [Extensibilidade de host de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)

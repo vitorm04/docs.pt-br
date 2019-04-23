@@ -3,10 +3,10 @@ title: SELECIONAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306424"
 ---
 # <a name="select-entity-sql"></a>SELECIONAR (Entity SQL)
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  Também é possível usar a sintaxe JOIN (FULL, INNER, LEFT, OUTER, ON e RIGHT). ON é necessário para junções internas e não é permitido para junções cruzadas.  
   
 ## <a name="row-and-value-select-clauses"></a>Cláusulas de seleção de linha e valor  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a duas variantes da cláusula SELECT. A primeira variante, seleção de linha, é identificada pela palavra-chave SELECT e pode ser usada para especificar um ou mais valores que devem ser projetados. Como um wrapper de linha é implicitamente adicionado ao redor dos valores retornados, o resultado da expressão de consulta é sempre um multiconjunto de linhas.  
+ O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oferece suporte a duas variantes da cláusula SELECT. A primeira variante, seleção de linha, é identificada pela palavra-chave SELECT e pode ser usada para especificar um ou mais valores que devem ser projetados. Como um wrapper de linha é implicitamente adicionado ao redor dos valores retornados, o resultado da expressão de consulta é sempre um multiconjunto de linhas.  
   
  Cada expressão de consulta em uma seleção de linha deve especificar um alias. Se nenhum alias for especificada,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta gerar um alias usando as regras de geração de alias.  
   
@@ -102,6 +102,6 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
 ## <a name="see-also"></a>Consulte também
 
-- [Expressões de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

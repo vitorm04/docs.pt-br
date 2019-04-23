@@ -3,17 +3,17 @@ title: Criando uma atividade em tempo de execução com o DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
 ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321218"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Criando uma atividade em tempo de execução com o DynamicActivity
-<xref:System.Activities.DynamicActivity> é uma concreto, classe lacradas com um construtor público. <xref:System.Activities.DynamicActivity> pode ser usado para montar a funcionalidade de atividade em tempo de execução usando uma atividade DOM.  
+<xref:System.Activities.DynamicActivity> é um concreto, classe lacradas com um construtor público. <xref:System.Activities.DynamicActivity> pode ser usado para reunir a funcionalidade de atividade em tempo de execução usando os DOM de uma atividade.  
   
 ## <a name="dynamicactivity-features"></a>Recursos de DynamicActivity  
- <xref:System.Activities.DynamicActivity> tem acesso a propriedades de execução, argumentos e variáveis, mas nenhum acesso aos serviços de tempo de execução como atividades filhos de programação ou de rastreamento.  
+ <xref:System.Activities.DynamicActivity> tem acesso às propriedades de execução, os argumentos e variáveis, mas nenhum o acesso aos serviços de tempo de execução como atividades filhos de programação ou o rastreamento.  
   
  As propriedades de nível superior podem ser definidas usando objetos de <xref:System.Activities.Argument> de fluxo de trabalho. No código obrigatório, esses argumentos são criados usando propriedades de CLR em um novo tipo. Em XAML, são declarados usando `x:Class` e marcas de `x:Member` .  
   

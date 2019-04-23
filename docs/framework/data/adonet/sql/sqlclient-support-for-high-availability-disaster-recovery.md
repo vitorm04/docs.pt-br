@@ -3,10 +3,10 @@ title: Suporte do SqlClient para alta disponibilidade, recuperação de desastre
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307582"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastre
@@ -63,7 +63,7 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
 2. Se um aplicativo usar `ApplicationIntent=ReadWrite` (discutido abaixo) e o local de réplica secundário estiver configurado para acesso de somente leitura.  
   
- <xref:System.Data.SqlClient.SqlDependency> não é suportado em réplicas secundárias somente leitura.  
+ <xref:System.Data.SqlClient.SqlDependency> não é suportado em réplicas secundárias de somente leitura.  
   
  Uma conexão falhará se a réplica primária estiver configurada para rejeitar as cargas de trabalho de somente leitura e a cadeia de caracteres da conexão contém `ApplicationIntent=ReadOnly`.  
   
@@ -79,7 +79,7 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  A palavra-chave `ApplicationIntent` não funciona com bancos de dados legados de somente leitura.  
   
- Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com o `ALLOW_CONNECTIONS` cláusula do `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instruções.)  
+ Um banco de dados pode permitir ou impedir cargas de trabalho de leitura no banco de dados AlwaysOn de destino. (Isso é feito com a cláusula `ALLOW_CONNECTIONS` das instruções `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
   
  A palavra-chave `ApplicationIntent` é usada para ativar o roteamento de somente leitura.  
   
@@ -98,5 +98,5 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
 ## <a name="see-also"></a>Consulte também
 
-- [funcionalidades do SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Central de desenvolvedores de provedores gerenciados ADO.NET e DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

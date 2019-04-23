@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319398"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opções do compilador C#)
@@ -70,4 +70,4 @@ csc -lib:c:\ -reference:t2.dll t2.cs
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

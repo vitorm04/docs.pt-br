@@ -3,10 +3,10 @@ title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305020"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
@@ -106,5 +106,5 @@ Um *de mensagens suspeitas* é uma mensagem que foi excedido o número máximo d
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Diferenças de recursos em fila no Windows Vista, Windows Server 2003, e no Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Diferenças de recursos da Fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [Especificando e lidando com falhas em contratos e serviços](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

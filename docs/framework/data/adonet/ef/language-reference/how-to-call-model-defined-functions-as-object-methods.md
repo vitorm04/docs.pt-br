@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304825"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: Chamar funções definidas por modelo como métodos de objeto
@@ -44,7 +44,7 @@ Este tópico descreve como chamar uma função o definida como um método em um 
 2. Chame o método como um membro um método estático na classe personalizada  
   
 ## <a name="example"></a>Exemplo  
- **Chamando uma função o definida como um método em um objeto de ObjectContext**  
+ **Chamando uma função definida pelo modelo como um método em um objeto ObjectContext**  
   
  O exemplo a seguir demonstra como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> . O exemplo usa o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
@@ -82,7 +82,7 @@ Este tópico descreve como chamar uma função o definida como um método em um 
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Exemplo  
- **Chamando uma função o definida como um método estático em uma classe personalizada**  
+ **Chamar uma função definida pelo modelo como um método estático em uma classe personalizada**  
   
  O exemplo a seguir demonstra como chamar uma função o definida como um método estático em uma classe personalizada. O exemplo usa o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
@@ -109,4 +109,4 @@ Este tópico descreve como chamar uma função o definida como um método em um 
 
 - [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Chamando funções em consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Chamando funções em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

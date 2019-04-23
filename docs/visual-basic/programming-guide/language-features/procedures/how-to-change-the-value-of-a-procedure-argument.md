@@ -14,10 +14,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316616"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Como: Altere o valor de um argumento de procedimento (Visual Basic)
@@ -80,12 +80,12 @@ Quando você chama um procedimento, cada argumento que você fornecer correspond
 ## <a name="see-also"></a>Consulte também
 
 - [Procedimentos](./index.md)
-- [Parâmetros e argumentos de procedimento](./procedure-parameters-and-arguments.md)
-- [Como: passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
-- [Passar argumentos por valor e por referência](./passing-arguments-by-value-and-by-reference.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Como: Passar argumentos para um procedimento](./how-to-pass-arguments-to-a-procedure.md)
+- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)
 - [Diferenças entre argumentos modificáveis e não modificáveis](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Diferenças entre passar um argumento por valor e por referência](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Como: proteger um argumento de procedimento contra alterações de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Como: forçar um argumento a ser passado por valor](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Passar argumentos por posição e nome](./passing-arguments-by-position-and-by-name.md)
-- [Tipos de valor e referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Como: Proteger um argumento de procedimento contra alterações de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Como: Forçar um argumento a ser passado por valor](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Passando Argumentos por Posição e Nome](./passing-arguments-by-position-and-by-name.md)
+- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

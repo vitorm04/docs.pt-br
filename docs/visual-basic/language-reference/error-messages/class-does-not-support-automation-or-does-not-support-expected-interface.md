@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
 ms.openlocfilehash: 4545c6d3bc302dba0c37e5ae6ebefa8939b0cff9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305917"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>A classe não dá suporte à automação ou à interface esperada
@@ -22,5 +22,5 @@ A classe especificada na chamada de função `GetObject` ou `CreateObject` não 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tipos de erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Fale conosco](/visualstudio/ide/talk-to-us)

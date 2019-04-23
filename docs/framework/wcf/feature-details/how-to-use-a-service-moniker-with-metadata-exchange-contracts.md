@@ -3,10 +3,10 @@ title: 'Como: usar um moniker de serviço com contratos de intercâmbio de metad
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319827"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Como: usar um moniker de serviço com contratos de intercâmbio de metadados
@@ -41,5 +41,5 @@ Após desenvolver alguns novos serviços do WCF, você pode decidir o que você 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: usar o moniker de serviço do Windows Communication Foundation sem registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
-- [Como: usar um moniker de serviço com contratos WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+- [Como: Use o Moniker de serviço do Windows Communication Foundation sem registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Como: Usar um Moniker de serviço com contratos WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

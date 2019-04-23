@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cafd8685f34537f8efb372967dc45682afbe8fa0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306372"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Passo a passo: Herdando um controle de formulários do Windows com o Visual C\#
@@ -135,7 +135,7 @@ Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode 
   
 11. No menu **Depuração**, selecione **Iniciar Depuração**.  
   
-     `Form1` é exibida.  
+     `Form1` é exibido.  
   
 12. Clique em `valueButton1`.  
   
@@ -143,5 +143,5 @@ Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Passo a passo: Criando um controle composto com o Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Passo a passo: Criando um controle composto com VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

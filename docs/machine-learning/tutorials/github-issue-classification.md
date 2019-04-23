@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318774"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutorial: Usar o ML.NET em um cenário de classificação multiclasse para classificar os problemas do GitHub
@@ -58,7 +58,7 @@ As fases do fluxo de trabalho são as seguintes:
    * **Treinar o modelo**
    * **Avaliar o modelo**
 4. **Implantar Modelo**
-   * **Usar o Modelo para prever**
+   * **Usar o modelo para prever**
 
 ### <a name="understand-the-problem"></a>Compreender o problema
 
@@ -150,7 +150,7 @@ Crie três campos globais para manter os caminhos para os arquivos baixados rece
 * `_mlContext` é o <xref:Microsoft.ML.MLContext> que fornece o contexto de processamento.
 * `_trainingDataView` é o <xref:Microsoft.Data.DataView.IDataView> usado para processar o conjunto de dados de treinamento.
 * `_predEngine` é o <xref:Microsoft.ML.PredictionEngine%602> usado para previsões individuais.
-* `_reader` é o <xref:Microsoft.ML.Data.TextLoader> usado para carregar e transformar os conjuntos de dados.
+* O `_reader` é o <xref:Microsoft.ML.Data.TextLoader> usado para carregar e transformar os conjuntos de dados.
 
 Adicione o seguinte código à linha logo acima do método `Main` para especificar estes caminhos e as outras variáveis:
 

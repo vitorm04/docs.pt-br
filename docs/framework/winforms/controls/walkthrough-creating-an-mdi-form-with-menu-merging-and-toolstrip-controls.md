@@ -15,10 +15,10 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319060"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Passo a passo: Criar um formulário MDI com mesclagem de menu e controles ToolStrip
@@ -209,7 +209,7 @@ O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace oferece sup
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Como: criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Como: criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Como: Inserir um MenuStrip em um menu suspenso MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Como: Criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Como: Criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)
+- [Como: Inserir um MenuStrip um Menu suspenso do MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [Controle ToolStrip](toolstrip-control-windows-forms.md)

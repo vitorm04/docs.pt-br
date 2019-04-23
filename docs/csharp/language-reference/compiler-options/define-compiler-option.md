@@ -12,10 +12,10 @@ helpviewer_keywords:
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305254"
 ---
 # <a name="-define-c-compiler-options"></a>-define (opções do compilador C#)
@@ -81,4 +81,4 @@ public class Test
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Gerenciando propriedades de solução e projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

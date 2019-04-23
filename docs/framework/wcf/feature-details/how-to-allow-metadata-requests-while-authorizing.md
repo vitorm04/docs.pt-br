@@ -8,10 +8,10 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317695"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Como: permitir solicitações de metadados durante a autorização
@@ -39,4 +39,4 @@ Durante a autorização personalizada, ele pode ser necessário permitir que uma
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Gerenciamento de declarações e autorizações com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317331"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
@@ -70,7 +70,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
      <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute>, e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
+    <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
   
 4. CONSIDERE o uso do <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar os tipos concretos que devem ser usados ao desserializar um grafo de objeto complexo.  
   
@@ -142,8 +142,8 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
 
 - [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Serializador de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Tipos com suporte fornecido pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Tipos com suporte pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serialização binária](binary-serialization.md)
-- [Comunicação remota .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [Comunicação remota do .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serialização XML e SOAP](xml-and-soap-serialization.md)
 - [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)

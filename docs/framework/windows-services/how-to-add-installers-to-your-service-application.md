@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307243"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Como: Adicionar instaladores ao aplicativo de serviço
@@ -62,7 +62,7 @@ O Visual Studio tem componentes de instalação que podem instalar recursos asso
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a aplicativos do Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como: instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Como: Iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Como: Especificar o contexto de segurança para serviços](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

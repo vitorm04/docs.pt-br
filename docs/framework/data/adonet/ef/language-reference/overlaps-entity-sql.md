@@ -3,10 +3,10 @@ title: SOBREPÕE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319632"
 ---
 # <a name="overlaps-entity-sql"></a>SOBREPÕE (Entity SQL)
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  Qualquer expressão de consulta válida que retornar uma coleção para comparar com a coleção retornada de outra expressão de consulta. Todas as expressões devem ser do mesmo tipo ou de uma base comum ou um tipo derivado que `expression`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se as duas coleções possuem elementos comuns; Caso contrário, `false`.  
+ `true` se as duas coleções possuem elementos comuns; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  OVERLAPS fornecem funcional equivalente ao seguinte:  

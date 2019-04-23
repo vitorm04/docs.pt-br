@@ -3,10 +3,10 @@ title: 'Como: importar metadados para pontos de extremidade de serviço'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
 ms.openlocfilehash: afee3f2236db99b14c0e840d987e4862a260568e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318280"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Como: importar metadados para pontos de extremidade de serviço
@@ -40,4 +40,4 @@ Este tópico explica como importar metadados para uma coleção de pontos de ext
 ## <a name="see-also"></a>Consulte também
 
 - [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)

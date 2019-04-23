@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317006"
 ---
 # <a name="how-to-author-composite-controls"></a>Como: Criar controles compostos
@@ -80,10 +80,10 @@ Os controles de composição podem ser usados de várias maneiras. É possível 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Criar um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Passo a passo: Criando um controle composto com o Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Passo a passo: Herdar de um controle do Windows Forms com Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Passo a passo: Herdando um controle do Windows Forms com Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
-- [Recomendações do tipo de controle](control-type-recommendations.md)
-- [Como: Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Passo a passo: Criando um controle composto com o Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Passo a passo: Criando um controle composto com VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Recomendações do Tipo de Controle](control-type-recommendations.md)
+- [Como: Criar controles para Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
