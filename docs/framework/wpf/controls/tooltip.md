@@ -9,30 +9,30 @@ helpviewer_keywords:
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054982"
 ---
-# <a name="tooltip"></a><span data-ttu-id="5676d-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="5676d-102">ToolTip</span></span>
-<span data-ttu-id="5676d-103">Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, como por um <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="5676d-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="6bed4-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="6bed4-102">ToolTip</span></span>
+<span data-ttu-id="6bed4-103">Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, como por um <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="6bed4-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="5676d-104">A ilustração a seguir mostra um ponteiro de mouse que aponta para o **feche**<xref:System.Windows.Controls.Button>, que então exibe sua identificação <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="5676d-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="6bed4-104">A ilustração a seguir mostra um ponteiro de mouse que aponta para o **feche**<xref:System.Windows.Controls.Button>, que então exibe sua identificação <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="6bed4-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="5676d-105">Botão Fechar com sua dica de ferramenta exibida</span><span class="sxs-lookup"><span data-stu-id="5676d-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="6bed4-105">Botão Fechar com sua dica de ferramenta exibida</span><span class="sxs-lookup"><span data-stu-id="6bed4-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="5676d-106">![Captura de tela de dica de ferramenta](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="5676d-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="6bed4-106">![Captura de tela de dica de ferramenta](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="6bed4-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5676d-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5676d-107">In This Section</span></span>  
- [<span data-ttu-id="5676d-108">Visão geral de ToolTip</span><span class="sxs-lookup"><span data-stu-id="5676d-108">ToolTip Overview</span></span>](tooltip-overview.md)  
-  [<span data-ttu-id="5676d-109">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="5676d-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6bed4-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="6bed4-107">In This Section</span></span>  
+ [<span data-ttu-id="6bed4-108">Visão geral de ToolTip</span><span class="sxs-lookup"><span data-stu-id="6bed4-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="6bed4-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="6bed4-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="5676d-110">Referência</span><span class="sxs-lookup"><span data-stu-id="5676d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6bed4-110">Referência</span><span class="sxs-lookup"><span data-stu-id="6bed4-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="5676d-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="5676d-111">Related Sections</span></span>  
- [<span data-ttu-id="5676d-112">Visão geral do pop-up</span><span class="sxs-lookup"><span data-stu-id="5676d-112">Popup Overview</span></span>](popup-overview.md)  
-  [<span data-ttu-id="5676d-113">Tópicos explicativos </span><span class="sxs-lookup"><span data-stu-id="5676d-113">How-to Topics</span></span>](popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="6bed4-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="6bed4-111">Related Sections</span></span>  
+ [<span data-ttu-id="6bed4-112">Visão geral do pop-up</span><span class="sxs-lookup"><span data-stu-id="6bed4-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="6bed4-113">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="6bed4-113">How-to Topics</span></span>](popup-how-to-topics.md)
