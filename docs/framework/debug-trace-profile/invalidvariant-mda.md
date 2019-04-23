@@ -11,31 +11,31 @@ ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 64f5a4425d70974bae8c4f7bec28041e687fe95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228478"
 ---
-# <a name="invalidvariant-mda"></a><span data-ttu-id="cbb64-102">MDA invalidVariant</span><span class="sxs-lookup"><span data-stu-id="cbb64-102">invalidVariant MDA</span></span>
-<span data-ttu-id="cbb64-103">O MDA (Assistente de Depuração Gerenciado) de `invalidVariant` é ativado quando uma estrutura `VARIANT` inválida é encontrada durante uma chamada de código não gerenciado ou nativo para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="cbb64-103">The `invalidVariant` managed debugging assistant (MDA) is activated when an invalid `VARIANT` structure is encountered during a call from native or unmanaged code to managed code.</span></span>  
+# <a name="invalidvariant-mda"></a><span data-ttu-id="1c8f7-102">MDA invalidVariant</span><span class="sxs-lookup"><span data-stu-id="1c8f7-102">invalidVariant MDA</span></span>
+<span data-ttu-id="1c8f7-103">O MDA (Assistente de Depuração Gerenciado) de `invalidVariant` é ativado quando uma estrutura `VARIANT` inválida é encontrada durante uma chamada de código não gerenciado ou nativo para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-103">The `invalidVariant` managed debugging assistant (MDA) is activated when an invalid `VARIANT` structure is encountered during a call from native or unmanaged code to managed code.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="cbb64-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="cbb64-104">Symptoms</span></span>  
- <span data-ttu-id="cbb64-105">Um comportamento inesperado durante a transição entre código nativo e gerenciado que envolve o marshaling de um `VARIANT` para um objeto.</span><span class="sxs-lookup"><span data-stu-id="cbb64-105">Unexpected behavior during a transition between native and managed code involving the marshaling of a `VARIANT` to an object.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="1c8f7-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="1c8f7-104">Symptoms</span></span>  
+ <span data-ttu-id="1c8f7-105">Um comportamento inesperado durante a transição entre código nativo e gerenciado que envolve o marshaling de um `VARIANT` para um objeto.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-105">Unexpected behavior during a transition between native and managed code involving the marshaling of a `VARIANT` to an object.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="cbb64-106">Causa</span><span class="sxs-lookup"><span data-stu-id="cbb64-106">Cause</span></span>  
- <span data-ttu-id="cbb64-107">Código nativo está passando uma estrutura `VARIANT` malformada para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="cbb64-107">Native code is passing a malformed `VARIANT` structure to managed code.</span></span>  <span data-ttu-id="cbb64-108">O tempo de execução tenta realizar marshaling dessa `VARIANT` para um objeto e ativa o MDA se o `VARIANT` não é válido.</span><span class="sxs-lookup"><span data-stu-id="cbb64-108">The runtime attempts to marshal this `VARIANT` to an object and activates the MDA if the `VARIANT` is not valid.</span></span> <span data-ttu-id="cbb64-109">Exemplos de `VARIANT`S inválidos incluem um `VARIANT` com `VARTYPE` VT_EMPTY &#124; VT_BYREF ou um `VARIANT` com `VARTYPE` VT_VARIANT.</span><span class="sxs-lookup"><span data-stu-id="cbb64-109">Examples of invalid `VARIANT`S include a `VARIANT` with `VARTYPE` VT_EMPTY &#124; VT_BYREF or a `VARIANT` with `VARTYPE` VT_VARIANT.</span></span>  
+## <a name="cause"></a><span data-ttu-id="1c8f7-106">Causa</span><span class="sxs-lookup"><span data-stu-id="1c8f7-106">Cause</span></span>  
+ <span data-ttu-id="1c8f7-107">Código nativo está passando uma estrutura `VARIANT` malformada para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-107">Native code is passing a malformed `VARIANT` structure to managed code.</span></span>  <span data-ttu-id="1c8f7-108">O tempo de execução tenta realizar marshaling dessa `VARIANT` para um objeto e ativa o MDA se o `VARIANT` não é válido.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-108">The runtime attempts to marshal this `VARIANT` to an object and activates the MDA if the `VARIANT` is not valid.</span></span> <span data-ttu-id="1c8f7-109">Exemplos de `VARIANT`S inválidos incluem um `VARIANT` com `VARTYPE` VT_EMPTY &#124; VT_BYREF ou um `VARIANT` com `VARTYPE` VT_VARIANT.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-109">Examples of invalid `VARIANT`S include a `VARIANT` with `VARTYPE` VT_EMPTY &#124; VT_BYREF or a `VARIANT` with `VARTYPE` VT_VARIANT.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="cbb64-110">Resolução</span><span class="sxs-lookup"><span data-stu-id="cbb64-110">Resolution</span></span>  
- <span data-ttu-id="cbb64-111">O código não gerenciado ou nativo passando o `VARIANT` deve garantir que o `VARIANT` seja corretamente formado e inicializado.</span><span class="sxs-lookup"><span data-stu-id="cbb64-111">The native or unmanaged code passing the `VARIANT` must ensure that the `VARIANT` is correctly formed and initialized.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="1c8f7-110">Resolução</span><span class="sxs-lookup"><span data-stu-id="1c8f7-110">Resolution</span></span>  
+ <span data-ttu-id="1c8f7-111">O código não gerenciado ou nativo passando o `VARIANT` deve garantir que o `VARIANT` seja corretamente formado e inicializado.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-111">The native or unmanaged code passing the `VARIANT` must ensure that the `VARIANT` is correctly formed and initialized.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="cbb64-112">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="cbb64-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="cbb64-113">O MDA não tem nenhum efeito sobre o comportamento do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="cbb64-113">The MDA has no effect on the runtime's behavior.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="1c8f7-112">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="1c8f7-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="1c8f7-113">O MDA não tem nenhum efeito sobre o comportamento do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-113">The MDA has no effect on the runtime's behavior.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="cbb64-114">Saída</span><span class="sxs-lookup"><span data-stu-id="cbb64-114">Output</span></span>  
- <span data-ttu-id="cbb64-115">Uma mensagem MDA indicando que o tempo de execução detectou inválido `VARIANT` passado para código gerenciado por um módulo não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="cbb64-115">An MDA message indicating that the runtime detected an invalid `VARIANT` passed to managed code by an unmanaged module.</span></span>  
+## <a name="output"></a><span data-ttu-id="1c8f7-114">Saída</span><span class="sxs-lookup"><span data-stu-id="1c8f7-114">Output</span></span>  
+ <span data-ttu-id="1c8f7-115">Uma mensagem MDA indicando que o tempo de execução detectou inválido `VARIANT` passado para código gerenciado por um módulo não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="1c8f7-115">An MDA message indicating that the runtime detected an invalid `VARIANT` passed to managed code by an unmanaged module.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="cbb64-116">Configuração</span><span class="sxs-lookup"><span data-stu-id="cbb64-116">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="1c8f7-116">Configuração</span><span class="sxs-lookup"><span data-stu-id="1c8f7-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,8 +45,8 @@ ms.locfileid: "59228478"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cbb64-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cbb64-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c8f7-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c8f7-117">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="cbb64-118">Diagnosticando erros com assistentes de depuração gerenciados</span><span class="sxs-lookup"><span data-stu-id="cbb64-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="cbb64-119">Realizando marshaling de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="cbb64-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="1c8f7-118">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="1c8f7-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="1c8f7-119">Marshaling de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="1c8f7-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

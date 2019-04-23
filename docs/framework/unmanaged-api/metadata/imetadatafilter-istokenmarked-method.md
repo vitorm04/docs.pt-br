@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6969f2c1df9b5b04122ed6aef550697171123cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229011"
 ---
-# <a name="imetadatafilteristokenmarked-method"></a><span data-ttu-id="e72c4-102">Método IMetaDataFilter::IsTokenMarked</span><span class="sxs-lookup"><span data-stu-id="e72c4-102">IMetaDataFilter::IsTokenMarked Method</span></span>
-<span data-ttu-id="e72c4-103">Obtém um valor que indica se o token de metadados especificado foi marcado como processada.</span><span class="sxs-lookup"><span data-stu-id="e72c4-103">Gets a value indicating whether the specified metadata token has been marked as processed.</span></span>  
+# <a name="imetadatafilteristokenmarked-method"></a><span data-ttu-id="1efe9-102">Método IMetaDataFilter::IsTokenMarked</span><span class="sxs-lookup"><span data-stu-id="1efe9-102">IMetaDataFilter::IsTokenMarked Method</span></span>
+<span data-ttu-id="1efe9-103">Obtém um valor que indica se o token de metadados especificado foi marcado como processada.</span><span class="sxs-lookup"><span data-stu-id="1efe9-103">Gets a value indicating whether the specified metadata token has been marked as processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e72c4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e72c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1efe9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1efe9-104">Syntax</span></span>  
   
 ```  
 HRESULT IsTokenMarked (  
@@ -36,22 +36,22 @@ HRESULT IsTokenMarked (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e72c4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e72c4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1efe9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1efe9-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="e72c4-106">[in] O token para examinar uma marca de processamento.</span><span class="sxs-lookup"><span data-stu-id="e72c4-106">[in] The token to examine for a processing mark.</span></span>  
+ <span data-ttu-id="1efe9-106">[in] O token para examinar uma marca de processamento.</span><span class="sxs-lookup"><span data-stu-id="1efe9-106">[in] The token to examine for a processing mark.</span></span>  
   
  `pIsMarked`  
- <span data-ttu-id="e72c4-107">[out] Um valor que é `true` se `tk` tiver sido processada; caso contrário `false`.</span><span class="sxs-lookup"><span data-stu-id="e72c4-107">[out] A value that is `true` if `tk` has been processed; otherwise `false`.</span></span>  
+ <span data-ttu-id="1efe9-107">[out] Um valor que é `true` se `tk` tiver sido processada; caso contrário `false`.</span><span class="sxs-lookup"><span data-stu-id="1efe9-107">[out] A value that is `true` if `tk` has been processed; otherwise `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e72c4-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e72c4-108">Requirements</span></span>  
- <span data-ttu-id="e72c4-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e72c4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1efe9-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1efe9-108">Requirements</span></span>  
+ <span data-ttu-id="1efe9-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1efe9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e72c4-110">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e72c4-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1efe9-110">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1efe9-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e72c4-111">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e72c4-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1efe9-111">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="1efe9-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="e72c4-112">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e72c4-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="1efe9-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1efe9-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e72c4-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e72c4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1efe9-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1efe9-113">See also</span></span>
 
-- [<span data-ttu-id="e72c4-114">Interface IMetaDataFilter</span><span class="sxs-lookup"><span data-stu-id="e72c4-114">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="1efe9-114">Interface IMetaDataFilter</span><span class="sxs-lookup"><span data-stu-id="1efe9-114">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
