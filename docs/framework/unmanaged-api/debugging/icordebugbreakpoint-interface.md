@@ -17,40 +17,40 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a68e061c6def61746ee65f8a25818f8dbcd785b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159725"
 ---
-# <a name="icordebugbreakpoint-interface"></a><span data-ttu-id="b47b6-102">Interface ICorDebugBreakpoint</span><span class="sxs-lookup"><span data-stu-id="b47b6-102">ICorDebugBreakpoint Interface</span></span>
+# <a name="icordebugbreakpoint-interface"></a><span data-ttu-id="4262c-102">Interface ICorDebugBreakpoint</span><span class="sxs-lookup"><span data-stu-id="4262c-102">ICorDebugBreakpoint Interface</span></span>
 
-<span data-ttu-id="b47b6-103">Representa um ponto de interrupção em uma função ou um ponto de inspeção em um valor.</span><span class="sxs-lookup"><span data-stu-id="b47b6-103">Represents a breakpoint in a function, or a watch point on a value.</span></span>  
+<span data-ttu-id="4262c-103">Representa um ponto de interrupção em uma função ou um ponto de inspeção em um valor.</span><span class="sxs-lookup"><span data-stu-id="4262c-103">Represents a breakpoint in a function, or a watch point on a value.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b47b6-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="b47b6-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4262c-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="4262c-104">Methods</span></span>  
   
-|<span data-ttu-id="b47b6-105">Método</span><span class="sxs-lookup"><span data-stu-id="b47b6-105">Method</span></span>|<span data-ttu-id="b47b6-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="b47b6-106">Description</span></span>|  
+|<span data-ttu-id="4262c-105">Método</span><span class="sxs-lookup"><span data-stu-id="4262c-105">Method</span></span>|<span data-ttu-id="4262c-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="4262c-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b47b6-107">Método Activate</span><span class="sxs-lookup"><span data-stu-id="b47b6-107">Activate Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|<span data-ttu-id="b47b6-108">Define o estado ativo disso `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="b47b6-108">Sets the active state of this `ICorDebugBreakpoint`.</span></span>|  
-|[<span data-ttu-id="b47b6-109">Método IsActive</span><span class="sxs-lookup"><span data-stu-id="b47b6-109">IsActive Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|<span data-ttu-id="b47b6-110">Obtém um valor que indica se este `ICorDebugBreakpoint` está ativa.</span><span class="sxs-lookup"><span data-stu-id="b47b6-110">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>|  
+|[<span data-ttu-id="4262c-107">Método Activate</span><span class="sxs-lookup"><span data-stu-id="4262c-107">Activate Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|<span data-ttu-id="4262c-108">Define o estado ativo disso `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="4262c-108">Sets the active state of this `ICorDebugBreakpoint`.</span></span>|  
+|[<span data-ttu-id="4262c-109">Método IsActive</span><span class="sxs-lookup"><span data-stu-id="4262c-109">IsActive Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|<span data-ttu-id="4262c-110">Obtém um valor que indica se este `ICorDebugBreakpoint` está ativa.</span><span class="sxs-lookup"><span data-stu-id="4262c-110">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b47b6-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="b47b6-111">Remarks</span></span>  
- <span data-ttu-id="b47b6-112">Pontos de interrupção não suportam diretamente expressões condicionais.</span><span class="sxs-lookup"><span data-stu-id="b47b6-112">Breakpoints do not directly support conditional expressions.</span></span> <span data-ttu-id="b47b6-113">Se desejar essa funcionalidade, um depurador deve implementar a ele na parte superior da `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="b47b6-113">If such functionality is desired, a debugger must implement it on top of `ICorDebugBreakpoint`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4262c-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="4262c-111">Remarks</span></span>  
+ <span data-ttu-id="4262c-112">Pontos de interrupção não suportam diretamente expressões condicionais.</span><span class="sxs-lookup"><span data-stu-id="4262c-112">Breakpoints do not directly support conditional expressions.</span></span> <span data-ttu-id="4262c-113">Se desejar essa funcionalidade, um depurador deve implementar a ele na parte superior da `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="4262c-113">If such functionality is desired, a debugger must implement it on top of `ICorDebugBreakpoint`.</span></span>  
   
- <span data-ttu-id="b47b6-114">Estende a interface ICorDebugFunctionBreakpoint `ICorDebugBreakpoint` para dar suporte a pontos de interrupção em funções.</span><span class="sxs-lookup"><span data-stu-id="b47b6-114">The ICorDebugFunctionBreakpoint interface extends `ICorDebugBreakpoint` to support breakpoints within functions.</span></span>  
+ <span data-ttu-id="4262c-114">Estende a interface ICorDebugFunctionBreakpoint `ICorDebugBreakpoint` para dar suporte a pontos de interrupção em funções.</span><span class="sxs-lookup"><span data-stu-id="4262c-114">The ICorDebugFunctionBreakpoint interface extends `ICorDebugBreakpoint` to support breakpoints within functions.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b47b6-115">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="b47b6-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="4262c-115">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="4262c-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b47b6-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b47b6-116">Requirements</span></span>  
- <span data-ttu-id="b47b6-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b47b6-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4262c-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4262c-116">Requirements</span></span>  
+ <span data-ttu-id="4262c-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4262c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b47b6-118">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b47b6-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4262c-118">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4262c-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b47b6-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b47b6-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4262c-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4262c-119">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b47b6-120">Versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b47b6-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="4262c-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4262c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b47b6-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b47b6-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4262c-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4262c-121">See also</span></span>
 
-- [<span data-ttu-id="b47b6-122">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="b47b6-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="4262c-122">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="4262c-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
