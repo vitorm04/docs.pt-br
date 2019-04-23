@@ -3,11 +3,11 @@ title: Cliente ASMX com um serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
 ms.openlocfilehash: 1eee814b17a7547bbbc07e17dd675c5f37860341
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302218"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979245"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX com um serviço do WCF
 Este exemplo demonstra como criar um serviço usando o Windows Communication Foundation (WCF) e, em seguida, acessar o serviço de um cliente não WCF, como um cliente do ASMX.  

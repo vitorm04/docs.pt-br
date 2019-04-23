@@ -6,12 +6,12 @@ title: Documentação .NET
 description: Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 01472d5586becf0bca2333557a05ddb10ee8b607
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427481"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978075"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -54,7 +54,7 @@ ms.locfileid: "59427481"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7.2">
+                <a href="/dotnet/api/?view=netframework-4.8">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "59427481"
         <h1>Documentação .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Documentos</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Introdução</a>
@@ -153,7 +153,7 @@ ms.locfileid: "59427481"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">Desenvolvimento multiplataforma</a></p>
+                                                <p><a href="/xamarin/cross-platform">Desenvolvimento de plataforma cruzada</a></p>
                                                 <p><a href="/xamarin/ios">Guia do Xamarin.iOS</a></p>
                                                 <p><a href="/xamarin/android">Guia do Xamarin.Android</a></p>
                                                 <p><a href="/xamarin/xamarin-forms">Guia do Xamarin.Forms</a></p>
@@ -172,11 +172,11 @@ ms.locfileid: "59427481"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/csharp">Guia de C#</a></h3>
+                                                <h3><a href="/dotnet/csharp">Guia do C#</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Tour do C#</a></p>
                                                 <p><a href="/dotnet/csharp/whats-new">Novidades no C#</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">Referência da linguagem C</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference">Referência da linguagem C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,10 +192,10 @@ ms.locfileid: "59427481"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">Guia de F#</a></h3>
+                                                <h3><a href="/dotnet/fsharp">Guia do F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/tutorials/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Tour do F#</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">Referência da linguagem F#</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference">Referência da Linguagem F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -434,7 +434,7 @@ ms.locfileid: "59427481"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Celular</a>
+                        <a href="#mobile">Dispositivo móvel</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -496,7 +496,7 @@ ms.locfileid: "59427481"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Desktop</a>
+                        <a href="#desktop">Área de trabalho</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">

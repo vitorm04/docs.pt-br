@@ -3,11 +3,11 @@ title: Kit de ferramentas de Ruleset externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840231"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978608"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de ferramentas de Ruleset externo
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352809"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978920"
 ---
 # <a name="data-binding"></a>Associação de dados
 
@@ -42,9 +42,9 @@ As gerações de coleção são implementadas por <xref:System.Data.Linq.Table%6
 
 - A fonte de dados é um <xref:System.Linq.IQueryable%601>. Há dois cenários:
 
-    - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] localiza subjacente <xref:System.Data.Linq.Table%601> do <xref:System.Linq.IQueryable%601>, permite que o código-fonte para edição e a situação é o mesmo do primeiro ponto de marcador.
+  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] localiza subjacente <xref:System.Data.Linq.Table%601> do <xref:System.Linq.IQueryable%601>, permite que o código-fonte para edição e a situação é o mesmo do primeiro ponto de marcador.
 
-    - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não é possível localizar subjacente <xref:System.Data.Linq.Table%601>, o código-fonte não permitirá a edição (por exemplo, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procura pela consulta para preencher um genérico `SortableBindingList`, que é um simples <xref:System.ComponentModel.BindingList%601> que implementa o recurso de classificação para entidades T para uma determinada propriedade.
+  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não é possível localizar subjacente <xref:System.Data.Linq.Table%601>, o código-fonte não permitirá a edição (por exemplo, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procura pela consulta para preencher um genérico `SortableBindingList`, que é um simples <xref:System.ComponentModel.BindingList%601> que implementa o recurso de classificação para entidades T para uma determinada propriedade.
 
 ## <a name="specialized-collections"></a>Coleções especializadas
 
@@ -52,8 +52,7 @@ Para muitos recursos descritos anteriormente neste documento, <xref:System.Compo
 
 ### <a name="generic-sortablebindinglist"></a>SortableBindingList genérica
 
-Essa classe herda de <xref:System.ComponentModel.BindingList%601> e é uma versão classificável de <xref:System.ComponentModel.BindingList%601>. A classificação é uma solução na memória e nunca entra em contato com o próprio banco de dados. <xref:System.ComponentModel.BindingList%601> implementa <xref:System.ComponentModel.IBindingList>, mas, por padrão, não dá suporte à classificação. No entanto, <xref:System.ComponentModel.BindingList%601> implementa <xref:System.ComponentModel.IBindingList> com virtual *core* métodos. Você pode substituir esses métodos facilmente. 
-  `SortableBindingList` genérica substitui <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> e <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>. `ApplySortCore` é chamada por <xref:System.ComponentModel.IBindingList.ApplySort%2A> e classifica a lista de itens de T para uma determinada propriedade.
+Essa classe herda de <xref:System.ComponentModel.BindingList%601> e é uma versão classificável de <xref:System.ComponentModel.BindingList%601>. A classificação é uma solução na memória e nunca entra em contato com o próprio banco de dados. <xref:System.ComponentModel.BindingList%601> implementa <xref:System.ComponentModel.IBindingList>, mas, por padrão, não dá suporte à classificação. No entanto, <xref:System.ComponentModel.BindingList%601> implementa <xref:System.ComponentModel.IBindingList> com virtual *core* métodos. Você pode substituir esses métodos facilmente. `SortableBindingList` genérica substitui <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> e <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>. `ApplySortCore` é chamada por <xref:System.ComponentModel.IBindingList.ApplySort%2A> e classifica a lista de itens de T para uma determinada propriedade.
 
 Uma exceção será gerada se a propriedade não pertencer a T.
 

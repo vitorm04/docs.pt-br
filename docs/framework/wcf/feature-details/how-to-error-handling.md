@@ -3,11 +3,11 @@ title: 'Como: Tratamento de erros'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334985"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979388"
 ---
 # <a name="how-to-error-handling"></a>Como: Tratamento de erros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa o tratamento de erros. Neste exemplo, as mensagens são roteadas para um ponto de extremidade de destino. Se uma mensagem não pode ser entregue devido a uma rede ou a falha de comunicação (<xref:System.ServiceModel.CommunicationException>), a mensagem é enviada novamente para um ponto de extremidade alternativo.  
