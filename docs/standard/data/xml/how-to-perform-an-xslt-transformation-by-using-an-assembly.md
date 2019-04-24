@@ -9,18 +9,18 @@ ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345398"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="03b46-102">Como: Executar uma transformação XSLT usando um assembly</span><span class="sxs-lookup"><span data-stu-id="03b46-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
-<span data-ttu-id="03b46-103">O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly.</span><span class="sxs-lookup"><span data-stu-id="03b46-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="03b46-104">O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="03b46-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="ce196-102">Como: Executar uma transformação XSLT usando um assembly</span><span class="sxs-lookup"><span data-stu-id="ce196-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
+<span data-ttu-id="ce196-103">O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly.</span><span class="sxs-lookup"><span data-stu-id="ce196-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="ce196-104">O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ce196-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="03b46-105">Para copiar os arquivos XML e XSLT para seu computador local</span><span class="sxs-lookup"><span data-stu-id="03b46-105">To copy the XML and XSLT files to your local computer</span></span>  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="ce196-105">Para copiar os arquivos XML e XSLT para seu computador local</span><span class="sxs-lookup"><span data-stu-id="ce196-105">To copy the XML and XSLT files to your local computer</span></span>  
   
--   <span data-ttu-id="03b46-106">Copie o arquivo XSLT para seu computador local e nomeie-o Transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="03b46-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
+-   <span data-ttu-id="ce196-106">Copie o arquivo XSLT para seu computador local e nomeie-o Transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="ce196-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ ms.locfileid: "59345398"
     </xsl:stylesheet>  
     ```  
   
--   <span data-ttu-id="03b46-107">Copie o arquivo XML para seu computador local e nomeie-o `books.xml`.</span><span class="sxs-lookup"><span data-stu-id="03b46-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
+-   <span data-ttu-id="ce196-107">Copie o arquivo XML para seu computador local e nomeie-o `books.xml`.</span><span class="sxs-lookup"><span data-stu-id="ce196-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,60 +130,60 @@ ms.locfileid: "59345398"
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="03b46-108">Para compilar a folha de estilos com o script habilitado.</span><span class="sxs-lookup"><span data-stu-id="03b46-108">To compile the style sheet with the script enabled.</span></span>  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="ce196-108">Para compilar a folha de estilos com o script habilitado.</span><span class="sxs-lookup"><span data-stu-id="ce196-108">To compile the style sheet with the script enabled.</span></span>  
   
-1. <span data-ttu-id="03b46-109">A execução do comando a seguir a partir da linha de comando cria dois assemblies nomeados `Transform.dll` e `Transform_Script1.dll` (Esse é o comportamento padrão.</span><span class="sxs-lookup"><span data-stu-id="03b46-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="03b46-110">A menos que de outra forma especificado, o nome da classe e do assembly usa como padrão o nome da folha de estilos principal):</span><span class="sxs-lookup"><span data-stu-id="03b46-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
+1. <span data-ttu-id="ce196-109">A execução do comando a seguir a partir da linha de comando cria dois assemblies nomeados `Transform.dll` e `Transform_Script1.dll` (Esse é o comportamento padrão.</span><span class="sxs-lookup"><span data-stu-id="ce196-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="ce196-110">A menos que de outra forma especificado, o nome da classe e do assembly usa como padrão o nome da folha de estilos principal):</span><span class="sxs-lookup"><span data-stu-id="ce196-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- <span data-ttu-id="03b46-111">O comando a seguir define explicitamente o nome da classe como Transform:</span><span class="sxs-lookup"><span data-stu-id="03b46-111">The following command explicitly sets the class name to Transform:</span></span>  
+ <span data-ttu-id="ce196-111">O comando a seguir define explicitamente o nome da classe como Transform:</span><span class="sxs-lookup"><span data-stu-id="ce196-111">The following command explicitly sets the class name to Transform:</span></span>  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="03b46-112">Para incluir o assembly compilado como uma referência ao compilar o código.</span><span class="sxs-lookup"><span data-stu-id="03b46-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="ce196-112">Para incluir o assembly compilado como uma referência ao compilar o código.</span><span class="sxs-lookup"><span data-stu-id="ce196-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
   
-1. <span data-ttu-id="03b46-113">Você pode incluir um assembly no Visual Studio adicionando uma referência do Gerenciador de Soluções ou da linha de comando.</span><span class="sxs-lookup"><span data-stu-id="03b46-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
+1. <span data-ttu-id="ce196-113">Você pode incluir um assembly no Visual Studio adicionando uma referência do Gerenciador de Soluções ou da linha de comando.</span><span class="sxs-lookup"><span data-stu-id="ce196-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
   
-2. <span data-ttu-id="03b46-114">Para a linha de comando com C#, use o seguinte:</span><span class="sxs-lookup"><span data-stu-id="03b46-114">For the command line with C#, use the following:</span></span>  
+2. <span data-ttu-id="ce196-114">Para a linha de comando com C#, use o seguinte:</span><span class="sxs-lookup"><span data-stu-id="ce196-114">For the command line with C#, use the following:</span></span>  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3. <span data-ttu-id="03b46-115">Para a linha de comando com Visual Basic, use o seguinte:</span><span class="sxs-lookup"><span data-stu-id="03b46-115">For the command line with Visual Basic, use the following</span></span>  
+3. <span data-ttu-id="ce196-115">Para a linha de comando com Visual Basic, use o seguinte:</span><span class="sxs-lookup"><span data-stu-id="ce196-115">For the command line with Visual Basic, use the following</span></span>  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="03b46-116">Para usar o assembly compilado em seu código.</span><span class="sxs-lookup"><span data-stu-id="03b46-116">To use the compiled assembly in your code.</span></span>  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="ce196-116">Para usar o assembly compilado em seu código.</span><span class="sxs-lookup"><span data-stu-id="ce196-116">To use the compiled assembly in your code.</span></span>  
   
-1. <span data-ttu-id="03b46-117">O exemplo a seguir mostra como executar a transformação XSLT usando a folha de estilos compilada.</span><span class="sxs-lookup"><span data-stu-id="03b46-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
+1. <span data-ttu-id="ce196-117">O exemplo a seguir mostra como executar a transformação XSLT usando a folha de estilos compilada.</span><span class="sxs-lookup"><span data-stu-id="ce196-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- <span data-ttu-id="03b46-118">Para vincular ao assembly compilado dinamicamente, substitua</span><span class="sxs-lookup"><span data-stu-id="03b46-118">To dynamically link to the compiled assembly, replace</span></span>  
+ <span data-ttu-id="ce196-118">Para vincular ao assembly compilado dinamicamente, substitua</span><span class="sxs-lookup"><span data-stu-id="ce196-118">To dynamically link to the compiled assembly, replace</span></span>  
   
 ```  
 xslt.Load(typeof(Transform))  
 ```  
   
- <span data-ttu-id="03b46-119">with</span><span class="sxs-lookup"><span data-stu-id="03b46-119">with</span></span>  
+ <span data-ttu-id="ce196-119">with</span><span class="sxs-lookup"><span data-stu-id="ce196-119">with</span></span>  
   
 ```  
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- <span data-ttu-id="03b46-120">no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="03b46-120">in the example above.</span></span> <span data-ttu-id="03b46-121">Para obter mais informações sobre o método Assembly.Load, confira</span><span class="sxs-lookup"><span data-stu-id="03b46-121">For more information on the Assembly.Load method, see</span></span> <xref:System.Reflection.Assembly.Load%2A>  
+ <span data-ttu-id="ce196-120">no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="ce196-120">in the example above.</span></span> <span data-ttu-id="ce196-121">Para obter mais informações sobre o método Assembly.Load, consulte <xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="ce196-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03b46-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="03b46-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce196-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ce196-122">See also</span></span>
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [<span data-ttu-id="03b46-123">Compilador de XSLT (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="03b46-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [<span data-ttu-id="03b46-124">Transformações XSLT</span><span class="sxs-lookup"><span data-stu-id="03b46-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [<span data-ttu-id="03b46-125">Compilando pela linha de comando com csc.exe</span><span class="sxs-lookup"><span data-stu-id="03b46-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [<span data-ttu-id="ce196-123">Compilador de XSLT (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="ce196-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [<span data-ttu-id="ce196-124">Transformações XSLT</span><span class="sxs-lookup"><span data-stu-id="ce196-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [<span data-ttu-id="ce196-125">Build pela linha de comando com csc.exe</span><span class="sxs-lookup"><span data-stu-id="ce196-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
