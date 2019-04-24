@@ -15,14 +15,14 @@ ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145113"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
-A reflexão fornece a infraestrutura usada pelos compiladores de linguagem como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
+A reflexão fornece a infraestrutura usada pelos compiladores de linguagem como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
   
  No exemplo a seguir, o compilador do Visual Basic usa reflexão implicitamente para chamar um método em um objeto cujo tipo não é conhecido no tempo de compilação. Uma classe **HelloWorld** tem um método **PrintHello** que imprime “Hello World” concatenado com algum texto que é passado para o método **PrintHello**. O método **PrintHello** chamado neste exemplo é na verdade um <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; o código do Visual Basic permite que o método **PrintHello** seja invocado como se o tipo de objeto (helloObj) fosse conhecido durante o tempo de compilação (associação antecipada) em vez de no tempo de execução (associação tardia).  
   
@@ -75,7 +75,7 @@ End Module
   
  Se houver mais de um membro do conjunto disponível, todos esses métodos são passados para **BindToMethod**, que seleciona o método apropriado e o retorna. No caso 2 do exemplo de código, há dois métodos chamados **PrintValue**. O método apropriado é selecionado pela chamada para **BindToMethod**.  
   
- <xref:System.Reflection.Binder.ChangeType%2A> executa a coerção de argumento (conversão de tipo), que converte os argumentos reais para o tipo dos argumentos formais do método selecionado. **ChangeType** é chamado para cada argumento, mesmo se os tipos de corresponderem exatamente.  
+ O <xref:System.Reflection.Binder.ChangeType%2A> executa a coerção de argumento (conversão de tipo), que converte os argumentos reais para o tipo dos argumentos formais do método selecionado. **ChangeType** é chamado para cada argumento, mesmo se os tipos de corresponderem exatamente.  
   
  No caso 3 do exemplo de código, um argumento real do tipo **String** com um valor de “5.5” é passado para um método com um argumento formal do tipo **Double**. Para que a invocação seja bem-sucedida, o valor da cadeia de caracteres “5.5” deve ser convertido em um valor duplo. O **ChangeType** executa essa conversão.  
   

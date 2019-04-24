@@ -8,10 +8,10 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309505"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
@@ -26,10 +26,10 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  [O processo de implantação](#the_deployment_process)  
  [Implantando o .NET Framework](#deploying_in_a_test_environment)  
- [Crie uma coleção](#creating_a_collection)  
- [Crie um pacote e programa](#creating_a_package)  
- [Selecione um ponto de distribuição](#select_dist_point)  
- [Implante o pacote](#deploying_package)  
+ [Criar uma coleção](#creating_a_collection)  
+ [Criar um pacote e um programa](#creating_a_package)  
+ [Selecionar um ponto de distribuição](#select_dist_point)  
+ [Implantar o pacote](#deploying_package)  
 [Recursos](#resources)  
 [Solução de problemas](#troubleshooting)  
   
@@ -191,7 +191,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  **Active Directory, DNS, DHCP:**  
   
--   [Serviços de Domínio do Active Directory](/windows/desktop/ad/active-directory-domain-services)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
 -   [DNS (Sistema de Nomes de Domínio)](/windows-server/networking/dns/dns-top)  
   
@@ -203,7 +203,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
 -   [Visão geral de segurança do SQL Server 2008 para administradores de banco de dados](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
- **System Center 2012 Configuration Manager (ponto de gerenciamento, ponto de distribuição):**  
+ **System Center 2012 Configuration Manager (Ponto de Gerenciamento, Ponto de Distribuição):**  
   
 -   [Administração de site do System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
@@ -261,4 +261,4 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md)

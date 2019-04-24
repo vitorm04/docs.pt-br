@@ -4,10 +4,10 @@ description: Saiba mais sobre árvores de expressão no .NET Core e como usá-la
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
 ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096606"
 ---
 # <a name="expression-trees"></a>Árvores de expressão
@@ -28,7 +28,7 @@ As seções restantes deste tutorial explorarão o que são as árvores de expre
 
     Compreender a estrutura e os conceitos por trás das *Árvores de Expressão*.
     
-2. [Tipos de Framework com suporte a árvores de expressão](expression-classes.md)
+2. [Tipos de Framework com Suporte a Árvores de Expressão](expression-classes.md)
     
     Saiba mais sobre as estruturas e classes que definem e manipulam as árvores de expressão.
     

@@ -16,10 +16,10 @@ ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313366"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
@@ -121,8 +121,8 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |Eventos|[Eventos](#events)|Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um cujo tipo define o tipo do evento, e ele deverá ser derivado de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
 |Eventos|[Eventos](#events)|Os eventos deverão respeitar um padrão de nomenclatura específico. O atributo `SpecialName` mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.|33|  
 |Exceções|[Exceções](#exceptions)|Os atributos acionados deverão ser do tipo <xref:System.Exception?displayProperty=nameWithType> ou de um tipo herdado dele. Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção.|40|  
-|Geral|[Conformidade com CLS: as regras](#Rules)|As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição.|1|  
-|Geral|[Conformidade com CLS: as regras](#Rules)|Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS.|2|  
+|Geral|[Conformidade com CLS: as Regras](#Rules)|As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição.|1|  
+|Geral|[Conformidade com CLS: as Regras](#Rules)|Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS.|2|  
 |Genéricos|[Tipos e membros genéricos](#Generics)|Os tipos aninhados deverão ter, pelo menos, tantos parâmetros genéricos quanto o tipo delimitador. Os parâmetros genéricos em um tipo aninhado correspondem, por posição, aos parâmetros genéricos no tipo delimitador.|42|  
 |Genéricos|[Tipos e membros genéricos](#Generics)|O nome de um tipo genérico deverá codificar o número de parâmetros de tipo declarados no tipo não aninhado ou recém-introduzidos no tipo, se aninhado, de acordo com as regras definidas anteriormente.|43|  
 |Genéricos|[Tipos e membros genéricos](#Generics)|Um tipo genérico deverá redeclarar restrições suficientes para assegurar que todas as restrições no tipo base ou nas interfaces sejam atendidas pelas restrições de tipo genérico.|4444|  
@@ -177,7 +177,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |<xref:System.Int64>|Inteiro com sinal de 64 bits|  
 |<xref:System.Single>|Valor do ponto flutuante de precisão simples|  
 |<xref:System.Double>|Valor do ponto flutuante de precisão dupla|  
-|<xref:System.Boolean>|`true` Tipo de valor `false` ou|  
+|<xref:System.Boolean>|Tipo de valor `true` ou `false`|  
 |<xref:System.Char>|unidade de código codificado UTF-16|  
 |<xref:System.Decimal>|Número decimal de ponto não flutuante|  
 |<xref:System.IntPtr>|Ponteiro ou identificador de um tamanho definido por plataforma|  
@@ -381,7 +381,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  A Common Language Specification impõe um modelo por instanciação conservador para tipos aninhados e membros protegidos. Tipos genéricos abertos não podem expor campos ou membros com assinaturas que contenham uma instanciação específica de um tipo genérico aninhado, protegido. Tipos não genéricos que estendam uma instanciação específica de uma interface ou classe base genérica não podem expor campos ou membros com assinaturas que contenham uma instanciação diferente de um tipo genérico aninhado e protegido.  
   
- O exemplo a seguir define um tipo genérico, `C1<T>` (ou `C1(Of T)` no Visual Basic) e uma classe protegida, `C1<T>.N` (ou `C1(Of T).N` no Visual Basic). `C1<T>` possui dois métodos, `M1` e `M2`. No entanto, `M1` é sem conformidade com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de C1\<T> (ou `C1(Of T)`). Uma segunda classe, `C2`, é derivada de `C1<long>` (ou de `C1(Of Long)`). Tem dois métodos, `M3` e `M4`. `M3` Não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.  
+ O exemplo a seguir define um tipo genérico, `C1<T>` (ou `C1(Of T)` no Visual Basic) e uma classe protegida, `C1<T>.N` (ou `C1(Of T).N` no Visual Basic). `C1<T>` possui dois métodos, `M1` e `M2`. No entanto, `M1` é sem conformidade com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de C1\<T> (ou `C1(Of T)`). Uma segunda classe, `C2`, é derivada de `C1<long>` (ou de `C1(Of Long)`). Tem dois métodos, `M3` e `M4`. No entanto, `M3` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.  
   
  [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
  [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  

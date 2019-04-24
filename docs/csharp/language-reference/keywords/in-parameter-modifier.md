@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
 ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112639"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador de parâmetro in (referência do C#)
@@ -125,6 +125,6 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Palavras-chave C#](index.md)
+- [Palavras-chave do C#](index.md)
 - [Parâmetros de método](method-parameters.md)
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)

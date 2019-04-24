@@ -12,10 +12,10 @@ ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328303"
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
@@ -53,13 +53,13 @@ Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtu
   
 |Tarefa|Métodos ou propriedades a serem usados|  
 |----------|----------------------------------|  
-|Para obter um objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> de um arquivo no disco que representa um arquivo persistente mapeado na memória.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> método.|  
-|Para obter um objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> que representa um arquivo não persistente mapeado na memória (não associado a um arquivo no disco).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> método.<br /><br /> - ou -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> método.|  
-|Para obter um objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> de um arquivo mapeado na memória existente (persistente ou não persistente).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType> método.|  
-|Para obter um objeto <xref:System.IO.UnmanagedMemoryStream> para uma exibição de acesso em sequência para o arquivo mapeado na memória.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> método.|  
-|Para obter um objeto <xref:System.IO.UnmanagedMemoryAccessor> para uma exibição de acesso aleatório para um arquivo mapeado na memória.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> método.|  
-|Para obter um objeto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> a ser usado com um código não gerenciado.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType> property.<br /><br /> - ou -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> property.<br /><br /> - ou -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> property.|  
-|Para atrasar a alocação de memória até que uma exibição seja criada (somente arquivos não persistentes).<br /><br /> Para determinar o tamanho de página atual do sistema, use a propriedade <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> método com o valor <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> - ou -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> métodos que possuem uma enumeração <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> como parâmetro.|  
+|Para obter um objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> de um arquivo no disco que representa um arquivo persistente mapeado na memória.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
+|Para obter um objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> que representa um arquivo não persistente mapeado na memória (não associado a um arquivo no disco).|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> - ou -<br /><br /> Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
+|Para obter um objeto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> de um arquivo mapeado na memória existente (persistente ou não persistente).|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
+|Para obter um objeto <xref:System.IO.UnmanagedMemoryStream> para uma exibição de acesso em sequência para o arquivo mapeado na memória.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
+|Para obter um objeto <xref:System.IO.UnmanagedMemoryAccessor> para uma exibição de acesso aleatório para um arquivo mapeado na memória.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
+|Para obter um objeto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> a ser usado com um código não gerenciado.|Propriedade <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> - ou -<br /><br /> Propriedade <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> - ou -<br /><br /> Propriedade <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
+|Para atrasar a alocação de memória até que uma exibição seja criada (somente arquivos não persistentes).<br /><br /> Para determinar o tamanho de página atual do sistema, use a propriedade <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> com o valor <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> - ou -<br /><br /> Métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> que possuem uma enumeração <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> como parâmetro.|  
   
 ### <a name="security"></a>Segurança  
  É possível aplicar os direitos de acesso ao criar um arquivo mapeado na memória usando os seguintes métodos que usam uma enumeração <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> como parâmetro:  
@@ -96,13 +96,13 @@ Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtu
   
  O exemplo a seguir consiste de três processos separados (aplicativos de console) que gravam valores booleanos em um arquivo mapeado na memória. Ocorre a seguinte sequência de ações:  
   
-1. `Process A` cria o arquivo mapeado na memória e grava um valor para ele.  
+1. O `Process A` cria o arquivo mapeado na memória e grava um valor para ele.  
   
-2. `Process B` abre o arquivo mapeado na memória e grava um valor para ele.  
+2. O `Process B` abre o arquivo mapeado na memória e grava um valor para ele.  
   
-3. `Process C` abre o arquivo mapeado na memória e grava um valor para ele.  
+3. O `Process C` abre o arquivo mapeado na memória e grava um valor para ele.  
   
-4. `Process A` lê e exibe os valores do arquivo mapeado na memória.  
+4. O `Process A` lê e exibe os valores do arquivo mapeado na memória.  
   
 5. Após o `Process A` concluir com o arquivo mapeado na memória, o arquivo é imediatamente recuperado pela coleta de lixo.  
   

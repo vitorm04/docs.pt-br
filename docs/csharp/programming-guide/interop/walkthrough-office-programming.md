@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328446"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
@@ -194,19 +194,19 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 
 - [Propriedades autoimplementadas (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Propriedades autoimplementadas (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
-- [Inicializadores de coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Inicializadores de Coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Passar argumentos por posição e nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Passando Argumentos por Posição e Nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Associação inicial e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dinâmica](../../../csharp/language-reference/keywords/dynamic.md)
-- [Usar o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Associação Antecipada e Tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Expressões lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Expressões lambda [C#]](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Como: usar propriedades indexadas na programação para interoperabilidade COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Passo a passo: inserir informações de tipo de assemblies do Microsoft Office no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Passo a passo: inserir tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [Passo a passo: Criando seu primeiro suplemento do VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [Passo a passo: inserindo tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Passo a passo: criando seu primeiro suplemento do VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilidade](../../../csharp/programming-guide/interop/index.md)

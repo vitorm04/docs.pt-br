@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
 ms.openlocfilehash: 8570692c02855cda7a1990f10ef97590449baccd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184659"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
@@ -90,7 +90,7 @@ Para os que gostam da teoria, essa é uma implementação do [Modelo Promise de 
 * O código assíncrono usa `Task<T>` e `Task`, que são constructos usados para modelar o trabalho que está sendo feito em segundo plano.
 * A palavra-chave `async` transforma um método em um método assíncrono, o que permite que você use a palavra-chave `await` em seu corpo.
 * Quando a palavra-chave `await` é aplicada, ela suspende o método de chamada e transfere o controle de volta ao seu chamador até que a tarefa em espera seja concluída.
-* `await` só pode ser usada dentro de um método assíncrono.
+* A `await` só pode ser usada dentro de um método assíncrono.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>Reconhecer trabalho vinculado à CPU e vinculado à E/S
 
@@ -218,7 +218,7 @@ Embora seja menos código, tome cuidado ao misturar LINQ com código assíncrono
 
 Embora a programação assíncrona seja relativamente simples, há alguns detalhes para ter em mente, que podem evitar um comportamento inesperado.
 
-* `async` Os métodos  **precisam ter uma palavra-chave** `await`  **no corpo ou eles nunca transferirão!**
+* `async` Os métodos  **precisam ter uma palavra-chave** `await` **no corpo ou eles nunca transferirão!**
 
 É importante ter isso em mente.  Se `await` não for usado no corpo de um método `async`, o compilador do C# gerará um aviso, mas o código será compilado e executado como se fosse um método normal.  Observe que isso também seria extremamente ineficiente, pois a máquina de estado, gerada pelo compilador do C# para o método assíncrono, não realizaria nada.
 
@@ -226,13 +226,13 @@ Embora a programação assíncrona seja relativamente simples, há alguns detalh
 
 Essa é a convenção usada no .NET para diferenciar mais facilmente os métodos síncronos e assíncronos. Observe que isso não se aplica, necessariamente, a alguns métodos que não são explicitamente chamados pelo seu código (como manipuladores de eventos ou métodos do controlador da Web). Como eles não são chamados explicitamente pelo seu código, ser explícito em relação à sua nomenclatura não é tão importante.
 
-* `async void` **só deve ser usado para manipuladores de eventos.**
+* `async void` O  **só deve ser usado para manipuladores de eventos.**
 
-`async void` é a única maneira de permitir que os manipuladores de eventos assíncronos trabalhem porque os eventos não têm tipos de retorno (portanto, não podem fazer uso de `Task` e `Task<T>`). Qualquer outro uso de `async void` não segue o modelo TAP e pode ser um desafio utilizá-lo, como:
+O `async void` é a única maneira de permitir que os manipuladores de eventos assíncronos trabalhem, pois os eventos não têm tipos de retorno (portanto, não podem fazer uso de `Task` e `Task<T>`). Qualquer outro uso de `async void` não segue o modelo TAP e pode ser um desafio utilizá-lo, como:
 
 * As exceções lançadas em um método `async void` não podem ser capturadas fora desse método.
-* `async void` métodos são muito difíceis de testar.
-* `async void` métodos poderão causar efeitos colaterais indesejados se o chamador não estiver esperando que eles sejam assíncronos.
+* Os métodos `async void` são muito difíceis de testar.
+* Os métodos `async void` poderão causar efeitos colaterais indesejados se o chamador não estiver esperando que eles sejam assíncronos.
 
 * **Vá com cuidado ao usar lambdas assíncronas em expressões LINQ**
 

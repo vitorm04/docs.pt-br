@@ -32,10 +32,10 @@ helpviewer_keywords:
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097155"
 ---
 # <a name="handling-errors"></a>Manipulando erros
@@ -169,5 +169,5 @@ End Try
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fundamentos do tratamento de exceção](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Fundamentos do tratamento de exceções](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)

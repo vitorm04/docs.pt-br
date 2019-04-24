@@ -8,10 +8,10 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210217"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migração do .NET Framework 4
@@ -22,11 +22,11 @@ Esse tópico descreve alterações notáveis nas seguintes áreas:
 
 * [ASP.NET e Web](#aspnet-and-web)
 
-* [Núcleo](#core)
+* [Core](#core)
 
 * [Dados](#data)
 
-* [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
+* [WCF (Windows Communication Foundation)](#windows-communication-foundation-wcf)
 
 * [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
 
@@ -107,7 +107,7 @@ Namespace: <xref:System>, <xref:System.Runtime.ExceptionServices>; assembly: msc
 | Recurso | Diferenças de 3.5 SP1 | Alterações recomendadas |
 | ------- | ------------------------ | ------------------- |
 | **Exceções do estado de processo corrompido** | O CLR não oferece mais exceções do estado de processo corrompido a manipuladores de exceção no código gerenciado. | Essas exceções indicam que o estado de um processo foi corrompido. Não é recomendável executar o aplicativo nesse estado.<br><br>Para obter mais informações, consulte o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> e a entrada [Handling Corrupted State Exceptions](https://go.microsoft.com/fwlink/?LinkID=179681) (Tratamento de exceções de estado corrompido) no blog CLR Inside Out. |
-| **Exceções do mecanismo de execução** | <xref:System.ExecutionEngineException> Agora é obsoleto, porque uma exceção capturável permitirá que um processo instável continue sendo executado. Essa alteração melhora a confiabilidade e a previsibilidade no tempo de execução. | Use um <xref:System.InvalidOperationException> para indicar a condição. |
+| **Exceções do mecanismo de execução** | Agora o <xref:System.ExecutionEngineException> é obsoleto, porque uma exceção capturável permitirá que um processo instável continue sendo executado. Essa alteração melhora a confiabilidade e a previsibilidade no tempo de execução. | Use um <xref:System.InvalidOperationException> para indicar a condição. |
 
 ### <a name="reflection"></a>Reflexão
 
@@ -120,7 +120,7 @@ Namespace: <xref:System.Reflection>; assembly: mscorlib (em mscorlib.dll)
 | **Tipo declarativo** | Agora a propriedade <xref:System.Type.DeclaringType> retorna null corretamente quando o tipo não tem um tipo declarativo. | nenhuma. |
 | **Delegados** | Agora um delegado gera um <xref:System.ArgumentNullException> em vez de um <xref:System.NullReferenceException> quando um valor null é passado para o construtor do delegado. | Certifique-se de que qualquer tratamento de exceção capture <xref:System.ArgumentNullException>. |
 | **Alteração no local do cache de assembly global** | Para assemblies do .NET Framework 4, o cache de assembly global foi movido do diretório Windows (%WINDIR%) para o subdiretório Microsoft.Net (*%WINDIR%\\Microsoft.Net*). Os assemblies de versões anteriores continuam no diretório mais antigo.<br><br>A enumeração [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) não gerenciada contém o novo sinalizador `ASM_CACHE_ROOT_EX`. Esse sinalizador obtém o local do cache para assemblies do .NET Framework 4, que podem ser obtidos pela função [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md). | Nenhum, supondo que os aplicativos não usam caminhos explícitos para assemblies, que não é uma prática recomendada. |
-| **Ferramenta de Cache de Assembly Global** | A [Gacutil.exe (Ferramenta do cache de assembly global)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ex0ss12c%28v=vs.100%29) não dá mais suporte ao visualizador de plugin shell. | nenhuma. |
+| **Ferramenta do cache de assembly global** | A [Gacutil.exe (Ferramenta do cache de assembly global)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ex0ss12c%28v=vs.100%29) não dá mais suporte ao visualizador de plugin shell. | nenhuma. |
 
 ### <a name="interoperability"></a>Interoperabilidade
 
@@ -323,7 +323,7 @@ Namespaces: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.X
 ### <a name="concepts"></a>Conceitos
 
 - [Guia de migração do .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
-- [Novidades no .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
+- [Novidades do .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [Compatibilidade de versão no .NET Framework](../../../docs/framework/migration-guide/version-compatibility.md)
 - [Migração de soluções do Office para o .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
 

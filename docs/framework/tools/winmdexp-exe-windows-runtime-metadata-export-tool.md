@@ -8,10 +8,10 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216334"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
@@ -52,7 +52,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="see-also"></a>Consulte também
 
-- [Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime ](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
-- [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Criando componentes do Windows Runtime no C# e no Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Mensagens de erro do winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
 - [Ferramentas de build, implantação e configuração (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

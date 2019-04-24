@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a51738fa75ba2dd4574549fce2570df8231c4cae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59234874"
 ---
 ### <a name="path-colon-checks-are-stricter"></a>Verificações de dois-pontos em caminhos estão mais rigorosas
@@ -11,7 +11,7 @@ ms.locfileid: "59234874"
 |   |   |
 |---|---|
 |Detalhes|No .NET Framework 4.6.2, uma série de alterações foram feitas para dar suporte aos caminhos incompatíveis anteriormente (em termos de comprimento e formato). As verificações de sintaxe do separador de unidades (dois-pontos) correto foram aperfeiçoadas, o que teve como efeito colateral o bloqueio de alguns caminhos de URI em algumas APIs de Caminho selecionadas em que eles costumavam ser aceitos.|
-|Sugestão|Ao passar um URI para as APIs afetadas, modifique a cadeia de caracteres para um caminho correto antes.<ul><li>Remova o esquema das URLs manualmente (por exemplo, remova <code>file://</code> das URLs).</li><li>Passe o URI para a classe <xref:System.Uri> e use <xref:System.Uri.LocalPath></li></ul>Como alternativa, é possível recusar a normalização do novo caminho definindo a opção AppContext <code>Switch.System.IO.UseLegacyPathHandling</code> como true.|
+|Sugestão|Ao passar um URI para as APIs afetadas, modifique a cadeia de caracteres para um caminho correto antes.<ul><li>Remova o esquema das URLs manualmente (por exemplo, remova <code>file://</code> das URLs).</li><li>Passe o URI para a classe <xref:System.Uri> e use <xref:System.Uri.LocalPath>.</li></ul>Como alternativa, é possível recusar a normalização do novo caminho definindo a opção AppContext <code>Switch.System.IO.UseLegacyPathHandling</code> como true.|
 |Escopo|Microsoft Edge|
 |Versão|4.6.2|
 |Tipo|Redirecionando|

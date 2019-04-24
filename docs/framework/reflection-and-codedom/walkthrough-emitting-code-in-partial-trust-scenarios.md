@@ -17,10 +17,10 @@ ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299469"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
@@ -169,7 +169,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     A restrição é que o método dinâmico hospedado anonimamente poderá acessar dados particulares somente em assemblies com níveis de confiança igual ou inferior ao nível de confiança do assembly de emissão. Por exemplo, se o método dinâmico estiver em execução com confiança de Internet, ele poderá acessar os dados particulares em outros assemblies que também são executados com confiança de Internet, mas não pode acessar dados particulares de assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assemblies são instalados no cache de assembly global e sempre são totalmente confiáveis.  
+     A restrição é que o método dinâmico hospedado anonimamente poderá acessar dados particulares somente em assemblies com níveis de confiança igual ou inferior ao nível de confiança do assembly de emissão. Por exemplo, se o método dinâmico estiver em execução com confiança de Internet, ele poderá acessar os dados particulares em outros assemblies que também são executados com confiança de Internet, mas não pode acessar dados particulares de assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] são instalados no cache de assembly global e sempre são totalmente confiáveis.  
   
      Métodos dinâmicos hospedados anonimamente podem usar essa capacidade restrita para ignorar as verificações de visibilidade JIT somente se o aplicativo host conceder <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. A demanda por essa permissão é realizada quando o método é invocado.  
   
@@ -214,4 +214,4 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
 ## <a name="see-also"></a>Consulte também
 
 - [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Como: Executar o código parcialmente confiável em uma área restrita.](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

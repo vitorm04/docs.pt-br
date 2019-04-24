@@ -8,10 +8,10 @@ ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199993"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Depurador de Linha de Comando do .NET Framework)
@@ -107,4 +107,4 @@ mdbg>
 ## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

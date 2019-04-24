@@ -12,10 +12,10 @@ ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302967"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência
@@ -34,7 +34,7 @@ A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tas
   
  Este passo a passo contém as seguintes seções:  
   
--   [Criando o Aplicativo de Console](#creating)  
+-   [Criar o Aplicativo de Console](#creating)  
   
 -   [Definir a classe do funcionário](#employeeClass)  
   
@@ -46,7 +46,7 @@ A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tas
   
 -   [Usar o ingresso em buffer para ler dados de funcionário do banco de dados](#bufferedJoin)  
   
--   [O Exemplo Completo](#complete)  
+-   [O exemplo completo](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Criando o Aplicativo de Console  

@@ -3,10 +3,10 @@ title: Programação orientada a objeto (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481165"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
@@ -43,7 +43,7 @@ Esta seção descreve os seguintes conceitos:
 
   - [Classes e membros estáticos](#Static)
 
-  - [Tipos anônimos](#AnonymousTypes)
+  - [Tipos Anônimos](#AnonymousTypes)
 
 - [Herança](#Inheritance)
 
@@ -79,7 +79,7 @@ struct SampleStruct
 
 Para obter mais informações, consulte:
 
-- [classe](../../../csharp/language-reference/keywords/class.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 
 - [struct](../../../csharp/language-reference/keywords/struct.md)
 
@@ -168,7 +168,7 @@ Para obter mais informações, consulte:
 
 - [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
 
-- [Métodos de extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Métodos de Extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> Construtores
 
@@ -234,12 +234,12 @@ Os modificadores de acesso a seguir estão disponíveis:
 
 |Modificador de C#|Definição|
 |------------------|----------------|
-|[públicos](../../../csharp/language-reference/keywords/public.md)|O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele.|
-|[particulares](../../../csharp/language-reference/keywords/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|
-|[protegidos](../../../csharp/language-reference/keywords/protected.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada.|
-|[interno](../../../csharp/language-reference/keywords/internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|
-|[internos protegidos](../../../csharp/language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|
-|[privado protegido](../../../csharp/language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base.|
+|[public](../../../csharp/language-reference/keywords/public.md)|O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele.|
+|[private](../../../csharp/language-reference/keywords/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|
+|[protected](../../../csharp/language-reference/keywords/protected.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada.|
+|[internal](../../../csharp/language-reference/keywords/internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base.|
 
 Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
@@ -450,7 +450,7 @@ Para obter mais informações, consulte:
 
 - [Delegados](../../../csharp/programming-guide/delegates/index.md)
 
-- [delegado](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../../csharp/language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>Consulte também
 

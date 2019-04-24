@@ -9,10 +9,10 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306528"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
@@ -253,14 +253,14 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |O .NET framework 4.7.1 instalado em todas as versões de sistema operacional diferentes do Windows 10 Fall Creators Update e do Windows Server, versão 1709|461310|
 |.NET Framework 4.7 instalado no Windows 10 Creators Update|460798|
 |.NET Framework 4.7 instalado em todas as versões do sistema operacional que não a Atualização do Windows 10 para Criadores|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado na Edição de Aniversário do Windows 10 e no Windows Server 2016|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado em todas as versões do sistema operacional diferentes da Edição de Aniversário do Windows 10 e do Windows Server 2016|394806|
+|O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado na Edição de Aniversário do Windows 10 e no Windows Server 2016|394802|
+|O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado em todas as versões do sistema operacional diferentes da Edição de Aniversário do Windows 10 e do Windows Server 2016|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado na Atualização de novembro do Windows 10|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado em todas as versões do sistema operacional que não a Atualização de novembro do Windows 10|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado no Windows 10|393295|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado em todas as versões do sistema operacional que não o Windows 10|393297|
 |.NET Framework 4.5.2|379893|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] instalado com o [!INCLUDE[win81](../../../includes/win81-md.md)] ou Windows Server 2012 R2|378675|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] instalado com [!INCLUDE[win81](../../../includes/win81-md.md)] ou Windows Server 2012 R2|378675|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] instalado no [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
 |[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|
 
@@ -281,9 +281,9 @@ Type: DWORD
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>Encadeando os pacotes de idiomas para a instalação do seu aplicativo
  O .NET Framework oferece um conjunto de arquivos executáveis de pacotes de idiomas independentes que contém recursos localizados para culturas específicas. Os pacotes de idiomas estão disponíveis no Centro de Download da Microsoft:
 
-- [Pacotes de idioma do .NET Framework 4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863258)
+- [Pacotes de idiomas do .NET Framework 4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863258)
 
-- [Pacotes de idioma do .NET Framework 4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)
+- [Pacotes de linguagem do .NET Framework 4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)
 
 - [Pacotes de idioma do .NET Framework 4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
@@ -359,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
 |**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"**. Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|
-|**/LCID**  `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:**  Use essa opção somente com o instalador da Web.|
+|**/LCID** `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:**  Use essa opção somente com o instalador da Web.|
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se essa opção for usada, o aplicativo de encadeamento precisa capturar o código de retorno e lidar com a reinicialização (consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN).|
@@ -405,8 +405,8 @@ A tabela a seguir lista os pacotes de idiomas do .NET Framework disponíveis par
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de implantação para administradores](../../../docs/framework/deployment/guide-for-administrators.md)
-- [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md)
 - [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)
-- [Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
+- [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

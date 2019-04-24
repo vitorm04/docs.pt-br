@@ -9,10 +9,10 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310558"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
@@ -780,4 +780,4 @@ ms.locfileid: "59310558"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Coleta de Lixo](../../../docs/standard/garbage-collection/index.md)
+- [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)

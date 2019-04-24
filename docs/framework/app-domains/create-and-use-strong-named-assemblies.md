@@ -15,10 +15,10 @@ ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300691"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
@@ -69,12 +69,12 @@ Esse recurso pode ser desabilitado para aplicativos individuais ou para um compu
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Como: Criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
+|[Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
 |[Como: assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descreve como criar um assembly de nome forte.|
-|[Nomeação forte aprimorada](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Aprimoramento da nomenclatura forte](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
 |[Como: Referenciar um assembly de nome forte](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Descreve como referenciar tipos ou recursos em um assembly de nome forte no tempo de compilação ou no tempo de execução.|
 |[Como: Desabilitar a funcionalidade de bypass de nome forte](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Descreve como desabilitar o recurso que ignora a validação de assinaturas de nome forte. Esse recurso pode ser desabilitado para todos ou para aplicativos específicos.|
-|[Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)|Fornece uma visão geral dos assemblies de arquivo único e vários arquivos.|
+|[Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)|Fornece uma visão geral dos assemblies de arquivo único e vários arquivos.|
 |[Como atrasar a assinatura de um assembly no Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explica como assinar um assembly com um nome forte, depois que o assembly foi criado.|
-|[Sn.exe (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Descreve a ferramenta incluída no .NET Framework que ajuda a criar assemblies com nomes fortes. Esta ferramenta oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.|
+|[Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Descreve a ferramenta incluída no .NET Framework que ajuda a criar assemblies com nomes fortes. Esta ferramenta oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.|
 |[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Descreve a ferramenta incluída no .NET Framework que gera um arquivo que tem um manifesto do assembly de módulos ou arquivos de recurso.|

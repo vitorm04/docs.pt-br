@@ -4,12 +4,12 @@ description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553869"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613363"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -64,7 +64,7 @@ Você pode iniciar a codificação do aplicativo no .NET simples (normalmente no
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Introdução ao Docker CE for Windows** \
-  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+  <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
@@ -122,7 +122,7 @@ Você pode especificar mais definições de configurações no Dockerfile, depen
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Criar sua própria imagem**. Na documentação oficial do Docker.\
-  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
+  <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - **Staying up-to-date with .NET Container Images** \ (Permanecendo atualizado com as imagens de contêiner do .NET)
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -290,10 +290,10 @@ Você pode criar sua própria imagem base do Docker do zero. Esse cenário não 
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Imagens do .NET Core para várias arquiteturas**.\
-  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
+  <https://github.com/dotnet/announcements/issues/14>
 
 - **Criar uma imagem base**. Documentação oficial do Docker.\
-  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 – Criar imagens definidas em Dockerfiles](./media/image7.png)
 
@@ -485,7 +485,7 @@ O ponto importante aqui é que, conforme mostrado na Figura 5-12, há um comando
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Implantar um contêiner ASP.NET em um host remoto do Docker** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uma observação sobre teste e implantação com orquestradores
 
@@ -522,10 +522,10 @@ Se você estiver desenvolvendo por meio da abordagem de editor/CLI, a depuraçã
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Depurando aplicativos em um contêiner do Docker local** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
 - **Steve Lasker. Compilar, depurar, implantar aplicativos do ASP.NET Core com o Docker.** Vídeo. \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Fluxo de trabalho simplificado ao desenvolver contêineres com o Visual Studio
 
@@ -540,7 +540,7 @@ Além disso, será necessário executar a etapa 2 (adicionar suporte do Docker a
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Steve Lasker. .NET Docker Development with Visual Studio 2017** \ (Desenvolvimento do Docker no .NET com o Visual Studio 2017)
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Usando comandos do PowerShell em um DockerFile para configurar contêineres do Windows 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **aspnet-docker/Dockerfile.** Comandos do PowerShell de exemplo a serem executados em Dockerfiles para incluir recursos do Windows.\
-  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

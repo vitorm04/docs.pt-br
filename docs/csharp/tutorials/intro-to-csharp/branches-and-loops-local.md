@@ -4,10 +4,10 @@ description: Neste tutorial sobre branches e loops, você escreve código em C# 
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427247"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
@@ -257,7 +257,7 @@ Continue com o tutorial [Matrizes e coleções](arrays-and-collections.md) em se
 
 Saiba mais sobre esses conceitos nestes tópicos:
 
-- [Instrução if e else](../../language-reference/keywords/if-else.md)
+- [Instrução If e else](../../language-reference/keywords/if-else.md)
 - [Instrução while](../../language-reference/keywords/while.md)
-- [Instrução do](../../language-reference/keywords/do.md)
+- [Instrução Do](../../language-reference/keywords/do.md)
 - [Instrução for](../../language-reference/keywords/for.md)

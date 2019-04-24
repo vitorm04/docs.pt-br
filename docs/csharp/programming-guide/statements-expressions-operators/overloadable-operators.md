@@ -7,10 +7,10 @@ helpviewer_keywords:
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
 ms.openlocfilehash: d0a5555bbe68aa82218c1dbe3d24705b26aff9c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296570"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Operadores sobrecarregáveis (Guia de Programação em C#)
@@ -38,5 +38,5 @@ Para obter informações sobre como sobrecarregar um operador, consulte o artigo
 - [Guia de Programação em C#](../index.md)
 - [Instruções, expressões e operadores](index.md)
 - [Operadores](operators.md)
-- [Operadores em C#](../../language-reference/operators/index.md)
+- [Operadores do C#](../../language-reference/operators/index.md)
 - [Por que os operadores sobrecarregados sempre são estáticos em C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

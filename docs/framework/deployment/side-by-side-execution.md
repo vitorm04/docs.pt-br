@@ -7,10 +7,10 @@ ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341069"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
@@ -113,11 +113,11 @@ publicKeyToken=...,
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Como: Habilitar e desabilitar o redirecionamento automático de associação](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
-|[Configurando o redirecionamento de associações de assemblies](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
+|[Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
+|[Configurando o redirecionamento de associação de assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
 |[Execução lado a lado em processo](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de tempo de execução lado a lado em processo para executar várias versões do CLR em um único processo.|  
 |[Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Fornece uma visão geral conceitual de assemblies.|  
 |[Domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md)|Fornece uma visão geral conceitual de domínios de aplicativos.|  
   
 ## <a name="reference"></a>Referência  
- [\<Elemento supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+ Elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

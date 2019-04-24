@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307451"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
@@ -69,7 +69,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pré-decremento|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Converte explicitamente x no tipo T|  
   
- **Operadores de multiplicação**  
+ **Operadores multiplicativos**  
   
 |Expressão|Descrição|  
 |----------------|-----------------|  
@@ -84,7 +84,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Adição, concatenação de cadeia de caracteres, combinação de delegados|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Subtração, remoção de delegado|  
   
- **Operadores Shift**  
+ **Operadores shift**  
   
 |Expressão|Descrição|  
 |----------------|-----------------|  
@@ -107,7 +107,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |Expressão|Descrição|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Igual|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Diferente de|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Não é igual a|  
   
  **Operadores lógicos, condicionais e nulos**  
   

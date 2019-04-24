@@ -12,10 +12,10 @@ ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126744"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
@@ -30,6 +30,6 @@ O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com 
 ## <a name="see-also"></a>Consulte também
 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
-- [Visão geral de multissegmentação do Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Visão Geral do Visual Studio Multiplataforma](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Solução de problemas com erros de direcionamento do .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Como: definir uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Como: Definir uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

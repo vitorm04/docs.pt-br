@@ -19,10 +19,10 @@ ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097259"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empacotando um assembly para o COM
@@ -84,10 +84,10 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
-- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
-- [Qualificando tipos do .NET para interoperação](qualifying-net-types-for-interoperation.md)
-- [Introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
-- [Considerações sobre segurança de assemblies](../app-domains/assembly-security-considerations.md)
+- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
+- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)
+- [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
-- [Registrando assemblies com o COM](registering-assemblies-with-com.md)
+- [Registrando assemblies usando COM](registering-assemblies-with-com.md)
 - [Como: Inserir bibliotecas de tipos como recursos do Win32 em aplicativos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

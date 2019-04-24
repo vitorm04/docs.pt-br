@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
 ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306645"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Usando tipos que permitem valor nulo (Guia de programação em C#)
@@ -29,7 +29,7 @@ Como um tipo de valor pode ser convertido implicitamente no tipo que permite val
 
 Use as seguintes propriedades readonly para examinar se uma instância de um tipo que permite valor nulo é nula e recuperar um valor de um tipo subjacente:  
   
-- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> indica se uma instância de um tipo que permite valor nulo tem um valor de seu tipo subjacente.
+- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> Indica se uma instância de um tipo que permite valor nulo tem um valor de seu tipo subjacente.
   
 - <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> obtém o valor de um tipo subjacente quando <xref:System.Nullable%601.HasValue%2A> é `true`. Quando <xref:System.Nullable%601.HasValue%2A> é `false`, a propriedade <xref:System.Nullable%601.Value%2A> gera uma <xref:System.InvalidOperationException>.
   
@@ -96,4 +96,4 @@ Você pode aplicar a conversão unboxing no tipo de valor que passou pela conver
 
 - [Tipos que permitem valor nulo](index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [O que exatamente “suspenso” significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [O que exatamente "levantado" significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

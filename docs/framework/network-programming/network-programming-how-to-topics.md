@@ -8,10 +8,10 @@ helpviewer_keywords:
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121986"
 ---
 # <a name="network-programming-how-to-topics"></a>Tópicos explicativos de programação de rede
@@ -39,13 +39,13 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 -   [Como: Criar um soquete](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
   
--   [Como: baixar arquivos com FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
+-   [Como: Baixar arquivos com FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
   
--   [Como: carregar arquivos com FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
+-   [Como: Carregar arquivos com FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
   
 -   [Como: Listar o conteúdo do diretório com FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- **Protocolo da Internet Versão 6:**  
+ **Protocolo IP versão 6:**  
   
 -   [Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -63,7 +63,7 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 -   [Como: Definir uma política de cache para uma solicitação](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- **Uso de proxies:**  
+ **Usar proxies:**  
   
 -   [Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
@@ -73,9 +73,9 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
   
 -   [Como: Detectar a disponibilidade de rede e alterações de endereço](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
   
--   [Como: obter informações de interface e de protocolo](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
+-   [Como: Obter informações de interface e de protocolo](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
   
--   [Como: executar ping em um host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+-   [Como: Executar ping em um host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>Consulte também
 

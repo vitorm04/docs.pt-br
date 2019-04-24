@@ -3,10 +3,10 @@ title: Coleções (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481100"
 ---
 # <a name="collections-c"></a>Coleções (C#)
@@ -44,7 +44,7 @@ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar
 
 - [Definindo uma coleção personalizada](#BKMK_CustomCollection)
 
-- [Iterators](#BKMK_Iterators)
+- [Iteradores](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -186,11 +186,11 @@ Várias coleções comuns são fornecidas pelo .NET Framework. Cada tipo de cole
 
 Algumas das classes de coleção comuns são descritas nesta seção:
 
-- <xref:System.Collections.Generic> classes
+- Classes <xref:System.Collections.Generic>
 
-- <xref:System.Collections.Concurrent> classes
+- Classes <xref:System.Collections.Concurrent>
 
-- <xref:System.Collections> classes
+- Classes <xref:System.Collections>
 
 <a name="BKMK_Generic"></a>
 
@@ -602,8 +602,8 @@ private static IEnumerable<int> EvenSequence(
 - [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ paralelo (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
-- [Coleções e estruturas de dados](../../../standard/collections/index.md)
-- [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)
-- [Comparações e classificações dentro de coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [Quando usar coleções genéricas](../../../standard/collections/when-to-use-generic-collections.md)
+- [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Coleções e Estruturas de Dados](../../../standard/collections/index.md)
+- [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)
+- [Comparações e Classificações Dentro de Coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Quando Usar Coleções Genéricas](../../../standard/collections/when-to-use-generic-collections.md)

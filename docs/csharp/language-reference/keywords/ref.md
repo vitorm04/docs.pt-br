@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116250"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
@@ -137,7 +137,7 @@ Adicionar o modificador `ref` a uma declaração `struct` define que instâncias
 A meta de manter um tipo `ref struct` como uma variável alocada na pilha apresenta várias regras que o compilador aplica para todos os tipos `ref struct`.
 
 - Você não pode encaixotar um `ref struct`. Você não pode atribuir um tipo `ref struct` a uma variável do tipo `object`, `dynamic` ou de qualquer tipo de interface.
-- `ref struct` Tipos não podem implementar interfaces.
+- Tipos `ref struct` não podem implementar interfaces.
 - Você não pode declarar um `ref struct` como um membro de uma classe ou de um struct normal.
 - Você não pode declarar variáveis locais que são do tipo `ref struct` em métodos assíncronos. Você pode declará-las em métodos síncronos que retornam tipos semelhantes a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
 - Você não pode declarar as variáveis locais `ref struct` em iteradores.
@@ -154,11 +154,11 @@ Você pode combinar modificadores para declarar um struct como `readonly ref`. U
 ## <a name="see-also"></a>Consulte também
 
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
-- [Ref returns e ref locals](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Retornos de ref e locais de ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
 - [Operador de atribuição ref](../operators/assignment-operator.md#ref-assignment-operator)
-- [Passar parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parâmetros de método](method-parameters.md)
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Palavras-chave C#](index.md)
+- [Palavras-chave do C#](index.md)

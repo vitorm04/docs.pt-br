@@ -10,10 +10,10 @@ ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326275"
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
@@ -79,4 +79,4 @@ Ao realizar marshaling dos dados, o marshaler de interoperabilidade pode copiar 
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Realizando marshaling de interoperabilidade](interop-marshaling.md)
+- [Marshaling de interoperabilidade](interop-marshaling.md)

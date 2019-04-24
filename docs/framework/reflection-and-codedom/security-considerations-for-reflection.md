@@ -13,10 +13,10 @@ ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207507"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
@@ -36,7 +36,7 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
     -   Membros protegidos de classes base do código de chamada. (Na reflexão, isso é chamado de acesso de nível familiar.)  
   
-    -   `internal` Membros (membros `Friend` no Visual Basic) no assembly do código de chamada. (Na reflexão, isso é chamado de acesso no nível do assembly.)  
+    -   Membros `internal` (membros `Friend` no Visual Basic) no assembly do código de chamada. (Na reflexão, isso é chamado de acesso no nível do assembly.)  
   
     -   Membros privados de outras instâncias da classe que contém o código de chamada.  
   

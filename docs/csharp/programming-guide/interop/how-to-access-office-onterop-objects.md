@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
 ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302992"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como: acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
@@ -96,7 +96,7 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]e versões posteriores converterão o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Embed Interop Types** estiver definida como true. True é o valor padrão para essa propriedade.  
+     O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] e versões posteriores, converterá o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Inserir Tipos Interop** do Excel estiver definida como true. True é o valor padrão para essa propriedade.  
   
 ## <a name="to-run-the-project"></a>Para executar o projeto  
   
@@ -112,7 +112,7 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
 1. Para ilustrar maneiras adicionais na quais [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versões posteriores, aprimora a programação do Office, o código a seguir abre um aplicativo Word e cria um ícone vinculado à planilha do Excel.  
   
-     Cole o método `CreateIconInWordDoc`, fornecido posteriormente nesta etapa, na classe `Program`. `CreateIconInWordDoc` usa argumentos nomeados e opcionais para reduzir a complexidade das chamadas de método a <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Essas chamadas incorporam dois novos recursos apresentados em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplificam as chamadas para métodos COM que possuem parâmetros de referência. Primeiro, você pode enviar argumentos para os parâmetros de referência como se fossem parâmetros de valor. Ou seja, você pode enviar valores diretamente, sem criar uma variável para cada parâmetro de referência. O compilador gera variáveis temporárias para conter os valores de argumento e descarta as variáveis quando você retornar da chamada. Em segundo lugar, você pode omitir a palavra-chave `ref` na lista de argumentos.  
+     Cole o método `CreateIconInWordDoc`, fornecido posteriormente nesta etapa, na classe `Program`. O `CreateIconInWordDoc` usa argumentos nomeados e opcionais para reduzir a complexidade das chamadas de método a <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> e <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Essas chamadas incorporam dois novos recursos apresentados em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplificam as chamadas para métodos COM que possuem parâmetros de referência. Primeiro, você pode enviar argumentos para os parâmetros de referência como se fossem parâmetros de valor. Ou seja, você pode enviar valores diretamente, sem criar uma variável para cada parâmetro de referência. O compilador gera variáveis temporárias para conter os valores de argumento e descarta as variáveis quando você retornar da chamada. Em segundo lugar, você pode omitir a palavra-chave `ref` na lista de argumentos.  
   
      O método `Add` tem quatro parâmetros de referência que são opcionais. No [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], ou versões posteriores, você poderá omitir argumentos para alguns ou todos os parâmetros se desejar usar os valores padrão. Em [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versões anteriores, um argumento deve ser fornecido para cada parâmetro e o argumento deve ser uma variável, pois os parâmetros são parâmetros de referência.  
   
@@ -176,7 +176,7 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dinâmica](../../../csharp/language-reference/keywords/dynamic.md)
-- [Usar o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Como: usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

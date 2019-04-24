@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345268"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Passo a passo: Manipulando arquivos usando métodos do .NET Framework (Visual Basic)
@@ -42,7 +42,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 4. Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.  
   
-|**Objeto**|**Propriedades**|**Valor**|  
+|**Object**|**Propriedades**|**Valor**|  
 |---|---|---|   
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Submit`<br /><br /> **Enviar entrada**|  
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Clear`<br /><br /> **Limpar entrada**|  
@@ -91,10 +91,10 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 |Controle|Propriedades|Valores|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visível**<br /><br /> **Tamanho**<br /><br /> **Multilinha**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Display`<br /><br /> **Monitor**|  
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visível**<br /><br /> **Size**<br /><br /> **Multilinha**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Display`<br /><br /> **Vídeo**|  
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`GetEntries`<br /><br /> **Obter entradas**|  
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`PickEntries`<br /><br /> **Selecionar uma entrada**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Selecionar uma entrada**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Para popular a caixa de combinação  
   
@@ -119,9 +119,9 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 |Controle|Propriedades|Valores|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`DeleteEntry`<br /><br /> **Excluir entrada**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`SubmitEdit`<br /><br /> **Enviar edição**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`DeleteEntry`<br /><br /> **Excluir entrada**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`SubmitEdit`<br /><br /> **Enviar edição**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar a exclusão e modificação de entradas  
   
@@ -151,4 +151,4 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
-- [Instruções passo a passo](../../../../visual-basic/walkthroughs.md)
+- [Explicações Passo a Passo](../../../../visual-basic/walkthroughs.md)

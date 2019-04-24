@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206415"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
@@ -41,7 +41,7 @@ sqlmetal [options] [<input file>]
 ## <a name="options"></a>Opções  
  Para exibir a lista de opções mais atual, digite `sqlmetal /?` em um prompt de comando no local instalado.  
   
- **Opções de conexão**  
+ **Opções de Conexão**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -79,7 +79,7 @@ sqlmetal [options] [<input file>]
 |**/pluralize**|Pluraliza ou singulariza automaticamente nomes de classe e de membro.<br /><br /> Essa opção só está disponível na versão em inglês  dos EUA.|  
 |**/serialization:** *\<option>*|Gera classes serializáveis.<br /><br /> *\<opção>* válida: nenhum, unidirecional. Valor padrão: nenhuma.<br /><br /> Para obter mais informações, consulte [Serialização](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
- **Arquivo de entrada**  
+ **Arquivo de Entrada**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -135,5 +135,5 @@ sqlmetal [options] [<input file>]
 ## <a name="see-also"></a>Consulte também
 
 - [Como: gerar o modelo de objeto em Visual Basic ou em C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [Geração de código em LINQ para SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Mapeamento externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Geração de código em LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Mapeamento Externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

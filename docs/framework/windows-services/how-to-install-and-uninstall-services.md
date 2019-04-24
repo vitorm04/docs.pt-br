@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308465"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Como: instalar e desinstalar serviços Windows
@@ -68,7 +68,7 @@ Se você estiver desenvolvendo um serviço Windows usando o .NET Framework, inst
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a aplicativos do serviço Windows](../windows-services/introduction-to-windows-service-applications.md)
+- [Introdução aos aplicativos do serviço Windows](../windows-services/introduction-to-windows-service-applications.md)
 - [Como: criar serviços Windows](../windows-services/how-to-create-windows-services.md)
 - [Como: adicionar instaladores ao aplicativo de serviço](../windows-services/how-to-add-installers-to-your-service-application.md)
-- [Installutil.exe (Ferramenta de Instalação)](../tools/installutil-exe-installer-tool.md)
+- [Installutil.exe (ferramenta de instalação)](../tools/installutil-exe-installer-tool.md)

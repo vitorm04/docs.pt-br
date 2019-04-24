@@ -14,10 +14,10 @@ ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306541"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Como: Mapear HRESULTs e exceções
@@ -75,7 +75,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exceção**|  
+|**COR_E_EXCEPTION**|**Exception**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND ou ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -97,7 +97,7 @@ CMyClass::MethodThatThrows
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR_E_NULLREFERENCE ou E_POINTER**|**NullReferenceException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY ou**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
 |**COR_E_PATHTOOLONG ou ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
@@ -135,8 +135,8 @@ CMyClass::MethodThatThrows
 |**ErrorCode**|HRESULT retornado da chamada.|  
 |**HelpLink**|Se **IErrorInfo->HelpContext** é diferente de zero, a cadeia de caracteres é formada pela concatenação de **IErrorInfo->GetHelpFile** e "#" e **IErrorInfo->GetHelpContext**. Caso contrário, a cadeia de caracteres é retornada de **IErrorInfo->GetHelpFile**.|  
 |**InnerException**|É sempre uma referência nula (**Nothing** no Visual Basic).|  
-|**Mensagem**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
-|**Origem**|Cadeia de caracteres retornada de **IErrorInfo->GetSource**.|  
+|**Message**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
+|**Source**|Cadeia de caracteres retornada de **IErrorInfo->GetSource**.|  
 |**StackTrace**|O rastreamento de pilha.|  
 |**TargetSite**|O nome do método que retornou o HRESULT com falha.|  
   

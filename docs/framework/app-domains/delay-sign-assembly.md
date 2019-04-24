@@ -15,10 +15,10 @@ ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334049"
 ---
 # <a name="delay-signing-an-assembly"></a>Atrasando a assinatura de um assembly
@@ -74,7 +74,7 @@ Uma organização pode ter um par de chaves bem protegido ao qual os desenvolved
   
 ## <a name="see-also"></a>Consulte também
 
-- [Criando assemblies](../../../docs/framework/app-domains/create-assemblies.md)
-- [Como: Criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
-- [Sn.exe (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)
+- [Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

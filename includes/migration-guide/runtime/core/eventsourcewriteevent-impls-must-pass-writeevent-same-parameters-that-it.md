@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 47d0aa554d88726caca35fa6bebe4d863fdc0695
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235033"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803174"
 ---
 ### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>EventSource.WriteEvent deve passar a WriteEvent os mesmos parâmetros que recebeu (mais ID)
 

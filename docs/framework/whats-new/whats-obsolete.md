@@ -10,10 +10,10 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337273"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes .NET Framework
@@ -56,7 +56,7 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
   
  A tabela a seguir lista os valores da cadeia de caracteres que você pode atribuir ao atributo `version` para segmentar uma versão específica do .NET Framework.  
   
-|Versão do .NET Framework|`version` cadeia de caracteres|
+|Versão do .NET Framework|Cadeia de caracteres `version`|
 |-|-|  
 |4.7 (incluindo 4.7.1 e 4.7.2)|v4.0|  
 |4.6 (incluindo 4.6.1 e 4.6.2)|v4.0|  
@@ -83,4 +83,4 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<Elemento supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- Elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)

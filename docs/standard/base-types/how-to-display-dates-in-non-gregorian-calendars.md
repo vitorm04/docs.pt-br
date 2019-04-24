@@ -14,10 +14,10 @@ ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313301"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Como: exibir datas em calendários não gregorianos
@@ -63,7 +63,7 @@ Os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> usam o calendári
   
     -   <xref:System.Globalization.Calendar.GetSecond%2A>, para exibir os segundos do minuto no calendário apropriado.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , para exibir os milissegundos do segundo no calendário apropriado.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, para exibir os milissegundos do segundo no calendário apropriado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo exibe uma data usando dois calendários diferentes. Ele exibe a data após definir o calendário islâmico como calendário padrão para a cultura ar-JO e exibe a data usando o calendário persa, que não tem suporte como calendário opcional pela cultura fa-IR.  

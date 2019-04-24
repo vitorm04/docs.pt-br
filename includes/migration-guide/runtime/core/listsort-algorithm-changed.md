@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: d4859629fe3922b71cc90664e1e3304cdb312bae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59235062"
 ---
 ### <a name="listsort-algorithm-changed"></a>O algoritmo List.Sort foi alterado
 
 |   |   |
 |---|---|
-|Detalhes|A partir do .NET Framework 4.5, o algoritmo de classificação de <xref:System.Collections.Generic.List%601?displayProperty=name> foi alterado (para ser uma classificação introspectiva em vez de uma classificação rápida). <xref:System.Collections.Generic.List%601?displayProperty=name>A classificação nunca foi estável, mas essa alteração pode fazer com que cenários diferentes sejam classificados de maneiras instáveis. Isso significa apenas que itens equivalentes podem ser classificados em ordens diferentes em chamadas posteriores da API.|
+|Detalhes|A partir do .NET Framework 4.5, o algoritmo de classificação de <xref:System.Collections.Generic.List%601?displayProperty=name> foi alterado (para ser uma classificação introspectiva em vez de uma classificação rápida). A classificação de <xref:System.Collections.Generic.List%601?displayProperty=name> nunca foi estável, mas essa alteração pode fazer com que cenários diferentes sejam classificados de maneiras instáveis. Isso significa apenas que itens equivalentes podem ser classificados em ordens diferentes em chamadas posteriores da API.|
 |Sugestão|Como o algoritmo de classificação antigo também era instável (embora de maneiras ligeiramente diferentes), não deve haver nenhum código que dependa de itens equivalentes sempre serem classificados em uma ordem específica. Se houver casos de códigos que dependem disso e que tinham sorte com o comportamento antigo, esses códigos deverão ser atualizados para usar um comparador que classifique de forma determinista os itens na ordem desejada.|
 |Escopo|Transparente|
 |Versão|4.5|

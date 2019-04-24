@@ -9,10 +9,10 @@ ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3177ae53d8b932a52dccf11b12d44fd07ec1c4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226619"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigação: Novo compilador JIT de 64 bits
@@ -71,5 +71,5 @@ A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações em tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [\<Elemento useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Elemento \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)

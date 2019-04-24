@@ -13,10 +13,10 @@ ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128722"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
@@ -125,4 +125,4 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Escrevendo um código fortemente tipado verificável](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
 - [Segurança de tipos e proteção](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
-- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

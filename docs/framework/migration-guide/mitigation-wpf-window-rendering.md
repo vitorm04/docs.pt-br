@@ -5,10 +5,10 @@ ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d54751ae0492e25f824eee6362e0f3bca446d75e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147622"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigação: Renderização de janela WPF
@@ -40,4 +40,4 @@ No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações em tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
