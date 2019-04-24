@@ -21,10 +21,10 @@ ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481256"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
@@ -189,7 +189,7 @@ Nesta seção Observações:
 
 - [Solução de problemas](#Troubleshooting)
 
-  - [Visualizador de Log de Associação do Assembly](#Fusion)
+  - [Visualizador de log da associação do assembly](#Fusion)
 
   - [O assistente de depuração gerenciado JITCompilationStart](#MDA)
 
@@ -610,7 +610,7 @@ ngen update /queue
 
 A ação `update` gera novamente todas as imagens nativas que foram invalidadas, não apenas as que usam `MyComponent`.
 
-Se o seu aplicativo for composto por várias raízes, você poderá controlar a prioridade das ações adiadas. Os comandos a seguir enfileiram a instalação de três raízes. `Assembly1` é instalado primeiro, sem aguardar o tempo ocioso. `Assembly2` também é instalado sem aguardar o tempo ocioso, mas somente após a conclusão de todas as ações de prioridade 1. `Assembly3` é instalado quando o serviço detecta que o computador está ocioso.
+Se o seu aplicativo for composto por várias raízes, você poderá controlar a prioridade das ações adiadas. Os comandos a seguir enfileiram a instalação de três raízes. O `Assembly1` é instalado primeiro, sem aguardar o tempo ocioso. O `Assembly2` também é instalado sem esperar o tempo ocioso, mas somente após a conclusão de todas as ações de prioridade 1. O `Assembly3` é instalado quando o serviço detecta que o computador está ocioso.
 
 ```
 ngen install Assembly1 /queue:1
@@ -639,4 +639,4 @@ No .NET Framework versão 2.0, a única interação com o serviço de imagem nat
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Processo de execução gerenciada](../../../docs/standard/managed-execution-process.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -3,10 +3,10 @@ title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo foi atualizado com a versão prévia 2.
 ms.date: 02/12/2019
 ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427273"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
@@ -14,7 +14,7 @@ ms.locfileid: "59427273"
 Há vários aprimoramentos na linguagem C# que você já pode experimentar na versão prévia 2. Os novos recursos adicionados na versão prévia 2 são:
 
 - [Aprimoramentos de correspondência de padrões](#more-patterns-in-more-places):
-  * [Expressões switch](#switch-expressions)
+  * [Expressões Switch](#switch-expressions)
   * [Padrões da propriedade](#property-patterns)
   * [Padrões de tupla](#tuple-patterns)
   * [Padrões posicionais](#positional-patterns)
@@ -24,7 +24,7 @@ Há vários aprimoramentos na linguagem C# que você já pode experimentar na ve
 
 Os recursos de linguagem a seguir apareceram pela primeira vez no C# 8.0 versão prévia 1:
 
-- [Tipos de referência anuláveis](#nullable-reference-types)
+- [Tipos de referência nula](#nullable-reference-types)
 - [Fluxos assíncronos](#asynchronous-streams)
 - [Índices e intervalos](#indices-and-ranges)
 

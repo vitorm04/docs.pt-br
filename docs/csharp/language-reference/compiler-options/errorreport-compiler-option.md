@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345086"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opções do compilador C#)
@@ -28,13 +28,13 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **nenhum**  
+ **none**  
  Relatórios sobre erros internos do compilador não serão coletados ou enviados à Microsoft.  
   
  **prompt**  
  Solicita que você envie um relatório quando um erro interno do compilador for recebido. **prompt** é o padrão quando você compila um aplicativo no ambiente de desenvolvimento.  
   
- **fila**  
+ **queue**  
  Enfileira o relatório de erros. Quando você faz logon com credenciais administrativas, pode relatar falhas desde a última vez que você fez logon. Não será solicitado que você envie relatórios de falhas mais de uma vez a cada três dias. **queue** é o padrão quando você compila um aplicativo na linha de comando.  
   
  **send**  

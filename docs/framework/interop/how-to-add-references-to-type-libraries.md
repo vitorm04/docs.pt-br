@@ -10,10 +10,10 @@ ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3fda2af84ff74e129c36dc966bad247bdf9e20
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427130"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Como: Adicionar referências a bibliotecas de tipos
@@ -47,7 +47,7 @@ O Visual Studio gera um assembly de interoperabilidade que contém metadados qua
 ## <a name="see-also"></a>Consulte também
 
 - [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
-- [Expondo componentes do COM para o .NET Framework](exposing-com-components.md)
+- [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
 - [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [Passo a passo: Inserindo tipos de assemblies gerenciados no Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (opções do compilador C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
