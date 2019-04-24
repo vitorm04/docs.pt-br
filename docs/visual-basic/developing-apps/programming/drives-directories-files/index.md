@@ -10,11 +10,11 @@ helpviewer_keywords:
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
 ms.openlocfilehash: 0c9c1c787138595f725316a580acda9c5d4d43a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61676073"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Processando unidades, diretórios e arquivos (Visual Basic)
 Você pode usar o Visual Basic para processar unidades, pastas e arquivos com o objeto `My.Computer.FileSystem`, que fornece um melhor desempenho e é mais fácil de usar que os métodos tradicionais, como as funções `FileOpen` e `Write` (embora elas ainda estejam disponíveis). As seções a seguir discutem esses métodos em detalhes.  
@@ -26,10 +26,10 @@ Você pode usar o Visual Basic para processar unidades, pastas e arquivos com o 
  [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
  Fornece uma visão geral dos conceitos de E/S de arquivo no .NET Framework, incluindo fluxos, armazenamento isolado, eventos de arquivo, atributos de arquivo e acesso a arquivos.  
   
- [Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Passo a passo: Manipulando arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Demonstra como usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para manipular arquivos e pastas.  
   
- [Passo a passo: manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Passo a passo: Manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Demonstra como usar o objeto `My.Computer.FileSystem` para manipular arquivos e pastas.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
