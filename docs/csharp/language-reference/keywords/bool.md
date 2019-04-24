@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
 ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334166"
 ---
 # <a name="bool-c-reference"></a>bool (Referência de C#)
@@ -54,7 +54,7 @@ Neste exemplo, você insere um caractere do teclado e o programa verifica se o c
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
 - [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)
 - [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

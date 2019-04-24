@@ -17,10 +17,10 @@ ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330071"
 ---
 # <a name="how-to-view-assembly-contents"></a>Como: Exibir o conteúdo do assembly
@@ -90,6 +90,6 @@ Você pode usar o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/i
   
 ## <a name="see-also"></a>Consulte também
 
-- [Domínios de aplicativo e assemblies](application-domains.md#application-domains-and-assemblies)
+- [Domínios do aplicativo e assemblies](application-domains.md#application-domains-and-assemblies)
 - [Tópicos explicativos sobre domínios do aplicativo e assemblies](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

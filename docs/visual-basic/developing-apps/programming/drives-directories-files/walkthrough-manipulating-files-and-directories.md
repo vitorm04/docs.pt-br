@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314679"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Passo a passo: Manipulando arquivos e diretórios no Visual Basic
@@ -46,8 +46,8 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
     |Controle|Propriedade|Valor|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
-    |**Botão**|**Nome**<br /><br /> **Texto**|`browseButton`<br /><br /> **Procure**|  
-    |**Botão**|**Nome**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examinar**|  
+    |**Button**|**Nome**<br /><br /> **Texto**|`browseButton`<br /><br /> **Procurar**|  
+    |**Button**|**Nome**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examinar**|  
     |**CheckBox**|**Nome**<br /><br /> **Texto**|`saveCheckBox`<br /><br /> **Salvar resultados**|  
     |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
@@ -164,4 +164,4 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Passo a passo: manipular arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Passo a passo: Manipulando arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

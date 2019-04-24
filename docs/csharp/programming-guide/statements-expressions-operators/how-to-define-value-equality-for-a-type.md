@@ -10,16 +10,16 @@ helpviewer_keywords:
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
 ms.openlocfilehash: 73cb9249343b02c937c3e4e652021c7a6dbb4386
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311468"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como: definir a igualdade de valor para um tipo (Guia de Programação em C#)
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  
   
-1. `x.Equals(x)` Retorna `true`. Isso é chamado de propriedade reflexiva.  
+1. `x.Equals(x)` retorna `true`. Isso é chamado de propriedade reflexiva.  
   
 2. `x.Equals(y)` retorna o mesmo valor que `y.Equals(x)`. Isso é chamado de propriedade simétrica.  
   
@@ -27,7 +27,7 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
 4. Invocações sucessivas de `x.Equals(y)` retornam o mesmo valor, contanto que os objetos referenciados por x e y não sejam modificados.  
   
-5. `x.Equals(null)` Retorna `false`. No entanto, `null.Equals(null)` gera uma exceção; não obedece à regra número dois acima.  
+5. `x.Equals(null)` retorna `false`. No entanto, `null.Equals(null)` gera uma exceção; não obedece à regra número dois acima.  
   
  Qualquer struct que você define já tem uma implementação padrão de igualdade de valor que ele herda da substituição <xref:System.ValueType?displayProperty=nameWithType> do método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Essa implementação usa a reflexão para examinar todos os campos e propriedades no tipo. Embora essa implementação produza resultados corretos, ela é relativamente lenta em comparação com uma implementação personalizada escrita especificamente para o tipo.  
   

@@ -11,10 +11,10 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310974"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Encaminhamento de tipo no Common Language Runtime
@@ -49,5 +49,5 @@ O encaminhamento de tipo permite que você mova um tipo para outro assembly sem 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
-- [Encaminhamento de tipos (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
+- [Encaminhamento de tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [Diretiva #using](/cpp/preprocessor/hash-using-directive-cpp)

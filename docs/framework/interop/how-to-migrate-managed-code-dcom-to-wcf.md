@@ -5,10 +5,10 @@ ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307711"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Como: Migrar código DCOM gerenciado para o WCF
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação de WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Serviços de implantação e projeção](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Compilando clientes](../../../docs/framework/wcf/building-clients.md)
-- [Serviços de duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Serviços duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)
