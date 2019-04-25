@@ -29,11 +29,11 @@ ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683295"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -115,7 +115,7 @@ ms.locfileid: "48584137"
   
 -   Delegados genéricos permitem retornos fortemente tipados sem a necessidade de criar múltiplas classes de delegados. Por exemplo, o delegado genérico <xref:System.Predicate%601> permite criar um método que implementa seus próprios critérios de pesquisa para um tipo específico e usar seu método com método do tipo <xref:System.Array>, tais como <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A> e <xref:System.Array.FindAll%2A>.  
   
--   Genéricos simplificam o código gerado dinamicamente. Quando você usa genéricos com código gerado dinamicamente, não é necessário gerar o tipo. Isso aumenta o número de cenários nos quais você pode usar métodos dinâmicos leves, em vez de gerar assemblies inteiros. Para obter mais informações, confira [Como definir e executar métodos dinâmicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
+-   Genéricos simplificam o código gerado dinamicamente. Quando você usa genéricos com código gerado dinamicamente, não é necessário gerar o tipo. Isso aumenta o número de cenários nos quais você pode usar métodos dinâmicos leves, em vez de gerar assemblies inteiros. Para obter mais informações, confira [Como: Definir e executar métodos dinâmicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Veja a seguir algumas limitações de genéricos:  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48584137"
 |[Covariância e Contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)|Descreve covariância e contravariância em parâmetros de tipo genérico.|  
 |[Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornece informações de resumo sobre as características e os cenários de uso dos tipos de coleção no .NET, incluindo tipos genéricos.|  
 |[Quando Usar Coleções Genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve regras gerais para determinar quando usar tipos de coleção genérica.|  
-|[Como definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica como gerar assemblies dinâmicos que incluem tipos e métodos genéricos.|  
+|[Como: Definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica como gerar assemblies dinâmicos que incluem tipos e métodos genéricos.|  
 |[Tipos genéricos no Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Descreve o recurso genérico para usuários do Visual Basic, incluindo tópicos de instruções para uso e definição de tipos genéricos.|  
 |[Introdução aos genéricos](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Fornece uma visão geral da definição e do uso de tipos genéricos para usuários do C#.|  
 |[Visão geral de genéricos no Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Descreve o recurso de genéricos para usuários do C++, incluindo as diferenças entre genéricos e modelos.|  

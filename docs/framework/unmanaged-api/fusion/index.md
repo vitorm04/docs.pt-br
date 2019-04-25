@@ -9,24 +9,24 @@ ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946114"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (referência de API não gerenciada)
-A API de fusão permite que um host de tempo de execução acessar as propriedades de recursos do aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
+A API de fusão permite a um host de tempo de execução acessar as propriedades dos recursos de um aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- Descreve as interfaces não gerenciadas que usa a API de fusão.  
+ Descreve as interfaces não gerenciadas que a API de fusão usa.  
   
  [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- Descreve as funções estáticas globais não gerenciadas que usa a API de fusão.  
+ Descreve as funções estáticas globais não gerenciadas que a API de fusão usa.  
   
  [Enumerações de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
- Descreve as enumerações não gerenciadas que usa a API de fusão.  
+ Descreve as enumerações não gerenciadas que a API de fusão usa.  
   
  [Estruturas de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- Descreve as estruturas não gerenciadas que usa a API de fusão.
+ Descreve as estruturas não gerenciadas que a API de fusão usa.

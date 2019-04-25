@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
 ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910124"
 ---
 # <a name="open-source-library-guidance"></a>Diretrizes da biblioteca de software livre
 
@@ -29,7 +29,7 @@ Aspectos das bibliotecas .NET de software livre de alta qualidade:
 
 ## <a name="types-of-recommendations"></a>Tipos de recomendações
 
-Cada artigo apresenta quatro tipos de recomendação: **Fazer**, **Considerar**, **Evitar** e **Não fazer**. O tipo de recomendação indica a intensidade em que ela deve ser seguida.
+Cada artigo apresenta quatro tipos de recomendações: **Fazer**, **Considerar**, **Evitar**, e **Não Fazer**. O tipo de recomendação indica a intensidade em que ela deve ser seguida.
 
 Procure quase sempre seguir a recomendação **Fazer**. Por exemplo:
 
