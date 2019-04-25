@@ -10,83 +10,89 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427377"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672388"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="21a15-102">?: Operador (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="21a15-102">?: Operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="15595-102">?: Operador (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="15595-102">?: Operator (C# Reference)</span></span>
 
-<span data-ttu-id="21a15-103">O operador condicional `?:`, comumente conhecido como o operador condicional ternário, avalia uma expressão booliana e retorna o resultado da avaliação de uma de duas expressões, dependendo se a expressão booliana é avaliada como `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="21a15-103">The conditional operator `?:`, commonly known as the ternary conditional operator, evaluates a Boolean expression, and returns the result of evaluating one of two expressions, depending on whether the Boolean expression evaluates to `true` or `false`.</span></span> <span data-ttu-id="21a15-104">Começando com C# 7.2, a [expressão de referência condicional](#conditional-ref-expression) retorna a referência ao resultado de uma de duas expressões.</span><span class="sxs-lookup"><span data-stu-id="21a15-104">Beginning with C# 7.2, the [conditional ref expression](#conditional-ref-expression) returns the reference to the result of one of the two expressions.</span></span>
+<span data-ttu-id="15595-103">O operador condicional `?:`, comumente conhecido como o operador condicional ternário, avalia uma expressão booliana e retorna o resultado da avaliação de uma de duas expressões, dependendo se a expressão booliana é avaliada como `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="15595-103">The conditional operator `?:`, commonly known as the ternary conditional operator, evaluates a Boolean expression, and returns the result of evaluating one of two expressions, depending on whether the Boolean expression evaluates to `true` or `false`.</span></span> <span data-ttu-id="15595-104">Começando com C# 7.2, a [expressão de referência condicional](#conditional-ref-expression) retorna a referência ao resultado de uma de duas expressões.</span><span class="sxs-lookup"><span data-stu-id="15595-104">Beginning with C# 7.2, the [conditional ref expression](#conditional-ref-expression) returns the reference to the result of one of the two expressions.</span></span>
 
-<span data-ttu-id="21a15-105">A sintaxe do operador condicional é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="21a15-105">The syntax for the conditional operator is as follows:</span></span>
+<span data-ttu-id="15595-105">A sintaxe do operador condicional é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="15595-105">The syntax for the conditional operator is as follows:</span></span>
 
 ```csharp
 condition ? consequent : alternative
 ```
 
-<span data-ttu-id="21a15-106">A expressão `condition` deve ser avaliada para `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="21a15-106">The `condition` expression must evaluate to `true` or `false`.</span></span> <span data-ttu-id="21a15-107">Se `condition` for avaliada como `true`, a expressão `consequent` será avaliada e seu resultado se tornará o resultado da operação.</span><span class="sxs-lookup"><span data-stu-id="21a15-107">If `condition` evaluates to `true`, the `consequent` expression is evaluated, and its result becomes the result of the operation.</span></span> <span data-ttu-id="21a15-108">Se `condition` for avaliada como `false`, a expressão `alternative` será avaliada e seu resultado se tornará o resultado da operação.</span><span class="sxs-lookup"><span data-stu-id="21a15-108">If `condition` evaluates to `false`, the `alternative` expression is evaluated, and its result becomes the result of the operation.</span></span> <span data-ttu-id="21a15-109">Somente `consequent` ou `alternative` é avaliada.</span><span class="sxs-lookup"><span data-stu-id="21a15-109">Only `consequent` or `alternative` is evaluated.</span></span>
+<span data-ttu-id="15595-106">A expressão `condition` deve ser avaliada para `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="15595-106">The `condition` expression must evaluate to `true` or `false`.</span></span> <span data-ttu-id="15595-107">Se `condition` for avaliada como `true`, a expressão `consequent` será avaliada e seu resultado se tornará o resultado da operação.</span><span class="sxs-lookup"><span data-stu-id="15595-107">If `condition` evaluates to `true`, the `consequent` expression is evaluated, and its result becomes the result of the operation.</span></span> <span data-ttu-id="15595-108">Se `condition` for avaliada como `false`, a expressão `alternative` será avaliada e seu resultado se tornará o resultado da operação.</span><span class="sxs-lookup"><span data-stu-id="15595-108">If `condition` evaluates to `false`, the `alternative` expression is evaluated, and its result becomes the result of the operation.</span></span> <span data-ttu-id="15595-109">Somente `consequent` ou `alternative` é avaliada.</span><span class="sxs-lookup"><span data-stu-id="15595-109">Only `consequent` or `alternative` is evaluated.</span></span>
 
-<span data-ttu-id="21a15-110">O tipo de `consequent` e `alternative` devem ser iguais ou deve haver uma conversão implícita de um tipo para outro.</span><span class="sxs-lookup"><span data-stu-id="21a15-110">The type of `consequent` and `alternative` must be the same, or there must be an implicit conversion from one type to the other.</span></span>
+<span data-ttu-id="15595-110">O tipo de `consequent` e `alternative` devem ser iguais ou deve haver uma conversão implícita de um tipo para outro.</span><span class="sxs-lookup"><span data-stu-id="15595-110">The type of `consequent` and `alternative` must be the same, or there must be an implicit conversion from one type to the other.</span></span>
 
-<span data-ttu-id="21a15-111">O operador condicional é associativo direito, ou seja, uma expressão da forma</span><span class="sxs-lookup"><span data-stu-id="21a15-111">The conditional operator is right-associative, that is, an expression of the form</span></span>
+<span data-ttu-id="15595-111">O operador condicional é associativo direito, ou seja, uma expressão da forma</span><span class="sxs-lookup"><span data-stu-id="15595-111">The conditional operator is right-associative, that is, an expression of the form</span></span>
 
 ```csharp
 a ? b : c ? d : e
 ```
 
-<span data-ttu-id="21a15-112">é avaliada como</span><span class="sxs-lookup"><span data-stu-id="21a15-112">is evaluated as</span></span>
+<span data-ttu-id="15595-112">é avaliada como</span><span class="sxs-lookup"><span data-stu-id="15595-112">is evaluated as</span></span>
 
 ```csharp
 a ? b : (c ? d : e)
 ```
 
-<span data-ttu-id="21a15-113">O exemplo a seguir demonstra o uso do operador condicional:</span><span class="sxs-lookup"><span data-stu-id="21a15-113">The following example demonstrates the usage of the conditional operator:</span></span>
+<span data-ttu-id="15595-113">Um dispositivo mnemônico útil que você pode usar para se lembrar de como esse operador avalia é perguntar:</span><span class="sxs-lookup"><span data-stu-id="15595-113">A handy mnemonic device you can use to remember how this operator evaluates is by asking:</span></span> 
+```
+is this condition true ? yes : no
+```
+<span data-ttu-id="15595-114">com a parte ?</span><span class="sxs-lookup"><span data-stu-id="15595-114">with the ?</span></span> <span data-ttu-id="15595-115">do operador atuando como um ponto de interrogação para a instrução anterior e a seguinte atuando como a resposta lógica para essa pergunta.</span><span class="sxs-lookup"><span data-stu-id="15595-115">part of the operator acting as a question mark for the previous statement, and the consequent acting as the logical response to this question.</span></span>
+
+<span data-ttu-id="15595-116">O exemplo a seguir demonstra o uso do operador condicional:</span><span class="sxs-lookup"><span data-stu-id="15595-116">The following example demonstrates the usage of the conditional operator:</span></span>
 
 [!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
-## <a name="conditional-ref-expression"></a><span data-ttu-id="21a15-114">Expressão condicional ref</span><span class="sxs-lookup"><span data-stu-id="21a15-114">Conditional ref expression</span></span>
+## <a name="conditional-ref-expression"></a><span data-ttu-id="15595-117">Expressão condicional ref</span><span class="sxs-lookup"><span data-stu-id="15595-117">Conditional ref expression</span></span>
 
-<span data-ttu-id="21a15-115">Começando com C# 7.2, use a expressão de referência condicional para retornar a referência ao resultado de uma de duas expressões.</span><span class="sxs-lookup"><span data-stu-id="21a15-115">Beginning with C# 7.2, you can use the conditional ref expression to return the reference to the result of one of the two expressions.</span></span> <span data-ttu-id="21a15-116">Você pode atribuir essa referência a uma variável [ref local](../keywords/ref.md#ref-locals) ou [ref readonly local](../keywords/ref.md#ref-readonly-locals) ou usá-la como um [valor de retorno de referência](../keywords/ref.md#reference-return-values) ou como um [parâmetro do método `ref`](../keywords/ref.md#passing-an-argument-by-reference).</span><span class="sxs-lookup"><span data-stu-id="21a15-116">You can assign that reference to a [ref local](../keywords/ref.md#ref-locals) or [ref readonly local](../keywords/ref.md#ref-readonly-locals) variable, or use it as a [reference return value](../keywords/ref.md#reference-return-values) or as a [`ref` method parameter](../keywords/ref.md#passing-an-argument-by-reference).</span></span>
+<span data-ttu-id="15595-118">Começando com C# 7.2, use a expressão de referência condicional para retornar a referência ao resultado de uma de duas expressões.</span><span class="sxs-lookup"><span data-stu-id="15595-118">Beginning with C# 7.2, you can use the conditional ref expression to return the reference to the result of one of the two expressions.</span></span> <span data-ttu-id="15595-119">Você pode atribuir essa referência a uma variável [ref local](../keywords/ref.md#ref-locals) ou [ref readonly local](../keywords/ref.md#ref-readonly-locals) ou usá-la como um [valor de retorno de referência](../keywords/ref.md#reference-return-values) ou como um [parâmetro do método `ref`](../keywords/ref.md#passing-an-argument-by-reference).</span><span class="sxs-lookup"><span data-stu-id="15595-119">You can assign that reference to a [ref local](../keywords/ref.md#ref-locals) or [ref readonly local](../keywords/ref.md#ref-readonly-locals) variable, or use it as a [reference return value](../keywords/ref.md#reference-return-values) or as a [`ref` method parameter](../keywords/ref.md#passing-an-argument-by-reference).</span></span>
 
-<span data-ttu-id="21a15-117">A sintaxe da expressão condicional ref é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="21a15-117">The syntax for the conditional ref expression is as follows:</span></span>
+<span data-ttu-id="15595-120">A sintaxe da expressão condicional ref é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="15595-120">The syntax for the conditional ref expression is as follows:</span></span>
 
 ```csharp
 condition ? ref consequent : ref alternative
 ```
 
-<span data-ttu-id="21a15-118">Como o operador condicional original, a expressão condicional ref avalia apenas uma das duas expressões: `consequent` ou `alternative`.</span><span class="sxs-lookup"><span data-stu-id="21a15-118">Like the original conditional operator, the conditional ref expression evaluates only one of the two expressions: either `consequent` or `alternative`.</span></span>
+<span data-ttu-id="15595-121">Como o operador condicional original, a expressão condicional ref avalia apenas uma das duas expressões: `consequent` ou `alternative`.</span><span class="sxs-lookup"><span data-stu-id="15595-121">Like the original conditional operator, the conditional ref expression evaluates only one of the two expressions: either `consequent` or `alternative`.</span></span>
 
-<span data-ttu-id="21a15-119">No caso da expressão condicional ref, o tipo de `consequent` e `alternative` devem ser iguais.</span><span class="sxs-lookup"><span data-stu-id="21a15-119">In the case of the conditional ref expression, the type of `consequent` and `alternative` must be the same.</span></span>
+<span data-ttu-id="15595-122">No caso da expressão condicional ref, o tipo de `consequent` e `alternative` devem ser iguais.</span><span class="sxs-lookup"><span data-stu-id="15595-122">In the case of the conditional ref expression, the type of `consequent` and `alternative` must be the same.</span></span>
 
-<span data-ttu-id="21a15-120">O exemplo a seguir demonstra o uso da expressão condicional ref:</span><span class="sxs-lookup"><span data-stu-id="21a15-120">The following example demonstrates the usage of the conditional ref expression:</span></span>
+<span data-ttu-id="15595-123">O exemplo a seguir demonstra o uso da expressão condicional ref:</span><span class="sxs-lookup"><span data-stu-id="15595-123">The following example demonstrates the usage of the conditional ref expression:</span></span>
 
 [!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
 
-<span data-ttu-id="21a15-121">Para saber mais, confira a [nota da proposta do recurso](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).</span><span class="sxs-lookup"><span data-stu-id="21a15-121">For more information, see the [feature proposal note](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).</span></span>
+<span data-ttu-id="15595-124">Para saber mais, confira a [nota da proposta do recurso](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).</span><span class="sxs-lookup"><span data-stu-id="15595-124">For more information, see the [feature proposal note](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).</span></span>
 
-## <a name="conditional-operator-and-an-ifelse-statement"></a><span data-ttu-id="21a15-122">Operador condicional e uma instrução `if..else`</span><span class="sxs-lookup"><span data-stu-id="21a15-122">Conditional operator and an `if..else` statement</span></span>
+## <a name="conditional-operator-and-an-ifelse-statement"></a><span data-ttu-id="15595-125">Operador condicional e uma instrução `if..else`</span><span class="sxs-lookup"><span data-stu-id="15595-125">Conditional operator and an `if..else` statement</span></span>
 
-<span data-ttu-id="21a15-123">O uso do operador condicional em uma instrução [ if-else ](../keywords/if-else.md) pode resultar em código mais conciso em casos onde você precisa calcular um valor condicionalmente.</span><span class="sxs-lookup"><span data-stu-id="21a15-123">Use of the conditional operator over an [if-else](../keywords/if-else.md) statement might result in more concise code in cases when you need conditionally to compute a value.</span></span> <span data-ttu-id="21a15-124">O exemplo a seguir demonstra duas maneiras de classificar um inteiro como negativo ou não negativo:</span><span class="sxs-lookup"><span data-stu-id="21a15-124">The following example demonstrates two ways to classify an integer as negative or nonnegative:</span></span>
+<span data-ttu-id="15595-126">O uso do operador condicional em uma instrução [ if-else ](../keywords/if-else.md) pode resultar em código mais conciso em casos onde você precisa calcular um valor condicionalmente.</span><span class="sxs-lookup"><span data-stu-id="15595-126">Use of the conditional operator over an [if-else](../keywords/if-else.md) statement might result in more concise code in cases when you need conditionally to compute a value.</span></span> <span data-ttu-id="15595-127">O exemplo a seguir demonstra duas maneiras de classificar um inteiro como negativo ou não negativo:</span><span class="sxs-lookup"><span data-stu-id="15595-127">The following example demonstrates two ways to classify an integer as negative or nonnegative:</span></span>
 
 [!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
 
-## <a name="operator-overloadability"></a><span data-ttu-id="21a15-125">Capacidade de sobrecarga do operador</span><span class="sxs-lookup"><span data-stu-id="21a15-125">Operator overloadability</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="15595-128">Capacidade de sobrecarga do operador</span><span class="sxs-lookup"><span data-stu-id="15595-128">Operator overloadability</span></span>
 
-<span data-ttu-id="21a15-126">O operador condicional não pode ser sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="21a15-126">The conditional operator cannot be overloaded.</span></span>
+<span data-ttu-id="15595-129">O operador condicional não pode ser sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="15595-129">The conditional operator cannot be overloaded.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="21a15-127">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="21a15-127">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="15595-130">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="15595-130">C# language specification</span></span>
 
-<span data-ttu-id="21a15-128">Para saber mais, confira a seção [Operador condicional](~/_csharplang/spec/expressions.md#conditional-operator) na [especificação da linguagem C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="21a15-128">For more information, see the [Conditional operator](~/_csharplang/spec/expressions.md#conditional-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
+<span data-ttu-id="15595-131">Para saber mais, confira a seção [Operador condicional](~/_csharplang/spec/expressions.md#conditional-operator) na [especificação da linguagem C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="15595-131">For more information, see the [Conditional operator](~/_csharplang/spec/expressions.md#conditional-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="21a15-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="21a15-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15595-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="15595-132">See also</span></span>
 
-- [<span data-ttu-id="21a15-130">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="21a15-130">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="21a15-131">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="21a15-131">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="21a15-132">Operadores em C#</span><span class="sxs-lookup"><span data-stu-id="21a15-132">C# Operators</span></span>](index.md)
-- [<span data-ttu-id="21a15-133">Instrução if-else</span><span class="sxs-lookup"><span data-stu-id="21a15-133">if-else statement</span></span>](../keywords/if-else.md)
-- [<span data-ttu-id="21a15-134">?.</span><span class="sxs-lookup"><span data-stu-id="21a15-134">?.</span></span> <span data-ttu-id="21a15-135">Operadores ?. e ?[]</span><span class="sxs-lookup"><span data-stu-id="21a15-135">and ?[] Operators</span></span>](null-conditional-operators.md)
-- [<span data-ttu-id="21a15-136">??</span><span class="sxs-lookup"><span data-stu-id="21a15-136">??</span></span> <span data-ttu-id="21a15-137">Operador</span><span class="sxs-lookup"><span data-stu-id="21a15-137">Operator</span></span>](null-coalescing-operator.md)
-- [<span data-ttu-id="21a15-138">ref keyword</span><span class="sxs-lookup"><span data-stu-id="21a15-138">ref keyword</span></span>](../keywords/ref.md)
+- [<span data-ttu-id="15595-133">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="15595-133">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="15595-134">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="15595-134">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="15595-135">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="15595-135">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="15595-136">Instrução if-else</span><span class="sxs-lookup"><span data-stu-id="15595-136">if-else statement</span></span>](../keywords/if-else.md)
+- <span data-ttu-id="15595-137">[Operadores ?. e ?[]](null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="15595-137">[?. and ?[] Operators](null-conditional-operators.md)</span></span>
+- [<span data-ttu-id="15595-138">Operador ??</span><span class="sxs-lookup"><span data-stu-id="15595-138">?? Operator</span></span>](null-coalescing-operator.md)
+- [<span data-ttu-id="15595-139">ref keyword</span><span class="sxs-lookup"><span data-stu-id="15595-139">ref keyword</span></span>](../keywords/ref.md)
