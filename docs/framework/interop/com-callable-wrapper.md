@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309479"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613246"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -182,7 +182,7 @@ Para obter o DispId de um membro da interface em tempo de execução, os cliente
 
 Interfaces duplas permitem a associação inicial e tardia a membros da interface por clientes COM. Em tempo de design e durante o teste, talvez seja útil definir a interface de classe como dupla. Para uma classe gerenciada (e suas classes base) que nunca serão modificadas, essa opção também é aceitável. Em todos os outros casos, evite definir a interface de classe como dupla.
 
-Uma interface dupla gerada automaticamente pode ser apropriada em casos raros. No entanto, com mais frequência, ela cria complexidade relacionada à versão. Por exemplo, os clientes COM que usam a interface de classe de uma classe derivada podem ser facilmente interrompidos com alterações na classe base. Quando um terceiro fornece a classe base, o layout da interface de classe fica fora de seu controle. Além disso, ao contrário de uma interface somente de expedição, uma interface dupla (**ClassInterfaceType.AutoDual**) fornece uma descrição da interface de classe na biblioteca de tipos exportada. Uma descrição como essa incentiva os clientes de associação tardia a armazenarem em cache os DispIds em tempo de execução.
+Uma interface dupla gerada automaticamente pode ser apropriada em casos raros. No entanto, com mais frequência, ela cria complexidade relacionada à versão. Por exemplo, os clientes COM que usam a interface de classe de uma classe derivada podem ser facilmente interrompidos com alterações na classe base. Quando um terceiro fornece a classe base, o layout da interface de classe fica fora de seu controle. Além disso, ao contrário de uma interface somente de expedição, uma interface dupla (**ClassInterfaceType.AutoDual**) fornece uma descrição da interface de classe na biblioteca de tipos exportada. Uma descrição como essa incentiva os clientes de associação tardia a armazenarem em cache os DispIds em tempo de compilação.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Verifique se todas as notificações de evento COM têm associação tardia.
 
@@ -198,6 +198,6 @@ Se o seu aplicativo exigir chamadas early-bound para métodos de interface de ev
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Wrappers COM](com-wrappers.md)
-- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
-- [Qualificando tipos do .NET para interoperação](qualifying-net-types-for-interoperation.md)
+- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
+- [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)
 - [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)

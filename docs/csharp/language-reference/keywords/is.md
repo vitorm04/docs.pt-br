@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480827"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672453"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
@@ -144,7 +144,7 @@ O exemplo a seguir demonstra uma comparação de verificações de `null`:
  
 ### <a name="var" /> Padrão var </a>
 
-Uma correspondência de padrão com o padrão var sempre é bem-sucedida para expressões não nulas; se *expr* for `null`, a expressão `is` será `false`. O valor não nulo de *expr* é sempre atribuído a uma variável local do mesmo tipo que o tipo de tempo de tempo de execução de *expr*.  A sintaxe é:
+O padrão `var` é um catch-all para qualquer tipo ou valor. O valor de *expr* é sempre atribuído a uma variável local do mesmo tipo que o tipo de tempo de compilação de *expr*. O resultado da expressão `is` é sempre `true`. A sintaxe é:
 
 ```csharp 
    expr is var varname
@@ -161,7 +161,7 @@ O exemplo a seguir usa o padrão var para atribuir uma expressão a uma variáve
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../../../csharp/language-reference/index.md)
-- [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
-- [Palavras-chave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [Palavras-chave do operador](../../../csharp/language-reference/keywords/operator-keywords.md)

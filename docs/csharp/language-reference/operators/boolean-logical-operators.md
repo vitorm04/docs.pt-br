@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427312"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos boolianos (referência do C#)
@@ -164,7 +164,7 @@ A lista a seguir ordena os operadores lógicos, começando da mais alta precedê
 - Operador de negação lógico `!`
 - Operador AND lógico `&`
 - Operador OR exclusivo lógico `^`
-- Operador lógico OU `|`
+- Operador OR lógico `|`
 - Operador AND lógico condicional `&&`
 - Operador OR lógico condicional `||`
 
@@ -192,4 +192,4 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Operadores em C#](index.md)
+- [Operadores do C#](index.md)

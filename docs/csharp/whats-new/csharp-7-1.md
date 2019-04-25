@@ -3,10 +3,10 @@ title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480957"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
@@ -17,13 +17,13 @@ O C# 7.1 adiciona a [seleção de versão da linguagem](../language-reference/co
 
 Os novos recursos de linguagem nesta versão são:
 
-* [`async` `Main` method](#async-main)
+* [`async` Método `Main`](#async-main)
   - O ponto de entrada para um aplicativo pode ter o modificador `async`.
 * [`default` Expressões literais](#default-literal-expressions)
   - Use expressões literais padrão em expressões de valor padrão quando o tipo de destino pode ser inferido.
 * [Nomes de elementos de tupla inferidos](#inferred-tuple-element-names)
   - Em muitos casos, os nomes dos elementos de tupla podem ser inferidos com base na inicialização da tupla.
-* [Restrições em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
+* [Correspondência de padrões em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
   - Você pode usar expressões de correspondência de padrão em variáveis cujo tipo é um parâmetro de tipo genérico.
 
 Por fim, o compilador traz duas opções `/refout` e `/refonly`, que controlam a [geração de assembly de referência](#reference-assembly-generation).
