@@ -14,8 +14,8 @@ ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914818"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -62,7 +62,7 @@ O .NET Framework 4.8 apresenta novos recursos nas seguintes áreas:
 - [Classes base](#core48)
 - [WCF (Windows Communication Foundation)](#wcf48)
 - [Windows Presentation Foundation (WPF)](#wpf48)
-- [Common Language Runtime](#clr48) 
+- [Common Language Runtime](#clr48)
 
 A melhoria na acessibilidade, que permite a um aplicativo proporcionar uma experiência adequada para os usuários da Tecnologia Assistencial, continua sendo um ponto importante do .NET Framework 4.8. Para saber mais sobre melhorias de acessibilidade no .NET Framework 4.8, consulte [Novidades de acessibilidade no .NET Framework](whats-new-in-accessibility.md).
 
@@ -79,7 +79,7 @@ Por padrão, em aplicativos destinados ao .NET Framework 4.8, as seguintes class
 - <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
 - <xref:System.Security.Cryptography.RijndaelManaged>
 - <xref:System.Security.Cryptography.RIPEMD160Managed>
-- <xref:System.Security.Cryptography.SHA256Managed> 
+- <xref:System.Security.Cryptography.SHA256Managed>
 
 Em vez disso, essas classes redirecionam as operações criptográficas para uma biblioteca de criptografia do sistema. Essa alteração elimina efetivamente uma diferença potencialmente confusa entre os ambientes do desenvolvedor e os ambientes de produção, fazendo com que componentes nativos e componentes gerenciados operem sob a mesma política criptográfica. Os aplicativos que dependem dessas exceções podem restaurar o comportamento anterior configurando o comutador `Switch.System.Security.Cryptography.UseLegacyFipsThrow` para `true`. Para saber mais, consulte [Classes de criptografia gerenciadas não geram uma CryptographyException no modo FIPS](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
 
@@ -93,7 +93,7 @@ Começando no .NET Framework 4.5, o assembly clrcompression.dll usa [ZLib](https
 
 **Introdução do ServiceHealthBehavior**
 
-Os pontos de extremidade de integridade são amplamente usados pelas ferramentas de orquestração para gerenciar os serviços com base em seu status de integridade. As verificações de integridade também podem ser usadas pelas ferramentas de monitoramento para rastrear e fornecer notificações sobre a disponibilidade e o desempenho de um serviço. 
+Os pontos de extremidade de integridade são amplamente usados pelas ferramentas de orquestração para gerenciar os serviços com base em seu status de integridade. As verificações de integridade também podem ser usadas pelas ferramentas de monitoramento para rastrear e fornecer notificações sobre a disponibilidade e o desempenho de um serviço.
 
 O **ServiceHealthBehavior** é um comportamento de serviço de aplicativo do Windows Communication Foundation que estende o <xref:System.ServiceModel.Description.IServiceBehavior>.  Quando adicionado à coleção <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType>, um comportamento de serviço executa estas tarefas:
 
@@ -106,15 +106,15 @@ Há duas maneiras de expor o ponto de extremidade da integridade e publicar info
 - Percorrer o código. Por exemplo:
 
   ```csharp
-  ServiceHost host = new ServiceHost(typeof(Service1), 
-                     new Uri("http://contoso:81/Service1")); 
+  ServiceHost host = new ServiceHost(typeof(Service1),
+                     new Uri("http://contoso:81/Service1"));
   ServiceHealthBehavior healthBehavior =
-      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+      host.Description.Behaviors.Find<ServiceHealthBehavior>();
   if (healthBehavior == null)
-  { 
-     healthBehavior = new ServiceHealthBehavior(); 
-  } 
-   host.Description.Behaviors.Add(healthBehavior); 
+  {
+     healthBehavior = new ServiceHealthBehavior();
+  }
+   host.Description.Behaviors.Add(healthBehavior);
   ```
 
 - Usando um arquivo de configuração. Por exemplo:
@@ -137,7 +137,7 @@ O status de integridade de um serviço pode ser consultado usando parâmetros de
 Parâmetros de consulta e exemplos:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
-  
+
   Retorna um código de status de resposta HTTP 455 quando o estado de qualquer um dos dispatchers de canal é maior que <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
 
 - OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
@@ -147,11 +147,11 @@ Parâmetros de consulta e exemplos:
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
   Especifica a porcentagem {1 a 100} que dispara a resposta e seu código de resposta HTTP {200 a 599}. Neste exemplo:
-  
+
     - Se a porcentagem é maior que 95, retorna um código de resposta HTTP 500.
-    
+
     - Se a porcentagem está entre 70 e 95, retorna 350.
-    
+
     - Caso contrário, retorna 200.
 
 O status da integridade do serviço pode ser exibido em HTML com a especificação de uma cadeia de consulta como `https://contoso:81/Service1?health` ou em XML com a especificação de uma cadeia de consulta como `https://contoso:81/Service1?health&Xml`. Uma cadeia de consulta como `https://contoso:81/Service1?health&NoContent` retorna uma página HTML vazia.
@@ -162,9 +162,9 @@ O status da integridade do serviço pode ser exibido em HTML com a especificaç�
 
 **Aprimoramentos de alto DPI**
 
-No .NET Framework 4.8, o WPF adiciona suporte para Reconhecimento de DPI V2 por Monitor e ajuste de DPI no Modo Misto. Consulte [Desenvolvimento de aplicativo de área de trabalho com alto DPI no Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) para saber mais sobre o desenvolvimento com alto DPI. 
+No .NET Framework 4.8, o WPF adiciona suporte para Reconhecimento de DPI V2 por Monitor e ajuste de DPI no Modo Misto. Consulte [Desenvolvimento de aplicativo de área de trabalho com alto DPI no Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) para saber mais sobre o desenvolvimento com alto DPI.
 
-O .NET Framework 4.8 melhora o suporte para interoperação hospedada de HWNDs e do Windows Forms em aplicativos WPF com alto DPI em plataformas compatíveis com o ajuste do DPI no Modo Misto (começando com a Atualização de abril de 2018 do Windows 10). Quando os controles hospedados de HWNDs ou do Windows Forms são criados como janelas em escala de DPI no Modo Misto chamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), eles podem ser hospedados em um aplicativo WPF V2 por Monitor e são dimensionados adequadamente. Tal conteúdo hospedado não é processado no DPI nativo; em vez disso, o sistema operacional ajusta o conteúdo hospedado para o tamanho apropriado. O suporte para o modo de reconhecimento de DPI V2 por Monitor também permite que os controles WPF sejam hospedados (isto é, tenham pai) em uma janela nativa em um aplicativo com alto DPI. 
+O .NET Framework 4.8 melhora o suporte para interoperação hospedada de HWNDs e do Windows Forms em aplicativos WPF com alto DPI em plataformas compatíveis com o ajuste do DPI no Modo Misto (começando com a Atualização de abril de 2018 do Windows 10). Quando os controles hospedados de HWNDs ou do Windows Forms são criados como janelas em escala de DPI no Modo Misto chamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), eles podem ser hospedados em um aplicativo WPF V2 por Monitor e são dimensionados adequadamente. Tal conteúdo hospedado não é processado no DPI nativo; em vez disso, o sistema operacional ajusta o conteúdo hospedado para o tamanho apropriado. O suporte para o modo de reconhecimento de DPI V2 por Monitor também permite que os controles WPF sejam hospedados (isto é, tenham pai) em uma janela nativa em um aplicativo com alto DPI.
 
 Para habilitar o suporte para ajuste de Alto DPI no Modo Misto, você pode definir os seguintes parâmetros [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) no arquivo de configuração de aplicativo:
 
@@ -180,11 +180,11 @@ Para habilitar o suporte para ajuste de Alto DPI no Modo Misto, você pode defin
 
 O tempo de execução no .NET Framework 4.8 inclui as seguintes mudanças e melhorias:
 
-**Melhorias no compilador JIT**. O compilador JIT (Just-in-time) no .NET Framework 4.8 baseia-se no compilador JIT do .NET Core 2.1. Muitas das otimizações e todas as correções de bugs feitas no compilador JIT do .NET Core 2.1 estão inclusas no compilador JIT do .NET Framework 4.8. 
+**Melhorias no compilador JIT**. O compilador JIT (Just-in-time) no .NET Framework 4.8 baseia-se no compilador JIT do .NET Core 2.1. Muitas das otimizações e todas as correções de bugs feitas no compilador JIT do .NET Core 2.1 estão inclusas no compilador JIT do .NET Framework 4.8.
 
 **Aprimoramentos do NGEN**. O tempo de execução melhorou o gerenciamento de memória para imagens NGEN ([Gerador de Imagem Nativa](../tools/ngen-exe-native-image-generator.md)) para que os dados mapeados das imagens NGEN não residam na memória. Isso reduz a área de superfície disponível para ataques que tentam executar código arbitrário modificando a memória a ser executada.
 
-**Verificação antimalware em todos os assemblies**. Em versões anteriores do .NET Framework, o tempo de execução examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o tempo de execução dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).  
+**Verificação antimalware em todos os assemblies**. Em versões anteriores do .NET Framework, o tempo de execução examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o tempo de execução dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 
