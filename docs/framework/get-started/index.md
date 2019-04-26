@@ -12,8 +12,8 @@ ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644032"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introdução ao .NET Framework
 
