@@ -11,11 +11,11 @@ helpviewer_keywords:
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907980"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estruturas de controle aninhadas (Visual Basic)
 Você pode colocar instruções de controle dentro de outras instruções de controle, por exemplo uma `If...Then...Else` bloquear dentro de um `For...Next` loop. Uma instrução de controle colocada dentro de outra instrução de controle é considerada *aninhada*.  

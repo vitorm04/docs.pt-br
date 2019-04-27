@@ -3,11 +3,11 @@ title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006755"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 
@@ -104,8 +104,7 @@ ms.locfileid: "57845729"
  O fluxo de trabalho da sequência contém uma atividade de <xref:System.Activities.Statements.While> com uma atividade filho no loop que não executa qualquer trabalho.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Replicator comparou a ParallelForEach
- <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  
-  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
+ <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
 
  O diagrama a seguir mostra os fluxos de trabalho usados para esse teste. O trabalho WF3 estão à esquerda e o trabalho WF4 estão à direita.
 
@@ -139,8 +138,7 @@ class WorkScope :
     }
 ```
 
- O manipulador de falha se destina a atividade de `WorkScope` . O fluxo de trabalho WF4 é igualmente simplista.  
-  <xref:System.Activities.Statements.CompensableActivity> tem um corpo e um manipulador de compensação.  Um explícito compensa é seguir na sequência.  A atividade de atividade de corpo e do manipulador de compensação é ambas são implementações:
+ O manipulador de falha se destina a atividade de `WorkScope` . O fluxo de trabalho WF4 é igualmente simplista.  <xref:System.Activities.Statements.CompensableActivity> tem um corpo e um manipulador de compensação.  Um explícito compensa é seguir na sequência.  A atividade de atividade de corpo e do manipulador de compensação é ambas são implementações:
 
 ```
 public sealed class CompensableActivityEmptyCompensation : CodeActivity

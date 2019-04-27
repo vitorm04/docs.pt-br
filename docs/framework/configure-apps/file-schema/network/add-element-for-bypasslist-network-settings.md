@@ -11,11 +11,11 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674656"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<Adicionar > elemento para bypasslist (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.  

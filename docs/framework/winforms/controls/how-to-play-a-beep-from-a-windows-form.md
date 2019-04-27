@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
 ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913426"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Como: Reproduzir um aviso sonoro de um Windows Form
 Este exemplo reproduz um aviso sonoro em tempo de execução.  

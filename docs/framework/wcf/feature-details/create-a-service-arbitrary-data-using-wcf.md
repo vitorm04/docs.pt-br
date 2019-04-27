@@ -3,11 +3,11 @@ title: 'Como: criar um serviço que aceita dados arbitrários usando o modelo de
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
 ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857309"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
 Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato não tem suporte byWCF. Este tópico discute usando o modelo de programação WCF REST para criar um serviço que recebe dados arbitrários.  

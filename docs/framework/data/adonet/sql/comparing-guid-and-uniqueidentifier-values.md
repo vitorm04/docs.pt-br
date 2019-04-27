@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
 ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878105"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Comparando valores de GUID e uniqueidentifier
 O tipo de dados de GUID (identificador exclusivo) no SQL Server é representado pelo tipo de dados `uniqueidentifier`, que armazena um valor binário de 16 bytes. O GUID é um número binário, e seu uso principal é como um identificador que deve ser exclusivo em uma rede que tenha muitos computadores em muitos sites. Os GUIDs podem ser gerados chamando a função Transact-SQL NEWID e têm a garantia de serem exclusivos em todo o mundo. Para obter mais informações, consulte [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  

@@ -5,11 +5,11 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868973"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs que dependem de reflexão
 Em alguns casos, o uso de reflexo no código não é óbvio, por isso a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)] não preserva os metadados necessários no tempo de execução. Este tópico abrange algumas APIs ou padrões de programação comuns que não são consideradas como parte da API de reflexão, mas que dependem de reflexão para serem executados com êxito. Se você usá-los no código-fonte, poderá adicionar informações sobre eles no arquivo de diretivas de tempo de execução (.rd.xml), de modo que as chamadas a essas APIs não gerem uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ou outras exceções em tempo de execução.  

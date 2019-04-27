@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a5f06b3f79fed5dac5a6f07650e4fabd0aa5867
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905626"
 ---
 # <a name="cvstruct-structure"></a>Estrutura CVStruct
 Contém informações que são usadas ao instalar um módulo ou uma imagem composta.  

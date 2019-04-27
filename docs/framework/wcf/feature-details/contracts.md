@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857617"
 ---
 # <a name="contracts"></a>Contratos
 Esta seção mostra como definir e implementar contratos do Windows Communication Foundation (WCF). Um contrato de serviço Especifica o que um ponto de extremidade comunica ao mundo externo. Em um nível mais concreto, é uma afirmação sobre um conjunto de mensagens específicas, organizados em padrões de troca de mensagens básicas (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço é um conjunto de trocas de mensagens relacionadas logicamente, uma operação de serviço é uma troca de mensagens única. Por exemplo, um `Hello` operação obviamente deve aceitar uma mensagem (de modo que o chamador pode anunciar a saudação) e podem ou não pode retornar uma mensagem (dependendo de cortesia da operação).  

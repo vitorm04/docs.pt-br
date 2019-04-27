@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913257"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Como: Posicionar controles nos Windows Forms
 Para posicionar controles, use o Designer de formulários do Windows ou especifique o <xref:System.Windows.Forms.Control.Location%2A> propriedade.  

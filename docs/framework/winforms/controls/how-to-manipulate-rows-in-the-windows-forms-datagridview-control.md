@@ -11,11 +11,11 @@ helpviewer_keywords:
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
 ms.openlocfilehash: 095efc7279a1dc6702aeeb5ec5d598dbdd8818b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913738"
 ---
 # <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Como: Manipular linhas no controle DataGridView do Windows Forms
 O exemplo de código a seguir mostra as várias maneiras de manipular <xref:System.Windows.Forms.DataGridView> linhas usando propriedades do objeto a <xref:System.Windows.Forms.DataGridViewRow> classe.  

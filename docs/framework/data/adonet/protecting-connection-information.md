@@ -3,11 +3,11 @@ title: Protegendo informações de conexão
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
 ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878924"
 ---
 # <a name="protecting-connection-information"></a>Protegendo informações de conexão
 A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. Armazenar as informações de conexão em texto sem formatação ou persistir-la na memória pode comprometer seu sistema inteiro. Cadeias de caracteres de Conexão inseridas no seu código-fonte podem ser lido usando o [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para exibir o Microsoft intermediate language (MSIL) em um assembly compilado.  

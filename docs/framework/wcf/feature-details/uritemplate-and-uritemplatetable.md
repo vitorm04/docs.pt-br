@@ -3,11 +3,11 @@ title: UriTemplate and UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918626"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate and UriTemplateTable
 Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos URIs que seus serviços respondem a. Windows Communication Foundation (WCF) adicionadas duas novas classes para dar aos desenvolvedores controle sobre seus URIs. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI no WCF. Essas classes também podem ser usadas em seu próprios, permitindo que os desenvolvedores tirem proveito de modelos e o URI de mecanismo de mapeamento sem implementar um serviço WCF.  

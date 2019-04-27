@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
 ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880042"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Gerando DataSets fortemente tipados
 Considerando um esquema XML que está em conformidade com o padrão da linguagem XSD, você pode gerar um <xref:System.Data.DataSet> fortemente tipado usando a ferramenta XSD.exe fornecida com o [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  

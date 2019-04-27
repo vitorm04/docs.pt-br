@@ -1,5 +1,5 @@
 ---
-title: 'Como: Enumerar os fusos horários presentes em um computador'
+title: 'Como: enumerar os fusos horários presentes em um computador'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +12,18 @@ ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908668"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Como: Enumerar os fusos horários presentes em um computador
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Como: enumerar os fusos horários presentes em um computador
 
 Trabalhar com êxito com um fuso horário designado requer que informações sobre o fuso horário em questão estejam disponíveis no sistema. Os sistemas operacionais Windows XP e Windows Vista armazenar essas informações no registro. Embora o número total de fusos horários existentes seja grande, o Registro contém informações apenas sobre um subconjunto deles. Além disso, o Registro em si é uma estrutura dinâmica cujo conteúdo está sujeito a alterações deliberadas ou acidentais. Como resultado, um aplicativo nem sempre pode presumir que um determinado fuso horário esteja definido e disponível no sistema. A primeira etapa para muitos aplicativos que usam informações de fuso horário é determinar se os fusos horários necessários estão disponíveis no sistema local ou dar ao usuário uma lista dos fusos horários entre os quais escolher. Isso requer que o aplicativo enumere os fusos horários definidos no sistema local.
 
 > [!NOTE]
-> Se um aplicativo se baseia na presença de um determinado fuso horário que não podem ser definida em um sistema local, o aplicativo pode garantir sua presença ao serializar e desserializar as informações sobre o fuso horário. O fuso horário, em seguida, podem ser adicionado a um controle de lista para que o usuário do aplicativo pode selecioná-lo. Para obter detalhes, consulte [como: Salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [como: Restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Se um aplicativo se baseia na presença de um determinado fuso horário que não podem ser definida em um sistema local, o aplicativo pode garantir sua presença ao serializar e desserializar as informações sobre o fuso horário. O fuso horário, em seguida, podem ser adicionado a um controle de lista para que o usuário do aplicativo pode selecioná-lo. Para obter detalhes, confira [Como: Salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [como: Restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar os fusos horários presentes no sistema local
 

@@ -3,11 +3,11 @@ title: Valores nulos
 description: Saiba como o valor nulo é usado no F# linguagem de programação.
 ms.date: 03/22/2019
 ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902272"
 ---
 # <a name="null-values"></a>Valores nulos
 
@@ -31,7 +31,7 @@ Para interpretar um valor nulo que é obtido de um método do .NET, use a corres
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-Valores nulos para F# tipos também podem ser gerados de outras maneiras, como quando você usa `Array.zeroCreate`, que chama `Unchecked.defaultof`. Você deve ter cuidado com o código, para manter os valores nulos encapsulados. Em uma biblioteca destinada somente para F#, você não precise verificar valores nulos em todas as funções. Se você estiver escrevendo uma biblioteca para interoperação com outras linguagens .NET, você talvez precise adicionar verificações para null, parâmetros de entrada e gerarem um `ArgumentNullException`, exatamente como faria em código C# ou Visual Basic.
+Valores nulos para F# tipos também podem ser gerados de outras maneiras, como quando você usa `Array.zeroCreate`, que chama `Unchecked.defaultof`. Você deve ter cuidado com o código, para manter os valores nulos encapsulados. Em uma biblioteca destinada somente para F#, você não precise verificar valores nulos em todas as funções. Se você estiver escrevendo uma biblioteca para interoperação com outras linguagens .NET, você talvez precise adicionar verificações para null, parâmetros de entrada e gerarem um `ArgumentNullException`, exatamente como faria em código c# ou Visual Basic.
 
 Você pode usar o código a seguir para verificar se um valor arbitrário é nulo.
 

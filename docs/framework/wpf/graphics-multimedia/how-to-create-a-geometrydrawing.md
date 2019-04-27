@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904950"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Como: Criar um GeometryDrawing
 Este exemplo mostra como criar e exibir um <xref:System.Windows.Media.GeometryDrawing>. Um <xref:System.Windows.Media.GeometryDrawing> permite que você criar uma forma com um preenchimento e uma estrutura de tópicos associando uma <xref:System.Windows.Media.Pen> e uma <xref:System.Windows.Media.Brush> com um <xref:System.Windows.Media.Geometry>. O <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> descreve a estrutura da forma, o <xref:System.Windows.Media.GeometryDrawing.Brush%2A> descreve o preenchimento da forma e o <xref:System.Windows.Media.GeometryDrawing.Pen%2A> descreve o contorno da forma.  

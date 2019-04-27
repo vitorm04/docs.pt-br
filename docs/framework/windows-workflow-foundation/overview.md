@@ -3,11 +3,11 @@ title: Visão geral de fluxo de trabalho do Windows
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861019"
 ---
 # <a name="windows-workflow-overview"></a>Visão geral de fluxo de trabalho do Windows
 Um fluxo de trabalho é um conjunto de unidades elementares chamadas *atividades* que são armazenados como um modelo que descreve um processo do mundo real. Fluxos de trabalho fornecem uma maneira de descrever a ordem de relações de execução e dependentes entre partes de trabalho ou longo tempo. Este trabalho passa pelo modelo do início ao final, e as atividades podem ser executadas por pessoas ou funções do sistema.  
@@ -33,7 +33,7 @@ Componentes de fluxo de trabalho no processo do host
   
  ![Diagrama que mostra como os componentes de fluxo de trabalho interagem.](./media/overview/workflow-component-interatction.gif)  
   
- No diagrama anterior, o método de <xref:System.Activities.WorkflowInvoker.Invoke%2A> da classe de <xref:System.Activities.WorkflowInvoker> é usado para chamar várias instâncias de fluxo de trabalho. <xref:System.Activities.WorkflowInvoker> é usado para fluxos de trabalho leves que não precisam o gerenciamento de host; fluxos de trabalho que precisam o gerenciamento de host (como <xref:System.Activities.Bookmark> retomada) devem ser executados usando <xref:System.Activities.WorkflowApplication.Run%2A> em vez disso. Não é necessário esperar uma instância de fluxo de trabalho para terminar antes de chamar outra; suporte de mecanismo de tempo de execução que executam várias o fluxo de trabalho instância como exemplo simultaneamente.  Fluxos de trabalho são chamados como segue:  
+ No diagrama anterior, o método de <xref:System.Activities.WorkflowInvoker.Invoke%2A> da classe de <xref:System.Activities.WorkflowInvoker> é usado para chamar várias instâncias de fluxo de trabalho. <xref:System.Activities.WorkflowInvoker> é usado para fluxos de trabalho leve que não precisam o gerenciamento de host; fluxos de trabalho que precisam o gerenciamento de host (como a ressunção de <xref:System.Activities.Bookmark> ) devem ser executados usando <xref:System.Activities.WorkflowApplication.Run%2A> em vez disso. Não é necessário esperar uma instância de fluxo de trabalho para terminar antes de chamar outra; suporte de mecanismo de tempo de execução que executam várias o fluxo de trabalho instância como exemplo simultaneamente.  Fluxos de trabalho são chamados como segue:  
   
 -   Uma atividade de <xref:System.Activities.Statements.Sequence> que contém uma atividade do filho de <xref:System.Activities.Statements.WriteLine> . <xref:System.Activities.Variable> de atividade pai é associado a <xref:System.Activities.InArgument> de atividade filho. Para obter mais informações sobre associação, argumentos e variáveis, consulte [variáveis e argumentos](variables-and-arguments.md).  
   

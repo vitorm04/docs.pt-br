@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
 ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857227"
 ---
 # <a name="data-contract-equivalence"></a>Equivalência de contrato de dados
 Para um cliente enviar com êxito os dados de um determinado tipo para um serviço ou um serviço para enviar com êxito os dados para um cliente, o tipo de envio não necessariamente precisa existir na extremidade receptora. O único requisito é que os contratos de ambos os tipos de dados ser equivalentes. (Às vezes, equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  

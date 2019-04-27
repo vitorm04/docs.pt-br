@@ -14,11 +14,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013225"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Como: Definir imagens em tempo de execução (Windows Forms)
 Você pode definir programaticamente a imagem exibida por um Windows Forms <xref:System.Windows.Forms.PictureBox> controle.  

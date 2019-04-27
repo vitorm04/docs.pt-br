@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
 ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922207"
 ---
 # <a name="multiple-bulk-copy-operations"></a>Várias operações de cópia em massa
 Você pode executar várias operações de cópia em massa usando uma única instância de um <xref:System.Data.SqlClient.SqlBulkCopy> classe. Se os parâmetros da operação alterar entre as cópias (por exemplo, o nome da tabela de destino), você deve atualizá-los antes de qualquer chamada subsequente para qualquer um dos **WriteToServer** métodos, conforme demonstrado no exemplo a seguir. A menos que explicitamente alterado, todos os valores de propriedade permanecem como estavam na operação de cópia em massa anterior para uma determinada instância.  

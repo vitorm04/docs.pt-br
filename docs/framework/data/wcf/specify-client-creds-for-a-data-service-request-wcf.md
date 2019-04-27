@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875572"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Como: Especifique as credenciais do cliente para um serviço de dados de solicitação (WCF Data Services)
 Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma solicitação para um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service. No entanto, você pode especificar que credenciais enviadas para autenticar solicitações ao serviço de dados, fornecendo uma <xref:System.Net.NetworkCredential> para o <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> propriedade do <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). O exemplo neste tópico mostra como fornecer explicitamente as credenciais que são usadas pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente ao solicitar dados do serviço de dados.  

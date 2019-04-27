@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
 ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921141"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Resolução de associação tardia; poderiam ocorrer erros de tempo de execução
 Um objeto é atribuído a uma variável declarada com o [tipo de dados do objeto](../../../visual-basic/language-reference/data-types/object-data-type.md).  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
 ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876506"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Como: Executar consultas de serviço de dados (WCF Data Services)
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar um serviço de dados de um aplicativo cliente baseado em .NET Framework usando as classes de serviço de dados do cliente geradas. Você pode executar consultas usando um desses métodos:  

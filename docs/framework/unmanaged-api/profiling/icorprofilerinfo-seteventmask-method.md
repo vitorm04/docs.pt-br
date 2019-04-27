@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 122a621552b49f476f219216ac0a52011c1542ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860926"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>Método ICorProfilerInfo::SetEventMask
 Determina um valor que especifica os tipos de eventos dos quais o perfil deseja receber notificação do CLR (Common Language Runtime).  

@@ -3,11 +3,11 @@ title: 'Como: Combinar e comparar coleções de cadeia de caracteres (LINQ) (Vis
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855225"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Como: Combinar e comparar coleções de cadeia de caracteres (LINQ) (Visual Basic)
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.  

@@ -3,11 +3,11 @@ title: FindCriteria e descoberta achada
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856512"
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das principais ações na descoberta. Executar um localizar envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. Para obter mais informações sobre as mensagens de descoberta, consulte o [especificação WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  

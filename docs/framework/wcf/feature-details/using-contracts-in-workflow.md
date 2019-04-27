@@ -3,11 +3,11 @@ title: Utilizando contratos no fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918535"
 ---
 # <a name="using-contracts-in-workflow"></a>Utilizando contratos no fluxo de trabalho
 Ao implementar um serviço, você pode definir um número de contratos que descrevem o serviço e os dados que ele envia e recebe. Os dados são representados como contratos de dados e os contratos de mensagem; serviços WCF e o fluxo de trabalho usam definições de contrato de mensagem e de contrato de dados como parte de descrições do serviço. O próprio serviço expõe metadados (na forma de WSDL) para descrever as operações do serviço. No WCF, contratos de serviço e operação definir o serviço e as operações que ele suporta. No entanto, em um serviço de fluxo de trabalho, esses contratos são parte do processo de negócios em si; eles são expostos nos metadados por um processo chamado inferência do contrato.  

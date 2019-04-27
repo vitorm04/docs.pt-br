@@ -3,11 +3,11 @@ title: 1030 - StartFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
 ms.openlocfilehash: 3848d644e77041a62a52eb2eae5eeef286dfe334
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924313"
 ---
 # <a name="1030---startfaultworkitem"></a>1030 - StartFaultWorkItem
 ## <a name="properties"></a>Propriedades  
@@ -23,7 +23,7 @@ ms.locfileid: "33509674"
  Indica que um FaultWorkItem está sendo a execução.  
   
 ## <a name="message"></a>Mensagem  
- Iniciando a execução de um FaultWorkItem para a atividade '%1', DisplayName: '%2', InstanceId: '%3'.  A exceção é propagada de atividade “%4 ", DisplayName: “%5", InstanceId: “%6".  
+ Iniciar a execução de um FaultWorkItem para atividades "%1", DisplayName: "%2", InstanceId: '%3'.  A exceção é propagada de atividade “%4 ", DisplayName: “%5", InstanceId: “%6".  
   
 ## <a name="details"></a>Detalhes  
   

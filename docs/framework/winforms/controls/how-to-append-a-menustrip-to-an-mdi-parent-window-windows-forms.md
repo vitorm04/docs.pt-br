@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
 ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011019"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Como: Acrescentar um MenuStrip a uma janela pai do MDI (Windows Forms)
 Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos) filho pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu da MDI pai com o conteúdo do menu da MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  

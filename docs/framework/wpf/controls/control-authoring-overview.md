@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017677"
 ---
 # <a name="control-authoring-overview"></a>Visão geral da criação de controle
 A extensibilidade do modelo de controle do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] reduz consideravelmente a necessidade de criar um novo controle. No entanto, em alguns casos, você ainda precisará criar um controle personalizado. Este tópico aborda os recursos que minimizam sua necessidade de criar um controle personalizado e os diferentes modelos de criação no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico também demonstra como criar um novo controle.  

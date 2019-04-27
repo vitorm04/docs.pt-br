@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
 ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913106"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Como: Renderizar um elemento de estilo visual
 O <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace expõe <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> compatíveis com estilos visuais de elementos de (UI) de interface de objetos que representam o usuário do Windows. Este tópico demonstra como usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> classe para renderizar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa o **fazer logoff** e **desligar** botões do menu Iniciar.  

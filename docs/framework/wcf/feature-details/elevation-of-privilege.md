@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856384"
 ---
 # <a name="elevation-of-privilege"></a>Elevação de privilégio
 *Elevação de privilégio* resulta da dando uma autorização invasor permissões além desses inicialmente concedido. Por exemplo, um invasor com um conjunto de privilégios de permissões "somente leitura" de alguma forma eleva o conjunto para incluir a "leitura e gravação."  

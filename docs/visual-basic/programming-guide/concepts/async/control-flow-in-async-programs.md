@@ -3,11 +3,11 @@ title: Fluxo de controle em programas assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923663"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Fluxo de controle em programas assíncronos (Visual Basic)
 Você pode escrever e manter programas assíncronos mais facilmente usando as palavras-chave `Async` e `Await`. No entanto, os resultados podem surpreendê-lo se você não entender o funcionamento do seu programa. Este tópico rastreia o fluxo de controle por meio de um programa assíncrono simples para mostrar quando o controle se move de um método para o outro e quais informações são transferidas a cada vez.  
@@ -98,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
 ### <a name="download-the-program"></a>Baixar o Programa  
- Você pode baixar o aplicativo para este tópico em [exemplo assíncrono: Controlar fluxo em programas assíncronos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). As etapas a seguir abrem e executam o programa.  
+ Você pode baixar o aplicativo para este tópico em [Amostra assíncrona: Fluxo de controle em programas assíncronos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). As etapas a seguir abrem e executam o programa.  
   
 1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   

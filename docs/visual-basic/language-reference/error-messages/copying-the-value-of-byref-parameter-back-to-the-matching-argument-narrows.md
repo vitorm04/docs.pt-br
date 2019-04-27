@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
 ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803851"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Copiar o valor do parâmetro 'ByRef' '\<parametername >' para o argumento correspondente é restrita do tipo '\<typename1 >' no tipo '\<typename2 >'
 Um procedimento é chamado com um argumento que é ampliado para o tipo de parâmetro correspondente, e a conversão de parâmetro para o argumento é restritiva.  

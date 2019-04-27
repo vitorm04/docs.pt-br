@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913205"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Como: Fornecer um bitmap da caixa de ferramentas para um controle
 Se você quiser ter um ícone especial para o seu controle apareça na **caixa de ferramentas**, você pode especificar uma imagem específica usando o <xref:System.Drawing.ToolboxBitmapAttribute>. Esta classe é um *atributo*, um tipo especial de classe que você pode anexar a outras classes. Para obter mais informações sobre atributos, consulte [visão geral de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) para o Visual Basic ou [atributos (c#)](../../../csharp/programming-guide/concepts/attributes/index.md) para c#.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
 ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011886"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Acessando membros não expostos no Document Object Model HTML gerenciado
 O gerenciado HTML documento Object Model (DOM) contém uma classe chamada <xref:System.Windows.Forms.HtmlElement> que expõe as propriedades, métodos e eventos que todos os elementos HTML têm em comum. Às vezes, no entanto, será necessário acessar membros que a interface gerenciada não expõe diretamente. Este tópico analisa duas maneiras de acessar membros não expostos, incluindo [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] e funções do VBScript definidas dentro de uma página da Web.  

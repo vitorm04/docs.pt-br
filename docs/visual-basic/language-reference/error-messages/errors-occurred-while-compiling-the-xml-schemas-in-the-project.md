@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
 ms.openlocfilehash: 337fc1fb4dfc83c9b4814d3e45eb0cbe0758f7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803264"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Ocorreram erros na compilação dos esquemas XML no projeto
 Ocorreram erros ao compilar os esquemas XML no projeto. Por isso, o XML IntelliSense não está disponível.  

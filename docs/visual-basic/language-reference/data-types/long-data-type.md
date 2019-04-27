@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918444"
 ---
 # <a name="long-data-type-visual-basic"></a>Tipo de dados Long (Visual Basic)
 

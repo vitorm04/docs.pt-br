@@ -3,11 +3,11 @@ title: Estendendo rastreamento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
 ms.openlocfilehash: c56f886857e8d391a243e3af4a13353f14116247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990139"
 ---
 # <a name="extending-tracing"></a>Estendendo rastreamento
 Este exemplo demonstra como estender o recurso de rastreamento do Windows Communication Foundation (WCF), escrevendo rastreamentos de atividade definida pelo usuário no código de cliente e o serviço. Isso permite que o usuário criar atividades de rastreamento e agrupe os rastreamentos em unidades lógicas de trabalho. Também é possível correlacionar atividades por meio das transferências (dentro do mesmo ponto de extremidade) e propagação (em pontos de extremidade). Neste exemplo, o rastreamento está habilitado para o cliente e o serviço. Para obter mais informações sobre como habilitar o rastreamento nos arquivos de configuração do cliente e o serviço, consulte [rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  

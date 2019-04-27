@@ -3,11 +3,11 @@ title: Pontos de extremidade SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007806"
 ---
 # <a name="soap-and-http-endpoints"></a>Pontos de extremidade SOAP e HTTP
 Este exemplo demonstra como implementar um serviço baseado em RPC e expô-lo no formato SOAP e o formato "Plain Old XML" (POX) usando o modelo de programação da Web do WCF. Consulte a [serviço HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo para obter mais detalhes sobre a associação de HTTP para o serviço. Este exemplo se concentra nos detalhes que pertencem ao expor o mesmo serviço via SOAP e HTTP usando ligações diferentes.  

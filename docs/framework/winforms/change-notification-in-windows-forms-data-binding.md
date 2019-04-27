@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011873"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificação de alteração na associação de dados do Windows Forms
 Um dos conceitos mais importantes do Windows Forms de vinculação de dados é *notificação de alteração*. Para garantir que sua fonte de dados e controles de ligação sempre tenham os dados mais recentes, você deve adicionar a notificação de alteração para associação de dados. Especificamente, você deseja garantir que os controles associados são notificados das alterações que foram feitas para sua fonte de dados e a fonte de dados é notificada das alterações que foram feitas para as propriedades associadas de um controle.  

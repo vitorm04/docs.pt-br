@@ -3,11 +3,11 @@ title: Escolher atividade
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
 ms.openlocfilehash: b9ee6c06377760d27bc54d39c1d1f3ecf67ea0d8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909410"
 ---
 # <a name="pick-activity"></a>Escolher atividade
 A atividade de <xref:System.Activities.Statements.Pick> simplifica a modelagem de um conjunto de disparadores de evento seguidos por seus manipuladores correspondentes.  Uma atividade de <xref:System.Activities.Statements.Pick> contém uma coleção de atividades de <xref:System.Activities.Statements.PickBranch> , onde cada <xref:System.Activities.Statements.PickBranch> é um emparelhamento entre uma atividade de <xref:System.Activities.Statements.PickBranch.Trigger%2A> e uma atividade de <xref:System.Activities.Statements.PickBranch.Action%2A> .  Em tempo de execução, disparadores para todos as ramificações são executados paralelamente.  Quando um disparador for concluída, então a ação correspondente é executada, e todos outros disparadores são canceladas.  O comportamento do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> atividade é semelhante ao [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.Workflow.Activities.ListenActivity> atividade.  

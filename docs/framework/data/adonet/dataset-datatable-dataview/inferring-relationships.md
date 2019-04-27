@@ -3,11 +3,11 @@ title: Inferir relações
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
 ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879665"
 ---
 # <a name="inferring-relationships"></a>Inferir relações
 Se um elemento que é inferido como uma tabela tem um elemento filho que também é inferido como uma tabela, um <xref:System.Data.DataRelation> será criada entre as duas tabelas. Uma nova coluna com um nome de **ParentTableName_Id** será adicionado para a tabela criada para o elemento pai e a tabela criada para o elemento filho. O **ColumnMapping** propriedade desta coluna de identidade será definida como **MappingType.Hidden**. A coluna será uma chave primária de incremento automático para a tabela pai e será usada para o **DataRelation** entre as duas tabelas. O tipo de dados da coluna de identidade adicionado estará **System.Int32**, ao contrário do tipo de dados de todas as outras colunas inferidos, que é **System. String**. Um <xref:System.Data.ForeignKeyConstraint> com **DeleteRule** = **Cascade** também será criado usando a nova coluna nas tabelas pai e filho.  

@@ -3,11 +3,11 @@ title: Segurança da integração CLR no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
 ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878482"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Segurança da integração CLR no SQL Server
 Microsoft SQL Server fornece a integração do componente do common language runtime (CLR) do .NET Framework. Integração CLR permite que você grave procedimentos armazenados, disparadores, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e streaming funções com valor de tabela, usando qualquer linguagem do .NET Framework, como o Microsoft Visual Basic .NET ou o Microsoft Visual c#.  

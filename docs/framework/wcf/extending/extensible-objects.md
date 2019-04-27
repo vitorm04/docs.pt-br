@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
 ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857877"
 ---
 # <a name="extensible-objects"></a>Objetos extensíveis
 O padrão de objeto extensível é usado para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar o novo estado a um objeto. Extensões, anexadas a um dos objetos extensíveis, habilitar comportamentos em muito diferentes estágios de processamento para acessar o estado compartilhado e a funcionalidade anexada a um objeto extensível comum que eles podem acessar.  

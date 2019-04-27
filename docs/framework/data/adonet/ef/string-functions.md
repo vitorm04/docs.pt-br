@@ -3,11 +3,11 @@ title: Funções da cadeia de caracteres
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879106"
 ---
 # <a name="string-functions"></a>Funções da cadeia de caracteres
 O provedor de dados .NET Framework para SQL Server (SqlClient) fornece funções `String` que executam operações em um `String` de entrada e retornam `String` ou um resultado de valor numérico. Essas funções estão no namespace SqlServer, que está disponível quando você usa o SqlClient. A propriedade de namespace de um provedor permite que o Entity Framework descubra qual prefixo é usado por esse provedor para construções específicas, como tipos e funções.  

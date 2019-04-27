@@ -5,11 +5,11 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857565"
 ---
 # <a name="common-security-scenarios"></a>Cenários comuns de segurança
 Os tópicos nesta seção uma série de possíveis clientes e as configurações de segurança do serviço de catálogo. As configurações variam de acordo com uma série de fatores. Por exemplo, se um cliente ou serviço estiver em uma intranet, ou se a segurança é fornecida pelo Windows ou de transporte (como HTTPS).  

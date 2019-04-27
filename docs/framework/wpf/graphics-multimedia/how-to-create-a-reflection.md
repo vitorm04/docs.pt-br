@@ -10,11 +10,11 @@ helpviewer_keywords:
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
 ms.openlocfilehash: 61b597cd36fcf0d60f215d9b5403f3b42b21dec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904210"
 ---
 # <a name="how-to-create-a-reflection"></a>Como: Criar uma reflexão
 Este exemplo mostra como usar um <xref:System.Windows.Media.VisualBrush> para criar um reflexo. Porque um <xref:System.Windows.Media.VisualBrush> pode exibir um elemento visual existente, você pode usar esse recurso para produzir efeitos visuais interessantes, como reflexões e ampliações.  

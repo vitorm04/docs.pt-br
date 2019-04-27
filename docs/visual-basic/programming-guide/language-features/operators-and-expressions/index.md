@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864313"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores e expressões no Visual Basic
 Um *operador* é um elemento de código que executa uma operação em um ou mais elementos de código que retêm valores. Os elementos de valor incluem variáveis, constantes, literais, propriedades, valores retornados dos procedimentos `Function` e `Operator`, bem como expressões.  

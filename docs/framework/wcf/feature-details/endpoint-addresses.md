@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856617"
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um identificador de URI (Uniform Resource), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no modelo de programação pelo Windows Communication Foundation (WCF) a <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocar mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP exigidos para alcançar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
@@ -139,5 +139,5 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 ## <a name="see-also"></a>Consulte também
 
-- [Especificando um endereço de ponto de extremidade](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
-- [Identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Especificando um endereço do ponto de extremidade](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

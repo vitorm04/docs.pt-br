@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
 ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902662"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modos de seleção no controle DataGridView dos Windows Forms
 Às vezes você deseja que seu aplicativo para executar ações com base nas seleções do usuário dentro de um <xref:System.Windows.Forms.DataGridView> controle. Dependendo das ações, você talvez queira restringir os tipos de seleção possíveis. Por exemplo, suponha que seu aplicativo possa imprimir um relatório para o registro selecionado no momento. Nesse caso, você talvez queira configurar o <xref:System.Windows.Forms.DataGridView> controle, de modo que clicar em qualquer lugar dentro de uma linha sempre seleciona a linha inteira, e então que apenas uma linha por vez pode ser selecionada.  

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Controlar o tempo de animação do quadro-chave'
+title: 'Como: Controlar o tempo de animação do quadro principal'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - timing key-frame animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d0ea56b24f8fffeb688d297a675681bce3fdc4e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911454"
 ---
-# <a name="how-to-control-key-frame-animation-timing"></a>Como: Controlar o tempo de animação do quadro-chave
+# <a name="how-to-control-key-frame-animation-timing"></a>Como: Controlar o tempo de animação do quadro principal
 
 Este exemplo mostra como controlar o intervalo de quadros chave em uma animação de quadro chave. Assim como outras animações, animações de quadro-chave têm uma <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriedade. Além de especificar a duração de uma animação, é necessário especificar qual parte da duração é atribuída a cada um de seus quadros chave. Para alocar o tempo, você deve especificar um <xref:System.Windows.Media.Animation.KeyTime> para cada quadro chave na animação.
 

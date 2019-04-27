@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858072"
 ---
 # <a name="best-practices-for-queued-communication"></a>Práticas recomendadas para comunicação em fila
 Este tópico fornece as práticas recomendadas para a comunicação em fila no Windows Communication Foundation (WCF). As seções a seguir discutem as práticas recomendadas de uma perspectiva de cenário.  

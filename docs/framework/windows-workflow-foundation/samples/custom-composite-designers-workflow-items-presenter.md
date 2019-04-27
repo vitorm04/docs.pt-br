@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005635"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Designer de compostos personalizados - apresentador de itens de fluxo de trabalho
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> é um principal no modelo de programação do designer de WF que permite a edição de uma coleção de elementos contidos. Este exemplo mostra como criar um designer de atividade que surija uma coleção tão editável.

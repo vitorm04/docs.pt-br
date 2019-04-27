@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
 ms.openlocfilehash: 3bd2293f02e77ab2db5c3ba245596021e08b04c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875895"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Como: Definir relações de entidades (WCF Data Services)
 Quando você adiciona uma nova entidade no [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], qualquer relacionamento entre a nova entidade e entidades relacionadas não é definido automaticamente. Você pode criar e alterar relações entre instâncias de entidade e que a biblioteca cliente reflita essas alterações no serviço de dados. Para obter mais informações, consulte [atualização do serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

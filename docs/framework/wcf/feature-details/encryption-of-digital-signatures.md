@@ -7,11 +7,11 @@ helpviewer_keywords:
 - digital signatures [WCF]
 ms.assetid: 0868866d-40b4-4341-8e42-eee3b7f15b69
 ms.openlocfilehash: ea53a575802f1e7903a66c2eda466c8937fb02f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856383"
 ---
 # <a name="encryption-of-digital-signatures"></a>Criptografia de assinaturas digitais
 Por padrão, uma mensagem foi assinada e criptografada e a assinatura digital é criptografada. Você pode controlar isso criando uma associação personalizada com uma instância das <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ou o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e, em seguida, definindo o `MessageProtectionOrder` propriedade de qualquer classe para um <xref:System.ServiceModel.Security.MessageProtectionOrder> valor de enumeração. O padrão é <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Esse processo leva de 10 a 40 por cento de mais de simplesmente assinar e criptografar. Desabilitar a criptografia da assinatura, no entanto, pode permitir que um invasor adivinhar o conteúdo da mensagem. Isso é possível porque o elemento de assinatura contém o código hash do texto sem formatação de todas as partes na mensagem assinada. Por exemplo, embora o corpo da mensagem é criptografado por padrão, a assinatura não criptografada contém o código hash do corpo da mensagem. Se a mensagem for pequena, um invasor poderá deduzir o conteúdo. Criptografando a assinatura reduz ou elimina essa possibilidade.  

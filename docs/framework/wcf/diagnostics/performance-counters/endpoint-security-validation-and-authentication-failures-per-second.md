@@ -1,16 +1,16 @@
 ---
-title: 'Ponto de extremidade: Falhas de autenticação e validação de segurança por segundo'
+title: 'Ponto de extremidade: Falhas de Validação e Autenticação de Segurança por Segundo'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 ms.openlocfilehash: 43886f79585fb9a63eeb51360cc869365c100a1d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916533"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Ponto de extremidade: Falhas de autenticação e validação de segurança por segundo
-Nome do contador: Falhas de autenticação e validação de segurança por segundo  
+# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Ponto de extremidade: Falhas de Validação e Autenticação de Segurança por Segundo
+Nome do contador: Falhas de Validação e Autenticação de Segurança por Segundo  
   
 ## <a name="description"></a>Descrição  
  Esse contador é incrementado sempre que uma mensagem foi rejeitada devido a um problema de segurança não coberto pelo contador "Chamadas de segurança não autorizado". Esses problemas incluem:  

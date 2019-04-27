@@ -3,11 +3,11 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879054"
 ---
 # <a name="facet"></a>facet
 Um *faceta* é usado para adicionar detalhes a uma definição de propriedade do tipo primitivo. Um [propriedade](../../../../docs/framework/data/adonet/property.md) definição contém informações sobre o tipo de propriedade, mas geralmente mais detalhes é necessário. Por exemplo, um tipo de entidade em um modelo conceitual pode ter uma propriedade do tipo `String` cujo valor pode não ser definido como nulo. As facetas permitem que você especifique esse nível de detalhe.  

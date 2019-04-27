@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
 ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803249"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Como: manipular a entrada do teclado no nível do formulário
 Os Windows Forms proporcionam a capacidade de manipular mensagens de teclado no nível do formulário, antes que as mensagens cheguem a um controle. Este tópico mostra como realizar essa tarefa.  

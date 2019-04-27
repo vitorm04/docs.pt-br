@@ -12,11 +12,11 @@ ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868791"
 ---
 # <a name="securing-exception-handling"></a>Protegendo a manipulação de exceções
 No Visual C++ e Visual Basic, uma expressão de filtro ainda mais para cima na pilha é executado antes de qualquer **finalmente** instrução. O **catch** bloco associado a esse filtro é executado após o **finalmente** instrução. Para obter mais informações, consulte [Using User-Filtered exceções](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Esta seção examina as implicações de segurança desse pedido. Considere o seguinte exemplo de pseudocódigo que ilustra a ordem na quais instruções de filtro e **finalmente** declarações são executadas.  

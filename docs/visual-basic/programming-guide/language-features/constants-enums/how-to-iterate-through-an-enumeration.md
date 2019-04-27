@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
 ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907030"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Como: Iterar por meio de uma enumeração no Visual Basic
 Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes. Para iterar por meio de uma enumeração, você pode movê-lo em uma matriz usando o <xref:System.Enum.GetValues%2A> método. Você também pode iterar por meio de uma enumeração usando um `For...Each` instrução, usando o <xref:System.Enum.GetNames%2A> ou <xref:System.Enum.GetValues%2A> método para extrair o valor de cadeia de caracteres ou numérica.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007104"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Passo a passo: mapear propriedades usando o elemento WindowsFormsHost
 

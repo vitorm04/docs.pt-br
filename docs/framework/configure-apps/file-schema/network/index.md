@@ -13,11 +13,11 @@ helpviewer_keywords:
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
 ms.openlocfilehash: 71d945e6046a8648a812de939f197429bc695808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674526"
 ---
 # <a name="network-settings-schema"></a>Esquema de configurações de rede
 As configurações de rede especificam como o .NET Framework se conecta à Internet. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  

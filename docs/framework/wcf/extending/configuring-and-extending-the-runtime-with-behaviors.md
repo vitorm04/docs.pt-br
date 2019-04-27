@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923273"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurando e estendendo o tempo de execução com comportamentos
 Comportamentos que você possa modificar o comportamento padrão e adicionar extensões personalizadas que inspecionem e validar a configuração de serviço ou modificam o comportamento de tempo de execução em aplicativos de cliente e o serviço do Windows Communication Foundation (WCF). Este tópico descreve as interfaces de comportamento, como implementá-los e como adicioná-los para a descrição do serviço (em um aplicativo de serviço) ou o ponto de extremidade (em um aplicativo de cliente) por meio de programação ou em um arquivo de configuração. Para obter mais informações sobre como usar os comportamentos fornecidos pelo sistema, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [especificando comportamento de tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  

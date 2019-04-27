@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917352"
 ---
 # <a name="beginenumeration-function"></a>Função BeginEnumeration
 Inicia uma enumeração dos métodos disponíveis para o objeto.  

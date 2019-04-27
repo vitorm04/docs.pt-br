@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
 ms.openlocfilehash: aae304b9963f3a8e5833b4d8ba0a54777a750225
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003360"
 ---
 # <a name="how-to-create-an-elliptical-arc"></a>Como: Criar um arco elíptico
 Este exemplo mostra como desenhar um arco elíptico. Para criar um arco elíptico, use o <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.ArcSegment> classes.  

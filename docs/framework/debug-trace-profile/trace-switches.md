@@ -15,11 +15,11 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873854"
 ---
 # <a name="trace-switches"></a>Opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento. Elas são objetos que existem no código e podem ser configuradas externamente por meio do arquivo .config. Há três tipos de opções de rastreamento fornecidas no .NET Framework: a classe <xref:System.Diagnostics.BooleanSwitch>, a classe <xref:System.Diagnostics.TraceSwitch> e a classe <xref:System.Diagnostics.SourceSwitch>. A classe <xref:System.Diagnostics.BooleanSwitch> atua como uma opção de alternância, habilitando ou desabilitando uma variedade de instruções de rastreamento. As classes <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> permitem habilitar uma opção de rastreamento para um nível de rastreamento específico, de modo que as mensagens <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.TraceSource> especificadas para o nível e todos os níveis inferiores a ele sejam exibidas. Se você desabilitar a opção, as mensagens de rastreamento não serão exibidas. Todas essas classes são derivadas da classe **Switch** abstrata (**MustInherit**), assim como todas as opções desenvolvidas pelo usuário.  

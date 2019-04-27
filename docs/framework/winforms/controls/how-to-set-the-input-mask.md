@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912867"
 ---
 # <a name="how-to-set-the-input-mask"></a>Como: Definir a máscara de entrada
 O controle de caixa de texto mascarado é um controle de caixa de texto avançado que dá suporte a uma sintaxe declarativa para aceitar ou rejeitar a entrada do usuário. Definindo a propriedade Máscara, você pode especificar a entrada do usuário permitida sem escrever qualquer lógica de validação personalizada no seu aplicativo. Para obter mais informações, consulte a seção comentários do <xref:System.Windows.Forms.MaskedTextBox> classe.  

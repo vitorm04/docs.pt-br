@@ -3,11 +3,11 @@ title: Etapas comuns de uso do LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876962"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Etapas comuns de uso do LINQ to SQL
 Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], siga as etapas descritas mais adiante neste tópico. Observe que várias etapas são opcionais. É muito provável que você possa usar o modelo de objeto em seu estado padrão.  

@@ -3,11 +3,11 @@ title: Consultando DataSets (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: a1c316811ce08141999bcec4c9c8504f86c2e285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878677"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Consultando DataSets (LINQ to DataSet)
 Depois que um objeto de <xref:System.Data.DataSet> foi populado com dados, você pode começar a consulta. A formulação de consultas com o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] é semelhante ao uso do [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] em outra fonte de dados habilitada para [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Lembre-se, no entanto, que quando você usa [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consultas em relação a um <xref:System.Data.DataSet> objeto você está consultando uma enumeração de <xref:System.Data.DataRow> objetos, em vez de uma enumeração de um tipo personalizado. Isso significa que você pode usar qualquer um dos membros a <xref:System.Data.DataRow> classe no seu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consultas. Isso permite que você crie consultas sofisticadas e complexas.  

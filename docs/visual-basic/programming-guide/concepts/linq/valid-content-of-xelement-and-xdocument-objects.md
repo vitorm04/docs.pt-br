@@ -3,11 +3,11 @@ title: Conteúdo válido de XElement e XDocument Objects2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907576"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Conteúdo válido de objetos XElement e XDocument
 Este tópico descreve os argumentos válidos que podem ser passados para os construtores e os métodos que você usa para adicionar conteúdo a elementos e documentos.  

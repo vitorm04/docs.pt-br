@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 6f437b7f7ae6a414971edb497bc2c84c03674fe8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904040"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Como: mapear hierarquias de herança
 Para implementar o mapeamento de herança em [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], você deve especificar atributos e propriedades de atributo na classe raiz da hierarquia de herança como descrito nas seguintes etapas. Os desenvolvedores usando o Visual Studio podem usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para mapear hierarquias de herança. Confira [Como Configurar a herança usando o Designer Relacional de Objetos](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
 ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856434"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeração em contratos de dados
 Enumerações podem ser expressos no modelo de contrato de dados. Este tópico explica a vários exemplos que explicam o modelo de programação.  

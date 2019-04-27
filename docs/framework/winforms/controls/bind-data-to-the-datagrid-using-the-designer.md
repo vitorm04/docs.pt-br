@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011704"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Associar dados ao controle DataGridView do Windows Forms usando o designer
 Você pode usar o designer para conectar-se um <xref:System.Windows.Forms.DataGridView> controle a fontes de dados de diferentes variedades, incluindo bancos de dados, objetos de negócios ou serviços da Web. Quando você associa o controle a uma fonte de dados usando o designer, o controle é automaticamente associado a um <xref:System.Windows.Forms.BindingSource> componente que representa a fonte de dados. Além disso, as colunas são automaticamente geradas no controle para coincidir com as informações de esquema fornecidas pela fonte de dados.  

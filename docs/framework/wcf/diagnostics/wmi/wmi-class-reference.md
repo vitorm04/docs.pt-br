@@ -3,17 +3,17 @@ title: Referência de classe WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915649"
 ---
 # <a name="wmi-class-reference"></a>Referência de classe WMI
 Esta seção lista todas as classes WMI expostas pelo provedor WMI do Windows Communication Foundation (WCF).  
   
-## <a name="accessing-wmi-instances"></a>Acessando instâncias WMI  
- Todas as classes listadas na referência de objeto WMI não podem ser diretamente instanciadas, exceto para o serviço, AppDomain, contrato, ServiceAppDomain, ServiceToEndpointAssociation e ponto de extremidade. Para acessar outras instâncias, você pode acessar as propriedades das classes de nível superiores mencionadas anteriormente. Por exemplo, você pode acessar a instância de TransportBindingElement do ponto de extremidade de instância -> associação -> BindingElements.  
+## <a name="accessing-wmi-instances"></a>Acessando instâncias do WMI  
+ Todas as classes listadas na referência do objeto WMI não podem ser diretamente instanciadas, exceto para o serviço, AppDomain, contrato, ServiceAppDomain, ServiceToEndpointAssociation e ponto de extremidade. Para acessar outras instâncias, você pode acessar as propriedades das classes de nível superior mencionadas anteriormente. Por exemplo, você pode acessar a instância de TransportBindingElement do ponto de extremidade -> instância de associação -> BindingElements.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ Esta seção lista todas as classes WMI expostas pelo provedor WMI do Windows Co
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- "Classe comportamento"  
+ "Classe de comportamento"  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   

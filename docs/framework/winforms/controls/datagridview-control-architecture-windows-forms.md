@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011592"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Arquitetura do controle DataGridView (Windows Forms)
 O <xref:System.Windows.Forms.DataGridView> controle e suas classes relacionadas foram projetados para ser um sistema flexível e extensível para exibir e editar dados tabulares. Essas classes estão contidas no <xref:System.Windows.Forms?displayProperty=nameWithType> namespace e eles são nomeados com o prefixo "DataGridView".  

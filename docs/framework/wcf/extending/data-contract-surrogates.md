@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858020"
 ---
 # <a name="data-contract-surrogates"></a>Substitutos de contrato de dados
 O contrato de dados *substituto* é um recurso avançado, criado sobre o modelo de contrato de dados. Esse recurso destina-se a ser usado para o tipo de personalização e substituição em situações em que os usuários quiserem alterar como um tipo é serializado, desserializados ou projetado em metadados. Alguns cenários onde um substituto pode ser usado é quando um contrato de dados não foi especificado para o tipo, campos e propriedades não são marcadas com o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo ou usuários desejarem criar dinamicamente as variações de esquema.  

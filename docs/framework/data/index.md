@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
 ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875973"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dados e modelagem no .NET Framework
 Esta seção fornece informações de como acessar dados usando ADO.NET, LINQ (consulta integrada à linguagem), WCF Data Services e XML.  

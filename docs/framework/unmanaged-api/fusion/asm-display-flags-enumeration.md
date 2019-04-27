@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cbcff46b1932f3293fba4fda922e78f3b9ac37b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914714"
 ---
 # <a name="asmdisplayflags-enumeration"></a>Enumeração ASM_DISPLAY_FLAGS
 Indica a versão, compilação, cultura, assinatura e assim por diante, do assembly cujo nome de exibição será recuperado pelo [iassemblyname:: GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) método.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
 ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921713"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Como: Pintar uma área com um pincel de sistema
 O <xref:System.Windows.SystemColors> classe fornece acesso a pincéis do sistema e cores, como <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, e <xref:System.Windows.SystemColors.DesktopBrush%2A>. Um pincel de sistema é um <xref:System.Windows.Media.SolidColorBrush> objeto que pinta uma área com a cor especificada do sistema. Um pincel do sistema sempre produz um preenchimento sólido; ele não pode ser usado para criar um gradiente.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
 ms.openlocfilehash: ad0673f72b1a81d6bcfaf0704ccd698eda7bb20c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936507"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Como: Interceptar mensagens de serviço de dados (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode interceptar mensagens de solicitação de modo que você possa adicionar lógica personalizada a uma operação. Para interceptar uma mensagem, você pode usar métodos especialmente atribuídos no serviço de dados. Para obter mais informações, consulte [interceptores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  

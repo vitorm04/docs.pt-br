@@ -3,11 +3,11 @@ title: Visão geral de serviços de fluxo de trabalho de hospedagem
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
 ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855879"
 ---
 # <a name="hosting-workflow-services-overview"></a>Visão geral de serviços de fluxo de trabalho de hospedagem
 Serviços de fluxo de trabalho devem ser hospedados para executar. O <xref:System.ServiceModel.WorkflowServiceHost> é o host de fluxo de trabalho de out-of-the-box que dá suporte a várias instâncias, configuração e mensagens do WCF (embora os fluxos de trabalho não é necessários usar o sistema de mensagens para ser hospedado).  Ele também se integra com persistência, acompanhamento e controle de instância por meio de um conjunto de comportamentos de serviço.  Assim como do WCF <xref:System.ServiceModel.ServiceHost>, o <xref:System.ServiceModel.WorkflowServiceHost> pode ser auto-hospedado em qualquer aplicativo gerenciado do .NET ou hospedado na web (como um arquivo. xamlx) no IIS / WAS.  Os tópicos desta seção descrevem como hospedar um serviço de fluxo de trabalho.  
@@ -25,7 +25,7 @@ Serviços de fluxo de trabalho devem ser hospedados para executar. O <xref:Syste
  [Ponto de extremidade de controle de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  Descreve como definir um ponto de extremidade que lhe permite criar instâncias de fluxo de trabalho.
   
- [Como hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
+ [Como: Hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Demonstra como hospedar um serviço de fluxo de trabalho existente no Windows Server App Fabric.  
   
  [Configurando WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)  

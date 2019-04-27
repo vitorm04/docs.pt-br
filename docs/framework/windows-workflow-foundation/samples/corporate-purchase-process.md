@@ -3,11 +3,11 @@ title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005388"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.

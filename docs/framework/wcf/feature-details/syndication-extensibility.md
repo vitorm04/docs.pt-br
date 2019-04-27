@@ -3,11 +3,11 @@ title: Extensibilidade de sindicalização
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915558"
 ---
 # <a name="syndication-extensibility"></a>Extensibilidade de sindicalização
 A API de distribuição foi projetado para fornecer um modelo de programação em formato neutro que permite que o conteúdo agregado a ser gravado para a transmissão em uma variedade de formatos. O modelo de dados abstrato consiste as seguintes classes:  

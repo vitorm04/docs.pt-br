@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
 ms.openlocfilehash: a4f74e48cfdd5c0bc0f745d0f32eb39442f5bd83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906757"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>Como: Agrupar valores constantes relacionados juntos (Visual Basic)
 Uma enumeração é a melhor maneira de agrupar constantes relacionadas. Você cria uma enumeração com o `Enum` instrução na seção de declarações de uma classe ou um módulo. Para obter mais informações, confira [Como: Declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  

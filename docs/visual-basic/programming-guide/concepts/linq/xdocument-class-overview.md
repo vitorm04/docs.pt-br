@@ -3,11 +3,11 @@ title: Visão geral da classe XDocument (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
 ms.openlocfilehash: f9a531b9e90a8d6511dd0a2c6fc3131c9bfe1e89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907810"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>Visão geral da classe XDocument (Visual Basic)
 Este tópico apresenta a classe <xref:System.Xml.Linq.XDocument>.  

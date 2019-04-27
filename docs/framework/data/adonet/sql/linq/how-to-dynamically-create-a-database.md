@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877260"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Como: criar um banco de dados dinamicamente
 No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional. O mapeamento é habilitado usando o mapeamento baseado em atributo ou um arquivo de mapeamento externo para descrever a estrutura do banco de dados relacional. Em ambos os cenários, há informações suficientes sobre o banco de dados relacional para que você possa criar uma nova instância do banco de dados usando o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  

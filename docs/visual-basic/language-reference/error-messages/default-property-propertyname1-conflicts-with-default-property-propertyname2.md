@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
 ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803682"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Propriedade padrão '\<propertyname1 >' está em conflito com a propriedade padrão '\<propertyname2 >' em '\<classname >' e deve ser declarado 'como Shadows'
 Uma propriedade é declarada com o mesmo nome de uma propriedade definida na classe base. Nessa situação, a propriedade nessa classe deve sombrear a propriedade de classe base.  

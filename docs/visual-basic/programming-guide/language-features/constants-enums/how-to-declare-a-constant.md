@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975969"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Como: Declarar uma constante (Visual Basic)
 Você usa o `Const` instrução para declarar uma constante e defina seu valor. Ao declarar uma constante, você pode atribuir um nome significativo para um valor. Depois que uma constante é declarada, não pode ser modificado ou receber um novo valor.  

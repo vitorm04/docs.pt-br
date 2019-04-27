@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827938"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferenças entre sombreamento e sobreposição (Visual Basic)
 Quando você define uma classe que herda de uma classe base, às vezes você deseja redefinir uma ou mais dos elementos de classe base na classe derivada. Sombreamento e sobreposição estão disponíveis para essa finalidade.  

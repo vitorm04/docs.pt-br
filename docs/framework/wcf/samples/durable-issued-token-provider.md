@@ -3,11 +3,11 @@ title: Provedor de tokens emitidos duráveis
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
 ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990204"
 ---
 # <a name="durable-issued-token-provider"></a>Provedor de tokens emitidos duráveis
 Este exemplo demonstra como implementar uma provedor de token emitida personalizadas do cliente.  

@@ -3,11 +3,11 @@ title: Operações de dados do SQL Server no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
 ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876311"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Operações de dados do SQL Server no ADO.NET
 Esta seção descreve os recursos e a funcionalidade do SQL Server que são específicos ao Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  

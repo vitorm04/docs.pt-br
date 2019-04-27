@@ -3,11 +3,11 @@ title: ACHATAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
 ms.openlocfilehash: 4f9a6315fc9cc2f295c21cc5fb7e1007e47796b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879717"
 ---
 # <a name="flatten-entity-sql"></a>ACHATAR (Entity SQL)
 Converte uma coleção de coleções em uma coleção combinada. A nova coleção contém todos os mesmos elementos que a coleção antiga, mas sem uma estrutura aninhada.  

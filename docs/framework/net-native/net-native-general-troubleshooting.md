@@ -5,11 +5,11 @@ ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866843"
 ---
 # <a name="net-native-general-troubleshooting"></a>Solução de problemas gerais do .NET Nativo
 Este tópico descreve como solucionar problemas potenciais que podem ser encontrados durante o desenvolvimento de aplicativos com [!INCLUDE[net_native](../../../includes/net-native-md.md)].  

@@ -3,11 +3,11 @@ title: Participantes de persistência
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672647"
 ---
 # <a name="persistence-participants"></a>Participantes de persistência
 Um participante de persistência pode participar em uma operação de persistência (salvar) ou carregamento disparada por um aplicativo host. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vem com duas classes abstratas, **PersistenceParticipant** e **PersistenceIOParticipant**, que você pode usar para criar um participante de persistência. Um participante de persistência deriva de uma dessas classes, implementa-se os métodos de interesse, e então adiciona uma instância da classe à coleção de <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> em <xref:System.ServiceModel.Activities.WorkflowServiceHost> . O aplicativo host pode procurar essas extensões de fluxo de trabalho para manter uma instância de fluxo de trabalho e chama métodos apropriados nos participantes de persistência em momentos apropriadas.  

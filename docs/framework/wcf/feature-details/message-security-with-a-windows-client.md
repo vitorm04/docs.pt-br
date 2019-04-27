@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922780"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
 Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e o servidor protegido pelo modo de segurança de mensagem. O cliente e o serviço são autenticados usando credenciais do Windows.  

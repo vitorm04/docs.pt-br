@@ -7,11 +7,11 @@ helpviewer_keywords:
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
 ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913161"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Como: Transferir controles existentes a um pai diferente
 Você pode atribuir controles existentes em seu formulário para um novo controle de contêiner.  

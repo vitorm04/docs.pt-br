@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875323"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilitário de cliente do WCF Data Service (DataSvcUtil.exe)
 
@@ -38,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |Opção|Descrição|
 |------------|-----------------|
 |`/dataservicecollection`|Especifica que o código necessário para associar objetos a controles também é gerado.|
-|`/help`<br /><br /> -ou-<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|
+|`/help`<br /><br /> - ou -<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|
 |`/in:` *\<file>*|Especifica o arquivo. CSDL ou. edmx ou um diretório em que o arquivo está localizado.|
 |`/language:`[VB&#124;CSharp]|Especifica a linguagem dos arquivos de código-fonte gerados. A linguagem volta automaticamente para C#.|
 |`/nologo`|Suprime a notificação de direitos autorais da exibição.|

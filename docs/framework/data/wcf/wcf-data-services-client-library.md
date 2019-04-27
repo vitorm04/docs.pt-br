@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875193"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca de cliente do WCF Data Services
 Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-com base em serviço de dados se ele pode enviar uma solicitação HTTP e processar o [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed que um serviço de dados retorna. Esta interoperabilidade permite que você acesse [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviços em um amplo aplicativos de intervalo da Web habilitado. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui bibliotecas de cliente que fornecem uma experiência mais rica de programação quando você consome [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds a partir do .NET Framework ou aplicativos baseados no Silverlight.  

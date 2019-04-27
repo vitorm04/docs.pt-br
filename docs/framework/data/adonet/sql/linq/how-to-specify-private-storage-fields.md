@@ -3,11 +3,11 @@ title: 'Como: especificar campos de armazenamento particular'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
 ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902714"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>Como: especificar campos de armazenamento particular
 Use o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> propriedade no <xref:System.Data.Linq.Mapping.DataAttribute> atributo para designar o nome de um campo de armazenamento subjacente.  

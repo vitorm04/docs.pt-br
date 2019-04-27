@@ -3,11 +3,11 @@ title: Expressões lentas
 description: Saiba como F# expressões lentas podem melhorar o desempenho de seus aplicativos e bibliotecas.
 ms.date: 03/13/2019
 ms.openlocfilehash: 6d53d53093f4e93f53e1c956b94e2f1e4a1bbd55
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57853317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904105"
 ---
 # <a name="lazy-expressions"></a>Expressões lentas
 

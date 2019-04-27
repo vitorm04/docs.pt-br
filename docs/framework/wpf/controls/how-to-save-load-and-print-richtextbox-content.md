@@ -13,11 +13,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
 ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910592"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Como: Salvar, carregar e imprimir conteúdo RichTextBox
 O exemplo a seguir mostra como salvar o conteúdo de um <xref:System.Windows.Controls.RichTextBox> em um arquivo, carregar esse conteúdo de volta para o <xref:System.Windows.Controls.RichTextBox>e imprimir o conteúdo.  

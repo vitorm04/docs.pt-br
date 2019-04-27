@@ -3,11 +3,11 @@ title: Utilizando um resolvedor de contrato de dados
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
 ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918561"
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilizando um resolvedor de contrato de dados
 Um resolvedor de contrato de dados permite que você configure tipos conhecidos dinamicamente. Tipos conhecidos são necessários ao serializar ou desserializar um tipo que não se espera por um contrato de dados. Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos normalmente são especificados estaticamente. Isso significa que você precisaria saber todos os tipos possíveis de uma operação pode receber ao implementar a operação. Há cenários em que isso não é verdadeiro e é importante ser capaz de especificar tipos conhecidos dinamicamente.  

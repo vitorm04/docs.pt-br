@@ -3,11 +3,11 @@ title: 'Como: Acessar os serviços WCF com unidirecional e contratos de solicita
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
 ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855108"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Como: Acessar os serviços WCF com unidirecional e contratos de solicitação-resposta
 Os procedimentos a seguir descrevem como acessar um serviço do Windows Communication Foundation (WCF) que define um contrato unidirecional e um contrato de solicitação-resposta e que não usa o padrão de comunicação duplex.  

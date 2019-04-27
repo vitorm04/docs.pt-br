@@ -8,11 +8,11 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997062"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Como: Controlar o preenchimento de uma forma composta
 O <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriedade de um <xref:System.Windows.Media.GeometryGroup> ou um <xref:System.Windows.Media.PathGeometry>, especifica uma "regra" que a forma composta usa para determinar se um determinado ponto é parte da geometria. Há dois valores possíveis para <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> e <xref:System.Windows.Media.FillRule.Nonzero>. As seções a seguir descreverão como usar essas duas regras.  

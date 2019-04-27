@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
 ms.openlocfilehash: 0be7dcbefb23d2f2b283ac498f3b0ea43278f2d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875831"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>Como: Carregar resultados (WCF Data Services) paginados
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que o serviço de dados limitar o número de entidades que são retornados em um única feed de resposta. Quando isso acontece, a entrada final no feed contém um link para a próxima página de dados. O URI para a próxima página de dados é obtido chamando o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> método da <xref:System.Data.Services.Client.QueryOperationResponse%601>, que é retornado quando o <xref:System.Data.Services.Client.DataServiceQuery%601> é executado. O URI representado por esse objeto, em seguida, é usado para carregar a próxima página de resultados. Para obter mais informações, consulte [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  

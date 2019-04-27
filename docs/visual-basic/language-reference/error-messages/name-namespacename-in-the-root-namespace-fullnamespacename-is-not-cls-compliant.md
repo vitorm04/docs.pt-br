@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918353"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nome da \<namespacename > no namespace raiz \<fullnamespacename > não é compatível com CLS
 Um assembly é marcado como `<CLSCompliant(True)>`, mas um elemento do nome do namespace raiz começa com um sublinhado (`_`).  

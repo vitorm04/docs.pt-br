@@ -13,11 +13,11 @@ ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868830"
 ---
 # <a name="security-and-serialization"></a>Segurança e serialização
 Como a serialização pode permitir que outro código veja ou modifique os dados da instância de objeto de outro modo seria inacessíveis, uma permissão especial é necessária de código para executar a serialização: <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> sinalizador especificado. De acordo com a política padrão, essa permissão não é dada ao código da intranet ou baixado da Internet; somente o código no computador local recebe essa permissão.  

@@ -3,11 +3,11 @@ title: Iniciar várias tarefas assíncronas e processá-las conforme são conclu
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
 ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925119"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Iniciar várias tarefas assíncronas e processá-las conforme são concluídas (Visual Basic)
 Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, você pode iniciar várias tarefas ao mesmo tempo e processá-las individualmente conforme elas foram concluídas, em vez de processá-las na ordem em que foram iniciadas.  

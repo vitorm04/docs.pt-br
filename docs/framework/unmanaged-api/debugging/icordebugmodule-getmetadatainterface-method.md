@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37710fbb7acc50b80d7acebe4194b019c0b64660
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994845"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>Método ICorDebugModule::GetMetaDataInterface
 Obtém um objeto de interface de metadados que pode ser usado para examinar os metadados para o módulo.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
 ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906849"
 ---
 # <a name="loop-structures-visual-basic"></a>Estruturas de loop (Visual Basic)
 Estruturas de loop do Visual Basic permitem que você execute uma ou mais linhas de código repetidamente. Você pode repetir as instruções em uma estrutura de loop até que uma condição for `True`, até que uma condição é `False`, um especificado o número de vezes ou uma vez para cada elemento em uma coleção.  

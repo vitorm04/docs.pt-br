@@ -12,11 +12,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863435"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Como: Passar argumentos para um procedimento (Visual Basic)
 Quando você chama um procedimento, você pode seguir o nome do procedimento com uma lista de argumentos entre parênteses. Você fornece um argumento correspondente a cada parâmetro necessário que o procedimento define e, opcionalmente, você pode fornecer argumentos para o `Optional` parâmetros. Se você não fornecer um `Optional` parâmetro na chamada, você deve incluir uma vírgula para marcar seu lugar na lista de argumentos, se você estiver fornecendo quaisquer argumentos subsequentes.  

@@ -3,11 +3,11 @@ title: Rastreamento ponta a ponta
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912529"
 ---
 # <a name="end-to-end-tracing"></a>Rastreamento ponta a ponta
 Ponta a ponta (e2e) rastreamento permite aos desenvolvedores acompanhar a execução de código na infra-estrutura do Windows Communication Foundation (WCF) para investigar por que um caminho de código falhou, ou para fornecer rastreamento detalhado para análise de desempenho e planejamento de capacidade. Windows Communication Foundation (WCF) fornece três mecanismos de correlação para ajudar a diagnosticar a causa do erro: propagação, transferências e atividades.  

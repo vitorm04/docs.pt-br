@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
 ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013355"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Como: Selecionar um item no controle ListView do Windows Forms
 Este exemplo demonstra como selecionar programaticamente um item em um Windows Forms <xref:System.Windows.Forms.ListView> controle. Selecionar um item por meio de programação não altera automaticamente o foco para o <xref:System.Windows.Forms.ListView> controle. Por esse motivo, você normalmente também desejará definir o item focados ao selecionar um item.  

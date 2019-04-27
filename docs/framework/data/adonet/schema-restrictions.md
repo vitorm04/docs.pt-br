@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878404"
 ---
 # <a name="schema-restrictions"></a>Restrições de esquema
 O segundo parâmetro opcional do **GetSchema** método é retornado das restrições que são usadas para limitar a quantidade de informações de esquema, e ele é passado para o **GetSchema** método como uma matriz de cadeias de caracteres . A posição na matriz determina os valores que você pode passar, e isso é equivalente ao número de restrição.  

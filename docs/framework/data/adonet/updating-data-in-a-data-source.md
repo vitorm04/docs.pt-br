@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934115"
 ---
 # <a name="updating-data-in-a-data-source"></a>Atualizando dados em uma fonte de dados
 As instruções SQL que modificam dados (como UPDATE, INSERT ou DELETE) não retornam linhas. Da mesma forma, muitos procedimentos armazenados executam uma ação, mas não retornam linhas. Para executar comandos que não retornam linhas, criar uma **comando** objeto com o comando SQL apropriado e uma **Conexão**, incluindo quaisquer **parâmetros**. Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
 ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913647"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Como: Remover um ToolStrip de um ToolStripContainer para um formulário
 Use o procedimento a seguir para mover uma <xref:System.Windows.Forms.ToolStrip> fora de um <xref:System.Windows.Forms.ToolStripContainer> para um formulário.  

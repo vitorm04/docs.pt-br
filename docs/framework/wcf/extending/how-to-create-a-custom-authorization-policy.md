@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902324"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Como: criar uma política de autorização personalizada
 A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização baseada em declarações. Declarações são extraídas de tokens, opcionalmente processadas pela diretiva de autorização personalizada e, em seguida, colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext> que pode ser examinado para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser isolada dos detalhes sobre as diferentes declarações apresentados pelos diferentes tipos de token que o WCF oferece suporte. Este tópico mostra como implementar uma política de autorização personalizados e como adicionar essa política para a coleção de políticas usado por um serviço.  

@@ -3,11 +3,11 @@ title: Transações e simultaneidade
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933699"
 ---
 # <a name="transactions-and-concurrency"></a>Transações e simultaneidade
 Uma transação consiste em um único comando ou em um grupo de comandos executados como um pacote. As transações permitem que você combine várias operações em uma única unidade de trabalho. Se uma falha ocorrer em determinado ponto na transação, todas as atualizações poderão ser revertidas para o estado em vigor antes da transação.  

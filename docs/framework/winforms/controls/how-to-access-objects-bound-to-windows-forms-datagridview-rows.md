@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
 ms.openlocfilehash: 50882ab9a1a498bf8f76381e3f4aac53876abbb8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011275"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Como: Acessar objetos associados às linhas de DataGridView do Windows Forms
 Às vezes, é útil exibir uma tabela de informações armazenadas em uma coleção de objetos de negócios. Quando você associa um <xref:System.Windows.Forms.DataGridView> controle a uma coleção assim, cada propriedade pública é exibido em sua própria coluna, a menos que a propriedade foi marcado como não pesquisável com um <xref:System.ComponentModel.BrowsableAttribute>. Por exemplo, uma coleção de objetos `Customer` teria colunas como **Nome** e **Endereço**.  
@@ -46,5 +46,5 @@ ms.locfileid: "59217400"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como: Associar objetos a controles DataGridView do Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como: Associar objetos a controles DataGridView dos Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

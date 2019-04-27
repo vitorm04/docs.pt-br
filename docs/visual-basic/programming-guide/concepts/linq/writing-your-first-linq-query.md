@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907472"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escrevendo a primeira consulta LINQ (Visual Basic)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas são expressas em uma linguagem de consulta dedicado. Ao longo do tempo, diferentes linguagens foram desenvolvidas para diferentes tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Isso torna necessária para o desenvolvedor do aplicativo aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados com suporte.  

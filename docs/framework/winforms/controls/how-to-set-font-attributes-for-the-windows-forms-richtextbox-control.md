@@ -15,11 +15,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
 ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013264"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Como: Definir atributos de fonte para o controle RichTextBox do Windows Forms
 Os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle tem várias opções para formatar o texto que ele exibe. Você pode fazer os caracteres selecionados em negrito, sublinhado ou itálico, usando o <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propriedade. Você também pode usar essa propriedade para alterar o tamanho e a face de tipo dos caracteres selecionados. O <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propriedade permite que você alterar a cor dos caracteres selecionados.  

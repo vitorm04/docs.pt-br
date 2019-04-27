@@ -3,11 +3,11 @@ title: Correlação duplex durável
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856580"
 ---
 # <a name="durable-duplex-correlation"></a>Correlação duplex durável
 Correlação duplex durável, também conhecido como correlação de retorno de chamada, é útil quando um serviço de fluxo de trabalho tem um requisito para enviar um retorno de chamada ao chamador inicial. Ao contrário de duplex do WCF, o retorno de chamada pode ocorrer a qualquer momento no futuro e não está vinculado ao mesmo canal ou o tempo de vida do canal; o único requisito é que o chamador tem um ponto de extremidade ativo escuta para a mensagem de retorno de chamada. Isso permite que dois serviços de fluxo de trabalho para se comunicar em uma conversa de longa execução. Este tópico fornece uma visão geral de correlação duplex durável.  
@@ -16,7 +16,7 @@ Correlação duplex durável, também conhecido como correlação de retorno de 
  Para usar a correlação duplex durável, os dois serviços devem usar uma associação habilitada para contexto que dá suporte a operações de duas vias, tais como <xref:System.ServiceModel.NetTcpContextBinding> ou <xref:System.ServiceModel.WSHttpContextBinding>. Os registros de serviço chamada um <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> com a associação desejada no cliente <xref:System.ServiceModel.Endpoint>. O serviço de recebimento recebe esses dados em que a chamada inicial e, em seguida, usa-lo por conta própria <xref:System.ServiceModel.Endpoint> no <xref:System.ServiceModel.Activities.Send> atividade que faz a chamada para o serviço de chamada. Neste exemplo, dois serviços se comunicam entre si. O primeiro serviço invoca um método no serviço de segundo e, em seguida, aguarda uma resposta. O segundo serviço sabe o nome do método de retorno de chamada, mas o ponto de extremidade do serviço que implementa este método não é conhecido em tempo de design.  
   
 > [!NOTE]
-> Frente e verso durável só pode ser usado quando o <xref:System.ServiceModel.Channels.AddressingVersion> do ponto de extremidade é configurado com <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Se não, então um <xref:System.InvalidOperationException> exceção é lançada com a seguinte mensagem: "a mensagem contém um cabeçalho de contexto do retorno de chamada com uma referência de ponto de extremidade para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Contexto do retorno de chamada pode ser transmitido apenas quando o AddressingVersion é configurado com 'WSAddressing10'.
+> Frente e verso durável só pode ser usado quando o <xref:System.ServiceModel.Channels.AddressingVersion> do ponto de extremidade é configurado com <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Se não, então um <xref:System.InvalidOperationException> exceção é lançada com a seguinte mensagem: "A mensagem contém um cabeçalho de contexto do retorno de chamada com uma referência de ponto de extremidade para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Contexto do retorno de chamada pode ser transmitido apenas quando o AddressingVersion é configurado com 'WSAddressing10'.
   
  No exemplo a seguir, um serviço de fluxo de trabalho é hospedado que cria um retorno de chamada <xref:System.ServiceModel.Endpoint> usando <xref:System.ServiceModel.WSHttpContextBinding>.  
   

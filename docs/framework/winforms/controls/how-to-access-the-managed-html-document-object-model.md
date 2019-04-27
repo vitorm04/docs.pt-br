@@ -9,11 +9,11 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011249"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Como: Acessar o Modelo de Objeto do Documento HTML gerenciado
 É possível acessar o Document Object Model (DOM) do HTML gerenciado a partir de dois tipos de aplicativos:  

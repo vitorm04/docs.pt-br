@@ -7,11 +7,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864228"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Como: Chamar um procedimento que não retorna um valor (Visual Basic)
 Um `Sub` procedimento não retornar um valor para o código de chamada. Você chamá-lo explicitamente com uma instrução de chamada autônoma. Você não pode chamá-lo simplesmente usando seu nome dentro de uma expressão.  

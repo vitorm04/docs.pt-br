@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906731"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como: Descartar um recurso do sistema (Visual Basic)
 Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco. Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.  

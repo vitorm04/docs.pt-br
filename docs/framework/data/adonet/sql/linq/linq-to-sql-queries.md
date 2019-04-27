@@ -3,11 +3,11 @@ title: Consultas LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
 ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902870"
 ---
 # <a name="linq-to-sql-queries"></a>Consultas LINQ to SQL
 Você define consultas de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usando a mesma sintaxe que você em [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. A única diferença é que os objetos referenciados nas consultas são mapeados para os elementos em uma base de dados. Para obter mais informações, consulte [Introdução a Consultas de LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  

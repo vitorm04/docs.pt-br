@@ -5,11 +5,11 @@ helpviewer_keywords:
 - claims [WCF], denying access to resources
 ms.assetid: 145ebb41-680e-4256-b14c-1efb4af1e982
 ms.openlocfilehash: 4f48c59090579f4b451f615bb792a4dcb73f6df5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857580"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>Declarações e acesso negado para recursos
 Windows Communication Foundation (WCF) oferece suporte a um mecanismo de autorização baseada em declarações. Além de permitir o acesso a recursos com base na presença de declarações, sistemas geralmente negar acesso a recursos com base na presença de declarações. Tais sistemas devem examinar o <xref:System.IdentityModel.Policy.AuthorizationContext> para declarações que resultam em acesso negado antes de procurar declarações que resultam em acesso sendo permitido.  

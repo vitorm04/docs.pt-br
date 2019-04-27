@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922216"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificando dados de valores grandes (max) no ADO.NET
 Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linha máximo de 8 quilobytes (KB). O SQL Server fornece um especificador `max` para os tipos de dados `varchar`, `nvarchar` e `varbinary` para permitir o armazenamento de valores grandes como 2^32 bytes. As colunas da tabela e variáveis Transact-SQL podem especificar os tipos de dados `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. No ADO.NET, os tipos de dados `max` podem ser encontrados por `DataReader` e também podem ser especificados como valores de parâmetro de entrada e saída sem nenhuma manipulação especial. Para tipos de dados `varchar`, os dados podem ser recuperados e atualizados incrementalmente.  

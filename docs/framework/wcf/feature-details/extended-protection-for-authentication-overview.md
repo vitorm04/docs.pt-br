@@ -3,11 +3,11 @@ title: Proteção estendida para visão geral de autenticação
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856717"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Proteção estendida para visão geral de autenticação
 Proteção estendida para autenticação ajuda a proteger contra ataques de (MITM) man-in-the-middle, nos quais um invasor intercepta as credenciais de um cliente e encaminha-as para um servidor.  

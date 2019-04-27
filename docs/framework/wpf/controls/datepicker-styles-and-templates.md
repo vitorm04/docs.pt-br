@@ -10,11 +10,11 @@ helpviewer_keywords:
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
 ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912243"
 ---
 # <a name="datepicker-styles-and-templates"></a>Estilos e modelos DatePicker
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.DatePicker> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

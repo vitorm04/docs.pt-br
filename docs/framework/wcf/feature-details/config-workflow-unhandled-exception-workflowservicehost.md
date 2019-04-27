@@ -3,11 +3,11 @@ title: 'Como: configurar um comportamento de exceção sem tratamento de fluxo d
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
 ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857552"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Como: configurar um comportamento de exceção sem tratamento de fluxo de trabalho com WorkflowServiceHost
 O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é um comportamento que permite que você especifique a ação a ser tomada se uma exceção sem tratamento ocorrer dentro de um fluxo de trabalho hospedado no <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Este tópico mostra como configurar esse comportamento em um arquivo de configuração.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876103"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Atualizando o serviço de dados (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são rastreados, usando o <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla as alterações para entidades que relatam usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastrear entidades adicionadas e excluídas e também as alterações feitas aos valores de propriedade ou relações entre instâncias de entidade. Essas alterações controladas são enviadas para o serviço de dados como operações baseadas em REST, quando você chama o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método.  

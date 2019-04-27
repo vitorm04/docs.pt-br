@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879860"
 ---
 # <a name="datarow-deletion"></a>Exclusão de DataRow
 Há dois métodos que você pode usar para excluir uma <xref:System.Data.DataRow> do objeto de um <xref:System.Data.DataTable> objeto: o **remover** método da <xref:System.Data.DataRowCollection> objeto e o <xref:System.Data.DataRow.Delete%2A> o método da **DataRow**objeto. Enquanto o <xref:System.Data.DataRowCollection.Remove%2A> exclusões de método uma **DataRow** da **DataRowCollection**, o <xref:System.Data.DataRow.Delete%2A> método marca apenas a linha para exclusão. A remoção real ocorre quando o aplicativo chama o **AcceptChanges** método. Usando <xref:System.Data.DataRow.Delete%2A>, você pode verificar programaticamente quais linhas estão marcadas para exclusão antes de realmente removê-las. Quando uma linha está marcada para exclusão, sua propriedade <xref:System.Data.DataRow.RowState%2A> é definida como <xref:System.Data.DataRow.Delete%2A>.  

@@ -3,11 +3,11 @@ title: Filtragem
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856694"
 ---
 # <a name="filtering"></a>Filtragem
 O Windows Communication Foundation (WCF) filtragem de sistema pode usar filtros declarativos para corresponder as mensagens e tomar decisões operacionais. Você pode usar filtros para determinar o que fazer com uma mensagem, examinando a parte da mensagem. Um processo de enfileiramento de mensagens, por exemplo, pode usar uma consulta XPath 1.0 para verificar o elemento de prioridade de um cabeçalho conhecido para determinar se deseja mover uma mensagem para o início da fila.  

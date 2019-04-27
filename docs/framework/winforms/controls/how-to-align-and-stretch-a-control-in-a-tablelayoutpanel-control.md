@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
 ms.openlocfilehash: 6f36914387519b027fcf4cb6bf1e7654e551b3eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010982"
 ---
 # <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Como: Alinhar e alongar um controle em um controle TableLayoutPanel
 Você pode alinhar e Alongar controles em uma <xref:System.Windows.Forms.TableLayoutPanel> com o <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades.  

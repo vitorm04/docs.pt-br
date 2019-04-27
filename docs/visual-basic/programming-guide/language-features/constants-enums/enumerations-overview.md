@@ -6,11 +6,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
 ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907394"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Visão geral de enumerações (Visual Basic)
 Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores constantes a nomes. Por exemplo, é possível declarar uma enumeração de um conjunto de constantes de inteiros associados aos dias da semana e, em seguida, usar os nomes de dias em vez de seus valores de inteiros em seu código.  

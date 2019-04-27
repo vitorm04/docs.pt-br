@@ -11,11 +11,11 @@ helpviewer_keywords:
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911815"
 ---
 # <a name="expander"></a>Expansor
 Um <xref:System.Windows.Controls.Expander> permite que um usuário exibir um cabeçalho e expandir esse cabeçalho para ver mais detalhes, ou para recolher uma seção em um cabeçalho.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
 ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880055"
 ---
 # <a name="finding-rows"></a>Localizar linhas
 Você pode procurar por linhas de acordo com seus valores de chave de classificação usando o <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> métodos do <xref:System.Data.DataView>. Valores de maiusculas e minúsculas da pesquisa na **encontrar** e **FindRows** métodos é determinado pelo **CaseSensitive** propriedade subjacente <xref:System.Data.DataTable>. Valores de pesquisa devem corresponder a valores de chave de classificação existentes em sua totalidade para retornar um resultado.  

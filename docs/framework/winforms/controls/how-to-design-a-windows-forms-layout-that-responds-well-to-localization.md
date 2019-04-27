@@ -11,11 +11,11 @@ helpviewer_keywords:
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
 ms.openlocfilehash: 131dc688d2a742fa7a0d99ec7858d4e280c9882f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926509"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Como: Criar um layout do Windows Forms que responda bem à localização
 Criação de formulários que estão prontos para serem localizados aumenta a velocidade de desenvolvimento para mercados internacionais. Você pode usar o <xref:System.Windows.Forms.TableLayoutPanel> controle para implementar os layouts que respondem normalmente como controles redimensionam devido a alterações nas suas <xref:System.Windows.Forms.Control.Text%2A> valores de propriedade.  

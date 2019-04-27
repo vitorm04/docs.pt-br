@@ -3,11 +3,11 @@ title: Listas
 description: Saiba mais sobre F# lista uma série imutável, ordenada, de elementos do mesmo tipo.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904118"
 ---
 # <a name="lists"></a>Listas
 
@@ -65,11 +65,11 @@ O tipo de lista oferece suporte às seguintes propriedades:
 |Propriedade|Tipo|Descrição|
 |--------|----|-----------|
 |[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|O primeiro elemento.|
-|[vazio](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|A propriedade estática que retorna uma lista vazia do tipo apropriado.|
+|[Empty](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|A propriedade estática que retorna uma lista vazia do tipo apropriado.|
 |[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` se a lista não tiver elementos.|
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|O elemento no índice especificado (com base em zero).|
 |[Comprimento](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|O número de elementos.|
-|[Parte final](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|A lista sem o primeiro elemento.|
+|[Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|A lista sem o primeiro elemento.|
 
 A seguir, alguns exemplos de como usar essas propriedades.
 

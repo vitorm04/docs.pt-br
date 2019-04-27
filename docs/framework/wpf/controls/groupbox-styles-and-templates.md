@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
 ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911255"
 ---
 # <a name="groupbox-styles-and-templates"></a>Estilos e modelos GroupBox
 <a name="introduction"></a> Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.GroupBox> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

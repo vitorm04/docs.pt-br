@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801758"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Como: implementar a interface IListSource
 Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma classe vinculável que não implementa <xref:System.Collections.IList> , mas em vez disso, fornece uma lista de outro local.  

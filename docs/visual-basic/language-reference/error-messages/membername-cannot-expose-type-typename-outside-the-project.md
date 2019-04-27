@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
 ms.openlocfilehash: 16f579a05236ba8977a071cb08068be8e98799f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921076"
 ---
 # <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername >' não pode expor o tipo '\<typename >' fora do projeto até \<containertype > '\<containertypename >'
 Uma variável, parâmetro de procedimento ou função de retorno seja exposta fora de seu contêiner, mas ele é declarado como um tipo que não deve ser exposto fora do contêiner.  

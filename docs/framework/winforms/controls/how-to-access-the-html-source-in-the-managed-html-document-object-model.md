@@ -9,11 +9,11 @@ helpviewer_keywords:
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
 ms.openlocfilehash: f2306e3405aa0ff37060d987bdc82b58fbaa7784
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011262"
 ---
 # <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Como: Acessar a fonte HTML no Modelo de Objeto do Documento HTML gerenciado
 As propriedades <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> no controle <xref:System.Windows.Forms.WebBrowser> retornam o HTML do documento atual do modo que foi inicialmente exibido. No entanto, caso modificar a página usando chamadas de método e propriedade como <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> e <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, essas mudanças não aparecerão quando chamar <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. Para obter a fonte HTML mais atualizada do DOM, é necessário chamar a <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> propriedade no elemento HTML.  

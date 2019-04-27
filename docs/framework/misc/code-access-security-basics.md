@@ -10,11 +10,11 @@ ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868764"
 ---
 # <a name="code-access-security-basics"></a>Noções básicas da segurança de acesso do código
 
@@ -36,7 +36,7 @@ Você deve estar familiarizado com os seguintes conceitos de segurança de acess
 
 <a name="typesafe_code"></a>
 
-## <a name="writing-verifiably-type-safe-code"></a>Escrevendo código fortemente tipado verificável
+## <a name="writing-verifiably-type-safe-code"></a>Escrevendo um código fortemente tipado verificável
 
 Compilação do Just-in-time (JIT) executa um processo de verificação que examina o código e tenta determinar se o código é fortemente tipada. O código está comprovado durante a verificação ser fortemente tipado é chamado *código fortemente tipado verificável*. Código pode ser fortemente tipado, ainda pode não ser fortemente tipado verificável devido às limitações do processo de verificação ou do compilador. Nem todos os idiomas são fortemente tipadas e alguns compiladores de linguagem, como o Microsoft Visual C++, não é possível gerar o código gerenciado de fortemente tipado verificável. Para determinar se o compilador de linguagem que você use gera código fortemente tipado verificável, consulte a documentação do compilador. Se você usar um compilador de linguagem que gera o código fortemente tipado verificável somente quando você evitar determinadas construções de linguagem, você talvez queira usar o [ferramenta PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md) para determinar se o seu código é fortemente tipado verificável.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903429"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderizando controles com estilos visuais
 O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à renderização de controles e outros elementos da interface do usuário do Windows usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para renderizar controles e outros elementos da interface do usuário com o estilo visual atual do sistema operacional.  
