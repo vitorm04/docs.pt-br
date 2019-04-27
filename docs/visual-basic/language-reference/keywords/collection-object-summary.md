@@ -5,24 +5,24 @@ helpviewer_keywords:
 - Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
 ms.openlocfilehash: 50174f2af5e52b0fd71a590e7daf0285b5e043ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802426"
 ---
-# <a name="collection-object-summary-visual-basic"></a><span data-ttu-id="d48ac-102">Resumo do objeto de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d48ac-102">Collection Object Summary (Visual Basic)</span></span>
-<span data-ttu-id="d48ac-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="d48ac-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
+# <a name="collection-object-summary-visual-basic"></a><span data-ttu-id="f5d2e-102">Resumo do objeto de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5d2e-102">Collection Object Summary (Visual Basic)</span></span>
+<span data-ttu-id="f5d2e-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="f5d2e-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|<span data-ttu-id="d48ac-104">Ação</span><span class="sxs-lookup"><span data-stu-id="d48ac-104">Action</span></span>|<span data-ttu-id="d48ac-105">Elemento de linguagem</span><span class="sxs-lookup"><span data-stu-id="d48ac-105">Language element</span></span>|  
+|<span data-ttu-id="f5d2e-104">Ação</span><span class="sxs-lookup"><span data-stu-id="f5d2e-104">Action</span></span>|<span data-ttu-id="f5d2e-105">Elemento de linguagem</span><span class="sxs-lookup"><span data-stu-id="f5d2e-105">Language element</span></span>|  
 |------------|----------------------|  
-|<span data-ttu-id="d48ac-106">Crie um objeto `Collection`.</span><span class="sxs-lookup"><span data-stu-id="d48ac-106">Create a `Collection` object.</span></span>|<xref:Microsoft.VisualBasic.Collection>|  
-|<span data-ttu-id="d48ac-107">Adicione um item a uma coleção.</span><span class="sxs-lookup"><span data-stu-id="d48ac-107">Add an item to a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|<span data-ttu-id="d48ac-108">Remova um objeto de uma coleção.</span><span class="sxs-lookup"><span data-stu-id="d48ac-108">Remove an object from a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|<span data-ttu-id="d48ac-109">Fazer referência a um item em uma coleção.</span><span class="sxs-lookup"><span data-stu-id="d48ac-109">Reference an item in a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|<span data-ttu-id="d48ac-110">Retornar uma referência a um <xref:System.Collections.IEnumerator> interface.</span><span class="sxs-lookup"><span data-stu-id="d48ac-110">Return a reference to an <xref:System.Collections.IEnumerator> interface.</span></span>|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|<span data-ttu-id="f5d2e-106">Crie um objeto `Collection`.</span><span class="sxs-lookup"><span data-stu-id="f5d2e-106">Create a `Collection` object.</span></span>|<xref:Microsoft.VisualBasic.Collection>|  
+|<span data-ttu-id="f5d2e-107">Adicione um item a uma coleção.</span><span class="sxs-lookup"><span data-stu-id="f5d2e-107">Add an item to a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|<span data-ttu-id="f5d2e-108">Remova um objeto de uma coleção.</span><span class="sxs-lookup"><span data-stu-id="f5d2e-108">Remove an object from a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|<span data-ttu-id="f5d2e-109">Fazer referência a um item em uma coleção.</span><span class="sxs-lookup"><span data-stu-id="f5d2e-109">Reference an item in a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|<span data-ttu-id="f5d2e-110">Retornar uma referência a um <xref:System.Collections.IEnumerator> interface.</span><span class="sxs-lookup"><span data-stu-id="f5d2e-110">Return a reference to an <xref:System.Collections.IEnumerator> interface.</span></span>|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="d48ac-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d48ac-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5d2e-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f5d2e-111">See also</span></span>
 
-- [<span data-ttu-id="d48ac-112">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="d48ac-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="d48ac-113">Membros da Biblioteca em Tempo de Execução do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d48ac-113">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)
+- [<span data-ttu-id="f5d2e-112">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="f5d2e-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="f5d2e-113">Membros da Biblioteca em Tempo de Execução do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f5d2e-113">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

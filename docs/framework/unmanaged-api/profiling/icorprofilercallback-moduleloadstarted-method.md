@@ -18,38 +18,38 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3503aa1eb86246365e31f52313893ad8713f5748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992180"
 ---
-# <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="5600a-102">Método ICorProfilerCallback::ModuleLoadStarted</span><span class="sxs-lookup"><span data-stu-id="5600a-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
-<span data-ttu-id="5600a-103">Notifica o criador de perfil que um módulo está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="5600a-103">Notifies the profiler that a module is being loaded.</span></span>  
+# <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="37c01-102">Método ICorProfilerCallback::ModuleLoadStarted</span><span class="sxs-lookup"><span data-stu-id="37c01-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
+<span data-ttu-id="37c01-103">Notifica o criador de perfil que um módulo está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="37c01-103">Notifies the profiler that a module is being loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5600a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5600a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37c01-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="37c01-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleLoadStarted(  
     [in] ModuleID moduleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5600a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5600a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37c01-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="37c01-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="5600a-106">[in] A ID do módulo que está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="5600a-106">[in] The ID of the module that is being loaded.</span></span>  
+ <span data-ttu-id="37c01-106">[in] A ID do módulo que está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="37c01-106">[in] The ID of the module that is being loaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5600a-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="5600a-107">Remarks</span></span>  
- <span data-ttu-id="5600a-108">O valor de `moduleId` não é válido para uma solicitação de informações até que o [ICorProfilerCallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) método é chamado.</span><span class="sxs-lookup"><span data-stu-id="5600a-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37c01-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="37c01-107">Remarks</span></span>  
+ <span data-ttu-id="37c01-108">O valor de `moduleId` não é válido para uma solicitação de informações até que o [ICorProfilerCallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) método é chamado.</span><span class="sxs-lookup"><span data-stu-id="37c01-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5600a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5600a-109">Requirements</span></span>  
- <span data-ttu-id="5600a-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5600a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37c01-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="37c01-109">Requirements</span></span>  
+ <span data-ttu-id="37c01-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37c01-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5600a-111">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5600a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="37c01-111">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="37c01-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5600a-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5600a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37c01-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37c01-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5600a-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5600a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="37c01-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37c01-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5600a-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5600a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37c01-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37c01-114">See also</span></span>
 
-- [<span data-ttu-id="5600a-115">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="5600a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="37c01-115">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="37c01-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

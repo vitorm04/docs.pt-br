@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906731"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a><span data-ttu-id="b6d38-102">Como: Descartar um recurso do sistema (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6d38-102">How to: Dispose of a System Resource (Visual Basic)</span></span>
-<span data-ttu-id="b6d38-103">Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco.</span><span class="sxs-lookup"><span data-stu-id="b6d38-103">You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block.</span></span> <span data-ttu-id="b6d38-104">Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.</span><span class="sxs-lookup"><span data-stu-id="b6d38-104">This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.</span></span>  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a><span data-ttu-id="2cad0-102">Como: Descartar um recurso do sistema (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2cad0-102">How to: Dispose of a System Resource (Visual Basic)</span></span>
+<span data-ttu-id="2cad0-103">Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco.</span><span class="sxs-lookup"><span data-stu-id="2cad0-103">You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block.</span></span> <span data-ttu-id="2cad0-104">Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.</span><span class="sxs-lookup"><span data-stu-id="2cad0-104">This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.</span></span>  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a><span data-ttu-id="b6d38-105">Para descartar uma conexão de banco de dados quando seu código for concluído com ele</span><span class="sxs-lookup"><span data-stu-id="b6d38-105">To dispose of a database connection when your code is finished with it</span></span>  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a><span data-ttu-id="2cad0-105">Para descartar uma conexão de banco de dados quando seu código for concluído com ele</span><span class="sxs-lookup"><span data-stu-id="2cad0-105">To dispose of a database connection when your code is finished with it</span></span>  
   
-1. <span data-ttu-id="b6d38-106">Certifique-se de incluir apropriado [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início de seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).</span><span class="sxs-lookup"><span data-stu-id="b6d38-106">Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).</span></span>  
+1. <span data-ttu-id="2cad0-106">Certifique-se de incluir apropriado [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início de seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).</span><span class="sxs-lookup"><span data-stu-id="2cad0-106">Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).</span></span>  
   
-2. <span data-ttu-id="b6d38-107">Criar uma `Using` bloco com o `Using` e `End Using` instruções.</span><span class="sxs-lookup"><span data-stu-id="b6d38-107">Create a `Using` block with the `Using` and `End Using` statements.</span></span> <span data-ttu-id="b6d38-108">Dentro do bloco, coloque o código que lida com a conexão de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="b6d38-108">Inside the block, put the code that deals with the database connection.</span></span>  
+2. <span data-ttu-id="2cad0-107">Criar uma `Using` bloco com o `Using` e `End Using` instruções.</span><span class="sxs-lookup"><span data-stu-id="2cad0-107">Create a `Using` block with the `Using` and `End Using` statements.</span></span> <span data-ttu-id="2cad0-108">Dentro do bloco, coloque o código que lida com a conexão de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="2cad0-108">Inside the block, put the code that deals with the database connection.</span></span>  
   
-3. <span data-ttu-id="b6d38-109">A conexão de declarar e criar uma instância dela como parte do `Using` instrução.</span><span class="sxs-lookup"><span data-stu-id="b6d38-109">Declare the connection and create an instance of it as part of the `Using` statement.</span></span>  
+3. <span data-ttu-id="2cad0-109">A conexão de declarar e criar uma instância dela como parte do `Using` instrução.</span><span class="sxs-lookup"><span data-stu-id="2cad0-109">Declare the connection and create an instance of it as part of the `Using` statement.</span></span>  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -38,18 +38,18 @@ ms.locfileid: "59341901"
     End Sub  
     ```  
   
-     <span data-ttu-id="b6d38-110">O sistema descarta o recurso não importa como você sai do bloco, incluindo o caso de uma exceção sem tratamento.</span><span class="sxs-lookup"><span data-stu-id="b6d38-110">The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.</span></span>  
+     <span data-ttu-id="2cad0-110">O sistema descarta o recurso não importa como você sai do bloco, incluindo o caso de uma exceção sem tratamento.</span><span class="sxs-lookup"><span data-stu-id="2cad0-110">The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.</span></span>  
   
-     <span data-ttu-id="b6d38-111">Observe que você não pode acessar `sqc` de fora a `Using` bloquear, porque seu escopo é limitado ao bloco.</span><span class="sxs-lookup"><span data-stu-id="b6d38-111">Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.</span></span>  
+     <span data-ttu-id="2cad0-111">Observe que você não pode acessar `sqc` de fora a `Using` bloquear, porque seu escopo é limitado ao bloco.</span><span class="sxs-lookup"><span data-stu-id="2cad0-111">Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.</span></span>  
   
-     <span data-ttu-id="b6d38-112">Você pode usar essa mesma técnica em um recurso do sistema como um identificador de arquivo ou um wrapper COM.</span><span class="sxs-lookup"><span data-stu-id="b6d38-112">You can use this same technique on a system resource such as a file handle or a COM wrapper.</span></span> <span data-ttu-id="b6d38-113">Você usa um `Using` bloquear quando você deseja deixar o recurso disponível para outros componentes após você ter saído do `Using` bloco.</span><span class="sxs-lookup"><span data-stu-id="b6d38-113">You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.</span></span>  
+     <span data-ttu-id="2cad0-112">Você pode usar essa mesma técnica em um recurso do sistema como um identificador de arquivo ou um wrapper COM.</span><span class="sxs-lookup"><span data-stu-id="2cad0-112">You can use this same technique on a system resource such as a file handle or a COM wrapper.</span></span> <span data-ttu-id="2cad0-113">Você usa um `Using` bloquear quando você deseja deixar o recurso disponível para outros componentes após você ter saído do `Using` bloco.</span><span class="sxs-lookup"><span data-stu-id="2cad0-113">You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6d38-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b6d38-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2cad0-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2cad0-114">See also</span></span>
 
 - <xref:System.Data.SqlClient.SqlConnection>
-- [<span data-ttu-id="b6d38-115">Fluxo de Controle</span><span class="sxs-lookup"><span data-stu-id="b6d38-115">Control Flow</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [<span data-ttu-id="b6d38-116">Estruturas de Decisão</span><span class="sxs-lookup"><span data-stu-id="b6d38-116">Decision Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [<span data-ttu-id="b6d38-117">Estruturas de Loop</span><span class="sxs-lookup"><span data-stu-id="b6d38-117">Loop Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [<span data-ttu-id="b6d38-118">Outras Estruturas de Controle</span><span class="sxs-lookup"><span data-stu-id="b6d38-118">Other Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [<span data-ttu-id="b6d38-119">Estruturas de Controle Aninhadas</span><span class="sxs-lookup"><span data-stu-id="b6d38-119">Nested Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [<span data-ttu-id="b6d38-120">Instrução Using</span><span class="sxs-lookup"><span data-stu-id="b6d38-120">Using Statement</span></span>](../../../../visual-basic/language-reference/statements/using-statement.md)
+- [<span data-ttu-id="2cad0-115">Fluxo de Controle</span><span class="sxs-lookup"><span data-stu-id="2cad0-115">Control Flow</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [<span data-ttu-id="2cad0-116">Estruturas de Decisão</span><span class="sxs-lookup"><span data-stu-id="2cad0-116">Decision Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [<span data-ttu-id="2cad0-117">Estruturas de Loop</span><span class="sxs-lookup"><span data-stu-id="2cad0-117">Loop Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [<span data-ttu-id="2cad0-118">Outras Estruturas de Controle</span><span class="sxs-lookup"><span data-stu-id="2cad0-118">Other Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [<span data-ttu-id="2cad0-119">Estruturas de Controle Aninhadas</span><span class="sxs-lookup"><span data-stu-id="2cad0-119">Nested Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [<span data-ttu-id="2cad0-120">Instrução Using</span><span class="sxs-lookup"><span data-stu-id="2cad0-120">Using Statement</span></span>](../../../../visual-basic/language-reference/statements/using-statement.md)

@@ -5,21 +5,21 @@ f1_keywords:
 - vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
 ms.openlocfilehash: c45c8458e9acb7f168fc9afb6b1979a950a38dc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920774"
 ---
-# <a name="property-not-found"></a><span data-ttu-id="5061d-102">Propriedade não localizada</span><span class="sxs-lookup"><span data-stu-id="5061d-102">Property not found</span></span>
-<span data-ttu-id="5061d-103">Este objeto não oferece suporte a propriedade especificada.</span><span class="sxs-lookup"><span data-stu-id="5061d-103">This object does not support the specified property.</span></span>  
+# <a name="property-not-found"></a><span data-ttu-id="e9189-102">Propriedade não localizada</span><span class="sxs-lookup"><span data-stu-id="e9189-102">Property not found</span></span>
+<span data-ttu-id="e9189-103">Este objeto não oferece suporte a propriedade especificada.</span><span class="sxs-lookup"><span data-stu-id="e9189-103">This object does not support the specified property.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5061d-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5061d-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e9189-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="e9189-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="5061d-105">Verifique a ortografia do nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="5061d-105">Check the spelling of the property's name.</span></span>  
+1. <span data-ttu-id="e9189-105">Verifique a ortografia do nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="e9189-105">Check the spelling of the property's name.</span></span>  
   
-2. <span data-ttu-id="5061d-106">Verifique a documentação do objeto para verificar se que você não está tentando acessar algo parecido com uma propriedade de "text" quando o objeto dá suporte, na verdade, um "legenda" ou uma propriedade nomeada da mesma forma.</span><span class="sxs-lookup"><span data-stu-id="5061d-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
+2. <span data-ttu-id="e9189-106">Verifique a documentação do objeto para verificar se que você não está tentando acessar algo parecido com uma propriedade de "text" quando o objeto dá suporte, na verdade, um "legenda" ou uma propriedade nomeada da mesma forma.</span><span class="sxs-lookup"><span data-stu-id="e9189-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5061d-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5061d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9189-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e9189-107">See also</span></span>
 
-- [<span data-ttu-id="5061d-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="5061d-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="e9189-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="e9189-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

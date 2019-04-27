@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d8d5f2123608af241095c966901bd227fa6152d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919276"
 ---
-# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="130db-102">Método ICorDebugProcess::EnumerateObjects</span><span class="sxs-lookup"><span data-stu-id="130db-102">ICorDebugProcess::EnumerateObjects Method</span></span>
-<span data-ttu-id="130db-103">Esse método não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="130db-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="1a65c-102">Método ICorDebugProcess::EnumerateObjects</span><span class="sxs-lookup"><span data-stu-id="1a65c-102">ICorDebugProcess::EnumerateObjects Method</span></span>
+<span data-ttu-id="1a65c-103">Esse método não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="1a65c-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="130db-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="130db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a65c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1a65c-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateObjects (  
