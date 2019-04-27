@@ -11,11 +11,11 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675397"
 ---
 # <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_campo StatusCode
 
@@ -28,7 +28,7 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Esta API não é destinada a ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Consulte [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Essa API não se destina a ser usado diretamente em seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Ver [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
 > Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
 
@@ -36,6 +36,6 @@ public HttpStatusCode m_StatusCode
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** sistema (em System. dll)
+**Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** disponível desde o 2.0.
+**Versões do .NET framework:** Disponível desde o 2.0.

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - tab characters [WPF], enabling
 ms.assetid: 14b1b064-61f7-4958-be63-88d85b868d03
 ms.openlocfilehash: 9a01ae93d1b75c604fbe4f15f720e0a84086bd1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910566"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>Como: Habilitar caracteres de tabulação em um controle TextBox
 Este exemplo mostra como habilitar a aceitação de caracteres de tabulação como entrada normal em um <xref:System.Windows.Controls.TextBox> controle.  

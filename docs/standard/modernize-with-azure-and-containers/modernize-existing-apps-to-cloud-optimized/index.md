@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811665"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 

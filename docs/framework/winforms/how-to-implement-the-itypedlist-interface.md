@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800849"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Como: implementar a interface ITypedList
 Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a descoberta do esquema para uma lista vinculável.  

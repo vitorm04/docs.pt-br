@@ -11,11 +11,11 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
 ms.openlocfilehash: 26b3a64533747e80c7b9270918030da76d5e00c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801355"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Como: distinguir entre cliques e cliques duplos
 Normalmente, um único *clique* inicia uma interface do usuário e um *clique duplo* estende a ação. Por exemplo, um clique normalmente seleciona um item e um clique duplo edita o item selecionado. No entanto, eventos de clique a formulários do Windows não acomodam facilmente um cenário onde um clique e um clique duplo executam ações incompatíveis, como uma ação associada à <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> eventos é executado antes da ação ligada para o <xref:System.Windows.Forms.Control.DoubleClick>ou <xref:System.Windows.Forms.Control.MouseDoubleClick> eventos. Este tópico demonstra duas soluções para esse problema. Uma solução é manipular o evento de clique duplo e reverter as ações no tratamento de evento de clique. Em raras situações, você talvez seja necessário simular um clique e comportamento de clique duplo manipulando o <xref:System.Windows.Forms.Control.MouseDown> evento e, usando o <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> e <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> propriedades do <xref:System.Windows.Forms.SystemInformation> classe. Você medir o tempo entre cliques e se um segundo clique ocorre antes do valor de <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> for atingido e o clique foi dentro de um retângulo definido por <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, executar a ação de clique duplo; caso contrário, execute a ação de clique.  

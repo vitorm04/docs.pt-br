@@ -5,11 +5,11 @@ helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
 ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801980"
 ---
 # <a name="string-functions-visual-basic"></a>Funções da cadeia de caracteres (Visual Basic)
 A tabela a seguir lista as funções que o Visual Basic oferece para pesquisar e manipular cadeias de caracteres.  

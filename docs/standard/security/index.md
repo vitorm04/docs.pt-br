@@ -12,14 +12,14 @@ ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860549"
 ---
 # <a name="security-in-net"></a>Segurança no .NET
-O common language runtime e o .NET fornecem muitas classes úteis e serviços que permitem aos desenvolvedores facilmente escrever código seguro e permitem que os administradores de sistema personalizar as permissões concedidas ao código para que possam acessar recursos protegidos. Além disso, o tempo de execução e o .NET fornecem classes úteis e serviços que facilitam o uso de criptografia e segurança baseada em função.  
+O common language runtime e o .NET fornecem recursos protegidos de muitas classes úteis e serviços que permitem aos desenvolvedores escrever código seguro e permitem que os administradores de sistema personalizar as permissões concedidas ao código para que ele possa acessar facilmente. Além disso, o tempo de execução e o .NET fornecem classes úteis e serviços que facilitam o uso de criptografia e segurança baseada em função.  
   
 ## <a name="in-this-section"></a>Nesta seção  
 
@@ -33,7 +33,7 @@ O common language runtime e o .NET fornecem muitas classes úteis e serviços qu
  Fornece uma visão geral dos serviços de criptografia fornecidos pelo .NET. Esta seção é de interesse dos desenvolvedores.  
   
  [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)  
- Descreve algumas das práticas recomendadas para a criação de aplicativos .NET confiáveis. Esta seção é de interesse dos desenvolvedores.  
+ Descreve algumas das práticas recomendadas para a criação de aplicativos confiáveis do .NET. Esta seção é de interesse dos desenvolvedores.  
   
  [Diretrizes de codificação segura para código não gerenciado](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
  Descreve algumas das práticas recomendadas e preocupações com a segurança ao chamar código não gerenciado.  

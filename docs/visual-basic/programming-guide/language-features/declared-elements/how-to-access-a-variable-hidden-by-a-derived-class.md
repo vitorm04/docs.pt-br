@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829654"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Como: Acessar uma variável ocultada por uma classe derivada (Visual Basic)
 Quando o código em uma classe derivada acessa uma variável, o compilador resolve normalmente a referência para a versão mais acessível, ou seja, a versão acessível as menor número etapas derivacionais com versões anteriores da classe de acesso. Se a variável é definida na classe derivada, o código normalmente acessa essa definição.  

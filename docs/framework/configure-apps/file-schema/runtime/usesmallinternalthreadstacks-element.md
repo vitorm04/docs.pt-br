@@ -8,11 +8,11 @@ ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673980"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > elemento
 Usam solicitações que o common language runtime (CLR) reduzir a memória com a especificação de tamanhos de pilha explícito ao criar certos threads que ele usa internamente, em vez de usar o tamanho da pilha padrão para esses threads.  

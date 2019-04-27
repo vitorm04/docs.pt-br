@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800120"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validação da entrada do usuário no Windows Forms
 Quando os usuários inserem dados em seu aplicativo, convém verificar se os dados são válidos antes de seu aplicativo utilizá-los. Você pode exigir que determinados campos de texto não sejam de comprimento zero, que um campo seja formatado como um número de telefone ou outros tipos de dados bem formados ou que uma cadeia de caracteres não contenha caracteres desprotegidos que poderiam ser usados para comprometer a segurança de um banco de dados. O Windows Forms fornece várias maneiras para validar a entrada em seu aplicativo.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703680"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de um serviço do Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  

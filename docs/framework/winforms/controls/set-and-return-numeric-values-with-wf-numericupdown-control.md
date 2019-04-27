@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902220"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Como: Definir e retornar valores numéricos com o controle NumericUpDown do Windows Forms
 O valor numérico de formulários do Windows <xref:System.Windows.Forms.NumericUpDown> controle é determinado pelo seu <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriedade. Você pode escrever testes condicionais para o valor do controle, assim como ocorre com qualquer outra propriedade. Uma vez a <xref:System.Windows.Forms.NumericUpDown.Value%2A> estiver definida, você pode ajustá-lo diretamente ao escrever código para executar operações nela ou você pode chamar o <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> métodos.  

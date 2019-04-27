@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
 ms.openlocfilehash: 606231449263f1c26596ca8606a88053c6aded8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877273"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>Como: detectar e resolver submissões com conflito
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece vários recursos para detectar e resolver conflitos que provêm de alterações do usuário a base de dados. Para obter mais informações, confira [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  

@@ -3,11 +3,11 @@ title: <add> de <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
 ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704473"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<Adicionar > de \<claimTypeRequirements >
 Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  

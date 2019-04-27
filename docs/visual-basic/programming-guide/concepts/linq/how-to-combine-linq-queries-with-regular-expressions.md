@@ -3,11 +3,11 @@ title: 'Como: Combinar consultas LINQ com expressões regulares (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855030"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Como: Combinar consultas LINQ com expressões regulares (Visual Basic)
 Este exemplo mostra como usar a classe <xref:System.Text.RegularExpressions.Regex> para criar uma expressão regular para correspondências mais complexas em cadeias de texto. A consulta LINQ torna fácil a aplicação de filtro exatamente nos arquivos que você deseja pesquisar com a expressão regular e formatar os resultados.  

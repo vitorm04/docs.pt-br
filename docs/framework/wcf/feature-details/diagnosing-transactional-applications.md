@@ -3,11 +3,11 @@ title: Diagnosticando aplicativos transacionais
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856733"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnosticando aplicativos transacionais
 Este tópico descreve como usar o recurso de diagnóstico e gerenciamento do Windows Communication Foundation (WCF) para solucionar problemas de um aplicativo transacional.  

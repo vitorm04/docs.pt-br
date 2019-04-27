@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674708"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > (configurações de rede)
 Especifica os módulos usados para autenticar solicitações de rede.  

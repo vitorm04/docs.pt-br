@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
 ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801472"
 ---
 # <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expressão >' não pode ser usado como restrição de tipo
 Uma lista de restrições inclui uma expressão que não representa uma restrição válida em um parâmetro de tipo.  

@@ -1,17 +1,17 @@
 ---
-title: Escolhendo plataformas de computação do Azure para aplicativos baseados em contêiner
+title: Escolher plataformas de computação do Azure para aplicativos baseados em contêiner
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Escolhendo plataformas de computação do Azure para aplicativos baseados em contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811743"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Escolhendo plataformas de computação do Azure para aplicativos baseados em contêiner
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Escolher plataformas de computação do Azure para aplicativos baseados em contêiner
 
 Como você pode ter notado depois de ler as seções anteriores, o Azure é uma nuvem aberta que oferece várias opções. Você pode usar o mais adequado para suas necessidades, no entanto, ele também dá superfície a perguntas sobre o que você deve usar para seus aplicativos em contêineres de produto/tecnologia.
 
