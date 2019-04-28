@@ -10,18 +10,18 @@ helpviewer_keywords:
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
 ms.openlocfilehash: 0c07365f5be2e419b4049a466949fed2d884d897
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913127"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a><span data-ttu-id="24a7b-102">Como: Remover itens de controles DomainUpDown do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="24a7b-102">How to: Remove Items from Windows Forms DomainUpDown Controls</span></span>
-<span data-ttu-id="24a7b-103">Você pode remover itens dos formulários do Windows <xref:System.Windows.Forms.DomainUpDown> controle chamando o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> ou <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método da <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe.</span><span class="sxs-lookup"><span data-stu-id="24a7b-103">You can remove items from the Windows Forms <xref:System.Windows.Forms.DomainUpDown> control by calling the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> or <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> method of the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> class.</span></span> <span data-ttu-id="24a7b-104">O <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método Remove um item específico, enquanto o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método Remove um item por sua posição.</span><span class="sxs-lookup"><span data-stu-id="24a7b-104">The <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> method removes a specific item, while the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> method removes an item by its position.</span></span>  
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a><span data-ttu-id="a73f3-102">Como: Remover itens de controles DomainUpDown do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a73f3-102">How to: Remove Items from Windows Forms DomainUpDown Controls</span></span>
+<span data-ttu-id="a73f3-103">Você pode remover itens dos formulários do Windows <xref:System.Windows.Forms.DomainUpDown> controle chamando o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> ou <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método da <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe.</span><span class="sxs-lookup"><span data-stu-id="a73f3-103">You can remove items from the Windows Forms <xref:System.Windows.Forms.DomainUpDown> control by calling the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> or <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> method of the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> class.</span></span> <span data-ttu-id="a73f3-104">O <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método Remove um item específico, enquanto o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método Remove um item por sua posição.</span><span class="sxs-lookup"><span data-stu-id="a73f3-104">The <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> method removes a specific item, while the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> method removes an item by its position.</span></span>  
   
-### <a name="to-remove-an-item"></a><span data-ttu-id="24a7b-105">Para remover um item</span><span class="sxs-lookup"><span data-stu-id="24a7b-105">To remove an item</span></span>  
+### <a name="to-remove-an-item"></a><span data-ttu-id="a73f3-105">Para remover um item</span><span class="sxs-lookup"><span data-stu-id="a73f3-105">To remove an item</span></span>  
   
--   <span data-ttu-id="24a7b-106">Use o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método da <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe para remover um item por nome.</span><span class="sxs-lookup"><span data-stu-id="24a7b-106">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> method of the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> class to remove an item by name.</span></span>  
+- <span data-ttu-id="a73f3-106">Use o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método da <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> classe para remover um item por nome.</span><span class="sxs-lookup"><span data-stu-id="a73f3-106">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> method of the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> class to remove an item by name.</span></span>  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -35,9 +35,9 @@ ms.locfileid: "59131398"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     <span data-ttu-id="24a7b-107">- ou -</span><span class="sxs-lookup"><span data-stu-id="24a7b-107">-or-</span></span>  
+     <span data-ttu-id="a73f3-107">- ou -</span><span class="sxs-lookup"><span data-stu-id="a73f3-107">-or-</span></span>  
   
--   <span data-ttu-id="24a7b-108">Use o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método para remover um item por sua posição.</span><span class="sxs-lookup"><span data-stu-id="24a7b-108">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> method to remove an item by its position.</span></span>  
+- <span data-ttu-id="a73f3-108">Use o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método para remover um item por sua posição.</span><span class="sxs-lookup"><span data-stu-id="a73f3-108">Use the <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> method to remove an item by its position.</span></span>  
   
     ```vb  
     ' Removes the first item in the list.  
@@ -54,10 +54,10 @@ ms.locfileid: "59131398"
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="24a7b-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="24a7b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a73f3-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a73f3-109">See also</span></span>
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="24a7b-110">Controle DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="24a7b-110">DomainUpDown Control</span></span>](domainupdown-control-windows-forms.md)
-- [<span data-ttu-id="24a7b-111">Visão geral do controle DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="24a7b-111">DomainUpDown Control Overview</span></span>](domainupdown-control-overview-windows-forms.md)
+- [<span data-ttu-id="a73f3-110">Controle DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="a73f3-110">DomainUpDown Control</span></span>](domainupdown-control-windows-forms.md)
+- [<span data-ttu-id="a73f3-111">Visão geral do controle DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="a73f3-111">DomainUpDown Control Overview</span></span>](domainupdown-control-overview-windows-forms.md)

@@ -8,42 +8,42 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010313"
 ---
-# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="7d688-102">Tópicos explicativos de animação e tempo</span><span class="sxs-lookup"><span data-stu-id="7d688-102">Animation and Timing How-to Topics</span></span>
-<span data-ttu-id="7d688-103">Os tópicos a seguir demonstram como usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema de animação e temporização em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="7d688-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
+# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="0f081-102">Tópicos explicativos de animação e tempo</span><span class="sxs-lookup"><span data-stu-id="0f081-102">Animation and Timing How-to Topics</span></span>
+<span data-ttu-id="0f081-103">Os tópicos a seguir demonstram como usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema de animação e temporização em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="0f081-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7d688-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7d688-104">In This Section</span></span>  
- [<span data-ttu-id="7d688-105">Acelerar ou desacelerar uma animação</span><span class="sxs-lookup"><span data-stu-id="7d688-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
- [<span data-ttu-id="7d688-106">Acumular valores de animação durante ciclos de repetição</span><span class="sxs-lookup"><span data-stu-id="7d688-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [<span data-ttu-id="7d688-107">Adicionar um valor de saída da animação a um valor inicial de animação</span><span class="sxs-lookup"><span data-stu-id="7d688-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [<span data-ttu-id="7d688-108">Animar uma propriedade usando um storyboard</span><span class="sxs-lookup"><span data-stu-id="7d688-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
- [<span data-ttu-id="7d688-109">Animar uma propriedade sem usar um storyboard</span><span class="sxs-lookup"><span data-stu-id="7d688-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
- [<span data-ttu-id="7d688-110">Animar em um ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="7d688-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
- [<span data-ttu-id="7d688-111">Animar em um estilo</span><span class="sxs-lookup"><span data-stu-id="7d688-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
- [<span data-ttu-id="7d688-112">Animar a opacidade de um elemento ou pincel</span><span class="sxs-lookup"><span data-stu-id="7d688-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [<span data-ttu-id="7d688-113">Alterar a velocidade de um relógio sem alterar a velocidade da linha do tempo</span><span class="sxs-lookup"><span data-stu-id="7d688-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
- [<span data-ttu-id="7d688-114">Controlar um storyboard depois de ter começado usando os métodos interativos</span><span class="sxs-lookup"><span data-stu-id="7d688-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
- [<span data-ttu-id="7d688-115">Controlar uma animação usando From, To e By</span><span class="sxs-lookup"><span data-stu-id="7d688-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
- [<span data-ttu-id="7d688-116">Definir um escopo de nome</span><span class="sxs-lookup"><span data-stu-id="7d688-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
- [<span data-ttu-id="7d688-117">Receber notificação quando o estado de um relógio mudar</span><span class="sxs-lookup"><span data-stu-id="7d688-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
- [<span data-ttu-id="7d688-118">Repetir uma animação</span><span class="sxs-lookup"><span data-stu-id="7d688-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
- [<span data-ttu-id="7d688-119">Buscar um storyboard</span><span class="sxs-lookup"><span data-stu-id="7d688-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
- [<span data-ttu-id="7d688-120">Buscar um storyboard de forma síncrona</span><span class="sxs-lookup"><span data-stu-id="7d688-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
- [<span data-ttu-id="7d688-121">Definir uma duração para uma animação</span><span class="sxs-lookup"><span data-stu-id="7d688-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
- [<span data-ttu-id="7d688-122">Definir uma propriedade depois de animá-la com um storyboard</span><span class="sxs-lookup"><span data-stu-id="7d688-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [<span data-ttu-id="7d688-123">Simplificar animações usando linhas do tempo filho</span><span class="sxs-lookup"><span data-stu-id="7d688-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
- [<span data-ttu-id="7d688-124">Especificar HandoffBehavior entre animações de storyboard</span><span class="sxs-lookup"><span data-stu-id="7d688-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [<span data-ttu-id="7d688-125">Especificar o FillBehavior para uma linha do tempo que tenha atingido o fim do período ativo</span><span class="sxs-lookup"><span data-stu-id="7d688-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
- [<span data-ttu-id="7d688-126">Especificar se uma linha do tempo é revertida automaticamente</span><span class="sxs-lookup"><span data-stu-id="7d688-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [<span data-ttu-id="7d688-127">Disparar uma animação quando o valor de uma propriedade é alterado</span><span class="sxs-lookup"><span data-stu-id="7d688-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [<span data-ttu-id="7d688-128">Usar gatilhos de evento para controlar um storyboard depois de ter começado</span><span class="sxs-lookup"><span data-stu-id="7d688-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0f081-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="0f081-104">In This Section</span></span>  
+ [<span data-ttu-id="0f081-105">Acelerar ou desacelerar uma animação</span><span class="sxs-lookup"><span data-stu-id="0f081-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
+ [<span data-ttu-id="0f081-106">Acumular valores de animação durante ciclos de repetição</span><span class="sxs-lookup"><span data-stu-id="0f081-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="0f081-107">Adicionar um valor de saída da animação a um valor inicial de animação</span><span class="sxs-lookup"><span data-stu-id="0f081-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="0f081-108">Animar uma propriedade usando um storyboard</span><span class="sxs-lookup"><span data-stu-id="0f081-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="0f081-109">Animar uma propriedade sem usar um storyboard</span><span class="sxs-lookup"><span data-stu-id="0f081-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="0f081-110">Animar em um ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="0f081-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
+ [<span data-ttu-id="0f081-111">Animar em um estilo</span><span class="sxs-lookup"><span data-stu-id="0f081-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
+ [<span data-ttu-id="0f081-112">Animar a opacidade de um elemento ou pincel</span><span class="sxs-lookup"><span data-stu-id="0f081-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [<span data-ttu-id="0f081-113">Alterar a velocidade de um relógio sem alterar a velocidade da linha do tempo</span><span class="sxs-lookup"><span data-stu-id="0f081-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
+ [<span data-ttu-id="0f081-114">Controlar um storyboard depois de ter começado usando os métodos interativos</span><span class="sxs-lookup"><span data-stu-id="0f081-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="0f081-115">Controlar uma animação usando From, To e By</span><span class="sxs-lookup"><span data-stu-id="0f081-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
+ [<span data-ttu-id="0f081-116">Definir um escopo de nome</span><span class="sxs-lookup"><span data-stu-id="0f081-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
+ [<span data-ttu-id="0f081-117">Receber notificação quando o estado de um relógio mudar</span><span class="sxs-lookup"><span data-stu-id="0f081-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
+ [<span data-ttu-id="0f081-118">Repetir uma animação</span><span class="sxs-lookup"><span data-stu-id="0f081-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="0f081-119">Buscar um storyboard</span><span class="sxs-lookup"><span data-stu-id="0f081-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
+ [<span data-ttu-id="0f081-120">Buscar um storyboard de forma síncrona</span><span class="sxs-lookup"><span data-stu-id="0f081-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
+ [<span data-ttu-id="0f081-121">Definir uma duração para uma animação</span><span class="sxs-lookup"><span data-stu-id="0f081-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
+ [<span data-ttu-id="0f081-122">Definir uma propriedade depois de animá-la com um storyboard</span><span class="sxs-lookup"><span data-stu-id="0f081-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [<span data-ttu-id="0f081-123">Simplificar animações usando linhas do tempo filho</span><span class="sxs-lookup"><span data-stu-id="0f081-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
+ [<span data-ttu-id="0f081-124">Especificar HandoffBehavior entre animações de storyboard</span><span class="sxs-lookup"><span data-stu-id="0f081-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [<span data-ttu-id="0f081-125">Especificar o FillBehavior para uma linha do tempo que tenha atingido o fim do período ativo</span><span class="sxs-lookup"><span data-stu-id="0f081-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
+ [<span data-ttu-id="0f081-126">Especificar se uma linha do tempo é revertida automaticamente</span><span class="sxs-lookup"><span data-stu-id="0f081-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="0f081-127">Disparar uma animação quando o valor de uma propriedade é alterado</span><span class="sxs-lookup"><span data-stu-id="0f081-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [<span data-ttu-id="0f081-128">Usar gatilhos de evento para controlar um storyboard depois de ter começado</span><span class="sxs-lookup"><span data-stu-id="0f081-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
-## <a name="reference"></a><span data-ttu-id="7d688-129">Referência</span><span class="sxs-lookup"><span data-stu-id="7d688-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0f081-129">Referência</span><span class="sxs-lookup"><span data-stu-id="0f081-129">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Timeline>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -54,5 +54,5 @@ ms.locfileid: "57358490"
   
  <xref:System.Windows.Media.Animation>  
   
-## <a name="related-sections"></a><span data-ttu-id="7d688-130">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="7d688-130">Related Sections</span></span>  
- [<span data-ttu-id="7d688-131">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="7d688-131">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="0f081-130">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="0f081-130">Related Sections</span></span>  
+ [<span data-ttu-id="0f081-131">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="0f081-131">Graphics and Multimedia</span></span>](index.md)
