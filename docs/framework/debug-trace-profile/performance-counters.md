@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874466"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
 Este tópico fornece uma lista de contadores de desempenho, você pode encontrar na [Monitor de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Contadores de desempenho de exceções](#exception)  
+- [Contadores de desempenho de exceções](#exception)  
   
--   [Contadores de desempenho de interoperabilidade](#interop)  
+- [Contadores de desempenho de interoperabilidade](#interop)  
   
--   [Contadores de desempenho JIT](#jit)  
+- [Contadores de desempenho JIT](#jit)  
   
--   [Carregando contadores de desempenho](#loading)  
+- [Carregando contadores de desempenho](#loading)  
   
--   [Contadores de desempenho de bloqueio e thread](#lockthread)  
+- [Contadores de desempenho de bloqueio e thread](#lockthread)  
   
--   [Contadores de desempenho da memória](#memory)  
+- [Contadores de desempenho da memória](#memory)  
   
--   [Contadores de desempenho de rede](#networking)  
+- [Contadores de desempenho de rede](#networking)  
   
--   [Contadores de desempenho de segurança](#security)  
+- [Contadores de desempenho de segurança](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Contadores de desempenho de exceções  
@@ -161,21 +161,21 @@ Este tópico fornece uma lista de contadores de desempenho, você pode encontrar
   
  Existem várias classes de contadores de desempenho de rede com suporte:  
   
--   Contadores de eventos que medem o número de vezes em que um determinado evento ocorreu.  
+- Contadores de eventos que medem o número de vezes em que um determinado evento ocorreu.  
   
--   Contadores de dados que medem a quantidade de dados enviados ou recebidos.  
+- Contadores de dados que medem a quantidade de dados enviados ou recebidos.  
   
--   Contadores de duração que medem quanto tempo os diferentes processos levam. Os tempos são medidos nos objetos a cada intervalo (normalmente em segundos) após eles saírem de estados diferentes.  
+- Contadores de duração que medem quanto tempo os diferentes processos levam. Os tempos são medidos nos objetos a cada intervalo (normalmente em segundos) após eles saírem de estados diferentes.  
   
--   Contadores por intervalo que medem o número de objetos que estão fazendo uma determinada transição por intervalo (normalmente por segundo).  
+- Contadores por intervalo que medem o número de objetos que estão fazendo uma determinada transição por intervalo (normalmente por segundo).  
   
  Os contadores de desempenho de rede para eventos incluem o seguinte:  
   
--   **Conexões estabelecidas**  
+- **Conexões estabelecidas**  
   
--   **Datagramas recebidos**  
+- **Datagramas recebidos**  
   
--   **Datagramas enviados**  
+- **Datagramas enviados**  
   
  Esses contadores de desempenho fornecem contagens desde o início do processo. As contagens de conexões <xref:System.Net.Sockets.Socket> estabelecidas incluem chamadas de método <xref:System.Net.Sockets.Socket> explícitas por um aplicativo uma conexão de soquete de fluxo que foi estabelecida, bem como chamadas internas feitas por outras classes (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> e <xref:System.Net.Sockets.TcpClient>, por exemplo) para a classe <xref:System.Net.Sockets.Socket>  
   
@@ -183,33 +183,33 @@ Este tópico fornece uma lista de contadores de desempenho, você pode encontrar
   
  Os contadores de desempenho de rede para dados incluem o seguinte:  
   
--   **Bytes recebidos**  
+- **Bytes recebidos**  
   
--   **Bytes enviados**  
+- **Bytes enviados**  
   
  Os contadores acima fornecem contagens de bytes desde o início do processo.  
   
  Há dois contadores de duração que medem quanto tempo demorou parte ou todo o ciclo de vida de objetos <xref:System.Net.HttpWebRequest>:  
   
--   **Tempo de vida médio de HttpWebRequest**  
+- **Tempo de vida médio de HttpWebRequest**  
   
--   **Tempo de espera médio de HttpWebRequest**  
+- **Tempo de espera médio de HttpWebRequest**  
   
  Para o contador **Tempo de vida médio de HttpWebRequest**, o tempo de vida da maioria dos objetos <xref:System.Net.HttpWebRequest> sempre começa com a hora em que o objeto é criado até o momento em que o fluxo de resposta é fechado pelo aplicativo. Há dois casos incomuns:  
   
--   Se o aplicativo nunca chama os métodos <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, o tempo de vida do objeto <xref:System.Net.HttpWebRequest> é ignorado.  
+- Se o aplicativo nunca chama os métodos <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, o tempo de vida do objeto <xref:System.Net.HttpWebRequest> é ignorado.  
   
--   Se o objeto <xref:System.Net.HttpWebRequest> gera uma <xref:System.Net.WebException> ao chamar os métodos <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.EndGetResponse%2A>, o tempo de vida termina quando a exceção é gerada. Tecnicamente, o fluxo de resposta subjacente também está fechado nesse momento (o fluxo de resposta retornado ao usuário é realmente um fluxo de memória contendo uma cópia do fluxo de resposta).  
+- Se o objeto <xref:System.Net.HttpWebRequest> gera uma <xref:System.Net.WebException> ao chamar os métodos <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.EndGetResponse%2A>, o tempo de vida termina quando a exceção é gerada. Tecnicamente, o fluxo de resposta subjacente também está fechado nesse momento (o fluxo de resposta retornado ao usuário é realmente um fluxo de memória contendo uma cópia do fluxo de resposta).  
   
  Há quatro contadores que acompanham certas emissões de objetos <xref:System.Net.HttpWebRequest> por intervalo. Esses contadores de desempenho podem ajudar os desenvolvedores de aplicativos, os administradores e a equipe de suporte a compreender melhor o que os objetos <xref:System.Net.HttpWebRequest> estão fazendo. Os contadores incluem o seguinte:  
   
--   **HttpWebRequests criadas/s**  
+- **HttpWebRequests criadas/s**  
   
--   **HttpWebRequests colocadas na fila/s**  
+- **HttpWebRequests colocadas na fila/s**  
   
--   **HttpWebRequests anuladas/s**  
+- **HttpWebRequests anuladas/s**  
   
--   **HttpWebRequests com falha/s**  
+- **HttpWebRequests com falha/s**  
   
  Para o contador **HttpWebRequests anuladas/s**, chamadas internas para <xref:System.Net.HttpWebRequest.Abort%2A> também são contadas. Essas chamadas internas são geralmente causadas por tempos limite que um aplicativo pode desejar medir.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Os contadores de desempenho de rede são listados em duas categorias:  
   
--   "Rede do .NET CLR" – os contadores de desempenho originais introduzidos no .NET Framework Versão 2 e com suporte no .NET Framework Versão 2 e versões posteriores.  
+- "Rede do .NET CLR" – os contadores de desempenho originais introduzidos no .NET Framework Versão 2 e com suporte no .NET Framework Versão 2 e versões posteriores.  
   
--   "Rede do .NET CLR 4.0.0.0" – todos os contadores de soquete acima mais os novos contadores de desempenho com suporte no .NET Framework Versão 4 e posteriores. Esses novos contadores fornecem informações de desempenho sobre objetos <xref:System.Net.HttpWebRequest>.  
+- "Rede do .NET CLR 4.0.0.0" – todos os contadores de soquete acima mais os novos contadores de desempenho com suporte no .NET Framework Versão 4 e posteriores. Esses novos contadores fornecem informações de desempenho sobre objetos <xref:System.Net.HttpWebRequest>.  
   
  Para obter mais informações sobre como acessar e gerenciar os contadores de desempenho em um aplicativo, consulte [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

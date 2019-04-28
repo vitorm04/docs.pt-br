@@ -1,5 +1,5 @@
 ---
-title: <shadowCopyVerifyByTimestamp> Elemento
+title: Elemento <shadowCopyVerifyByTimestamp>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
@@ -8,18 +8,18 @@ ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674006"
 ---
-# <a name="shadowcopyverifybytimestamp-element"></a>\<elemento shadowCopyVerifyByTimestamp > elemento
+# <a name="shadowcopyverifybytimestamp-element"></a>\<Elemento shadowCopyVerifyByTimestamp>
 Especifica se a cópia de sombra usa o comportamento de inicialização padrão introduzido no [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] ou reverte para o comportamento de inicialização de versões anteriores do .NET Framework.  
   
  \<Configuração > elemento  
 \<tempo de execução > elemento  
-\<elemento shadowCopyVerifyByTimestamp > elemento  
+\<Elemento shadowCopyVerifyByTimestamp>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,4 +71,4 @@ Especifica se a cópia de sombra usa o comportamento de inicialização padrão 
 
 - [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Criando cópias de sombra de assemblies](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+- [Cópias de sombra de assemblies](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

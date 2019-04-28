@@ -3,11 +3,11 @@ title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
 ms.openlocfilehash: b9ab4e8ca5a71d54a80d17322b61c83d41af2b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673583"
 ---
 # <a name="commonparameters"></a>\<commonParameters>
 Representa uma coleção de parâmetros que são usados globalmente em vários serviços. Esta coleção normalmente incluirão a cadeia de caracteres de conexão de banco de dados que pode ser compartilhada por serviços duráveis.  

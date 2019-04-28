@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
 ms.openlocfilehash: 0c9286ff65c84a8d20532fd119ecd335ad90ee7b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996561"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle de Tabela
 > [!NOTE]

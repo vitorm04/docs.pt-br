@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
 ms.openlocfilehash: 91ee4bf9242df822890b0a171061f375a3b24cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803864"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos
 Tipos de dados dos parâmetros de tipo não podem ser inferidos destes argumentos. Especificar os dados de tipo (s) explicitamente talvez corrija esse erro.  
@@ -55,7 +55,7 @@ End Interface
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Você poderá especificar um tipo de dados para o parâmetro de tipo ou os parâmetros em vez de depender de inferência de tipo.  
+- Você poderá especificar um tipo de dados para o parâmetro de tipo ou os parâmetros em vez de depender de inferência de tipo.  
   
 ## <a name="see-also"></a>Consulte também
 

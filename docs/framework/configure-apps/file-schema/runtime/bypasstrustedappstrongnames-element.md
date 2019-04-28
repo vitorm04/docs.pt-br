@@ -10,13 +10,13 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674201"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > elemento
+# <a name="bypasstrustedappstrongnames-element"></a>\<Elemento bypassTrustedAppStrongNames>
 Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em uma confiança total <xref:System.AppDomain>.  
   
  \<configuration>  
@@ -61,16 +61,16 @@ Especifica se deve ignorar a validação de nomes fortes em assemblies de confia
   
  O recurso de desvio se aplica a qualquer assembly que está assinado com um nome forte e que tem as seguintes características:  
   
--   Totalmente confiável sem a <xref:System.Security.Policy.StrongName> evidência (por exemplo, tem `MyComputer` evidência de zona).  
+- Totalmente confiável sem a <xref:System.Security.Policy.StrongName> evidência (por exemplo, tem `MyComputer` evidência de zona).  
   
--   Carregado em um <xref:System.AppDomain> totalmente confiável.  
+- Carregado em um <xref:System.AppDomain> totalmente confiável.  
   
--   Carregado de um local sob a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> desse <xref:System.AppDomain>.  
+- Carregado de um local sob a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> desse <xref:System.AppDomain>.  
   
--   Não assinado com atraso.  
+- Não assinado com atraso.  
   
 > [!NOTE]
->  Se o recurso de desvio tiver sido desativado para todos os aplicativos no computador usando uma chave do registro, esse arquivo de configuração não terá efeito. Para obter mais informações, confira [Como: Desabilitar o recurso de desvio de nome forte](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Se o recurso de desvio tiver sido desativado para todos os aplicativos no computador usando uma chave do registro, esse arquivo de configuração não terá efeito. Para obter mais informações, confira [Como: desabilitar a funcionalidade de bypass de nome forte](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar o comportamento que valida a assinatura de nome forte em assemblies de confiança total.  

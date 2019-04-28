@@ -3,11 +3,11 @@ title: Geração SQL
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
 ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879145"
 ---
 # <a name="sql-generation"></a>Geração SQL
 Quando você escreve um provedor para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], você deve converter árvores de comando de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] em SQL que um base de dados específico, pode compreender como Transact-SQL para SQL Server ou PL/SQL para Oracle. Nesta seção, você aprenderá como desenvolver um componente de geração SQL (para consultas SELECT) para um provedor de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] . Para obter informações sobre como inserir, atualizar e excluir consultas, consulte [geração SQL alteração](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  

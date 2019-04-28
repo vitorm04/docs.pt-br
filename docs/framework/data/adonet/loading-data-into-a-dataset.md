@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a53e5dc1-9669-49d4-828d-efa633237066
 ms.openlocfilehash: cb5578d790e5d3f54f75f964bb3288d861c9d7c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878534"
 ---
 # <a name="loading-data-into-a-dataset"></a>Carregando dados em um DataSet
 Um objeto <xref:System.Data.DataSet> deve ser populado primeiro para que você possa consultá-lo com o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Há várias maneiras diferentes de popular o <xref:System.Data.DataSet>. Por exemplo, você pode usar [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] para consultar o banco de dados e carregar os resultados para o <xref:System.Data.DataSet>. Para obter mais informações, consulte [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  

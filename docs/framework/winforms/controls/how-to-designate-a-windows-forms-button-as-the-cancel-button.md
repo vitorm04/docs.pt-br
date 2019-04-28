@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
 ms.openlocfilehash: 8170190145e76a86f5343bc42b39be7fb9d61a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010716"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>Como: Designar um botão do Windows Forms como o botão Cancelar
 Em qualquer formulário do Windows, você pode designar um <xref:System.Windows.Forms.Button> controle para ser o botão Cancelar. Um botão Cancelar é clicado sempre que o usuário pressiona a tecla ESC, independentemente de qual outro controle no formulário tem o foco. Geralmente, este botão é programado para permitir que o usuário sair rapidamente de uma operação sem se comprometer com qualquer ação.  

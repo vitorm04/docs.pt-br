@@ -3,11 +3,11 @@ title: <add> de <scopedCertificates> elemento
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
 ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673856"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<Adicionar > de \<scopedCertificates > elemento
 Adiciona um certificado X.509 à coleção de certificados de escopo.  

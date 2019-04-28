@@ -6,8 +6,8 @@ ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004920"
 ---
 # <a name="linq-message-query-correlation"></a>Correlação de consulta de mensagem LINQ
 Este exemplo demonstra como fazer correlação conteudo base que usa uma implementação personalizada de <xref:System.ServiceModel.Dispatcher.MessageQuery> diferentemente de sistema forneceu <xref:System.ServiceModel.XPathMessageQuery>.  
@@ -28,11 +28,11 @@ Este exemplo demonstra como fazer correlação conteudo base que usa uma impleme
   
 2. Uma vez que o URL ACLs é adicionado, use as seguintes etapas.  
   
-    1.  Compile a solução.  
+    1. Compile a solução.  
   
-    2.  Definir vários projetos de inicialização clicando duas vezes a solução e selecionando **definir projetos de inicialização**. Adicione **Service** e **cliente** (nessa ordem) como vários projetos de inicialização.  
+    2. Definir vários projetos de inicialização clicando duas vezes a solução e selecionando **definir projetos de inicialização**. Adicione **Service** e **cliente** (nessa ordem) como vários projetos de inicialização.  
   
-    3.  Execute o aplicativo. O console de cliente mostra um fluxo de trabalho que envia um pedido e que recebe a identificação de ordem de compra e então confirma posteriormente ordem. A janela de serviço (as solicitações que estão sendo processadas.  
+    3. Execute o aplicativo. O console de cliente mostra um fluxo de trabalho que envia um pedido e que recebe a identificação de ordem de compra e então confirma posteriormente ordem. A janela de serviço (as solicitações que estão sendo processadas.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

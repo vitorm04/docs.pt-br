@@ -20,11 +20,11 @@ helpviewer_keywords:
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
 ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906952"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Solucionando problemas de tipos de dados (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer quando você executa operações em tipos de dados intrínseco.  

@@ -3,11 +3,11 @@ title: Controlando a serialização e a desserialização sem SerializationBinde
 ms.date: 03/30/2017
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
 ms.openlocfilehash: cb2476b55a965e326e492c3c0b77f0be65b2b290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857253"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>Controlando a serialização e a desserialização sem SerializationBinder
 Durante a serialização, um formatador transmite as informações necessárias para criar uma instância de um objeto do tipo correto e a versão. Em geral, essas informações incluem o nome completo do tipo e o nome de assembly do objeto. Por padrão, a desserialização usa essas informações para criar uma instância de um objeto idêntico. Alguns usuários talvez seja necessário controlar qual classe serializar e desserializar, seja porque a classe original talvez não exista no computador executando a desserialização, a classe original foi movido entre assemblies ou uma versão diferente da classe é necessária no servidor e cliente. Para obter mais informações, consulte [uso de associador de serialização](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  

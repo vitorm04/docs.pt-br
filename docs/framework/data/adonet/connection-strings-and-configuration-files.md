@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880068"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
 Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.  

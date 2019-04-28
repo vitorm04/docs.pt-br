@@ -5,32 +5,32 @@ f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
 ms.openlocfilehash: c3f88a5a3c37c89d23055aa413957b2add38ed67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803461"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Erro no carregamento da DLL (Visual Basic)
 Uma biblioteca de vínculo dinâmico (DLL) é uma biblioteca especificada na `Lib` cláusula de um `Declare` instrução. Possíveis causas para esse erro incluem:  
   
--   O arquivo não é executável da DLL.  
+- O arquivo não é executável da DLL.  
   
--   O arquivo não é uma DLL do Microsoft Windows.  
+- O arquivo não é uma DLL do Microsoft Windows.  
   
--   A DLL faz referência a outro DLL que não está presente.  
+- A DLL faz referência a outro DLL que não está presente.  
   
--   A DLL ou DLL referenciada não está em um diretório especificado no caminho.  
+- A DLL ou DLL referenciada não está em um diretório especificado no caminho.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Se o arquivo for um arquivo de texto de origem e, portanto, não DLL executável, ele deve ser compilado e vinculado a um formulário de DLL executável.  
+- Se o arquivo for um arquivo de texto de origem e, portanto, não DLL executável, ele deve ser compilado e vinculado a um formulário de DLL executável.  
   
--   Se o arquivo não é uma DLL do Microsoft Windows, obtenha o Windows Microsoft equivalente.  
+- Se o arquivo não é uma DLL do Microsoft Windows, obtenha o Windows Microsoft equivalente.  
   
--   Se a DLL referências outro DLL que não está presente, obtenha a DLL de referência e disponibilizá-lo.  
+- Se a DLL referências outro DLL que não está presente, obtenha a DLL de referência e disponibilizá-lo.  
   
--   Se a DLL ou DLL referenciada não estiver em um diretório especificado pelo caminho, mova a DLL para um diretório referenciado.  
+- Se a DLL ou DLL referenciada não estiver em um diretório especificado pelo caminho, mova a DLL para um diretório referenciado.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910917"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Como: Criar um controle que tenha uma chave de acesso e disposição do texto
 Este exemplo mostra como criar um controle que tenha uma tecla de acesso e dê suporte à disposição do texto. O exemplo usa um <xref:System.Windows.Controls.Label> controle para ilustrar esses conceitos.  

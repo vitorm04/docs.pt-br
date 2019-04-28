@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861225"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#. 
@@ -451,15 +451,15 @@ class Compilation { /*...*/
   
  Um truque de desempenho comum é armazenar resultados em cache. Porém, um cache sem um limite de tamanho ou uma política de alienação pode causar perda de memória. Ao processar grandes volumes de dados, se mantiver muita memória em caches, você poderá fazer a coleta de lixo substituir os benefícios das pesquisas armazenadas em cache. 
   
- Neste artigo, abordamos como você deve dar atenção a sintomas de afunilamento de desempenho que possam afetar a capacidade de resposta do aplicativo, especialmente para sistemas grandes ou sistemas que processem um grande volume de dados. Entre os responsáveis mais comuns estão conversão boxing, manipulações da cadeia de caracteres, LINQ e lambda, cache em métodos assíncronos, cache sem um limite de tamanho ou uma política de alienação, uso incorreto de dicionários e passagem de estruturas. Lembre-se dos quatro fatos para ajustar os aplicativos:  
+ Neste artigo, abordamos como você deve dar atenção a sintomas de gargalo de desempenho que possam afetar a capacidade de resposta do aplicativo, especialmente para sistemas grandes ou sistemas que processem um grande volume de dados. Entre os responsáveis mais comuns estão conversão boxing, manipulações da cadeia de caracteres, LINQ e lambda, cache em métodos assíncronos, cache sem um limite de tamanho ou uma política de alienação, uso incorreto de dicionários e passagem de estruturas. Lembre-se dos quatro fatos para ajustar os aplicativos:  
   
--   Não otimize antes – seja produtivo e ajuste o aplicativo quando identificar problemas. 
+- Não otimize antes – seja produtivo e ajuste o aplicativo quando identificar problemas. 
   
--   Os perfis não mentem – você está adivinhando se não está medindo. 
+- Os perfis não mentem – você está adivinhando se não está medindo. 
   
--   As boas ferramentas fazem toda a diferença – baixe o PerfView e faça um teste. 
+- As boas ferramentas fazem toda a diferença – baixe o PerfView e faça um teste. 
   
--   É tudo uma questão de alocação – é onde a equipe da plataforma do compilador passa boa parte do tempo melhorando o desempenho dos novos compiladores. 
+- É tudo uma questão de alocação – é onde a equipe da plataforma do compilador passa boa parte do tempo melhorando o desempenho dos novos compiladores. 
   
 ## <a name="see-also"></a>Consulte também
 

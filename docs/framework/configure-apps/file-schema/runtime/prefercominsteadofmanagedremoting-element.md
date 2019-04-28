@@ -8,11 +8,11 @@ ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5b0a394500dbea0d557a33ea8d2e169c2c6561f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674019"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > elemento
 Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio de aplicativo.  
@@ -56,9 +56,9 @@ Especifica se o tempo de execução usará a interoperabilidade COM em vez de co
 ## <a name="remarks"></a>Comentários  
  Quando você define o `enabled` atributo `true`, o tempo de execução se comporta da seguinte maneira:  
   
--   O tempo de execução não chama [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface quando um [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface entra no domínio por meio de uma interface COM. Em vez disso, ele cria um [(Runtime Callable Wrapper)](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) em torno do objeto.  
+- O tempo de execução não chama [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface quando um [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface entra no domínio por meio de uma interface COM. Em vez disso, ele cria um [(Runtime Callable Wrapper)](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) em torno do objeto.  
   
--   O tempo de execução retorna E_NOINTERFACE quando ele recebe um `QueryInterface` chamar para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface para qualquer [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) que foi criado neste domínio.  
+- O tempo de execução retorna E_NOINTERFACE quando ele recebe um `QueryInterface` chamar para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface para qualquer [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) que foi criado neste domínio.  
   
  Esses dois comportamentos Certifique-se de que todas as chamadas sobre COM interfaces entre os objetos gerenciados entre o uso de limites de domínio do aplicativo COM e interoperabilidade de COM em vez de comunicação remota.  
   

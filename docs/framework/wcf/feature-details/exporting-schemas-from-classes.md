@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856659"
 ---
 # <a name="exporting-schemas-from-classes"></a>Exportando esquemas de classes
 Para gerar esquemas XSD (linguagem) de definição de esquema XML de classes que são usadas no modelo de contrato de dados, use o <xref:System.Runtime.Serialization.XsdDataContractExporter> classe. Este tópico descreve o processo de criação de esquemas.  
@@ -43,18 +43,18 @@ Para gerar esquemas XSD (linguagem) de definição de esquema XML de classes que
 ## <a name="export-options"></a>Opções de exportação  
  Você pode definir as <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> propriedade do <xref:System.Runtime.Serialization.XsdDataContractExporter> a uma instância da <xref:System.Runtime.Serialization.ExportOptions> classe para controlar vários aspectos do processo de exportação. Especificamente, você pode definir as seguintes opções:  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Esta coleção de `Type` representa os tipos conhecidos para os tipos que está sendo exportados. (Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Esses tipos conhecidos são exportados em cada `Export` chamar Além disso, para os tipos passados para o `Export` método.  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Esta coleção de `Type` representa os tipos conhecidos para os tipos que está sendo exportados. (Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Esses tipos conhecidos são exportados em cada `Export` chamar Além disso, para os tipos passados para o `Export` método.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> pode ser fornecido por meio dessa propriedade que deseja personalizar o processo de exportação. Para obter mais informações, consulte [substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> pode ser fornecido por meio dessa propriedade que deseja personalizar o processo de exportação. Para obter mais informações, consulte [substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
   
 ## <a name="helper-methods"></a>Métodos auxiliares  
  Além de sua função principal de exportação de esquema, o `XsdDataContractExporter` fornece vários métodos auxiliares úteis que fornecem informações sobre os tipos. Elas incluem:  
   
--   Método <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A>. Esse método usa um `Type` e retorna um <xref:System.Xml.XmlQualifiedName> que representa o nome do elemento raiz e o namespace que seria usado se esse tipo foi serializado como o objeto raiz.  
+- Método <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A>. Esse método usa um `Type` e retorna um <xref:System.Xml.XmlQualifiedName> que representa o nome do elemento raiz e o namespace que seria usado se esse tipo foi serializado como o objeto raiz.  
   
--   Método <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A>. Esse método usa um `Type` e retorna um <xref:System.Xml.XmlQualifiedName> que representa o nome do tipo de esquema XSD que seria usado se esse tipo foi exportado para o esquema. Para <xref:System.Xml.Serialization.IXmlSerializable> tipos representados como tipos anônimos no esquema, esse método retornará `null`.  
+- Método <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A>. Esse método usa um `Type` e retorna um <xref:System.Xml.XmlQualifiedName> que representa o nome do tipo de esquema XSD que seria usado se esse tipo foi exportado para o esquema. Para <xref:System.Xml.Serialization.IXmlSerializable> tipos representados como tipos anônimos no esquema, esse método retornará `null`.  
   
--   Método <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A>. Esse método funciona somente com <xref:System.Xml.Serialization.IXmlSerializable> tipos que são representados como tipos anônimos no esquema e retorna `null` para todos os outros tipos. Para tipos anônimos, este método retorna um <xref:System.Xml.Schema.XmlSchemaType> que representa um determinado `Type`.  
+- Método <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A>. Esse método funciona somente com <xref:System.Xml.Serialization.IXmlSerializable> tipos que são representados como tipos anônimos no esquema e retorna `null` para todos os outros tipos. Para tipos anônimos, este método retorna um <xref:System.Xml.Schema.XmlSchemaType> que representa um determinado `Type`.  
   
  Opções de exportação afetam todos esses métodos.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908122"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionando problemas de matrizes (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com matrizes.  
@@ -22,7 +22,7 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com ma
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Declarar e inicializar uma matriz de erros de compilação  
  Erros de compilação podem surgir de compreensão das regras para declarar, criando e inicializando matrizes. As causas mais comuns de erros são as seguintes:  
   
--   Fornecendo uma [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) cláusula depois de especificar os tamanhos da dimensão na declaração da variável de matriz. As linhas de código a seguir mostram inválidas declarações desse tipo.  
+- Fornecendo uma [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) cláusula depois de especificar os tamanhos da dimensão na declaração da variável de matriz. As linhas de código a seguir mostram inválidas declarações desse tipo.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com ma
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Especificando os comprimentos de dimensão por mais de uma matriz de nível superior de uma matriz denteada. A linha de código a seguir mostra uma declaração inválida desse tipo.  
+- Especificando os comprimentos de dimensão por mais de uma matriz de nível superior de uma matriz denteada. A linha de código a seguir mostra uma declaração inválida desse tipo.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   Omitindo o `New` palavra-chave ao especificar os valores de elemento. A linha de código a seguir mostra uma declaração inválida desse tipo.  
+- Omitindo o `New` palavra-chave ao especificar os valores de elemento. A linha de código a seguir mostra uma declaração inválida desse tipo.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Fornecendo uma `New` cláusula sem as chaves (`{}`). As linhas de código a seguir mostram inválidas declarações desse tipo.  
+- Fornecendo uma `New` cláusula sem as chaves (`{}`). As linhas de código a seguir mostram inválidas declarações desse tipo.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

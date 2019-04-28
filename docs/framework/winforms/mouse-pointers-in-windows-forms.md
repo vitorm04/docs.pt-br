@@ -10,11 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
 ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800760"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Ponteiros do mouse no Windows Forms
 O *ponteiro* do mouse, que às vezes é conhecido como o cursor, é um bitmap que especifica um ponto de foco na tela para entrada do usuário com o mouse. Este tópico fornece uma visão geral do ponteiro do mouse no Windows Forms e descreve algumas maneiras de modificar e controlar o ponteiro do mouse.  

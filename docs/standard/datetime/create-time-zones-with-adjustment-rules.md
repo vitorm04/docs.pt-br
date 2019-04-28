@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar fusos horários com regras de ajuste'
+title: 'Como: criar fusos horários com regras de ajuste'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901713"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Como: Criar fusos horários com regras de ajuste
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Como: criar fusos horários com regras de ajuste
 
 As informações precisas de fuso horário que são exigidas por um aplicativo não podem estar presentes em um determinado sistema por diversos motivos:
 

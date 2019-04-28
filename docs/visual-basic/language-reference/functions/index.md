@@ -6,17 +6,17 @@ helpviewer_keywords:
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
 ms.openlocfilehash: d76e02676d3921231b3fe4bf5cc1015540e6bafc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802512"
 ---
 # <a name="functions-visual-basic"></a>Funções (Visual Basic)
 Os tópicos nesta seção contêm tabelas das funções de membro de tempo de execução do Visual Basic.  
   
 > [!NOTE]
->  Você também pode criar funções e chamá-las. Para obter mais informações, consulte [instrução Function](../../../visual-basic/language-reference/statements/function-statement.md) e [Como criar um procedimento que retorna um valor](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+>  Você também pode criar funções e chamá-las. Para obter mais informações, consulte [instrução Function](../../../visual-basic/language-reference/statements/function-statement.md) e [como: Criar um procedimento que retorna um valor](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Funções de Conversão](../../../visual-basic/language-reference/functions/conversion-functions.md)  

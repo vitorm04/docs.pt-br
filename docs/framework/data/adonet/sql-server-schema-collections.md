@@ -3,11 +3,11 @@ title: Coleções de esquema do SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878447"
 ---
 # <a name="sql-server-schema-collections"></a>Coleções de esquema do SQL Server
 O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleções de esquema adicionais além das coleções de esquema comuns. As coleções de esquema variam ligeiramente conforme a versão do SQL Server que você está usando. Para determinar a lista de coleções de esquema com suporte, chame o **GetSchema** método sem argumentos ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam.  

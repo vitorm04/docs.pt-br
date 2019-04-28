@@ -3,11 +3,11 @@ title: Métodos de System.TimeSpan
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
 ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917430"
 ---
 # <a name="systemtimespan-methods"></a>Métodos de System.TimeSpan
 Suporte de membro para <xref:System.TimeSpan?displayProperty=nameWithType> depende das versões do .NET Framework e do Microsoft SQL Server que você está usando.  

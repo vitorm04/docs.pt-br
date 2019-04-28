@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
 ms.openlocfilehash: 9f78068597edb616017876c9c72b01d44111f6f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902818"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Evitar a adição e a exclusão de linha no controle DataGridView do Windows Forms usando o designer
 Às vezes, você desejará impedir que usuários insiram novas linhas de dados ou excluam linhas existentes em seu <xref:System.Windows.Forms.DataGridView> controle. Novas linhas são inseridas na linha especial para novos registros na parte inferior do controle. Quando você desabilitar a adição de linha, a linha para novos registros não será exibida. Em seguida, você pode deixar o controle totalmente somente leitura desabilitando a exclusão de linha e a edição de célula.  
@@ -21,7 +21,7 @@ ms.locfileid: "59220546"
   
 ### <a name="to-prevent-row-addition-and-deletion"></a>Para evitar a exclusão e adição de linha  
   
--   Clique no glifo de marca inteligente (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no canto superior direito dos <xref:System.Windows.Forms.DataGridView> controlar e, em seguida, desmarque o **habilitar inclusão** e **Enable Deleting** caixas de seleção.  
+- Clique no glifo de marca inteligente (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no canto superior direito dos <xref:System.Windows.Forms.DataGridView> controlar e, em seguida, desmarque o **habilitar inclusão** e **Enable Deleting** caixas de seleção.  
   
     > [!NOTE]
     >  Para tornar o controle somente leitura inteiramente, desmarque também a caixa de seleção **Habilitar Edição**.  

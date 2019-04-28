@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864696"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Como: Corresponder uma cadeia de caracteres com um padrão (Visual Basic)
 Se você quiser saber se uma expressão do [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfaz um padrão, em seguida, você pode usar o [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Para corresponder um caractere na expressão de cadeia de caracteres com um caractere específico  
   
--   Coloque o caractere específico diretamente na cadeia de caracteres padrão. Determinados caracteres especiais devem ser colocados entre colchetes (`[ ]`). Para obter mais informações, consulte [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Coloque o caractere específico diretamente na cadeia de caracteres padrão. Determinados caracteres especiais devem ser colocados entre colchetes (`[ ]`). Para obter mais informações, consulte [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      A exemplo a seguir testa se `myString` consiste exatamente o único caractere `H`.  
   
@@ -37,7 +37,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Para corresponder um caractere na expressão de cadeia de caracteres com um caractere curinga  
   
--   Coloque um ponto de interrogação (`?`) na cadeia de caracteres padrão. Qualquer caractere válido nessa posição é uma correspondência com êxito.  
+- Coloque um ponto de interrogação (`?`) na cadeia de caracteres padrão. Qualquer caractere válido nessa posição é uma correspondência com êxito.  
   
      A exemplo a seguir testa se `myString` consiste no caractere único `W` seguido por exatamente dois caracteres de todos os valores.  
   
@@ -45,7 +45,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Para corresponder um caractere na expressão de cadeia de caracteres em uma lista de caracteres  
   
--   Coloque colchetes (`[ ]`) na cadeia de caracteres padrão e dentro dos colchetes coloque a lista de caracteres. Não separe os caracteres com vírgulas ou qualquer outro separador. Qualquer caractere único na lista é uma correspondência com êxito.  
+- Coloque colchetes (`[ ]`) na cadeia de caracteres padrão e dentro dos colchetes coloque a lista de caracteres. Não separe os caracteres com vírgulas ou qualquer outro separador. Qualquer caractere único na lista é uma correspondência com êxito.  
   
      A exemplo a seguir testa se `myString` consiste em qualquer caractere válido seguido por exatamente um dos caracteres `A`, `C`, ou `E`.  
   
@@ -55,7 +55,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Para corresponder um caractere na expressão de cadeia de caracteres com um intervalo de caracteres  
   
--   Coloque colchetes (`[ ]`) na cadeia de caracteres padrão e dentro dos colchetes coloque os caracteres de menores e mais no intervalo, separados por um hífen (`–`). Qualquer caractere único dentro do intervalo é uma correspondência com êxito.  
+- Coloque colchetes (`[ ]`) na cadeia de caracteres padrão e dentro dos colchetes coloque os caracteres de menores e mais no intervalo, separados por um hífen (`–`). Qualquer caractere único dentro do intervalo é uma correspondência com êxito.  
   
      A exemplo a seguir testa se `myString` consiste em caracteres `num` seguidos por exatamente um dos caracteres `i`, `j`, `k`, `l`, `m`, ou `n`.  
   
