@@ -3,11 +3,11 @@ title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
 ms.openlocfilehash: 7d0afd638e9a311b69ff47b6789d5fde093945ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673518"
 ---
 # <a name="baseaddresses"></a>\<baseAddresses>
 Representa uma coleção de `baseAddress` elementos, que são os endereços base para um host de serviço em um ambiente auto-hospedado. Se um endereço base estiver presente, os pontos de extremidade podem ser configurados com endereços em relação ao endereço base.  

@@ -3,11 +3,11 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673323"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Especifica as configurações de pool de canal para uma associação personalizada.  
@@ -52,11 +52,11 @@ Especifica as configurações de pool de canal para uma associação personaliza
   
  `ChannelPoolSettings` Especifica as cotas de três:  
   
--   O `idleTimeout` cota é usada para reduzir os ataques de negação de serviço (DOS) no servidor que dependem de prender os recursos por um longo período de tempo. No cliente, definir o valor correto pode aumentar a confiabilidade de conexão com o serviço. O valor padrão se baseia em uma forma prudente modesta alocação de recursos. Ele é adequado para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
+- O `idleTimeout` cota é usada para reduzir os ataques de negação de serviço (DOS) no servidor que dependem de prender os recursos por um longo período de tempo. No cliente, definir o valor correto pode aumentar a confiabilidade de conexão com o serviço. O valor padrão se baseia em uma forma prudente modesta alocação de recursos. Ele é adequado para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
--   O `leaseTimeout` cota é usada para integração com os balanceadores de carga e aumentar a confiabilidade. O valor padrão se baseia em uma alocação conservadora de recursos. Ele é adequado para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
+- O `leaseTimeout` cota é usada para integração com os balanceadores de carga e aumentar a confiabilidade. O valor padrão se baseia em uma alocação conservadora de recursos. Ele é adequado para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
--   O `maxOutboundChannelsPerEndpoint` cota define limites de cache no servidor e o cliente e é usada para melhorar a confiabilidade. O valor padrão se baseia em uma forma prudente modesta alocação de recursos que é adequada para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
+- O `maxOutboundChannelsPerEndpoint` cota define limites de cache no servidor e o cliente e é usada para melhorar a confiabilidade. O valor padrão se baseia em uma forma prudente modesta alocação de recursos que é adequada para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
 ## <a name="see-also"></a>Consulte também
 
