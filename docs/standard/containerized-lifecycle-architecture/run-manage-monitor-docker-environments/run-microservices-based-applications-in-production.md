@@ -1,17 +1,17 @@
 ---
-title: Executar aplicativos compostos e baseados em microsserviços em ambientes de produção
+title: Executar aplicativos compostos e microsserviços em ambientes de produção
 description: Conheça os principais componentes para executar aplicativos baseados em contêiner na produção
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921583"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e baseados em microsserviços em ambientes de produção
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e microsserviços em ambientes de produção
 
 Aplicativos compostos por vários microsserviços precisam ser implantados em clusters do orchestrator para simplificar a complexidade de implantação e torná-lo viável de um ponto de vista de TI. Sem um cluster do orquestrador, seria difícil de implantar e dimensionar um aplicativo de microsserviços complexos.
 

@@ -3,11 +3,11 @@ title: 1031 - CompleteFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: 95f4ccb0-6be4-41f3-9330-fae43165828f
 ms.openlocfilehash: cdcbe516fc8ba7440b3d109a5e5cadc105ecee9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008792"
 ---
 # <a name="1031---completefaultworkitem"></a>1031 - CompleteFaultWorkItem
 ## <a name="properties"></a>Propriedades  

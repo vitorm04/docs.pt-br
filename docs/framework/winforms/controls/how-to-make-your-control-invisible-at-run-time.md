@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913699"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Como: Deixar o controle invisível em tempo de execução
 Há vezes em que você quer criar um controle de usuário invisível em tempo de execução. Por exemplo, um controle que é um relógio despertador pode ser invisível, exceto quando o alarme foi acionado. Isso é facilmente realizado configurando o <xref:System.Windows.Forms.Control.Visible%2A> propriedade. Se o <xref:System.Windows.Forms.Control.Visible%2A> é de propriedade `true`, o controle será exibido como normal. Se for `false`, o controle será ocultado. Embora o código em seu controle ainda possa ser executado enquanto invisível, você não poderá interagir com o controle por meio da interface do usuário. Se quiser criar um controle invisível que ainda responde à entrada do usuário (por exemplo, cliques de mouse), você deverá criar um controle transparente. Para obter mais informações, veja [Como dar ao controle de uma tela de fundo transparente](how-to-give-your-control-a-transparent-background.md).  

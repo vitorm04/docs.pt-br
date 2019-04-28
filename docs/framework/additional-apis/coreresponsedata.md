@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675410"
 ---
 # <a name="coreresponsedata-class"></a>Classe CoreResponseData
 
-O `CoreResponseData` classe representa a análise dos cabeçalhos HTTP e o corpo da resposta.
+O `CoreResponseData` classe representa a análise de cabeçalhos HTTP e o corpo da resposta.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,7 +28,7 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Essa API é interna e não é destinada a ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Consulte [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Essa API é interno, e ele não deve ser usado diretamente em seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Ver [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
 > Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
 
@@ -36,6 +36,6 @@ internal class CoreResponseData
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** sistema (em System. dll)
+**Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** disponível desde o 2.0.
+**Versões do .NET framework:** Disponível desde o 2.0.

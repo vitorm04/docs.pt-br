@@ -1,5 +1,5 @@
 ---
-title: Salvando e restaurando fusos horários
+title: Salvar e restaurar fusos horários
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,13 +20,13 @@ ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026517"
 ---
-# <a name="saving-and-restoring-time-zones"></a>Salvando e restaurando fusos horários
+# <a name="saving-and-restoring-time-zones"></a>Salvar e restaurar fusos horários
 
 O <xref:System.TimeZoneInfo> classe depende do registro para recuperar dados de fuso horário predefinido. No entanto, o registro é uma estrutura dinâmica. Além disso, as informações de fuso horário que contém o registro são usadas pelo sistema operacional, principalmente para lidar com conversões e ajustes de hora para o ano atual. Isso tem duas das maiores implicações para aplicativos que dependem de dados precisos de zona de tempo:
 

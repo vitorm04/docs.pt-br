@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996548"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Suporte da automação de interface do usuário para o tipo de controle Text
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103773"
   
  Um controle de texto pode ser usado sozinho, como um rótulo ou texto estático em um formulário. Ele também pode estar contido dentro da estrutura de r:  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  Controles de texto não podem estar em exibição de conteúdo a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] como texto geralmente é exibido por meio de árvore a `NameProperty` de outro controle. Por exemplo, o texto que é usado para rotular um controle de caixa de combinação é exposto por meio do controle `NameProperty` valor. Como o controle de caixa de combinação está na exibição de conteúdo da árvore de automação da interface do usuário, não é necessário para o controle de texto para estar lá. Controles de texto sempre têm 0 filho na exibição de conteúdo  
   

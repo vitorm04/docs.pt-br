@@ -1,17 +1,17 @@
 ---
-title: Compile serviços resilientes prontos para a nuvem. Adotar falhas transitórias na nuvem
-description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Compile serviços resilientes prontos para a nuvem. Adotar falhas transitórias na nuvem
+title: Compile serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Compile serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811821"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Compile serviços resilientes prontos para a nuvem: Adotar falhas transitórias na nuvem
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crie serviços resilientes prontos para a nuvem: adote as falhas transitórias na nuvem
 
 A resiliência é a capacidade de recuperar de falhas e continuar a funcionar. A resiliência não é sobre como evitar falhas, mas aceitar o fato de que as falhas ocorrerão e, em seguida, responder a elas de uma maneira que evite o tempo de inatividade ou perda de dados. A meta de resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
 
@@ -43,19 +43,19 @@ Para saber como implementar estratégias para tratar falhas parciais na nuvem, c
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Implementando comunicação resiliente para lidar com falhas parciais**
+- **Implementando comunicação resiliente para lidar com falhas parciais**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework conexão resiliência e lógica de repetição (versão 6 e posterior)**
+- **Entity Framework conexão resiliência e lógica de repetição (versão 6 e posterior)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **O Transient Fault Handling Application Block**
+- **O Transient Fault Handling Application Block**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Biblioteca Polly para comunicação resiliente de HTTP**
+- **Biblioteca Polly para comunicação resiliente de HTTP**
 
     https://github.com/App-vNext/Polly
 

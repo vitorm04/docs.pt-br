@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921102"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga com associação tardia não pode ser aplicada a '\<procedurename >' porque a instância de acesso é um tipo de interface
 O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência tem o tipo de dados de uma interface. O `Object` argumento força o compilador a resolver a referência de associação tardia.  
@@ -24,7 +24,7 @@ O compilador está tentando resolver uma referência a uma propriedade ou proced
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Use `CType` para lançar um argumento de `Object` para o tipo especificado pela assinatura da sobrecarga que você deseja chamar.  
+- Use `CType` para lançar um argumento de `Object` para o tipo especificado pela assinatura da sobrecarga que você deseja chamar.  
   
      Observe que ele não ajuda a converter o objeto que faz referência a interface subjacente. Você deve converter o argumento para evitar esse erro.  
   

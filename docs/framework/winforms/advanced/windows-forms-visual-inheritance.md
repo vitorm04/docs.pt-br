@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
 ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011860"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Herança visual dos Windows Forms
 Às vezes decidimos que um projeto precisa de um formulário semelhante a outro criado em um projeto anterior. Ou talvez queiramos criar um formulário básico, com configurações como marca-d'água ou determinado controle de layout que usaremos novamente em um projeto, com cada iteração contendo modificações ao modelo de formulário original. A herança de formulário permite criar um formulário base, herdar dele, fazer modificações e ao mesmo tempo preserva quaisquer configurações originais necessárias.  
