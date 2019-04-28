@@ -10,24 +10,24 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857162"
 ---
 # <a name="data-contract-known-types"></a>Tipos de contratos de dados conhecidos
 O <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que você especificar, com antecedência, os tipos que devem ser incluídos para consideração durante a desserialização. Para obter um exemplo de funcionamento, consulte o [tipos conhecidos de](../../../../docs/framework/wcf/samples/known-types.md) exemplo.  
   
  Normalmente, ao passar parâmetros e valores retornados entre um cliente e um serviço, ambos os pontos de extremidade compartilham todos os contratos de dados dos dados a serem transmitidos. No entanto, isso não for o caso nas seguintes circunstâncias:  
   
--   O contrato de dados enviados é derivado do contrato de dados esperado. Para obter mais informações, consulte a seção sobre a herança no [equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Nesse caso, os dados transmitidos não tem os mesmos dados conforme o esperado, o ponto de extremidade de recebimento do contrato.  
+- O contrato de dados enviados é derivado do contrato de dados esperado. Para obter mais informações, consulte a seção sobre a herança no [equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Nesse caso, os dados transmitidos não tem os mesmos dados conforme o esperado, o ponto de extremidade de recebimento do contrato.  
   
--   O tipo declarado para obter as informações a serem transmitidos é uma interface, em vez de uma classe, estrutura ou enumeração. Portanto, ele não pode ser conhecido com antecedência qual tipo que implementa a interface, na verdade, é enviada e, portanto, o ponto de extremidade de recebimento não pode determinar antecipadamente o contrato de dados para os dados transmitidos.  
+- O tipo declarado para obter as informações a serem transmitidos é uma interface, em vez de uma classe, estrutura ou enumeração. Portanto, ele não pode ser conhecido com antecedência qual tipo que implementa a interface, na verdade, é enviada e, portanto, o ponto de extremidade de recebimento não pode determinar antecipadamente o contrato de dados para os dados transmitidos.  
   
--   O tipo declarado para obter as informações a serem transmitidos é <xref:System.Object>. Como cada tipo herda de <xref:System.Object>e ele não pode ser conhecido com antecedência qual tipo realmente é enviado, o ponto de extremidade de recebimento não pode determinar antecipadamente o contrato de dados para os dados transmitidos. Esse é um caso especial do primeiro item: Cada contrato de dados é derivado do padrão, um contrato de dados em branco que é gerado para <xref:System.Object>.  
+- O tipo declarado para obter as informações a serem transmitidos é <xref:System.Object>. Como cada tipo herda de <xref:System.Object>e ele não pode ser conhecido com antecedência qual tipo realmente é enviado, o ponto de extremidade de recebimento não pode determinar antecipadamente o contrato de dados para os dados transmitidos. Esse é um caso especial do primeiro item: Cada contrato de dados é derivado do padrão, um contrato de dados em branco que é gerado para <xref:System.Object>.  
   
--   Alguns tipos, que incluem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipos, têm membros que estão em uma das três categorias acima. Por exemplo, <xref:System.Collections.Hashtable> usa <xref:System.Object> para armazenar os objetos reais na tabela de hash. Durante a serialização desses tipos, o lado de recebimento não pode determinar antecipadamente o contrato de dados para esses membros.  
+- Alguns tipos, que incluem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipos, têm membros que estão em uma das três categorias acima. Por exemplo, <xref:System.Collections.Hashtable> usa <xref:System.Object> para armazenar os objetos reais na tabela de hash. Durante a serialização desses tipos, o lado de recebimento não pode determinar antecipadamente o contrato de dados para esses membros.  
   
 ## <a name="the-knowntypeattribute-class"></a>A classe KnownTypeAttribute  
  Quando os dados chegam a um ponto de extremidade de recebimento, o tempo de execução do WCF tenta desserializar os dados para uma instância de um tipo do common language runtime (CLR). O tipo que é instanciado para desserialização é escolhido pelo primeiro inspecionando a mensagem de entrada para determinar os dados de contrato para que o conteúdo da mensagem está em conformidade com. O mecanismo de desserialização, em seguida, tenta encontrar um tipo CLR que implementa um contrato de dados compatível com o conteúdo da mensagem. O conjunto de tipos de candidato que permite o mecanismo de desserialização durante esse processo é chamado como conjunto do desserializador de "tipos conhecidos".  

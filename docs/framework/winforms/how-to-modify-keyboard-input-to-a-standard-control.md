@@ -11,18 +11,18 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
 ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802318"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Como: modificar a entrada do teclado para um controle padrão
 O Windows Forms fornece a capacidade de consumir e modificar as entradas do teclado. Consumir uma tecla significa tratá-la dentro de um método ou manipulador de eventos para que outros métodos e eventos mais adiante na fila de mensagens não recebam o valor da tecla. Modificar uma tecla significa modificar o valor de uma tecla para que os métodos e manipuladores de eventos mais adiante na fila de mensagens recebam um valor de tecla diferente. Este tópico mostra como realizar essas tarefas.  
   
 ### <a name="to-consume-a-key"></a>Consumir uma tecla  
   
--   Em um <xref:System.Windows.Forms.Control.KeyPress> manipulador de eventos, defina a <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> propriedade da <xref:System.Windows.Forms.KeyPressEventArgs> classe para `true`.  
+- Em um <xref:System.Windows.Forms.Control.KeyPress> manipulador de eventos, defina a <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> propriedade da <xref:System.Windows.Forms.KeyPressEventArgs> classe para `true`.  
   
      -ou-  
   
@@ -38,7 +38,7 @@ O Windows Forms fornece a capacidade de consumir e modificar as entradas do tecl
   
 ### <a name="to-modify-a-standard-character-key"></a>Modificar uma tecla de caractere padrão  
   
--   Em um <xref:System.Windows.Forms.Control.KeyPress> manipulador de eventos, defina a <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> propriedade do <xref:System.Windows.Forms.KeyPressEventArgs> classe para o valor da nova tecla de caractere.  
+- Em um <xref:System.Windows.Forms.Control.KeyPress> manipulador de eventos, defina a <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> propriedade do <xref:System.Windows.Forms.KeyPressEventArgs> classe para o valor da nova tecla de caractere.  
   
      O exemplo a seguir é um trecho de uma instrução `switch` que modifica “B” para “A” e “b” para “a”. Observe que o <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> propriedade do <xref:System.Windows.Forms.KeyPressEventArgs> parâmetro for definido como `false`, de modo que o novo valor de chave é propagado para outros métodos e eventos na fila de mensagens.  
   
@@ -47,7 +47,7 @@ O Windows Forms fornece a capacidade de consumir e modificar as entradas do tecl
   
 ### <a name="to-modify-a-noncharacter-key"></a>Modificar uma tecla não caractere  
   
--   Substituir uma <xref:System.Windows.Forms.Control> método que processa mensagens do Windows, detecte a mensagem WM_KEYDOWN ou WM_SYSKEYDOWN e defina o <xref:System.Windows.Forms.Message.WParam%2A> propriedade da <xref:System.Windows.Forms.Message> parâmetro para o <xref:System.Windows.Forms.Keys> valor que representa a nova tecla não caractere.  
+- Substituir uma <xref:System.Windows.Forms.Control> método que processa mensagens do Windows, detecte a mensagem WM_KEYDOWN ou WM_SYSKEYDOWN e defina o <xref:System.Windows.Forms.Message.WParam%2A> propriedade da <xref:System.Windows.Forms.Message> parâmetro para o <xref:System.Windows.Forms.Keys> valor que representa a nova tecla não caractere.  
   
      O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.Control.PreProcessMessage%2A> método de um controle para detectar as teclas F1 a F9 e modificar qualquer pressionamento de tecla F3 para F1. Para obter mais informações sobre <xref:System.Windows.Forms.Control> métodos que você pode substituir para interceptar mensagens de teclado, consulte [entrada do usuário em um aplicativo do Windows Forms](user-input-in-a-windows-forms-application.md) e [como funciona a entrada do teclado](how-keyboard-input-works.md).  
   
@@ -63,7 +63,7 @@ O Windows Forms fornece a capacidade de consumir e modificar as entradas do tecl
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
+- Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812018"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -39,13 +39,13 @@ Em contêineres do Windows, o processo de empacotamento de aplicativos é totalm
 
 Muitas organizações estão colocar em contêineres aplicativos monolíticos existentes pelos seguintes motivos:
 
--   **Versão maior agilidade por meio de implantação aprimoradas**. Os contêineres oferecem um contrato de implantação consistente entre o desenvolvimento e operações. Quando você usa contêineres, você não ouvirá os desenvolvedores dizem, "Funciona no meu computador, por que não em produção?" Pode dizer: "Ele é executado como um contêiner, ele será executado na produção." O aplicativo empacotado, com todas as suas dependências, pode ser executado em qualquer ambiente compatível com base em contêiner. Ela será executada da maneira que ele deve ser executado em todos os destinos de implantação (desenvolvimento, QA, preparo e produção). Contêineres eliminam a maioria dos fricções quando eles se movem de um estágio para o próximo, o que melhora significativamente a implantação, e você pode enviar mais rápido.
+- **Versão maior agilidade por meio de implantação aprimoradas**. Os contêineres oferecem um contrato de implantação consistente entre o desenvolvimento e operações. Quando você usa contêineres, você não ouvirá os desenvolvedores dizem, "Funciona no meu computador, por que não em produção?" Pode dizer: "Ele é executado como um contêiner, ele será executado na produção." O aplicativo empacotado, com todas as suas dependências, pode ser executado em qualquer ambiente compatível com base em contêiner. Ela será executada da maneira que ele deve ser executado em todos os destinos de implantação (desenvolvimento, QA, preparo e produção). Contêineres eliminam a maioria dos fricções quando eles se movem de um estágio para o próximo, o que melhora significativamente a implantação, e você pode enviar mais rápido.
 
--   **Reduções de custos**. Contêineres de levam a reduzir os custos, pela consolidação e a remoção de hardware existente ou de aplicativos em execução em uma densidade mais alta por unidade de hardware.
+- **Reduções de custos**. Contêineres de levam a reduzir os custos, pela consolidação e a remoção de hardware existente ou de aplicativos em execução em uma densidade mais alta por unidade de hardware.
 
--   **Portabilidade**. Contêineres são modulares e portátil. Contêineres do docker têm suporte em qualquer sistema operacional (Linux e Windows), em qualquer nuvem pública principais (Microsoft Azure, Amazon AWS, Google e IBM) e no local e privado ou ambientes de nuvem híbrida.
+- **Portabilidade**. Contêineres são modulares e portátil. Contêineres do docker têm suporte em qualquer sistema operacional (Linux e Windows), em qualquer nuvem pública principais (Microsoft Azure, Amazon AWS, Google e IBM) e no local e privado ou ambientes de nuvem híbrida.
 
--   **Controle**. Os contêineres oferecem um ambiente flexível e seguro que é controlado no nível do contêiner. Um contêiner pode ser protegido, isolado e limitado até mesmo, definindo políticas de restrição de execução no contêiner. Conforme detalhado na seção sobre contêineres do Windows, contêineres do Hyper-V e do Windows Server 2016 oferecem opções de suporte da empresa adicionais.
+- **Controle**. Os contêineres oferecem um ambiente flexível e seguro que é controlado no nível do contêiner. Um contêiner pode ser protegido, isolado e limitado até mesmo, definindo políticas de restrição de execução no contêiner. Conforme detalhado na seção sobre contêineres do Windows, contêineres do Hyper-V e do Windows Server 2016 oferecem opções de suporte da empresa adicionais.
 
 Aprimoramentos significativos na agilidade, portabilidade e controle acabar levam para reduções significativas nos custos ao usar contêineres para desenvolver e manter aplicativos.
 
@@ -123,15 +123,15 @@ Executar um contêiner no Windows, com ou sem o isolamento do Hyper-V é uma dec
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Documentação de contêineres do Windows**
+- **Documentação de contêineres do Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Conceitos básicos de contêineres do Windows**
+- **Conceitos básicos de contêineres do Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **Infográfico: A Microsoft e contêineres**
+- **Infográfico: A Microsoft e contêineres**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ No entanto, ao pensar sobre o ambiente de implantação de produção ou até me
 > **Figura 4-7.5.** O ecossistema de contêiner no Azure
 
 No ecossistema do contêiner no Azure, os seguintes produtos que dão suporte a contêineres que são considerados infraestrutura:
--   **Instâncias de contêiner do Azure (ACI)**
--   **Máquinas virtuais do Azure** (com suporte do contêiner)
--   **Conjuntos de dimensionamento de máquina Virtual do Azure** (com suporte do contêiner)
+- **Instâncias de contêiner do Azure (ACI)**
+- **Máquinas virtuais do Azure** (com suporte do contêiner)
+- **Conjuntos de dimensionamento de máquina Virtual do Azure** (com suporte do contêiner)
 
 De um desses três, a ACI oferece um grande benefício é o fato de que você não precisa manter o sistema operacional subjacente, você não precisa atualizar/aplicar patch, etc., mas ainda ACI é posicionado no nível de infraestrutura, como melhor explicado nas próximas seções deste livro.
 
 Os produtos em contêineres de suporte do Azure que estão ao mesmo tempo mais posicionado na PaaS (plataforma como serviço) níveis são:
 
--   **Serviço de Aplicativo do Azure**
--   **Serviço Kubernetes do Azure (AKS e ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Serviço de Aplicativo do Azure**
+- **Serviço Kubernetes do Azure (AKS e ACS)**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 Em seguida, o registro de contêiner do Azure é um registro de contêiner escalonável alta hospedado no Azure que você pode usar de todos os produtos anteriores durante o registro e implantar suas imagens de contêiner personalizado.
 

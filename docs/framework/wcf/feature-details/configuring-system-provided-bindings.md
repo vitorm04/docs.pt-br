@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857409"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurando associações fornecidas pelo sistema
 As associações especificam o mecanismo de comunicação a ser usado ao se comunicar com um ponto de extremidade e indicam como se conectar a um ponto de extremidade. Associações consistem em elementos que definem como os canais do Windows Communication Foundation (WCF) são camados para fornecer os recursos de comunicação necessária. Uma associação contém três tipos de elementos:  
   
--   Elementos de associação de canal do protocolo, que determinam a segurança, confiabilidade, as configurações de fluxo do contexto ou protocolos definidos pelo usuário para usar com as mensagens que são enviadas para o ponto de extremidade.  
+- Elementos de associação de canal do protocolo, que determinam a segurança, confiabilidade, as configurações de fluxo do contexto ou protocolos definidos pelo usuário para usar com as mensagens que são enviadas para o ponto de extremidade.  
   
--   Elementos de associação de canal, que determinam o protocolo de transporte subjacente para usar ao enviar mensagens para o ponto de extremidade, por exemplo, TCP ou HTTP de transporte.  
+- Elementos de associação de canal, que determinam o protocolo de transporte subjacente para usar ao enviar mensagens para o ponto de extremidade, por exemplo, TCP ou HTTP de transporte.  
   
--   Mensagem que codifica elementos de associação, que determinam a transmissão codificação usada para mensagens que são enviadas para o ponto de extremidade, por exemplo, text/XML, binário, ou MTOM Message Transmission Optimization Mechanism ().  
+- Mensagem que codifica elementos de associação, que determinam a transmissão codificação usada para mensagens que são enviadas para o ponto de extremidade, por exemplo, text/XML, binário, ou MTOM Message Transmission Optimization Mechanism ().  
   
  Este tópico apresenta todas as associações fornecidas pelo sistema do Windows Communication Foundation (WCF). Se nenhuma delas atender os requisitos exatos para seu aplicativo, você pode criar uma associação usando o <xref:System.ServiceModel.Channels.CustomBinding> classe. Para obter mais informações sobre como criar associações personalizadas, confira [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

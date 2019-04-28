@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867127"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: Como os objetos são criados e destruídos (Visual Basic)
 Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos denominados *construtores* (métodos especiais que permitem o controle sobre a inicialização).  
@@ -84,13 +84,13 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
 ### <a name="implementing-idisposable"></a>Implementando IDisposable  
  Uma classe que implementa a interface <xref:System.IDisposable> deve incluir essas seções de código:  
   
--   Um campo para controlar se o objeto foi descartado:  
+- Um campo para controlar se o objeto foi descartado:  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Uma sobrecarga de <xref:System.IDisposable.Dispose%2A> que libera recursos da classe. Esse método deve ser chamado pelos métodos <xref:System.IDisposable.Dispose%2A> e `Finalize` da classe base:  
+- Uma sobrecarga de <xref:System.IDisposable.Dispose%2A> que libera recursos da classe. Esse método deve ser chamado pelos métodos <xref:System.IDisposable.Dispose%2A> e `Finalize` da classe base:  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
     End Sub  
     ```  
   
--   Uma implementação de <xref:System.IDisposable.Dispose%2A> que contém apenas o código a seguir:  
+- Uma implementação de <xref:System.IDisposable.Dispose%2A> que contém apenas o código a seguir:  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
     End Sub  
     ```  
   
--   Uma substituição do método `Finalize` que contém apenas o código a seguir:  
+- Uma substituição do método `Finalize` que contém apenas o código a seguir:  
   
     ```  
     Protected Overrides Sub Finalize()  

@@ -3,11 +3,11 @@ title: Visão geral do modelo de fábrica
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
 ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879093"
 ---
 # <a name="factory-model-overview"></a>Visão geral do modelo de fábrica
 O ADO.NET 2.0 introduziu novas classes de base no <xref:System.Data.Common> namespace. As classes base são abstratas, o que significa que eles não podem ser instanciados diretamente. Eles incluem <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, e <xref:System.Data.Common.DbDataAdapter> e são compartilhadas por provedores de dados do .NET Framework, como <xref:System.Data.SqlClient> e <xref:System.Data.OleDb>. A adição de classes base simplifica a adição da funcionalidade para os provedores de dados .NET Framework sem ter que criar novas interfaces.  

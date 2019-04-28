@@ -3,20 +3,20 @@ title: Sequências da Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878443"
 ---
 # <a name="oracle-sequences"></a>Sequências da Oracle
 O provedor de dados .NET Framework para Oracle fornece suporte para recuperar os principais valores do Oracle Sequence gerados pelo servidor depois de executar inserções usando o <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
  O SQL Server e a Oracle dão suporte à criação de incrementar automaticamente as colunas que podem ser designadas como chaves primárias. Esses valores gerados pelo servidor como linhas são adicionados a uma tabela. No SQL Server, você define a propriedade Identity de uma coluna; no Oracle, você cria uma Sequence. A diferença entre colunas incrementar automaticamente colunas no SQL Server e sequências no Oracle é que:  
   
--   No SQL Server, você marca uma coluna como uma coluna de incremento automático e o SQL Server automaticamente gera novos valores para a coluna quando você insere uma nova linha.  
+- No SQL Server, você marca uma coluna como uma coluna de incremento automático e o SQL Server automaticamente gera novos valores para a coluna quando você insere uma nova linha.  
   
--   No Oracle, você cria uma sequência para gerar novos valores para uma coluna na tabela, mas não há nenhum link direto entre a sequência e a tabela ou coluna. Uma sequência do Oracle é um objeto, como uma tabela ou procedimento armazenado.  
+- No Oracle, você cria uma sequência para gerar novos valores para uma coluna na tabela, mas não há nenhum link direto entre a sequência e a tabela ou coluna. Uma sequência do Oracle é um objeto, como uma tabela ou procedimento armazenado.  
   
  Quando você cria uma sequência em um banco de dados Oracle, pode definir seu valor inicial e o incremento entre seus valores. Você também pode consultar a sequência para novos valores antes de enviar novas linhas. Isso significa que seu código pode reconhecer os principais valores para novas linhas antes de inseri-los no banco de dados.  
   

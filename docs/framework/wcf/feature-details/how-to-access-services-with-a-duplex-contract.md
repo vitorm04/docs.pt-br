@@ -8,11 +8,11 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
 ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855134"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Como: Serviços do Access com um contrato duplex
 
@@ -26,7 +26,7 @@ Para obter um tutorial sobre como criar um serviço WCF básico e um cliente, co
 
 1. Crie um serviço que contém duas interfaces. A primeira interface é para o serviço, a segunda é para o retorno de chamada. Para obter mais informações sobre como criar um serviço duplex, consulte [como: Criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
 
-2. Execute o serviço.
+2. Executar o serviço.
 
 3. Use o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar contratos (interfaces) para o cliente. Para obter informações sobre como fazer isso, consulte [como: Criar um cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
 

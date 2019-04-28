@@ -3,11 +3,11 @@ title: Métodos de System.String
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
 ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876649"
 ---
 # <a name="systemstring-methods"></a>Métodos de System.String
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte aos seguintes métodos de <xref:System.String> .  
@@ -15,9 +15,9 @@ ms.locfileid: "59160492"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Métodos sem suporte de System.String em geral  
  Métodos sem suporte de <xref:System.String> geralmente:  
   
--   Sobrecargas de reconhecimento de cultura (métodos que usam um `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Sobrecargas de reconhecimento de cultura (métodos que usam um `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
   
--   Métodos que usam ou gerenciar uma matriz de `char` .  
+- Métodos que usam ou gerenciar uma matriz de `char` .  
   
 ## <a name="unsupported-systemstring-static-methods"></a>Métodos sem suporte estático de System.String  
   
@@ -47,13 +47,13 @@ ms.locfileid: "59160492"
   
 ## <a name="differences-from-net"></a>Diferenças do .NET  
   
--   Consultas não esclarecem as ordenações do SQL Server que podem ser aplicadas no servidor, e portanto fornecerão comparações que levam confidenciais, sem diferenciação de maiúsculas e minúsculas por padrão. Esse comportamento difere de opção, semântica maiúsculas de minúsculas do .NET Framework.  
+- Consultas não esclarecem as ordenações do SQL Server que podem ser aplicadas no servidor, e portanto fornecerão comparações que levam confidenciais, sem diferenciação de maiúsculas e minúsculas por padrão. Esse comportamento difere de opção, semântica maiúsculas de minúsculas do .NET Framework.  
   
--   Quando `LastIndexOf` retorna 0, a cadeia de caracteres é `NULL` ou posição encontrada é 0.  
+- Quando `LastIndexOf` retorna 0, a cadeia de caracteres é `NULL` ou posição encontrada é 0.  
   
--   Os resultados inesperados podem ser retornados de concatenação ou outras operações em cadeias de caracteres de comprimento fixo (`CHAR`, `NCHAR`), porque esses tipos têm automaticamente o preenchimento aplicado ao base de dados.  
+- Os resultados inesperados podem ser retornados de concatenação ou outras operações em cadeias de caracteres de comprimento fixo (`CHAR`, `NCHAR`), porque esses tipos têm automaticamente o preenchimento aplicado ao base de dados.  
   
--   Porque muitos métodos, como `Replace`, `ToLower`, `ToUpper`, e o indexador de caracteres, não têm nenhuma conversão válido para `TEXT` ou colunas e XML de `NTEXT` , `SqlExceptions` ocorre se traduzido normalmente. Esse comportamento é considerado aceitável para esses tipos. No entanto, todas as operações de cadeia de caracteres devem corresponder a semântica do Common Language Runtime (CLR) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, e `NVARCHAR(max)`.  
+- Porque muitos métodos, como `Replace`, `ToLower`, `ToUpper`, e o indexador de caracteres, não têm nenhuma conversão válido para `TEXT` ou colunas e XML de `NTEXT` , `SqlExceptions` ocorre se traduzido normalmente. Esse comportamento é considerado aceitável para esses tipos. No entanto, todas as operações de cadeia de caracteres devem corresponder a semântica do Common Language Runtime (CLR) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, e `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Consulte também
 

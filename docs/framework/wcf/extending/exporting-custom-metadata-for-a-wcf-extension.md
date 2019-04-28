@@ -3,11 +3,11 @@ title: Exportando metadados personalizados para uma extensão do WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857955"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportando metadados personalizados para uma extensão do WCF
 No Windows Communication Foundation (WCF), a exportação de metadados é o processo de descrever os pontos de extremidade de serviço e Projetando-os em uma representação paralela e padronizada que os clientes podem usar para entender como usar o serviço. Metadados personalizados consistem em elementos XML que o Exportadores de metadados fornecidos pelo sistema não é possível exportar. Normalmente, isso inclui elementos WSDL personalizados para comportamentos definidos pelo usuário e elementos de associação e declarações de política sobre os recursos e requisitos de associações e contratos.  
@@ -28,9 +28,9 @@ No Windows Communication Foundation (WCF), a exportação de metadados é o proc
 ## <a name="exporting-custom-wsdl-elements"></a>Exportando elementos WSDL personalizado  
  Implementar o <xref:System.ServiceModel.Description.IWsdlExportExtension> em um comportamento da operação, o comportamento de contrato, o comportamento de ponto de extremidade ou o elemento de associação (<xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>, ou <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> , respectivamente) e insira o comportamentos ou elementos de associação para o Descrição do serviço que você está tentando exportar. (Para obter mais informações sobre a inserção de comportamentos, consulte [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)). O <xref:System.ServiceModel.Description.IWsdlExportExtension> é chamado para cada ponto de extremidade e cada ponto de extremidade exporta o contrato primeiro se ele já não foi exportado. Você pode participar de qualquer processo de exportação, dependendo das suas necessidades:  
   
--   Use o <xref:System.ServiceModel.Description.WsdlContractConversionContext> para modificar os metadados exportados no <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> método.  
+- Use o <xref:System.ServiceModel.Description.WsdlContractConversionContext> para modificar os metadados exportados no <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> método.  
   
--   Use o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> para modificar os metadados exportados para o ponto de extremidade no <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> método.  
+- Use o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> para modificar os metadados exportados para o ponto de extremidade no <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> método.  
   
  O <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> método é chamado em todos os <xref:System.ServiceModel.Description.IWsdlExportExtension> implementações dentro de <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> instância que está sendo exportada.  O <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> método é chamado em todos os <xref:System.ServiceModel.Description.IWsdlExportExtension> implementações com o <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> instância que está sendo exportada.  
   

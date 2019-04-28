@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
 ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802603"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Expressão é um valor e, por isso, não pode ser o destino de uma atribuição
 Uma declaração tenta atribuir um valor a uma expressão. Você pode atribuir um valor apenas para uma variável gravável, propriedade ou elemento de matriz no tempo de execução. O exemplo a seguir ilustra como esse erro pode ocorrer.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Se a instrução atribui um valor a uma expressão, substitua a expressão com uma única variável gravável, propriedade ou elemento da matriz.  
+- Se a instrução atribui um valor a uma expressão, substitua a expressão com uma única variável gravável, propriedade ou elemento da matriz.  
   
--   Se a instrução faz acesso indireto por meio de um tipo de valor (normalmente, uma estrutura), crie uma variável para conter o tipo de valor.  
+- Se a instrução faz acesso indireto por meio de um tipo de valor (normalmente, uma estrutura), crie uma variável para conter o tipo de valor.  
   
--   Atribua a estrutura apropriada (ou outro tipo de valor) à variável.  
+- Atribua a estrutura apropriada (ou outro tipo de valor) à variável.  
   
--   Use a variável para acessar a propriedade para atribuir a ele um valor.  
+- Use a variável para acessar a propriedade para atribuir a ele um valor.  
   
 ## <a name="see-also"></a>Consulte também
 

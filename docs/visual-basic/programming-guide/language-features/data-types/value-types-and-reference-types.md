@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869655"
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor e referência
 No Visual Basic, os tipos de dados são implementados com base em sua classificação. Os tipos de dados do Visual Basic podem ser classificados de acordo com se uma variável de um determinado tipo armazena seus próprios dados ou um ponteiro para os dados. Se ela armazena seus próprios dados é um *tipo de valor*; se ele contém um ponteiro para dados em outro lugar na memória é um *tipo de referência*.  
@@ -23,13 +23,13 @@ No Visual Basic, os tipos de dados são implementados com base em sua classifica
 ## <a name="value-types"></a>Tipos de valor  
  Um tipo de dados é um *tipo de valor* se ele contém os dados dentro de sua própria alocação de memória. Tipos de valor incluem o seguinte:  
   
--   Todos os tipos de dados numéricos  
+- Todos os tipos de dados numéricos  
   
--   `Boolean`, `Char` e `Date`  
+- `Boolean`, `Char` e `Date`  
   
--   Todas as estruturas, mesmo se seus membros são tipos de referência  
+- Todas as estruturas, mesmo se seus membros são tipos de referência  
   
--   Enumerações, pois seu tipo subjacente é sempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou `ULong`  
+- Enumerações, pois seu tipo subjacente é sempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou `ULong`  
   
  Cada estrutura é um tipo de valor, mesmo que ele contenha membros de tipo de referência. Por esse motivo, tipos de valor, tal como `Char` e `Integer` são implementados por estruturas do .NET Framework.  
   
@@ -38,13 +38,13 @@ No Visual Basic, os tipos de dados são implementados com base em sua classifica
 ## <a name="reference-types"></a>Tipos de referência  
  Um *tipo de referência* contém um ponteiro para outro local da memória que contém os dados. Tipos de referência incluem o seguinte:  
   
--   `String`  
+- `String`  
   
--   Todas as matrizes, mesmo se seus elementos são tipos de valor  
+- Todas as matrizes, mesmo se seus elementos são tipos de valor  
   
--   Tipos de classe, como <xref:System.Windows.Forms.Form>  
+- Tipos de classe, como <xref:System.Windows.Forms.Form>  
   
--   Delegados  
+- Delegados  
   
  Uma classe é um *tipo de referência*. Por esse motivo, tipos de referência, como `Object` e `String` são compatíveis com [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes. Observe que cada matriz é um tipo de referência, mesmo se seus membros são tipos de valor.  
   
@@ -57,15 +57,15 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="elements-that-are-not-types"></a>Elementos que não são de tipos  
  Os seguintes elementos de programação não se qualificam como tipos, porque você não pode especificar qualquer um deles como um tipo de dados para um elemento declarado:  
   
--   Namespaces  
+- Namespaces  
   
--   Módulos  
+- Módulos  
   
--   Eventos  
+- Eventos  
   
--   Propriedades e procedimentos  
+- Propriedades e procedimentos  
   
--   Variáveis, constantes e campos  
+- Variáveis, constantes e campos  
   
 ## <a name="working-with-the-object-data-type"></a>Trabalhando com o tipo de dados de objeto  
  Você pode atribuir um tipo de referência ou um tipo de valor a uma variável do `Object` tipo de dados. Um `Object` variável sempre contém um ponteiro para os dados, nunca os dados em si. No entanto, se você atribuir um tipo de valor para um `Object` variável, ele se comporta como se ele contém seus próprios dados. Para obter mais informações, consulte [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md).  

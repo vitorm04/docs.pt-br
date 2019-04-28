@@ -3,11 +3,11 @@ title: Configurando WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
 ms.openlocfilehash: dcfc22c1c0084761039a876eec7bf00cf78b51a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857383"
 ---
 # <a name="configuring-workflowservicehost"></a>Configurando WorkflowServiceHost
 Esta seção contém um conjunto de curto "como" tópicos que descrevem brevemente como configurar diferentes recursos do <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe na configuração. Esses tópicos abordam a configuração específica do serviço de fluxo de trabalho, todas as demais configurações é feita da mesma forma como um serviço WCF normal.  

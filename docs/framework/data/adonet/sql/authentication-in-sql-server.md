@@ -3,18 +3,18 @@ title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879002"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.  
   
--   Autenticação do Windows é o padrão e é conhecida como segurança integrada porque esse modelo de segurança do SQL Server está totalmente integrado ao Windows. As contas de usuário e grupos específicas do Windows são confiáveis para fazer logon no SQL Server. Os usuários do Windows que tiverem sido autenticados não precisam apresentar credenciais adicionais.  
+- Autenticação do Windows é o padrão e é conhecida como segurança integrada porque esse modelo de segurança do SQL Server está totalmente integrado ao Windows. As contas de usuário e grupos específicas do Windows são confiáveis para fazer logon no SQL Server. Os usuários do Windows que tiverem sido autenticados não precisam apresentar credenciais adicionais.  
   
--   Modo misto oferece suporte à autenticação pelo Windows e pelo SQL Server. Os pares de nome e senha do usuário são mantidos dentro do SQL Server.  
+- Modo misto oferece suporte à autenticação pelo Windows e pelo SQL Server. Os pares de nome e senha do usuário são mantidos dentro do SQL Server.  
   
 > [!IMPORTANT]
 >  Recomendamos usar a autenticação do Windows sempre que for possível. Autenticação do Windows usa uma série de mensagens criptografadas para autenticar usuários no SQL Server. Quando são usados logons do SQL Server, nomes de logon do SQL Server e as senhas criptografadas são passadas pela rede, o que torna menos seguros.  
@@ -31,19 +31,19 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
 ## <a name="authentication-scenarios"></a>Cenários de autenticação  
  A autenticação do Windows geralmente é a melhor escolha nas seguintes situações:  
   
--   Há um controlador de domínio.  
+- Há um controlador de domínio.  
   
--   O aplicativo e o banco de dados estão no mesmo computador.  
+- O aplicativo e o banco de dados estão no mesmo computador.  
   
--   Você está usando uma instância do SQL Server Express ou LocalDB.  
+- Você está usando uma instância do SQL Server Express ou LocalDB.  
   
  Os logons do SQL Server são geralmente usados nas seguintes situações:  
   
--   Se você tiver um grupo de trabalho.  
+- Se você tiver um grupo de trabalho.  
   
--   Os usuários se conectam de domínios diferentes e não confiáveis.  
+- Os usuários se conectam de domínios diferentes e não confiáveis.  
   
--   Aplicativos de Internet, como [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Aplicativos de Internet, como [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  Especifica autenticação do Windows não desabilita os logons do SQL Server. Use o ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrução para desabilitar os logons do SQL Server altamente privilegiados.  
@@ -51,11 +51,11 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
 ## <a name="login-types"></a>Tipos de logon  
  SQL Server dá suporte a três tipos de logons:  
   
--   Uma conta de usuário local do Windows ou uma conta de domínio confiável. SQL Server se baseia em Windows para autenticar as contas de usuário do Windows.  
+- Uma conta de usuário local do Windows ou uma conta de domínio confiável. SQL Server se baseia em Windows para autenticar as contas de usuário do Windows.  
   
--   Grupo do Windows. Conceder acesso a um grupo do Windows concede acesso a todos os logons de usuário do Windows que são membros do grupo.  
+- Grupo do Windows. Conceder acesso a um grupo do Windows concede acesso a todos os logons de usuário do Windows que são membros do grupo.  
   
--   Logon do SQL Server. SQL Server armazena o nome de usuário e um hash da senha no banco de dados mestre, usando métodos de autenticação interna para verificar as tentativas de logon.  
+- Logon do SQL Server. SQL Server armazena o nome de usuário e um hash da senha no banco de dados mestre, usando métodos de autenticação interna para verificar as tentativas de logon.  
   
 > [!NOTE]
 >  O SQL Server fornece os logons criados de certificados ou chaves assimétricas que são usadas apenas para assinatura de código. Eles não podem ser usados para se conectar ao SQL Server.  

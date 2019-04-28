@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
 ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801641"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>O atributo 'Extension' pode ser aplicado apenas às declarações 'Module', 'Sub' ou 'Function'
 A única maneira de estender um tipo de dados no Visual Basic é definir um método de extensão dentro de um módulo padrão. O método de extensão pode ser um `Sub` procedimento ou uma `Function` procedimento. Todos os métodos de extensão devem ser marcados com o atributo de extensão `<Extension()>`, da <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace. Opcionalmente, um módulo que contém um método de extensão pode ser marcado da mesma maneira. Nenhum outro uso do atributo de extensão é válido.  
@@ -21,9 +21,9 @@ A única maneira de estender um tipo de dados no Visual Basic é definir um mét
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova o atributo de extensão.  
+- Remova o atributo de extensão.  
   
--   Reprojetar sua extensão como um método, definido no módulo delimitador.  
+- Reprojetar sua extensão como um método, definido no módulo delimitador.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir define uma `Print` método para o `String` tipo de dados.  
