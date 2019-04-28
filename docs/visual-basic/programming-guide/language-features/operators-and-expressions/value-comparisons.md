@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
 ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864384"
 ---
 # <a name="value-comparisons-visual-basic"></a>Comparações de valor (Visual Basic)
 Operadores de comparação podem ser usados para construir expressões que comparam os valores das variáveis numéricas. Essas expressões retornam um `Boolean` valor com base em se a comparação for true ou false. Estes são exemplos de uma expressão.  

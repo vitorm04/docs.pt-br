@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877741"
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para manipular as informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora, e tipos de dados expandidos com maior intervalo, precisão e reconhecimento de fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -51,13 +51,13 @@ O SQL Server 2008 apresenta novos tipos de dados para manipular as informações
 ## <a name="datetime-data-types-and-parameters"></a>Parâmetros e tipos de dados de data/hora  
  As seguintes enumerações foram adicionadas ao <xref:System.Data.SqlDbType> para oferecer suporte aos novos tipos de dados de data e hora.  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlParameter> usando um dos anteriores <xref:System.Data.SqlDbType> enumerações. 
 
@@ -66,9 +66,9 @@ Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlPara
 
  Você também pode especificar o tipo de um <xref:System.Data.SqlClient.SqlParameter> genericamente definindo a propriedade <xref:System.Data.SqlClient.SqlParameter.DbType%2A> de um objeto `SqlParameter` para um valor de enumeração específico de <xref:System.Data.DbType>. Os seguintes valores de enumeração foram adicionados ao <xref:System.Data.DbType> para dar suporte aos tipos de dados `datetime2` e `datetimeoffset`:  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  Essas novas enumerações suplementam as enumerações `Date`, `Time` e `DateTime`, que existiam em versões anteriores do .NET Framework.  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>Especificando valores de data e hora como literais  
  Você pode especificar tipos de dados de data e hora usando uma variedade de formatos diferentes de cadeia de caracteres literal, que o SQL Server em seguida avalia em tempo de execução, convertendo-os para as estruturas internas de data/hora. O SQL Server reconhece os dados de data e hora que estão incluídos entre aspas simples ('). Os seguintes exemplos demonstram alguns formatos:  
   
--   Formatos de data alfabéticos, como `'October 15, 2006'`.  
+- Formatos de data alfabéticos, como `'October 15, 2006'`.  
   
--   Formatos de data numéricos, como `'10/15/2006'`.  
+- Formatos de data numéricos, como `'10/15/2006'`.  
   
--   Formatos de cadeia de caracteres não separadas, como `'20061015'`, que poderiam ser interpretados como 15 de outubro de 2006 se você estivesse usando o formato de data padrão ISO.  
+- Formatos de cadeia de caracteres não separadas, como `'20061015'`, que poderiam ser interpretados como 15 de outubro de 2006 se você estivesse usando o formato de data padrão ISO.  
   
 > [!NOTE]
 >  Você pode encontrar a documentação completa para todos os formatos de cadeia de caracteres literal e outros recursos de tipos de dados de data e hora nos Manuais Online do SQL Server.  

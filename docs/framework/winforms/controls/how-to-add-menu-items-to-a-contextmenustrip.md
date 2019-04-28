@@ -10,18 +10,18 @@ helpviewer_keywords:
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
 ms.openlocfilehash: 534bbd2c2edb68dca0f2a1c2997ff1ba762ef07c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011041"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Como: Adicionar itens de menu a um ContextMenuStrip
 Você pode adicionar apenas um item de menu ou vários itens de cada vez para um <xref:System.Windows.Forms.ContextMenuStrip>.  
   
 ### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>Para adicionar um item de menu único a um ContextMenuStrip  
   
--   Use o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método para adicionar um item de menu para um <xref:System.Windows.Forms.ContextMenuStrip>.  
+- Use o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método para adicionar um item de menu para um <xref:System.Windows.Forms.ContextMenuStrip>.  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -33,7 +33,7 @@ Você pode adicionar apenas um item de menu ou vários itens de cada vez para um
   
 ### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a>Para adicionar vários itens de menu a um ContextMenuStrip  
   
--   Use o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método para adicionar vários itens de menu para um <xref:System.Windows.Forms.ContextMenuStrip>.  
+- Use o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método para adicionar vários itens de menu para um <xref:System.Windows.Forms.ContextMenuStrip>.  
   
     ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  

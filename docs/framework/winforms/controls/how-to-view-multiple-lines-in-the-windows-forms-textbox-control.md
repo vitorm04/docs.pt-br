@@ -12,18 +12,18 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012913"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Como: Exibir várias linhas no controle TextBox do Windows Forms
 Por padrão, os formulários do Windows <xref:System.Windows.Forms.TextBox> controle exibe uma única linha de texto e não exibe barras de rolagem. Se o texto for maior que o espaço disponível, apenas parte do texto ficará visível. Você pode alterar esse comportamento padrão definindo a <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propriedades com valores apropriados.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Exibir um retorno de carro no controle TextBox  
   
--   Para exibir um retorno de carro em uma multilinha <xref:System.Windows.Forms.TextBox>, use o <xref:System.Environment.NewLine%2A> propriedade.  
+- Para exibir um retorno de carro em uma multilinha <xref:System.Windows.Forms.TextBox>, use o <xref:System.Environment.NewLine%2A> propriedade.  
   
      Lembre-se que a interpretação de caracteres de escape (\\) é específica a um idioma. O Visual Basic usa `Chr$(13) & Chr$(10)` para a combinação de retorno de carro e caracteres de avanço de linha.  
   

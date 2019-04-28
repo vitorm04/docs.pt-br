@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014242"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
 Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` os membros de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite que você personalize o comportamento do modelo de aplicativo e adicionar chamadas para seus próprios métodos quando o aplicativo é inicializado e desligado.  
@@ -38,11 +38,11 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
      O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> método chama os métodos a seguir:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina se o aplicativo tem uma tela inicial definida e, em caso afirmativo, exibe a tela inicial em um thread separado.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina se o aplicativo tem uma tela inicial definida e, em caso afirmativo, exibe a tela inicial em um thread separado.  
   
          O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> método contém o código que exibe na tela inicial de tela para pelo menos o número de milissegundos especificado pelo <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> propriedade. Para usar essa funcionalidade, você deve adicionar a tela inicial para seu aplicativo usando o **Designer de projeto** (que define o `My.Application.MinimumSplashScreenDisplayTime` propriedade como dois segundos), ou defina o `My.Application.MinimumSplashScreenDisplayTime` propriedade em um método que substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> ou <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite que um designer emita o código que inicializa a tela inicial.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite que um designer emita o código que inicializa a tela inicial.  
   
          Por padrão, esse método não fará nada. Se você selecionar uma tela inicial para seu aplicativo no Visual Basic **Designer de projeto**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriedade para uma nova instância do formulário de tela inicial .  
   
@@ -54,11 +54,11 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
   
      Por padrão, antes de entrar no loop de mensagem do Windows Forms, este método chama o `OnCreateMainForm` (para criar o formulário principal do aplicativo) e `HideSplashScreen` (para fechar a tela inicial) métodos:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornece uma maneira para um designer emita o código que inicializa o formulário principal.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornece uma maneira para um designer emita o código que inicializa o formulário principal.  
   
          Por padrão, esse método não fará nada. No entanto, quando você seleciona um formulário principal para o seu aplicativo no Visual Basic **Designer de projeto**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propriedade para uma nova instância do formulário principal.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se o aplicativo tem uma tela inicial definida e ele estiver aberto, esse método fecha a tela inicial.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se o aplicativo tem uma tela inicial definida e ele estiver aberto, esse método fecha a tela inicial.  
   
          Por padrão, esse método fecha a tela inicial.  
   
@@ -97,7 +97,6 @@ Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Ove
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

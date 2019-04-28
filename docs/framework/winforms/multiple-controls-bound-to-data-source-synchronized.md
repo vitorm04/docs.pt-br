@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800757"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Como: assegurar que vários controles associados à mesma fonte de dados permaneçam sincronizados
 Muitas vezes, ao trabalhar com vinculação de dados nos Windows Forms, vários controles são associados à mesma fonte de dados. Em alguns casos, pode ser necessário executar etapas adicionais para garantir que as propriedades associadas dos controles permaneçam sincronizadas entre si e à fonte de dados. Essas etapas são necessárias em duas situações:  
   
--   Se a fonte de dados não implementa <xref:System.ComponentModel.IBindingList>e, portanto, gerar <xref:System.ComponentModel.IBindingList.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
+- Se a fonte de dados não implementa <xref:System.ComponentModel.IBindingList>e, portanto, gerar <xref:System.ComponentModel.IBindingList.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
--   Se a fonte de dados implementa <xref:System.ComponentModel.IEditableObject>.  
+- Se a fonte de dados implementa <xref:System.ComponentModel.IEditableObject>.  
   
  No primeiro caso, você pode usar um <xref:System.Windows.Forms.BindingSource> para associar a fonte de dados aos controles. No último caso, você deve usar um <xref:System.Windows.Forms.BindingSource> e lidar com o <xref:System.Windows.Forms.BindingSource.BindingComplete> eventos e chame <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> em associado <xref:System.Windows.Forms.BindingManagerBase>.  
   
@@ -34,11 +34,11 @@ Muitas vezes, ao trabalhar com vinculação de dados nos Windows Forms, vários 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Este exemplo de código requer  
+- Este exemplo de código requer  
   
--   Referências para o <xref:System>, <xref:System.Windows.Forms>, e <xref:System.Drawing> assemblies.  
+- Referências para o <xref:System>, <xref:System.Windows.Forms>, e <xref:System.Drawing> assemblies.  
   
--   Um formulário com o <xref:System.Windows.Forms.Form.Load> evento como manipulado e uma chamada para o `InitializeControlsAndDataSource` método no exemplo a partir do formulário <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+- Um formulário com o <xref:System.Windows.Forms.Form.Load> evento como manipulado e uma chamada para o `InitializeControlsAndDataSource` método no exemplo a partir do formulário <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte também
 

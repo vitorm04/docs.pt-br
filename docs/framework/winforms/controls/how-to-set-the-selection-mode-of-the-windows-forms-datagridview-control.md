@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
 ms.openlocfilehash: 2e430dfb170943178f6db27c0bd2c1ef0f972882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013108"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Como: Definir o modo de seleção do controle DataGridView do Windows Forms
 O exemplo de código a seguir demonstra como configurar um <xref:System.Windows.Forms.DataGridView> controle, de modo que clicar em qualquer lugar dentro de uma linha automaticamente seleciona a linha inteira e então, que apenas uma linha por vez pode ser selecionada.  
@@ -26,9 +26,9 @@ O exemplo de código a seguir demonstra como configurar um <xref:System.Windows.
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
+- Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
   
--   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

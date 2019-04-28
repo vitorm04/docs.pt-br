@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
 ms.openlocfilehash: 49e7d6768d8739bba94c9e8d38bcc582c8bd6e4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902896"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>Como: declarar tabelas como classes
 Use o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> atributo para designar uma classe como uma classe de entidade associada a uma tabela de banco de dados.  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>Para mapear uma classe a uma tabela de base de dados  
   
--   Adicione o atributo de <xref:System.Data.Linq.Mapping.TableAttribute> à declaração de classe.  
+- Adicione o atributo de <xref:System.Data.Linq.Mapping.TableAttribute> à declaração de classe.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir estabelece a classe de `Customer` como uma classe de entidade que está associada com a tabela de base de dados de `Customers` .  

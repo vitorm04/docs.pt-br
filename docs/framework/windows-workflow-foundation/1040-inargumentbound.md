@@ -3,11 +3,11 @@ title: 1040 - InArgumentBound
 ms.date: 03/30/2017
 ms.assetid: 7dfaad1b-36c0-4575-84c1-31d63b0eaf5d
 ms.openlocfilehash: 984372c07ccfb11f2f05d5488fa5ffc95075db41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009741"
 ---
 # <a name="1040---inargumentbound"></a>1040 - InArgumentBound
 ## <a name="properties"></a>Propriedades  

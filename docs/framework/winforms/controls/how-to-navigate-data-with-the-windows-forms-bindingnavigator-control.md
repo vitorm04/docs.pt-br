@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
 ms.openlocfilehash: 0c2fdf820b9b42a592c422cf77362598c5e5eed7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913595"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Como: Navegar em dados com o controle BindingNavigator do Windows Forms
 O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Forms permite aos desenvolvedores fornecer aos usuários finais com um simples de dados de navegação e manipulação de interface do usuário em formulários que criam.  
@@ -49,7 +49,7 @@ O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Fo
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Referência aos conjuntos System, System.Data, System.Drawing, System.Windows.Forms e System.Xml.  
+- Referência aos conjuntos System, System.Data, System.Drawing, System.Windows.Forms e System.Xml.  
   
  Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  
   

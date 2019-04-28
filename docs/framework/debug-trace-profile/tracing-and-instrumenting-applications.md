@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876142"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
 O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
   
  O termo *instrumentação* refere-se à capacidade de monitorar ou medir o nível de desempenho de um produto e de diagnosticar erros. Em programação, isso significa a capacidade de um aplicativo de incorporar:  
   
--   **Rastreamento de código** –Recebimento de mensagens informativas sobre a execução de um aplicativo em tempo de execução.  
+- **Rastreamento de código** –Recebimento de mensagens informativas sobre a execução de um aplicativo em tempo de execução.  
   
--   **Depuração** – Rastreamento e correção de erros de programação em um aplicativo em desenvolvimento. Para obter mais informações, consulte [Depurando](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Depuração** – Rastreamento e correção de erros de programação em um aplicativo em desenvolvimento. Para obter mais informações, consulte [Depurando](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Contadores de desempenho** – Componentes que permitem acompanhar o desempenho do aplicativo. Para obter mais informações, consulte [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Contadores de desempenho** – Componentes que permitem acompanhar o desempenho do aplicativo. Para obter mais informações, consulte [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Logs de eventos** – Componentes que permitem receber e acompanhar os principais eventos na execução do aplicativo. Para obter mais informações, consulte a classe <xref:System.Diagnostics.EventLog>.  
+- **Logs de eventos** – Componentes que permitem receber e acompanhar os principais eventos na execução do aplicativo. Para obter mais informações, consulte a classe <xref:System.Diagnostics.EventLog>.  
   
  A instrumentação do aplicativo com a colocação de instruções de rastreamento em locais estratégicos no código é especialmente útil para aplicativos distribuídos. Usando as instruções de rastreamento, você pode instrumentar um aplicativo não apenas para exibir informações quando as coisas dão errado, mas também para monitorar o desempenho do aplicativo.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Compile o aplicativo no código executável usando um dos seguintes procedimentos:  
   
-    -   Use o menu **Compilar** juntamente com a página **Depurar** da caixa de diálogo **Páginas de Propriedades** no **Gerenciador de Soluções**. Use essa opção quando estiver compilando no Visual Studio.  
+    - Use o menu **Compilar** juntamente com a página **Depurar** da caixa de diálogo **Páginas de Propriedades** no **Gerenciador de Soluções**. Use essa opção quando estiver compilando no Visual Studio.  
   
          \- ou -  
   
-    -   Use as diretivas do compilador **Trace** e **Debug** para o método de compilação de linha de comando. Para obter mais informações, consulte [Compilando condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Use essa opção quando estiver compilando na linha de comando.  
+    - Use as diretivas do compilador **Trace** e **Debug** para o método de compilação de linha de comando. Para obter mais informações, consulte [Compilando condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Use essa opção quando estiver compilando na linha de comando.  
   
 7. Se ocorrer um problema durante o tempo de execução, ative a opção de rastreamento apropriada. Para obter mais informações, consulte [Configurando Opções de Rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
