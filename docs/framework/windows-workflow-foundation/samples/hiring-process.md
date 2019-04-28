@@ -3,11 +3,11 @@ title: Processo de aluguer
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005050"
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
@@ -18,35 +18,35 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
  Este exemplo demonstra os seguintes recursos de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart> e fluxos de trabalho <xref:System.Activities.Statements.Sequence> para modelar processos comerciais.  
+- <xref:System.Activities.Statements.Flowchart> e fluxos de trabalho <xref:System.Activities.Statements.Sequence> para modelar processos comerciais.  
   
--   Serviços de fluxo de trabalho.  
+- Serviços de fluxo de trabalho.  
   
--   Atividades de mensagem.  
+- Atividades de mensagem.  
   
--   Correlação conteudo base.  
+- Correlação conteudo base.  
   
--   Atividades personalizados (declarativo e o código baseado).  
+- Atividades personalizados (declarativo e o código baseado).  
   
--   Sistema forneceu persistência de servidor SQL.  
+- Sistema forneceu persistência de servidor SQL.  
   
--   <xref:System.Activities.Persistence.PersistenceParticipant>personalizado.  
+- <xref:System.Activities.Persistence.PersistenceParticipant>personalizado.  
   
--   Controle personalizado.  
+- Controle personalizado.  
   
--   Rastreamento de evento para acompanhar do Windows (ETW).  
+- Rastreamento de evento para acompanhar do Windows (ETW).  
   
--   Composição de atividades.  
+- Composição de atividades.  
   
--   atividades de<xref:System.Activities.Statements.Parallel> .  
+- atividades de<xref:System.Activities.Statements.Parallel> .  
   
--   atividade de<xref:System.Activities.Statements.CancellationScope> .  
+- atividade de<xref:System.Activities.Statements.CancellationScope> .  
   
--   Timers duráveis (atividade de<xref:System.Activities.Statements.Delay> ).  
+- Timers duráveis (atividade de<xref:System.Activities.Statements.Delay> ).  
   
--   Transações.  
+- Transações.  
   
--   Mais de um fluxo de trabalho na mesma solução.  
+- Mais de um fluxo de trabalho na mesma solução.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -64,25 +64,25 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 2. O gerenciador do solicitador deve aprovar a solicitação:  
   
-    1.  O gerenciador pode descartar a solicitação.  
+    1. O gerenciador pode descartar a solicitação.  
   
-    2.  O gerenciador pode retornar a solicitação ao solicitador para informações adicionais:  
+    2. O gerenciador pode retornar a solicitação ao solicitador para informações adicionais:  
   
-        1.  O solicitador revise e envia a solicitação de volta ao gerenciador.  
+        1. O solicitador revise e envia a solicitação de volta ao gerenciador.  
   
-    3.  O gerenciador pode aprovar.  
+    3. O gerenciador pode aprovar.  
   
 3. Depois que o gerenciador do solicitador aprova, o proprietário do departamento deve aprovar a solicitação:  
   
-    1.  O proprietário do departamento pode descartar.  
+    1. O proprietário do departamento pode descartar.  
   
-    2.  O proprietário do departamento pode aprovar.  
+    2. O proprietário do departamento pode aprovar.  
   
 4. Depois que o proprietário do departamento aprova, o processo requer a aprovação de gerentes de 2 horas ou de CEO:  
   
-    1.  O processo pode fazer a transição de estado aceito ou descartado.  
+    1. O processo pode fazer a transição de estado aceito ou descartado.  
   
-    2.  Se o processo é aceito, uma nova instância do fluxo de trabalho `ResumeRequest` é iniciada (`ResumeRequest` é associado a HiringRequest.csproj com uma referência de serviço.)  
+    2. Se o processo é aceito, uma nova instância do fluxo de trabalho `ResumeRequest` é iniciada (`ResumeRequest` é associado a HiringRequest.csproj com uma referência de serviço.)  
   
  Uma vez que os gerentes aprovam o aluguer de um novo empregado, a hora deve encontrar o candidato apropriado. Esse processo é executado pelo segundo fluxo de trabalho (`ResumeRequest`, definido em ResumeRequestService.csproj). Este fluxo de trabalho define o processo para enviar um anúncio de emprego com uma oportunidade de carreira a carreiras externos site de Contoso, recebe resumos dos candidatos, e monitora o estado do anúncio de emprego. As posições estão disponíveis por um período de tempo fixo (até que uma hora expirem) ou até que um funcionário de Contoso decida o remover. O fluxo de trabalho `ResumeRequest` consiste as seguintes etapas:  
   
@@ -215,19 +215,19 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 2. Se a solução não compilar, verifique o seguinte:  
   
-    -   A referência ao `ContosoHR` não está ausente do `InternalClient` ou `CareersWebSite` projetos.  
+    - A referência ao `ContosoHR` não está ausente do `InternalClient` ou `CareersWebSite` projetos.  
   
 3. Se a solução não executa, verifique o seguinte:  
   
-    1.  Todos os serviços estão executando.  
+    1. Todos os serviços estão executando.  
   
-    2.  Referências de serviço são atualizadas.  
+    2. Referências de serviço são atualizadas.  
   
-        1.  Abra a pasta App_WebReferences  
+        1. Abra a pasta App_WebReferences  
   
-        2.  Clique com botão direito **Contoso** e selecione **referências de Web/serviço de atualização**.  
+        2. Clique com botão direito **Contoso** e selecione **referências de Web/serviço de atualização**.  
   
-        3.  Recompile a solução pressionando CTRL + SHIFT + B no Visual Studio.  
+        3. Recompile a solução pressionando CTRL + SHIFT + B no Visual Studio.  
   
 ## <a name="uninstalling"></a>Desinstalando  
   

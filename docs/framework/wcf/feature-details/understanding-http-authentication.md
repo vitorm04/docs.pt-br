@@ -3,11 +3,11 @@ title: Noções básicas de autenticação HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918899"
 ---
 # <a name="understanding-http-authentication"></a>Noções básicas de autenticação HTTP
 A autenticação é o processo de identificar se um cliente está qualificado para acessar um recurso. O protocolo HTTP oferece suporte à autenticação como um meio de negociar o acesso a um recurso seguro.  
@@ -29,11 +29,11 @@ A autenticação é o processo de identificar se um cliente está qualificado pa
 ## <a name="choosing-an-authentication-scheme"></a>Escolher um esquema de autenticação  
  Ao selecionar os possíveis esquemas de autenticação para um servidor HTTP, alguns itens a serem considerados incluem o seguinte:  
   
--   Considere se o recurso precisa ser protegido. Usando a autenticação HTTP requer a transmissão de dados mais e pode limitar a interoperabilidade com clientes. Permitir acesso anônimo a recursos que não precisam ser protegidos.  
+- Considere se o recurso precisa ser protegido. Usando a autenticação HTTP requer a transmissão de dados mais e pode limitar a interoperabilidade com clientes. Permitir acesso anônimo a recursos que não precisam ser protegidos.  
   
--   Se o recurso precisa ser protegido, considere quais esquemas de autenticação fornecem o nível de segurança necessário. O esquema de autenticação padrão mais fraco discutido aqui é a autenticação básica. Autenticação básica não protege as credenciais do usuário. O esquema padrão de autenticação mais forte é a autenticação Negotiate, resultando no protocolo Kerberos.  
+- Se o recurso precisa ser protegido, considere quais esquemas de autenticação fornecem o nível de segurança necessário. O esquema de autenticação padrão mais fraco discutido aqui é a autenticação básica. Autenticação básica não protege as credenciais do usuário. O esquema padrão de autenticação mais forte é a autenticação Negotiate, resultando no protocolo Kerberos.  
   
--   Um servidor não deve representar (nos cabeçalhos de autenticação de WWW) qualquer esquema que não está preparada para aceitar ou que não protege o recurso protegido adequadamente. Os clientes são livres para escolher entre qualquer um dos esquemas de autenticação que o servidor apresenta. Alguns clientes usam como padrão um esquema de autenticação fraca ou o esquema de autenticação primeiro na lista do servidor.  
+- Um servidor não deve representar (nos cabeçalhos de autenticação de WWW) qualquer esquema que não está preparada para aceitar ou que não protege o recurso protegido adequadamente. Os clientes são livres para escolher entre qualquer um dos esquemas de autenticação que o servidor apresenta. Alguns clientes usam como padrão um esquema de autenticação fraca ou o esquema de autenticação primeiro na lista do servidor.  
   
 ## <a name="see-also"></a>Consulte também
 

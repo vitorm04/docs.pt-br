@@ -6,11 +6,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007106"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Passo a passo: localizar um aplicativo híbrido
 
@@ -18,15 +18,15 @@ Este passo a passo mostra como localizar [!INCLUDE[TLA2#tla_winclient](../../../
 
 As tarefas ilustradas neste passo a passo incluem:
 
--   Criando o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] projeto host.
+- Criando o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] projeto host.
 
--   Atributo de conteúdo localizável.
+- Atributo de conteúdo localizável.
 
--   Habilitando a localização.
+- Habilitando a localização.
 
--   Atribuindo identificadores de recursos.
+- Atribuindo identificadores de recursos.
 
--   Usando a ferramenta LocBaml para produzir um assembly satélite.
+- Usando a ferramenta LocBaml para produzir um assembly satélite.
 
 Para obter uma listagem de código completa das tarefas ilustradas neste passo a passo, consulte [Localizando um exemplo de aplicativo híbrido](https://go.microsoft.com/fwlink/?LinkID=160015).
 
@@ -36,7 +36,7 @@ Quando tiver terminado, você terá um aplicativo híbrido localizado.
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>Criando o projeto de host do Windows Forms
 

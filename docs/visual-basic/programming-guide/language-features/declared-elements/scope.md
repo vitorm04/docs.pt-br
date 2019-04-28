@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917833"
 ---
 # <a name="scope-in-visual-basic"></a>Escopo no Visual Basic
 O *escopo* de um elemento declarado é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome ou tornando-os disponíveis por meio de uma [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Um elemento pode ter escopo em um dos seguintes níveis:  
@@ -37,11 +37,11 @@ O *escopo* de um elemento declarado é o conjunto de todo o código que pode faz
 ## <a name="specifying-scope-and-defining-variables"></a>Especificar o escopo e definir variáveis  
  Especifique o escopo de um elemento quando você declará-la. O escopo pode depender dos seguintes fatores:  
   
--   A região (bloco, procedimento, módulo, classe ou estrutura) em que você declara o elemento  
+- A região (bloco, procedimento, módulo, classe ou estrutura) em que você declara o elemento  
   
--   O namespace que contém a declaração do elemento  
+- O namespace que contém a declaração do elemento  
   
--   O nível de acesso que você declarar para o elemento  
+- O nível de acesso que você declarar para o elemento  
   
  Tenha cuidado ao definir variáveis com o mesmo nome mas com escopo diferente, porque isso pode levar a resultados inesperados. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ O *escopo* de um elemento declarado é o conjunto de todo o código que pode faz
 ### <a name="block-scope"></a>Escopo de bloco  
  Um bloco é um conjunto de instruções entre Iniciando e encerrando instruções de declaração, como o seguinte:  
   
--   `Do` e `Loop`  
+- `Do` e `Loop`  
   
--   `For` [`Each`] e `Next`  
+- `For` [`Each`] e `Next`  
   
--   `If` e `End If`  
+- `If` e `End If`  
   
--   `Select` e `End Select`  
+- `Select` e `End Select`  
   
--   `SyncLock` e `End SyncLock`  
+- `SyncLock` e `End SyncLock`  
   
--   `Try` e `End Try`  
+- `Try` e `End Try`  
   
--   `While` e `End While`  
+- `While` e `End While`  
   
--   `With` e `End With`  
+- `With` e `End With`  
   
  Se você declarar uma variável dentro de um bloco, você pode usá-lo apenas dentro desse bloco. No exemplo a seguir, o escopo da variável de inteiro `cube` é o bloco entre `If` e `End If`, e você não pode consultar `cube` quando a execução passa para fora do bloco.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Vantagens de variáveis locais  
  Variáveis locais são uma boa escolha para qualquer tipo de cálculo temporário, pelos seguintes motivos:  
   
--   **Prevenção de conflitos de nome.** Nomes de variável local não são suscetíveis a entrar em conflito. Por exemplo, você pode criar vários procedimentos diferentes que contém uma variável chamada `intTemp`. Desde que cada `intTemp` é declarado como uma variável local, cada procedimento reconhece apenas sua própria versão do `intTemp`. Qualquer procedimento pode alterar o valor em seu local `intTemp` sem afetar `intTemp` variáveis em outros procedimentos.  
+- **Prevenção de conflitos de nome.** Nomes de variável local não são suscetíveis a entrar em conflito. Por exemplo, você pode criar vários procedimentos diferentes que contém uma variável chamada `intTemp`. Desde que cada `intTemp` é declarado como uma variável local, cada procedimento reconhece apenas sua própria versão do `intTemp`. Qualquer procedimento pode alterar o valor em seu local `intTemp` sem afetar `intTemp` variáveis em outros procedimentos.  
   
--   **Consumo de memória.** As variáveis locais consomem memória somente enquanto seu procedimento está sendo executado. Sua memória é liberada quando o procedimento retorna ao código de chamada. Por outro lado, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [estático](../../../../visual-basic/language-reference/modifiers/static.md) variáveis consomem recursos de memória até que seu aplicativo é interrompido, portanto, use-as quando necessário. *Variáveis de instância* consomem memória enquanto sua instância continuará a existir, o que as torna menos eficiente do que as variáveis locais, mas potencialmente mais eficiente do que `Shared` ou `Static` variáveis.  
+- **Consumo de memória.** As variáveis locais consomem memória somente enquanto seu procedimento está sendo executado. Sua memória é liberada quando o procedimento retorna ao código de chamada. Por outro lado, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [estático](../../../../visual-basic/language-reference/modifiers/static.md) variáveis consomem recursos de memória até que seu aplicativo é interrompido, portanto, use-as quando necessário. *Variáveis de instância* consomem memória enquanto sua instância continuará a existir, o que as torna menos eficiente do que as variáveis locais, mas potencialmente mais eficiente do que `Shared` ou `Static` variáveis.  
   
 ### <a name="minimizing-scope"></a>Minimizando o escopo  
  Em geral, ao declarar qualquer variável ou constante, é boa prática para tornar o escopo tão restrito quanto possível (o escopo de bloco é o menor). Isso ajuda a conservar a memória e minimiza as chances de seu código erroneamente referir-se a variável errada. Da mesma forma, você deve declarar uma variável para ser [estático](../../../../visual-basic/language-reference/modifiers/static.md) somente quando for necessário preservar seu valor entre chamadas de procedimento.  

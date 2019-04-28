@@ -10,11 +10,11 @@ ms.assetid: 7b3d2755-cbab-4160-bc69-eb85791e38c7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985693"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Interfaces e coclasse de hospedagem CLR reprovadas
 Esta seção descreve as interfaces não gerenciadas hosts podem usar para integrar o common language runtime (CLR) nas versões do .NET Framework 1.0 e 1.1 em seus aplicativos. Essas interfaces fornecem métodos para um host configurar e carregar o tempo de execução em um processo.  
@@ -24,7 +24,7 @@ Esta seção descreve as interfaces não gerenciadas hosts podem usar para integ
  Fornece métodos para o host configurar um <xref:System.AppDomain>.  
   
  [Classe ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
- (Preterido) Fornece funcionalidade para a criação de um arquivo executável (PE) portátil nativo.  
+ (Preterido) Fornece funcionalidade para criar um arquivo executável (PE) portátil nativo.  
   
  [Interface ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
  Fornece métodos para o host definir configurações de CLR.  

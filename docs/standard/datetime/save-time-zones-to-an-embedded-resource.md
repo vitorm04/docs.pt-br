@@ -1,5 +1,5 @@
 ---
-title: 'Como: Salvar fusos horários em um recurso inserido'
+title: 'Como: salvar fusos horários em um recurso inserido'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912698"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Como: Salvar fusos horários em um recurso inserido
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Como: salvar fusos horários em um recurso inserido
 
 Um aplicativo com reconhecimento de fuso horário geralmente exige a presença de um determinado fuso horário. No entanto, como a disponibilidade do indivíduo <xref:System.TimeZoneInfo> objetos depende de informações armazenadas no registro do sistema local, fusos horários disponíveis até mesmo normalmente pode estar ausentes. Além disso, informações sobre fusos horários personalizados é instanciado usando o <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método não são armazenadas com outras informações de fuso horário no registro. Para garantir que essas zonas de tempo estejam disponíveis quando eles forem necessários, salvá-los ao serializá-los e depois restaurá-los por desserializá-las.
 

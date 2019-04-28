@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907381"
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipos de dados compostos (Visual Basic)
 Além das fontes de Visual Basic de tipos de dados elementar, você também pode montar itens de diferentes tipos para criar *tipos de dados compostos* como classes, matrizes e estruturas. Você pode criar tipos de dados compostos de tipos elementares e de outros tipos compostos. Por exemplo, você pode definir uma matriz de elementos de estrutura, ou uma estrutura com membros da matriz.  
@@ -36,11 +36,11 @@ Uma tupla é uma estrutura leve que contém dois ou mais campos cujos tipos são
 ## <a name="array-types"></a>Tipos de matriz  
  Não há nenhum tipo de dados único que inclui todas as matrizes. O tipo de dados de uma instância específica de uma matriz é determinado pelo seguinte:  
   
--   O fato de ser uma matriz  
+- O fato de ser uma matriz  
   
--   A classificação (número de dimensões) da matriz  
+- A classificação (número de dimensões) da matriz  
   
--   O tipo de elemento da matriz  
+- O tipo de elemento da matriz  
   
  Em particular, o comprimento de uma determinada dimensão não é parte da instância tipo de dados. O exemplo a seguir ilustra essa situação.  
   

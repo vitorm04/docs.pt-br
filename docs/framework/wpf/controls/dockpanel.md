@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
 ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911866"
 ---
 # <a name="dockpanel"></a>DockPanel
 O <xref:System.Windows.Controls.DockPanel> elemento é usado para posicionar conteúdo filho ao longo da borda de um contêiner de layout.  

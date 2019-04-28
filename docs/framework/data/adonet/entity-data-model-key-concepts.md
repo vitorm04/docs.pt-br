@@ -3,11 +3,11 @@ title: Conceitos chave do Modelo de Dados de Entidade
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
 ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879263"
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceitos chave do Modelo de Dados de Entidade
 Modelo de dados de entidade (EDM) usa três conceitos principais para descrever a estrutura de dados: *tipo de entidade*, *tipo de associação*, e *propriedade*. Esses são os conceitos mais importantes para descrever a estrutura dos dados em qualquer implementação do EDM.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906992"
 ---
 # <a name="decision-structures-visual-basic"></a>Estruturas de decisão (Visual Basic)
 Visual Basic permite testar condições e executar operações diferentes dependendo dos resultados do teste. Você pode testar uma condição ser verdadeira ou falsa para vários valores de uma expressão, ou para várias exceções geradas quando você executa uma série de instruções.  
@@ -26,13 +26,13 @@ Visual Basic permite testar condições e executar operações diferentes depend
 ## <a name="ifthenelse-construction"></a>If... Then... Outra construção  
  `If...Then...Else` construções permitem que você teste para uma ou mais condições e executar uma ou mais instruções, dependendo de cada condição. Você pode testar condições e tomar ações das seguintes maneiras:  
   
--   Executar uma ou mais instruções, se uma condição for `True`  
+- Executar uma ou mais instruções, se uma condição for `True`  
   
--   Executar uma ou mais instruções, se uma condição for `False`  
+- Executar uma ou mais instruções, se uma condição for `False`  
   
--   Execute algumas declarações se uma condição for `True` e outras pessoas se ele for `False`  
+- Execute algumas declarações se uma condição for `True` e outras pessoas se ele for `False`  
   
--   Testar uma condição adicional se uma condição anterior for `False`  
+- Testar uma condição adicional se uma condição anterior for `False`  
   
  A estrutura de controle que oferece todas essas possibilidades é o [se... Then... Instrução else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Você pode usar uma versão de linha única, se você tiver apenas um teste e uma única instrução para executar. Se você tiver um conjunto mais complexo de condições e ações, você pode usar a versão de várias linhas.  
   

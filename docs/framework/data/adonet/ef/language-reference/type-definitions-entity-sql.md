@@ -3,11 +3,11 @@ title: Definições de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879548"
 ---
 # <a name="type-definitions-entity-sql"></a>Definições de tipo (Entity SQL)
 Uma definição de tipo é usada na instrução de declaração de uma função in-line de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
@@ -19,25 +19,25 @@ Uma definição de tipo é usada na instrução de declaração de uma função 
   
  Definições de tipo podem ser qualquer:  
   
--   O tipo identificador (por exemplo, “Int32” ou “AdventureWorks.Order”).  
+- O tipo identificador (por exemplo, “Int32” ou “AdventureWorks.Order”).  
   
--   A palavra-chave `COLLECTION` seguido por outra definição de tipo no parêntese (por exemplo, “coleção (AdventureWorks.Order) ").  
+- A palavra-chave `COLLECTION` seguido por outra definição de tipo no parêntese (por exemplo, “coleção (AdventureWorks.Order) ").  
   
--   A LINHA seguida por uma lista de definições de propriedade no parêntese (por exemplo, “linha de palavras-chave (x) AdventureWorks.Order "). Definições de propriedade tem um formato como "`identifier type_definition`, `identifier type_definition`,...".  
+- A LINHA seguida por uma lista de definições de propriedade no parêntese (por exemplo, “linha de palavras-chave (x) AdventureWorks.Order "). Definições de propriedade tem um formato como "`identifier type_definition`, `identifier type_definition`,...".  
   
--   A referência seguido pelo tipo identificador no parêntese (por exemplo, “referência de palavras-chave (AdventureWorks.Order) "). O operador de definição de tipo de referência requer um tipo de entidade como o argumento. Você não pode especificar um tipo primitivo como o argumento.  
+- A referência seguido pelo tipo identificador no parêntese (por exemplo, “referência de palavras-chave (AdventureWorks.Order) "). O operador de definição de tipo de referência requer um tipo de entidade como o argumento. Você não pode especificar um tipo primitivo como o argumento.  
   
  Você também pode aninhar definições de tipo (por exemplo, “coleção (linha (referência de AdventureWorks.Order (x))").  
   
  As opções de definição de tipo são:  
   
--   `IdentifierName supported_type`, ou  
+- `IdentifierName supported_type`, ou  
   
--   COLEÇÃO de`IdentifierName` (`type_definition`), ou  
+- COLEÇÃO de`IdentifierName` (`type_definition`), ou  
   
--   LINHA de`IdentifierName` (`property_definition`), ou  
+- LINHA de`IdentifierName` (`property_definition`), ou  
   
--   REFERÊNCIA DE`IdentifierName` (`supported_entity_type`)  
+- REFERÊNCIA DE`IdentifierName` (`supported_entity_type`)  
   
  A opção de definição de propriedade é `IdentifierName type_definition`.  
   

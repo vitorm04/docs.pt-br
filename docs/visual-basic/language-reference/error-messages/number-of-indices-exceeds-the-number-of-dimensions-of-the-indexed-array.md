@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918158"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>O número de índices excede o número de dimensões da matriz indexada
 O número de índices usados para acessar um elemento de matriz deve ser exatamente o mesmo que a classificação da matriz, ou seja, o número de dimensões declarado para ele.  
@@ -21,7 +21,7 @@ O número de índices usados para acessar um elemento de matriz deve ser exatame
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova subscritos da referência de matriz até que o número total de subscritos é igual a classificação da matriz. Por exemplo:  
+- Remova subscritos da referência de matriz até que o número total de subscritos é igual a classificação da matriz. Por exemplo:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

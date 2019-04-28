@@ -3,11 +3,11 @@ title: Designer de compostos personalizados - apresentador de item de fluxo de t
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005220"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Designer de compostos personalizados - apresentador de item de fluxo de trabalho
 O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chave no WF designer modelo de programação que permite a criação de um "soltar" onde uma atividade arbitrária pode ser colocada. Este exemplo mostra como criar um designer de atividade que surija tal uma "zona de descarte."
@@ -16,18 +16,18 @@ O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chav
 
 ## <a name="demonstrates"></a>Demonstra
 
--   Criando um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Criando um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
--   Registrando o designer personalizado que usa o armazenamento de metadados.
+- Registrando o designer personalizado que usa o armazenamento de metadados.
 
--   Programando a caixa de ferramentas rehosted declarativamente e imperativa.
+- Programando a caixa de ferramentas rehosted declarativamente e imperativa.
 
 ## <a name="sample-details"></a>Detalhes de exemplo
  O código para esse exemplo mostra:
 
--   O designer personalizado de atividade é compilado para a classe de `SimpleNativeActivity` .
+- O designer personalizado de atividade é compilado para a classe de `SimpleNativeActivity` .
 
--   A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- A criação de um designer personalizado de atividade com <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

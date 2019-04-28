@@ -3,11 +3,11 @@ title: Exemplo de extensões tipadas vagamente
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006571"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Exemplo de extensões tipadas vagamente
 O modelo de objeto de Sindicalização fornece suporte avançado para trabalhar com dados de extensão — informações que está presentes em um feed de sindicalização da representação XML, mas não são explicitamente expostas pelas classes, como <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem>. Este exemplo ilustra as técnicas básicas para trabalhar com dados de extensão.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  Este documento contém as seguintes partes de dados de extensão:  
   
--   O `myAttribute` atributo do `<feed>` elemento.  
+- O `myAttribute` atributo do `<feed>` elemento.  
   
--   `<simpleString>` elemento.  
+- `<simpleString>` elemento.  
   
--   `<DataContractExtension>` elemento.  
+- `<DataContractExtension>` elemento.  
   
--   `<XmlSerializerExtension>` elemento.  
+- `<XmlSerializerExtension>` elemento.  
   
--   `<xElementExtension>` elemento.  
+- `<xElementExtension>` elemento.  
   
 ## <a name="writing-extension-data"></a>Gravação de dados de extensão  
  Extensões de atributo são criadas adicionando entradas ao <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> coleção conforme mostrado no código de exemplo a seguir.  

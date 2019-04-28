@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913075"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Como: Responder a cliques no botão do Windows Forms
 O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> controle é executar algum código quando o botão é clicado.  
@@ -31,7 +31,7 @@ O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> contro
   
 ### <a name="to-respond-to-a-button-click"></a>Para responder a um clique de botão  
   
--   O botão `Click` <xref:System.EventHandler> escrever o código seja executado. `Button1_Click` deve ser associado ao controle. Para obter mais informações, confira [Como: Criar manipuladores de eventos em tempo de execução para formulários do Windows](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- O botão `Click` <xref:System.EventHandler> escrever o código seja executado. `Button1_Click` deve ser associado ao controle. Para obter mais informações, confira [Como: Criar manipuladores de eventos em tempo de execução para formulários do Windows](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904261"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Como: Alterar a aparência do TabControl do Windows Forms
 Você pode alterar a aparência das guias nos Windows Forms usando propriedades do <xref:System.Windows.Forms.TabControl> e o <xref:System.Windows.Forms.TabPage> objetos que compõem guias individuais no controle. Ao configurar essas propriedades, é possível exibir imagens em guias, exibir guias verticalmente em vez de horizontalmente, exibir várias linhas de guias e habilitar ou desabilitar guias com programação.  
@@ -43,7 +43,7 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Organizar as guias na lateral do controle  
   
--   Defina as <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade do <xref:System.Windows.Forms.TabControl> para <xref:System.Windows.Forms.TabAlignment.Left> ou <xref:System.Windows.Forms.TabAlignment.Right>.  
+- Defina as <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade do <xref:System.Windows.Forms.TabControl> para <xref:System.Windows.Forms.TabAlignment.Left> ou <xref:System.Windows.Forms.TabAlignment.Right>.  
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Habilitar ou desabilitar todos os controles em uma guia usando programação  
   
@@ -63,7 +63,7 @@ Você pode alterar a aparência das guias nos Windows Forms usando propriedades 
   
 ### <a name="to-display-tabs-as-buttons"></a>Exibir guias como botões  
   
--   Defina as <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do <xref:System.Windows.Forms.TabControl> para <xref:System.Windows.Forms.TabAppearance.Buttons> ou <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
+- Defina as <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do <xref:System.Windows.Forms.TabControl> para <xref:System.Windows.Forms.TabAppearance.Buttons> ou <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Consulte também
 

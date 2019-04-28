@@ -3,11 +3,11 @@ title: Canal local
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
 ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989827"
 ---
 # <a name="local-channel"></a>Canal local
 Canal local é um canal de transporte do Windows Communication Foundation (WCF) que é usado para comunicação dentro do mesmo domínio de aplicativo. Isso é útil para cenários em que o cliente e o serviço estão em execução no mesmo domínio do aplicativo e deve ser evitada a sobrecarga da pilha de canais do WCF típica (serialização e desserialização de mensagens).  
@@ -18,9 +18,9 @@ Canal local é um canal de transporte do Windows Communication Foundation (WCF) 
 ## <a name="discussion"></a>Discussão  
  O exemplo consiste em dois arquivos de projeto:  
   
--   **LocalChannel**: A representação programática do canal local dentro do domínio do aplicativo atual. Neste projeto, o componente de envio coloca a mensagem em uma fila na memória e o componente receptor retira a mensagem para recebê-lo.  
+- **LocalChannel**: A representação programática do canal local dentro do domínio do aplicativo atual. Neste projeto, o componente de envio coloca a mensagem em uma fila na memória e o componente receptor retira a mensagem para recebê-lo.  
   
--   **ClientAndService**: Este projeto hospeda um serviço em um aplicativo de console e, em seguida, executa o cliente para chamar o serviço de dentro do mesmo domínio de aplicativo.  
+- **ClientAndService**: Este projeto hospeda um serviço em um aplicativo de console e, em seguida, executa o cliente para chamar o serviço de dentro do mesmo domínio de aplicativo.  
   
  O design de canal local ignora a pilha de canal e o processo de serialização para aumentar a velocidade. O canal de transporte local é implementado usando uma fila para chamadas de serviço do cliente para o serviço de transporte e retornar o valor de volta ao cliente. Em vez de serializar os parâmetros e valores de retorno, o exemplo copia os objetos.  
   

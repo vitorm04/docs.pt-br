@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903351"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 As seções a seguir respondem a alguns problemas comuns que você pode encontrar ao implementar o [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -34,18 +34,18 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
   
  Os detalhes exatos do uso da conexão dependem do seguinte:  
   
--   Status da conexão se <xref:System.Data.Linq.DataContext> for construído com um objeto de conexão.  
+- Status da conexão se <xref:System.Data.Linq.DataContext> for construído com um objeto de conexão.  
   
--   Configurações da cadeia de conexão (por exemplo, permitindo MARS, Multiple Active Result Sets). Para obter mais informações, confira [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- Configurações da cadeia de conexão (por exemplo, permitindo MARS, Multiple Active Result Sets). Para obter mais informações, confira [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Atualizar sem consultar  
  P. Posso atualizar os dados da tabela sem primeiro consultar o banco de dados?  
   
  R. Embora o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não tenha comandos de atualização baseados em conjunto, você pode usar qualquer uma das seguintes técnicas para atualizar sem consultar primeiro:  
   
--   Use <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> para enviar o código SQL.  
+- Use <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> para enviar o código SQL.  
   
--   Crie uma nova instância do objeto e inicialize todos os valores atuais (campos) que afetam a atualização. Anexe o objeto ao <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.Table%601.Attach%2A> e modifique o campo que você deseja alterar.  
+- Crie uma nova instância do objeto e inicialize todos os valores atuais (campos) que afetam a atualização. Anexe o objeto ao <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.Table%601.Attach%2A> e modifique o campo que você deseja alterar.  
   
 ## <a name="unexpected-query-results"></a>Resultados inesperados da consulta  
  P. Minha consulta está retornando resultados inesperados. Como posso inspecionar o que está ocorrendo?  
@@ -57,9 +57,9 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
   
  R. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece duas maneiras de retornar valores gerados por banco de dados por meio de procedimentos armazenados:  
   
--   Nomeando o resultado de saída.  
+- Nomeando o resultado de saída.  
   
--   Especificando explicitamente um parâmetro de saída.  
+- Especificando explicitamente um parâmetro de saída.  
   
  O código a seguir é um exemplo de saída incorreta. Como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não pode mapear os resultados, ele sempre retorna 0:  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
 ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000994"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Como: Criar e usar uma tela
 Este exemplo mostra como criar e usar uma instância de <xref:System.Windows.Controls.Canvas>.  

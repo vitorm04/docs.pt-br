@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017745"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Criando um controle que tenha uma aparência personalizável
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ Um controle NumericUpDown personalizado
   
  Esse tópico contém as seguintes seções:  
   
--   [Pré-requisitos](#prerequisites)  
+- [Pré-requisitos](#prerequisites)  
   
--   [Modelo de partes e estados](#parts_and_states_model)  
+- [Modelo de partes e estados](#parts_and_states_model)  
   
--   [Definindo a estrutura e o comportamento visuais de um controle em um ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [Definindo a estrutura e o comportamento visuais de um controle em um ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [Usando partes do ControlTemplate no código](#using_parts_of_the_controltemplate_in_code)  
+- [Usando partes do ControlTemplate no código](#using_parts_of_the_controltemplate_in_code)  
   
--   [Fornecendo o contrato de controle](#providing_the_control_contract)  
+- [Fornecendo o contrato de controle](#providing_the_control_contract)  
   
--   [Exemplo completo](#complete_example)  
+- [Exemplo completo](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
@@ -60,11 +60,11 @@ Um controle NumericUpDown personalizado
 ## <a name="parts-and-states-model"></a>Modelo de partes e estados  
  O modelo de partes e estados especifica como definir a estrutura e o comportamento visuais de um controle. Para seguir o modelo de partes e estados, faça o seguinte:  
   
--   Definir a estrutura e o comportamento visuais no <xref:System.Windows.Controls.ControlTemplate> de um controle.  
+- Definir a estrutura e o comportamento visuais no <xref:System.Windows.Controls.ControlTemplate> de um controle.  
   
--   Siga algumas melhores práticas quando a lógica do controle interagir com partes do modelo de controle.  
+- Siga algumas melhores práticas quando a lógica do controle interagir com partes do modelo de controle.  
   
--   Fornecer um contrato de controle para especificar o que deve ser incluído no <xref:System.Windows.Controls.ControlTemplate>.  
+- Fornecer um contrato de controle para especificar o que deve ser incluído no <xref:System.Windows.Controls.ControlTemplate>.  
   
  Quando você define a estrutura e o comportamento visuais nos <xref:System.Windows.Controls.ControlTemplate> de um controle, os autores do aplicativo podem alterar a estrutura e o comportamento visual do seu controle criando um novo <xref:System.Windows.Controls.ControlTemplate> em vez de escrever código.   Você deve fornecer um contrato de controle que informa ao aplicativo autores que <xref:System.Windows.FrameworkElement> objetos e os estados devem ser definidos na <xref:System.Windows.Controls.ControlTemplate>. Você deve seguir algumas práticas recomendadas quando você interage com as partes na <xref:System.Windows.Controls.ControlTemplate> para que o controle manipula adequadamente incompleto <xref:System.Windows.Controls.ControlTemplate>.  Se você seguir esses três princípios, os autores do aplicativo será capazes de criar uma <xref:System.Windows.Controls.ControlTemplate> para o seu controle apenas tão facilmente quanto eles pode para os controles que acompanham o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  A próxima seção explica cada uma dessas recomendações detalhadamente.  
   
@@ -134,18 +134,18 @@ Um controle NumericUpDown personalizado
   
  O <xref:System.Windows.VisualStateManager.GoToState%2A> método executa a lógica necessária para iniciar e interromper os storyboards corretamente. Quando um controle chama <xref:System.Windows.VisualStateManager.GoToState%2A> para alterar seu estado, o <xref:System.Windows.VisualStateManager> faz o seguinte:  
   
--   Se o <xref:System.Windows.VisualState> que o controle vai tiver um <xref:System.Windows.Media.Animation.Storyboard>, o storyboard será iniciado. Então, se o <xref:System.Windows.VisualState> que o controle vem tiver um <xref:System.Windows.Media.Animation.Storyboard>, o storyboard será encerrado.  
+- Se o <xref:System.Windows.VisualState> que o controle vai tiver um <xref:System.Windows.Media.Animation.Storyboard>, o storyboard será iniciado. Então, se o <xref:System.Windows.VisualState> que o controle vem tiver um <xref:System.Windows.Media.Animation.Storyboard>, o storyboard será encerrado.  
   
--   Se o controle já estiver no estado especificado, <xref:System.Windows.VisualStateManager.GoToState%2A> não executará nenhuma ação e retornará `true`.  
+- Se o controle já estiver no estado especificado, <xref:System.Windows.VisualStateManager.GoToState%2A> não executará nenhuma ação e retornará `true`.  
   
--   Se o estado especificado não existe na <xref:System.Windows.Controls.ControlTemplate> dos `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> não executará nenhuma ação e retornará `false`.  
+- Se o estado especificado não existe na <xref:System.Windows.Controls.ControlTemplate> dos `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> não executará nenhuma ação e retornará `false`.  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>Melhores práticas para trabalhar com o VisualStateManager  
  É recomendável que você faça o seguinte para manter os estados do controle:  
   
--   Usar propriedades para controlar seu estado.  
+- Usar propriedades para controlar seu estado.  
   
--   Criar um método auxiliar para fazer a transição entre estados.  
+- Criar um método auxiliar para fazer a transição entre estados.  
   
  O controlar `NumericUpDown` usa sua propriedade `Value` para controlar se ele está no estado `Positive` ou `Negative`.  O `NumericUpDown` controle também define o `Focused` e `UnFocused` afirma, que rastreia o <xref:System.Windows.UIElement.IsFocused%2A> propriedade. Se você usar estados que naturalmente não correspondem a uma propriedade do controle, poderá definir uma propriedade particular para controlar o estado.  
   
@@ -160,11 +160,11 @@ Um controle NumericUpDown personalizado
   
  Há três locais típicos em que o estado de um controle pode ser alterado:  
   
--   Quando o <xref:System.Windows.Controls.ControlTemplate> é aplicada para o <xref:System.Windows.Controls.Control>.  
+- Quando o <xref:System.Windows.Controls.ControlTemplate> é aplicada para o <xref:System.Windows.Controls.Control>.  
   
--   Quando uma propriedade é alterada.  
+- Quando uma propriedade é alterada.  
   
--   Quando ocorre um evento.  
+- Quando ocorre um evento.  
   
  Os exemplos a seguir demonstram a atualização do estado do controle `NumericUpDown` nesses casos.  
   
@@ -189,33 +189,33 @@ Um controle NumericUpDown personalizado
 ## <a name="providing-the-control-contract"></a>Fornecendo o contrato de controle  
  Você fornece um contrato de controle, de modo que <xref:System.Windows.Controls.ControlTemplate> autores saberá o que colocar o modelo. Um contrato de controle contém três elementos:  
   
--   Os elementos visuais usados pela lógica do controle.  
+- Os elementos visuais usados pela lógica do controle.  
   
--   Os estados do controle e o grupo ao qual cada estado pertence.  
+- Os estados do controle e o grupo ao qual cada estado pertence.  
   
--   As propriedades públicas que afetam o controle visualmente.  
+- As propriedades públicas que afetam o controle visualmente.  
   
  Alguém que cria um novo <xref:System.Windows.Controls.ControlTemplate> precisa saber o que <xref:System.Windows.FrameworkElement> objetos usa a lógica do controle, que tipo de cada objeto é e o nome deles. Um <xref:System.Windows.Controls.ControlTemplate> autor também precisa saber o nome de cada estado possível que o controle pode ser incluído e que <xref:System.Windows.VisualStateGroup> o estado é.  
   
  Retornando para o `NumericUpDown` espera de controle de exemplo, o <xref:System.Windows.Controls.ControlTemplate> ter o seguinte <xref:System.Windows.FrameworkElement> objetos:  
   
--   Um <xref:System.Windows.Controls.Primitives.RepeatButton> chamado `UpButton`.  
+- Um <xref:System.Windows.Controls.Primitives.RepeatButton> chamado `UpButton`.  
   
--   Um <xref:System.Windows.Controls.Primitives.RepeatButton> chamado `DownButton.`  
+- Um <xref:System.Windows.Controls.Primitives.RepeatButton> chamado `DownButton.`  
   
  O controle pode estar nos seguintes estados:  
   
--   No `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- No `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   No `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- No `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  Para especificar quais <xref:System.Windows.FrameworkElement> objetos que o controle espera que, se você usar o <xref:System.Windows.TemplatePartAttribute>, que especifica o nome e tipo dos elementos esperados.  Para especificar os possíveis estados de um controle, você deve usar o <xref:System.Windows.TemplateVisualStateAttribute>, que especifica o nome do estado e que <xref:System.Windows.VisualStateGroup> pertence.  Colocar o <xref:System.Windows.TemplatePartAttribute> e <xref:System.Windows.TemplateVisualStateAttribute> na definição de classe do controle.  
   

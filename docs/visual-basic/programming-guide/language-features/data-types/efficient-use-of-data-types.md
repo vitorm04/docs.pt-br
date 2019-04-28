@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907212"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Uso eficiente de tipos de dados (Visual Basic)
 Variáveis não declaradas e as variáveis declaradas sem um tipo de dados são atribuídas a `Object` tipo de dados. Isso torna mais fácil escrever programas rapidamente, mas ele pode fazer com que eles sejam executados mais lentamente.  
@@ -26,11 +26,11 @@ Variáveis não declaradas e as variáveis declaradas sem um tipo de dados são 
 ## <a name="strong-typing"></a>Tipagem forte  
  Especificar tipos de dados para todas as variáveis é conhecido como *tipagem forte*. Usando a tipagem forte tem várias vantagens:  
   
--   Ele permite que o suporte do IntelliSense para as variáveis. Isso permite que você veja suas propriedades e outros membros conforme você digita no código.  
+- Ele permite que o suporte do IntelliSense para as variáveis. Isso permite que você veja suas propriedades e outros membros conforme você digita no código.  
   
--   Ela tira proveito da verificação de tipo do compilador. Captura instruções que podem falhar em tempo de execução devido a erros, como estouro. Ela também captura chamadas para métodos em objetos que não dão suporte a eles.  
+- Ela tira proveito da verificação de tipo do compilador. Captura instruções que podem falhar em tempo de execução devido a erros, como estouro. Ela também captura chamadas para métodos em objetos que não dão suporte a eles.  
   
--   Isso resulta em uma execução mais rápida do seu código.  
+- Isso resulta em uma execução mais rápida do seu código.  
   
 ## <a name="most-efficient-data-types"></a>Tipos de dados mais eficientes  
  Para variáveis que nunca contêm frações, os tipos de dados integrais são mais eficientes do que os tipos não integral. No Visual Basic `Integer` e `UInteger` são os tipos numéricos mais eficientes.  

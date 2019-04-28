@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907602"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Passo a passo: Escrevendo consultas em Visual Basic
 Este passo a passo demonstra como você pode usar recursos de linguagem do Visual Basic para escrever [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões de consulta. O passo a passo demonstra como criar consultas em uma lista de objetos do aluno, como executar as consultas e como modificá-los. As consultas incorporam vários recursos, incluindo tipos anônimos, inferência de tipo local e inicializadores de objeto.  
@@ -40,14 +40,14 @@ Este passo a passo demonstra como você pode usar recursos de linguagem do Visua
   
 #### <a name="to-add-the-data-source"></a>Para adicionar a fonte de dados  
   
--   Definir um `Student` de classe e criar uma lista de instâncias da classe.  
+- Definir um `Student` de classe e criar uma lista de instâncias da classe.  
   
     > [!IMPORTANT]
     >  O código necessário para definir a `Student` de classe e criar a lista usada no passo a passo exemplos é fornecido no [como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Você pode copiá-lo a partir daí e cole-a no seu projeto. O novo código substitui o código que apareceu quando você criou o projeto.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Para adicionar um novo aluno à lista de alunos  
   
--   Seguem o padrão no `getStudents` método para adicionar outra instância da `Student` classe à lista. Adicionar o aluno apresentará os inicializadores de objeto. Para obter mais informações, consulte [inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+- Seguem o padrão no `getStudents` método para adicionar outra instância da `Student` classe à lista. Adicionar o aluno apresentará os inicializadores de objeto. Para obter mais informações, consulte [inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Criar uma consulta  
  Quando executada, a consulta adicionada nesta seção produz uma lista dos alunos cuja classificação acadêmica coloca-os nos dez principais. Porque a consulta seleciona completo `Student` cada vez, o tipo do resultado da consulta de objeto é `IEnumerable(Of Student)`. No entanto, o tipo de consulta normalmente não é especificado nas definições de consulta. Em vez disso, o compilador usa a inferência de tipo local para determinar o tipo. Para obter mais informações, consulte [inferência de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variável de intervalo da consulta, `currentStudent`, serve como uma referência a cada `Student` instância na origem, `students`, fornecendo acesso às propriedades de cada objeto no `students`.  

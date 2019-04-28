@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7be1bd2934fbb2e09a39c3042fa9ae314e89d629
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905600"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Método ICeeGen::AllocateMethodBuffer
 Cria um buffer do tamanho especificado para um método e obtém o endereço virtual relativo do método.  
