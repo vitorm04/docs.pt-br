@@ -8,29 +8,29 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
 ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650447"
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="3239e-102">Tópicos explicativos de áudio e vídeo</span><span class="sxs-lookup"><span data-stu-id="3239e-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="3239e-103">Os tópicos a seguir demonstram como usar o <xref:System.Windows.Controls.MediaElement> a integrar o conteúdo de áudio e vídeo em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="3239e-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="b8c9d-102">Tópicos explicativos de áudio e vídeo</span><span class="sxs-lookup"><span data-stu-id="b8c9d-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="b8c9d-103">Os tópicos a seguir demonstram como usar o <xref:System.Windows.Controls.MediaElement> a integrar o conteúdo de áudio e vídeo em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="b8c9d-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3239e-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="3239e-104">In This Section</span></span>  
- [<span data-ttu-id="3239e-105">Controlar um MediaElement (reproduzir, pausar, parar, volume e velocidade)</span><span class="sxs-lookup"><span data-stu-id="3239e-105">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="3239e-106">Controlar um MediaElement usando um storyboard</span><span class="sxs-lookup"><span data-stu-id="3239e-106">Control a MediaElement by Using a Storyboard</span></span>](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="3239e-107">Disparar reprodução de mídia com um evento de usuário</span><span class="sxs-lookup"><span data-stu-id="3239e-107">Trigger Media Playback with a User Event</span></span>](how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="3239e-108">Repetir reprodução de mídia</span><span class="sxs-lookup"><span data-stu-id="3239e-108">Repeat Media Playback</span></span>](how-to-repeat-media-playback.md)  
- [<span data-ttu-id="3239e-109">Reproduzir mídia com animações</span><span class="sxs-lookup"><span data-stu-id="3239e-109">Play Media with Animations</span></span>](how-to-play-media-with-animations.md)  
- [<span data-ttu-id="3239e-110">Usar transformações em um MediaElement</span><span class="sxs-lookup"><span data-stu-id="3239e-110">Use Transforms on a MediaElement</span></span>](how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b8c9d-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="b8c9d-104">In This Section</span></span>  
+ [<span data-ttu-id="b8c9d-105">Controlar um MediaElement (reproduzir, pausar, parar, volume e velocidade)</span><span class="sxs-lookup"><span data-stu-id="b8c9d-105">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="b8c9d-106">Controlar um MediaElement usando um storyboard</span><span class="sxs-lookup"><span data-stu-id="b8c9d-106">Control a MediaElement by Using a Storyboard</span></span>](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="b8c9d-107">Disparar reprodução de mídia com um evento de usuário</span><span class="sxs-lookup"><span data-stu-id="b8c9d-107">Trigger Media Playback with a User Event</span></span>](how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="b8c9d-108">Repetir reprodução de mídia</span><span class="sxs-lookup"><span data-stu-id="b8c9d-108">Repeat Media Playback</span></span>](how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="b8c9d-109">Reproduzir mídia com animações</span><span class="sxs-lookup"><span data-stu-id="b8c9d-109">Play Media with Animations</span></span>](how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="b8c9d-110">Usar transformações em um MediaElement</span><span class="sxs-lookup"><span data-stu-id="b8c9d-110">Use Transforms on a MediaElement</span></span>](how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="3239e-111">Referência</span><span class="sxs-lookup"><span data-stu-id="3239e-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b8c9d-111">Referência</span><span class="sxs-lookup"><span data-stu-id="b8c9d-111">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="3239e-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="3239e-112">Related Sections</span></span>  
- [<span data-ttu-id="3239e-113">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="3239e-113">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="b8c9d-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="b8c9d-112">Related Sections</span></span>  
+ [<span data-ttu-id="b8c9d-113">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="b8c9d-113">Graphics and Multimedia</span></span>](index.md)

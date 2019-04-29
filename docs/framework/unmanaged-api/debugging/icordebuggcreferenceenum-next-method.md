@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33ad221f2a05357484d0877b6306d78e3864eff6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651579"
 ---
-# <a name="icordebuggcreferenceenumnext-method"></a><span data-ttu-id="81f34-102">Método ICorDebugGCReferenceEnum::Next</span><span class="sxs-lookup"><span data-stu-id="81f34-102">ICorDebugGCReferenceEnum::Next Method</span></span>
-<span data-ttu-id="81f34-103">Obtém o número especificado de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instâncias que contêm informações sobre os objetos que serão coletados pelo lixo.</span><span class="sxs-lookup"><span data-stu-id="81f34-103">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>  
+# <a name="icordebuggcreferenceenumnext-method"></a><span data-ttu-id="55c15-102">Método ICorDebugGCReferenceEnum::Next</span><span class="sxs-lookup"><span data-stu-id="55c15-102">ICorDebugGCReferenceEnum::Next Method</span></span>
+<span data-ttu-id="55c15-103">Obtém o número especificado de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instâncias que contêm informações sobre os objetos que serão coletados pelo lixo.</span><span class="sxs-lookup"><span data-stu-id="55c15-103">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81f34-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="81f34-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55c15-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="55c15-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -36,28 +36,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="81f34-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="81f34-105">Parameters</span></span>  
- <span data-ttu-id="81f34-106">celt</span><span class="sxs-lookup"><span data-stu-id="81f34-106">celt</span></span>  
- <span data-ttu-id="81f34-107">[in] O número de raízes a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="81f34-107">[in] The number of roots to be retrieved.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="55c15-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="55c15-105">Parameters</span></span>  
+ <span data-ttu-id="55c15-106">celt</span><span class="sxs-lookup"><span data-stu-id="55c15-106">celt</span></span>  
+ <span data-ttu-id="55c15-107">[in] O número de raízes a ser recuperado.</span><span class="sxs-lookup"><span data-stu-id="55c15-107">[in] The number of roots to be retrieved.</span></span>  
   
- <span data-ttu-id="81f34-108">raízes</span><span class="sxs-lookup"><span data-stu-id="81f34-108">roots</span></span>  
- <span data-ttu-id="81f34-109">[out] Uma matriz de ponteiros, cada qual apontando para um [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objeto que representa a raiz de um objeto a ser coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="81f34-109">[out] An array of pointers, each of which points to a [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) object that represents the root of an object to be garbage-collected.</span></span>  
+ <span data-ttu-id="55c15-108">raízes</span><span class="sxs-lookup"><span data-stu-id="55c15-108">roots</span></span>  
+ <span data-ttu-id="55c15-109">[out] Uma matriz de ponteiros, cada qual apontando para um [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objeto que representa a raiz de um objeto a ser coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="55c15-109">[out] An array of pointers, each of which points to a [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) object that represents the root of an object to be garbage-collected.</span></span>  
   
- <span data-ttu-id="81f34-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="81f34-110">pceltFetched</span></span>  
- <span data-ttu-id="81f34-111">[out] Um ponteiro para o número de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objetos, na verdade, são retornados em `roots`.</span><span class="sxs-lookup"><span data-stu-id="81f34-111">[out] A pointer to the number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects actually returned in `roots`.</span></span> <span data-ttu-id="81f34-112">Esse valor pode ser `null` se `celt` é 1.</span><span class="sxs-lookup"><span data-stu-id="81f34-112">This value may be `null` if `celt` is 1.</span></span>  
+ <span data-ttu-id="55c15-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="55c15-110">pceltFetched</span></span>  
+ <span data-ttu-id="55c15-111">[out] Um ponteiro para o número de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objetos, na verdade, são retornados em `roots`.</span><span class="sxs-lookup"><span data-stu-id="55c15-111">[out] A pointer to the number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects actually returned in `roots`.</span></span> <span data-ttu-id="55c15-112">Esse valor pode ser `null` se `celt` é 1.</span><span class="sxs-lookup"><span data-stu-id="55c15-112">This value may be `null` if `celt` is 1.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="81f34-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="81f34-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="55c15-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="55c15-113">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81f34-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="81f34-114">Requirements</span></span>  
- <span data-ttu-id="81f34-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81f34-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55c15-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="55c15-114">Requirements</span></span>  
+ <span data-ttu-id="55c15-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55c15-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81f34-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="81f34-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="55c15-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="55c15-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="81f34-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="81f34-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55c15-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55c15-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="81f34-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81f34-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="55c15-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55c15-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81f34-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="81f34-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55c15-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="55c15-119">See also</span></span>
 
-- [<span data-ttu-id="81f34-120">Interface ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="81f34-120">ICorDebugGCReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
-- [<span data-ttu-id="81f34-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="81f34-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="55c15-120">Interface ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="55c15-120">ICorDebugGCReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
+- [<span data-ttu-id="55c15-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="55c15-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

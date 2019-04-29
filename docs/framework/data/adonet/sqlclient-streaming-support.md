@@ -3,30 +3,30 @@ title: Suporte de streaming do SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
 ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698441"
 ---
-# <a name="sqlclient-streaming-support"></a><span data-ttu-id="3a662-102">Suporte de streaming do SqlClient</span><span class="sxs-lookup"><span data-stu-id="3a662-102">SqlClient Streaming Support</span></span>
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="57e3d-102">Suporte de streaming do SqlClient</span><span class="sxs-lookup"><span data-stu-id="57e3d-102">SqlClient Streaming Support</span></span>
 
-<span data-ttu-id="3a662-103">Suporte a streaming entre o SQL Server e um aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia).</span><span class="sxs-lookup"><span data-stu-id="3a662-103">Streaming support between SQL Server and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="3a662-104">Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperar BLOBS pode usar muita memória.</span><span class="sxs-lookup"><span data-stu-id="3a662-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
+<span data-ttu-id="57e3d-103">Suporte a streaming entre o SQL Server e um aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia).</span><span class="sxs-lookup"><span data-stu-id="57e3d-103">Streaming support between SQL Server and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="57e3d-104">Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperar BLOBS pode usar muita memória.</span><span class="sxs-lookup"><span data-stu-id="57e3d-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
 
-<span data-ttu-id="3a662-105">Streaming suporte para e do SQL Server simplifica a gravação de aplicativos em que dados de fluxo, sem ter que carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.</span><span class="sxs-lookup"><span data-stu-id="3a662-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
+<span data-ttu-id="57e3d-105">Streaming suporte para e do SQL Server simplifica a gravação de aplicativos em que dados de fluxo, sem ter que carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.</span><span class="sxs-lookup"><span data-stu-id="57e3d-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
 
-<span data-ttu-id="3a662-106">O suporte a streaming também habilitará aplicativos da camada intermediária para dimensionar melhor, especialmente em cenários onde os objetos comerciais se conectam ao SQL Azure para enviar, recuperar e manipular BLOBs grandes.</span><span class="sxs-lookup"><span data-stu-id="3a662-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
+<span data-ttu-id="57e3d-106">O suporte a streaming também habilitará aplicativos da camada intermediária para dimensionar melhor, especialmente em cenários onde os objetos comerciais se conectam ao SQL Azure para enviar, recuperar e manipular BLOBs grandes.</span><span class="sxs-lookup"><span data-stu-id="57e3d-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="3a662-107">As chamadas assíncronas não têm suporte se um aplicativo também usa a palavra-chave da cadeia de conexão `Context Connection`.</span><span class="sxs-lookup"><span data-stu-id="3a662-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
+> <span data-ttu-id="57e3d-107">As chamadas assíncronas não têm suporte se um aplicativo também usa a palavra-chave da cadeia de conexão `Context Connection`.</span><span class="sxs-lookup"><span data-stu-id="57e3d-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
 >
-> <span data-ttu-id="3a662-108">Os membros adicionados para dar suporte a streaming são usados para recuperar dados de consultas e passar parâmetros para consultas e procedimentos armazenados.</span><span class="sxs-lookup"><span data-stu-id="3a662-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="3a662-109">O recurso de streaming aborda cenários básicos de migração de dados e de OLTP e é aplicável ambientes de migrações de dados locais e externos.</span><span class="sxs-lookup"><span data-stu-id="3a662-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on premise and off premise data migrations.environments.</span></span>
+> <span data-ttu-id="57e3d-108">Os membros adicionados para dar suporte a streaming são usados para recuperar dados de consultas e passar parâmetros para consultas e procedimentos armazenados.</span><span class="sxs-lookup"><span data-stu-id="57e3d-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="57e3d-109">O recurso de streaming aborda cenários básicos de migração de dados e de OLTP e é aplicável ambientes de migrações de dados locais e externos.</span><span class="sxs-lookup"><span data-stu-id="57e3d-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on premise and off premise data migrations.environments.</span></span>
 
-## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="3a662-110">Suporte a streaming do SQL Server</span><span class="sxs-lookup"><span data-stu-id="3a662-110">Streaming Support from SQL Server</span></span>
+## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="57e3d-110">Suporte a streaming do SQL Server</span><span class="sxs-lookup"><span data-stu-id="57e3d-110">Streaming Support from SQL Server</span></span>
 
-<span data-ttu-id="3a662-111">Suporte a streaming do SQL Server introduz uma nova funcionalidade na <xref:System.Data.Common.DbDataReader> e, em de <xref:System.Data.SqlClient.SqlDataReader> classes para obter <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, e <xref:System.IO.TextReader> objetos e reagir a eles.</span><span class="sxs-lookup"><span data-stu-id="3a662-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="3a662-112">Essas classes são usadas para recuperar dados de consultas.</span><span class="sxs-lookup"><span data-stu-id="3a662-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="3a662-113">Como resultado, o suporte de Streaming do SQL Server aborda cenários de OLTP e aplica-se para o local e em ambientes fora do local.</span><span class="sxs-lookup"><span data-stu-id="3a662-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premise and off-premise environments.</span></span>
+<span data-ttu-id="57e3d-111">Suporte a streaming do SQL Server introduz uma nova funcionalidade na <xref:System.Data.Common.DbDataReader> e, em de <xref:System.Data.SqlClient.SqlDataReader> classes para obter <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, e <xref:System.IO.TextReader> objetos e reagir a eles.</span><span class="sxs-lookup"><span data-stu-id="57e3d-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="57e3d-112">Essas classes são usadas para recuperar dados de consultas.</span><span class="sxs-lookup"><span data-stu-id="57e3d-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="57e3d-113">Como resultado, o suporte de Streaming do SQL Server aborda cenários de OLTP e aplica-se para o local e em ambientes fora do local.</span><span class="sxs-lookup"><span data-stu-id="57e3d-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premise and off-premise environments.</span></span>
 
-<span data-ttu-id="3a662-114">Os seguintes membros foram adicionados ao <xref:System.Data.SqlClient.SqlDataReader> para habilitar o suporte a streaming do SQL Server:</span><span class="sxs-lookup"><span data-stu-id="3a662-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="57e3d-114">Os seguintes membros foram adicionados ao <xref:System.Data.SqlClient.SqlDataReader> para habilitar o suporte a streaming do SQL Server:</span><span class="sxs-lookup"><span data-stu-id="57e3d-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ ms.locfileid: "57844230"
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-<span data-ttu-id="3a662-115">Os seguintes membros foram adicionados ao <xref:System.Data.Common.DbDataReader> para habilitar o suporte a streaming do SQL Server:</span><span class="sxs-lookup"><span data-stu-id="3a662-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="57e3d-115">Os seguintes membros foram adicionados ao <xref:System.Data.Common.DbDataReader> para habilitar o suporte a streaming do SQL Server:</span><span class="sxs-lookup"><span data-stu-id="57e3d-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,37 +48,37 @@ ms.locfileid: "57844230"
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="3a662-116">Suporte a streaming para o SQL Server</span><span class="sxs-lookup"><span data-stu-id="3a662-116">Streaming Support to SQL Server</span></span>
+## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="57e3d-116">Suporte a streaming para o SQL Server</span><span class="sxs-lookup"><span data-stu-id="57e3d-116">Streaming Support to SQL Server</span></span>
 
-<span data-ttu-id="3a662-117">Suporte para o SQL Server de streaming introduz uma nova funcionalidade na <xref:System.Data.SqlClient.SqlParameter> de classe para que possa aceitar e reagir às <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, e <xref:System.IO.TextReader> objetos.</span><span class="sxs-lookup"><span data-stu-id="3a662-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="3a662-118"><xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.</span><span class="sxs-lookup"><span data-stu-id="3a662-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
+<span data-ttu-id="57e3d-117">Suporte para o SQL Server de streaming introduz uma nova funcionalidade na <xref:System.Data.SqlClient.SqlParameter> de classe para que possa aceitar e reagir às <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, e <xref:System.IO.TextReader> objetos.</span><span class="sxs-lookup"><span data-stu-id="57e3d-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="57e3d-118"><xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.</span><span class="sxs-lookup"><span data-stu-id="57e3d-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
 
-<span data-ttu-id="3a662-119">Descartar um objeto <xref:System.Data.SqlClient.SqlCommand> ou chamar <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve cancelar qualquer operação de streaming.</span><span class="sxs-lookup"><span data-stu-id="3a662-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="3a662-120">Se um aplicativo enviar <xref:System.Threading.CancellationToken>, o cancelamento não será garantido.</span><span class="sxs-lookup"><span data-stu-id="3a662-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
+<span data-ttu-id="57e3d-119">Descartar um objeto <xref:System.Data.SqlClient.SqlCommand> ou chamar <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve cancelar qualquer operação de streaming.</span><span class="sxs-lookup"><span data-stu-id="57e3d-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="57e3d-120">Se um aplicativo enviar <xref:System.Threading.CancellationToken>, o cancelamento não será garantido.</span><span class="sxs-lookup"><span data-stu-id="57e3d-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
 
-<span data-ttu-id="3a662-121">Os seguintes tipos de <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceitarão um <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.Stream>:</span><span class="sxs-lookup"><span data-stu-id="3a662-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
+<span data-ttu-id="57e3d-121">Os seguintes tipos de <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceitarão um <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.Stream>:</span><span class="sxs-lookup"><span data-stu-id="57e3d-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
 
-- <span data-ttu-id="3a662-122">**Binary**</span><span class="sxs-lookup"><span data-stu-id="3a662-122">**Binary**</span></span>
+- <span data-ttu-id="57e3d-122">**Binary**</span><span class="sxs-lookup"><span data-stu-id="57e3d-122">**Binary**</span></span>
 
-- <span data-ttu-id="3a662-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="3a662-123">**VarBinary**</span></span>
+- <span data-ttu-id="57e3d-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="57e3d-123">**VarBinary**</span></span>
 
-<span data-ttu-id="3a662-124">Os seguintes tipos de <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceitarão um <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.TextReader>:</span><span class="sxs-lookup"><span data-stu-id="3a662-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
+<span data-ttu-id="57e3d-124">Os seguintes tipos de <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceitarão um <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.TextReader>:</span><span class="sxs-lookup"><span data-stu-id="57e3d-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
 
-- <span data-ttu-id="3a662-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="3a662-125">**Char**</span></span>
+- <span data-ttu-id="57e3d-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="57e3d-125">**Char**</span></span>
 
-- <span data-ttu-id="3a662-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="3a662-126">**NChar**</span></span>
+- <span data-ttu-id="57e3d-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="57e3d-126">**NChar**</span></span>
 
-- <span data-ttu-id="3a662-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="3a662-127">**NVarChar**</span></span>
+- <span data-ttu-id="57e3d-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="57e3d-127">**NVarChar**</span></span>
 
-- <span data-ttu-id="3a662-128">**Xml**</span><span class="sxs-lookup"><span data-stu-id="3a662-128">**Xml**</span></span>
+- <span data-ttu-id="57e3d-128">**Xml**</span><span class="sxs-lookup"><span data-stu-id="57e3d-128">**Xml**</span></span>
 
-<span data-ttu-id="3a662-129">O **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> tipo aceitará uma <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="3a662-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
+<span data-ttu-id="57e3d-129">O **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> tipo aceitará uma <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="57e3d-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
 
-<span data-ttu-id="3a662-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> pode aceitar valores do tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="3a662-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
+<span data-ttu-id="57e3d-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> pode aceitar valores do tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="57e3d-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
 
-<span data-ttu-id="3a662-131">O objeto <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream> serão transferidos até atingir o valor definido pelo <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span><span class="sxs-lookup"><span data-stu-id="3a662-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
+<span data-ttu-id="57e3d-131">O objeto <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream> serão transferidos até atingir o valor definido pelo <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span><span class="sxs-lookup"><span data-stu-id="57e3d-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
 
-## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="3a662-132">Exemplo-- Streaming do SQL Server</span><span class="sxs-lookup"><span data-stu-id="3a662-132">Sample -- Streaming from SQL Server</span></span>
+## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="57e3d-132">Exemplo-- Streaming do SQL Server</span><span class="sxs-lookup"><span data-stu-id="57e3d-132">Sample -- Streaming from SQL Server</span></span>
 
-<span data-ttu-id="3a662-133">Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:</span><span class="sxs-lookup"><span data-stu-id="3a662-133">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>
+<span data-ttu-id="57e3d-133">Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:</span><span class="sxs-lookup"><span data-stu-id="57e3d-133">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo]
@@ -97,17 +97,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO
 ```
 
-<span data-ttu-id="3a662-134">O exemplo a seguir mostra como fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="3a662-134">The sample shows how to do the following:</span></span>
+<span data-ttu-id="57e3d-134">O exemplo a seguir mostra como fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="57e3d-134">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="3a662-135">Evite fechar um thread da interface do usuário fornecendo uma maneira assíncrona de recuperar arquivos grandes.</span><span class="sxs-lookup"><span data-stu-id="3a662-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
+- <span data-ttu-id="57e3d-135">Evite fechar um thread da interface do usuário fornecendo uma maneira assíncrona de recuperar arquivos grandes.</span><span class="sxs-lookup"><span data-stu-id="57e3d-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
 
-- <span data-ttu-id="3a662-136">Transferir um arquivo de texto grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a662-136">Transfer a large text file from SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
+- <span data-ttu-id="57e3d-136">Transferir um arquivo de texto grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="57e3d-136">Transfer a large text file from SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
 
-- <span data-ttu-id="3a662-137">Transferir um arquivo grande XML do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a662-137">Transfer a large XML file from SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
+- <span data-ttu-id="57e3d-137">Transferir um arquivo grande XML do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="57e3d-137">Transfer a large XML file from SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
 
-- <span data-ttu-id="3a662-138">Recupere dados do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3a662-138">Retrieve data from SQL Server.</span></span>
+- <span data-ttu-id="57e3d-138">Recupere dados do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="57e3d-138">Retrieve data from SQL Server.</span></span>
 
-- <span data-ttu-id="3a662-139">Transferir arquivos grandes (BLOBs) de um banco de dados do SQL Server para outro sem ficar sem memória.</span><span class="sxs-lookup"><span data-stu-id="3a662-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
+- <span data-ttu-id="57e3d-139">Transferir arquivos grandes (BLOBs) de um banco de dados do SQL Server para outro sem ficar sem memória.</span><span class="sxs-lookup"><span data-stu-id="57e3d-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
 
 ```csharp
 using System;
@@ -298,9 +298,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="3a662-140">Exemplo-- Streaming para o SQL Server</span><span class="sxs-lookup"><span data-stu-id="3a662-140">Sample -- Streaming to SQL Server</span></span>
+## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="57e3d-140">Exemplo-- Streaming para o SQL Server</span><span class="sxs-lookup"><span data-stu-id="57e3d-140">Sample -- Streaming to SQL Server</span></span>
 
-<span data-ttu-id="3a662-141">Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:</span><span class="sxs-lookup"><span data-stu-id="3a662-141">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>
+<span data-ttu-id="57e3d-141">Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:</span><span class="sxs-lookup"><span data-stu-id="57e3d-141">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -321,19 +321,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO
 ```
 
-<span data-ttu-id="3a662-142">O exemplo a seguir mostra como fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="3a662-142">The sample shows how to do the following:</span></span>
+<span data-ttu-id="57e3d-142">O exemplo a seguir mostra como fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="57e3d-142">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="3a662-143">Transferindo um grande BLOB para o SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a662-143">Transferring a large BLOB to SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
+- <span data-ttu-id="57e3d-143">Transferindo um grande BLOB para o SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="57e3d-143">Transferring a large BLOB to SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
 
-- <span data-ttu-id="3a662-144">Transferência de um arquivo de texto grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a662-144">Transferring a large text file to SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
+- <span data-ttu-id="57e3d-144">Transferência de um arquivo de texto grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="57e3d-144">Transferring a large text file to SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>
 
-- <span data-ttu-id="3a662-145">Usando o novo recurso assíncrono para transferir um BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="3a662-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
+- <span data-ttu-id="57e3d-145">Usando o novo recurso assíncrono para transferir um BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="57e3d-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="3a662-146">Usando o novo recurso assíncrono e a palavra-chave await para transferir um BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="3a662-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
+- <span data-ttu-id="57e3d-146">Usando o novo recurso assíncrono e a palavra-chave await para transferir um BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="57e3d-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="3a662-147">Cancelando a transferência de um BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="3a662-147">Cancelling the transfer of a large BLOB.</span></span>
+- <span data-ttu-id="57e3d-147">Cancelando a transferência de um BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="57e3d-147">Cancelling the transfer of a large BLOB.</span></span>
 
-- <span data-ttu-id="3a662-148">Streaming de um SQL Server para outra usando o novo recurso assíncrono.</span><span class="sxs-lookup"><span data-stu-id="3a662-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
+- <span data-ttu-id="57e3d-148">Streaming de um SQL Server para outra usando o novo recurso assíncrono.</span><span class="sxs-lookup"><span data-stu-id="57e3d-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
 
 ```csharp
 using System;
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="3a662-149">Exemplo-- Streaming de um servidor SQL para outro SQL Server</span><span class="sxs-lookup"><span data-stu-id="3a662-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="57e3d-149">Exemplo-- Streaming de um servidor SQL para outro SQL Server</span><span class="sxs-lookup"><span data-stu-id="57e3d-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
 
-<span data-ttu-id="3a662-150">Este exemplo demonstra como um BLOB grande de um SQL Server para outra, com suporte ao cancelamento de forma assíncrona.</span><span class="sxs-lookup"><span data-stu-id="3a662-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
+<span data-ttu-id="57e3d-150">Este exemplo demonstra como um BLOB grande de um SQL Server para outra, com suporte ao cancelamento de forma assíncrona.</span><span class="sxs-lookup"><span data-stu-id="57e3d-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
 
 ```csharp
 using System;
@@ -522,6 +522,6 @@ namespace StreamingFromServerToAnother {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3a662-151">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3a662-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57e3d-151">Consulte também</span><span class="sxs-lookup"><span data-stu-id="57e3d-151">See also</span></span>
 
-- <span data-ttu-id="3a662-152">[Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="3a662-152">[Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)</span></span>
+- <span data-ttu-id="57e3d-152">[Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="57e3d-152">[Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)</span></span>

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f14822a58f3982d6f9fee1328c10b960657c056f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753498"
 ---
-# <a name="importtypes2-method"></a><span data-ttu-id="9faee-102">Método ImportTypes2</span><span class="sxs-lookup"><span data-stu-id="9faee-102">ImportTypes2 Method</span></span>
-<span data-ttu-id="9faee-103">Inicia a importação de tipos.</span><span class="sxs-lookup"><span data-stu-id="9faee-103">Initiates the import of types.</span></span> <span data-ttu-id="9faee-104">Chame esse método para começar a importar tipos de cada escopo importado por meio [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="9faee-104">Call this method to begin importing types from each scope imported via [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span></span>  
+# <a name="importtypes2-method"></a><span data-ttu-id="0f793-102">Método ImportTypes2</span><span class="sxs-lookup"><span data-stu-id="0f793-102">ImportTypes2 Method</span></span>
+<span data-ttu-id="0f793-103">Inicia a importação de tipos.</span><span class="sxs-lookup"><span data-stu-id="0f793-103">Initiates the import of types.</span></span> <span data-ttu-id="0f793-104">Chame esse método para começar a importar tipos de cada escopo importado por meio [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="0f793-104">Call this method to begin importing types from each scope imported via [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9faee-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9faee-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f793-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0f793-105">Syntax</span></span>  
   
 ```  
 HRESULT ImportTypes2(  
@@ -39,33 +39,33 @@ HRESULT ImportTypes2(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9faee-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9faee-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0f793-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0f793-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="9faee-107">ID do assembly no qual importar.</span><span class="sxs-lookup"><span data-stu-id="9faee-107">ID of assembly into which to import.</span></span>  
+ <span data-ttu-id="0f793-107">ID do assembly no qual importar.</span><span class="sxs-lookup"><span data-stu-id="0f793-107">ID of assembly into which to import.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="9faee-108">ID do arquivo a partir do qual importar.</span><span class="sxs-lookup"><span data-stu-id="9faee-108">ID of file to from which to import.</span></span>  
+ <span data-ttu-id="0f793-108">ID do arquivo a partir do qual importar.</span><span class="sxs-lookup"><span data-stu-id="0f793-108">ID of file to from which to import.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="9faee-109">Escopo baseado em zero do qual importar.</span><span class="sxs-lookup"><span data-stu-id="9faee-109">Zero-based scope from which to import.</span></span>  
+ <span data-ttu-id="0f793-109">Escopo baseado em zero do qual importar.</span><span class="sxs-lookup"><span data-stu-id="0f793-109">Zero-based scope from which to import.</span></span>  
   
  `phEnum`  
- <span data-ttu-id="9faee-110">Recebe o identificador de enumerador para os tipos no escopo fornecido.</span><span class="sxs-lookup"><span data-stu-id="9faee-110">Receives enumerator handle for the types in the given scope.</span></span>  
+ <span data-ttu-id="0f793-110">Recebe o identificador de enumerador para os tipos no escopo fornecido.</span><span class="sxs-lookup"><span data-stu-id="0f793-110">Receives enumerator handle for the types in the given scope.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="9faee-111">Opcionalmente, recebe [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="9faee-111">Optionally receives [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface.</span></span>  
+ <span data-ttu-id="0f793-111">Opcionalmente, recebe [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="0f793-111">Optionally receives [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface.</span></span>  
   
  `pdwCountOfTypes`  
- <span data-ttu-id="9faee-112">Opcionalmente, recebe a contagem de tipos no escopo especificado.</span><span class="sxs-lookup"><span data-stu-id="9faee-112">Optionally receives count of types in the specified scope.</span></span>  
+ <span data-ttu-id="0f793-112">Opcionalmente, recebe a contagem de tipos no escopo especificado.</span><span class="sxs-lookup"><span data-stu-id="0f793-112">Optionally receives count of types in the specified scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9faee-113">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="9faee-113">Return Value</span></span>  
- <span data-ttu-id="9faee-114">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="9faee-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0f793-113">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="0f793-113">Return Value</span></span>  
+ <span data-ttu-id="0f793-114">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="0f793-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9faee-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9faee-115">Requirements</span></span>  
- <span data-ttu-id="9faee-116">Requer alink.h</span><span class="sxs-lookup"><span data-stu-id="9faee-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f793-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0f793-115">Requirements</span></span>  
+ <span data-ttu-id="0f793-116">Requer alink.h</span><span class="sxs-lookup"><span data-stu-id="0f793-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9faee-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9faee-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f793-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0f793-117">See also</span></span>
 
-- [<span data-ttu-id="9faee-118">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="9faee-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="9faee-119">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="9faee-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="9faee-120">API do ALink</span><span class="sxs-lookup"><span data-stu-id="9faee-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="0f793-118">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="0f793-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="0f793-119">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="0f793-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="0f793-120">API do ALink</span><span class="sxs-lookup"><span data-stu-id="0f793-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

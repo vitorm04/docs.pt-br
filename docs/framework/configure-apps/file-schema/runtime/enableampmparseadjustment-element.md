@@ -5,83 +5,83 @@ ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704837"
 ---
-# <a name="enableampmparseadjustment-element"></a><span data-ttu-id="8755b-102">\<EnableAmPmParseAdjustment > elemento</span><span class="sxs-lookup"><span data-stu-id="8755b-102">\<EnableAmPmParseAdjustment> Element</span></span>
-<span data-ttu-id="8755b-103">Determina se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="8755b-103">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain a day, month, hour, and AM/PM designator.</span></span>  
+# <a name="enableampmparseadjustment-element"></a><span data-ttu-id="66fdc-102">\<EnableAmPmParseAdjustment > elemento</span><span class="sxs-lookup"><span data-stu-id="66fdc-102">\<EnableAmPmParseAdjustment> Element</span></span>
+<span data-ttu-id="66fdc-103">Determina se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="66fdc-103">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain a day, month, hour, and AM/PM designator.</span></span>  
   
- <span data-ttu-id="8755b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8755b-104">\<configuration></span></span>  
- <span data-ttu-id="8755b-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="8755b-105">\<runtime></span></span>  
-<span data-ttu-id="8755b-106">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="8755b-106">\<EnableAmPmParseAdjustment></span></span>  
+ <span data-ttu-id="66fdc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="66fdc-104">\<configuration></span></span>  
+ <span data-ttu-id="66fdc-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="66fdc-105">\<runtime></span></span>  
+<span data-ttu-id="66fdc-106">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="66fdc-106">\<EnableAmPmParseAdjustment></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8755b-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8755b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66fdc-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="66fdc-107">Syntax</span></span>  
   
 ```xml  
 <EnableAmPmParseAdjustment enabled="0"|"1" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8755b-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="8755b-108">Attributes and Elements</span></span>  
- <span data-ttu-id="8755b-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="8755b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="66fdc-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="66fdc-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="66fdc-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="66fdc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8755b-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="8755b-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="66fdc-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="66fdc-110">Attributes</span></span>  
   
-|<span data-ttu-id="8755b-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="8755b-111">Attribute</span></span>|<span data-ttu-id="8755b-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="8755b-112">Description</span></span>|  
+|<span data-ttu-id="66fdc-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="66fdc-111">Attribute</span></span>|<span data-ttu-id="66fdc-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="66fdc-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="8755b-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="8755b-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="8755b-114">Especifica se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="8755b-114">Specifies whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|`enabled`|<span data-ttu-id="66fdc-113">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="66fdc-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="66fdc-114">Especifica se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="66fdc-114">Specifies whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
   
-### <a name="enabled-attribute"></a><span data-ttu-id="8755b-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="8755b-115">enabled Attribute</span></span>  
+### <a name="enabled-attribute"></a><span data-ttu-id="66fdc-115">Atributo habilitado</span><span class="sxs-lookup"><span data-stu-id="66fdc-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="8755b-116">Valor</span><span class="sxs-lookup"><span data-stu-id="8755b-116">Value</span></span>|<span data-ttu-id="8755b-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="8755b-117">Description</span></span>|  
+|<span data-ttu-id="66fdc-116">Valor</span><span class="sxs-lookup"><span data-stu-id="66fdc-116">Value</span></span>|<span data-ttu-id="66fdc-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="66fdc-117">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="8755b-118">0</span><span class="sxs-lookup"><span data-stu-id="8755b-118">0</span></span>|<span data-ttu-id="8755b-119">Data e hora de métodos de análise não usam regras ajustadas para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="8755b-119">Date and time parsing methods do not use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
-|<span data-ttu-id="8755b-120">1</span><span class="sxs-lookup"><span data-stu-id="8755b-120">1</span></span>|<span data-ttu-id="8755b-121">Data e hora métodos de análise usam regras ajustadas para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="8755b-121">Date and time parsing methods use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|<span data-ttu-id="66fdc-118">0</span><span class="sxs-lookup"><span data-stu-id="66fdc-118">0</span></span>|<span data-ttu-id="66fdc-119">Data e hora de métodos de análise não usam regras ajustadas para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="66fdc-119">Date and time parsing methods do not use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|<span data-ttu-id="66fdc-120">1</span><span class="sxs-lookup"><span data-stu-id="66fdc-120">1</span></span>|<span data-ttu-id="66fdc-121">Data e hora métodos de análise usam regras ajustadas para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.</span><span class="sxs-lookup"><span data-stu-id="66fdc-121">Date and time parsing methods use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8755b-122">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="8755b-122">Child Elements</span></span>  
- <span data-ttu-id="8755b-123">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="8755b-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="66fdc-122">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="66fdc-122">Child Elements</span></span>  
+ <span data-ttu-id="66fdc-123">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="66fdc-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="8755b-124">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="8755b-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="66fdc-124">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="66fdc-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="8755b-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="8755b-125">Element</span></span>|<span data-ttu-id="8755b-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="8755b-126">Description</span></span>|  
+|<span data-ttu-id="66fdc-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="66fdc-125">Element</span></span>|<span data-ttu-id="66fdc-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="66fdc-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="8755b-127">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8755b-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="8755b-128">Contém informações sobre opções de inicialização do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="8755b-128">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="66fdc-127">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="66fdc-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="66fdc-128">Contém informações sobre opções de inicialização do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="66fdc-128">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8755b-129">Comentários</span><span class="sxs-lookup"><span data-stu-id="8755b-129">Remarks</span></span>  
- <span data-ttu-id="8755b-130">O `<EnableAmPmParseAdjustment>` elemento controla como os métodos a seguir analisar uma cadeia de caracteres de data que contém um dia numérico e o mês, seguido por uma hora e um designador AM/PM (por exemplo, "10 4 6 AM"):</span><span class="sxs-lookup"><span data-stu-id="8755b-130">The `<EnableAmPmParseAdjustment>` element controls how the following methods parse a date string that contains a numeric day and month followed by an hour and an AM/PM designator (such as "4/10 6 AM"):</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66fdc-129">Comentários</span><span class="sxs-lookup"><span data-stu-id="66fdc-129">Remarks</span></span>  
+ <span data-ttu-id="66fdc-130">O `<EnableAmPmParseAdjustment>` elemento controla como os métodos a seguir analisar uma cadeia de caracteres de data que contém um dia numérico e o mês, seguido por uma hora e um designador AM/PM (por exemplo, "10 4 6 AM"):</span><span class="sxs-lookup"><span data-stu-id="66fdc-130">The `<EnableAmPmParseAdjustment>` element controls how the following methods parse a date string that contains a numeric day and month followed by an hour and an AM/PM designator (such as "4/10 6 AM"):</span></span>  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
+- <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="8755b-131">Outros padrões não são afetados.</span><span class="sxs-lookup"><span data-stu-id="8755b-131">No other patterns are affected.</span></span>  
+ <span data-ttu-id="66fdc-131">Outros padrões não são afetados.</span><span class="sxs-lookup"><span data-stu-id="66fdc-131">No other patterns are affected.</span></span>  
   
- <span data-ttu-id="8755b-132">O `<EnableAmPmParseAdjustment>` elemento não tem efeito sobre a <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> métodos.</span><span class="sxs-lookup"><span data-stu-id="8755b-132">The `<EnableAmPmParseAdjustment>` element has no effect on the  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>,  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, and <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> methods.</span></span>  
+ <span data-ttu-id="66fdc-132">O `<EnableAmPmParseAdjustment>` elemento não tem efeito sobre a <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> métodos.</span><span class="sxs-lookup"><span data-stu-id="66fdc-132">The `<EnableAmPmParseAdjustment>` element has no effect on the  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>,  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, and <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> methods.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="8755b-133">No .NET Core e .NET Native, regras de análise ajustadas do AM/PM são habilitadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="8755b-133">In .NET Core and .NET Native, the adjusted AM/PM parsing rules are enabled by default.</span></span>  
+>  <span data-ttu-id="66fdc-133">No .NET Core e .NET Native, regras de análise ajustadas do AM/PM são habilitadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="66fdc-133">In .NET Core and .NET Native, the adjusted AM/PM parsing rules are enabled by default.</span></span>  
   
- <span data-ttu-id="8755b-134">Se a regra de análise de ajuste não estiver habilitada, o primeiro dígito da cadeia de caracteres é interpretado como a hora do relógio de 12 horas, e o restante da cadeia de caracteres, exceto o designador AM/PM é ignorado.</span><span class="sxs-lookup"><span data-stu-id="8755b-134">If the parsing adjustment rule is not enabled, the first digit of the string is interpreted as the hour of the 12-hour clock, and the remainder of the string except for the AM/PM designator is ignored.</span></span> <span data-ttu-id="8755b-135">A data e hora retornado pelo método de análise consiste da data atual e a hora do dia extraído da cadeia de caracteres de data.</span><span class="sxs-lookup"><span data-stu-id="8755b-135">The date and time returned by the parsing method consists of the current date and the hour of the day extracted from the date string.</span></span>  
+ <span data-ttu-id="66fdc-134">Se a regra de análise de ajuste não estiver habilitada, o primeiro dígito da cadeia de caracteres é interpretado como a hora do relógio de 12 horas, e o restante da cadeia de caracteres, exceto o designador AM/PM é ignorado.</span><span class="sxs-lookup"><span data-stu-id="66fdc-134">If the parsing adjustment rule is not enabled, the first digit of the string is interpreted as the hour of the 12-hour clock, and the remainder of the string except for the AM/PM designator is ignored.</span></span> <span data-ttu-id="66fdc-135">A data e hora retornado pelo método de análise consiste da data atual e a hora do dia extraído da cadeia de caracteres de data.</span><span class="sxs-lookup"><span data-stu-id="66fdc-135">The date and time returned by the parsing method consists of the current date and the hour of the day extracted from the date string.</span></span>  
   
- <span data-ttu-id="8755b-136">Se a regra de análise de ajuste está habilitada, método de análise interpretar o dia e mês como pertencentes ao ano atual e interpretar a hora como a hora do relógio de 12 horas.</span><span class="sxs-lookup"><span data-stu-id="8755b-136">If the parsing adjustment rule is enabled, parsing method interpret the day and month as belonging to the current year, and interpret the time as the hour of the 12-hour clock.</span></span>  
+ <span data-ttu-id="66fdc-136">Se a regra de análise de ajuste está habilitada, método de análise interpretar o dia e mês como pertencentes ao ano atual e interpretar a hora como a hora do relógio de 12 horas.</span><span class="sxs-lookup"><span data-stu-id="66fdc-136">If the parsing adjustment rule is enabled, parsing method interpret the day and month as belonging to the current year, and interpret the time as the hour of the 12-hour clock.</span></span>  
   
- <span data-ttu-id="8755b-137">A tabela a seguir ilustra a diferença no <xref:System.DateTime> valor quando o <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método é usado para analisar a cadeia de caracteres "" 4/10 6 AM"com o `<EnableAmPmParseAdjustment>` do elemento `enabled` propriedade definida como"0"ou"1".</span><span class="sxs-lookup"><span data-stu-id="8755b-137">The following table illustrates the difference in the <xref:System.DateTime> value when the <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> method is used to parse the string ""4/10 6 AM" with the `<EnableAmPmParseAdjustment>` element's `enabled` property  set to "0" or "1".</span></span> <span data-ttu-id="8755b-138">Ele pressupõe que hoje é dia 5 de janeiro de 2017 e exibe a data como se ele é formatado usando a cadeia de caracteres de formato de "G" da cultura especificada.</span><span class="sxs-lookup"><span data-stu-id="8755b-138">It assumes that today's date is January 5, 2017, and displays the date as if it is formatted using the specified culture's "G" format string.</span></span>  
+ <span data-ttu-id="66fdc-137">A tabela a seguir ilustra a diferença no <xref:System.DateTime> valor quando o <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método é usado para analisar a cadeia de caracteres "" 4/10 6 AM"com o `<EnableAmPmParseAdjustment>` do elemento `enabled` propriedade definida como"0"ou"1".</span><span class="sxs-lookup"><span data-stu-id="66fdc-137">The following table illustrates the difference in the <xref:System.DateTime> value when the <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> method is used to parse the string ""4/10 6 AM" with the `<EnableAmPmParseAdjustment>` element's `enabled` property  set to "0" or "1".</span></span> <span data-ttu-id="66fdc-138">Ele pressupõe que hoje é dia 5 de janeiro de 2017 e exibe a data como se ele é formatado usando a cadeia de caracteres de formato de "G" da cultura especificada.</span><span class="sxs-lookup"><span data-stu-id="66fdc-138">It assumes that today's date is January 5, 2017, and displays the date as if it is formatted using the specified culture's "G" format string.</span></span>  
   
-|<span data-ttu-id="8755b-139">Nome da cultura</span><span class="sxs-lookup"><span data-stu-id="8755b-139">Culture name</span></span>|<span data-ttu-id="8755b-140">enabled="0"</span><span class="sxs-lookup"><span data-stu-id="8755b-140">enabled="0"</span></span>|<span data-ttu-id="8755b-141">enabled="1"</span><span class="sxs-lookup"><span data-stu-id="8755b-141">enabled="1"</span></span>|  
+|<span data-ttu-id="66fdc-139">Nome da cultura</span><span class="sxs-lookup"><span data-stu-id="66fdc-139">Culture name</span></span>|<span data-ttu-id="66fdc-140">enabled="0"</span><span class="sxs-lookup"><span data-stu-id="66fdc-140">enabled="0"</span></span>|<span data-ttu-id="66fdc-141">enabled="1"</span><span class="sxs-lookup"><span data-stu-id="66fdc-141">enabled="1"</span></span>|  
 |------------------|------------------|------------------|  
-|<span data-ttu-id="8755b-142">en-US</span><span class="sxs-lookup"><span data-stu-id="8755b-142">en-US</span></span>|<span data-ttu-id="8755b-143">1/5/2017 4:00:00 AM</span><span class="sxs-lookup"><span data-stu-id="8755b-143">1/5/2017 4:00:00 AM</span></span>|<span data-ttu-id="8755b-144">4/10/2017 6:00:00 AM</span><span class="sxs-lookup"><span data-stu-id="8755b-144">4/10/2017 6:00:00 AM</span></span>|  
-|<span data-ttu-id="8755b-145">en-GB</span><span class="sxs-lookup"><span data-stu-id="8755b-145">en-GB</span></span>|<span data-ttu-id="8755b-146">5/1/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="8755b-146">5/1/2017 6:00:00</span></span>|<span data-ttu-id="8755b-147">10/4/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="8755b-147">10/4/2017 6:00:00</span></span>|  
+|<span data-ttu-id="66fdc-142">en-US</span><span class="sxs-lookup"><span data-stu-id="66fdc-142">en-US</span></span>|<span data-ttu-id="66fdc-143">1/5/2017 4:00:00 AM</span><span class="sxs-lookup"><span data-stu-id="66fdc-143">1/5/2017 4:00:00 AM</span></span>|<span data-ttu-id="66fdc-144">4/10/2017 6:00:00 AM</span><span class="sxs-lookup"><span data-stu-id="66fdc-144">4/10/2017 6:00:00 AM</span></span>|  
+|<span data-ttu-id="66fdc-145">en-GB</span><span class="sxs-lookup"><span data-stu-id="66fdc-145">en-GB</span></span>|<span data-ttu-id="66fdc-146">5/1/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="66fdc-146">5/1/2017 6:00:00</span></span>|<span data-ttu-id="66fdc-147">10/4/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="66fdc-147">10/4/2017 6:00:00</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8755b-148">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8755b-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66fdc-148">Consulte também</span><span class="sxs-lookup"><span data-stu-id="66fdc-148">See also</span></span>
 
-- [<span data-ttu-id="8755b-149">\<tempo de execução > elemento</span><span class="sxs-lookup"><span data-stu-id="8755b-149">\<runtime> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [<span data-ttu-id="8755b-150">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="8755b-150">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [<span data-ttu-id="66fdc-149">\<tempo de execução > elemento</span><span class="sxs-lookup"><span data-stu-id="66fdc-149">\<runtime> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [<span data-ttu-id="66fdc-150">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="66fdc-150">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

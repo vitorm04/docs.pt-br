@@ -9,27 +9,27 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762079"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="18ec2-102">Tópicos explicativos de programação da camada visual</span><span class="sxs-lookup"><span data-stu-id="18ec2-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="18ec2-103">Os tópicos nesta seção demonstram como usar a camada visual para composição de baixo nível e de teste de clique.</span><span class="sxs-lookup"><span data-stu-id="18ec2-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="67d89-102">Tópicos explicativos de programação da camada visual</span><span class="sxs-lookup"><span data-stu-id="67d89-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="67d89-103">Os tópicos nesta seção demonstram como usar a camada visual para composição de baixo nível e de teste de clique.</span><span class="sxs-lookup"><span data-stu-id="67d89-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="18ec2-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="18ec2-104">In This Section</span></span>  
- [<span data-ttu-id="18ec2-105">Obter o deslocamento de um visual</span><span class="sxs-lookup"><span data-stu-id="18ec2-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="18ec2-106">Enumerar conteúdo de desenho de um visual</span><span class="sxs-lookup"><span data-stu-id="18ec2-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="18ec2-107">Teste de clique de geometria em um visual</span><span class="sxs-lookup"><span data-stu-id="18ec2-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="18ec2-108">Teste de clique usando geometria como um parâmetro</span><span class="sxs-lookup"><span data-stu-id="18ec2-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="18ec2-109">Teste de clique usando um contêiner de host Win32</span><span class="sxs-lookup"><span data-stu-id="18ec2-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="18ec2-110">Renderizar em um intervalo por quadro usando CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="18ec2-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="67d89-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="67d89-104">In This Section</span></span>  
+ [<span data-ttu-id="67d89-105">Obter o deslocamento de um visual</span><span class="sxs-lookup"><span data-stu-id="67d89-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="67d89-106">Enumerar conteúdo de desenho de um visual</span><span class="sxs-lookup"><span data-stu-id="67d89-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="67d89-107">Teste de clique de geometria em um visual</span><span class="sxs-lookup"><span data-stu-id="67d89-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="67d89-108">Teste de clique usando geometria como um parâmetro</span><span class="sxs-lookup"><span data-stu-id="67d89-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="67d89-109">Teste de clique usando um contêiner de host Win32</span><span class="sxs-lookup"><span data-stu-id="67d89-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="67d89-110">Renderizar em um intervalo por quadro usando CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="67d89-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="18ec2-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="18ec2-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67d89-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="67d89-111">See also</span></span>
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="18ec2-112">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="18ec2-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="18ec2-113">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="18ec2-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="67d89-112">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="67d89-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="67d89-113">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="67d89-113">Graphics and Multimedia</span></span>](index.md)

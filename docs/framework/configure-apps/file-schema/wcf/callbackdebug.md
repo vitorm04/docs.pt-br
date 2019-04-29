@@ -3,49 +3,49 @@ title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
 ms.openlocfilehash: a1190eb1c015ba07488ff5a5952f2f5f1b10974c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704512"
 ---
-# <a name="callbackdebug"></a><span data-ttu-id="d3739-101">\<callbackDebug></span><span class="sxs-lookup"><span data-stu-id="d3739-101">\<callbackDebug></span></span>
-<span data-ttu-id="d3739-102">Especifica a depuração de serviço para um objeto de retorno de chamada do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d3739-102">Specifies service debugging for a Windows Communication Foundation (WCF) callback object.</span></span>  
+# <a name="callbackdebug"></a><span data-ttu-id="e71f1-101">\<callbackDebug></span><span class="sxs-lookup"><span data-stu-id="e71f1-101">\<callbackDebug></span></span>
+<span data-ttu-id="e71f1-102">Especifica a depuração de serviço para um objeto de retorno de chamada do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e71f1-102">Specifies service debugging for a Windows Communication Foundation (WCF) callback object.</span></span>  
   
- <span data-ttu-id="d3739-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="d3739-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="d3739-104">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="d3739-104">\<behaviors></span></span>  
-<span data-ttu-id="d3739-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="d3739-105">\<endpointBehaviors></span></span>  
-<span data-ttu-id="d3739-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="d3739-106">\<behavior></span></span>  
-<span data-ttu-id="d3739-107">\<callbackDebug></span><span class="sxs-lookup"><span data-stu-id="d3739-107">\<callbackDebug></span></span>  
+ <span data-ttu-id="e71f1-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="e71f1-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="e71f1-104">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="e71f1-104">\<behaviors></span></span>  
+<span data-ttu-id="e71f1-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="e71f1-105">\<endpointBehaviors></span></span>  
+<span data-ttu-id="e71f1-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="e71f1-106">\<behavior></span></span>  
+<span data-ttu-id="e71f1-107">\<callbackDebug></span><span class="sxs-lookup"><span data-stu-id="e71f1-107">\<callbackDebug></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3739-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d3739-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e71f1-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e71f1-108">Syntax</span></span>  
   
 ```xml  
 <callbackDebug includeExceptionDetailInFaults="Boolean" />
 ```  
   
-## <a name="type"></a><span data-ttu-id="d3739-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="d3739-109">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="e71f1-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="e71f1-109">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d3739-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="d3739-110">Attributes and Elements</span></span>  
- <span data-ttu-id="d3739-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="d3739-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e71f1-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="e71f1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="e71f1-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="e71f1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d3739-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="d3739-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e71f1-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="e71f1-112">Attributes</span></span>  
   
-|<span data-ttu-id="d3739-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="d3739-113">Attribute</span></span>|<span data-ttu-id="d3739-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="d3739-114">Description</span></span>|  
+|<span data-ttu-id="e71f1-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="e71f1-113">Attribute</span></span>|<span data-ttu-id="e71f1-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="e71f1-114">Description</span></span>|  
 |---------------|-----------------|  
-|`includeExceptionDetailInFaults`|<span data-ttu-id="d3739-115">Um valor que especifica se objetos de retorno de chamada do cliente retornam informações de exceção gerenciada em falhas SOAP para o serviço.</span><span class="sxs-lookup"><span data-stu-id="d3739-115">A value that specifies whether client callback objects return managed exception information in SOAP faults back to the service.</span></span><br /><br /> <span data-ttu-id="d3739-116">Se você definir esse atributo como `true` programaticamente, você pode habilitar o fluxo de informações de exceção gerenciada em um objeto de retorno de chamada do cliente para o serviço para fins de depuração.</span><span class="sxs-lookup"><span data-stu-id="d3739-116">If you set this attribute to `true` programmatically, you can enable the flow of managed exception information in a client callback object back to the service for debugging purposes.</span></span> <span data-ttu-id="d3739-117">**Cuidado:**  Retornando informações de exceção gerenciada para os clientes podem ser um risco à segurança.</span><span class="sxs-lookup"><span data-stu-id="d3739-117">**Caution:**  Returning managed exception information to clients can be a security risk.</span></span> <span data-ttu-id="d3739-118">Isso ocorre porque os detalhes da exceção expõem informações sobre a implementação de serviço interno que pode ser usada por clientes não autorizados.</span><span class="sxs-lookup"><span data-stu-id="d3739-118">This is because exception details expose information about the internal service implementation that could be used by unauthorized clients.</span></span>|  
+|`includeExceptionDetailInFaults`|<span data-ttu-id="e71f1-115">Um valor que especifica se objetos de retorno de chamada do cliente retornam informações de exceção gerenciada em falhas SOAP para o serviço.</span><span class="sxs-lookup"><span data-stu-id="e71f1-115">A value that specifies whether client callback objects return managed exception information in SOAP faults back to the service.</span></span><br /><br /> <span data-ttu-id="e71f1-116">Se você definir esse atributo como `true` programaticamente, você pode habilitar o fluxo de informações de exceção gerenciada em um objeto de retorno de chamada do cliente para o serviço para fins de depuração.</span><span class="sxs-lookup"><span data-stu-id="e71f1-116">If you set this attribute to `true` programmatically, you can enable the flow of managed exception information in a client callback object back to the service for debugging purposes.</span></span> <span data-ttu-id="e71f1-117">**Cuidado:**  Retornando informações de exceção gerenciada para os clientes podem ser um risco à segurança.</span><span class="sxs-lookup"><span data-stu-id="e71f1-117">**Caution:**  Returning managed exception information to clients can be a security risk.</span></span> <span data-ttu-id="e71f1-118">Isso ocorre porque os detalhes da exceção expõem informações sobre a implementação de serviço interno que pode ser usada por clientes não autorizados.</span><span class="sxs-lookup"><span data-stu-id="e71f1-118">This is because exception details expose information about the internal service implementation that could be used by unauthorized clients.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d3739-119">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="d3739-119">Child Elements</span></span>  
- <span data-ttu-id="d3739-120">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="d3739-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e71f1-119">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="e71f1-119">Child Elements</span></span>  
+ <span data-ttu-id="e71f1-120">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="e71f1-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d3739-121">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="d3739-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e71f1-121">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="e71f1-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="d3739-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="d3739-122">Element</span></span>|<span data-ttu-id="d3739-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="d3739-123">Description</span></span>|  
+|<span data-ttu-id="e71f1-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="e71f1-122">Element</span></span>|<span data-ttu-id="e71f1-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="e71f1-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d3739-124">\<behavior></span><span class="sxs-lookup"><span data-stu-id="d3739-124">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="d3739-125">Especifica um comportamento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="d3739-125">Specifies an endpoint behavior.</span></span>|  
+|[<span data-ttu-id="e71f1-124">\<behavior></span><span class="sxs-lookup"><span data-stu-id="e71f1-124">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="e71f1-125">Especifica um comportamento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="e71f1-125">Specifies an endpoint behavior.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="d3739-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d3739-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e71f1-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e71f1-126">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.CallbackDebugElement>
 - <xref:System.ServiceModel.Description.CallbackDebugBehavior>

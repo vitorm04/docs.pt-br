@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
 ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696309"
 ---
-# <a name="image"></a><span data-ttu-id="d2f8d-102">Image</span><span class="sxs-lookup"><span data-stu-id="d2f8d-102">Image</span></span>
-<span data-ttu-id="d2f8d-103">O <xref:System.Windows.Controls.Image> elemento é usado para exibir imagens bitmap em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="d2f8d-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="bcea8-102">Image</span><span class="sxs-lookup"><span data-stu-id="bcea8-102">Image</span></span>
+<span data-ttu-id="bcea8-103">O <xref:System.Windows.Controls.Image> elemento é usado para exibir imagens bitmap em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="bcea8-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d2f8d-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="d2f8d-104">In This Section</span></span>  
- [<span data-ttu-id="d2f8d-105">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="d2f8d-105">How-to Topics</span></span>](image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bcea8-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="bcea8-104">In This Section</span></span>  
+ [<span data-ttu-id="bcea8-105">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="bcea8-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d2f8d-106">Referência</span><span class="sxs-lookup"><span data-stu-id="d2f8d-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bcea8-106">Referência</span><span class="sxs-lookup"><span data-stu-id="bcea8-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="d2f8d-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d2f8d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcea8-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bcea8-107">See also</span></span>
 
-- [<span data-ttu-id="d2f8d-108">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="d2f8d-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="d2f8d-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="d2f8d-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+- [<span data-ttu-id="bcea8-108">Visão geral da geração de imagens</span><span class="sxs-lookup"><span data-stu-id="bcea8-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="bcea8-109">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="bcea8-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

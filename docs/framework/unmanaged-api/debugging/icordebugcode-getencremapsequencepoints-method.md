@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750170"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="e36b6-102">Método ICorDebugCode::GetEnCRemapSequencePoints</span><span class="sxs-lookup"><span data-stu-id="e36b6-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="e36b6-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e36b6-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="c03aa-102">Método ICorDebugCode::GetEnCRemapSequencePoints</span><span class="sxs-lookup"><span data-stu-id="c03aa-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="c03aa-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c03aa-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e36b6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e36b6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c03aa-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c03aa-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e36b6-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e36b6-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c03aa-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c03aa-105">See also</span></span>
