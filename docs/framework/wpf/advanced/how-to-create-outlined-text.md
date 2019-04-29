@@ -12,11 +12,11 @@ helpviewer_keywords:
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
 ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776700"
 ---
 # <a name="how-to-create-outlined-text"></a>Como: Criar texto contornado
 Na maioria dos casos, ao adicionar ornamentos a cadeias de caracteres de texto em seu aplicativo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], você está usando texto em termos de uma coleção de caracteres separados ou glifos. Por exemplo, você poderia criar um pincel de gradiente linear e aplicá-lo para o <xref:System.Windows.Controls.Control.Foreground%2A> propriedade de um <xref:System.Windows.Controls.TextBox> objeto. Ao exibir ou editar a caixa de texto, o pincel de gradiente linear é aplicado automaticamente ao conjunto de caracteres atual na cadeia de texto.  

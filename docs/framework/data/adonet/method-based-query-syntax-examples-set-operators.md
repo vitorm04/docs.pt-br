@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
 ms.openlocfilehash: 48aa6044f39be93f144b6c4af5137b131dda0b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772132"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Exemplos de sintaxe de consulta baseada em método: Definir operadores (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, e <xref:System.Linq.Enumerable.Union%2A> operadores para executar operações de comparação de valor com base em conjuntos de linhas de dados.[ Carregar dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) ver [comparando DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) para obter mais informações sobre <xref:System.Data.DataRowComparer>.  

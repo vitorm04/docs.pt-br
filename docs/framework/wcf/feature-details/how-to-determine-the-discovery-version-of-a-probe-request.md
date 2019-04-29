@@ -3,11 +3,11 @@ title: Como determinar a versão de descoberta de uma solicitação de investiga
 ms.date: 03/30/2017
 ms.assetid: b3c4e2e2-2957-4074-ae6a-776a5ca84278
 ms.openlocfilehash: 6bd112be311eb9397ad89801be5358d67c7499fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773172"
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>Como determinar a versão de descoberta de uma solicitação de investigação
 Um proxy de descoberta pode expor vários pontos de extremidade de descoberta usando versões diferentes de descoberta. Quando um UDP multicast solicitação de investigação chega no proxy, que o proxy deve responder com uma mensagem de supressão multicast. Para fazer isso, ele precisaria saber a versão de descoberta da solicitação.  

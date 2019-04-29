@@ -10,11 +10,11 @@ helpviewer_keywords:
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
 ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768622"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Como: Substituir metadados para uma propriedade de dependência
 Este exemplo mostra como substituir metadados de propriedade de dependência padrão que vem de uma classe herdada, chamando o <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método e fornecendo metadados específicos do tipo.  

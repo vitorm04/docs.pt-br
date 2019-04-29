@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931472"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Como: Especificar a direção da associação
 Este exemplo mostra como especificar se a associação atualiza apenas a propriedade de destino da associação (destino), a propriedade de origem da associação (origem) ou a propriedade de destino e a propriedade de origem.  
@@ -19,15 +19,15 @@ Este exemplo mostra como especificar se a associação atualiza apenas a proprie
 ## <a name="example"></a>Exemplo  
  Você usa o <xref:System.Windows.Data.Binding.Mode%2A> propriedade para especificar a direção da associação. A lista de enumeração a seguir mostra as opções disponíveis para atualizações de associação:  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> Atualiza a propriedade de destino ou a propriedade sempre que a propriedade de destino ou a propriedade de origem é alterado.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> Atualiza a propriedade de destino ou a propriedade sempre que a propriedade de destino ou a propriedade de origem é alterado.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> Atualiza a propriedade de destino somente quando a propriedade de origem é alterada.  
+- <xref:System.Windows.Data.BindingMode.OneWay> Atualiza a propriedade de destino somente quando a propriedade de origem é alterada.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> Atualiza a propriedade de destino somente quando o aplicativo é iniciado ou quando o <xref:System.Windows.FrameworkElement.DataContext%2A> sofrer uma alteração.  
+- <xref:System.Windows.Data.BindingMode.OneTime> Atualiza a propriedade de destino somente quando o aplicativo é iniciado ou quando o <xref:System.Windows.FrameworkElement.DataContext%2A> sofrer uma alteração.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> Atualiza a propriedade de origem quando a propriedade de destino é alterado.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> Atualiza a propriedade de origem quando a propriedade de destino é alterado.  
   
--   <xref:System.Windows.Data.BindingMode.Default> faz com que o padrão <xref:System.Windows.Data.Binding.Mode%2A> valor da propriedade de destino a ser usado.  
+- <xref:System.Windows.Data.BindingMode.Default> faz com que o padrão <xref:System.Windows.Data.Binding.Mode%2A> valor da propriedade de destino a ser usado.  
   
  Para obter mais informações, consulte a enumeração <xref:System.Windows.Data.BindingMode>.  
   

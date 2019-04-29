@@ -3,11 +3,11 @@ title: Criação de atividade de fluxo de trabalho usando a classe de atividades
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
 ms.openlocfilehash: 1bec10b6ae9fb43319cfb6acbf59133e1acca09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755500"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>Criação de atividade de fluxo de trabalho usando a classe de atividades
 A maneira mais simples para criar uma atividade usando o Windows Workflow Foundation (WF) no [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] é criar uma classe que herda <xref:System.Activities.Activity> que cria a funcionalidade montando personalizado atividades ou atividades do [interno Biblioteca de atividade](net-framework-4-5-built-in-activity-library.md). Este tópico demonstra como criar uma atividade duas mensagens que grava no console.

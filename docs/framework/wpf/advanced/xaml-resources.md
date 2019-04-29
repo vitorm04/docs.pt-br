@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757073"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. Exemplos de recursos incluem pincéis e estilos. Esta visão geral descreve como usar recursos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Você também pode criar e acessar recursos por meio de código ou de forma intercambiável entre o código e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obter mais informações, consulte [recursos e código](resources-and-code.md).  
@@ -44,28 +44,28 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
  Quando você referencia um recurso, as seguintes considerações podem influenciar se uma referência de recurso estático ou dinâmico será usada:  
   
--   O design geral de como criar os recursos para seu aplicativo (por página, no aplicativo, soltos no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], em um assembly somente de recurso).  
+- O design geral de como criar os recursos para seu aplicativo (por página, no aplicativo, soltos no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], em um assembly somente de recurso).  
   
--   A funcionalidade do aplicativo: a atualização de recursos em tempo real faz parte dos requisitos do aplicativo?  
+- A funcionalidade do aplicativo: a atualização de recursos em tempo real faz parte dos requisitos do aplicativo?  
   
--   O respectivo comportamento de pesquisa desse tipo de referência de recurso.  
+- O respectivo comportamento de pesquisa desse tipo de referência de recurso.  
   
--   A propriedade ou o tipo de recurso específico e o comportamento nativo desses tipos.  
+- A propriedade ou o tipo de recurso específico e o comportamento nativo desses tipos.  
   
 ### <a name="static-resources"></a>Recursos estáticos  
  As referências de recursos estáticos funcionam melhor nas seguintes circunstâncias:  
   
--   O design do aplicativo concentra a maior parte de seus recursos em dicionários de recursos em nível de página ou de aplicativo. As referências de recursos estáticos não são reavaliadas de acordo com os comportamentos em tempo de execução, como o recarregamento de uma página e, portanto, pode haver alguma vantagem de desempenho em evitar um grande número de referências de recursos dinâmicos quando elas não são necessárias, conforme o design do aplicativo e dos recursos.  
+- O design do aplicativo concentra a maior parte de seus recursos em dicionários de recursos em nível de página ou de aplicativo. As referências de recursos estáticos não são reavaliadas de acordo com os comportamentos em tempo de execução, como o recarregamento de uma página e, portanto, pode haver alguma vantagem de desempenho em evitar um grande número de referências de recursos dinâmicos quando elas não são necessárias, conforme o design do aplicativo e dos recursos.  
   
--   Você está definindo o valor de uma propriedade que não está em um <xref:System.Windows.DependencyObject> ou um <xref:System.Windows.Freezable>.  
+- Você está definindo o valor de uma propriedade que não está em um <xref:System.Windows.DependencyObject> ou um <xref:System.Windows.Freezable>.  
   
--   Você está criando um dicionário de recursos que será compilado em uma DLL e empacotado como parte do aplicativo ou compartilhado entre aplicativos.  
+- Você está criando um dicionário de recursos que será compilado em uma DLL e empacotado como parte do aplicativo ou compartilhado entre aplicativos.  
   
--   Você está criando um tema para um controle personalizado e está definindo recursos que são usados nos temas. Nesse caso, normalmente, você não deseja ter o comportamento de pesquisa da referência de recursos dinâmicos; em vez disso, você deseja ter o comportamento da referência de recursos estáticos, de forma que a pesquisa seja previsível e independente para o tema. Com uma referência de recursos dinâmicos, até mesmo uma referência em um tema é deixada como não avaliada até o tempo de execução, e há a possibilidade de que quando o tema for aplicado, algum elemento local redefina uma chave que o tema está tentando referenciar e o elemento local falhe antes do próprio tema na pesquisa. Se isso acontecer, o tema não se comportará da maneira esperada.  
+- Você está criando um tema para um controle personalizado e está definindo recursos que são usados nos temas. Nesse caso, normalmente, você não deseja ter o comportamento de pesquisa da referência de recursos dinâmicos; em vez disso, você deseja ter o comportamento da referência de recursos estáticos, de forma que a pesquisa seja previsível e independente para o tema. Com uma referência de recursos dinâmicos, até mesmo uma referência em um tema é deixada como não avaliada até o tempo de execução, e há a possibilidade de que quando o tema for aplicado, algum elemento local redefina uma chave que o tema está tentando referenciar e o elemento local falhe antes do próprio tema na pesquisa. Se isso acontecer, o tema não se comportará da maneira esperada.  
   
--   Você está usando recursos para definir uma grande quantidade de propriedades de dependência. As propriedades de dependência têm um cache de valor efetivo habilitado pelo sistema de propriedades e, portanto, se você fornecer um valor para uma propriedade de dependência que pode ser avaliado em tempo de carregamento, a propriedade de dependência não precisará verificar uma expressão reavaliada e poderá retornar o último valor efetivo. Essa técnica pode ser uma vantagem de desempenho.  
+- Você está usando recursos para definir uma grande quantidade de propriedades de dependência. As propriedades de dependência têm um cache de valor efetivo habilitado pelo sistema de propriedades e, portanto, se você fornecer um valor para uma propriedade de dependência que pode ser avaliado em tempo de carregamento, a propriedade de dependência não precisará verificar uma expressão reavaliada e poderá retornar o último valor efetivo. Essa técnica pode ser uma vantagem de desempenho.  
   
--   Para alterar o recurso subjacente para todos os consumidores ou deseja manter instâncias graváveis separadas para cada consumidor usando o [x: atributo X:Shared](../../xaml-services/x-shared-attribute.md).  
+- Para alterar o recurso subjacente para todos os consumidores ou deseja manter instâncias graváveis separadas para cada consumidor usando o [x: atributo X:Shared](../../xaml-services/x-shared-attribute.md).  
   
 #### <a name="static-resource-lookup-behavior"></a>Comportamento de pesquisa de recursos estáticos  
   
@@ -84,28 +84,28 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
 ### <a name="dynamic-resources"></a>Recursos dinâmicos  
  Os recursos dinâmicos funcionam melhor nas seguintes circunstâncias:  
   
--   O valor do recurso depende de condições que só são conhecidas em tempo de execução. Isso inclui recursos do sistema ou recursos que são, de outro modo, configuráveis pelo usuário. Por exemplo, você pode criar valores setter que fazem referência às propriedades do sistema, como expostos por <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, ou <xref:System.Windows.SystemParameters>. Esses valores são realmente dinâmicos, pois, basicamente, são obtidos do ambiente em tempo de execução do usuário e do sistema operacional. Você também pode ter temas em nível do aplicativo que podem ser alterados, em que o acesso aos recursos em nível de página também deve captar a alteração.  
+- O valor do recurso depende de condições que só são conhecidas em tempo de execução. Isso inclui recursos do sistema ou recursos que são, de outro modo, configuráveis pelo usuário. Por exemplo, você pode criar valores setter que fazem referência às propriedades do sistema, como expostos por <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, ou <xref:System.Windows.SystemParameters>. Esses valores são realmente dinâmicos, pois, basicamente, são obtidos do ambiente em tempo de execução do usuário e do sistema operacional. Você também pode ter temas em nível do aplicativo que podem ser alterados, em que o acesso aos recursos em nível de página também deve captar a alteração.  
   
--   Você está criando ou referenciando estilos de tema para um controle personalizado.  
+- Você está criando ou referenciando estilos de tema para um controle personalizado.  
   
--   Você pretende ajustar o conteúdo de um <xref:System.Windows.ResourceDictionary> durante um ciclo de vida do aplicativo.  
+- Você pretende ajustar o conteúdo de um <xref:System.Windows.ResourceDictionary> durante um ciclo de vida do aplicativo.  
   
--   Você tem uma estrutura de recursos complicada que tem interdependências, em que uma referência de encaminhamento pode ser necessária. Referências de recursos estáticos não dão suporte a referências de encaminhamento, mas referências a recursos dinâmicos oferecem suporte a isso porque o recurso não precisa ser avaliado até o tempo de execução e referências de encaminhamento, portanto, não são um conceito relevante.  
+- Você tem uma estrutura de recursos complicada que tem interdependências, em que uma referência de encaminhamento pode ser necessária. Referências de recursos estáticos não dão suporte a referências de encaminhamento, mas referências a recursos dinâmicos oferecem suporte a isso porque o recurso não precisa ser avaliado até o tempo de execução e referências de encaminhamento, portanto, não são um conceito relevante.  
   
--   Você está referenciando um recurso que é especificamente grande da perspectiva de um conjunto de compilação ou de trabalho, que pode não ser usado imediatamente quando a página é carregada. Referências de recursos estáticos sempre são carregadas do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] quando a página for carregada; no entanto, uma referência de recurso dinâmico não é carregado até que, na verdade, ele é usado.  
+- Você está referenciando um recurso que é especificamente grande da perspectiva de um conjunto de compilação ou de trabalho, que pode não ser usado imediatamente quando a página é carregada. Referências de recursos estáticos sempre são carregadas do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] quando a página for carregada; no entanto, uma referência de recurso dinâmico não é carregado até que, na verdade, ele é usado.  
   
--   Você está criando um estilo no qual os valores setter podem ser obtidos de outros valores que são influenciados por temas ou por outras configurações do usuário.  
+- Você está criando um estilo no qual os valores setter podem ser obtidos de outros valores que são influenciados por temas ou por outras configurações do usuário.  
   
--   Você está aplicando recursos a elementos que podem ser reassociados na árvore lógica durante o tempo de vida do aplicativo. Potencialmente, a alteração do pai também altera o escopo de pesquisa de recursos; portanto, se você desejar que o recurso de um elemento reassociado seja reavaliado com base no novo escopo, sempre use uma referência de recursos dinâmicos.  
+- Você está aplicando recursos a elementos que podem ser reassociados na árvore lógica durante o tempo de vida do aplicativo. Potencialmente, a alteração do pai também altera o escopo de pesquisa de recursos; portanto, se você desejar que o recurso de um elemento reassociado seja reavaliado com base no novo escopo, sempre use uma referência de recursos dinâmicos.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>Comportamento de pesquisa de recursos dinâmicos  
  Comportamento de pesquisa para obter uma referência de recurso dinâmico é comparável ao comportamento de pesquisa em seu código se você chamar <xref:System.Windows.FrameworkElement.FindResource%2A> ou <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
 1. O processo de pesquisa verifica a chave solicitada no dicionário de recursos definido pelo elemento que define a propriedade.  
   
-    -   Se o elemento define uma <xref:System.Windows.FrameworkElement.Style%2A> propriedade, o <xref:System.Windows.Style.Resources%2A> dicionário dentro a <xref:System.Windows.Style> é verificada.  
+    - Se o elemento define uma <xref:System.Windows.FrameworkElement.Style%2A> propriedade, o <xref:System.Windows.Style.Resources%2A> dicionário dentro a <xref:System.Windows.Style> é verificada.  
   
-    -   Se o elemento define uma <xref:System.Windows.Controls.Control.Template%2A> propriedade, o <xref:System.Windows.FrameworkTemplate.Resources%2A> dicionário dentro a <xref:System.Windows.FrameworkTemplate> é verificada.  
+    - Se o elemento define uma <xref:System.Windows.Controls.Control.Template%2A> propriedade, o <xref:System.Windows.FrameworkTemplate.Resources%2A> dicionário dentro a <xref:System.Windows.FrameworkTemplate> é verificada.  
   
 2. Em seguida, o processo de pesquisa percorre a árvore lógica de forma ascendente, até o elemento pai e seu dicionário de recursos. Isso continua até que o elemento raiz seja alcançado.  
   
@@ -117,20 +117,20 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
  O comportamento de exceção (se houver) varia:  
   
--   Se um recurso foi solicitado por um <xref:System.Windows.FrameworkElement.FindResource%2A> chamar e não foi encontrado, uma exceção será gerada.  
+- Se um recurso foi solicitado por um <xref:System.Windows.FrameworkElement.FindResource%2A> chamar e não foi encontrado, uma exceção será gerada.  
   
--   Se um recurso foi solicitado por um <xref:System.Windows.FrameworkElement.TryFindResource%2A> chamar e não foi encontrado, nenhuma exceção for gerada, mas o valor retornado é `null`. Se a propriedade sendo definida não aceitar `null`, em seguida, ele ainda é possível que uma exceção mais profunda seja gerada (isso depende da propriedade que está sendo definida).  
+- Se um recurso foi solicitado por um <xref:System.Windows.FrameworkElement.TryFindResource%2A> chamar e não foi encontrado, nenhuma exceção for gerada, mas o valor retornado é `null`. Se a propriedade sendo definida não aceitar `null`, em seguida, ele ainda é possível que uma exceção mais profunda seja gerada (isso depende da propriedade que está sendo definida).  
   
--   Se um recurso foi solicitado por uma referência de recurso dinâmico no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e não foi encontrado, em seguida, o comportamento depende do sistema de propriedades geral, mas o comportamento geral é como se nenhuma operação de configuração de propriedade ocorreu no nível onde o recurso existe. Por exemplo, se você tentar definir a tela de fundo em um elemento de botão individual usando um recurso que não pôde ser avaliado, nenhum conjunto de valores resultará, mas o valor efetivo ainda poderá ser obtido de outros participantes do sistema de propriedades e da precedência de valor. Por exemplo, o valor de tela de fundo ainda poderá ser obtido de um estilo de botão definido localmente ou do estilo de tema. Para propriedades que não são definidas por estilos de tema, o valor efetivo após uma avaliação de recurso com falha pode ser obtido do valor padrão nos metadados da propriedade.  
+- Se um recurso foi solicitado por uma referência de recurso dinâmico no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e não foi encontrado, em seguida, o comportamento depende do sistema de propriedades geral, mas o comportamento geral é como se nenhuma operação de configuração de propriedade ocorreu no nível onde o recurso existe. Por exemplo, se você tentar definir a tela de fundo em um elemento de botão individual usando um recurso que não pôde ser avaliado, nenhum conjunto de valores resultará, mas o valor efetivo ainda poderá ser obtido de outros participantes do sistema de propriedades e da precedência de valor. Por exemplo, o valor de tela de fundo ainda poderá ser obtido de um estilo de botão definido localmente ou do estilo de tema. Para propriedades que não são definidas por estilos de tema, o valor efetivo após uma avaliação de recurso com falha pode ser obtido do valor padrão nos metadados da propriedade.  
   
 #### <a name="restrictions"></a>Restrições  
  As referências de recursos dinâmicos têm algumas restrições importantes. Pelo menos, uma das seguintes condições deve ser verdadeira:  
   
--   A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Se a propriedade deve ser suportada por um <xref:System.Windows.DependencyProperty>.  
+- A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Se a propriedade deve ser suportada por um <xref:System.Windows.DependencyProperty>.  
   
--   A referência é para um valor em uma <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+- A referência é para um valor em uma <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
--   A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.Freezable> que é fornecido como um valor de uma <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> propriedade, ou um <xref:System.Windows.Setter> valor.  
+- A propriedade sendo definida deve ser uma propriedade em um <xref:System.Windows.Freezable> que é fornecido como um valor de uma <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> propriedade, ou um <xref:System.Windows.Setter> valor.  
   
  Porque a propriedade sendo definida deve ser um <xref:System.Windows.DependencyProperty> ou <xref:System.Windows.Freezable> propriedade, a maioria das alterações de propriedade podem ser propagadas para a interface do usuário porque uma alteração de propriedade (o valor do recurso dinâmico alterado) é reconhecida pelo sistema de propriedade. A maioria dos controles incluem lógica que forçará outro layout de um controle se um <xref:System.Windows.DependencyProperty> alterações e a propriedade puder afetar o layout. No entanto, nem todas as propriedades que têm uma [extensão de marcação DynamicResource](dynamicresource-markup-extension.md) como seu valor são garantidos para fornecer o valor de tal forma que elas sejam atualizadas em tempo real na interface do usuário. Essa funcionalidade ainda pode variar dependendo da propriedade, bem como do tipo que possui a propriedade, ou até mesmo da estrutura lógica do aplicativo.  
   

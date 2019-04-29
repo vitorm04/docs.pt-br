@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765681"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalização de feed (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dá suporte a formatos Atom e notação JSON (JavaScript Object) para feeds de dados. Quando você usa um feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornece um método padrão para serializar os dados, como entidades e relações, em um formato XML que pode ser incluído no corpo da mensagem HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e os elementos do Atom. Para obter mais informações, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -83,12 +83,12 @@ ms.locfileid: "59517311"
 ## <a name="feed-customization-considerations"></a>Considerações sobre a personalização de feed  
  Você deve considerar o seguinte ao definir mapeamentos de feed personalizados.  
   
--   O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente trata elementos mapeados em um feed como vazio quando contém apenas espaços em branco. Por isso, os elementos mapeados que contêm somente espaço em branco não são materializados no cliente com o mesmo espaço em branco. Para preservar esse espaço em branco no cliente, você deve definir o valor de `KeepInContext` para `true` no atributo de mapeamento de feed.  
+- O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente trata elementos mapeados em um feed como vazio quando contém apenas espaços em branco. Por isso, os elementos mapeados que contêm somente espaço em branco não são materializados no cliente com o mesmo espaço em branco. Para preservar esse espaço em branco no cliente, você deve definir o valor de `KeepInContext` para `true` no atributo de mapeamento de feed.  
   
 ## <a name="versioning-requirements"></a>Requisitos de controle de versão  
  Personalização do feed tem as seguintes [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] requisitos de controle de versão de protocolo:  
   
--   Personalização de feed requer que o cliente e dados de serviço suporte a versão 2.0 do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo e versões posteriores.  
+- Personalização de feed requer que o cliente e dados de serviço suporte a versão 2.0 do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo e versões posteriores.  
   
  Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

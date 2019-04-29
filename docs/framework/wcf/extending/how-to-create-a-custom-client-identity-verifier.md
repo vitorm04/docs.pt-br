@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
 ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767254"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Como: criar um verificador de identidade de cliente personalizado
 O *identidade* recurso do Windows Communication Foundation (WCF) permite que um cliente para especificar com antecedência a identidade esperada do serviço. Sempre que um servidor se autentica para o cliente, a identidade é verificada em relação a identidade esperada. (Para obter uma explicação de identidade e como ele funciona, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

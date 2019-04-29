@@ -12,20 +12,20 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698987"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Como: Aplicar uma transformação a um elemento quando ocorre um evento
 Este exemplo mostra como aplicar um <xref:System.Windows.Media.ScaleTransform> quando ocorre um evento. O conceito que é mostrado aqui é o mesmo que você usa para aplicar outros tipos de transformações. Para obter mais informações sobre os tipos disponíveis de transformações, consulte a <xref:System.Windows.Media.Transform> classe ou [visão geral de transformações](transforms-overview.md).  
   
  Você pode aplicar uma transformação a um elemento de uma destas duas maneiras:  
   
--   Se você fizer *não* deseja que a transformação afete o layout, use o <xref:System.Windows.UIElement.RenderTransform%2A> propriedade do elemento.  
+- Se você fizer *não* deseja que a transformação afete o layout, use o <xref:System.Windows.UIElement.RenderTransform%2A> propriedade do elemento.  
   
--   Se você quiser que a transformação afete o layout, use o <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriedade do elemento.  
+- Se você quiser que a transformação afete o layout, use o <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriedade do elemento.  
   
  O exemplo a seguir aplica uma <xref:System.Windows.Media.ScaleTransform> para o <xref:System.Windows.UIElement.RenderTransform%2A> propriedade de um botão. Quando o mouse se move sobre o botão, o <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> e <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propriedades da <xref:System.Windows.Media.ScaleTransform> são definidos como `2`, que faz com que o botão fique maior. Quando o mouse se move para fora do botão <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> e <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> são definidos como `1`, que faz com que o botão para retornar ao seu tamanho original.  
   

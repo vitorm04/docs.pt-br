@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
 ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757489"
 ---
 # <a name="names-of-type-members"></a>Nomes de membros de tipo
 Tipos são compostos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomenclatura de membros de tipo.  

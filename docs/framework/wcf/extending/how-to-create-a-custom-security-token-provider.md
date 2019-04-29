@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767189"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Como: criar um provedor de token de segurança personalizado
 Este tópico mostra como criar novos tipos de token com um provedor de token de segurança personalizada e como integrar o provedor com um Gerenciador de token de segurança personalizada.  

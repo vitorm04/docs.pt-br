@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790971"
 ---
 # <a name="textbox-overview"></a>Visão geral de TextBox
 O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite texto não formatado. Um uso comum de um <xref:System.Windows.Controls.TextBox> está editando o texto não formatado em um formulário. Por exemplo, um formulário que solicita o nome do usuário, número de telefone, etc. usaria <xref:System.Windows.Controls.TextBox> controles de entrada de texto. Este tópico apresenta os <xref:System.Windows.Controls.TextBox> de classe e fornece exemplos de como usá-lo em ambos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e C#.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 79038efa-15bf-464a-83e2-35fe145252ce
 ms.openlocfilehash: 5990e9f4c08eafeae6bed18d3d8af0617b84ff54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774589"
 ---
 # <a name="how-to-call-database-functions"></a>Como: Chamar funções de banco de dados
 A classe de <xref:System.Data.Objects.SqlClient.SqlFunctions> contém os métodos que expõe funções do SQL Server para usar em consultas LINQ to Entities. Quando você usa métodos de <xref:System.Data.Objects.SqlClient.SqlFunctions> em consultas LINQ to Entities, as funções de base de dados correspondentes são executadas em base de dados.  

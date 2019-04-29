@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
 ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768544"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Como: Adicionar vários conjuntos de configurações ao seu aplicativo em C\#
 Em alguns casos, convém ter vários conjuntos de configurações em um aplicativo. Por exemplo, se você estiver desenvolvendo um aplicativo no qual se supõe que um determinado grupo de configurações deve ser alterado com frequência, talvez seja mais inteligente separá-las em um único arquivo, de modo que esse arquivo possa ser substituído em massa sem que as demais configurações sejam afetadas. O Visual Studio lhe permite adicionar vários conjuntos de configurações ao projeto. Conjuntos de configurações adicionais podem ser acessados através do objeto Properties.Settings.  

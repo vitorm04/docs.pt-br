@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
 ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787628"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Como: criar um serviço que requer sessões
 As sessões criam um estado compartilhado entre dois ou mais pontos de extremidade que habilita recursos úteis, como os retornos de chamada, a segurança de saltos múltiplos e associações entre clientes e instâncias de serviço. Para obter mais informações sobre as sessões em aplicativos do Windows Communication Foundation (WCF), consulte [sessões usando](../../../../docs/framework/wcf/using-sessions.md).  
@@ -21,11 +21,11 @@ As sessões criam um estado compartilhado entre dois ou mais pontos de extremida
   
 2. Modificar a <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> que declara o contrato, definindo o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> propriedade para qualquer um:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Se este contrato deve ser executado dentro de uma sessão.  
+    - <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Se este contrato deve ser executado dentro de uma sessão.  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Se esse contrato pode ser executado dentro de uma sessão.  
+    - <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Se esse contrato pode ser executado dentro de uma sessão.  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Se este contrato não deve ser executado dentro de uma sessão.  
+    - <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Se este contrato não deve ser executado dentro de uma sessão.  
   
 3. Configure o ponto de extremidade de serviço para usar uma associação que dá suporte a sessões. O exemplo de configuração a seguir mostra o uso do <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, que oferece suporte a um WS`-`ReliableMessaging sessão.  
   

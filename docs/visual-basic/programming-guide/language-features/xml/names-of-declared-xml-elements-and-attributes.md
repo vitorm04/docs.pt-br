@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761696"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nomes de elementos e atributos XML declarados (Visual Basic)
 Este tópico fornece diretrizes de Visual Basic para nomear elementos XML e atributos em literais XML.  Em um literal XML, você pode especificar um nome local ou um nome qualificado. Um nome qualificado consiste em um prefixo de namespace XML, dois-pontos e um nome local. Para obter mais informações sobre prefixos de namespace XML, consulte [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -21,17 +21,17 @@ Este tópico fornece diretrizes de Visual Basic para nomear elementos XML e atri
 ## <a name="rules"></a>Regras  
  Um nome local de um elemento ou atributo no Visual Basic deve seguir as regras a seguir.  
   
--   Ele pode começar com um namespace. Ele deve começar com um caractere alfabético ou sublinhado (`_`).  
+- Ele pode começar com um namespace. Ele deve começar com um caractere alfabético ou sublinhado (`_`).  
   
--   Ele deve conter apenas caracteres alfabéticos, dígitos decimais, sublinhados, pontos (.) e hifens (-).  
+- Ele deve conter apenas caracteres alfabéticos, dígitos decimais, sublinhados, pontos (.) e hifens (-).  
   
--   Ele não deve ter mais de 1.024 caracteres.  
+- Ele não deve ter mais de 1.024 caracteres.  
   
--   Dois-pontos que aparecem em nomes indicam demarcação de namespace. Portanto, você pode usar dois-pontos somente para especificar um namespace de XML para um determinado nome.  
+- Dois-pontos que aparecem em nomes indicam demarcação de namespace. Portanto, você pode usar dois-pontos somente para especificar um namespace de XML para um determinado nome.  
   
  Além disso, você deve seguir as diretrizes a seguir.  
   
--   A especificação XML 1.0 se reserva todos os nomes que começam com a cadeia de caracteres "xml", de qualquer variação de maiusculas e minúsculas. Portanto, não use esses nomes para o elemento e nomes de atributo.  
+- A especificação XML 1.0 se reserva todos os nomes que começam com a cadeia de caracteres "xml", de qualquer variação de maiusculas e minúsculas. Portanto, não use esses nomes para o elemento e nomes de atributo.  
   
 ### <a name="name-length-guidelines"></a>Diretrizes de comprimento de nome  
  Como uma questão de prática, um nome deve ser tão curto quanto possível e ainda identificar claramente a natureza do elemento. Isso melhora a legibilidade do código e reduz o tamanho da linha de comprimento e o arquivo de origem.  

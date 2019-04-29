@@ -3,11 +3,11 @@ title: Processamento de transações
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
 ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793660"
 ---
 # <a name="transaction-processing"></a>Processamento de transações
 Ao comprar um livro de livrarias online, você troca money (na forma de crédito) de um livro. Se o crédito é boa, uma série de operações relacionadas garante que você obtenha o livro e a livraria obtém seu dinheiro. No entanto, se uma única operação na série falhar durante a troca, toda a troca falhará. Você não obtiver o livro e a livraria não obter seu dinheiro.  

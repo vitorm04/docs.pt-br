@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46d96d66f16cd956d8fab1afe00486d564e37953
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775544"
 ---
 # <a name="icordebugprocess-interface"></a>Interface ICorDebugProcess
 Representa um processo que está executando o código gerenciado. Essa interface é uma subclasse de ICorDebugController.  

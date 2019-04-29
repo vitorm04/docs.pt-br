@@ -3,11 +3,11 @@ title: Coleções de esquema de OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771989"
 ---
 # <a name="ole-db-schema-collections"></a>Coleções de esquema de OLE DB
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -15,17 +15,17 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Provedor Microsoft SQL Server, OLE DB  
  O Microsoft OLE DB Driver do SQL Server suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
--   Tabelas  
+- Tabelas  
   
--   Colunas  
+- Colunas  
   
--   Procedimentos  
+- Procedimentos  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catálogo  
+- Catálogo  
   
--   Índices  
+- Índices  
   
 ### <a name="tables"></a>Tabelas  
   
@@ -154,19 +154,19 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 ## <a name="microsoft-oracle-ole-db-provider"></a>Provedor OLE DB Microsoft Oracle  
  O Microsoft OLE DB Driver Oracle suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
--   Tabelas  
+- Tabelas  
   
--   Colunas  
+- Colunas  
   
--   Procedimentos  
+- Procedimentos  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Exibições  
+- Exibições  
   
--   Índices  
+- Índices  
   
 ### <a name="tables"></a>Tabelas  
   
@@ -297,15 +297,15 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 ## <a name="microsoft-jet-ole-db-provider"></a>Provedor OLE DB Microsoft Jet  
  O Microsoft Jet OLE DB Driver suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
--   Tabelas  
+- Tabelas  
   
--   Colunas  
+- Colunas  
   
--   Procedimentos  
+- Procedimentos  
   
--   Exibições  
+- Exibições  
   
--   Índices  
+- Índices  
   
 ### <a name="tables"></a>Tabelas  
   

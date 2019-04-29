@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
 ms.openlocfilehash: d49c6d933a09dce5d657746358f1a5f716ab639b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790410"
 ---
 # <a name="activityscheduledquery"></a>\<activityScheduledQuery>
 Representa uma coleção de consultas que são usados para controlar uma atividade agendada para execução por uma atividade pai. A consulta é necessária para um participante de rastreamento assinar os registros de atividade agendada.  

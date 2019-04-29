@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 ms.openlocfilehash: e8d82ff8958af12842366911b6633ea6b2e0efbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765837"
 ---
 # <a name="create-the-data-service"></a>Criar o serviço de dados
 
@@ -52,11 +52,11 @@ Neste tópico, você cria um serviço de dados de exemplo que usa o WCF Data Ser
 
 5. Conectar-se o modelo de dados no banco de dados de uma das seguintes etapas e, em seguida, clique em **próxima**:
 
-    -   Se você não tiver uma conexão de banco de dados já configurada, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, confira [Como: Criar conexões com bancos de dados do SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instância do SQL Server deve ter o banco de dados de exemplo Northwind anexado.
+    - Se você não tiver uma conexão de banco de dados já configurada, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, confira [Como: Criar conexões com bancos de dados do SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instância do SQL Server deve ter o banco de dados de exemplo Northwind anexado.
 
          \- ou -
 
-    -   Se você tiver uma conexão de banco de dados já configurada para se conectar ao banco de dados Northwind, selecione a conexão da lista de conexões.
+    - Se você tiver uma conexão de banco de dados já configurada para se conectar ao banco de dados Northwind, selecione a conexão da lista de conexões.
 
 6. Na página final do assistente, selecione as caixas de seleção para todas as tabelas no banco de dados e desmarque as caixas de seleção para exibições e procedimentos armazenados.
 

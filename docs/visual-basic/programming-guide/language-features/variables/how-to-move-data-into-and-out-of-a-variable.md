@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756592"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Como: Mover dados dentro e fora de uma variável (Visual Basic)
 Você pode armazenar um valor em uma variável, colocando o nome da variável no lado esquerdo de uma instrução de atribuição.  
@@ -19,7 +19,7 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
   
 #### <a name="to-store-a-value-in-a-variable"></a>Para armazenar um valor em uma variável  
   
--   Use o nome da variável no lado esquerdo de uma instrução de atribuição.  
+- Use o nome da variável no lado esquerdo de uma instrução de atribuição.  
   
      O exemplo a seguir define o valor da variável `alpha`.  
   
@@ -34,11 +34,11 @@ Você pode armazenar um valor em uma variável, colocando o nome da variável no
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Para recuperar um valor de uma variável  
   
--   Use o nome da variável em uma expressão. Você pode usar uma variável em qualquer lugar você pode usar uma constante ou um literal, exceto em uma expressão que define o valor de uma constante.  
+- Use o nome da variável em uma expressão. Você pode usar uma variável em qualquer lugar você pode usar uma constante ou um literal, exceto em uma expressão que define o valor de uma constante.  
   
      - ou -  
   
--   Use o nome da variável igual a seguir (`=`) entrar em uma instrução de atribuição.  
+- Use o nome da variável igual a seguir (`=`) entrar em uma instrução de atribuição.  
   
      O exemplo a seguir lê o valor da variável `startValue` e, em seguida, usa o valor da variável `counter` em uma expressão.  
   

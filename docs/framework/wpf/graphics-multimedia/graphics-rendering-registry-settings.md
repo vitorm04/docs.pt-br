@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
 ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762693"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  

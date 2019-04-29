@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792178"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Passo a passo: Herdar de um controle do Windows Forms com Visual Basic
 Com o Visual Basic, você pode criar controles personalizados avançados por meio *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará funcionalidades do formulários padrão do Windows <xref:System.Windows.Forms.Button> controlar e exporá uma propriedade personalizada chamada `ButtonValue`.  

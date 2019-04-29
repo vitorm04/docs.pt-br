@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
 ms.openlocfilehash: 616110145db2796e05509094b1c023daacd68f03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751665"
 ---
 # <a name="object-data-type"></a>Tipo de dados Object
 Contém os endereços que se referem a objetos. Você pode atribuir qualquer tipo de referência (cadeia de caracteres, matriz, classe ou interface) para um `Object` variável. Uma `Object` variável também pode consultar dados de qualquer tipo de valor (numérico, `Boolean`, `Char`, `Date`, estrutura, ou enumeração).  
@@ -42,19 +42,19 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
--   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, tenha em mente que os tipos de ponteiro em outros ambientes não são compatíveis com o Visual Basic `Object` tipo.  
+- **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, tenha em mente que os tipos de ponteiro em outros ambientes não são compatíveis com o Visual Basic `Object` tipo.  
   
--   **Desempenho.** Uma variável declarada com o `Object` tipo é flexível o suficiente para conter uma referência a qualquer objeto. No entanto, quando você invoca um método ou propriedade nesse tipo de variável, você sempre provoca *ligação tardia* (no tempo de execução). Para forçar *vinculação inicial* (no tempo de compilação) e um melhor desempenho, declare a variável com um nome de classe específica ou convertê-lo para o tipo de dados específico.  
+- **Desempenho.** Uma variável declarada com o `Object` tipo é flexível o suficiente para conter uma referência a qualquer objeto. No entanto, quando você invoca um método ou propriedade nesse tipo de variável, você sempre provoca *ligação tardia* (no tempo de execução). Para forçar *vinculação inicial* (no tempo de compilação) e um melhor desempenho, declare a variável com um nome de classe específica ou convertê-lo para o tipo de dados específico.  
   
      Quando você declara uma variável de objeto, tente usar um tipo de classe específica, por exemplo <xref:System.OperatingSystem>, em vez do generalizado `Object` tipo. Você também deve usar a classe mais específica disponível, como <xref:System.Windows.Forms.TextBox> em vez de <xref:System.Windows.Forms.Control>, de modo que você pode acessar suas propriedades e métodos. Normalmente, você pode usar o **Classes** lista o **Pesquisador de objetos** para localizar nomes de classe disponíveis.  
   
--   **Ampliação.** Todos os tipos de dados e todos os tipos de referência são ampliados com o `Object` tipo de dados. Isso significa que você pode converter qualquer tipo de `Object` sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
+- **Ampliação.** Todos os tipos de dados e todos os tipos de referência são ampliados com o `Object` tipo de dados. Isso significa que você pode converter qualquer tipo de `Object` sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
   
      No entanto, se você converter entre tipos de valor e `Object`, Visual Basic executa operações denominadas *boxing* e *unboxing*, que tornam a execução mais lenta.  
   
--   **Caracteres de tipo.** `Object` não tem nenhum caractere de tipo literal ou um caractere de tipo identificador.  
+- **Caracteres de tipo.** `Object` não tem nenhum caractere de tipo literal ou um caractere de tipo identificador.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.Object?displayProperty=nameWithType> classe.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.Object?displayProperty=nameWithType> classe.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra um `Object` variável que aponta para uma instância do objeto.  

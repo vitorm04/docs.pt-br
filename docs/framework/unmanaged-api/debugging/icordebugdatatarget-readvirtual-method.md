@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4749bfee22e58ad7c3ca29ec992da88493ca2c5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763835"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Método ICorDebugDataTarget::ReadVirtual
 Obtém um bloco de memória contígua, iniciando no endereço especificado e retorna-o no buffer fornecido.  

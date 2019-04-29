@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763484"
 ---
 # <a name="iclrtaskreset-method"></a>Método ICLRTask::Reset
 Informa o common language runtime (CLR) que o host tiver concluído uma tarefa e permite que o CLR para reutilizar o atual [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância para representar outra tarefa.  

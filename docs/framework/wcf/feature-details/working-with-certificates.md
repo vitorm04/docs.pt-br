@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929838"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -29,27 +29,27 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
 ## <a name="certificate-stores"></a>Repositórios de certificados  
  Os certificados estão localizados em repositórios. Dois grandes repositórios de certificado existem e são divididos em sub-repositórios. Se você for o administrador em um computador, poderá exibir os dois principais repositórios usando a ferramenta do snap-in do MMC. Os não administradores podem exibir somente o repositório do usuário atual.  
   
--   **O repositório do computador local**. Ele contém os certificados acessados por processos do computador, como [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Use este local para armazenar os certificados que autenticam o servidor para clientes.  
+- **O repositório do computador local**. Ele contém os certificados acessados por processos do computador, como [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Use este local para armazenar os certificados que autenticam o servidor para clientes.  
   
--   **O repositório do usuário atual**. Os aplicativos interativos geralmente colocam certificados aqui para o usuário atual do computador. Se você estiver criando um aplicativo cliente, aqui é onde você normalmente coloca os certificados que autenticam um usuário para um serviço.  
+- **O repositório do usuário atual**. Os aplicativos interativos geralmente colocam certificados aqui para o usuário atual do computador. Se você estiver criando um aplicativo cliente, aqui é onde você normalmente coloca os certificados que autenticam um usuário para um serviço.  
   
  Esses dois repositórios são divididos em sub-repositórios. O mais importante deles ao programar com o WCF inclui:  
   
--   **Autoridades de Certificação Raiz Confiáveis**. Você pode usar os certificados nesse repositório para criar uma cadeia de certificados, que podem ser rastreados para um certificado de autoridade de certificação nesse repositório.  
+- **Autoridades de Certificação Raiz Confiáveis**. Você pode usar os certificados nesse repositório para criar uma cadeia de certificados, que podem ser rastreados para um certificado de autoridade de certificação nesse repositório.  
   
     > [!IMPORTANT]
     >  O computador local implicitamente confia em qualquer certificado colocado nesse repositório, mesmo se o certificado não vier de uma autoridade de certificação de terceiros confiável. Por esse motivo, não coloque nenhum certificado nesse repositório a menos que você confie totalmente no emissor e entenda as consequências.  
   
--   **Pessoal**. Esse repositório é usado para os certificados associados com um usuário de um computador. Geralmente, esse repositório é usado para os certificados emitidos por um dos certificados da autoridade de certificação localizados no repositório Autoridades de Certificação Confiáveis. Como alternativa, um certificado localizado aqui pode ser emitido por conta própria e confiável por um aplicativo.  
+- **Pessoal**. Esse repositório é usado para os certificados associados com um usuário de um computador. Geralmente, esse repositório é usado para os certificados emitidos por um dos certificados da autoridade de certificação localizados no repositório Autoridades de Certificação Confiáveis. Como alternativa, um certificado localizado aqui pode ser emitido por conta própria e confiável por um aplicativo.  
   
  Para obter mais informações sobre repositórios de certificados, confira [Repositórios de certificados](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Selecionando um repositório  
  Selecionar onde armazenar um certificado depende de como e quando o serviço ou o cliente é executado. As seguintes regras gerais se aplicam:  
   
--   Se o serviço WCF está hospedado em um serviço Windows, use o repositório do **computador local**. Observe que os privilégios de administrador são necessários para instalar certificados no repositório do computador local.  
+- Se o serviço WCF está hospedado em um serviço Windows, use o repositório do **computador local**. Observe que os privilégios de administrador são necessários para instalar certificados no repositório do computador local.  
   
--   Se o serviço ou o cliente é um aplicativo executado em uma conta de usuário, use o repositório do **usuário atual**.  
+- Se o serviço ou o cliente é um aplicativo executado em uma conta de usuário, use o repositório do **usuário atual**.  
   
 ### <a name="accessing-stores"></a>Acessando repositórios  
  Os repositórios são protegidos por listas de controle de acesso (ACLs), como pastas em um computador. Ao criar um serviço hospedado pelos Serviços de Informações da Internet (IIS), o processo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é executado sob a conta do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Essa conta deve ter acesso ao repositório que contém os certificados que um serviço usa. Cada um dos principais repositórios é protegido por uma lista de acesso padrão, mas as listas podem ser modificadas. Se você criar uma função separada para acessar um repositório, deverá conceder permissão de acesso a essa função. Para saber como modificar a lista de acesso usando a ferramenta WinHttpCertConfig.exe, consulte [como: Criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obter mais informações sobre como usar certificados do cliente com o IIS, confira [Como chamar um serviço Web usando um certificado do cliente para autenticação em um aplicativo Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
@@ -74,11 +74,11 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
  Também é possível definir a propriedade usando configuração. Os seguintes elementos são usados para especificar o modo de validação:  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Autenticação personalizada  
  A propriedade `CertificateValidationMode` também permite que você personalize como os certificados são autenticados. Por padrão, o nível é definido como `ChainTrust`. Para usar o valor <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, você também deverá definir o atributo `CustomCertificateValidatorType` para um assembly e um tipo usados para validar o certificado. Para criar um validador personalizado, você deverá herdar da classe abstrata <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  

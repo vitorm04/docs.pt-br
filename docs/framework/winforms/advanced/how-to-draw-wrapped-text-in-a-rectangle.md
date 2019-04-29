@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781389"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Como: desenhar texto ajustado um retângulo
 Você pode desenhar texto encapsulado em um retângulo usando o <xref:System.Drawing.Graphics.DrawString%2A> sobrecarregada do método da <xref:System.Drawing.Graphics> classe que usa um <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> parâmetro. Você também usará um <xref:System.Drawing.Brush> e um <xref:System.Drawing.Font>.  
@@ -42,7 +42,7 @@ Você pode desenhar texto encapsulado em um retângulo usando o <xref:System.Dra
 ## <a name="compiling-the-code"></a>Compilando o código  
  Os exemplos anteriores requerem:  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+- <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Consulte também
 

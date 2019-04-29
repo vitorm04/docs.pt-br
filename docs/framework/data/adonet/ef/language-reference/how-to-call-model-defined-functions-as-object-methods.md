@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774602"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: Chamar funções definidas por modelo como métodos de objeto
 Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Um *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas no LINQ para consultas de entidades, consulte [como: Chamar funções definidas em consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -25,9 +25,9 @@ Este tópico descreve como chamar uma função o definida como um método em um 
   
 2. Adicione um método do Common Language Runtime (CLR) a sua classe de <xref:System.Data.Objects.ObjectContext> que faz o seguinte:  
   
-    -   Mapeados para a função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual, respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
+    - Mapeados para a função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual, respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
   
-    -   Retorna os resultados do método de <xref:System.Linq.IQueryProvider.Execute%2A> retornado pela propriedade de <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> .  
+    - Retorna os resultados do método de <xref:System.Linq.IQueryProvider.Execute%2A> retornado pela propriedade de <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> .  
   
 3. Chame o método como um membro em uma instância da classe de <xref:System.Data.Objects.ObjectContext> .  
   
@@ -35,11 +35,11 @@ Este tópico descreve como chamar uma função o definida como um método em um 
   
 1. Adicionar uma classe ao seu aplicativo com um método estático que faça o seguinte:  
   
-    -   Mapeados para a função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual, respectivamente.  
+    - Mapeados para a função definida no modelo conceitual. Para mapear o método, você deve aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para o método. Observe que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual, respectivamente.  
   
-    -   Aceita um argumento de <xref:System.Linq.IQueryable> .  
+    - Aceita um argumento de <xref:System.Linq.IQueryable> .  
   
-    -   Retorna os resultados do método de <xref:System.Linq.IQueryProvider.Execute%2A> retornado pela propriedade de <xref:System.Linq.IQueryable.Provider%2A> .  
+    - Retorna os resultados do método de <xref:System.Linq.IQueryProvider.Execute%2A> retornado pela propriedade de <xref:System.Linq.IQueryable.Provider%2A> .  
   
 2. Chame o método como um membro um método estático na classe personalizada  
   

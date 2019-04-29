@@ -17,11 +17,11 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748754"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de dados UShort (Visual Basic)
 
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>Dicas de programação
   
--   **Números negativos.** Porque `UShort` é um tipo sem sinal, ele não pode representar um número negativo. Se você usar o operador unário menos (`-`) ou uma expressão que é avaliada para o tipo `UShort`, Visual Basic converte a expressão para `Integer` primeiro.  
+- **Números negativos.** Porque `UShort` é um tipo sem sinal, ele não pode representar um número negativo. Se você usar o operador unário menos (`-`) ou uma expressão que é avaliada para o tipo `UShort`, Visual Basic converte a expressão para `Integer` primeiro.  
   
--   **Conformidade com CLS.** O `UShort` tipo de dados não é parte do [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), então um código compatível com CLS não pode consumir um componente que usa-o.
+- **Conformidade com CLS.** O `UShort` tipo de dados não é parte do [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), então um código compatível com CLS não pode consumir um componente que usa-o.
   
--   **Ampliação.** O `UShort` tipo de dados amplia a `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, e `Double`. Isso significa que você pode converter `UShort` para qualquer um desses tipos sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
+- **Ampliação.** O `UShort` tipo de dados amplia a `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, e `Double`. Isso significa que você pode converter `UShort` para qualquer um desses tipos sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
   
--   **Caracteres de tipo.** Acrescentar os caracteres de tipo literal `US` a um literal o força ao `UShort` tipo de dados. `UShort` não tem nenhum caractere de tipo de identificador.  
+- **Caracteres de tipo.** Acrescentar os caracteres de tipo literal `US` a um literal o força ao `UShort` tipo de dados. `UShort` não tem nenhum caractere de tipo de identificador.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.UInt16?displayProperty=nameWithType>.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.UInt16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

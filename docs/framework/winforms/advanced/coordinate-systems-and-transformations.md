@@ -7,11 +7,11 @@ helpviewer_keywords:
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
 ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755760"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Sistemas de coordenadas e transformações
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece uma transformação global e uma transformação de página para que você pode transformar (girar, dimensionar, traduzir e assim por diante) dos itens que você desenhar. As duas transformações também permitem que você trabalhe em uma variedade de sistemas de coordenadas.  

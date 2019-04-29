@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
 ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756865"
 ---
 # <a name="nested-types"></a>Tipos aninhados
 Um tipo aninhado é um tipo definido dentro do escopo de outro tipo, que é chamado de tipo de delimitador. Um tipo aninhado tem acesso a todos os membros do seu tipo delimitador. Por exemplo, ele tem acesso a campos privados, definidos no tipo delimitador e protegidos campos definidos em todos os ascendentes do tipo delimitador.  

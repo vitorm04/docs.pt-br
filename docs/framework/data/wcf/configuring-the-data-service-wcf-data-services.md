@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793478"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -77,9 +77,9 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode cr
 ## <a name="versioning-requirements"></a>Requisitos de controle de versão  
  Os seguintes comportamentos de configuração de serviço de dados exigem a versão 2 do protocolo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ou versões posteriores:  
   
--   Suporte para solicitações de contagem.  
+- Suporte para solicitações de contagem.  
   
--   Suporte a opção de consulta de $select para a projeção.  
+- Suporte a opção de consulta de $select para a projeção.  
   
  Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

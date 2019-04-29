@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773068"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Como: habilitar a detecção de reprodução de mensagem
 Um ataque de repetição ocorre quando um invasor copia um fluxo de mensagens entre duas partes e repete o fluxo a um ou mais das partes. A menos que atenuado, os computadores sujeita a ataque processará o fluxo como mensagens legítimas, resultando em um intervalo de consequências incorretas, como com redundância de pedidos de um item.  
@@ -30,13 +30,13 @@ Um ataque de repetição ocorre quando um invasor copia um fluxo de mensagens en
   
 2. Use o <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> propriedade para retornar uma referência para o <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> de classe e definir qualquer uma das propriedades a seguir, conforme apropriado:  
   
-    1.  `DetectReplay`. Um valor booliano. Isso determina se o cliente deve detectar repetições do servidor. O padrão é `true`.  
+    1. `DetectReplay`. Um valor booliano. Isso determina se o cliente deve detectar repetições do servidor. O padrão é `true`.  
   
-    2.  `MaxClockSkew`. Um valor <xref:System.TimeSpan>. Controla quanto distorção de tempo que o mecanismo de reprodução pode tolerar entre o cliente e o servidor. O mecanismo de segurança examina o tempo de carimbo de data / enviados e determina se ele foi enviado muito distante no passado. O padrão é 5 minutos.  
+    2. `MaxClockSkew`. Um valor <xref:System.TimeSpan>. Controla quanto distorção de tempo que o mecanismo de reprodução pode tolerar entre o cliente e o servidor. O mecanismo de segurança examina o tempo de carimbo de data / enviados e determina se ele foi enviado muito distante no passado. O padrão é 5 minutos.  
   
-    3.  `ReplayWindow`. Um valor `TimeSpan`. Isso controla quanto tempo uma mensagem podem residir na rede depois que o servidor envia a ele (por meio de intermediários) antes de alcançar o cliente. O cliente controla as assinaturas das mensagens enviadas dentro a versão mais recente `ReplayWindow` para fins de detecção de reprodução.  
+    3. `ReplayWindow`. Um valor `TimeSpan`. Isso controla quanto tempo uma mensagem podem residir na rede depois que o servidor envia a ele (por meio de intermediários) antes de alcançar o cliente. O cliente controla as assinaturas das mensagens enviadas dentro a versão mais recente `ReplayWindow` para fins de detecção de reprodução.  
   
-    4.  `ReplayCacheSize`. Um valor inteiro. O cliente armazena as assinaturas da mensagem em um cache. Essa configuração especifica quantas assinaturas, o cache pode armazenar. Se o número de mensagens enviadas dentro a última janela reprodução atingir o limite de cache, novas mensagens são rejeitadas até que as assinaturas em cache mais antigas alcance o limite de tempo. O padrão é 500000.  
+    4. `ReplayCacheSize`. Um valor inteiro. O cliente armazena as assinaturas da mensagem em um cache. Essa configuração especifica quantas assinaturas, o cache pode armazenar. Se o número de mensagens enviadas dentro a última janela reprodução atingir o limite de cache, novas mensagens são rejeitadas até que as assinaturas em cache mais antigas alcance o limite de tempo. O padrão é 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Para controlar a detecção de reprodução no serviço usando código  
   
@@ -88,19 +88,19 @@ Um ataque de repetição ocorre quando um invasor copia um fluxo de mensagens en
   
  Se você não usar sessões de conversa segura, detecção de reprodução não garante a detecção de repetições em cenários de farm de servidor e quando o processo ser reciclado. Isso se aplica às seguintes associações fornecidas pelo sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+- <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> com o <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriedade definida como `false`.  
+- <xref:System.ServiceModel.WSHttpBinding> com o <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriedade definida como `false`.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Os seguintes namespaces são necessários para compilar o código:  
+- Os seguintes namespaces são necessários para compilar o código:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Consulte também
 

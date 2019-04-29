@@ -7,23 +7,23 @@ helpviewer_keywords:
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
 ms.openlocfilehash: 175f79096d2bbda81a602d38e027d5a6d871fa12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768687"
 ---
 # <a name="wcf-discovery"></a>Descoberta de WCF
-Windows Communication Foundation (WCF) oferece suporte para habilitar o serviço seja detectável em tempo de execução de uma maneira interoperável usando o protocolo WS-Discovery. Serviços WCF podem anunciar a disponibilidade de rede usando uma mensagem de multicast ou em um servidor de proxy de descoberta. Aplicativos cliente podem pesquisar a rede ou um servidor de proxy de descoberta para localizar os serviços que atendem a um conjunto de critérios. Os tópicos nesta seção fornecem uma visão geral e descrevem o modelo de programação para esse recurso em detalhes.  
+Windows Communication Foundation (WCF) oferece suporte para habilitar os serviços sejam descobertos em tempo de execução de uma maneira interoperável usando o protocolo WS-Discovery. Os serviços WCF podem anunciar sua disponibilidade para a rede usando uma mensagem de multicast ou em um servidor de proxy de descoberta. Aplicativos cliente podem pesquisar a rede ou um servidor de proxy de descoberta para localizar os serviços que atendem a um conjunto de critérios. Os tópicos nesta seção fornecem uma visão geral e descrevem o modelo de programação para esse recurso em detalhes.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- Fornece uma visão geral do suporte do WS-Discovery fornecida pelo WCF.  
+ Fornece uma visão geral do suporte do WS-Discovery fornecido pelo WCF.  
   
  [Modelo de objeto de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)  
- Descreve as classes no modelo de objeto de extensibilidade de suporte do WS-Discovery.  
+ Descreve as classes no modelo de objeto e extensibilidade do suporte do WS-Discovery.  
   
- [Como adicionar programaticamente a capacidade de descoberta a um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
+ [Como: Adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
  Mostra como criar um serviço do Windows Communication Foundation (WCF) podem ser descobertos.  
   
  [Implementando um proxy de descoberta](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  

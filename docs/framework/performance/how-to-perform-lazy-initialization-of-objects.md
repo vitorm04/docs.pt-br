@@ -10,11 +10,11 @@ ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722979"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Como: executar a inicialização lenta de objetos
 A classe <xref:System.Lazy%601?displayProperty=nameWithType> simplifica o trabalho de inicialização lenta e instanciação de objetos. Inicializando objetos de maneira lenta, você poderá evitar a necessidade de criá-los se eles nunca forem necessários ou você poderá adiar sua inicialização até que eles sejam acessados pela primeira vez. Para obter mais informações, veja [Inicialização lenta](../../../docs/framework/performance/lazy-initialization.md).  
