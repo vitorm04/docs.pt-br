@@ -7,25 +7,25 @@ helpviewer_keywords:
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
 ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698948"
 ---
-# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a><span data-ttu-id="27ad5-102">Como: Aplicar material à frente e ao verso de um objeto 3D</span><span class="sxs-lookup"><span data-stu-id="27ad5-102">How to: Apply Material to the Front and Back of a 3-D Object</span></span>
-<span data-ttu-id="27ad5-103">O exemplo a seguir mostra como aplicar um <xref:System.Windows.Media.Media3D.Material> do objeto para a frente e ao verso de um 3D e animar o objeto para mostrar ambos os lados do objeto.</span><span class="sxs-lookup"><span data-stu-id="27ad5-103">The following example shows how to apply a <xref:System.Windows.Media.Media3D.Material> to the front and back of a 3-D object and animate the object to show both sides of the object.</span></span> <span data-ttu-id="27ad5-104">O <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar um vermelho <xref:System.Windows.Media.Brush> ao lado frontal do objeto e o <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> propriedade do <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar uma azul <xref:System.Windows.Media.Brush> para a parte de trás do objeto.</span><span class="sxs-lookup"><span data-stu-id="27ad5-104">The <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a red <xref:System.Windows.Media.Brush> to the front side of the object and the <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> property of the <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a blue <xref:System.Windows.Media.Brush> to the back side of the object.</span></span> <span data-ttu-id="27ad5-105">O código a seguir mostra o aplicativo de materiais para o objeto:</span><span class="sxs-lookup"><span data-stu-id="27ad5-105">The code below shows the application of the materials to the object:</span></span>  
+# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a><span data-ttu-id="57652-102">Como: Aplicar material à frente e ao verso de um objeto 3D</span><span class="sxs-lookup"><span data-stu-id="57652-102">How to: Apply Material to the Front and Back of a 3-D Object</span></span>
+<span data-ttu-id="57652-103">O exemplo a seguir mostra como aplicar um <xref:System.Windows.Media.Media3D.Material> do objeto para a frente e ao verso de um 3D e animar o objeto para mostrar ambos os lados do objeto.</span><span class="sxs-lookup"><span data-stu-id="57652-103">The following example shows how to apply a <xref:System.Windows.Media.Media3D.Material> to the front and back of a 3-D object and animate the object to show both sides of the object.</span></span> <span data-ttu-id="57652-104">O <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar um vermelho <xref:System.Windows.Media.Brush> ao lado frontal do objeto e o <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> propriedade do <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar uma azul <xref:System.Windows.Media.Brush> para a parte de trás do objeto.</span><span class="sxs-lookup"><span data-stu-id="57652-104">The <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a red <xref:System.Windows.Media.Brush> to the front side of the object and the <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> property of the <xref:System.Windows.Media.Media3D.GeometryModel3D> is used to apply a blue <xref:System.Windows.Media.Brush> to the back side of the object.</span></span> <span data-ttu-id="57652-105">O código a seguir mostra o aplicativo de materiais para o objeto:</span><span class="sxs-lookup"><span data-stu-id="57652-105">The code below shows the application of the materials to the object:</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexampleinline1)]  
   
-## <a name="example"></a><span data-ttu-id="27ad5-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="27ad5-106">Example</span></span>  
- <span data-ttu-id="27ad5-107">O código a seguir mostra o exemplo completo.</span><span class="sxs-lookup"><span data-stu-id="27ad5-107">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="57652-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="57652-106">Example</span></span>  
+ <span data-ttu-id="57652-107">O código a seguir mostra o exemplo completo.</span><span class="sxs-lookup"><span data-stu-id="57652-107">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="27ad5-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="27ad5-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57652-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="57652-108">See also</span></span>
 
-- [<span data-ttu-id="27ad5-109">Criar uma cena 3D</span><span class="sxs-lookup"><span data-stu-id="27ad5-109">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)
-- [<span data-ttu-id="27ad5-110">Visão geral de elementos gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="27ad5-110">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
-- [<span data-ttu-id="27ad5-111">Animar propriedades de material em uma cena 3D</span><span class="sxs-lookup"><span data-stu-id="27ad5-111">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)
-- [<span data-ttu-id="27ad5-112">Aplicar material emissivo a um objeto 3D</span><span class="sxs-lookup"><span data-stu-id="27ad5-112">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)
+- [<span data-ttu-id="57652-109">Criar uma cena 3D</span><span class="sxs-lookup"><span data-stu-id="57652-109">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)
+- [<span data-ttu-id="57652-110">Visão geral de elementos gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="57652-110">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="57652-111">Animar propriedades de material em uma cena 3D</span><span class="sxs-lookup"><span data-stu-id="57652-111">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [<span data-ttu-id="57652-112">Aplicar material emissivo a um objeto 3D</span><span class="sxs-lookup"><span data-stu-id="57652-112">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)

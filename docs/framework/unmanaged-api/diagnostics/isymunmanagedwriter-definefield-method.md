@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5fd9798b3681d66e71d5703f4d16564b153da07b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789624"
 ---
-# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="81c31-102">Método ISymUnmanagedWriter::DefineField</span><span class="sxs-lookup"><span data-stu-id="81c31-102">ISymUnmanagedWriter::DefineField Method</span></span>
-<span data-ttu-id="81c31-103">Define uma única variável que não está dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="81c31-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="81c31-104">Esse método é usado para determinados campos em classes, campos de bits e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="81c31-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
+# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="0cb05-102">Método ISymUnmanagedWriter::DefineField</span><span class="sxs-lookup"><span data-stu-id="0cb05-102">ISymUnmanagedWriter::DefineField Method</span></span>
+<span data-ttu-id="0cb05-103">Define uma única variável que não está dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="0cb05-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="0cb05-104">Esse método é usado para determinados campos em classes, campos de bits e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="0cb05-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81c31-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="81c31-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cb05-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0cb05-105">Syntax</span></span>  
   
 ```  
 HRESULT DefineField(  
@@ -42,40 +42,40 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="81c31-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="81c31-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0cb05-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0cb05-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="81c31-107">[in] O método ou tipo de metadados de token.</span><span class="sxs-lookup"><span data-stu-id="81c31-107">[in] The metadata type or method token.</span></span>  
+ <span data-ttu-id="0cb05-107">[in] O método ou tipo de metadados de token.</span><span class="sxs-lookup"><span data-stu-id="0cb05-107">[in] The metadata type or method token.</span></span>  
   
  `name`  
- <span data-ttu-id="81c31-108">[in] O nome do campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-108">[in] The field name.</span></span>  
+ <span data-ttu-id="0cb05-108">[in] O nome do campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-108">[in] The field name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="81c31-109">[in] Os atributos de campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-109">[in] The field attributes.</span></span>  
+ <span data-ttu-id="0cb05-109">[in] Os atributos de campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-109">[in] The field attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="81c31-110">[in] Um `ULONG32` que é o tamanho, em caracteres, do buffer necessário para conter a assinatura de campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
+ <span data-ttu-id="0cb05-110">[in] Um `ULONG32` que é o tamanho, em caracteres, do buffer necessário para conter a assinatura de campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
   
  `signature`  
- <span data-ttu-id="81c31-111">[in] A matriz de assinaturas de campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-111">[in] The array of field signatures.</span></span>  
+ <span data-ttu-id="0cb05-111">[in] A matriz de assinaturas de campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-111">[in] The array of field signatures.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="81c31-112">[in] O tipo de endereço.</span><span class="sxs-lookup"><span data-stu-id="81c31-112">[in] The address type.</span></span>  
+ <span data-ttu-id="0cb05-112">[in] O tipo de endereço.</span><span class="sxs-lookup"><span data-stu-id="0cb05-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="81c31-113">[in] O primeiro endereço para a especificação de campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-113">[in] The first address for the field specification.</span></span>  
+ <span data-ttu-id="0cb05-113">[in] O primeiro endereço para a especificação de campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-113">[in] The first address for the field specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="81c31-114">[in] O segundo endereço para a especificação de campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-114">[in] The second address for the field specification.</span></span>  
+ <span data-ttu-id="0cb05-114">[in] O segundo endereço para a especificação de campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-114">[in] The second address for the field specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="81c31-115">[in] O terceiro endereço para a especificação de campo.</span><span class="sxs-lookup"><span data-stu-id="81c31-115">[in] The third address for the field specification.</span></span>  
+ <span data-ttu-id="0cb05-115">[in] O terceiro endereço para a especificação de campo.</span><span class="sxs-lookup"><span data-stu-id="0cb05-115">[in] The third address for the field specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="81c31-116">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="81c31-116">Return Value</span></span>  
- <span data-ttu-id="81c31-117">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="81c31-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0cb05-116">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="0cb05-116">Return Value</span></span>  
+ <span data-ttu-id="0cb05-117">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="0cb05-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81c31-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="81c31-118">Requirements</span></span>  
- <span data-ttu-id="81c31-119">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="81c31-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0cb05-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0cb05-118">Requirements</span></span>  
+ <span data-ttu-id="0cb05-119">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0cb05-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81c31-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="81c31-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cb05-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0cb05-120">See also</span></span>
 
-- [<span data-ttu-id="81c31-121">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="81c31-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="0cb05-121">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="0cb05-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

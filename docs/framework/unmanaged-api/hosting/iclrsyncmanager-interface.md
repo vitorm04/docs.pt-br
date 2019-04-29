@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763575"
 ---
-# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="8ac08-102">Interface ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="8ac08-102">ICLRSyncManager Interface</span></span>
-<span data-ttu-id="8ac08-103">Define métodos que permitem que o host para obter informações sobre tarefas solicitadas e para detectar deadlocks em sua implementação de sincronização.</span><span class="sxs-lookup"><span data-stu-id="8ac08-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
+# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="4ed4c-102">Interface ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="4ed4c-102">ICLRSyncManager Interface</span></span>
+<span data-ttu-id="4ed4c-103">Define métodos que permitem que o host para obter informações sobre tarefas solicitadas e para detectar deadlocks em sua implementação de sincronização.</span><span class="sxs-lookup"><span data-stu-id="4ed4c-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8ac08-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="8ac08-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4ed4c-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="4ed4c-104">Methods</span></span>  
   
-|<span data-ttu-id="8ac08-105">Método</span><span class="sxs-lookup"><span data-stu-id="8ac08-105">Method</span></span>|<span data-ttu-id="8ac08-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="8ac08-106">Description</span></span>|  
+|<span data-ttu-id="4ed4c-105">Método</span><span class="sxs-lookup"><span data-stu-id="4ed4c-105">Method</span></span>|<span data-ttu-id="4ed4c-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="4ed4c-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8ac08-107">Método CreateRWLockOwnerIterator</span><span class="sxs-lookup"><span data-stu-id="8ac08-107">CreateRWLockOwnerIterator Method</span></span>](iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="8ac08-108">Solicita que o common language runtime (CLR) cria um iterador para o host a usar para determinar o conjunto de tarefas aguardando um bloqueio de leitor-gravador.</span><span class="sxs-lookup"><span data-stu-id="8ac08-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
-|[<span data-ttu-id="8ac08-109">Método DeleteRWLockOwnerIterator</span><span class="sxs-lookup"><span data-stu-id="8ac08-109">DeleteRWLockOwnerIterator Method</span></span>](iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="8ac08-110">Solicita que o CLR destrua um iterador que foi criado por uma chamada para `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="8ac08-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
-|[<span data-ttu-id="8ac08-111">Método GetMonitorOwner</span><span class="sxs-lookup"><span data-stu-id="8ac08-111">GetMonitorOwner Method</span></span>](iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="8ac08-112">Obtém a tarefa que possui o monitor especificado.</span><span class="sxs-lookup"><span data-stu-id="8ac08-112">Gets the task that owns the specified monitor.</span></span>|  
-|[<span data-ttu-id="8ac08-113">Método GetRWLockOwnerNext</span><span class="sxs-lookup"><span data-stu-id="8ac08-113">GetRWLockOwnerNext Method</span></span>](iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="8ac08-114">Obtém a próxima tarefa está aguardando o bloqueio de leitor-gravador atual.</span><span class="sxs-lookup"><span data-stu-id="8ac08-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
+|[<span data-ttu-id="4ed4c-107">Método CreateRWLockOwnerIterator</span><span class="sxs-lookup"><span data-stu-id="4ed4c-107">CreateRWLockOwnerIterator Method</span></span>](iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="4ed4c-108">Solicita que o common language runtime (CLR) cria um iterador para o host a usar para determinar o conjunto de tarefas aguardando um bloqueio de leitor-gravador.</span><span class="sxs-lookup"><span data-stu-id="4ed4c-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
+|[<span data-ttu-id="4ed4c-109">Método DeleteRWLockOwnerIterator</span><span class="sxs-lookup"><span data-stu-id="4ed4c-109">DeleteRWLockOwnerIterator Method</span></span>](iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="4ed4c-110">Solicita que o CLR destrua um iterador que foi criado por uma chamada para `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="4ed4c-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
+|[<span data-ttu-id="4ed4c-111">Método GetMonitorOwner</span><span class="sxs-lookup"><span data-stu-id="4ed4c-111">GetMonitorOwner Method</span></span>](iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="4ed4c-112">Obtém a tarefa que possui o monitor especificado.</span><span class="sxs-lookup"><span data-stu-id="4ed4c-112">Gets the task that owns the specified monitor.</span></span>|  
+|[<span data-ttu-id="4ed4c-113">Método GetRWLockOwnerNext</span><span class="sxs-lookup"><span data-stu-id="4ed4c-113">GetRWLockOwnerNext Method</span></span>](iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="4ed4c-114">Obtém a próxima tarefa está aguardando o bloqueio de leitor-gravador atual.</span><span class="sxs-lookup"><span data-stu-id="4ed4c-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8ac08-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8ac08-115">Requirements</span></span>  
- <span data-ttu-id="8ac08-116">**Plataformas:** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8ac08-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ed4c-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4ed4c-115">Requirements</span></span>  
+ <span data-ttu-id="4ed4c-116">**Plataformas:** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ed4c-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ac08-117">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8ac08-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4ed4c-117">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4ed4c-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8ac08-118">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="8ac08-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4ed4c-118">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4ed4c-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8ac08-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ac08-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4ed4c-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ed4c-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8ac08-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ac08-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ed4c-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4ed4c-120">See also</span></span>
 
 - <xref:System.Threading.Thread>
-- [<span data-ttu-id="8ac08-121">Interface IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="8ac08-121">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
-- <span data-ttu-id="8ac08-122">[Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="8ac08-122">[Managed and Unmanaged Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span></span>
-- [<span data-ttu-id="8ac08-123">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="8ac08-123">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="4ed4c-121">Interface IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="4ed4c-121">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
+- <span data-ttu-id="4ed4c-122">[Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="4ed4c-122">[Managed and Unmanaged Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span></span>
+- [<span data-ttu-id="4ed4c-123">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="4ed4c-123">Hosting Interfaces</span></span>](hosting-interfaces.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2eaa48dcc7dad2d66f1a60922c94193120b59b32
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785147"
 ---
-# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="98cde-102">Método ICorDebugAppDomain::GetModuleFromMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="98cde-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
-<span data-ttu-id="98cde-103">Obtém o módulo que corresponda à interface de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="98cde-103">Gets the module that corresponds to the given metadata interface.</span></span>  
+# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="70bb1-102">Método ICorDebugAppDomain::GetModuleFromMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="70bb1-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
+<span data-ttu-id="70bb1-103">Obtém o módulo que corresponda à interface de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="70bb1-103">Gets the module that corresponds to the given metadata interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98cde-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="98cde-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70bb1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="70bb1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleFromMetaDataInterface (  
@@ -36,18 +36,18 @@ HRESULT GetModuleFromMetaDataInterface (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98cde-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="98cde-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70bb1-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="70bb1-105">Parameters</span></span>  
  `pIMetaData`  
- <span data-ttu-id="98cde-106">[in] Um ponteiro para um objeto que é um dos [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="98cde-106">[in] A pointer to an object that is one of the [Metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
+ <span data-ttu-id="70bb1-106">[in] Um ponteiro para um objeto que é um dos [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="70bb1-106">[in] A pointer to an object that is one of the [Metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
   
  `ppModule`  
- <span data-ttu-id="98cde-107">[out] Um ponteiro para o endereço de um objeto ICorDebugModule que representa o módulo correspondente para a interface de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="98cde-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
+ <span data-ttu-id="70bb1-107">[out] Um ponteiro para o endereço de um objeto ICorDebugModule que representa o módulo correspondente para a interface de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="70bb1-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98cde-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="98cde-108">Requirements</span></span>  
- <span data-ttu-id="98cde-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98cde-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70bb1-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="70bb1-108">Requirements</span></span>  
+ <span data-ttu-id="70bb1-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70bb1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98cde-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98cde-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="70bb1-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="70bb1-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98cde-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98cde-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="70bb1-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70bb1-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="98cde-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98cde-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="70bb1-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70bb1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

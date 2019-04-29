@@ -3,21 +3,21 @@ title: Refatoração usando uma função pura (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787108"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="56511-102">Refatoração usando uma função pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56511-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
-<span data-ttu-id="56511-103">O exemplo a seguir refatora o exemplo anterior, [refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura nesse exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="56511-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="e660a-102">Refatoração usando uma função pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e660a-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
+<span data-ttu-id="e660a-103">O exemplo a seguir refatora o exemplo anterior, [refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura nesse exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="e660a-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="56511-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="56511-104">Example</span></span>  
- <span data-ttu-id="56511-105">Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="56511-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="56511-106">Também identifica o estilo de cada parágrafo.</span><span class="sxs-lookup"><span data-stu-id="56511-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="56511-107">Este exemplo cria nos exemplos anteriores neste tutorial.</span><span class="sxs-lookup"><span data-stu-id="56511-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="56511-108">O código refactored é chamado nos comentários no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="56511-108">The refactored code is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="e660a-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e660a-104">Example</span></span>  
+ <span data-ttu-id="e660a-105">Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="e660a-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="e660a-106">Também identifica o estilo de cada parágrafo.</span><span class="sxs-lookup"><span data-stu-id="e660a-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="e660a-107">Este exemplo cria nos exemplos anteriores neste tutorial.</span><span class="sxs-lookup"><span data-stu-id="e660a-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="e660a-108">O código refactored é chamado nos comentários no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="e660a-108">The refactored code is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="56511-109">Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o código-fonte Office documento Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="56511-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="e660a-109">Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o código-fonte Office documento Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="e660a-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="56511-110">Este exemplo usa classes do assembly WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="56511-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="56511-111">Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="56511-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="e660a-110">Este exemplo usa classes do assembly WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="e660a-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="e660a-111">Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e660a-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -147,7 +147,7 @@ Module Module1
 End Module   
 ```  
   
- <span data-ttu-id="56511-112">Este exemplo gerenciar as mesmas saída que antes de refatoração:</span><span class="sxs-lookup"><span data-stu-id="56511-112">This example produces the same output as before the refactoring:</span></span>  
+ <span data-ttu-id="e660a-112">Este exemplo gerenciar as mesmas saída que antes de refatoração:</span><span class="sxs-lookup"><span data-stu-id="e660a-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -167,13 +167,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a><span data-ttu-id="56511-113">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="56511-113">Next Steps</span></span>  
- <span data-ttu-id="56511-114">O exemplo a seguir mostra como projetar XML em uma forma diferente:</span><span class="sxs-lookup"><span data-stu-id="56511-114">The next example shows how to project XML into a different shape:</span></span>  
+### <a name="next-steps"></a><span data-ttu-id="e660a-113">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="e660a-113">Next Steps</span></span>  
+ <span data-ttu-id="e660a-114">O exemplo a seguir mostra como projetar XML em uma forma diferente:</span><span class="sxs-lookup"><span data-stu-id="e660a-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [<span data-ttu-id="56511-115">Projetando XML em uma forma diferente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56511-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [<span data-ttu-id="e660a-115">Projetando XML em uma forma diferente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e660a-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a><span data-ttu-id="56511-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="56511-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e660a-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e660a-116">See also</span></span>
 
-- [<span data-ttu-id="56511-117">Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56511-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="56511-118">Refatoração usando um método de extensão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56511-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [<span data-ttu-id="56511-119">Refatoração em funções puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56511-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [<span data-ttu-id="e660a-117">Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e660a-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="e660a-118">Refatoração usando um método de extensão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e660a-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [<span data-ttu-id="e660a-119">Refatoração em funções puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e660a-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

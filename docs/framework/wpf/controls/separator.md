@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Separator control [WPF]
 ms.assetid: 1b872bc6-1a26-401c-989b-3fafecc5a4ef
 ms.openlocfilehash: d3d8fb637363a154013115f95bae52904467b46e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938951"
 ---
-# <a name="separator"></a><span data-ttu-id="70bf6-102">Separador</span><span class="sxs-lookup"><span data-stu-id="70bf6-102">Separator</span></span>
-<span data-ttu-id="70bf6-103">Um <xref:System.Windows.Controls.Separator> controle desenha uma linha, horizontal ou vertical entre os itens em controles, como <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="70bf6-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  
+# <a name="separator"></a><span data-ttu-id="cb307-102">Separador</span><span class="sxs-lookup"><span data-stu-id="cb307-102">Separator</span></span>
+<span data-ttu-id="cb307-103">Um <xref:System.Windows.Controls.Separator> controle desenha uma linha, horizontal ou vertical, entre os itens em controles, como <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="cb307-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="70bf6-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="70bf6-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="cb307-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="cb307-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="70bf6-105">Referência</span><span class="sxs-lookup"><span data-stu-id="70bf6-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cb307-105">Referência</span><span class="sxs-lookup"><span data-stu-id="cb307-105">Reference</span></span>  
  <xref:System.Windows.Controls.Separator>
