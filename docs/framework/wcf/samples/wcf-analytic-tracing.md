@@ -3,11 +3,11 @@ title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723349"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava ETW no Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos de analíticos destinam-se tornar mais fácil de obter visibilidade em seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram com os serviços WCF.  
@@ -22,11 +22,11 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 ## <a name="self-hosting-vs-web-hosting"></a>Hospedagem interna vs. Web Hosting  
  Para serviços hospedados na Web, rastreamentos de analítica do WCF fornecem um campo chamado "HostReference", que é usado para identificar o serviço que está emitindo rastreamentos. Os rastreamentos do usuário extensível podem participar desse modelo e este exemplo demonstra as práticas recomendadas para fazer isso. O formato de um host da Web de referência quando o pipe '&#124;' caracteres será exibida na resultante cadeia de caracteres pode ser qualquer um dos seguintes:  
   
--   Se o aplicativo não estiver na raiz.  
+- Se o aplicativo não estiver na raiz.  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   Se o aplicativo está na raiz.  
+- Se o aplicativo está na raiz.  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 10. Testar o serviço usando a Test usuário.  
   
-    1.  No cliente de teste do WCF, clique duas vezes em **Add ()** sob o nó do serviço de ICalculator.  
+    1. No cliente de teste do WCF, clique duas vezes em **Add ()** sob o nó do serviço de ICalculator.  
   
          O **Add ()** método aparece no painel direito com dois parâmetros.  
   
-    2.  Digite 2 para o primeiro parâmetro e 3 para o segundo parâmetro.  
+    2. Digite 2 para o primeiro parâmetro e 3 para o segundo parâmetro.  
   
-    3.  Clique em **Invoke** para invocar o método.  
+    3. Clique em **Invoke** para invocar o método.  
   
 11. Vá para o **Visualizador de eventos** janela que você já abriu. Navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativo Aplicativos de servidor**.  
   

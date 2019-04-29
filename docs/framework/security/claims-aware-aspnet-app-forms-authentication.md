@@ -1,16 +1,16 @@
 ---
-title: 'Como: Criar um aplicativo de ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários'
+title: 'Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação Baseada em Formulários'
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792737"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Como: Criar um aplicativo de ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação Baseada em Formulários
 
 ## <a name="applies-to"></a>Aplica-se a
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788135"
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -24,17 +24,17 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 ## <a name="caching-data"></a>Armazenando dados em cache  
  É possível armazenar as informações em cache usando classes no namespace <xref:System.Runtime.Caching>. As classes de cache desse namespace fornecem os seguintes recursos:  
   
--   Tipos abstratos que fornecem a base para a criação de implementações personalizadas de cache.  
+- Tipos abstratos que fornecem a base para a criação de implementações personalizadas de cache.  
   
--   Uma implementação concreta de cache de objetos na memória.  
+- Uma implementação concreta de cache de objetos na memória.  
   
  A classe de cache de base abstrata (<xref:System.Runtime.Caching.ObjectCache>) define as seguintes tarefas de cache:  
   
--   Criação e gerenciamento de entradas de cache.  
+- Criação e gerenciamento de entradas de cache.  
   
--   Especificação de informações de expiração e remoção.  
+- Especificação de informações de expiração e remoção.  
   
--   Gatilho de eventos que são acionados em resposta a alterações nas entradas de cache.  
+- Gatilho de eventos que são acionados em resposta a alterações nas entradas de cache.  
   
  A classe <xref:System.Runtime.Caching.MemoryCache> é uma implementação de cache de objetos na memória da classe <xref:System.Runtime.Caching.ObjectCache>. É possível usar a classe <xref:System.Runtime.Caching.MemoryCache> para a maioria das tarefas de cache.  
   
@@ -67,11 +67,11 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
  Para estender o cache, faça o seguinte:  
   
--   Crie uma classe personalizada que é derivada da classe <xref:System.Runtime.Caching.ObjectCache> e, em seguida, forneça uma implementação personalizada de cache na classe derivada.  
+- Crie uma classe personalizada que é derivada da classe <xref:System.Runtime.Caching.ObjectCache> e, em seguida, forneça uma implementação personalizada de cache na classe derivada.  
   
--   Crie uma classe que é derivada da classe <xref:System.Runtime.Caching.MemoryCache> e personalize ou estenda a classe derivada. Para obter um exemplo de como fazer isso, consulte [Armazenando dados de aplicativo em cache usando vários objetos de cache em um aplicativo ASP.NET](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Crie uma classe que é derivada da classe <xref:System.Runtime.Caching.MemoryCache> e personalize ou estenda a classe derivada. Para obter um exemplo de como fazer isso, consulte [Armazenando dados de aplicativo em cache usando vários objetos de cache em um aplicativo ASP.NET](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
   
--   Crie uma classe que é derivada da classe <xref:System.Web.Caching.OutputCacheProvider> e configure o aplicativo para usar o provedor de cache de saída personalizado.  
+- Crie uma classe que é derivada da classe <xref:System.Web.Caching.OutputCacheProvider> e configure o aplicativo para usar o provedor de cache de saída personalizado.  
   
  Para obter mais informações, consulte a entrada [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772) (Cache de saída extensível com o ASP.NET 4 [VS 2010 e Série do .NET 4.0]) no blog de Scott Guthrie.  
   

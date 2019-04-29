@@ -5,11 +5,11 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935519"
 ---
 # <a name="wcf-syndication"></a>Sindicalização do WCF
 Windows Communication Foundation (WCF) oferece suporte para trabalhar facilmente com feeds de agregação em Atom, RSS ou outros formatos personalizados, que permite que você leia e criá-los, bem como expô-los em um ponto de extremidade de serviço. Os tópicos nesta seção descrevem este modelo de programação para sindicalização em detalhes.  

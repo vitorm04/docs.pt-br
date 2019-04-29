@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757310"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade no <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  
@@ -20,17 +20,17 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 ## <a name="the-application-class"></a>A classe do aplicativo  
  No WPF, a funcionalidade comum no escopo do aplicativo é encapsulada no <xref:System.Windows.Application> classe. O <xref:System.Windows.Application> classe inclui as seguintes funcionalidades:  
   
--   Acompanhamento e interação com o tempo de vida do aplicativo.  
+- Acompanhamento e interação com o tempo de vida do aplicativo.  
   
--   Recuperação e processamento de parâmetros de linha de comando.  
+- Recuperação e processamento de parâmetros de linha de comando.  
   
--   Detecção e resposta a exceções sem tratamento.  
+- Detecção e resposta a exceções sem tratamento.  
   
--   Compartilhamento de recursos e propriedades no escopo do aplicativo.  
+- Compartilhamento de recursos e propriedades no escopo do aplicativo.  
   
--   Gerenciamento de janelas de aplicativos autônomos.  
+- Gerenciamento de janelas de aplicativos autônomos.  
   
--   Acompanhamento e gerenciamento da navegação.  
+- Acompanhamento e gerenciamento da navegação.  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Como realizar tarefas comuns usando a classe do aplicativo  
@@ -71,7 +71,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 - Na marcação, o `Application` elemento deve incluir o `x:Class` atributo. Quando o aplicativo é compilado, a existência de `x:Class` na marcação arquivo faz com que o MSBuild criar um `partial` classe que deriva <xref:System.Windows.Application> e tem o nome especificado pelo `x:Class` atributo. Isso exige a adição de uma declaração de namespace XML para o esquema XAML (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   No code-behind, a classe deve ser um `partial` classe com o mesmo nome que é especificado pelo `x:Class` do atributo na marcação e deve derivar de <xref:System.Windows.Application>. Isso permite que o arquivo code-behind seja associado a `partial` classe que é gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).  
+- No code-behind, a classe deve ser um `partial` classe com o mesmo nome que é especificado pelo `x:Class` do atributo na marcação e deve derivar de <xref:System.Windows.Application>. Isso permite que o arquivo code-behind seja associado a `partial` classe que é gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Quando você cria um novo projeto de aplicativo do WPF ou o projeto de aplicativo de navegador WPF usando o Visual Studio, uma definição de aplicativo é incluída por padrão e é definida usando marcação e code-behind.  
@@ -195,17 +195,17 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 ### <a name="application-activation-and-deactivation"></a>Ativação e desativação de aplicativos  
  Windows permite que os usuários alternem entre aplicativos. A maneira mais comum é usar a combinação de teclas ALT+TAB. Um aplicativo só pode ser alternado para se ele tiver um visível <xref:System.Windows.Window> que um usuário pode selecionar. Selecionado no momento <xref:System.Windows.Window> é o *janela ativa* (também conhecido como o *janela em primeiro plano*) e é o <xref:System.Windows.Window> que recebe entrada do usuário. O aplicativo com a janela ativa é o *aplicativo ativo* (ou *aplicativo em primeiro plano*). Um aplicativo se torna o aplicativo ativo nas seguintes circunstâncias:  
   
--   Ele é iniciado e mostra um <xref:System.Windows.Window>.  
+- Ele é iniciado e mostra um <xref:System.Windows.Window>.  
   
--   Um usuário alterna de outro aplicativo, selecionando um <xref:System.Windows.Window> no aplicativo.  
+- Um usuário alterna de outro aplicativo, selecionando um <xref:System.Windows.Window> no aplicativo.  
   
  Você pode detectar quando um aplicativo se torna ativo manipulando o <xref:System.Windows.Application.Activated?displayProperty=nameWithType> eventos.  
   
  Da mesma forma, um aplicativo pode se tornar inativo nas seguintes circunstâncias:  
   
--   Um usuário muda para outro aplicativo do aplicativo atual.  
+- Um usuário muda para outro aplicativo do aplicativo atual.  
   
--   Quando o aplicativo é desligado.  
+- Quando o aplicativo é desligado.  
   
  Você pode detectar quando um aplicativo se torna inativo manipulando o <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> eventos.  
   
@@ -225,13 +225,13 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 ### <a name="application-shutdown"></a>Desligamento do aplicativo  
  A vida de um aplicativo termina quando ele é desligado, o que pode ocorrer pelos seguintes motivos:  
   
--   Um usuário fecha cada <xref:System.Windows.Window>.  
+- Um usuário fecha cada <xref:System.Windows.Window>.  
   
--   Um usuário fecha principal <xref:System.Windows.Window>.  
+- Um usuário fecha principal <xref:System.Windows.Window>.  
   
--   Um usuário encerra a sessão do Windows fazendo logoff ou desligando.  
+- Um usuário encerra a sessão do Windows fazendo logoff ou desligando.  
   
--   Uma condição específica ao aplicativo foi atendida.  
+- Uma condição específica ao aplicativo foi atendida.  
   
  Para ajudá-lo a gerenciar o desligamento do aplicativo <xref:System.Windows.Application> fornece a <xref:System.Windows.Application.Shutdown%2A> método, o <xref:System.Windows.Application.ShutdownMode%2A> propriedade e o <xref:System.Windows.Application.SessionEnding> e <xref:System.Windows.Application.Exit> eventos.  
   
@@ -241,11 +241,11 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 #### <a name="shutdown-mode"></a>Modo de desligamento  
  A maioria dos aplicativos é desligada quando todas as janelas são fechadas ou quando a janela principal é fechada. No entanto, às vezes, outras condições específicas ao aplicativo podem determinar quando um aplicativo é desligado. Você pode especificar as condições sob as quais seu aplicativo será desligado configurando <xref:System.Windows.Application.ShutdownMode%2A> com um dos seguintes <xref:System.Windows.ShutdownMode> valores de enumeração:  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  O valor padrão de <xref:System.Windows.Application.ShutdownMode%2A> é <xref:System.Windows.ShutdownMode.OnLastWindowClose>, que significa que um aplicativo encerra automaticamente quando a última janela do aplicativo é fechada pelo usuário. No entanto, se seu aplicativo deve ser desligado quando a janela principal é fechada, WPF faz isso automaticamente se você definir <xref:System.Windows.Application.ShutdownMode%2A> para <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Isso é mostrado no exemplo a seguir.  
   
@@ -259,13 +259,13 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 #### <a name="session-ending"></a>Encerramento da sessão  
  As condições de desligamento descritas pela <xref:System.Windows.Application.ShutdownMode%2A> propriedade são específicas para um aplicativo. No entanto, em alguns casos, um aplicativo pode ser desligado como resultado de uma condição externa. A condição externa mais comum ocorre quando um usuário encerra a sessão do Windows com as seguintes ações:  
   
--   Logoff  
+- Logoff  
   
--   Desligamento  
+- Desligamento  
   
--   Reinicialização  
+- Reinicialização  
   
--   Hibernação  
+- Hibernação  
   
  Para detectar quando termina de uma sessão do Windows, você pode manipular o <xref:System.Windows.Application.SessionEnding> evento, conforme ilustrado no exemplo a seguir.  
   
@@ -291,11 +291,11 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
  <xref:System.Windows.Application.Exit> pode ser tratado por aplicativos autônomos e XBAPs. Para XBAPs, <xref:System.Windows.Application.Exit> é acionado nas seguintes circunstâncias:  
   
--   Um XBAP é navegado para fora.  
+- Um XBAP é navegado para fora.  
   
--   No [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], quando a guia que está hospedando o XBAP está fechada.  
+- No [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], quando a guia que está hospedando o XBAP está fechada.  
   
--   Quando o navegador é fechado.  
+- Quando o navegador é fechado.  
   
 #### <a name="exit-code"></a>Código de Saída  
  Na maioria das vezes, os aplicativos são iniciados pelo sistema operacional em resposta a uma solicitação do usuário. No entanto, um aplicativo pode ser iniciado por outro aplicativo para executar uma tarefa específica. Quando o aplicativo iniciado é desligado, o aplicativo que o iniciou talvez deseje saber a condição na qual o aplicativo iniciado foi desligado. Nessas situações, o Windows permite que aplicativos retornar um código de saída do aplicativo durante o desligamento. Por padrão, os aplicativos WPF retornam um valor de código de saída igual a 0.  
@@ -325,11 +325,11 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
  Da perspectiva da experiência do usuário, é melhor que um aplicativo evite esse comportamento padrão fazendo algumas ou todas as seguintes opções:  
   
--   Exibição de informações amigáveis.  
+- Exibição de informações amigáveis.  
   
--   Tentativa de manter um aplicativo em execução.  
+- Tentativa de manter um aplicativo em execução.  
   
--   Registro detalhado, informações de exceção amigáveis ao desenvolvedor no log de eventos do Windows.  
+- Registro detalhado, informações de exceção amigáveis ao desenvolvedor no log de eventos do Windows.  
   
  Implementar esse suporte depende do que está sendo capaz de detectar exceções sem tratamento, que é o que o <xref:System.Windows.Application.DispatcherUnhandledException> é gerado para.  
   

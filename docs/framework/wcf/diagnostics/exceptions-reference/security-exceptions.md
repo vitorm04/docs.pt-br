@@ -3,11 +3,11 @@ title: Exceções de segurança
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780855"
 ---
 # <a name="security-exceptions"></a>Exceções de segurança
 Este tópico lista todas as exceções de segurança.  
@@ -29,8 +29,8 @@ Este tópico lista todas as exceções de segurança.
 |CachedNegotiationStateQuotaReached|O serviço não pode armazenar em cache o estado de negociação como a capacidade especificada foi atingida. Repita a solicitação.|  
 |CacheQuotaReached|O item não pode ser adicionado. O tamanho máximo do cache é especificado.|  
 |CannotDetermineSPNBasedOnAddress|Cliente não pode determinar que o nome da entidade de serviço com base na identidade, o endereço de destino especificado com a finalidade de destinado a SspiNegotiation/Kerberos. A identidade de endereço de destino deve ser uma identidade UPN (como acmedomain\\\alice) ou uma identidade SPN (como host/bobs-machine).|  
-|CannotFindCert|Não é possível localizar o certificado X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|Não é possível localizar o certificado X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation, FindType, FindValue para o destino especificado.|  
+|CannotFindCert|Não é possível localizar o certificado X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation, FindType ', FindValue.|  
+|CannotFindCertForTarget|Não é possível localizar o certificado X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation ', FindType, FindValue para o destino especificado.|  
 |CannotFindCorrelationStateForApplyingSecurity|Não é possível localizar o estado de correlação para a aplicação de segurança para responder em que o respondente.|  
 |CannotFindNegotiationState|Não é possível localizar o estado de negociação para o contexto especificado.|  
 |CannotFindSecuritySession|Não é possível encontrar a sessão de segurança com a ID especificada.|  
@@ -55,8 +55,8 @@ Este tópico lista todas as exceções de segurança.
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Falha na exportação de política de segurança. A ligação contém AsymmetricSecurityBindingElement e um elemento de associação de transporte seguro. Não há suporte para exportação de política para essa associação.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Falha na exportação de política de segurança. A ligação contém SymmetricSecurityBindingElement e um elemento de associação de transporte seguro. Não há suporte para exportação de política para essa associação.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Falha na exportação de política de segurança. A associação contém TransportSecurityBindingElement, mas nenhum elemento de associação de transporte que implemente ITransportTokenAssertionProvider. Não há suporte para exportação de política para essa associação. Verifique se que o elemento de associação de transporte na associação implementa a interface ITransportTokenAssertionProvider.|  
-|FoundMultipleCerts|Encontrados vários certificados X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation, FindType, FindValue. Forneça um valor de localização mais específico.|  
-|FoundMultipleCertsForTarget|Encontrados vários certificados X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation, FindType, FindValue para o destino especificado. Forneça um valor de localização mais específico.|  
+|FoundMultipleCerts|Encontrados vários certificados X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation, FindType ', FindValue. Forneça um valor de localização mais específico.|  
+|FoundMultipleCertsForTarget|Encontrados vários certificados X.509 usando os critérios de pesquisa especificados: StoreName, StoreLocation ', FindType, FindValue para o destino especificado. Forneça um valor de localização mais específico.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 não oferece suporte a descriptografia de cabeçalho. Use SecurityVersion.WsSecurityXXX2005 e acima ou usar a segurança de transporte para criptografar a mensagem completa.|  
 |IdentityCheckFailedForIncomingMessage|Falha de verificação de identidade para mensagem de entrada. A identidade esperada é especificada para o ponto de extremidade de destino.|  
 |IdentityCheckFailedForOutgoingMessage|Falha de verificação de identidade para mensagem de saída. A identidade esperada é especificada para o ponto de extremidade de destino.|  

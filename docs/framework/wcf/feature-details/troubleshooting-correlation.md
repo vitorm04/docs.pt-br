@@ -3,11 +3,11 @@ title: Correlação de solução de problemas
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932815"
 ---
 # <a name="troubleshooting-correlation"></a>Correlação de solução de problemas
 Correlação é usada para relacionar mensagens do serviço de fluxo de trabalho entre si e com a instância de fluxo de trabalho correto, mas se ele não está configurado corretamente, as mensagens não serão recebidas e aplicativos não funcionarão corretamente. Este tópico fornece uma visão geral dos vários métodos para solução de problemas de correlação e também lista alguns problemas comuns que podem ocorrer quando você usa a correlação.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Persistência não é permitida entre um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par ou uma <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> par. Uma zona sem persistir é criada que dura até que ambas as atividades sejam concluídas. Se uma atividade, como uma atividade de atraso é nesta zona sem persistir e faz com que o fluxo de trabalho se torne ocioso, o fluxo de trabalho não persistirá mesmo que ele o host está configurado para persistir fluxos de trabalho quando eles se tornam ociosos. Se uma atividade, como uma atividade persist, tentar persistir explicitamente na zona sem persistir, uma exceção fatal é lançada, as anulações de fluxo de trabalho e um <xref:System.ServiceModel.FaultException> é retornado ao chamador. A mensagem de exceção fatal é "System. InvalidOperationException: Manter atividades não podem ser contidas dentro de blocos sem persistência.". Essa exceção não é retornada ao chamador, mas pode ser observada se o rastreamento está habilitado. A mensagem para o <xref:System.ServiceModel.FaultException> retornado ao chamador é "a operação pode não ser executada como WorkflowInstance '5836145b 7da2 - 49 d 0-a052-a49162adeab6' foi concluída".
+ Persistência não é permitida entre um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par ou uma <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> par. Uma zona sem persistir é criada que dura até que ambas as atividades sejam concluídas. Se uma atividade, como uma atividade de atraso é nesta zona sem persistir e faz com que o fluxo de trabalho se torne ocioso, o fluxo de trabalho não persistirá mesmo que ele o host está configurado para persistir fluxos de trabalho quando eles se tornam ociosos. Se uma atividade, como uma atividade persist, tentar persistir explicitamente na zona sem persistir, uma exceção fatal é lançada, as anulações de fluxo de trabalho e um <xref:System.ServiceModel.FaultException> é retornado ao chamador. A mensagem de exceção fatal é "System. InvalidOperationException: Manter atividades não podem ser contidas dentro de blocos sem persistência. ". Essa exceção não é retornada ao chamador, mas pode ser observada se o rastreamento está habilitado. A mensagem para o <xref:System.ServiceModel.FaultException> retornado ao chamador é "a operação pode não ser executada como WorkflowInstance '5836145b 7da2 - 49 d 0-a052-a49162adeab6' foi concluída".
 
  Para obter mais informações sobre a correlação de solicitação-resposta, consulte [solicitação-resposta](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Se uma consulta XPath está configurada incorretamente, de modo que nenhum dado de correlação é recuperado, uma falha será retornada com a seguinte mensagem: "uma consulta de correlação gerou um conjunto de resultados vazio. Verifique se as consultas de correlação para o ponto de extremidade estão configuradas corretamente." Uma maneira rápida de solucionar esse problema é substituir a consulta XPath com um valor literal, conforme descrito na seção anterior. Esse problema pode ocorrer se você usar o construtor de consultas XPath na **adicionar inicializadores de correlação** ou **definição de CorrelatesOn** caixas de diálogo e seu serviço de fluxo de trabalho usa contratos de mensagem. No exemplo a seguir, uma classe de contrato de mensagem é definida.
+ Se uma consulta XPath está configurada incorretamente, de modo que nenhum dado de correlação é recuperado, uma falha será retornada com a seguinte mensagem: "Uma consulta de correlação gerou um conjunto de resultados vazio. Verifique se as consultas de correlação para o ponto de extremidade estão configuradas corretamente." Uma maneira rápida de solucionar esse problema é substituir a consulta XPath com um valor literal, conforme descrito na seção anterior. Esse problema pode ocorrer se você usar o construtor de consultas XPath na **adicionar inicializadores de correlação** ou **definição de CorrelatesOn** caixas de diálogo e seu serviço de fluxo de trabalho usa contratos de mensagem. No exemplo a seguir, uma classe de contrato de mensagem é definida.
 
 ```csharp
 [MessageContract]

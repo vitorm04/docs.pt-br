@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784053"
 ---
 # <a name="operator-statement"></a>Instrução Operator
 Declara o símbolo do operador, operandos e código que definem um procedimento de operador em uma classe ou estrutura.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Pares correspondentes  
  Você deve definir determinados operadores como pares correspondentes. Se você definir um operador de tal par, você deve definir o outro também. Os pares correspondentes são os seguintes:  
   
--   `=` e `<>`  
+- `=` e `<>`  
   
--   `>` e `<`  
+- `>` e `<`  
   
--   `>=` e `<=`  
+- `>=` e `<=`  
   
--   `IsTrue` e `IsFalse`  
+- `IsTrue` e `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Restrições de tipo de dados  
  Cada operador que você definir deve envolver a classe ou estrutura na qual você defini-lo. Isso significa que a classe ou estrutura deve aparecer como o tipo de dados das seguintes opções:  
   
--   O operando de um operador unário.  
+- O operando de um operador unário.  
   
--   Pelo menos um dos operandos de um operador binário.  
+- Pelo menos um dos operandos de um operador binário.  
   
--   O operando ou tipo de retorno de um operador de conversão.  
+- O operando ou tipo de retorno de um operador de conversão.  
   
  Determinados operadores têm dados adicionais que digite as restrições, da seguinte maneira:  
   
--   Se você definir a `IsTrue` e `IsFalse` operadores, eles devem retornar o `Boolean` tipo.  
+- Se você definir a `IsTrue` e `IsFalse` operadores, eles devem retornar o `Boolean` tipo.  
   
--   Se você definir a `<<` e `>>` operadores, eles devem ambos especificam o `Integer` de tipo para o `operandtype` de `operand2`.  
+- Se você definir a `<<` e `>>` operadores, eles devem ambos especificam o `Integer` de tipo para o `operandtype` de `operand2`.  
   
  O tipo de retorno não precisa corresponder ao tipo de qualquer um dos operandos. Por exemplo, um operador de comparação, como `=` ou `<>` pode retornar `Boolean` mesmo se nenhum dos operandos é `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  Não é possível definir a `AndAlso` operador diretamente com um `Operator` instrução. No entanto, você pode usar `AndAlso` se você cumpriu as seguintes condições:  
   
--   Você definiu `And` nos mesmos tipos de operando que você deseja usar para `AndAlso`.  
+- Você definiu `And` nos mesmos tipos de operando que você deseja usar para `AndAlso`.  
   
--   Sua definição de `And` retorna o mesmo tipo que a classe ou estrutura na qual você o define.  
+- Sua definição de `And` retorna o mesmo tipo que a classe ou estrutura na qual você o define.  
   
--   Você definiu o `IsFalse` operador na classe ou estrutura na qual você definiu `And`.  
+- Você definiu o `IsFalse` operador na classe ou estrutura na qual você definiu `And`.  
   
  Da mesma forma, você pode usar `OrElse` se você tiver definido `Or` nos operandos mesmos, com o tipo de retorno da classe ou estrutura e você tiver definido `IsTrue` na classe ou estrutura.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Se você declarar um procedimento de conversão para ser `Widening`, seu código de procedimento não deve gerar falhas. Isso significa que o seguinte:  
   
--   Ele deve sempre retornar um valor válido do tipo `type`.  
+- Ele deve sempre retornar um valor válido do tipo `type`.  
   
--   Ele deve tratar todas as possíveis exceções e outras condições de erro.  
+- Ele deve tratar todas as possíveis exceções e outras condições de erro.  
   
--   Ele deve tratar retorna qualquer erro de qualquer procedimento que ele chama.  
+- Ele deve tratar retorna qualquer erro de qualquer procedimento que ele chama.  
   
  Se houver a possibilidade que um procedimento de conversão talvez não seja bem-sucedida, ou que ele pode causar uma exceção sem tratamento, você deve declará-la para ser `Narrowing`.  
   

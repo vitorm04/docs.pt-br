@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778723"
 ---
 # <a name="shadows-visual-basic"></a>Sombras (Visual Basic)
 Especifica que um elemento de programação declarado redeclara e oculta um elemento de nome idêntico, ou conjunto de elementos sobrecarregados, em uma classe base.  
@@ -28,19 +28,19 @@ Especifica que um elemento de programação declarado redeclara e oculta um elem
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto da declaração.** Você pode usar `Shadows` apenas no nível de classe. Isso significa que o contexto da declaração para um `Shadows` elemento deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, estrutura, módulo ou procedimento.  
+- **Contexto da declaração.** Você pode usar `Shadows` apenas no nível de classe. Isso significa que o contexto da declaração para um `Shadows` elemento deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, estrutura, módulo ou procedimento.  
   
      Você pode declarar apenas um elemento de sombreamento em uma instrução única declaração.  
   
--   **Modificadores combinados.** Não é possível especificar `Shadows` junto com `Overloads`, `Overrides`, ou `Static` na mesma declaração.  
+- **Modificadores combinados.** Não é possível especificar `Shadows` junto com `Overloads`, `Overrides`, ou `Static` na mesma declaração.  
   
--   **Tipos de elemento.** Você pode sombrear qualquer tipo de elemento declarado com qualquer outro tipo. Se você sombrear uma propriedade ou procedimento com outra propriedade ou procedimento, os parâmetros e o tipo de retorno é preciso coincide com a propriedade da classe base ou o procedimento.  
+- **Tipos de elemento.** Você pode sombrear qualquer tipo de elemento declarado com qualquer outro tipo. Se você sombrear uma propriedade ou procedimento com outra propriedade ou procedimento, os parâmetros e o tipo de retorno é preciso coincide com a propriedade da classe base ou o procedimento.  
   
--   **Acessando.** O elemento sombreado na classe base está normalmente disponível de dentro da classe derivada que sombreia. No entanto, as seguintes considerações se aplicam.  
+- **Acessando.** O elemento sombreado na classe base está normalmente disponível de dentro da classe derivada que sombreia. No entanto, as seguintes considerações se aplicam.  
   
-    -   Se o elemento de sombreamento não está acessível a partir do código que faz referência a ele, a referência será resolvida para o elemento sombreado. Por exemplo, se um `Private` elemento sombreia um elemento de classe base, o código que não tem permissão para acessar o `Private` elemento acessa o elemento de classe base em vez disso.  
+    - Se o elemento de sombreamento não está acessível a partir do código que faz referência a ele, a referência será resolvida para o elemento sombreado. Por exemplo, se um `Private` elemento sombreia um elemento de classe base, o código que não tem permissão para acessar o `Private` elemento acessa o elemento de classe base em vez disso.  
   
-    -   Se você sombrear um elemento, você ainda pode acessar o elemento sombreado por meio de um objeto declarado com o tipo da classe base. Você também pode acessá-lo por meio de `MyBase`.  
+    - Se você sombrear um elemento, você ainda pode acessar o elemento sombreado por meio de um objeto declarado com o tipo da classe base. Você também pode acessá-lo por meio de `MyBase`.  
   
  O `Shadows` modificador pode ser usado nestes contextos:  
   

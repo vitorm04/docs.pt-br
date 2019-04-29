@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777033"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Como: Adicionar tratamento de classes para um evento roteado
 Eventos roteados podem ser manipulados por manipuladores de classe ou de instância em qualquer nó da rota. Manipuladores de classe são invocados primeiro e podem ser usados pelas implementações de classe para suprimir eventos da manipulação de instâncias ou apresentar outros comportamentos específicos de evento em eventos pertencentes a classes base. Este exemplo ilustra duas técnicas intimamente relacionadas para implementar manipuladores de classe.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
 ms.openlocfilehash: a2225e297dbc0b5f9d49799cb34eb5539746e62e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776778"
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>Como: Criar texto com uma sombra
 Os exemplos nesta seção mostram como criar um efeito de sombra para texto exibido.  

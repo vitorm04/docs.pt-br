@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760708"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que permite aos desenvolvedores escreverem consultas no modelo conceitual do Entity Framework usando Visual Basic ou Visual C#. As consultas no Entity Framework são representadas por consultas de árvore de comando, que são executadas no contexto de objeto. O LINQ to Entities converte consultas do LINQ (Consulta Integrada à Linguagem) para consultas de árvore de comando, executa as consultas no Entity Framework e retorna os objetos que podem ser usados pelo Entity Framework e pelo LINQ. Veja a seguir o processo para criar e executar uma consulta LINQ to Entities:  
@@ -57,13 +57,13 @@ O LINQ to Entities fornece suporte a LINQ (Consulta Integrada à Linguagem) que 
   
  Os resultados da consulta são geralmente retornados como um dos seguintes:  
   
--   Uma coleção de zero ou mais objetos de entidade tipados ou uma projeção de tipos complexos definidos no modelo conceitual.  
+- Uma coleção de zero ou mais objetos de entidade tipados ou uma projeção de tipos complexos definidos no modelo conceitual.  
   
--   Tipos CLR que têm suporte pelo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipos CLR que têm suporte pelo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Coleções internas.  
+- Coleções internas.  
   
--   Tipos anônimos.  
+- Tipos anônimos.  
   
  Para obter mais informações, consulte [resultados da consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766617"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>URI de namespace XML `http://www.w3.org/XML/1998/namespace`; pode ser associado somente a 'xmlns'
 O URI `http://www.w3.org/XML/1998/namespace` é usado em uma declaração de namespace XML. Esse URI é um espaço reservado e não pode ser incluído em uma declaração de namespace XML.  

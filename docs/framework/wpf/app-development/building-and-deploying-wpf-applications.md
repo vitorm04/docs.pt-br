@@ -9,20 +9,20 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756969"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Compilando e implantando aplicativos do WPF
 O modelo de compilação e implantação fornece a capacidade de criar e implantar aplicativos localmente e remotamente, incluindo o seguinte:  
   
--   : O .NET de build do MSBuild sistema localizado no namespace Tasks.  
+- : O .NET de build do MSBuild sistema localizado no namespace Tasks.  
   
--   Recursos: Trabalhando com recursos de interface do usuário.  
+- Recursos: Trabalhando com recursos de interface do usuário.  
   
--   A implantação do ClickOnce: a publicação e implantação do sistema .NET.  
+- A implantação do ClickOnce: a publicação e implantação do sistema .NET.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)  

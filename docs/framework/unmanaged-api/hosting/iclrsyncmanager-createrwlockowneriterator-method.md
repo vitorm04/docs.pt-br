@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763699"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>Método ICLRSyncManager::CreateRWLockOwnerIterator
 Solicita que o common language runtime (CLR) cria um iterador para o host a usar para determinar o conjunto de tarefas aguardando um bloqueio de leitor-gravador.  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>Comentários  
  Hosts normalmente chamam o `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, e `GetRWLockOwnerNext` métodos durante a detecção de deadlock. O host é responsável por garantir que o bloqueio de leitor-gravador ainda é válido, pois o CLR não faz tentativa de manter o bloqueio de leitor-gravador ativo. Várias estratégias estão disponíveis para o host garantir a validade do bloqueio:  
   
--   O host pode bloquear chamadas de versão sobre o bloqueio de leitor-gravador (por exemplo, [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)), garantindo que este bloco não causar um deadlock.  
+- O host pode bloquear chamadas de versão sobre o bloqueio de leitor-gravador (por exemplo, [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)), garantindo que este bloco não causar um deadlock.  
   
--   O host pode bloquear a saída do aguardando o objeto de evento associado com o bloqueio de leitor-gravador, novamente, garantindo que este bloco não causar um deadlock.  
+- O host pode bloquear a saída do aguardando o objeto de evento associado com o bloqueio de leitor-gravador, novamente, garantindo que este bloco não causar um deadlock.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` deve ser chamado apenas em threads que estão executando o código não gerenciado.  

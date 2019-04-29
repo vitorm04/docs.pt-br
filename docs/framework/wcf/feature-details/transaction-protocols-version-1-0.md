@@ -3,11 +3,11 @@ title: Protocolos de transação versão 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
 ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764616"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transação versão 1.0
 Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos protocolos WS-Coordination e de transações de WS-Atomic. Para obter mais informações sobre a versão 1.1, consulte [protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -45,13 +45,13 @@ Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos
   
  A figura e a tabela ilustram as quatro classes de mensagens do ponto de vista de segurança:  
   
--   Mensagens de ativação (CreateCoordinationContext e CreateCoordinationContextResponse).  
+- Mensagens de ativação (CreateCoordinationContext e CreateCoordinationContextResponse).  
   
--   Mensagens de registro (registrar e RegisterResponse)  
+- Mensagens de registro (registrar e RegisterResponse)  
   
--   Mensagens de protocolo (preparar, reversão, confirmação, anulado e assim por diante).  
+- Mensagens de protocolo (preparar, reversão, confirmação, anulado e assim por diante).  
   
--   Mensagens de aplicativo.  
+- Mensagens de aplicativo.  
   
  As classes de três mensagem primeiras são consideradas mensagens do Gerenciador de transações e suas configurações de ligação é descrita em "Aplicativo de troca de mensagens" neste tópico. A quarta classe da mensagem é o aplicativo de mensagens e é descrita na seção "Exemplos de mensagem" neste tópico. Esta seção descreve as associações de protocolo usadas para cada uma dessas classes pelo WCF.  
   
@@ -78,9 +78,9 @@ Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos
 #### <a name="https-transport-configuration"></a>Configuração do transporte HTTPS  
  Certificados X.509 são usados para estabelecer a identidade do Gerenciador de transações. Autenticação de cliente/servidor é necessária e autorização de cliente/servidor é deixada como um detalhe de implementação:  
   
--   R1111: Os certificados x. 509 apresentados durante a transmissão devem ter um nome de assunto que corresponda o nome de domínio totalmente qualificado (FQDN) do computador de origem.  
+- R1111: Os certificados x. 509 apresentados durante a transmissão devem ter um nome de assunto que corresponda o nome de domínio totalmente qualificado (FQDN) do computador de origem.  
   
--   B1112: DNS deve ser funcional entre cada par de receptor de remetente no sistema para verificações de nome de assunto de x. 509 seja bem-sucedida.  
+- B1112: DNS deve ser funcional entre cada par de receptor de remetente no sistema para verificações de nome de assunto de x. 509 seja bem-sucedida.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Ativação e registro de configuração de associação  
  WCF requer a associação de solicitação/resposta duplex com correlação via HTTPS. (Para obter mais informações sobre a correlação e as descrições dos padrões de troca de mensagem de solicitação/resposta, consulte transações WS-Atomic, seção 8).  
@@ -103,9 +103,9 @@ Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos
   
  Especificação WS-AT, seção 8 descreve ainda mais detalhes sobre a correlação e os padrões de troca de mensagem.  
   
--   R1222: Ao receber um `CreateCoordinationContext`, o coordenador deve emitir uma `SecurityContextToken` com o segredo associado `STx`. Esse token é retornado dentro de um `t:IssuedTokens` cabeçalho seguindo a especificação WS-Trust.  
+- R1222: Ao receber um `CreateCoordinationContext`, o coordenador deve emitir uma `SecurityContextToken` com o segredo associado `STx`. Esse token é retornado dentro de um `t:IssuedTokens` cabeçalho seguindo a especificação WS-Trust.  
   
--   R1223: Se a ativação ocorrer dentro de um contexto de coordenação existente, o `t:IssuedTokens` cabeçalho com o `SecurityContextToken` associado existente contexto deve fluir no `CreateCoordinationContext` mensagem.  
+- R1223: Se a ativação ocorrer dentro de um contexto de coordenação existente, o `t:IssuedTokens` cabeçalho com o `SecurityContextToken` associado existente contexto deve fluir no `CreateCoordinationContext` mensagem.  
   
  Uma nova `t:IssuedTokens` cabeçalho deve ser gerado para anexar a de saída `wscoor:CreateCoordinationContextResponse` mensagem.  
   
@@ -126,9 +126,9 @@ Versão 1 do Windows Communication Foundation (WCF) implementa a versão 1.0 dos
 ## <a name="application-message-exchange"></a>Troca de mensagens de aplicativo  
  Aplicativos são livres para usar qualquer associação específica para mensagens de aplicativo para aplicativo, desde que a associação atende aos seguintes requisitos de segurança:  
   
--   R2001: Mensagens de aplicativo para o aplicativo devem fluir a `t:IssuedTokens` cabeçalho juntamente com o `CoordinationContext` no cabeçalho da mensagem.  
+- R2001: Mensagens de aplicativo para o aplicativo devem fluir a `t:IssuedTokens` cabeçalho juntamente com o `CoordinationContext` no cabeçalho da mensagem.  
   
--   R2002: Integridade e confidencialidade de `t:IssuedToken` deve ser fornecido.  
+- R2002: Integridade e confidencialidade de `t:IssuedToken` deve ser fornecido.  
   
  O `CoordinationContext` cabeçalho contém `wscoor:Identifier`. Embora a definição de `xsd:AnyURI` permite o uso de URIs absolutos e relativos, o WCF oferece suporte apenas `wscoor:Identifiers`, que são URIs absolutos.  
   

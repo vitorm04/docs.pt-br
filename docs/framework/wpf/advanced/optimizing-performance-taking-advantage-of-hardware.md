@@ -10,11 +10,11 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773122"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Otimizando desempenho: Aproveitar o hardware
 A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem dois pipelines de renderização, hardware e software. Este tópico apresenta informações sobre esses pipelines de renderização para ajudá-lo a tomar decisões sobre otimizações de desempenho de seus aplicativos.  
@@ -34,23 +34,23 @@ A arquitetura interna do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
   
  Os recursos do hardware gráfico que mais afetam os níveis de camada de renderização são:  
   
--   **RAM de Vídeo** A quantidade de memória de vídeo no hardware gráfico determina o tamanho e o número de buffers que podem ser usados para compor gráficos.  
+- **RAM de Vídeo** A quantidade de memória de vídeo no hardware gráfico determina o tamanho e o número de buffers que podem ser usados para compor gráficos.  
   
--   **Sombreador de Pixel** Um sombreador de pixel é uma função de processamento gráfico que calcula efeitos por pixel. Dependendo da resolução dos gráficos exibidos, pode haver muitos milhões de pixels que precisam ser processados para cada quadro de vídeo.  
+- **Sombreador de Pixel** Um sombreador de pixel é uma função de processamento gráfico que calcula efeitos por pixel. Dependendo da resolução dos gráficos exibidos, pode haver muitos milhões de pixels que precisam ser processados para cada quadro de vídeo.  
   
--   **Sombreador de Vértice** O sombreador de vértice é uma função de processamento gráfico que realiza operações matemáticas nos dados de vértice do objeto.  
+- **Sombreador de Vértice** O sombreador de vértice é uma função de processamento gráfico que realiza operações matemáticas nos dados de vértice do objeto.  
   
--   **Suporte Multitextura** Suporte multitextura refere-se à capacidade de aplicar duas ou mais texturas distintas durante uma operação de mesclagem em um objeto gráfico 3D. O grau de suporte a multitextura é determinado pelo número de unidades de multitextura no hardware gráfico.  
+- **Suporte Multitextura** Suporte multitextura refere-se à capacidade de aplicar duas ou mais texturas distintas durante uma operação de mesclagem em um objeto gráfico 3D. O grau de suporte a multitextura é determinado pelo número de unidades de multitextura no hardware gráfico.  
   
  O sombreador de pixel, o sombreador de vértices e recursos multitextura são usados para definir níveis específicos de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], que, por sua vez, são usados para definir as diferentes camadas de renderização em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Os recursos do hardware gráfico determinam a capacidade de renderização de um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define três camadas de renderização:  
   
--   **Camada de Renderização 0** Sem aceleração de hardware gráfico. O nível de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é inferior à versão 7.0.  
+- **Camada de Renderização 0** Sem aceleração de hardware gráfico. O nível de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é inferior à versão 7.0.  
   
--   **Camada de Renderização 1** Aceleração parcial de hardware gráfico. O nível de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é maior ou igual à versão 7.0 e **menor** que a versão 9.0.  
+- **Camada de Renderização 1** Aceleração parcial de hardware gráfico. O nível de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é maior ou igual à versão 7.0 e **menor** que a versão 9.0.  
   
--   **Camada de Renderização 2** A maioria dos recursos gráficos usa aceleração de hardware gráfico. O nível de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é maior ou igual à versão 9.0.  
+- **Camada de Renderização 2** A maioria dos recursos gráficos usa aceleração de hardware gráfico. O nível de versão [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] é maior ou igual à versão 9.0.  
   
  Para obter mais informações sobre camadas de renderização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Níveis de renderização gráfica](graphics-rendering-tiers.md).  
   

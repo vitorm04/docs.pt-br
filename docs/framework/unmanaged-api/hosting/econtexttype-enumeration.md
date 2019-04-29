@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f3643bf4880532a46fe7f9f57b8077032013728
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796030"
 ---
 # <a name="econtexttype-enumeration"></a>Enumeração EContextType
 Descreve o contexto de segurança do thread em execução no momento.  

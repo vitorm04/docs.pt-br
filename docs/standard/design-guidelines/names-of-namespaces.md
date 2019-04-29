@@ -1,5 +1,5 @@
 ---
-title: Nomes de Namespaces
+title: Nomes de namespaces
 ms.date: 10/22/2008
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940979"
 ---
-# <a name="names-of-namespaces"></a>Nomes de Namespaces
+# <a name="names-of-namespaces"></a>Nomes de namespaces
 Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é criando clareza suficiente para o programador usando a estrutura de saber imediatamente qual o conteúdo do namespace é provavelmente será. O modelo a seguir especifica a regra geral para a nomeação de namespaces:  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
@@ -49,7 +49,7 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é crian
   
  Há diretrizes específicas para evitar conflitos de nome de tipo para categorias diferentes de namespaces.  
   
--   **Namespaces de modelos de aplicativo**  
+- **Namespaces de modelos de aplicativo**  
   
      Os namespaces que pertencem a um modelo de aplicativo único muito geralmente são usados juntos, mas quase nunca são usadas com namespaces de outros modelos de aplicativo. Por exemplo, o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace muito raramente é usado junto com o <xref:System.Web.UI?displayProperty=nameWithType> namespace. A seguir está uma lista de grupos de namespace do modelo de aplicativo bem conhecido:  
   
@@ -60,11 +60,11 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é crian
   
      Por exemplo, não adicione um tipo chamado `Page` para o <xref:System.Web.UI.Adapters?displayProperty=nameWithType> namespace, porque o <xref:System.Web.UI?displayProperty=nameWithType> namespace já contém um tipo chamado `Page`.  
   
--   **Namespaces de infraestrutura**  
+- **Namespaces de infraestrutura**  
   
      Esse grupo contém os namespaces que raramente são importados durante o desenvolvimento de aplicativos comuns. Por exemplo, `.Design` namespaces são usados principalmente das ferramentas de desenvolvimento de programação. Evitando conflitos com os tipos nesses namespaces não é crítica.  
   
--   **Namespaces básicos**  
+- **Namespaces básicos**  
   
      Namespaces básicos incluem todas `System` namespaces, exceto os namespaces dos modelos de aplicativo e os namespaces de infraestrutura. Namespaces básicos incluem, entre outros, `System`, `System.IO`, `System.Xml`, e `System.Net`.  
   
@@ -72,7 +72,7 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é crian
   
      Por exemplo, nunca use `Stream` como um nome de tipo. Ela entraria em conflito com <xref:System.IO.Stream?displayProperty=nameWithType>, um tipo muito usados.  
   
--   **Grupos de namespace de tecnologia**  
+- **Grupos de namespace de tecnologia**  
   
      Essa categoria inclui todos os namespaces com os dois primeiros nós de namespace mesmo `(<Company>.<Technology>*`), como `Microsoft.Build.Utilities` e `Microsoft.Build.Tasks`. É importante que os tipos que pertencem a uma única tecnologia não entrem em conflito umas com as outras.  
   

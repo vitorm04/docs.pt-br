@@ -3,11 +3,11 @@ title: Implantando aplicativos do WCF com um clique
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
 ms.openlocfilehash: 1820b00aa903633750f74f319f9cf8038ba2b043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785083"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>Implantando aplicativos do WCF com um clique
 Aplicativos cliente que usam o Windows Communication Foundation (WCF) podem ser implantados usando a tecnologia ClickOnce. Essa tecnologia permite que eles podem se beneficiar do tempo de execução proteções de segurança fornecidas pela segurança de acesso do código, desde que eles são assinados digitalmente com um certificado confiável. O certificado usado para assinar o aplicativo ClickOnce deve residir no repositório fornecedores confiáveis, e a política de segurança local no computador cliente deve ser configurada para conceder permissões de confiança total para os aplicativos assinados com o certificado do Editor.  

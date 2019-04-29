@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
 ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777111"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Como: Adicionar um tipo de proprietário para uma propriedade de dependência
 Este exemplo mostra como adicionar uma classe como um proprietário de uma propriedade de dependência registrado para um tipo diferente. Ao fazer isso, o leitor de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e o sistema de propriedade podem reconhecer a classe como um proprietário adicional da propriedade. Adicionar como proprietário opcionalmente permite que a classe de adição forneça os metadados específicos do tipo.  
@@ -33,4 +33,4 @@ Este exemplo mostra como adicionar uma classe como um proprietário de uma propr
 ## <a name="see-also"></a>Consulte também
 
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
-- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
+- [Visão geral das propriedades da dependência](dependency-properties-overview.md)

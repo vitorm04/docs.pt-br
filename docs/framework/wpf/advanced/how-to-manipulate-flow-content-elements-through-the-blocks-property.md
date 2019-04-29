@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
 ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942825"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Como: Manipular elementos de conteúdo de fluxo por meio da propriedade Blocks
 Estes exemplos demonstram algumas das operações mais comuns que podem ser executadas em elementos de conteúdo de fluxo por meio da propriedade **Blocks**. Essa propriedade é usada para adicionar e remover itens de <xref:System.Windows.Documents.BlockCollection>. Elementos de conteúdo de fluxo com uma propriedade **Blocks** incluem:  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.ListItem>  
+- <xref:System.Windows.Documents.ListItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
  Esses exemplos, por acaso, usam <xref:System.Windows.Documents.Section> como o fluxo de elemento de conteúdo, mas essas técnicas são aplicáveis a todos os elementos que hospedam uma coleção de elementos de conteúdo de fluxo.  
   

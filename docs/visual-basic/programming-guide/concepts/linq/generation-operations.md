@@ -3,11 +3,11 @@ title: Operações de geração (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
 ms.openlocfilehash: cbc3de23fc8ef691c0342b318728c035db9a36b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927699"
 ---
 # <a name="generation-operations-visual-basic"></a>Operações de geração (Visual Basic)
 Geração refere-se à criação de uma nova sequência de valores.  

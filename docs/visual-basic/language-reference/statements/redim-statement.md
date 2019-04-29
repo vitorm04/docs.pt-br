@@ -27,11 +27,11 @@ helpviewer_keywords:
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
 ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783949"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrução ReDim (Visual Basic)
 Realoca espaço de armazenamento para uma variável de matriz.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Regras  
   
--   **Diversas variáveis.** Você pode redimensionar diversas variáveis de matriz na mesma instrução de declaração e especificar o `name` e `boundlist` partes para cada variável. Diversas variáveis são separadas por vírgulas.  
+- **Diversas variáveis.** Você pode redimensionar diversas variáveis de matriz na mesma instrução de declaração e especificar o `name` e `boundlist` partes para cada variável. Diversas variáveis são separadas por vírgulas.  
   
--   **Limites da matriz.** Cada entrada na `boundlist` pode especificar os limites inferior e superior da dimensão. O limite inferior é sempre 0 (zero). O limite superior é o valor mais alto de índice possíveis para essa dimensão, não o comprimento da dimensão (que é o limite superior mais um). O índice para cada dimensão pode variar de 0 a seu valor de limite superior.  
+- **Limites da matriz.** Cada entrada na `boundlist` pode especificar os limites inferior e superior da dimensão. O limite inferior é sempre 0 (zero). O limite superior é o valor mais alto de índice possíveis para essa dimensão, não o comprimento da dimensão (que é o limite superior mais um). O índice para cada dimensão pode variar de 0 a seu valor de limite superior.  
   
      O número de dimensões no `boundlist` deve corresponder ao número de dimensões (rank) da matriz original.  
   
--   **Tipos de dados.** O `ReDim` instrução não é possível alterar o tipo de dados de uma variável de matriz ou seus elementos.  
+- **Tipos de dados.** O `ReDim` instrução não é possível alterar o tipo de dados de uma variável de matriz ou seus elementos.  
   
--   **Inicialização.** O `ReDim` instrução não pode fornecer novos valores de inicialização para os elementos da matriz.  
+- **Inicialização.** O `ReDim` instrução não pode fornecer novos valores de inicialização para os elementos da matriz.  
   
--   **Classificação.** O `ReDim` instrução não é possível alterar a classificação (número de dimensões) da matriz.  
+- **Classificação.** O `ReDim` instrução não é possível alterar a classificação (número de dimensões) da matriz.  
   
--   **Redimensionando com preservar.** Se você usar `Preserve`, você pode redimensionar a última dimensão da matriz. Para cada dimensão, você deve especificar o limite da matriz existente.  
+- **Redimensionando com preservar.** Se você usar `Preserve`, você pode redimensionar a última dimensão da matriz. Para cada dimensão, você deve especificar o limite da matriz existente.  
   
      Por exemplo, se a matriz tem apenas uma dimensão, redimensionar a dimensão e ainda preservar todo o conteúdo da matriz, porque você está alterando a última e a dimensão apenas. No entanto, se sua matriz tiver duas ou mais dimensões, você pode alterar o tamanho de apenas da última dimensão de se você usar `Preserve`.  
   
--   **Propriedades.** Você pode usar `ReDim` em uma propriedade que contém uma matriz de valores.  
+- **Propriedades.** Você pode usar `ReDim` em uma propriedade que contém uma matriz de valores.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Substituição de matriz.** `ReDim` libera a matriz existente e cria uma nova matriz com a mesma classificação. A nova matriz substitui a matriz lançada na variável de matriz.  
+- **Substituição de matriz.** `ReDim` libera a matriz existente e cria uma nova matriz com a mesma classificação. A nova matriz substitui a matriz lançada na variável de matriz.  
   
--   **Inicialização sem preservar.** Se você não especificar `Preserve`, `ReDim` inicializa os elementos da nova matriz, usando o valor padrão para seu tipo de dados.  
+- **Inicialização sem preservar.** Se você não especificar `Preserve`, `ReDim` inicializa os elementos da nova matriz, usando o valor padrão para seu tipo de dados.  
   
--   **Inicialização com preservar.** Se você especificar `Preserve`, Visual Basic copia os elementos da matriz existente para a nova matriz.  
+- **Inicialização com preservar.** Se você especificar `Preserve`, Visual Basic copia os elementos da matriz existente para a nova matriz.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir aumenta o tamanho da última dimensão de uma matriz dinâmica sem perder todos os dados existentes na matriz e, em seguida, diminui o tamanho com perda de dados parcial. Por fim, ele diminui o tamanho de volta para seu valor original e reinicializa todos os elementos da matriz.  

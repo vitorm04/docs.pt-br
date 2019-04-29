@@ -3,11 +3,11 @@ title: Período viável de detecção de instâncias
 ms.date: 03/30/2017
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
 ms.openlocfilehash: 9652dd811f64e5324219b8aa0700ab8219edeeb0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937950"
 ---
 # <a name="runnable-instances-detection-period"></a>Período viável de detecção de instâncias
 A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente interna que acorde e detecte instâncias praticáveis ou activatable na base de dados de persistência. O **período de detecção de instâncias praticáveis** propriedade de Store de instância de fluxo de trabalho do SQL Especifica o período de tempo após o qual o Store de instância de fluxo de trabalho do SQL executa uma tarefa de detecção para detectar qualquer fluxo de trabalho possível ou activatable instâncias do banco de dados de persistência após o ciclo de detecção anterior.  

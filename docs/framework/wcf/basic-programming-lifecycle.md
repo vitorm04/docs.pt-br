@@ -5,11 +5,11 @@ helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
 ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782396"
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo de vida de programação básica
 Windows Communication Foundation (WCF) permite que aplicativos se comuniquem independentemente de estarem no mesmo computador, através da Internet ou em diferentes plataformas de aplicativo. Este tópico descreve as tarefas que são necessários para compilar um aplicativo WCF. Para um aplicativo de exemplo funcional, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md).  

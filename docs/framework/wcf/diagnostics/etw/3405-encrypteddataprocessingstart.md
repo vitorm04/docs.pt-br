@@ -3,11 +3,11 @@ title: 3405 - EncryptedDataProcessingStart
 ms.date: 03/30/2017
 ms.assetid: bdb6e4e8-ec85-4629-a43a-7836d445ecab
 ms.openlocfilehash: 67462fa77bd3d9ca7932e4177ac4a9c0ae513697
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33463736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764706"
 ---
 # <a name="3405---encrypteddataprocessingstart"></a>3405 - EncryptedDataProcessingStart
 ## <a name="properties"></a>Propriedades  
@@ -20,9 +20,9 @@ ms.locfileid: "33463736"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando foi iniciado o processamento de dados criptografado.  
+ Esse evento é emitido quando o processamento de dados criptografado foi iniciado.  
   
 ## <a name="message"></a>Mensagem  
- Introdução de processamento de dados criptografados.  
+ Criptografado de processamento de dados iniciado.  
   
 ## <a name="details"></a>Detalhes

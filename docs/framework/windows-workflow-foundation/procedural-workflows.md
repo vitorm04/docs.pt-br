@@ -3,11 +3,11 @@ title: Fluxos de trabalho procedurais
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
 ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780674"
 ---
 # <a name="procedural-workflows"></a>Fluxos de trabalho procedurais
 Fluxos de trabalho procedurais usam métodos de controle de fluxo semelhantes a esses elementos encontrados em idiomas procedurais. Essas construções incluem `While` e `If`. Esses fluxos de trabalho podem ser compostos livremente usando outras atividades de controle de fluxo como <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.  
@@ -15,21 +15,21 @@ Fluxos de trabalho procedurais usam métodos de controle de fluxo semelhantes a 
 ## <a name="controlling-execution-flow"></a>Fluxo de controle de execução  
  A biblioteca de atividade de fluxo de trabalho tem atividades para modelar a maioria dos métodos de controle de fluxo usados em idiomas procedurais. Elas incluem:  
   
--   <xref:System.Activities.Statements.While>  
+- <xref:System.Activities.Statements.While>  
   
--   <xref:System.Activities.Statements.DoWhile>  
+- <xref:System.Activities.Statements.DoWhile>  
   
--   <xref:System.Activities.Statements.ForEach%601>  
+- <xref:System.Activities.Statements.ForEach%601>  
   
--   <xref:System.Activities.Statements.Parallel>  
+- <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.ParallelForEach%601>  
+- <xref:System.Activities.Statements.ParallelForEach%601>  
   
--   <xref:System.Activities.Statements.If>  
+- <xref:System.Activities.Statements.If>  
   
--   <xref:System.Activities.Statements.Switch%601>  
+- <xref:System.Activities.Statements.Switch%601>  
   
--   <xref:System.Activities.Statements.Pick>  
+- <xref:System.Activities.Statements.Pick>  
   
  Para usar atividades de fluxo de controle, arraste e solte-las a partir de **atividade** caixa de ferramentas em uma atividade composta dentro da janela do designer.  
   

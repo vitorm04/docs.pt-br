@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783819"
 ---
 # <a name="synclock-statement"></a>Instrução SyncLock
 Adquire um bloqueio exclusivo para um bloco de instrução antes de executar o bloco.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>Regras  
   
--   A ramificação. Você não pode ramificar em uma `SyncLock` bloquear de fora do bloco.  
+- A ramificação. Você não pode ramificar em uma `SyncLock` bloquear de fora do bloco.  
   
--   Valor do objeto de bloqueio. O valor de `lockobject` não pode ser `Nothing`. Você deve criar o objeto de bloqueio antes de você usá-lo em um `SyncLock` instrução.  
+- Valor do objeto de bloqueio. O valor de `lockobject` não pode ser `Nothing`. Você deve criar o objeto de bloqueio antes de você usá-lo em um `SyncLock` instrução.  
   
      Você não pode alterar o valor de `lockobject` durante a execução de um `SyncLock` bloco. O mecanismo requer que o objeto de bloqueio permaneça inalterado.  
   
--   Não é possível usar o [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador em uma `SyncLock` bloco.  
+- Não é possível usar o [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador em uma `SyncLock` bloco.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   Mecanismo. Quando um segmento atinge a `SyncLock` instrução, ele avalia o `lockobject` expressão e suspende a execução até que ele adquire um bloqueio exclusivo no objeto retornado pela expressão. Quando outro thread atinge a `SyncLock` instrução, ele não adquirir um bloqueio até que o primeiro thread executa o `End SyncLock` instrução.  
+- Mecanismo. Quando um segmento atinge a `SyncLock` instrução, ele avalia o `lockobject` expressão e suspende a execução até que ele adquire um bloqueio exclusivo no objeto retornado pela expressão. Quando outro thread atinge a `SyncLock` instrução, ele não adquirir um bloqueio até que o primeiro thread executa o `End SyncLock` instrução.  
   
--   Dados protegidos. Se `lockobject` é um `Shared` variável, o bloqueio exclusivo impede um segmento em qualquer instância da classe de executar o `SyncLock` bloquear enquanto ele está em execução por qualquer outro thread. Isso protege os dados que são compartilhados entre todas as instâncias.  
+- Dados protegidos. Se `lockobject` é um `Shared` variável, o bloqueio exclusivo impede um segmento em qualquer instância da classe de executar o `SyncLock` bloquear enquanto ele está em execução por qualquer outro thread. Isso protege os dados que são compartilhados entre todas as instâncias.  
   
      Se `lockobject` é uma variável de instância (não `Shared`), o bloqueio impede que um thread em execução na instância atual da execução de `SyncLock` bloco ao mesmo tempo que outro segmento na mesma instância. Isso protege os dados mantidos pela instância individual.  
   
--   Aquisição e liberação. Um `SyncLock` bloco se comporta como uma `Try...Finally` construção na qual o `Try` bloco adquire um bloqueio exclusivo na `lockobject` e o `Finally` bloco o libera. Por isso, o `SyncLock` bloco garante a liberação do bloqueio, não importa como você sai do bloco. Isso é verdadeiro mesmo no caso de uma exceção sem tratamento.  
+- Aquisição e liberação. Um `SyncLock` bloco se comporta como uma `Try...Finally` construção na qual o `Try` bloco adquire um bloqueio exclusivo na `lockobject` e o `Finally` bloco o libera. Por isso, o `SyncLock` bloco garante a liberação do bloqueio, não importa como você sai do bloco. Isso é verdadeiro mesmo no caso de uma exceção sem tratamento.  
   
--   Chamadas de estrutura. O `SyncLock` bloco adquire e libera o bloqueio exclusivo chamando o `Enter` e `Exit` métodos da `Monitor` classe o <xref:System.Threading> namespace.  
+- Chamadas de estrutura. O `SyncLock` bloco adquire e libera o bloqueio exclusivo chamando o `Enter` e `Exit` métodos da `Monitor` classe o <xref:System.Threading> namespace.  
   
 ## <a name="programming-practices"></a>Práticas recomendadas de programação  
  O `lockobject` expressão sempre deve ser avaliada como um objeto que pertence à sua classe exclusivamente. Você deve declarar uma `Private` variável de objeto para proteger dados pertencentes à instância atual, ou um `Private Shared` variável de objeto para proteger dados comuns a todas as instâncias.  

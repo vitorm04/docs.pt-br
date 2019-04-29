@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788902"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Especifica qual versão de plataforma do common language runtime (CLR) pode executar o arquivo de saída.  
@@ -38,31 +38,31 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
   
  Em geral, os assemblies do .NET Framework gravados no Visual Basic serão executados da mesma maneira, independentemente da plataforma. No entanto, existem alguns casos em que se comportam de formas diferentes em plataformas distintas. Esses casos comuns são:  
   
--   Estruturas que contêm membros que alteram o tamanho de acordo com a plataforma, como qualquer tipo de ponteiro.  
+- Estruturas que contêm membros que alteram o tamanho de acordo com a plataforma, como qualquer tipo de ponteiro.  
   
--   Aritmética de ponteiro que inclui tamanhos constantes.  
+- Aritmética de ponteiro que inclui tamanhos constantes.  
   
--   As declarações COM ou de invocação de plataforma incorreta que usam `Integer` para identificadores em vez de <xref:System.IntPtr>.  
+- As declarações COM ou de invocação de plataforma incorreta que usam `Integer` para identificadores em vez de <xref:System.IntPtr>.  
   
--   Convertendo <xref:System.IntPtr> para `Integer`.  
+- Convertendo <xref:System.IntPtr> para `Integer`.  
   
--   Usando a invocação de plataforma ou a interoperabilidade COM com os componentes que não existem em todas as plataformas.  
+- Usando a invocação de plataforma ou a interoperabilidade COM com os componentes que não existem em todas as plataformas.  
   
  O **-plataforma** opção reduzirá alguns problemas se você souber que fez suposições sobre a arquitetura do seu código será executado em. Especificamente:  
   
--   Se decidir atingir uma plataforma de 64 bits e o aplicativo for executado em uma máquina de 32 bits, a mensagem de erro vem muito mais cedo e mais direcionada ao problema do que o erro que ocorre sem usar essa comutador.  
+- Se decidir atingir uma plataforma de 64 bits e o aplicativo for executado em uma máquina de 32 bits, a mensagem de erro vem muito mais cedo e mais direcionada ao problema do que o erro que ocorre sem usar essa comutador.  
   
--   Se você definir o sinalizador `x86` na opção e, em seguida, o aplicativo for executado em uma máquina de 64 bits, o aplicativo será executado no subsistema WOW em vez de ser executado nativamente.  
+- Se você definir o sinalizador `x86` na opção e, em seguida, o aplicativo for executado em uma máquina de 64 bits, o aplicativo será executado no subsistema WOW em vez de ser executado nativamente.  
   
  Em um sistema operacional do Windows de 64 bits:  
   
--   Assemblies compilados com `-platform:x86` serão executados no CLR de 32 bits em execução no WOW64.  
+- Assemblies compilados com `-platform:x86` serão executados no CLR de 32 bits em execução no WOW64.  
   
--   Executáveis compilados com o `-platform:anycpu` serão executados no CLR de 64 bits.  
+- Executáveis compilados com o `-platform:anycpu` serão executados no CLR de 64 bits.  
   
--   Uma DLL compilada com o `-platform:anycpu` será executada no mesmo CLR que o processo no qual foi carregado.  
+- Uma DLL compilada com o `-platform:anycpu` será executada no mesmo CLR que o processo no qual foi carregado.  
   
--   Executáveis compilados com `-platform:anycpu32bitpreferred` serão executados no CLR de 32 bits.  
+- Executáveis compilados com `-platform:anycpu32bitpreferred` serão executados no CLR de 32 bits.  
   
  Para obter mais informações sobre como desenvolver um aplicativo seja executado em uma versão de 64 bits do Windows, consulte [aplicativos de 64 bits](../../../framework/64-bit-apps.md).  
   

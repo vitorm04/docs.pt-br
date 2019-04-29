@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793426"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Associando dados a controles (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode associar controles, como o `ComboBox` e `ListView` controles a uma instância da <xref:System.Data.Services.Client.DataServiceCollection%601> classe. Essa coleção, que herda do <xref:System.Collections.ObjectModel.ObservableCollection%601> de classe, que contém os dados de um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Essa classe representa uma coleção de dados dinâmicos que fornece notificações quando itens são adicionados ou removidos. Quando você usa uma instância do <xref:System.Data.Services.Client.DataServiceCollection%601> para vinculação de dados, o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente manipulam esses eventos para garantir que os objetos controlados pelo <xref:System.Data.Services.Client.DataServiceContext> permanecerem sincronizados com os dados no elemento de interface do usuário associado.  
@@ -73,17 +73,17 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode as
 ## <a name="customizing-data-binding-behaviors"></a>Personalizando comportamentos de vinculação de dados  
  A classe <xref:System.Data.Services.Client.DataServiceCollection%601> permite que você intercepte os eventos disparados quando são feitas alterações na coleção, como a adição ou remoção de um objeto, e quando são feitas alterações nas propriedades do objeto de uma coleção. Você pode alterar os eventos de vinculação de dados para substituir o comportamento padrão, o que inclui as seguintes restrições:  
   
--   Nenhuma validação é executada dentro dos representantes.  
+- Nenhuma validação é executada dentro dos representantes.  
   
--   A adição de uma entidade adiciona automaticamente as entidades relacionadas.  
+- A adição de uma entidade adiciona automaticamente as entidades relacionadas.  
   
--   A exclusão de uma entidade não exclui as entidades relacionadas.  
+- A exclusão de uma entidade não exclui as entidades relacionadas.  
   
  Quando cria uma nova instância de <xref:System.Data.Services.Client.DataServiceCollection%601>, você tem a opção de especificar os seguintes parâmetros que definem representantes para métodos que manipulam os eventos gerados quando os objetos associados são alterados:  
   
--   `entityChanged` - um método que é chamado quando a propriedade de um objeto associado é alterada. Esse delegado de <xref:System.Func%602> aceita um objeto <xref:System.Data.Services.Client.EntityChangedParams> e retorna um valor booliano que indica se o comportamento padrão, chamar <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> no <xref:System.Data.Services.Client.DataServiceContext>, ainda deve ocorrer.  
+- `entityChanged` - um método que é chamado quando a propriedade de um objeto associado é alterada. Esse delegado de <xref:System.Func%602> aceita um objeto <xref:System.Data.Services.Client.EntityChangedParams> e retorna um valor booliano que indica se o comportamento padrão, chamar <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> no <xref:System.Data.Services.Client.DataServiceContext>, ainda deve ocorrer.  
   
--   `entityCollectionChanged` - um método que é chamado quando um objeto é adicionado ou removido da coleção de associação. Esse delegado de <xref:System.Func%602> aceita um objeto <xref:System.Data.Services.Client.EntityCollectionChangedParams> e retorna um valor booliano que indica se o comportamento padrão, chamar <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> para uma ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> ou <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> para uma ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> no <xref:System.Data.Services.Client.DataServiceContext>, ainda deve ocorrer.  
+- `entityCollectionChanged` - um método que é chamado quando um objeto é adicionado ou removido da coleção de associação. Esse delegado de <xref:System.Func%602> aceita um objeto <xref:System.Data.Services.Client.EntityCollectionChangedParams> e retorna um valor booliano que indica se o comportamento padrão, chamar <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> para uma ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> ou <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> para uma ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> no <xref:System.Data.Services.Client.DataServiceContext>, ainda deve ocorrer.  
   
 > [!NOTE]
 >  O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não executa nenhuma validação dos comportamentos personalizados que você implementa nesses delegados.  
@@ -101,15 +101,15 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode as
 ## <a name="data-binding-with-custom-client-data-classes"></a>Vinculação de dados com classes de dados de cliente personalizadas  
  Para poder carregar objetos em um <xref:System.Data.Services.Client.DataServiceCollection%601>, os próprios objetos devem implementar a interface de <xref:System.ComponentModel.INotifyPropertyChanged>. Classes de cliente que são geradas quando você usa o serviço de dados do **adicionar referência de serviço** caixa de diálogo ou o [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) ferramenta implementam essa interface. Se você fornecer suas próprias classes de dados do cliente, deverá usar outro tipo de coleção para vinculação de dados. Quando os objetos forem alterados, você deverá manipular os eventos nos controles associados por dados para chamar os seguintes métodos da classe <xref:System.Data.Services.Client.DataServiceContext>:  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - quando um novo objeto é adicionado à coleção.  
+- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - quando um novo objeto é adicionado à coleção.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - quando um objeto é removido da coleção.  
+- <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - quando um objeto é removido da coleção.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - quando uma propriedade é alterada em um objeto da coleção.  
+- <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - quando uma propriedade é alterada em um objeto da coleção.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - quando um objeto é adicionado a uma coleção de objeto relacionado.  
+- <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - quando um objeto é adicionado a uma coleção de objeto relacionado.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - quando um objeto é adicionado a uma coleção de objetos relacionados.  
+- <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - quando um objeto é adicionado a uma coleção de objetos relacionados.  
   
  Para obter mais informações, consulte [atualização do serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   

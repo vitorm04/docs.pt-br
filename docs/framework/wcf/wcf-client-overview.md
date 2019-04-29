@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791229"
 ---
 # <a name="wcf-client-overview"></a>Visão geral do cliente WCF
 Esta seção descreve o que fazem aplicativos cliente, como configurar, criar e usar um cliente do Windows Communication Foundation (WCF) e como proteger aplicativos cliente.  
@@ -30,15 +30,15 @@ Esta seção descreve o que fazem aplicativos cliente, como configurar, criar e 
   
  As seções a seguir abordam essas etapas e fazem breves introduções às seguintes questões:  
   
--   Manipulando erros.  
+- Manipulando erros.  
   
--   Configurando e protegendo clientes.  
+- Configurando e protegendo clientes.  
   
--   Criando objetos de retorno de chamada para serviços duplex.  
+- Criando objetos de retorno de chamada para serviços duplex.  
   
--   Chamando serviços de modo assíncrono.  
+- Chamando serviços de modo assíncrono.  
   
--   Chamando serviços por meio de canais de cliente.  
+- Chamando serviços por meio de canais de cliente.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Obter o contrato de serviço, as associações e os endereços  
  No WCF, serviços e clientes do modelo contratos usando atributos gerenciados, interfaces e métodos. Para se conectar a um serviço em um aplicativo cliente, é necessário obter as informações de tipo do contrato de serviço. Normalmente, você faz isso usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), que baixa metadados do serviço, converte-o em um arquivo de código fonte gerenciado na linguagem de sua escolha e cria um cliente arquivo de configuração do aplicativo que você pode usar para configurar o objeto de cliente do WCF. Por exemplo, se você pretende criar um objeto de cliente WCF para invocar um `MyCalculatorService`, e você souber que os metadados para o serviço é publicado ao `http://computerName/MyCalculatorService/Service.svc?wsdl`, em seguida, o exemplo de código a seguir mostra como usar Svcutil.exe para obter um `ClientCode.vb` de arquivos que contém o contrato de serviço em código gerenciado.  
@@ -146,11 +146,11 @@ End Interface
   
  Os clientes dos serviços duplex devem:  
   
--   Implementar uma classe de contrato de retorno de chamada.  
+- Implementar uma classe de contrato de retorno de chamada.  
   
--   Crie uma instância da classe de implementação de contrato de retorno de chamada e usá-lo para criar o <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> objeto que você passa para o construtor de cliente do WCF.  
+- Crie uma instância da classe de implementação de contrato de retorno de chamada e usá-lo para criar o <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> objeto que você passa para o construtor de cliente do WCF.  
   
--   Chamar operações e manipular retornos de chamada de operação.  
+- Chamar operações e manipular retornos de chamada de operação.  
   
  Função duplex de objetos de cliente WCF como suas contrapartes nonduplex, com exceção de que eles expõem a funcionalidade necessária para dar suporte a retornos de chamada, incluindo a configuração do serviço de retorno de chamada.  
   

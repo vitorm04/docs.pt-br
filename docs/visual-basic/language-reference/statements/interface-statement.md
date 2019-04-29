@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784183"
 ---
 # <a name="interface-statement-visual-basic"></a>Instrução Interface (Visual Basic)
 Declara o nome de uma interface e apresenta as definições dos membros que compõe a interface.  
@@ -67,31 +67,31 @@ End Interface
   
 ## <a name="rules"></a>Regras  
   
--   **Interfaces de aninhamento.** Você pode definir uma interface dentro de outra. A interface externa é chamada a *que contém a interface*, e a interface interna é chamada uma *interface aninhada*.  
+- **Interfaces de aninhamento.** Você pode definir uma interface dentro de outra. A interface externa é chamada a *que contém a interface*, e a interface interna é chamada uma *interface aninhada*.  
   
--   **Declaração de membro.** Quando você declara uma propriedade ou procedimento como um membro de uma interface, você está definindo apenas o *assinatura* da propriedade ou procedimento. Isso inclui o tipo de elemento (propriedade ou procedimento), seus parâmetros e tipos de parâmetro e seu tipo de retorno. Por isso, a definição de membro usa apenas uma linha de código e declarações de finalização como `End Function` ou `End Property` não são válidos em uma interface.  
+- **Declaração de membro.** Quando você declara uma propriedade ou procedimento como um membro de uma interface, você está definindo apenas o *assinatura* da propriedade ou procedimento. Isso inclui o tipo de elemento (propriedade ou procedimento), seus parâmetros e tipos de parâmetro e seu tipo de retorno. Por isso, a definição de membro usa apenas uma linha de código e declarações de finalização como `End Function` ou `End Property` não são válidos em uma interface.  
   
      Por outro lado, quando você define uma enumeração ou estrutura, ou uma classe aninhada ou interface, é necessário incluir seus membros de dados.  
   
--   **Modificador de membro.** Você não pode usar qualquer modificador de acesso ao definir membros de módulo, nem especificar [Shared](../../../visual-basic/language-reference/modifiers/shared.md) ou qualquer modificador de procedimento exceto [sobrecarrega](../../../visual-basic/language-reference/modifiers/overloads.md). Você pode declarar qualquer membro com [sombras](../../../visual-basic/language-reference/modifiers/shadows.md), e você pode usar [padrão](../../../visual-basic/language-reference/modifiers/default.md) ao definir uma propriedade, bem como [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) ou [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **Modificador de membro.** Você não pode usar qualquer modificador de acesso ao definir membros de módulo, nem especificar [Shared](../../../visual-basic/language-reference/modifiers/shared.md) ou qualquer modificador de procedimento exceto [sobrecarrega](../../../visual-basic/language-reference/modifiers/overloads.md). Você pode declarar qualquer membro com [sombras](../../../visual-basic/language-reference/modifiers/shadows.md), e você pode usar [padrão](../../../visual-basic/language-reference/modifiers/default.md) ao definir uma propriedade, bem como [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) ou [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
--   **Herança.** Se a interface usa o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar uma ou mais interfaces base. Você pode herdar de duas interfaces, mesmo se cada um deles definir um membro com o mesmo nome. Se você fizer isso, o código de implementação deve usar a qualificação de nome para especificar qual membro que está implementando.  
+- **Herança.** Se a interface usa o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar uma ou mais interfaces base. Você pode herdar de duas interfaces, mesmo se cada um deles definir um membro com o mesmo nome. Se você fizer isso, o código de implementação deve usar a qualificação de nome para especificar qual membro que está implementando.  
   
      Uma interface não pode herdar de outra interface com um nível de acesso mais restritivo. Por exemplo, uma `Public` interface não pode herdar de um `Friend` interface.  
   
      Uma interface não pode herdar de uma interface aninhada dentro dele.  
   
--   **Implementação.** Quando uma classe usa a [implementa](../../../visual-basic/language-reference/statements/implements-clause.md) instrução para implementar esta interface, ele deve implementar todos os membros definidos dentro da interface. Além disso, cada assinatura no código de implementação deve corresponder exatamente a assinatura correspondente definida nessa interface. No entanto, o nome do membro no código de implementação não precisa corresponder ao nome do membro, conforme definido na interface.  
+- **Implementação.** Quando uma classe usa a [implementa](../../../visual-basic/language-reference/statements/implements-clause.md) instrução para implementar esta interface, ele deve implementar todos os membros definidos dentro da interface. Além disso, cada assinatura no código de implementação deve corresponder exatamente a assinatura correspondente definida nessa interface. No entanto, o nome do membro no código de implementação não precisa corresponder ao nome do membro, conforme definido na interface.  
   
      Quando uma classe está implementando um procedimento, ele não pode designar o procedimento como `Shared`.  
   
--   **Propriedade padrão.** Uma interface pode especificar no máximo uma propriedade como seu *propriedade padrão*, que pode ser referenciado sem usar o nome da propriedade. Especificar essa propriedade, declarando-o com o [padrão](../../../visual-basic/language-reference/modifiers/default.md) modificador.  
+- **Propriedade padrão.** Uma interface pode especificar no máximo uma propriedade como seu *propriedade padrão*, que pode ser referenciado sem usar o nome da propriedade. Especificar essa propriedade, declarando-o com o [padrão](../../../visual-basic/language-reference/modifiers/default.md) modificador.  
   
      Observe que isso significa que uma interface pode definir uma propriedade padrão apenas se ela não herda nada.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Nível de acesso.** Todos os membros de interface possuem implicitamente [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso. É possível usar qualquer modificador de acesso ao definir um membro. No entanto, uma classe que implementa a interface pode declarar um nível de acesso para cada membro implementado.  
+- **Nível de acesso.** Todos os membros de interface possuem implicitamente [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso. É possível usar qualquer modificador de acesso ao definir um membro. No entanto, uma classe que implementa a interface pode declarar um nível de acesso para cada membro implementado.  
   
      Se você atribuir uma instância da classe a uma variável, o nível de acesso de seus membros pode depender se o tipo de dados da variável é a interface subjacente ou a classe de implementação. O exemplo a seguir ilustra essa situação.  
   
@@ -99,11 +99,11 @@ End Interface
   
      Se você acessar membros de classe por meio de `varAsInterface`, todos eles têm acesso público. No entanto, se você acessar membros por meio `varAsClass`, o `Sub` procedimento `doSomething` tem acesso privado.  
   
--   **Escopo.** Uma interface está no escopo em todo o seu namespace, classe, estrutura ou módulo.  
+- **Escopo.** Uma interface está no escopo em todo o seu namespace, classe, estrutura ou módulo.  
   
      O escopo de cada membro da interface é toda a interface.  
   
--   **Tempo de vida.** Uma interface em si tem um tempo de vida, nem seus membros. Quando uma classe implementa uma interface e um objeto é criado como uma instância do que a classe, o objeto tem um tempo de vida do aplicativo no qual ele está em execução. Para obter mais informações, consulte "Tempo de vida" em [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **Tempo de vida.** Uma interface em si tem um tempo de vida, nem seus membros. Quando uma classe implementa uma interface e um objeto é criado como uma instância do que a classe, o objeto tem um tempo de vida do aplicativo no qual ele está em execução. Para obter mais informações, consulte "Tempo de vida" em [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Interface` instrução para definir uma interface denominada `thisInterface`, que deve ser implementado com um `Property` instrução e um `Function` instrução.  

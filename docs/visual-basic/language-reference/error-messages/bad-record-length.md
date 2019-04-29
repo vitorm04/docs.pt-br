@@ -8,17 +8,17 @@ ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935246"
 ---
 # <a name="bad-record-length"></a>Comprimento de registro inválido
 Entre as causas possíveis desse erro são:  
   
--   O comprimento de uma variável do registro especificado em uma `FileGet`, `FileGetObject`, `FilePut` ou `FilePutObject` instrução é diferente do que o comprimento especificado no correspondente `FileOpen` instrução.  
+- O comprimento de uma variável do registro especificado em uma `FileGet`, `FileGetObject`, `FilePut` ou `FilePutObject` instrução é diferente do que o comprimento especificado no correspondente `FileOpen` instrução.  
   
--   A variável em uma `FilePut` ou `FilePutObject` instrução é ou inclui uma cadeia de caracteres de comprimento variável.  
+- A variável em uma `FilePut` ou `FilePutObject` instrução é ou inclui uma cadeia de caracteres de comprimento variável.  
   
--   A variável em uma `FilePut` ou `FilePutObject` é ou inclui um `Variant` tipo.  
+- A variável em uma `FilePut` ou `FilePutObject` é ou inclui um `Variant` tipo.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   

@@ -3,11 +3,11 @@ title: Reflexão (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783520"
 ---
 # <a name="reflection-visual-basic"></a>Reflexão (Visual Basic)
 A reflexão fornece objetos (do tipo <xref:System.Type>) que descrevem assemblies, módulos e tipos. É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos. Se você estiver usando atributos em seu código, a reflexão permite acessá-los. Para obter mais informações, consulte [Atributos](../../../standard/attributes/index.md).  
@@ -40,26 +40,26 @@ System.Console.WriteLine(info)
 ## <a name="reflection-overview"></a>Visão geral da reflexão  
  A reflexão é útil nas seguintes situações:  
   
--   Quando você precisa acessar atributos nos metadados do seu programa. Para obter mais informações, consulte [Recuperando informações armazenadas em atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- Quando você precisa acessar atributos nos metadados do seu programa. Para obter mais informações, consulte [Recuperando informações armazenadas em atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
--   Para examinar e instanciar tipos em um assembly.  
+- Para examinar e instanciar tipos em um assembly.  
   
--   Para criar novos tipos em tempo de execução. Usar as classes em <xref:System.Reflection.Emit>.  
+- Para criar novos tipos em tempo de execução. Usar as classes em <xref:System.Reflection.Emit>.  
   
--   Para executar a associação tardia, acessar métodos em tipos criados em tempo de execução. Consulte o tópico [Carregando e usando tipos dinamicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+- Para executar a associação tardia, acessar métodos em tipos criados em tempo de execução. Consulte o tópico [Carregando e usando tipos dinamicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Para saber mais:  
   
--   [Reflexão](../../../framework/reflection-and-codedom/reflection.md)  
+- [Reflexão](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Exibindo informações de tipo](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [Exibindo informações de tipo](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Reflexão e tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Reflexão e tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [Recuperando informações armazenadas em atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Recuperando informações armazenadas em atributos](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -3,11 +3,11 @@ title: Identificadores (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774654"
 ---
 # <a name="identifiers-entity-sql"></a>Identificadores (Entity SQL)
 Os identificadores são usados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para representar alias de expressão de consulta, referências variáveis, propriedades de objetos, funções, e assim por diante. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece dois tipos de identificadores: identificadores simples e identificadores entre aspas.  
@@ -20,15 +20,15 @@ Os identificadores são usados em [!INCLUDE[esql](../../../../../../includes/esq
   
  Um identificador citado não pode incluir os seguintes caracteres:  
   
--   Nova linha.  
+- Nova linha.  
   
--   Retornos de carro.  
+- Retornos de carro.  
   
--   Guias.  
+- Guias.  
   
--   Retrocesso.  
+- Retrocesso.  
   
--   Colchetes adicionais (isto é, colchetes dentro de colchetes que ícones o identificador).  
+- Colchetes adicionais (isto é, colchetes dentro de colchetes que ícones o identificador).  
   
  Um identificador citar- pode incluir caracteres Unicode.  
   
@@ -53,13 +53,13 @@ Os identificadores são usados em [!INCLUDE[esql](../../../../../../includes/esq
 ## <a name="aliasing-rules"></a>Regras de serrilha  
  Recomendamos especificar alias em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta sempre que necessário, incluindo o seguinte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] constrói:  
   
--   Campos de um construtor de linha.  
+- Campos de um construtor de linha.  
   
--   Itens na cláusula de uma expressão de consulta.  
+- Itens na cláusula de uma expressão de consulta.  
   
--   Itens na cláusula SELECT de uma expressão de consulta.  
+- Itens na cláusula SELECT de uma expressão de consulta.  
   
--   Itens em cláusula GROUP BY de uma expressão de consulta.  
+- Itens em cláusula GROUP BY de uma expressão de consulta.  
   
 ### <a name="valid-aliases"></a>Alias válidos  
  Alias válidos no [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são qualquer identificador simples ou identificador entre aspas.  
@@ -67,9 +67,9 @@ Os identificadores são usados em [!INCLUDE[esql](../../../../../../includes/esq
 ### <a name="alias-generation"></a>Geração do alias  
  Se nenhum alias for especificada em uma [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão de consulta, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta gerar um alias com base nas seguintes regras simples:  
   
--   Se a expressão de consulta (para um alias são não especificado) é um identificador simples ou citado, o identificador é usado como o alias. Por exemplo, `ROW(a, [b])` se torna `ROW(a AS a, [b] AS [b])`.  
+- Se a expressão de consulta (para um alias são não especificado) é um identificador simples ou citado, o identificador é usado como o alias. Por exemplo, `ROW(a, [b])` se torna `ROW(a AS a, [b] AS [b])`.  
   
--   Se a expressão de consulta é uma expressão mais complexa, mas o componente do último dessa expressão de consulta é um identificador simples, então o identificador é usado como o alias. Por exemplo, `ROW(a.a1, b.[b1])` se torna `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Se a expressão de consulta é uma expressão mais complexa, mas o componente do último dessa expressão de consulta é um identificador simples, então o identificador é usado como o alias. Por exemplo, `ROW(a.a1, b.[b1])` se torna `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
  Recomendamos que você não use a serrilha implícita se você desejar usar posteriormente o nome do alias. Quando o alias (implícitas ou explícitas) entrem em conflito ou são repetidas no mesmo escopo, haverá um erro de compilação. Um alias implícitas transmitirão a compilação mesmo se houver um alias explícitas ou implícitas de mesmo nome.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Os seguintes são notas adicionais sobre escopos:  
   
--   A lista seleto- pode gerar nomes novos no escopo, em ordem. As expressões de projeção à direita podem se referir aos nomes projetados para a esquerda.  
+- A lista seleto- pode gerar nomes novos no escopo, em ordem. As expressões de projeção à direita podem se referir aos nomes projetados para a esquerda.  
   
--   A cláusula GROUP BY pode consultar os nomes (alias) especificados na lista select.  
+- A cláusula GROUP BY pode consultar os nomes (alias) especificados na lista select.  
   
--   A ordem de classificação das cláusulas dentro da expressão SELECT determina a ordem que os nomes são introduzidos no escopo. A cláusula é avaliado primeiro, seguido por uma cláusula WHERE, cláusula GROUP BY TENDO, a cláusula, a cláusula SELECT, e finalmente a cláusula GROUP BY.  
+- A ordem de classificação das cláusulas dentro da expressão SELECT determina a ordem que os nomes são introduzidos no escopo. A cláusula é avaliado primeiro, seguido por uma cláusula WHERE, cláusula GROUP BY TENDO, a cláusula, a cláusula SELECT, e finalmente a cláusula GROUP BY.  
   
 ### <a name="aggregate-handling"></a>Tratamento aggregate  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a dois formulários de agregados: agregados coleção com base e agregados grupo-base. Agregados coleção com base são a compilação preferencial em [!INCLUDE[esql](../../../../../../includes/esql-md.md)], e grupo- com agregados são suportadas para compatibilidade SQL.  

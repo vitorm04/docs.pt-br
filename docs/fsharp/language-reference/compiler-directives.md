@@ -3,11 +3,11 @@ title: Diretivas de compilador
 description: Saiba mais sobre F# diretivas de pré-processador de linguagem, diretivas de compilação condicional, diretivas de linha e diretivas de compilador.
 ms.date: 12/10/2018
 ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766097"
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 
@@ -24,7 +24,7 @@ A tabela a seguir lista as diretivas de pré-processador que estão disponíveis
 |`#if` *symbol*|Dá suporte à compilação condicional. Código na seção após o `#if` está incluído se o *símbolo* é definido. O símbolo também pode ser negado com `!`.|
 |`#else`|Dá suporte à compilação condicional. Marca uma seção de código para incluir se o símbolo usado com o anterior `#if` não está definido.|
 |`#endif`|Dá suporte à compilação condicional. Marca o final de uma seção condicional do código.|
-|`#`[linha] *int*,<br/>`#`[linha] *int* *cadeia de caracteres*,<br/>`#`[linha] *int* *cadeia de caracteres textuais*|Indica o nome original da fonte código linha e o arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram F# código-fonte.|
+|`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|Indica o nome original da fonte código linha e o arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram F# código-fonte.|
 |`#nowarn` *warningcode*|Desabilita um aviso do compilador ou avisos. Para desabilitar um aviso, localize seu número de saída do compilador e incluí-lo entre aspas. Omita o prefixo "FS". Para desabilitar vários números de aviso na mesma linha, incluir cada número entre aspas e separe cada cadeia de caracteres por um espaço. Por exemplo:
 
 `#nowarn "9" "40"`

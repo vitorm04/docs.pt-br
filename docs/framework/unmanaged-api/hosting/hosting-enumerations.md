@@ -9,11 +9,11 @@ ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05fc295d394dca7a4f0edead64d326032958b070
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775175"
 ---
 # <a name="hosting-enumerations"></a>Hospedando enumerações
 Esta seção descreve as enumerações não gerenciadas que usa a API de hospedagem.  
@@ -29,10 +29,10 @@ Esta seção descreve as enumerações não gerenciadas que usa a API de hospeda
  Indica as estatísticas de coleta de lixo para um thread.  
   
  [Enumeração EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)  
- Descreve as categorias de recursos que o host pode bloquear a execução de código parcialmente confiável.  
+ Descreve as categorias de recursos que o host pode bloquear seja executado no código parcialmente confiável.  
   
  [Enumeração EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md)  
- Fornece os sinalizadores que especificam o nível no qual aplicar ou modificar a diretiva de assembly.  
+ Fornece sinalizadores que especificam o nível no qual aplicar ou modificar a diretiva de assembly.  
   
  [Enumeração ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)  
  Indica o tipo de identidade de um assembly.  
@@ -41,10 +41,10 @@ Esta seção descreve as enumerações não gerenciadas que usa a API de hospeda
  Descreve os eventos CLR para o qual o host pode registrar retornos de chamada.  
   
  [Enumeração EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- Descreve o conjunto de falhas para o qual um host pode definir as ações de política.  
+ Descreve o conjunto de falhas para o qual um host pode definir ações de política.  
   
  [Enumeração EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
- Descreve o conjunto de operações para o qual um host pode aplicar as ações de política.  
+ Descreve o conjunto de operações para o qual um host pode aplicar ações de política.  
   
  [Enumeração EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
  Descreve as opções disponíveis para o gerenciamento de exceções que são sem tratamento no código do usuário.  
@@ -53,16 +53,16 @@ Esta seção descreve as enumerações não gerenciadas que usa a API de hospeda
  Descreve o contexto de segurança do thread em execução no momento.  
   
  [Enumeração ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
- Contém valores que indicam quais itens a serem incluídos em um subconjunto personalizado de um heap de despejo quando o relatório de erros.  
+ Contém valores que indicam quais itens a serem incluídos em um subconjunto personalizado de um heap de despejo ao relatar erros.  
   
  [Enumeração ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- Reservado para extensão futura do [estrutura CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) estrutura.  
+ Reservado para uma futura extensão do [estrutura CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) estrutura.  
   
  [Enumeração EHostApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/ehostapplicationpolicy-enumeration.md)  
  Indica como modificar um [IHostAssemblyManager Interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) objeto de interface. Esta enumeração foi preterida.  
   
  [Enumeração EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)  
- Permite que o host especificar o tipo de CLR deve ser executadas ao aplicar modificações de política de um assembly de origem para um assembly de destino de redirecionamento.  
+ Permite que o host especificar o tipo de redirecionamento, que o CLR deve executar ao aplicar as modificações de política de um assembly de origem para um assembly de destino.  
   
  [Enumeração EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)  
  Permite que o host fornecer o tempo de execução com informações sobre a inicialização de um domínio de aplicativo.  
@@ -74,22 +74,22 @@ Esta seção descreve as enumerações não gerenciadas que usa a API de hospeda
  Contém valores que indicam o impacto de uma falha quando uma alocação de memória específica foi solicitada, mas não pode ser atendida.  
   
  [Enumeração EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- Descreve as ações de política, o host pode ser definido para operações descritas por [enumeração EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e falhas descritas por [enumeração EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
+ Descreve as ações de política, o host pode ser definido para operações descritas pelo [enumeração EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e as falhas descritas pelo [enumeração EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
   
  [Enumeração ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)  
- Contém valores que defina a política para ler os arquivos do programa (PDB) de banco de dados.  
+ Contém valores que definir a política para a leitura de arquivos de banco de dados (PDB) do programa.  
   
  [Enumeração ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)  
- Contém valores que indicam o tipo de tarefa representado por um [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou um [IHostTask Interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.  
+ Contém valores que indicam o tipo de tarefa representada por uma [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou um [IHostTask Interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.  
   
  [Enumeração HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)  
  Contém valores que especificam o tipo de host que está iniciando um aplicativo.  
   
  [Enumeração MALLOC_TYPE](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md)  
- Contém valores que especificam as características da memória alocada.  
+ Contém valores que especificam as características da memória que está sendo alocada.  
   
  [Enumeração METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)  
- Descreve os possíveis sinalizadores retornados no `pdwConfigFlags` parâmetro o [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) método.  
+ Descreve os possíveis sinalizadores retornados na `pdwConfigFlags` parâmetro do [iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) método.  
   
  [Enumeração METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)  
  Fornece diretivas de associação que são comuns a maioria dos hosts de tempo de execução.  
@@ -104,10 +104,10 @@ Esta seção descreve as enumerações não gerenciadas que usa a API de hospeda
  Contém valores que indicam o comportamento de inicialização do CLR.  
   
  [Enumeração ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)  
- Contém valores que indicam o tipo de validação que deve ser executada em uma chamada para [método validar](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md).  
+ Contém valores que indicam o tipo de validação que deve ser executada em uma chamada para [método Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md).  
   
  [Enumeração WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)  
- Indica a ação que um host deve executar se uma operação solicitada por blocos de CLR.  
+ Indica a ação que um host deve executar se uma operação solicitada pelos blocos CLR.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Coclasses de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

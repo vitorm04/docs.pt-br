@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: KrzysztofCwalina
 ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756852"
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
 Sobrecargas de operador permitem que os tipos de framework apareçam como se fossem primitivos de linguagem internas.  

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928661"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Desenvolvendo aplicativos orientados a serviços com WCF
-Esta seção da documentação fornece informações sobre o Windows Communication Foundation (WCF), que é um modelo de programação unificado para a criação de aplicativos orientados a serviços. Ele permite aos desenvolvedores criarem soluções seguras, confiáveis e transacionadas que se integram nas plataformas e interoperam com os investimentos existentes.
+Esta seção da documentação fornece informações sobre o Windows Communication Foundation (WCF), que é um modelo de programação unificado para criar aplicativos orientados a serviço. Ele permite aos desenvolvedores criarem soluções seguras, confiáveis e transacionadas que se integram nas plataformas e interoperam com os investimentos existentes.
  
 ## <a name="in-this-section"></a>Nesta seção  
  [Novidades no Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)  
@@ -35,7 +35,7 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  Descreve os princípios básicos para criar aplicativos do Windows Communication Foundation.  
   
  [Detalhes de recursos do WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Mostra os tópicos que permitem que você escolha quais recursos ou o recurso do WCF você precisa implantar.  
+ Mostra os tópicos que permitem que você escolha quais recursos ou recurso do WCF que você precisa empregar.  
   
  [Estendendo o WCF](../../../docs/framework/wcf/extending/index.md)  
  Descreve como modificar e estender os componentes de tempo de execução do WCF  
@@ -56,7 +56,7 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  Fornece orientação para corrigir problemas de configuração do WCF  
   
  [Migrando do .NET Remoting para o WCF](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
- Compara a comunicação remota do .NET para WCF e fornece orientação para cenários comuns.  
+ Compara .NET Remoting para o WCF e fornece orientação de migração para cenários comuns.  
   
  [Usando as ferramentas de desenvolvimento do WCF](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
  Descreve as ferramentas de desenvolvimento do Windows Communication Foundation do Visual Studio que podem lhe ajudar a desenvolver seu WCFservice.  
@@ -68,7 +68,7 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  Exemplos que fornecem instruções sobre vários aspectos do Windows Communication Foundation  
   
  [Glossário do Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Mostra uma lista de condições específicas para o WCF  
+ Mostra uma lista de termos específicos para o WCF  
   
  [Referência geral](../../../docs/framework/wcf/general-reference.md)  
  A seção descreve os elementos que são usados para configurar clientes e serviços do Windows Communication Foundation.  

@@ -3,11 +3,11 @@ title: 'Transporte: Transações personalizadas através de exemplo de UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760033"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: Transações personalizadas através de exemplo de UDP
 Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) amostra no Windows Communication Foundation (WCF)[extensibilidade de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md). Ele estende o exemplo de transporte UDP para dar suporte a fluxo de transação personalizada e demonstra o uso do <xref:System.ServiceModel.Channels.TransactionMessageProperty> propriedade.  
@@ -50,9 +50,9 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  Para o transporte de fluxo de transação personalizada, a implementação do cliente deve saber quais operações de serviço exigem o fluxo de transações e passar essas informações para o WCF. Também deve haver um mecanismo para transmitir a transação do usuário para a camada de transporte. Este exemplo usa "Inspetores de mensagem do WCF" para obter essas informações. O Inspetor de mensagens do cliente implementado aqui, que é chamado `TransactionFlowInspector`, executa as seguintes tarefas:  
   
--   Determina se uma transação deve fluir para uma ação de mensagem determinada (Isso ocorre em `IsTxFlowRequiredForThisOperation()`).  
+- Determina se uma transação deve fluir para uma ação de mensagem determinada (Isso ocorre em `IsTxFlowRequiredForThisOperation()`).  
   
--   Anexa a transação de ambiente atual para a mensagem usando `TransactionFlowProperty`, se uma transação é necessária para ser colocada em fluxo (Isso é feito no `BeforeSendRequest()`).  
+- Anexa a transação de ambiente atual para a mensagem usando `TransactionFlowProperty`, se uma transação é necessária para ser colocada em fluxo (Isso é feito no `BeforeSendRequest()`).  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  

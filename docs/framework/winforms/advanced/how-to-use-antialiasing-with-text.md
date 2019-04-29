@@ -12,11 +12,11 @@ helpviewer_keywords:
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
 ms.openlocfilehash: 24d1b1dfbe955bcfa98a16c3be592ab837ec0182
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779062"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Como: usar suavização com texto
 *Suavização* refere-se para a suavização de bordas irregulares de desenhado de gráficos e texto para aprimorar sua aparência ou a legibilidade. Com o gerenciado [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classes, você pode renderizar texto de com suavização de alta qualidade, bem como texto de qualidade inferior. Normalmente, a renderização de qualidade superior leva mais tempo de processamento de renderização de qualidade inferior. Para definir o nível de qualidade do texto, defina as <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriedade de um <xref:System.Drawing.Graphics> a um dos elementos do <xref:System.Drawing.Text.TextRenderingHint> enumeração  

@@ -3,11 +3,11 @@ title: Modelos do Visual Studio do WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780660"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 Modelos do Visual Studio Windows Communication Foundation (WCF) são predefinidos de projeto e modelos de item, que você pode usar no Visual Studio para criar rapidamente os serviços WCF e aplicativos ao redor.  
@@ -20,11 +20,11 @@ Modelos do Visual Studio Windows Communication Foundation (WCF) são predefinido
   
  Quando você cria um novo projeto usando o **serviço do WCF** modelo, o novo projeto inclui automaticamente os três arquivos a seguir:  
   
--   Arquivo do contrato de serviço (arquivo IService1.cs ou IService1.vb). O arquivo do contrato de serviço é uma interface que tem os atributos de serviço WCF aplicados. Esse arquivo fornece uma definição de um serviço simples para mostrar a você como definir os serviços e inclui as operações com base no parâmetro e um exemplo de contrato de dados simples. Este é o arquivo padrão exibido no editor de código depois de criar um projeto de serviço do WCF.  
+- Arquivo do contrato de serviço (arquivo IService1.cs ou IService1.vb). O arquivo do contrato de serviço é uma interface que tem os atributos de serviço WCF aplicados. Esse arquivo fornece uma definição de um serviço simples para mostrar a você como definir os serviços e inclui as operações com base no parâmetro e um exemplo de contrato de dados simples. Este é o arquivo padrão exibido no editor de código depois de criar um projeto de serviço do WCF.  
   
--   Arquivo de implementação de serviço (Service1.cs or Service1.vb). O arquivo de implementação de serviço implementa o contrato definido no arquivo do contrato de serviço.  
+- Arquivo de implementação de serviço (Service1.cs or Service1.vb). O arquivo de implementação de serviço implementa o contrato definido no arquivo do contrato de serviço.  
   
--   Arquivo de configuração de aplicativo (App. config). O arquivo de configuração fornece os elementos básicos de um modelo de serviço WCF com uma associação HTTP segura. Ele também inclui um ponto de extremidade para o serviço e permite a troca de metadados.  
+- Arquivo de configuração de aplicativo (App. config). O arquivo de configuração fornece os elementos básicos de um modelo de serviço WCF com uma associação HTTP segura. Ele também inclui um ponto de extremidade para o serviço e permite a troca de metadados.  
   
 > [!NOTE]
 >  Visual Studio estiver configurado para reconhecer o arquivo App. config como o arquivo de configuração para o projeto quando ele é executado usando o [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que é a configuração padrão. Se você hospedar a biblioteca de serviço em um executável, você precisa mover o código de configuração para o arquivo de configuração do executável, como arquivos de configuração para DLLs não são válidos.  
@@ -34,13 +34,13 @@ Modelos do Visual Studio Windows Communication Foundation (WCF) são predefinido
   
  Quando você cria um novo projeto usando o **serviço de aplicativo Web WCF** modelo, o projeto inclui os seguintes quatro arquivos:  
   
--   Arquivo de host de serviço (service1.svc).  
+- Arquivo de host de serviço (service1.svc).  
   
--   Arquivo do contrato de serviço (arquivo IService1.cs ou IService1.vb).  
+- Arquivo do contrato de serviço (arquivo IService1.cs ou IService1.vb).  
   
--   Arquivo de implementação de serviço (arquivo Service1.svc.cs ou Service1.svc.vb).  
+- Arquivo de implementação de serviço (arquivo Service1.svc.cs ou Service1.svc.vb).  
   
--   Arquivo de configuração da Web (Web. config).  
+- Arquivo de configuração da Web (Web. config).  
   
  O modelo cria um site da Web (para ser implantado em um diretório virtual) e hospeda um serviço nele automaticamente.  
   

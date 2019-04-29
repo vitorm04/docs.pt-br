@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795194"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Como: acessar dispositivos de criptografia de hardware
 Você pode usar o <xref:System.Security.Cryptography.CspParameters> classe para dispositivos de criptografia de hardware de acesso. Por exemplo, você pode usar essa classe para integrar seu aplicativo com um cartão inteligente, um gerador de número aleatório de hardware ou uma implementação de hardware de um determinado algoritmo criptográfico.  
@@ -54,8 +54,8 @@ Você pode usar o <xref:System.Security.Cryptography.CspParameters> classe para 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Incluir o <xref:System> e <xref:System.Security.Cryptography> namespaces.  
+- Incluir o <xref:System> e <xref:System.Security.Cryptography> namespaces.  
   
--   Você deve ter um leitor de cartão inteligente e os drivers instalados em seu computador.  
+- Você deve ter um leitor de cartão inteligente e os drivers instalados em seu computador.  
   
--   Você deve inicializar o <xref:System.Security.Cryptography.CspParameters> usando informações específicas para seu leitor de cartão de objeto.  Para obter mais informações, consulte a documentação de seu leitor de cartão.
+- Você deve inicializar o <xref:System.Security.Cryptography.CspParameters> usando informações específicas para seu leitor de cartão de objeto.  Para obter mais informações, consulte a documentação de seu leitor de cartão.

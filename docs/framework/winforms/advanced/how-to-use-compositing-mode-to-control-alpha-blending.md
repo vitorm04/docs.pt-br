@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779011"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Como: usar o modo de composição para controlar a combinação alfa
 Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguintes características:  
   
--   Cores com valores alfabéticos inferiores a 255.  
+- Cores com valores alfabéticos inferiores a 255.  
   
--   As cores não têm combinação alfa umas com as outras ao criar o bitmap.  
+- As cores não têm combinação alfa umas com as outras ao criar o bitmap.  
   
--   Ao exibir o bitmap terminado, as cores no bitmap são combinadas em alfo com as cores da tela de fundo no dispositivo de vídeo.  
+- Ao exibir o bitmap terminado, as cores no bitmap são combinadas em alfo com as cores da tela de fundo no dispositivo de vídeo.  
   
  Para criar esse bitmap, construa um espaço em branco <xref:System.Drawing.Bitmap> do objeto e, em seguida, construir um <xref:System.Drawing.Graphics> objeto baseado nesse bitmap. Definir o modo de composição do <xref:System.Drawing.Graphics> do objeto para <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e089d133374f112dea13e91f9bd571bd2b5af07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796703"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>Método IHostMAlloc::DebugAlloc
 Solicita que o host alocar a quantidade especificada de memória do heap e, além disso, controlar em que a memória foi alocada.  

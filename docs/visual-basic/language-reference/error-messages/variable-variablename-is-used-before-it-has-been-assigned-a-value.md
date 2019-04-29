@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766721"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Variável '\<variablename >' é usada antes de receber um valor
 Variável '\<variablename >' é usada antes de receber um valor. Uma exceção de referência nula poderia resultar em tempo de execução.  
@@ -27,9 +27,9 @@ Variável '\<variablename >' é usada antes de receber um valor. Uma exceção d
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Verifique sua lógica de fluxo de controle e verifique se que a variável tem um valor válido antes do controle passa para qualquer instrução que lê-lo.  
+- Verifique sua lógica de fluxo de controle e verifique se que a variável tem um valor válido antes do controle passa para qualquer instrução que lê-lo.  
   
--   É uma maneira de garantir que a variável sempre tem um valor válido para inicializá-lo como parte de sua declaração. Consulte "Inicialização" no [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
+- É uma maneira de garantir que a variável sempre tem um valor válido para inicializá-lo como parte de sua declaração. Consulte "Inicialização" no [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
 

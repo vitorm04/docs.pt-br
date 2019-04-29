@@ -3,11 +3,11 @@ title: 'Como: criar um serviço WCF que se comunica por meio de WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787524"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Como: criar um serviço WCF que se comunica por meio de WebSockets
 Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBinding> associação para se comunicar por meio de WebSockets.  O WebSocket será usado quando o <xref:System.ServiceModel.NetHttpBinding> determina o contrato de serviço define um contrato de retorno de chamada. Este tópico descreve como implementar um serviço WCF e um cliente que usa o <xref:System.ServiceModel.NetHttpBinding> para se comunicar por meio de WebSockets.  
@@ -108,7 +108,7 @@ Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBin
   
      A operação de contrato de retorno de chamada é implementada como um método assíncrono.  
   
-    1.  Implemente o código do cliente.  
+    1. Implemente o código do cliente.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ Os serviços WCF e os clientes podem usar o <xref:System.ServiceModel.NetHttpBin
   
          O CallbackHandler é repetida aqui para maior clareza. O aplicativo cliente cria um novo InstanceContext e especifica a implementação da interface de retorno de chamada. Em seguida, ele cria uma instância da classe de proxy, enviando uma referência para o InstanceContext recém-criado. Quando o cliente chama o serviço, o serviço irá chamar o cliente usando o contrato de retorno de chamada especificado.  
   
-    2.  Configurar o cliente  
+    2. Configurar o cliente  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

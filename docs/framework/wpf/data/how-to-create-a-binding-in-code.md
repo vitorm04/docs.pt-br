@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
 ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931619"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Como: Criar uma associação no código
 Este exemplo mostra como criar e definir um <xref:System.Windows.Data.Binding> no código.  

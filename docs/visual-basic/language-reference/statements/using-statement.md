@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698649"
 ---
 # <a name="using-statement-visual-basic"></a>Instrução Using (Visual Basic)
 Declara o início de um `Using` bloquear e, opcionalmente, adquire os recursos do sistema que controla o bloco.  
@@ -61,11 +61,11 @@ End Using
   
  Um `Using` bloco tem três partes: aquisição, uso e descarte.  
   
--   *Aquisição* significa criar uma variável e inicializá-la para se referir ao recurso do sistema. O `Using` instrução pode adquirir um ou mais recursos, ou você pode adquirir exatamente um recurso antes de inserir o bloco e fornecê-lo para o `Using` instrução. Se você fornecer `resourceexpression`, você deve adquirir o recurso antes de passar o controle para o `Using` instrução.  
+- *Aquisição* significa criar uma variável e inicializá-la para se referir ao recurso do sistema. O `Using` instrução pode adquirir um ou mais recursos, ou você pode adquirir exatamente um recurso antes de inserir o bloco e fornecê-lo para o `Using` instrução. Se você fornecer `resourceexpression`, você deve adquirir o recurso antes de passar o controle para o `Using` instrução.  
   
--   *Uso* significa acessar os recursos e executar ações com eles. As instruções entre `Using` e `End Using` representam o uso de recursos.  
+- *Uso* significa acessar os recursos e executar ações com eles. As instruções entre `Using` e `End Using` representam o uso de recursos.  
   
--   *Disposição* significa que a chamada a <xref:System.IDisposable.Dispose%2A> método no objeto do `resourcename`. Isso permite que o objeto libere corretamente seus recursos. O `End Using` instrução descarta os recursos sob o `Using` controle bloco de.  
+- *Disposição* significa que a chamada a <xref:System.IDisposable.Dispose%2A> método no objeto do `resourcename`. Isso permite que o objeto libere corretamente seus recursos. O `End Using` instrução descarta os recursos sob o `Using` controle bloco de.  
   
 ## <a name="behavior"></a>Comportamento  
  Um `Using` bloco se comporta como um `Try`... `Finally` em que o `Try` block usa os recursos e o `Finally` bloco descarta-los. Por isso, o `Using` bloco garante a liberação dos recursos, não importa como você sai do bloco. Isso é verdadeiro mesmo no caso de uma exceção sem tratamento, exceto para um <xref:System.StackOverflowException>.  

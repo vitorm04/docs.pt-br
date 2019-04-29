@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769520"
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  
@@ -58,9 +58,9 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>Estilizando uma ListView que implemente um GridView  
  O <xref:System.Windows.Controls.ListView> controle contiver <xref:System.Windows.Controls.ListViewItem> objetos que representam os itens de dados que são exibidos. Você pode usar as propriedades a seguir para definir o conteúdo e estilo de itens de dados:  
   
--   Sobre o <xref:System.Windows.Controls.ListView> controlar, use o <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, e <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> propriedades.  
+- Sobre o <xref:System.Windows.Controls.ListView> controlar, use o <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, e <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> propriedades.  
   
--   Sobre o <xref:System.Windows.Controls.ListViewItem> controlar, use o <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriedades.  
+- Sobre o <xref:System.Windows.Controls.ListViewItem> controlar, use o <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriedades.  
   
  Para evitar problemas de alinhamento entre células em uma <xref:System.Windows.Controls.GridView>, não use o <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para definir propriedades ou adicionar conteúdo que afeta a largura de um item em um <xref:System.Windows.Controls.ListView>. Por exemplo, um problema de alinhamento pode ocorrer quando você define o <xref:System.Windows.FrameworkElement.Margin%2A> propriedade no <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Para especificar propriedades ou definir o conteúdo que afeta a largura de itens em uma <xref:System.Windows.Controls.GridView>, use as propriedades do <xref:System.Windows.Controls.GridView> classe e suas classes relacionadas, tais como <xref:System.Windows.Controls.GridViewColumn>.  
   

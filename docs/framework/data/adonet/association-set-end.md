@@ -3,20 +3,20 @@ title: extremidade do conjunto de associação
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
 ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769560"
 ---
 # <a name="association-set-end"></a>extremidade do conjunto de associação
 Uma *final do conjunto de associações* identifica a [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) e o [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) no final de uma [conjunto de associações](../../../../docs/framework/data/adonet/association-set.md). Termina do conjunto de associações são definidas como parte de um conjunto de associações; um conjunto de associações deve ter exatamente duas termina do conjunto de associações.  
   
  Uma definição de final do conjunto de associações contém as informações a seguir:  
   
--   Um dos tipos de entidade envolvidos no conjunto de associações. (Necessário)  
+- Um dos tipos de entidade envolvidos no conjunto de associações. (Necessário)  
   
--   O conjunto de entidades para o tipo de entidade envolvido no conjunto de associações. (Necessário)  
+- O conjunto de entidades para o tipo de entidade envolvido no conjunto de associações. (Necessário)  
   
 ## <a name="example"></a>Exemplo  
  O diagrama a seguir mostra um modelo conceitual com duas associações: `WrittenBy` e `PublishedBy`.  

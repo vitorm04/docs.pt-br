@@ -3,14 +3,14 @@ title: Exemplos de consulta
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783104"
 ---
 # <a name="query-examples"></a>Exemplos de consulta
-Esta seção fornece exemplos de Visual Basic e C# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores que usam o Visual Studio podem encontrar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores que usam o Visual Studio podem encontrar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *BD* geralmente é usado em exemplos de código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação. *BD* será considerado como uma instância de um *Northwind* classe que herda de <xref:System.Data.Linq.DataContext>.  

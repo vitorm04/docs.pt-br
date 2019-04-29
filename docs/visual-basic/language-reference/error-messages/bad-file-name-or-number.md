@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935220"
 ---
 # <a name="bad-file-name-or-number"></a>Nome ou número de arquivo inválido
 Ocorreu um erro ao tentar acessar o arquivo especificado. Entre as causas possíveis desse erro são:  
   
--   Uma declaração se refere a um arquivo com um nome de arquivo ou um número que não foi especificado no `FileOpen` instrução ou que foi especificado em um `FileOpen` instrução, mas foi subsequentemente fechado.  
+- Uma declaração se refere a um arquivo com um nome de arquivo ou um número que não foi especificado no `FileOpen` instrução ou que foi especificado em um `FileOpen` instrução, mas foi subsequentemente fechado.  
   
--   Uma declaração se refere a um arquivo com um número que está fora do intervalo de números de arquivos.  
+- Uma declaração se refere a um arquivo com um número que está fora do intervalo de números de arquivos.  
   
--   Uma declaração se refere a um nome de arquivo ou um número que não é válido.  
+- Uma declaração se refere a um nome de arquivo ou um número que não é válido.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   

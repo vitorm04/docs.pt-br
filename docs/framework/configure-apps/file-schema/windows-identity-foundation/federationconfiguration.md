@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791710"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura a <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) ao usar federated autenticação por meio do protocolo WS-Federation. Configura a <xref:System.Security.Claims.ClaimsAuthorizationManager> ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe para fornecer controle de acesso baseado em declarações.  
@@ -52,9 +52,9 @@ Configura a <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
 ## <a name="remarks"></a>Comentários  
  O \<federationConfiguration > elemento fornece configurações em dois cenários diferentes:  
   
--   Ao usar o WS-Federation em um aplicativo da Web passivo, o elemento contém configurações que configuram os <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Ele também faz referência a configuração de identidade a ser usado para definir manipuladores de token de segurança, certificados e componentes, como o Gerenciador de autorização de declarações e o Gerenciador de autenticação de declarações.  
+- Ao usar o WS-Federation em um aplicativo da Web passivo, o elemento contém configurações que configuram os <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Ele também faz referência a configuração de identidade a ser usado para definir manipuladores de token de segurança, certificados e componentes, como o Gerenciador de autorização de declarações e o Gerenciador de autenticação de declarações.  
   
--   Ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> de classe para fornecer controle de acesso baseado em declarações em seu código, o elemento faz referência a configuração de identidade que configura o Gerenciador de autorização de declarações e a política que é usada para fazer a autorização decisões. Isso é verdadeiro, mesmo em cenários que não são cenários passivos do Web; Por exemplo, aplicativos do Windows Communication Foundation (WCF) ou um aplicativo que não é baseado na Web. Se o aplicativo não for um aplicativo da Web passivo, o [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento (e seus elementos de política filho, se presente) da configuração de identidade referenciada pelo `<federationConfiguration>` elemento as únicas configurações são aplicadas. Todos os outros são ignorados.  
+- Ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> de classe para fornecer controle de acesso baseado em declarações em seu código, o elemento faz referência a configuração de identidade que configura o Gerenciador de autorização de declarações e a política que é usada para fazer a autorização decisões. Isso é verdadeiro, mesmo em cenários que não são cenários passivos do Web; Por exemplo, aplicativos do Windows Communication Foundation (WCF) ou um aplicativo que não é baseado na Web. Se o aplicativo não for um aplicativo da Web passivo, o [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento (e seus elementos de política filho, se presente) da configuração de identidade referenciada pelo `<federationConfiguration>` elemento as únicas configurações são aplicadas. Todos os outros são ignorados.  
   
  Independentemente do cenário, o tempo de execução carrega a configuração de Federação do padrão. O comportamento é definido da seguinte maneira:  
   

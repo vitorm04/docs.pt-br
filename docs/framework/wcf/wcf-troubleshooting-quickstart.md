@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780816"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista diversos problemas conhecidos, os clientes têm executado até ao desenvolver clientes WCF e serviços. Se o problema que está ocorrendo não estiver nessa lista, é recomendável que configurar o rastreamento para seu serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador do arquivo de rastreamento e obter informações detalhadas sobre exceções que possam estar ocorrendo dentro do serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [Ferramenta de Visualizador de rastreamento (SvcTraceViewer.exe) de serviço](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Meu serviço e cliente funcionem bem, mas eu não é possível fazê-los funcionar quando o cliente está em outro computador? O que está acontecendo?  
  Dependendo da exceção, pode haver vários problemas:  
   
--   Talvez você precise alterar os endereços de ponto de extremidade do cliente para o nome de host e não "localhost".  
+- Talvez você precise alterar os endereços de ponto de extremidade do cliente para o nome de host e não "localhost".  
   
--   Talvez você precise abrir a porta para o aplicativo. Para obter detalhes, consulte [instruções do Firewall](../../../docs/framework/wcf/samples/firewall-instructions.md) de amostras do SDK.  
+- Talvez você precise abrir a porta para o aplicativo. Para obter detalhes, consulte [instruções do Firewall](../../../docs/framework/wcf/samples/firewall-instructions.md) de amostras do SDK.  
   
--   Para outros problemas possíveis, consulte o tópico de exemplos [executando os exemplos do Windows Communication Foundation](./samples/running-the-samples.md).  
+- Para outros problemas possíveis, consulte o tópico de exemplos [executando os exemplos do Windows Communication Foundation](./samples/running-the-samples.md).  
   
--   Se o cliente está usando as credenciais do Windows e a exceção é um <xref:System.ServiceModel.Security.SecurityNegotiationException>, configure o Kerberos da seguinte maneira.  
+- Se o cliente está usando as credenciais do Windows e a exceção é um <xref:System.ServiceModel.Security.SecurityNegotiationException>, configure o Kerberos da seguinte maneira.  
   
-    1.  Adicione as credenciais de identidade para o elemento de ponto de extremidade no arquivo de App. config do cliente:  
+    1. Adicione as credenciais de identidade para o elemento de ponto de extremidade no arquivo de App. config do cliente:  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Execute o serviço auto-hospedado na conta do sistema ou NetworkService. Você pode executar este comando para criar uma janela de comando na conta do sistema:  
+    2. Execute o serviço auto-hospedado na conta do sistema ou NetworkService. Você pode executar este comando para criar uma janela de comando na conta do sistema:  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  Hospede o serviço no Internet Information Services (IIS), que, por padrão, usa a conta de serviço (SPN) nome da entidade.  
+    3. Hospede o serviço no Internet Information Services (IIS), que, por padrão, usa a conta de serviço (SPN) nome da entidade.  
   
-    4.  Registre um novo SPN com o domínio usando o SetSPN. Observe que você precisará ser um administrador de domínio para fazer isso.  
+    4. Registre um novo SPN com o domínio usando o SetSPN. Observe que você precisará ser um administrador de domínio para fazer isso.  
   
  Para obter mais informações sobre o protocolo Kerberos, consulte [conceitos de segurança utilizados no WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) e:  
   
--   [Depuração de erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Depuração de erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registrando nomes da entidade de serviço Kerberos usando HTTP. sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrando nomes da entidade de serviço Kerberos usando HTTP. sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos explicado](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos explicado](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Quando eu gero uma FaultException\<exceção > em que o tipo é uma exceção, eu sempre recebem um tipo FaultException geral no cliente e não o tipo genérico. O que está acontecendo?  
  É recomendável que você crie seu próprio erro personalizado do tipo de dados e declarar que como o tipo de detalhe no seu contrato de falha. O motivo é que, usando tipos de exceção fornecido pelo sistema:  
   
--   Cria uma dependência de tipo que remove uma das maiores vantagens de aplicativos orientados a serviço.  
+- Cria uma dependência de tipo que remove uma das maiores vantagens de aplicativos orientados a serviço.  
   
--   Não podem depender de serialização de uma maneira padrão de exceções. Alguns — como <xref:System.Security.SecurityException>— pode não ser serializável em todos os.  
+- Não podem depender de serialização de uma maneira padrão de exceções. Alguns — como <xref:System.Security.SecurityException>— pode não ser serializável em todos os.  
   
--   Expõe os detalhes de implementação interna para os clientes. Para obter mais informações, consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- Expõe os detalhes de implementação interna para os clientes. Para obter mais informações, consulte [especificação e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Se você estiver depurando um aplicativo, no entanto, você pode serializar informações de exceção e retorná-lo para o cliente usando o <xref:System.ServiceModel.Description.ServiceDebugBehavior> classe.  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791931"
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciais (Visual Basic)
 Métodos parciais permitem que os desenvolvedores insiram lógica personalizada no código. Normalmente, o código é parte de uma classe gerado pelo designer. Métodos parciais são definidos em uma classe parcial que é criada por um gerador de código, e elas são usadas para fornecer uma notificação de que algo foi alterado. Eles permitem ao desenvolvedor especificar o comportamento personalizado em resposta à alteração.  
@@ -33,11 +33,11 @@ End Sub
   
  A definição deve atender aos seguintes condições:  
   
--   O método deve ser um `Sub`, e não um `Function`.  
+- O método deve ser um `Sub`, e não um `Function`.  
   
--   O corpo do método deve ser deixado vazio.  
+- O corpo do método deve ser deixado vazio.  
   
--   O modificador de acesso deve ser `Private`.  
+- O modificador de acesso deve ser `Private`.  
   
 ## <a name="implementation"></a>Implementação  
  A implementação consiste basicamente em preencher o corpo do método parcial. A implementação é normalmente em uma classe parcial separada da definição e é escrita por um desenvolvedor que deseja estender o código gerado.  

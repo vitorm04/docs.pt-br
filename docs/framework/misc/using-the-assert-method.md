@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869000"
 ---
 # <a name="using-the-assert-method"></a>Usando o método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073722"
   
  A ilustração a seguir mostra o que acontece quando você usa **Assert**. Suponha que as instruções a seguir são verdadeiras sobre assemblies, A, B, C, E e F e duas permissões, P1 e P1A:  
   
--   P1A representa o direito de ler arquivos. txt na unidade C.  
+- P1A representa o direito de ler arquivos. txt na unidade C.  
   
--   P1 representa o direito de ler todos os arquivos na unidade C.  
+- P1 representa o direito de ler todos os arquivos na unidade C.  
   
--   P1A e P1 são ambos **FileIOPermission** tipos e P1A é um subconjunto de P1.  
+- P1A e P1 são ambos **FileIOPermission** tipos e P1A é um subconjunto de P1.  
   
--   Assemblies E e F concedeu permissão P1A.  
+- Assemblies E e F concedeu permissão P1A.  
   
--   O assembly C recebeu permissão de P1.  
+- O assembly C recebeu permissão de P1.  
   
--   Assemblies A e B foram concedidos permissões nem P1 nem P1A.  
+- Assemblies A e B foram concedidos permissões nem P1 nem P1A.  
   
--   Método um está contido em um assembly, o método B está contido no assembly B e assim por diante.  
+- Método um está contido em um assembly, o método B está contido no assembly B e assim por diante.  
   
  ![Diagrama que mostra os assemblies de método Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

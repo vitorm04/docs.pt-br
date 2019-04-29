@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787862"
 ---
 # <a name="how-to-create-a-secure-session"></a>Como: criar uma sessão segura
 Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) de associação, as associações fornecidas pelo sistema no Windows Communication Foundation (WCF) automaticamente usam sessões seguras quando a segurança de mensagens está habilitada.  
@@ -21,7 +21,7 @@ Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-ap
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Para especificar que um serviço usa sessões seguras usando uma das associações fornecidas pelo sistema  
   
--   Configure um serviço para usar uma associação fornecida pelo sistema que dá suporte à segurança de mensagem.  
+- Configure um serviço para usar uma associação fornecida pelo sistema que dá suporte à segurança de mensagem.  
   
      Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) de associação, quando as associações fornecidas pelo sistema estão configuradas para usar automaticamente a segurança de mensagem, WCF usa sessões seguras. A tabela a seguir lista as associações fornecidas pelo sistema que dão suporte à segurança de mensagem e se a segurança de mensagem é o mecanismo de segurança padrão.  
   
@@ -58,7 +58,7 @@ Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-ap
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Para especificar que um serviço usa sessões seguras usando uma associação personalizada  
   
--   Crie uma ligação personalizada que especifica que as mensagens SOAP são protegidas por uma sessão segura.  
+- Crie uma ligação personalizada que especifica que as mensagens SOAP são protegidas por uma sessão segura.  
   
      Para obter mais informações sobre como criar uma ligação personalizada, consulte [como: Personalizar uma associação fornecida pelo sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   

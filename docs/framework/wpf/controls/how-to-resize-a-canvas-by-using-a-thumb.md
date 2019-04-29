@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
 ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770741"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Como: Redimensionar uma tela usando um elevador
 Este exemplo mostra como usar um <xref:System.Windows.Controls.Primitives.Thumb> controle para redimensionar um <xref:System.Windows.Controls.Canvas> controle.  

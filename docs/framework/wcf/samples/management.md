@@ -3,21 +3,21 @@ title: Gerenciamento
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
 ms.openlocfilehash: b5bb0b72f5290548bb844ac4f00b6fbbd9891cb7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787537"
 ---
 # <a name="management"></a>Gerenciamento
 Esta seção contém exemplos que demonstram o gerenciamento do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Serviços do WCF e Rastreamento de Eventos para Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Demonstra como usar o rastreamento analítico do WCF para emitir eventos no evento de rastreamento para Windows (ETW).  
+ Demonstra como usar o rastreamento analítico do WCF para emitir eventos no rastreamento de eventos para Windows (ETW).  
   
  [Rastreamento analítico de WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
- Demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que WCF grava ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que WCF grava ETW em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  [Rastreamento circular](../../../../docs/framework/wcf/samples/circular-tracing.md)  
  Demonstra a implementação de um ouvinte de rastreamento de buffer circular.  
@@ -26,7 +26,7 @@ Esta seção contém exemplos que demonstram o gerenciamento do Windows Communic
  Demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o rastreamento de eventos para Windows (ETW).  
   
  [Estendendo o rastreamento](../../../../docs/framework/wcf/samples/extending-tracing.md)  
- Demonstra como estender o recurso de rastreamento do WCF, escrevendo rastreamentos de atividade definida pelo usuário no código de cliente e de serviço.  
+ Demonstra como estender o recurso de rastreamento do WCF, escrevendo rastreamentos de atividade definida pelo usuário no código de cliente e o serviço.  
   
  [Bloqueio de segurança PII](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
  Demonstra como controlar vários recursos relacionados à segurança de um serviço WCF.  
@@ -41,4 +41,4 @@ Esta seção contém exemplos que demonstram o gerenciamento do Windows Communic
  Demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos.  
   
  [Provedor de WMI](../../../../docs/framework/wcf/samples/wmi-provider.md)  
- Demonstra como coletar dados de serviços do WCF em tempo de execução usando o provedor do Windows Management Instrumentation (WMI) que é incorporado ao WCF.
+ Demonstra como coletar dados de serviços do WCF em tempo de execução, usando o provedor Windows Management Instrumentation (WMI) que é incorporado ao WCF.

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784040"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Instrução Option Explicit (Visual Basic)
 Força a declaração explícita de todas as variáveis em um arquivo ou permite que as declarações implícitas de variáveis.  
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Para definir o Option Explicit na linha de comando  
   
--   Incluir o [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) opção de compilador na **vbc** comando.  
+- Incluir o [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) opção de compilador na **vbc** comando.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Option Explicit` instrução para forçar a declaração explícita de todas as variáveis. Tentativa de usar uma variável não declarada causa um erro em tempo de compilação.  

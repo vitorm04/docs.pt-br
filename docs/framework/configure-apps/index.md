@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775863"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurando aplicativos usando arquivos de configuração 
 O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolvedores e administradores controle e flexibilidade sobre a maneira de executar aplicativos. Os arquivos de configuração são arquivos XML que podem ser alterados quando necessário. Um administrador pode controlar quais recursos protegidos um aplicativo pode acessar, quais versões de assemblies um aplicativo usará e onde os aplicativos e objetos remotos são localizados. Os desenvolvedores podem colocar definições em arquivos de configuração, eliminando a necessidade de recompilar um aplicativo sempre que uma configuração é alterada. Esta seção descreve o que pode ser configurado e por que a configuração de um aplicativo pode ser útil.  
@@ -66,7 +66,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
  O nome e o local do arquivo de configuração de aplicativo dependem do host do aplicativo que pode ser um dos seguintes:  
   
--   Aplicativo hospedado em executável.  
+- Aplicativo hospedado em executável.  
   
      Esses aplicativos têm dois arquivos de configuração: um arquivo de configuração de origem, que é modificado pelo desenvolvedor durante o desenvolvimento, e um arquivo de saída que é distribuído com o aplicativo.  
   
@@ -74,11 +74,11 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
      O Visual Studio copia automaticamente o arquivo de configuração de origem para o diretório onde o assembly compilado é colocado para criar o arquivo de configuração de saída que é implantado com o aplicativo. Em alguns casos, o Visual Studio pode modificar o arquivo de configuração de saída. Para obter mais informações, consulte a seção [Redirecting assembly versions at the app level](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) (Redirecionando versões de assembly no nível do aplicativo) do artigo [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md) (Redirecionando versões de assembly).  
   
--   Aplicativo hospedado no ASP.NET.  
+- Aplicativo hospedado no ASP.NET.  
   
      Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [definições de configuração do ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Aplicativo hospedado no Internet Explorer.  
+- Aplicativo hospedado no Internet Explorer.  
   
      Se um aplicativo hospedado no Internet Explorer possuir um arquivo de configuração, o local desse arquivo será especificado em uma marca `<link>` com a seguinte sintaxe:  
   
@@ -94,11 +94,11 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
  Os arquivos de configuração de segurança estão nos seguintes locais:  
   
--   Arquivo de configuração de política empresarial: %*runtime-install-path*%\Config\Enterprisesec.config  
+- Arquivo de configuração de política empresarial: %*runtime-install-path*%\Config\Enterprisesec.config  
   
--   Arquivo de configuração de política de computador: %*runtime-install-path*%\Config\Security.config  
+- Arquivo de configuração de política de computador: %*runtime-install-path*%\Config\Security.config  
   
--   Arquivo de configuração de política de usuário: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- Arquivo de configuração de política de usuário: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como: Localizar Assemblies usando DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
 ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784209"
 ---
 # <a name="statements-visual-basic"></a>Instruções (Visual Basic)
 Os tópicos nesta seção contêm tabelas da declaração do Visual Basic e instruções executáveis e de listas importantes que se aplicam a muitas instruções.  

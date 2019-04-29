@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792828"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
@@ -25,13 +25,13 @@ Em um aplicativo de terceira parte confiável, a autorização determina quais r
 ### <a name="iprincipalisinrole-method"></a>Método IPrincipal.IsInRole  
  Para implementar a abordagem RBAC em aplicativos baseados em declarações, use o método **IsInRole()** na interface **IPrinicpal**, assim como você faria em aplicativos não baseados em declarações. Há várias maneiras de usar o método **IsInRole()**:  
   
--   Chamando **IPrincipal.IsInRole("Administrator")** explicitamente. Nessa abordagem, o resultado é um booleano. Use-a em suas instruções condicionais. Ela pode ser usada arbitrariamente em qualquer local de seu código.  
+- Chamando **IPrincipal.IsInRole("Administrator")** explicitamente. Nessa abordagem, o resultado é um booleano. Use-a em suas instruções condicionais. Ela pode ser usada arbitrariamente em qualquer local de seu código.  
   
--   Usando a demanda de segurança **PrincipalPermission.Demand()**. Nessa abordagem, o resultado é uma exceção caso a demanda não seja atendida. Isso deve se ajustar à sua estratégia de tratamento de exceções. A geração de exceções é muito mais cara, de uma perspectiva de desempenho, comparada ao retorno do booliano. Isso pode ser usado em qualquer local de seu código.  
+- Usando a demanda de segurança **PrincipalPermission.Demand()**. Nessa abordagem, o resultado é uma exceção caso a demanda não seja atendida. Isso deve se ajustar à sua estratégia de tratamento de exceções. A geração de exceções é muito mais cara, de uma perspectiva de desempenho, comparada ao retorno do booliano. Isso pode ser usado em qualquer local de seu código.  
   
--   Usando os atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Essa abordagem é chamada declarativa porque é usada para decorar métodos. Ela não pode ser usada em blocos de códigos dentro das implementações do método. O resultado é uma exceção caso a demanda não seja atendida. Você deve se certificar de que ela se ajuste à sua estratégia de tratamento de exceções.  
+- Usando os atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Essa abordagem é chamada declarativa porque é usada para decorar métodos. Ela não pode ser usada em blocos de códigos dentro das implementações do método. O resultado é uma exceção caso a demanda não seja atendida. Você deve se certificar de que ela se ajuste à sua estratégia de tratamento de exceções.  
   
--   Usando a autorização de URL, usando a seção **\<authorization>** em **web.config**. Essa abordagem é apropriada quando você está gerenciando a autorização no nível de URL. Esse é o nível mais grosseiro entre os mencionados anteriormente. A vantagem dessa abordagem é que as alterações são feitas no arquivo de configuração, o que significa que o código não deve ser compilado para se beneficiar da alteração.  
+- Usando a autorização de URL, usando a seção **\<authorization>** em **web.config**. Essa abordagem é apropriada quando você está gerenciando a autorização no nível de URL. Esse é o nível mais grosseiro entre os mencionados anteriormente. A vantagem dessa abordagem é que as alterações são feitas no arquivo de configuração, o que significa que o código não deve ser compilado para se beneficiar da alteração.  
   
 ### <a name="expressing-roles-as-claims"></a>Expressando funções como declarações  
  Quando o método **IsInRole()** é chamado, há uma verificação feita para ver se o usuário atual tem essa função. Em aplicativos com reconhecimento de declarações, a função é expressa por um tipo de declaração de função que deve estar disponível no token. O tipo de declaração de função é expresso usando o seguinte URI:  
@@ -40,11 +40,11 @@ Em um aplicativo de terceira parte confiável, a autorização determina quais r
   
  Há várias maneiras de enriquecer um token com um tipo de declaração de função:  
   
--   **Durante a emissão de token**. Quando um usuário é autenticado, a declaração de função pode ser emitida pelo STS do provedor de identidade ou por um provedor de federação, como o ACS (Serviço de Controle de Acesso) do Microsoft Azure.  
+- **Durante a emissão de token**. Quando um usuário é autenticado, a declaração de função pode ser emitida pelo STS do provedor de identidade ou por um provedor de federação, como o ACS (Serviço de Controle de Acesso) do Microsoft Azure.  
   
--   **Transformando declarações arbitrárias em um tipo de declaração de função usando ClaimsAuthenticationManager**. O ClaimsAuthenticationManager é um componente fornecido como parte do WIF. Ele permite que as solicitações sejam interceptadas quando iniciam um aplicativo, inspecionando os tokens e transformando-os adicionando, alterando ou removendo declarações. Para obter mais informações sobre como usar o ClaimsAuthenticationManager para transformar declarações, consulte [How To: Função de implementar com base em controle de acesso (RBAC) em um aplicativo do ASP.NET com suporte a declarações usando WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+- **Transformando declarações arbitrárias em um tipo de declaração de função usando ClaimsAuthenticationManager**. O ClaimsAuthenticationManager é um componente fornecido como parte do WIF. Ele permite que as solicitações sejam interceptadas quando iniciam um aplicativo, inspecionando os tokens e transformando-os adicionando, alterando ou removendo declarações. Para obter mais informações sobre como usar o ClaimsAuthenticationManager para transformar declarações, consulte [How To: Função de implementar com base em controle de acesso (RBAC) em um aplicativo do ASP.NET com suporte a declarações usando WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **Mapeando declarações arbitrárias para um tipo de função usando a seção de configuração samlSecurityTokenRequirement** – uma abordagem declarativa em que a transformação de declarações é feita usando apenas a configuração, sem a necessidade de codificação.  
+- **Mapeando declarações arbitrárias para um tipo de função usando a seção de configuração samlSecurityTokenRequirement** – uma abordagem declarativa em que a transformação de declarações é feita usando apenas a configuração, sem a necessidade de codificação.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Autorização baseada em declarações  

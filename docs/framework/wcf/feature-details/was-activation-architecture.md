@@ -3,11 +3,11 @@ title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932697"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
 Este tópico relaciona e descreve os componentes do Windows Process Activation Service (também conhecido como WAS).  
@@ -15,15 +15,15 @@ Este tópico relaciona e descreve os componentes do Windows Process Activation S
 ## <a name="activation-components"></a>Componentes de ativação  
  FOI consiste em vários componentes de arquitetura:  
   
--   Adaptadores de escuta. Serviços do Windows que recebem mensagens em protocolos de rede específico e se comunicar com o WAS para rotear mensagens de entrada para o processo de trabalho correto.  
+- Adaptadores de escuta. Serviços do Windows que recebem mensagens em protocolos de rede específico e se comunicar com o WAS para rotear mensagens de entrada para o processo de trabalho correto.  
   
--   ERA. O serviço do Windows que gerencia a criação e o tempo de vida de processos de trabalho.  
+- ERA. O serviço do Windows que gerencia a criação e o tempo de vida de processos de trabalho.  
   
--   O executável de processo de trabalho genérica (w3wp.exe).  
+- O executável de processo de trabalho genérica (w3wp.exe).  
   
--   Gerenciador de aplicativos. Gerencia a criação e o tempo de vida de domínios de aplicativos que processam hospedar aplicativos dentro do trabalhador.  
+- Gerenciador de aplicativos. Gerencia a criação e o tempo de vida de domínios de aplicativos que processam hospedar aplicativos dentro do trabalhador.  
   
--   Manipuladores de protocolo. Componentes específicos de protocolo que são executados no processo de trabalho e gerenciam a comunicação entre o processo de trabalho e os adaptadores de escuta individuais. Existem dois tipos de manipuladores de protocolo: processar manipuladores de protocolo e manipuladores de protocolo AppDomain.  
+- Manipuladores de protocolo. Componentes específicos de protocolo que são executados no processo de trabalho e gerenciam a comunicação entre o processo de trabalho e os adaptadores de escuta individuais. Existem dois tipos de manipuladores de protocolo: processar manipuladores de protocolo e manipuladores de protocolo AppDomain.  
   
  Ao WAS ativa uma instância do processo de trabalho, ele carrega os manipuladores de protocolo de processo necessários no processo de trabalho e usa o Gerenciador de aplicativos para criar um domínio de aplicativo para hospedar o aplicativo. O domínio do aplicativo carrega o código do aplicativo, bem como os manipuladores de protocolo AppDomain que os protocolos de rede usados pelo exigem aplicativo.  
   
