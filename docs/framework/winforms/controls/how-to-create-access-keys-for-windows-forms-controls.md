@@ -21,11 +21,11 @@ helpviewer_keywords:
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
 ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746792"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Como: Criar chaves de acesso para controles do Windows Forms
 Uma *chave de acesso* é um caractere de sublinhado no texto de um menu, item de menu ou rótulo de um controle como um botão. Com uma chave de acesso, o usuário pode "clicar" um botão pressionando a tecla ALT em combinação com a chave de acesso predefinidas. Por exemplo, se um botão executa um procedimento para imprimir um formulário e, portanto, seu `Text` estiver definida como "Print", adicionando um e comercial antes que a letra "P" faz com que a letra "P" seja sublinhada no texto do botão no tempo de execução. O usuário pode executar o comando associado ao botão pressionando ALT+P. Não é possível ter uma chave de acesso para um controle que não possa receber foco.  

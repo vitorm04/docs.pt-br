@@ -3,11 +3,11 @@ title: 'Como: escrever uma extensão para o ServiceContractGenerator'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
 ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766994"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Como: escrever uma extensão para o ServiceContractGenerator
 Este tópico descreve como escrever uma extensão para o <xref:System.ServiceModel.Description.ServiceContractGenerator>. Isso pode ser feito com a implementação de <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> um comportamento de operação de interface ou implementar o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interface em um comportamento de contrato. Este tópico mostra como implementar o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interface em um comportamento de contrato.  

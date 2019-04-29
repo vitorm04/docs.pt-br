@@ -6,8 +6,8 @@ ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772992"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 A especificação de descoberta não requer que os pontos de extremidade que participam do processo de descoberta para ser seguro. Aprimorando as mensagens de descoberta com segurança atenua os vários tipos de ataques (negação de serviço, a alteração da mensagem, reproduzir, falsificação). Este exemplo implementa canais personalizados de computação e verifique se as assinaturas de mensagem usando o formato de assinatura compact (descrito na seção 8.2 da especificação WS-Discovery). O exemplo dá suporte a ambos os [especificação de descoberta de 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e o [versão 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ A especificação de descoberta não requer que os pontos de extremidade que par
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O exemplo inclui uma biblioteca e 4 aplicativos de console:  
   
--   **DiscoverySecurityChannels**: Uma biblioteca que expõe a associação de segurança. A biblioteca computa e verifica a assinatura compact para mensagens de entrada/saída.  
+- **DiscoverySecurityChannels**: Uma biblioteca que expõe a associação de segurança. A biblioteca computa e verifica a assinatura compact para mensagens de entrada/saída.  
   
--   **Serviço**: Um serviço que expõe o contrato ICalculatorService, auto-hospedado. O serviço está marcado como detectável. O usuário Especifica os detalhes do certificado usado para assinar as mensagens, especificando o local do repositório e o nome e o nome da entidade ou outro identificador exclusivo para o certificado e o armazenamento onde os certificados de cliente estão localizados (os certificados usados para verificar a assinatura para mensagens de entrada). Com base nesses detalhes, um UdpDiscoveryEndpoint com segurança adicional é criado e usado.  
+- **Serviço**: Um serviço que expõe o contrato ICalculatorService, auto-hospedado. O serviço está marcado como detectável. O usuário Especifica os detalhes do certificado usado para assinar as mensagens, especificando o local do repositório e o nome e o nome da entidade ou outro identificador exclusivo para o certificado e o armazenamento onde os certificados de cliente estão localizados (os certificados usados para verificar a assinatura para mensagens de entrada). Com base nesses detalhes, um UdpDiscoveryEndpoint com segurança adicional é criado e usado.  
   
--   **Cliente**: Esta classe tenta descobrir um ICalculatorService e para chamar métodos no serviço. Novamente, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> com adicionado a segurança é criada e usada para assinar e verificar as mensagens.  
+- **Cliente**: Esta classe tenta descobrir um ICalculatorService e para chamar métodos no serviço. Novamente, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> com adicionado a segurança é criada e usada para assinar e verificar as mensagens.  
   
--   **AnnouncementListener**: Um serviço auto-hospedado que escuta anúncios online e offline e usa o ponto de extremidade de comunicado de seguro.  
+- **AnnouncementListener**: Um serviço auto-hospedado que escuta anúncios online e offline e usa o ponto de extremidade de comunicado de seguro.  
   
 > [!NOTE]
 >  Se o Setup. bat for executado várias vezes, o Gerenciador de certificados solicitará a escolha de um certificado para adicionar, pois há certificados duplicados. Nesse caso, o Setup. bat deve ser anulada e Cleanup deve ser chamado, porque as duplicatas já foram criadas. CleanUp também solicitará que você escolha um certificado a ser excluído. Selecione um certificado na lista e continuar a executar CleanUp até que nenhum certificado restantes.  

@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761358"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Visão geral do controle MenuStrip (Windows Forms)
 Os menus expõem funcionalidades para os usuários, mantendo os comandos que são agrupados por um tema comum.  
@@ -26,11 +26,11 @@ Os menus expõem funcionalidades para os usuários, mantendo os comandos que sã
 ## <a name="ways-to-use-the-menustrip-control"></a>Maneiras de usar o controle MenuStrip  
  Use o <xref:System.Windows.Forms.MenuStrip> o controle para:  
   
--   Crie facilmente menus personalizados e comumente usados que dão suporte a recursos avançados de interface do usuário e layout, tais como ordenação e alinhamento de texto e imagem, operações do tipo "arrastar e soltar", MDI, estouro e modos alternativos de acessar os comandos de menu.  
+- Crie facilmente menus personalizados e comumente usados que dão suporte a recursos avançados de interface do usuário e layout, tais como ordenação e alinhamento de texto e imagem, operações do tipo "arrastar e soltar", MDI, estouro e modos alternativos de acessar os comandos de menu.  
   
--   Suporte à aparência e comportamento típicos do sistema operacional.  
+- Suporte à aparência e comportamento típicos do sistema operacional.  
   
--   Manipule eventos de forma consistente em todos os contêineres e os itens contidos da mesma forma que você manipula eventos para outros controles.  
+- Manipule eventos de forma consistente em todos os contêineres e os itens contidos da mesma forma que você manipula eventos para outros controles.  
   
  A tabela a seguir mostra algumas propriedades especialmente importantes de <xref:System.Windows.Forms.MenuStrip> e associados a classes.  
   

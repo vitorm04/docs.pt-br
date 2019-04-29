@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754694"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Melhorando a depuração com os atributos de exibição do depurador
 
@@ -45,11 +45,11 @@ Por exemplo, se um objeto do C# tiver um `ToString()` substituído, o depurador 
 ## <a name="using-the-debuggerbrowsableattribute"></a>Usando o DebuggerBrowsableAttribute
  Aplique o <xref:System.Diagnostics.DebuggerBrowsableAttribute> a um campo ou uma propriedade para especificar como o campo ou a propriedade deve ser exibida na janela do depurador. O construtor desse atributo usa um dos valores de enumeração <xref:System.Diagnostics.DebuggerBrowsableState>, que especifica um dos seguintes estados:
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> indica que o membro não é exibido na janela de dados.  Por exemplo, o uso desse valor para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> em um campo remove o campo da hierarquia; o campo não é exibido quando você expande o tipo delimitador clicando no sinal de adição (+) da instância de tipo.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> indica que o membro não é exibido na janela de dados.  Por exemplo, o uso desse valor para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> em um campo remove o campo da hierarquia; o campo não é exibido quando você expande o tipo delimitador clicando no sinal de adição (+) da instância de tipo.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica que o membro é exibido, mas não expandido por padrão.  Este é o comportamento padrão.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica que o membro é exibido, mas não expandido por padrão.  Este é o comportamento padrão.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica que o próprio membro não é mostrado, mas seus objetos constituintes são exibidos, se ele é uma matriz ou uma coleção.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica que o próprio membro não é mostrado, mas seus objetos constituintes são exibidos, se ele é uma matriz ou uma coleção.
 
 > [!NOTE]
 >  Não há suporte para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> no Visual Basic no .NET Framework versão 2.0.

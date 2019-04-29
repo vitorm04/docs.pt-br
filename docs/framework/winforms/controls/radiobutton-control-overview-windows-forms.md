@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755942"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Visão geral do controle RadioButton (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> controles apresentam um conjunto de duas ou mais opções mutuamente exclusivas para o usuário. Embora os botões de opção e caixas de seleção pareçam funcionar da mesma forma, há uma diferença importante: quando um usuário seleciona um botão de opção, os outros botões de opção no mesmo grupo não podem ser selecionados juntamente. Por outro lado, qualquer número de caixas de seleção pode ser selecionado. Definir um grupo de botões de opção informa ao usuário: “Esse é um conjunto de opções, dentre as quais você pode escolher uma e apenas uma”.  

@@ -3,11 +3,11 @@ title: Provedor de função e associação
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756111"
 ---
 # <a name="membership-and-role-provider"></a>Provedor de função e associação
 O provedor de função e associação que demonstra como um serviço pode usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedores de associação e funções para autenticar e autorizar clientes.  
@@ -19,15 +19,15 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
  O exemplo demonstra como:  
   
--   Um cliente pode autenticar usando a combinação da senha do nome de usuário.  
+- Um cliente pode autenticar usando a combinação da senha do nome de usuário.  
   
--   O servidor pode validar as credenciais do cliente em relação a [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação.  
+- O servidor pode validar as credenciais do cliente em relação a [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação.  
   
--   O servidor pode ser autenticado usando o certificado do servidor x. 509.  
+- O servidor pode ser autenticado usando o certificado do servidor x. 509.  
   
--   O servidor pode mapear o cliente autenticado a uma função usando o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função.  
+- O servidor pode mapear o cliente autenticado a uma função usando o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função.  
   
--   O servidor pode usar o `PrincipalPermissionAttribute` para controlar o acesso a determinados métodos que são expostos pelo serviço.  
+- O servidor pode usar o `PrincipalPermissionAttribute` para controlar o acesso a determinados métodos que são expostos pelo serviço.  
   
  Os provedores de associação e funções são configurados para usar um armazenamento de apoio do SQL Server. Uma cadeia de caracteres de conexão e várias opções são especificadas no arquivo de configuração de serviço. O provedor de associação é dado o nome `SqlMembershipProvider` enquanto o provedor de função recebe o nome `SqlRoleProvider`.  
   
@@ -164,7 +164,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
 ### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
 > [!NOTE]
 >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
  O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.  
   
--   Criando o certificado do servidor.  
+- Criando o certificado do servidor.  
   
      As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. A variável % SERVER_NAME % Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. Esse arquivo em lotes padrão é-localhost.  
   
@@ -190,7 +190,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.  
+- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.  
   
      As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.  
   

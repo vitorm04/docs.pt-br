@@ -1,30 +1,30 @@
 ---
-title: 'Como: Propriedades de dados de instância de Deserialize'
+title: 'Como: desserializar propriedades de dados de instância'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
 ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761436"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a>Como: Propriedades de dados de instância de Deserialize
+# <a name="how-to-deserialize-instance-data-properties"></a>Como: desserializar propriedades de dados de instância
 Pode haver situações quando um usuário ou um administrador de fluxo de trabalho podem querer inspecione manualmente o estado de uma instância persistentes de fluxo de trabalho. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fornece uma exibição na tabela de instâncias que expõe as seguintes quatro colunas:  
   
--   ReadWritePrimitiveDataProperties  
+- ReadWritePrimitiveDataProperties  
   
--   WriteOnlyPrimitiveDataProperties  
+- WriteOnlyPrimitiveDataProperties  
   
--   ReadWriteComplexDataProperties  
+- ReadWriteComplexDataProperties  
   
--   WriteOnlyComplexDataProperties  
+- WriteOnlyComplexDataProperties  
   
- Propriedades de dados primitivo consultem propriedades cujos tipos do .NET Framework são considerados "comum" (por exemplo, Int32 e cadeia de caracteres), enquanto as propriedades de dados complexos se referir a todos os outros tipos. Uma enumeração exata de tipos primitivos for encontrada posteriormente neste exemplo de código.  
+ Propriedades de dados primitivos se referem às propriedades cujos tipos do .NET Framework são considerados "comuns" (por exemplo, Int32 e cadeia de caracteres), enquanto as propriedades de dados complexos se referir a todos os outros tipos. Uma enumeração exata de tipos primitivos for encontrada posteriormente neste exemplo de código.  
   
  As propriedades de leitura/gravação às propriedades que são retornadas de volta para o tempo de execução de fluxo de trabalho que uma instância é carregada. As propriedades WriteOnly são escritas a base de dados e então nunca ler novamente.  
   
- Este exemplo fornece o código que permite que um usuário para desserializar propriedades primitivas de dados. Dada uma matriz de bytes lido da coluna de ReadWritePrimitiveDataProperties ou WriteOnlyPrimitiveDataProperties, esse código converterá o objeto binário grande (BLOB) em um <xref:System.Collections.Generic.Dictionary%602> do tipo \<XName, objeto > onde cada valor de chave par representa um nome de propriedade e seu valor correspondente.  
+ Este exemplo fornece o código que permite que um usuário para desserializar propriedades primitivas de dados. Dada uma matriz de bytes lido da coluna de ReadWritePrimitiveDataProperties ou de WriteOnlyPrimitiveDataProperties, esse código irá converter o objeto binário grande (BLOB) em um <xref:System.Collections.Generic.Dictionary%602> do tipo \<XName, objeto > em que cada valor de chave par representa um nome de propriedade e seu valor correspondente.  
   
  Este exemplo não demonstra como desserializar propriedades de dados complexos porque isso não é uma operação atualmente suportados.  
   

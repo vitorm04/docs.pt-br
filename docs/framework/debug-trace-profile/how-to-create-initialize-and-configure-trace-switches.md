@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754343"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: criar, inicializar e configurar opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento.  
@@ -75,11 +75,11 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 2. Se o projeto não contiver um arquivo de configuração (app.config ou Web.config), no menu **Projeto**, selecione **Adicionar Novo Item**.  
   
-    -   **Visual Basic:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo de configuração de aplicativo**.  
+    - **Visual Basic:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo de configuração de aplicativo**.  
   
          O arquivo de configuração de aplicativo será criado e aberto. Este é um documento XML cujo elemento raiz é `<configuration>.`  
   
-    -   **Visual C#:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo XML**. Nomeie esse arquivo **app.config**. No editor de XML, após a declaração XML, adicione o seguinte XML:  
+    - **Visual C#:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo XML**. Nomeie esse arquivo **app.config**. No editor de XML, após a declaração XML, adicione o seguinte XML:  
   
         ```xml  
         <configuration>  

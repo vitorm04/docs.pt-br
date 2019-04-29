@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748170"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  
@@ -51,9 +51,9 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
   
  Para fazer um Formulário do Windows funcionar corretamente em um aplicativo cliente COM, execute-o em um loop de mensagem do Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
   
--   Use o <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> método para exibir o formulário do Windows. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Use o <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> método para exibir o formulário do Windows. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
--   Exiba cada Formulário do Windows em um novo thread. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Exiba cada Formulário do Windows em um novo thread. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Consulte também
 

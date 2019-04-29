@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747501"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Passo a passo: demonstrando herança visual
 A herança visual permite que você veja os controles no formulário de base e adicione novos controles. Neste passo a passo, você criará um formulário de base e o compilará em uma biblioteca de classes. Você importará esta biblioteca de classes em outro projeto e criará um novo formulário que herda do formulário de base. Durante este passo a passo, você aprenderá a:  
   
--   Criar um projeto de biblioteca de classes que contém um formulário de base.  
+- Criar um projeto de biblioteca de classes que contém um formulário de base.  
   
--   Adicionar um botão com propriedades que as classes derivadas do formulário de base podem modificar.  
+- Adicionar um botão com propriedades que as classes derivadas do formulário de base podem modificar.  
   
--   Adicionar um botão que não pode ser modificado por herdeiros do formulário de base.  
+- Adicionar um botão que não pode ser modificado por herdeiros do formulário de base.  
   
--   Criar um projeto que contém um formulário que herda de `BaseForm`.  
+- Criar um projeto que contém um formulário que herda de `BaseForm`.  
   
  Por fim, este passo a passo demonstrará a diferença entre controles particulares e protegidos em um formulário herdado.  
   
@@ -76,11 +76,11 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 3. Na janela Propriedades, defina as seguintes propriedades do botão:  
   
-    -   Defina a propriedade **Texto** como **Say Hello**.  
+    - Defina a propriedade **Texto** como **Say Hello**.  
   
-    -   Defina a propriedade **(Nome)** como **btnProtected**.  
+    - Defina a propriedade **(Nome)** como **btnProtected**.  
   
-    -   Defina a **modificadores** propriedade **protegido**. Isso possibilita que formulários que herdam de **Form1** modifiquem as propriedades de **btnProtected**.  
+    - Defina a **modificadores** propriedade **protegido**. Isso possibilita que formulários que herdam de **Form1** modifiquem as propriedades de **btnProtected**.  
   
 4. Clique duas vezes no botão **Say Hello** para adicionar um manipulador de eventos para o evento **Clique**.  
   
@@ -100,11 +100,11 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 2. Adicione um segundo botão e defina suas propriedades da seguinte maneira:  
   
-    -   Defina a propriedade **Texto** como **Say Goodbye**.  
+    - Defina a propriedade **Texto** como **Say Goodbye**.  
   
-    -   Defina a propriedade **(Nome)** como **btnPrivate**.  
+    - Defina a propriedade **(Nome)** como **btnPrivate**.  
   
-    -   Defina a propriedade **(Nome)** como **Particular**. Isso possibilita que formulários que herdam de **Form1** modifiquem as propriedades de **btnPrivate**.  
+    - Defina a propriedade **(Nome)** como **Particular**. Isso possibilita que formulários que herdam de **Form1** modifiquem as propriedades de **btnPrivate**.  
   
 3. Clique duas vezes no botão **Say Goodbye** para adicionar um manipulador de eventos para o evento **Clique**. Coloque a seguinte linha de código no procedimento do evento:  
   
@@ -148,9 +148,9 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 8. Se você estiver usando o Visual c#:  
   
-    1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1** no projeto **InheritanceTest** e selecione **Excluir**. Na caixa de mensagem que aparece, clique em **OK** para confirmar a exclusão.  
+    1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1** no projeto **InheritanceTest** e selecione **Excluir**. Na caixa de mensagem que aparece, clique em **OK** para confirmar a exclusão.  
   
-    2.  Abra o arquivo Program.cs e altere a linha `Application.Run(new Form1());` para `Application.Run(new Form2());`.  
+    2. Abra o arquivo Program.cs e altere a linha `Application.Run(new Form1());` para `Application.Run(new Form2());`.  
   
 9. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **InheritanceTest** e selecione **Definir como projeto de inicialização**.  
   

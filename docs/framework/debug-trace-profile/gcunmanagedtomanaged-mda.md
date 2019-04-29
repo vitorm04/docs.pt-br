@@ -15,11 +15,11 @@ ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 66f662114868832f909d734a482e1dc9aefb841a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754473"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>MDA gcUnmanagedToManaged
 O MDA (assistente para depuração gerenciada) `gcUnmanagedToManaged` causa uma coleta de lixo sempre que um thread faz a transição de código não gerenciado para código gerenciado.  

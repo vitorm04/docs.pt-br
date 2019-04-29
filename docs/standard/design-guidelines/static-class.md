@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: KrzysztofCwalina
 ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762040"
 ---
 # <a name="static-class-design"></a>Design de classe estática
-Uma classe estática é definida como uma classe que contém apenas membros estáticos (claro além os membros de instância herdados de <xref:System.Object?displayProperty=nameWithType> e, possivelmente, um construtor particular). Algumas linguagens fornecem suporte interno para classes estáticas. No C# 2.0 e posterior, quando uma classe é declarada como estático, é abstrato, selado, e nenhum membro de instância pode ser substituído ou declarado.  
+Uma classe estática é definida como uma classe que contém apenas membros estáticos (claro além os membros de instância herdados de <xref:System.Object?displayProperty=nameWithType> e, possivelmente, um construtor particular). Algumas linguagens fornecem suporte interno para classes estáticas. No c# 2.0 e posterior, quando uma classe é declarada como estático, é abstrato, selado, e nenhum membro de instância pode ser substituído ou declarado.  
   
  Classes estáticas são um meio-termo entre puro design orientado a objeto e simplicidade. Eles normalmente são usados para fornecer atalhos para outras operações (como <xref:System.IO.File?displayProperty=nameWithType>), os detentores dos métodos de extensão ou a funcionalidade para o qual um wrapper completo orientado a objeto é injustificado (como <xref:System.Environment?displayProperty=nameWithType>).  
   

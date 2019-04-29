@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764895"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Visão geral de renderização de gráficos do WPF
 Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ele se concentra na função do <xref:System.Windows.Media.Visual> classe para suporte à renderização no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo.  
@@ -24,27 +24,27 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
  O <xref:System.Windows.Media.Visual> objeto é um núcleo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objeto, cuja função principal é fornecer suporte a renderização. Controles de interface do usuário, como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivam o <xref:System.Windows.Media.Visual> de classe e usá-lo para persistir seus dados de renderização. O <xref:System.Windows.Media.Visual> objeto oferece suporte para:  
   
--   Exibição de saída: Renderizando o persistente, serializado conteúdo de desenho de um visual.  
+- Exibição de saída: Renderizando o persistente, serializado conteúdo de desenho de um visual.  
   
--   Transformações: Execução de transformações em um visual.  
+- Transformações: Execução de transformações em um visual.  
   
--   Recorte: Fornecendo suporte de região de recorte para um visual.  
+- Recorte: Fornecendo suporte de região de recorte para um visual.  
   
--   O teste de clique: Determinando se uma coordenada ou geometria está contida dentro dos limites de um visual.  
+- O teste de clique: Determinando se uma coordenada ou geometria está contida dentro dos limites de um visual.  
   
--   Cálculos de caixa delimitadora: Determinando o retângulo delimitador de um visual.  
+- Cálculos de caixa delimitadora: Determinando o retângulo delimitador de um visual.  
   
  No entanto, o <xref:System.Windows.Media.Visual> objeto não inclui suporte para recursos de não renderização, tais como:  
   
--   Manipulação de eventos  
+- Manipulação de eventos  
   
--   Layout  
+- Layout  
   
--   Estilos  
+- Estilos  
   
--   Associação de dados  
+- Associação de dados  
   
--   Globalização  
+- Globalização  
   
  <xref:System.Windows.Media.Visual> é exposta como uma classe abstrata pública da qual classes filho devem ser derivadas. A ilustração a seguir mostra a hierarquia dos objetos visuais que são expostos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -127,13 +127,13 @@ Ordem das operações do DrawingGroup
   
  Há diversos pontos a observar sobre a hierarquia de objetos visuais e listas de instruções de gráficos vetoriais:  
   
--   A ordem na hierarquia representa a ordem de renderização das informações de desenho. Do elemento visual raiz, a ordem de renderização passa pelos elementos filho da esquerda para a direita, de cima para baixo. Se um determinado elemento tem elementos visuais filho, a ordem de renderização passa por eles antes de passar pelos irmãos desse elemento.  
+- A ordem na hierarquia representa a ordem de renderização das informações de desenho. Do elemento visual raiz, a ordem de renderização passa pelos elementos filho da esquerda para a direita, de cima para baixo. Se um determinado elemento tem elementos visuais filho, a ordem de renderização passa por eles antes de passar pelos irmãos desse elemento.  
   
--   Elementos de nós não folha na hierarquia, como <xref:System.Windows.Controls.ContentPresenter>, são usados para conter elementos filho – eles não contêm listas de instruções.  
+- Elementos de nós não folha na hierarquia, como <xref:System.Windows.Controls.ContentPresenter>, são usados para conter elementos filho – eles não contêm listas de instruções.  
   
--   Se um elemento visual contém uma lista de instruções de gráfico vetorial e filhos visuais, a lista de instruções no elemento visual pai é renderizada antes de desenhos em qualquer um dos objetos filho visuais.  
+- Se um elemento visual contém uma lista de instruções de gráfico vetorial e filhos visuais, a lista de instruções no elemento visual pai é renderizada antes de desenhos em qualquer um dos objetos filho visuais.  
   
--   Os itens na lista de instruções de gráficos vetoriais são renderizados da esquerda para a direita.  
+- Os itens na lista de instruções de gráficos vetoriais são renderizados da esquerda para a direita.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Árvore visual  

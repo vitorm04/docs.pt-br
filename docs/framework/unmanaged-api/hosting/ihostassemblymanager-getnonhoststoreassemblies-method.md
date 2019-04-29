@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760188"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>Método IHostAssemblyManager::GetNonHostStoreAssemblies
 Obtém um ponteiro de interface para um [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) que representa a lista de assemblies que o host espera que o common language runtime (CLR) para carregar.  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>Comentários  
  O CLR resolve referências usando o seguinte conjunto de diretrizes:  
   
--   Primeiro, ele consulta a lista de referências de assembly retornado por `GetNonHostStoreAssemblies`.  
+- Primeiro, ele consulta a lista de referências de assembly retornado por `GetNonHostStoreAssemblies`.  
   
--   Se o assembly aparece na lista, o CLR é associado a ele normalmente.  
+- Se o assembly aparece na lista, o CLR é associado a ele normalmente.  
   
--   Se o assembly não aparece na lista e o host tiver fornecido uma implementação de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), o CLR chama [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) para permitir que o host fornecer a assembly para associar a.  
+- Se o assembly não aparece na lista e o host tiver fornecido uma implementação de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), o CLR chama [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) para permitir que o host fornecer a assembly para associar a.  
   
--   Caso contrário, o CLR não vincular ao assembly.  
+- Caso contrário, o CLR não vincular ao assembly.  
   
  Se o host define `ppReferenceList` como nulo, as sondas CLR primeiro chama o cache de assembly global, `ProvideAssembly`e, em seguida, investiga a base do aplicativo para resolver uma referência de assembly.  
   

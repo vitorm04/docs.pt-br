@@ -3,11 +3,11 @@ title: 'Como: publicar metadados para um serviço usando um arquivo de configura
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761449"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Como: publicar metadados para um serviço usando um arquivo de configuração
 Esse é um dos dois tópicos que demonstram os metadados de publicação para um serviço do Windows Communication Foundation (WCF). Há duas maneiras para especificar como um serviço deve publicar metadados, usando um arquivo de configuração e código. Este tópico mostra como publicar metadados para um serviço usando um arquivo de configuração.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. Para os pontos de extremidade de metadados adicionados na etapa anterior, defina o `binding` de atributo para um dos seguintes:  
   
-    -   `mexHttpBinding` para a publicação de HTTP.  
+    - `mexHttpBinding` para a publicação de HTTP.  
   
-    -   `mexHttpsBinding` para a publicação de HTTPS.  
+    - `mexHttpsBinding` para a publicação de HTTPS.  
   
-    -   `mexNamedPipeBinding` para a publicação de pipe nomeado.  
+    - `mexNamedPipeBinding` para a publicação de pipe nomeado.  
   
-    -   `mexTcpBinding` para a publicação de TCP.  
+    - `mexTcpBinding` para a publicação de TCP.  
   
 8. Para os pontos de extremidade de metadados adicionados em uma etapa anterior, defina o endereço para:  
   
-    -   Uma cadeia de caracteres vazia para usar o endereço de base do aplicativo host como o ponto de publicação se o endereço básico é o mesmo que a associação de metadados.  
+    - Uma cadeia de caracteres vazia para usar o endereço de base do aplicativo host como o ponto de publicação se o endereço básico é o mesmo que a associação de metadados.  
   
-    -   Um endereço relativo, se o aplicativo host tem um endereço básico.  
+    - Um endereço relativo, se o aplicativo host tem um endereço básico.  
   
-    -   Um endereço absoluto.  
+    - Um endereço absoluto.  
   
 9. Compile e execute o aplicativo de console.  
   

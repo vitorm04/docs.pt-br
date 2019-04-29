@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765265"
 ---
 # <a name="lockclrversion-function"></a>Função LockClrVersion
 Permite que o host determine qual versão do common language runtime (CLR) será usado dentro do processo antes de inicializar explicitamente o CLR.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. A função especificada por `hostCallback` , em seguida, faz a seguinte sequência de chamadas:  
   
-    -   A função especificada pelo `pBeginHostSetup` parâmetro.  
+    - A função especificada pelo `pBeginHostSetup` parâmetro.  
   
-    -   `CorBindToRuntimeEx` (ou outra função de inicialização de tempo de execução).  
+    - `CorBindToRuntimeEx` (ou outra função de inicialização de tempo de execução).  
   
-    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   A função especificada pelo `pEndHostSetup` parâmetro.  
+    - A função especificada pelo `pEndHostSetup` parâmetro.  
   
  Todas as chamadas de `pBeginHostSetup` para `pEndHostSetup` deve ocorrer em um único thread ou fibra, com a mesma pilha de lógica. Esse thread pode ser diferente do thread no qual `hostCallback` é chamado.  
   

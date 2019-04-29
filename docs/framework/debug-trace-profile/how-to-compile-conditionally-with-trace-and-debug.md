@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754551"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como: compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
@@ -28,11 +28,11 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
  É possível especificar as configurações do compilador para o aplicativo de várias maneiras:  
   
--   As páginas de propriedades  
+- As páginas de propriedades  
   
--   A linha de comando  
+- A linha de comando  
   
--   **#CONST** (para o Visual Basic) e **#define** (para o C#)  
+- **#CONST** (para o Visual Basic) e **#define** (para o C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Para alterar as configurações de compilação na caixa de diálogo das páginas de propriedades  
   
@@ -40,9 +40,9 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 2. Escolha **Propriedades** no menu de atalho.  
   
-    -   No Visual Basic, clique na guia **Compilar** no painel esquerdo da página de propriedades e, em seguida, clique no botão **Opções Avançadas de Compilação** para exibir a caixa de diálogo **Configurações Avançadas do Compilador**. Marque as caixas de seleção para as configurações do compilador que você deseja habilitar. Desmarque as caixas de seleção das configurações que você deseja desabilitar.  
+    - No Visual Basic, clique na guia **Compilar** no painel esquerdo da página de propriedades e, em seguida, clique no botão **Opções Avançadas de Compilação** para exibir a caixa de diálogo **Configurações Avançadas do Compilador**. Marque as caixas de seleção para as configurações do compilador que você deseja habilitar. Desmarque as caixas de seleção das configurações que você deseja desabilitar.  
   
-    -   No C#, clique na guia **Compilar** no painel esquerdo da página de propriedades e, em seguida, marque as caixas de seleção para as configurações do compilador que você deseja habilitar. Desmarque as caixas de seleção das configurações que você deseja desabilitar.  
+    - No C#, clique na guia **Compilar** no painel esquerdo da página de propriedades e, em seguida, marque as caixas de seleção para as configurações do compilador que você deseja habilitar. Desmarque as caixas de seleção das configurações que você deseja desabilitar.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Para compilar um código instrumentado usando a linha de comando  
   

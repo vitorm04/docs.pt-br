@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756748"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionando problemas de variáveis no Visual Basic
 Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com variáveis no Visual Basic.  
@@ -18,9 +18,9 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com va
 ## <a name="unable-to-access-members-of-an-object"></a>Não é possível acessar membros de um objeto  
  Se seu código tenta acessar uma propriedade ou método em um objeto, há dois resultados de erro possíveis:  
   
--   O compilador pode gerar uma mensagem de erro se você declarar a variável de objeto para ser de um tipo específico e, em seguida, fazer referência a um membro não definido por esse tipo.  
+- O compilador pode gerar uma mensagem de erro se você declarar a variável de objeto para ser de um tipo específico e, em seguida, fazer referência a um membro não definido por esse tipo.  
   
--   Um tempo de execução <xref:System.MemberAccessException> ocorre quando o objeto atribuído a uma variável de objeto não expõe o membro que seu código está tentando acessar. No caso de uma variável de [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md), você também pode obter essa exceção se o membro não for `Public`. Isso ocorre porque a associação tardia permite acesso somente a `Public` membros.  
+- Um tempo de execução <xref:System.MemberAccessException> ocorre quando o objeto atribuído a uma variável de objeto não expõe o membro que seu código está tentando acessar. No caso de uma variável de [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md), você também pode obter essa exceção se o membro não for `Public`. Isso ocorre porque a associação tardia permite acesso somente a `Public` membros.  
   
  Quando o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) conjuntos de verificação de tipo `On`, uma variável de objeto pode acessar somente os métodos e propriedades da classe com a qual você declará-la. O exemplo a seguir ilustra essa situação.  
 

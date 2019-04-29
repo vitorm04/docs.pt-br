@@ -3,11 +3,11 @@ title: PARTIÇÃODOGRUPO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774719"
 ---
 # <a name="grouppartition-entity-sql"></a>PARTIÇÃODOGRUPO (Entity SQL)
 Retorna uma coleção de valores de argumento que são projetados fora do partição atual do grupo que a agregação está relacionada. A agregação de `GroupPartition` é uma agregação grupo- base e não tem nenhum formulário coleção com base.  
@@ -56,7 +56,7 @@ select p, (select ol.Quantity as q from LOB.OrderLines as ol2 where ol2.Product 
   
  Como mostrado no exemplo, o operador aggregate de GROUPPARTITION facilita obter uma referência a entrada definida após o agrupamento.  
   
- O operador GROUPPARTITION pode especificar qualquer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão no operador de entrada quando você usa o `expression` parâmetro.  
+ O operador de GROUPPARTITION pode especificar qualquer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão no operador de entrada quando você usa o `expression` parâmetro.  
   
  Por exemplo todas as expressões da seguir de entrada a partição de grupo são válidas:  
   

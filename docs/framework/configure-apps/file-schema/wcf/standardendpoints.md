@@ -3,11 +3,11 @@ title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
 ms.openlocfilehash: 66b86647689ea2ca39ae2f569d275aff1f48cba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757970"
 ---
 # <a name="standardendpoints"></a>\<standardEndpoints>
 Esta seção de configuração permite que você defina uma coleção de pontos de extremidade padrão que são pontos de extremidade pré-configurados reutilizáveis. Um ponto de extremidade padrão terá um ou mais do endereço, associação e atributos de contrato definido como um valor fixo. Por exemplo, o ponto de extremidade de descoberta o contrato é fixo. Você também pode usar pontos de extremidade padrão para estender o ponto de extremidade de serviço com novas propriedades semelhantes à definição de ligações personalizadas.  

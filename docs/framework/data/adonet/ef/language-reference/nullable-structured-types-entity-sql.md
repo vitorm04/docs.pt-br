@@ -3,11 +3,11 @@ title: Tipos anuláveis estruturados (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760318"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Tipos anuláveis estruturados (Entity SQL)
 Uma instância de `null` de um tipo estruturada é uma instância que não existe. Isso é diferente de uma instância existente em que todas as propriedades têm valores de `null` .  
@@ -17,28 +17,28 @@ Uma instância de `null` de um tipo estruturada é uma instância que não exist
 ## <a name="kinds-of-nullable-structured-types"></a>Tipos de tipos estruturados anulável  
  Existem três tipos de tipos anuláveis de framework:  
   
--   Tipos de linha.  
+- Tipos de linha.  
   
--   Tipos complexos.  
+- Tipos complexos.  
   
--   Tipos de entidade.  
+- Tipos de entidade.  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Os padrões de código que gerenciar instâncias nulos Structured tipo  
  Os seguintes cenários gerenciar instâncias de `null` :  
   
--   Na forma `null` como um tipo estruturada:  
+- Na forma `null` como um tipo estruturada:  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   Upcasting de um tipo base para um tipo derivado:  
+- Upcasting de um tipo base para um tipo derivado:  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   Externo join à condição falsa:  
+- Externo join à condição falsa:  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ Uma instância de `null` de um tipo estruturada é uma instância que não exist
     ON FalseCondition  
     ```  
   
--   Desreferenciando uma referência de `null` :  
+- Desreferenciando uma referência de `null` :  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   Obtendo ANYELEMENT de uma coleção vazia:  
+- Obtendo ANYELEMENT de uma coleção vazia:  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   Verificar instâncias de `null` de tipos estruturados:  
+- Verificar instâncias de `null` de tipos estruturados:  
   
     ```csharp  
     ...  

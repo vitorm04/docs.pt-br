@@ -1,5 +1,5 @@
 ---
-title: Lacrar
+title: Selar
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762053"
 ---
-# <a name="sealing"></a>Lacrar
+# <a name="sealing"></a>Selar
 Um dos recursos das estruturas orientada a objeto é que os desenvolvedores podem estender e personalizá-los de maneiras não previstas pelos designers do framework. Isso é a potência e o perigo de design extensível. Quando você projeta sua estrutura, ele é, portanto, muito importante para projetar cuidadosamente para extensibilidade quando ele for desejado e para limitar a extensibilidade quando é perigoso.  
   
  Um mecanismo poderoso que impede a extensibilidade é lacrar. Você pode lacre a classe ou a membros individuais. Lacrar uma classe impede que os usuários herdando da classe. Lacrar um membro impede que os usuários a substituição de um membro específico.  
@@ -27,13 +27,13 @@ Um dos recursos das estruturas orientada a objeto é que os desenvolvedores pode
   
  Bons motivos para lacrar uma classe incluem o seguinte:  
   
--   A classe é uma classe estática. Ver [Design de classe estática](../../../docs/standard/design-guidelines/static-class.md).  
+- A classe é uma classe estática. Ver [Design de classe estática](../../../docs/standard/design-guidelines/static-class.md).  
   
--   A classe armazena os segredos confidenciais de segurança em membros protegidos herdados.  
+- A classe armazena os segredos confidenciais de segurança em membros protegidos herdados.  
   
--   A classe herda muitos membros virtuais e o custo de lacrá-los individualmente seria superam os benefícios de deixar a classe sem lacre.  
+- A classe herda muitos membros virtuais e o custo de lacrá-los individualmente seria superam os benefícios de deixar a classe sem lacre.  
   
--   A classe é um atributo que requer tempo de execução muito rápida pesquisa. Atributos lacrados têm um pouco mais altos níveis de desempenho que aqueles sem lacre. ver [atributos](../../../docs/standard/design-guidelines/attributes.md).  
+- A classe é um atributo que requer tempo de execução muito rápida pesquisa. Atributos lacrados têm um pouco mais altos níveis de desempenho que aqueles sem lacre. ver [atributos](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** declarar membros virtuais ou protegidos em tipos lacrados.  
   

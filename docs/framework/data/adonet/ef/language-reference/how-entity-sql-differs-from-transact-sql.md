@@ -3,11 +3,11 @@ title: Como o Entity SQL difere do Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774735"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Como o Entity SQL difere do Transact-SQL
 Este tópico descreve as diferenças entre [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ Este tópico descreve as diferenças entre [!INCLUDE[esql](../../../../../../inc
 ## <a name="support-for-collections"></a>Suporte para coleções  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trata coleções como entidades de primeira classe. Por exemplo:  
   
--   As expressões de coleção são válidas em uma cláusula `from`.  
+- As expressões de coleção são válidas em uma cláusula `from`.  
   
--   As subconsultas `in` e `exists` foram generalizadas para permitir quaisquer coleções.  
+- As subconsultas `in` e `exists` foram generalizadas para permitir quaisquer coleções.  
   
      Um subconsulta é um tipo de coleção. `e1 in e2` e `exists(e)` são as construções [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para executar essas operações.  
   
--   A operações de conjunto, como `union`, `intersect` e `except`, agora funcionam em coleções.  
+- A operações de conjunto, como `union`, `intersect` e `except`, agora funcionam em coleções.  
   
--   As junções funcionam em coleções.  
+- As junções funcionam em coleções.  
   
 ## <a name="support-for-expressions"></a>Suporte para expressões  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] tem subconsultas (tabelas) e expressões (linhas e colunas).  

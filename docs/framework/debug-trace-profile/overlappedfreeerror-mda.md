@@ -12,11 +12,11 @@ ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: defd7f90fcac8d1e98104796682058638c9bd799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753680"
 ---
 # <a name="overlappedfreeerror-mda"></a>MDA overlappedFreeError
 O MDA (Assistente de Depuração Gerenciado) de `overlappedFreeError` é ativado quando o método <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> é chamado antes da conclusão da operação sobreposta.  
