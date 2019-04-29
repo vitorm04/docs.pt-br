@@ -8,25 +8,25 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790904"
 ---
-# <a name="styles-and-templates"></a><span data-ttu-id="c0c6d-102">Estilos e modelos </span><span class="sxs-lookup"><span data-stu-id="c0c6d-102">Styles and Templates</span></span>
-<span data-ttu-id="c0c6d-103">Modelagem e definição de estilo do Windows Presentation Foundation (WPF) referem-se a um conjunto de recursos (estilos, modelos, gatilhos e storyboards) que permitem que um aplicativo, o documento ou o designer de (UI) de interface do usuário criar aplicativos visualmente atraentes e padronizem uma determinada aparência para seus produtos.</span><span class="sxs-lookup"><span data-stu-id="c0c6d-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
+# <a name="styles-and-templates"></a><span data-ttu-id="34205-102">Estilos e modelos </span><span class="sxs-lookup"><span data-stu-id="34205-102">Styles and Templates</span></span>
+<span data-ttu-id="34205-103">Modelagem e definição de estilo do Windows Presentation Foundation (WPF) referem-se a um conjunto de recursos (estilos, modelos, gatilhos e storyboards) que permitem que um aplicativo, o documento ou o designer de (UI) de interface do usuário criar aplicativos visualmente atraentes e padronizem uma determinada aparência para seus produtos.</span><span class="sxs-lookup"><span data-stu-id="34205-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c0c6d-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c0c6d-104">In This Section</span></span>  
- [<span data-ttu-id="c0c6d-105">Estilo e modelagem</span><span class="sxs-lookup"><span data-stu-id="c0c6d-105">Styling and Templating</span></span>](styling-and-templating.md)  
-  [<span data-ttu-id="c0c6d-106">Como: Localizar elementos gerados por ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="c0c6d-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="34205-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="34205-104">In This Section</span></span>  
+ [<span data-ttu-id="34205-105">Estilo e modelagem</span><span class="sxs-lookup"><span data-stu-id="34205-105">Styling and Templating</span></span>](styling-and-templating.md)  
+  [<span data-ttu-id="34205-106">Como: Localizar elementos gerados por ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="34205-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a><span data-ttu-id="c0c6d-107">Referência</span><span class="sxs-lookup"><span data-stu-id="c0c6d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="34205-107">Referência</span><span class="sxs-lookup"><span data-stu-id="34205-107">Reference</span></span>  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="c0c6d-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="c0c6d-108">Related Sections</span></span>  
- [<span data-ttu-id="c0c6d-109">Avançado</span><span class="sxs-lookup"><span data-stu-id="c0c6d-109">Advanced</span></span>](../advanced/index.md)  
-  [<span data-ttu-id="c0c6d-110">Personalização do controle</span><span class="sxs-lookup"><span data-stu-id="c0c6d-110">Control Customization</span></span>](control-customization.md)  
-  [<span data-ttu-id="c0c6d-111">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="c0c6d-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="34205-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="34205-108">Related Sections</span></span>  
+ [<span data-ttu-id="34205-109">Avançado</span><span class="sxs-lookup"><span data-stu-id="34205-109">Advanced</span></span>](../advanced/index.md)  
+  [<span data-ttu-id="34205-110">Personalização do controle</span><span class="sxs-lookup"><span data-stu-id="34205-110">Control Customization</span></span>](control-customization.md)  
+  [<span data-ttu-id="34205-111">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="34205-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)

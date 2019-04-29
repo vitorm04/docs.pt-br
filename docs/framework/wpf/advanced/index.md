@@ -10,26 +10,26 @@ helpviewer_keywords:
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
 ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942799"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="8e0f7-102">Avançado (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="8e0f7-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="8e0f7-103">Esta seção descreve algumas das áreas avançadas no WPF.</span><span class="sxs-lookup"><span data-stu-id="8e0f7-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="c700e-102">Avançado (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="c700e-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="c700e-103">Esta seção descreve algumas das áreas avançadas no WPF.</span><span class="sxs-lookup"><span data-stu-id="c700e-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8e0f7-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8e0f7-104">In This Section</span></span>  
- [<span data-ttu-id="8e0f7-105">Arquitetura do WPF</span><span class="sxs-lookup"><span data-stu-id="8e0f7-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="8e0f7-106">Elementos base</span><span class="sxs-lookup"><span data-stu-id="8e0f7-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="8e0f7-107">Árvore de elementos e serialização</span><span class="sxs-lookup"><span data-stu-id="8e0f7-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="8e0f7-108">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="8e0f7-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="8e0f7-109">Documentos</span><span class="sxs-lookup"><span data-stu-id="8e0f7-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="8e0f7-110">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="8e0f7-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="8e0f7-111">Migração e interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="8e0f7-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="8e0f7-112">Desempenho</span><span class="sxs-lookup"><span data-stu-id="8e0f7-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="8e0f7-113">Modelo de threading</span><span class="sxs-lookup"><span data-stu-id="8e0f7-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="8e0f7-114">Visão geral dos suplementos do WPF</span><span class="sxs-lookup"><span data-stu-id="8e0f7-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="8e0f7-115">Referência de API do WPF não gerenciada</span><span class="sxs-lookup"><span data-stu-id="8e0f7-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c700e-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c700e-104">In This Section</span></span>  
+ [<span data-ttu-id="c700e-105">Arquitetura do WPF</span><span class="sxs-lookup"><span data-stu-id="c700e-105">WPF Architecture</span></span>](wpf-architecture.md)  
+ [<span data-ttu-id="c700e-106">Elementos base</span><span class="sxs-lookup"><span data-stu-id="c700e-106">Base Elements</span></span>](base-elements.md)  
+ [<span data-ttu-id="c700e-107">Árvore de elementos e serialização</span><span class="sxs-lookup"><span data-stu-id="c700e-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+ [<span data-ttu-id="c700e-108">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="c700e-108">Drag and Drop</span></span>](drag-and-drop.md)  
+ [<span data-ttu-id="c700e-109">Documentos</span><span class="sxs-lookup"><span data-stu-id="c700e-109">Documents</span></span>](documents.md)  
+ [<span data-ttu-id="c700e-110">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="c700e-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
+ [<span data-ttu-id="c700e-111">Migração e interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="c700e-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+ [<span data-ttu-id="c700e-112">Desempenho</span><span class="sxs-lookup"><span data-stu-id="c700e-112">Performance</span></span>](performance.md)  
+ [<span data-ttu-id="c700e-113">Modelo de threading</span><span class="sxs-lookup"><span data-stu-id="c700e-113">Threading Model</span></span>](threading-model.md)  
+ [<span data-ttu-id="c700e-114">Visão geral dos suplementos do WPF</span><span class="sxs-lookup"><span data-stu-id="c700e-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
+ [<span data-ttu-id="c700e-115">Referência de API do WPF não gerenciada</span><span class="sxs-lookup"><span data-stu-id="c700e-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="8e0f7-116">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="8e0f7-116">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c700e-116">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="c700e-116">Related Sections</span></span>

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
 ms.openlocfilehash: daff9d6d351db514d552225853f977775f8e3204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941434"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="4faae-102">Como: Habilitar a reorganização de itens ToolStrip em tempo de execução no Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4faae-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
-<span data-ttu-id="4faae-103">Você pode permitir que o usuário reorganizar <xref:System.Windows.Forms.ToolStripItem> controles no <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="4faae-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="816b3-102">Como: Habilitar a reorganização de itens ToolStrip em tempo de execução no Windows Forms</span><span class="sxs-lookup"><span data-stu-id="816b3-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
+<span data-ttu-id="816b3-103">Você pode permitir que o usuário reorganizar <xref:System.Windows.Forms.ToolStripItem> controles no <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="816b3-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="4faae-104">Para habilitar a reorganização de ToolStripItem em tempo de execução</span><span class="sxs-lookup"><span data-stu-id="4faae-104">To enable ToolStripItem rearrangement at run time</span></span>  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="816b3-104">Para habilitar a reorganização de ToolStripItem em tempo de execução</span><span class="sxs-lookup"><span data-stu-id="816b3-104">To enable ToolStripItem rearrangement at run time</span></span>  
   
--   <span data-ttu-id="4faae-105">Defina a propriedade <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> como `true`.</span><span class="sxs-lookup"><span data-stu-id="4faae-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="4faae-106">Por padrão, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> é `false`.</span><span class="sxs-lookup"><span data-stu-id="4faae-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
+- <span data-ttu-id="816b3-105">Defina a propriedade <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> como `true`.</span><span class="sxs-lookup"><span data-stu-id="816b3-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="816b3-106">Por padrão, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> é `false`.</span><span class="sxs-lookup"><span data-stu-id="816b3-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
   
-     <span data-ttu-id="4faae-107">Em tempo de execução, o usuário mantiver pressionada a tecla ALT e o botão esquerdo do mouse para arrastar um <xref:System.Windows.Forms.ToolStripItem> em um local diferente no <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="4faae-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+     <span data-ttu-id="816b3-107">Em tempo de execução, o usuário mantiver pressionada a tecla ALT e o botão esquerdo do mouse para arrastar um <xref:System.Windows.Forms.ToolStripItem> em um local diferente no <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="816b3-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  
@@ -34,10 +34,10 @@ ms.locfileid: "59220391"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4faae-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4faae-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="816b3-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="816b3-108">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>
-- [<span data-ttu-id="4faae-109">Visão geral do controle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4faae-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="4faae-110">Arquitetura de controle do ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4faae-110">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="4faae-111">Resumo da tecnologia de ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4faae-111">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="816b3-109">Visão geral do controle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="816b3-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="816b3-110">Arquitetura de controle do ToolStrip</span><span class="sxs-lookup"><span data-stu-id="816b3-110">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="816b3-111">Resumo da tecnologia de ToolStrip</span><span class="sxs-lookup"><span data-stu-id="816b3-111">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

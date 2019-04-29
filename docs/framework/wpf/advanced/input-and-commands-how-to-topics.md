@@ -8,29 +8,29 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
 ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942773"
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="4ba8f-102">Tópicos explicativos de entrada e comandos</span><span class="sxs-lookup"><span data-stu-id="4ba8f-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="4ba8f-103">Os tópicos nesta seção descrevem como usar a infra-estrutura de entrada e comando no Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="4ba8f-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="4d02e-102">Tópicos explicativos de entrada e comandos</span><span class="sxs-lookup"><span data-stu-id="4d02e-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="4d02e-103">Os tópicos nesta seção descrevem como usar a infra-estrutura de entrada e comando no Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="4d02e-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4ba8f-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="4ba8f-104">In This Section</span></span>  
- [<span data-ttu-id="4ba8f-105">Habilitar um comando</span><span class="sxs-lookup"><span data-stu-id="4ba8f-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
- [<span data-ttu-id="4ba8f-106">Alterar o tipo de cursor</span><span class="sxs-lookup"><span data-stu-id="4ba8f-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="4ba8f-107">Alterar a cor de um elemento usando eventos de foco</span><span class="sxs-lookup"><span data-stu-id="4ba8f-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="4ba8f-108">Aplicar um FocusVisualStyle a um controle</span><span class="sxs-lookup"><span data-stu-id="4ba8f-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="4ba8f-109">Detectar quando a tecla Enter é pressionada</span><span class="sxs-lookup"><span data-stu-id="4ba8f-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="4ba8f-110">Criar um efeito de sobreposição usando eventos</span><span class="sxs-lookup"><span data-stu-id="4ba8f-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="4ba8f-111">Fazer um objeto seguir o ponteiro do mouse</span><span class="sxs-lookup"><span data-stu-id="4ba8f-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="4ba8f-112">Criar um RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="4ba8f-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="4ba8f-113">Implementar ICommandSource</span><span class="sxs-lookup"><span data-stu-id="4ba8f-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
- [<span data-ttu-id="4ba8f-114">Enganchar um comando em um controle sem suporte a comandos</span><span class="sxs-lookup"><span data-stu-id="4ba8f-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="4ba8f-115">Interligar um comando a um controle com suporte de comando</span><span class="sxs-lookup"><span data-stu-id="4ba8f-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4d02e-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="4d02e-104">In This Section</span></span>  
+ [<span data-ttu-id="4d02e-105">Habilitar um comando</span><span class="sxs-lookup"><span data-stu-id="4d02e-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
+ [<span data-ttu-id="4d02e-106">Alterar o tipo de cursor</span><span class="sxs-lookup"><span data-stu-id="4d02e-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="4d02e-107">Alterar a cor de um elemento usando eventos de foco</span><span class="sxs-lookup"><span data-stu-id="4d02e-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="4d02e-108">Aplicar um FocusVisualStyle a um controle</span><span class="sxs-lookup"><span data-stu-id="4d02e-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="4d02e-109">Detectar quando a tecla Enter é pressionada</span><span class="sxs-lookup"><span data-stu-id="4d02e-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="4d02e-110">Criar um efeito de sobreposição usando eventos</span><span class="sxs-lookup"><span data-stu-id="4d02e-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="4d02e-111">Fazer um objeto seguir o ponteiro do mouse</span><span class="sxs-lookup"><span data-stu-id="4d02e-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="4d02e-112">Criar um RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="4d02e-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="4d02e-113">Implementar ICommandSource</span><span class="sxs-lookup"><span data-stu-id="4d02e-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="4d02e-114">Enganchar um comando em um controle sem suporte a comandos</span><span class="sxs-lookup"><span data-stu-id="4d02e-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="4d02e-115">Interligar um comando a um controle com suporte de comando</span><span class="sxs-lookup"><span data-stu-id="4d02e-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="4ba8f-116">Referência</span><span class="sxs-lookup"><span data-stu-id="4ba8f-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4d02e-116">Referência</span><span class="sxs-lookup"><span data-stu-id="4d02e-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -45,4 +45,4 @@ ms.locfileid: "57352380"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="4ba8f-117">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="4ba8f-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="4d02e-117">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="4d02e-117">Related Sections</span></span>

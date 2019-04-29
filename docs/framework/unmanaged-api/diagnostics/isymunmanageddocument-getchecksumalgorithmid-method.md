@@ -18,29 +18,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f2df98728eec28ffca05b2e246575fc5c882a078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939874"
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="ad825-102">Método ISymUnmanagedDocument::GetCheckSumAlgorithmId</span><span class="sxs-lookup"><span data-stu-id="ad825-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="ad825-103">Obtém o identificador de algoritmo de soma de verificação ou retorna um GUID de todos os zeros se não houver nenhuma soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="ad825-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="9df1f-102">Método ISymUnmanagedDocument::GetCheckSumAlgorithmId</span><span class="sxs-lookup"><span data-stu-id="9df1f-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="9df1f-103">Obtém o identificador de algoritmo de soma de verificação ou retorna um GUID de todos os zeros se não houver nenhuma soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="9df1f-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad825-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ad825-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9df1f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9df1f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad825-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ad825-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9df1f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9df1f-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="ad825-106">[out] Um ponteiro para uma variável que recebe o identificador de algoritmo de soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="ad825-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="9df1f-106">[out] Um ponteiro para uma variável que recebe o identificador de algoritmo de soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="9df1f-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ad825-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="ad825-107">Return Value</span></span>  
- <span data-ttu-id="ad825-108">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="ad825-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9df1f-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="9df1f-107">Return Value</span></span>  
+ <span data-ttu-id="9df1f-108">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="9df1f-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad825-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ad825-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9df1f-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9df1f-109">See also</span></span>
 
-- [<span data-ttu-id="ad825-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="ad825-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="9df1f-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="9df1f-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
