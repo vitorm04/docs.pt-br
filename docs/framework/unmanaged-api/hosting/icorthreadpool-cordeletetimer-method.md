@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 098c23dd0ddff4342aa4cefbaa4e149ed95a1cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700066"
 ---
 # <a name="icorthreadpoolcordeletetimer-method"></a>Método ICorThreadpool::CorDeleteTimer
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  

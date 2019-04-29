@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
 ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747678"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Introdução à programação de elementos gráficos
 Esta seção mostra como começar a usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] em um aplicativo dos Windows Forms. Os tópicos a seguir mostram como concluir várias tarefas de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] como desenhar e preencher formas e texto.  

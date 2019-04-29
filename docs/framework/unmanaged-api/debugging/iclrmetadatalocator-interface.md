@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697843"
 ---
 # <a name="iclrmetadatalocator-interface"></a>Interface ICLRMetadataLocator
 Usado pela camada de serviços de acesso a dados para localizar os metadados dos assemblies em um processo de destino.  

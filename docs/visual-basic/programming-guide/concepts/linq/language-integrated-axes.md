@@ -3,11 +3,11 @@ title: Eixos integrados em linguagem Visual Basic (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d450a556-a134-4261-b011-44e399660894
 ms.openlocfilehash: 0de88ad55724f71f5671a044dbadcb2f6c59e829
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663460"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Eixos integrados em linguagem Visual Basic (LINQ to XML)
 Esta seção descreve os recursos compilados diretamente na linguagem do Visual Basic para torná-lo mais fácil de acessar o XML. Muitos dos exemplos do LINQ para a documentação XML usam esses eixos integrados do Visual Basic.  

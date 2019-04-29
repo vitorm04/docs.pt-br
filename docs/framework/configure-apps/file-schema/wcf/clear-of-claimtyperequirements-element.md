@@ -3,11 +3,11 @@ title: <clear> de <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
 ms.openlocfilehash: 35d0391951204bd352918d3004f0cc4f9480b0e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704265"
 ---
 # <a name="clear-of-claimtyperequirements-element"></a>\<Limpar > de \<claimTypeRequirements > elemento
 Especifica que todos os tipos de declaração a serem removidos na credencial federada. Isso garante que a coleção começa vazia.  

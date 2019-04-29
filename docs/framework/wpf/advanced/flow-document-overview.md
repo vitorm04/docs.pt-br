@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703786"
 ---
 # <a name="flow-document-overview"></a>Visão geral do documento de fluxo
 Os documentos dinâmicos são projetados para otimizar a exibição e legibilidade. Em vez de serem configurados para um layout predefinido, os documentos dinâmicos ajustam e refluem seu conteúdo com base em variáveis de tempo de execução como tamanho da janela, resolução do dispositivo e preferências opcionais do usuário. Além disso, os documentos dinâmicos oferecem recursos de documento avançados, como paginação e colunas. Este tópico fornece uma visão geral dos documentos dinâmicos e como criá-los.  
@@ -42,13 +42,13 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  Conforme realçado na ilustração acima, há vários recursos incorporados em documentos dinâmicos:
   
--   Pesquisa: Permite ao usuário realizar uma pesquisa de texto completo de um documento inteiro.  
+- Pesquisa: Permite ao usuário realizar uma pesquisa de texto completo de um documento inteiro.  
   
--   Modo de exibição: O usuário pode selecionar o modo de visualização preferencial incluindo um modo de exibição (uma página de vez) de página única, um duas páginas-em-um-vez (formato de leitura de livro) exibindo modo e um modo de exibição (sem margem inferior) de rolagem contínua.  Para obter mais informações sobre esses modos de exibição, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+- Modo de exibição: O usuário pode selecionar o modo de visualização preferencial incluindo um modo de exibição (uma página de vez) de página única, um duas páginas-em-um-vez (formato de leitura de livro) exibindo modo e um modo de exibição (sem margem inferior) de rolagem contínua.  Para obter mais informações sobre esses modos de exibição, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Controles de navegação de página: Se o modo de exibição do documento usa páginas, os controles de navegação de página incluem um botão para ir para a próxima página (a seta para baixo) ou a página anterior (a seta de para cima), bem como indicadores para o número da página atual e o número total de páginas. Também é possível folhear páginas usando as teclas de direção do teclado.  
+- Controles de navegação de página: Se o modo de exibição do documento usa páginas, os controles de navegação de página incluem um botão para ir para a próxima página (a seta para baixo) ou a página anterior (a seta de para cima), bem como indicadores para o número da página atual e o número total de páginas. Também é possível folhear páginas usando as teclas de direção do teclado.  
   
--   Zoom: Os controles de zoom permitem ao usuário aumentar ou diminuir o nível de zoom clicando no sinal de mais ou menos botões, respectivamente. Os controles de zoom também incluem um controle deslizante para ajustar o nível de zoom. Para obter mais informações, consulte <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+- Zoom: Os controles de zoom permitem ao usuário aumentar ou diminuir o nível de zoom clicando no sinal de mais ou menos botões, respectivamente. Os controles de zoom também incluem um controle deslizante para ajustar o nível de zoom. Para obter mais informações, consulte <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
  Esses recursos podem ser modificados com base no controle usado para hospedar o conteúdo dinâmico. A próxima seção descreve os diferentes controles.  
   
@@ -75,9 +75,9 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
 ## <a name="creating-flow-content"></a>Criar conteúdo dinâmico  
  O conteúdo de fluxo pode ser complexo, consistindo de vários elementos, incluindo texto, imagens, tabelas e até mesmo <xref:System.Windows.UIElement> derivado classes como controles. Para entender como criar conteúdo dinâmico complexo, são essenciais os seguintes pontos:  
   
--   **Classes relacionadas a fluxo**: Cada classe usada no conteúdo de fluxo tem uma finalidade específica. Além disso, a relação hierárquica entre classes de fluxo ajuda a entender como elas são usadas. Por exemplo, classes derivadas do <xref:System.Windows.Documents.Block> classe são usados para conter outros objetos enquanto as classes derivadas de <xref:System.Windows.Documents.Inline> contêm objetos que são exibidos.  
+- **Classes relacionadas a fluxo**: Cada classe usada no conteúdo de fluxo tem uma finalidade específica. Além disso, a relação hierárquica entre classes de fluxo ajuda a entender como elas são usadas. Por exemplo, classes derivadas do <xref:System.Windows.Documents.Block> classe são usados para conter outros objetos enquanto as classes derivadas de <xref:System.Windows.Documents.Inline> contêm objetos que são exibidos.  
   
--   **Esquema de conteúdo**: Um documento dinâmico pode exigir um grande número de elementos aninhados. O esquema de conteúdo especifica relações pai/filho possíveis entre elementos.  
+- **Esquema de conteúdo**: Um documento dinâmico pode exigir um grande número de elementos aninhados. O esquema de conteúdo especifica relações pai/filho possíveis entre elementos.  
   
  As seções a seguir abordarão cada uma dessas áreas com mais detalhes.  
   
@@ -196,19 +196,19 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
   
  **Figure:**  
   
--   Pode ser posicionada: Você pode definir suas âncoras horizontais e verticais para encaixá-la em relação à página, conteúdo, coluna ou parágrafo. Você também pode usar sua <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> propriedades para especificar deslocamentos arbitrários.  
+- Pode ser posicionada: Você pode definir suas âncoras horizontais e verticais para encaixá-la em relação à página, conteúdo, coluna ou parágrafo. Você também pode usar sua <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> propriedades para especificar deslocamentos arbitrários.  
   
--   É dimensionável para mais de uma coluna: Você pode definir <xref:System.Windows.Documents.Figure> altura e largura para múltiplos da página, largura ou altura de conteúdo ou da coluna. Observe que no caso de página e o conteúdo, múltiplos maiores que 1 não são permitidos. Por exemplo, você pode definir a largura de um <xref:System.Windows.Documents.Figure> seja "0.5 page" ou "0.25 content" ou "coluna 2". Você também pode definir a altura e largura para valores de pixel absolutos.  
+- É dimensionável para mais de uma coluna: Você pode definir <xref:System.Windows.Documents.Figure> altura e largura para múltiplos da página, largura ou altura de conteúdo ou da coluna. Observe que no caso de página e o conteúdo, múltiplos maiores que 1 não são permitidos. Por exemplo, você pode definir a largura de um <xref:System.Windows.Documents.Figure> seja "0.5 page" ou "0.25 content" ou "coluna 2". Você também pode definir a altura e largura para valores de pixel absolutos.  
   
--   Não pagina: Se o conteúdo dentro de um <xref:System.Windows.Documents.Figure> não se ajustarem dentro a <xref:System.Windows.Documents.Figure>, ele processará qualquer conteúdo que é adequado e o conteúdo restante será perdido  
+- Não pagina: Se o conteúdo dentro de um <xref:System.Windows.Documents.Figure> não se ajustarem dentro a <xref:System.Windows.Documents.Figure>, ele processará qualquer conteúdo que é adequado e o conteúdo restante será perdido  
   
  **Floater:**  
   
--   Não pode ser posicionado e será renderizado sempre que for possível disponibilizar espaço para ele. Não é possível definir o deslocamento ou âncora um <xref:System.Windows.Documents.Floater>.  
+- Não pode ser posicionado e será renderizado sempre que for possível disponibilizar espaço para ele. Não é possível definir o deslocamento ou âncora um <xref:System.Windows.Documents.Floater>.  
   
--   Não pode ser dimensionada para mais de uma coluna: Por padrão, <xref:System.Windows.Documents.Floater> tamanho de uma coluna. Ele tem um <xref:System.Windows.Documents.Floater.Width%2A> propriedade que pode ser definida como um valor absoluto de pixel, mas se esse valor for maior que a largura de uma coluna, ele será ignorado e o floater é dimensionada em uma coluna. Você pode dimensioná-lo para menos de uma coluna, definindo a largura em pixels correta, mas o dimensionamento não é relativo da coluna, então "0.5Column" não é uma expressão válida para <xref:System.Windows.Documents.Floater> largura. <xref:System.Windows.Documents.Floater> não tem nenhuma propriedade de altura e é não é possível definir a altura, que depende do conteúdo  
+- Não pode ser dimensionada para mais de uma coluna: Por padrão, <xref:System.Windows.Documents.Floater> tamanho de uma coluna. Ele tem um <xref:System.Windows.Documents.Floater.Width%2A> propriedade que pode ser definida como um valor absoluto de pixel, mas se esse valor for maior que a largura de uma coluna, ele será ignorado e o floater é dimensionada em uma coluna. Você pode dimensioná-lo para menos de uma coluna, definindo a largura em pixels correta, mas o dimensionamento não é relativo da coluna, então "0.5Column" não é uma expressão válida para <xref:System.Windows.Documents.Floater> largura. <xref:System.Windows.Documents.Floater> não tem nenhuma propriedade de altura e é não é possível definir a altura, que depende do conteúdo  
   
--   <xref:System.Windows.Documents.Floater> pagina: Se seu conteúdo em sua largura especificada se estender a altura de coluna mais de 1, o floater quebra e pagina para a próxima coluna, a próxima página, etc.  
+- <xref:System.Windows.Documents.Floater> pagina: Se seu conteúdo em sua largura especificada se estender a altura de coluna mais de 1, o floater quebra e pagina para a próxima coluna, a próxima página, etc.  
   
  <xref:System.Windows.Documents.Figure> é um bom lugar para colocar conteúdo autônomo em que você deseja controlar o tamanho e posicionamento e tenha certeza de que o conteúdo caiba na tamanho especificado. <xref:System.Windows.Documents.Floater> é um bom lugar para colocar mais conteúdo fluindo livre que flui de modo semelhante ao conteúdo da página principal, mas separado dela.  
   

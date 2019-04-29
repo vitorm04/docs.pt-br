@@ -3,11 +3,11 @@ title: Segurança 2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664149"
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que um desenvolvedor pode garantir que um aplicativo está protegido contra todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros trará. Por outro lado, apenas porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existir ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante a vida útil do aplicativo.  
@@ -46,19 +46,19 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
 ## <a name="code-access-security-cas"></a>CAS (Segurança de Acesso do Código)  
  Segurança de acesso do código (CAS) é um mecanismo que ajuda a limitar o acesso de código tem a recursos e operações protegidos. No .NET Framework, o CAS executa as seguintes funções:  
   
--   Define as permissões e os conjuntos de permissões que representam o direito de acessar vários recursos do sistema.  
+- Define as permissões e os conjuntos de permissões que representam o direito de acessar vários recursos do sistema.  
   
--   Permite aos administradores configurar política de segurança, associando os conjuntos de permissões a grupos de código (grupos de códigos).  
+- Permite aos administradores configurar política de segurança, associando os conjuntos de permissões a grupos de código (grupos de códigos).  
   
--   Permite que o código solicitar as permissões necessárias para executar, bem como as permissões que seriam útil ter e especifica quais permissões o código nunca deve ter.  
+- Permite que o código solicitar as permissões necessárias para executar, bem como as permissões que seriam útil ter e especifica quais permissões o código nunca deve ter.  
   
--   Concede permissões para cada assembly que é carregado, com base nas permissões solicitadas pelo código e as operações permitidas pela política de segurança.  
+- Concede permissões para cada assembly que é carregado, com base nas permissões solicitadas pelo código e as operações permitidas pela política de segurança.  
   
--   Permite que o código para que os chamadores têm permissões específicas à demanda.  
+- Permite que o código para que os chamadores têm permissões específicas à demanda.  
   
--   Permite que o código para que os chamadores possuem uma assinatura digital, permitindo que somente os chamadores de uma organização específica ou um site chamar o código protegido à demanda.  
+- Permite que o código para que os chamadores possuem uma assinatura digital, permitindo que somente os chamadores de uma organização específica ou um site chamar o código protegido à demanda.  
   
--   Impõe restrições em código em tempo de execução, comparando as permissões concedidas de todos os chamadores na pilha de chamadas para as permissões que os chamadores devem ter.  
+- Impõe restrições em código em tempo de execução, comparando as permissões concedidas de todos os chamadores na pilha de chamadas para as permissões que os chamadores devem ter.  
   
  Para minimizar a quantidade de danos que podem ocorrer se um ataque for bem-sucedida, escolha um contexto de segurança de seu código que concede acesso apenas os recursos necessários para executar seu trabalho concluído e nada mais.  
   
@@ -72,17 +72,17 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
 ## <a name="database-security"></a>Segurança de banco de dados  
  O princípio de privilégios mínimos também se aplica à sua fonte de dados. Algumas diretrizes gerais para segurança de banco de dados incluem:  
   
--   Crie contas com os privilégios mais baixos possíveis.  
+- Crie contas com os privilégios mais baixos possíveis.  
   
--   Não permitir que os usuários acesso a contas administrativas apenas para obter o código em funcionamento.  
+- Não permitir que os usuários acesso a contas administrativas apenas para obter o código em funcionamento.  
   
--   Não retornam mensagens de erro do lado do servidor para aplicativos cliente.  
+- Não retornam mensagens de erro do lado do servidor para aplicativos cliente.  
   
--   Valide todas as entradas no cliente e no servidor.  
+- Valide todas as entradas no cliente e no servidor.  
   
--   Usar comandos parametrizados e evitar instruções SQL dinâmicas.  
+- Usar comandos parametrizados e evitar instruções SQL dinâmicas.  
   
--   Habilite a auditoria de segurança e registro em log para o banco de dados que você está usando para que você será alertado de qualquer violações de segurança.  
+- Habilite a auditoria de segurança e registro em log para o banco de dados que você está usando para que você será alertado de qualquer violações de segurança.  
   
  Para obter mais informações, consulte os seguintes recursos.  
   

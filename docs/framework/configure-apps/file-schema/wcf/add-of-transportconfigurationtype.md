@@ -3,11 +3,11 @@ title: <add> de <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
 ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701431"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<Adicionar > de \<transportConfigurationType >
 Esse elemento é um par chave/valor, que identifica o tipo de um transporte particular.  

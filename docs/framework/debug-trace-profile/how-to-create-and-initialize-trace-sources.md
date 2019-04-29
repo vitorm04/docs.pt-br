@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754512"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Como: criar e inicializar fontes de rastreamento
 A classe <xref:System.Diagnostics.TraceSource> é usada por aplicativos para produzir rastreamentos que podem ser associados ao aplicativo. <xref:System.Diagnostics.TraceSource> fornece métodos de rastreamento que permitem rastrear eventos com facilidade, rastrear dados e emitir rastreamentos informativos. A saída de rastreamento de <xref:System.Diagnostics.TraceSource> pode ser criada e inicializada com ou sem o uso de arquivos de configuração. Este tópico fornece instruções para ambas as opções. No entanto, recomendamos o uso de arquivos de configuração para facilitar a reconfiguração dos rastreamentos produzidos por origens de rastreamento em tempo de execução.  
@@ -73,7 +73,7 @@ A classe <xref:System.Diagnostics.TraceSource> é usada por aplicativos para pro
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Para inicializar origens de rastreamento, ouvintes e filtros sem um arquivo de configuração  
   
--   Use o exemplo de código a seguir para habilitar o rastreamento por meio de uma origem de rastreamento sem usar um arquivo de configuração. Essa não é uma prática recomendada, mas pode haver circunstâncias em que você não deseja depender dos arquivos de configuração para garantir o rastreamento.  
+- Use o exemplo de código a seguir para habilitar o rastreamento por meio de uma origem de rastreamento sem usar um arquivo de configuração. Essa não é uma prática recomendada, mas pode haver circunstâncias em que você não deseja depender dos arquivos de configuração para garantir o rastreamento.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

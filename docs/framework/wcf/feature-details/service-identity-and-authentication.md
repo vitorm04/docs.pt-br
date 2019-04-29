@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748259"
 ---
 # <a name="service-identity-and-authentication"></a>Identidade e autenticação de serviço
 Um serviço *identidade de ponto de extremidade* é um valor gerado do serviço de descrição de linguagem WSDL (Web Services). Esse valor, propagada para qualquer cliente, é usado para autenticar o serviço. Depois que o cliente inicia uma comunicação para um ponto de extremidade e o serviço autentica para o cliente, o cliente compara o valor de identidade do ponto de extremidade com o valor real retornado o processo de autenticação de ponto de extremidade. Se elas corresponderem, o cliente terá certeza que ele entrou em contato o ponto de extremidade de serviço esperada. Isso funciona como uma proteção contra *phishing* , impedindo que um cliente que está sendo redirecionado para um ponto de extremidade hospedado por um serviço mal-intencionado.  
@@ -26,9 +26,9 @@ Um serviço *identidade de ponto de extremidade* é um valor gerado do serviço 
   
  Processamento de identidade consiste dos seguintes estágios:  
   
--   Em tempo de design, o desenvolvedor cliente determina a identidade do serviço de metadados do ponto de extremidade (exposto por meio de WSDL).  
+- Em tempo de design, o desenvolvedor cliente determina a identidade do serviço de metadados do ponto de extremidade (exposto por meio de WSDL).  
   
--   Em tempo de execução, o aplicativo cliente verifica as declarações do serviço credenciais de segurança antes de enviar todas as mensagens para o serviço.  
+- Em tempo de execução, o aplicativo cliente verifica as declarações do serviço credenciais de segurança antes de enviar todas as mensagens para o serviço.  
   
  Identidade de processamento no cliente é análoga à autenticação de cliente no serviço. Um serviço seguro não executar o código até que as credenciais do cliente foram autenticadas. Da mesma forma, o cliente não enviará mensagens para o serviço até que as credenciais do serviço foram autenticadas com base no que é conhecido de antemão de metadados do serviço.  
   
@@ -78,21 +78,21 @@ Um serviço *identidade de ponto de extremidade* é um valor gerado do serviço 
   
  Se o canal está configurado para se autenticar usando o nível de transporte ou de mensagem de protocolo (SSL) com certificados X.509 para autenticação, os seguintes valores de identidade são válidos:  
   
--   DNS. WCF garante que o certificado fornecido durante o handshake SSL contém um DNS ou `CommonName` atributo de (CN) igual ao valor especificado na identidade do DNS no cliente. Observe que essas verificações são feitas Além disso, para determinar a validade do certificado do servidor. Por padrão, o WCF valida se o certificado do servidor é emitido por uma autoridade raiz confiável.  
+- DNS. WCF garante que o certificado fornecido durante o handshake SSL contém um DNS ou `CommonName` atributo de (CN) igual ao valor especificado na identidade do DNS no cliente. Observe que essas verificações são feitas Além disso, para determinar a validade do certificado do servidor. Por padrão, o WCF valida se o certificado do servidor é emitido por uma autoridade raiz confiável.  
   
--   Certificado. Durante o handshake SSL, o WCF assegura que o ponto de extremidade remoto fornece o valor de certificado exato especificado na identidade.  
+- Certificado. Durante o handshake SSL, o WCF assegura que o ponto de extremidade remoto fornece o valor de certificado exato especificado na identidade.  
   
--   Referência de certificado. Mesmo que o certificado.  
+- Referência de certificado. Mesmo que o certificado.  
   
--   RSA. Durante o handshake SSL, o WCF assegura que o ponto de extremidade remoto fornece a chave RSA exata especificada na identidade.  
+- RSA. Durante o handshake SSL, o WCF assegura que o ponto de extremidade remoto fornece a chave RSA exata especificada na identidade.  
   
  Se o serviço é autenticado usando o SSL no nível de transporte ou de mensagem com uma credencial do Windows para autenticação e negocia a credencial, os seguintes valores de identidade são válidos:  
   
--   DNS. A negociação passa o SPN do serviço para que o nome DNS pode ser verificado. O SPN está no formato `host/<dns name>`.  
+- DNS. A negociação passa o SPN do serviço para que o nome DNS pode ser verificado. O SPN está no formato `host/<dns name>`.  
   
--   SPN. Um serviço explícito SPN for retornado, por exemplo, `host/myservice`.  
+- SPN. Um serviço explícito SPN for retornado, por exemplo, `host/myservice`.  
   
--   UPN. O UPN da conta de serviço. O UPN está no formato `username` @ `domain`. Por exemplo, quando o serviço está em execução em uma conta de usuário, ele pode ser `username@contoso.com`.  
+- UPN. O UPN da conta de serviço. O UPN está no formato `username` @ `domain`. Por exemplo, quando o serviço está em execução em uma conta de usuário, ele pode ser `username@contoso.com`.  
   
  Especificando a identidade por meio de programação (usando o <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade) é opcional. Se nenhuma identidade for especificada, e o tipo de credencial de cliente é o Windows, o padrão é o SPN com o valor definido para a parte do nome do host do endereço do ponto de extremidade de serviço prefixada com o "host /" literal. Se nenhuma identidade for especificada, e o tipo de credencial de cliente é um certificado, o padrão é `Certificate`. Isso se aplica a ambos os segurança em nível de mensagem e transporte.  
   

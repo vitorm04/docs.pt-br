@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712745"
 ---
-# <a name="azure-logic-apps"></a>Aplicativos lógicos do Azure
+# <a name="azure-logic-apps"></a>Aplicativos Lógicos do Azure
 
 [Aplicativos lógicos do Azure](https://docs.microsoft.com/azure/logic-apps) fornece um mecanismo sem servidor para criar fluxos de trabalho automatizados para integrar aplicativos e dados entre os serviços de nuvem e sistemas locais. Você cria fluxos de trabalho usando um designer visual. Você pode disparar fluxos de trabalho com base em eventos, temporizadores e aproveite conectores para aplicativos de integração e facilitar a comunicação de business-to-business (B2B). Os aplicativos lógicos se integra perfeitamente com o Azure Functions.
 

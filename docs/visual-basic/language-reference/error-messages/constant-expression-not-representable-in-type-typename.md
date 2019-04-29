@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
 ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649849"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>Expressão de constante não representável no tipo '\<typename >'
 Você está tentando avaliar uma constante que não se ajustarem ao tipo de destino, normalmente porque ela está estourando o intervalo.  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696767"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a> Ao desenvolver autônomo do Windows Presentation Foundation (WPF) e aplicativos hospedados pelo navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos executados com permissões ilimitadas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](./app-development/wpf-add-ins-overview.md).  
@@ -31,17 +31,17 @@ ms.locfileid: "59313561"
   
  Esse tópico contém as seguintes seções:  
   
--   [Navegação segura](#SafeTopLevelNavigation)  
+- [Navegação segura](#SafeTopLevelNavigation)  
   
--   [Configurações de segurança de software de navegação na Web](#InternetExplorerSecuritySettings)  
+- [Configurações de segurança de software de navegação na Web](#InternetExplorerSecuritySettings)  
   
--   [Controle WebBrowser e controles de recurso](#webbrowser_control_and_feature_controls)  
+- [Controle WebBrowser e controles de recurso](#webbrowser_control_and_feature_controls)  
   
--   [Desabilitando os assemblies APTCA para aplicativos cliente parcialmente confiáveis](#APTCA)  
+- [Desabilitando os assemblies APTCA para aplicativos cliente parcialmente confiáveis](#APTCA)  
   
--   [Comportamento da área restrita para arquivos XAML flexíveis](#LooseContentSandboxing)  
+- [Comportamento da área restrita para arquivos XAML flexíveis](#LooseContentSandboxing)  
   
--   [Recursos para o desenvolvimento de aplicativos do WPF que promovem a segurança](#BestPractices)  
+- [Recursos para o desenvolvimento de aplicativos do WPF que promovem a segurança](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Navegação segura  
@@ -69,19 +69,19 @@ ms.locfileid: "59313561"
   
  É possível navegar até arquivos desses tipos de conteúdo por meio do usuário ou programaticamente:  
   
--   **Navegação do usuário**. O usuário navega, clicando em um <xref:System.Windows.Documents.Hyperlink> elemento.  
+- **Navegação do usuário**. O usuário navega, clicando em um <xref:System.Windows.Documents.Hyperlink> elemento.  
   
--   **Navegação programática**. O aplicativo navega sem envolver o usuário, por exemplo, definindo o <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> propriedade.  
+- **Navegação programática**. O aplicativo navega sem envolver o usuário, por exemplo, definindo o <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> propriedade.  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>Segurança da navegação do navegador  
  A navegação do navegador é considerada segura somente nestas condições:  
   
--   **Navegação do usuário**. O usuário navega, clicando em um <xref:System.Windows.Documents.Hyperlink> elemento que está dentro do principal <xref:System.Windows.Navigation.NavigationWindow>, e não no aninhado <xref:System.Windows.Controls.Frame>.  
+- **Navegação do usuário**. O usuário navega, clicando em um <xref:System.Windows.Documents.Hyperlink> elemento que está dentro do principal <xref:System.Windows.Navigation.NavigationWindow>, e não no aninhado <xref:System.Windows.Controls.Frame>.  
   
--   **Zona**. O conteúdo da navegação localiza-se na Internet ou na intranet local.  
+- **Zona**. O conteúdo da navegação localiza-se na Internet ou na intranet local.  
   
--   **Protocolo**. É o protocolo usado **http**, **https**, **arquivo**, ou **mailto**.  
+- **Protocolo**. É o protocolo usado **http**, **https**, **arquivo**, ou **mailto**.  
   
  Se um [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] tenta navegar até o conteúdo de uma maneira que não são compatíveis com essas condições, um <xref:System.Security.SecurityException> é gerada.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313561"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] Fornece um mecanismo pelo qual você pode configurar a funcionalidade que pode ser executada por ou de [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], incluindo o seguinte:  
   
--   Componentes dependentes do framework .NET  
+- Componentes dependentes do framework .NET  
   
--   Controles ActiveX e plug-ins  
+- Controles ActiveX e plug-ins  
   
--   Downloads  
+- Downloads  
   
--   Script  
+- Script  
   
--   Autenticação do usuário  
+- Autenticação do usuário  
   
  A coleção de funcionalidade que pode ser protegida dessa maneira é configurada em uma base por zona para o **Internet**, **Intranet**, **Sites confiáveis**, e  **Sites restritos** zonas. As etapas a seguir descrevem como definir as configurações de segurança:  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313561"
   
  Começando com [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], as seguintes configurações de segurança especificamente para o .NET Framework são incluídas:  
   
--   **XAML flexível**. Controles se [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] navegar até eles e flexível [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] arquivos. (Opções de Habilitar, Desabilitar e Prompt.)  
+- **XAML flexível**. Controles se [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] navegar até eles e flexível [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] arquivos. (Opções de Habilitar, Desabilitar e Prompt.)  
   
--   **Aplicativos do navegador XAML**. Controles se [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] pode navegar para e execute [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Opções de Habilitar, Desabilitar e Prompt.)  
+- **Aplicativos do navegador XAML**. Controles se [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] pode navegar para e execute [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Opções de Habilitar, Desabilitar e Prompt.)  
   
  Por padrão, essas configurações são habilitadas para o **Internet**, **intranet Local**, e **sites confiáveis** zonas e desabilitado para o **sites restritos**  zona.  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313561"
   
  Essa chave estabelece uma entrada para o assembly APTCA. Você também precisa criar um valor nessa chave que habilite ou desabilite o assembly. Abaixo estão os detalhes do valor:  
   
--   Nome do valor: **APTCA_FLAG**.  
+- Nome do valor: **APTCA_FLAG**.  
   
--   Tipo de valor: **REG_DWORD**.  
+- Tipo de valor: **REG_DWORD**.  
   
--   Dados de valor: **1** desabilitar; **0** para habilitar.  
+- Dados de valor: **1** desabilitar; **0** para habilitar.  
   
  Caso seja necessário desabilitar um assembly para aplicativos clientes parcialmente confiáveis, você pode gravar uma atualização que crie a chave do Registro e o valor.  
   

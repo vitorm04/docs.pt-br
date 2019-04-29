@@ -9,11 +9,11 @@ helpviewer_keywords:
 - seeking clocks synchronously [WPF]
 ms.assetid: e5b7529b-b7d0-40d2-9e1d-fa4b5e736e96
 ms.openlocfilehash: 9b6b1f5523effc56ccd9ddaa4f478e1d3a20ada8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651253"
 ---
 # <a name="how-to-seek-a-clock-synchronously"></a>Como: Buscar um relógio de forma síncrona
 Use o <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> método para buscar um relógio para um ponto específico de forma síncrona. O exemplo a seguir demonstra a ambos os <xref:System.Windows.Media.Animation.ClockController.Seek%2A> e <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> métodos de um <xref:System.Windows.Media.Animation.ClockController>.  

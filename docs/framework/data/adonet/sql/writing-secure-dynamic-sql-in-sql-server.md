@@ -3,11 +3,11 @@ title: Escrevendo SQL dinâmico seguro no SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757710"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escrevendo SQL dinâmico seguro no SQL Server
 A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere instruções Transact-SQL em vez de entrada válida. Se a entrada for passada diretamente para o servidor sem ser validada e se o aplicativo executa inadvertidamente o código injetado, o ataque terá o potencial de danificar ou destruir dados.  
@@ -21,34 +21,34 @@ A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere i
   
  Aqui estão algumas diretrizes úteis:  
   
--   Nunca construa instruções Transact-SQL diretamente da entrada do usuário; use procedimentos armazenados para validar a entrada de usuário.  
+- Nunca construa instruções Transact-SQL diretamente da entrada do usuário; use procedimentos armazenados para validar a entrada de usuário.  
   
--   Valide a entrada de usuário testando tipo, comprimento, formato e intervalo. Use a função Transact-SQL QUOTENAME() para ignorar nomes do sistema ou a função REPLACE() para ignorar qualquer caractere em uma cadeia de caracteres.  
+- Valide a entrada de usuário testando tipo, comprimento, formato e intervalo. Use a função Transact-SQL QUOTENAME() para ignorar nomes do sistema ou a função REPLACE() para ignorar qualquer caractere em uma cadeia de caracteres.  
   
--   Implemente várias camadas de validação em cada camada do aplicativo.  
+- Implemente várias camadas de validação em cada camada do aplicativo.  
   
--   Teste o tamanho e o tipo de dados de entrada e imponha limites apropriados. Isso pode ajudar a impedir o excesso deliberado de buffer.  
+- Teste o tamanho e o tipo de dados de entrada e imponha limites apropriados. Isso pode ajudar a impedir o excesso deliberado de buffer.  
   
--   Teste o conteúdo de variáveis de cadeia de caracteres e aceite somente valores previstos. Rejeite entradas que contenham dados binários, sequências de escape e caracteres de comentário.  
+- Teste o conteúdo de variáveis de cadeia de caracteres e aceite somente valores previstos. Rejeite entradas que contenham dados binários, sequências de escape e caracteres de comentário.  
   
--   Quando você estiver trabalhando com documentos XML, valide todos os dados em seu esquema como foram inseridos.  
+- Quando você estiver trabalhando com documentos XML, valide todos os dados em seu esquema como foram inseridos.  
   
--   Em ambientes de várias camadas, todos os dados devem ser validados antes de entrarem na zona de confiança.  
+- Em ambientes de várias camadas, todos os dados devem ser validados antes de entrarem na zona de confiança.  
   
--   Não aceite as seguintes cadeias de caracteres nos campos do que os nomes de arquivo podem ser criados: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
+- Não aceite as seguintes cadeias de caracteres nos campos do que os nomes de arquivo podem ser criados: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
   
--   Use objetos <xref:System.Data.SqlClient.SqlParameter> com procedimentos armazenados e comandos para fornecer a verificação de tipo e validação de comprimento.  
+- Use objetos <xref:System.Data.SqlClient.SqlParameter> com procedimentos armazenados e comandos para fornecer a verificação de tipo e validação de comprimento.  
   
--   Use expressões <xref:System.Text.RegularExpressions.Regex> em código de cliente para filtrar caracteres inválidos.  
+- Use expressões <xref:System.Text.RegularExpressions.Regex> em código de cliente para filtrar caracteres inválidos.  
   
 ## <a name="dynamic-sql-strategies"></a>Estratégias dinâmicas do SQL  
  Executar instruções SQL dinamicamente criadas em seu código procedural quebra a cadeia de propriedade, fazendo o SQL Server verificar as permissões do chamador nos objetos acessados pelo SQL dinâmico.  
   
  O SQL Server tem métodos para conceder aos usuários acesso aos dados usando procedimentos armazenados e funções definidas pelo usuário que executa o SQL dinâmico.  
   
--   Usar a representação com a cláusula Transact-SQL EXECUTE AS, conforme descrito em [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usar a representação com a cláusula Transact-SQL EXECUTE AS, conforme descrito em [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Assinar procedimentos armazenados com certificados, conforme descrito em [Assinando procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Assinar procedimentos armazenados com certificados, conforme descrito em [Assinando procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  A cláusula EXECUTE AS substitui as permissões do chamador com relação pelas do usuário especificado na cláusula EXECUTE AS. Os procedimentos armazenados aninhados ou gatilhos são executados sob o contexto de segurança do usuário do proxy. Isso pode interromper aplicativos que dependem de segurança em nível de linha ou exigem auditoria. Algumas funções que retornam a identidade do usuário retornam o usuário especificado na cláusula EXECUTE AS, não o chamador original. O contexto de execução é revertido para o chamador original somente após a execução do procedimento ou quando uma instrução REVERT for emitida.  

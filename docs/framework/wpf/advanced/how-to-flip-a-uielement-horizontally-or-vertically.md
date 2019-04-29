@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
 ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767011"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Como: Inverter um UIElement horizontal ou verticalmente
 Este exemplo mostra como usar um <xref:System.Windows.Media.ScaleTransform> inverter um <xref:System.Windows.UIElement> horizontal ou verticalmente. Neste exemplo, uma <xref:System.Windows.Controls.Button> controle (um tipo de <xref:System.Windows.UIElement>) é invertido aplicando um <xref:System.Windows.Media.ScaleTransform> ao seu <xref:System.Windows.UIElement.RenderTransform%2A> propriedade.  
