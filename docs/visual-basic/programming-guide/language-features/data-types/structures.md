@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663356"
 ---
 # <a name="structures-visual-basic"></a>Estruturas (Visual Basic)
 Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT) compatível com versões anteriores do Visual Basic. Além dos campos, estruturas podem expor propriedades, métodos e eventos. Uma estrutura pode implementar uma ou mais interfaces, e você pode declarar os níveis de acesso individual para cada campo.  
@@ -24,7 +24,7 @@ Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT)
  Estruturas são úteis quando você deseja que uma única variável para conter várias partes de informação relacionadas. Por exemplo, você talvez queira manter o nome, extensão de telefone e salário do funcionário. Você pode usar diversas variáveis para obter essas informações, ou você poderia definir uma estrutura e usá-lo para uma única variável funcionário. A vantagem da estrutura se torna aparente quando você tem muitos funcionários e, portanto, muitas instâncias da variável.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
  Mostra como declarar uma estrutura e seus elementos.  
   
  [Variáveis de Estrutura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  

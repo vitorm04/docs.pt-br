@@ -3,11 +3,11 @@ title: 3819 - RoutingServiceMovedToBackup
 ms.date: 03/30/2017
 ms.assetid: bf4086de-efd4-413c-9bc3-32a85b6b6722
 ms.openlocfilehash: 34f29a638ef57af8166b8c2806b15bd0300ab25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33466266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748311"
 ---
 # <a name="3819---routingservicemovedtobackup"></a>3819 - RoutingServiceMovedToBackup
 ## <a name="properties"></a>Propriedades  
@@ -20,9 +20,9 @@ ms.locfileid: "33466266"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o serviço de roteamento foi movido para pontos de extremidade de backup.  
+ Esse evento é emitido quando o serviço de roteamento foi movido para pontos de extremidade.  
   
 ## <a name="message"></a>Mensagem  
- Mensagem de serviço de roteamento com ID: '%1' [operação %2] é movida para o ponto de extremidade de backup '%3'.  
+ Roteamento de mensagem de serviço com ID: '%1' [%2 operação] movidos para o ponto de extremidade de backup '%3'.  
   
 ## <a name="details"></a>Detalhes

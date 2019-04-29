@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762482"
 ---
 # <a name="one-way-services"></a>Serviços unidirecionais
 O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método. Com uma operação unidirecional, apenas uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem faz o remetente espera um.  
   
  Use o padrão de design unidirecional:  
   
--   Quando o cliente deve chamar as operações e não é afetado pelo resultado da operação no nível da operação.  
+- Quando o cliente deve chamar as operações e não é afetado pelo resultado da operação no nível da operação.  
   
--   Ao usar o <xref:System.ServiceModel.NetMsmqBinding> ou o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe. (Para obter mais informações sobre esse cenário, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Ao usar o <xref:System.ServiceModel.NetMsmqBinding> ou o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe. (Para obter mais informações sobre esse cenário, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Quando uma operação é unidirecional, não há nenhuma mensagem de resposta para transmitir informações de erro para o cliente. Você pode detectar condições de erro usando os recursos da associação subjacente, como sessões confiáveis, ou criando um contrato de serviço duplex que usa duas operações unidirecionais — um contrato unidirecional do cliente para o serviço para chamar a operação de serviço e outro unidirecional de contrato entre o serviço e o cliente para que o serviço possa enviar falhas back para o cliente usando um retorno de chamada que implementa o cliente.  
   

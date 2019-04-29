@@ -8,11 +8,11 @@ ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19103b2ac6e6dbba930050074fcea3cfd5a97661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704655"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
 Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tamanho total.  
@@ -57,11 +57,11 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
 ## <a name="remarks"></a>Comentários  
  Usando esse elemento em seu arquivo de configuração de aplicativo permite matrizes que são maiores que 2 GB de tamanho, mas não altere outros limites de tamanho do objeto ou matriz:  
   
--   O número máximo de elementos em uma matriz é <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
+- O número máximo de elementos em uma matriz é <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
--   O índice máximo em uma única dimensão é 2,147,483,591 (0x7FFFFFC7) para matrizes de bytes e matrizes de estruturas de byte único e 2,146,435,071 (0X7FEFFFFF) para outros tipos.  
+- O índice máximo em uma única dimensão é 2,147,483,591 (0x7FFFFFC7) para matrizes de bytes e matrizes de estruturas de byte único e 2,146,435,071 (0X7FEFFFFF) para outros tipos.  
   
--   O tamanho máximo de cadeias de caracteres e outros objetos não matriz não é alterado.  
+- O tamanho máximo de cadeias de caracteres e outros objetos não matriz não é alterado.  
   
 > [!CAUTION]
 >  Antes de habilitar esse recurso, certifique-se de que seu aplicativo não inclui o código não seguro que pressupõe que todas as matrizes são menores que 2 GB de tamanho. Por exemplo, o código não seguro que usa matrizes como buffers pode ser suscetível a estouros de buffer se ele é gravado na suposição de que matrizes não deve exceder 2 GB.  

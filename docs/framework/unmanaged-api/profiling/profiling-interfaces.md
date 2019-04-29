@@ -9,21 +9,21 @@ ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758191"
 ---
 # <a name="profiling-interfaces"></a>Criação de perfil de interfaces
 Esta seção descreve as interfaces não gerenciadas que permitem criar o perfil de um programa que está sendo executado no CLR (Common Language Runtime).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interface ICLRProfiling](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
- Fornece o [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método, o que permite que um criador de perfil anexar a um processo em execução.  
+ Fornece o [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método, que permite que um criador de perfil anexar a um processo em execução.  
   
  [Interface ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
- Permite que o criador de perfil informar o CLR de referências de assembly que o criador de perfil adicionará o [: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) retorno de chamada.  
+ Permite que o criador de perfil informe ao CLR de referências de assembly que o criador de perfil será adicionado a [ICorProfilerCallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) retorno de chamada.  
   
  [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  Fornece métodos usados pelo CLR para notificar um criador de perfis de código quando ocorrerem os eventos assinados pelo criador de perfis.  
@@ -44,13 +44,13 @@ Esta seção descreve as interfaces não gerenciadas que permitem criar o perfil
  Fornece um método de retorno de chamada que o CLR usa para notificar um criador de perfis de que um assembly está carregando.  
   
  [Interface ICorProfilerCallback7](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
- Fornece um método de retorno de chamada que usa o common language runtime para notificar o criador de perfil que o fluxo de símbolo associado a um módulo de memória está atualizado.  
+ Fornece um método de retorno de chamada que o common language runtime usa para notificar o criador de perfil que o fluxo de símbolo associado a um módulo na memória é atualizado.  
 
 [Interface ICorProfilerCallback8](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
-Fornece métodos de retorno de chamada que usa o common language runtime para notificar o criador de perfil que a compilação JIT de um método dinâmico foi iniciado e concluído.
+Fornece métodos de retorno de chamada que o common language runtime usa para notificar o criador de perfil que a compilação JIT de um método dinâmico foi iniciado e concluído.
 
 [Interface ICorProfilerCallback9](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
-Fornece um método de retorno de chamada que usa o common language runtime para notificar o criador de perfil um método dinâmico é lixo coletado e subsequentemente descarregado.
+Fornece um método de retorno de chamada que o common language runtime usa para notificar o criador de perfil um método dinâmico é lixo coletado e, subsequentemente, foi descarregado.
 
  [Interface ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Fornece métodos que permitem um criador de perfis de código se comunicar com o CLR para controlar como o compilador JIT deve gerar código ao recompilar um método específico.  
@@ -74,22 +74,22 @@ Fornece um método de retorno de chamada que usa o common language runtime para 
  Fornece métodos para uso por criadores de perfis de código para se comunicar com o CLR para controlar o monitoramento de eventos.  
   
  [Interface ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)  
- Fornece um enumerador para todos os métodos que pertencem a um módulo NGen especificado e que são embutida no corpo de um método específico.  
+ Fornece um enumerador para todos os métodos que pertencem a um determinado módulo do NGen e que são embutidos no corpo de um determinado método.  
   
  [Interface ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
- Fornece um método para aplicar recentemente definiu os metadados para um módulo e que fornece acesso a um fluxo de símbolo na memória.  
+ Fornece um método para aplicar recentemente definido metadados para um módulo e que fornece acesso a um fluxo de símbolo na memória.  
   
  [Interface ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
  Fornece métodos para iterar de forma sequencial por meio de uma coleção de módulos carregados pelo aplicativo ou pelo criador de perfis.  
   
  [Interface ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)  
- Fornece métodos para iterar em sequência por meio de uma coleção de objetos congeladas gerados pelo [Ngen.exe (gerador de imagem nativa)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Fornece métodos para iterar de forma sequencial por meio de uma coleção de objetos congelados que são gerados pelo [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
  [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
  Fornece métodos para iterar de forma sequencial por meio de uma coleção de threads no CLR.  
   
  [Interface IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
- Fornece o [alocação](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) método para alocar memória para um novo corpo de função do Microsoft intermediate language (MSIL).  
+ Fornece o [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) método alocar memória para um novo corpo de função do Microsoft intermediate language (MSIL).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Visão geral da criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

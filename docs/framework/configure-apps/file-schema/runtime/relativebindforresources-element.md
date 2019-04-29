@@ -8,11 +8,11 @@ ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704564"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > elemento
 Otimiza o teste para assemblies satélites.  
@@ -57,19 +57,19 @@ Otimiza o teste para assemblies satélites.
 ## <a name="remarks"></a>Comentários  
  Em geral, o Gerenciador de recursos de investigações para recursos, conforme documentado na [Empacotando e implantando recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) tópico. Isso significa que quando investigações do Gerenciador de recursos para uma versão localizada específica de um recurso, ele pode procurar no cache de assembly global, procurar em uma pasta específicas da cultura na consulta do aplicativo de base, de código do Windows Installer para assemblies satélite e acionar o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos. O `<relativeBindForResources>` elemento otimiza a maneira na qual o Gerenciador de recursos investigações para assemblies satélite. Ele pode melhorar o desempenho quando a investigação para recursos nas seguintes condições:  
   
--   Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélites também devem ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélites também devem ser instalados em uma pasta específica de cultura na base de código.  
+- Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélites também devem ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélites também devem ser instalados em uma pasta específica de cultura na base de código.  
   
--   Quando o Windows Installer não é usado ou apenas raramente é usado para instalação sob demanda dos assemblies satélites.  
+- Quando o Windows Installer não é usado ou apenas raramente é usado para instalação sob demanda dos assemblies satélites.  
   
--   Quando o código do aplicativo não processa o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
+- Quando o código do aplicativo não processa o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
   
  Definindo o `enabled` atributo o `<relativeBindForResources>` elemento a ser `true` otimiza a investigação do Gerenciador de recursos para assemblies satélite da seguinte maneira:  
   
--   Ele usa o local do assembly de código pai para investigar o assembly satélite.  
+- Ele usa o local do assembly de código pai para investigar o assembly satélite.  
   
--   Ele não consulta do Windows Installer para assemblies satélite.  
+- Ele não consulta do Windows Installer para assemblies satélite.  
   
--   Ele não gere a <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
+- Ele não gere a <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
   
 ## <a name="see-also"></a>Consulte também
 

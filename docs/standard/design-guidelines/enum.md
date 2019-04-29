@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669089"
 ---
 # <a name="enum-design"></a>Design de enumeração
 Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: enums de enums e sinalizador simples.  
@@ -48,17 +48,17 @@ Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: e
   
  **✓ CONSIDER** usando <xref:System.Int32> (o padrão na maioria das linguagens de programação) como o tipo subjacente de enum, a menos que qualquer um dos seguintes for verdadeiro:  
   
--   Enum é uma enumeração de sinalizadores e você tiver mais de 32 sinalizadores ou pretende ter mais no futuro.  
+- Enum é uma enumeração de sinalizadores e você tiver mais de 32 sinalizadores ou pretende ter mais no futuro.  
   
--   O tipo subjacente deve ser diferente de <xref:System.Int32> mais fáceis de interoperabilidade com código não gerenciado, esperando enums de tamanho diferente.  
+- O tipo subjacente deve ser diferente de <xref:System.Int32> mais fáceis de interoperabilidade com código não gerenciado, esperando enums de tamanho diferente.  
   
--   Um tipo subjacente menor poderia resultar em uma economia substancial no espaço. Se você espera que o enum a ser usado principalmente como um argumento para o fluxo de controle, o tamanho torna pouca diferença. A economia de tamanho pode ser significativa se:  
+- Um tipo subjacente menor poderia resultar em uma economia substancial no espaço. Se você espera que o enum a ser usado principalmente como um argumento para o fluxo de controle, o tamanho torna pouca diferença. A economia de tamanho pode ser significativa se:  
   
-    -   Você espera que o enum a ser usado como um campo em uma classe ou estrutura com muita frequência instanciada.  
+    - Você espera que o enum a ser usado como um campo em uma classe ou estrutura com muita frequência instanciada.  
   
-    -   Você espera que os usuários criem matrizes grandes ou coleções de enumerar instâncias.  
+    - Você espera que os usuários criem matrizes grandes ou coleções de enumerar instâncias.  
   
-    -   Você espera que um grande número de instâncias de enum deve ser serializada.  
+    - Você espera que um grande número de instâncias de enum deve ser serializada.  
   
  Para uso na memória, esteja ciente de que os objetos gerenciados são sempre `DWORD`-alinhados, portanto, você precisa efetivamente várias enumerações ou outras estruturas pequenas em uma instância para empacotar um enum menor com para fazer uma diferença, porque o tamanho total de instâncias é sempre vai ser arredondado para um `DWORD`.  
   

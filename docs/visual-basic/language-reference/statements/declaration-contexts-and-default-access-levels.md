@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638175"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contextos de declaração e níveis de acesso padrão (Visual Basic)
 Este tópico descreve quais tipos de Visual Basic podem ser declarados dentro do quais outros tipos, e o que seus níveis de acesso padrão se não especificado.  
@@ -24,11 +24,11 @@ Este tópico descreve quais tipos de Visual Basic podem ser declarados dentro do
   
  Os níveis para contextos de declaração são os seguintes:  
   
--   *Nível de Namespace* — dentro de um arquivo de origem ou namespace, mas não dentro de uma classe, estrutura, módulo ou interface  
+- *Nível de Namespace* — dentro de um arquivo de origem ou namespace, mas não dentro de uma classe, estrutura, módulo ou interface  
   
--   *Nível de módulo* — dentro de uma classe, estrutura, módulo ou interface, mas não dentro de um procedimento ou bloco  
+- *Nível de módulo* — dentro de uma classe, estrutura, módulo ou interface, mas não dentro de um procedimento ou bloco  
   
--   *Nível de procedimento* — dentro de um procedimento ou bloco (como `If` ou `For`)  
+- *Nível de procedimento* — dentro de um procedimento ou bloco (como `If` ou `For`)  
   
  A tabela a seguir mostra os níveis de acesso padrão para vários elementos de programação declarados, dependendo de seus contextos de declaração.  
   

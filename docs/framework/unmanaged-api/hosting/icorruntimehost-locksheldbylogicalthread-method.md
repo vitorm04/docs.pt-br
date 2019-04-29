@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 90af015de4428f75330de89978a7fc0a4b26750b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700742"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>Método ICorRuntimeHost::LocksHeldByLogicalThread
 Recupera o número de bloqueios que o thread atual mantém.  

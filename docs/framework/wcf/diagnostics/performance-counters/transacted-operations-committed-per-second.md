@@ -3,11 +3,11 @@ title: Operações Transacionadas Confirmadas por Segundo
 ms.date: 03/30/2017
 ms.assetid: 7318921b-47c4-4c8c-9fdd-41a92061c53f
 ms.openlocfilehash: 124eae3b36a731ac50a147782b19c87e3adfa7be
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766370"
 ---
 # <a name="transacted-operations-committed-per-second"></a>Operações Transacionadas Confirmadas por Segundo
 Nome do contador: Operações transacionadas confirmadas por segundo.  
@@ -17,4 +17,4 @@ Nome do contador: Operações transacionadas confirmadas por segundo.
   
  Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir.  
   
- (N 1 - N 0) / ((1!D 1 - D 0) / F)
+ (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

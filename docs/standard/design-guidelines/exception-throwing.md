@@ -1,5 +1,5 @@
 ---
-title: Gerando exceções
+title: Gerar exceções
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
 ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669063"
 ---
-# <a name="exception-throwing"></a>Gerando exceções
+# <a name="exception-throwing"></a>Gerar exceções
 Diretrizes de exceções descritas nesta seção exigem uma boa definição do significado da falha de execução. Falha na execução ocorre sempre que um membro não pode fazer o que ele foi projetado para fazer (o que o nome do membro implica). Por exemplo, se o `OpenFile` método não pode retornar um identificador de arquivo aberto para o chamador, ele será considerado uma falha na execução.  
   
  A maioria dos desenvolvedores tornaram-se confortável usando exceções para erros de uso como a divisão por zero ou referências nulas. No Framework, as exceções são usadas para todas as condições de erro, incluindo erros de execução.  

@@ -3,20 +3,20 @@ title: Transmissão de transferência de mensagem
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747570"
 ---
 # <a name="streaming-message-transfer"></a>Transmissão de transferência de mensagem
 Transportes do Windows Communication Foundation (WCF) dão suporte a dois modos para a transferência de mensagens:  
   
--   Transferências em buffer mantenha a mensagem inteira em um buffer de memória até que a transferência for concluída. Uma mensagem em buffer deve ser entregue completamente antes de um destinatário possa lê-lo.  
+- Transferências em buffer mantenha a mensagem inteira em um buffer de memória até que a transferência for concluída. Uma mensagem em buffer deve ser entregue completamente antes de um destinatário possa lê-lo.  
   
--   Transferências em streaming expõem a mensagem como um fluxo. O receptor começa a processar a mensagem antes que seja entregue completamente.  
+- Transferências em streaming expõem a mensagem como um fluxo. O receptor começa a processar a mensagem antes que seja entregue completamente.  
   
--   Transferências em streaming podem melhorar a escalabilidade de um serviço, eliminando a necessidade de buffers de memória grandes. Se alterar o modo de transferência melhora a escalabilidade depende do tamanho das mensagens que estão sendo transferidos. Tamanhos das mensagens grandes favorecerem usando transferências em streaming.  
+- Transferências em streaming podem melhorar a escalabilidade de um serviço, eliminando a necessidade de buffers de memória grandes. Se alterar o modo de transferência melhora a escalabilidade depende do tamanho das mensagens que estão sendo transferidos. Tamanhos das mensagens grandes favorecerem usando transferências em streaming.  
   
  Por padrão, o HTTP, TCP/IP e transportes de pipe nomeado usam transferências em buffer. Este documento descreve como alternar esses transportes de em um buffer para o modo de transferência em fluxo e as consequências de se fazer isso.  
   

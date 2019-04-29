@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747051"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Como: Criar uma tabela de pesquisa com o componente BindingSource do Windows Forms
 A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados de registros em uma tabela relacionada. Nos procedimentos a seguir, um controle <xref:System.Windows.Forms.ComboBox> é usado para exibir o campo com a relação de chave estrangeira da tabela pai para a tabela filho.  
@@ -37,13 +37,13 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
  Quatro propriedades importantes são definidas no [Controle ComboBox](combobox-control-windows-forms.md) para criar a tabela de pesquisa.  
   
--   A propriedade <xref:System.Windows.Forms.ComboBox.DataSource%2A> contém o nome da tabela.  
+- A propriedade <xref:System.Windows.Forms.ComboBox.DataSource%2A> contém o nome da tabela.  
   
--   A propriedade <xref:System.Windows.Forms.ListControl.DisplayMember%2A> contém a coluna de dados da tabela que você deseja exibir para o texto de controle (nome do cliente).  
+- A propriedade <xref:System.Windows.Forms.ListControl.DisplayMember%2A> contém a coluna de dados da tabela que você deseja exibir para o texto de controle (nome do cliente).  
   
--   A propriedade <xref:System.Windows.Forms.ListControl.ValueMember%2A> contém a coluna de dados dessa tabela com as informações armazenadas (o número de ID na tabela pai).  
+- A propriedade <xref:System.Windows.Forms.ListControl.ValueMember%2A> contém a coluna de dados dessa tabela com as informações armazenadas (o número de ID na tabela pai).  
   
--   A propriedade <xref:System.Windows.Forms.ListControl.SelectedValue%2A> fornece o valor de pesquisa da tabela filho, com base no <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- A propriedade <xref:System.Windows.Forms.ListControl.SelectedValue%2A> fornece o valor de pesquisa da tabela filho, com base no <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
   
  Os procedimentos a seguir mostram como dispor um formulário como uma tabela de pesquisa e vincular dados aos controles nele. Para concluir com êxito os procedimentos, você deve ter uma fonte de dados com as tabelas pai e filho que tenham uma relação de chave estrangeira, como mencionado anteriormente.  
   
@@ -65,21 +65,21 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
 3. Clique na seta ao lado da caixa suspensa **Fonte de Dados**. Se uma fonte de dados foi configurada anteriormente para o projeto ou formulário, ela aparecerá; caso contrário, siga as seguintes etapas (Este exemplo usa as tabelas Clientes e Pedidos do banco de dados de amostra Northwind e refere-se a elas nos parênteses).  
   
-    1.  Clique em **Adicionar Fonte de Dados do Projeto** para conectar-se aos dados e criar uma fonte de dados.  
+    1. Clique em **Adicionar Fonte de Dados do Projeto** para conectar-se aos dados e criar uma fonte de dados.  
   
-    2.  Na página de boas-vindas do **Assistente de Configuração de Fonte de Dados**, clique em **Avançar**.  
+    2. Na página de boas-vindas do **Assistente de Configuração de Fonte de Dados**, clique em **Avançar**.  
   
-    3.  Selecione **Banco de dados** na página **Escolher um tipo de fonte de dados**.  
+    3. Selecione **Banco de dados** na página **Escolher um tipo de fonte de dados**.  
   
-    4.  Escolha uma conexão de dados na lista de conexões disponíveis na página **Escolha a conexão de dados**. Se sua conexão de dados desejada não estiver disponível, selecione **Nova Conexão** para criar uma nova conexão de dados.  
+    4. Escolha uma conexão de dados na lista de conexões disponíveis na página **Escolha a conexão de dados**. Se sua conexão de dados desejada não estiver disponível, selecione **Nova Conexão** para criar uma nova conexão de dados.  
   
-    5.  Clique em **Sim, salvar a conexão** para salvar a cadeia de conexão no arquivo de configuração de aplicativo.  
+    5. Clique em **Sim, salvar a conexão** para salvar a cadeia de conexão no arquivo de configuração de aplicativo.  
   
-    6.  Selecione os objetos de banco de dados para trazer para o seu aplicativo. Neste caso, selecione uma tabela pai e uma tabela filho (por exemplo, clientes e pedidos) com uma relação de chave estrangeira.  
+    6. Selecione os objetos de banco de dados para trazer para o seu aplicativo. Neste caso, selecione uma tabela pai e uma tabela filho (por exemplo, clientes e pedidos) com uma relação de chave estrangeira.  
   
-    7.  Substitua o nome do conjunto de dados padrão, se quiser.  
+    7. Substitua o nome do conjunto de dados padrão, se quiser.  
   
-    8.  Clique em **Finalizar**.  
+    8. Clique em **Finalizar**.  
   
 4. Na caixa suspensa **Exibir Membro**, selecione o nome da coluna (por exemplo, ContactName) a ser exibida na caixa de combinação.  
   

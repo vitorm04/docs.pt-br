@@ -10,21 +10,21 @@ ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756176"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Enumerações de armazenamento de símbolo de diagnóstico
-Este tópico descreve as enumerações não gerenciadas que usa o armazenamento de símbolo de diagnóstico API.  
+Este tópico descreve as enumerações não gerenciadas que usa o repositório de símbolos de diagnóstico API.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Enumeração CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
  Indica o tipo de endereço de memória.  
   
  [Enumeração CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Especifica a política a ser usado ao fazer uma pesquisa de um leitor de símbolo.  
+ Especifica a política a ser usado ao fazer uma pesquisa por um leitor de símbolo.  
   
  [Enumeração CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
  Indica se uma variável é gerado pelo compilador.  

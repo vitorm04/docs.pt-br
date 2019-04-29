@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753793"
 ---
 # <a name="moduloobjecthashcode-mda"></a>MDA moduloObjectHashcode
 O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o comportamento da classe <xref:System.Object> para executar uma operação de módulo no código hash retornado pelo método <xref:System.Object.GetHashCode%2A>. O módulo padrão para esse MDA é 1, o que faz com que <xref:System.Object.GetHashCode%2A> retorne 0 para todos os objetos.  
@@ -25,13 +25,13 @@ O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o 
 ## <a name="symptoms"></a>Sintomas  
  Depois de migrar para uma nova versão do CLR (Common Language Runtime), um programa não é mais executado corretamente:  
   
--   O programa está obtendo o objeto errado de um <xref:System.Collections.Hashtable>.  
+- O programa está obtendo o objeto errado de um <xref:System.Collections.Hashtable>.  
   
--   A ordem de enumeração de um <xref:System.Collections.Hashtable> tem uma alteração que interrompe o programa.  
+- A ordem de enumeração de um <xref:System.Collections.Hashtable> tem uma alteração que interrompe o programa.  
   
--   Dois objetos que costumavam ser iguais não o são mais.  
+- Dois objetos que costumavam ser iguais não o são mais.  
   
--   Dois objetos que costumavam não ser iguais agora o são.  
+- Dois objetos que costumavam não ser iguais agora o são.  
   
 ## <a name="cause"></a>Causa  
  Seu programa pode estar obtendo o objeto errado de um <xref:System.Collections.Hashtable> porque a implementação do método <xref:System.Object.Equals%2A> na classe para a chave no <xref:System.Collections.Hashtable> testa a igualdade de objetos ao comparar os resultados da chamada para o método <xref:System.Object.GetHashCode%2A>. Códigos hash não devem ser usados para testar a igualdade de objetos porque os dois objetos podem ter o mesmo código hash, mesmo que seus respectivos campos tenham valores diferentes. Esses conflitos de código hash, embora raros na prática, ocorrem. O efeito disso em uma pesquisa <xref:System.Collections.Hashtable> é que duas chaves que não são iguais parecem ser e o objeto errado é retornado do <xref:System.Collections.Hashtable>. Por motivos de desempenho, a implementação de <xref:System.Object.GetHashCode%2A> pode variar entre as versões de tempo de execução, então colisões que podem não ocorrer em uma versão podem ocorrer em versões subsequentes. Quando códigos hash entrarem em conflito, habilite esse MDA para testar se o seu código tem bugs. Quando habilitado, esse MDA faz com que o método <xref:System.Object.GetHashCode%2A> retorne 0, resultando em uma colisão de todos os códigos hash. O único efeito que habilitar esse MDA deve ter em seu programa é tornar a execução dele mais lenta.  

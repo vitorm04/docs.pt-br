@@ -3,11 +3,11 @@ title: 5012 - DCJsonGenReaderStart
 ms.date: 03/30/2017
 ms.assetid: 6d2ad3c9-47ee-4e77-b1c6-259ab15b0cfb
 ms.openlocfilehash: 6de157a476310f7f5a1cfc6d9253cf1ed8b6b19c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650590"
 ---
 # <a name="5012---dcjsongenreaderstart"></a>5012 - DCJsonGenReaderStart
 ## <a name="properties"></a>Propriedades  
@@ -23,6 +23,6 @@ ms.locfileid: "33467903"
  Esse evento é emitido quando o Json gerado leitor começa.  
   
 ## <a name="message"></a>Mensagem  
- Leitor %1 para %2 início de geração JSON.  
+ JSON gerar %1 leitor para o início de %2.  
   
 ## <a name="details"></a>Detalhes

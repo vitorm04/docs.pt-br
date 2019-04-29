@@ -3,11 +3,11 @@ title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
 ms.openlocfilehash: 266b33e9b0386d0346a86ba8bd82cc65def4f0c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673050"
 ---
 # <a name="endtoendtracing"></a>\<endToEndTracing>
 Um elemento de configuração que permite que você habilitar e desabilitar diferentes aspectos de rastreamento de ponta a ponta durante a execução de um aplicativo de serviço.  

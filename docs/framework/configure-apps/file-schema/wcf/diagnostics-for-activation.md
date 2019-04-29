@@ -3,11 +3,11 @@ title: <diagnostics> para a ativação
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
 ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704252"
 ---
 # <a name="diagnostics-for-activation"></a>\<diagnóstico > para ativação
 Configura as funcionalidades de diagnóstico do ouvinte do Windows Communication Foundation (WCF).  

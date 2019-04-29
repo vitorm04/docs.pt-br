@@ -3,11 +3,11 @@ title: 'Como: melhorar o tempo de inicialização dos aplicativos do cliente WCF
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
 ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747622"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Como: melhorar o tempo de inicialização dos aplicativos do cliente WCF usando o XmlSerializer
 Os serviços e os aplicativos cliente que usam tipos de dados que são serializados usando <xref:System.Xml.Serialization.XmlSerializer> geram e compilam o código de serialização para esses tipos de dados em tempo de execução, o que pode levar a um desempenho de inicialização lento.  
@@ -37,11 +37,11 @@ Os serviços e os aplicativos cliente que usam tipos de dados que são serializa
   
 4. Verifique o código de serialização gerado disponíveis para seu aplicativo usando uma das seguintes opções:  
   
-    1.  Compilar o código de serialização gerado em um assembly separado com o nome [*assembly original*]. XmlSerializers (por exemplo, XmlSerializers). Seu aplicativo deve ser capaz de carregar o assembly, que deve ser assinado com a mesma chave que o assembly original. Se você recompilar o assembly original, você deve gerar novamente o assembly de serialização.  
+    1. Compilar o código de serialização gerado em um assembly separado com o nome [*assembly original*]. XmlSerializers (por exemplo, XmlSerializers). Seu aplicativo deve ser capaz de carregar o assembly, que deve ser assinado com a mesma chave que o assembly original. Se você recompilar o assembly original, você deve gerar novamente o assembly de serialização.  
   
-    2.  Compilar o código de serialização gerado em um assembly separado e usar o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> no contrato de serviço que usa o <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Defina as <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> propriedades para apontar para o assembly de serialização compilados.  
+    2. Compilar o código de serialização gerado em um assembly separado e usar o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> no contrato de serviço que usa o <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Defina as <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> propriedades para apontar para o assembly de serialização compilados.  
   
-    3.  Compilar o código de serialização gerado para o seu assembly de aplicativo e adicione a <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> ao contrato de serviço que usa o <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Não defina a <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> propriedades. O assembly de serialização padrão será considerado o assembly atual.  
+    3. Compilar o código de serialização gerado para o seu assembly de aplicativo e adicione a <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> ao contrato de serviço que usa o <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Não defina a <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> propriedades. O assembly de serialização padrão será considerado o assembly atual.  
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Para gerar o código de serialização de XmlSerializer no Visual Studio  
   

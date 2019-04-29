@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747999"
 ---
 # <a name="serialization-and-deserialization"></a>Serialização e desserialização
 Windows Communication Foundation (WCF) inclui um novo mecanismo de serialização, o <xref:System.Runtime.Serialization.DataContractSerializer>. O <xref:System.Runtime.Serialization.DataContractSerializer> converte entre objetos do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e XML, em ambas as direções. Este tópico explica como o serializador funciona.  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  No entanto, essa abordagem tem as seguintes características, que podem ser indesejáveis:  
   
--   Desempenho. Replicar dados é ineficiente.  
+- Desempenho. Replicar dados é ineficiente.  
   
--   Referências circulares. Se os objetos se referirem a si mesmos, mesmo por meio de outros objetos, serializar por replicação resultará em um loop infinito. (O serializador gera um <xref:System.Runtime.Serialization.SerializationException> se isso acontece.)  
+- Referências circulares. Se os objetos se referirem a si mesmos, mesmo por meio de outros objetos, serializar por replicação resultará em um loop infinito. (O serializador gera um <xref:System.Runtime.Serialization.SerializationException> se isso acontece.)  
   
--   Semântica. Muitas vezes, é importante preservar o fato de que duas referências são para o mesmo objeto, e não para dois objetos idênticos.  
+- Semântica. Muitas vezes, é importante preservar o fato de que duas referências são para o mesmo objeto, e não para dois objetos idênticos.  
   
  Por esses motivos, algumas sobrecargas de construtor do `DataContractSerializer` têm um parâmetro `preserveObjectReferences` (o padrão é `false`). Quando esse parâmetro é definido como `true`, um método especial de codificação de referências de objeto, que compreende apenas WCF, é usado. Quando estiver definido como `true`, o exemplo de código XML agora se parecerá com o seguinte.  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  É importante entender as limitações desse modo:  
   
--   O XML a `DataContractSerializer` produz com `preserveObjectReferences` definido como `true` não é interoperável com nenhuma outra tecnologia e pode ser acessado somente por outra `DataContractSerializer` instância, também com `preserveObjectReferences` definido como `true`.  
+- O XML a `DataContractSerializer` produz com `preserveObjectReferences` definido como `true` não é interoperável com nenhuma outra tecnologia e pode ser acessado somente por outra `DataContractSerializer` instância, também com `preserveObjectReferences` definido como `true`.  
   
--   Não há suporte de metadados (esquema) para esse recurso. O esquema que é gerado é válido somente para o caso em que `preserveObjectReferences` está definido como `false`.  
+- Não há suporte de metadados (esquema) para esse recurso. O esquema que é gerado é válido somente para o caso em que `preserveObjectReferences` está definido como `false`.  
   
--   Esse recurso pode fazer o processo de serialização e desserialização ser executado mais lentamente. Embora os dados não precisem ser replicados, as comparações adicionais de objeto devem ser executadas nesse modo.  
+- Esse recurso pode fazer o processo de serialização e desserialização ser executado mais lentamente. Embora os dados não precisem ser replicados, as comparações adicionais de objeto devem ser executadas nesse modo.  
   
 > [!CAUTION]
 >  Quando o modo `preserveObjectReferences` está ativado, ele é especialmente importante para definir o valor de `maxItemsInObjectGraph` para a cota correta. Devido à maneira como as matrizes são tratadas nesse modo, é fácil para que um invasor construir uma pequena mensagem mal-intencionada que resulta em um grande consumo de memória limitada somente pela cota de `maxItemsInObjectGraph`.  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
   
  No entanto, alguns problemas podem ocorrer:  
   
--   Segurança. Qualquer tipo encontrado no XML que está sendo desserializado é carregado. Isso pode ser explorado para forçar o carregamento de tipos mal-intencionados. Usando o `NetDataContractSerializer` com não-confiável de dados devem ser feitos apenas se um *associador de serialização* é usado (usando o <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> parâmetro de propriedade ou construtor). O associador permite que apenas tipos seguros sejam carregados. O mecanismo Associador é idêntico ao usado pelos tipos no <xref:System.Runtime.Serialization>.  
+- Segurança. Qualquer tipo encontrado no XML que está sendo desserializado é carregado. Isso pode ser explorado para forçar o carregamento de tipos mal-intencionados. Usando o `NetDataContractSerializer` com não-confiável de dados devem ser feitos apenas se um *associador de serialização* é usado (usando o <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> parâmetro de propriedade ou construtor). O associador permite que apenas tipos seguros sejam carregados. O mecanismo Associador é idêntico ao usado pelos tipos no <xref:System.Runtime.Serialization>.  
   
--   Controle de versão. Usar nomes completos de tipo e assembly no XML restringe significativamente o controle de versão de tipos. O exemplo a seguir não pode ser modificado: nomes de tipo, namespaces, nomes de assembly e versões de assembly. Definir a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> ou o parâmetro do construtor como <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> em vez do valor padrão de <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> permite alterações de versão do assembly, mas não para tipos de parâmetros genéricos.  
+- Controle de versão. Usar nomes completos de tipo e assembly no XML restringe significativamente o controle de versão de tipos. O exemplo a seguir não pode ser modificado: nomes de tipo, namespaces, nomes de assembly e versões de assembly. Definir a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> ou o parâmetro do construtor como <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> em vez do valor padrão de <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> permite alterações de versão do assembly, mas não para tipos de parâmetros genéricos.  
   
--   Interoperabilidade. Como os nomes de tipo e assembly do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] estão incluídos no XML, as plataformas diferentes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] não podem acessar os dados resultantes.  
+- Interoperabilidade. Como os nomes de tipo e assembly do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] estão incluídos no XML, as plataformas diferentes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] não podem acessar os dados resultantes.  
   
--   Desempenho. Gravar os nomes de tipo e assembly aumenta significativamente o tamanho do XML resultante.  
+- Desempenho. Gravar os nomes de tipo e assembly aumenta significativamente o tamanho do XML resultante.  
   
  Esse mecanismo é semelhante à serialização binária ou SOAP usada por [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoto (especificamente, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  Usar `NetDataContractSerializer` é semelhante a usar `DataContractSerializer`, com as seguintes diferenças:  
   
--   Os construtores não exigem que você especifique um tipo de raiz. Você pode serializar qualquer tipo com a mesma instância do `NetDataContractSerializer`.  
+- Os construtores não exigem que você especifique um tipo de raiz. Você pode serializar qualquer tipo com a mesma instância do `NetDataContractSerializer`.  
   
--   Os construtores não aceitam uma lista de tipos conhecidos. O mecanismo de tipos conhecidos será desnecessário se os nomes de tipo forem serializados no XML.  
+- Os construtores não aceitam uma lista de tipos conhecidos. O mecanismo de tipos conhecidos será desnecessário se os nomes de tipo forem serializados no XML.  
   
--   Os construtores não aceitam um substituto do contrato de dados. Em vez disso, aceitam um parâmetro <xref:System.Runtime.Serialization.ISurrogateSelector> chamado `surrogateSelector` (que mapeia para a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A>). Este é um mecanismo substituto herdado.  
+- Os construtores não aceitam um substituto do contrato de dados. Em vez disso, aceitam um parâmetro <xref:System.Runtime.Serialization.ISurrogateSelector> chamado `surrogateSelector` (que mapeia para a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A>). Este é um mecanismo substituto herdado.  
   
--   Os construtores aceitam um parâmetro chamado `assemblyFormat` do <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> que mapeia para a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A>. Conforme discutido anteriormente, isso pode ser usado para melhorar os recursos de controle de versão do serializador. Isso é idêntico ao mecanismo <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> na serialização binária ou SOAP.  
+- Os construtores aceitam um parâmetro chamado `assemblyFormat` do <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> que mapeia para a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A>. Conforme discutido anteriormente, isso pode ser usado para melhorar os recursos de controle de versão do serializador. Isso é idêntico ao mecanismo <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> na serialização binária ou SOAP.  
   
--   Os construtores aceitam um parâmetro <xref:System.Runtime.Serialization.StreamingContext> chamado `context` que mapeia para a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A>. Você pode usar isso para passar informações para os tipos que estão sendo serializados. Esse uso é idêntico ao do mecanismo <xref:System.Runtime.Serialization.StreamingContext> usado em outras classes <xref:System.Runtime.Serialization>.  
+- Os construtores aceitam um parâmetro <xref:System.Runtime.Serialization.StreamingContext> chamado `context` que mapeia para a propriedade <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A>. Você pode usar isso para passar informações para os tipos que estão sendo serializados. Esse uso é idêntico ao do mecanismo <xref:System.Runtime.Serialization.StreamingContext> usado em outras classes <xref:System.Runtime.Serialization>.  
   
--   Os métodos <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> e <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> são aliases para os métodos <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> e <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>. Eles existem para fornecer um modelo de programação mais consistente com serialização binária ou SOAP.  
+- Os métodos <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> e <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> são aliases para os métodos <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> e <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>. Eles existem para fornecer um modelo de programação mais consistente com serialização binária ou SOAP.  
   
  Para obter mais informações sobre esses recursos, consulte [serialização binária](../../../../docs/standard/serialization/binary-serialization.md).  
   

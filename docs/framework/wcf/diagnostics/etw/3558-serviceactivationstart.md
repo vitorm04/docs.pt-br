@@ -3,11 +3,11 @@ title: 3558 - ServiceActivationStart
 ms.date: 03/30/2017
 ms.assetid: 9062c6f4-2252-460c-ad29-f8effa72fcd1
 ms.openlocfilehash: cc6a27eddff409eeddb21689525bc7a4cb3d0ebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33466665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696074"
 ---
 # <a name="3558---serviceactivationstart"></a>3558 - ServiceActivationStart
 ## <a name="properties"></a>Propriedades  
@@ -20,9 +20,9 @@ ms.locfileid: "33466665"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido no início de ativação do serviço.  
+ Esse evento é emitido no início do serviço de ativação.  
   
 ## <a name="message"></a>Mensagem  
- Início de ativação de serviço  
+ Início do serviço de ativação  
   
 ## <a name="details"></a>Detalhes

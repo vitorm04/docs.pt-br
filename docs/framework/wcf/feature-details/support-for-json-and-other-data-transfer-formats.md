@@ -3,11 +3,11 @@ title: Suporte para JSON e outros formatos de transferência de dados
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
 ms.openlocfilehash: 9bf27a853fff42c098446067fa6f0db6bf4dbc4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747596"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Suporte para JSON e outros formatos de transferência de dados
 JSON (JavaScript Object Notation) é um formato de codificação de dados eficiente que permite a troca rápida de pequenas quantidades de dados entre navegadores do cliente e do AJAX (Asynchronous JavaScript and XML)-serviços Web ativada.  

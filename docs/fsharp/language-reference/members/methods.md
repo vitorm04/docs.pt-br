@@ -3,11 +3,11 @@ title: Métodos
 description: Saiba como um F# método é uma função associada com um tipo que são usados para expor e implementar a funcionalidade e o comportamento de objetos e tipos.
 ms.date: 05/16/2016
 ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666489"
 ---
 # <a name="methods"></a>Métodos
 

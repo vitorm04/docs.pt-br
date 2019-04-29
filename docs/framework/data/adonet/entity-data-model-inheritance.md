@@ -3,11 +3,11 @@ title: 'Modelo de Dados de Entidade: Herança'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667192"
 ---
 # <a name="entity-data-model-inheritance"></a>Modelo de Dados de Entidade: Herança
 Modelo de dados de entidade (EDM) dá suporte a herança para [tipos de entidade](../../../../docs/framework/data/adonet/entity-type.md). Herança em EDM é semelhante à herança para classes em idiomas de programação orientada a objeto. Como com classes em linguagens orientadas a objeto, em um modelo conceitual você pode definir um tipo de entidade (uma *tipo derivado*) que herda de outro tipo de entidade (a *tipo de base*). No entanto, diferentemente das classes em programação orientada a objeto, em um modelo conceitual o tipo derivado herda sempre qualquer os [propriedades](../../../../docs/framework/data/adonet/property.md) e [propriedades de navegação](../../../../docs/framework/data/adonet/navigation-property.md) do tipo base. Você não pode substituir propriedades herdadas em um tipo derivado.  

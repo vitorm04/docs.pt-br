@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706059"
 ---
-# <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_CoreResponse campo
+# <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_Campo CoreResponse
 
-`HttpWebRequest._CoreResponse` é um objeto (ou um [CoreResponseData](coreresponsedata.md) ou um <xref:System.Exception>) que contém o resultado da análise de resposta HTTP.
+`HttpWebRequest._CoreResponse` é um objeto (qualquer um [CoreResponseData](coreresponsedata.md) ou um <xref:System.Exception>) que contém o resultado da análise da resposta HTTP.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,7 +28,7 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Esta API não é destinada a ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Consulte [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Essa API não se destina a ser usado diretamente em seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Ver [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
 > Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
 
@@ -36,6 +36,6 @@ private object _CoreResponse
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** sistema (em System. dll)
+**Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** disponível desde o 2.0.
+**Versões do .NET framework:** Disponível desde o 2.0.

@@ -3,11 +3,11 @@ title: Preocupações de segurança e dicas úteis para rastreamento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663707"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Preocupações de segurança e dicas úteis para rastreamento
 Este tópico descreve como você pode proteger informações confidenciais sejam expostas, bem como dicas úteis ao usar o WebHost.  
@@ -22,11 +22,11 @@ Este tópico descreve como você pode proteger informações confidenciais sejam
   
  As dicas a seguir podem ajudar você a impedir que o conteúdo de um arquivo de rastreamento seja exposto indesejadamente:  
   
--   Certifique-se de que o log de arquivos são protegidos por listas de ACL (Access Control) no host Web e cenários de hospedagem interna.  
+- Certifique-se de que o log de arquivos são protegidos por listas de ACL (Access Control) no host Web e cenários de hospedagem interna.  
   
--   Escolha uma extensão de arquivo que não pode ser facilmente exposta com uma solicitação da Web. Por exemplo, a extensão de arquivo. XML não é uma opção segura. Você pode verificar o guia de administração do IIS para ver uma lista de extensões que podem ser atendidas.  
+- Escolha uma extensão de arquivo que não pode ser facilmente exposta com uma solicitação da Web. Por exemplo, a extensão de arquivo. XML não é uma opção segura. Você pode verificar o guia de administração do IIS para ver uma lista de extensões que podem ser atendidas.  
   
--   Especifique um caminho absoluto para o local de arquivo de log, que deve estar fora do diretório público vroot WebHost impedi-lo de que está sendo acessado por terceiros usando um navegador da Web.  
+- Especifique um caminho absoluto para o local de arquivo de log, que deve estar fora do diretório público vroot WebHost impedi-lo de que está sendo acessado por terceiros usando um navegador da Web.  
   
  Por padrão, as chaves e informações de identificação pessoal (PII), como nome de usuário e senha não são registradas em rastreamentos e registrado mensagens. No entanto, um administrador do computador, pode usar o `enableLoggingKnownPII` de atributo no `machineSettings` elemento do arquivo Machine. config para permitir que aplicativos em execução no computador para fazer logon conhecidas informações de identificação pessoal (PII) da seguinte maneira:  
   

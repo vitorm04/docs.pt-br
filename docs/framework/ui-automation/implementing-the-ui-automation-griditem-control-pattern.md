@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 ms.openlocfilehash: 932eb0af6afbe958695d5c084d2cb0c0bc188830
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609576"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementando o padrão de controle GridItem de interface de usuário 
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59176612"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar <xref:System.Windows.Automation.Provider.IGridProvider>, observe as seguintes diretrizes e convenções:  
   
--   Coordenadas de grade são baseadas em zero com a célula superior esquerda tendo as coordenadas (0, 0).  
+- Coordenadas de grade são baseadas em zero com a célula superior esquerda tendo as coordenadas (0, 0).  
   
--   As células mescladas relatará suas <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> e <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> propriedades com base em suas células âncoras subjacentes, conforme definido pelo provedor de automação de interface do usuário. Normalmente, ele será a mais à esquerda e superior de linha ou coluna.  
+- As células mescladas relatará suas <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> e <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> propriedades com base em suas células âncoras subjacentes, conforme definido pelo provedor de automação de interface do usuário. Normalmente, ele será a mais à esquerda e superior de linha ou coluna.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> não fornece para manipulação ativa da grade como mesclar ou dividir células.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> não fornece para manipulação ativa da grade como mesclar ou dividir células.  
   
--   Controles que implementam <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente pode ser percorrido (isto é, um cliente de automação de interface do usuário pode mover para os controles adjacentes) usando o teclado.  
+- Controles que implementam <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente pode ser percorrido (isto é, um cliente de automação de interface do usuário pode mover para os controles adjacentes) usando o teclado.  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
 ## <a name="required-members-for-igriditemprovider"></a>Membros necessários para IGridItemProvider  

@@ -3,11 +3,11 @@ title: 'Como: Estender o passo a passo assíncronas usando Task. WhenAll (Visual
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756501"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Como: Estender o passo a passo assíncronas usando Task. WhenAll (Visual Basic)
 Melhore o desempenho da solução assíncrona em [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) usando o <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> método. Esse método aguarda de maneira assíncrona várias operações assíncronas, que são representadas como uma coleção de tarefas.  
@@ -25,9 +25,9 @@ Melhore o desempenho da solução assíncrona em [Passo a passo: Acessando a Web
   
 1. Adicione o método `ProcessURLAsync` ao primeiro aplicativo desenvolvido em [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Se você baixou o código de [exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra o projeto AsyncWalkthrough e, em seguida, adicionar `ProcessURLAsync` para o arquivo. XAML. vb.  
+    - Se você baixou o código de [exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra o projeto AsyncWalkthrough e, em seguida, adicionar `ProcessURLAsync` para o arquivo. XAML. vb.  
   
-    -   Se você desenvolveu o código ao concluir o passo a passo, adicione `ProcessURLAsync` ao aplicativo que inclui o método `GetURLContentsAsync`. O arquivo. XAML. vb para este aplicativo é o primeiro exemplo na seção "Código exemplos do passo a passo completo".  
+    - Se você desenvolveu o código ao concluir o passo a passo, adicione `ProcessURLAsync` ao aplicativo que inclui o método `GetURLContentsAsync`. O arquivo. XAML. vb para este aplicativo é o primeiro exemplo na seção "Código exemplos do passo a passo completo".  
   
      O método `ProcessURLAsync` consolida as ações no corpo do loop `For Each` em `SumPageSizesAsync` no passo a passo original. O método baixa de maneira assíncrona o conteúdo de um site especificado como uma matriz de bytes e, em seguida, exibe e retorna o comprimento da matriz de bytes.  
   
@@ -98,9 +98,9 @@ Melhore o desempenho da solução assíncrona em [Passo a passo: Acessando a Web
   
 1. Adicione a seguinte versão de `ProcessURLAsync` ao segundo aplicativo desenvolvido em [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Se você baixou o código de [exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra o projeto AsyncWalkthrough_HttpClient e, em seguida, adicionar `ProcessURLAsync` para o arquivo. XAML. vb.  
+    - Se você baixou o código de [exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra o projeto AsyncWalkthrough_HttpClient e, em seguida, adicionar `ProcessURLAsync` para o arquivo. XAML. vb.  
   
-    -   Se você desenvolveu o código ao concluir o passo a passo, adicione `ProcessURLAsync` ao aplicativo que usa o método `HttpClient.GetByteArrayAsync`. O arquivo. XAML. vb para este aplicativo é o segundo exemplo na seção "Código exemplos do passo a passo completo".  
+    - Se você desenvolveu o código ao concluir o passo a passo, adicione `ProcessURLAsync` ao aplicativo que usa o método `HttpClient.GetByteArrayAsync`. O arquivo. XAML. vb para este aplicativo é o segundo exemplo na seção "Código exemplos do passo a passo completo".  
   
      O método `ProcessURLAsync` consolida as ações no corpo do loop `For Each` em `SumPageSizesAsync` no passo a passo original. O método baixa de maneira assíncrona o conteúdo de um site especificado como uma matriz de bytes e, em seguida, exibe e retorna o comprimento da matriz de bytes.  
   
@@ -169,7 +169,7 @@ Melhore o desempenho da solução assíncrona em [Passo a passo: Acessando a Web
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Para testar as soluções Task.WhenAll  
   
--   Para qualquer uma das soluções, escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**. A saída deverá ser parecida com a saída das soluções assíncronas de [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). No entanto, observe que os sites aparecem em uma ordem diferente a cada vez.  
+- Para qualquer uma das soluções, escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**. A saída deverá ser parecida com a saída das soluções assíncronas de [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). No entanto, observe que os sites aparecem em uma ordem diferente a cada vez.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra as extensões para o projeto que usa o método `GetURLContentsAsync` para baixar conteúdo da Web.  

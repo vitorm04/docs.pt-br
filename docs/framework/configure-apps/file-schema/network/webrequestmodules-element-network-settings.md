@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704941"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > (configurações de rede)
 Especifica os módulos para usá-lo para solicitar informações de hosts da rede.  

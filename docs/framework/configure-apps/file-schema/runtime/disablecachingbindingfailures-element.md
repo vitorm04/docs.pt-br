@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704785"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > elemento
 Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o assembly não foi encontrado por investigação de associação.  
@@ -63,11 +63,11 @@ Especifica se é necessário desabilitar o cache de falhas que ocorrem porque o 
   
  Alguns associação e falhas de carregamento não são afetados por este elemento e sempre são armazenados em cache. Essas falhas ocorrem porque o assembly foi encontrado, mas não pôde ser carregado. Elas geram <xref:System.BadImageFormatException> ou <xref:System.IO.FileLoadException>. A lista a seguir inclui alguns exemplos de tais falhas.  
   
--   Se você tentar carregar um arquivo não é um assembly válido, as tentativas subsequentes para carregar o assembly falhará mesmo se o arquivo inválido é substituído com o assembly correto.  
+- Se você tentar carregar um arquivo não é um assembly válido, as tentativas subsequentes para carregar o assembly falhará mesmo se o arquivo inválido é substituído com o assembly correto.  
   
--   Se você tentar carregar um assembly que está bloqueado pelo sistema de arquivos, as tentativas subsequentes para carregar o assembly falhará mesmo depois que o assembly é liberado pelo sistema de arquivos.  
+- Se você tentar carregar um assembly que está bloqueado pelo sistema de arquivos, as tentativas subsequentes para carregar o assembly falhará mesmo depois que o assembly é liberado pelo sistema de arquivos.  
   
--   Se uma ou mais versões do assembly que você está tentando carregar está no caminho de investigação, mas a versão específica que você está solicitando não está entre eles, tentativas subsequentes para carregar dessa versão falhará, mesmo se a versão correta é movida para o caminho de investigação.  
+- Se uma ou mais versões do assembly que você está tentando carregar está no caminho de investigação, mas a versão específica que você está solicitando não está entre eles, tentativas subsequentes para carregar dessa versão falhará, mesmo se a versão correta é movida para o caminho de investigação.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como desabilitar o cache de falhas de associação de assembly que ocorrem porque o assembly não foi encontrado por sondagem.  

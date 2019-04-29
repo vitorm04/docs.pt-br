@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0708a3b501a99b5f71be5ba4c6cc4ea2b754d12a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699884"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>Método IDebuggerInfo::IsDebuggerAttached
 Obtém um valor que indica se um depurador gerenciado está anexado a esse processo.  

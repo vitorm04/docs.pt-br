@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761359"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Como: Associar dados ao controle MaskedTextBox
 Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> controlar exatamente como faria para qualquer outro controle de formulários do Windows. No entanto, se o formato dos seus dados no banco de dados não corresponder ao formato esperado pela sua definição de máscara, será necessário reformatar os dados. O procedimento a seguir demonstra como fazer isso usando o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos do <xref:System.Windows.Forms.Binding> classe para exibir o número de telefone separados e campos de banco de dados de extensão de telefone como um único campo editável.  
@@ -239,15 +239,15 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Criar um Visual C# ou o projeto do Visual Basic.  
+- Criar um Visual C# ou o projeto do Visual Basic.  
   
--   Adicione a <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.MaskedTextBox> controles ao formulário, conforme descrito no procedimento anterior.  
+- Adicione a <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.MaskedTextBox> controles ao formulário, conforme descrito no procedimento anterior.  
   
--   Abra o arquivo de código-fonte para o formulário de padrão do projeto.  
+- Abra o arquivo de código-fonte para o formulário de padrão do projeto.  
   
--   Substitua o código-fonte deste arquivo pelo código listado na seção “Código” anterior.  
+- Substitua o código-fonte deste arquivo pelo código listado na seção “Código” anterior.  
   
--   Compile o aplicativo.  
+- Compile o aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
 

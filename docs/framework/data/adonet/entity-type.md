@@ -3,22 +3,22 @@ title: tipo de entidade
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667166"
 ---
 # <a name="entity-type"></a>tipo de entidade
 O *tipo de entidade* é o bloco de construção fundamental para descrever a estrutura de dados com o modelo de dados de entidade (EDM). Em um modelo conceitual, um tipo de entidade representa a estrutura dos conceitos de nível superior, como clientes ou pedidos. Um tipo de entidade é um modelo para instâncias do tipo de objeto. Cada modelo contém as informações a seguir:  
   
--   Um nome exclusivo. (Obrigatório.)  
+- Um nome exclusivo. (Obrigatório.)  
   
--   Uma [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) definido por uma ou mais propriedades. (Obrigatório.)  
+- Uma [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) definido por uma ou mais propriedades. (Obrigatório.)  
   
--   Dados na forma de [propriedades](../../../../docs/framework/data/adonet/property.md). (Opcional).  
+- Dados na forma de [propriedades](../../../../docs/framework/data/adonet/property.md). (Opcional).  
   
--   [Propriedades de navegação](../../../../docs/framework/data/adonet/navigation-property.md) que permite a navegação de um [finais](../../../../docs/framework/data/adonet/association-end.md) de uma [associação](../../../../docs/framework/data/adonet/association-type.md) para a outra extremidade. (Opcional)  
+- [Propriedades de navegação](../../../../docs/framework/data/adonet/navigation-property.md) que permite a navegação de um [finais](../../../../docs/framework/data/adonet/association-end.md) de uma [associação](../../../../docs/framework/data/adonet/association-type.md) para a outra extremidade. (Opcional)  
   
  Em um aplicativo, uma instância de um tipo de entidade representa um objeto específico (como um cliente ou uma ordem específica.) Cada instância de um tipo de entidade deve ter um único [chave de entidade](../../../../docs/framework/data/adonet/entity-key.md) dentro de uma [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md).  
   

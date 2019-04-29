@@ -3,11 +3,11 @@ title: Referência da linguagem F#
 description: Localize F# informações de recurso de idioma dessa referência a tokens de idioma, conceitos, tipos, expressões e tópicos de construção com suporte do compilador.
 ms.date: 05/16/2016
 ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666437"
 ---
 # <a name="f-language-reference"></a>Referência da linguagem F#
 
@@ -95,7 +95,7 @@ A tabela a seguir lista os tópicos que descrevem as expressões no F#.
 |[Loops: `for...in` Expressão](loops-for-in-expression.md)|Descreve a expressão `for...in`, uma construção de loop usada para iterar sobre as correspondências de um padrão em uma coleção enumerável como uma expressão de intervalo, sequência, lista, matriz ou outra construção que oferece suporte à enumeração.|
 |[Loops: `while...do` Expressão](loops-while-do-expression.md)|Descreve a expressão `while...do`, que é usada para uma execução iterativa (loop) enquanto uma condição de teste especificada é verdadeira.|
 |[Expressões de Objeto](object-expressions.md)|Descreve as expressões de objeto, que são expressões que criam novas instâncias de um tipo de objeto anônimo e criado dinamicamente, com base em um tipo base existente, interface ou conjunto de interfaces.|
-|[Expressões lentas](lazy-expressions.md)|Descreve expressões lentas, que são cálculos que não são avaliados imediatamente, mas em vez disso, são avaliados quando o resultado é realmente necessário.|
+|[Expressões Lentas](lazy-expressions.md)|Descreve expressões lentas, que são cálculos que não são avaliados imediatamente, mas em vez disso, são avaliados quando o resultado é realmente necessário.|
 |[Expressões de Computação](computation-expressions.md)|Descreve expressões de computação no F#, que fornece uma sintaxe conveniente para criar cálculos que podem ser sequenciados e combinados usando construções de fluxo de controle e associações. Podem ser usados para fornecer uma sintaxe conveniente para *monads*, um recurso de programação funcional que pode ser usado para gerenciar dados, controle e efeitos colaterais em programas funcionais. Um tipo de expressão de computação, o fluxo de trabalho assíncrono, oferece suporte para computações paralelas e assíncronas. Para saber mais, consulte [Fluxos de Trabalho Assíncronos](asynchronous-workflows.md).|
 |[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)|Descreve os fluxos de trabalho assíncronos, um recurso de linguagem que permite que você escreva código assíncrono de forma que seja muito próximo da maneira como você escreveria naturalmente código síncrono.|
 |[Citações de Código](code-quotations.md)|Descreve citações de código, um recurso de linguagem que permite gerar e trabalhar com expressões de código F# programaticamente.|

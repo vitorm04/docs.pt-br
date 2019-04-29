@@ -3,11 +3,11 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700768"
 ---
 # <a name="extensions"></a>\<extensions>
 Este elemento de configuração contém uma coleção de elementos XML que contêm metadados personalizados para serem publicados juntamente com os metadados detectáveis padrão (EPR, ContractTypeName, BindingName, escopo e ListenURI). O exemplo a seguir é um exemplo do uso desse elemento de configuração.  

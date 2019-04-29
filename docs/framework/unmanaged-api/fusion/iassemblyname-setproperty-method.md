@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cc2a2c7991eb4d11873ebb6a2df92ccc45cde9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697219"
 ---
 # <a name="iassemblynamesetproperty-method"></a>Método IAssemblyName::SetProperty
 Define o valor da propriedade referenciada pelo identificador de propriedade especificado.  

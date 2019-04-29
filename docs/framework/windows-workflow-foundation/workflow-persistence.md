@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669324"
 ---
 # <a name="workflow-persistence"></a>Persistência de fluxo de trabalho
 Persistência de fluxo de trabalho é a captura durável do estado de uma instância de fluxo de trabalho, independente de processo ou de informações do computador. Isso é feito para fornecer um ponto conhecido de recuperação para a instância de fluxo de trabalho no caso de falha do sistema, ou para preservar a memória descarregando as instâncias de fluxo de trabalho que não estão fazendo ativamente o trabalho, ou para mover o estado da instância de fluxo de trabalho de um nó para outro nó em um farm de servidores.  
@@ -27,30 +27,30 @@ Persistência de fluxo de trabalho é a captura durável do estado de uma instâ
 ## <a name="implicit-persistence-points"></a>Pontos implícitos de persistência  
  A lista a seguir contém exemplos das circunstâncias na qual um fluxo de trabalho é mantido quando um armazenamento de instância é associado com um fluxo de trabalho.  
   
--   Quando um **TransactionScope** conclusão da atividade ou um **TransactedReceiveScope** atividade é concluída.  
+- Quando um **TransactionScope** conclusão da atividade ou um **TransactedReceiveScope** atividade é concluída.  
   
--   Quando uma instância de fluxo de trabalho fica ociosa e o **WorkflowIdleBehavior** é definido no host de fluxo de trabalho. Isso ocorre, por exemplo, quando você usar as atividades de mensagem ou uma **atraso** atividade.  
+- Quando uma instância de fluxo de trabalho fica ociosa e o **WorkflowIdleBehavior** é definido no host de fluxo de trabalho. Isso ocorre, por exemplo, quando você usar as atividades de mensagem ou uma **atraso** atividade.  
   
--   Quando um WorkflowApplication se torna ocioso e o **PersistableIdle** do aplicativo estiver definida como **Persistableidleaction**.  
+- Quando um WorkflowApplication se torna ocioso e o **PersistableIdle** do aplicativo estiver definida como **Persistableidleaction**.  
   
--   Quando um aplicativo host seja instruído para persistir ou descarregar uma instância de fluxo de trabalho.  
+- Quando um aplicativo host seja instruído para persistir ou descarregar uma instância de fluxo de trabalho.  
   
--   Quando uma instância de fluxo de trabalho seja finalizada ou termina.  
+- Quando uma instância de fluxo de trabalho seja finalizada ou termina.  
   
--   Quando um **Persist** atividade é executada.  
+- Quando um **Persist** atividade é executada.  
   
--   Quando uma instância de um fluxo de trabalho desenvolvido usando uma versão anterior do Windows Workflow Foundation localizar um ponto de persistência durante a execução interoperável.  
+- Quando uma instância de um fluxo de trabalho desenvolvido usando uma versão anterior do Windows Workflow Foundation localizar um ponto de persistência durante a execução interoperável.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Repositório de instâncias de fluxo de trabalho do SQL](sql-workflow-instance-store.md)  
+- [Repositório de instâncias de fluxo de trabalho do SQL](sql-workflow-instance-store.md)  
   
--   [Armazenamentos de instância](instance-stores.md)  
+- [Armazenamentos de instância](instance-stores.md)  
   
--   [Participantes da persistência](persistence-participants.md)  
+- [Participantes da persistência](persistence-participants.md)  
   
--   [Práticas recomendadas de persistência](persistence-best-practices.md)  
+- [Práticas recomendadas de persistência](persistence-best-practices.md)  
   
--   [Instâncias de fluxo de trabalho não persistentes](non-persisted-workflow-instances.md)  
+- [Instâncias de fluxo de trabalho não persistentes](non-persisted-workflow-instances.md)  
   
--   [Pausando e continuando um fluxo de trabalho](pausing-and-resuming-a-workflow.md)
+- [Pausando e continuando um fluxo de trabalho](pausing-and-resuming-a-workflow.md)

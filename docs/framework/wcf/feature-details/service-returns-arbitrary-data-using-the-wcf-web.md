@@ -3,11 +3,11 @@ title: 'Como: criar um serviço que retorna dados arbitrários usando o modelo d
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747843"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF
 Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute usando o modelo de programação WCF WEB HTTP para criar esse tipo de serviço. Esse serviço tem uma operação que retorna um fluxo.  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Quando compilar o código de exemplo faz referência ServiceModel. dll e System.  
+- Quando compilar o código de exemplo faz referência ServiceModel. dll e System.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696467"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
 <a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Porque os aplicativos hospedados pelo navegador do Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade para um conjunto semelhante de restrições. Para impor essas restrições [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se baseia em ambos [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, os aplicativos hospedados pelo navegador solicitam a zona da Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permissões, independentemente se eles são lançados da Internet, intranet local ou no computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
@@ -29,11 +29,11 @@ ms.locfileid: "59218375"
   
  Esse tópico contém as seguintes seções:  
   
--   [Segurança parcialmente confiável do recurso de WPF](#WPF_Feature_Partial_Trust_Support)  
+- [Segurança parcialmente confiável do recurso de WPF](#WPF_Feature_Partial_Trust_Support)  
   
--   [Programação de confiança parcial](#Partial_Trust_Programming)  
+- [Programação de confiança parcial](#Partial_Trust_Programming)  
   
--   [Gerenciando permissões](#Managing_Permissions)  
+- [Gerenciando permissões](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Segurança parcialmente confiável do recurso de WPF  
@@ -52,19 +52,19 @@ ms.locfileid: "59218375"
   
  Esta tabela abrange o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] recursos de alto nível. Para obter mais informações, o [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documenta as permissões que são exigidas por cada membro no [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Além disso, os recursos a seguir possuem informações mais detalhadas sobre a execução em confiança parcial, incluindo considerações especiais.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consulte [visão geral de XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consulte [visão geral de XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   
--   Pop-ups (consulte <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Pop-ups (consulte <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Arrastar e soltar (consulte [arrastar e soltar de visão geral da](./advanced/drag-and-drop-overview.md)).  
+- Arrastar e soltar (consulte [arrastar e soltar de visão geral da](./advanced/drag-and-drop-overview.md)).  
   
--   Área de transferência (consulte <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Área de transferência (consulte <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
--   Geração de imagens (consulte <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Geração de imagens (consulte <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
--   Serialização (consulte <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serialização (consulte <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
--   Abra a caixa de diálogo de arquivo (consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Abra a caixa de diálogo de arquivo (consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
  A tabela a seguir descreve o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] conjunto de permissões da zona de recursos que não são seguros usar dentro dos limites da Internet.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218375"
   
  Se você precisar aumentar as permissões, você precisará alterar as configurações do projeto e o manifesto do aplicativo ClickOnce. Para obter mais informações, consulte [Visão geral de aplicativos de navegador XAML WPF](./app-development/wpf-xaml-browser-applications-overview.md). Os documentos a seguir também podem ser úteis.  
   
--   [Mage.exe (Manifest Generation and Editing Tool)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe (Manifest Generation and Editing Tool)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
--   [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
+- [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
  Se seu [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] requer confiança total, você pode usar as mesmas ferramentas para aumentar as permissões solicitadas. Embora um [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] só receberão confiança total, se for instalado e iniciado no computador local, intranet, ou de uma URL que está listada no navegador da confiáveis ou sites permitidos. Se o aplicativo for instalado da intranet ou em um site confiável, o usuário receberá o prompt ClickOnce padrão notificando sobre as permissões com privilégios elevados. O usuário pode optar por continuar ou cancelar a instalação.  
   

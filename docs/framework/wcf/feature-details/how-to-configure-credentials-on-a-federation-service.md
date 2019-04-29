@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699817"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Como: configurar credenciais em um serviço de federação
 No Windows Communication Foundation (WCF), criar um serviço federado consiste dos seguintes procedimentos principais:  
@@ -63,11 +63,11 @@ No Windows Communication Foundation (WCF), criar um serviço federado consiste d
   
  Para um serviço federado autenticar um cliente que, a seguir deve ser verdadeiras sobre o token emitido:  
   
--   Quando a assinatura do token emitido usa um identificador de chave de segurança RSA, os <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> propriedade deve ser `true`.  
+- Quando a assinatura do token emitido usa um identificador de chave de segurança RSA, os <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> propriedade deve ser `true`.  
   
--   Quando a assinatura do token emitido usa um número de série do emissor de x. 509, o identificador de chave de assunto de x. 509 ou o identificador de segurança de impressão digital X.509, o token emitido deve ser assinado por um certificado na coleção retornada pelo <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> propriedade do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>classe.  
+- Quando a assinatura do token emitido usa um número de série do emissor de x. 509, o identificador de chave de assunto de x. 509 ou o identificador de segurança de impressão digital X.509, o token emitido deve ser assinado por um certificado na coleção retornada pelo <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> propriedade do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>classe.  
   
--   Quando o token emitido é assinado usando um certificado X.509, o certificado deve validar pela semântica especificada pelo valor da <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> propriedade, independentemente se o certificado foi enviado para a terceira parte confiável como um <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> ou foi obtido do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> propriedade. Para obter mais informações sobre validação de certificado X.509, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+- Quando o token emitido é assinado usando um certificado X.509, o certificado deve validar pela semântica especificada pelo valor da <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> propriedade, independentemente se o certificado foi enviado para a terceira parte confiável como um <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> ou foi obtido do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> propriedade. Para obter mais informações sobre validação de certificado X.509, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Por exemplo, definindo a <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> para <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> seria autenticar qualquer token emitido cujo certificado de autenticação está no `TrustedPeople` repositório de certificados. Nesse caso, defina as <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> propriedade para um <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> ou <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Você pode selecionar outros modos, incluindo <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Quando `Custom` é selecionado, você deve atribuir uma instância das <xref:System.IdentityModel.Selectors.X509CertificateValidator> de classe para o <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> propriedade. O validador personalizado pode validar certificados usando qualquer critério, que ele gosta. Para obter mais informações, confira [Como: Criar um serviço que utiliza um validador de certificado personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

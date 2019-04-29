@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
 ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762131"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Como: Controlar um Storyboard depois de ter começado
 Este exemplo mostra como usar código para controlar um <xref:System.Windows.Media.Animation.Storyboard> depois que ele foi iniciado. Para controlar um storyboard no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Trigger> e <xref:System.Windows.TriggerAction> objetos; por exemplo, consulte [usar gatilhos de evento para controlar um Storyboard depois de ter começado](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
@@ -21,19 +21,19 @@ Este exemplo mostra como usar código para controlar um <xref:System.Windows.Med
   
  Para tornar um storyboard controlável, você deve usar o <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método e especifique **verdadeiro** como o segundo parâmetro. Em seguida, use os métodos interativos do storyboard para pausar, retomar, procurar, parar, acelerar ou retardar o storyboard ou avançar para seu período de preenchimento. A seguir temos uma lista de métodos interativos de storyboard:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Pausa o storyboard.  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Pausa o storyboard.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Retoma um storyboard em pausa.  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Retoma um storyboard em pausa.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Define a velocidade interativa do storyboard.  
+- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Define a velocidade interativa do storyboard.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Busca o storyboard no local especificado.  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Busca o storyboard no local especificado.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca o storyboard para o local especificado. Ao contrário de <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método, essa operação é processado antes da próxima escala.  
+- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca o storyboard para o local especificado. Ao contrário de <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método, essa operação é processado antes da próxima escala.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Avança o storyboard para seu período de preenchimento, se ele tiver um.  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Avança o storyboard para seu período de preenchimento, se ele tiver um.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Interrompe o storyboard.  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Interrompe o storyboard.  
   
  No exemplo a seguir, diversos métodos de storyboard são usados para controlar de forma interativa um storyboard.  
   

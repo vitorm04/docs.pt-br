@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design'
+title: 'Passo a passo: criar novo conteúdo WPF no Windows Forms na hora do design'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747668"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: criar novo conteúdo WPF no Windows Forms na hora do design
 
 Este tópico mostra como criar um controle do Windows Presentation Foundation (WPF) para uso em aplicativos baseados nos Windows Forms.
 

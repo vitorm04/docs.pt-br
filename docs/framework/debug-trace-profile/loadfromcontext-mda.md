@@ -10,11 +10,11 @@ ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b2cf06a5ab921f5ae89da4856e8164b6f57db5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754252"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`. Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.  
@@ -28,11 +28,11 @@ O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se 
 ## <a name="resolution"></a>Resolução  
  Configure os aplicativos de modo que as chamadas <xref:System.Reflection.Assembly.LoadFrom%2A> não sejam mais necessárias. Você pode usar as seguintes técnicas para fazer isso:  
   
--   Instale assemblies no cache de assembly global.  
+- Instale assemblies no cache de assembly global.  
   
--   Coloque os assemblies no diretório <xref:System.AppDomainSetup.ApplicationBase%2A> para o <xref:System.AppDomain>. No caso do domínio padrão, o diretório <xref:System.AppDomainSetup.ApplicationBase%2A> é aquele que contém o arquivo executável que iniciou o processo. Isso também poderá exigir a criação de um novo <xref:System.AppDomain>, se não for conveniente mover o assembly.  
+- Coloque os assemblies no diretório <xref:System.AppDomainSetup.ApplicationBase%2A> para o <xref:System.AppDomain>. No caso do domínio padrão, o diretório <xref:System.AppDomainSetup.ApplicationBase%2A> é aquele que contém o arquivo executável que iniciou o processo. Isso também poderá exigir a criação de um novo <xref:System.AppDomain>, se não for conveniente mover o assembly.  
   
--   Adicione um caminho de sondagem para o arquivo (.config) de configuração do aplicativo ou para domínios de aplicativo secundários se assemblies dependentes estão em diretórios filhos em relação ao executável.  
+- Adicione um caminho de sondagem para o arquivo (.config) de configuração do aplicativo ou para domínios de aplicativo secundários se assemblies dependentes estão em diretórios filhos em relação ao executável.  
   
  Em cada caso, o código pode ser alterado para usar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   

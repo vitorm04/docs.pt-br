@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754720"
 ---
 # <a name="failedqi-mda"></a>MDA failedQI
 O MDA (assistente para depuração gerenciada) `failedQI` é ativado quando o tempo de execução chama `QueryInterface` em um ponteiro de interface COM em nome de um RCW (Runtime Callable Wrapper) e a chamada `QueryInterface` falha.  
@@ -25,11 +25,11 @@ O MDA (assistente para depuração gerenciada) `failedQI` é ativado quando o te
   
 ## <a name="cause"></a>Causa  
   
--   A chamada é feita do contexto incorreto.  
+- A chamada é feita do contexto incorreto.  
   
--   O proxy registrado está falhando a chamada `QueryInterface` porque houve uma tentativa de realizar a chamada no contexto incorreto.  
+- O proxy registrado está falhando a chamada `QueryInterface` porque houve uma tentativa de realizar a chamada no contexto incorreto.  
   
--   Um proxy de propriedade do OLE retornou uma falha HRESULT.  
+- Um proxy de propriedade do OLE retornou uma falha HRESULT.  
   
 ## <a name="resolution"></a>Resolução  
  Consulte a documentação do MSDN sobre as regras do COM.  
@@ -53,5 +53,5 @@ O MDA (assistente para depuração gerenciada) `failedQI` é ativado quando o te
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com assistentes de depuração gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Realizando marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
