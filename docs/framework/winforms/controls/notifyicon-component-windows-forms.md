@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
 ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627805"
 ---
 # <a name="notifyicon-component-windows-forms"></a>Componente NotifyIcon (Windows Forms)
 Os formulários do Windows `NotifyIcon` componente exibe ícones na área de notificação de status da barra de tarefas para processos que são executados em segundo plano e não precisaria de outra forma têm interfaces do usuário. Por exemplo, um programa de proteção contra vírus que pode ser acessado clicando em um ícone na área de notificação de status da barra de tarefas.  

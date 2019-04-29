@@ -10,21 +10,21 @@ ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599280"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Estruturas de armazenamento de símbolo de diagnóstico
-Este tópico descreve as estruturas não gerenciadas que usa o armazenamento de símbolo de diagnóstico API.  
+Este tópico descreve as estruturas não gerenciadas que usa o repositório de símbolos de diagnóstico API.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Estrutura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
  Fornece informações para um depurador sobre uma função que está sendo chamado.  
   
  [Estrutura SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Fornece informações sobre os métodos que foram movidos em decorrência de edições para o manipulador de símbolo.  
+ Fornece informações para o manipulador de símbolo sobre os métodos que foram movidos em decorrência de edições.  
   
  [Estrutura USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
  Fornece informações para um depurador sobre um segmento.  

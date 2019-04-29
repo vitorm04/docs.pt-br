@@ -3,11 +3,11 @@ title: Problemas conhecidos em SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607718"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conhecidos em SqlClient para Entity Framework
 Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).  
@@ -25,15 +25,15 @@ Esta seção descreve os problemas conhecidos relacionados ao provedor de dados.
   
  A seguir estão alguns cenários típicos que podem resultar na presença de CRUZ SE APLICAM e/ou OUTER APPLY operadores na consulta de saída:  
   
--   Um subconsulta correlacionado com paginação.  
+- Um subconsulta correlacionado com paginação.  
   
--   `AnyElement` sobre subpropriedades uma consulta correlacionada, ou sobre uma coleção gerada por navegação.  
+- `AnyElement` sobre subpropriedades uma consulta correlacionada, ou sobre uma coleção gerada por navegação.  
   
--   LINQ consulta que uso que agrupa os métodos que aceitam um seletor do elemento.  
+- LINQ consulta que uso que agrupa os métodos que aceitam um seletor do elemento.  
   
--   Uma consulta em que uma CRUZ SE APLICA ou OUTER APPLY são especificados explicitamente  
+- Uma consulta em que uma CRUZ SE APLICA ou OUTER APPLY são especificados explicitamente  
   
--   Uma consulta que tenha uma compilação de DEREF sobre uma compilação de referência.  
+- Uma consulta que tenha uma compilação de DEREF sobre uma compilação de referência.  
   
 ## <a name="skip-operator"></a>Operador SKIP  
  Se você estiver usando [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], usar a SKIP com cláusula ORDER BY em colunas não chave pode retornar resultados incorretos. Mais do que o número de linhas especificado podem ser ignoradas se a coluna de chave não tem dados duplicados nele. Isso é devido a como SKIP é convertido para [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Por exemplo, a consulta a seguir, mais de cinco linhas podem ser ignoradas se `E.NonKeyColumn` tem valores duplicados:  

@@ -3,11 +3,11 @@ title: Mapear restrições de esquema XML (XSD) keyref para restrições de Data
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607482"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear restrições de esquema XML (XSD) keyref para restrições de DataSet
 O **keyref** elemento permite estabelecer links entre elementos dentro de um documento. Isso é semelhante a uma relação de chave estrangeira no banco de dados relacional. Se um esquema Especifica a **keyref** elemento, o elemento é convertido durante o processo de mapeamento de esquema para uma restrição de chave estrangeira correspondente nas colunas nas tabelas da <xref:System.Data.DataSet>. Por padrão, o **keyref** elemento também gera uma relação com o **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** propriedades especificadas na relação.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  Além disso, o **conjunto de dados** define as seguintes restrições:  
   
--   Uma restrição exclusiva na **ordem** tabela.  
+- Uma restrição exclusiva na **ordem** tabela.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** estiver definida como **falso** porque os dois elementos não estão aninhados no esquema.  
+- Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** estiver definida como **falso** porque os dois elementos não estão aninhados no esquema.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Uma restrição de chave estrangeira na **OrderDetail** tabela.  
+- Uma restrição de chave estrangeira na **OrderDetail** tabela.  
   
     ```  
               ConstraintName: OrderNoRef  

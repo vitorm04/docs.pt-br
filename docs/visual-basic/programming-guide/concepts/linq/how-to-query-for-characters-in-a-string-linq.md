@@ -3,11 +3,11 @@ title: 'Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
 ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644377"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (Visual Basic)
 Já que a classe <xref:System.String> implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, qualquer cadeia de caracteres pode ser consultada como uma sequência de caracteres. No entanto, esse não é um uso comum da LINQ. Para operações de correspondência de padrões complexas, use a classe <xref:System.Text.RegularExpressions.Regex>.  

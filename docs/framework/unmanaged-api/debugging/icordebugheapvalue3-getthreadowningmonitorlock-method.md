@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701015"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Método ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Retorna o thread gerenciado que detém o bloqueio de monitor nesse objeto.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Comentários  
  Se um thread gerenciado detém o bloqueio de monitor nesse objeto:  
   
--   O método retorna S_OK.  
+- O método retorna S_OK.  
   
--   O objeto de thread é válido até que o thread seja encerrado.  
+- O objeto de thread é válido até que o thread seja encerrado.  
   
  Se nenhum thread gerenciado detém o bloqueio de monitor nesse objeto `ppThread` e `pAcquisitionCount` forem alterados, e o método retorna S_FALSE.  
   

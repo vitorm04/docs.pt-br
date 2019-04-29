@@ -3,11 +3,11 @@ title: Autorização e permissões no SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663954"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorização e permissões no SQL Server
 Ao criar objetos de banco de dados, você deve conceder permissões explicitamente para torná-los acessíveis aos usuários. Cada objeto protegível tem permissões que podem ser concedidas a uma entidade de segurança usando declarações de permissão.  
@@ -37,7 +37,7 @@ Ao criar objetos de banco de dados, você deve conceder permissões explicitamen
 |REVOKE|Revoga uma permissão. Esse é o estado padrão de um novo objeto. Uma permissão revogada de um usuário ou de uma função ainda pode ser herdada de outros grupos ou funções aos quais a entidade de segurança está atribuída.|  
 |DENY|DENY revoga uma permissão de modo que não possa ser herdada. DENY tem precedência sobre todas as permissões, com a exceção de que DENY não se aplica a proprietários de objetos ou membros de `sysadmin`. Se você NEGAR permissões em um objeto à função `public` ela será negada a todos os usuários e funções com exceção dos proprietários de objetos e membros de `sysadmin`.|  
   
--   A instrução GRANT pode atribuir permissões a um grupo ou a uma função, que podem ser herdadas por usuários do banco de dados. No entanto, a instrução DENY tem precedência sobre quaisquer outras instruções de permissão. Portanto, um usuário para o qual uma permissão é negada não pode herdá-la de outra função.  
+- A instrução GRANT pode atribuir permissões a um grupo ou a uma função, que podem ser herdadas por usuários do banco de dados. No entanto, a instrução DENY tem precedência sobre quaisquer outras instruções de permissão. Portanto, um usuário para o qual uma permissão é negada não pode herdá-la de outra função.  
   
 > [!NOTE]
 >  As permissões não podem ser negadas para membros da função de servidor fixa `sysadmin` e proprietários de objetos.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 ms.openlocfilehash: fea91731694f18625e43c5545b353851e72234a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698610"
 ---
 # <a name="yield-statement-visual-basic"></a>Instrução Yield (Visual Basic)
 Envia o próximo elemento de uma coleção para um `For Each...Next` instrução.  
@@ -46,11 +46,11 @@ Yield expression
 ## <a name="iterator-functions-and-get-accessors"></a>Acessadores Get e funções de iterador  
  A declaração de uma função de iterador ou `Get` acessador deve atender aos seguintes requisitos:  
   
--   Ele deve incluir um [iterador](../../../visual-basic/language-reference/modifiers/iterator.md) modificador.  
+- Ele deve incluir um [iterador](../../../visual-basic/language-reference/modifiers/iterator.md) modificador.  
   
--   O tipo de retorno deve ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
+- O tipo de retorno deve ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
   
--   Ele não pode ter nenhum `ByRef` parâmetros.  
+- Ele não pode ter nenhum `ByRef` parâmetros.  
   
  Uma função de iterador não pode ocorrer em um evento, construtor de instância, o construtor estático ou um destruidor estático.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669350"
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -40,13 +40,13 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
 
  As seções a seguir descrevem como implementar o padrão de evento fraco.  Para fins desta discussão, o evento que deve ser assinado tem as seguintes características.  
   
--   O nome do evento é `SomeEvent`.  
+- O nome do evento é `SomeEvent`.  
   
--   O evento é gerado pela classe `EventSource`.  
+- O evento é gerado pela classe `EventSource`.  
   
--   O manipulador de eventos tem o tipo: `SomeEventEventHandler` (ou `EventHandler<SomeEventEventArgs>`).  
+- O manipulador de eventos tem o tipo: `SomeEventEventHandler` (ou `EventHandler<SomeEventEventArgs>`).  
   
--   O evento passa um parâmetro do tipo `SomeEventEventArgs` aos manipuladores de eventos.  
+- O evento passa um parâmetro do tipo `SomeEventEventArgs` aos manipuladores de eventos.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Usar uma classe existente de gerenciador de evento fraco  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609407"
 ---
 # <a name="corilmap-structure"></a>Estrutura COR_IL_MAP
 Especifica mudanças no deslocamento relativo de uma função.  
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Para depuração funcione corretamente, os seguintes requisitos devem ser atendidos:  
   
--   O mapa deve ser classificado em ordem crescente.  
+- O mapa deve ser classificado em ordem crescente.  
   
--   Código MSIL instrumentado não deve ser reordenado.  
+- Código MSIL instrumentado não deve ser reordenado.  
   
--   Código MSIL original não deve ser removido.  
+- Código MSIL original não deve ser removido.  
   
--   O mapa deve incluir as entradas para mapear todos os pontos de sequência do arquivo de banco de dados (PDB) do programa.  
+- O mapa deve incluir as entradas para mapear todos os pontos de sequência do arquivo de banco de dados (PDB) do programa.  
   
  O mapa não interpola entradas ausentes. O exemplo a seguir mostra um mapa e seus resultados.  
   
  Mapear:  
   
--   deslocamento antigo 0, o novo deslocamento 0  
+- deslocamento antigo 0, o novo deslocamento 0  
   
--   deslocamento antigo 5, 10 novo deslocamento  
+- deslocamento antigo 5, 10 novo deslocamento  
   
--   deslocamento antigo 9, 20 novo deslocamento  
+- deslocamento antigo 9, 20 novo deslocamento  
   
  Resultados:  
   
--   Um deslocamento antigo de 0, 1, 2, 3 ou 4 será mapeado para um novo deslocamento de 0.  
+- Um deslocamento antigo de 0, 1, 2, 3 ou 4 será mapeado para um novo deslocamento de 0.  
   
--   Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento de 10.  
+- Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento de 10.  
   
--   Um deslocamento antigo de 9 ou superior será mapeado para o novo deslocamento 20.  
+- Um deslocamento antigo de 9 ou superior será mapeado para o novo deslocamento 20.  
   
--   Um novo deslocamento de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 será mapeado para o deslocamento antigo 0.  
+- Um novo deslocamento de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 será mapeado para o deslocamento antigo 0.  
   
--   Um novo deslocamento de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 será mapeado para o deslocamento antigo 5.  
+- Um novo deslocamento de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 será mapeado para o deslocamento antigo 5.  
   
--   Um novo deslocamento de 20 ou superior será mapeado para o deslocamento antigo 9.  
+- Um novo deslocamento de 20 ou superior será mapeado para o deslocamento antigo 9.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

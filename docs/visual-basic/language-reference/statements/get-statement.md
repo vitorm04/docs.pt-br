@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638019"
 ---
 # <a name="get-statement"></a>Instrução Get
 Declara um `Get` procedimento de propriedade usado para recuperar o valor de uma propriedade.  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>Regras  
   
--   **Níveis de acesso mistos.** Se você estiver definindo uma propriedade de leitura / gravação, você pode, opcionalmente, especificar um nível de acesso diferentes para qualquer um de `Get` ou o `Set` procedimento, mas não ambos. Se você fizer isso, o nível de acesso do procedimento deve ser mais restritivo do que o nível de acesso da propriedade. Por exemplo, se a propriedade é declarada `Friend`, você pode declarar o `Get` procedimento `Private`, mas não `Public`.  
+- **Níveis de acesso mistos.** Se você estiver definindo uma propriedade de leitura / gravação, você pode, opcionalmente, especificar um nível de acesso diferentes para qualquer um de `Get` ou o `Set` procedimento, mas não ambos. Se você fizer isso, o nível de acesso do procedimento deve ser mais restritivo do que o nível de acesso da propriedade. Por exemplo, se a propriedade é declarada `Friend`, você pode declarar o `Get` procedimento `Private`, mas não `Public`.  
   
      Se você estiver definindo uma `ReadOnly` propriedade, o `Get` procedimento representa a propriedade de inteira. Você não pode declarar um acesso a diferentes níveis para `Get`, pois isso configuraria dois níveis de acesso para a propriedade.  
   
--   **Tipo de retorno.** O [declaração de propriedade](../../../visual-basic/language-reference/statements/property-statement.md) pode declarar o tipo de dados do valor que ele retorna. O `Get` procedimento retorna automaticamente esse tipo de dados. Você pode especificar qualquer tipo de dados ou o nome de uma enumeração, estrutura, classe ou interface.  
+- **Tipo de retorno.** O [declaração de propriedade](../../../visual-basic/language-reference/statements/property-statement.md) pode declarar o tipo de dados do valor que ele retorna. O `Get` procedimento retorna automaticamente esse tipo de dados. Você pode especificar qualquer tipo de dados ou o nome de uma enumeração, estrutura, classe ou interface.  
   
      Se o `Property` instrução não especifica `returntype`, o procedimento retornará `Object`.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Retornando de um procedimento.** Quando o `Get` procedimento retorna para o código de chamada, a execução continuará dentro da instrução que solicitou o valor da propriedade.  
+- **Retornando de um procedimento.** Quando o `Get` procedimento retorna para o código de chamada, a execução continuará dentro da instrução que solicitou o valor da propriedade.  
   
      `Get` procedimentos de propriedade podem retornar um valor usando o [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md) ou atribuindo o valor de retorno para o nome da propriedade. Para obter mais informações, consulte "Valor de retorno" em [instrução Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      O `Exit Property` e `Return` instruções fazem com que uma saída imediata de um procedimento de propriedade. Qualquer número de `Exit Property` e `Return` instruções podem aparecer em qualquer lugar no procedimento, e você pode misturar `Exit Property` e `Return` instruções.  
   
--   **Valor de retorno.** Para retornar um valor de uma `Get` procedimento, você pode atribuir o valor para o nome da propriedade ou incluí-lo em um [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md). O `Return` instrução atribui simultaneamente o `Get` de valor e finaliza o procedimento de retorno de procedimento.  
+- **Valor de retorno.** Para retornar um valor de uma `Get` procedimento, você pode atribuir o valor para o nome da propriedade ou incluí-lo em um [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md). O `Return` instrução atribui simultaneamente o `Get` de valor e finaliza o procedimento de retorno de procedimento.  
   
      Se você usar `Exit Property` sem atribuir um valor para o nome da propriedade, o `Get` procedimento retorna o valor padrão para o tipo de dados da propriedade. Para obter mais informações, consulte "Valor de retorno" em [instrução Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   

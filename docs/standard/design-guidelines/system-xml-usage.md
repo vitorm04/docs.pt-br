@@ -1,17 +1,17 @@
 ---
-title: Uso de System. XML
+title: Uso de System.XML
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
 author: KrzysztofCwalina
 ms.openlocfilehash: fc94ac62d1f2413c5f51446a8f6d0a52d9151557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650122"
 ---
-# <a name="systemxml-usage"></a>Uso de System. XML
+# <a name="systemxml-usage"></a>Uso de System.XML
 Esta seção fala sobre o uso de vários tipos que residem em <xref:System.Xml?displayProperty=nameWithType> namespaces que pode ser usado para representar dados XML.  
   
  **X DO NOT** usar <xref:System.Xml.XmlNode> ou <xref:System.Xml.XmlDocument> para representar dados XML. Favorecer usando as instâncias de <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, ou subtipos <xref:System.Xml.Linq.XNode> em vez disso. `XmlNode` e `XmlDocument` não foi projetado para expor em APIs públicas.  

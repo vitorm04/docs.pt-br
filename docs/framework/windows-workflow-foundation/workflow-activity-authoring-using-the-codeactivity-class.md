@@ -3,11 +3,11 @@ title: Criação de atividade de fluxo de trabalho usando a classe de CodeActivi
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669440"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Criação de atividade de fluxo de trabalho usando a classe de CodeActivity
 As atividades criadas por herança de <xref:System.Activities.CodeActivity> podem implementar o comportamento básico obrigatório substituindo o método de <xref:System.Activities.CodeActivity.Execute%2A> .
@@ -15,11 +15,11 @@ As atividades criadas por herança de <xref:System.Activities.CodeActivity> pode
 ## <a name="using-codeactivitycontext"></a>Usando CodeActivityContext
  Recursos de tempo de execução de fluxo de trabalho podem ser acessados de dentro do método de <xref:System.Activities.CodeActivity.Execute%2A> usando membros de parâmetro de `context` , do tipo <xref:System.Activities.CodeActivityContext>. Os recursos <xref:System.Activities.CodeActivityContext> direto disponível incluem o seguinte:
 
--   Definindo e obtendo os valores das variáveis e os argumentos.
+- Definindo e obtendo os valores das variáveis e os argumentos.
 
--   Recursos personalizados de rastreamento que usam <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Recursos personalizados de rastreamento que usam <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Acesso às propriedades de execução da atividade usando <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
+- Acesso às propriedades de execução da atividade usando <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Para criar uma atividade personalizado que herda de CodeActivity
 

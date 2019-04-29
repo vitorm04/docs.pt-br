@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665761"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Como: Declarar e chamar uma propriedade padrão no Visual Basic
 Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu código pode acessar sem especificá-lo. Ao chamar código nomes de uma classe ou estrutura, mas não uma propriedade e o contexto permite o acesso a uma propriedade, Visual Basic decide o acesso à propriedade dessa classe ou da estrutura padrão, se houver.  

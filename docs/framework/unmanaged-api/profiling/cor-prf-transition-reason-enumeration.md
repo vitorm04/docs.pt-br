@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2556196b7c8f81709e6880962e8ff36e126dd8b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599033"
 ---
 # <a name="corprftransitionreason-enumeration"></a>Enumeração COR_PRF_TRANSITION_REASON
 Indica o motivo para uma transição de código gerenciado para não gerenciado ou vice-versa.  
@@ -39,17 +39,17 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|A transição é devido a uma chamada em uma função.|  
+|`COR_PRF_TRANSITION_CALL`|A transição é devido a uma chamada para uma função.|  
 |`COR_PRF_TRANSITION_RETURN`|A transição é devido a um retorno de uma função.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando uma transição ocorre, o criador de perfil recebe um [: Managedtounmanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) ou [: Unmanagedtomanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) retorno de chamada, que Fornece um valor de `COR_PRF_TRANSITION_REASON` enumeração para indicar o motivo da transição.  
+ Quando uma transição ocorre, o criador de perfil recebe um [ICorProfilerCallback:: Managedtounmanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) ou [ICorProfilerCallback:: Unmanagedtomanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) retorno de chamada, que Fornece um valor da `COR_PRF_TRANSITION_REASON` enumeração para indicar o motivo para a transição.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e57c622780f0bc92061fd2928ea861f904d9eb37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599176"
 ---
 # <a name="corprfruntimetype-enumeration"></a>Enumeração COR_PRF_RUNTIME_TYPE
 Contém valores que indicam a versão do common language runtime (CLR): área de trabalho ou no CoreCLR, que é usado no Silverlight.  

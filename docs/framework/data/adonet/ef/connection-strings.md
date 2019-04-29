@@ -3,11 +3,11 @@ title: Cadeias de caracteres de Conexão no ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606761"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadeias de caracteres de Conexão no ADO.NET Entity Framework
 
@@ -94,8 +94,7 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Suporte para o &#124;DataDirectory&#124; cadeia de caracteres de substituição e o aplicativo Web raiz de operador (~)
 
-`DataDirectory` e o ~ operador são usados na <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte do `Metadata` e `Provider Connection String` palavras-chave. 
-  <xref:System.Data.EntityClient.EntityConnection> encaminha `DataDirectory` e o operador ~ para <xref:System.Data.Metadata.Edm.MetadataWorkspace> e para o provedor de armazenamento, respectivamente.
+`DataDirectory` e o ~ operador são usados na <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte do `Metadata` e `Provider Connection String` palavras-chave. <xref:System.Data.EntityClient.EntityConnection> encaminha `DataDirectory` e o operador ~ para <xref:System.Data.Metadata.Edm.MetadataWorkspace> e para o provedor de armazenamento, respectivamente.
 
 |Termo|Descrição|
 |----------|-----------------|

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640502"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Dimensionamento automático no Windows Forms
 
 Dimensionamento automático permite que um formulário e seus controles, criados em uma máquina com uma determinada exibição resolução ou sistema fonte, a ser exibida corretamente em outro computador com uma fonte de sistema ou resolução de exibição diferente. Ele garante que o formulário e seus controles de forma inteligente serão redimensionado para ser consistente com nativos do windows e outros aplicativos em computadores de usuários e outros desenvolvedores. O suporte a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para o dimensionamento automático e estilos visuais permite que [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicativos para manter uma aparência consistente em comparação com aplicativos nativos do Windows na máquina de cada usuário.
 
-Na maior parte, o dimensionamento automático funciona conforme o esperado em [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0 e posterior. No entanto, alterações de esquema de fonte podem ser problemáticas. Para obter um exemplo de como resolver esse problema, consulte [como: responder a alterações de esquema de fontes em um aplicativo do Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Na maior parte, o dimensionamento automático funciona conforme o esperado em [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0 e posterior. No entanto, alterações de esquema de fonte podem ser problemáticas. Para obter um exemplo de como resolver esse problema, consulte [como: Responder a alterações de esquema de fontes em um aplicativo do Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Necessidade de dimensionamento automático
 
@@ -105,4 +105,4 @@ Agora, o Windows Forms usa a seguinte lógica para dimensionar automaticamente o
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Renderizando controles com estilos visuais](./controls/rendering-controls-with-visual-styles.md)
-- [Como Melhorar o Desempenho Evitando a Colocação em Escala Automática](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Como: Melhorar o desempenho, evitando o dimensionamento automático](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

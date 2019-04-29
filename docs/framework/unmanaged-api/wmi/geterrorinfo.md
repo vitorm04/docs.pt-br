@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2df4b87016394d1998ef90abe2e3eeb911886ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608964"
 ---
 # <a name="geterrorinfo-function"></a>Função GetErrorInfo
 Recupera informações de erro da chamada de função anterior.  
@@ -51,4 +51,4 @@ Essa função encapsula uma chamada para o [IComThreadingInfo::GetErrorInfo](/wi
   
 ## <a name="see-also"></a>Consulte também
 
-- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

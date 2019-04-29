@@ -3,11 +3,11 @@ title: Armazenamento em cache do plano de consulta (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613658"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Armazenamento em cache do plano de consulta (Entity SQL)
 Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consulta pesquisa seu cache do plano de consulta para ver se a consulta exata já está compilada e disponível. Em caso afirmativo, reutiliza o plano armazenado em cachê em vez de criar um novo. Se uma correspondência não for encontrada no cache do plano de consulta, a consulta é criada e armazenadas em cachê. Uma consulta é identificada por sua coleção de texto e o parâmetro de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (nomes e tipos). Todas as comparações de texto diferenciam maiúsculas de minúsculas.  
@@ -34,19 +34,19 @@ Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consul
   
  Para que as consultas são igualadas corretamente pelo cache do plano de consulta, devem estar de acordo com os seguintes requisitos:  
   
--   O texto da consulta deve ser um padrão constante, de preferência um cadeia de caracteres constante ou um recurso.  
+- O texto da consulta deve ser um padrão constante, de preferência um cadeia de caracteres constante ou um recurso.  
   
--   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> devem ser usados em qualquer lugar que um valor de fornecido deve ser passado.  
+- <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> devem ser usados em qualquer lugar que um valor de fornecido deve ser passado.  
   
  Você deve evitar os seguintes padrões de consulta, que consomem desnecessariamente slots no cache do plano de consulta:  
   
--   Alterações em caso de letra em texto.  
+- Alterações em caso de letra em texto.  
   
--   Alterações no espaço em branco.  
+- Alterações no espaço em branco.  
   
--   Alterações em valores literais.  
+- Alterações em valores literais.  
   
--   Alterações ao texto dentro de comentários.  
+- Alterações ao texto dentro de comentários.  
   
 ## <a name="see-also"></a>Consulte também
 

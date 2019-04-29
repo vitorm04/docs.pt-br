@@ -3,24 +3,24 @@ title: 'Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605978"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento
 Este tópico mostra como usar a ferramenta Gerador de EDM (EdmGen.exe) para gerar os seguintes arquivos com base no banco de dados da escola:  
   
--   Um modelo conceitual (um arquivo .csdl).  
+- Um modelo conceitual (um arquivo .csdl).  
   
--   Um modelo de armazenamento (um arquivo .ssdl).  
+- Um modelo de armazenamento (um arquivo .ssdl).  
   
--   Mapeamento entre os modelos conceituais e de armazenamento (um arquivo .msl).  
+- Mapeamento entre os modelos conceituais e de armazenamento (um arquivo .msl).  
   
--   Código da camada de objetos no Visual Basic ou C#.  
+- Código da camada de objetos no Visual Basic ou C#.  
   
--   Exibir arquivos.  
+- Exibir arquivos.  
   
  A ferramenta EdmGen.exe usa /mode:FullGeneration para gerar os arquivos listados acima. Para obter mais informações sobre comandos EdmGen.exe, consulte [gerador de EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   

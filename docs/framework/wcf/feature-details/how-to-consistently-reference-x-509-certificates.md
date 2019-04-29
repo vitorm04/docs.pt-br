@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
 ms.openlocfilehash: bd911b1586f7f4a4816efa32480ef99ca12404f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699520"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Como: fazer referência de forma consistente aos certificados X.509
 Você pode identificar um certificado de várias maneiras: pelo hash do certificado, o emissor e número de série ou pelo identificador de chave de assunto (SKI). O SKI fornece uma identificação exclusiva para chave pública do assunto do certificado e geralmente é usado ao trabalhar com a assinatura digital XML. O valor de ESQUI geralmente é parte do certificado X.509 como uma *extensão de certificado x. 509*. Windows Communication Foundation (WCF) tem um padrão *referenciando estilo* se a extensão de ESQUI está ausente no certificado que usa o emissor e número de série. Se o certificado contém a extensão de ESQUI, o padrão de estilo de referência usa o SKI para apontar para o certificado. Se a forma intermediário por meio do desenvolvimento de um aplicativo, você alterna o uso de certificados que não usam a extensão de ESQUI a certificados que usam a extensão de ESQUI, também altera o estilo de referência usado em mensagens geradas pelo WCF.  
@@ -28,13 +28,13 @@ Você pode identificar um certificado de várias maneiras: pelo hash do certific
 ## <a name="compiling-the-code"></a>Compilando o código  
  Os seguintes namespaces são necessários para compilar o código:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.ServiceModel.Security.Tokens>  
+- <xref:System.ServiceModel.Security.Tokens>  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609887"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapeamento de Padrão de Controles para Clientes de Automação de IU
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101127"
   
  A tabela a seguir organiza os padrões de controle nas seguintes categorias:  
   
--   Com suporte. O controle deve oferecer suporte a esse padrão de controle.  
+- Com suporte. O controle deve oferecer suporte a esse padrão de controle.  
   
--   Suporte condicional. O controle pode dar suporte a esse padrão de controle dependendo do estado do controle.  
+- Suporte condicional. O controle pode dar suporte a esse padrão de controle dependendo do estado do controle.  
   
--   Sem suporte. O controle não dá suporte a esse padrão de controle; controles personalizados podem dar suporte a esse padrão de controle.  
+- Sem suporte. O controle não dá suporte a esse padrão de controle; controles personalizados podem dar suporte a esse padrão de controle.  
   
 > [!NOTE]
 >  Alguns controles têm suporte condicional para vários padrões de controle, dependendo da funcionalidade do controle. Por exemplo, o controle de item de menu tem suporte condicional para o <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, ou <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle, dependendo da sua função no controle do menu.  

@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640217"
 ---
 # <a name="architecture-deployment-approaches"></a>Abordagens de implantação de arquitetura
 
@@ -139,8 +139,8 @@ Há uma ampla gama de opções disponíveis para arquitetura, inclusive uma abor
 |         |IaaS     |PaaS     |Contêiner|Sem servidor|
 |---------|---------|---------|---------|----------|
 |**Ajustar Escala**|VM       |Instância |Aplicativo      |Função  |
-|**Abstrai**|Hardware|Plataforma|Sistema operacional de Host|Tempo de execução   |
-|**Unidade** |VM       |Projeto  |Image    |Código      |
+|**Abstrai**|Hardware|Plataforma|OS Host|Tempo de execução   |
+|**Unit** |VM       |Projeto  |Image    |Código      |
 |**Tempo de Vida**|meses|Dias para meses|Minutos a dias|Milissegundos de minutos|
 |**responsabilidade**|Aplicativos, dependências, tempo de execução e sistema operacional|Aplicativos e dependências|Aplicativos, dependências e tempo de execução|Função
 
@@ -156,7 +156,7 @@ O próximo capítulo se concentrar em arquitetura sem servidor, casos de uso e p
 
 * [Guia de arquitetura de aplicativo do Azure](https://docs.microsoft.com/azure/architecture/guide/)
 * [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [SQL do Azure](https://docs.microsoft.com/azure/sql-database)
+* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [Padrão de arquitetura de N camadas](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [Kubernetes no Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 * [Microsserviços](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)

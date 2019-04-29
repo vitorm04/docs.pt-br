@@ -3,11 +3,11 @@ title: Visão geral da Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606171"
 ---
 # <a name="entity-sql-overview"></a>Visão geral da Entity SQL
 A linguagem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é semelhante à SQL e permite que você consulte modelos conceituais no [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modelos conceituais representam dados como entidades e relações, e [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite que você consulte essas entidades e relações em um formato que é familiar para quem já usou o SQL.  

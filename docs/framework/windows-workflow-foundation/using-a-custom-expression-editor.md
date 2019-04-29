@@ -3,18 +3,18 @@ title: Usando um editor de expressão personalizado
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669596"
 ---
 # <a name="using-a-custom-expression-editor"></a>Usando um editor de expressão personalizado
 Um editor de expressão personalizado pode ser implementada para fornecer uma experiência de edição de uma expressão mais rica ou mais simples. Há várias situações em que você talvez queira usar um editor de expressão personalizado:  
   
--   Para fornecer suporte para o IntelliSense e outros recursos ricos que editam em um designer rehosted de fluxo de trabalho. Essa funcionalidade deve ser fornecida porque o editor de expressão do Visual Studio padrão não pode ser usado em aplicativos rehosted.  
+- Para fornecer suporte para o IntelliSense e outros recursos ricos que editam em um designer rehosted de fluxo de trabalho. Essa funcionalidade deve ser fornecida porque o editor de expressão do Visual Studio padrão não pode ser usado em aplicativos rehosted.  
   
--   Para simplificar a experiência para os usuários do analista de negócios, de edição de expressão para que eles não, por exemplo, precisarão aprender Visual Basic ou lidar com expressões do Visual Basic.  
+- Para simplificar a experiência para os usuários do analista de negócios, de edição de expressão para que eles não, por exemplo, precisarão aprender Visual Basic ou lidar com expressões do Visual Basic.  
   
  Três etapas básicas são necessárias para implementar um editor de expressão personalizado:  
   

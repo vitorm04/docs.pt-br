@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649992"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída
 Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere aplicar o operador 'Await' ao resultado da chamada.  
@@ -29,7 +29,7 @@ Como esta chamada não era esperada, a execução do método atual continua ante
   
 ### <a name="to-address-this-warning"></a>Para resolver este aviso  
   
--   Considere suprimir o aviso somente se você tiver certeza de que não deseja aguardar que a chamada assíncrona seja concluída e que o método chamado não gerará nenhuma exceção. Nesse caso, você pode suprimir o aviso atribuindo o resultado da tarefa da chamada a uma variável.  
+- Considere suprimir o aviso somente se você tiver certeza de que não deseja aguardar que a chamada assíncrona seja concluída e que o método chamado não gerará nenhuma exceção. Nesse caso, você pode suprimir o aviso atribuindo o resultado da tarefa da chamada a uma variável.  
   
      O exemplo a seguir mostra como causar o aviso, como suprimi-lo e como aguardar a chamada.  
   

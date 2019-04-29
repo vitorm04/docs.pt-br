@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638046"
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrução For...Next (Visual Basic)
 Repete um grupo de instruções um número de vezes especificado.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` geralmente é usado depois de avaliar alguma condição (por exemplo, em um `If`... `Then`... `Else` estrutura). Você talvez queira usar `Exit For` para as seguintes condições:  
   
--   Continuar para fazer a iteração é desnecessária ou impossível. Um valor errado ou uma solicitação de encerramento pode criar essa condição.  
+- Continuar para fazer a iteração é desnecessária ou impossível. Um valor errado ou uma solicitação de encerramento pode criar essa condição.  
   
--   Um `Try`... `Catch`... `Finally` instrução captura uma exceção. Você pode usar `Exit For` no final o `Finally` bloco.  
+- Um `Try`... `Catch`... `Finally` instrução captura uma exceção. Você pode usar `Exit For` no final o `Finally` bloco.  
   
--   Você tem um loop infinito, o que é um loop que possa ser executada um número grande ou mesmo infinito de vezes. Se você detectar uma condição desse tipo, você pode usar `Exit For` para escapar do loop. Para obter mais informações, consulte [fazer... Instrução de loop](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Você tem um loop infinito, o que é um loop que possa ser executada um número grande ou mesmo infinito de vezes. Se você detectar uma condição desse tipo, você pode usar `Exit For` para escapar do loop. Para obter mais informações, consulte [fazer... Instrução de loop](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Implementação Técnica  
  Quando um `For`... `Next` loop for iniciado, o Visual Basic avalia `start`, `end`, e `step`. Visual Basic avalia esses valores só nesse momento e, em seguida, atribui `start` para `counter`. Antes da instrução do bloco é executado, Visual Basic compara `counter` para `end`. Se `counter` já for maior do que o `end` valor (ou menor se `step` é negativo), o `For` loop termina e o controle passa para a instrução que segue o `Next` instrução. Caso contrário, o bloco de instrução é executada.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  O tipo de dados `counter` determina o tipo da iteração, que deve ser um dos seguintes tipos:  
   
--   Um `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, ou `Double`.  
+- Um `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, ou `Double`.  
   
--   Uma enumeração que declarar usando um [instrução Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Uma enumeração que declarar usando um [instrução Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Um `Object`.  
+- Um `Object`.  
   
--   Um tipo `T` que tem os seguintes operadores, onde `B` é um tipo que pode ser usado em um `Boolean` expressão.  
+- Um tipo `T` que tem os seguintes operadores, onde `B` é um tipo que pode ser usado em um `Boolean` expressão.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

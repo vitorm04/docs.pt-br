@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608549"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração fornece a flexibilidade de fornecer o ponto de extremidade e os dados de comportamento de serviço no ponto de implantação, em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -74,24 +74,24 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 ### <a name="the-service-element"></a>O \<service > elemento  
  Cada serviço tem os seguintes atributos:  
   
--   `name`. Especifica o tipo que fornece uma implementação de um contrato de serviço. É um nome totalmente qualificado que consiste no namespace, em um ponto e no nome do tipo. Por exemplo `"MyNameSpace.myServiceType"`.  
+- `name`. Especifica o tipo que fornece uma implementação de um contrato de serviço. É um nome totalmente qualificado que consiste no namespace, em um ponto e no nome do tipo. Por exemplo `"MyNameSpace.myServiceType"`.  
   
--   `behaviorConfiguration`. Especifica o nome de um dos elementos `behavior` localizados no elemento `behaviors`. O comportamento especificado governa as ações, como, por exemplo, se o serviço permite representação. Se seu valor for o nome vazio ou se nenhum `behaviorConfiguration` for fornecido, o conjunto padrão de comportamentos de serviço será adicionado ao serviço.  
+- `behaviorConfiguration`. Especifica o nome de um dos elementos `behavior` localizados no elemento `behaviors`. O comportamento especificado governa as ações, como, por exemplo, se o serviço permite representação. Se seu valor for o nome vazio ou se nenhum `behaviorConfiguration` for fornecido, o conjunto padrão de comportamentos de serviço será adicionado ao serviço.  
   
--   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>O \<ponto de extremidade > elemento  
  Cada ponto de extremidade requer um endereço, uma associação e um contrato, que são representados pelos seguintes atributos:  
   
--   `address`. Especifica o URI (Uniform Resource Identifier) do serviço, que pode ser um endereço absoluto ou um endereço fornecido em relação ao endereço básico do serviço. Se definido como uma cadeia de caracteres vazia, indicará que o ponto de extremidade está disponível no endereço básico especificado ao criar <xref:System.ServiceModel.ServiceHost> do serviço.  
+- `address`. Especifica o URI (Uniform Resource Identifier) do serviço, que pode ser um endereço absoluto ou um endereço fornecido em relação ao endereço básico do serviço. Se definido como uma cadeia de caracteres vazia, indicará que o ponto de extremidade está disponível no endereço básico especificado ao criar <xref:System.ServiceModel.ServiceHost> do serviço.  
   
--   `binding`. Normalmente especifica uma associação fornecida pelo sistema, como <xref:System.ServiceModel.WSHttpBinding>, mas também pode especificar uma associação definida pelo usuário. A associação especificada determina o tipo de transporte, de segurança e de codificação usado, e se sessões confiáveis, transações ou streaming são suportados ou se estão habilitados.  
+- `binding`. Normalmente especifica uma associação fornecida pelo sistema, como <xref:System.ServiceModel.WSHttpBinding>, mas também pode especificar uma associação definida pelo usuário. A associação especificada determina o tipo de transporte, de segurança e de codificação usado, e se sessões confiáveis, transações ou streaming são suportados ou se estão habilitados.  
   
--   `bindingConfiguration`. Se os valores padrão de uma associação precisarem ser modificados, isso poderá ser feito configurando o elemento `binding` apropriado no elemento `bindings`. Esse atributo deve receber o mesmo valor que o atributo `name` do elemento `binding` que é usado para alterar os padrões. Se nenhum nome for fornecido, ou se nenhum `bindingConfiguration` estiver especificado na associação, a associação padrão do tipo de associação será usada no ponto de extremidade.  
+- `bindingConfiguration`. Se os valores padrão de uma associação precisarem ser modificados, isso poderá ser feito configurando o elemento `binding` apropriado no elemento `bindings`. Esse atributo deve receber o mesmo valor que o atributo `name` do elemento `binding` que é usado para alterar os padrões. Se nenhum nome for fornecido, ou se nenhum `bindingConfiguration` estiver especificado na associação, a associação padrão do tipo de associação será usada no ponto de extremidade.  
   
--   `contract`. Especifica a interface que define o contrato. Essa é a interface implementada no tipo CLR (Common Language Runtime) especificado pelo atributo `name` do elemento `service`.  
+- `contract`. Especifica a interface que define o contrato. Essa é a interface implementada no tipo CLR (Common Language Runtime) especificado pelo atributo `name` do elemento `service`.  
   
--   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>O \<associações > elemento  
  O elemento `bindings` contém as especificações de todas as associações que podem ser usadas por qualquer ponto de extremidade definido em qualquer serviço.  

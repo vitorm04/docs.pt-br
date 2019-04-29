@@ -3,11 +3,11 @@ title: Semântica de comparação (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605958"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semântica de comparação (Entity SQL)
 Executar alguns dos seguintes operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] envolve a comparação de instâncias do tipo:  
@@ -15,53 +15,53 @@ Executar alguns dos seguintes operadores de [!INCLUDE[esql](../../../../../../in
 ## <a name="explicit-comparison"></a>Comparação explícita  
  Operações de igualdade:  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  Ordenando operações:  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  Operações de nulidade:  
   
--   É NULO  
+- É NULO  
   
--   NÃO É NULO  
+- NÃO É NULO  
   
 ## <a name="explicit-distinction"></a>Distinção explícita  
  Distinção de igualdade:  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  Classificação a distinção:  
   
--   ORDENAR POR  
+- ORDENAR POR  
   
 ## <a name="implicit-distinction"></a>Distinção implícita  
  Definir operações e predicados (igualdade):  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  Predicados de item (igual):  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>Combinações suportados  
  A tabela a seguir mostra todas as combinações suportados operadores de comparação para cada tipo do tipo:  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
 ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609745"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementando o Padrão de Controle Grid de Automação de Interface de Usuário
 > [!NOTE]
@@ -25,22 +25,22 @@ ms.locfileid: "59100568"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de grade, observe as seguintes diretrizes e convenções:  
   
--   Coordenadas de grade são baseadas em zero com o canto superior esquerdo (ou célula superior direita dependendo da localidade) tendo as coordenadas (0, 0).  
+- Coordenadas de grade são baseadas em zero com o canto superior esquerdo (ou célula superior direita dependendo da localidade) tendo as coordenadas (0, 0).  
   
--   Se uma célula estiver vazia, um elemento de automação de interface do usuário ainda deve ser retornado para oferecer suporte a <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> propriedade para essa célula. Isso é possível quando o layout dos elementos filho na grade é semelhante a uma matriz irregular (veja o exemplo abaixo).  
+- Se uma célula estiver vazia, um elemento de automação de interface do usuário ainda deve ser retornado para oferecer suporte a <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> propriedade para essa célula. Isso é possível quando o layout dos elementos filho na grade é semelhante a uma matriz irregular (veja o exemplo abaixo).  
   
  ![Windows Explorer exibir mostrando desbalanceada layout. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Exemplo de um controle de grade com coordenadas vazios  
   
--   Uma grade com um único item ainda é necessária para implementar <xref:System.Windows.Automation.Provider.IGridProvider> se ela é considerada como uma grade logicamente. O número de itens filho na grade é irrelevante.  
+- Uma grade com um único item ainda é necessária para implementar <xref:System.Windows.Automation.Provider.IGridProvider> se ela é considerada como uma grade logicamente. O número de itens filho na grade é irrelevante.  
   
--   Linhas e colunas, dependendo da implementação do provedor, ocultas podem ser carregadas na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas na <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas ainda não tiverem sido carregadas, eles não devem ser contados.  
+- Linhas e colunas, dependendo da implementação do provedor, ocultas podem ser carregadas na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas na <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas ainda não tiverem sido carregadas, eles não devem ser contados.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> não permite a manipulação ativa de uma grade; <xref:System.Windows.Automation.Provider.ITransformProvider> devem ser implementados para habilitar essa funcionalidade.  
+- <xref:System.Windows.Automation.Provider.IGridProvider> não permite a manipulação ativa de uma grade; <xref:System.Windows.Automation.Provider.ITransformProvider> devem ser implementados para habilitar essa funcionalidade.  
   
--   Use um <xref:System.Windows.Automation.StructureChangedEventHandler> para escutar alterações estruturais ou de layout para a grade, como as células que foram adicionados, removidos ou mesclados.  
+- Use um <xref:System.Windows.Automation.StructureChangedEventHandler> para escutar alterações estruturais ou de layout para a grade, como as células que foram adicionados, removidos ou mesclados.  
   
--   Use um <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> para controlar a travessia pelos itens ou células de uma grade.  
+- Use um <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> para controlar a travessia pelos itens ou células de uma grade.  
   
 <a name="Required_Members_for_IGridProvider"></a>   
 ## <a name="required-members-for-igridprovider"></a>Membros necessários para IGridProvider  

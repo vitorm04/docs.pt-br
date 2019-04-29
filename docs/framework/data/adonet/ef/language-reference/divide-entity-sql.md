@@ -3,11 +3,11 @@ title: '- (Divisão) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
 ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606056"
 ---
 # <a name="-divide-entity-sql"></a>/ (Divisão) (Entity SQL)
 Divide um número por outro.  

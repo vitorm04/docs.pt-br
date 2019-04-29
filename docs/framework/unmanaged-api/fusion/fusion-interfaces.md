@@ -9,18 +9,18 @@ ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697661"
 ---
 # <a name="fusion-interfaces"></a>Interfaces de fusão
-Esta seção descreve as interfaces não gerenciadas que a fusão API usa para acessar as propriedades de recursos do aplicativo e para localizar as versões corretas desses recursos para o aplicativo.  
+Esta seção descreve as interfaces não gerenciadas que a API de fusão usa para acessar as propriedades de recursos do aplicativo e para localizar as versões corretas desses recursos para o aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interface IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- Fornece métodos que geram e comparam as chaves de identidades de aplicativo e referências.  
+ Fornece métodos que geram e comparam chaves para as identidades de aplicativo e referências.  
   
  [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
  Fornece uma representação de cache de assembly global.  
@@ -32,7 +32,7 @@ Esta seção descreve as interfaces não gerenciadas que a fusão API usa para a
  Representa um enumerador para uma matriz de `IAssemblyName` objetos.  
   
  [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- Fornece métodos para descrever e trabalhar com uma identidade exclusiva de assembly.  
+ Fornece métodos para descrever e trabalhar com a identidade exclusiva de um assembly.  
   
  [Interface IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  
  Representa um identificador exclusivo para o código que define o aplicativo no escopo atual.  

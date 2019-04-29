@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
 ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650473"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Como: Exibir barras de rolagem no controle RichTextBox do Windows Forms
 Por padrão, os formulários do Windows <xref:System.Windows.Forms.RichTextBox> controle exibe barras de rolagem horizontal e vertical conforme necessário. Há sete valores possíveis para o <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propriedade do <xref:System.Windows.Forms.RichTextBox> controle, que são descritos na tabela a seguir.  

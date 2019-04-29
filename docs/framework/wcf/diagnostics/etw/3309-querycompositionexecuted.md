@@ -3,11 +3,11 @@ title: 3309 - QueryCompositionExecuted
 ms.date: 03/30/2017
 ms.assetid: a7ae2267-b478-4115-8317-a89ce4ced65d
 ms.openlocfilehash: 292864b47a36084cfb215535d59bd5f38ef5180c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61595842"
 ---
 # <a name="3309---querycompositionexecuted"></a>3309 - QueryCompositionExecuted
 ## <a name="properties"></a>Propriedades  
@@ -23,6 +23,6 @@ ms.locfileid: "33459747"
  Esse evento é emitido quando a composição de consulta é executada.  
   
 ## <a name="message"></a>Mensagem  
- Composição de consulta usando '%1' foi executada no Uri da solicitação: '%2'.  
+ Composição de consulta usando '%1' foi executada no Uri de solicitação: '%2'.  
   
 ## <a name="details"></a>Detalhes

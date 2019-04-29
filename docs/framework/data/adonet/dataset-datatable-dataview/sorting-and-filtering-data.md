@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607421"
 ---
 # <a name="sorting-and-filtering-data"></a>Classificando e filtrando dados
 O <xref:System.Data.DataView> fornece várias maneiras de classificar e filtrar dados em uma <xref:System.Data.DataTable>:  
   
--   Você pode usar a propriedade <xref:System.Data.DataView.Sort%2A> para especificar uma ou várias ordens de classificação de coluna, e para incluir parâmetros ASC (crescente) e DESC (decrescente).  
+- Você pode usar a propriedade <xref:System.Data.DataView.Sort%2A> para especificar uma ou várias ordens de classificação de coluna, e para incluir parâmetros ASC (crescente) e DESC (decrescente).  
   
--   Você pode usar a propriedade <xref:System.Data.DataView.ApplyDefaultSort%2A> para criar automaticamente uma ordem de classificação, em ordem crescente, com base na coluna de chave primária ou nas colunas da tabela. <xref:System.Data.DataView.ApplyDefaultSort%2A> se aplica somente quando o **classificação** propriedade é uma referência nula ou uma cadeia de caracteres vazia, e quando a tabela tem uma chave primária definida.  
+- Você pode usar a propriedade <xref:System.Data.DataView.ApplyDefaultSort%2A> para criar automaticamente uma ordem de classificação, em ordem crescente, com base na coluna de chave primária ou nas colunas da tabela. <xref:System.Data.DataView.ApplyDefaultSort%2A> se aplica somente quando o **classificação** propriedade é uma referência nula ou uma cadeia de caracteres vazia, e quando a tabela tem uma chave primária definida.  
   
--   Você pode usar a propriedade <xref:System.Data.DataView.RowFilter%2A> para especificar subconjuntos de linhas com base nos valores de coluna. Para obter detalhes sobre expressões válidas para o **RowFilter** propriedade, consulte as informações de referência para o <xref:System.Data.DataColumn.Expression%2A> propriedade do <xref:System.Data.DataColumn> classe.  
+- Você pode usar a propriedade <xref:System.Data.DataView.RowFilter%2A> para especificar subconjuntos de linhas com base nos valores de coluna. Para obter detalhes sobre expressões válidas para o **RowFilter** propriedade, consulte as informações de referência para o <xref:System.Data.DataColumn.Expression%2A> propriedade do <xref:System.Data.DataColumn> classe.  
   
      Se você quiser retornar os resultados de uma consulta específica nos dados, em vez de fornecer uma exibição dinâmica de um subconjunto dos dados, use o <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> métodos das **DataView** para obter melhor desempenho em vez de Definindo o **RowFilter** propriedade. Definindo o **RowFilter** propriedade recria o índice para os dados, adicionando a sobrecarga ao seu aplicativo e prejudicando o desempenho. O **RowFilter** propriedade é melhor usada em um aplicativo associado a dados em que um controle associado exibe resultados filtrados. O **encontrar** e **FindRows** métodos aproveitam o índice atual sem exigir que o índice seja reconstruído. Para obter mais informações sobre o **encontrar** e **FindRows** métodos, consulte [localizando linhas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
   
--   Você pode usar a propriedade <xref:System.Data.DataView.RowStateFilter%2A> para especificar quais versões de linha serão exibidas. O **DataView** gerencia implicitamente qual versão de linha para expor de acordo com as **RowState** da linha subjacente. Por exemplo, se o **RowStateFilter** é definido como **DataViewRowState. Deleted**, o **DataView** expõe o **Original** versão da linha todos os **Deleted** linhas porque não há nenhuma **atual** versão de linha. Você pode determinar qual versão de linha de uma linha está sendo exposto usando o **RowVersion** propriedade da **DataRowView**.  
+- Você pode usar a propriedade <xref:System.Data.DataView.RowStateFilter%2A> para especificar quais versões de linha serão exibidas. O **DataView** gerencia implicitamente qual versão de linha para expor de acordo com as **RowState** da linha subjacente. Por exemplo, se o **RowStateFilter** é definido como **DataViewRowState. Deleted**, o **DataView** expõe o **Original** versão da linha todos os **Deleted** linhas porque não há nenhuma **atual** versão de linha. Você pode determinar qual versão de linha de uma linha está sendo exposto usando o **RowVersion** propriedade da **DataRowView**.  
   
      A tabela a seguir mostra as opções para **DataViewRowState**.  
   

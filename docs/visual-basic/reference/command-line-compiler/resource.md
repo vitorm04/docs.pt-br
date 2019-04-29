@@ -10,11 +10,11 @@ helpviewer_keywords:
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61639069"
 ---
 # <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 Insere um recurso gerenciado em um assembly.  

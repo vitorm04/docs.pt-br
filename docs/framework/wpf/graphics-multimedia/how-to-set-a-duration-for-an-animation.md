@@ -7,11 +7,11 @@ helpviewer_keywords:
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
 ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651149"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Como: Definir uma duração para uma animação
 Um <xref:System.Windows.Media.Animation.Timeline> representa um segmento de tempo e o comprimento desse segmento são determinados pela linha do tempo <xref:System.Windows.Duration>. Quando um <xref:System.Windows.Media.Animation.Timeline> atinge o final de sua duração, sua execução é interrompida. Se o <xref:System.Windows.Media.Animation.Timeline> tem linhas do tempo filho, sua execução também é interrompida. No caso de uma animação, o <xref:System.Windows.Duration> Especifica quanto tempo a animação leva para fazer a transição do seu valor inicial para seu valor final.  

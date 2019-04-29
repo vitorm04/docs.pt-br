@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645730"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementando o Padrão Controle de Window de Automação de Interface de Usuário
 > [!NOTE]
@@ -25,15 +25,15 @@ ms.locfileid: "59168032"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de janela, observe as seguintes diretrizes e convenções:  
   
--   Para dar suporte a capacidade de modificar tanto o tamanho da janela e posição na tela usando automação de interface do usuário, um controle deve implementar <xref:System.Windows.Automation.Provider.ITransformProvider> além <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Para dar suporte a capacidade de modificar tanto o tamanho da janela e posição na tela usando automação de interface do usuário, um controle deve implementar <xref:System.Windows.Automation.Provider.ITransformProvider> além <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Controles que contêm as barras de título e elementos de barra de título que permitem o controle a ser movido, redimensionado, maximizada, minimizada ou fechada são geralmente necessários para implementar <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Controles que contêm as barras de título e elementos de barra de título que permitem o controle a ser movido, redimensionado, maximizada, minimizada ou fechada são geralmente necessários para implementar <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Controles como pop-ups de dica de ferramenta e combinação caixa ou menus suspensos normalmente não implementam <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Controles como pop-ups de dica de ferramenta e combinação caixa ou menus suspensos normalmente não implementam <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Janelas da Ajuda de balão são diferenciadas de pop-ups de dica de ferramenta básica pela provisão de um botão de fechar janela semelhante.  
+- Janelas da Ajuda de balão são diferenciadas de pop-ups de dica de ferramenta básica pela provisão de um botão de fechar janela semelhante.  
   
--   Modo de tela inteira não é suportado por IWindowProvider conforme ele é um recurso específico a um aplicativo e não é o comportamento de janela típica.  
+- Modo de tela inteira não é suportado por IWindowProvider conforme ele é um recurso específico a um aplicativo e não é o comportamento de janela típica.  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
 ## <a name="required-members-for-iwindowprovider"></a>Membros necessários para IWindowProvider  

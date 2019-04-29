@@ -1,5 +1,5 @@
 ---
-title: 'Como: Buscar um storyboard de forma síncrona'
+title: 'Como: Buscar um Storyboard de forma síncrona'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Storyboards [WPF], seeking synchronously
 ms.assetid: 03e06271-a946-4810-88ea-3fb4cfa9e0f1
 ms.openlocfilehash: 8ac55346ac83ee94318de90655bde6053ef20687
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651227"
 ---
-# <a name="how-to-seek-a-storyboard-synchronously"></a>Como: Buscar um storyboard de forma síncrona
+# <a name="how-to-seek-a-storyboard-synchronously"></a>Como: Buscar um Storyboard de forma síncrona
 O exemplo a seguir mostra como usar o <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> método de um <xref:System.Windows.Media.Animation.Storyboard> para buscar qualquer posição em uma animação de storyboard de forma síncrona.  
   
 ## <a name="example"></a>Exemplo  

@@ -3,11 +3,11 @@ title: Método CLR ao mapeamento canônico de função
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605711"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Método CLR ao mapeamento canônico de função
 
@@ -40,9 +40,9 @@ Para cenários LINQ, as consultas em Entity Framework envolvem mapear determinad
 
 |Método de instância System.String ()|Função canônica|Observações|
 |---------------------------------------|------------------------|-----------|
-|Boolean contém (cadeia de caracteres `value`)|`this` GOSTA de “% de`value`%”|Se `value` não é uma constante, então este mapeia para IndexOf (`this`, `value`0) >|
+|Boolean contém (cadeia de caracteres `value`)|`this` GOSTA DE “% DE`value`%”|Se `value` não é uma constante, então este mapeia para IndexOf (`this`, `value`) > 0|
 |EndsWith booleano (cadeia de caracteres `value`)|`this` COMO O `'` % `value`'|Se `value` não é uma constante, então este mapeados para a direita (`this`,`value`comprimento ()) = `value`.|
-|StartsWith booleano (cadeia de caracteres `value`)|`this` GOSTA de '`value`% "|Se `value` não é uma constante, então este mapeia para IndexOf (`this`, `value`) = 1.|
+|StartsWith booleano (cadeia de caracteres `value`)|`this` GOSTA DE '`value`% "|Se `value` não é uma constante, então este mapeia para IndexOf (`this`, `value`) = 1.|
 |Length|Comprimento (`this`)||
 |Int32 IndexOf (cadeia de caracteres `value`)|IndexOf (`this`, `value`) - 1||
 |Inserção de System.String (Int32, `startIndex`cadeia de caracteres `value`)|Concat (Concat (subcadeia de caracteres (`this`, 1, `startIndex`), `value`), subcadeia de caracteres (`this`, `startIndex`+1, comprimento (`this`) - `startIndex`))||
@@ -66,11 +66,11 @@ Para cenários LINQ, as consultas em Entity Framework envolvem mapear determinad
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Op_Equality booleano (DateTime `d1`, DateTime `d2`)|Operador =||
-|Op_GreaterThan booleano (DateTime `t1`, DateTime `t2`)|Operador >||
-|Op_GreaterThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|Operador >=||
+|Op_GreaterThan booleano (DateTime `t1`, DateTime `t2`)|> operador||
+|Op_GreaterThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|> = operador||
 |Op_Inequality booleano (DateTime `t1`, DateTime `t2`)|Operador !=||
 |Op_LessThan booleano (DateTime `t1`, data e hora `t2`)|< operador||
-|Op_LessThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|<operador =||
+|Op_LessThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|< operador =||
 |Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` como DateInterval, \_<br /><br /> ByVal `DateValue` como DateTime, \_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday, \_<br /><br /> Optional ByVal `FirstWeekOfYearValue` As FirstWeekOfYear = VbFirstJan1 \_<br /><br /> Como o inteiro)||Consulte a seção de função DatePart para mais informações.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year (DateTime `TimeValue`)|Year()||

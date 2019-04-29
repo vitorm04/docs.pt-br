@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703304"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que oferecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  
@@ -63,11 +63,11 @@ Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Fre
   
  Um congelável **não** poderá ser congelado se alguma das seguintes condições for verdadeira:  
   
--   Ele tem propriedades animadas ou associadas a dados.  
+- Ele tem propriedades animadas ou associadas a dados.  
   
--   Ele tem propriedades definidas por um recurso dinâmico. (Consulte os [recursos XAML](xaml-resources.md) para obter mais informações sobre recursos dinâmicos).  
+- Ele tem propriedades definidas por um recurso dinâmico. (Consulte os [recursos XAML](xaml-resources.md) para obter mais informações sobre recursos dinâmicos).  
   
--   Ele contém <xref:System.Windows.Freezable> subobjetos não podem ser congelados.  
+- Ele contém <xref:System.Windows.Freezable> subobjetos não podem ser congelados.  
   
  Se essas condições forem falsas, e você não pretende modificar o <xref:System.Windows.Freezable>, em seguida, você deverá congelá-lo para obter os benefícios de desempenho descritos anteriormente.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Criando sua própria classe Congelável  
  Uma classe que deriva de <xref:System.Windows.Freezable> obtém os recursos a seguir.  
   
--   Estados especiais: um estado somente leitura (congelada) e gravável.  
+- Estados especiais: um estado somente leitura (congelada) e gravável.  
   
--   Acesso thread-safe: um congelado <xref:System.Windows.Freezable> pode ser compartilhado entre threads.  
+- Acesso thread-safe: um congelado <xref:System.Windows.Freezable> pode ser compartilhado entre threads.  
   
--   Notificação de alteração detalhada: Ao contrário de outras <xref:System.Windows.DependencyObject>s, objetos congeláveis fornecem notificações de alteração quando valores da subpropriedade são alteram.  
+- Notificação de alteração detalhada: Ao contrário de outras <xref:System.Windows.DependencyObject>s, objetos congeláveis fornecem notificações de alteração quando valores da subpropriedade são alteram.  
   
--   Fácil clonagem: a classe Congelável tem vários métodos já implementados que produzem clones profundos.  
+- Fácil clonagem: a classe Congelável tem vários métodos já implementados que produzem clones profundos.  
   
  Um <xref:System.Windows.Freezable> é um tipo de <xref:System.Windows.DependencyObject>e, portanto, usa o sistema de propriedade de dependência. As propriedades de classe não precisam ser propriedades de dependência, mas usar as propriedades de dependência reduzirá a quantidade de código que você precisa escrever, porque o <xref:System.Windows.Freezable> classe foi projetada com propriedades de dependência em mente. Para obter mais informações sobre o sistema de propriedade de dependência, consulte o [Visão geral de propriedades de dependência](dependency-properties-overview.md).  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  Se sua classe contém membros de dados de propriedade que não são de dependência, você também deve substituir os métodos a seguir:  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  Você também deve observar as seguintes regras para o acesso e gravação em membros de dados que não são propriedades de dependência:  
   
--   No início de qualquer [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que lê membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.ReadPreamble%2A> método.  
+- No início de qualquer [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que lê membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.ReadPreamble%2A> método.  
   
--   No início de qualquer API que grava os membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.WritePreamble%2A> método. (Depois de ter chamado <xref:System.Windows.Freezable.WritePreamble%2A> em um [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], você não precisa fazer uma chamada adicional para <xref:System.Windows.Freezable.ReadPreamble%2A> se você também pode ler membros de dados de propriedade não são de dependência.)  
+- No início de qualquer API que grava os membros de dados de propriedade não são de dependência, chame o <xref:System.Windows.Freezable.WritePreamble%2A> método. (Depois de ter chamado <xref:System.Windows.Freezable.WritePreamble%2A> em um [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], você não precisa fazer uma chamada adicional para <xref:System.Windows.Freezable.ReadPreamble%2A> se você também pode ler membros de dados de propriedade não são de dependência.)  
   
--   Chamar o <xref:System.Windows.Freezable.WritePostscript%2A> método antes de sair de métodos que gravam em membros de dados de propriedade não são de dependência.  
+- Chamar o <xref:System.Windows.Freezable.WritePostscript%2A> método antes de sair de métodos que gravam em membros de dados de propriedade não são de dependência.  
   
  Se sua classe contém os membros de dados de propriedade de dependência não são <xref:System.Windows.DependencyObject> objetos, você também deve chamar o <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> método sempre que você alterar um dos seus valores, mesmo se você estiver configurando o membro `null`.  
   

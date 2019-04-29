@@ -3,11 +3,11 @@ title: Consulte expressões (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
 ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614616"
 ---
 # <a name="query-expressions-entity-sql"></a>Consulte expressões (Entity SQL)
 Uma expressão de consulta combina muitos diferentes operadores de consulta em uma única sintaxe. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece vários tipos de expressões, incluindo o seguinte: [literais](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parâmetros](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variáveis](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operadores, [funções](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), defina operadores e assim por diante. Para obter mais informações, consulte [referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  

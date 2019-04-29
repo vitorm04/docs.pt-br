@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665787"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressões lambda (Visual Basic)
 Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser usada sempre que um representante é válido. Expressões lambda podem ser funções ou sub-rotinas e podem ser uma linha ou várias linhas. Você pode passar valores do escopo atual para uma expressão lambda.  
@@ -43,27 +43,27 @@ Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser us
 ## <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda  
  A sintaxe de uma expressão lambda lembra a de uma função padrão ou a sub-rotina. As diferenças são da seguinte maneira:  
   
--   Uma expressão lambda não tem um nome.  
+- Uma expressão lambda não tem um nome.  
   
--   Expressões lambda não podem ter modificadores, como `Overloads` ou `Overrides`.  
+- Expressões lambda não podem ter modificadores, como `Overloads` ou `Overrides`.  
   
--   As funções lambda de linha única não usam um `As` cláusula para designar o tipo de retorno. Em vez disso, o tipo é inferido do valor que avalia o corpo da expressão lambda. Por exemplo, se o corpo da expressão lambda é `cust.City = "London"`, seu tipo de retorno é `Boolean`.  
+- As funções lambda de linha única não usam um `As` cláusula para designar o tipo de retorno. Em vez disso, o tipo é inferido do valor que avalia o corpo da expressão lambda. Por exemplo, se o corpo da expressão lambda é `cust.City = "London"`, seu tipo de retorno é `Boolean`.  
   
--   Em funções lambda de várias linhas, você pode especificar um tipo de retorno usando um `As` cláusula, ou omita o `As` cláusula para que o tipo de retorno é inferido. Quando o `As` cláusula é omitida para uma função lambda de várias linhas, o tipo de retorno é inferido como o tipo dominante de todos os `Return` instruções na função lambda de várias linhas. O *tipo dominante* é um tipo exclusivo que podem ampliar o todos os outros tipos. Se esse tipo exclusivo não puder ser determinado, o tipo dominante é o tipo exclusivo que todos os outros tipos na matriz podem restringir a. Se nenhum desses tipos exclusivos puder ser determinado, o tipo dominante será `Object`. Nesse caso, se `Option Strict` é definido como `On`, ocorre um erro do compilador.  
+- Em funções lambda de várias linhas, você pode especificar um tipo de retorno usando um `As` cláusula, ou omita o `As` cláusula para que o tipo de retorno é inferido. Quando o `As` cláusula é omitida para uma função lambda de várias linhas, o tipo de retorno é inferido como o tipo dominante de todos os `Return` instruções na função lambda de várias linhas. O *tipo dominante* é um tipo exclusivo que podem ampliar o todos os outros tipos. Se esse tipo exclusivo não puder ser determinado, o tipo dominante é o tipo exclusivo que todos os outros tipos na matriz podem restringir a. Se nenhum desses tipos exclusivos puder ser determinado, o tipo dominante será `Object`. Nesse caso, se `Option Strict` é definido como `On`, ocorre um erro do compilador.  
   
      Por exemplo, se as expressões são fornecidos para o `Return` instrução contêm valores do tipo `Integer`, `Long`, e `Double`, a matriz resultante é do tipo `Double`. Ambos `Integer` e `Long` ampliados com `Double` e somente `Double`. Portanto, `Double` é o tipo dominante. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   O corpo de uma função de única linha deve ser uma expressão que retorna um valor, não uma instrução. Não há nenhum `Return` instrução para funções de linha única. O valor retornado pela função linha única é o valor da expressão no corpo da função.  
+- O corpo de uma função de única linha deve ser uma expressão que retorna um valor, não uma instrução. Não há nenhum `Return` instrução para funções de linha única. O valor retornado pela função linha única é o valor da expressão no corpo da função.  
   
--   O corpo de uma sub-rotina de linha única deve ser uma instrução de linha única.  
+- O corpo de uma sub-rotina de linha única deve ser uma instrução de linha única.  
   
--   Funções de linha única e as sub-rotinas não incluem um `End Function` ou `End Sub` instrução.  
+- Funções de linha única e as sub-rotinas não incluem um `End Function` ou `End Sub` instrução.  
   
--   Você pode especificar o tipo de dados de um parâmetro de expressão lambda usando o `As` palavra-chave ou o tipo de dados do parâmetro pode ser inferido. Ou todos os parâmetros devem ter especificado devem ser deduzidos a tipos de dados ou todos.  
+- Você pode especificar o tipo de dados de um parâmetro de expressão lambda usando o `As` palavra-chave ou o tipo de dados do parâmetro pode ser inferido. Ou todos os parâmetros devem ter especificado devem ser deduzidos a tipos de dados ou todos.  
   
--   `Optional` e `Paramarray` parâmetros não são permitidos.  
+- `Optional` e `Paramarray` parâmetros não são permitidos.  
   
--   Parâmetros genéricos não são permitidos.  
+- Parâmetros genéricos não são permitidos.  
   
 ## <a name="async-lambdas"></a>Lambdas assíncronos  
  Você pode facilmente criar expressões lambda e instruções que incorporem processamento assíncrono usando o [Async](../../../../visual-basic/language-reference/modifiers/async.md) e [operador Await](../../../../visual-basic/language-reference/operators/await-operator.md) palavras-chave. Por exemplo, o exemplo do Windows Forms a seguir contém um manipulador de eventos que chama e espera um método assíncrono `ExampleMethodAsync`.  
@@ -118,15 +118,15 @@ End Class
   
  O exemplo a seguir demonstra uma ampla variedade de direitos de acesso da expressão lambda aninhada. Quando a expressão lambda retornado é executada a partir `Main` como `aDel`, ela acessa estes elementos:  
   
--   Um campo da classe na qual ela é definida: `aField`  
+- Um campo da classe na qual ela é definida: `aField`  
   
--   Uma propriedade da classe na qual ela é definida: `aProp`  
+- Uma propriedade da classe na qual ela é definida: `aProp`  
   
--   Um parâmetro de método `functionWithNestedLambda`, no qual ela está definida: `level1`  
+- Um parâmetro de método `functionWithNestedLambda`, no qual ela está definida: `level1`  
   
--   Uma variável local de `functionWithNestedLambda`: `localVar`  
+- Uma variável local de `functionWithNestedLambda`: `localVar`  
   
--   Um parâmetro da expressão lambda na qual ele está aninhado: `level2`  
+- Um parâmetro da expressão lambda na qual ele está aninhado: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>Exemplos  
   
--   O exemplo a seguir define uma expressão lambda que retorna `True` se o argumento que permitem valor nulo tem um valor atribuído, e `False` se o valor for `Nothing`.  
+- O exemplo a seguir define uma expressão lambda que retorna `True` se o argumento que permitem valor nulo tem um valor atribuído, e `False` se o valor for `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   O exemplo a seguir define uma expressão lambda que retorna o índice do último elemento em uma matriz.  
+- O exemplo a seguir define uma expressão lambda que retorna o índice do último elemento em uma matriz.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638071"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrução For Each...Next (Visual Basic)
 Repete um grupo de instruções para cada elemento em uma coleção.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` é frequentemente usado após uma avaliação de algumas condições, por exemplo, em um `If`... `Then`... `Else` estrutura. Você talvez queira usar `Exit For` para as seguintes condições:  
   
--   Continuar para fazer a iteração é desnecessária ou impossível. Isso pode ser causado por um valor errado ou uma solicitação de encerramento.  
+- Continuar para fazer a iteração é desnecessária ou impossível. Isso pode ser causado por um valor errado ou uma solicitação de encerramento.  
   
--   Uma exceção é detectada em um `Try`... `Catch`... `Finally`. Você pode usar `Exit For` no final o `Finally` bloco.  
+- Uma exceção é detectada em um `Try`... `Catch`... `Finally`. Você pode usar `Exit For` no final o `Finally` bloco.  
   
--   Há um loop infinito, o que é um loop que possa ser executada um número grande ou mesmo infinito de vezes. Se você detectar uma condição desse tipo, você pode usar `Exit For` para escapar do loop. Para obter mais informações, consulte [fazer... Instrução de loop](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Há um loop infinito, o que é um loop que possa ser executada um número grande ou mesmo infinito de vezes. Se você detectar uma condição desse tipo, você pode usar `Exit For` para escapar do loop. Para obter mais informações, consulte [fazer... Instrução de loop](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iterators  
  Você usa um *iterador* para executar uma iteração personalizada em uma coleção. Um iterador pode ser uma função ou um `Get` acessador. Ele usa um `Yield` instrução para retornar cada elemento da coleção um por vez.  

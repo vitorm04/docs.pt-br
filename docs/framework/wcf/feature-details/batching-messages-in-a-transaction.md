@@ -5,11 +5,11 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596772"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensagens de lote em uma transação
 Aplicativos em fila usam transações para garantir a correção e entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira para melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. A compensação está entre desempenho e recuperação: conforme aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessário se as transações serão revertidas. É importante observar a diferença entre o envio em lote de mensagens em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. Para obter mais informações sobre as sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens em lote em uma transação são uma otimização que não são alterados como o aplicativo é executado.  
@@ -20,13 +20,13 @@ Aplicativos em fila usam transações para garantir a correção e entrega confi
 ## <a name="committing-a-transaction"></a>Confirmar uma transação  
  Uma transação em lote é confirmada com base no seguinte:  
   
--   `MaxBatchSize`. Uma propriedade do <xref:System.ServiceModel.Description.TransactedBatchingBehavior> comportamento. Essa propriedade determina o número máximo de mensagens que são colocados em um lote. Quando esse número for atingido, o lote será confirmado. Esse é o valor não é um limite estrito, é possível confirmar um lote antes de receber esse número de mensagens.  
+- `MaxBatchSize`. Uma propriedade do <xref:System.ServiceModel.Description.TransactedBatchingBehavior> comportamento. Essa propriedade determina o número máximo de mensagens que são colocados em um lote. Quando esse número for atingido, o lote será confirmado. Esse é o valor não é um limite estrito, é possível confirmar um lote antes de receber esse número de mensagens.  
   
--   `Transaction Timeout`. Depois de decorrido 80 por cento do tempo de limite da transação, o lote será confirmado e um novo lote é criado. Isso significa que se 20 por cento ou menos do tempo fornecido para a conclusão de uma transação permanece, o lote será confirmado.  
+- `Transaction Timeout`. Depois de decorrido 80 por cento do tempo de limite da transação, o lote será confirmado e um novo lote é criado. Isso significa que se 20 por cento ou menos do tempo fornecido para a conclusão de uma transação permanece, o lote será confirmado.  
   
--   `TransactionScopeRequired`. Ao processar um lote de mensagens, se WCF encontrar um que tenha `TransactionScopeRequired`  =  `false`, ele confirma o lote e reabre um novo lote após o recebimento da primeira mensagem com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  = `true`.  
+- `TransactionScopeRequired`. Ao processar um lote de mensagens, se WCF encontrar um que tenha `TransactionScopeRequired`  =  `false`, ele confirma o lote e reabre um novo lote após o recebimento da primeira mensagem com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  = `true`.  
   
--   Se mais nenhuma mensagem existe na fila e, em seguida, o lote atual for confirmado, mesmo se o `MaxBatchSize` não tiver sido atingida ou 80 por cento do tempo de limite da transação ainda não tiver decorrido.  
+- Se mais nenhuma mensagem existe na fila e, em seguida, o lote atual for confirmado, mesmo se o `MaxBatchSize` não tiver sido atingida ou 80 por cento do tempo de limite da transação ainda não tiver decorrido.  
   
 ## <a name="leaving-batching-mode"></a>Sair do modo de lote  
  Se uma mensagem em um lote faz com que a transação seja anulada, ocorrem as seguintes etapas:  

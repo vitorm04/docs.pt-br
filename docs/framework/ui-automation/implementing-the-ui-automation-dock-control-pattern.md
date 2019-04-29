@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609914"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementando o padrão de controle de encaixe da automação de interface do usuário
 > [!NOTE]
@@ -28,13 +28,13 @@ Exemplo do Visual Studio o encaixe em que a janela "Class View" é DockPosition.
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de encaixe, observe as seguintes diretrizes e convenções:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> não expõe as propriedades do contêiner de encaixe ou propriedades de controles que estão encaixadas adjacente ao controle atual dentro do contêiner de encaixe.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> não expõe as propriedades do contêiner de encaixe ou propriedades de controles que estão encaixadas adjacente ao controle atual dentro do contêiner de encaixe.  
   
--   Controles são encaixados em relação aos outros com base no atual a ordem z; o mais alto sua ordem z colocação, quanto eles são colocados da borda especificada do contêiner de encaixe.  
+- Controles são encaixados em relação aos outros com base no atual a ordem z; o mais alto sua ordem z colocação, quanto eles são colocados da borda especificada do contêiner de encaixe.  
   
--   Se o contêiner de encaixe é redimensionado, todos os controles encaixados dentro do contêiner serão reposicionados liberação para a mesma margem para o qual eles foram originalmente encaixados. Os controles encaixados também serão redimensionado para preencher espaços dentro do contêiner de acordo com o comportamento de encaixe de seus <xref:System.Windows.Automation.DockPosition>. Por exemplo, se <xref:System.Windows.Automation.DockPosition.Top> for especificado, os lados esquerdo e direito do controle se expandirá para preencher qualquer espaço disponível. Se <xref:System.Windows.Automation.DockPosition.Fill> for especificado, todos os quatro lados do controle se expandirá para preencher qualquer espaço disponível.  
+- Se o contêiner de encaixe é redimensionado, todos os controles encaixados dentro do contêiner serão reposicionados liberação para a mesma margem para o qual eles foram originalmente encaixados. Os controles encaixados também serão redimensionado para preencher espaços dentro do contêiner de acordo com o comportamento de encaixe de seus <xref:System.Windows.Automation.DockPosition>. Por exemplo, se <xref:System.Windows.Automation.DockPosition.Top> for especificado, os lados esquerdo e direito do controle se expandirá para preencher qualquer espaço disponível. Se <xref:System.Windows.Automation.DockPosition.Fill> for especificado, todos os quatro lados do controle se expandirá para preencher qualquer espaço disponível.  
   
--   Em um sistema de vários monitor, os controles devem encaixar à esquerda ou direita do monitor atual. Se isso não for possível, eles devem encaixar o lado esquerdo do monitor mais à esquerda ou à direita do monitor mais à direita.  
+- Em um sistema de vários monitor, os controles devem encaixar à esquerda ou direita do monitor atual. Se isso não for possível, eles devem encaixar o lado esquerdo do monitor mais à esquerda ou à direita do monitor mais à direita.  
   
 <a name="Required_Members_for_IDockProvider"></a>   
 ## <a name="required-members-for-idockprovider"></a>Membros necessários para IDockProvider  

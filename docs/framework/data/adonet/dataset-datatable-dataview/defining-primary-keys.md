@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
 ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607304"
 ---
 # <a name="defining-primary-keys"></a>Definir chaves primárias
 Uma tabela de banco de dados geralmente tem uma coluna ou um grupo de colunas que identifica exclusivamente cada linha na tabela. Esta coluna de identificação ou grupo de colunas é chamado de chave primária.  

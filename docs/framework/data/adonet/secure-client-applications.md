@@ -3,11 +3,11 @@ title: Aplicativos cliente seguros
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664201"
 ---
 # <a name="secure-client-applications"></a>Aplicativos cliente seguros
 Aplicativos geralmente consistem em várias partes que precisam ser protegidos contra vulnerabilidades que poderiam resultar em perda de dados ou comprometer o sistema. Criar interfaces do usuário segura pode impedir que muitos problemas, bloqueando os invasores antes que possam acessar dados ou recursos do sistema.  

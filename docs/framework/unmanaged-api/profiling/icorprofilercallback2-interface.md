@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638397"
 ---
 # <a name="icorprofilercallback2-interface"></a>Interface ICorProfilerCallback2
 Fornece métodos que são usados pelo common language runtime (CLR) para notificar um criador de perfil de código quando ocorrem os eventos que assinou o criador de perfil. O `ICorProfilerCallback2` interface é uma extensão do [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interface. Ou seja, ele fornece os retornos de chamada novo introduzidos no .NET Framework versão 2.0.  

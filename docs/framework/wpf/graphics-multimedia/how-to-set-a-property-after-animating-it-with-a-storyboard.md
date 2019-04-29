@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651097"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Como: Definir uma propriedade depois de animá-la com um Storyboard
 Em alguns casos, pode parecer que não é possível alterar o valor de uma propriedade depois dela ter sido animada.  
@@ -30,11 +30,11 @@ Em alguns casos, pode parecer que não é possível alterar o valor de uma propr
   
  O código anterior parece não fazer nada: o pincel permanece amarelo, que é o valor fornecido pelo <xref:System.Windows.Media.Animation.ColorAnimation> que animou o pincel. O valor da propriedade subjacente (o valor de base) é efetivamente alterado para azul. No entanto, o valor efetivo ou atual permanece amarelo porque o <xref:System.Windows.Media.Animation.ColorAnimation> ainda estará substituindo o valor base. Se desejar que o valor de base se torne o valor efetivo novamente, você deverá impedir que a animação influencie a propriedade. Há três maneiras de fazer isso com animações do storyboard:  
   
--   Definir a animação <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriedade <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Definir a animação <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriedade <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Remova todo o storyboard.  
+- Remova todo o storyboard.  
   
--   Remova a animação da propriedade individual.  
+- Remova a animação da propriedade individual.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Definir a propriedade FillBehavior da animação como Parar  
  Definindo <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> para <xref:System.Windows.Media.Animation.FillBehavior.Stop>, você indica que a animação pare de afetar sua propriedade de destino após atingir o final do seu período ativo.  

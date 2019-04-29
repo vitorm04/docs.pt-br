@@ -3,11 +3,11 @@ title: 3314 - SessionIdleTimeout
 ms.date: 03/30/2017
 ms.assetid: a00f104e-3bea-4185-b7b0-ec1ed8212a74
 ms.openlocfilehash: 1abebab7a31f1d07d424cadc7b008395fcf5d21a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596526"
 ---
 # <a name="3314---sessionidletimeout"></a>3314 - SessionIdleTimeout
 ## <a name="properties"></a>Propriedades  
@@ -20,9 +20,9 @@ ms.locfileid: "33456434"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando a sessão anulada do canal ocioso.  
+ Esse evento é emitido quando a sessão anulada para o canal ocioso.  
   
 ## <a name="message"></a>Mensagem  
- Anulando a sessão do canal ocioso para uri: '%1'.  
+ Sessão anulando ocioso canal uri: '%1'.  
   
 ## <a name="details"></a>Detalhes

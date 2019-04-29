@@ -9,11 +9,11 @@ ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697713"
 ---
 # <a name="fusion-global-static-functions"></a>Funções estáticas globais de fusão
 Esta seção descreve as funções estáticas globais não gerenciadas que usa a API de fusão.  
@@ -26,7 +26,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que usa a
  Compara duas identidades de assembly para determinar se eles são equivalentes.  
   
  [Função CreateApplicationContext](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- Somente interno. (Esta função oferece suporte à infraestrutura .NET Framework e não se destina a ser usado diretamente no seu código.)  
+ Somente interno. (Essa função dá suporte à infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.)  
   
  [Função CreateAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
  Obtém um ponteiro para um novo [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instância que representa o cache de assembly global.  
@@ -44,7 +44,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que usa a
  Obtém um ponteiro para um [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) instância que representa uma lista de referências de um aplicativo para o assembly especificado.  
   
  [Função GetAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
- Obtém um ponteiro para um [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instância que gerencia chaves de identidades de aplicativo e referências.  
+ Obtém um ponteiro para um [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instância que gerencia as chaves para as identidades de aplicativo e referências.  
   
  [Função GetAssemblyIdentityFromFile](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
  Obtém um ponteiro para um `IUnknown` objeto com especificado `IID` no assembly no caminho de arquivo especificado.  
@@ -56,7 +56,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que usa a
  Recupera o caminho do diretório de histórico do aplicativo.  
   
  [Função GetIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
- Obtém um ponteiro para um [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instância que gerencia chaves para objetos de código.  
+ Obtém um ponteiro para um [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instância que gerencia as chaves para objetos de código.  
   
  [Função IsFrameworkAssembly](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
  Obtém um valor que indica se o assembly especificado é gerenciado.  

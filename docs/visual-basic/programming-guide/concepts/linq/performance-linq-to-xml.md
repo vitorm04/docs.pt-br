@@ -3,11 +3,11 @@ title: Desempenho (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
 ms.openlocfilehash: c58bcecbe196f32c0a6ce885929292490b37e052
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666164"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>Desempenho (LINQ to XML) (Visual Basic)
 Esta seção fornece informações sobre o desempenho em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]especificamente, o desempenho de compilação e de consultas funcionais.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669194"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interoperação Direct3D9 e WPF
 Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presentation Foundation). Este tópico descreve como criar conteúdo Direct3D9 para interoperar com eficiência com o WPF.  
@@ -32,9 +32,9 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
   
  Crie um dispositivo chamando um dos métodos a seguir.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  No Windows Vista ou sistemas operacionais mais recentes, use o método `Direct3DCreate9Ex` com uma exibição que está configurada para usar o WDDM (Windows Display Driver Model). Use o método `Direct3DCreate9` em qualquer outra plataforma.  
   
@@ -97,11 +97,11 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
   
  Há três abordagens possíveis para lidar com redimensionamento.  
   
--   Participar no sistema de layout e criar uma nova superfície quando o tamanho for alterado. Não crie muitas superfícies, pois você poderá esgotar ou fragmentar a memória de vídeo.  
+- Participar no sistema de layout e criar uma nova superfície quando o tamanho for alterado. Não crie muitas superfícies, pois você poderá esgotar ou fragmentar a memória de vídeo.  
   
--   Aguardar durante um período fixo de tempo sem que ocorra um evento de redimensionamento para criar a nova superfície.  
+- Aguardar durante um período fixo de tempo sem que ocorra um evento de redimensionamento para criar a nova superfície.  
   
--   Criar um <xref:System.Windows.Threading.DispatcherTimer> que verifica as dimensões do contêiner várias vezes por segundo.  
+- Criar um <xref:System.Windows.Threading.DispatcherTimer> que verifica as dimensões do contêiner várias vezes por segundo.  
   
 ## <a name="multi-monitor-optimization"></a>Otimização de vários monitores  
  Desempenho significativamente reduzido pode ocorrer quando o sistema de renderização move uma <xref:System.Windows.Interop.D3DImage> para outro monitor.  
@@ -132,11 +132,11 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
 ## <a name="wpf-software-rendering"></a>Renderização de Software do WPF  
  O WPF renderiza de maneira síncrona no thread da interface do usuário do software nas seguintes situações.  
   
--   Imprimindo  
+- Imprimindo  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  Quando uma dessas situações ocorre, o sistema de renderização chama o <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> método para copiar o buffer de hardware para o software. A implementação padrão chama o método `GetRenderTargetData` com sua superfície. Como essa chamada ocorre fora do padrão de bloqueio/desbloqueio, ela poderá falhar. Nesse caso, o método `CopyBackBuffer` retorna `null` e nenhuma imagem é exibida.  
   

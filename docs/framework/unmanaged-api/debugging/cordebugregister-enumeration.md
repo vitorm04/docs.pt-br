@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599312"
 ---
 # <a name="cordebugregister-enumeration"></a>Enumeração CorDebugRegister
 Especifica os registros associados a uma determinada arquitetura de processador.  
@@ -194,9 +194,9 @@ typedef enum CorDebugRegister {
 ## <a name="remarks"></a>Comentários  
  Existem 128 registros de dados de uso geral e 128 registros de dados de ponto flutuante no processador IA-64, porém, apenas os valores `REGISTER_IA64_R0` e `REGISTER_IA64_F0` são fornecidos. Os outros valores podem ser determinados da seguinte maneira:  
   
--   Some o número do registro ao `REGISTER_IA64_R0` para os valores `REGISTER_IA64_R1` até `REGISTER_IA64_R127`, que correspondem ao registro de dados #1 até o registro de dados #127 no processador IA-64.  
+- Some o número do registro ao `REGISTER_IA64_R0` para os valores `REGISTER_IA64_R1` até `REGISTER_IA64_R127`, que correspondem ao registro de dados #1 até o registro de dados #127 no processador IA-64.  
   
--   Some o número do registro ao `REGISTER_IA64_F0` para os valores `REGISTER_IA64_F1` até `REGISTER_IA64_F127`, que correspondem ao registro de dados de FP #1 até o registro de dados de FP #127 no processador IA-64.  
+- Some o número do registro ao `REGISTER_IA64_F0` para os valores `REGISTER_IA64_F1` até `REGISTER_IA64_F127`, que correspondem ao registro de dados de FP #1 até o registro de dados de FP #127 no processador IA-64.  
   
  Por exemplo, se for necessário especificar o registro de dados #83 no processador IA-64, use `REGISTER_IA64_R0` + 83.  
   

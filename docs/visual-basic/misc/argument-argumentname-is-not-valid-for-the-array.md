@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_InvalidRank1
 ms.assetid: 2c931ede-9c41-4ad3-8dfd-d649617f567c
 ms.openlocfilehash: 4be82f26885d077e0b6539a59fa00640660b72aa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666567"
 ---
 # <a name="argument-argumentname-is-not-valid-for-the-array"></a>Argumento '\<argumentname >' não é válido para a matriz
 Uma matriz contém um argumento que não é válido.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Verifique a ortografia de argumentos na expressão. Um nome de variável incorreta implicitamente pode criar uma variável numérica que é inicializada como zero.  
+- Verifique a ortografia de argumentos na expressão. Um nome de variável incorreta implicitamente pode criar uma variável numérica que é inicializada como zero.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -3,27 +3,27 @@ title: Instâncias são persistentes de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644259"
 ---
 # <a name="non-persisted-workflow-instances"></a>Instâncias são persistentes de fluxo de trabalho
 Quando uma nova instância de um fluxo de trabalho é criada que persiste seu estado em <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, o host serviço cria uma entrada para o serviço no armazenamento de instância. Posteriormente, quando a instância do fluxo de trabalho é mantida pela primeira vez, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> armazena o estado atual da instância. Se o fluxo de trabalho é hospedado no serviço de ativação de processo do Windows, os dados de implantação de serviço são gravados também para o armazenamento de instância quando a instância é mantida pela primeira vez.  
   
- Como a instância de fluxo de trabalho não foi mantida, ele está em um **persistentes** estado. Quando nesse estado, a instância de fluxo de trabalho não pode ser recuperada após um domínio de aplicativo se recicla, falha do host, ou falha do computador.  
+ Desde que a instância de fluxo de trabalho não foi persistente, ela está em um **são persistentes** estado. Quando nesse estado, a instância de fluxo de trabalho não pode ser recuperada após um domínio de aplicativo se recicla, falha do host, ou falha do computador.  
   
 ## <a name="the-non-persisted-state"></a>O estado não persistente  
  As instâncias duráveis de fluxo de trabalho que não foram persistentes permanecem em um estado não mantido nos seguintes casos:  
   
--   Falhas de host serviço antes de instância de fluxo de trabalho são mantidas pela primeira vez. O de instância de fluxo de trabalho na instância armazenam e não são recuperadas. Se uma mensagem correlacionada chega, a instância de fluxo de trabalho se torna ativa novamente.  
+- Falhas de host serviço antes de instância de fluxo de trabalho são mantidas pela primeira vez. O de instância de fluxo de trabalho na instância armazenam e não são recuperadas. Se uma mensagem correlacionada chega, a instância de fluxo de trabalho se torna ativa novamente.  
   
--   A instância de fluxo de trabalho apresenta uma exceção antes de ser mantidas pela primeira vez. Como <xref:System.Activities.UnhandledExceptionAction> retornado, os seguintes cenários ocorrem:  
+- A instância de fluxo de trabalho apresenta uma exceção antes de ser mantidas pela primeira vez. Como <xref:System.Activities.UnhandledExceptionAction> retornado, os seguintes cenários ocorrem:  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> é definido como <xref:System.Activities.UnhandledExceptionAction.Abort>: Quando ocorre uma exceção, informações de implantação de serviço é escrita para o armazenamento de instância, e a instância de fluxo de trabalho é descarregada de memória. O de instância de fluxo de trabalho em um estado não persistido e não podem ser recarregadas.  
+    - <xref:System.Activities.UnhandledExceptionAction> é definido como <xref:System.Activities.UnhandledExceptionAction.Abort>: Quando ocorre uma exceção, informações de implantação do serviço é escrita para o armazenamento de instância e a instância de fluxo de trabalho é descarregada da memória. O de instância de fluxo de trabalho em um estado não persistido e não podem ser recarregadas.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> é definido como <xref:System.Activities.UnhandledExceptionAction.Cancel> ou a <xref:System.Activities.UnhandledExceptionAction.Terminate>: Quando ocorre uma exceção, informações de implantação de serviço é escrita para o armazenamento de instância, e o estado da instância da atividade é definido como <xref:System.Activities.ActivityInstanceState.Closed>.  
+    - <xref:System.Activities.UnhandledExceptionAction> é definido como <xref:System.Activities.UnhandledExceptionAction.Cancel> ou <xref:System.Activities.UnhandledExceptionAction.Terminate>: Quando ocorre uma exceção, informações de implantação do serviço é escrita para o armazenamento de instância e o estado da instância de atividade é definido como <xref:System.Activities.ActivityInstanceState.Closed>.  
   
  Para minimizar o risco de localizar instâncias são persistentes descarregadas de fluxo de trabalho, recomendamos persistir o fluxo de trabalho no início em seu ciclo de vida.  
   
@@ -34,7 +34,7 @@ Quando uma nova instância de um fluxo de trabalho é criada que persiste seu es
   
  Para localizar ocorrências são mantidas na instância Store de fluxo de trabalho do SQL você pode usar as seguintes consultas SQL:  
   
--   Esta consulta localiza todas as instâncias que não foram persistentes, e retorna a hora de identificação e de criação (armazenados na hora UTC) para eles.  
+- Esta consulta localiza todas as instâncias que não foram persistentes, e retorna a hora de identificação e de criação (armazenados na hora UTC) para eles.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ Quando uma nova instância de um fluxo de trabalho é criada que persiste seu es
         where IsInitialized = 0  
     ```  
   
--   Esta consulta localiza todas as instâncias que não foram persistentes, e não é carregado, e retorna a hora de identificação e de criação (armazenados na hora UTC) para eles.  
+- Esta consulta localiza todas as instâncias que não foram persistentes, e não é carregado, e retorna a hora de identificação e de criação (armazenados na hora UTC) para eles.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ Quando uma nova instância de um fluxo de trabalho é criada que persiste seu es
             and CurrentMachine is NULL  
     ```  
   
--   Esta consulta localiza todas as instâncias suspensas que não foram persistentes, e retorna a identificação, o tempo de criação (armazenados na hora UTC), a razão de suspensão, e o nome da exceção para eles.  
+- Esta consulta localiza todas as instâncias suspensas que não foram persistentes, e retorna a identificação, o tempo de criação (armazenados na hora UTC), a razão de suspensão, e o nome da exceção para eles.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

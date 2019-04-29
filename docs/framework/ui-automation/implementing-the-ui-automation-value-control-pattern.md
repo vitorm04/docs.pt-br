@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645784"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 > [!NOTE]
@@ -25,23 +25,23 @@ ms.locfileid: "59174948"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de valor, observe as seguintes diretrizes e convenções:  
   
--   Controles como <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> deve oferecer suporte a <xref:System.Windows.Automation.ValuePattern> se o valor de qualquer um dos itens for editável, independentemente do atual modo de edição do controle. O controle pai também deve suportar <xref:System.Windows.Automation.ValuePattern> se os itens filhos são editáveis.  
+- Controles como <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> deve oferecer suporte a <xref:System.Windows.Automation.ValuePattern> se o valor de qualquer um dos itens for editável, independentemente do atual modo de edição do controle. O controle pai também deve suportar <xref:System.Windows.Automation.ValuePattern> se os itens filhos são editáveis.  
   
  ![Item de lista editável. ](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Exemplo de um Item de lista editável  
   
--   Controles de edição de linha única oferecem suporte a acesso programático aos seus conteúdos implementando <xref:System.Windows.Automation.Provider.IValueProvider>. No entanto, os controles de edição de várias linhas não implementam <xref:System.Windows.Automation.Provider.IValueProvider>; em vez disso, eles oferecem acesso a seus conteúdos implementando <xref:System.Windows.Automation.Provider.ITextProvider>.  
+- Controles de edição de linha única oferecem suporte a acesso programático aos seus conteúdos implementando <xref:System.Windows.Automation.Provider.IValueProvider>. No entanto, os controles de edição de várias linhas não implementam <xref:System.Windows.Automation.Provider.IValueProvider>; em vez disso, eles oferecem acesso a seus conteúdos implementando <xref:System.Windows.Automation.Provider.ITextProvider>.  
   
--   Para recuperar o conteúdo textual de um controle de edição de várias linhas, o controle deve implementar <xref:System.Windows.Automation.Provider.ITextProvider>. No entanto, <xref:System.Windows.Automation.Provider.ITextProvider> não oferece suporte para a definição do valor de um controle.  
+- Para recuperar o conteúdo textual de um controle de edição de várias linhas, o controle deve implementar <xref:System.Windows.Automation.Provider.ITextProvider>. No entanto, <xref:System.Windows.Automation.Provider.ITextProvider> não oferece suporte para a definição do valor de um controle.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> não oferece suporte a recuperação de informações ou valores de subcadeia de caracteres de formatação. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> não oferece suporte a recuperação de informações ou valores de subcadeia de caracteres de formatação. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> deve ser implementado por controles, como o **seletor de cor** controle de seleção do [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "yellow") e um equivalente interno[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]estrutura.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> deve ser implementado por controles, como o **seletor de cor** controle de seleção do [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "yellow") e um equivalente interno[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]estrutura.  
   
  ![Seletor de cores com amarelo realçado. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemplo de mapeamento de cadeia de caracteres de amostra de cor  
   
--   Um controle deve ter sua <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> definido como `true` e seu <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> definido como `false` antes de permitir que uma chamada para <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
+- Um controle deve ter sua <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> definido como `true` e seu <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> definido como `false` antes de permitir que uma chamada para <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-ivalueprovider"></a>Membros necessários para IValueProvider  

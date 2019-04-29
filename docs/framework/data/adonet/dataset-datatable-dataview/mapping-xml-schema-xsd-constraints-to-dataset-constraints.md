@@ -3,22 +3,22 @@ title: Mapeamento de restrições de esquema XML (XSD) para restrições de Data
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607885"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet
 A linguagem de definição de esquema XML (XSD) permite que as restrições sejam especificadas em elementos e atributos que ela define. Ao mapear um esquema XML para esquema relacional em uma <xref:System.Data.DataSet>, as restrições de esquema XML são mapeadas para restrições relacionais apropriadas nas tabelas e colunas dentro de **conjunto de dados**.  
   
  Esta seção discute o mapeamento das seguintes restrições de esquema XML:  
   
--   A restrição de exclusividade especificada usando o **exclusivo** elemento.  
+- A restrição de exclusividade especificada usando o **exclusivo** elemento.  
   
--   A restrição de chave especificada usando o **chave** elemento.  
+- A restrição de chave especificada usando o **chave** elemento.  
   
--   A restrição de keyref especificada usando o **keyref** elemento.  
+- A restrição de keyref especificada usando o **keyref** elemento.  
   
  Ao usar uma restrição em um elemento ou atributo, você pode especificar determinadas restrições nos valores do elemento em qualquer instância do documento. Por exemplo, uma restrição de chave em um **CustomerID** elemento filho de um **cliente** elemento no esquema indica que os valores da **CustomerID** elemento filho deve ser exclusivo em qualquer instância de documento, e que não são permitidos valores nulos.  
   

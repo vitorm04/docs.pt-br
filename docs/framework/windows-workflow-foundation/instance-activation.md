@@ -3,11 +3,11 @@ title: Ativação de instância
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641653"
 ---
 # <a name="instance-activation"></a>Ativação de instância
 A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente interna que acorde e detecte instâncias praticáveis ou activatable de fluxo de trabalho na base de dados de persistência. Se encontra uma instância viável de fluxo de trabalho, notifica o host de fluxo de trabalho que é capaz de ativar a instância. Se o armazenamento de instância encontra uma instância activatable de fluxo de trabalho, notifica um host genérico que ative um host de fluxo de trabalho, que executa por sua vez a instância de fluxo de trabalho. As seções neste tópico explica o processo de ativação de instância em detalhes.  
@@ -15,11 +15,11 @@ A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente
 ## <a name="RunnableSection"></a> Detectando e ativando instâncias praticáveis de fluxo de trabalho  
  A Store de instância de fluxo de trabalho do SQL considera uma instância de fluxo de trabalho *executável* se a instância não está em estado suspenso ou o estado concluído e satisfaz as condições a seguir:  
   
--   A instância é desbloqueada e tem um timer pendente que expirou.  
+- A instância é desbloqueada e tem um timer pendente que expirou.  
   
--   A instância tem um bloqueio expirado nele.  
+- A instância tem um bloqueio expirado nele.  
   
--   A instância é desbloqueada e seu status será **Executing**.  
+- A instância é desbloqueada e seu status será **Executing**.  
   
  A instância Store de fluxo de trabalho do SQL aumenta <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> quando encontra uma instância viável. Após isso, o SqlWorkflowInstanceStore para monitorar de <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> até que seja chamado uma vez no armazenamento.  
   

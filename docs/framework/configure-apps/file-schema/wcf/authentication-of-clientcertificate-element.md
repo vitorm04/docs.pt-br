@@ -3,11 +3,11 @@ title: <authentication> de <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
 ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701327"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<autenticação > de \<clientCertificate > elemento
 Especifica os comportamentos de autenticação para certificados de cliente usados por um serviço.  

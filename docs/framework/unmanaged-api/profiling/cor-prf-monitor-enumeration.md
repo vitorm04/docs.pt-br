@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599046"
 ---
 # <a name="corprfmonitor-enumeration"></a>Enumeração COR_PRF_MONITOR
 Contém valores usados para especificar comportamentos, recursos ou eventos que o criador de perfis deseja assinar.  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>Membros  
  As seções a seguir listam `COR_PRF_MONITOR` membros de enumeração por categoria. As categorias são:  
   
--   [Nenhum conjunto de sinalizadores](#None)  
+- [Nenhum conjunto de sinalizadores](#None)  
   
--   [Sinalizadores de retorno de chamada](#Callback)  
+- [Sinalizadores de retorno de chamada](#Callback)  
   
--   [Sinalizadores de habilitação de recurso](#Feature)  
+- [Sinalizadores de habilitação de recurso](#Feature)  
   
--   [Sinalizadores de configuração](#Config)  
+- [Sinalizadores de configuração](#Config)  
   
--   [Sinalizadores compostos](#Composite)  
+- [Sinalizadores compostos](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Nenhum conjunto de sinalizadores  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 ms.openlocfilehash: d038991da4048e3279ae974cbf4d3e53691349af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645767"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementando o Padrão de Controle de Transformação de Automação de IU
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59088543"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle Transform, observe as seguintes diretrizes e convenções:  
   
--   Suporte para esse padrão de controle não está limitado a objetos na área de trabalho. Esse padrão de controle também deve ser suportado pelos filhos de um objeto de contêiner, se os filhos podem ser movidos, redimensionados ou girados livremente dentro dos limites do contêiner.  
+- Suporte para esse padrão de controle não está limitado a objetos na área de trabalho. Esse padrão de controle também deve ser suportado pelos filhos de um objeto de contêiner, se os filhos podem ser movidos, redimensionados ou girados livremente dentro dos limites do contêiner.  
   
--   Um objeto não pode ser movido, redimensionado ou rotacionado de forma que sua localização na tela resultante seria ser completamente fora das coordenadas de seu contêiner e, portanto, inacessível para o teclado ou mouse (por exemplo, quando uma janela de nível superior é movida de fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner). Nesses casos, o objeto será colocado o mais próximo das coordenadas de tela solicitada possível com as coordenadas esquerdas ou superior, substituídas para estar dentro dos limites do contêiner.  
+- Um objeto não pode ser movido, redimensionado ou rotacionado de forma que sua localização na tela resultante seria ser completamente fora das coordenadas de seu contêiner e, portanto, inacessível para o teclado ou mouse (por exemplo, quando uma janela de nível superior é movida de fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner). Nesses casos, o objeto será colocado o mais próximo das coordenadas de tela solicitada possível com as coordenadas esquerdas ou superior, substituídas para estar dentro dos limites do contêiner.  
   
--   Para sistemas de vários monitores, se um objeto for movido, redimensionado ou girado completamente fora das coordenadas de tela da área de trabalho combinado, o objeto é colocado no monitor principal o mais próximo das coordenadas solicitadas quanto possível.  
+- Para sistemas de vários monitores, se um objeto for movido, redimensionado ou girado completamente fora das coordenadas de tela da área de trabalho combinado, o objeto é colocado no monitor principal o mais próximo das coordenadas solicitadas quanto possível.  
   
--   Todos os parâmetros e valores de propriedade são absolutos e independente da localidade.  
+- Todos os parâmetros e valores de propriedade são absolutos e independente da localidade.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-itransformprovider"></a>Membros necessários para ITransformProvider  

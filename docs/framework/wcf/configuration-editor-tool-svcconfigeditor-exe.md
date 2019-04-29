@@ -11,8 +11,8 @@ ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608847"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Ferramenta Configuration Editor (SvcConfigEditor.exe)
 O Editor de configuração de serviço do Windows Communication Foundation (WCF) (SvcConfigEditor.exe) permite que os administradores e desenvolvedores criar e modificar definições de configuração para serviços WCF usando uma interface gráfica do usuário. Com essa ferramenta, você pode gerenciar as configurações para associações, comportamentos, serviços e diagnóstico do WCF sem a necessidade de editar diretamente os arquivos de configuração XML.  
@@ -50,11 +50,11 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
   
  Interface do usuário do Service Configuration Editor é dividido nas seguintes áreas:  
   
--   Painel de exibição de árvore, que exibe os elementos de configuração em uma estrutura de árvore à esquerda. Você pode executar operações na árvore clicando-se a nós.  
+- Painel de exibição de árvore, que exibe os elementos de configuração em uma estrutura de árvore à esquerda. Você pode executar operações na árvore clicando-se a nós.  
   
--   Painel de tarefas, que exibe tarefas comuns para elementos atuais no canto inferior esquerdo da janela  
+- Painel de tarefas, que exibe tarefas comuns para elementos atuais no canto inferior esquerdo da janela  
   
--   Painel de detalhes, que exibe as configurações detalhadas do nó da configuração selecionada na exibição de árvore à direita.  
+- Painel de detalhes, que exibe as configurações detalhadas do nó da configuração selecionada na exibição de árvore à direita.  
   
 ### <a name="opening-a-configuration-file"></a>Abrir um arquivo de configuração  
   
@@ -77,16 +77,16 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-service-configuration"></a>Criando uma nova configuração de serviço  
  Você pode criar uma nova configuração de serviço das seguintes maneiras:  
   
--   Usando um assistente: Clique no link **criar um novo serviço...** no painel de tarefas ou página de resumo para iniciar o assistente. Você também pode fazer isso na **arquivo** -> menu **Adicionar Novo Item**.  
+- Usando um assistente: Clique no link **criar um novo serviço...** no painel de tarefas ou página de resumo para iniciar o assistente. Você também pode fazer isso na **arquivo** -> menu **Adicionar Novo Item**.  
   
--   Crie manualmente: Você pode com o botão direito do **serviços** nó e escolha **novo serviço**.  
+- Crie manualmente: Você pode com o botão direito do **serviços** nó e escolha **novo serviço**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Criando uma nova configuração de ponto de extremidade de serviço  
  Você pode criar uma nova configuração de ponto de extremidade de serviço das seguintes maneiras:  
   
--   Criar usando um assistente: clique no link **criar um novo ponto de extremidade de serviço...** no painel de tarefas ou página de resumo para iniciar o assistente. Você também pode fazer isso na **arquivo** -> menu **Adicionar Novo Item**.  
+- Criar usando um assistente: clique no link **criar um novo ponto de extremidade de serviço...** no painel de tarefas ou página de resumo para iniciar o assistente. Você também pode fazer isso na **arquivo** -> menu **Adicionar Novo Item**.  
   
--   Crie manualmente: Depois que você criou um serviço, você pode clique com botão direito do **pontos de extremidade** nó e escolha "**novo ponto de extremidade de serviço**".  
+- Crie manualmente: Depois que você criou um serviço, você pode clique com botão direito do **pontos de extremidade** nó e escolha "**novo ponto de extremidade de serviço**".  
   
 #### <a name="editing-a-service-configuration"></a>Editando uma configuração de serviço  
   
@@ -121,9 +121,9 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Criando uma nova configuração de ponto de extremidade do cliente  
  Você pode criar uma nova configuração de ponto de extremidade do cliente das seguintes maneiras:  
   
--   Crie pelo Assistente: Clique no link **criar um novo cliente...** sobre o **painel de tarefas** no canto inferior esquerdo da janela, ou **página de resumo** para iniciar o assistente. Você também pode fazer isso na **arquivo** -> menu **Adicionar Novo Item**. O assistente solicita que você apontar para o local da configuração do serviço, do qual a configuração do cliente é gerada. Em seguida, você pode escolher o ponto de extremidade de serviço para se conectar ao.  
+- Crie pelo Assistente: Clique no link **criar um novo cliente...** sobre o **painel de tarefas** no canto inferior esquerdo da janela, ou **página de resumo** para iniciar o assistente. Você também pode fazer isso na **arquivo** -> menu **Adicionar Novo Item**. O assistente solicita que você apontar para o local da configuração do serviço, do qual a configuração do cliente é gerada. Em seguida, você pode escolher o ponto de extremidade de serviço para se conectar ao.  
   
--   Crie manualmente: Clique com botão direito do **pontos de extremidade** nó sob **cliente**e escolha **novo ponto de extremidade do cliente**.  
+- Crie manualmente: Clique com botão direito do **pontos de extremidade** nó sob **cliente**e escolha **novo ponto de extremidade do cliente**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>Editando uma configuração de ponto de extremidade do cliente  
   
@@ -141,27 +141,27 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Criando uma nova configuração de ponto de extremidade padrão  
  Você pode criar uma nova configuração de ponto de extremidade padrão das seguintes maneiras:  
   
--   Clique com botão direito do **ponto de extremidade padrão** nó e selecione **nova configuração de ponto de extremidade padrão...** Selecione o tipo de associação, na caixa de diálogo e clique em **Okey**.  
+- Clique com botão direito do **ponto de extremidade padrão** nó e selecione **nova configuração de ponto de extremidade padrão...** Selecione o tipo de associação, na caixa de diálogo e clique em **Okey**.  
   
--   Selecione o **ponto de extremidade padrão** nó e clique em **nova configuração de ponto de extremidade padrão...** no **painel de tarefas** no canto inferior esquerdo da janela.  
+- Selecione o **ponto de extremidade padrão** nó e clique em **nova configuração de ponto de extremidade padrão...** no **painel de tarefas** no canto inferior esquerdo da janela.  
   
  O **criando um novo ponto de extremidade padrão** caixa de diálogo exibe e lista todos os tipos de ponto de extremidade padrão.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Exibir e editar uma configuração de ponto de extremidade padrão  
  Você pode abrir uma configuração de ponto de extremidade padrão para exibição e edição das seguintes maneiras:  
   
--   Clique para expandir a **ponto de extremidade padrão** nó e clique no nó de subpropriedades do respectivo ponto de extremidade.  
+- Clique para expandir a **ponto de extremidade padrão** nó e clique no nó de subpropriedades do respectivo ponto de extremidade.  
   
--   Clique o **ponto de extremidade padrão** nó e clique no respectivo ponto de extremidade no painel de detalhes.  
+- Clique o **ponto de extremidade padrão** nó e clique no respectivo ponto de extremidade no painel de detalhes.  
   
  Atributos para o ponto de extremidade são mostrados no painel direito para edição.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Excluindo uma configuração de ponto de extremidade padrão  
  Você pode excluir uma configuração de ponto de extremidade padrão das seguintes maneiras:  
   
--   Clique para expandir a **ponto de extremidade padrão** nó e o botão direito do mouse subnó o respectivo ponto de extremidade. Use o comando de contexto **Excluir configuração de ponto de extremidade padrão** para excluir o ponto de extremidade.  
+- Clique para expandir a **ponto de extremidade padrão** nó e o botão direito do mouse subnó o respectivo ponto de extremidade. Use o comando de contexto **Excluir configuração de ponto de extremidade padrão** para excluir o ponto de extremidade.  
   
--   Clique o **ponto de extremidade padrão** nó. No **tarefa** painel, clique em **Excluir configuração de ponto de extremidade padrão**.  
+- Clique o **ponto de extremidade padrão** nó. No **tarefa** painel, clique em **Excluir configuração de ponto de extremidade padrão**.  
   
  Se o ponto de extremidade padrão é em usado, uma mensagem de aviso é exibida quando você tentar excluí-lo: **O ponto de extremidade padrão está em uso. Se você excluí-lo agora, certifique-se de excluir todas as suas referências em outras partes da configuração (por exemplo, no ponto de extremidade de serviço ou cliente). Caso contrário, a configuração será inválida e não pode ser aberta da próxima vez. Tem certeza de que deseja excluir o ponto de extremidade standard?"**  
   
@@ -175,11 +175,11 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
 #### <a name="creating-a-new-binding-configuration"></a>Criando uma nova configuração de associação  
  Você pode criar uma nova configuração de associação das seguintes maneiras.  
   
--   Clique com botão direito do **ligações** nó e selecione **nova configuração de associação**... Selecione o tipo de associação, na caixa de diálogo e clique em **Okey**.  
+- Clique com botão direito do **ligações** nó e selecione **nova configuração de associação**... Selecione o tipo de associação, na caixa de diálogo e clique em **Okey**.  
   
--   Selecione o **ligações** nó e clique em **nova configuração de associação**... no **painel de tarefas** no canto inferior esquerdo da janela.  
+- Selecione o **ligações** nó e clique em **nova configuração de associação**... no **painel de tarefas** no canto inferior esquerdo da janela.  
   
--   No serviço ou cliente página Resumo, clique em **clique para criar** na **configuração de associação** campo para criar uma configuração de associação para o ponto de extremidade correspondente.  
+- No serviço ou cliente página Resumo, clique em **clique para criar** na **configuração de associação** campo para criar uma configuração de associação para o ponto de extremidade correspondente.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Adicionando extensões de elemento de associação para uma associação personalizada  
   
@@ -278,9 +278,9 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
 ##### <a name="creating-a-new-behavior-configuration"></a>Criando uma nova configuração de comportamento  
  Você pode criar uma nova configuração de comportamento de duas maneiras.  
   
--   Clique em um de nós do comportamento e selecione "**nova configuração de comportamento...**  
+- Clique em um de nós do comportamento e selecione "**nova configuração de comportamento...**  
   
--   Selecione um de nós do comportamento e clique no **nova configuração de comportamento**... no **painel de tarefas** no canto inferior esquerdo da janela.  
+- Selecione um de nós do comportamento e clique no **nova configuração de comportamento**... no **painel de tarefas** no canto inferior esquerdo da janela.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Adicionando extensões de elemento de comportamento a um comportamento  
   
@@ -319,13 +319,13 @@ O Editor de configuração de serviço do Windows Communication Foundation (WCF)
 #### <a name="extensions"></a>Extensões  
  Novas extensões de associação, as extensões de elemento de associação, extensões de ponto de extremidade padrão e extensões de comportamento podem ser registradas para uso na configuração do WCF. As extensões são pares de nome/tipo. O nome define o nome da extensão de configuração, enquanto o tipo implementa a extensão. Há quatro tipos de extensões:  
   
--   As extensões de associação definem um tipo de associação inteira. Exemplo: `basicHttpBinding`.  
+- As extensões de associação definem um tipo de associação inteira. Exemplo: `basicHttpBinding`.  
   
--   Extensões de elemento de associação definem um elemento de uma associação. Exemplo: `textMessageEncoding`.  
+- Extensões de elemento de associação definem um elemento de uma associação. Exemplo: `textMessageEncoding`.  
   
--   Extensões de ponto de extremidade padrão definem um ponto de extremidade padrão inteiro. Exemplo: `discoveryEndpoint`.  
+- Extensões de ponto de extremidade padrão definem um ponto de extremidade padrão inteiro. Exemplo: `discoveryEndpoint`.  
   
--   Extensões de elemento de comportamento definem um elemento de um comportamento. Exemplo: `clientVia`.  
+- Extensões de elemento de comportamento definem um elemento de um comportamento. Exemplo: `clientVia`.  
   
  Extensões que foram registradas na configuração podem ser usadas como qualquer outro componente do WCF do mesmo tipo.  
   

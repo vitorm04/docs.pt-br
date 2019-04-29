@@ -3,18 +3,18 @@ title: Funções agregadas (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607213"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funções agregadas (Entity SQL)
 Uma agregação é uma construção de linguagem que condense uma coleção em um escalar como parte de uma operação de grupo. as agregações de[!INCLUDE[esql](../../../../../../includes/esql-md.md)] vêm em duas formas:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funções de coleção que podem ser usadas em qualquer lugar em uma expressão. Isso inclui usando funções agregadas em projeções e predicados que atuam em coleções. Funções de coleção são o modo preferido para especificar agregados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funções de coleção que podem ser usadas em qualquer lugar em uma expressão. Isso inclui usando funções agregadas em projeções e predicados que atuam em coleções. Funções de coleção são o modo preferido para especificar agregados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   O grupo agrega as expressões de consulta que têm um cláusula GROUP BY. Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregados do grupo aceitam DISTINCT e ALL como modificadores a entrada aggregate.  
+- O grupo agrega as expressões de consulta que têm um cláusula GROUP BY. Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregados do grupo aceitam DISTINCT e ALL como modificadores a entrada aggregate.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primeiro tenta interpretar uma expressão como uma função de coleção e se a expressão é no contexto de uma expressão SELECT ele interpretará como uma agregação de grupo.  
   

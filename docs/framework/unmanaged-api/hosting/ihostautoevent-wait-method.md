@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b07b3649cc1d7fcc2c75cbbd59414ee67819103
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599410"
 ---
 # <a name="ihostautoeventwait-method"></a>Método IHostAutoEvent::Wait
 Faz com que o atual [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instância aguardar até que ele é de propriedade ou uma quantidade especificada de tempo passa.  

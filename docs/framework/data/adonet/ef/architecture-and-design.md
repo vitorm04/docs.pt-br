@@ -3,20 +3,20 @@ title: Arquitetura e design
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606835"
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) é implementado como um visitante na árvore de expressão que representa a árvore de comando. A geração é feita em uma única passada sobre a árvore de expressão.  
   
  Os nós de árvore são processados a partir de baixo. Primeiro, uma estrutura intermediária é produzida: SqlSelectStatement ou SqlBuilder, ambos que implementam ISqlFragment. Em seguida, a instrução SQL de cadeia de caracteres é gerado dessa estrutura. Há dois motivos para a estrutura intermediário:  
   
--   Logicamente, uma instrução SQL SELECT está fora de serviço preenchido. Os nós que participam na cláusula são visitados antes que os nós que participam em WHERE GRUPO, PERTO, e a cláusula ORDER BY.  
+- Logicamente, uma instrução SQL SELECT está fora de serviço preenchido. Os nós que participam na cláusula são visitados antes que os nós que participam em WHERE GRUPO, PERTO, e a cláusula ORDER BY.  
   
--   Para renomear alias, você deve identificar todas as aliases usadas para evitar colisões em renomear. Para adiar as opções renomeando em SqlBuilder, o símbolo de uso objetos para representar as colunas que são candidatos para renomear.  
+- Para renomear alias, você deve identificar todas as aliases usadas para evitar colisões em renomear. Para adiar as opções renomeando em SqlBuilder, o símbolo de uso objetos para representar as colunas que são candidatos para renomear.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microso
 ### <a name="isqlfragment"></a>ISqlFragment  
  Esta seção aborda as classes que implementam a interface de ISqlFragment, que serve duas finalidades:  
   
--   Um tipo de retorno comum para todos os métodos do visitante.  
+- Um tipo de retorno comum para todos os métodos do visitante.  
   
--   Fornece um método para gravar a cadeia de caracteres final SQL.  
+- Fornece um método para gravar a cadeia de caracteres final SQL.  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  Normalmente, se as cláusulas da instrução SQL são avaliadas após as cláusulas onde os nós que estão sendo considerados mesclando não estiverem vazias, o nó não pode ser adicionado à instrução atual. Por exemplo, se o nó seguir é um filtro, o nó pode ser inserido em SqlSelectStatement atual somente se o seguinte é verdadeira:  
   
--   A lista SELECT está vazia. Se a lista SELECT é não vazio, a lista select foi gerada por um nó que precede o filtro e o predicado pode consultar as colunas geradas por essa lista SELECT.  
+- A lista SELECT está vazia. Se a lista SELECT é não vazio, a lista select foi gerada por um nó que precede o filtro e o predicado pode consultar as colunas geradas por essa lista SELECT.  
   
--   O GROUPBY está vazia. Se o GROUPBY é não vazio, adicione o filtro significaria filtro antes de agrupamento, que não está correto.  
+- O GROUPBY está vazia. Se o GROUPBY é não vazio, adicione o filtro significaria filtro antes de agrupamento, que não está correto.  
   
--   A cláusula TOP está vazia. Se a cláusula TOP é não vazio, adicione o filtro significaria filtro antes de fazer a TOP, que não está correto.  
+- A cláusula TOP está vazia. Se a cláusula TOP é não vazio, adicione o filtro significaria filtro antes de fazer a TOP, que não está correto.  
   
  Isso não se aplica a nós não-relacionais como DbConstantExpression ou expressões aritméticas, porque esses são sempre incluídos como parte de um SqlSelectStatement existente.  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>(não se junte nós relacionais)  
  O seguinte suporte de expressão não associa a nós:  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  Visitar esses nós segue o padrão a seguir:  
   
 1. Interativo entrada relacional e obter o SqlSelectStatement resultante. A entrada a um nó relacional pode ser um dos seguintes:  
   
-    -   Um nó relacional, incluindo uma extensão (um DbScanExpression, por exemplo). Visitar um nó retorna um SqlSelectStatement.  
+    - Um nó relacional, incluindo uma extensão (um DbScanExpression, por exemplo). Visitar um nó retorna um SqlSelectStatement.  
   
-    -   Uma expressão de operação relevante (UNION TODOS, por exemplo). O resultado tem que ser empacotado entre colchetes e coloque na cláusula de um novo SqlSelectStatement.  
+    - Uma expressão de operação relevante (UNION TODOS, por exemplo). O resultado tem que ser empacotado entre colchetes e coloque na cláusula de um novo SqlSelectStatement.  
   
 2. Verifique se o nó atual pode ser adicionado ao SqlSelectStatement gerado pela entrada. A seção denominada agrupamento expressões em instruções SQL descreve esta. Se não,  
   
-    -   Aparecer o objeto atual de SqlSelectStatement.  
+    - Aparecer o objeto atual de SqlSelectStatement.  
   
-    -   Crie um novo objeto de SqlSelectStatement e adicione o SqlSelectStatement aparecido como o novo objeto de SqlSelectStatement.  
+    - Crie um novo objeto de SqlSelectStatement e adicione o SqlSelectStatement aparecido como o novo objeto de SqlSelectStatement.  
   
-    -   Coloque o novo objeto sobre a pilha.  
+    - Coloque o novo objeto sobre a pilha.  
   
 3. Redirecionando a expressão de entrada que associa o símbolo correto de entrada. Essa informação é mantida no objeto de SqlSelectStatement.  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>Adição às expressões  
  Os seguintes são considerados ingressar em expressões e são processados em uma maneira comum, pelo método de VisitJoinExpression:  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  A seguir estão as etapas de visita:  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. Enviar o processo visitar o resultado da entrada por ProcessJoinInputResult, que é responsável para manter a tabela de símbolo após visitado um filho de uma expressão de associação e possivelmente ter concluído o SqlSelectStatement gerado pelo filho. O resultado de filho pode ser um dos seguintes:  
   
-    -   Um SqlSelectStatement diferente de aquele que o pai será adicionado. Em tais casos, talvez precisem ser concluído adicionando colunas padrão. Se a entrada foi uma associação, você precisa criar um novo join para o símbolo. Caso contrário, crie um símbolo normal.  
+    - Um SqlSelectStatement diferente de aquele que o pai será adicionado. Em tais casos, talvez precisem ser concluído adicionando colunas padrão. Se a entrada foi uma associação, você precisa criar um novo join para o símbolo. Caso contrário, crie um símbolo normal.  
   
-    -   Uma extensão (um DbScanExpression, por exemplo), nesse caso é simplesmente adicionada à lista de entradas de SqlSelectStatement pai.  
+    - Uma extensão (um DbScanExpression, por exemplo), nesse caso é simplesmente adicionada à lista de entradas de SqlSelectStatement pai.  
   
-    -   Não um SqlSelectStatement, nesse caso é empacotado com colchetes.  
+    - Não um SqlSelectStatement, nesse caso é empacotado com colchetes.  
   
-    -   O mesmo SqlSelectStatement a que o pai é adicionado. Em tais casos, os símbolos na lista de FromExtents precisam ser substituídos por um único novo JoinSymbol que representa todos os.  
+    - O mesmo SqlSelectStatement a que o pai é adicionado. Em tais casos, os símbolos na lista de FromExtents precisam ser substituídos por um único novo JoinSymbol que representa todos os.  
   
-    -   Para os primeiros três casos, AddFromSymbol é chamado para adicionar COMO a cláusula, e atualizar a tabela de símbolo.  
+    - Para os primeiros três casos, AddFromSymbol é chamado para adicionar COMO a cláusula, e atualizar a tabela de símbolo.  
   
  No lugar, a condição de adição (se houver) é visitada.  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  A propriedade a instância é visitada primeiro e o resultado é um símbolo, um JoinSymbol, ou um SymbolPair. É aqui como esses três ocorrências são tratados:  
   
--   Se um JoinSymbol é retornado, de sua propriedade de NameToExtent contém um símbolo para a propriedade necessário. Se o símbolo de associação verdadeira, aninhado representa um novo registro do símbolo é retornado com o símbolo do join para controlar o símbolo que seria usado como o alias de instância, e o símbolo que representa a propriedade real para resolver mais.  
+- Se um JoinSymbol é retornado, de sua propriedade de NameToExtent contém um símbolo para a propriedade necessário. Se o símbolo de associação verdadeira, aninhado representa um novo registro do símbolo é retornado com o símbolo do join para controlar o símbolo que seria usado como o alias de instância, e o símbolo que representa a propriedade real para resolver mais.  
   
--   Se um SymbolPair é retornado e parte da coluna é um símbolo de adição, um símbolo de associação é retornado novamente, mas a propriedade coluna é atualizada agora para apontar para a propriedade representada pela expressão atual da propriedade. Se não um SqlBuilder é retornado com a fonte de SymbolPair como alias, e o símbolo para a propriedade atual como a coluna.  
+- Se um SymbolPair é retornado e parte da coluna é um símbolo de adição, um símbolo de associação é retornado novamente, mas a propriedade coluna é atualizada agora para apontar para a propriedade representada pela expressão atual da propriedade. Se não um SqlBuilder é retornado com a fonte de SymbolPair como alias, e o símbolo para a propriedade atual como a coluna.  
   
--   Se um símbolo é retornado, o método de visita retorna um método de SqlBuilder com essa instância como alias, e o nome da propriedade como o nome da coluna.  
+- Se um símbolo é retornado, o método de visita retorna um método de SqlBuilder com essa instância como alias, e o nome da propriedade como o nome da coluna.  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Quando usado como a propriedade de projeção de DbProjectExpression, DbNewInstanceExpression gerencia uma lista separada por vírgulas de argumentos para representar as colunas projetadas.  
   
  Quando DbNewInstanceExpression tem um tipo de retorno da coleção, e define uma nova coleção de expressões fornecidas como argumentos, os seguintes três ocorrências são tratados separada:  
   
--   Se DbNewInstanceExpression tem DbElementExpression como o argumento único, ele é convertido como segue:  
+- Se DbNewInstanceExpression tem DbElementExpression como o argumento único, ele é convertido como segue:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

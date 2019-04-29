@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645991"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementando o padrão de controle de tabela de automação de interface de usuário
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59144645"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de tabela, observe as seguintes diretrizes e convenções:  
   
--   Acesso ao conteúdo das células individuais é por meio de um sistema de coordenadas lógico bidimensional ou matriz fornecida pela implementação simultânea necessária de <xref:System.Windows.Automation.Provider.IGridProvider>.  
+- Acesso ao conteúdo das células individuais é por meio de um sistema de coordenadas lógico bidimensional ou matriz fornecida pela implementação simultânea necessária de <xref:System.Windows.Automation.Provider.IGridProvider>.  
   
--   Um cabeçalho de coluna ou linha pode estar contido em um objeto de tabela ou ser um objeto de cabeçalho separado que está associado um objeto de tabela.  
+- Um cabeçalho de coluna ou linha pode estar contido em um objeto de tabela ou ser um objeto de cabeçalho separado que está associado um objeto de tabela.  
   
--   Cabeçalhos de coluna e linha podem incluir um cabeçalho principal, bem como os cabeçalhos de suporte.  
+- Cabeçalhos de coluna e linha podem incluir um cabeçalho principal, bem como os cabeçalhos de suporte.  
   
 > [!NOTE]
 >  Esse conceito fica evidente em um [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] planilha em que um usuário tenha definido uma coluna "First name". Esta coluna agora tem dois cabeçalhos — o cabeçalho de "First name" definido pelo usuário e a designação alfanumérica para aquela coluna atribuída pelo aplicativo.  
   
--   Ver [Implementando o padrão de controle Grid de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) para a funcionalidade de grade relacionados.  
+- Ver [Implementando o padrão de controle Grid de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) para a funcionalidade de grade relacionados.  
   
  ![Tabela com itens de cabeçalho complexos. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Exemplo de uma tabela com cabeçalhos de coluna complexa  
