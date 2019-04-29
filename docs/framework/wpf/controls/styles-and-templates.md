@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790904"
 ---
 # <a name="styles-and-templates"></a>Estilos e modelos 
 Modelagem e definição de estilo do Windows Presentation Foundation (WPF) referem-se a um conjunto de recursos (estilos, modelos, gatilhos e storyboards) que permitem que um aplicativo, o documento ou o designer de (UI) de interface do usuário criar aplicativos visualmente atraentes e padronizem uma determinada aparência para seus produtos.  

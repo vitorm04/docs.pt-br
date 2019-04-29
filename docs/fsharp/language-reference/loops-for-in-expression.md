@@ -3,11 +3,11 @@ title: 'Loops: expressão for...in'
 description: Veja como o F# loop for... expressão constructo de loop é usado para iterar sobre as correspondências de um padrão em uma coleção enumerável.
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024437"
 ---
 # <a name="loops-forin-expression"></a>Loops: expressão for...in
 
@@ -28,11 +28,11 @@ A expressão enumerável pode ser especificada como uma coleção enumerável ou
 
 Quando você expressa um intervalo usando o `..` operador, você pode usar a sintaxe a seguir.
 
-*Iniciar* ... *Concluir*
+*Iniciar* ... *finish*
 
 Você também pode usar uma versão que inclua um incremento chamado a *ignorar*, conforme mostrado no código a seguir.
 
-*Iniciar* ... *Ignorar* ... *Concluir*
+*Iniciar* ... *Ignorar* ... *finish*
 
 Quando você usa intervalos integrais e uma variável de contador simples como um padrão, o comportamento típico é para incrementar a variável de contador em 1 em cada iteração, mas se o intervalo inclui um valor skip, o contador é incrementado pelo valor skip em vez disso.
 

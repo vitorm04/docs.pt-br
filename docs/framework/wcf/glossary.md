@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
 ms.openlocfilehash: cbd5ce06698400152460af0706761d9855b43e12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929526"
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Glossário Windows Communication Foundation para o .NET Framework 4.5
 
@@ -55,7 +55,7 @@ Os seguintes termos são definidos para a documentação do Windows Communicatio
 |modo de segurança de transporte|Segurança pode ser fornecida por um dos três modos: modo de transporte, modo de segurança de mensagem, e transporte com modo de credenciais de mensagem. O modo de segurança de transporte especifica o segredo, integridade, e autenticação é fornecida pelos mecanismos da camada de transporte (como HTTPS). Ao usar um transporte como HTTPS, esse modo tem a vantagem de ser eficiente no desempenho, além de bem-compreendido devido à sua predominância na Internet. A desvantagem é que esse tipo de segurança é aplicado separadamente em cada salto no caminho de comunicação, tornando a comunicação suscetível a um &quot;intermediários&quot; ataque.|
 |transporte com modo de segurança de credencial de mensagem|Esse modo usa a camada de transporte para fornecer confidencialidade, a autenticação, e integridade de mensagens, quando cada uma das mensagens pode conter várias credenciais (reivindicações) exigidas pelos destinatários de mensagem.|
 |conversor de tipo|Um tipo de CLR pode ser associado com um ou mais tipos derivados System.ComponentModel.TypeConverter que permitem converter instâncias do tipo da CLR e instâncias de outros tipos. Um conversor de tipo está associado um tipo CLR usando o atributo System.  Um TypeConverterAttribute pode ser especificado diretamente no tipo de CLR ou propriedade. Um conversor de tipo especificado em uma propriedade sempre tem precedência sobre um conversor de tipo especificado no tipo de CLR de propriedade.|
-|Cliente de WCF|Um cliente de WCF é uma construção de aplicativo cliente que expõe as operações de serviço como métodos (na linguagem de programação. NET Framework de sua escolha, como Visual Basic ou Visual c#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.  Um cliente de WCF pode ser automaticamente gerado usando a ferramenta de utilitário de metadados de ServiceModel (Svcutil.exe) e apontando na um serviço em execução que publica metadados.|
+|Cliente de WCF|Um cliente de WCF é uma construção de aplicativo cliente que expõe as operações de serviço como métodos (na linguagem de programação. NET Framework de sua escolha, como Visual Basic ou Visual C#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.  Um cliente de WCF pode ser automaticamente gerado usando a ferramenta de utilitário de metadados de ServiceModel (Svcutil.exe) e apontando na um serviço em execução que publica metadados.|
 |serviços de fluxo de trabalho|Um serviço de fluxo de trabalho é um serviço windows que é implementado como um fluxo de trabalho. O fluxo de trabalho contém as atividades de mensagem que enviam e/ou recebem mensagens do windows.|
 |WS-*|Taquigrafia para o conjunto crescente de especificações de (WS) de serviço Web, como WS- segurança, WS - ReliableMessaging, e assim por diante, que são implementadas em windows.|
 |XAML|extensible application marcação idioma|

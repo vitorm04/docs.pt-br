@@ -18,11 +18,11 @@ ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795272"
 ---
 # <a name="time-zone-overview"></a>Visão geral do fuso horário
 
@@ -59,7 +59,7 @@ No .NET, um <xref:System.TimeZoneInfo> objeto representa um fuso horário. O <xr
 
 A dependência da <xref:System.TimeZoneInfo> classe no registro significa que um aplicativo com reconhecimento de fuso horário não pode garantir que um determinado fuso horário esteja definido no registro. Como resultado, a tentativa de criar uma instância de um fuso horário específico (que não seja o fuso horário local ou o fuso horário que representa o UTC) deve usar tratamento de exceção. Ela também deve fornecer algum método para permitir que o aplicativo continue se necessário <xref:System.TimeZoneInfo> objeto não pode ser instanciado a partir do registro.
 
-Para lidar com a ausência de um fuso horário necessário, o <xref:System.TimeZoneInfo> classe inclui um <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método, que você pode usar para criar fusos horários personalizados que não são encontrados no registro. Para obter detalhes sobre como criar um fuso horário personalizado, consulte [como: Criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [como: Criar fusos horários com regras de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Além disso, você pode usar o <xref:System.TimeZoneInfo.ToSerializedString%2A> método para converter um fuso horário recém-criado em uma cadeia de caracteres e salvá-la em um armazenamento de dados (por exemplo, um banco de dados, um arquivo de texto, o registro ou um recurso de aplicativo). Você pode usar o <xref:System.TimeZoneInfo.FromSerializedString%2A> método para converter essa cadeia de caracteres de volta para um <xref:System.TimeZoneInfo> objeto. Para obter detalhes, consulte [como: Salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [como: Restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Para lidar com a ausência de um fuso horário necessário, o <xref:System.TimeZoneInfo> classe inclui um <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método, que você pode usar para criar fusos horários personalizados que não são encontrados no registro. Para obter detalhes sobre como criar um fuso horário personalizado, consulte [como: Criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [como: Criar fusos horários com regras de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Além disso, você pode usar o <xref:System.TimeZoneInfo.ToSerializedString%2A> método para converter um fuso horário recém-criado em uma cadeia de caracteres e salvá-la em um armazenamento de dados (por exemplo, um banco de dados, um arquivo de texto, o registro ou um recurso de aplicativo). Você pode usar o <xref:System.TimeZoneInfo.FromSerializedString%2A> método para converter essa cadeia de caracteres de volta para um <xref:System.TimeZoneInfo> objeto. Para obter detalhes, confira [Como: Salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [como: Restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 Como cada fuso horário é caracterizado por uma diferença base do UTC, bem como por uma diferença do UTC que reflete as regras de ajuste existentes, um horário em um fuso horário pode ser facilmente convertido no horário em outro fuso horário. Para essa finalidade, o <xref:System.TimeZoneInfo> objeto inclui vários métodos de conversão, incluindo:
 

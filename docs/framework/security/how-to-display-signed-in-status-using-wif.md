@@ -7,49 +7,49 @@ ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940498"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Como: exibir o status de conexão usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   Web Forms do ASP.NET®  
+- Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
  Este tópico descreve como exibir o status de entrada em um aplicativo ASP.NET habilitado para WIF. O WIF fornece o mecanismo para fazer com que seu aplicativo reconheça declarações e para gerenciar autenticação e autorização para recursos do aplicativo.  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Visão geral  
+- Visão geral  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – instalar a extensão de Identidade e Acesso  
+- Etapa 1 – instalar a extensão de Identidade e Acesso  
   
--   Etapa 2 – criar um aplicativo ASP.NET de terceira parte confiável  
+- Etapa 2 – criar um aplicativo ASP.NET de terceira parte confiável  
   
--   Etapa 3 – habilitar o STS de desenvolvimento local para autenticar usuários  
+- Etapa 3 – habilitar o STS de desenvolvimento local para autenticar usuários  
   
--   Etapa 4 – modificar seu aplicativo ASP.NET para exibir o status de entrada  
+- Etapa 4 – modificar seu aplicativo ASP.NET para exibir o status de entrada  
   
--   Etapa 5 – testar a integração entre o WIF e o seu aplicativo ASP.NET  
+- Etapa 5 – testar a integração entre o WIF e o seu aplicativo ASP.NET  
   
 ## <a name="overview"></a>Visão geral  
  Este tópico demonstra como criar um aplicativo com reconhecimento de declaração simples usando o WIF e como exibir facilmente se um usuário está conectado ou não. As etapas a seguir usam o STS de desenvolvimento local que está incluído com a extensão de Identidade e Acesso do Visual Studio. O STS de desenvolvimento local destina-se a um ambiente de teste e desenvolvimento para fornecer um método simples de integrar declarações em seu aplicativo. Ele nunca deve ser usado em um ambiente de produção, já que ele não executa autenticação real e credenciais não são necessárias. No entanto, o código obrigatório nas etapas a seguir é o mesmo para um aplicativo pronto para produção usando autenticação real.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – instalar a extensão de Identidade e Acesso  
+- Etapa 1 – instalar a extensão de Identidade e Acesso  
   
--   Etapa 2 – criar um aplicativo ASP.NET de terceira parte confiável  
+- Etapa 2 – criar um aplicativo ASP.NET de terceira parte confiável  
   
--   Etapa 3 – habilitar o STS de desenvolvimento local para autenticar usuários  
+- Etapa 3 – habilitar o STS de desenvolvimento local para autenticar usuários  
   
--   Etapa 4 – modificar seu aplicativo ASP.NET para exibir o status de entrada  
+- Etapa 4 – modificar seu aplicativo ASP.NET para exibir o status de entrada  
   
--   Etapa 5 – testar a integração entre o WIF e o seu aplicativo ASP.NET  
+- Etapa 5 – testar a integração entre o WIF e o seu aplicativo ASP.NET  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Etapa 1 – instalar a extensão de Identidade e Acesso  
  Essa etapa descreve como configurar a extensão de Identidade e Acesso para o Visual Studio 2012. Essa extensão automatiza o processo de configurar seu aplicativo para se comunicar com pontos de extremidade do STS.  

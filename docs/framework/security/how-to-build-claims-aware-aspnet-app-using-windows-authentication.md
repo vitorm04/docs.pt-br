@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940537"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Como: criar um aplicativo ASP.NET baseado em declarações usando a Autenticação do Windows
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms do ASP.NET®  
+- Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
  Estas Instruções fornecem procedimentos passo a passo detalhados para criar um aplicativo Web ASP.NET Web Forms simples baseado em declarações que usa a autenticação do Windows. Também fornece instruções sobre como testar o aplicativo para verificar se as declarações são apresentadas quando um usuário se conecta usando a autenticação do Windows.  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Visão geral  
+- Visão geral  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
   
--   Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para declarações usando a Autenticação do Windows  
+- Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para declarações usando a Autenticação do Windows  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar um aplicativo ASP.NET Web Forms para declarações usando a autenticação do Windows  
+- Configurar um aplicativo ASP.NET Web Forms para declarações usando a autenticação do Windows  
   
--   Testar o aplicativo ASP.NET Web Forms para ver se ele está funcionando corretamente  
+- Testar o aplicativo ASP.NET Web Forms para ver se ele está funcionando corretamente  
   
 ## <a name="overview"></a>Visão geral  
  No .NET 4.5, o WIF e sua autorização baseada em declarações foram incluídos como parte integrante do Framework. Anteriormente, se você quisesse obter declarações de um usuário do ASP.NET, precisava instalar o WIF e, em seguida, converter as interfaces para objetos de Entidade de Segurança, como `Thread.CurrentPrincipal` ou `HttpContext.Current.User`. Agora, as declarações são atendidas automaticamente por esses objetos de Entidade de Segurança.  
@@ -47,11 +47,11 @@ ms.locfileid: "59767962"
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
   
--   Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para declarações usando a Autenticação do Windows  
+- Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para declarações usando a Autenticação do Windows  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
  Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms.  

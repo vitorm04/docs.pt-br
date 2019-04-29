@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776214"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Como: Descobrir se um trabalho de impressão pode ser impresso a esta hora do dia
 Filas de impressão não estão sempre disponíveis 24 horas por dia. Eles têm propriedades de tempo de início e término que podem ser definidas para torná-las indisponíveis em determinados momentos do dia. Esse recurso pode ser usado, por exemplo, para reservar uma impressora para uso exclusivo de um determinado departamento após as 17h. Esse departamento teria uma fila diferente na impressora do que a que outros departamentos usam. A fila para os outros departamentos seria definida como indisponível após as 17h, enquanto a fila para o departamento favorecido poderia ser definida para estar sempre disponível.  
@@ -41,9 +41,9 @@ Filas de impressão não estão sempre disponíveis 24 horas por dia. Eles têm 
   
  O método **ReportQueueAndJobAvailability** começa verificando se a fila ou o trabalho de impressão está indisponível no momento. Se um deles estiver indisponível, ele verificará se a fila está indisponível. Se ela não estiver disponível, o método relatará esse fato e a hora em que a fila estará disponível novamente. Em seguida, ele verifica o trabalho e, se ele estiver indisponível, relatará o próximo intervalo em que ela pode ser impressa. Por fim, o método relata o horário mais próximo em que o trabalho pode ser impresso. Ele é o segundo dos dois horários a seguir.  
   
--   A hora em que a fila de impressão ficará disponível.  
+- A hora em que a fila de impressão ficará disponível.  
   
--   A hora em que o trabalho de impressão ficará disponível.  
+- A hora em que o trabalho de impressão ficará disponível.  
   
  Ao relatar horários do dia, o <xref:System.DateTime.ToShortTimeString%2A> método também é chamado porque esse método suprime os anos, meses e dias da saída. Você não pode restringir a disponibilidade de uma fila de impressão ou de um trabalho de impressão para dias, meses ou anos específicos.  
   

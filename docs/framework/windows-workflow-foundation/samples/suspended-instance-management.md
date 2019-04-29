@@ -3,11 +3,11 @@ title: Gerenciamento suspenso da instância
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785899"
 ---
 # <a name="suspended-instance-management"></a>Gerenciamento suspenso da instância
 Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que foram suspensas.  A ação padrão para <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é `AbandonAndSuspend`. Isso significa que por padrão, as exceções não tratadas lançadas de uma instância de fluxo de trabalho hospedada em <xref:System.ServiceModel.WorkflowServiceHost> causarão a instância a ser descartado de memória (abandonada) e de bens/versão armazenado de instância a ser marcada como suspendida. Uma instância suspendida de fluxo de trabalho não poderá executar até que estado unsuspended.
@@ -26,41 +26,41 @@ Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que fo
 
 1. Esse exemplo requer que os seguintes componentes do Windows estão ativados:
 
-    1.  Servidor das filas de mensagens da Microsoft (MSMQ)
+    1. Servidor das filas de mensagens da Microsoft (MSMQ)
 
-    2.  SQL Server Express
+    2. SQL Server Express
 
 2. Configurar o base de dados SQL Server.
 
-    1.  Em um prompt de comando do Visual Studio 2010, execute "Setup. cmd" do diretório de SuspendedInstanceManagement, que faz o seguinte:
+    1. Em um prompt de comando do Visual Studio 2010, execute "Setup. cmd" do diretório de SuspendedInstanceManagement, que faz o seguinte:
 
-        1.  Cria um base de dados de persistência usando o SQL Server Express. Se o base de dados de persistência já existir, então é solto e re-criada
+        1. Cria um base de dados de persistência usando o SQL Server Express. Se o base de dados de persistência já existir, então é solto e re-criada
 
-        2.  Configura de base de dados para persistência.
+        2. Configura de base de dados para persistência.
 
-        3.  Adiciona o IIS APPPOOL \ AUTORIDADE de DefaultAppPool e NT \ serviço de rede para a função de InstanceStoreUsers que foi definida para configurar o base de dados para persistência.
+        3. Adiciona o IIS APPPOOL \ AUTORIDADE de DefaultAppPool e NT \ serviço de rede para a função de InstanceStoreUsers que foi definida para configurar o base de dados para persistência.
 
 3. Configurar a fila de serviço.
 
-    1.  No Visual Studio 2010, clique com botão direito do **SampleWorkflowApp** do projeto e clique em **definir como projeto de inicialização**.
+    1. No Visual Studio 2010, clique com botão direito do **SampleWorkflowApp** do projeto e clique em **definir como projeto de inicialização**.
 
-    2.  Compilar e executar o SampleWorkflowApp pressionando **F5**. Isso criará a fila necessário.
+    2. Compilar e executar o SampleWorkflowApp pressionando **F5**. Isso criará a fila necessário.
 
-    3.  Pressione **Enter** para interromper o SampleWorkflowApp.
+    3. Pressione **Enter** para interromper o SampleWorkflowApp.
 
-    4.  Abra o console de Gerenciamento do Computador executando Compmgmt.msc de um prompt de comando.
+    4. Abra o console de Gerenciamento do Computador executando Compmgmt.msc de um prompt de comando.
 
-    5.  Expandir **aplicativos e serviços**, **enfileiramento**, **privativas**.
+    5. Expandir **aplicativos e serviços**, **enfileiramento**, **privativas**.
 
-    6.  Clique com botão direito do **ReceiveTx** da fila e selecione **propriedades**.
+    6. Clique com botão direito do **ReceiveTx** da fila e selecione **propriedades**.
 
-    7.  Selecione o **segurança** guia e permitir **Everyone** ter permissões para **receber mensagem**, **inspecionar mensagem**, e  **Enviar mensagem**.
+    7. Selecione o **segurança** guia e permitir **Everyone** ter permissões para **receber mensagem**, **inspecionar mensagem**, e  **Enviar mensagem**.
 
 4. Agora, executar o exemplo.
 
-    1.  No Visual Studio 2010, execute o projeto de SampleWorkflowApp novamente sem depuração pressionando **Ctrl + F5**. Dois endereços de ponto de extremidade será impresso na janela do console: um para o ponto final do aplicativo e então outro de <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Uma instância de fluxo de trabalho é criada em seguida, e os registros de controle para essa instância aparecerá na janela do console. A instância de fluxo de trabalho irá acionar uma exceção que causou a instância a ser suspendida e anuladas.
+    1. No Visual Studio 2010, execute o projeto de SampleWorkflowApp novamente sem depuração pressionando **Ctrl + F5**. Dois endereços de ponto de extremidade será impresso na janela do console: um para o ponto final do aplicativo e então outro de <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Uma instância de fluxo de trabalho é criada em seguida, e os registros de controle para essa instância aparecerá na janela do console. A instância de fluxo de trabalho irá acionar uma exceção que causou a instância a ser suspendida e anuladas.
 
-    2.  O utilitário de linha de comando pode então ser usado para executar uma ação adicional em uma destas instâncias. A sintaxe para argumentos de linha de comando é como o follows::
+    2. O utilitário de linha de comando pode então ser usado para executar uma ação adicional em uma destas instâncias. A sintaxe para argumentos de linha de comando é como o follows::
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 

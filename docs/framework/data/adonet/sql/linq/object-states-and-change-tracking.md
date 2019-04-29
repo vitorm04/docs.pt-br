@@ -3,11 +3,11 @@ title: Estados e controle de alterações de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794388"
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos sempre participam em qualquer *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo criar for desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  
@@ -38,11 +38,11 @@ ms.locfileid: "59191148"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executa o processamento seguinte quando um objeto é excluído (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) de sua tabela:  
   
--   Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, uma operação de `DELETE` é executada para esse objeto.  
+- Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, uma operação de `DELETE` é executada para esse objeto.  
   
--   Remoção não é propagada a objetos relacionados independentemente se eles são carregados. Especificamente, os objetos relacionados não são carregados atualizar a propriedade de relacionamento.  
+- Remoção não é propagada a objetos relacionados independentemente se eles são carregados. Especificamente, os objetos relacionados não são carregados atualizar a propriedade de relacionamento.  
   
--   Após a execução bem-sucedida de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, os objetos são definidos no estado de `Deleted` . Como resultado, você não pode usar o objeto ou seu `id` nesse <xref:System.Data.Linq.DataContext>. O cache interno mantido por uma instância de <xref:System.Data.Linq.DataContext> não elimina os objetos que são recuperados ou adicionados como novas, mesmo após os objetos foram excluídos na base de dados.  
+- Após a execução bem-sucedida de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, os objetos são definidos no estado de `Deleted` . Como resultado, você não pode usar o objeto ou seu `id` nesse <xref:System.Data.Linq.DataContext>. O cache interno mantido por uma instância de <xref:System.Data.Linq.DataContext> não elimina os objetos que são recuperados ou adicionados como novas, mesmo após os objetos foram excluídos na base de dados.  
   
  Você pode chamar <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> somente em um objeto controlado por <xref:System.Data.Linq.DataContext>. Para um objeto de `Untracked` , você deve chamar <xref:System.Data.Linq.Table%601.Attach%2A> antes de chamar <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>. A chamada <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> em um objeto de `Untracked` gerencie uma exceção.  
   

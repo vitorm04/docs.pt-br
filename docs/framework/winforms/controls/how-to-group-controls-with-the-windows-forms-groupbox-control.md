@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941317"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Como: Agrupar controles com o controle GroupBox do Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para agrupar outros controles. Há três razões para agrupar controles:  
   
--   Para criar um agrupamento visual dos elementos de formulário relacionados para uma interface do usuário clara.  
+- Para criar um agrupamento visual dos elementos de formulário relacionados para uma interface do usuário clara.  
   
--   Para criar um agrupamento programático (de botões de opção, por exemplo).  
+- Para criar um agrupamento programático (de botões de opção, por exemplo).  
   
--   Para mover os controles como uma unidade em tempo de design.  
+- Para mover os controles como uma unidade em tempo de design.  
   
 ### <a name="to-create-a-group-of-controls"></a>Para criar um grupo de controles  
   

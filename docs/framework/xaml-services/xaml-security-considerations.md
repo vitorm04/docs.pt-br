@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938782"
 ---
 # <a name="xaml-security-considerations"></a>Considerações sobre segurança XAML
 Este tópico descreve as práticas recomendadas de segurança em aplicativos quando você usa XAML e a API de serviços XAML do .NET Framework.  
@@ -34,9 +34,9 @@ Este tópico descreve as práticas recomendadas de segurança em aplicativos qua
 ## <a name="xaml-namespaces-and-assembly-trust"></a>Namespaces XAML e a confiança do Assembly  
  A sintaxe básica de não-qualificado e a definição para como XAML interpreta um mapeamento de namespace XAML personalizado a um assembly não faz distinção entre um assembly confiável e como carregado no domínio de aplicativo. Portanto, é tecnicamente possível que um assembly não confiável falsificar o mapeamento de namespace XAML desejado de um assembly confiável e capturar informações de propriedade e o objeto declarado de uma fonte XAML. Se você tiver requisitos de segurança para evitar essa situação, o mapeamento de namespace XAML pretendido deve ser feito usando uma das seguintes técnicas:  
   
--   Use um nome totalmente qualificado do assembly com nome forte em qualquer mapeamento de namespace XAML feito pelo XAML do seu aplicativo.  
+- Use um nome totalmente qualificado do assembly com nome forte em qualquer mapeamento de namespace XAML feito pelo XAML do seu aplicativo.  
   
--   Restringir o assembly mapeando para um conjunto fixo de assemblies de referência, com a construção de um determinado <xref:System.Xaml.XamlSchemaContext> para seu XAML leitores e XAML do objeto gravadores. Consulte <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+- Restringir o assembly mapeando para um conjunto fixo de assemblies de referência, com a construção de um determinado <xref:System.Xaml.XamlSchemaContext> para seu XAML leitores e XAML do objeto gravadores. Consulte <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>Mapeamento de tipo XAML e o tipo de acesso de sistema  
  XAML dá suporte a seu próprio sistema de tipo, que é um par para como o CLR implementa o sistema de tipo CLR básico de várias maneiras. No entanto, para determinados aspectos de reconhecimento de tipo no qual você está tomando decisões de confiança sobre um tipo com base em suas informações de tipo, você deve adiar as informações de tipo no CLR, tipos de suporte. Isso ocorre porque alguns dos recursos de relatório específicos do sistema de tipo XAML são deixadas abertas como métodos virtuais e, portanto, não são totalmente sob o controle das implementações de serviços de XAML do .NET Framework do originais. Esses pontos de extensibilidade existem porque o sistema de tipo XAML é extensível, para corresponder a extensibilidade do XAML em si e suas possíveis estratégias alternativas de mapeamento de tipo versus a implementação do padrão baseado em CLR e o contexto de esquema XAML padrão. Para obter mais informações, consulte as notas específicas em diversas propriedades de <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  

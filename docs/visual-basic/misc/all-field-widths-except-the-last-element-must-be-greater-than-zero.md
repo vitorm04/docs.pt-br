@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
 ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940654"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero
 Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero. Uma largura de campo que menor que ou igual a zero no último elemento indica que o último campo é de comprimento variável.  
@@ -18,7 +18,7 @@ Todas as larguras de campo, exceto o último elemento, devem ser maiores que zer
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Defina a largura do campo como o tamanho correto.  
+- Defina a largura do campo como o tamanho correto.  
   
 ## <a name="see-also"></a>Consulte também
 

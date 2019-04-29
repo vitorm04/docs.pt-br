@@ -9,11 +9,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
 ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937937"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Sistemas de Ajuda em aplicativos do Windows Forms
 Uma das cortesias mais importantes que você, como desenvolvedor de aplicativos, pode fornecer aos seus usuários com é um sistema de Ajuda competente. Esse é o local que eles procuram quando ficam confusos ou desorientados. É fácil fornecer um sistema de Ajuda em um aplicativo baseado no Windows usando o [componente HelpProvider](../controls/helpprovider-component-windows-forms.md).  

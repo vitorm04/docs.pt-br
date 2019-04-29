@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787849"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como: criar uma associação personalizada utilizando o SecurityBindingElement
 Windows Communication Foundation (WCF) inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem flexibilidade total durante a configuração de todas as opções de segurança que o WCF oferece suporte. Este tópico demonstra como criar uma ligação personalizada diretamente de elementos de ligação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) inclui várias associações fornecidas p
   
  Classes adicionais são usadas quando a segurança em nível de transporte é fornecida:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Necessário de elementos de associação  
  Há um grande número de elementos de associação possíveis que podem ser combinadas em uma associação. Nem todas essas combinações são válidas. Esta seção descreve os elementos necessários que devem estar presentes em uma associação de segurança.  
   
  Associações de segurança válido dependem de muitos fatores, incluindo o seguinte:  
   
--   Modo de segurança.  
+- Modo de segurança.  
   
--   Protocolo de transporte.  
+- Protocolo de transporte.  
   
--   O padrão de troca mensagens (MEP) especificado no contrato.  
+- O padrão de troca mensagens (MEP) especificado no contrato.  
   
  A tabela a seguir mostra as configurações de pilha do elemento de associação válida para cada combinação de fatores anteriores. Observe que esses são os requisitos mínimos. Você pode adicionar elementos de ligação adicionais para associação, como elementos de associação, elementos de associação da transação e outros elementos de associação de codificação de mensagem.  
   

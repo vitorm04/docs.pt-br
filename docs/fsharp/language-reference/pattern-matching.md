@@ -3,11 +3,11 @@ title: Correspondência padrão
 description: Saiba como os padrões são usados no F# para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795454"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -37,15 +37,15 @@ Padrões suportados são mostrados na tabela a seguir. Em tempo de execução, a
 |`as` Padrão|*padrão de* como *identificador*|`(a, b) as tuple1`|
 |OU padrão|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |E o padrão|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Padrão constante|*identificador* :: *identificador da lista*|`h :: t`|
-|Padrão de lista|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
-|Padrão de matriz|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Padrão posto entre parênteses|( *padrão* )|`( a )`|
-|Padrão de tupla|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|Padrão de registro|{ *identifier1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|Padrão constante|*identifier* :: *list-identifier*|`h :: t`|
+|Padrão de lista|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
+|Padrão de matriz|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Padrão posto entre parênteses|( *pattern* )|`( a )`|
+|Padrão de tupla|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
+|Padrão de registro|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |Padrão de curinga|_|`_`|
-|Padrão juntamente com a anotação de tipo|*padrão de* : *tipo*|`a : int`|
-|Padrão de teste de tipo|:? *tipo de* [como *identificador* ]|`:? System.DateTime as dt`|
+|Padrão juntamente com a anotação de tipo|*pattern* : *type*|`a : int`|
+|Padrão de teste de tipo|:? *type* [ as *identifier* ]|`:? System.DateTime as dt`|
 |Padrão zero|nulo|`null`|
 
 ## <a name="constant-patterns"></a>Padrões constante

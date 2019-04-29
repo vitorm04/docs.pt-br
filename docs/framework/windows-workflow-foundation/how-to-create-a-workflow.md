@@ -3,11 +3,11 @@ title: 'Como: criar um fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773308"
 ---
 # <a name="how-to-create-a-workflow"></a>Como: criar um fluxo de trabalho
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Os tópicos nesta seção passa pela criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.Flowchart> atividade e atividades personalizadas do anterior [como: Criar uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número. Somente um dos tópicos nesta seção é necessário para concluir o tutorial; você deve escolher o estilo que os interesses você e seguem essa etapa. No entanto, você pode concluir todos os tópicos se desejado.  

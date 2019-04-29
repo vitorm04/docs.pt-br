@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36792d01ebdad72271a8b0597a33d83cab34780e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789578"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>Enumeração CLSID_RESOLUTION_FLAGS
 Contém valores que indicam como o common language runtime (CLR) deve resolver uma `CLSID`.  

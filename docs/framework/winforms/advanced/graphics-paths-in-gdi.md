@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938122"
 ---
 # <a name="graphics-paths-in-gdi"></a>demarcadores de elementos gráficos no GDI+
 Os demarcadores são formados combinando linhas, retângulos e curvas simples. Lembre-se do [visão geral de elementos gráficos vetoriais](vector-graphics-overview.md) que os seguintes blocos de construção básicos provaram para ser mais útil para desenhar imagens:  
   
--   Linhas  
+- Linhas  
   
--   Retângulos  
+- Retângulos  
   
--   Elipses  
+- Elipses  
   
--   Arcos  
+- Arcos  
   
--   Polígonos  
+- Polígonos  
   
--   Splines cardinais  
+- Splines cardinais  
   
--   Splines de Bézier  
+- Splines de Bézier  
   
  No GDI+, a <xref:System.Drawing.Drawing2D.GraphicsPath> objeto permite que você colete uma sequência desses blocos de construção em uma única unidade. Toda a sequência de linhas, retângulos, polígonos e curvas pode então ser desenhada com uma chamada para o <xref:System.Drawing.Graphics.DrawPath%2A> método da <xref:System.Drawing.Graphics> classe. A ilustração a seguir mostra um demarcador criado pela combinação de uma linha, um arco, uma spline de Bézier e uma spline cardinal.  
   

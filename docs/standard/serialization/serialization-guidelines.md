@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794297"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -32,22 +32,22 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
 ## <a name="guidelines"></a>Diretrizes  
   
--   Pense sobre a serialização ao criar novos tipos.  
+- Pense sobre a serialização ao criar novos tipos.  
   
      A serialização é uma questão de design importante a ser considerada para qualquer tipo, pois os programas talvez precisem persistir ou transmitir instâncias do tipo.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Escolhendo a tecnologia de serialização correta que receberá suporte  
  Qualquer tipo específico pode oferecer suporte a nenhuma, uma ou mais tecnologias de serialização.  
   
--   CONSIDERE dar suporte à *serialização de contrato de dados* se houver possibilidade de que as instâncias do seu tipo precisem ser persistentes ou usadas nos Serviços Web.  
+- CONSIDERE dar suporte à *serialização de contrato de dados* se houver possibilidade de que as instâncias do seu tipo precisem ser persistentes ou usadas nos Serviços Web.  
   
--   CONSIDERE dar suporte à *serialização XML* em vez da ou além da serialização do contrato de dados se você precisar ter mais controle sobre o formato XML gerado quando o tipo for serializado.  
+- CONSIDERE dar suporte à *serialização XML* em vez da ou além da serialização do contrato de dados se você precisar ter mais controle sobre o formato XML gerado quando o tipo for serializado.  
   
      Isso talvez seja necessário em alguns cenários de interoperabilidade no qual você precise usar uma construção XML para a qual não haja suporte na serialização do contrato de dados, por exemplo, para gerar atributos XML.  
   
--   CONSIDERE dar suporte à *serialização em tempo de execução* se as instâncias do tipo precisarem ultrapassar os limites da comunicação remota .NET.  
+- CONSIDERE dar suporte à *serialização em tempo de execução* se as instâncias do tipo precisarem ultrapassar os limites da comunicação remota .NET.  
   
--   EVITE o suporte à serialização em tempo de execução ou à serialização XML apenas por motivos gerais de persistência. Prefira a serialização do contrato de dados em vez disso  
+- EVITE o suporte à serialização em tempo de execução ou à serialização XML apenas por motivos gerais de persistência. Prefira a serialização do contrato de dados em vez disso  
   
 #### <a name="supporting-data-contract-serialization"></a>Dando suporte à serialização do contrato de dados  
  Os tipos podem dar suporte à serialização do contrato de dados aplicando o <xref:System.Runtime.Serialization.DataContractAttribute> ao tipo e o <xref:System.Runtime.Serialization.DataMemberAttribute> aos membros (campos e propriedades) do tipo.  

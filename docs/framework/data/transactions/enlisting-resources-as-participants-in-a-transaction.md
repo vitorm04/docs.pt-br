@@ -1,18 +1,18 @@
 ---
-title: Inscrição de recursos como participantes em uma transação
+title: Inscrever recursos como participantes em uma transação
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
 ms.openlocfilehash: 98872bd3ccddb1696b37eace0e28156cdbe002dc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793725"
 ---
-# <a name="enlisting-resources-as-participants-in-a-transaction"></a>Inscrição de recursos como participantes em uma transação
+# <a name="enlisting-resources-as-participants-in-a-transaction"></a>Inscrever recursos como participantes em uma transação
 
 Cada recurso que participa de uma transação é gerenciado por um Gerenciador de recursos, as ações são coordenadas por um Gerenciador de transações. A coordenação é feita por meio de notificações para assinantes que tem se inscrito em uma transação por meio do Gerenciador de transações.
 

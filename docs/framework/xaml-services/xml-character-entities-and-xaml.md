@@ -21,11 +21,11 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938704"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entidades e XAML de caractere XML
 XAML usa entidades de caracteres definidas no XML para caracteres especiais. Este tópico descreve algumas entidades de caractere específico e considerações gerais para outros conceitos XML em XAML.  

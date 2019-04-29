@@ -5,11 +5,11 @@ helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
 ms.openlocfilehash: b7543d14ba39d854b5a2c3f4d0d19b9a457ea89b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770845"
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>Como: Verificar se um GridSplitter está visível
 Este exemplo mostra como certificar-se um <xref:System.Windows.Controls.GridSplitter> controle não está oculto pelos outros controles em um <xref:System.Windows.Controls.Grid>.  
@@ -19,15 +19,15 @@ Este exemplo mostra como certificar-se um <xref:System.Windows.Controls.GridSpli
   
  Para impedir que oculta <xref:System.Windows.Controls.GridSplitter> controles, faça o seguinte.  
   
--   Certifique-se de que <xref:System.Windows.Controls.GridSplitter> controles são a última <xref:System.Windows.Controls.Panel.Children%2A> adicionado para o <xref:System.Windows.Controls.Grid>. A exemplo a seguir mostra a <xref:System.Windows.Controls.GridSplitter> como o último elemento em de <xref:System.Windows.Controls.Panel.Children%2A> coleção do <xref:System.Windows.Controls.Grid>.  
+- Certifique-se de que <xref:System.Windows.Controls.GridSplitter> controles são a última <xref:System.Windows.Controls.Panel.Children%2A> adicionado para o <xref:System.Windows.Controls.Grid>. A exemplo a seguir mostra a <xref:System.Windows.Controls.GridSplitter> como o último elemento em de <xref:System.Windows.Controls.Panel.Children%2A> coleção do <xref:System.Windows.Controls.Grid>.  
   
  [!code-xaml[GridSplitterSnips#GridSplitterLastChild](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterlastchild)]  
   
--   Defina a <xref:System.Windows.Controls.Panel.ZIndexProperty> no <xref:System.Windows.Controls.GridSplitter> para mais de um controle que o ocultaria. O exemplo a seguir fornece as <xref:System.Windows.Controls.GridSplitter> controlar um maior <xref:System.Windows.Controls.Panel.ZIndexProperty> que o <xref:System.Windows.Controls.Button> controle.  
+- Defina a <xref:System.Windows.Controls.Panel.ZIndexProperty> no <xref:System.Windows.Controls.GridSplitter> para mais de um controle que o ocultaria. O exemplo a seguir fornece as <xref:System.Windows.Controls.GridSplitter> controlar um maior <xref:System.Windows.Controls.Panel.ZIndexProperty> que o <xref:System.Windows.Controls.Button> controle.  
   
  [!code-xaml[GridSplitterSnips#GridSplitterZIndex](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterzindex)]  
   
--   Defina as margens no controle que ocultaria o <xref:System.Windows.Controls.GridSplitter> para que o <xref:System.Windows.Controls.GridSplitter> é exposto. O exemplo a seguir define margens em um controle que seria sobreporia e ocultar o <xref:System.Windows.Controls.GridSplitter>.  
+- Defina as margens no controle que ocultaria o <xref:System.Windows.Controls.GridSplitter> para que o <xref:System.Windows.Controls.GridSplitter> é exposto. O exemplo a seguir define margens em um controle que seria sobreporia e ocultar o <xref:System.Windows.Controls.GridSplitter>.  
   
  [!code-xaml[GridSplitterSnips#GridSplitterMargin](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   

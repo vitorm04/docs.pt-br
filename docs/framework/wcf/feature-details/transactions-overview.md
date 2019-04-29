@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
 ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933645"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Visão geral de transações do Windows Communication Foundation
 As transações fornecem uma maneira de agrupar um conjunto de ações ou operações em uma única unidade indivisível de execução. Uma transação é uma coleção de operações com as seguintes propriedades:  
   
--   Atomicidade. Isso garante que todas as atualizações concluídas em uma transação específica são confirmadas e tornam-se duráveis ou eles são todos anulados e revertidos ao estado anterior.  
+- Atomicidade. Isso garante que todas as atualizações concluídas em uma transação específica são confirmadas e tornam-se duráveis ou eles são todos anulados e revertidos ao estado anterior.  
   
--   Consistência. Isso garante que as alterações feitas em uma transação representam uma transformação de um estado consistente para outro. Por exemplo, uma transação que transfere dinheiro de uma conta bancária para uma conta de economias não altera a quantidade de dinheiro na conta bancária geral.  
+- Consistência. Isso garante que as alterações feitas em uma transação representam uma transformação de um estado consistente para outro. Por exemplo, uma transação que transfere dinheiro de uma conta bancária para uma conta de economias não altera a quantidade de dinheiro na conta bancária geral.  
   
--   Isolamento. Isso impede que uma transação de observar as alterações não confirmadas que pertencem a outras transações simultâneas. O isolamento fornece uma abstração de simultaneidade, garantindo uma transação não pode ter um impacto inesperado na execução de outra transação.  
+- Isolamento. Isso impede que uma transação de observar as alterações não confirmadas que pertencem a outras transações simultâneas. O isolamento fornece uma abstração de simultaneidade, garantindo uma transação não pode ter um impacto inesperado na execução de outra transação.  
   
--   Durabilidade. Isso significa que, depois de confirmado, atualizações para recursos gerenciados (como um registro de banco de dados) será persistentes no caso de falhas.  
+- Durabilidade. Isso significa que, depois de confirmado, atualizações para recursos gerenciados (como um registro de banco de dados) será persistentes no caso de falhas.  
   
  Windows Communication Foundation (WCF) oferece um conjunto avançado de recursos que permitem a criação de transações distribuídas em seu aplicativo de serviço Web.  
   
@@ -32,11 +32,11 @@ As transações fornecem uma maneira de agrupar um conjunto de ações ou opera�
   
  Atributos de transação no <xref:System.ServiceModel> namespace permitem que você faça o seguinte:  
   
--   Configurar tempos limite de transação e a filtragem no nível de isolamento usando o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo.  
+- Configurar tempos limite de transação e a filtragem no nível de isolamento usando o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo.  
   
--   Habilitar a funcionalidade de transações e configurar o comportamento de conclusão de transações usando o <xref:System.ServiceModel.OperationBehaviorAttribute> atributo.  
+- Habilitar a funcionalidade de transações e configurar o comportamento de conclusão de transações usando o <xref:System.ServiceModel.OperationBehaviorAttribute> atributo.  
   
--   Use o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> atributos em um método de contrato para exigir, permitir ou negar o fluxo de transações.  
+- Use o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> atributos em um método de contrato para exigir, permitir ou negar o fluxo de transações.  
   
  Para obter mais informações, consulte [atributos de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   

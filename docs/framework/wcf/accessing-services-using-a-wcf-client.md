@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782428"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Usando um cliente WCF para acessar um serviço
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Muitas exceções geradas por um cliente WCF são causadas por uma exceção no serviço. Alguns exemplos disso são:
 
--   <xref:System.Net.Sockets.SocketException>: Uma conexão existente foi fechada forçadamente pelo host remoto.
+- <xref:System.Net.Sockets.SocketException>: Uma conexão existente foi fechada forçadamente pelo host remoto.
 
--   <xref:System.ServiceModel.CommunicationException>: A conexão subjacente foi fechado inesperadamente.
+- <xref:System.ServiceModel.CommunicationException>: A conexão subjacente foi fechado inesperadamente.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: A conexão de soquete foi anulada. Isso pode ser causado por um erro ao processar a mensagem, um tempo limite de recebimento foi excedido pelo host remoto ou um problema de recurso de rede subjacente.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: A conexão de soquete foi anulada. Isso pode ser causado por um erro ao processar a mensagem, um tempo limite de recebimento foi excedido pelo host remoto ou um problema de recurso de rede subjacente.
 
 Quando esses tipos de exceções ocorrem, a melhor maneira de resolver o problema é ativar o rastreamento no lado do serviço e determinar qual exceção ocorreu lá. Para obter mais informações sobre rastreamento, consulte [rastreamento](../../../docs/framework/wcf/diagnostics/tracing/index.md) e [usando o rastreamento para solucionar problemas de seu aplicativo](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

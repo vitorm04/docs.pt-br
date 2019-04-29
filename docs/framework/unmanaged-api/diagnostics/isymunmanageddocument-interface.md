@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939770"
 ---
 # <a name="isymunmanageddocument-interface"></a>Interface ISymUnmanagedDocument
 Representa um documento referenciado por um repositório de símbolos. Um documento é definido por um localizador recursos uniforme (URL) e um GUID de tipo de documento. Você pode localizar o documento, independentemente de como ele é armazenado usando a URL e GUID do tipo de documento. Você pode armazenar a origem do documento no repositório de símbolos e recuperá-lo por meio dessa interface.  

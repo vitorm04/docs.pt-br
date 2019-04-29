@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933842"
 ---
 # <a name="how-to-use-data-protection"></a>Como: usar a proteção de dados
 O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe permite criptografar dados usando as informações de conta de usuário atual ou do computador.  Quando você usa a DPAPI, você aliviar o problema difícil de explicitamente gerar e armazenar uma chave de criptografia.  
@@ -62,9 +62,9 @@ O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Incluir uma referência a `System.Security.dll`.  
+- Incluir uma referência a `System.Security.dll`.  
   
--   Incluir o <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, e <xref:System.Text> namespace.  
+- Incluir o <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, e <xref:System.Text> namespace.  
   
 ## <a name="see-also"></a>Consulte também
 

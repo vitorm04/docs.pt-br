@@ -3,11 +3,11 @@ title: Interoperabilidade com serviços corporativos e transações COM+
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793647"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilidade com serviços corporativos e transações COM+
 O <xref:System.Transactions> namespace oferece suporte a interoperabilidade entre objetos de transação criados usando este namespace e transações criadas por meio do COM+.  
@@ -29,9 +29,9 @@ O <xref:System.Transactions> namespace oferece suporte a interoperabilidade entr
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Especifica os requisitos a seguir:  
   
--   Quando <xref:System.Transactions.Transaction.Current%2A> estiver marcada, <xref:System.Transactions> deve oferecer suporte a transações no contexto de COM+ se detectar que ele seja executado em um contexto diferente o contexto padrão. Observe que o contexto padrão não pode conter uma transação. Portanto, no contexto padrão, mesmo com <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, a transação armazenada no armazenamento local de thread usado pelo <xref:System.Transactions> é retornado para <xref:System.Transactions.Transaction.Current%2A>.  
+- Quando <xref:System.Transactions.Transaction.Current%2A> estiver marcada, <xref:System.Transactions> deve oferecer suporte a transações no contexto de COM+ se detectar que ele seja executado em um contexto diferente o contexto padrão. Observe que o contexto padrão não pode conter uma transação. Portanto, no contexto padrão, mesmo com <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, a transação armazenada no armazenamento local de thread usado pelo <xref:System.Transactions> é retornado para <xref:System.Transactions.Transaction.Current%2A>.  
   
--   Se um novo <xref:System.Transactions.TransactionScope> objeto é criado e a criação ocorre em um contexto diferente do contexto padrão, a transação atual para o <xref:System.Transactions.TransactionScope> objeto deve ser refletido no COM+. Nesse caso, <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se comporta como <xref:System.Transactions.EnterpriseServicesInteropOption.Full> que ele cria um novo contexto de COM+.  
+- Se um novo <xref:System.Transactions.TransactionScope> objeto é criado e a criação ocorre em um contexto diferente do contexto padrão, a transação atual para o <xref:System.Transactions.TransactionScope> objeto deve ser refletido no COM+. Nesse caso, <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se comporta como <xref:System.Transactions.EnterpriseServicesInteropOption.Full> que ele cria um novo contexto de COM+.  
   
  Além disso quando <xref:System.Transactions.Transaction.Current%2A> é definido em ambos <xref:System.Transactions.EnterpriseServicesInteropOption.Full> e <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, esses dois modos significam que <xref:System.Transactions.Transaction.Current%2A> não pode ser definida diretamente.  Qualquer tentativa de definir <xref:System.Transactions.Transaction.Current%2A> diferente de criar diretamente uma <xref:System.Transactions.TransactionScope> resulta em uma <xref:System.InvalidOperationException>. O <xref:System.Transactions.EnterpriseServicesInteropOption> valor de enumeração é herdada por novos escopos de transação que não especificar explicitamente o valor a ser usado. Por exemplo, se você criar um novo <xref:System.Transactions.TransactionScope> objeto com <xref:System.Transactions.EnterpriseServicesInteropOption.Full>e, em seguida, crie um segundo <xref:System.Transactions.TransactionScope> do objeto, mas não especificam um <xref:System.Transactions.EnterpriseServicesInteropOption> valor, a segunda <xref:System.Transactions.TransactionScope> objeto também tem um <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.  
   
@@ -39,11 +39,11 @@ O <xref:System.Transactions> namespace oferece suporte a interoperabilidade entr
   
 1. <xref:System.Transactions.Transaction.Current%2A> é verificado para ver se há uma transação. Essa verificação resulta em:  
   
-    -   Uma verificação para ver se há um escopo.  
+    - Uma verificação para ver se há um escopo.  
   
-    -   Se houver um escopo, o valor da <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração passada quando o escopo foi criado inicialmente é verificada.  
+    - Se houver um escopo, o valor da <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração passada quando o escopo foi criado inicialmente é verificada.  
   
-    -   Se o <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração é definida como <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, a transação COM+ (<xref:System.EnterpriseServices> transação) tem precedência sobre o <xref:System.Transactions> transações no armazenamento local de thread gerenciado.  
+    - Se o <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração é definida como <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, a transação COM+ (<xref:System.EnterpriseServices> transação) tem precedência sobre o <xref:System.Transactions> transações no armazenamento local de thread gerenciado.  
   
          Se o valor for definido como <xref:System.Transactions.EnterpriseServicesInteropOption.None>, o <xref:System.Transactions> transações no armazenamento local de thread gerenciado tem precedência.  
   
@@ -53,11 +53,11 @@ O <xref:System.Transactions> namespace oferece suporte a interoperabilidade entr
   
 3. Se uma nova transação deve ser criado, os seguintes valores de <xref:System.Transactions.EnterpriseServicesInteropOption> resultar em:  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: uma transação associada a um contexto de COM+ é criada.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: uma transação associada a um contexto de COM+ é criada.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: um <xref:System.Transactions> transação é criada.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>: um <xref:System.Transactions> transação é criada.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: se houver um contexto de COM+, uma transação é criada e anexada ao contexto.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: se houver um contexto de COM+, uma transação é criada e anexada ao contexto.  
   
  A tabela a seguir ilustra o contexto do Enterprise Services (ES) e um escopo transacional que exige uma transação usando o <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração.  
   
@@ -75,6 +75,6 @@ O <xref:System.Transactions> namespace oferece suporte a interoperabilidade entr
   
  Na tabela anterior:  
   
--   ST significa que a transação de ambiente do escopo seja gerenciada por <xref:System.Transactions>separada de qualquer <xref:System.EnterpriseServices> transação do contexto que pode estar presente.  
+- ST significa que a transação de ambiente do escopo seja gerenciada por <xref:System.Transactions>separada de qualquer <xref:System.EnterpriseServices> transação do contexto que pode estar presente.  
   
--   ES significa que a transação de ambiente do escopo é igual a <xref:System.EnterpriseServices> transação do contexto.
+- ES significa que a transação de ambiente do escopo é igual a <xref:System.EnterpriseServices> transação do contexto.

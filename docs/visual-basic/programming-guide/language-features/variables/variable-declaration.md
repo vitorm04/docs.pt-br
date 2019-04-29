@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756995"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaração de variável no Visual Basic
 Você declara uma variável para especificar seu nome e características. A instrução de declaração para variáveis é a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Sua localização e conteúdo determinam as características da variável.  
@@ -42,15 +42,15 @@ Você declara uma variável para especificar seu nome e características. A inst
 ## <a name="declaring-data-type"></a>Declarando o tipo de dados  
  O [como](../../../../visual-basic/language-reference/statements/as-clause.md) cláusula na instrução de declaração permite que você defina o tipo de dados ou o tipo de objeto da variável que você está declarando. Você pode especificar qualquer um dos seguintes tipos para uma variável:  
   
--   Tipo de dados um elementar, como `Boolean`, `Long`, ou `Decimal`  
+- Tipo de dados um elementar, como `Boolean`, `Long`, ou `Decimal`  
   
--   Um tipo de dados compostos, como uma matriz ou estrutura  
+- Um tipo de dados compostos, como uma matriz ou estrutura  
   
--   Um tipo de objeto ou classe, definida em seu aplicativo ou em outro aplicativo  
+- Um tipo de objeto ou classe, definida em seu aplicativo ou em outro aplicativo  
   
--   Um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, como <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
+- Um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, como <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
   
--   Tipo de uma interface, como <xref:System.IComparable> ou <xref:System.IDisposable>  
+- Tipo de uma interface, como <xref:System.IComparable> ou <xref:System.IDisposable>  
   
  Você pode declarar diversas variáveis em uma instrução sem ter que repetir o tipo de dados. Nas instruções a seguir, as variáveis `i`, `j`, e `k` são declaradas como tipo `Integer`, `l` e `m` como `Long`, e `x` e `y` como `Single`:  
   

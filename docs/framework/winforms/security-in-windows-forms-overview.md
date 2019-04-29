@@ -9,11 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801037"
 ---
 # <a name="security-in-windows-forms-overview"></a>Visão geral da Segurança do Windows Forms
 Antes do lançamento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], todo código em execução no computador de um usuário tinha os mesmos direitos ou permissões que esse usuário para acessar recursos do computador. Por exemplo, se o usuário era autorizado a acessar o sistema de arquivos, o código era autorizado a acessar o sistema de arquivos. Se o usuário era autorizado a acessar um banco de dados, o código era autorizado a acessar o banco de dados. Embora esses direitos ou permissões possam ser aceitáveis para código em executáveis que o usuário explicitamente instalou no computador local, eles podem não ser aceitáveis para código potencialmente mal-intencionado proveniente da Internet ou de uma intranet local. Esse código não deveria ser capaz de acessar recursos do computador do usuário sem permissão.  

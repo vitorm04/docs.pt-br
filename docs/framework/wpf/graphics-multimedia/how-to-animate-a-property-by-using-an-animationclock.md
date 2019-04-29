@@ -9,22 +9,22 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761007"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Como: Animar uma propriedade usando um AnimationClock
 Este exemplo mostra como usar <xref:System.Windows.Media.Animation.Clock> objetos para animar uma propriedade.  
   
  Existem três maneiras de animar uma propriedade de dependência:  
   
--   Criar uma <xref:System.Windows.Media.Animation.AnimationTimeline> e associá-lo com essa propriedade usando um <xref:System.Windows.Media.Animation.Storyboard>.  
+- Criar uma <xref:System.Windows.Media.Animation.AnimationTimeline> e associá-lo com essa propriedade usando um <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Usar o objeto <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método para aplicar uma única <xref:System.Windows.Media.Animation.AnimationTimeline> para uma propriedade de destino.  
+- Usar o objeto <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método para aplicar uma única <xref:System.Windows.Media.Animation.AnimationTimeline> para uma propriedade de destino.  
   
--   Criar uma <xref:System.Windows.Media.Animation.AnimationClock> de um <xref:System.Windows.Media.Animation.AnimationTimeline> e aplicá-la a uma propriedade.  
+- Criar uma <xref:System.Windows.Media.Animation.AnimationClock> de um <xref:System.Windows.Media.Animation.AnimationTimeline> e aplicá-la a uma propriedade.  
   
  <xref:System.Windows.Media.Animation.Storyboard> objetos e o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método permitem animar propriedades sem criar e distribuir relógios diretamente (para obter exemplos, consulte [animar uma propriedade usando um Storyboard](how-to-animate-a-property-by-using-a-storyboard.md) e [animar uma propriedade sem Usar um Storyboard](how-to-animate-a-property-without-using-a-storyboard.md)); relógios são criados e distribuídos para você automaticamente.  
   

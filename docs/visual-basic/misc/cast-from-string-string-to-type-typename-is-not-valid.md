@@ -5,11 +5,11 @@ f1_keywords:
 - vbrInvalidCast_FromStringTo
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
 ms.openlocfilehash: 6ce6f9a6f29b29ba3404ffee61f4baf962bba316
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941655"
 ---
 # <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>Conversão de cadeia de caracteres &quot; \<cadeia de caracteres >&quot; para o tipo '\<typename >' não é válido
 Uma tentativa de converter uma variável de cadeia de caracteres para outro tipo não é válida.  

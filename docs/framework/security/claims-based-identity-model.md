@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792803"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidade baseada em declarações
 Quando você cria aplicativos com reconhecimento de declarações, a identidade do usuário é representada em seu aplicativo como um conjunto de declarações. Uma reivindicação pode ser o nome do usuário, outra pode ser um endereço de email. A ideia é que um sistema externo de identidade seja configurado para dar ao seu aplicativo tudo que ele precisa saber sobre o usuário com cada solicitação que ele faz, juntamente com a segurança criptográfica que os dados de identidade você recebe de uma fonte confiável.  
   
  Nesse modelo, o logon único é muito mais fácil de obter, e seu aplicativo não fica mais responsável pelo seguinte:  
   
--   Autenticar os usuários.  
+- Autenticar os usuários.  
   
--   Armazenar contas de usuário e senhas.  
+- Armazenar contas de usuário e senhas.  
   
--   Chamar diretórios corporativos para pesquisar detalhes da identidade do usuário.  
+- Chamar diretórios corporativos para pesquisar detalhes da identidade do usuário.  
   
--   Integrar-se com sistemas de identidade de outras plataformas ou empresas.  
+- Integrar-se com sistemas de identidade de outras plataformas ou empresas.  
   
  Nesse modelo, o aplicativo toma decisões relacionadas à identidade com base nas declarações fornecidas pelo sistema que autenticou o usuário. Isso pode ser qualquer coisa, desde a personalização simples do aplicativo com o nome do usuário a autorizar o usuário a acessar recursos de maior valor em seu aplicativo.  
   
  Este tópico fornece as seguintes informações:  
   
--   [Introdução à identidade baseada em declarações](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Introdução à identidade baseada em declarações](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Cenário básico para um modelo de identidade baseada em declarações](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Cenário básico para um modelo de identidade baseada em declarações](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Introdução à identidade baseada em declarações  

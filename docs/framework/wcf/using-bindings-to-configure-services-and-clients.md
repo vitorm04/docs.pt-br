@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791372"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Usando associações para configurar serviços e clientes
 Associações são objetos que especificam os detalhes de comunicação necessários para se conectar a um ponto de extremidade. Mais especificamente, as associações contêm informações de configuração que são usadas para criar o tempo de execução do cliente ou serviço, definindo as especificidades de transportes, formatos de transmissão (codificação de mensagens) e de protocolo para o canal de cliente ou de ponto de extremidade do respectivo. Para criar um serviço Windows Communication Foundation (WCF) ativo, cada ponto de extremidade no serviço requer uma associação. Este tópico explica o que são associações, como elas são definidas e como uma ligação específica é especificada para um ponto de extremidade.  
@@ -29,13 +29,13 @@ Associações são objetos que especificam os detalhes de comunicação necessá
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
  O WCF inclui um conjunto de associações fornecidas pelo sistema que são projetados para abranger a maioria dos cenários e requisitos do aplicativo. As classes a seguir representam alguns exemplos das associações fornecidas pelo sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que está em conformidade com o WS-I Basic Profile 1.1 especificação (por exemplo, os serviços de Web do ASP.NET [ASMX]-com base em serviços).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que está em conformidade com o WS-I Basic Profile 1.1 especificação (por exemplo, os serviços de Web do ASP.NET [ASMX]-com base em serviços).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Protocolos de especificações de serviços de um protocolo HTTP associação adequada para se conectar a pontos de extremidade que estão em conformidade com a Web.  
+- <xref:System.ServiceModel.WSHttpBinding>: Protocolos de especificações de serviços de um protocolo HTTP associação adequada para se conectar a pontos de extremidade que estão em conformidade com a Web.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o binário do .NET, codificação e de delimitação de quadros tecnologias em conjunto com o Windows chamado transporte de pipe para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o binário do .NET, codificação e de delimitação de quadros tecnologias em conjunto com o Windows chamado transporte de pipe para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Usa o binário do .NET, codificação e as tecnologias em conjunto com o enfileiramento de mensagens (também conhecido como MSMQ) de delimitação de quadros para criar conexões de mensagem na fila com outros pontos de extremidade do WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa o binário do .NET, codificação e as tecnologias em conjunto com o enfileiramento de mensagens (também conhecido como MSMQ) de delimitação de quadros para criar conexões de mensagem na fila com outros pontos de extremidade do WCF.  
   
  Para obter uma lista completa das associações fornecidas pelo sistema, com descrições, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -52,9 +52,9 @@ Associações são objetos que especificam os detalhes de comunicação necessá
 ## <a name="code-and-configuration"></a>Configuração e código  
  Você pode definir ou configurar as associações por meio de código ou na configuração. Essas duas abordagens são independentes do tipo de associação usado, por exemplo, se você estiver usando um fornecido pelo sistema ou uma <xref:System.ServiceModel.Channels.CustomBinding> associação. Em geral, usando código lhe dá controle total sobre a definição de uma associação ao compilar. Por outro lado, usando a configuração, permite que um administrador do sistema ou o usuário de um serviço WCF ou o cliente para alterar os parâmetros de associações. Essa flexibilidade geralmente é desejável porque não há nenhuma maneira de prever os requisitos de máquina específica e as condições em que um aplicativo WCF deve ser implantada da rede. Separar as informações de associação (e endereçamento) do código permite que os administradores alterem os detalhes de associação sem ter que recompilar ou reimplantar o aplicativo. Observe que, se a associação é definida no código, ele substitui quaisquer definições de configuração feitas no arquivo de configuração. Para obter exemplos dessas abordagens, consulte os tópicos a seguir:  
   
--   [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fornece um exemplo de como criar uma associação no código.  
+- [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fornece um exemplo de como criar uma associação no código.  
   
--   [Tutorial: Criar um cliente do Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) fornece um exemplo de criação de um cliente por meio da configuração.  
+- [Tutorial: Criar um cliente do Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) fornece um exemplo de criação de um cliente por meio da configuração.  
   
 ## <a name="see-also"></a>Consulte também
 

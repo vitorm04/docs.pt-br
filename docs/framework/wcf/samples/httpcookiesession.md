@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752731"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre serviços Windows Communication Foundation (WCF) e os clientes do ASMX ou entre clientes do WCF e serviços ASMX.  
   
  Quando um cliente chama um método Web em um Web service ASMX que é baseada em sessão, o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mecanismo faz o seguinte:  
   
--   Gera uma ID exclusiva (ID de sessão).  
+- Gera uma ID exclusiva (ID de sessão).  
   
--   Gera o objeto de sessão e a associa a ID exclusiva.  
+- Gera o objeto de sessão e a associa a ID exclusiva.  
   
--   Adiciona a ID exclusiva para um cabeçalho de resposta HTTP Set-Cookie e o envia ao cliente.  
+- Adiciona a ID exclusiva para um cabeçalho de resposta HTTP Set-Cookie e o envia ao cliente.  
   
--   Identifica o cliente em chamadas subsequentes com base na ID de sessão envia a ele.  
+- Identifica o cliente em chamadas subsequentes com base na ID de sessão envia a ele.  
   
  O cliente inclui a ID de sessão em suas solicitações subsequentes para o servidor. O servidor usa a ID de sessão do cliente para carregar o objeto de sessão apropriado para o contexto HTTP atual.  
   
@@ -39,7 +39,7 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
 ## <a name="service-channel"></a>Canal de serviço  
  O exemplo fornece um canal de serviço no `HttpCookieReplySessionChannelListener` classe. Essa classe implementa a <xref:System.ServiceModel.Channels.IChannelListener> interface e converte os <xref:System.ServiceModel.Channels.IReplyChannel> canal da menor na pilha de canais para um <xref:System.ServiceModel.Channels.IReplySessionChannel>. Esse processo pode ser dividido nas seguintes partes:  
   
--   Quando o ouvinte de canais é aberto, ele aceita um canal interno de seu ouvinte interno. Como o ouvinte interno é um ouvinte de datagrama e o tempo de vida de um canal aceito é dissociado do tempo de vida do ouvinte, podemos fechar o ouvinte interno e apenas manter o canal interno  
+- Quando o ouvinte de canais é aberto, ele aceita um canal interno de seu ouvinte interno. Como o ouvinte interno é um ouvinte de datagrama e o tempo de vida de um canal aceito é dissociado do tempo de vida do ouvinte, podemos fechar o ouvinte interno e apenas manter o canal interno  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   Quando o processo de abertura é concluída, configuramos um loop de mensagem para receber mensagens do canal interno.  
+- Quando o processo de abertura é concluída, configuramos um loop de mensagem para receber mensagens do canal interno.  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
     }  
     ```  
   
--   Quando uma mensagem chega, o canal de serviço examina o identificador de sessão e desprovisionar multiplexa as para o canal de sessão apropriado. O ouvinte de canais mantém um dicionário que mapeia os identificadores de sessão para as instâncias de canal de sessão.  
+- Quando uma mensagem chega, o canal de serviço examina o identificador de sessão e desprovisionar multiplexa as para o canal de sessão apropriado. O ouvinte de canais mantém um dicionário que mapeia os identificadores de sessão para as instâncias de canal de sessão.  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

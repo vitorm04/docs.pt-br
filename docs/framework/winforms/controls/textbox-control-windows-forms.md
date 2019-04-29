@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
 ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932503"
 ---
 # <a name="textbox-control-windows-forms"></a>Controle TextBox (Windows Forms)
 Caixas de texto dos Windows Forms são usadas para obter entradas do usuário ou para exibir texto. O controle `TextBox` geralmente é usado para texto editável, embora também possa ser tornado somente leitura. Caixas de texto podem exibir várias linhas, quebrar o texto para o tamanho do controle e adicionar formatação básica. O controle `TextBox` permite um único formato de texto exibido ou inserido no controle.  

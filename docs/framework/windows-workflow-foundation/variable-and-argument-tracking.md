@@ -3,11 +3,11 @@ title: Rastreamento de variável e argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755513"
 ---
 # <a name="variable-and-argument-tracking"></a>Rastreamento de variável e argumento
 Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair dados. Isso fornece um contexto extra para acessar uma execução de postagem de registro de rastreamento. Em [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], você pode extrair qualquer variável ou argumento visível no escopo de qualquer atividade em um fluxo de trabalho usando o rastreamento. Controlando os perfis facilitam extrair dados.  
@@ -15,9 +15,9 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
 ## <a name="variables-and-arguments"></a>Variáveis e argumentos  
  Variáveis e os argumentos são extraídos quando uma atividade se emite um ActivityStateRecord.  Uma variável está disponível para a extração somente se está no escopo da atividade. Uma variável para ser extraído dentro de uma atividade é especificado da seguinte maneira:  
   
--   Se uma variável é especificado pelo nome de variável, então o rastreamento para a variável dentro da atividade sendo controlada e em atividades pai. A variável é procurada no escopo da atividade atual e o escopo pai.  
+- Se uma variável é especificado pelo nome de variável, então o rastreamento para a variável dentro da atividade sendo controlada e em atividades pai. A variável é procurada no escopo da atividade atual e o escopo pai.  
   
--   Se as variáveis a ser extraídos são especificadas usando o nome = "*", em seguida, todas as variáveis dentro da atividade atual que está sendo controlado são extraídas. Variáveis que estão no escopo mas são definidos em atividades pai não são extraídos nesse caso.  
+- Se as variáveis a ser extraídos são especificadas usando o nome = "*", em seguida, todas as variáveis dentro da atividade atual que está sendo controlado são extraídas. Variáveis que estão no escopo mas são definidos em atividades pai não são extraídos nesse caso.  
   
  Para extrair argumentos, os argumentos extraídos dependem de estado da atividade. Quando o estado de uma atividade é executado, então somente `InArguments` está disponível para a extração. Para qualquer outro estado da atividade (zipado, criticado, cancelado), todos os argumentos, InArguments e OutArguments, estão disponíveis para a extração.  
   

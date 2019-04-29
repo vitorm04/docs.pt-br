@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
 ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792204"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Passo a passo: Fornecer itens de menu padrão para um formulário
 Você pode fornecer um menu padrão para os formulários com o <xref:System.Windows.Forms.MenuStrip> controle.  
   
  Este passo a passo demonstra como usar um <xref:System.Windows.Forms.MenuStrip> controle para criar um menu padrão. O formulário também responde quando um usuário seleciona um item de menu. As seguintes tarefas são ilustradas nesta instrução passo a passo:  
   
--   Criando um projeto do Windows Forms.  
+- Criando um projeto do Windows Forms.  
   
--   Criando um menu padrão.  
+- Criando um menu padrão.  
   
--   Criando um <xref:System.Windows.Forms.StatusStrip> controle.  
+- Criando um <xref:System.Windows.Forms.StatusStrip> controle.  
   
--   Manipulação da seleção de item de menu.  
+- Manipulação da seleção de item de menu.  
   
  Quando tiver terminado, você terá um formulário com um menu padrão que exibe as seleções de item de menu em um <xref:System.Windows.Forms.StatusStrip> controle.  
   
@@ -40,7 +40,7 @@ Você pode fornecer um menu padrão para os formulários com o <xref:System.Wind
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para concluir este passo a passo, você precisará de:  
   
--   Permissões suficientes para poder criar e executar projetos de aplicativos dos Windows Forms no computador no qual Visual Studio está instalado.  
+- Permissões suficientes para poder criar e executar projetos de aplicativos dos Windows Forms no computador no qual Visual Studio está instalado.  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
  A primeira etapa é criar o projeto e configurar o formulário.  
@@ -113,11 +113,11 @@ Você pode fornecer um menu padrão para os formulários com o <xref:System.Wind
 ## <a name="next-steps"></a>Próximas etapas  
  Neste passo a passo, você criou um formulário com um menu padrão. Você pode usar o <xref:System.Windows.Forms.ToolStrip> família de controles para muitas outras finalidades:  
   
--   Criar menus de atalho para os controles com <xref:System.Windows.Forms.ContextMenuStrip>. Para obter mais informações, consulte [Visão geral do componente ContextMenu](contextmenu-component-overview-windows-forms.md).  
+- Criar menus de atalho para os controles com <xref:System.Windows.Forms.ContextMenuStrip>. Para obter mais informações, consulte [Visão geral do componente ContextMenu](contextmenu-component-overview-windows-forms.md).  
   
--   Criar um formulário de MDI (interface MDI) de vários documentos com encaixe <xref:System.Windows.Forms.ToolStrip> controles. Para obter mais informações, confira [Passo a passo: Criando um formulário MDI com mesclagem de Menu e controles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+- Criar um formulário de MDI (interface MDI) de vários documentos com encaixe <xref:System.Windows.Forms.ToolStrip> controles. Para obter mais informações, confira [Passo a passo: Criando um formulário MDI com mesclagem de Menu e controles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Dê sua <xref:System.Windows.Forms.ToolStrip> controla uma aparência profissional. Para obter mais informações, confira [Como: Definir o renderizador ToolStrip para um aplicativo](how-to-set-the-toolstrip-renderer-for-an-application.md).  
+- Dê sua <xref:System.Windows.Forms.ToolStrip> controla uma aparência profissional. Para obter mais informações, confira [Como: Definir o renderizador ToolStrip para um aplicativo](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Consulte também
 

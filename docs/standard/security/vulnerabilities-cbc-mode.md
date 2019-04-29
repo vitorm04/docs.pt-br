@@ -1,17 +1,17 @@
 ---
-title: Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
+title: Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento
 description: Saiba como detectar e atenuar as vulnerabilidades de medição de tempo com a descriptografia simétrica de modo Cipher Block Chaining (CBC) usando o preenchimento.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933894"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento
 
 A Microsoft acredita que não é seguro descriptografar dados criptografados com o modo de criptografia simétrica Cipher Block Chaining (CBC) quando o preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto codificado, exceto para muito específica circunstâncias. Essa avaliação baseia-se a pesquisa de criptografia conhecida no momento. 
 

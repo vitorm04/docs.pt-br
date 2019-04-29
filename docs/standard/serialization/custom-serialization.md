@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931736"
 ---
 # <a name="custom-serialization"></a>Serialização personalizada
 A serialização personalizada é o processo de controlar a serialização e a desserialização de um tipo. Controlando a serialização, é possível garantir a compatibilidade de serialização, que é a capacidade de serializar e desserializar entre versões de um tipo sem interromper a funcionalidade básica do tipo. Por exemplo, na primeira versão de um tipo, pode haver apenas dois campos. Na próxima versão de um tipo, vários outros campos são adicionados. No entanto, a segunda versão de um aplicativo deve ser capaz de serializar e desserializar ambos os tipos. As seções a seguir descrevem como controlar a serialização.
@@ -35,13 +35,13 @@ A serialização personalizada é o processo de controlar a serialização e a d
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Executando métodos personalizados durante e após a serialização  
  A prática recomendada e a maneira mais fácil (introduzidas na versão 2.0 do .NET Framework) é aplicar os seguintes atributos a métodos que são usados para corrigir dados durante e após a serialização:  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  Esses atributos permitem que o tipo participe de qualquer uma ou todas as quatro fases dos processos de serialização e desserialização. Os atributos especificam os métodos do tipo que devem ser chamados durante cada fase. Os métodos não acessam o fluxo de serialização. Em vez disso, permitem alterar o objeto antes e depois da serialização, ou antes e depois da desserialização. Os atributos podem ser aplicados a todos os níveis da hierarquia de herança do tipo e cada método é chamado na hierarquia da base para a mais derivada. Esse mecanismo impede a complexidade e os problemas resultantes de se implementar a interface <xref:System.Runtime.Serialization.ISerializable> dando a responsabilidade para serialização e desserialização à implementação mais derivada. Além disso, esse mecanismo permite que os formatadores ignorem a população de campos e de recuperação do fluxo de serialização. Para obter detalhes e exemplos de controle de serialização e desserialização, clique em um dos links anteriores.  
   

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792932"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Windows Identity Foundation (WIF)  
+- Windows Identity Foundation (WIF)  
   
--   ASP.NET  
+- ASP.NET  
   
  Este tópico descreve o cenário da criação de aplicativos Web ASP.NET com reconhecimento de declarações usando o WIF. Geralmente há três participantes em um cenário de aplicativo com reconhecimento de declarações: o aplicativo em si, o usuário final e o STS (Serviço de Token de Segurança). A figura a seguir descreve esse cenário:  
   
@@ -33,19 +33,19 @@ ms.locfileid: "59314542"
   
  STS é um serviço que emite tokens após a autenticação bem-sucedida. A Microsoft oferece dois STSs padrão do setor:  
   
--   [Serviços de Federação do Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Serviços de Federação do Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
  O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O ACS é um serviço de nuvem oferecido como parte da Plataforma Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento Local que faz parte do [ferramenta de identidade e acesso para o Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponível online gratuitamente.  
   
  Para criar seu primeiro aplicativo ASP.NET com reconhecimento de declarações usando o WIF, siga as instruções em uma destas referências:  
   
--   [Como: Criar aplicativo de Web do ASP.NET MVC com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [Como: Criar aplicativo de Web do ASP.NET MVC com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Como: Criar um aplicativo de ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [Como: Criar um aplicativo de ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Consulte também
 

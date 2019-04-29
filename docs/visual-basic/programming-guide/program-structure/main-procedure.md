@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920108"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimento principal no Visual Basic
 Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. Esse procedimento serve como o início do ponto e controle geral para seu aplicativo. O .NET Framework chama seu `Main` procedimento quando ele tiver carregado seu aplicativo e está pronto para transmitir o controle a ele. A menos que você estiver criando um aplicativo do Windows Forms, você deve escrever o `Main` procedimento para aplicativos que executam suas próprias.  
@@ -23,11 +23,11 @@ Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. E
 ## <a name="requirements-for-the-main-procedure"></a>Requisitos para o procedimento principal  
  Um arquivo que é executado em seu próprio (normalmente com uma extensão .exe) deve conter um `Main` procedimento. Uma biblioteca (por exemplo, com extensão. dll) não é executado em seu próprio e não requer um `Main` procedimento. Os requisitos para os diferentes tipos de projetos que você pode criar são da seguinte maneira:  
   
--   Execute aplicativos de console seus próprios, e você deve fornecer pelo menos um `Main` procedimento. .  
+- Execute aplicativos de console seus próprios, e você deve fornecer pelo menos um `Main` procedimento. .  
   
--   Aplicativos de formulários do Windows executados suas próprias. No entanto, o compilador do Visual Basic gera automaticamente um `Main` procedimento como um aplicativo e você não precisará escrevê-lo.  
+- Aplicativos de formulários do Windows executados suas próprias. No entanto, o compilador do Visual Basic gera automaticamente um `Main` procedimento como um aplicativo e você não precisará escrevê-lo.  
   
--   Bibliotecas de classes não exigem um `Main` procedimento. Isso inclui bibliotecas de controle do Windows e bibliotecas de controle de Web. Aplicativos Web são implantados como bibliotecas de classes.  
+- Bibliotecas de classes não exigem um `Main` procedimento. Isso inclui bibliotecas de controle do Windows e bibliotecas de controle de Web. Aplicativos Web são implantados como bibliotecas de classes.  
   
 ## <a name="declaring-the-main-procedure"></a>Declarando o procedimento principal  
  Há quatro maneiras de declarar o `Main` procedimento. Pode levar argumentos ou não, e ele pode retornar um valor ou não.  
@@ -35,7 +35,7 @@ Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. E
 > [!NOTE]
 >  Se você declarar `Main` em uma classe, você deve usar o `Shared` palavra-chave. Em um módulo `Main` não precisa ser `Shared`.  
   
--   A maneira mais simples é declarar uma `Sub` procedimento que não usam argumentos ou retornar um valor.  
+- A maneira mais simples é declarar uma `Sub` procedimento que não usam argumentos ou retornar um valor.  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. E
     End Module  
     ```  
   
--   `Main` também pode retornar um `Integer` valor, que usa o sistema operacional como o código de saída para o seu programa. Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows. Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de um `Sub` procedimento.  
+- `Main` também pode retornar um `Integer` valor, que usa o sistema operacional como o código de saída para o seu programa. Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows. Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de um `Sub` procedimento.  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. E
     End Module  
     ```  
   
--   `Main` também pode tirar uma `String` matriz como um argumento. Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o seu programa. Você pode executar ações diferentes dependendo dos seus valores.  
+- `Main` também pode tirar uma `String` matriz como um argumento. Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o seu programa. Você pode executar ações diferentes dependendo dos seus valores.  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ Todos os aplicativos Visual Basic devem conter um procedimento chamado `Main`. E
     End Module  
     ```  
   
--   Você pode declarar `Main` para examinar os argumentos de linha de comando, mas não retornar um código de saída, da seguinte maneira.  
+- Você pode declarar `Main` para examinar os argumentos de linha de comando, mas não retornar um código de saída, da seguinte maneira.  
   
     ```  
     Module mainModule  

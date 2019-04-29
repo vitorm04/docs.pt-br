@@ -1,21 +1,21 @@
 ---
-title: Executar recuperação
+title: Executar a recuperação
 ms.date: 03/30/2017
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
 ms.openlocfilehash: 149ac6b6162893de830f59b3d18008d8298eab56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793608"
 ---
-# <a name="performing-recovery"></a>Executar recuperação
+# <a name="performing-recovery"></a>Executar a recuperação
 Um Gerenciador de recursos facilita a resolução de inscrições duráveis em uma transação, reenlisting o participante de transação após falha de recurso.  
   
 ## <a name="the-recovery-process"></a>O processo de recuperação  
- Para inscrever permanentemente um recurso (descrito por uma implementação do <xref:System.Transactions.IEnlistmentNotification> interface) que podem ser mais tarde qualificadas para a recuperação, você deve chamar o <xref:System.Transactions.Transaction.EnlistDurable%2A> método. Além disso, você deve fornecer o <xref:System.Transactions.Transaction.EnlistDurable%2A> método com um identificador de Gerenciador de recursos (um <xref:System.Guid>) que é usado para rotular consistentemente o participante da transação em caso de falha de recurso. Por esse motivo, o <xref:System.Guid> que é fornecido para o Enlist inicial chamada deve ser idêntica de *resourceManagerIdentifier* parâmetro no <xref:System.Transactions.TransactionManager.Reenlist%2A> chamada durante a recuperação. Caso contrário, <xref:System.Transactions.TransactionException> é lançada. Para obter mais informações sobre inscrições duráveis, consulte [inscrição recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) .  
+ Para inscrever permanentemente um recurso (descrito por uma implementação do <xref:System.Transactions.IEnlistmentNotification> interface) que podem ser mais tarde qualificadas para a recuperação, você deve chamar o <xref:System.Transactions.Transaction.EnlistDurable%2A> método. Além disso, você deve fornecer o <xref:System.Transactions.Transaction.EnlistDurable%2A> método com um identificador de Gerenciador de recursos (um <xref:System.Guid>) que é usado para rotular consistentemente o participante da transação em caso de falha de recurso. Por esse motivo, o <xref:System.Guid> que é fornecido para a inscrição inicial chamada deve ser idêntica de *resourceManagerIdentifier* parâmetro no <xref:System.Transactions.TransactionManager.Reenlist%2A> chamar durante a recuperação. Caso contrário, <xref:System.Transactions.TransactionException> é lançada. Para obter mais informações sobre inscrições duráveis, consulte [inscrever-se a recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) .  
   
- Na fase de preparação (fase 1) do protocolo 2PC, quando sua implementação de um Gerenciador de recursos duráveis recebe o <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> notificação, ele deve registrar seu registro de preparação durante essa fase. O registro deve conter todas as informações necessárias concluir a transação na confirmação. O registro de preparação mais tarde pode ser acessado durante a recuperação recuperando o <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> propriedade o *preparingEnlistment* retorno de chamada. O log de registro não precisa ser executada dentro do <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> método como o Gerenciador de recursos pode fazer isso em um thread de trabalho.  
+ Na fase de preparação (fase 1) do protocolo 2PC, quando sua implementação de um Gerenciador de recursos duráveis recebe o <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> notificação, ele deve registrar seu registro de preparação durante essa fase. O registro deve conter todas as informações necessárias concluir a transação na confirmação. O registro de preparação mais tarde pode ser acessado durante a recuperação recuperando os <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> propriedade do *preparingEnlistment* retorno de chamada. O log de registro não precisa ser executada dentro do <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> método como o Gerenciador de recursos pode fazer isso em um thread de trabalho.  
   
  O processo de recuperação consiste em duas etapas a seguir:  
   

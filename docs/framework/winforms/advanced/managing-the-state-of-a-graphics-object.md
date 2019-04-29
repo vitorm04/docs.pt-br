@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
 ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936860"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gerenciando o estado de um objeto gráfico
 O <xref:System.Drawing.Graphics> classe é o cerne da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para desenhar qualquer coisa, você deve obter um <xref:System.Drawing.Graphics> do objeto, defina suas propriedades e chamar seus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e assim por diante).  
@@ -35,11 +35,11 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ## <a name="graphics-state"></a>Estado gráfico  
  Um <xref:System.Drawing.Graphics> objeto mais do que fornecer métodos de desenho, como <xref:System.Drawing.Graphics.DrawLine%2A> e <xref:System.Drawing.Graphics.DrawRectangle%2A>. Um <xref:System.Drawing.Graphics> objeto também mantém o estado dos gráficos, que pode ser dividido nas seguintes categorias:  
   
--   Configurações de qualidade  
+- Configurações de qualidade  
   
--   Transformações  
+- Transformações  
   
--   Área de recorte  
+- Área de recorte  
   
 ### <a name="quality-settings"></a>Configurações de Qualidade  
  Um <xref:System.Drawing.Graphics> objeto tem várias propriedades que influenciam a qualidade dos itens que são desenhadas. Por exemplo, você pode definir o <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriedade para especificar o tipo de suavização (se houver) aplicado ao texto. Outras propriedades que influenciam a qualidade são <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, e <xref:System.Drawing.Graphics.InterpolationMode%2A>.  

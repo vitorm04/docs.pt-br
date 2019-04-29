@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_StreamNotReadable
 ms.assetid: b6ac8043-b939-441c-822f-de6f16f45525
 ms.openlocfilehash: 5429a1209503ae631edce913d753d7342e900362
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942682"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>O fluxo transmitido para TextFieldParser não pode ser lido.
 O [objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md) não é possível ler o fluxo que foi passado para ele. Isso pode ser um resultado da tentativa de ler um arquivo que não é um arquivo de texto.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Verifique se que o arquivo é um arquivo de texto.  
+- Verifique se que o arquivo é um arquivo de texto.  
   
 ## <a name="see-also"></a>Consulte também
 

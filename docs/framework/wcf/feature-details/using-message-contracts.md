@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932789"
 ---
 # <a name="using-message-contracts"></a>Utilizando contratos de mensagem
 Normalmente, ao criar aplicativos do Windows Communication Foundation (WCF), os desenvolvedores preste muita atenção para as estruturas de dados e os problemas de serialização e não preciso me preocupar com a estrutura das mensagens na qual os dados são executados. Para esses aplicativos, criação de contratos de dados para os parâmetros ou valores de retorno é simples. (Para obter mais informações, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Atributos de cabeçalho SOAP  
  O padrão SOAP define os seguintes atributos que podem existir em um cabeçalho:  
   
--   `Actor/Role` (`Actor` em SOAP 1.1, `Role` em SOAP 1.2)  
+- `Actor/Role` (`Actor` em SOAP 1.1, `Role` em SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  O `Actor` ou `Role` atributo especifica o URI Uniform Resource Identifier () do nó para o qual um determinado cabeçalho é pretendido. O `MustUnderstand` atributo especifica se o nó de processar o cabeçalho deve compreender. O `Relay` atributo especifica se o cabeçalho deve ser retransmitido para nós de downstream. WCF não executa qualquer processamento desses atributos nas mensagens de entrada, exceto para o `MustUnderstand` atributo, conforme especificado na seção "Controle de versão de contrato de mensagem", mais adiante neste tópico. No entanto, ele permite que você ler e gravar esses atributos conforme necessário, como a descrição a seguir.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  As seguintes regras se aplicam a cabeçalhos de controle de versão:  
   
--   WCF não objeto aos cabeçalhos ausentes — os membros correspondentes são deixados em seus valores padrão.  
+- WCF não objeto aos cabeçalhos ausentes — os membros correspondentes são deixados em seus valores padrão.  
   
--   O WCF também ignora cabeçalhos adicionais inesperados. A única exceção a essa regra é se o cabeçalho extra tem um `MustUnderstand` atributo definido como `true` na mensagem SOAP de entrada — nesse caso, uma exceção é lançada como um cabeçalho que deve ser compreendido não pode ser processado.  
+- O WCF também ignora cabeçalhos adicionais inesperados. A única exceção a essa regra é se o cabeçalho extra tem um `MustUnderstand` atributo definido como `true` na mensagem SOAP de entrada — nesse caso, uma exceção é lançada como um cabeçalho que deve ser compreendido não pode ser processado.  
   
  Corpos de tem regras semelhantes de controle de versão de mensagem — partes do corpo de mensagem ausente e adicionais são ignorados.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Ao criar ou acessar uma mensagem usando um tipo de contrato de mensagem que herda de outros tipos de contrato de mensagem, as seguintes regras se aplicam:  
   
--   Todos os cabeçalhos de mensagens na hierarquia de herança são coletados juntos para formar o conjunto completo de cabeçalhos da mensagem.  
+- Todos os cabeçalhos de mensagens na hierarquia de herança são coletados juntos para formar o conjunto completo de cabeçalhos da mensagem.  
   
--   Todas as partes de corpo de mensagem na hierarquia de herança são coletadas juntos para formar o corpo da mensagem completa. As partes de corpo são ordenadas de acordo com as regras de ordenação comuns (por <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> propriedade e, em seguida, em ordem alfabética), com nenhuma relevância para o seu lugar na hierarquia de herança. Usando a herança de contrato de mensagem em que as partes de corpo da mensagem ocorrerem em vários níveis de árvore de herança é altamente desaconselhável. Se uma classe base e uma classe derivada definem um cabeçalho ou uma parte do corpo com o mesmo nome, o membro da classe base mais é usado para armazenar o valor dessa parte do cabeçalho ou no corpo.  
+- Todas as partes de corpo de mensagem na hierarquia de herança são coletadas juntos para formar o corpo da mensagem completa. As partes de corpo são ordenadas de acordo com as regras de ordenação comuns (por <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> propriedade e, em seguida, em ordem alfabética), com nenhuma relevância para o seu lugar na hierarquia de herança. Usando a herança de contrato de mensagem em que as partes de corpo da mensagem ocorrerem em vários níveis de árvore de herança é altamente desaconselhável. Se uma classe base e uma classe derivada definem um cabeçalho ou uma parte do corpo com o mesmo nome, o membro da classe base mais é usado para armazenar o valor dessa parte do cabeçalho ou no corpo.  
   
  Considere as classes no exemplo de código a seguir.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>Considerações de WSDL  
  Ao gerar um contrato de descrição linguagem WSDL (Web Services) de um serviço que usa os contratos de mensagem, é importante lembrar que nem todos os recursos de contrato de mensagem são refletidos no WSDL resultante. Considere os seguintes pontos:  
   
--   WSDL não pode expressar o conceito de uma matriz de cabeçalhos. Durante a criação de mensagens com uma matriz de cabeçalhos usando o <xref:System.ServiceModel.MessageHeaderArrayAttribute>, o WSDL resultante reflete apenas um cabeçalho, em vez da matriz.  
+- WSDL não pode expressar o conceito de uma matriz de cabeçalhos. Durante a criação de mensagens com uma matriz de cabeçalhos usando o <xref:System.ServiceModel.MessageHeaderArrayAttribute>, o WSDL resultante reflete apenas um cabeçalho, em vez da matriz.  
   
--   O documento WSDL resultante pode não refletir algumas informações de nível de proteção.  
+- O documento WSDL resultante pode não refletir algumas informações de nível de proteção.  
   
--   O tipo de mensagem gerado no WSDL tem o mesmo nome que o nome da classe do tipo de contrato de mensagem.  
+- O tipo de mensagem gerado no WSDL tem o mesmo nome que o nome da classe do tipo de contrato de mensagem.  
   
--   Ao usar a mesma mensagem de contrato em várias operações, vários tipos de mensagem são gerados no documento WSDL. Os nomes são feitos exclusivos, adicionando os números "2", "3" e assim por diante, para usos subsequentes. Ao importar novamente o WSDL, vários tipos de contrato de mensagem são criados e são idênticos, exceto por seus nomes.  
+- Ao usar a mesma mensagem de contrato em várias operações, vários tipos de mensagem são gerados no documento WSDL. Os nomes são feitos exclusivos, adicionando os números "2", "3" e assim por diante, para usos subsequentes. Ao importar novamente o WSDL, vários tipos de contrato de mensagem são criados e são idênticos, exceto por seus nomes.  
   
 ## <a name="soap-encoding-considerations"></a>Considerações de codificação de SOAP  
  O WCF permite que você use o estilo de XML, de codificação de SOAP herdado no entanto, seu uso não é recomendado. Ao usar esse estilo (definindo o `Use` propriedade para `Encoded` no <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> aplicados ao contrato de serviço), as seguintes considerações adicionais se aplicam:  
   
--   Não há suporte para os cabeçalhos da mensagem; Isso significa que o atributo <xref:System.ServiceModel.MessageHeaderAttribute> e o atributo de matriz <xref:System.ServiceModel.MessageHeaderArrayAttribute> são incompatíveis com codificação SOAP.  
+- Não há suporte para os cabeçalhos da mensagem; Isso significa que o atributo <xref:System.ServiceModel.MessageHeaderAttribute> e o atributo de matriz <xref:System.ServiceModel.MessageHeaderArrayAttribute> são incompatíveis com codificação SOAP.  
   
--   Se o contrato de mensagem não é empacotado, ou seja, se a propriedade <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> é definido como `false`, o contrato de mensagem pode ter parte do corpo de apenas um.  
+- Se o contrato de mensagem não é empacotado, ou seja, se a propriedade <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> é definido como `false`, o contrato de mensagem pode ter parte do corpo de apenas um.  
   
--   O nome do elemento wrapper para o contrato de mensagem de solicitação deve corresponder ao nome da operação. Use o `WrapperName` propriedade do contrato de mensagem para isso.  
+- O nome do elemento wrapper para o contrato de mensagem de solicitação deve corresponder ao nome da operação. Use o `WrapperName` propriedade do contrato de mensagem para isso.  
   
--   O nome do elemento wrapper para o contrato de mensagem de resposta deve ser igual ao nome da operação, tendo como sufixado 'Response'. Use o <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> propriedade do contrato de mensagem para isso.  
+- O nome do elemento wrapper para o contrato de mensagem de resposta deve ser igual ao nome da operação, tendo como sufixado 'Response'. Use o <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> propriedade do contrato de mensagem para isso.  
   
--   Codificação de SOAP preserva as referências de objeto. Por exemplo, considere o código a seguir.  
+- Codificação de SOAP preserva as referências de objeto. Por exemplo, considere o código a seguir.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

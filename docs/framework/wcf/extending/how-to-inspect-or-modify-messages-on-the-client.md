@@ -3,11 +3,11 @@ title: 'Como: inspecionar ou modificar mensagens no cliente'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766831"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Como: inspecionar ou modificar mensagens no cliente
 Você pode inspecionar ou modificar as mensagens de entrada ou saídas em um cliente WCF implementando um <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e inseri-lo no tempo de execução do cliente. Para obter mais informações, consulte [estendendo clientes](../../../../docs/framework/wcf/extending/extending-clients.md). O recurso equivalente no serviço é o <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obter um exemplo de código completo, consulte o [inspetores de mensagem](../../../../docs/framework/wcf/samples/message-inspectors.md) exemplo.  
@@ -23,13 +23,13 @@ Você pode inspecionar ou modificar as mensagens de entrada ou saídas em um cli
 ## <a name="example"></a>Exemplo  
  Os exemplos de código a seguir mostram, na ordem:  
   
--   Uma implementação de Inspetor de cliente.  
+- Uma implementação de Inspetor de cliente.  
   
--   Um comportamento de ponto de extremidade que insere o Inspetor.  
+- Um comportamento de ponto de extremidade que insere o Inspetor.  
   
--   Um <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-derivado da classe que permite que você adicione o comportamento em um arquivo de configuração.  
+- Um <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-derivado da classe que permite que você adicione o comportamento em um arquivo de configuração.  
   
--   Um arquivo de configuração que adiciona o comportamento de ponto de extremidade que insere o Inspetor de mensagens do cliente em tempo de execução do cliente.  
+- Um arquivo de configuração que adiciona o comportamento de ponto de extremidade que insere o Inspetor de mensagens do cliente em tempo de execução do cliente.  
   
 ```csharp  
 // Client message inspector  

@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940433"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Como: transformar declarações de entrada
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms do ASP.NET®  
+- Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
  Estas instruções fornecem procedimentos passo a passo detalhados para criar um aplicativo ASP.NET Web Forms simples com reconhecimento de declarações e transformar as declarações de entrada. Elas também fornecem explicações sobre como testar o aplicativo para verificar se as declarações transformadas são apresentadas quando o aplicativo é executado.  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Visão geral  
+- Visão geral  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
   
--   Etapa 2 – implementar a transformação de declarações usando um ClaimsAuthenticationManager personalizado  
+- Etapa 2 – implementar a transformação de declarações usando um ClaimsAuthenticationManager personalizado  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
+- Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
   
--   Transformar declarações de entrada com a adição de uma declaração da função de administrador  
+- Transformar declarações de entrada com a adição de uma declaração da função de administrador  
   
--   Testar o aplicativo ASP.NET Web Forms para ver se ele está funcionando corretamente  
+- Testar o aplicativo ASP.NET Web Forms para ver se ele está funcionando corretamente  
   
 ## <a name="overview"></a>Visão geral  
  O WIF expõe uma classe chamada <xref:System.Security.Claims.ClaimsAuthenticationManager> que permite que os usuários modifiquem declarações antes que elas sejam apresentadas para um aplicativo RP (de terceira parte confiável). O <xref:System.Security.Claims.ClaimsAuthenticationManager> é útil para separação de interesses entre autenticação e o código do aplicativo subjacente. O exemplo a seguir demonstra como adicionar uma função às declarações na <xref:System.Security.Claims.ClaimsPrincipal> de entrada que pode ser necessária para o RP.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
   
--   Etapa 2 – implementar a transformação de declarações usando um ClaimsAuthenticationManager personalizado  
+- Etapa 2 – implementar a transformação de declarações usando um ClaimsAuthenticationManager personalizado  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
  Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms.  

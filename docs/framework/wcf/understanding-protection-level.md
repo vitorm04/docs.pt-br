@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791424"
 ---
 # <a name="understanding-protection-level"></a>Noções básicas de nível de proteção
 O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como o <xref:System.ServiceModel.ServiceContractAttribute> e o <xref:System.ServiceModel.OperationContractAttribute> classes. A propriedade controla como uma parte (ou inteiro) de uma mensagem é protegido. Este tópico explica o recurso do Windows Communication Foundation (WCF) e como ele funciona.  
@@ -26,33 +26,33 @@ O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como
 ## <a name="basics"></a>Noções básicas  
  Para entender o recurso de nível de proteção, as instruções básicas a seguir se aplicam:  
   
--   Existem três níveis de básicos de proteção para qualquer parte de uma mensagem. A propriedade (onde quer que ele ocorre) é definida como um do <xref:System.Net.Security.ProtectionLevel> valores de enumeração. Em ordem crescente de proteção, elas incluem:  
+- Existem três níveis de básicos de proteção para qualquer parte de uma mensagem. A propriedade (onde quer que ele ocorre) é definida como um do <xref:System.Net.Security.ProtectionLevel> valores de enumeração. Em ordem crescente de proteção, elas incluem:  
   
-    -   `None`.  
+    - `None`.  
   
-    -   `Sign`. A parte protegida é assinada digitalmente. Isso garante a detecção de adulteração a parte da mensagem protegida.  
+    - `Sign`. A parte protegida é assinada digitalmente. Isso garante a detecção de adulteração a parte da mensagem protegida.  
   
-    -   `EncryptAndSign`. A parte da mensagem é criptografada para garantir a confidencialidade antes que ele seja assinado.  
+    - `EncryptAndSign`. A parte da mensagem é criptografada para garantir a confidencialidade antes que ele seja assinado.  
   
--   Você pode definir requisitos de proteção somente para *dados de aplicativo* com esse recurso. Por exemplo, cabeçalhos de WS-Addressing são dados de infraestrutura e, portanto, não são afetados pelo `ProtectionLevel`.  
+- Você pode definir requisitos de proteção somente para *dados de aplicativo* com esse recurso. Por exemplo, cabeçalhos de WS-Addressing são dados de infraestrutura e, portanto, não são afetados pelo `ProtectionLevel`.  
   
--   Quando o modo de segurança é definido como `Transport`, a mensagem inteira é protegida pelo mecanismo de transporte. Portanto, definindo um nível de proteção separados para diferentes partes de uma mensagem não tem nenhum efeito.  
+- Quando o modo de segurança é definido como `Transport`, a mensagem inteira é protegida pelo mecanismo de transporte. Portanto, definindo um nível de proteção separados para diferentes partes de uma mensagem não tem nenhum efeito.  
   
--   O `ProtectionLevel` é uma maneira para o desenvolvedor definir o *nível mínimo* que deve estar de acordo com uma associação. Quando um serviço é implantado, a associação real especificada na configuração pode não dar suporte ou o nível mínimo. Por exemplo, por padrão, o <xref:System.ServiceModel.BasicHttpBinding> classe não fornece segurança (embora ele pode ser habilitado). Portanto, usá-lo com um contrato que tem qualquer configuração diferente de `None` fará com que uma exceção seja lançada.  
+- O `ProtectionLevel` é uma maneira para o desenvolvedor definir o *nível mínimo* que deve estar de acordo com uma associação. Quando um serviço é implantado, a associação real especificada na configuração pode não dar suporte ou o nível mínimo. Por exemplo, por padrão, o <xref:System.ServiceModel.BasicHttpBinding> classe não fornece segurança (embora ele pode ser habilitado). Portanto, usá-lo com um contrato que tem qualquer configuração diferente de `None` fará com que uma exceção seja lançada.  
   
--   Se o serviço exigir que o mínimo `ProtectionLevel` para todas as mensagens é `Sign`, um cliente (talvez criado por uma tecnologia não WCF) pode criptografar e assinar todas as mensagens (que é mais do que o mínimo necessário). Nesse caso, o WCF não lançará uma exceção porque o cliente fez mais do que o mínimo. No entanto, observe que aplicativos do WCF (serviços ou clientes) não excessivamente protege uma parte da mensagem se possível, mas estará em conformidade com o nível mínimo. Observe também que, ao usar `Transport` como o modo de segurança, o transporte em excesso pode o Proteja o fluxo de mensagem porque é inerentemente não é possível proteger em um nível mais granular.  
+- Se o serviço exigir que o mínimo `ProtectionLevel` para todas as mensagens é `Sign`, um cliente (talvez criado por uma tecnologia não WCF) pode criptografar e assinar todas as mensagens (que é mais do que o mínimo necessário). Nesse caso, o WCF não lançará uma exceção porque o cliente fez mais do que o mínimo. No entanto, observe que aplicativos do WCF (serviços ou clientes) não excessivamente protege uma parte da mensagem se possível, mas estará em conformidade com o nível mínimo. Observe também que, ao usar `Transport` como o modo de segurança, o transporte em excesso pode o Proteja o fluxo de mensagem porque é inerentemente não é possível proteger em um nível mais granular.  
   
--   Se você definir a `ProtectionLevel` explicitamente para o `Sign` ou `EncryptAndSign`, em seguida, você deve usar uma associação com segurança habilitada ou se uma exceção será gerada.  
+- Se você definir a `ProtectionLevel` explicitamente para o `Sign` ou `EncryptAndSign`, em seguida, você deve usar uma associação com segurança habilitada ou se uma exceção será gerada.  
   
--   Se você selecionar uma associação que habilita a segurança e você não definir o `ProtectionLevel` propriedade em qualquer lugar no contrato, o aplicativo de todos os dados serão criptografados e assinados.  
+- Se você selecionar uma associação que habilita a segurança e você não definir o `ProtectionLevel` propriedade em qualquer lugar no contrato, o aplicativo de todos os dados serão criptografados e assinados.  
   
--   Se você selecionar uma associação que não tem segurança habilitada (por exemplo, o `BasicHttpBinding` classe tem segurança desabilitada por padrão) e o `ProtectionLevel` não estiver explicitamente definida, nenhum dos dados do aplicativo serão protegidos.  
+- Se você selecionar uma associação que não tem segurança habilitada (por exemplo, o `BasicHttpBinding` classe tem segurança desabilitada por padrão) e o `ProtectionLevel` não estiver explicitamente definida, nenhum dos dados do aplicativo serão protegidos.  
   
--   Se você estiver usando uma associação que aplica segurança no nível de transporte, todos os dados de aplicativo serão protegidos de acordo com os recursos do transporte.  
+- Se você estiver usando uma associação que aplica segurança no nível de transporte, todos os dados de aplicativo serão protegidos de acordo com os recursos do transporte.  
   
--   Se você usar uma associação que aplica segurança no nível da mensagem, os dados de aplicativo serão protegidos acordo com os níveis de proteção definido no contrato. Se você não especificar um nível de proteção, em seguida, todos os dados de aplicativo nas mensagens serão criptografados e assinados.  
+- Se você usar uma associação que aplica segurança no nível da mensagem, os dados de aplicativo serão protegidos acordo com os níveis de proteção definido no contrato. Se você não especificar um nível de proteção, em seguida, todos os dados de aplicativo nas mensagens serão criptografados e assinados.  
   
--   O `ProtectionLevel` pode ser definido em diferentes níveis de escopo. Há uma hierarquia associada com escopo, que é explicada na próxima seção.  
+- O `ProtectionLevel` pode ser definido em diferentes níveis de escopo. Há uma hierarquia associada com escopo, que é explicada na próxima seção.  
   
 ## <a name="scoping"></a>Definição de escopo  
  Definindo o `ProtectionLevel` sobre a API de nível mais alta, define o nível para todos os níveis abaixo dele. Se o `ProtectionLevel` é definido como um valor diferente em um nível inferior, abaixo de todas as APIs que nível na hierarquia agora será redefinido para o novo nível (APIs acima dele, no entanto, ainda serão afetadas por um nível mais alto). A hierarquia é da seguinte maneira. Atributos de mesmo nível são correspondentes.  

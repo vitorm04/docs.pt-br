@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937716"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Como: criar uma nova configuração em tempo de design
 Você pode criar uma nova configuração em tempo de design usando o designer de configurações. O designer de configurações é uma interface no estilo de grade que permite que você crie novas configurações e especifique propriedades para essas configurações. Você deve especificar o nome, valor, tipo e escopo para as novas configurações. Depois de criar uma configuração, é acessível no código.  

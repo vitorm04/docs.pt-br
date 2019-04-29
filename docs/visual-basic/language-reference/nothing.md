@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
 ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778619"
 ---
 # <a name="nothing-visual-basic"></a>Nada (Visual Basic)
 Representa o valor padrão de qualquer tipo de dados. Para tipos de referência, o valor padrão é o `null` referência. Para tipos de valor, o valor padrão depende se o tipo de valor é anulável.  

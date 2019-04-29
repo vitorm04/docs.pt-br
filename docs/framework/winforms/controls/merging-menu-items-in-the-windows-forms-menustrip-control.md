@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936351"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Mesclando itens de menu no controle MenuStrip dos Windows Forms
 Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu ou os menus inteiros do formulário filho com os menus do formulário pai.  
@@ -20,9 +20,9 @@ Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu 
 ## <a name="general-concepts"></a>Conceitos gerais  
  Os procedimentos de mesclagem envolvem um controle do código-fonte e de destino:  
   
--   O destino é o <xref:System.Windows.Forms.MenuStrip> controle sobre o formulário pai MDI ou principal no qual você está mesclando itens de menu.  
+- O destino é o <xref:System.Windows.Forms.MenuStrip> controle sobre o formulário pai MDI ou principal no qual você está mesclando itens de menu.  
   
--   A fonte é o <xref:System.Windows.Forms.MenuStrip> controle no formulário filho MDI que contém os itens de menu que você deseja mesclar com o menu de destino.  
+- A fonte é o <xref:System.Windows.Forms.MenuStrip> controle no formulário filho MDI que contém os itens de menu que você deseja mesclar com o menu de destino.  
   
  O <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade identifica o item de menu filho MDI do formulário de pai cuja lista suspensa você preencherá com títulos da MDI atual. Por exemplo, você normalmente lista o filho MDI que está aberto no momento no menu **Janela**.  
   

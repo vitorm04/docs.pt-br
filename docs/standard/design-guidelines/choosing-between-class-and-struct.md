@@ -1,5 +1,5 @@
 ---
-title: Escolhendo entre a classe e Struct
+title: Escolher entre Classe e Struct
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778775"
 ---
-# <a name="choosing-between-class-and-struct"></a>Escolhendo entre a classe e Struct
+# <a name="choosing-between-class-and-struct"></a>Escolher entre Classe e Struct
 Uma das decisões de design básica que faces cada designer de estrutura é se deseja criar um tipo como uma classe (um tipo de referência) ou como um struct (um tipo de valor). Boa compreensão das diferenças no comportamento dos tipos de referência e tipos de valor é fundamental para fazer essa escolha.  
   
  A primeira diferença entre os tipos de referência e tipos de valor, consideraremos é que tipos de referência são alocados no heap e coleta de lixo, ao passo que tipos de valor são alocados na pilha ou embutido no que contém tipos e desalocada quando a pilha esvazia ou quando seu tipo recipiente é desalocado. Portanto, as alocações e Desalocações de tipos de valor são em geral, mais barato do que as alocações e Desalocações de tipos de referência.  
@@ -39,13 +39,13 @@ Uma das decisões de design básica que faces cada designer de estrutura é se d
   
  **X AVOID** definindo uma estrutura, a menos que o tipo tem todas as seguintes características:  
   
--   Logicamente, ele representa um único valor, semelhante aos tipos primitivos (`int`, `double`, etc.).  
+- Logicamente, ele representa um único valor, semelhante aos tipos primitivos (`int`, `double`, etc.).  
   
--   Ele tem um tamanho de instância em 16 bytes.  
+- Ele tem um tamanho de instância em 16 bytes.  
   
--   É imutável.  
+- É imutável.  
   
--   Ele não terá a ser demarcado com frequência.  
+- Ele não terá a ser demarcado com frequência.  
   
  Em todos os outros casos, você deve definir seus tipos como classes.  
   

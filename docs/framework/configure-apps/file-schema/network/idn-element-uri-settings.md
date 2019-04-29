@@ -3,11 +3,11 @@ title: Elemento <idn> (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705095"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > (configurações de Uri)
 Especifica se a análise de nome de domínio internacionalizado (IDN) é aplicado a um nome de domínio.  
@@ -60,15 +60,15 @@ Especifica se a análise de nome de domínio internacionalizado (IDN) é aplicad
   
  Há três valores possíveis para IDN, dependendo dos servidores DNS que são usados:  
   
--   IDN habilitado = All  
+- IDN habilitado = All  
   
      Esse valor converterá todos os nomes de domínio Unicode em seus equivalentes do Punycode (nomes IDN).  
   
--   IDN habilitado = AllExceptIntranet  
+- IDN habilitado = AllExceptIntranet  
   
      Esse valor converterá todos os nomes de domínio Unicode não está na Intranet local para usar os equivalentes do Punycode (nomes IDN). Nesse caso, para manipular nomes internacionais na Intranet local, os servidores DNS que são usados para a Intranet devem dar suporte a resolução de nomes do Unicode.  
   
--   IDN habilitado = nenhum  
+- IDN habilitado = nenhum  
   
      Esse valor não converterá nenhum nome de domínio Unicode para usar o Punycode. Isso é o valor padrão que é consistente com o comportamento do .NET Framework 2.0.  
   

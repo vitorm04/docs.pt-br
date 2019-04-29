@@ -1,15 +1,15 @@
 ---
-title: Recursos fornecidos pelo System. Transactions
+title: Recursos fornecidos por System.Transactions
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
 ms.openlocfilehash: 6fc20f8249f37f69689fb3fc6b3144792badad3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793686"
 ---
-# <a name="features-provided-by-systemtransactions"></a>Recursos fornecidos pelo System. Transactions
+# <a name="features-provided-by-systemtransactions"></a>Recursos fornecidos por System.Transactions
 Esta seção descreve como você pode usar os recursos fornecidos pelo <xref:System.Transactions> namespace para escrever seu próprio Gerenciador de recursos e dos aplicativos transacional. Especificamente, esta seção aborda como criar e participar de uma transação (local ou distribuída) com um ou vários participantes.  
   
 ## <a name="overview-of-systemtransactions"></a>Visão geral do System. Transactions  
@@ -19,11 +19,11 @@ Esta seção descreve como você pode usar os recursos fornecidos pelo <xref:Sys
   
  O Gerenciador de transações também transparentemente escala transações locais para transações distribuídas através da coordenação com um Gerenciador de transações baseadas em disco como o DTC, quando um Gerenciador de recursos adicionais de durável inscreve-se com uma transação. Há duas maneiras principais que o <xref:System.Transactions> infra-estrutura proporciona um desempenho aprimorado.  
   
--   Escalonamento dinâmico, o que garante que o <xref:System.Transactions> infra-estrutura apenas emprega o MSDTC quando uma transação engloba vários recursos distribuídos. Para obter mais informações sobre o escalonamento dinâmico. consulte [escalonamento de bloqueios de gerenciamento de transação](../../../../docs/framework/data/transactions/transaction-management-escalation.md) tópico.  
+- Escalonamento dinâmico, o que garante que o <xref:System.Transactions> infra-estrutura apenas emprega o MSDTC quando uma transação engloba vários recursos distribuídos. Para obter mais informações sobre o escalonamento dinâmico. ver [escalonamento de gerenciamento de transações](../../../../docs/framework/data/transactions/transaction-management-escalation.md) tópico.  
   
--   Podem ser promovidas inscrições, que permite que um recurso, como um banco de dados, apropriar-se da transação se for a única entidade participa da transação. Posteriormente, se necessário, o <xref:System.Transactions> infra-estrutura ainda pode escalonar o gerenciamento da transação para o MSDTC. Isso reduz ainda mais a possibilidade de usar o MSDTC. Inscrições passível de promoção são abordadas detalhadamente no tópico[otimização usando única fase de confirmação e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+- Podem ser promovidas inscrições, que permite que um recurso, como um banco de dados, apropriar-se da transação se for a única entidade participa da transação. Posteriormente, se necessário, o <xref:System.Transactions> infra-estrutura ainda pode escalonar o gerenciamento da transação para o MSDTC. Isso reduz ainda mais a possibilidade de usar o MSDTC. Podem ser promovidas são abordadas em detalhes no tópico[otimização usando confirmação de fase única e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
- O <xref:System.Transactions> namespace define três níveis de confiança - AllowPartiallyTrustedCallers (APTCA), DistributedTransactionPermission(DTP) e confiança total - que restringem o acesso aos tipos de recursos ele expõe. Para obter mais informações sobre os vários níveis de confiança, consulte [níveis de confiança de segurança acessando recursos](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).  
+ O <xref:System.Transactions> namespace define três níveis de confiança - AllowPartiallyTrustedCallers (APTCA), DistributedTransactionPermission(DTP) e confiança total - que restringem o acesso aos tipos de recursos ele expõe. Para obter mais informações sobre os vários níveis de confiança, consulte [níveis de confiança de segurança no acessando recursos](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

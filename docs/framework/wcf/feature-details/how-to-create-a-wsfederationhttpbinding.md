@@ -1,5 +1,5 @@
 ---
-title: Como criar uma WSFederationHttpBinding
+title: 'Como: criar uma WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778346"
 ---
-# <a name="how-to-create-a-wsfederationhttpbinding"></a>Como criar uma WSFederationHttpBinding
+# <a name="how-to-create-a-wsfederationhttpbinding"></a>Como: criar uma WSFederationHttpBinding
 
 No Windows Communication Foundation (WCF), o <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) na configuração) fornece um mecanismo para expor um serviço federado. Ou seja, um serviço que exige que os clientes autentiquem usando um token de segurança emitido por um serviço de token de segurança. Este tópico mostra como configurar um <xref:System.ServiceModel.WSFederationHttpBinding> no código e configuração. Depois que a associação é criada, você pode configurar um ponto de extremidade para usar essa associação.
 
@@ -91,7 +91,7 @@ No Windows Communication Foundation (WCF), o <xref:System.ServiceModel.WSFederat
 
 12. Para obter mais informações, consulte [identidade de serviço e autenticação](service-identity-and-authentication.md).
 
-13. Necessário no cliente, se nenhum emissor local for especificado; não usado no serviço. Criar uma [ \<associação >](../../../../docs/framework/misc/binding.md) elemento na seção de associações que pode ser usado para se comunicar com o serviço de token de segurança. Para obter mais informações sobre como criar uma associação, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Necessário no cliente, se nenhum emissor local for especificado; não usado no serviço. Criar uma [ \<associação >](../../../../docs/framework/misc/binding.md) elemento na seção de associações que pode ser usado para se comunicar com o serviço de token de segurança. Para obter mais informações sobre como criar uma associação, consulte [como: Especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
 
 14. Especificar a associação criada na etapa anterior, definindo o `binding` e `bindingConfiguration` atributos do `<issuer>` elemento.
 
@@ -110,4 +110,4 @@ O exemplo de código a seguir mostra o código para configurar um `WSFederationH
 
 - [Federação](federation.md)
 - [Exemplo de federação](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Como: desabilitar sessões seguras em um WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Como: Desabilitar sessões seguras em um WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780998"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 Consulta integrada à linguagem (LINQ) adiciona recursos de consulta para o Visual Basic e fornece recursos simples e eficientes quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a serem processados ou trabalhar com diferentes sintaxes de consulta para cada tipo de dados que você está procurando, o LINQ apresenta consultas como parte da linguagem Visual Basic. Ele usa uma sintaxe unificada independentemente do tipo de dados.  
@@ -182,11 +182,11 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
 ## <a name="visual-basic-features-that-support-linq"></a>Funcionalidades do Visual Basic que suportam LINQ  
  Visual Basic inclui outros recursos notáveis que tornam o uso de LINQ simples e reduzem a quantidade de código que você deve escrever para executar consultas LINQ. Eles incluem o seguinte:  
   
--   **Tipos anônimos**, que permitem que você crie um novo tipo com base em um resultado de consulta.  
+- **Tipos anônimos**, que permitem que você crie um novo tipo com base em um resultado de consulta.  
   
--   **Variáveis de tipo implícito**, que permitem adiar a especificação de um tipo e deixar o compilador inferir o tipo com base no resultado da consulta.  
+- **Variáveis de tipo implícito**, que permitem adiar a especificação de um tipo e deixar o compilador inferir o tipo com base no resultado da consulta.  
   
--   **Métodos de extensão**, que permitem estender um tipo existente com seus próprios métodos sem modificar o próprio tipo.  
+- **Métodos de extensão**, que permitem estender um tipo existente com seus próprios métodos sem modificar o próprio tipo.  
   
  Para obter detalhes, consulte [Visual Basic recursos que suporte LINQ](../../concepts/linq/features-that-support-linq.md).  
   

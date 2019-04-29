@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940446"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Como: habilitar o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms do ASP.NET®  
+- Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
  Estas instruções fornecem procedimentos passo a passo detalhados para habilitar o rastreamento do WIF em um aplicativo ASP.NET. Elas também fornecem instruções para testar o aplicativo para verificar se o ouvinte de rastreamento e o registro estão funcionando corretamente. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. Ele pode ser baixado do seguinte local: [Ferramenta de identidade e acesso](https://go.microsoft.com/fwlink/?LinkID=245849)  
@@ -25,30 +25,30 @@ ms.locfileid: "59769028"
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Visão geral  
+- Visão geral  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples e habilitar o rastreamento  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples e habilitar o rastreamento  
   
--   Etapa 2 – testar sua solução  
+- Etapa 2 – testar sua solução  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Criar um aplicativo simples do ASP.NET que usa o WIF e o STS de desenvolvimento por meio da ferramenta de identidade e acesso  
+- Criar um aplicativo simples do ASP.NET que usa o WIF e o STS de desenvolvimento por meio da ferramenta de identidade e acesso  
   
--   Habilitar o rastreamento e verificar se ele está funcionando  
+- Habilitar o rastreamento e verificar se ele está funcionando  
   
 ## <a name="overview"></a>Visão geral  
  O rastreamento permite depurar e solucionar problemas de vários tipos de problemas com o WIF, incluindo tokens, cookies, declarações, mensagens de protocolo e muito mais. O rastreamento do WIF é semelhante ao rastreamento do WCF; por exemplo, você pode escolher o detalhamento dos rastreamentos para exibir tudo, desde mensagens críticas até todas as mensagens. Os rastreamentos do WIF podem ser gerados em arquivos **.xml** ou em arquivos **.svclog** que podem ser exibidos usando a ferramenta Visualizador de Rastreamento de Serviço. Essa ferramenta está localizada na **bin** diretório do SDK do Windows caminho de instalação no seu computador, por exemplo: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples e habilitar o rastreamento  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples e habilitar o rastreamento  
   
--   Etapa 2 – testar sua solução  
+- Etapa 2 – testar sua solução  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>Etapa 1 – criar um aplicativo ASP.NET Web Forms simples e habilitar o rastreamento  
  Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms e modificará o arquivo *Web.config* para habilitar o rastreamento.  

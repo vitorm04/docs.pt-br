@@ -3,11 +3,11 @@ title: 3370 - BinaryMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: 624f8dab-a150-468e-9709-613621a8627f
 ms.openlocfilehash: b495c8aa638c852e94c56f66837f2da12ff093f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795922"
 ---
 # <a name="3370---binarymessageencodingstart"></a>3370 - BinaryMessageEncodingStart
 ## <a name="properties"></a>Propriedades  
@@ -20,9 +20,9 @@ ms.locfileid: "33462941"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o BinaryMessageEncoder iniciou a codificação da mensagem.  
+ Esse evento é emitido quando o BinaryMessageEncoder zahájil kódování zprávy.  
   
 ## <a name="message"></a>Mensagem  
- BinaryMessageEncoder iniciou a codificação da mensagem.  
+ Kodér BinaryMessageEncoder zahájil kódování zprávy.  
   
 ## <a name="details"></a>Detalhes

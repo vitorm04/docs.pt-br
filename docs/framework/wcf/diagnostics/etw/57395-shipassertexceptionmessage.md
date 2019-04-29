@@ -3,11 +3,11 @@ title: 57395 - ShipAssertExceptionMessage
 ms.date: 03/30/2017
 ms.assetid: 37f0c15b-e34e-42fe-8f86-b122e592add5
 ms.openlocfilehash: 667896b2efe07955a2b49d0db6dceed03e4ac923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767218"
 ---
 # <a name="57395---shipassertexceptionmessage"></a>57395 - ShipAssertExceptionMessage
 ## <a name="properties"></a>Propriedades  
@@ -23,6 +23,6 @@ ms.locfileid: "33469444"
  Esse evento é emitido quando ocorreu uma falha inesperada.  
   
 ## <a name="message"></a>Mensagem  
- Ocorreu uma falha inesperada. Aplicativos não devem tentar manipular esse erro. Para fins de diagnóstico, esta mensagem em inglês está associada à falha: %1.  
+ Ocorreu uma falha inesperada. Aplicativos não devem tentar tratar esse erro. Para fins de diagnóstico, essa mensagem em inglês está associada à falha: %1.  
   
 ## <a name="details"></a>Detalhes

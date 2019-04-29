@@ -3,11 +3,11 @@ title: Contadores de desempenho de ponto de extremidade
 ms.date: 03/30/2017
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
 ms.openlocfilehash: f07e318e39a68e689ec484b09fa743623cfb51d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797222"
 ---
 # <a name="endpoint-performance-counters"></a>Contadores de desempenho de ponto de extremidade
 Contadores de desempenho do ponto de extremidade capturam dados que revela como um ponto de extremidade é aceitar mensagens. Eles podem ser encontrados no `ServiceModelEndpoint 4.0.0.0` objeto de desempenho durante a exibição com o Monitor de desempenho. As instâncias são nomeadas usando esse padrão:  

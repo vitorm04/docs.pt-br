@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940459"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Como: habilitar o WIF para um aplicativo de serviço Web WCF
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Resumo  
  Estas instruções fornecem procedimentos passo a passo detalhados para habilitar o WIF em um serviço Web WCF. Também fornecem explicações sobre como testar o aplicativo para verificar se o serviço Web está apresentando declarações corretamente quando o aplicativo é executado. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. Ele pode ser baixado do seguinte local: [Ferramenta de identidade e acesso](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Visão geral  
+- Visão geral  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – Criar um serviço WCF simples  
+- Etapa 1 – Criar um serviço WCF simples  
   
--   Etapa 2 – Criar um aplicativo cliente para o serviço WCF  
+- Etapa 2 – Criar um aplicativo cliente para o serviço WCF  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Criar um serviço WCF que requer tokens emitidos  
+- Criar um serviço WCF que requer tokens emitidos  
   
--   Criar um cliente WCF que solicita um token de um STS e passa-o ao serviço WCF  
+- Criar um cliente WCF que solicita um token de um STS e passa-o ao serviço WCF  
   
 ## <a name="overview"></a>Visão geral  
  Estas instruções são destinadas a demonstrar como um desenvolvedor pode usar a autenticação federada ao desenvolver serviços WCF. Alguns dos benefícios de usar a federação nos serviços WCF incluem:  
@@ -55,11 +55,11 @@ ms.locfileid: "59977425"
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – Criar um serviço WCF simples  
+- Etapa 1 – Criar um serviço WCF simples  
   
--   Etapa 2 – Criar um aplicativo cliente para o serviço WCF  
+- Etapa 2 – Criar um aplicativo cliente para o serviço WCF  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>Etapa 1 – Criar um serviço WCF simples  
  Nesta etapa, você criará um novo serviço WCF que usa o STS de Desenvolvimento incluído na Ferramenta de Identidade e Acesso.  

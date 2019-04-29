@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936663"
 ---
 # <a name="mod-operator-visual-basic"></a>Operador Mod (Visual Basic)
 Divide dois números e retorna apenas o resto.  
@@ -70,9 +70,9 @@ End Module
   
  Operadores relacionados incluem o seguinte:  
   
--   O [\ operador (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) retorna o quociente de inteiro de uma divisão. Por exemplo, a expressão `14 \ 4` é avaliada como 3.  
+- O [\ operador (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) retorna o quociente de inteiro de uma divisão. Por exemplo, a expressão `14 \ 4` é avaliada como 3.  
   
--   O [/ operador (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retorna o quociente completo, incluindo o restante, como um número de ponto flutuante. Por exemplo, a expressão `14 / 4` avaliará como 3.5.  
+- O [/ operador (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retorna o quociente completo, incluindo o restante, como um número de ponto flutuante. Por exemplo, a expressão `14 / 4` avaliará como 3.5.  
   
 ## <a name="attempted-division-by-zero"></a>Tentativa de divisão por zero  
  Se `number2` for avaliada como zero, o comportamento do `Mod` operador depende do tipo de dados dos operandos. Uma divisão integral gera um <xref:System.DivideByZeroException> exceção. Retorna uma divisão de ponto flutuante <xref:System.Double.NaN>.  

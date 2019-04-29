@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762743"
 ---
 # <a name="nettcp-port-sharing"></a>Compartilhamento de porta Net.TCP
 Windows Communication Foundation (WCF) fornece um novo protocolo de rede com base em TCP (net.tcp://) para comunicação de alto desempenho. O WCF também apresenta um novo componente do sistema, o serviço de compartilhamento de porta NET. TCP que permite que as portas do NET. TCP sejam compartilhadas entre vários processos do usuário.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) fornece um novo protocolo de rede com bas
 ## <a name="port-sharing-architecture"></a>Arquitetura de compartilhamento de porta  
  A arquitetura de compartilhamento de porta no WCF tem três componentes principais:  
   
--   Um processo de trabalho: Qualquer processo net.tcp:// usando portas compartilhadas se comunicando.  
+- Um processo de trabalho: Qualquer processo net.tcp:// usando portas compartilhadas se comunicando.  
   
--   O transporte TCP do WCF: Implementa o protocolo net.tcp://.  
+- O transporte TCP do WCF: Implementa o protocolo net.tcp://.  
   
--   O serviço de compartilhamento de porta NET. TCP: Permite que vários processos de trabalho compartilhar a mesma porta TCP.  
+- O serviço de compartilhamento de porta NET. TCP: Permite que vários processos de trabalho compartilhar a mesma porta TCP.  
   
  O serviço de compartilhamento de porta NET. TCP é um serviço do Windows de modo de usuário que aceita conexões net.tcp:// em nome os processos de trabalho que se conectam por meio dele. Quando chega uma conexão de soquete, a serviço de compartilhamento de porta inspeciona o fluxo de mensagem de entrada para obter seu endereço de destino. Com base nesse endereço, a serviço de compartilhamento de porta pode rotear o fluxo de dados para o aplicativo que, por fim, a processa.  
   

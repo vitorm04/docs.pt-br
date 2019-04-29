@@ -11,18 +11,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
 ms.openlocfilehash: daff9d6d351db514d552225853f977775f8e3204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941434"
 ---
 # <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Como: Habilitar a reorganização de itens ToolStrip em tempo de execução no Windows Forms
 Você pode permitir que o usuário reorganizar <xref:System.Windows.Forms.ToolStripItem> controles no <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Para habilitar a reorganização de ToolStripItem em tempo de execução  
   
--   Defina a propriedade <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> como `true`. Por padrão, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> é `false`.  
+- Defina a propriedade <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> como `true`. Por padrão, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> é `false`.  
   
      Em tempo de execução, o usuário mantiver pressionada a tecla ALT e o botão esquerdo do mouse para arrastar um <xref:System.Windows.Forms.ToolStripItem> em um local diferente no <xref:System.Windows.Forms.ToolStrip>.  
   

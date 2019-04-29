@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940511"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Resumo  
  Estas Instruções fornecem procedimentos passo a passo detalhados para criar um aplicativo Web ASP.NET MVC simples baseado em declarações. Também fornecem instruções sobre como testar o aplicativo Web ASP.NET MVC simples baseado em declarações para uma implementação bem-sucedida da autenticação baseada em declarações. Estas Instruções não contêm instruções detalhadas para a criação de um STS (Serviço de Token de Segurança) e pressupõe que você já tenha configurado um.  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – Criar um aplicativo ASP.NET MVC simples  
+- Etapa 1 – Criar um aplicativo ASP.NET MVC simples  
   
--   Etapa 2 – Configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
+- Etapa 2 – Configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
--   Itens relacionados  
+- Itens relacionados  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar um aplicativo Web ASP.NET MVC para autenticação baseada em declarações  
+- Configurar um aplicativo Web ASP.NET MVC para autenticação baseada em declarações  
   
--   Testar um aplicativo Web ASP.NET MVC bem-sucedido baseado em declarações  
+- Testar um aplicativo Web ASP.NET MVC bem-sucedido baseado em declarações  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – Criar um aplicativo ASP.NET MVC simples  
+- Etapa 1 – Criar um aplicativo ASP.NET MVC simples  
   
--   Etapa 2 – Configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
+- Etapa 2 – Configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Etapa 1 – Criar um aplicativo ASP.NET MVC simples  
  Nesta etapa, você criará um novo aplicativo ASP.NET MVC.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335661"
   
 ## <a name="related-items"></a>Itens relacionados  
   
--   [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

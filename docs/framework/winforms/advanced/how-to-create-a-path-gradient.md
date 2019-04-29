@@ -13,8 +13,8 @@ ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937996"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Como: criar um gradiente de caminho
 O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você personalize a forma como preencher uma forma alterando as cores gradualmente. Por exemplo, você pode especificar uma cor para o centro de um caminho e outra cor para o limite de um caminho. Você também pode especificar cores separadas para cada um dos vários pontos ao longo do limite de um caminho.  
@@ -26,7 +26,7 @@ Os exemplos neste artigo são métodos que são chamados de um controle <xref:Sy
 
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Como preencher uma elipse com um gradiente de caminho  
   
--   O exemplo a seguir preenche uma elipse com pincel de gradiente de caminho. A cor central é definida como azul e a cor do limite é definida como azul-piscina. A ilustração a seguir mostra a elipse preenchida.  
+- O exemplo a seguir preenche uma elipse com pincel de gradiente de caminho. A cor central é definida como azul e a cor do limite é definida como azul-piscina. A ilustração a seguir mostra a elipse preenchida.  
   
      ![Caminho de gradiente preenche uma elipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
@@ -43,12 +43,12 @@ Os exemplos neste artigo são métodos que são chamados de um controle <xref:Sy
   
 ### <a name="to-specify-points-on-the-boundary"></a>Como especificar os pontos no limite  
   
--   O exemplo a seguir constrói um pincel de gradiente de caminho de um caminho em forma de estrela. O código define o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> propriedade, que define a cor do centroide da estrela para vermelho. Em seguida, o código define a <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> propriedade para especificar várias cores (armazenadas no `colors` matriz) em pontos individuais no `points` matriz. A instrução de código final preenche o caminho em forma de estrela com o pincel de gradiente de caminho.  
+- O exemplo a seguir constrói um pincel de gradiente de caminho de um caminho em forma de estrela. O código define o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> propriedade, que define a cor do centroide da estrela para vermelho. Em seguida, o código define a <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> propriedade para especificar várias cores (armazenadas no `colors` matriz) em pontos individuais no `points` matriz. A instrução de código final preenche o caminho em forma de estrela com o pincel de gradiente de caminho.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   O exemplo a seguir desenha um gradiente de caminho sem um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto no código. Determinada <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> construtor no exemplo recebe uma matriz de pontos, mas não exige um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Além disso, observe que o <xref:System.Drawing.Drawing2D.PathGradientBrush> é usado para preencher um retângulo, não um caminho. O retângulo é maior do que o caminho fechado usado para definir o pincel, portanto, alguns dos retângulos não são pintados pelo pincel. A ilustração a seguir mostra o retângulo (linha pontilhada) e a parte do retângulo pintado pelo pincel de gradiente de caminho: 
+- O exemplo a seguir desenha um gradiente de caminho sem um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto no código. Determinada <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> construtor no exemplo recebe uma matriz de pontos, mas não exige um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Além disso, observe que o <xref:System.Drawing.Drawing2D.PathGradientBrush> é usado para preencher um retângulo, não um caminho. O retângulo é maior do que o caminho fechado usado para definir o pincel, portanto, alguns dos retângulos não são pintados pelo pincel. A ilustração a seguir mostra o retângulo (linha pontilhada) e a parte do retângulo pintado pelo pincel de gradiente de caminho: 
   
      ![Parte do gradiente pintado pelo pincel de gradiente de caminho.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
@@ -57,7 +57,7 @@ Os exemplos neste artigo são métodos que são chamados de um controle <xref:Sy
   
 ### <a name="to-customize-a-path-gradient"></a>Como personalizar um gradiente de caminho  
   
--   Uma maneira de personalizar um pincel de gradiente de caminho é definir sua <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> propriedade. O ajuste de escala do foco especifica um caminho interno que se encontra dentro do caminho principal. A cor central é exibida em qualquer lugar dentro desse caminho interno e não apenas no ponto central.  
+- Uma maneira de personalizar um pincel de gradiente de caminho é definir sua <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> propriedade. O ajuste de escala do foco especifica um caminho interno que se encontra dentro do caminho principal. A cor central é exibida em qualquer lugar dentro desse caminho interno e não apenas no ponto central.  
   
      O exemplo a seguir cria um pincel de gradiente de caminho com base em uma trajetória elíptica. O código define a cor do limite como azul, define a cor do centro para azul-piscina e, em seguida, usa o pincel de gradiente de caminho para preencher o caminho elíptico.  
   
@@ -74,7 +74,7 @@ Os exemplos neste artigo são métodos que são chamados de um controle <xref:Sy
   
 ### <a name="to-customize-with-interpolation"></a>Como personalizar com interpolação  
   
--   Outra maneira de personalizar um pincel de gradiente de caminho é especificar uma matriz de cores de interpolação e uma matriz de posições de interpolação.  
+- Outra maneira de personalizar um pincel de gradiente de caminho é especificar uma matriz de cores de interpolação e uma matriz de posições de interpolação.  
   
      O exemplo a seguir cria um pincel de gradiente de caminho com base em um triângulo. O código define o <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> propriedade do pincel do gradiente de caminho para especificar uma matriz de cores de interpolação (verde-escuro, azul-piscina, azul) e uma matriz de posições de interpolação (0, 0,25, 1). Ao mudar do limite do triângulo ao ponto central, a cor gradualmente muda de verde-escuro para azul-piscina e, em seguida, de azul-piscina para azul. A alteração de verde-escuro para azul-piscina ocorre em 25 por cento da distância de verde-escuro para azul.  
   
@@ -87,7 +87,7 @@ Os exemplos neste artigo são métodos que são chamados de um controle <xref:Sy
   
 ### <a name="to-set-the-center-point"></a>Como definir o ponto central  
   
--   Por padrão, o ponto central de um pincel de gradiente de caminho é o centroide de caminho usado para construir o pincel. Você pode alterar o local do ponto central, definindo o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriedade do <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
+- Por padrão, o ponto central de um pincel de gradiente de caminho é o centroide de caminho usado para construir o pincel. Você pode alterar o local do ponto central, definindo o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriedade do <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
   
      O exemplo a seguir cria um pincel de gradiente de caminho com base em uma elipse. O centro da elipse é em (70, 35), mas o ponto central do pincel de gradiente de caminho é definido como (120, 40).  
   
@@ -98,7 +98,7 @@ Os exemplos neste artigo são métodos que são chamados de um controle <xref:Sy
   
      ![Caminho de gradiente com preenchido elipse e o ponto central.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
--   Você pode definir o ponto central de um pincel de gradiente de caminho para um local fora do caminho que foi usado para construir o pincel. O exemplo a seguir substitui a chamada para definir o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriedade no código anterior.  
+- Você pode definir o ponto central de um pincel de gradiente de caminho para um local fora do caminho que foi usado para construir o pincel. O exemplo a seguir substitui a chamada para definir o <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriedade no código anterior.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  

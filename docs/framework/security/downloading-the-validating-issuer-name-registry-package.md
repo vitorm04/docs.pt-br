@@ -3,17 +3,17 @@ title: Baixando o Pacote de Registro do nome do emissor de validação
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
 ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940576"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>Baixe o pacote de registro de nome de emissor validação
 
 Este tópico descreve como baixar e usar o VINR (Registro do Nome do Emissor de Validação) no projeto.
 
-O VINR está disponível como um pacote NuGet, que adiciona os assemblies e as referências necessárias ao projeto. Se você ainda não tiver o NuGet instalado, acesse [nuget.org](https://nuget.org) para instalá-lo. Veja o histórico de controle de versão da extensão visitando sua página no NuGet: [Registro do Nome do Emissor de Validação do Microsoft no NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
+O VINR está disponível como um pacote NuGet, que adiciona os assemblies e as referências necessárias ao projeto. Se você ainda não tiver o NuGet instalado, acesse [nuget.org](https://nuget.org) para instalá-lo. Você pode ver o histórico de controle de versão para a extensão visitando sua página no NuGet: [Validando o registro de nome de emissor do Microsoft](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
 
 ## <a name="use-the-package-manager-gui"></a>Usar a GUI do Gerenciador de pacotes
 

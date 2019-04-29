@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929591"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 Este documento fornece uma visão geral da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço WCF e um cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender a programação de WCF, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -34,11 +34,11 @@ Este documento fornece uma visão geral da arquitetura do Windows Communication 
   
  Outro elemento necessário na pilha de comunicação é a codificação que especifica como qualquer mensagem determinada é formatada. O WCF fornece as seguintes codificações:  
   
--   Codificação de texto, uma codificação interoperável.  
+- Codificação de texto, uma codificação interoperável.  
   
--   Codificação MTOM (Mecanismo de otimização de transmissão de mensagens), que é uma maneira interoperável de enviar com eficiência dados binários não estruturados para e de um serviço.  
+- Codificação MTOM (Mecanismo de otimização de transmissão de mensagens), que é uma maneira interoperável de enviar com eficiência dados binários não estruturados para e de um serviço.  
   
--   Codificação binária para a transferência eficiente.  
+- Codificação binária para a transferência eficiente.  
   
  Mais mecanismos de codificação (por exemplo, uma codificação de compactação) podem ser adicionados usando os pontos de extensão internos do WCF.  
   

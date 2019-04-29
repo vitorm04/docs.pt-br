@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940485"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Como: depurar serviços e aplicativos baseados em declarações usando o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)  
+- Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)  
   
--   Solução de problemas e depuração de aplicativos do WIF  
+- Solução de problemas e depuração de aplicativos do WIF  
   
 ## <a name="summary"></a>Resumo  
  Estas Instruções descrevem as etapas necessárias para configurar o rastreamento do WIF, coletar logs de rastreamento e analisar os logs de rastreamento usando a ferramenta Visualizador de Rastreamento. Fornecem um mapeamento geral para entradas de rastreamento para as ações necessárias para solucionar problemas relacionados ao WIF.  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – Configurar o rastreamento do WIF usando o arquivo de configuração Web.config  
+- Etapa 1 – Configurar o rastreamento do WIF usando o arquivo de configuração Web.config  
   
--   Etapa 2 – Analisar arquivos de rastreamento do WIF usando a ferramenta Visualizador de Rastreamento  
+- Etapa 2 – Analisar arquivos de rastreamento do WIF usando a ferramenta Visualizador de Rastreamento  
   
--   Etapa 3 – Identificar soluções para corrigir problemas relacionados ao WIF  
+- Etapa 3 – Identificar soluções para corrigir problemas relacionados ao WIF  
   
--   Itens relacionados  
+- Itens relacionados  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configure o rastreamento do WIF.  
+- Configure o rastreamento do WIF.  
   
--   Exiba os logs de rastreamento na ferramenta Visualizador de Rastreamento.  
+- Exiba os logs de rastreamento na ferramenta Visualizador de Rastreamento.  
   
--   Identifique problemas relacionados ao WIF nos logs de rastreamento.  
+- Identifique problemas relacionados ao WIF nos logs de rastreamento.  
   
--   Aplique ações corretivas aos problemas relacionados ao WIF encontrados nos logs de rastreamento.  
+- Aplique ações corretivas aos problemas relacionados ao WIF encontrados nos logs de rastreamento.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – Configurar o rastreamento do WIF usando o arquivo de configuração Web.config  
+- Etapa 1 – Configurar o rastreamento do WIF usando o arquivo de configuração Web.config  
   
--   Etapa 2 – Analisar arquivos de rastreamento do WIF usando a ferramenta Visualizador de Rastreamento  
+- Etapa 2 – Analisar arquivos de rastreamento do WIF usando a ferramenta Visualizador de Rastreamento  
   
--   Etapa 3 – Identificar soluções para corrigir problemas relacionados ao WIF  
+- Etapa 3 – Identificar soluções para corrigir problemas relacionados ao WIF  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Etapa 1 – Configurar o rastreamento do WIF usando o arquivo de configuração Web.config  
  Nesta etapa, você adicionará alterações às seções de configuração no arquivo *Web.config* que permitem que o WIF rastreie seus eventos e armazene-os em um log de rastreamento.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321543"
   
 ## <a name="related-items"></a>Itens relacionados  
   
--   [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

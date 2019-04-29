@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937963"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Como: construir fontes e famílias de fontes
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] agrupa fontes com a mesma face de tipo, mas diferentes estilos em famílias de fontes. Por exemplo, a família de fonte Arial contém as seguintes fontes:  
   
--   Arial Regular  
+- Arial Regular  
   
--   Arial Bold  
+- Arial Bold  
   
--   Arial Italic  
+- Arial Italic  
   
--   Arial Bold Italic  
+- Arial Bold Italic  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa quatro estilos de famílias de formato: regular, negrito, itálico e negrito e itálico. Adjetivos como *estreito* e *arredondado* não são considerados estilos; em vez disso, eles são parte do nome da família. Por exemplo, Arial Narrow é uma família de fontes com os seguintes membros:  
   
--   Arial Narrow Regular  
+- Arial Narrow Regular  
   
--   Arial Narrow Bold  
+- Arial Narrow Bold  
   
--   Arial Narrow Italic  
+- Arial Narrow Italic  
   
--   Arial Narrow Bold Italic  
+- Arial Narrow Bold Italic  
   
  Antes de você pode desenhar texto com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você precisa construir uma <xref:System.Drawing.FontFamily> objeto e um <xref:System.Drawing.Font> objeto. O <xref:System.Drawing.FontFamily> objeto Especifica a face de tipos (por exemplo, Arial) e o <xref:System.Drawing.Font> objeto Especifica o tamanho, estilo e unidades.  
   

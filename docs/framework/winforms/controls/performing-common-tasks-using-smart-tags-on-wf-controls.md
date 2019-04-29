@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932594"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Passo a passo: Executando tarefas comuns usando marcas inteligentes nos controles do Windows Forms
 Ao construir formulários e controles para o seu Aplicativo dos Windows Forms, há várias tarefas que serão executadas repetidamente. Estas são algumas das tarefas realizadas com frequência que você encontrará:  
   
--   Adicionando ou removendo uma guia em um <xref:System.Windows.Forms.TabControl>.  
+- Adicionando ou removendo uma guia em um <xref:System.Windows.Forms.TabControl>.  
   
--   Encaixando um controle ao pai.  
+- Encaixando um controle ao pai.  
   
--   Alterando a orientação de um <xref:System.Windows.Forms.SplitContainer> controle.  
+- Alterando a orientação de um <xref:System.Windows.Forms.SplitContainer> controle.  
   
  Para acelerar o desenvolvimento, muitos controles oferecem smart tags, que são menus contextuais que permitem executar tarefas comuns como essas em um único gesto no tempo de design. Essas tarefas são chamadas *verbos de marcas inteligentes*.  
   
@@ -28,11 +28,11 @@ Ao construir formulários e controles para o seu Aplicativo dos Windows Forms, h
   
  As tarefas ilustradas neste passo a passo incluem:  
   
--   Criação de um projeto dos Windows Forms  
+- Criação de um projeto dos Windows Forms  
   
--   Usando smart tags  
+- Usando smart tags  
   
--   Habilitar e desabilitar smart tags  
+- Habilitar e desabilitar smart tags  
   
  Ao terminar, você terá um entendimento da função desempenhada por esses importantes recursos de layout.  
   

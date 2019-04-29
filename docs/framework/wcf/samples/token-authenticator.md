@@ -3,30 +3,30 @@ title: Autenticador de token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779165"
 ---
 # <a name="token-authenticator"></a>Autenticador de token
 Este exemplo demonstra como implementar um autenticador de token personalizado. Um autenticador de token no Windows Communication Foundation (WCF) é usado para validar o token usado com a mensagem, verificar se ele é autoconsistente e autenticar a identidade associada ao token.
 
  Autenticadores de token personalizados são úteis em uma variedade de casos, como:
 
--   Quando você deseja substituir o mecanismo de autenticação padrão associado a um token.
+- Quando você deseja substituir o mecanismo de autenticação padrão associado a um token.
 
--   Quando você está criando um token personalizado.
+- Quando você está criando um token personalizado.
 
  Este exemplo demonstra o seguinte:
 
--   Como um cliente pode autenticar usando um par de nome de usuário e senha.
+- Como um cliente pode autenticar usando um par de nome de usuário e senha.
 
--   Como o servidor pode validar as credenciais do cliente usando um autenticador de token personalizado.
+- Como o servidor pode validar as credenciais do cliente usando um autenticador de token personalizado.
 
--   Como o código do serviço WCF está associado com o autenticador de token personalizado.
+- Como o código do serviço WCF está associado com o autenticador de token personalizado.
 
--   Como o servidor pode ser autenticado usando o certificado do servidor x. 509.
+- Como o servidor pode ser autenticado usando o certificado do servidor x. 509.
 
  Este exemplo também mostra como a identidade do chamador está acessível no WCF após o processo de autenticação de token personalizado.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  O exemplo a seguir fornece uma visão geral das seções diferentes dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.
 
--   Criando o certificado do servidor.
+- Criando o certificado do servidor.
 
      As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão nesse arquivo em lotes é localhost.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
+- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
 
      As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
 

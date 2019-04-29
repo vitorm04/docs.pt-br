@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934869"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Método ICorDebugAppDomain2::GetArrayOrPointerType
 Obtém uma matriz do tipo especificado, ou um ponteiro ou referência ao tipo especificado.  
@@ -54,11 +54,11 @@ HRESULT GetArrayOrPointerType (
 ## <a name="remarks"></a>Comentários  
  O valor de *elementType* deve ser um dos seguintes:  
   
--   ELEMENT_TYPE_PTR  
+- ELEMENT_TYPE_PTR  
   
--   ELEMENT_TYPE_BYREF  
+- ELEMENT_TYPE_BYREF  
   
--   ELEMENT_TYPE_ARRAY ou ELEMENT_TYPE_SZARRAY  
+- ELEMENT_TYPE_ARRAY ou ELEMENT_TYPE_SZARRAY  
   
  Se o valor de *elementType* é ELEMENT_TYPE_PTR ou ELEMENT_TYPE_BYREF, *nRank* deve ser zero.  
   

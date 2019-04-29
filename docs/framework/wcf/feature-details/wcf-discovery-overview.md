@@ -3,11 +3,11 @@ title: Visão geral de descoberta do WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784248"
 ---
 # <a name="wcf-discovery-overview"></a>Visão geral de descoberta do WCF
 As APIs de descoberta fornecem um modelo de programação unificado para a publicação dinâmica e a descoberta de serviços da Web usando o protocolo WS-Discovery. Essas APIs permitem que os serviços publicar em si e os clientes localizem serviços publicados. Depois que um serviço é feito detectável, o serviço tem a capacidade de enviar mensagens de comunicado, bem como ouvir e responder às solicitações de descoberta. Serviços podem ser descobertos podem enviar mensagens de saudação anunciar sua chegada em uma rede e Bye anunciar sua saída de uma rede. Para localizar um serviço, os clientes enviam uma `Probe` solicitação que contém critérios específicos, como o tipo de contrato de serviço, as palavras-chave e o escopo na rede. Serviços de recebem o `Probe` solicitar e determinar se eles correspondem aos critérios. Se corresponder a um serviço, ele responde enviando um `ProbeMatch` mensagem de volta para o cliente com as informações necessárias para contatar o serviço. Os clientes também podem enviar `Resolve` solicitações que lhes permitem encontrar os serviços que podem ter sido alteradas seu endereço de ponto de extremidade. Serviços correspondentes respondem às `Resolve` solicitações enviando um `ResolveMatch` mensagem de volta ao cliente.  
@@ -15,11 +15,11 @@ As APIs de descoberta fornecem um modelo de programação unificado para a publi
 ## <a name="ad-hoc-and-managed-modes"></a>Modos gerenciados e Ad Hoc  
  A API de descoberta dá suporte a dois modos diferentes: Gerenciado e Ad Hoc. No modo gerenciado, há um servidor centralizado chamado um proxy de descoberta que mantém informações sobre os serviços disponíveis. O proxy de descoberta pode ser preenchido com informações sobre os serviços em uma variedade de formas. Por exemplo, os serviços podem enviar mensagens de comunicado durante o início até o proxy de descoberta ou o proxy pode ler os dados de um banco de dados ou um arquivo de configuração para determinar quais serviços estão disponíveis. Como o proxy de descoberta é preenchido completamente é responsabilidade do desenvolvedor. Clientes usam o proxy de descoberta para recuperar informações sobre os serviços disponíveis. Quando um cliente pesquisa um serviço ele envia um `Probe` mensagem para o proxy de descoberta e o proxy determina se qualquer um dos serviços que ele sabe sobre correspondem ao serviço que o cliente está procurando. Se não houver correspondências dos envios de proxy de descoberta uma `ProbeMatch` resposta de volta ao cliente. O cliente pode, em seguida, entre em contato com o serviço diretamente usando as informações de serviço retornadas do proxy. O princípio fundamental por trás de modo gerenciado é que as solicitações de descoberta são enviadas de uma maneira de unicast para uma autoridade, o proxy de descoberta. O .NET Framework contém componentes-chave que permitem que você crie seus próprios proxy. Os clientes e serviços podem localizar o proxy por vários métodos:  
   
--   O proxy pode responder a mensagens ad hoc.  
+- O proxy pode responder a mensagens ad hoc.  
   
--   O proxy pode enviar uma mensagem de comunicado durante o início do.  
+- O proxy pode enviar uma mensagem de comunicado durante o início do.  
   
--   Os clientes e serviços podem ser gravados para procurar um ponto de extremidade conhecido específico.  
+- Os clientes e serviços podem ser gravados para procurar um ponto de extremidade conhecido específico.  
   
  No modo Ad Hoc, não há nenhum servidor centralizado. Todas as mensagens de descoberta, como anúncios de serviço e solicitações de cliente são enviadas de forma seletiva. Por padrão o .NET Framework contém suporte para a descoberta de Ad-Hoc através do protocolo UDP. Por exemplo, se um serviço estiver configurado para enviar um anúncio Hello durante a inicialização, ele envia-lo ao longo de um endereço de multicast, bem conhecido, usando o protocolo UDP. Os clientes precisam ouvir esses anúncios ativamente e processá-las adequadamente. Quando um cliente envia um `Probe` mensagem para um serviço que ela seja enviada pela rede usando um protocolo de multicast. Cada serviço que recebe a solicitação determina se ele corresponde aos critérios de `Probe` da mensagem e responde diretamente ao cliente com um `ProbeMatch` da mensagem se o serviço corresponder aos critérios especificados no `Probe` mensagem.  
   
