@@ -17,27 +17,27 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e26d79a5b597b8585f2fffd7f3945f00832ca134
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650707"
 ---
-# <a name="isymunmanagedwriter3-interface"></a><span data-ttu-id="0feb9-102">Interface ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="0feb9-102">ISymUnmanagedWriter3 Interface</span></span>
-<span data-ttu-id="0feb9-103">Representa um gravador de símbolo e fornece métodos para definir pontos de sequência, documentos, escopos léxicos e variáveis.</span><span class="sxs-lookup"><span data-stu-id="0feb9-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span> <span data-ttu-id="0feb9-104">Essa interface estende o [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="0feb9-104">This interface extends the [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
+# <a name="isymunmanagedwriter3-interface"></a><span data-ttu-id="07ea7-102">Interface ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="07ea7-102">ISymUnmanagedWriter3 Interface</span></span>
+<span data-ttu-id="07ea7-103">Representa um gravador de símbolo e fornece métodos para definir pontos de sequência, documentos, escopos léxicos e variáveis.</span><span class="sxs-lookup"><span data-stu-id="07ea7-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span> <span data-ttu-id="07ea7-104">Essa interface estende o [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="07ea7-104">This interface extends the [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0feb9-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="0feb9-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="07ea7-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="07ea7-105">Methods</span></span>  
   
-|<span data-ttu-id="0feb9-106">Método</span><span class="sxs-lookup"><span data-stu-id="0feb9-106">Method</span></span>|<span data-ttu-id="0feb9-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="0feb9-107">Description</span></span>|  
+|<span data-ttu-id="07ea7-106">Método</span><span class="sxs-lookup"><span data-stu-id="07ea7-106">Method</span></span>|<span data-ttu-id="07ea7-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="07ea7-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0feb9-108">Método Commit</span><span class="sxs-lookup"><span data-stu-id="0feb9-108">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-commit-method.md)|<span data-ttu-id="0feb9-109">Confirma as alterações gravadas no fluxo até o momento.</span><span class="sxs-lookup"><span data-stu-id="0feb9-109">Commits the changes written so far to the stream.</span></span>|  
-|[<span data-ttu-id="0feb9-110">Método OpenMethod2</span><span class="sxs-lookup"><span data-stu-id="0feb9-110">OpenMethod2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)|<span data-ttu-id="0feb9-111">Abre um método e fornece seu deslocamento de seção real na imagem.</span><span class="sxs-lookup"><span data-stu-id="0feb9-111">Opens a method and provides its real section offset in the image.</span></span>|  
+|[<span data-ttu-id="07ea7-108">Método Commit</span><span class="sxs-lookup"><span data-stu-id="07ea7-108">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-commit-method.md)|<span data-ttu-id="07ea7-109">Confirma as alterações gravadas no fluxo até o momento.</span><span class="sxs-lookup"><span data-stu-id="07ea7-109">Commits the changes written so far to the stream.</span></span>|  
+|[<span data-ttu-id="07ea7-110">Método OpenMethod2</span><span class="sxs-lookup"><span data-stu-id="07ea7-110">OpenMethod2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)|<span data-ttu-id="07ea7-111">Abre um método e fornece seu deslocamento de seção real na imagem.</span><span class="sxs-lookup"><span data-stu-id="07ea7-111">Opens a method and provides its real section offset in the image.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0feb9-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0feb9-112">Requirements</span></span>  
- <span data-ttu-id="0feb9-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0feb9-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07ea7-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="07ea7-112">Requirements</span></span>  
+ <span data-ttu-id="07ea7-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="07ea7-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0feb9-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0feb9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07ea7-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="07ea7-114">See also</span></span>
 
-- [<span data-ttu-id="0feb9-115">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="0feb9-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="0feb9-116">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="0feb9-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="0feb9-117">Interface ISymUnmanagedWriter2</span><span class="sxs-lookup"><span data-stu-id="0feb9-117">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="07ea7-115">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="07ea7-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="07ea7-116">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="07ea7-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="07ea7-117">Interface ISymUnmanagedWriter2</span><span class="sxs-lookup"><span data-stu-id="07ea7-117">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)

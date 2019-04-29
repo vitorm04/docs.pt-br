@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697674"
 ---
-# <a name="iassemblycache-interface"></a><span data-ttu-id="5817d-102">Interface IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="5817d-102">IAssemblyCache Interface</span></span>
-<span data-ttu-id="5817d-103">Representa o cache de assembly global para uso pela tecnologia de fusão.</span><span class="sxs-lookup"><span data-stu-id="5817d-103">Represents the global assembly cache for use by the fusion technology.</span></span>  
+# <a name="iassemblycache-interface"></a><span data-ttu-id="05b42-102">Interface IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="05b42-102">IAssemblyCache Interface</span></span>
+<span data-ttu-id="05b42-103">Representa o cache de assembly global para uso pela tecnologia de fusão.</span><span class="sxs-lookup"><span data-stu-id="05b42-103">Represents the global assembly cache for use by the fusion technology.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5817d-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="5817d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="05b42-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="05b42-104">Methods</span></span>  
   
-|<span data-ttu-id="5817d-105">Método</span><span class="sxs-lookup"><span data-stu-id="5817d-105">Method</span></span>|<span data-ttu-id="5817d-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="5817d-106">Description</span></span>|  
+|<span data-ttu-id="05b42-105">Método</span><span class="sxs-lookup"><span data-stu-id="05b42-105">Method</span></span>|<span data-ttu-id="05b42-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="05b42-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5817d-107">Método CreateAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="5817d-107">CreateAssemblyCacheItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|<span data-ttu-id="5817d-108">Obtém uma referência a um novo [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span><span class="sxs-lookup"><span data-stu-id="5817d-108">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span></span>|  
-|[<span data-ttu-id="5817d-109">Método CreateAssemblyScavenger</span><span class="sxs-lookup"><span data-stu-id="5817d-109">CreateAssemblyScavenger Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|<span data-ttu-id="5817d-110">Reservado para uso interno pela tecnologia de fusão.</span><span class="sxs-lookup"><span data-stu-id="5817d-110">Reserved for internal use by the fusion technology.</span></span>|  
-|[<span data-ttu-id="5817d-111">Método InstallAssembly</span><span class="sxs-lookup"><span data-stu-id="5817d-111">InstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|<span data-ttu-id="5817d-112">Instala o assembly especificado no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="5817d-112">Installs the specified assembly in the global assembly cache.</span></span>|  
-|[<span data-ttu-id="5817d-113">Método QueryAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="5817d-113">QueryAssemblyInfo Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|<span data-ttu-id="5817d-114">Obtém os dados solicitados sobre o assembly especificado.</span><span class="sxs-lookup"><span data-stu-id="5817d-114">Gets the requested data about the specified assembly.</span></span>|  
-|[<span data-ttu-id="5817d-115">Método UninstallAssembly</span><span class="sxs-lookup"><span data-stu-id="5817d-115">UninstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|<span data-ttu-id="5817d-116">Desinstala o assembly especificado do cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="5817d-116">Uninstalls the specified assembly from the global assembly cache.</span></span>|  
+|[<span data-ttu-id="05b42-107">Método CreateAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="05b42-107">CreateAssemblyCacheItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|<span data-ttu-id="05b42-108">Obtém uma referência a um novo [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span><span class="sxs-lookup"><span data-stu-id="05b42-108">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span></span>|  
+|[<span data-ttu-id="05b42-109">Método CreateAssemblyScavenger</span><span class="sxs-lookup"><span data-stu-id="05b42-109">CreateAssemblyScavenger Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|<span data-ttu-id="05b42-110">Reservado para uso interno pela tecnologia de fusão.</span><span class="sxs-lookup"><span data-stu-id="05b42-110">Reserved for internal use by the fusion technology.</span></span>|  
+|[<span data-ttu-id="05b42-111">Método InstallAssembly</span><span class="sxs-lookup"><span data-stu-id="05b42-111">InstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|<span data-ttu-id="05b42-112">Instala o assembly especificado no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="05b42-112">Installs the specified assembly in the global assembly cache.</span></span>|  
+|[<span data-ttu-id="05b42-113">Método QueryAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="05b42-113">QueryAssemblyInfo Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|<span data-ttu-id="05b42-114">Obtém os dados solicitados sobre o assembly especificado.</span><span class="sxs-lookup"><span data-stu-id="05b42-114">Gets the requested data about the specified assembly.</span></span>|  
+|[<span data-ttu-id="05b42-115">Método UninstallAssembly</span><span class="sxs-lookup"><span data-stu-id="05b42-115">UninstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|<span data-ttu-id="05b42-116">Desinstala o assembly especificado do cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="05b42-116">Uninstalls the specified assembly from the global assembly cache.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5817d-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5817d-117">Requirements</span></span>  
- <span data-ttu-id="5817d-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5817d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05b42-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05b42-117">Requirements</span></span>  
+ <span data-ttu-id="05b42-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05b42-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5817d-119">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5817d-119">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="05b42-119">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="05b42-119">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="5817d-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5817d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="05b42-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05b42-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5817d-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5817d-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05b42-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="05b42-121">See also</span></span>
 
-- [<span data-ttu-id="5817d-122">Interfaces de fusão</span><span class="sxs-lookup"><span data-stu-id="5817d-122">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="5817d-123">Cache de assembly global</span><span class="sxs-lookup"><span data-stu-id="5817d-123">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="05b42-122">Interfaces de fusão</span><span class="sxs-lookup"><span data-stu-id="05b42-122">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="05b42-123">Cache de assembly global</span><span class="sxs-lookup"><span data-stu-id="05b42-123">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

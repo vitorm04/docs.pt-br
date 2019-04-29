@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666971"
 ---
-# <a name="icordebugeval2newstringwithlength-method"></a><span data-ttu-id="d7c7d-102">Método ICorDebugEval2::NewStringWithLength</span><span class="sxs-lookup"><span data-stu-id="d7c7d-102">ICorDebugEval2::NewStringWithLength Method</span></span>
-<span data-ttu-id="d7c7d-103">Cria uma cadeia de caracteres de comprimento especificado, com o conteúdo especificado.</span><span class="sxs-lookup"><span data-stu-id="d7c7d-103">Creates a string of the specified length, with the specified contents.</span></span>  
+# <a name="icordebugeval2newstringwithlength-method"></a><span data-ttu-id="c9ef5-102">Método ICorDebugEval2::NewStringWithLength</span><span class="sxs-lookup"><span data-stu-id="c9ef5-102">ICorDebugEval2::NewStringWithLength Method</span></span>
+<span data-ttu-id="c9ef5-103">Cria uma cadeia de caracteres de comprimento especificado, com o conteúdo especificado.</span><span class="sxs-lookup"><span data-stu-id="c9ef5-103">Creates a string of the specified length, with the specified contents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7c7d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d7c7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9ef5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c9ef5-104">Syntax</span></span>  
   
 ```  
 HRESULT NewStringWithLength (  
@@ -36,23 +36,23 @@ HRESULT NewStringWithLength (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d7c7d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d7c7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9ef5-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c9ef5-105">Parameters</span></span>  
  `string`  
- <span data-ttu-id="d7c7d-106">[in] Um ponteiro para o valor de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d7c7d-106">[in] A pointer to the string value.</span></span>  
+ <span data-ttu-id="c9ef5-106">[in] Um ponteiro para o valor de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="c9ef5-106">[in] A pointer to the string value.</span></span>  
   
  `uiLength`  
- <span data-ttu-id="d7c7d-107">[in] Comprimento da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d7c7d-107">[in] Length of the string.</span></span>  
+ <span data-ttu-id="c9ef5-107">[in] Comprimento da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="c9ef5-107">[in] Length of the string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d7c7d-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="d7c7d-108">Remarks</span></span>  
- <span data-ttu-id="d7c7d-109">Se a cadeia de caracteres da direita caractere nulo deve estar em uma cadeia de caracteres gerenciada, o chamador do `NewStringWithLength` método deve garantir que o comprimento da cadeia de caracteres inclui o caractere nulo à direita.</span><span class="sxs-lookup"><span data-stu-id="d7c7d-109">If the string's trailing null character is expected to be in the managed string, the caller of the `NewStringWithLength` method must ensure that the string length includes the trailing null character.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9ef5-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9ef5-108">Remarks</span></span>  
+ <span data-ttu-id="c9ef5-109">Se a cadeia de caracteres da direita caractere nulo deve estar em uma cadeia de caracteres gerenciada, o chamador do `NewStringWithLength` método deve garantir que o comprimento da cadeia de caracteres inclui o caractere nulo à direita.</span><span class="sxs-lookup"><span data-stu-id="c9ef5-109">If the string's trailing null character is expected to be in the managed string, the caller of the `NewStringWithLength` method must ensure that the string length includes the trailing null character.</span></span>  
   
- <span data-ttu-id="d7c7d-110">A cadeia de caracteres sempre é criada no domínio do aplicativo no qual o thread está em execução no momento.</span><span class="sxs-lookup"><span data-stu-id="d7c7d-110">The string is always created in the application domain in which the thread is currently executing.</span></span>  
+ <span data-ttu-id="c9ef5-110">A cadeia de caracteres sempre é criada no domínio do aplicativo no qual o thread está em execução no momento.</span><span class="sxs-lookup"><span data-stu-id="c9ef5-110">The string is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7c7d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d7c7d-111">Requirements</span></span>  
- <span data-ttu-id="d7c7d-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7c7d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9ef5-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c9ef5-111">Requirements</span></span>  
+ <span data-ttu-id="c9ef5-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9ef5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7c7d-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7c7d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9ef5-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9ef5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d7c7d-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7c7d-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9ef5-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9ef5-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d7c7d-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7c7d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c9ef5-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9ef5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

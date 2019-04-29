@@ -17,31 +17,31 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c62079a87c09bcbe09167a137fd39530652ae3e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697856"
 ---
-# <a name="iclrdebugginglibraryprovider-interface"></a><span data-ttu-id="87b0c-102">Interface ICLRDebuggingLibraryProvider</span><span class="sxs-lookup"><span data-stu-id="87b0c-102">ICLRDebuggingLibraryProvider Interface</span></span>
-<span data-ttu-id="87b0c-103">Inclui o [método ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) método, que obtém um provedor de biblioteca de interface de retorno de chamada que permite que o common language runtime específica da versão bibliotecas de depuração ser localizada e carregada sob demanda.</span><span class="sxs-lookup"><span data-stu-id="87b0c-103">Includes the [ProvideLibrary Method](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) method, which gets a library provider callback interface that allows common language runtime version-specific debugging libraries to be located and loaded on demand.</span></span>  
+# <a name="iclrdebugginglibraryprovider-interface"></a><span data-ttu-id="17946-102">Interface ICLRDebuggingLibraryProvider</span><span class="sxs-lookup"><span data-stu-id="17946-102">ICLRDebuggingLibraryProvider Interface</span></span>
+<span data-ttu-id="17946-103">Inclui o [método ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) método, que obtém um provedor de biblioteca de interface de retorno de chamada que permite que o common language runtime específica da versão bibliotecas de depuração ser localizada e carregada sob demanda.</span><span class="sxs-lookup"><span data-stu-id="17946-103">Includes the [ProvideLibrary Method](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) method, which gets a library provider callback interface that allows common language runtime version-specific debugging libraries to be located and loaded on demand.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="87b0c-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="87b0c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="17946-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="17946-104">Methods</span></span>  
   
-|<span data-ttu-id="87b0c-105">Método</span><span class="sxs-lookup"><span data-stu-id="87b0c-105">Method</span></span>|<span data-ttu-id="87b0c-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="87b0c-106">Description</span></span>|  
+|<span data-ttu-id="17946-105">Método</span><span class="sxs-lookup"><span data-stu-id="17946-105">Method</span></span>|<span data-ttu-id="17946-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="17946-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="87b0c-107">Método ProvideLibrary</span><span class="sxs-lookup"><span data-stu-id="87b0c-107">ProvideLibrary Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|<span data-ttu-id="87b0c-108">Permite que o depurador fornecer um identificador para um módulo que pode ser usado para carregar uma biblioteca de depuração.</span><span class="sxs-lookup"><span data-stu-id="87b0c-108">Allows the debugger to provide a handle to a module which can be used to load a debug library.</span></span>|  
+|[<span data-ttu-id="17946-107">Método ProvideLibrary</span><span class="sxs-lookup"><span data-stu-id="17946-107">ProvideLibrary Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|<span data-ttu-id="17946-108">Permite que o depurador fornecer um identificador para um módulo que pode ser usado para carregar uma biblioteca de depuração.</span><span class="sxs-lookup"><span data-stu-id="17946-108">Allows the debugger to provide a handle to a module which can be used to load a debug library.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="87b0c-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="87b0c-109">Requirements</span></span>  
- <span data-ttu-id="87b0c-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87b0c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17946-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="17946-109">Requirements</span></span>  
+ <span data-ttu-id="17946-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17946-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87b0c-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="87b0c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17946-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17946-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="87b0c-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="87b0c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17946-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17946-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="87b0c-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87b0c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="17946-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17946-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87b0c-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="87b0c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17946-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="17946-114">See also</span></span>
 
-- [<span data-ttu-id="87b0c-115">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="87b0c-115">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="87b0c-116">Depuração</span><span class="sxs-lookup"><span data-stu-id="87b0c-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="17946-115">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="17946-115">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="17946-116">Depuração</span><span class="sxs-lookup"><span data-stu-id="17946-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

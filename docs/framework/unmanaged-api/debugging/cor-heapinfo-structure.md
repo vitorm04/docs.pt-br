@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609471"
 ---
-# <a name="corheapinfo-structure"></a><span data-ttu-id="c7a13-102">Estrutura COR_HEAPINFO</span><span class="sxs-lookup"><span data-stu-id="c7a13-102">COR_HEAPINFO Structure</span></span>
-<span data-ttu-id="c7a13-103">Fornece informações gerais sobre o heap de coleta de lixo, incluindo se é enumerável.</span><span class="sxs-lookup"><span data-stu-id="c7a13-103">Provides general information about the garbage collection heap, including whether it is enumerable.</span></span>  
+# <a name="corheapinfo-structure"></a><span data-ttu-id="8ed61-102">Estrutura COR_HEAPINFO</span><span class="sxs-lookup"><span data-stu-id="8ed61-102">COR_HEAPINFO Structure</span></span>
+<span data-ttu-id="8ed61-103">Fornece informações gerais sobre o heap de coleta de lixo, incluindo se é enumerável.</span><span class="sxs-lookup"><span data-stu-id="8ed61-103">Provides general information about the garbage collection heap, including whether it is enumerable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7a13-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c7a13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ed61-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8ed61-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_HEAPINFO {  
@@ -38,31 +38,31 @@ typedef struct _COR_HEAPINFO {
 } COR_HEAPINFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c7a13-105">Membros</span><span class="sxs-lookup"><span data-stu-id="c7a13-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8ed61-105">Membros</span><span class="sxs-lookup"><span data-stu-id="8ed61-105">Members</span></span>  
   
-|<span data-ttu-id="c7a13-106">Membro</span><span class="sxs-lookup"><span data-stu-id="c7a13-106">Member</span></span>|<span data-ttu-id="c7a13-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="c7a13-107">Description</span></span>|  
+|<span data-ttu-id="8ed61-106">Membro</span><span class="sxs-lookup"><span data-stu-id="8ed61-106">Member</span></span>|<span data-ttu-id="8ed61-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="8ed61-107">Description</span></span>|  
 |------------|-----------------|  
-|`areGCStructuresValid`|<span data-ttu-id="c7a13-108">`true` Se as estruturas de coleta de lixo são válidas e o heap pode ser enumerado; Caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="c7a13-108">`true` if garbage collection structures are valid and the heap can be enumerated; otherwise, `false`.</span></span>|  
-|`pointerSize`|<span data-ttu-id="c7a13-109">O tamanho, em bytes, dos ponteiros na arquitetura de destino.</span><span class="sxs-lookup"><span data-stu-id="c7a13-109">The size, in bytes, of pointers on the target architecture.</span></span>|  
-|`numHeaps`|<span data-ttu-id="c7a13-110">O número de coleta de lixo lógico heaps no processo.</span><span class="sxs-lookup"><span data-stu-id="c7a13-110">The number of logical garbage collection heaps in the process.</span></span>|  
-|`concurrent`|<span data-ttu-id="c7a13-111">`TRUE` Se simultâneas a coleta de lixo (em segundo plano) estiver habilitada; Caso contrário, `FALSE`.</span><span class="sxs-lookup"><span data-stu-id="c7a13-111">`TRUE` if concurrent (background) garbage collection is enabled; otherwise, `FALSE`.</span></span>|  
-|`gcType`|<span data-ttu-id="c7a13-112">Um membro do [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumeração que indica se o coletor de lixo está em execução em uma estação de trabalho ou um servidor.</span><span class="sxs-lookup"><span data-stu-id="c7a13-112">A member of the [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumeration that indicates whether the garbage collector is running on a workstation or a server.</span></span>|  
+|`areGCStructuresValid`|<span data-ttu-id="8ed61-108">`true` Se as estruturas de coleta de lixo são válidas e o heap pode ser enumerado; Caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="8ed61-108">`true` if garbage collection structures are valid and the heap can be enumerated; otherwise, `false`.</span></span>|  
+|`pointerSize`|<span data-ttu-id="8ed61-109">O tamanho, em bytes, dos ponteiros na arquitetura de destino.</span><span class="sxs-lookup"><span data-stu-id="8ed61-109">The size, in bytes, of pointers on the target architecture.</span></span>|  
+|`numHeaps`|<span data-ttu-id="8ed61-110">O número de coleta de lixo lógico heaps no processo.</span><span class="sxs-lookup"><span data-stu-id="8ed61-110">The number of logical garbage collection heaps in the process.</span></span>|  
+|`concurrent`|<span data-ttu-id="8ed61-111">`TRUE` Se simultâneas a coleta de lixo (em segundo plano) estiver habilitada; Caso contrário, `FALSE`.</span><span class="sxs-lookup"><span data-stu-id="8ed61-111">`TRUE` if concurrent (background) garbage collection is enabled; otherwise, `FALSE`.</span></span>|  
+|`gcType`|<span data-ttu-id="8ed61-112">Um membro do [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumeração que indica se o coletor de lixo está em execução em uma estação de trabalho ou um servidor.</span><span class="sxs-lookup"><span data-stu-id="8ed61-112">A member of the [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumeration that indicates whether the garbage collector is running on a workstation or a server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c7a13-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="c7a13-113">Remarks</span></span>  
- <span data-ttu-id="c7a13-114">Uma instância das `COR_HEAPINFO` estrutura é retornada ao chamar o [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="c7a13-114">An instance of the `COR_HEAPINFO` structure is returned by calling the [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8ed61-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="8ed61-113">Remarks</span></span>  
+ <span data-ttu-id="8ed61-114">Uma instância das `COR_HEAPINFO` estrutura é retornada ao chamar o [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="8ed61-114">An instance of the `COR_HEAPINFO` structure is returned by calling the [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) method.</span></span>  
   
- <span data-ttu-id="c7a13-115">Antes de enumerar os objetos no heap de coleta de lixo, você sempre deve verificar o `areGCStructuresValid` campo para garantir que o heap está em um estado enumerável.</span><span class="sxs-lookup"><span data-stu-id="c7a13-115">Before enumerating objects on the garbage collection heap, you must always check the `areGCStructuresValid` field to ensure that the heap is in an enumerable state.</span></span> <span data-ttu-id="c7a13-116">Para obter mais informações, consulte o [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="c7a13-116">For more information, see the [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) method.</span></span>  
+ <span data-ttu-id="8ed61-115">Antes de enumerar os objetos no heap de coleta de lixo, você sempre deve verificar o `areGCStructuresValid` campo para garantir que o heap está em um estado enumerável.</span><span class="sxs-lookup"><span data-stu-id="8ed61-115">Before enumerating objects on the garbage collection heap, you must always check the `areGCStructuresValid` field to ensure that the heap is in an enumerable state.</span></span> <span data-ttu-id="8ed61-116">Para obter mais informações, consulte o [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="8ed61-116">For more information, see the [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7a13-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c7a13-117">Requirements</span></span>  
- <span data-ttu-id="c7a13-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7a13-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ed61-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8ed61-117">Requirements</span></span>  
+ <span data-ttu-id="8ed61-118">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8ed61-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7a13-119">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7a13-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8ed61-119">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8ed61-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7a13-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7a13-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8ed61-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8ed61-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7a13-121">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7a13-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="8ed61-121">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ed61-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7a13-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c7a13-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ed61-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ed61-122">See also</span></span>
 
-- [<span data-ttu-id="c7a13-123">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="c7a13-123">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="c7a13-124">Depuração</span><span class="sxs-lookup"><span data-stu-id="c7a13-124">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="8ed61-123">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="8ed61-123">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="8ed61-124">Depuração</span><span class="sxs-lookup"><span data-stu-id="8ed61-124">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
