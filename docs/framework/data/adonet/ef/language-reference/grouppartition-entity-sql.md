@@ -3,34 +3,34 @@ title: PARTIÇÃODOGRUPO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774719"
 ---
-# <a name="grouppartition-entity-sql"></a><span data-ttu-id="42f8f-102">PARTIÇÃODOGRUPO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="42f8f-102">GROUPPARTITION (Entity SQL)</span></span>
-<span data-ttu-id="42f8f-103">Retorna uma coleção de valores de argumento que são projetados fora do partição atual do grupo que a agregação está relacionada.</span><span class="sxs-lookup"><span data-stu-id="42f8f-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="42f8f-104">A agregação de `GroupPartition` é uma agregação grupo- base e não tem nenhum formulário coleção com base.</span><span class="sxs-lookup"><span data-stu-id="42f8f-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  
+# <a name="grouppartition-entity-sql"></a><span data-ttu-id="f370b-102">PARTIÇÃODOGRUPO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f370b-102">GROUPPARTITION (Entity SQL)</span></span>
+<span data-ttu-id="f370b-103">Retorna uma coleção de valores de argumento que são projetados fora do partição atual do grupo que a agregação está relacionada.</span><span class="sxs-lookup"><span data-stu-id="f370b-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="f370b-104">A agregação de `GroupPartition` é uma agregação grupo- base e não tem nenhum formulário coleção com base.</span><span class="sxs-lookup"><span data-stu-id="f370b-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42f8f-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="42f8f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f370b-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f370b-105">Syntax</span></span>  
   
 ```  
 GROUPPARTITION( [ALL|DISTINCT] expression )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="42f8f-106">Arguments</span><span class="sxs-lookup"><span data-stu-id="42f8f-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="f370b-106">Arguments</span><span class="sxs-lookup"><span data-stu-id="f370b-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="42f8f-107">Qualquer expressão de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="42f8f-107">Any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression.</span></span>  
+ <span data-ttu-id="f370b-107">Qualquer expressão de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f370b-107">Any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="42f8f-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="42f8f-108">Remarks</span></span>  
- <span data-ttu-id="42f8f-109">A seguinte consulta gerencia uma lista de produtos e uma coleção de linha quantidades do pedido por cada produto:</span><span class="sxs-lookup"><span data-stu-id="42f8f-109">The following query produces a list of products and a collection of order line quantities per each product:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f370b-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="f370b-108">Remarks</span></span>  
+ <span data-ttu-id="f370b-109">A seguinte consulta gerencia uma lista de produtos e uma coleção de linha quantidades do pedido por cada produto:</span><span class="sxs-lookup"><span data-stu-id="f370b-109">The following query produces a list of products and a collection of order line quantities per each product:</span></span>  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol  
   group by ol.Product as p  
 ```  
   
- <span data-ttu-id="42f8f-110">As duas consultas são iguais semanticamente:</span><span class="sxs-lookup"><span data-stu-id="42f8f-110">The following two queries are semantically equal:</span></span>  
+ <span data-ttu-id="f370b-110">As duas consultas são iguais semanticamente:</span><span class="sxs-lookup"><span data-stu-id="f370b-110">The following two queries are semantically equal:</span></span>  
   
 ```  
 select p, Sum(GroupPartition(ol.Quantity)) from LOB.OrderLines as ol  
@@ -39,26 +39,26 @@ select p, Sum(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p  
 ```  
   
- <span data-ttu-id="42f8f-111">O operador de `GROUPPARTITION` pode ser usado em conjunto com funções agregadas definidas pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="42f8f-111">The `GROUPPARTITION` operator can be used in conjunction with user-defined aggregate functions.</span></span>  
+ <span data-ttu-id="f370b-111">O operador de `GROUPPARTITION` pode ser usado em conjunto com funções agregadas definidas pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="f370b-111">The `GROUPPARTITION` operator can be used in conjunction with user-defined aggregate functions.</span></span>  
   
- <span data-ttu-id="42f8f-112">`GROUPPARTITION` é um operador aggregate especial que contém uma referência ao conjunto agrupado de entrada.</span><span class="sxs-lookup"><span data-stu-id="42f8f-112">`GROUPPARTITION` is a special aggregate operator that holds a reference to the grouped input set.</span></span> <span data-ttu-id="42f8f-113">Essa referência pode ser usada em qualquer lugar na consulta onde o PERTO GRUPO está no escopo.</span><span class="sxs-lookup"><span data-stu-id="42f8f-113">This reference can be used anywhere in the query where GROUP BY is in scope.</span></span> <span data-ttu-id="42f8f-114">Por exemplo,</span><span class="sxs-lookup"><span data-stu-id="42f8f-114">For example,</span></span>  
+ <span data-ttu-id="f370b-112">`GROUPPARTITION` é um operador aggregate especial que contém uma referência ao conjunto agrupado de entrada.</span><span class="sxs-lookup"><span data-stu-id="f370b-112">`GROUPPARTITION` is a special aggregate operator that holds a reference to the grouped input set.</span></span> <span data-ttu-id="f370b-113">Essa referência pode ser usada em qualquer lugar na consulta onde o PERTO GRUPO está no escopo.</span><span class="sxs-lookup"><span data-stu-id="f370b-113">This reference can be used anywhere in the query where GROUP BY is in scope.</span></span> <span data-ttu-id="f370b-114">Por exemplo,</span><span class="sxs-lookup"><span data-stu-id="f370b-114">For example,</span></span>  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  
 ```  
   
- <span data-ttu-id="42f8f-115">Com um GRUPO normal PERTO, os resultados de agrupamento são ocultos.</span><span class="sxs-lookup"><span data-stu-id="42f8f-115">With a regular GROUP BY, the results of the grouping are hidden.</span></span> <span data-ttu-id="42f8f-116">Você pode usar os resultados em uma função agregada.</span><span class="sxs-lookup"><span data-stu-id="42f8f-116">You can only use the results in an aggregate function.</span></span> <span data-ttu-id="42f8f-117">Para ver os resultados de agrupamento, você precisa correlacionar os resultados de agrupamento e de entrada definidos usando um subconsulta.</span><span class="sxs-lookup"><span data-stu-id="42f8f-117">In order to see the results of the grouping, you have to correlate the results of the grouping and the input set by using a subquery.</span></span> <span data-ttu-id="42f8f-118">As duas consultas são equivalentes:</span><span class="sxs-lookup"><span data-stu-id="42f8f-118">The following two queries are equivalent:</span></span>  
+ <span data-ttu-id="f370b-115">Com um GRUPO normal PERTO, os resultados de agrupamento são ocultos.</span><span class="sxs-lookup"><span data-stu-id="f370b-115">With a regular GROUP BY, the results of the grouping are hidden.</span></span> <span data-ttu-id="f370b-116">Você pode usar os resultados em uma função agregada.</span><span class="sxs-lookup"><span data-stu-id="f370b-116">You can only use the results in an aggregate function.</span></span> <span data-ttu-id="f370b-117">Para ver os resultados de agrupamento, você precisa correlacionar os resultados de agrupamento e de entrada definidos usando um subconsulta.</span><span class="sxs-lookup"><span data-stu-id="f370b-117">In order to see the results of the grouping, you have to correlate the results of the grouping and the input set by using a subquery.</span></span> <span data-ttu-id="f370b-118">As duas consultas são equivalentes:</span><span class="sxs-lookup"><span data-stu-id="f370b-118">The following two queries are equivalent:</span></span>  
   
 ```  
 select p, (select q from GroupPartition(ol.Quantity) as q) from LOB.OrderLines as ol group by ol.Product as p  
 select p, (select ol.Quantity as q from LOB.OrderLines as ol2 where ol2.Product = p) from LOB.OrderLines as ol group by ol.Product as p  
 ```  
   
- <span data-ttu-id="42f8f-119">Como mostrado no exemplo, o operador aggregate de GROUPPARTITION facilita obter uma referência a entrada definida após o agrupamento.</span><span class="sxs-lookup"><span data-stu-id="42f8f-119">As seen from the example, the GROUPPARTITION aggregate operator makes it easier to get a reference to the input set after the grouping.</span></span>  
+ <span data-ttu-id="f370b-119">Como mostrado no exemplo, o operador aggregate de GROUPPARTITION facilita obter uma referência a entrada definida após o agrupamento.</span><span class="sxs-lookup"><span data-stu-id="f370b-119">As seen from the example, the GROUPPARTITION aggregate operator makes it easier to get a reference to the input set after the grouping.</span></span>  
   
- <span data-ttu-id="42f8f-120">O operador GROUPPARTITION pode especificar qualquer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão no operador de entrada quando você usa o `expression` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="42f8f-120">The GROUPPARTITION operator can specify any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression in the operator input when you use the `expression` parameter.</span></span>  
+ <span data-ttu-id="f370b-120">O operador de GROUPPARTITION pode especificar qualquer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressão no operador de entrada quando você usa o `expression` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="f370b-120">The GROUPPARTITION operator can specify any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression in the operator input when you use the `expression` parameter.</span></span>  
   
- <span data-ttu-id="42f8f-121">Por exemplo todas as expressões da seguir de entrada a partição de grupo são válidas:</span><span class="sxs-lookup"><span data-stu-id="42f8f-121">For instance all of the following input expressions to the group partition are valid:</span></span>  
+ <span data-ttu-id="f370b-121">Por exemplo todas as expressões da seguir de entrada a partição de grupo são válidas:</span><span class="sxs-lookup"><span data-stu-id="f370b-121">For instance all of the following input expressions to the group partition are valid:</span></span>  
   
 ```  
 select groupkey, GroupPartition(b) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
@@ -69,7 +69,7 @@ select groupkey, GroupPartition({42}) from {1,2,3} as a inner join {4,5,6} as b 
 select groupkey, GroupPartition(b > a) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
 ```  
   
-## <a name="example"></a><span data-ttu-id="42f8f-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="42f8f-122">Example</span></span>  
- <span data-ttu-id="42f8f-123">O exemplo a seguir mostra como usar a cláusula de GROUPPARTITION com o cláusula GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="42f8f-123">The following example shows how to use the GROUPPARTITION clause with the GROUP BY clause.</span></span> <span data-ttu-id="42f8f-124">O cláusula GROUP BY agrupa entidades de `SalesOrderHeader` pelo seu `Contact`.</span><span class="sxs-lookup"><span data-stu-id="42f8f-124">The GROUP BY clause groups `SalesOrderHeader` entities by their `Contact`.</span></span> <span data-ttu-id="42f8f-125">A cláusula de GROUPPARTITION projetos na propriedade de `TotalDue` para cada grupo, resultando em uma coleção de decimais.</span><span class="sxs-lookup"><span data-stu-id="42f8f-125">The GROUPPARTITION clause then projects the `TotalDue` property for each group, resulting in a collection of decimals.</span></span>  
+## <a name="example"></a><span data-ttu-id="f370b-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f370b-122">Example</span></span>  
+ <span data-ttu-id="f370b-123">O exemplo a seguir mostra como usar a cláusula de GROUPPARTITION com o cláusula GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="f370b-123">The following example shows how to use the GROUPPARTITION clause with the GROUP BY clause.</span></span> <span data-ttu-id="f370b-124">O cláusula GROUP BY agrupa entidades de `SalesOrderHeader` pelo seu `Contact`.</span><span class="sxs-lookup"><span data-stu-id="f370b-124">The GROUP BY clause groups `SalesOrderHeader` entities by their `Contact`.</span></span> <span data-ttu-id="f370b-125">A cláusula de GROUPPARTITION projetos na propriedade de `TotalDue` para cada grupo, resultando em uma coleção de decimais.</span><span class="sxs-lookup"><span data-stu-id="f370b-125">The GROUPPARTITION clause then projects the `TotalDue` property for each group, resulting in a collection of decimals.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]
