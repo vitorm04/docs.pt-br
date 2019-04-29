@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778984"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e manipulação de eventos WPF
 Para o idioma do Microsoft Visual Basic .NET, especificamente, você pode usar específicos do idioma `Handles` palavra-chave para associar manipuladores de eventos com instâncias, em vez de anexar manipuladores de eventos com atributos ou usando o <xref:System.Windows.UIElement.AddHandler%2A> método. No entanto, a técnica `Handles` para anexar manipuladores às instâncias tem algumas limitações, uma vez que a sintaxe `Handles` não dá suporte a alguns dos recursos específicos de evento roteado do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

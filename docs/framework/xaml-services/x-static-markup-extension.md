@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938926"
 ---
 # <a name="xstatic-markup-extension"></a>Extensão de marcação x:Static
 Faz referência a qualquer entidade de código estático por-valor que é definida em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– maneira em conformidade. A propriedade estática que é referenciada pode ser usada para fornecer o valor de uma propriedade em XAML.  
@@ -38,10 +38,10 @@ Faz referência a qualquer entidade de código estático por-valor que é defini
 
 A entidade de código que é referenciada deve ser um destes procedimentos:  
   
--   Uma constante  
--   Uma propriedade estática  
--   Um campo  
--   Um valor de enumeração
+- Uma constante  
+- Uma propriedade estática  
+- Um campo  
+- Um valor de enumeração
 
 Especificar qualquer outra entidade de código, como uma propriedade não estática, causa um erro de tempo de compilação se o XAML é compilada com marcação, ou uma exceção de análise de tempo de carregamento XAML.  
 
@@ -74,11 +74,11 @@ Na implementação de serviços de XAML do .NET Framework, o tratamento para ess
 ## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
  Namespace XAML padrão, você pode usar para a programação do WPF não contém muitas propriedades estáticas úteis, e a maioria das propriedades estáticas útil tem suporte, como conversores de tipo que facilitam o uso sem a necessidade de `{x:Static}` . Para propriedades estáticas, você deve mapear um prefixo para um namespace XAML, se uma das seguintes opções for verdadeira:  
   
--   Você está fazendo referência a um tipo que existe no WPF, mas não é parte do namespace XAML padrão do WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Isso é um cenário bastante comum para usar `x:Static`. Por exemplo, você pode usar um `x:Static` referência com um mapeamento de namespace XAML para o <xref:System> assembly mscorlib e namespace do CLR para fazer referência a propriedades estáticas do <xref:System.Environment> classe.  
+- Você está fazendo referência a um tipo que existe no WPF, mas não é parte do namespace XAML padrão do WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Isso é um cenário bastante comum para usar `x:Static`. Por exemplo, você pode usar um `x:Static` referência com um mapeamento de namespace XAML para o <xref:System> assembly mscorlib e namespace do CLR para fazer referência a propriedades estáticas do <xref:System.Environment> classe.  
   
--   Você está fazendo referência a um tipo de um assembly personalizado.  
+- Você está fazendo referência a um tipo de um assembly personalizado.  
   
--   Você está fazendo referência a um tipo que existe em um assembly do WPF, mas esse tipo está dentro de um namespace CLR que não foi mapeado para ser parte do namespace XAML do WPF padrão. O mapeamento de namespaces CLR dentro do namespace XAML padrão do WPF é executado pelas definições em vários assemblies WPF (para obter mais informações sobre esse conceito, consulte [Namespaces de XAML e mapeamento de Namespace para XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Namespaces CLR não mapeado pode existir se esse namespace de CLR é composta principalmente de definições de classe não são geralmente destinadas para XAML, como <xref:System.Windows.Threading>.  
+- Você está fazendo referência a um tipo que existe em um assembly do WPF, mas esse tipo está dentro de um namespace CLR que não foi mapeado para ser parte do namespace XAML do WPF padrão. O mapeamento de namespaces CLR dentro do namespace XAML padrão do WPF é executado pelas definições em vários assemblies WPF (para obter mais informações sobre esse conceito, consulte [Namespaces de XAML e mapeamento de Namespace para XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Namespaces CLR não mapeado pode existir se esse namespace de CLR é composta principalmente de definições de classe não são geralmente destinadas para XAML, como <xref:System.Windows.Threading>.  
   
  Para obter mais informações sobre como usar prefixos e namespaces XAML para WPF, consulte [Namespaces XAML e mapeamento de Namespace para XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   

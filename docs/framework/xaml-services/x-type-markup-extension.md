@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938847"
 ---
 # <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
 Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XAML especificado.  
@@ -71,11 +71,11 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 fornece suporte adicional para tipos de genéricos e modifica o comportamento do recurso do `x:TypeArguments` e `x:Type` oferecer esse suporte.  
   
--   `x:TypeArguments` e o elemento de objeto associado para uma instanciação genérica de objeto pode ser em elementos que não seja a raiz. Para obter mais informações, consulte a seção "XAML 2009" [diretiva X:TypeArguments](x-typearguments-directive.md).  
+- `x:TypeArguments` e o elemento de objeto associado para uma instanciação genérica de objeto pode ser em elementos que não seja a raiz. Para obter mais informações, consulte a seção "XAML 2009" [diretiva X:TypeArguments](x-typearguments-directive.md).  
   
--   XAML 2009 dá suporte a uma sintaxe para especificar a restrição de um tipo genérico na marcação. Isso pode ser usado por `x:TypeArguments`, por `x:Type`, ou os dois recursos em combinação.  
+- XAML 2009 dá suporte a uma sintaxe para especificar a restrição de um tipo genérico na marcação. Isso pode ser usado por `x:TypeArguments`, por `x:Type`, ou os dois recursos em combinação.  
   
--   Implementação de XAML WPF durante o processamento de XAML 2009 para carga também adiciona esse recurso para o comportamento de conversão de tipo implícito para determinadas propriedades de estrutura que usam o tipo <xref:System.Type>.  
+- Implementação de XAML WPF durante o processamento de XAML 2009 para carga também adiciona esse recurso para o comportamento de conversão de tipo implícito para determinadas propriedades de estrutura que usam o tipo <xref:System.Type>.  
   
  No WPF, você pode usar os recursos do XAML 2009 mas somente para XAML flexível (XAML não é compilado por marcação). Compilado por marcação XAML para WPF e o formato BAML de XAML têm suporte no momento, as palavras-chave do XAML 2009 e os recursos.  
   

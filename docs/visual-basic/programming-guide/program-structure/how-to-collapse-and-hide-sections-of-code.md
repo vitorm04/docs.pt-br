@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758269"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Como: Recolher e ocultar seções de código (Visual Basic)
 O `#Region` diretiva permite que você recolher e ocultar seções de código em arquivos do Visual Basic. O `#Region` diretiva permite que você especifique um bloco de código que você pode expandir ou recolher ao usar o editor de código do Visual Studio. A capacidade de ocultar código seletivamente torna seus arquivos mais gerenciáveis e mais fácil de ler. Para obter mais informações, consulte [Estrutura de tópicos](/visualstudio/ide/outlining).  
@@ -20,7 +20,7 @@ O `#Region` diretiva permite que você recolher e ocultar seções de código em
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>Para recolher e ocultar uma seção de código  
   
--   Coloque a seção de código entre o `#Region` e `#End Region` instruções, como no exemplo a seguir:  
+- Coloque a seção de código entre o `#Region` e `#End Region` instruções, como no exemplo a seguir:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   

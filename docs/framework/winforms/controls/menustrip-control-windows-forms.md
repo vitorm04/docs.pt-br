@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722998"
 ---
 # <a name="menustrip-control-windows-forms"></a>Controle MenuStrip (Windows Forms)
 Esse controle agrupa comandos do aplicativo e os torna facilmente acessíveis.  
@@ -55,19 +55,19 @@ Esse controle agrupa comandos do aplicativo e os torna facilmente acessíveis.
  [Como: Configurar a mesclagem de Menu automática para aplicativos MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Descreve como mesclar itens de menu automaticamente no tempo de execução.  
   
--   [Editor de coleção de itens do MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [Editor de coleção de itens do MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Como: Copiar ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
+- [Como: Copiar ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Como: Ocultar ToolStripMenuItems usando o Designer](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [Como: Ocultar ToolStripMenuItems usando o Designer](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Como: Desabilitar ToolStripMenuItems usando o Designer](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [Como: Desabilitar ToolStripMenuItems usando o Designer](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Como: Mover ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
+- [Como: Mover ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Passo a passo: Fornecendo itens de Menu padrão para um formulário](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [Passo a passo: Fornecendo itens de Menu padrão para um formulário](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Caixa de diálogo de tarefas do MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [Caixa de diálogo de tarefas do MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.MenuStrip>  

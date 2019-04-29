@@ -1,5 +1,5 @@
 ---
-title: Thumb estilos e modelos
+title: Estilos e modelos Thumb
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], Thumb
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
 ms.openlocfilehash: b7fc595f0c592d42f118c6b5542edf93716c2fca
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790774"
 ---
-# <a name="thumb-styles-and-templates"></a>Thumb estilos e modelos
+# <a name="thumb-styles-and-templates"></a>Estilos e modelos Thumb
 
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Primitives.Thumb> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 

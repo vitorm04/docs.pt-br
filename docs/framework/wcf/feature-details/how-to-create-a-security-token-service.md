@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787667"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Como: criar um serviço de token de segurança
 Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validando tokens de segurança. Um serviço de token de segurança fornece uma ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  
@@ -24,61 +24,61 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
 ### <a name="request-message-structure"></a>Estrutura de mensagem de solicitação  
  A estrutura de mensagens de solicitação de problema normalmente consiste dos seguintes itens:  
   
--   URI de tipo de uma solicitação com um valor de `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
+- URI de tipo de uma solicitação com um valor de `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Um tipo de token URI. Para tokens de segurança asserções Markup Language (SAML) 1.1, o valor desse URI é `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
+- Um tipo de token URI. Para tokens de segurança asserções Markup Language (SAML) 1.1, o valor desse URI é `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
--   Um valor de tamanho de chave que indica o número de bits na chave a ser associado com o token emitido.  
+- Um valor de tamanho de chave que indica o número de bits na chave a ser associado com o token emitido.  
   
--   Um tipo de chave URI. Para chaves simétricas, o valor desse URI é `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
+- Um tipo de chave URI. Para chaves simétricas, o valor desse URI é `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Além disso, alguns outros itens podem estar presentes:  
   
--   Material de chave fornecido pelo cliente.  
+- Material de chave fornecido pelo cliente.  
   
--   Informações de escopo que indicam o serviço de destino que será usado com o token emitido.  
+- Informações de escopo que indicam o serviço de destino que será usado com o token emitido.  
   
  O serviço de token de segurança usa as informações na mensagem de solicitação de problema ao construir a mensagem de resposta do problema.  
   
 ## <a name="response-message-structure"></a>Estrutura de mensagem de resposta  
  A estrutura de mensagem de resposta de problema normalmente consiste dos seguintes itens;  
   
--   O token de segurança emitido, por exemplo, uma asserção SAML 1.1.  
+- O token de segurança emitido, por exemplo, uma asserção SAML 1.1.  
   
--   Um token de prova associado com o token de segurança. As chaves simétricas, isso geralmente é um formato criptografado do material de chave.  
+- Um token de prova associado com o token de segurança. As chaves simétricas, isso geralmente é um formato criptografado do material de chave.  
   
--   Referências para o token de segurança emitido. Normalmente, o serviço de token de segurança retorna uma referência que pode ser usada quando o token emitido é exibido em uma mensagem subsequente enviada pelo cliente e outro que pode ser usada quando o token não está presente nas mensagens subsequentes.  
+- Referências para o token de segurança emitido. Normalmente, o serviço de token de segurança retorna uma referência que pode ser usada quando o token emitido é exibido em uma mensagem subsequente enviada pelo cliente e outro que pode ser usada quando o token não está presente nas mensagens subsequentes.  
   
  Além disso, alguns outros itens podem estar presentes:  
   
--   Material de chave fornecido pelo serviço de token de segurança.  
+- Material de chave fornecido pelo serviço de token de segurança.  
   
--   O algoritmo necessário para calcular a chave compartilhada.  
+- O algoritmo necessário para calcular a chave compartilhada.  
   
--   Informações de tempo de vida de token emitido.  
+- Informações de tempo de vida de token emitido.  
   
 ## <a name="processing-request-messages"></a>Processando mensagens de solicitação  
  O serviço de token de segurança processa a solicitação de problema examinando as várias partes da mensagem de solicitação e garantindo que ele pode emitir um token que atende à solicitação. O serviço de token de segurança deve determinar o seguinte antes de ele constrói o token a ser emitido:  
   
--   A solicitação é realmente uma solicitação para um token a ser emitido.  
+- A solicitação é realmente uma solicitação para um token a ser emitido.  
   
--   O serviço de token de segurança dá suporte ao tipo de token solicitado.  
+- O serviço de token de segurança dá suporte ao tipo de token solicitado.  
   
--   O solicitante está autorizado a fazer a solicitação.  
+- O solicitante está autorizado a fazer a solicitação.  
   
--   O serviço de token de segurança pode atender às expectativas do solicitante com relação ao material de chave.  
+- O serviço de token de segurança pode atender às expectativas do solicitante com relação ao material de chave.  
   
  Duas partes vitais de construir um token são determinar qual chave para assinar o token com e qual chave deve criptografar a chave compartilhada com. O token precisa ser assinado para que quando o cliente apresenta o token ao serviço de destino, o serviço pode determinar que o token foi emitido por um serviço de token de segurança que ele confia. O material da chave precisa ser criptografado de tal forma que o serviço de destino pode descriptografar o material da chave.  
   
  Uma asserção SAML de assinatura envolve a criação de um <xref:System.IdentityModel.Tokens.SigningCredentials> instância. O construtor para essa classe usa o seguinte:  
   
--   Um <xref:System.IdentityModel.Tokens.SecurityKey> para a chave a ser usado para assinar declaração SAML.  
+- Um <xref:System.IdentityModel.Tokens.SecurityKey> para a chave a ser usado para assinar declaração SAML.  
   
--   Uma cadeia de caracteres que identifica o algoritmo de assinatura a ser usado.  
+- Uma cadeia de caracteres que identifica o algoritmo de assinatura a ser usado.  
   
--   Uma cadeia de caracteres que identifica o algoritmo de resumo para usar.  
+- Uma cadeia de caracteres que identifica o algoritmo de resumo para usar.  
   
--   Opcionalmente, um <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> que identifica a chave a ser usado para assinar a asserção.  
+- Opcionalmente, um <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> que identifica a chave a ser usado para assinar a asserção.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

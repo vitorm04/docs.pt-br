@@ -3,11 +3,11 @@ title: 'Como: Localizar elementos em um Namespace (XPath-LINQ to XML) (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
 ms.openlocfilehash: f48ae0a03d625a3510b2280aa6361e2a731e5afe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780465"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Como: Localizar elementos em um Namespace (XPath-LINQ to XML) (Visual Basic)
 As expressões XPath pode localizar nós em um namespace específico. Prefixos de namespace do uso de expressões XPath para especificar namespaces. Para analisar uma expressão XPath que contém prefixos de namespace, você deve passar um objeto para os métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>. Este exemplo usa <xref:System.Xml.XmlNamespaceManager>.  

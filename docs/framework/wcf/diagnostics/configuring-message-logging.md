@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785002"
 ---
 # <a name="configuring-message-logging"></a>Configurando registros de mensagens em log
 Este tópico descreve como você pode configurar o log de mensagens para diferentes cenários.  
@@ -83,11 +83,11 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
 ### <a name="other-options"></a>Outras opções  
  Além dos níveis de registro em log, o usuário pode especificar as seguintes opções:  
   
--   Toda mensagem de log (`logEntireMessage` atributo): Esse valor Especifica se a mensagem inteira (cabeçalho de mensagem e corpo) é registrada. O valor padrão é `false`, que significa que apenas o cabeçalho está registrado. Essa configuração afeta os níveis de log de mensagem de transporte e de serviço...  
+- Toda mensagem de log (`logEntireMessage` atributo): Esse valor Especifica se a mensagem inteira (cabeçalho de mensagem e corpo) é registrada. O valor padrão é `false`, que significa que apenas o cabeçalho está registrado. Essa configuração afeta os níveis de log de mensagem de transporte e de serviço...  
   
--   Máximo de mensagens para fazer logon (`maxMessagesToLog` atributo): Esse valor Especifica o número máximo de mensagens para fazer logon. Todas as mensagens (serviço de transporte e mensagens malformadas) são contadas para essa cota. Quando a cota for atingida, um rastreamento é emitido e nenhuma mensagem adicional será registrada. O valor padrão é 10000.  
+- Máximo de mensagens para fazer logon (`maxMessagesToLog` atributo): Esse valor Especifica o número máximo de mensagens para fazer logon. Todas as mensagens (serviço de transporte e mensagens malformadas) são contadas para essa cota. Quando a cota for atingida, um rastreamento é emitido e nenhuma mensagem adicional será registrada. O valor padrão é 10000.  
   
--   Tamanho máximo de mensagem a ser registrada (`maxSizeOfMessageToLog` atributo): Esse valor Especifica o tamanho máximo de mensagens para fazer logon em bytes. As mensagens que excedem o limite de tamanho não são registradas e nenhuma outra atividade é executada para a mensagem. Essa configuração afeta todos os níveis de rastreamento. Se o rastreamento de ServiceModel estiver ativada, um rastreamento de nível de aviso é emitido no primeiro ponto de registro em log (ServiceModelSend * ou TransportReceive) para notificar o usuário. O valor padrão para mensagens de nível transporte e de nível de serviço é de 256K, enquanto o valor padrão para mensagens malformadas for 4K.  
+- Tamanho máximo de mensagem a ser registrada (`maxSizeOfMessageToLog` atributo): Esse valor Especifica o tamanho máximo de mensagens para fazer logon em bytes. As mensagens que excedem o limite de tamanho não são registradas e nenhuma outra atividade é executada para a mensagem. Essa configuração afeta todos os níveis de rastreamento. Se o rastreamento de ServiceModel estiver ativada, um rastreamento de nível de aviso é emitido no primeiro ponto de registro em log (ServiceModelSend * ou TransportReceive) para notificar o usuário. O valor padrão para mensagens de nível transporte e de nível de serviço é de 256K, enquanto o valor padrão para mensagens malformadas for 4K.  
   
     > [!CAUTION]
     >  O tamanho da mensagem que é calculado a ser comparada com `maxSizeOfMessageToLog` é o tamanho da mensagem na memória antes da serialização. Esse tamanho pode ser diferente do que o comprimento real da cadeia de caracteres de mensagem que está sendo registrada e, em muitas ocasiões em que é maior do que o tamanho real. Como resultado, as mensagens não podem ser registradas. Você pode considerar esse fato, especificando o `maxSizeOfMessageToLog` atributo a ser 10% maior que o tamanho da mensagem esperada. Além disso, se mensagens malformadas são registradas, o espaço em disco utilizado pelos logs de mensagem pode ser até 5 vezes o tamanho do valor especificado por `maxSizeOfMessageToLog`.  

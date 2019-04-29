@@ -3,17 +3,17 @@ title: Baixando o Pacote do Manipulador de Token da Web JSON
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792739"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>Baixe o pacote do manipulador de Token Web JSON
 
 Este tópico descreve como baixar e usar o Manipulador de Token Web JSON no projeto.
 
-A extensão Manipulador de Token Web JSON está disponível como um pacote NuGet, que adiciona os assemblies e as referências necessárias ao projeto. Se você ainda não tiver o NuGet instalado, acesse [nuget.org](https://nuget.org) para instalá-lo. Veja o histórico de controle de versão da extensão visitando sua página no NuGet: [Manipulador de Token Web JSON no NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
+A extensão Manipulador de Token Web JSON está disponível como um pacote NuGet, que adiciona os assemblies e as referências necessárias ao projeto. Se você ainda não tiver o NuGet instalado, acesse [nuget.org](https://nuget.org) para instalá-lo. Você pode ver o histórico de controle de versão para a extensão visitando sua página no NuGet: [Manipulador de Token Web JSON no NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
 
 ## <a name="use-the-package-manager-gui"></a>Usar a GUI do Gerenciador de pacotes
 

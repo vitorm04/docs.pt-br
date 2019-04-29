@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784001"
 ---
 # <a name="parameter-list-visual-basic"></a>Lista de parâmetros (Visual Basic)
 Especifica os parâmetros do procedimento quando ele é chamado. Vários parâmetros são separados por vírgulas. A seguir está a sintaxe para um parâmetro.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>Regras  
   
--   **Parênteses.** Se você especificar uma lista de parâmetros, você deve colocá-la entre parênteses. Se não houver nenhum parâmetro, você ainda pode usar parênteses que incluem uma lista vazia. Isso melhora a legibilidade do código ao esclarecer que o elemento é um procedimento.  
+- **Parênteses.** Se você especificar uma lista de parâmetros, você deve colocá-la entre parênteses. Se não houver nenhum parâmetro, você ainda pode usar parênteses que incluem uma lista vazia. Isso melhora a legibilidade do código ao esclarecer que o elemento é um procedimento.  
   
--   **Parâmetros opcionais.** Se você usar o `Optional` modificador em um parâmetro, todos os parâmetros subsequentes na lista também devem ser opcionais e sejam declarados usando o `Optional` modificador.  
+- **Parâmetros opcionais.** Se você usar o `Optional` modificador em um parâmetro, todos os parâmetros subsequentes na lista também devem ser opcionais e sejam declarados usando o `Optional` modificador.  
   
      Cada declaração de parâmetro opcional deve fornecer o `defaultvalue` cláusula.  
   
      Para obter mais informações, consulte [parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Matrizes de parâmetros.** Você deve especificar `ByVal` para um `ParamArray` parâmetro.  
+- **Matrizes de parâmetros.** Você deve especificar `ByVal` para um `ParamArray` parâmetro.  
   
      É possível usar ambos `Optional` e `ParamArray` na mesma lista de parâmetros.  
   
      Para obter mais informações, consulte [matrizes de parâmetro](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Mecanismo de passagem.** O mecanismo padrão para cada argumento é `ByVal`, que significa que o procedimento não é possível alterar o elemento variável subjacente. No entanto, se o elemento for um tipo de referência, o procedimento pode modificar o conteúdo ou os membros do objeto subjacente, mesmo que ele não é possível substituir ou reatribuir o próprio objeto.  
+- **Mecanismo de passagem.** O mecanismo padrão para cada argumento é `ByVal`, que significa que o procedimento não é possível alterar o elemento variável subjacente. No entanto, se o elemento for um tipo de referência, o procedimento pode modificar o conteúdo ou os membros do objeto subjacente, mesmo que ele não é possível substituir ou reatribuir o próprio objeto.  
   
--   **Nomes de parâmetro.** Se o tipo de dados do parâmetro é uma matriz, siga `parametername` imediatamente por parênteses. Para obter mais informações sobre nomes de parâmetro, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Nomes de parâmetro.** Se o tipo de dados do parâmetro é uma matriz, siga `parametername` imediatamente por parênteses. Para obter mais informações sobre nomes de parâmetro, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="example"></a>Exemplo  
  A exemplo a seguir mostra um `Function` procedimento que define dois parâmetros.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: KrzysztofCwalina
 ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778697"
 ---
 # <a name="virtual-members"></a>Membros virtuais
 Membros virtuais podem ser substituídos, portanto, alterar o comportamento da subclasse. Eles são muito semelhantes aos retornos de chamada em termos de extensibilidade que eles fornecem, mas eles são melhores em termos de desempenho de execução e o consumo de memória. Além disso, os membros virtuais se sentir mais naturais em cenários que exigem a criação de um especial de um tipo existente (especialização).  

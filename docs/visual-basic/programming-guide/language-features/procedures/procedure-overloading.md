@@ -18,11 +18,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
 ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791866"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimento (Visual Basic)
 *Sobrecarregando* significa que um procedimento definindo-a em várias versões, usando o mesmo nome mas listas de parâmetros diferentes. O objetivo de sobrecarga é definir várias versões intimamente relacionadas de um procedimento sem a necessidade para diferenciá-los por nome. Para fazer isso, variando de lista de parâmetros.  
@@ -30,39 +30,39 @@ ms.locfileid: "58828232"
 ## <a name="overloading-rules"></a>Sobrecarga de regras  
  Ao sobrecarregar um procedimento, as seguintes regras se aplicam:  
   
--   **Mesmo nome**. Cada versão sobrecarregada deve usar o mesmo nome do procedimento.  
+- **Mesmo nome**. Cada versão sobrecarregada deve usar o mesmo nome do procedimento.  
   
--   **Assinatura diferente**. Cada versão sobrecarregada deve diferir de todas as outras versões sobrecarregadas em pelo menos um dos seguintes aspectos:  
+- **Assinatura diferente**. Cada versão sobrecarregada deve diferir de todas as outras versões sobrecarregadas em pelo menos um dos seguintes aspectos:  
   
-    -   Número de parâmetros  
+    - Número de parâmetros  
   
-    -   Ordem dos parâmetros  
+    - Ordem dos parâmetros  
   
-    -   Tipos de dados dos parâmetros  
+    - Tipos de dados dos parâmetros  
   
-    -   Número de parâmetros de tipo (para um procedimento genérico)  
+    - Número de parâmetros de tipo (para um procedimento genérico)  
   
-    -   Tipo de retorno (somente para um operador de conversão)  
+    - Tipo de retorno (somente para um operador de conversão)  
   
      Junto com o nome do procedimento, os itens anteriores são coletivamente chamados de *assinatura* do procedimento. Quando você chama um procedimento sobrecarregado, o compilador usa a assinatura para verificar se a chamada corretamente corresponde a definição.  
   
--   **Itens não faz parte da assinatura**. Você não pode sobrecarregar um procedimento sem variando a assinatura. Em particular, você não pode sobrecarregar um procedimento, variando apenas um ou mais dos seguintes itens:  
+- **Itens não faz parte da assinatura**. Você não pode sobrecarregar um procedimento sem variando a assinatura. Em particular, você não pode sobrecarregar um procedimento, variando apenas um ou mais dos seguintes itens:  
   
-    -   Palavras-chave com o modificador de procedimento, como `Public`, `Shared`, e `Static`  
+    - Palavras-chave com o modificador de procedimento, como `Public`, `Shared`, e `Static`  
   
-    -   Nomes de parâmetro de tipo ou parâmetro  
+    - Nomes de parâmetro de tipo ou parâmetro  
   
-    -   Restrições de parâmetro de tipo (para um procedimento genérico)  
+    - Restrições de parâmetro de tipo (para um procedimento genérico)  
   
-    -   Palavras-chave com o modificador de parâmetro, como `ByRef` e `Optional`  
+    - Palavras-chave com o modificador de parâmetro, como `ByRef` e `Optional`  
   
-    -   Se ele retorna um valor  
+    - Se ele retorna um valor  
   
-    -   o tipo de dados do valor de retorno (exceto para um operador de conversão)  
+    - o tipo de dados do valor de retorno (exceto para um operador de conversão)  
   
      Os itens na lista anterior não são parte da assinatura. Embora você não pode usá-las para diferenciar entre as versões sobrecarregadas, você pode variá-los entre as versões sobrecarregadas que adequadamente são diferenciadas por suas assinaturas.  
   
--   **Associação tardia argumentos**. Se você pretende passar uma variável de objeto associado tardia para uma versão sobrecarregada, você deve declarar o parâmetro apropriado como <xref:System.Object>.  
+- **Associação tardia argumentos**. Se você pretende passar uma variável de objeto associado tardia para uma versão sobrecarregada, você deve declarar o parâmetro apropriado como <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Várias versões de um procedimento  
  Suponha que você está escrevendo um `Sub` procedimento para lançar uma transação contra um saldo do cliente e você deseja ser capaz de se referir ao cliente por nome ou por número de conta. Para acomodar isso, você pode definir duas diferentes `Sub` procedimentos, como no exemplo a seguir:  

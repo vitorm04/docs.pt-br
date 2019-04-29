@@ -1,5 +1,5 @@
 ---
-title: 'Como: Localizar Assemblies usando DEVPATH'
+title: 'Como: Localizar assemblies usando DEVPATH'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775824"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>Como: Localizar Assemblies usando DEVPATH
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>Como: Localizar assemblies usando DEVPATH
 Talvez os desenvolvedores queiram certificar-se de que um assembly compartilhado que elas estão criando funciona corretamente com vários aplicativos. Em vez de continuamente colocar o assembly no cache de assembly global durante o ciclo de desenvolvimento, o desenvolvedor pode criar uma variável de ambiente DEVPATH que aponta para o diretório de saída de compilação para o assembly.  
   
  Por exemplo, suponha que você esteja criando um assembly compartilhado chamado MySharedAssembly e o diretório de saída é C:\MySharedAssembly\Debug. Você pode colocar C:\MySharedAssembly\Debug na variável DEVPATH. Em seguida, você deve especificar o [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) elemento no arquivo de configuração do computador. Esse elemento informa o common language runtime usar DEVPATH para localizar assemblies.  

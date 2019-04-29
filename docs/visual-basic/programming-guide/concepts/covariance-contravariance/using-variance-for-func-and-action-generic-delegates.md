@@ -3,11 +3,11 @@ title: Usando variação para delegados Func e Action genérico (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
 ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787264"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usando variação para delegados Func e Action genérico (Visual Basic)
 Esses exemplos demonstram como usar covariância e contravariância nos delegados genéricos `Func` e `Action` para permitir a reutilização dos métodos e fornecer mais flexibilidade em seu código.  

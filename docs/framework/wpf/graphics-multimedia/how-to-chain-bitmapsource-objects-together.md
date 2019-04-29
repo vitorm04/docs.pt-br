@@ -10,11 +10,11 @@ helpviewer_keywords:
 - chaining BitmapSource objects [WPF]
 ms.assetid: 32d88853-395b-4855-9685-51a482a3b421
 ms.openlocfilehash: 403a2a8683e65fd71df89befd59744ac3fe6200c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785652"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Como: Encadear objetos BitmapSource
 Este exemplo mostra como você pode aplicar uma variedade de efeitos em uma fonte de imagem ao encadear vários <xref:System.Windows.Media.Imaging.BitmapSource> objetos derivados.  

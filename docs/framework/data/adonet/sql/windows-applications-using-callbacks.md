@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 1efb30581642faba3e839357ef9d6f8d6c8869e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780153"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicativos do Windows que usam retornos de chamada
 Na maioria dos cenários de processamento assíncrono, você deseja iniciar uma operação de banco de dados e continuar a outros processos em execução sem aguardar a conclusão da operação de banco de dados. No entanto, muitos cenários exigem fazendo algo depois que a operação de banco de dados foi encerrada. Em um aplicativo do Windows, por exemplo, você talvez queira delegar a operação de longa execução a um thread em segundo plano, permitindo que o thread da interface do usuário continuar responsiva. No entanto, quando a operação de banco de dados for concluída, você deseja usar os resultados para preencher o formulário. Esse tipo de cenário é implementado da melhor forma com um retorno de chamada.  

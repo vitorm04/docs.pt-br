@@ -3,20 +3,20 @@ title: Visão geral de fluxo de mensagens
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797470"
 ---
 # <a name="message-flow-overview"></a>Visão geral de fluxo de mensagens
 Em um sistema distribuído que contém serviços interconectados, é necessário determinar relações causais entre os serviços. É importante entender os vários componentes que faziam parte de um fluxo de solicitação para dar suporte a cenários críticos, tais como integridade, monitoramento, solução de problemas e análise da causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:
 
--   Rastreamento analítico: Um alto desempenho e o recurso de rastreamento de baixo nível de detalhes usando o rastreamento de eventos para Windows (ETW).
+- Rastreamento analítico: Um alto desempenho e o recurso de rastreamento de baixo nível de detalhes usando o rastreamento de eventos para Windows (ETW).
 
--   Modelo de atividade de ponta a ponta para os serviços do WCF/WF: Esse recurso dá suporte à correlação de rastreamentos gerados pelo <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> namespaces.
+- Modelo de atividade de ponta a ponta para os serviços do WCF/WF: Esse recurso dá suporte à correlação de rastreamentos gerados pelo <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> namespaces.
 
--   Rastreamento do WF com o ETW: Esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade sobre o estado atual e o progresso do fluxo de trabalho.
+- Rastreamento do WF com o ETW: Esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade sobre o estado atual e o progresso do fluxo de trabalho.
 
  Erros registrados em um rastreamento ou registro de rastreamento podem ser usados para localizar defeitos de código ou mensagens formadas incorretamente. A propriedade ActivityId do nó correlação no cabeçalho da mensagem do evento pode ser usada para determinar a atividade com falha. Para habilitar o rastreamento de fluxo de mensagem por ID de atividade, consulte [Configurando o rastreamento de fluxo de mensagem](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Este tópico demonstra como habilitar o rastreamento de fluxo de mensagem no projeto criado no tutorial de Introdução.
 

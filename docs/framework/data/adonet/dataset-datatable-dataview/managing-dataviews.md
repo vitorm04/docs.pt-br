@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
 ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785405"
 ---
 # <a name="managing-dataviews"></a>Gerenciar DataViews
 Você pode usar um <xref:System.Data.DataViewManager> para gerenciar as configurações de exibição para todas as tabelas em um <xref:System.Data.DataView>. Se você tiver um controle que você deseja associar a várias tabelas, como uma grade que navega relações, uma **DataViewManager** é ideal.  

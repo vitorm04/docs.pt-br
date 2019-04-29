@@ -3,11 +3,11 @@ title: Registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
 ms.openlocfilehash: e189b6c2997c7d4d7422e61fa22be95678aeb911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797430"
 ---
 # <a name="message-logging"></a>Registro em log de mensagens
 Windows Communication Foundation (WCF) fornece a capacidade para registrar mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja o que a mensagem e é de corpo de mensagem semelhante. Esse tipo de registro em log é particularmente útil na permitindo que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro em log a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem chegou. Você também pode examinar a segurança tokens usados, as partes criptografada e assinada e partes permanecem intactas.  

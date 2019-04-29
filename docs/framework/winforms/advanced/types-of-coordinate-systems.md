@@ -16,11 +16,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
 ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792324"
 ---
 # <a name="types-of-coordinate-systems"></a>Tipos de sistemas de coordenadas
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa três espaços de coordenadas: mundo, página e dispositivo. Coordenadas de mundo são as coordenadas usadas para modelar um mundo gráfico específico e são as coordenadas que você passa para métodos no .NET Framework. Coordenadas de página fazem referência ao sistema de coordenadas usado por uma superfície de desenho, como um formulário ou controle. Coordenadas de dispositivo são as coordenadas usadas pelo dispositivo físico em que o desenho está sendo feito, como uma tela ou uma folha de papel. Quando você faz a chamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, os pontos que você passa para o <xref:System.Drawing.Graphics.DrawLine%2A> método —`(0, 0)` e `(160, 80)`— estão no espaço de coordenadas de mundo. Antes que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possa desenhar a linha na tela, as coordenadas passam por uma sequência de transformações. Uma transformação, chamada transformação global, converte coordenadas de mundo em coordenadas de página e outra transformação, chamada transformação de página, converte coordenadas de página em coordenadas de dispositivo.  

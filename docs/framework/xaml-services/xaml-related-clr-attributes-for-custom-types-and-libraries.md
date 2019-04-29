@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938756"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
 Este tópico descreve os atributos de runtime (CLR) de linguagem comuns que são definidos por serviços XAML do .NET Framework. Ele também descreve outros atributos CLR que são definidos no .NET Framework que têm um cenário relacionados a XAML para o aplicativo para assemblies ou tipos. Atribuição de assemblies, tipos ou membros com esses atributos CLR fornece relacionadas aos seus tipos de informações do sistema de tipo XAML. Informações são fornecidas para qualquer consumidor XAML que usa serviços de XAML do .NET Framework para processar o fluxo do nó XAML diretamente ou por meio dos leitores XAML e gravadores XAML.  
@@ -90,9 +90,9 @@ Este tópico descreve os atributos de runtime (CLR) de linguagem comuns que são
   
  **Argumentos:** Dá suporte a duas formas de atribuição:  
   
--   Uma cadeia de caracteres que especifica o nome de uma propriedade no tipo atribuído.  
+- Uma cadeia de caracteres que especifica o nome de uma propriedade no tipo atribuído.  
   
--   Uma cadeia de caracteres que especifica o nome de uma propriedade e um <xref:System.Type> para o tipo que define a propriedade nomeada. Esse formulário é para especificar um membro anexável como a propriedade de namescope XAML.  
+- Uma cadeia de caracteres que especifica o nome de uma propriedade e um <xref:System.Type> para o tipo que define a propriedade nomeada. Esse formulário é para especificar um membro anexável como a propriedade de namescope XAML.  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> Especifica uma propriedade que fornece o valor do namescope XAML para a classe atribuída. A propriedade de namescope XAML é esperada para referenciar um objeto que implementa <xref:System.Windows.Markup.INameScope> e mantém o namescope XAML real, seu repositório e seu comportamento.  
   
@@ -219,9 +219,9 @@ Este tópico descreve os atributos de runtime (CLR) de linguagem comuns que são
   
  **Argumentos:**  
   
--   Uma cadeia de caracteres que especifica o identificador do namespace XAML para incorporar.  
+- Uma cadeia de caracteres que especifica o identificador do namespace XAML para incorporar.  
   
--   Uma cadeia de caracteres que especifica o identificador do namespace de XAML que pode incorporar o namespace XAML do argumento anterior.  
+- Uma cadeia de caracteres que especifica o identificador do namespace de XAML que pode incorporar o namespace XAML do argumento anterior.  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Especifica que um namespace XAML pode ser incluído em outro namespace XAML. Normalmente, o namespace de XAML incluído é indicado em um <xref:System.Windows.Markup.XmlnsDefinitionAttribute> definido anteriormente. Essa técnica pode ser usado para controle de versão de um vocabulário XAML em uma biblioteca de e para torná-lo compatível com a marcação definida anteriormente contra o vocabulário anteriormente com controle de versão.  
   
@@ -230,40 +230,40 @@ Este tópico descreve os atributos de runtime (CLR) de linguagem comuns que são
   
  **Argumentos:**  
   
--   Uma cadeia de caracteres que especifica o identificador do namespace XAML para definir.  
+- Uma cadeia de caracteres que especifica o identificador do namespace XAML para definir.  
   
--   Uma cadeia de caracteres que nomeia um namespace CLR. O namespace CLR deve definir os tipos públicos em seu assembly e pelo menos um dos tipos de namespace CLR deve ser destinado para uso do XAML.  
+- Uma cadeia de caracteres que nomeia um namespace CLR. O namespace CLR deve definir os tipos públicos em seu assembly e pelo menos um dos tipos de namespace CLR deve ser destinado para uso do XAML.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Especifica um mapeamento em uma base por assembly entre um namespace XAML e um namespace CLR, que é usado para resolução de tipo por um gravador de XAML do objeto ou o contexto do esquema XAML.  
   
  Mais de um <xref:System.Windows.Markup.XmlnsDefinitionAttribute> pode ser aplicado a um assembly. Isso pode ser feito para qualquer combinação dos seguintes motivos:  
   
--   O projeto de biblioteca contém vários namespaces CLR para organização lógica de acesso à API de tempo de execução; No entanto, você deseja que todos os tipos nesses namespaces para ser usado com o XAML referenciando o mesmo namespace XAML. Nesse caso, você aplicar vários <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atributos usando a mesma <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> valor, mas diferentes <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> valores. Isso é especialmente útil se você estiver definindo mapeamentos para o namespace XAML que seu aplicativo ou framework pretende ser um namespace XAML padrão no uso comum.  
+- O projeto de biblioteca contém vários namespaces CLR para organização lógica de acesso à API de tempo de execução; No entanto, você deseja que todos os tipos nesses namespaces para ser usado com o XAML referenciando o mesmo namespace XAML. Nesse caso, você aplicar vários <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atributos usando a mesma <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> valor, mas diferentes <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> valores. Isso é especialmente útil se você estiver definindo mapeamentos para o namespace XAML que seu aplicativo ou framework pretende ser um namespace XAML padrão no uso comum.  
   
--   O projeto de biblioteca contém vários namespaces CLR, e você deseja uma separação de namespace XAML deliberada entre os usos dos tipos nesses namespaces de CLR.  
+- O projeto de biblioteca contém vários namespaces CLR, e você deseja uma separação de namespace XAML deliberada entre os usos dos tipos nesses namespaces de CLR.  
   
--   Definir um namespace CLR no assembly, e você deseja que ele fique acessível por meio de mais de um namespace XAML. Esse cenário ocorre quando você estiver dando suporte a vários vocabulários com a mesma base de código.  
+- Definir um namespace CLR no assembly, e você deseja que ele fique acessível por meio de mais de um namespace XAML. Esse cenário ocorre quando você estiver dando suporte a vários vocabulários com a mesma base de código.  
   
--   Você define o suporte de linguagem XAML em um ou mais namespaces CLR. Nesses casos, o <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> o valor deve ser `http://schemas.microsoft.com/winfx/2006/xaml`.  
+- Você define o suporte de linguagem XAML em um ou mais namespaces CLR. Nesses casos, o <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> o valor deve ser `http://schemas.microsoft.com/winfx/2006/xaml`.  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **Argumentos:**  
   
--   Uma cadeia de caracteres que especifica o identificador de um namespace XAML.  
+- Uma cadeia de caracteres que especifica o identificador de um namespace XAML.  
   
--   Uma cadeia de caracteres que especifica um prefixo recomendado.  
+- Uma cadeia de caracteres que especifica um prefixo recomendado.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Especifica um prefixo recomendado a ser usado para um namespace XAML. O prefixo é útil ao escrever elementos e atributos em um arquivo XAML que é serializado por serviços de XAML do .NET Framework <xref:System.Xaml.XamlXmlWriter>, ou quando uma biblioteca de implementação de XAML interage com um ambiente de design que tenha o XAML de recursos de edição.  
   
  Mais de um <xref:System.Windows.Markup.XmlnsPrefixAttribute> pode ser aplicado a um assembly. Isso pode ser feito para qualquer combinação dos seguintes motivos:  
   
--   O assembly define os tipos para mais de um namespace XAML. Nesse caso, você deve definir valores de prefixo diferente para cada namespace XAML.  
+- O assembly define os tipos para mais de um namespace XAML. Nesse caso, você deve definir valores de prefixo diferente para cada namespace XAML.  
   
--   Que dão suporte a vários vocabulários e usar prefixos diferentes para cada vocabulário e o namespace XAML.  
+- Que dão suporte a vários vocabulários e usar prefixos diferentes para cada vocabulário e o namespace XAML.  
   
--   Definir o suporte de linguagem XAML no assembly e ter uma <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para `http://schemas.microsoft.com/winfx/2006/xaml`. Nesse caso, você geralmente deve promover o prefixo `x`.  
+- Definir o suporte de linguagem XAML no assembly e ter uma <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para `http://schemas.microsoft.com/winfx/2006/xaml`. Nesse caso, você geralmente deve promover o prefixo `x`.  
   
 > [!NOTE]
 >  Serviços de XAML do .NET framework também define o atributo de XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Este é um atributo de nível de assembly para o suporte do sistema de projeto e não é relevante para tipos personalizados de XAML.  

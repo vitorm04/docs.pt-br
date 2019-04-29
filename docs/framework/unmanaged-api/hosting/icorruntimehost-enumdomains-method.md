@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69fcc862e98e305105a6f17ca49940bd10cef39c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937040"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>Método ICorRuntimeHost::EnumDomains
 Obtém um enumerador para os domínios no processo atual.  

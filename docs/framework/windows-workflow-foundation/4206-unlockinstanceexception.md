@@ -3,11 +3,11 @@ title: 4206 - UnlockInstanceException
 ms.date: 03/30/2017
 ms.assetid: 5a46dc5f-d517-4135-8905-25a42f01206b
 ms.openlocfilehash: 3c981888b491f2797a431c2103ba3f5f0bd17046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774316"
 ---
 # <a name="4206---unlockinstanceexception"></a>4206 - UnlockInstanceException
 ## <a name="properties"></a>Propriedades  

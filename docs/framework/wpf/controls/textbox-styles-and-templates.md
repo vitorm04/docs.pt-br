@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
 ms.openlocfilehash: ccc89e0e0c8977398ed162b246ff6cdede3b8351
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790865"
 ---
 # <a name="textbox-styles-and-templates"></a>Estilos e modelos TextBox
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.TextBox> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765200"
 ---
 # <a name="mdainfo-structure"></a>Estrutura MDAInfo
 Fornece detalhes sobre o `Event_MDAFired` evento, que dispara a criação de um Assistente para depuração gerenciada (MDA).  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  O tempo de execução realiza as seguintes etapas quando um evento que dispara a criação de um MDA é disparado:  
   
--   Se o host não tiver registrado um [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) instância chamando [iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) para ser notificado sobre um `Event_MDAFired` evento, o tempo de execução continua com sua padrão, o comportamento não hospedados.  
+- Se o host não tiver registrado um [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) instância chamando [iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) para ser notificado sobre um `Event_MDAFired` evento, o tempo de execução continua com sua padrão, o comportamento não hospedados.  
   
--   Se o host tiver registrado um manipulador para este evento, o tempo de execução verifica se um depurador está anexado ao processo. Se for, o tempo de execução invade o depurador. Quando o depurador continua, ele chama o host. Se nenhum depurador estiver anexado, o tempo de execução chama `IActionOnCLREvent::OnEvent` e passa um ponteiro para um `MDAInfo` a instância como o `data` parâmetro.  
+- Se o host tiver registrado um manipulador para este evento, o tempo de execução verifica se um depurador está anexado ao processo. Se for, o tempo de execução invade o depurador. Quando o depurador continua, ele chama o host. Se nenhum depurador estiver anexado, o tempo de execução chama `IActionOnCLREvent::OnEvent` e passa um ponteiro para um `MDAInfo` a instância como o `data` parâmetro.  
   
  O host pode escolher ativar MDAs e ser notificado quando um MDA é ativado. Isso o host uma oportunidade para substituir o comportamento padrão e anular o thread gerenciado que gerou o evento, para impedir que ele se corromper o estado do processo. Para obter mais informações sobre como usar os MDAs, consulte [diagnosticando erros com assistentes para depuração gerenciada](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   

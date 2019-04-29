@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
 ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790722"
 ---
 # <a name="tooltip-overview"></a>Visão geral de ToolTip
 Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, como por um <xref:System.Windows.Controls.Button>. Este tópico apresenta a dica de ferramenta e discute como criar e personalizar o conteúdo da dica de ferramenta.  
@@ -24,9 +24,9 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
   
  O conteúdo de uma dica de ferramenta pode conter uma ou mais linhas de texto, imagens, formas ou outros conteúdos visuais. Você define uma dica de ferramenta para um controle definindo uma das seguintes propriedades para o conteúdo da dica de ferramenta.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  Propriedade que você usa depende se o controle que define a dica de ferramenta herda de <xref:System.Windows.FrameworkContentElement> ou <xref:System.Windows.FrameworkElement> classe.  
   

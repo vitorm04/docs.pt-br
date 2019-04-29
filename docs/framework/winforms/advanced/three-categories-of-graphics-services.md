@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651513"
 ---
 # <a name="three-categories-of-graphics-services"></a>Três categorias de serviços gráficos
 As ofertas de elementos gráficos no Windows Forms se enquadram nas três categorias amplas a seguir:  
   
--   Gráficos vetoriais bidimensionais (2D)  
+- Gráficos vetoriais bidimensionais (2D)  
   
--   Imagens  
+- Imagens  
   
--   Tipografia  
+- Tipografia  
   
 ## <a name="2-d-vector-graphics"></a>Gráficos vetoriais 2D  
  Gráficos vetoriais bidimensionais são primitivos, como linhas, curvas e figuras. que são especificadas por conjuntos de pontos em um sistema de coordenadas. Por exemplo, uma linha reta é especificada por seus dois pontos de extremidade e um retângulo é especificado por um ponto que indica o local de seu canto superior esquerdo e um par de números fornecendo sua largura e altura. Um demarcador simples é especificado por uma matriz de pontos conectados por linhas retas. Uma spline de Bézier é uma curva sofisticada especificada por quatro pontos de controle.  

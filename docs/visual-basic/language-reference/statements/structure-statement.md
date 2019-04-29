@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783852"
 ---
 # <a name="structure-statement"></a>Instrução Structure
 Declara o nome de uma estrutura e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a estrutura.  
@@ -61,31 +61,31 @@ End Structure
   
 ## <a name="rules"></a>Regras  
   
--   **Aninhamento.** Você pode definir uma estrutura dentro de outra. A estrutura externa é chamada a *que contém a estrutura*, e a estrutura interna é chamada uma *aninhados estrutura*. No entanto, você não pode acessar membros de uma estrutura aninhada através da estrutura contida. Em vez disso, você deve declarar uma variável do tipo de dados da estrutura aninhada.  
+- **Aninhamento.** Você pode definir uma estrutura dentro de outra. A estrutura externa é chamada a *que contém a estrutura*, e a estrutura interna é chamada uma *aninhados estrutura*. No entanto, você não pode acessar membros de uma estrutura aninhada através da estrutura contida. Em vez disso, você deve declarar uma variável do tipo de dados da estrutura aninhada.  
   
--   **Declaração de membro.** Você deve declarar cada membro de uma estrutura. Um membro da estrutura não pode ser [Protected](../../../visual-basic/language-reference/modifiers/protected.md) ou `Protected Friend` porque nada pode herdar de uma estrutura. A estrutura em si, no entanto, pode ser `Protected` ou `Protected Friend`.  
+- **Declaração de membro.** Você deve declarar cada membro de uma estrutura. Um membro da estrutura não pode ser [Protected](../../../visual-basic/language-reference/modifiers/protected.md) ou `Protected Friend` porque nada pode herdar de uma estrutura. A estrutura em si, no entanto, pode ser `Protected` ou `Protected Friend`.  
   
      Você pode declarar zero ou mais variáveis não compartilhadas ou compartilhadas, ou eventos em uma estrutura. Você não pode ter apenas constantes, propriedades e procedimentos, mesmo se algumas delas sejam compartilhadas.  
   
--   **Inicialização.** Você não pode inicializar o valor de qualquer membro de dados não compartilhado de uma estrutura como parte de sua declaração. Você deve inicializar tal membro de dados por meio de um construtor parametrizado na estrutura, ou atribuir um valor ao membro depois de ter criado uma instância da estrutura.  
+- **Inicialização.** Você não pode inicializar o valor de qualquer membro de dados não compartilhado de uma estrutura como parte de sua declaração. Você deve inicializar tal membro de dados por meio de um construtor parametrizado na estrutura, ou atribuir um valor ao membro depois de ter criado uma instância da estrutura.  
   
--   **Herança.** Uma estrutura não pode herdar de qualquer tipo diferente de <xref:System.ValueType>, de que todas as estruturas herdam. Em particular, uma estrutura não pode herdar de outra.  
+- **Herança.** Uma estrutura não pode herdar de qualquer tipo diferente de <xref:System.ValueType>, de que todas as estruturas herdam. Em particular, uma estrutura não pode herdar de outra.  
   
      Não é possível usar o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md) em uma definição de estrutura, mesmo para especificar <xref:System.ValueType>.  
   
--   **Implementação.** Se a estrutura usa a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar todos os membros definidos em cada interface que você especificar no `interfacenames`.  
+- **Implementação.** Se a estrutura usa a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar todos os membros definidos em cada interface que você especificar no `interfacenames`.  
   
--   **Propriedade padrão.** Uma estrutura pode especificar no máximo uma propriedade como seu *propriedade padrão*, usando o [padrão](../../../visual-basic/language-reference/modifiers/default.md) modificador. Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Propriedade padrão.** Uma estrutura pode especificar no máximo uma propriedade como seu *propriedade padrão*, usando o [padrão](../../../visual-basic/language-reference/modifiers/default.md) modificador. Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Nível de acesso.** Dentro de uma estrutura, você pode declarar cada membro com seu próprio nível de acesso. Todos os membros de estrutura padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso. Observe que se a própria estrutura tem um nível de acesso mais restrito, isso restringe automaticamente o acesso a seus membros, mesmo se você ajustar seus níveis de acesso com os modificadores de acesso.  
+- **Nível de acesso.** Dentro de uma estrutura, você pode declarar cada membro com seu próprio nível de acesso. Todos os membros de estrutura padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso. Observe que se a própria estrutura tem um nível de acesso mais restrito, isso restringe automaticamente o acesso a seus membros, mesmo se você ajustar seus níveis de acesso com os modificadores de acesso.  
   
--   **Escopo.** Uma estrutura está no escopo em todo o seu namespace, classe, estrutura ou módulo recipiente.  
+- **Escopo.** Uma estrutura está no escopo em todo o seu namespace, classe, estrutura ou módulo recipiente.  
   
      O escopo de cada membro de estrutura é a estrutura inteira.  
   
--   **Tempo de vida.** Uma estrutura em si tem um tempo de vida. Em vez disso, cada instância dessa estrutura tem um tempo de vida independente de todas as outras instâncias.  
+- **Tempo de vida.** Uma estrutura em si tem um tempo de vida. Em vez disso, cada instância dessa estrutura tem um tempo de vida independente de todas as outras instâncias.  
   
      O tempo de vida de uma instância começa quando ela é criada por um [novo operador](../../../visual-basic/language-reference/operators/new-operator.md) cláusula. Ela termina quando o tempo de vida da variável que contém termina.  
   
@@ -93,11 +93,11 @@ End Structure
   
      Membros de estrutura têm tempos de vida, dependendo de como e onde eles são declarados. Para obter mais informações, consulte "Tempo de vida" em [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
   
--   **Qualificação.** Código fora de uma estrutura deve qualificar o nome do membro com o nome da estrutura.  
+- **Qualificação.** Código fora de uma estrutura deve qualificar o nome do membro com o nome da estrutura.  
   
      Se o código dentro de uma estrutura aninhada fizer uma referência não qualificada a um elemento de programação, Visual Basic procura esse elemento primeiramente na estrutura aninhada, em seguida, em sua estrutura contida e assim por diante-out para o elemento contido mais externo. Para obter mais informações, consulte [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
--   **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo de memória total de uma estrutura somando as alocações de armazenamento nominais de seus membros. Além disso, você não pode presumir com segurança que a ordem de armazenamento na memória é a mesma que sua ordem de declaração. Se você precisar controlar o layout de armazenamento de uma estrutura, você pode aplicar a <xref:System.Runtime.InteropServices.StructLayoutAttribute> de atributo para o `Structure` instrução.  
+- **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo de memória total de uma estrutura somando as alocações de armazenamento nominais de seus membros. Além disso, você não pode presumir com segurança que a ordem de armazenamento na memória é a mesma que sua ordem de declaração. Se você precisar controlar o layout de armazenamento de uma estrutura, você pode aplicar a <xref:System.Runtime.InteropServices.StructLayoutAttribute> de atributo para o `Structure` instrução.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Structure` instrução para definir um conjunto de dados relacionados de um funcionário. Ele mostra o uso de `Public`, `Friend`, e `Private` membros para refletir a sensibilidade dos itens de dados. Ele também mostra os membros de procedimento, propriedade e evento.  

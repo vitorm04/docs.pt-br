@@ -3,11 +3,11 @@ title: Alterando os níveis de compartilhamento de cache para enviar atividades
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784287"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Alterando os níveis de compartilhamento de cache para enviar atividades
 O <xref:System.ServiceModel.Activities.SendMessageChannelCache> extensão permite que você personalize o cache do compartilhamento níveis, as configurações de cache da fábrica de canal, e as configurações do canal de armazenar em cache para fluxos de trabalho que enviam mensagens a pontos de extremidade de serviço usando <xref:System.ServiceModel.Activities.Send> atividades de mensagem. Esses fluxos de trabalho normalmente são fluxos de trabalho do cliente, mas também pode ser o serviços de fluxo de trabalho que são hospedados em um <xref:System.ServiceModel.WorkflowServiceHost>. Contém o cache da fábrica de canal em cache <xref:System.ServiceModel.ChannelFactory%601> objetos. O cache de canal contém canais armazenados em cache.  
@@ -20,11 +20,11 @@ O <xref:System.ServiceModel.Activities.SendMessageChannelCache> extensão permit
   
  Estes são os diferente cache do compartilhamento níveis disponíveis para <xref:System.ServiceModel.Activities.Send> atividades em um fluxo de trabalho e seu uso recomendado:  
   
--   **Nível de host**: No host de nível de compartilhamento, o cache está disponível somente para as instâncias de fluxo de trabalho hospedadas no host do serviço de fluxo de trabalho. Um cache também pode ser compartilhado entre os hosts de serviço de fluxo de trabalho em um cache de todo o processo.  
+- **Nível de host**: No host de nível de compartilhamento, o cache está disponível somente para as instâncias de fluxo de trabalho hospedadas no host do serviço de fluxo de trabalho. Um cache também pode ser compartilhado entre os hosts de serviço de fluxo de trabalho em um cache de todo o processo.  
   
--   **Nível de instância**: No nível de compartilhamento, o cache estará disponível para uma instância de fluxo de trabalho específico em todo seu ciclo de vida, mas o cache não está disponível para outras instâncias de fluxo de trabalho.  
+- **Nível de instância**: No nível de compartilhamento, o cache estará disponível para uma instância de fluxo de trabalho específico em todo seu ciclo de vida, mas o cache não está disponível para outras instâncias de fluxo de trabalho.  
   
--   **Sem Cache**: O cache é desativado por padrão, se você tiver um fluxo de trabalho que usa pontos de extremidade definidos na configuração. Também é recomendável manter o cache seja desativado nesse caso porque ativá-lo pode ser insegura. Por exemplo, se outra identidade (credenciais diferentes ou usando a representação) é necessária para cada envio.  
+- **Sem Cache**: O cache é desativado por padrão, se você tiver um fluxo de trabalho que usa pontos de extremidade definidos na configuração. Também é recomendável manter o cache seja desativado nesse caso porque ativá-lo pode ser insegura. Por exemplo, se outra identidade (credenciais diferentes ou usando a representação) é necessária para cada envio.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Alterando o nível de compartilhamento para um fluxo de trabalho do cliente de Cache  
  Para definir o cache do compartilhamento em um fluxo de trabalho do cliente, adicione uma instância da <xref:System.ServiceModel.Activities.SendMessageChannelCache> classe como uma extensão para o conjunto desejado de instâncias de fluxo de trabalho. Isso resulta em compartilhar o cache em todas as instâncias de fluxo de trabalho. Os exemplos de código a seguir mostram como executar essas etapas.  
@@ -90,7 +90,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
   
 |Configurações|LeaseTimeout (min)|IdleTimeout (min)|MaxItemsInCache|  
 |-|-|-|-|  
-|Padrão de Cache de fábrica|TimeSpan. MaxValue|2|16|  
+|Padrão de Cache de fábrica|TimeSpan.MaxValue|2|16|  
 |Padrão de Cache de canal|5|2|16|  
   
  Para personalizar as configurações de cache de canal e do cache de fábrica, crie uma instância de <xref:System.ServiceModel.Activities.SendMessageChannelCache> classe usando o construtor parametrizado <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> e passar uma nova instância da <xref:System.ServiceModel.Activities.ChannelCacheSettings> com valores personalizados para cada um do `factorySettings` e `channelSettings` parâmetros. Em seguida, adicione a nova instância dessa classe como uma extensão a um host de serviço de fluxo de trabalho ou uma instância de fluxo de trabalho. O exemplo de código a seguir mostra como executar essas etapas para uma instância de fluxo de trabalho.  

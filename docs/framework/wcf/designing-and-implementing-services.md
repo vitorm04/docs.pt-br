@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785015"
 ---
 # <a name="designing-and-implementing-services"></a>Serviços de implantação e projeção
 Esta seção mostra como definir e implementar contratos do WCF. Um contrato de serviço Especifica o que um ponto de extremidade comunica ao mundo externo. Em um nível mais concreto, é uma afirmação sobre um conjunto de mensagens específicas, organizados em padrões de troca de mensagens básicas (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço é um conjunto de trocas de mensagens relacionadas logicamente, uma operação de serviço é uma troca de mensagens única. Por exemplo, um `Hello` operação obviamente deve aceitar uma mensagem (de modo que o chamador pode anunciar a saudação) e podem ou não pode retornar uma mensagem (dependendo de cortesia da operação).  
@@ -19,22 +19,22 @@ Esta seção mostra como definir e implementar contratos do WCF. Um contrato de 
 ## <a name="overview"></a>Visão geral  
  Este tópico fornece uma orientação conceitual de alto nível para projetar e implementar serviços WCF. Subtópicos fornecem informações mais detalhadas sobre as especificações de design e implementação. Antes de criar e implementar seu aplicativo do WCF, é recomendável que você:  
   
--   Entender é que um contrato de serviço, como ele funciona e como criá-lo.  
+- Entender é que um contrato de serviço, como ele funciona e como criá-lo.  
   
--   Entender o que os contratos de estado requisitos mínimos não pode dar suporte a essa configuração de tempo de execução ou o ambiente de hospedagem.  
+- Entender o que os contratos de estado requisitos mínimos não pode dar suporte a essa configuração de tempo de execução ou o ambiente de hospedagem.  
   
 ## <a name="service-contracts"></a>Contratos de serviço  
  Um contrato de serviço Especifica o seguinte:  
   
--   As operações de um contrato expõe.  
+- As operações de um contrato expõe.  
   
--   A assinatura das operações em termos de mensagens trocadas.  
+- A assinatura das operações em termos de mensagens trocadas.  
   
--   Os tipos de dados dessas mensagens.  
+- Os tipos de dados dessas mensagens.  
   
--   O local das operações.  
+- O local das operações.  
   
--   Os protocolos específicos e formatos de serialização que são usados para dar suporte à comunicação bem-sucedida com o serviço.  
+- Os protocolos específicos e formatos de serialização que são usados para dar suporte à comunicação bem-sucedida com o serviço.  
   
  Por exemplo, um contrato de ordem de compra pode ter um `CreateOrder` tipos de operação que aceita uma entrada de informações do pedido e retorna informações de êxito ou falha, incluindo um identificador do pedido. Ele também pode ter um `GetOrderStatus` operação que aceita um identificador do pedido e retorna informações de status do pedido. Um contrato de serviço desse tipo deve especificar:  
   

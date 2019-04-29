@@ -3,11 +3,11 @@ title: Rastreamento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
 ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785912"
 ---
 # <a name="sql-tracking"></a>Rastreamento de SQL
 Este exemplo demonstra como escrever um participante de rastreamento SQL personalizado, que grava registros de rastreamento em uma base de dados SQL. Windows Workflow Foundation (WF) fornece o fluxo de trabalho de acompanhamento para obter visibilidade sobre a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Para obter mais informações sobre o controle de fluxo de trabalho, consulte [fluxo de trabalho, controle e rastreamento](../workflow-tracking-and-tracing.md).

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748405"
 ---
 # <a name="vector-graphics-overview"></a>Visão geral de gráficos vetoriais
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  
@@ -32,19 +32,19 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha li
   
  Ao longo do tempo, determinados blocos de construção básicos mostraram ser mais úteis para criar imagens bidimensionais. Esses blocos de construção, que têm suporte no [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], são apresentados na lista a seguir:  
   
--   Linhas  
+- Linhas  
   
--   Retângulos  
+- Retângulos  
   
--   Elipses  
+- Elipses  
   
--   Arcos  
+- Arcos  
   
--   Polígonos  
+- Polígonos  
   
--   Splines cardinais  
+- Splines cardinais  
   
--   splines de Bézier  
+- splines de Bézier  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Métodos para desenhar com um objeto gráfico  
  O <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece os seguintes métodos para desenhar os itens na lista anterior: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (para splines cardinais) e <xref:System.Drawing.Graphics.DrawBezier%2A>. Cada um desses métodos está sobrecarregado; ou seja, cada método dá suporte a diferentes listas de parâmetros. Por exemplo, uma variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e quatro inteiros, enquanto outra variação do <xref:System.Drawing.Graphics.DrawLine%2A> método recebe um <xref:System.Drawing.Pen> objeto e dois <xref:System.Drawing.Point> objetos.  

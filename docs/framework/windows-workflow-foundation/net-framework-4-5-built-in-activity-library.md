@@ -3,11 +3,11 @@ title: biblioteca interno de atividade do .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
 ms.openlocfilehash: 6d47c36a55829684a0eefb2a560e65f7b91462a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785997"
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>biblioteca interno de atividade do .NET Framework 4.5
 

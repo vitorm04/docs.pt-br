@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778632"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Especifica que um ou mais variáveis de membro declaradas se referem a uma instância de uma classe que pode gerar eventos.  
@@ -28,7 +28,7 @@ Especifica que um ou mais variáveis de membro declaradas se referem a uma inst�
   
 ## <a name="rules"></a>Regras  
   
--   **Tipos de elemento.** Você deve declarar `WithEvents` variáveis sejam variáveis de objeto para que eles possam aceitar instâncias de classe. No entanto, você não pode declará-los como `Object`. Você deve declará-los como a classe específica que pode gerar eventos.  
+- **Tipos de elemento.** Você deve declarar `WithEvents` variáveis sejam variáveis de objeto para que eles possam aceitar instâncias de classe. No entanto, você não pode declará-los como `Object`. Você deve declará-los como a classe específica que pode gerar eventos.  
   
  O `WithEvents` modificador pode ser usado neste contexto: [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

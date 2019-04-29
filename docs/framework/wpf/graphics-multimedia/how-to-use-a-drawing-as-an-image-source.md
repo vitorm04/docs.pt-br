@@ -7,11 +7,11 @@ helpviewer_keywords:
 - drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
 ms.openlocfilehash: d4b91a6495e1c54400d5fbfe43b6311d908565a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769338"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>Como: Usar um desenho como uma fonte de imagem
 Este exemplo mostra como usar um <xref:System.Windows.Media.Drawing> como o <xref:System.Windows.Controls.Image.Source%2A> para um <xref:System.Windows.Controls.Image> controle. Para exibir uma <xref:System.Windows.Media.Drawing> com um <xref:System.Windows.Controls.Image> controlar, use um <xref:System.Windows.Media.DrawingImage> como o <xref:System.Windows.Controls.Image> do controle <xref:System.Windows.Controls.Image.Source%2A> e defina a <xref:System.Windows.Media.DrawingImage> do objeto <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> propriedade para o desenho que você deseja exibir.  

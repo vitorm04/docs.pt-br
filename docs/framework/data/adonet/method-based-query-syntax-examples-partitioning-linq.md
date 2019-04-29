@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
 ms.openlocfilehash: bfc26835258606ff20dd066ecb6e4c874d0be2f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772145"
 ---
 # <a name="method-based-query-syntax-examples-partitioning-linq"></a>Exemplos de sintaxe de consulta baseada em método: Divisão (LINQ
 Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.Skip%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>, <xref:System.Linq.Enumerable.Take%2A>, e métodos de <xref:System.Linq.Enumerable.TakeWhile%2A> para ver <xref:System.Data.DataSet> usando a sintaxe da expressão de consulta.  

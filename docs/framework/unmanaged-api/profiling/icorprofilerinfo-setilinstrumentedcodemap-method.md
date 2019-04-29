@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792633"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>Método ICorProfilerInfo::SetILInstrumentedCodeMap
 Define um mapa de código para a função especificada usando as entradas de mapa especificadas Microsoft intermediate language (MSIL).  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  O depurador assumirá que cada deslocamento antigo se refere a um deslocamento dentro do código MSIL original, sem modificações de MSIL, e cada novo deslocamento refere-se para o deslocamento do MSIL dentro do código novo, instrumentado. O mapa deve ser classificado em ordem crescente. Para depuração funcione corretamente, siga estas diretrizes:  
   
--   Não reorganize o código instrumentado de MSIL.  
+- Não reorganize o código instrumentado de MSIL.  
   
--   Não remova o código MSIL original.  
+- Não remova o código MSIL original.  
   
--   Inclua entradas para todos os pontos de sequência do arquivo de banco de dados (PDB) de programa no mapa. O mapa não interpola entradas ausentes. Então, como o mapa a seguir:  
+- Inclua entradas para todos os pontos de sequência do arquivo de banco de dados (PDB) de programa no mapa. O mapa não interpola entradas ausentes. Então, como o mapa a seguir:  
   
      (0 antigo, 0 novos)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 antigo, 20 novas)  
   
-    -   Um deslocamento antigo de 0, 1, 2, 3 ou 4 será mapeado para o novo deslocamento 0.  
+    - Um deslocamento antigo de 0, 1, 2, 3 ou 4 será mapeado para o novo deslocamento 0.  
   
-    -   Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento de 10.  
+    - Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento de 10.  
   
-    -   Um deslocamento antigo de 9 ou superior será mapeado para o novo deslocamento 20.  
+    - Um deslocamento antigo de 9 ou superior será mapeado para o novo deslocamento 20.  
   
-    -   Um novo deslocamento de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 será mapeado para o deslocamento antigo 0.  
+    - Um novo deslocamento de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 será mapeado para o deslocamento antigo 0.  
   
-    -   Um novo deslocamento de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 será mapeado para o deslocamento antigo 5.  
+    - Um novo deslocamento de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 será mapeado para o deslocamento antigo 5.  
   
-    -   Um novo deslocamento de 20 ou superior será mapeado para o deslocamento antigo 9.  
+    - Um novo deslocamento de 20 ou superior será mapeado para o deslocamento antigo 9.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

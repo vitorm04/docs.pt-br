@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779806"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Método ICorProfilerInfo2::DoStackSnapshot
 Orienta os quadros gerenciados na pilha para o thread especificado e envia informações para o criador de perfil por meio de um retorno de chamada.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Movimentações de pilha assíncronas podem facilmente causar deadlocks ou violações, de acesso, a menos que você siga estas diretrizes:  
   
--   Quando você suspende diretamente threads, lembre-se de que apenas um thread que nunca executa código gerenciado pode suspender outro thread.  
+- Quando você suspende diretamente threads, lembre-se de que apenas um thread que nunca executa código gerenciado pode suspender outro thread.  
   
--   Sempre bloquear sua [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) retorno de chamada até que a movimentação da pilha do thread for concluída.  
+- Sempre bloquear sua [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) retorno de chamada até que a movimentação da pilha do thread for concluída.  
   
--   Não segure um bloqueio enquanto seu gerador de perfil chama uma função CLR que pode disparar uma coleta de lixo. Ou seja, não segure um bloqueio se o thread proprietário pode fazer uma chamada que dispara uma coleta de lixo.  
+- Não segure um bloqueio enquanto seu gerador de perfil chama uma função CLR que pode disparar uma coleta de lixo. Ou seja, não segure um bloqueio se o thread proprietário pode fazer uma chamada que dispara uma coleta de lixo.  
   
  Também há um risco de deadlock se você chamar `DoStackSnapshot` de um thread que seu gerador de perfil foi criado para que você pode movimentar a pilha de um thread de destino separado. Na primeira vez que o thread que você criou entra em determinados `ICorProfilerInfo*` métodos (incluindo `DoStackSnapshot`), o CLR realizará a inicialização por thread, CLR específico nesse thread. Se seu gerador de perfil suspendeu cuja pilha está tentando movimentar o thread-alvo, e se esse thread-alvo aconteceu possua um bloqueio necessário para realizar essa inicialização por thread, ocorrerá um deadlock. Para evitar esse deadlock, faça uma chamada inicial em `DoStackSnapshot` de seu thread criado pelo criador de perfil para movimentar um separado thread de destino, mas não suspender o thread de destino primeiro. Essa chamada inicial garante que a inicialização por thread pode ser concluída sem deadlock. Se `DoStackSnapshot` for bem-sucedida e relata a pelo menos um quadro, após esse ponto, será seguro para que esse thread criado pelo criador de perfil de suspender qualquer thread-alvo e chamada `DoStackSnapshot` para movimentar a pilha do thread-alvo.  
   

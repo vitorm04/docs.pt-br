@@ -3,11 +3,11 @@ title: 'Padrões de design: publicação-assinatura baseada em lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773044"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: publicação-assinatura baseada em lista
 Este exemplo ilustra o padrão baseado em lista publicar-assinar, implementado como um programa do Windows Communication Foundation (WCF).  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Configure o computador de serviço:  
   
-    1.  No computador do serviço, crie um diretório virtual chamado ServiceModelSamples. O lote de Setupvroot.bat do arquivo a [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) pode ser usado para criar o diretório de disco e o diretório virtual.  
+    1. No computador do serviço, crie um diretório virtual chamado ServiceModelSamples. O lote de Setupvroot.bat do arquivo a [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) pode ser usado para criar o diretório de disco e o diretório virtual.  
   
-    2.  Copie os arquivos de programa do serviço de %SystemDrive%\Inetpub\wwwroot\servicemodelsamples ao diretório virtual ServiceModelSamples na máquina do serviço. Certifique-se de incluir os arquivos no diretório \bin.  
+    2. Copie os arquivos de programa do serviço de %SystemDrive%\Inetpub\wwwroot\servicemodelsamples ao diretório virtual ServiceModelSamples na máquina do serviço. Certifique-se de incluir os arquivos no diretório \bin.  
   
-    3.  Teste que você pode acessar o serviço no computador cliente usando um navegador.  
+    3. Teste que você pode acessar o serviço no computador cliente usando um navegador.  
   
 2. Configure os computadores cliente:  
   
-    1.  Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para os computadores cliente.  
+    1. Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para os computadores cliente.  
   
-    2.  Em cada arquivo de configuração do cliente, altere o valor do endereço da definição do ponto de extremidade para coincidir com o novo endereço do seu serviço. Substitua todas as referências a "localhost" com um nome de domínio totalmente qualificado no endereço.  
+    2. Em cada arquivo de configuração do cliente, altere o valor do endereço da definição do ponto de extremidade para coincidir com o novo endereço do seu serviço. Substitua todas as referências a "localhost" com um nome de domínio totalmente qualificado no endereço.  
   
 3. Configure o computador de origem de dados:  
   
-    1.  Copie os arquivos de programa da fonte de dados da pasta \datasource\bin\, sob a pasta de idioma específico, o computador de origem de dados.  
+    1. Copie os arquivos de programa da fonte de dados da pasta \datasource\bin\, sob a pasta de idioma específico, o computador de origem de dados.  
   
-    2.  No arquivo de configuração de fonte de dados, altere o valor do endereço da definição do ponto de extremidade para coincidir com o novo endereço do seu serviço. Substitua todas as referências a "localhost" com um nome de domínio totalmente qualificado no endereço.  
+    2. No arquivo de configuração de fonte de dados, altere o valor do endereço da definição do ponto de extremidade para coincidir com o novo endereço do seu serviço. Substitua todas as referências a "localhost" com um nome de domínio totalmente qualificado no endereço.  
   
 4. Em computadores cliente, inicie o Client.exe em um prompt de comando.  
   

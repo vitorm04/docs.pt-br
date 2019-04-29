@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791893"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parâmetros e argumentos de procedimento (Visual Basic)
 Na maioria dos casos, um procedimento precisa de algumas informações sobre as circunstâncias em que ele tiver sido chamado. Um procedimento que executa tarefas repetidas ou compartilhadas usa informações diferentes para cada chamada. Essas informações consistem em variáveis, constantes e expressões que você passa para o procedimento quando você chamá-lo.  
@@ -49,11 +49,11 @@ Na maioria dos casos, um procedimento precisa de algumas informações sobre as 
   
  Se o código de chamada espera que fornecer um argumento com um tipo de dados diferente do seu parâmetro correspondente, tal como `Byte` para um `String` parâmetro, ele deve fazer o seguinte:  
   
--   Forneça apenas os argumentos com tipos de dados ampliam com o tipo de dados de parâmetro;  
+- Forneça apenas os argumentos com tipos de dados ampliam com o tipo de dados de parâmetro;  
   
--   Definir `Option Strict Off` para permitir conversões de estreitamento implícitas; ou  
+- Definir `Option Strict Off` para permitir conversões de estreitamento implícitas; ou  
   
--   Use uma palavra-chave de conversão para converter explicitamente o tipo de dados.  
+- Use uma palavra-chave de conversão para converter explicitamente o tipo de dados.  
   
 ### <a name="type-parameters"></a>Parâmetros de tipo  
  Um *procedimento genérico* também define um ou mais *parâmetros de tipo* , além de seus parâmetros normais. Um procedimento genérico permite que o código de chamada passar diferentes tipos de dados cada vez que ele chama o procedimento, portanto, ele pode personalizar os tipos de dados para os requisitos de cada chamada individual. Ver [procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

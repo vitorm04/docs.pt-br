@@ -3,11 +3,11 @@ title: Serviços e rastreamento de eventos WCF para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
 ms.openlocfilehash: 35d0202a3b9cf4060240dc521554644d419a5c23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723167"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Serviços e rastreamento de eventos WCF para Windows
 Este exemplo demonstra como usar o rastreamento analítico no Windows Communication Foundation (WCF) para emitir eventos no rastreamento de eventos para Windows (ETW). Os rastreamentos analíticos são eventos emitidos nos pontos-chave na pilha do WCF que permitem a solução de problemas dos serviços WCF no ambiente de produção.

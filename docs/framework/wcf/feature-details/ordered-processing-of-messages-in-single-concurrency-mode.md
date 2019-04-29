@@ -3,11 +3,11 @@ title: Processamento ordenado de mensagens em modo de concorrência única
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
 ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769441"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>Processamento ordenado de mensagens em modo de concorrência única
 WCF não garante a ordem na qual as mensagens são processadas, a menos que o canal subjacente é sessão.  Por exemplo, um serviço WCF que usa MsmqInputChannel, que não é um canal de sessão, falhará processar mensagens na ordem. Há algumas circunstâncias em que um desenvolvedor pode deseja que o comportamento de processamento de pedidos em, mas não quiser usar sessões. Este tópico descreve como configurar esse comportamento quando um serviço está em execução no modo de simultaneidade única.  

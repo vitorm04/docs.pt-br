@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762391"
 ---
 # <a name="fromtoby-animations-overview"></a>Visão geral de animações de/para/por
 Este tópico descreve como usar animações de/para/por para animar propriedades de dependência. Uma animação de/para/por cria uma transição entre dois valores.  
@@ -65,15 +65,15 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
 ## <a name="target-values"></a>Valores de destino  
  Uma animação de/para/por cria uma transição entre dois valores de destino. É comum especificar um valor inicial (configurá-lo usando o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade) e um valor final (configurá-lo usando o <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriedade). No entanto, você também pode especificar apenas um valor inicial, um valor de destino ou um valor de deslocamento. Nesses casos, a animação obtém o valor de destino ausente da propriedade que está sendo animada. A lista a seguir descreve as diferentes maneiras de especificar os valores de destino de uma animação.  
   
--   **Valor inicial**  
+- **Valor inicial**  
   
      Use o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> quando você deseja especificar explicitamente o valor inicial de uma animação de propriedade. Você pode usar o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade por si só, ou com o <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> ou <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade. Se você especificar apenas o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade, a animação faz a transição desse valor ao valor base da propriedade animada.  
   
--   **Valor final**  
+- **Valor final**  
   
      Para especificar um valor final de uma animação, use seu <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriedade. Se você usar o <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriedade por si só, a animação obtém o valor inicial da propriedade que está sendo animada ou da saída de outra animação que é aplicada à mesma propriedade. Você pode usar o <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriedade junto com o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade para especificar explicitamente valores para a animação inicial e final.  
   
--   **Valor de deslocamento**  
+- **Valor de deslocamento**  
   
      O <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade permite que você especifique um deslocamento, em vez de um explícito valor inicial ou final da animação. O <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade de uma animação especifica por quanto a animação altera um valor sobre sua duração. Você pode usar o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade sozinho ou com o <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriedade. Se você especificar apenas o <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriedade, a animação adiciona o valor de deslocamento ao valor base da propriedade ou a saída de outra animação.  
   
@@ -134,9 +134,9 @@ Este tópico descreve como usar animações de/para/por para animar propriedades
 ## <a name="other-animation-types"></a>Outros tipos de animação  
  Animações de/para/por não são o único tipo de animação que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece: também fornece animações de quadro-chave e animações de caminho.  
   
--   Uma animação de quadro-chave se anima com qualquer número de valores de destino, descritos usando quadros-chave. Para obter mais informações, consulte o [visão geral de animações de quadro-chave](key-frame-animations-overview.md).  
+- Uma animação de quadro-chave se anima com qualquer número de valores de destino, descritos usando quadros-chave. Para obter mais informações, consulte o [visão geral de animações de quadro-chave](key-frame-animations-overview.md).  
   
--   Uma animação de caminho gera valores de saída para um <xref:System.Windows.Media.PathGeometry>. Para obter mais informações, consulte o [visão geral de animações de caminho](path-animations-overview.md).  
+- Uma animação de caminho gera valores de saída para um <xref:System.Windows.Media.PathGeometry>. Para obter mais informações, consulte o [visão geral de animações de caminho](path-animations-overview.md).  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também permite que você crie seus próprios tipos de animação personalizada. Para obter mais informações, consulte o [visão geral de animações personalizadas](custom-animations-overview.md).  
   

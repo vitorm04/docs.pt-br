@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bba1e6c113fb4caa0db8963e238d3eceba0cc8ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782740"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Método ICorDebugStackWalk::GetContext
 Retorna o contexto para o quadro atual na [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  

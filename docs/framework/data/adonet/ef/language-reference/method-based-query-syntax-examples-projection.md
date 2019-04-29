@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
 ms.openlocfilehash: a38fce33fe34bf6485d0d5fcef4f194f4c2470b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760500"
 ---
 # <a name="method-based-query-syntax-examples-projection"></a>Exemplos de sintaxe de consulta baseada em método: Projeção
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  

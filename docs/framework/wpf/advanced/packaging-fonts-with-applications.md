@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773224"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empacotando fontes com aplicativos
 Este tópico fornece uma visão geral de como empacotar fontes com seu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo.  
@@ -158,17 +158,17 @@ Este tópico fornece uma visão geral de como empacotar fontes com seu [!INCLUDE
 ## <a name="limitations-on-font-usage"></a>Limitações no uso de fontes  
  A seguinte lista descreve várias limitações no empacotamento e uso de fontes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos:  
   
--   **Bits de permissão de incorporação de fontes:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos não verificam ou impõem bits de permissão de incorporação de fonte. Consulte a [Introdução a empacotamento de fontes](#introduction_to_packaging_fonts) seção para obter mais informações.  
+- **Bits de permissão de incorporação de fontes:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos não verificam ou impõem bits de permissão de incorporação de fonte. Consulte a [Introdução a empacotamento de fontes](#introduction_to_packaging_fonts) seção para obter mais informações.  
   
--   **Site de fontes de origem:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos não permitem uma referência de fonte para http ou ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Site de fontes de origem:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos não permitem uma referência de fonte para http ou ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **Um URI absoluto usando o pacote: notação:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos não permitem que você crie uma <xref:System.Windows.Media.FontFamily> objeto programaticamente usando "pack:" como parte de absoluta [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referência a uma fonte. Por exemplo, `"pack://application:,,,/resources/#Pericles Light"` é uma referência de fonte inválida.  
+- **Um URI absoluto usando o pacote: notação:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos não permitem que você crie uma <xref:System.Windows.Media.FontFamily> objeto programaticamente usando "pack:" como parte de absoluta [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referência a uma fonte. Por exemplo, `"pack://application:,,,/resources/#Pericles Light"` é uma referência de fonte inválida.  
   
--   **Incorporação de fonte automática:** Durante o tempo de design, não há nenhum suporte para pesquisar o uso de um aplicativo de fontes e incorporar automaticamente as fontes nos recursos do aplicativo.  
+- **Incorporação de fonte automática:** Durante o tempo de design, não há nenhum suporte para pesquisar o uso de um aplicativo de fontes e incorporar automaticamente as fontes nos recursos do aplicativo.  
   
--   **Subconjuntos de fontes:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos não dão suporte à criação de subconjuntos de fontes para documentos não fixos.  
+- **Subconjuntos de fontes:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os aplicativos não dão suporte à criação de subconjuntos de fontes para documentos não fixos.  
   
--   Em casos em que há uma referência incorreta, o aplicativo volta a usar uma fonte disponível.  
+- Em casos em que há uma referência incorreta, o aplicativo volta a usar uma fonte disponível.  
   
 ## <a name="see-also"></a>Consulte também
 

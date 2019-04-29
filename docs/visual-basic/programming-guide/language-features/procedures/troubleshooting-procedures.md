@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791788"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Solucionando problemas de procedimentos (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com procedimentos.  
@@ -46,9 +46,9 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com pr
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argumento não sendo modificado pela chamada de procedimento  
  Se você pretende permitir que um procedimento alterar um elemento de programação subjacente um argumento no código de chamada, você deve passar por referência. Mas um procedimento pode acessar os elementos de um argumento de tipo de referência, mesmo se você passá-lo por valor.  
   
--   **Variável de base**. Para permitir que o procedimento substituir o valor do elemento variável subjacente, o procedimento deve declarar o parâmetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Além disso, o código de chamada deve não coloque o argumento entre parênteses, porque isso poderia substituir o `ByRef` mecanismo de passagem.  
+- **Variável de base**. Para permitir que o procedimento substituir o valor do elemento variável subjacente, o procedimento deve declarar o parâmetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Além disso, o código de chamada deve não coloque o argumento entre parênteses, porque isso poderia substituir o `ByRef` mecanismo de passagem.  
   
--   **Fazer referência a elementos do tipo**. Se você declarar um parâmetro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), o procedimento não é possível modificar o elemento variável subjacente. No entanto, se o argumento for um tipo de referência, o procedimento pode modificar os membros do objeto para o qual ele aponta, mesmo que ele não é possível substituir o valor da variável. Por exemplo, se o argumento for uma variável de matriz, o procedimento não é possível atribuir uma nova matriz a ela, mas ele pode alterar um ou mais dos seus elementos. Os elementos alterados são refletidos na variável de matriz subjacente no código de chamada.  
+- **Fazer referência a elementos do tipo**. Se você declarar um parâmetro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), o procedimento não é possível modificar o elemento variável subjacente. No entanto, se o argumento for um tipo de referência, o procedimento pode modificar os membros do objeto para o qual ele aponta, mesmo que ele não é possível substituir o valor da variável. Por exemplo, se o argumento for uma variável de matriz, o procedimento não é possível atribuir uma nova matriz a ela, mas ele pode alterar um ou mais dos seus elementos. Os elementos alterados são refletidos na variável de matriz subjacente no código de chamada.  
   
  O exemplo a seguir define dois procedimentos que tenham uma variável de matriz por valor e operam em seus elementos. Procedimento `increase` simplesmente adiciona um para cada elemento. Procedimento `replace` atribui uma nova matriz para o parâmetro `a()` e, em seguida, adiciona um para cada elemento. No entanto, a reatribuição não afeta a variável de matriz subjacente no código de chamada porque `a()` é declarado `ByVal`.  
   
@@ -75,13 +75,13 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com pr
   
  Os seguintes itens, mesmo que pertençam à lista de parâmetros, não são componentes da assinatura do procedimento:  
   
--   Palavras-chave com o modificador de procedimento, como `Public`, `Shared`, e `Static`  
+- Palavras-chave com o modificador de procedimento, como `Public`, `Shared`, e `Static`  
   
--   Nomes de parâmetro  
+- Nomes de parâmetro  
   
--   Palavras-chave com o modificador de parâmetro, como `ByRef` e `Optional`  
+- Palavras-chave com o modificador de parâmetro, como `ByRef` e `Optional`  
   
--   o tipo de dados do valor de retorno (exceto para um operador de conversão)  
+- o tipo de dados do valor de retorno (exceto para um operador de conversão)  
   
  Você não pode sobrecarregar um procedimento, variando apenas um ou mais dos itens anteriores.  
   
@@ -95,11 +95,11 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com pr
   
  Quando você determinou qual sobrecarga você deseja chamar, tenha cuidado para observar as seguintes regras:  
   
--   Forneça o número correto de argumentos e na ordem correta.  
+- Forneça o número correto de argumentos e na ordem correta.  
   
--   O ideal é que seus argumentos devem ter os mesmos tipos de dados como os parâmetros correspondentes. Em qualquer caso, o tipo de dados de cada argumento deve ampliar ao de seu parâmetro correspondente. Isso é verdadeiro mesmo com o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) definido como `Off`. Se uma sobrecarga exigir qualquer conversão de redução da sua lista de argumentos, que sobrecarregam não é elegível para ser chamado.  
+- O ideal é que seus argumentos devem ter os mesmos tipos de dados como os parâmetros correspondentes. Em qualquer caso, o tipo de dados de cada argumento deve ampliar ao de seu parâmetro correspondente. Isso é verdadeiro mesmo com o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) definido como `Off`. Se uma sobrecarga exigir qualquer conversão de redução da sua lista de argumentos, que sobrecarregam não é elegível para ser chamado.  
   
--   Se você fornecer argumentos que exigem conversões de ampliação, faça seus tipos de dados o mais próximo possível para os tipos de dados do parâmetro correspondente. Se duas ou mais sobrecargas aceitam os tipos de dados do argumento, o compilador resolve a chamada para a sobrecarga que chama para a menor quantidade de ampliação.  
+- Se você fornecer argumentos que exigem conversões de ampliação, faça seus tipos de dados o mais próximo possível para os tipos de dados do parâmetro correspondente. Se duas ou mais sobrecargas aceitam os tipos de dados do argumento, o compilador resolve a chamada para a sobrecarga que chama para a menor quantidade de ampliação.  
   
  Você pode reduzir a chance de incompatibilidade de tipo de dados usando o [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) palavra de-de chave do conversão ao preparar seus argumentos.  
   

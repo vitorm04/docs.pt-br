@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940524"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Como: criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms do ASP.NET®  
+- Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
  Estas Instruções fornecem procedimentos passo a passo detalhados para criar um aplicativo Web ASP.NET Web Forms simples baseado em declarações. Também fornecem instruções sobre como testar o aplicativo Web ASP.NET Web Forms simples baseado em declarações para uma implementação bem-sucedida da autenticação federada. Estas Instruções não contêm instruções detalhadas para a criação de um STS (Serviço de Token de Segurança) e pressupõe que você já tenha configurado um.  
   
 ## <a name="contents"></a>Conteúdo  
   
--   Objetivos  
+- Objetivos  
   
--   Resumo das etapas  
+- Resumo das etapas  
   
--   Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
+- Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
   
--   Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
+- Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="objectives"></a>Objetivos  
   
--   Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
+- Configurar um aplicativo ASP.NET Web Forms para autenticação baseada em declarações  
   
--   Testar um aplicativo Web ASP.NET Web Forms bem-sucedido baseado em declarações  
+- Testar um aplicativo Web ASP.NET Web Forms bem-sucedido baseado em declarações  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  
   
--   Etapa 1 – Criar um aplicativo ASP.NET Web Forms simples  
+- Etapa 1 – Criar um aplicativo ASP.NET Web Forms simples  
   
--   Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para autenticação federada  
+- Etapa 2 – Configurar um aplicativo ASP.NET Web Forms para autenticação federada  
   
--   Etapa 3 – Testar a solução  
+- Etapa 3 – Testar a solução  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Etapa 1 – criar um aplicativo ASP.NET Web Forms simples  
  Nesta etapa, você criará um novo aplicativo ASP.NET Web Forms.  

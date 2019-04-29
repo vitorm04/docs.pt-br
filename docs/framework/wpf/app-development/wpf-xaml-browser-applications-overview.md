@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785860"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320126"
   
  Esse tópico contém as seguintes seções:  
   
--   [Criando um novo aplicativo de navegador XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
+- [Criando um novo aplicativo de navegador XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Implantando um XBAP](#deploying_a_xbap)  
+- [Implantando um XBAP](#deploying_a_xbap)  
   
--   [Comunicando-se com a página da Web de host](#communicating_with_the_host_web_page)  
+- [Comunicando-se com a página da Web de host](#communicating_with_the_host_web_page)  
   
--   [Considerações sobre segurança de XBAP](#xbap_security_considerations)  
+- [Considerações sobre segurança de XBAP](#xbap_security_considerations)  
   
--   [Considerações sobre desempenho de tempo de início de XBAP](#xbap_start_time_performance_considerations)  
+- [Considerações sobre desempenho de tempo de início de XBAP](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Criando um novo aplicativo de navegador XAML (XBAP)  
@@ -131,17 +131,17 @@ ms.locfileid: "59320126"
   
  Quando você usa um <xref:System.Windows.Controls.WebBrowser> controle em seu aplicativo, o WPF cria internamente uma instância do controle WebBrowser ActiveX nativo. Quando seu aplicativo é um XBAP de confiança parcial em execução no Internet Explorer, o controle ActiveX é executado em um thread dedicado do processo do Internet Explorer. Portanto, as seguintes limitações se aplicam:  
   
--   O <xref:System.Windows.Controls.WebBrowser> controle deve fornecer um comportamento semelhante para o navegador host, incluindo as restrições de segurança. Algumas dessas restrições de segurança podem ser controladas por meio das configurações de segurança do Internet Explorer. Para obter mais informações, consulte [Segurança](../security-wpf.md).  
+- O <xref:System.Windows.Controls.WebBrowser> controle deve fornecer um comportamento semelhante para o navegador host, incluindo as restrições de segurança. Algumas dessas restrições de segurança podem ser controladas por meio das configurações de segurança do Internet Explorer. Para obter mais informações, consulte [Segurança](../security-wpf.md).  
   
--   Uma exceção é lançada quando um XBAP é carregado entre domínios em uma página HTML.  
+- Uma exceção é lançada quando um XBAP é carregado entre domínios em uma página HTML.  
   
--   A entrada está em um thread separado do WPF <xref:System.Windows.Controls.WebBrowser>, portanto, a entrada do teclado não pode ser interceptada e o estado do IME não é compartilhado.  
+- A entrada está em um thread separado do WPF <xref:System.Windows.Controls.WebBrowser>, portanto, a entrada do teclado não pode ser interceptada e o estado do IME não é compartilhado.  
   
--   O tempo ou a ordem de navegação pode ser diferente devido ao controle ActiveX em execução em outro thread. Por exemplo, a navegação até uma página nem sempre é cancelada ao iniciar outra solicitação de navegação.  
+- O tempo ou a ordem de navegação pode ser diferente devido ao controle ActiveX em execução em outro thread. Por exemplo, a navegação até uma página nem sempre é cancelada ao iniciar outra solicitação de navegação.  
   
--   Um controle ActiveX personalizado pode ter problemas com a comunicação, pois o aplicativo do WPF está em execução em um thread separado.  
+- Um controle ActiveX personalizado pode ter problemas com a comunicação, pois o aplicativo do WPF está em execução em um thread separado.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> não é acionado porque <xref:System.Windows.Interop.HwndHost> não pode ser subclasse uma janela em execução em outro thread ou processo.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> não é acionado porque <xref:System.Windows.Interop.HwndHost> não pode ser subclasse uma janela em execução em outro thread ou processo.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Criando um XBAP de confiança total  
  Se seu XBAP requer confiança total, você pode alterar seu projeto para habilitar essa permissão. As etapas a seguir descrevem como habilitar a confiança total:  
@@ -152,9 +152,9 @@ ms.locfileid: "59320126"
   
  Essa configuração faz as seguintes alterações:  
   
--   No arquivo de projeto, o valor do elemento `<TargetZone>` é alterado para `Custom`.  
+- No arquivo de projeto, o valor do elemento `<TargetZone>` é alterado para `Custom`.  
   
--   No manifesto do aplicativo (App), uma `Unrestricted="true"` atributo é adicionado para o '<xref:System.Security.PermissionSet> elemento.  
+- No manifesto do aplicativo (App), uma `Unrestricted="true"` atributo é adicionado para o '<xref:System.Security.PermissionSet> elemento.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

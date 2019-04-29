@@ -3,11 +3,11 @@ title: Usando XML em um DataSet
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
 ms.openlocfilehash: 9e586ff0c6f28dd5919bc8b1bc640389a5cad610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607081"
 ---
 # <a name="using-xml-in-a-dataset"></a>Usando XML em um DataSet
 Com o ADO.NET, você pode preencher um <xref:System.Data.DataSet> de um fluxo XML ou documento. Você pode usar o fluxo XML ou o documento para fornecer ao <xref:System.Data.DataSet> os dados, as informações de esquema ou ambos. As informações fornecidas do fluxo XML ou documento podem ser combinadas com os dados existentes ou informações do esquema presentes no <xref:System.Data.DataSet>.  

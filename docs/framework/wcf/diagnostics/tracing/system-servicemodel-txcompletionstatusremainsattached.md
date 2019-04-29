@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusRemainsAttached
 ms.date: 03/30/2017
 ms.assetid: 60a745f5-85f7-4006-9786-fbbcca678ac9
 ms.openlocfilehash: 93fa6620688c9c3eeca5a0cbb0979accbadc1920
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779477"
 ---
 # <a name="systemservicemodeltxcompletionstatusremainsattached"></a>System.ServiceModel.TxCompletionStatusRemainsAttached
 A transação especificada para a operação especificada permanece anexada a InstanceContext.  

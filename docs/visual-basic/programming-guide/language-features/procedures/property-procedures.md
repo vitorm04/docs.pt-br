@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791853"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedimentos de propriedade (Visual Basic)
 Um procedimento de propriedade é uma série de instruções do Visual Basic que manipulam uma propriedade personalizada em um módulo, classe ou estrutura. Procedimentos de propriedade também são conhecidos como *acessadores de propriedade*.  
   
  Visual Basic fornece para os procedimentos de propriedade a seguir:  
   
--   Um `Get` procedimento retorna o valor de uma propriedade. Ele é chamado quando você acessa a propriedade em uma expressão.  
+- Um `Get` procedimento retorna o valor de uma propriedade. Ele é chamado quando você acessa a propriedade em uma expressão.  
   
--   Um `Set` procedimento define uma propriedade com um valor, incluindo uma referência de objeto. Ele é chamado quando você atribui um valor à propriedade.  
+- Um `Set` procedimento define uma propriedade com um valor, incluindo uma referência de objeto. Ele é chamado quando você atribui um valor à propriedade.  
   
  Você geralmente define procedimentos de propriedade de pares, usando o `Get` e `Set` instruções, mas você pode definir um procedimento sozinho se a propriedade é somente leitura ([instrução Get](../../../../visual-basic/language-reference/statements/get-statement.md)) ou somente gravação ([definido Instrução](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

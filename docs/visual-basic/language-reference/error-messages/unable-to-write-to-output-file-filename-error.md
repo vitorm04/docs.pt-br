@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787407"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Não é possível gravar no arquivo de saída '\<filename >': \<erro >
 Ocorreu um problema na criação do arquivo.  
@@ -21,9 +21,9 @@ Ocorreu um problema na criação do arquivo.
   
  Algumas situações comuns em que um arquivo fica aberto exclusivamente são quando:  
   
--   O aplicativo está em execução e usando os arquivos dele. Para resolver esse problema, verifique se o aplicativo não está em execução.  
+- O aplicativo está em execução e usando os arquivos dele. Para resolver esse problema, verifique se o aplicativo não está em execução.  
   
--   Outro aplicativo abriu o arquivo. Para resolver esse problema, verifique se nenhum outro aplicativo está acessando os arquivos. Nem sempre é óbvio qual aplicativo está acessando seus arquivos. Nesse caso, reiniciar o computador pode ser o caminho mais fácil para encerrar o aplicativo.  
+- Outro aplicativo abriu o arquivo. Para resolver esse problema, verifique se nenhum outro aplicativo está acessando os arquivos. Nem sempre é óbvio qual aplicativo está acessando seus arquivos. Nesse caso, reiniciar o computador pode ser o caminho mais fácil para encerrar o aplicativo.  
   
  Se apenas um dos arquivos de saída do projeto estiver marcado como somente leitura, esta exceção será acionada.  
   

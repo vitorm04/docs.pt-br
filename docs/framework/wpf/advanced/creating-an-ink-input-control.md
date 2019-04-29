@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928689"
 ---
 # <a name="creating-an-ink-input-control"></a>Criando um controle de entrada de tinta
 Você pode criar um controle personalizado que renderiza a tinta de forma dinâmica e estática. Ou seja, é possível renderizar a tinta conforme um usuário desenha um traço, fazendo com que a tinta apareça "fluindo" da caneta eletrônica e exibi-la depois de adicionada ao controle, tanto pela caneta eletrônica, colada da área de transferência ou carregada de um arquivo. Para renderizar a tinta dinamicamente, o controle deve usar um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Para renderizar a tinta estaticamente, você deve substituir os métodos de evento de caneta (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) para coletar <xref:System.Windows.Input.StylusPoint> dados, criar traços e adicioná-los para um <xref:System.Windows.Controls.InkPresenter> (que renderiza a tinta no controle).  
   
  Este tópico contém as seguintes subseções:  
   
--   [Como: Coletar dados de ponto da caneta e criar traços de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [Como: Coletar dados de ponto da caneta e criar traços de tinta](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Como: Habilitar o controle aceitar a entrada do Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [Como: Habilitar o controle aceitar a entrada do Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Juntando as peças](#PuttingItTogether)  
+- [Juntando as peças](#PuttingItTogether)  
   
--   [Usando plug-ins adicionais e o DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [Usando plug-ins adicionais e o DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Conclusão](#AdvancedInkHandling_Conclusion)  
+- [Conclusão](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Como: Coletar dados de ponto da caneta e criar traços de tinta  

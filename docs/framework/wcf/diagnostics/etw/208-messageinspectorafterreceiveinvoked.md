@@ -3,11 +3,11 @@ title: 208 - MessageInspectorAfterReceiveInvoked
 ms.date: 03/30/2017
 ms.assetid: dfb5f7b0-4346-4949-8104-351726b1f502
 ms.openlocfilehash: 3499131fcb52f0a0ab6d0e78e165522b7092612f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781895"
 ---
 # <a name="208---messageinspectorafterreceiveinvoked"></a>208 - MessageInspectorAfterReceiveInvoked
 ## <a name="properties"></a>Propriedades  
@@ -20,15 +20,15 @@ ms.locfileid: "33458892"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido após o modelo de serviço foi invocado o `AfterReceive` método em um Inspetor de mensagem.  
+ Esse evento é emitido depois que o modelo de serviço tenha chamado o `AfterReceive` método em um Inspetor de mensagens.  
   
 ## <a name="message"></a>Mensagem  
- O Dispatcher invocou 'AfterReceiveReply' em um MessageInspector do tipo '%1'.  
+ O Dispatcher invocado AfterReceiveReply em um MessageInspector do tipo '%1'.  
   
 ## <a name="details"></a>Detalhes  
   
 |Nome do item de dados|Tipo de item de dados|Descrição|  
 |--------------------|--------------------|-----------------|  
 |NomeDoTipo|`xs:string`|O FullName do CLR do tipo de chamada `MessageInspector`.|  
-|HostReference|`xs:string`|Para serviços hospedados na Web, este campo identifica exclusivamente o serviço na hierarquia da Web. O formato é definido como ' caminho Virtual do aplicativo Web Site nome&#124;caminho Virtual do serviço&#124;ServiceName'. Exemplo: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
+|HostReference|`xs:string`|Para serviços hospedados na Web, este campo identifica exclusivamente o serviço na hierarquia da Web. O formato é definido como ' caminho Virtual do aplicativo de nome de Site&#124;caminho Virtual de serviço&#124;ServiceName'. Exemplo: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
 |AppDomain|`xs:string`|A cadeia de caracteres retornada por AppDomain.CurrentDomain.FriendlyName.|

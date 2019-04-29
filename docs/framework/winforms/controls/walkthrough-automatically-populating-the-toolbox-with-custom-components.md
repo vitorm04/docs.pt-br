@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759902"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Passo a passo: Preencher de forma automática a caixa de ferramentas com componentes personalizados
 Se seus componentes forem definidos por um projeto na solução aberta no momento, eles aparecerão automaticamente na **Caixa de Ferramentas** sem exigir que você execute nenhuma ação. Você também pode preencher manualmente a **Caixa de Ferramentas** com seus componentes personalizados usando a [Caixa de Diálogo Escolher Itens da Caixa de Ferramentas (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), mas a **Caixa de Ferramentas** leva em conta itens nas saídas de build da sua solução com todas as seguintes características:  
   
--   Implementa <xref:System.ComponentModel.IComponent>;  
+- Implementa <xref:System.ComponentModel.IComponent>;  
   
--   Não tem <xref:System.ComponentModel.ToolboxItemAttribute> definido como `false`;  
+- Não tem <xref:System.ComponentModel.ToolboxItemAttribute> definido como `false`;  
   
--   Não tem <xref:System.ComponentModel.DesignTimeVisibleAttribute> definido como `false`.  
+- Não tem <xref:System.ComponentModel.DesignTimeVisibleAttribute> definido como `false`.  
   
 > [!NOTE]
 >  A **Caixa de Ferramentas** não segue cadeias de referência, portanto, não exibirá itens que não sejam criados por um projeto em sua solução.  
   
  Este passo a passo demonstra como um componente personalizado aparece automaticamente na **Caixa de Ferramentas** depois que o componente é criado. As tarefas ilustradas neste passo a passo incluem:  
   
--   Criando um projeto dos Windows Forms.  
+- Criando um projeto dos Windows Forms.  
   
--   Criando um componente personalizado.  
+- Criando um componente personalizado.  
   
--   Criando uma instância de um componente personalizado.  
+- Criando uma instância de um componente personalizado.  
   
--   Descarregando e recarregando um componente personalizado.  
+- Descarregando e recarregando um componente personalizado.  
   
  Quando tiver terminado, verá que a **Caixa de Ferramentas** é preenchida com um componente que você criou.  
   

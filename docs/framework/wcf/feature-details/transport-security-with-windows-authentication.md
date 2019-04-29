@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932881"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Segurança de transporte com autenticação do Windows
 O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o cliente do Windows Communication Foundation (WCF). Para obter mais informações sobre a programação, consulte [como: Proteger um serviço com credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -32,9 +32,9 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
 ## <a name="service"></a>Serviço  
  O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
   
--   Crie um serviço autônomo usando o código sem nenhuma configuração.  
+- Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
+- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa uma segurança do Windows.  
@@ -76,9 +76,9 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
 ## <a name="client"></a>Cliente  
  O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
   
--   Crie um cliente autônomo usando o código (e o código do cliente).  
+- Crie um cliente autônomo usando o código (e o código do cliente).  
   
--   Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
+- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

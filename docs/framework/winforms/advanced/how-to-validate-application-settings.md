@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778840"
 ---
 # <a name="how-to-validate-application-settings"></a>Como: validar configurações de aplicativo
 Este tópico demonstra como validar configurações do aplicativo antes que elas sejam persistentes.  
@@ -34,11 +34,11 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
   
  Um manipulador de eventos geralmente executa uma das seguintes ações quando detecta um valor inválido:  
   
--   Fornece automaticamente um valor sabidamente correto, como o valor padrão.  
+- Fornece automaticamente um valor sabidamente correto, como o valor padrão.  
   
--   Consulta novamente o usuário do código do servidor para obter informações.  
+- Consulta novamente o usuário do código do servidor para obter informações.  
   
--   Para eventos gerados antes de suas ações associadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa o <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar a operação.  
+- Para eventos gerados antes de suas ações associadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa o <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar a operação.  
   
  Para obter mais informações sobre a manipulação de eventos, consulte [Visão geral de manipuladores de evento](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
   
 ### <a name="to-obtain-the-application-settings-object"></a>Para obter o objeto de configurações do aplicativo  
   
--   Obtenha uma referência para o objeto de configurações de aplicativo (a instância do wrapper) executando um dos seguintes itens com marcadores:  
+- Obtenha uma referência para o objeto de configurações de aplicativo (a instância do wrapper) executando um dos seguintes itens com marcadores:  
   
-    -   Se você tiver criado suas configurações usando a caixa de diálogo de Configurações de aplicativo do Visual Studio no **Editor de propriedade**, poderá recuperar o objeto de configurações padrão gerado para sua linguagem por meio da seguinte expressão.  
+    - Se você tiver criado suas configurações usando a caixa de diálogo de Configurações de aplicativo do Visual Studio no **Editor de propriedade**, poderá recuperar o objeto de configurações padrão gerado para sua linguagem por meio da seguinte expressão.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
   
          - ou -  
   
-    -   Se você for um desenvolvedor de Visual Basic e tiver criado as configurações do aplicativo usando o Designer de Projeto, poderá recuperar as configurações usando o [Objeto My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Se você for um desenvolvedor de Visual Basic e tiver criado as configurações do aplicativo usando o Designer de Projeto, poderá recuperar as configurações usando o [Objeto My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          - ou -  
   
-    -   Se você tiver criado suas configurações derivando de <xref:System.Configuration.ApplicationSettingsBase> diretamente, você precisa instanciar sua classe manualmente.  
+    - Se você tiver criado suas configurações derivando de <xref:System.Configuration.ApplicationSettingsBase> diretamente, você precisa instanciar sua classe manualmente.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

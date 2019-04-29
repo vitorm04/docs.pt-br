@@ -3,11 +3,11 @@ title: Eixos LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
 ms.openlocfilehash: 4a04c15357b5630de06dc0743523e5a98c91745e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780972"
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>Eixos LINQ to XML (Visual Basic)
 Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, você poderá consultá-la para localizar elementos e atributos, e recuperar seus valores.  

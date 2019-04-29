@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775850"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contadores de desempenho e aplicativos lado a lado em processo
 Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contadores de desempenho por tempo de execução. Este tópico descreve a alteração do Registro necessária para habilitar essa funcionalidade.  
@@ -25,9 +25,9 @@ Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contad
 ## <a name="the-default-behavior"></a>O comportamento padrão  
  Por padrão, o Monitor de Desempenho exibe os contadores de desempenho classificados por aplicativo. No entanto, há dois cenários em que isso torna-se um problema:  
   
--   Ao monitorar dois aplicativos que têm o mesmo nome. Por exemplo, se ambos os aplicativos são nomeados myapp.exe, um é exibido como **myapp** e o outro como **myapp#1** na coluna **Instância**. Nesse caso, é difícil corresponder um contador de desempenho a um aplicativo específico. Não está claro se os dados coletados para **myapp#1** referem-se ao primeiro myapp.exe ou ao segundo.  
+- Ao monitorar dois aplicativos que têm o mesmo nome. Por exemplo, se ambos os aplicativos são nomeados myapp.exe, um é exibido como **myapp** e o outro como **myapp#1** na coluna **Instância**. Nesse caso, é difícil corresponder um contador de desempenho a um aplicativo específico. Não está claro se os dados coletados para **myapp#1** referem-se ao primeiro myapp.exe ou ao segundo.  
   
--   Quando um aplicativo usa várias instâncias do Common Language Runtime. O [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] dá suporte a cenários de hospedagem lado a lado em processo; ou seja, um único processo ou aplicativo pode carregar várias instâncias do common language runtime. Se um único aplicativo chamado myapp.exe carrega duas instâncias de tempo de execução, por padrão, elas serão designadas na coluna **Instância** como **myapp** e **myapp#1**. Nesse caso, não está claro se **myapp** e **myapp#1** referem-se a dois aplicativos de mesmo nome ou ao mesmo aplicativo com dois tempos de execução. Se vários aplicativos com o mesmo nome carregam vários tempos de execução, a ambiguidade é ainda maior.  
+- Quando um aplicativo usa várias instâncias do Common Language Runtime. O [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] dá suporte a cenários de hospedagem lado a lado em processo; ou seja, um único processo ou aplicativo pode carregar várias instâncias do common language runtime. Se um único aplicativo chamado myapp.exe carrega duas instâncias de tempo de execução, por padrão, elas serão designadas na coluna **Instância** como **myapp** e **myapp#1**. Nesse caso, não está claro se **myapp** e **myapp#1** referem-se a dois aplicativos de mesmo nome ou ao mesmo aplicativo com dois tempos de execução. Se vários aplicativos com o mesmo nome carregam vários tempos de execução, a ambiguidade é ainda maior.  
   
  Você pode definir uma chave do Registro para eliminar essa ambiguidade. Para aplicativos desenvolvidos usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], essa alteração do Registro adiciona um identificador de processo seguido por um identificador de instância de tempo de execução para o nome do aplicativo na coluna **Instância**. Em vez de *aplicativo* ou *aplicativo*#1, o aplicativo agora é identificado como *aplicativo*_`p`*processID*\_`r`*runtimeID* na coluna **Instância**. Se um aplicativo foi desenvolvido usando uma versão anterior do Common Language Runtime, essa instância é representada como *aplicativo\_*`p`*processID* desde que o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] esteja instalado.  
   

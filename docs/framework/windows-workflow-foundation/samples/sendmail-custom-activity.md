@@ -3,11 +3,11 @@ title: Atividade personalizado de SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785938"
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
 Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizada usa os recursos do <xref:System.Net.Mail.SmtpClient> para enviar email de forma assíncrona e enviar email com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
@@ -107,13 +107,13 @@ new SendMail
   
  Para obter mais informações sobre como configurar um servidor SMTP, consulte os links a seguir.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configurando o serviço SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Configurando o serviço SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Configurar o email SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Configurar o email SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Como instalar o serviço SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Como instalar o serviço SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Os emuladores SMTP fornecidos por terceiros estão disponíveis para download.  
   

@@ -3,11 +3,11 @@ title: Refatoração usando uma função pura (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787108"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refatoração usando uma função pura (Visual Basic)
 O exemplo a seguir refatora o exemplo anterior, [refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura nesse exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
@@ -170,7 +170,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Próximas etapas  
  O exemplo a seguir mostra como projetar XML em uma forma diferente:  
   
--   [Projetando XML em uma forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Projetando XML em uma forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Consulte também
 

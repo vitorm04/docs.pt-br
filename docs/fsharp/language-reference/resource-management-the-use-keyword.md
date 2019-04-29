@@ -3,11 +3,11 @@ title: 'Gerenciamento de recursos: A palavra-chave use'
 description: Saiba mais sobre o F# palavra-chave 'use' e a função 'using', o que pode controlar a inicialização e a liberação de recursos.
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770481"
 ---
 # <a name="resource-management-the-use-keyword"></a>Gerenciamento de recursos: A palavra-chave use
 
@@ -40,7 +40,7 @@ O exemplo a seguir mostra como fechar um arquivo automaticamente usando o `use` 
 
 O `using` função tem a seguinte forma:
 
-`using` (*expression1*) *função ou lambda*
+`using` (*expression1*) *function-or-lambda*
 
 Em um `using` expressão, *expression1* cria o objeto que deve ser descartado. O resultado de *expression1* (o objeto que deve ser descartado) se torna um argumento *valor*, para *função ou lambda*, que é qualquer função que espera um único restante do argumento de um tipo que corresponde ao valor produzido pela *expression1*, ou uma expressão lambda que espera um argumento desse tipo. No final da execução da função, o tempo de execução chama `Dispose` e libera os recursos (a menos que o valor é `null`, caso em que a chamada de Dispose não é realizada).
 

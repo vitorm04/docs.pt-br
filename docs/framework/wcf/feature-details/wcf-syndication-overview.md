@@ -3,11 +3,11 @@ title: Visão geral de sindicalização do WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 ms.openlocfilehash: ef62c4460ff5dd4890de174afda671facee97f2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768557"
 ---
 # <a name="wcf-syndication-overview"></a>Visão geral de sindicalização do WCF
 Windows Communication Foundation (WCF) oferece suporte para expor feeds de sindicalização de um serviço WCF. Sindicalização é um mecanismo de integração de aplicativos no qual um servidor expõe alguns dados de aplicativo em um formato interoperável, conhecido como um feed. Um feed é uma coleção de dados de aplicativo que consiste em alguns metadados de nível de feed (título, autor, URL e outros metadados) e uma série de itens de feed. Dentro do feed, os itens do feed são geralmente temporal em ordem cronológica inversa. Um item de feed consiste em um conjunto padrão de metadados de nível de item (title, URL, data de criação, categoria e outros metadados de nível de item) e uma quantidade arbitrária de dados específicos do aplicativo. Os dois tipos mais comuns de feeds de agregação são RSS Really Simple Syndication () 2.0 e Atom 1.0, sendo que ambos têm suporte pelo WCF.  

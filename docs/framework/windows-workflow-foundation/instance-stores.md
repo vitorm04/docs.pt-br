@@ -3,11 +3,11 @@ title: Armazenamentos de instância
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791164"
 ---
 # <a name="instance-stores"></a>Armazenamentos de instância
 Um armazenamento de instância é um contêiner lógico instâncias. É o local onde os dados e os metadados de instância são armazenados. Um armazenamento de instância não implica o armazenamento físico dedicado. Um armazenamento de instância pode conter informações durável em uma base de dados SQL Server ou em uma informações de estado não durável na memória. Os vem de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] com a instância Store de fluxo de trabalho SQL, que é uma implementação concreta de um armazenamento de instância que permite que os fluxos de trabalho persistam dados e metadados de instância em uma base de dados SQL Server 2005 ou SQL Server 2008. Além a tela de aplicativo Windows Server também fornece uma implementação concreta de um armazenamento de instância. Para obter mais informações, consulte [Store de instância do Windows Server App Fabric, consulta e provedores de controle](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

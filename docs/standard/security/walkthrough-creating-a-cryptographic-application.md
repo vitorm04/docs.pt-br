@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794999"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Passo a passo: criar um aplicativo criptográfico
 Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os exemplos de código são projetados para um aplicativo Windows Forms. Este aplicativo não demonstram cenários do mundo real, como o uso de cartões inteligentes. Em vez disso, ele demonstra os conceitos básicos de criptografia e descriptografia.  
   
  Este passo a passo usa as seguintes diretrizes para criptografia:  
   
--   Use o <xref:System.Security.Cryptography.RijndaelManaged> classe, um algoritmo simétrico, para criptografar e descriptografar dados usando gerada automaticamente <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
+- Use o <xref:System.Security.Cryptography.RijndaelManaged> classe, um algoritmo simétrico, para criptografar e descriptografar dados usando gerada automaticamente <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
   
--   Use o <xref:System.Security.Cryptography.RSACryptoServiceProvider>, um algoritmo assimétrico, para criptografar e descriptografar a chave para os dados criptografados pela <xref:System.Security.Cryptography.RijndaelManaged>. Algoritmos assimétricos são melhor usados para pequenas quantidades de dados, como uma chave.  
+- Use o <xref:System.Security.Cryptography.RSACryptoServiceProvider>, um algoritmo assimétrico, para criptografar e descriptografar a chave para os dados criptografados pela <xref:System.Security.Cryptography.RijndaelManaged>. Algoritmos assimétricos são melhor usados para pequenas quantidades de dados, como uma chave.  
   
     > [!NOTE]
     >  Se você quiser proteger os dados em seu computador, em vez de trocar o conteúdo criptografado com outras pessoas, considere usar o <xref:System.Security.Cryptography.ProtectedData> ou <xref:System.Security.Cryptography.ProtectedMemory> classes.  
@@ -48,7 +48,7 @@ Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
--   Referências aos namespaces <xref:System.IO> e <xref:System.Security.Cryptography>.  
+- Referências aos namespaces <xref:System.IO> e <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Criando um aplicativo do Windows Forms  
  A maioria dos exemplos de código neste passo a passo é projetada para serem manipuladores de eventos para controles de botão. A tabela a seguir lista os controles necessários para o aplicativo de exemplo e seus nomes necessárias corresponder os exemplos de código.  
@@ -100,15 +100,15 @@ Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os
   
  O pacote de criptografia usa o seguinte formato:  
   
--   Comprimento da chave, bytes de 0 - 3  
+- Comprimento da chave, bytes de 0 - 3  
   
--   Comprimento de IV, bytes de 4 a 7  
+- Comprimento de IV, bytes de 4 a 7  
   
--   Chave criptografada  
+- Chave criptografada  
   
--   IV  
+- IV  
   
--   Texto codificado  
+- Texto codificado  
   
  Você pode usar os comprimentos da chave e IV para determinar os pontos de partida e comprimentos de todas as partes do pacote de criptografia, que, em seguida, pode ser usado para descriptografar o arquivo.  
   

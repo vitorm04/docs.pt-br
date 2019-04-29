@@ -12,14 +12,14 @@ ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787888"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de armazenamento de símbolo de diagnóstico
-Este tópico descreve as interfaces não gerenciadas que permitem que um compilador para gerar informações de símbolo para uso por um depurador.  
+Este tópico descreve as interfaces não gerenciadas que permitem que um compilador gerar informações de símbolo para uso por um depurador.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interface IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
@@ -29,10 +29,10 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Define a interface para anexar um depurador de servidor chamado automaticamente.  
   
  [Interface INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- Declara os métodos para registrar e cancelar o registro de uma fonte de conexão de notificação.  
+ Declara os métodos para registrar e cancelar o registro de uma fonte de notificação de conexão.  
   
  [Interface INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- Declara os métodos de notificação de coletor.  
+ Declara os métodos de notificação do coletor.  
   
  [Interface INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
  Declara um método para definir filtros de notificação.  
@@ -44,22 +44,22 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Essa interface é o complemento de leitura para [ISymUnmanagedAsyncMethodPropertiesWriter Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [Interface ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Permite a definição das informações de método assíncrono opcional por símbolo do método. Deve usar um método aberto (ou seja, entre as chamadas para o [método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)e [método CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Permite a definição de informações do método assíncrono opcional por um símbolo de método. Deve ser usado com um método de aberto (ou seja, entre as chamadas para o [método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)e o [método CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [Interface ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
  Representa um associador de símbolo para código não gerenciado.  
   
  [Interface ISymUnmanagedBinder2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- Representa um associador de símbolo para código não gerenciado e estende o `ISymUnmanagedBinder` interface.  
+ Representa um associador de símbolo para código não gerenciado e amplia o `ISymUnmanagedBinder` interface.  
   
  [Interface ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- Representa um associador de símbolo para código não gerenciado e estende o `ISymUnmanagedBinder` interface.  
+ Representa um associador de símbolo para código não gerenciado e amplia o `ISymUnmanagedBinder` interface.  
   
  [Interface ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
  Fornece acesso às constantes não gerenciados.  
   
  [Interface ISymUnmanagedDispose](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)  
- Libera recursos não gerenciados.  
+ Descarta os recursos não gerenciados.  
   
  [Interface ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)  
  Representa um documento referenciado por um repositório de símbolos.  
@@ -77,7 +77,7 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Representa um namespace.  
   
  [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- Representa um leitor de símbolo que fornece acesso a documentos, métodos e variáveis em um armazenamento de símbolo.  
+ Representa um leitor de símbolo que fornece acesso a documentos, métodos e variáveis dentro de um repositório de símbolos.  
   
  [Interface ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
  Obtém um método de leitor de símbolo dado um token de método e um número de versão de editar e copiar.  
@@ -89,7 +89,7 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Representa um escopo léxico dentro de um método.  
   
  [Interface ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- Representa um escopo léxico dentro de um método e estende o `ISymUnmanagedScope` interface com métodos que obtêm informações sobre constantes definidas dentro do escopo.  
+ Representa um escopo léxico dentro de um método e estende o `ISymUnmanagedScope` interface com métodos que obtêm informações sobre constantes definidas dentro do escopo...  
   
  [Interface ISymUnmanagedSourceServerModule](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
  Fornece dados de servidor de origem para um módulo.  
@@ -101,13 +101,13 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Representa uma variável, como um parâmetro, uma variável local ou um campo.  
   
  [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos de léxicos e variáveis.  
+ Representa um gravador de símbolo e fornece métodos para definir pontos de sequência, documentos, escopos léxicos e variáveis.  
   
  [Interface ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos de léxicos e variáveis. Estende o `ISymUnmanagedWriter` interface.  
+ Representa um gravador de símbolo e fornece métodos para definir pontos de sequência, documentos, escopos léxicos e variáveis. Estende o `ISymUnmanagedWriter` interface.  
   
  [Interface ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos de léxicos e variáveis. Estende o `ISymUnmanagedWriter` interface.  
+ Representa um gravador de símbolo e fornece métodos para definir pontos de sequência, documentos, escopos léxicos e variáveis. Estende o `ISymUnmanagedWriter` interface.  
   
  [Interface ISymUnmanagedWriter4](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
  Interface ISymUnmanagedWriter4.  

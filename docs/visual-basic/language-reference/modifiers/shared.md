@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
 ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778736"
 ---
 # <a name="shared-visual-basic"></a>Compartilhado (Visual Basic)
 Especifica que um ou mais elementos de programação declarados estão associados com uma classe ou estrutura em geral e não uma instância específica da classe ou estrutura.  
@@ -30,25 +30,25 @@ Especifica que um ou mais elementos de programação declarados estão associado
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto da declaração.** Você pode usar `Shared` apenas no nível de módulo. Isso significa que o contexto da declaração para um `Shared` elemento deve ser uma classe ou estrutura e não pode ser um arquivo de origem, namespace ou procedimento.  
+- **Contexto da declaração.** Você pode usar `Shared` apenas no nível de módulo. Isso significa que o contexto da declaração para um `Shared` elemento deve ser uma classe ou estrutura e não pode ser um arquivo de origem, namespace ou procedimento.  
   
--   **Modificadores combinados.** Não é possível especificar `Shared` junto com [prevalece](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), ou [ Estático](../../../visual-basic/language-reference/modifiers/static.md) na mesma declaração.  
+- **Modificadores combinados.** Não é possível especificar `Shared` junto com [prevalece](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), ou [ Estático](../../../visual-basic/language-reference/modifiers/static.md) na mesma declaração.  
   
--   **Acessando.** Você pode acessar um elemento compartilhado qualificando com seu nome de classe ou estrutura, não com o nome da variável de uma instância específica de sua classe ou estrutura. Até mesmo, não é preciso criar uma instância de uma classe ou estrutura para acessar seus membros compartilhados.  
+- **Acessando.** Você pode acessar um elemento compartilhado qualificando com seu nome de classe ou estrutura, não com o nome da variável de uma instância específica de sua classe ou estrutura. Até mesmo, não é preciso criar uma instância de uma classe ou estrutura para acessar seus membros compartilhados.  
   
      O exemplo a seguir chama o procedimento compartilhado <xref:System.Double.IsNaN%2A> expostos pelo <xref:System.Double> estrutura.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Compartilhamento implícito.** Não é possível usar o `Shared` modificador em um [instrução Const](../../../visual-basic/language-reference/statements/const-statement.md), mas constantes são implicitamente compartilhadas. Da mesma forma, você não pode declarar um membro de um módulo ou interface seja `Shared`, mas eles são implicitamente compartilhados.  
+- **Compartilhamento implícito.** Não é possível usar o `Shared` modificador em um [instrução Const](../../../visual-basic/language-reference/statements/const-statement.md), mas constantes são implicitamente compartilhadas. Da mesma forma, você não pode declarar um membro de um módulo ou interface seja `Shared`, mas eles são implicitamente compartilhados.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Armazenamento.** Uma variável compartilhada ou um evento é armazenado na memória somente uma vez, não importa quantas vezes você cria de sua classe ou estrutura. Da mesma forma, um procedimento compartilhado ou uma propriedade mantém apenas um conjunto de variáveis locais.  
+- **Armazenamento.** Uma variável compartilhada ou um evento é armazenado na memória somente uma vez, não importa quantas vezes você cria de sua classe ou estrutura. Da mesma forma, um procedimento compartilhado ou uma propriedade mantém apenas um conjunto de variáveis locais.  
   
--   **Acessando por meio de uma variável de instância.** É possível acessar um elemento compartilhado qualificando-o com o nome de uma variável que contém uma instância específica de sua classe ou estrutura. Embora isso geralmente funciona conforme o esperado, o compilador gera uma mensagem de aviso e faz o acesso através do nome de classe ou estrutura em vez da variável.  
+- **Acessando por meio de uma variável de instância.** É possível acessar um elemento compartilhado qualificando-o com o nome de uma variável que contém uma instância específica de sua classe ou estrutura. Embora isso geralmente funciona conforme o esperado, o compilador gera uma mensagem de aviso e faz o acesso através do nome de classe ou estrutura em vez da variável.  
   
--   **Acessando por meio de uma expressão de instância.** Se você acessar um elemento compartilhado por meio de uma expressão que retorna uma instância de sua classe ou estrutura, o compilador faz o acesso através do nome de classe ou estrutura em vez de avaliar a expressão. Isso produz resultados inesperados se você pretendia que a expressão para executar outras ações, bem como retornar a instância. O exemplo a seguir ilustra essa situação.  
+- **Acessando por meio de uma expressão de instância.** Se você acessar um elemento compartilhado por meio de uma expressão que retorna uma instância de sua classe ou estrutura, o compilador faz o acesso através do nome de classe ou estrutura em vez de avaliar a expressão. Isso produz resultados inesperados se você pretendia que a expressão para executar outras ações, bem como retornar a instância. O exemplo a seguir ilustra essa situação.  
   
     ```vb
     Sub main()  

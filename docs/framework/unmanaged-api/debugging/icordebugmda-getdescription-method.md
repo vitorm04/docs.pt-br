@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 998d4baf03123f1ffc174b2a7aeed0ff4a25b001
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723674"
 ---
 # <a name="icordebugmdagetdescription-method"></a>Método ICorDebugMDA::GetDescription
 Obtém uma cadeia de caracteres que contém a descrição do Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  

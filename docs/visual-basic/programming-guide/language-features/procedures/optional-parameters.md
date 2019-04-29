@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791951"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parâmetros opcionais (Visual Basic)
 Você pode especificar que um parâmetro de procedimento é opcional e nenhum argumento precisa ser fornecido para ele quando o procedimento é chamado. *Parâmetros opcionais* são indicados pelo `Optional` palavra-chave na definição do procedimento. As seguintes regras se aplicam:  
   
--   Cada parâmetro opcional na definição do procedimento deve especificar um valor padrão.  
+- Cada parâmetro opcional na definição do procedimento deve especificar um valor padrão.  
   
--   O valor padrão para um parâmetro opcional deve ser uma expressão constante.  
+- O valor padrão para um parâmetro opcional deve ser uma expressão constante.  
   
--   Todo parâmetro após um parâmetro opcional na definição do procedimento também deve ser opcional.  
+- Todo parâmetro após um parâmetro opcional na definição do procedimento também deve ser opcional.  
   
  A sintaxe a seguir mostra uma declaração de procedimento com um parâmetro opcional:  
   

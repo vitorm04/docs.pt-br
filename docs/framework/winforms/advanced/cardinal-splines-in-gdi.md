@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779102"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Splines cardinais no GDI+
 Um spline cardinal é uma sequência de curvas individuais unidas para formar uma curva maior. O spline é especificado por uma matriz de pontos e um parâmetro de tensão. Um spline cardinal passa suavemente pelos pontos na matriz. Não há cantos agudos nem mudanças abruptas na inclinação da curva. A ilustração a seguir mostra um conjunto de pontos e um spline cardinal que passa pelos pontos no conjunto.  

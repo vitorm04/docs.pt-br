@@ -3,11 +3,11 @@ title: Mantendo um objeto no Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783468"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: Mantendo um objeto no Visual Studio (Visual Basic)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
@@ -127,7 +127,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
 ### <a name="to-mark-a-class-as-serializable"></a>Para marcar uma classe como serializável  
   
--   Altere a declaração da classe para a classe Loan da seguinte maneira:  
+- Altere a declaração da classe para a classe Loan da seguinte maneira:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Para impedir que um membro seja serializado  
   
--   Altere a declaração para o evento `PropertyChanged` da seguinte maneira:  
+- Altere a declaração para o evento `PropertyChanged` da seguinte maneira:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
 ### <a name="to-add-references-to-namespaces"></a>Para adicionar referências a namespaces  
   
--   Adicione as seguintes instruções ao topo da classe `Form1`:  
+- Adicione as seguintes instruções ao topo da classe `Form1`:  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Para salvar os dados e serializar a classe  
   
--   Adicione o seguinte código ao procedimento do evento `Form1_FormClosing`:  
+- Adicione o seguinte código ao procedimento do evento `Form1_FormClosing`:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

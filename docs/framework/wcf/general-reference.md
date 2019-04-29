@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
 ms.openlocfilehash: 5494716f52c3d604fb010c602389930c71a8ea40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929552"
 ---
 # <a name="general-reference"></a>Referência geral
-A seção [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) descreve os elementos que são usados para configurar serviços e clientes do Windows Communication Foundation (WCF).
+A seção [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) descreve os elementos que são usados para configurar os clientes do Windows Communication Foundation (WCF) e serviços.

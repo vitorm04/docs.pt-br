@@ -3,11 +3,11 @@ title: Células de referência
 description: Saiba como F# células de referência são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795389"
 ---
 # <a name="reference-cells"></a>Células de referência
 

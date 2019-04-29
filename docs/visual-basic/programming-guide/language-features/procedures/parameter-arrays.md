@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791944"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrizes de parâmetros (Visual Basic)
 Normalmente, você não pode chamar um procedimento com mais argumentos do que especifica a declaração de procedimento. Quando você precisa de um número indefinido de argumentos, você pode declarar uma *matriz de parâmetros*, que permite que um procedimento aceitar uma matriz de valores para um parâmetro. Você não precisa saber o número de elementos na matriz de parâmetros quando você define o procedimento. O tamanho da matriz é determinado individualmente por cada chamada ao procedimento.  
@@ -23,22 +23,22 @@ Normalmente, você não pode chamar um procedimento com mais argumentos do que e
 ## <a name="declaring-a-paramarray"></a>Declarando um ParamArray  
  Você usa o [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) palavra-chave para denotar uma matriz de parâmetros na lista de parâmetros. As seguintes regras se aplicam:  
   
--   Um procedimento pode definir apenas uma matriz de parâmetro, e ele deve ser o último parâmetro na definição do procedimento.  
+- Um procedimento pode definir apenas uma matriz de parâmetro, e ele deve ser o último parâmetro na definição do procedimento.  
   
--   A matriz de parâmetros deve ser passada por valor. Ela é boa prática para incluir explicitamente o [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) palavra-chave na definição do procedimento.  
+- A matriz de parâmetros deve ser passada por valor. Ela é boa prática para incluir explicitamente o [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) palavra-chave na definição do procedimento.  
   
--   A matriz de parâmetros é automaticamente opcional. Seu valor padrão é uma matriz unidimensional vazia do tipo de elemento da matriz de parâmetros.  
+- A matriz de parâmetros é automaticamente opcional. Seu valor padrão é uma matriz unidimensional vazia do tipo de elemento da matriz de parâmetros.  
   
--   Todos os parâmetros que precedem a matriz de parâmetros devem ser necessários. A matriz de parâmetros deve ser o único parâmetro opcional.  
+- Todos os parâmetros que precedem a matriz de parâmetros devem ser necessários. A matriz de parâmetros deve ser o único parâmetro opcional.  
   
 ## <a name="calling-a-paramarray"></a>Chamar um ParamArray  
  Quando você chama um procedimento que define uma matriz de parâmetros, você pode fornecer o argumento em qualquer uma das seguintes maneiras:  
   
--   Nada — ou seja, você poderá omitir as [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argumento. Nesse caso, uma matriz vazia é passada para o procedimento. Você também pode passar o [nada](../../../../visual-basic/language-reference/nothing.md) palavra-chave, com o mesmo efeito.  
+- Nada — ou seja, você poderá omitir as [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argumento. Nesse caso, uma matriz vazia é passada para o procedimento. Você também pode passar o [nada](../../../../visual-basic/language-reference/nothing.md) palavra-chave, com o mesmo efeito.  
   
--   Uma lista de um número arbitrário de argumentos, separados por vírgulas. O tipo de dados de cada argumento deve ser implicitamente conversível para o `ParamArray` tipo de elemento.  
+- Uma lista de um número arbitrário de argumentos, separados por vírgulas. O tipo de dados de cada argumento deve ser implicitamente conversível para o `ParamArray` tipo de elemento.  
   
--   Uma matriz com o mesmo tipo de elemento como o tipo de elemento da matriz de parâmetros.  
+- Uma matriz com o mesmo tipo de elemento como o tipo de elemento da matriz de parâmetros.  
   
  Em todos os casos, o código dentro do procedimento trata a matriz de parâmetros como uma matriz unidimensional com elementos do mesmo tipo de dados como o `ParamArray` tipo de dados.  
   

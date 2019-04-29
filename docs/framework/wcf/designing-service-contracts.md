@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785028"
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve o que serviço contratos estão, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudam você a criar operações que satisfazem a requisitos do seu cenário.  
@@ -24,28 +24,28 @@ Este tópico descreve o que serviço contratos estão, como elas são definidas,
   
  Este tópico descreve os seguintes pontos de decisão ao projetar um contrato de serviço:  
   
--   Se usar interfaces ou classes.  
+- Se usar interfaces ou classes.  
   
--   Como especificar os tipos de dados para o exchange.  
+- Como especificar os tipos de dados para o exchange.  
   
--   Os tipos de padrões de troca, que você pode usar.  
+- Os tipos de padrões de troca, que você pode usar.  
   
--   Se você pode fazer parte de requisitos de segurança explícita do contrato.  
+- Se você pode fazer parte de requisitos de segurança explícita do contrato.  
   
--   As restrições para operação entradas e saídas.  
+- As restrições para operação entradas e saídas.  
   
 ## <a name="classes-or-interfaces"></a>Classes ou Interfaces  
  Classes e interfaces representam um agrupamento de funcionalidade e, portanto, ambos podem ser usados para definir um contrato de serviço do WCF. No entanto, é recomendável que você use interfaces porque elas diretamente modelam contratos de serviço. Sem uma implementação, as interfaces não mais do que definir um agrupamento de métodos com determinadas assinaturas. Implementar uma interface de contrato de serviço e você tiver implementado um serviço WCF.  
   
  Todos os benefícios de interfaces gerenciadas se aplicam a interfaces de contrato de serviço:  
   
--   Interfaces de contrato de serviço podem estender qualquer número de outras interfaces de contrato de serviço.  
+- Interfaces de contrato de serviço podem estender qualquer número de outras interfaces de contrato de serviço.  
   
--   Uma única classe pode implementar qualquer número de contratos de serviço com a implementação dessas interfaces de contrato de serviço.  
+- Uma única classe pode implementar qualquer número de contratos de serviço com a implementação dessas interfaces de contrato de serviço.  
   
--   Você pode modificar a implementação de um contrato de serviço, alterando a implementação da interface, enquanto o contrato de serviço permanece o mesmo.  
+- Você pode modificar a implementação de um contrato de serviço, alterando a implementação da interface, enquanto o contrato de serviço permanece o mesmo.  
   
--   Você pode versão seu serviço, Implementando a interface antiga e nova. Clientes antigos conecte-se à versão original, enquanto os clientes mais recentes podem conectar-se para a versão mais recente.  
+- Você pode versão seu serviço, Implementando a interface antiga e nova. Clientes antigos conecte-se à versão original, enquanto os clientes mais recentes podem conectar-se para a versão mais recente.  
   
 > [!NOTE]
 >  Ao herdar de outras interfaces de contrato de serviço, você não pode substituir as propriedades da operação, como o nome ou namespace. Se você tentar fazer isso, você cria uma nova operação no contrato de serviço atual.  
@@ -251,11 +251,11 @@ End Interface
   
  Um serviço que implementa essa `IExplicitProtectionLevelSampleService` de contrato e tem um ponto de extremidade que usa o padrão <xref:System.ServiceModel.WSHttpBinding> (o padrão <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, que é <xref:System.ServiceModel.SecurityMode.Message>) tem o seguinte comportamento:  
   
--   O `GetString` mensagens da operação são criptografadas e assinadas.  
+- O `GetString` mensagens da operação são criptografadas e assinadas.  
   
--   O `GetInt` assinados (ou seja, simples) e não criptografado de operação de mensagens são enviadas como texto.  
+- O `GetInt` assinados (ou seja, simples) e não criptografado de operação de mensagens são enviadas como texto.  
   
--   O `GetGuid` operação <xref:System.Guid?displayProperty=nameWithType> é retornado em uma mensagem que é criptografada e assinada.  
+- O `GetGuid` operação <xref:System.Guid?displayProperty=nameWithType> é retornado em uma mensagem que é criptografada e assinada.  
   
  Para obter mais informações sobre os níveis de proteção e como usá-los, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md). Para obter mais informações sobre a segurança, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   

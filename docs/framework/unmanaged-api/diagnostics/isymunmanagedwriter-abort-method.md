@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 090183cad17aff6faf5e79639eadff086c1a26ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797456"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>Método ISymUnmanagedWriter::Abort
 Fecha o gravador de símbolo sem confirmar os símbolos para o repositório de símbolos. Após essa chamada, o gravador de símbolo se torna inválido para obter informações mais atualizadas. Para confirmar os símbolos e fechar o gravador de símbolo, use o [isymunmanagedwriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) método em vez disso.  

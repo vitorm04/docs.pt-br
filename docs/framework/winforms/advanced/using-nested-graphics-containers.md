@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
 ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766243"
 ---
 # <a name="using-nested-graphics-containers"></a>Usando contêineres de elementos gráficos aninhados
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece contêineres que você pode usar para substituir ou aumentar a parte do estado no temporariamente um <xref:System.Drawing.Graphics> objeto. Criar um contêiner chamando o <xref:System.Drawing.Graphics.BeginContainer%2A> método de um <xref:System.Drawing.Graphics> objeto. Você pode chamar <xref:System.Drawing.Graphics.BeginContainer%2A> repetidamente para formar contêineres aninhados. Cada chamada para <xref:System.Drawing.Graphics.BeginContainer%2A> deve ser emparelhado com uma chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  

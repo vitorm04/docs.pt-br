@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773707"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
 
@@ -26,15 +26,15 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  O formato de fonte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] lida com os seguintes desafios do desenvolvedor:  
   
--   Suporte mais amplo a várias plataformas.  
+- Suporte mais amplo a várias plataformas.  
   
--   Melhor suporte para conjuntos de caracteres internacionais.  
+- Melhor suporte para conjuntos de caracteres internacionais.  
   
--   Melhor proteção para dados de fonte.  
+- Melhor proteção para dados de fonte.  
   
--   Arquivos menores para tornar a distribuição de fonte mais eficiente.  
+- Arquivos menores para tornar a distribuição de fonte mais eficiente.  
   
--   Suporte mais amplo para controle tipográfico avançado.  
+- Suporte mais amplo para controle tipográfico avançado.  
   
 > [!NOTE]
 >  O SDK do Windows contém um conjunto de fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de amostra que é possível usar com aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Essas fontes oferecem a maioria dos recursos ilustrados no restante deste tópico. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
@@ -44,11 +44,11 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 ### <a name="advanced-typographic-extensions"></a>Extensões tipográficas avançadas  
  As tabelas tipográficas avançadas (Tabelas de layout do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) ampliam a funcionalidade de fontes com estruturas de tópicos do [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] ou do CFF. As fontes de layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contêm informações adicionais que ampliam a capacidade das fontes de dar suporte à tipografia internacional de alta qualidade. A maioria das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] expõe somente um subconjunto dos recursos totais do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] disponíveis. As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fornecem os recursos a seguir.  
   
--   O mapeamento avançado entre caracteres e glifos dá suporte a ligaduras, formas posicionais, alternativos e outras substituições de fonte.  
+- O mapeamento avançado entre caracteres e glifos dá suporte a ligaduras, formas posicionais, alternativos e outras substituições de fonte.  
   
--   Suporte para posicionamento bidimensional e anexação de glifos.  
+- Suporte para posicionamento bidimensional e anexação de glifos.  
   
--   Informações explícitas de script e de linguagem contidas na fonte para que um aplicativo de processamento de texto possa ajustar seu comportamento de acordo.  
+- Informações explícitas de script e de linguagem contidas na fonte para que um aplicativo de processamento de texto possa ajustar seu comportamento de acordo.  
   
  As tabelas de layout do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] são descritas mais detalhadamente na seção [“Tabelas de arquivos de fonte”](https://www.microsoft.com/typography/otspec/otff.htm) da especificação do [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
@@ -120,13 +120,13 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 ## <a name="ligatures"></a>Ligaduras  
  Ligaduras são dois ou mais glifos que formam um único glifo com o objetivo de criar um texto mais legível ou atraente. As fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] oferecem suporte a quatro tipos de ligaduras:  
   
--   **Ligaduras padrão**. Concebidas para aumentar a legibilidade. As ligaduras padrão incluem “fi”, “fl” e “ff”.  
+- **Ligaduras padrão**. Concebidas para aumentar a legibilidade. As ligaduras padrão incluem “fi”, “fl” e “ff”.  
   
--   **Ligaduras contextuais**. Concebida para aumentar a legibilidade, pois oferece um melhor comportamento de ligação entre os caracteres que compõem a ligadura.  
+- **Ligaduras contextuais**. Concebida para aumentar a legibilidade, pois oferece um melhor comportamento de ligação entre os caracteres que compõem a ligadura.  
   
--   **Ligaduras discricionárias**. Concebidas para serem ornamentais, não especificamente para facilitar a leitura.  
+- **Ligaduras discricionárias**. Concebidas para serem ornamentais, não especificamente para facilitar a leitura.  
   
--   **Ligaduras históricas**. Concebidas para serem históricas, não especificamente para facilitar a leitura.  
+- **Ligaduras históricas**. Concebidas para serem históricas, não especificamente para facilitar a leitura.  
   
  O texto a seguir exibe glifos com ligadura padrão para a fonte Pericles.  
   

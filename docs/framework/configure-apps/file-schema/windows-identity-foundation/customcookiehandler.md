@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
 ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791723"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 Define o tipo de manipulador de cookie personalizado. Esse elemento pode estar presente apenas se o `mode` atributo do `<cookieHandler>` elemento é "Custom". O tipo personalizado deve ser derivado de <xref:System.IdentityModel.Services.CookieHandler> classe.  

@@ -3,24 +3,24 @@ title: Mapear relações implícitas entre elementos de esquema aninhados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
 ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879587"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapear relações implícitas entre elementos de esquema aninhados
 Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexos aninhados dentro uma da outra. Nesse caso, o processo de mapeamento se aplica o mapeamento padrão e cria o seguinte no <xref:System.Data.DataSet>:  
   
--   Uma tabela para cada um dos tipos complexos (pai e filho).  
+- Uma tabela para cada um dos tipos complexos (pai e filho).  
   
--   Não se existir nenhuma restrição exclusiva no pai, a coluna de chave primária adicional um acordo com a definição de tabela denominada *TableName*ID onde *TableName* é o nome da tabela pai.  
+- Não se existir nenhuma restrição exclusiva no pai, a coluna de chave primária adicional um acordo com a definição de tabela denominada *TableName*ID onde *TableName* é o nome da tabela pai.  
   
--   Uma restrição de chave primária na tabela pai que identifica a coluna adicional, como a chave primária (definindo o **IsPrimaryKey** propriedade **verdadeiro**). A restrição é denominada restrição\# onde \# é 1, 2, 3 e assim por diante. Por exemplo, o nome padrão para a primeira restrição é Constraint1.  
+- Uma restrição de chave primária na tabela pai que identifica a coluna adicional, como a chave primária (definindo o **IsPrimaryKey** propriedade **verdadeiro**). A restrição é denominada restrição\# onde \# é 1, 2, 3 e assim por diante. Por exemplo, o nome padrão para a primeira restrição é Constraint1.  
   
--   Uma restrição de chave estrangeira na tabela filho que identifica a coluna adicional, como a chave estrangeira referindo-se para a chave primária da tabela pai. A restrição é nomeada *ParentTable_ChildTable* onde *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.  
+- Uma restrição de chave estrangeira na tabela filho que identifica a coluna adicional, como a chave estrangeira referindo-se para a chave primária da tabela pai. A restrição é nomeada *ParentTable_ChildTable* onde *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.  
   
--   Uma relação de dados entre as tabelas pai e filho.  
+- Uma relação de dados entre as tabelas pai e filho.  
   
  O exemplo a seguir mostra um esquema no qual **OrderDetail** é um elemento filho do **ordem**.  
   
@@ -56,14 +56,14 @@ Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexo
   
  O processo de mapeamento de esquema XML cria o seguinte a **conjunto de dados**:  
   
--   Uma **ordem** e uma **OrderDetail** tabela.  
+- Uma **ordem** e uma **OrderDetail** tabela.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Uma restrição exclusiva na **ordem** tabela. Observe que o **IsPrimaryKey** estiver definida como **verdadeiro**.  
+- Uma restrição exclusiva na **ordem** tabela. Observe que o **IsPrimaryKey** estiver definida como **verdadeiro**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexo
     IsPrimaryKey: True  
     ```  
   
--   Uma restrição de chave estrangeira na **OrderDetail** tabela.  
+- Uma restrição de chave estrangeira na **OrderDetail** tabela.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexo
     RelatedColumns: Order_Id   
     ```  
   
--   Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** propriedade para essa relação é definida como **verdadeiro** porque o **ordem** e **OrderDetail** elementos são aninhados no esquema .  
+- Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** propriedade para essa relação é definida como **verdadeiro** porque o **ordem** e **OrderDetail** elementos são aninhados no esquema .  
   
     ```  
     ParentTable: Order  

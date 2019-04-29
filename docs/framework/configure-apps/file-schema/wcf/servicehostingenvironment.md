@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788395"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular. Se esse elemento estiver vazio, o tipo padrão é usado. Esse elemento só pode ser usado no aplicativo ou arquivos de configuração de nível de máquina.  
@@ -63,25 +63,25 @@ Esse elemento define o tipo que o ambiente de hospedagem de serviço instancia p
 ## <a name="remarks"></a>Comentários  
  Por padrão, os serviços de WCF para execução lado a lado com o ASP.NET em domínios de aplicativo hospedado (AppDomain). Embora o WCF e ASP.NET podem coexistir no mesmo AppDomain, as solicitações do WCF não são processadas pelo Pipeline de HTTP do ASP.NET por padrão. Como resultado, vários elementos da plataforma do aplicativo ASP.NET não estão disponíveis para os serviços WCF. Eles incluem  
   
--   Autorização de arquivo/URL do ASP.NET  
+- Autorização de arquivo/URL do ASP.NET  
   
--   Personificação do ASP.NET  
+- Personificação do ASP.NET  
   
--   Estado de sessão baseada em cookie  
+- Estado de sessão baseada em cookie  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   Extensibilidade de pipeline por meio de HttpModule personalizado  
+- Extensibilidade de pipeline por meio de HttpModule personalizado  
   
  Se precisam de seus serviços WCF funcionar com o contexto do ASP.NET e se comunicar somente por HTTP, você pode usar o modo de compatibilidade do ASP.NET do WCF. Esse modo é ativado quando o `aspNetCompatibilityEnabled` atributo é definido como `true` no nível do aplicativo. As implementações de serviço devem declarar sua capacidade de executar no modo de compatibilidade usando o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> classe. Quando o modo de compatibilidade é habilitado,  
   
--   Autorização de arquivo/URL do ASP.NET é aplicada antes da autorização do WCF. Uma decisão de autorização baseia-se na identidade do nível de transporte da solicitação. As identidades no nível da mensagem são ignoradas.  
+- Autorização de arquivo/URL do ASP.NET é aplicada antes da autorização do WCF. Uma decisão de autorização baseia-se na identidade do nível de transporte da solicitação. As identidades no nível da mensagem são ignoradas.  
   
--   Operações de serviço WCF começam a executar no contexto de representação do ASP.NET. Se a representação do ASP.NET e a representação do WCF são habilitadas para um serviço específico, o contexto de representação do WCF se aplica.  
+- Operações de serviço WCF começam a executar no contexto de representação do ASP.NET. Se a representação do ASP.NET e a representação do WCF são habilitadas para um serviço específico, o contexto de representação do WCF se aplica.  
   
--   HttpContext. Current pode ser usado no código de serviço do WCF e serviços são impedidos de expor pontos de extremidade não-HTTP.  
+- HttpContext. Current pode ser usado no código de serviço do WCF e serviços são impedidos de expor pontos de extremidade não-HTTP.  
   
--   As solicitações do WCF são processadas pelo pipeline do ASP.NET. HttpModules que foram configurados para atuar em solicitações de entrada também pode processar as solicitações do WCF. Eles podem incluir componentes da plataforma ASP.NET (por exemplo, <xref:System.Web.SessionState.SessionStateModule>), bem como módulos personalizados de terceiros.  
+- As solicitações do WCF são processadas pelo pipeline do ASP.NET. HttpModules que foram configurados para atuar em solicitações de entrada também pode processar as solicitações do WCF. Eles podem incluir componentes da plataforma ASP.NET (por exemplo, <xref:System.Web.SessionState.SessionStateModule>), bem como módulos personalizados de terceiros.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra como habilitar o modo de compatibilidade do ASP.  

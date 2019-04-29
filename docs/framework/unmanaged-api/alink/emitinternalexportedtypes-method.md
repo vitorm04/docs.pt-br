@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790007"
 ---
 # <a name="emitinternalexportedtypes-method"></a>Método EmitInternalExportedTypes
 Emite tipos adicionados ao assembly. Chame esse método depois conhecido tipos internos foram adicionados.  

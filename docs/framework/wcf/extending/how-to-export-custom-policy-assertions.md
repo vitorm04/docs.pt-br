@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767163"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Como: exportar declarações de política personalizadas
 Declarações de política descrevem os recursos e os requisitos de um ponto de extremidade de serviço. Aplicativos de serviço podem usar declarações de política personalizadas nos metadados de serviço para se comunicar o ponto de extremidade, contrato ou associação de informações de personalização para o aplicativo cliente. Você pode usar o Windows Communication Foundation (WCF) para exportar declarações em expressões de política anexadas em associações WSDL no ponto de extremidade, operação ou entidades de mensagem, dependendo dos recursos ou requisitos que você está se comunicando.  

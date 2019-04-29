@@ -7,8 +7,8 @@ ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792763"
 ---
 # <a name="custom-token-handlers"></a>Manipuladores de token personalizados
 Este tópico aborda os manipuladores de token no WIF e como eles são usados para processar tokens. O tópico também aborda o que é necessário para criar manipuladores de token personalizados para os tipos de token sem suporte por padrão no WIF.  
@@ -19,23 +19,23 @@ Este tópico aborda os manipuladores de token no WIF e como eles são usados par
 ## <a name="built-in-security-token-handlers-in-wif"></a>Manipuladores de token de segurança internos no WIF  
  O WIF 4.5 inclui nove classes de manipulador de token de segurança derivados da classe base abstrata <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>Adicionando um Manipulador de Token Personalizado  
  Alguns tipos de token, como SWT (Tokens Web Simples) e JWT (Tokens Web JSON), não têm manipuladores de token internos fornecidos pelo WIF. Para esses tipos de token e para outros que não têm um manipulador interno, é necessário executar as etapas a seguir para criar um manipulador de token personalizado.  
@@ -46,17 +46,17 @@ Este tópico aborda os manipuladores de token no WIF e como eles são usados par
   
 2. Substitua os seguintes métodos e forneça sua própria implementação:  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. Adicione uma referência ao novo manipulador de token personalizado no arquivo *Web.config* ou *App.config*, na seção **\<system.identityModel>** que se aplica ao WIF. Por exemplo, a marcação de configuração a seguir especifica um novo manipulador de token chamado **MyCustomTokenHandler** que reside no namespace **CustomToken**.  
   

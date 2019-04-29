@@ -3,11 +3,11 @@ title: Específicos de recurso do Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773674"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de recurso do Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ O <xref:System.ServiceModel.WorkflowServiceHost> é o host de fluxo de trabalho 
 
 - Para Exemplos <xref:System.ServiceModel.WorkflowServiceHost> pode ser encontrado nas seções a seguir:
 
-    - [Execução](./samples/execution.md)
+  - [Execução](./samples/execution.md)
 
-    - Aplicativo: [Gerenciamento suspenso da instância](./samples/suspended-instance-management.md)
+  - Aplicativo: [Gerenciamento suspenso da instância](./samples/suspended-instance-management.md)
 
 - [Visão geral dos serviços de fluxo de trabalho de hospedagem](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Uma correlação é uma das duas coisas:
 
 - Um exemplo de correlação usado para agrupar mensagens seja adjacente uma correlação de solicitação de resposta que agrupe mensagens juntos.
 
-    - Em um <xref:System.ServiceModel.Activities.Receive> atividade, clique em de <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propriedade e adicione um <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando o CorrelationHandle criado na primeira etapa acima.
+  - Em um <xref:System.ServiceModel.Activities.Receive> atividade, clique em de <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propriedade e adicione um <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando o CorrelationHandle criado na primeira etapa acima.
 
-    - Criar uma <xref:System.ServiceModel.Activities.SendReply> atividade clicando com o <xref:System.ServiceModel.Activities.Receive> e clicando em "Criar SendReply". Cole-o no fluxo de trabalho após a atividade de <xref:System.ServiceModel.Activities.Receive> .
+  - Criar uma <xref:System.ServiceModel.Activities.SendReply> atividade clicando com o <xref:System.ServiceModel.Activities.Receive> e clicando em "Criar SendReply". Cole-o no fluxo de trabalho após a atividade de <xref:System.ServiceModel.Activities.Receive> .
 
 - Um exemplo de mapear uma parte de dados a uma instância do serviço é correlação conteudo base que mapeia um conjunto de dados (por exemplo, um ID de ordem) para uma determinada instância de fluxo de trabalho.
 
-    - Em quaisquer atividades de mensagem, clique na propriedade de `CorrelationInitializers` e adicione <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> usando a variável de <xref:System.ServiceModel.Activities.CorrelationHandle> criado anterior. Clique duas vezes na propriedade desejada na mensagem (por exemplo, OrderID) no menu suspenso. Defina a propriedade de `CorrelatesWith` à variável de <xref:System.ServiceModel.Activities.CorrelationHandle> usado anterior.
+  - Em quaisquer atividades de mensagem, clique na propriedade de `CorrelationInitializers` e adicione <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> usando a variável de <xref:System.ServiceModel.Activities.CorrelationHandle> criado anterior. Clique duas vezes na propriedade desejada na mensagem (por exemplo, OrderID) no menu suspenso. Defina a propriedade de `CorrelatesWith` à variável de <xref:System.ServiceModel.Activities.CorrelationHandle> usado anterior.
 
 - [Documentação conceitual de correlação](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ O [DataContractResolver](../wcf/samples/datacontractresolver.md) resolve esses p
 
 - Exemplos:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Cenários de resolução do contrato de dados
 
@@ -151,25 +151,25 @@ O fluxograma é um paradigma conhecido para representar visualmente problemas de
 
 - O recurso de fluxograma usa as seguintes classes:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Exemplos:
 
-    - [Tratamento de falha em uma atividade do fluxograma usando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Tratamento de falha em uma atividade do fluxograma usando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Processo de contratação](./samples/hiring-process.md)
+  - [Processo de contratação](./samples/hiring-process.md)
 
 - Documentação do designer:
 
-    - [Designers de atividade de fluxograma](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Designers de atividade de fluxograma](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Cenários do fluxograma
 
@@ -197,15 +197,15 @@ As atividades procedurais fornecem um mecanismo para o fluxo de controle em um m
 
 - Exemplos:
 
-    - [Processo de contratação](./samples/hiring-process.md)
+  - [Processo de contratação](./samples/hiring-process.md)
 
-    - [Processo de compra corporativo](./samples/corporate-purchase-process.md)
+  - [Processo de compra corporativo](./samples/corporate-purchase-process.md)
 
 - Documentação do designer:
 
-    - [Designer de atividade Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Designer de atividade Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > Designer de atividade](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > Designer de atividade](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Cenários procedurais de atividades
 
@@ -275,7 +275,7 @@ O serviço de roteamento no .NET 4 foi projetado para facilitar resolver esses p
 
 1. O conteúdo do roteamento (os objetos de<xref:System.ServiceModel.Dispatcher.MessageFilter> examinar uma mensagem para determinar onde deve ser enviada.)
 
-2. Compilação de uma ponte sobre o protocolo (mensagem & de transporte)
+2. Protocolo de ponte (mensagem & de transporte)
 
 3. Tratamento de erros (o roteador captura exceções de comunicação e efetua o failover para pontos de extremidade alternativos)
 
@@ -349,8 +349,7 @@ Controle de fluxo de trabalho fornece informações sobre a execução de uma in
 
 ## <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 
-
-  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> é uma implementação com base no servidor SQL de um armazenamento de instância. Um armazenamento de instância armazena o estado de uma instância em execução junto com todos os dados necessários carregar e continuar essa instância. O host serviço instrui o armazenamento de instância para salvar o estado da instância se o fluxo de trabalho persistir, e instrui o armazenamento de instância para carregar o estado da instância quando uma mensagem chega para essa instância ou uma atividade do atraso expira.
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> é uma implementação com base no servidor SQL de um armazenamento de instância. Um armazenamento de instância armazena o estado de uma instância em execução junto com todos os dados necessários carregar e continuar essa instância. O host serviço instrui o armazenamento de instância para salvar o estado da instância se o fluxo de trabalho persistir, e instrui o armazenamento de instância para carregar o estado da instância quando uma mensagem chega para essa instância ou uma atividade do atraso expira.
 
 ### <a name="getting-started"></a>Guia de Introdução
 

@@ -3,11 +3,11 @@ title: 4209 - TimeoutOpeningSqlConnection
 ms.date: 03/30/2017
 ms.assetid: f0e56518-9758-41dc-a760-50d1a10fba6e
 ms.openlocfilehash: d61d710959f99dbc8a91441766a690eb7e9a365c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774264"
 ---
 # <a name="4209---timeoutopeningsqlconnection"></a>4209 - TimeoutOpeningSqlConnection
 ## <a name="properties"></a>Propriedades  

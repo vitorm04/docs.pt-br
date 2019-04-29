@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763731"
 ---
 # <a name="icordebugstepper-interface"></a>Interface ICorDebugStepper
 Representa uma etapa na execução do código que é realizada por um depurador, serve como um identificador entre a emissão e a conclusão de um comando e fornece uma maneira de cancelar uma etapa.  
@@ -42,11 +42,11 @@ Representa uma etapa na execução do código que é realizada por um depurador,
 ## <a name="remarks"></a>Comentários  
  O `ICorDebugStepper` interface tem as seguintes finalidades:  
   
--   Ele atua como um identificador entre um comando de depuração é emitido e a conclusão desse comando.  
+- Ele atua como um identificador entre um comando de depuração é emitido e a conclusão desse comando.  
   
--   Ele fornece uma interface central para encapsular todo o passo a passo que pode ser executada.  
+- Ele fornece uma interface central para encapsular todo o passo a passo que pode ser executada.  
   
--   Ele fornece uma maneira de cancelar prematuramente uma operação de passo a passo.  
+- Ele fornece uma maneira de cancelar prematuramente uma operação de passo a passo.  
   
  Pode haver mais de um seletor por thread. Por exemplo, um ponto de interrupção pode ser obtido ao passar sobre uma função, e o usuário deseja iniciar uma nova operação de deslocamento dentro dessa função. É responsabilidade do depurador para determinar como lidar com essa situação. O depurador poderá cancelar a operação de passo a passo original ou aninhar as duas operações. O `ICorDebugStepper` interface dá suporte a ambas as opções.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938615"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literal CDATA XML (Visual Basic)
 Um valor literal que representa um <xref:System.Xml.Linq.XCData> objeto.  
@@ -40,9 +40,9 @@ Um valor literal que representa um <xref:System.Xml.Linq.XCData> objeto.
 ## <a name="remarks"></a>Comentários  
  As seções CDATA XML contêm o texto não processado que deve ser incluído, mas não analisado com o XML que o contém. Uma seção CDATA XML pode conter qualquer texto. Isso inclui caracteres XML reservados. A seção CDATA XML termina com a sequência "]] >". Isso significa que os seguintes pontos:  
   
--   Você não pode usar uma expressão inserida em um literal XML CDATA porque os delimitadores de expressão incorporada são conteúdo XML CDATA válido.  
+- Você não pode usar uma expressão inserida em um literal XML CDATA porque os delimitadores de expressão incorporada são conteúdo XML CDATA válido.  
   
--   As seções CDATA XML não podem ser aninhadas, porque `content` não pode conter o valor "]] >".  
+- As seções CDATA XML não podem ser aninhadas, porque `content` não pode conter o valor "]] >".  
   
  Você pode atribuir um literal XML CDATA a uma variável ou incluí-lo em um elemento XML literal.  
   

@@ -3,11 +3,11 @@ title: 'Ponto de extremidade: Chamadas com falha por segundo'
 ms.date: 03/30/2017
 ms.assetid: bcbe9da4-c8dd-4e27-b630-11611adc7580
 ms.openlocfilehash: 52419f45adde768d19d6b46642d52ad0a1844197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797339"
 ---
 # <a name="endpoint-calls-failed-per-second"></a>Ponto de extremidade: Chamadas com falha por segundo
 Nome do contador: Chamadas com falha por segundo.  

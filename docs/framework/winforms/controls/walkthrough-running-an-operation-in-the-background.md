@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792165"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Passo a passo: Executando uma operação em segundo plano
 Se você tiver uma operação que levará muito tempo para ser concluída, e você não deseja causar atrasos na interface do usuário, você pode usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar a operação em outro thread.  
@@ -96,9 +96,9 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e voc
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   Implemente um formulário que relata o andamento à medida que uma operação assíncrona prossegue. Para obter mais informações, confira [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md).  
+- Implemente um formulário que relata o andamento à medida que uma operação assíncrona prossegue. Para obter mais informações, confira [Como: Implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Implemente uma classe que dá suporte ao padrão assíncrono para componentes. Para obter mais informações, consulte [Implementando o padrão assíncrono baseado em evento](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+- Implemente uma classe que dá suporte ao padrão assíncrono para componentes. Para obter mais informações, consulte [Implementando o padrão assíncrono baseado em evento](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Consulte também
 

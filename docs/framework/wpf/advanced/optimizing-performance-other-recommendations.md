@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773094"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Otimizando desempenho: Outras recomendações
 <a name="introduction"></a> Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md).  
   
  Esse tópico contém as seguintes seções:  
   
--   [Opacidade em pincéis versus opacidade em elementos](#Opacity)  
+- [Opacidade em pincéis versus opacidade em elementos](#Opacity)  
   
--   [Navegação para objeto](#Navigation_Objects)  
+- [Navegação para objeto](#Navigation_Objects)  
   
--   [Testes de clique em grandes superfícies 3D](#Hit_Testing)  
+- [Testes de clique em grandes superfícies 3D](#Hit_Testing)  
   
--   [Evento CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
+- [Evento CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
   
--   [Evite usar ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
+- [Evite usar ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Configurar o serviço de cache de fonte para reduzir o tempo de inicialização](#FontCache)  
+- [Configurar o serviço de cache de fonte para reduzir o tempo de inicialização](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Opacidade em pincéis versus opacidade em elementos  

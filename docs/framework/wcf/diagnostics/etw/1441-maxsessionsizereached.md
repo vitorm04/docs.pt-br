@@ -3,11 +3,11 @@ title: 1441 - MaxSessionSizeReached
 ms.date: 03/30/2017
 ms.assetid: ccf51232-cdbc-4004-a4b9-aed0c256dfe4
 ms.openlocfilehash: bcb639d4fdf8a324d4ed9a024937ee748169f9f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782008"
 ---
 # <a name="1441---maxsessionsizereached"></a>1441 - MaxSessionSizeReached
 ## <a name="properties"></a>Propriedades  
@@ -15,7 +15,7 @@ ms.locfileid: "33460848"
 |||  
 |-|-|  
 |ID|1441|  
-|Palavras-chave|Cota|  
+|Palavras-chave|Quota|  
 |Nível|Aviso|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   

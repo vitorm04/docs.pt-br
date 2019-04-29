@@ -3,11 +3,11 @@ title: 217 - ClientOperationPrepared
 ms.date: 03/30/2017
 ms.assetid: ad207f04-b038-4f33-95e9-27a361df8ecd
 ms.openlocfilehash: 5979cd8ffe0e05b61af01d2aa98c4a2c63fd432c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781752"
 ---
 # <a name="217---clientoperationprepared"></a>217 - ClientOperationPrepared
 ## <a name="properties"></a>Propriedades  
@@ -23,7 +23,7 @@ ms.locfileid: "33461059"
  Esse evento é emitido por clientes antes de uma operação é enviada para o serviço.  
   
 ## <a name="message"></a>Mensagem  
- O cliente está executando a ação '%1' associada ao contrato '%2'. A mensagem será enviada para '%3'.  
+ O cliente está executando a ação '%1' associado ao contrato '%2'. A mensagem será enviada para '%3'.  
   
 ## <a name="details"></a>Detalhes  
   
@@ -32,5 +32,5 @@ ms.locfileid: "33461059"
 |Ação|`xs:string`|O cabeçalho de ação SOAP da mensagem de saída.|  
 |Nome do contrato|`xs:string`|O nome do contrato. Exemplo: ICalculator.|  
 |Destino|`xs:string`|O endereço do ponto de extremidade de serviço que a mensagem é enviada ao.|  
-|HostReference|`xs:string`|Para serviços hospedados na Web, este campo identifica exclusivamente o serviço na hierarquia da Web. O formato é definido como ' caminho Virtual do aplicativo Web Site nome&#124;caminho Virtual do serviço&#124;ServiceName'. Exemplo: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
+|HostReference|`xs:string`|Para serviços hospedados na Web, este campo identifica exclusivamente o serviço na hierarquia da Web. O formato é definido como ' caminho Virtual do aplicativo de nome de Site&#124;caminho Virtual de serviço&#124;ServiceName'. Exemplo: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
 |AppDomain|`xs:string`|A cadeia de caracteres retornada por AppDomain.CurrentDomain.FriendlyName.|

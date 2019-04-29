@@ -2,14 +2,14 @@
 title: Introdução à programação funcional em F#
 description: Conheça os conceitos básicos da programação funcional em F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.openlocfilehash: 84022e58c0f17b9e9875402c653c31e494e940da
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25724473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772782"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>Introdução à programação funcional em F# #
+# <a name="introduction-to-functional-programming-in-f"></a>Introdução à programação funcional em F\#
 
 Programação funcional é um estilo de programação que enfatiza o uso de funções e dados imutáveis. Programação funcional tipada é quando a programação funcional é combinada com tipos estáticos, como com F#. Em geral, os conceitos a seguir são enfatizados na programação funcional:
 
@@ -99,7 +99,7 @@ Há um tipo especial, `unit`, que é usado quando não há nada para retornar. P
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" s
+    printfn "String is: %s" str
 ```
 
 A assinatura tem esta aparência:
@@ -161,90 +161,15 @@ let addOneToValue x =
     x + 1
 ```
 
-Embora essa função não depende de um valor global, ele grava o valor de `x` para a saída do programa. Embora não haja nada errado com isso, isso significa que a função não é pura.
+Embora essa função não depende de um valor global, ele grava o valor de `x` para a saída do programa. Embora não haja nada errado com isso, isso significa que a função não é pura. Se outra parte do seu programa depende de algo externo ao programa, como o buffer de saída, em seguida, chamar essa função pode afetar essa outra parte do seu programa.
 
-Removendo o `printfn` instrução finalmente torna a função pura:
+Removendo o `printfn` instrução faz com que a função pura:
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-Embora essa função não é inerentemente _melhor_ que a versão anterior com o `printfn` instrução, ele garante que tudo o que essa função faz é retornar um valor. Chamar essa função uma vez ou 1 bilhões de vezes será ainda resultará na mesma coisa: produzir apenas um valor. Essa capacidade de previsão é importante na programação funcional, pois significa que qualquer função pura é referencialmente transparente.
-
-### <a name="referential-transparency"></a>Transparência referencial
-
-Transparência referencial é uma propriedade de expressões e funções. Para uma expressão ser transparente referencialmente, ele deve ser capaz de ser substituído pelo valor resultante sem alterar o comportamento do programa. Todas as funções puras são referencialmente transparentes.
-
-Assim como acontece com as funções puras, pode ser útil pensar em transparência referencial de uma perspectiva de matemática. Na expressão matemática `y = f(x)`, `f(x)` pode ser substituído pelo resultado da função e ainda será igual a `y`. Isso é verdadeiro igualmente para transparência referencial na programação funcional.
-
-Considere a possibilidade de chamar o previamente definido `addOneIfOdd` funcionar duas vezes:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 = addOneIffOdd 1 // Produces 2
-let res2 = addOneIffOdd 2 // Produces 2
-```
-
-É possível substituí a cada chamada de função com o corpo da função, substituindo o argumento `input` com cada valor:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 =
-    let result =
-        if isOdd 1 then
-            1 + 1
-        else
-            1
-
-    result
-let res2 =
-    let result =
-        if isOdd 2 then
-            2 + 1
-        else
-            2
-
-    result
-```
-
-Ambos `res1` e `res2` têm o mesmo valor como se a função foi chamada, indicando que `addOneIfOdd` referencialmente transparente!
-
-Além disso, uma função não precisa ser puro para também ser referencialmente transparente. Considere uma definição anterior de `addOneTovalue`:
-
-```fsharp
-let addOneToValue x = 
-    printfn "x is %d" x
-    x + 1
-```
-
-Qualquer chamada para essa função também pode ser substituída por seu corpo e as mesmas coisas ocorrerá sempre que:
-
-* O valor, antes de serem adicionados, é impresso na saída
-* O valor tem 1 adicionado a
-
-Ao programar em F#, ele costuma ser transparência referencial que é a meta, em vez de pureza. No entanto, é ainda uma prática recomendada escrever funções puras, quando possível.
+Embora essa função não é inerentemente _melhor_ que a versão anterior com o `printfn` instrução, ele garante que tudo o que essa função faz é retornar um valor. Chamar essa função a qualquer número de vezes que produz o mesmo resultado: ele produz apenas um valor. A capacidade de previsão fornecida por pureza é algo que muitos programadores funcionais se esforçam para.
 
 ### <a name="immutability"></a>Imutabilidade
 

@@ -3,24 +3,24 @@ title: Atributos comuns (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794024"
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comuns (Visual Basic)
 Este tópico descreve os atributos que são mais comumente usados em programas em Visual Basic.  
   
--   [Atributos globais](#Global)  
+- [Atributos globais](#Global)  
   
--   [Atributo obsoleto](#Obsolete)  
+- [Atributo obsoleto](#Obsolete)  
   
--   [Atributo condicional](#Conditional)  
+- [Atributo condicional](#Conditional)  
   
--   [Atributos de informações do chamador](#CallerInfo)  
+- [Atributos de informações do chamador](#CallerInfo)  
   
--   [Atributos do Visual Basic](#VB)  
+- [Atributos do Visual Basic](#VB)  
   
 ## <a name="Global"></a> Atributos globais  
  A maioria dos atributos são aplicados aos elementos específicos de linguagem, como classes ou métodos. No entanto, alguns atributos são globais. Eles se aplicam a um assembly inteiro ou módulo. Por exemplo, o atributo <xref:System.Reflection.AssemblyVersionAttribute> pode ser usado para inserir informações de versão em um assembly, desta maneira:  
@@ -33,11 +33,11 @@ Este tópico descreve os atributos que são mais comumente usados em programas e
   
  Os atributos de assembly são valores que fornecem informações sobre um assembly. Eles se enquadram nas seguintes categorias:  
   
--   Atributos de identidade do assembly  
+- Atributos de identidade do assembly  
   
--   Atributos informativos  
+- Atributos informativos  
   
--   Atributos de manifesto do assembly  
+- Atributos de manifesto do assembly  
   
 ### <a name="assembly-identity-attributes"></a>Atributos de Identidade do Assembly  
  Três atributos (com um nome forte, se aplicável) determinam a identidade de um assembly: nome, versão e cultura. Esses atributos formam o nome completo do assembly e são necessários ao fazer referência a ele no código. Você pode definir a versão e a cultura de um assembly, usando atributos. No entanto, o valor do nome é definido pelo compilador, pelo IDE do Visual Studio na [caixa de diálogo de Informações do Assembly](/visualstudio/ide/reference/assembly-information-dialog-box) ou pelo Assembly Linker (Al.exe) quando o assembly é criado, com base no arquivo que contém o manifesto do assembly. O atributo <xref:System.Reflection.AssemblyFlagsAttribute> especifica se várias cópias do assembly podem coexistir.  

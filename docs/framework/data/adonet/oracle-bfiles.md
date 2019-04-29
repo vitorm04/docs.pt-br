@@ -3,11 +3,11 @@ title: Oracle BFILEs
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771963"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILEs
 O provedor de dados .NET Framework para Oracle inclui a classe <xref:System.Data.OracleClient.OracleBFile>, que é usada para trabalhar com os tipos de dados Oracle <xref:System.Data.OracleClient.OracleType.BFile>.  
@@ -16,11 +16,11 @@ O provedor de dados .NET Framework para Oracle inclui a classe <xref:System.Data
   
  Outras características de um **BFILE** tipo de dados que o distingue de um **LOB** tipo de dados é que ela:  
   
--   Contém dados não estruturados.  
+- Contém dados não estruturados.  
   
--   Dá suporte a agrupamento do lado do servidor.  
+- Dá suporte a agrupamento do lado do servidor.  
   
--   Usa semântica de cópia de referência. Por exemplo, se você executar uma operação de cópia em um **BFILE**, somente os **BFILE** localizador (que é uma referência ao arquivo) é copiado. Os dados no arquivo não são copiados.  
+- Usa semântica de cópia de referência. Por exemplo, se você executar uma operação de cópia em um **BFILE**, somente os **BFILE** localizador (que é uma referência ao arquivo) é copiado. Os dados no arquivo não são copiados.  
   
  O **BFILE** tipo de dados deve ser usado para referenciar LOBs que são grandes em tamanho e, portanto, não é prático armazenar no banco de dados. Mais sobrecarga de cliente, servidor e comunicação está envolvida ao usar um **BFILE** tipo de dados em comparação com o **LOB** tipo de dados. É mais eficiente para acessar uma **BFILE** se você precisar obter uma pequena quantidade de dados. Será mais eficiente acessar LOBs residentes em banco de dados se você precisar obter o objeto inteiro.  
   

@@ -3,11 +3,11 @@ title: Elemento <httpListener> (Configurações de Rede)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705071"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > (configurações de rede)
 Personaliza os parâmetros usados pelo <xref:System.Net.HttpListener> classe.  
@@ -52,9 +52,9 @@ Personaliza os parâmetros usados pelo <xref:System.Net.HttpListener> classe.
   
  O `http.sys` serviço expõe duas cadeias de caracteres URI de solicitação:  
   
--   URI bruto  
+- URI bruto  
   
--   URI convertido  
+- URI convertido  
   
  O URI bruto é o <xref:System.Uri?displayProperty=nameWithType> fornecido na linha de solicitação de uma solicitação HTTP:  
   
@@ -72,11 +72,11 @@ Personaliza os parâmetros usados pelo <xref:System.Net.HttpListener> classe.
   
  O `http.sys` serviço combina o <xref:System.Uri.Host%2A?displayProperty=nameWithType> valor da propriedade e a cadeia de caracteres na linha da solicitação para criar um URI convertido. Além disso, `http.sys` e o <xref:System.Uri?displayProperty=nameWithType> classe também faz o seguinte:  
   
--   Un-escapa o percentual de todos os valores codificados.  
+- Un-escapa o percentual de todos os valores codificados.  
   
--   Caracteres não ASCII de converte codificados por porcentagem em uma representação de caractere UTF-16. Observe que há suporte para caracteres UTF-8 e ANSI DBCS, bem como caracteres Unicode (codificação Unicode usando o formato de uXXXX %).  
+- Caracteres não ASCII de converte codificados por porcentagem em uma representação de caractere UTF-16. Observe que há suporte para caracteres UTF-8 e ANSI DBCS, bem como caracteres Unicode (codificação Unicode usando o formato de uXXXX %).  
   
--   Executa outras etapas de normalização, como a compactação de caminho.  
+- Executa outras etapas de normalização, como a compactação de caminho.  
   
  Uma vez que a solicitação não contém todas as informações sobre a codificação usada para valores codificados por percentual, não é possível determinar a codificação correta apenas analisando os valores codificados por porcentagem.  
   

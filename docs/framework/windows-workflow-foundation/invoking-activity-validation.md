@@ -3,11 +3,11 @@ title: Invocando a validação de atividades
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
 ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791073"
 ---
 # <a name="invoking-activity-validation"></a>Invocando a validação de atividades
 Validação de atividade fornece um método para identificar e relatar erros na configuração de quaisquer atividades antes da execução. A validação ocorre quando um trabalho são alterados no designer de trabalho e todos os erros ou avisos de validação são exibidos no designer de fluxo de trabalho. Validação também ocorre em tempo de execução quando um fluxo de trabalho é chamado e se qualquer erro de validação ocorre, <xref:System.Activities.InvalidWorkflowException> é acionada pela lógica padrão de validação. Windows Workflow Foundation (WF) fornece o <xref:System.Activities.Validation.ActivityValidationServices> classe que pode ser usada pelo aplicativo de fluxo de trabalho e os desenvolvedores de ferramentas validar explicitamente uma atividade. Este tópico descreve como usar <xref:System.Activities.Validation.ActivityValidationServices> para executar a validação de atividade.  
@@ -152,8 +152,7 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
-> Nesse exemplo, a atividade de raiz ter sido declarada como `Add` em vez de `Activity` como no exemplo anterior. Isso permite que o método de `WorkflowInvoker.Invoke` retorna um único número inteiro que representa os resultados de atividade de `Add` em vez de um dicionário de argumentos de `out` . 
-  `wf` variável pode também ter sido declarado como `Activity<int>`.  
+> Nesse exemplo, a atividade de raiz ter sido declarada como `Add` em vez de `Activity` como no exemplo anterior. Isso permite que o método de `WorkflowInvoker.Invoke` retorna um único número inteiro que representa os resultados de atividade de `Add` em vez de um dicionário de argumentos de `out` . `wf` variável pode também ter sido declarado como `Activity<int>`.  
   
  Para validar argumentos de raiz, é responsabilidade do aplicativo host garantir que todos os argumentos necessários são passados quando o fluxo de trabalho é chamado.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793673"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar uma transação implícita usando o escopo da transação
 O <xref:System.Transactions.TransactionScope> classe fornece uma maneira simples para marcar um bloco de código como participar de uma transação, sem a necessidade de interagir com a própria transação. Selecione um escopo de transação e gerenciar a transação ambiente automaticamente. Devido à sua facilidade de uso e a eficiência, é recomendável que você use o <xref:System.Transactions.TransactionScope> classe ao desenvolver um aplicativo de transação.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Um <xref:System.Transactions.TransactionScope> objeto tem três opções:  
   
--   Una a transação de ambiente ou criar um novo caso não exista.  
+- Una a transação de ambiente ou criar um novo caso não exista.  
   
--   Ser um novo escopo de raiz, ou seja, iniciar uma nova transação e ter essa transação com a nova transação ambiente dentro de seu próprio escopo.  
+- Ser um novo escopo de raiz, ou seja, iniciar uma nova transação e ter essa transação com a nova transação ambiente dentro de seu próprio escopo.  
   
--   Não fazer parte de uma transação, todo. Como resultado, há uma transação de ambiente.  
+- Não fazer parte de uma transação, todo. Como resultado, há uma transação de ambiente.  
   
  Se o escopo é instanciado com <xref:System.Transactions.TransactionScopeOption.Required>e uma transação de ambiente estiver presente, o escopo une a transação. Se, por outro lado, não há nenhuma transação de ambiente, o escopo cria uma nova transação e se tornar o escopo raiz. Este é o valor padrão. Quando <xref:System.Transactions.TransactionScopeOption.Required> é usado, o código dentro do escopo não precisa ter um comportamento diferente seja a raiz ou apenas associando a transação de ambiente. Ele deve operar identicamente em ambos os casos.  
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792282"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Passo a passo: Depurando controles do Windows Forms no tempo de design
 Quando criar um controle personalizado, frequentemente você achará necessário depurar seu comportamento em tempo de design. Isso será especialmente válido se você estiver criando um designer personalizado para seu controle personalizado. Para obter detalhes, consulte [passo a passo: Criando um Windows Forms o controle que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md).  
@@ -29,17 +29,17 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
  As tarefas ilustradas neste passo a passo incluem:  
   
--   Criar um projeto dos Windows Forms para hospedar o controle personalizado  
+- Criar um projeto dos Windows Forms para hospedar o controle personalizado  
   
--   Criar um projeto de biblioteca de controle  
+- Criar um projeto de biblioteca de controle  
   
--   Adicionar uma propriedade ao controle personalizado  
+- Adicionar uma propriedade ao controle personalizado  
   
--   Adicionar o controle personalizado ao formulário de host  
+- Adicionar o controle personalizado ao formulário de host  
   
--   Configurar o projeto para depuração em tempo de design  
+- Configurar o projeto para depuração em tempo de design  
   
--   Depurar o controle personalizado em tempo de design  
+- Depurar o controle personalizado em tempo de design  
   
  Quando tiver terminado, você compreenderá as tarefas necessárias para depurar o comportamento de tempo de design de um controle personalizado.  
   
@@ -51,7 +51,7 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 #### <a name="to-create-the-project"></a>Para criar o projeto  
   
--   Crie um projeto de aplicativo do Windows chamado "DebuggingExample" (**arquivo** > **New** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
+- Crie um projeto de aplicativo do Windows chamado "DebuggingExample" (**arquivo** > **New** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
   
 ## <a name="creating-a-control-library-project"></a>Criar um Projeto de Biblioteca de Controle  
  A etapa seguinte é criar o projeto de biblioteca de controle e configurar o controle personalizado.  
@@ -71,7 +71,7 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 #### <a name="to-check-your-progress"></a>Para verificar o progresso  
   
--   Localize a nova guia chamada **Componentes de DebugControlLibrary** e clique para selecioná-la. Quando ela abrir, você verá seu controle listado como **DebugControl** com o ícone padrão ao lado dele.  
+- Localize a nova guia chamada **Componentes de DebugControlLibrary** e clique para selecioná-la. Quando ela abrir, você verá seu controle listado como **DebugControl** com o ícone padrão ao lado dele.  
   
 ## <a name="adding-a-property-to-your-custom-control"></a>Adicionar uma Propriedade ao Controle Personalizado  
  Para demonstrar que o código de seu controle personalizado está sendo executado em tempo de design, você adicionará uma propriedade e definirá um ponto de interrupção no código que implementa a propriedade.  
@@ -149,9 +149,9 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 2. Pressione F5 para iniciar a sessão de depuração. Observe que uma nova instância do Visual Studio é criada. É possível diferenciar as instâncias de duas maneiras:  
   
-    -   A instância de depuração tem as palavras **Em execução** na barra de título  
+    - A instância de depuração tem as palavras **Em execução** na barra de título  
   
-    -   A instância de depuração tem o botão **Iniciar** em sua barra de ferramentas **Depurar** desabilitado  
+    - A instância de depuração tem o botão **Iniciar** em sua barra de ferramentas **Depurar** desabilitado  
   
      Seu ponto de interrupção é definido na instância de depuração.  
   
@@ -166,11 +166,11 @@ Quando criar um controle personalizado, frequentemente você achará necessário
 ## <a name="next-steps"></a>Próximas etapas  
  Agora que você pode depurar seus controles personalizados em tempo de design, há muitas possibilidades para expandir a interação do controle com o IDE do Visual Studio.  
   
--   Você pode usar o <xref:System.ComponentModel.Component.DesignMode%2A> propriedade do <xref:System.ComponentModel.Component> classe para escrever um código que será executado somente em tempo de design. Para obter detalhes, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.  
+- Você pode usar o <xref:System.ComponentModel.Component.DesignMode%2A> propriedade do <xref:System.ComponentModel.Component> classe para escrever um código que será executado somente em tempo de design. Para obter detalhes, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.  
   
--   Há vários atributos que você pode aplicar a propriedades do controle para manipular a interação do seu controle personalizado com o designer. Você pode encontrar esses atributos no <xref:System.ComponentModel?displayProperty=nameWithType> namespace.  
+- Há vários atributos que você pode aplicar a propriedades do controle para manipular a interação do seu controle personalizado com o designer. Você pode encontrar esses atributos no <xref:System.ComponentModel?displayProperty=nameWithType> namespace.  
   
--   Você pode escrever um designer personalizado para seu controle personalizado. Isso lhe dá controle total sobre a experiência de design usando a infra-estrutura de designer extensível exposta pelo Visual Studio. Para obter detalhes, consulte [passo a passo: Criando um Windows Forms o controle que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md).  
+- Você pode escrever um designer personalizado para seu controle personalizado. Isso lhe dá controle total sobre a experiência de design usando a infra-estrutura de designer extensível exposta pelo Visual Studio. Para obter detalhes, consulte [passo a passo: Criando um Windows Forms o controle que tira proveito dos recursos de tempo de Design do Visual Studio](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>Consulte também
 

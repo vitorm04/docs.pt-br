@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777449"
 ---
 # <a name="imetadataimport-interface"></a>Interface IMetaDataImport
 Fornece métodos para importação e manipulação de metadados existentes de um arquivo executável portátil (PE) ou outra fonte, como uma biblioteca de tipos ou um binário de metadados independente, o tempo de execução.  
@@ -96,13 +96,13 @@ Fornece métodos para importação e manipulação de metadados existentes de um
 ## <a name="remarks"></a>Comentários  
  O design do `IMetaDataImport` interface destina-se principalmente a ser usado por ferramentas e serviços que serão importando as informações de tipo (por exemplo, ferramentas de desenvolvimento) ou gerenciando implantado os componentes (por exemplo, serviços de resolução/ativação). Os métodos no `IMetaDataImport` se enquadram nas categorias de tarefas a seguir:  
   
--   Enumerando coleções de itens no escopo de metadados.  
+- Enumerando coleções de itens no escopo de metadados.  
   
--   Localizar um item que tem um conjunto específico de características.  
+- Localizar um item que tem um conjunto específico de características.  
   
--   Obtendo as propriedades de um item especificado.  
+- Obtendo as propriedades de um item especificado.  
   
--   Os métodos Get projetados especificamente para retornar as propriedades de valor único de um item de metadados. Quando a propriedade é uma referência a outro item, será retornado um token para aquele item. Qualquer tipo de ponteiro de entrada pode ser nulo para indicar que o valor específico não está sendo solicitado. Para obter as propriedades que são basicamente objetos de coleção (por exemplo, a coleção de interfaces que implementa uma classe), use os métodos de enumeração.  
+- Os métodos Get projetados especificamente para retornar as propriedades de valor único de um item de metadados. Quando a propriedade é uma referência a outro item, será retornado um token para aquele item. Qualquer tipo de ponteiro de entrada pode ser nulo para indicar que o valor específico não está sendo solicitado. Para obter as propriedades que são basicamente objetos de coleção (por exemplo, a coleção de interfaces que implementa uma classe), use os métodos de enumeração.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  

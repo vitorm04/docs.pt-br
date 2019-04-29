@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788070"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palavras-chave e níveis ETW no CLR
 <a name="top"></a> Os eventos ETW (rastreamento de eventos para Windows) pode ser filtrado por categoria e nível. As [palavras-chave CLR ETW](#keywords) do evento permitem a filtragem de eventos por categoria; elas são usadas em combinações para os provedores de tempo de execução e de encerramento. Os [níveis de evento](#levels) são identificados por sinalizadores.  
@@ -25,13 +25,13 @@ ms.locfileid: "59105736"
   
  Essas palavras-chave são descritas nas seguintes tabelas:  
   
--   [Palavras-chave de tempo de execução CLR ETW](#runtime)  
+- [Palavras-chave de tempo de execução CLR ETW](#runtime)  
   
--   [Palavras-chave de encerramento CLR ETW](#rundown)  
+- [Palavras-chave de encerramento CLR ETW](#rundown)  
   
--   [Combinações de palavras-chave para a resolução de símbolo do provedor de tempo de execução](#runtime_combo)  
+- [Combinações de palavras-chave para a resolução de símbolo do provedor de tempo de execução](#runtime_combo)  
   
--   [Combinações de palavras-chave para a resolução de símbolo do provedor de encerramento](#rundown_combo)  
+- [Combinações de palavras-chave para a resolução de símbolo do provedor de encerramento](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>Palavras-Chave de Tempo de Execução CLR ETW  

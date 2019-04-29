@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791970"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimentos do operador (Visual Basic)
 Um procedimento de operador é uma série de instruções do Visual Basic que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu. Isso também é chamado *sobrecarga de operador*.  
@@ -31,13 +31,13 @@ Um procedimento de operador é uma série de instruções do Visual Basic que de
 ## <a name="types-of-operator-procedure"></a>Tipos de procedimento de operador  
  Um procedimento de operador pode ser um dos seguintes tipos:  
   
--   Uma definição de um operador unário onde o argumento é do tipo de sua classe ou estrutura.  
+- Uma definição de um operador unário onde o argumento é do tipo de sua classe ou estrutura.  
   
--   Uma definição de um operador binário onde pelo menos um dos argumentos é do tipo de sua classe ou estrutura.  
+- Uma definição de um operador binário onde pelo menos um dos argumentos é do tipo de sua classe ou estrutura.  
   
--   Uma definição de um operador de conversão onde o argumento é do tipo de sua classe ou estrutura.  
+- Uma definição de um operador de conversão onde o argumento é do tipo de sua classe ou estrutura.  
   
--   Uma definição de um operador de conversão que retorna o tipo de sua classe ou estrutura.  
+- Uma definição de um operador de conversão que retorna o tipo de sua classe ou estrutura.  
   
  Operadores de conversão são sempre unários, e você sempre use `CType` como o operador que você está definindo.  
   

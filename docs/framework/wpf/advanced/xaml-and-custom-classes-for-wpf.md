@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759928"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML e classes personalizadas para WPF
 Tal como implementado nas estruturas do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], o XAML dá suporte à capacidade de definir uma classe ou estrutura personalizada em qualquer linguagem do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e, em seguida, acessar essa classe usando a marcação de XAML. É possível usar uma mistura de tipos definidos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e tipos personalizados dentro do mesmo arquivo de marcação, normalmente mapeando os tipos personalizados até um prefixo de namespace de XAML. Este tópico aborda as exigências que uma classe personalizada deve cumprir para que possa ser usada como um elemento XAML.  
@@ -20,19 +20,19 @@ Tal como implementado nas estruturas do [!INCLUDE[TLA#tla_clr](../../../../inclu
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Classes personalizadas em aplicativos ou assemblies  
  As classes personalizadas que são usadas em XAML podem ser definidas de duas maneiras distintas: dentro do code-behind ou outro código que produz o aplicativo primário do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ou como uma classe em um assembly separado, como um executável ou DLL usados como biblioteca de classes. Cada uma dessas abordagens apresenta vantagens e desvantagens.  
   
--   A vantagem de criar uma biblioteca de classes é que qualquer uma dessas classes personalizadas pode ser compartilhada entre vários aplicativos possíveis diferentes. Uma biblioteca separada também facilita o controle de problemas de versão dos aplicativos e simplifica uma classe em que o uso pretendido da classe é como um elemento raiz em uma página XAML.  
+- A vantagem de criar uma biblioteca de classes é que qualquer uma dessas classes personalizadas pode ser compartilhada entre vários aplicativos possíveis diferentes. Uma biblioteca separada também facilita o controle de problemas de versão dos aplicativos e simplifica uma classe em que o uso pretendido da classe é como um elemento raiz em uma página XAML.  
   
--   A vantagem de definir as classes personalizadas no aplicativo é que essa técnica é relativamente simples e minimiza os problemas de implantação e testes encontrados quando assemblies separados são introduzidos além do executável principal do aplicativo.  
+- A vantagem de definir as classes personalizadas no aplicativo é que essa técnica é relativamente simples e minimiza os problemas de implantação e testes encontrados quando assemblies separados são introduzidos além do executável principal do aplicativo.  
   
--   Se definidas no mesmo assembly ou em um assembly diferente, as classes personalizadas precisam ser mapeadas entre o namespace de CLR e o namespace de XML para que possam ser usadas no XAML como elementos. Consulte [Namespaces de XAML e mapeamento de namespace para XAML do WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+- Se definidas no mesmo assembly ou em um assembly diferente, as classes personalizadas precisam ser mapeadas entre o namespace de CLR e o namespace de XML para que possam ser usadas no XAML como elementos. Consulte [Namespaces de XAML e mapeamento de namespace para XAML do WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>Exigências para uma classe personalizada como um elemento XAML  
  Para que possa ser instanciada como um elemento de objeto, sua classe deve cumprir as exigências abaixo:  
   
--   A classe personalizada deve ser pública e dar suporte a um construtor público padrão (sem parâmetros). (Consulte a seção a seguir para ver as observações sobre estruturas.)  
+- A classe personalizada deve ser pública e dar suporte a um construtor público padrão (sem parâmetros). (Consulte a seção a seguir para ver as observações sobre estruturas.)  
   
--   A classe personalizada não deve ser uma classe aninhada. As classes aninhadas e o “ponto” na sintaxe de uso do CLR geral interferem com outros recursos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e/ou do XAML, como propriedades anexadas.  
+- A classe personalizada não deve ser uma classe aninhada. As classes aninhadas e o “ponto” na sintaxe de uso do CLR geral interferem com outros recursos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e/ou do XAML, como propriedades anexadas.  
   
  Além de habilitar a sintaxe de elemento de objeto, sua definição de objeto também habilita a sintaxe de elemento de propriedade para outras propriedades públicas que assumem o objeto como o tipo de valor. Isso ocorre porque, agora, o objeto pode ser instanciado como um elemento de objeto e pode preencher o valor do elemento da propriedade de tal propriedade.  
   
@@ -75,19 +75,19 @@ Tal como implementado nas estruturas do [!INCLUDE[TLA#tla_clr](../../../../inclu
 ## <a name="writing-collection-properties"></a>Gravando propriedades de coleção  
  As propriedades que usam um tipo de coleção têm uma sintaxe XAML que permite especificar os objetos que são adicionados à coleção. Essa sintaxe possui dois recursos notáveis.  
   
--   O objeto que é o objeto de coleção não precisa ser especificado na sintaxe de elemento de objeto. A presença desse tipo de coleção é implícita sempre que você especifica uma propriedade em XAML que utiliza um tipo de coleção.  
+- O objeto que é o objeto de coleção não precisa ser especificado na sintaxe de elemento de objeto. A presença desse tipo de coleção é implícita sempre que você especifica uma propriedade em XAML que utiliza um tipo de coleção.  
   
--   Os elementos filho da propriedade de coleção na marcação são processados para se tornarem membros da coleção. Normalmente, o acesso ao código para os membros de uma coleção é realizado por meio de métodos de lista/dicionário, como `Add`, ou por meio de um indexador. Mas a sintaxe XAML não oferece suporte a métodos ou indexadores (exceção: XAML 2009 pode dar suporte a métodos, mas usar XAML 2009 restringe os possíveis usos do WPF; ver [recursos da linguagem XAML 2009](../../xaml-services/xaml-2009-language-features.md)). As coleções obviamente são uma exigência muito comum para a criação de uma árvore de elementos; você precisa de alguma forma para preencher essas coleções em XAML declarativo. Portanto, os elementos filho de uma propriedade de coleção são processados ao serem adicionados à coleção que é o valor de tipo de propriedade da coleção.  
+- Os elementos filho da propriedade de coleção na marcação são processados para se tornarem membros da coleção. Normalmente, o acesso ao código para os membros de uma coleção é realizado por meio de métodos de lista/dicionário, como `Add`, ou por meio de um indexador. Mas a sintaxe XAML não oferece suporte a métodos ou indexadores (exceção: XAML 2009 pode dar suporte a métodos, mas usar XAML 2009 restringe os possíveis usos do WPF; ver [recursos da linguagem XAML 2009](../../xaml-services/xaml-2009-language-features.md)). As coleções obviamente são uma exigência muito comum para a criação de uma árvore de elementos; você precisa de alguma forma para preencher essas coleções em XAML declarativo. Portanto, os elementos filho de uma propriedade de coleção são processados ao serem adicionados à coleção que é o valor de tipo de propriedade da coleção.  
   
  A implementação de serviços de XAML do .NET Framework e, consequentemente, o processador XAML do WPF usam a seguinte definição para o que constitui uma propriedade de coleção. O tipo de propriedade da propriedade deve implementar um dos seguintes:  
   
--   Implementa <xref:System.Collections.IList>.  
+- Implementa <xref:System.Collections.IList>.  
   
--   Implementa <xref:System.Collections.IDictionary> ou o equivalente genérico (<xref:System.Collections.Generic.IDictionary%602>).  
+- Implementa <xref:System.Collections.IDictionary> ou o equivalente genérico (<xref:System.Collections.Generic.IDictionary%602>).  
   
--   Deriva <xref:System.Array> (para obter mais informações sobre matrizes em XAML, consulte [extensão de marcação X:array](../../xaml-services/x-array-markup-extension.md).)  
+- Deriva <xref:System.Array> (para obter mais informações sobre matrizes em XAML, consulte [extensão de marcação X:array](../../xaml-services/x-array-markup-extension.md).)  
   
--   Implementa <xref:System.Windows.Markup.IAddChild> (uma interface definida por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
+- Implementa <xref:System.Windows.Markup.IAddChild> (uma interface definida por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
   
  Cada um desses tipos de CLR tem um método do `Add`, que é usado pelo processador de XAML para adicionar itens à coleção subjacente ao criar o grafo do objeto.  
   

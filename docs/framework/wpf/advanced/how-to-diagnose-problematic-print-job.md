@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776253"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Como: Diagnosticar um trabalho de impressão problemático
 Administradores de rede frequentemente recebem reclamações de usuários sobre trabalhos de impressão que não são impressos ou são impressos lentamente. O conjunto avançado de propriedades do trabalho de impressão exposto no [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] do Microsoft .NET Framework fornecem um meio para executar um diagnóstico remoto rápido dos trabalhos de impressão.  
@@ -25,13 +25,13 @@ Administradores de rede frequentemente recebem reclamações de usuários sobre 
   
 1. Identifique o trabalho de impressão sobre o qual o usuário está reclamando. Frequentemente, os usuários não conseguem fazer isso com precisão. Talvez eles não saibam os nomes dos servidores de impressão ou impressoras. Eles podem descrevem a localização da impressora em uma terminologia diferente da que foi usada na configuração seu <xref:System.Printing.PrintQueue.Location%2A> propriedade. Portanto, é uma boa ideia gerar uma lista dos trabalhos enviados atualmente pelo usuário. Se houver mais de um, a comunicação entre o usuário e o administrador de sistema de impressão poderá ser usada para identificar o trabalho que está tendo problemas. As subetapas são as seguintes.  
   
-    1.  Obter uma lista de todos os servidores de impressão.  
+    1. Obter uma lista de todos os servidores de impressão.  
   
-    2.  Executar um loop pelos servidores para consultar suas filas de impressão.  
+    2. Executar um loop pelos servidores para consultar suas filas de impressão.  
   
-    3.  Em cada passagem do loop do servidor, percorra em loop todas as filas do servidor para consultar seus trabalhos  
+    3. Em cada passagem do loop do servidor, percorra em loop todas as filas do servidor para consultar seus trabalhos  
   
-    4.  Em cada passo do loop da fila, percorra em loop sobre seus trabalhos e colete informações de identificação sobre aqueles que foram enviados pelo usuário que fez a reclamação.  
+    4. Em cada passo do loop da fila, percorra em loop sobre seus trabalhos e colete informações de identificação sobre aqueles que foram enviados pelo usuário que fez a reclamação.  
   
 2. Quando o trabalho de impressão problemático for identificado, examine as propriedades relevantes para ver qual pode ser o problema. Por exemplo, o trabalho está em estado de erro ou a impressora que atende a fila ficou offline antes que o trabalho fosse impresso?  
   
@@ -49,9 +49,9 @@ Administradores de rede frequentemente recebem reclamações de usuários sobre 
   
  Nesse ponto, o aplicativo contém uma estrutura de ramificação correspondente às duas maneiras de verificar o status do trabalho da impressora:  
   
--   Você pode ler os sinalizadores do <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriedade que é do tipo <xref:System.Printing.PrintJobStatus>.  
+- Você pode ler os sinalizadores do <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriedade que é do tipo <xref:System.Printing.PrintJobStatus>.  
   
--   Você pode ler cada propriedade relevante, como <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> e <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Você pode ler cada propriedade relevante, como <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> e <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  Este exemplo demonstra ambos métodos, o usuário foi previamente consultado sobre qual método usar e respondeu com "Y" se quiser usar os sinalizadores do <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriedade. Veja abaixo os detalhes dos dois métodos. Por fim, o aplicativo usa um método chamado **ReportQueueAndJobAvailability** para relatar se o trabalho pode ser impresso a esta hora do dia. Esse método é abordado em [Descobrir se um trabalho de impressão pode ser impresso a esta hora do dia](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Executar código parcialmente confiável em uma área restrita'
+title: 'Como: Executar o código parcialmente confiável em uma área restrita.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752965"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Como: Executar código parcialmente confiável em uma área restrita
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Como: Executar o código parcialmente confiável em uma área restrita.
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Área restrita é a prática da execução do código em um ambiente de segurança restrito, o que limita as permissões de acesso concedidas ao código. Por exemplo, se você tiver uma biblioteca gerenciada de uma fonte que não confiar completamente, você não deve executá-lo como totalmente confiável. Em vez disso, você deve colocar o código em uma área restrita que limita suas permissões para aqueles que você espera que ele precisa (por exemplo, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> permissão).  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Informações adicionais:  
   
-    -   Isso é a única sobrecarga da <xref:System.AppDomain.CreateDomain%2A> método que usa um <xref:System.Security.PermissionSet> como um parâmetro e, portanto, a única sobrecarga que permite que você carregam um aplicativo em uma configuração de confiança parcial.  
+    - Isso é a única sobrecarga da <xref:System.AppDomain.CreateDomain%2A> método que usa um <xref:System.Security.PermissionSet> como um parâmetro e, portanto, a única sobrecarga que permite que você carregam um aplicativo em uma configuração de confiança parcial.  
   
-    -   O `evidence` parâmetro não é usado para calcular um conjunto de permissões; ele é usado para identificação por outros recursos do .NET Framework.  
+    - O `evidence` parâmetro não é usado para calcular um conjunto de permissões; ele é usado para identificação por outros recursos do .NET Framework.  
   
-    -   Definindo o <xref:System.AppDomainSetup.ApplicationBase%2A> propriedade do `info` o parâmetro é obrigatório para essa sobrecarga.  
+    - Definindo o <xref:System.AppDomainSetup.ApplicationBase%2A> propriedade do `info` o parâmetro é obrigatório para essa sobrecarga.  
   
-    -   O `fullTrustAssemblies` parâmetro tem o `params` palavra-chave, o que significa que não é necessário criar um <xref:System.Security.Policy.StrongName> matriz. É permitido passar 0, 1 ou mais nomes fortes, como parâmetros.  
+    - O `fullTrustAssemblies` parâmetro tem o `params` palavra-chave, o que significa que não é necessário criar um <xref:System.Security.Policy.StrongName> matriz. É permitido passar 0, 1 ou mais nomes fortes, como parâmetros.  
   
-    -   O código para criar o domínio de aplicativo é:  
+    - O código para criar o domínio de aplicativo é:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Carregar o código para a área restrita <xref:System.AppDomain> que você criou. Isso pode ser feito de duas maneiras:  
   
-    -   Chamar o <xref:System.AppDomain.ExecuteAssembly%2A> método para o assembly.  
+    - Chamar o <xref:System.AppDomain.ExecuteAssembly%2A> método para o assembly.  
   
-    -   Use o <xref:System.Activator.CreateInstanceFrom%2A> método para criar uma instância de uma classe derivada de <xref:System.MarshalByRefObject> no novo <xref:System.AppDomain>.  
+    - Use o <xref:System.Activator.CreateInstanceFrom%2A> método para criar uma instância de uma classe derivada de <xref:System.MarshalByRefObject> no novo <xref:System.AppDomain>.  
   
      O segundo método é preferível, pois ele torna mais fácil passar parâmetros para o novo <xref:System.AppDomain> instância. O <xref:System.Activator.CreateInstanceFrom%2A> método fornece dois recursos importantes:  
   
-    -   Você pode usar uma base de código que aponta para um local que não contém o assembly.  
+    - Você pode usar uma base de código que aponta para um local que não contém o assembly.  
   
-    -   Você pode fazer a criação em um <xref:System.Security.CodeAccessPermission.Assert%2A> para confiança total (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), que permite que você crie uma instância de uma classe crítica. (Isso ocorre sempre que o assembly tem sem marcações de transparência e é carregado como totalmente confiável). Portanto, você precisa ter cuidado para criar somente o código que você confia com essa função, e é recomendável que você crie apenas instâncias de classes totalmente confiáveis no novo domínio de aplicativo.  
+    - Você pode fazer a criação em um <xref:System.Security.CodeAccessPermission.Assert%2A> para confiança total (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), que permite que você crie uma instância de uma classe crítica. (Isso ocorre sempre que o assembly tem sem marcações de transparência e é carregado como totalmente confiável). Portanto, você precisa ter cuidado para criar somente o código que você confia com essa função, e é recomendável que você crie apenas instâncias de classes totalmente confiáveis no novo domínio de aplicativo.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

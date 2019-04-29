@@ -3,20 +3,20 @@ title: Visão geral de segurança do SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922194"
 ---
 # <a name="overview-of-sql-server-security"></a>Visão geral de segurança do SQL Server
 Uma estratégia de defesa em profundidade, com a sobreposição de camadas de segurança, é a melhor maneira de combater ameaças de segurança. SQL Server fornece uma arquitetura de segurança que foi projetada para permitir que os administradores de banco de dados e os desenvolvedores criem aplicativos de banco de dados seguro e combater ameaças. Cada versão do SQL Server tem melhorado em versões anteriores do SQL Server com a introdução de novos recursos e funcionalidades. No entanto, a segurança não é fornecido na caixa. Cada aplicativo é exclusivo em seus requisitos de segurança. Os desenvolvedores precisam entender qual combinação de recursos e funcionalidade são mais apropriados para combater as ameaças conhecidas e para prever as ameaças que podem surgir no futuro.  
   
  Uma instância do SQL Server contém uma coleção hierárquica de entidades, começando com o servidor. Cada servidor contém vários bancos de dados e cada banco de dados contém uma coleção de objetos protegíveis. Todos os protegíveis do SQL Server está associada *permissões* que podem ser concedidas a um *principal*, que é um grupo individual, ou processo concedeu acesso ao SQL Server. A estrutura de segurança do SQL Server gerencia o acesso a entidades podem ser protegidos por meio *autenticação* e *autorização*.  
   
--   Autenticação é o processo de fazer logon no SQL Server pelo qual uma entidade de segurança solicita acesso ao enviar as credenciais que o servidor avalia. A autenticação estabelece a identidade do usuário ou processo que está sendo autenticado.  
+- Autenticação é o processo de fazer logon no SQL Server pelo qual uma entidade de segurança solicita acesso ao enviar as credenciais que o servidor avalia. A autenticação estabelece a identidade do usuário ou processo que está sendo autenticado.  
   
--   A autorização é o processo de determinar quais recursos protegíveis uma entidade de segurança pode acessar e quais operações são permitidas para esses recursos.  
+- A autorização é o processo de determinar quais recursos protegíveis uma entidade de segurança pode acessar e quais operações são permitidas para esses recursos.  
   
  Os tópicos nesta seção abordam conceitos básicos de segurança do SQL Server, fornecendo links para a documentação completa na versão relevante dos Manuais Online do SQL Server.  
   

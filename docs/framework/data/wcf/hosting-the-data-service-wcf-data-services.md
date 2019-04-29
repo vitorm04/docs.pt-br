@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765564"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospeda o serviço de dados (WCF Data Services)
 Usando o WCF Data Services, você pode criar um serviço que expõe dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Esse serviço de dados é definido como uma classe que herda de <xref:System.Data.Services.DataService%601>. Essa classe fornece a funcionalidade necessária para processar mensagens de solicitação, realizar atualizações na fonte de dados e gerar mensagens de respostas, conforme exigido pelo OData. No entanto, um serviço de dados não é possível associar a e escuta um soquete de rede para solicitações HTTP de entrada. Para essa funcionalidade necessária, o serviço de dados se baseia em um componente de hospedagem.
 
  O host de serviço de dados executa as seguintes tarefas em nome do serviço de dados:
 
--   Escuta as solicitações e encaminha essas solicitações para o serviço de dados.
+- Escuta as solicitações e encaminha essas solicitações para o serviço de dados.
 
--   Cria uma instância do serviço de dados para cada solicitação.
+- Cria uma instância do serviço de dados para cada solicitação.
 
--   Solicita que o serviço de dados processar a solicitação de entrada.
+- Solicita que o serviço de dados processar a solicitação de entrada.
 
--   Envia a resposta em nome do serviço de dados.
+- Envia a resposta em nome do serviço de dados.
 
  Para simplificar a hospedagem de um serviço de dados, o WCF Data Services foi projetado para integrar com o Windows Communication Foundation (WCF). O serviço de dados fornece uma implementação de WCF padrão que serve como o host de serviço de dados em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo. Portanto, você pode hospedar um serviço de dados em uma das seguintes maneiras:
 
--   Em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo.
+- Em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo.
 
--   Em um aplicativo gerenciado que oferece suporte aos serviços do WCF auto-hospedado.
+- Em um aplicativo gerenciado que oferece suporte aos serviços do WCF auto-hospedado.
 
--   Em alguns outro host de serviço de dados personalizados.
+- Em alguns outro host de serviço de dados personalizados.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hospedar um serviço de dados em um aplicativo ASP.NET
 
@@ -65,13 +65,13 @@ Quando você usa o **Adicionar Novo Item** caixa de diálogo no Visual Studio 20
 ## <a name="defining-a-custom-data-service-host"></a>Definindo um Host de serviço de dados personalizados
  Para casos em que a implementação de host do WCF é restritiva demais, você também pode definir um host personalizado para um serviço de dados. Qualquer classe que implemente <xref:System.Data.Services.IDataServiceHost> interface pode ser usada como o host de rede para um serviço de dados. Um host personalizado deve implementar a <xref:System.Data.Services.IDataServiceHost> de interface e ser capaz de lidar com as seguintes responsabilidades básicas do host do serviço de dados:
 
--   Fornece o serviço de dados com o caminho raiz do serviço.
+- Fornece o serviço de dados com o caminho raiz do serviço.
 
--   Processar informações de cabeçalhos de solicitação e resposta ao apropriado <xref:System.Data.Services.IDataServiceHost> implementação de membro.
+- Processar informações de cabeçalhos de solicitação e resposta ao apropriado <xref:System.Data.Services.IDataServiceHost> implementação de membro.
 
--   Trate as exceções geradas pelo serviço de dados.
+- Trate as exceções geradas pelo serviço de dados.
 
--   Valide parâmetros na cadeia de caracteres de consulta.
+- Valide parâmetros na cadeia de caracteres de consulta.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,15 +1,15 @@
 ---
-title: Otimização usando confirmação de fase única e notificação de fase única passível de promoção
+title: Otimização usando commit de fase única e notificação de fase única promovível
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793621"
 ---
-# <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Otimização usando confirmação de fase única e notificação de fase única passível de promoção
+# <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Otimização usando commit de fase única e notificação de fase única promovível
 
 Este tópico descreve os mecanismos fornecidos pelo <xref:System.Transactions> infra-estrutura para otimizar o desempenho.
 
@@ -46,7 +46,7 @@ Nesse cenário,
 
 2. Quando a segunda conexão, CN2 chama <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>, a chamada falhará porque não há outra inscrição podem ser promovida envolvidas. Por isso, CN2 deve obter uma transação do DTC para passá-lo para SQL. Para fazer isso, ele usa um dos métodos fornecidos pelo <xref:System.Transactions.TransactionInterop> classe para produzir um formato da transação que pode ser determinado para SQL.
 
-3. <xref:System.Transactions>chama o <xref:System.Transactions.ITransactionPromoter.Promote%2A> método o <xref:System.Transactions.ITransactionPromoter> interface implementada pelo CN1.
+3. <xref:System.Transactions> chamadas a <xref:System.Transactions.ITransactionPromoter.Promote%2A> método no <xref:System.Transactions.ITransactionPromoter> interface implementada pelo CN1.
 
 4. Neste ponto, CN1 aumenta a transação, usando um mecanismo específico para o SQL 2005 e <xref:System.Data>.
 
