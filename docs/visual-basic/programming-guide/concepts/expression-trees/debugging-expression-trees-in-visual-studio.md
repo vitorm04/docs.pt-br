@@ -3,35 +3,35 @@ title: Depurando árvores de expressão no Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
 ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787186"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a><span data-ttu-id="cdf3d-102">Depurando árvores de expressão no Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cdf3d-102">Debugging Expression Trees in Visual Studio (Visual Basic)</span></span>
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a><span data-ttu-id="2326f-102">Depurando árvores de expressão no Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2326f-102">Debugging Expression Trees in Visual Studio (Visual Basic)</span></span>
 
-<span data-ttu-id="cdf3d-103">Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-103">You can analyze the structure and content of expression trees when you debug your applications.</span></span> <span data-ttu-id="cdf3d-104">Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-104">To get a quick overview of the expression tree structure, you can use the `DebugView` property, which is available only in debug mode.</span></span> <span data-ttu-id="cdf3d-105">Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="cdf3d-105">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>
+<span data-ttu-id="2326f-103">Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão.</span><span class="sxs-lookup"><span data-stu-id="2326f-103">You can analyze the structure and content of expression trees when you debug your applications.</span></span> <span data-ttu-id="2326f-104">Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração.</span><span class="sxs-lookup"><span data-stu-id="2326f-104">To get a quick overview of the expression tree structure, you can use the `DebugView` property, which is available only in debug mode.</span></span> <span data-ttu-id="2326f-105">Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="2326f-105">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>
 
-<span data-ttu-id="cdf3d-106">Para melhor representar o conteúdo das árvores de expressão, a propriedade `DebugView` usa os visualizadores do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-106">To better represent the content of expression trees, the `DebugView` property uses Visual Studio visualizers.</span></span> <span data-ttu-id="cdf3d-107">Para obter mais informações, consulte [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data).</span><span class="sxs-lookup"><span data-stu-id="cdf3d-107">For more information, see [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data).</span></span>
+<span data-ttu-id="2326f-106">Para melhor representar o conteúdo das árvores de expressão, a propriedade `DebugView` usa os visualizadores do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2326f-106">To better represent the content of expression trees, the `DebugView` property uses Visual Studio visualizers.</span></span> <span data-ttu-id="2326f-107">Para obter mais informações, consulte [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data).</span><span class="sxs-lookup"><span data-stu-id="2326f-107">For more information, see [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data).</span></span>
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a><span data-ttu-id="cdf3d-108">Para abrir um visualizador para uma árvore de expressão</span><span class="sxs-lookup"><span data-stu-id="cdf3d-108">To open a visualizer for an expression tree</span></span>
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a><span data-ttu-id="2326f-108">Para abrir um visualizador para uma árvore de expressão</span><span class="sxs-lookup"><span data-stu-id="2326f-108">To open a visualizer for an expression tree</span></span>
 
-1. <span data-ttu-id="cdf3d-109">Clique no ícone de lupa que aparece ao lado da propriedade `DebugView` de uma árvore de expressão em **DataTips**, uma janela **Inspeção**, a janela **Autos** ou a janela **Locais**.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-109">Click the magnifying glass icon that appears next to the `DebugView` property of an expression tree in **DataTips**, a **Watch** window, the **Autos** window, or the **Locals** window.</span></span>
+1. <span data-ttu-id="2326f-109">Clique no ícone de lupa que aparece ao lado da propriedade `DebugView` de uma árvore de expressão em **DataTips**, uma janela **Inspeção**, a janela **Autos** ou a janela **Locais**.</span><span class="sxs-lookup"><span data-stu-id="2326f-109">Click the magnifying glass icon that appears next to the `DebugView` property of an expression tree in **DataTips**, a **Watch** window, the **Autos** window, or the **Locals** window.</span></span>
 
-    <span data-ttu-id="cdf3d-110">Uma lista de visualizadores é exibida.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-110">A list of visualizers is displayed.</span></span>
+    <span data-ttu-id="2326f-110">Uma lista de visualizadores é exibida.</span><span class="sxs-lookup"><span data-stu-id="2326f-110">A list of visualizers is displayed.</span></span>
 
-2. <span data-ttu-id="cdf3d-111">Clique no visualizador que você deseja usar.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-111">Click the visualizer you want to use.</span></span>
+2. <span data-ttu-id="2326f-111">Clique no visualizador que você deseja usar.</span><span class="sxs-lookup"><span data-stu-id="2326f-111">Click the visualizer you want to use.</span></span>
 
-<span data-ttu-id="cdf3d-112">Cada tipo de expressão é exibido no visualizador, conforme descrito nas seções a seguir.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-112">Each expression type is displayed in the visualizer as described in the following sections.</span></span>
+<span data-ttu-id="2326f-112">Cada tipo de expressão é exibido no visualizador, conforme descrito nas seções a seguir.</span><span class="sxs-lookup"><span data-stu-id="2326f-112">Each expression type is displayed in the visualizer as described in the following sections.</span></span>
 
-## <a name="parameterexpressions"></a><span data-ttu-id="cdf3d-113">ParameterExpressions</span><span class="sxs-lookup"><span data-stu-id="cdf3d-113">ParameterExpressions</span></span>
+## <a name="parameterexpressions"></a><span data-ttu-id="2326f-113">ParameterExpressions</span><span class="sxs-lookup"><span data-stu-id="2326f-113">ParameterExpressions</span></span>
 
-<span data-ttu-id="cdf3d-114">Os nomes de variáveis <xref:System.Linq.Expressions.ParameterExpression> são exibidos com o símbolo "$" no início.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-114"><xref:System.Linq.Expressions.ParameterExpression> variable names are displayed with a "$" symbol at the beginning.</span></span>
+<span data-ttu-id="2326f-114">Os nomes de variáveis <xref:System.Linq.Expressions.ParameterExpression> são exibidos com o símbolo "$" no início.</span><span class="sxs-lookup"><span data-stu-id="2326f-114"><xref:System.Linq.Expressions.ParameterExpression> variable names are displayed with a "$" symbol at the beginning.</span></span>
 
-<span data-ttu-id="cdf3d-115">Se um parâmetro não tiver um nome, será atribuído um nome gerado automaticamente, como `$var1` ou `$var2`.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-115">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>
+<span data-ttu-id="2326f-115">Se um parâmetro não tiver um nome, será atribuído um nome gerado automaticamente, como `$var1` ou `$var2`.</span><span class="sxs-lookup"><span data-stu-id="2326f-115">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cdf3d-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cdf3d-116">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2326f-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2326f-116">Examples</span></span>
 
 - `Expression`
 
@@ -40,7 +40,7 @@ ms.locfileid: "57364717"
     Expression.Parameter(GetType(Integer), "num")
     ```
 
-    <span data-ttu-id="cdf3d-117">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-117">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-117">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-117">`DebugView` property</span></span>
 
     `$num`
 
@@ -51,14 +51,14 @@ ms.locfileid: "57364717"
     Expression.Parameter(GetType(Integer))
     ```
 
-    <span data-ttu-id="cdf3d-118">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-118">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-118">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-118">`DebugView` property</span></span>
 
     `$var1`
 
-## <a name="constantexpressions"></a><span data-ttu-id="cdf3d-119">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="cdf3d-119">ConstantExpressions</span></span>
- <span data-ttu-id="cdf3d-120">Para objetos <xref:System.Linq.Expressions.ConstantExpression> que representam valores inteiros, cadeias de caracteres e `null`, o valor da constante é exibido.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-120">For <xref:System.Linq.Expressions.ConstantExpression> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>
+## <a name="constantexpressions"></a><span data-ttu-id="2326f-119">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="2326f-119">ConstantExpressions</span></span>
+ <span data-ttu-id="2326f-120">Para objetos <xref:System.Linq.Expressions.ConstantExpression> que representam valores inteiros, cadeias de caracteres e `null`, o valor da constante é exibido.</span><span class="sxs-lookup"><span data-stu-id="2326f-120">For <xref:System.Linq.Expressions.ConstantExpression> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cdf3d-121">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cdf3d-121">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2326f-121">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2326f-121">Examples</span></span>
 
 - `Expression`
 
@@ -67,9 +67,9 @@ ms.locfileid: "57364717"
     Dim expr As ConstantExpression = Expression.Constant(num)
     ```
 
-    <span data-ttu-id="cdf3d-122">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-122">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-122">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-122">`DebugView` property</span></span>
 
-    <span data-ttu-id="cdf3d-123">10</span><span class="sxs-lookup"><span data-stu-id="cdf3d-123">10</span></span>
+    <span data-ttu-id="2326f-123">10</span><span class="sxs-lookup"><span data-stu-id="2326f-123">10</span></span>
 
 - `Expression`
 
@@ -78,15 +78,15 @@ ms.locfileid: "57364717"
     Dim expr As ConstantExpression = Expression.Constant(num)
     ```
 
-    <span data-ttu-id="cdf3d-124">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-124">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-124">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-124">`DebugView` property</span></span>
 
-    <span data-ttu-id="cdf3d-125">10D</span><span class="sxs-lookup"><span data-stu-id="cdf3d-125">10D</span></span>
+    <span data-ttu-id="2326f-125">10D</span><span class="sxs-lookup"><span data-stu-id="2326f-125">10D</span></span>
 
-## <a name="blockexpression"></a><span data-ttu-id="cdf3d-126">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="cdf3d-126">BlockExpression</span></span>
+## <a name="blockexpression"></a><span data-ttu-id="2326f-126">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="2326f-126">BlockExpression</span></span>
 
-<span data-ttu-id="cdf3d-127">Se o tipo de um objeto <xref:System.Linq.Expressions.BlockExpression> difere do tipo da última expressão no bloco, o tipo é exibido na propriedade `DebugInfo` entre colchetes angulares (\< e >).</span><span class="sxs-lookup"><span data-stu-id="cdf3d-127">If the type of a <xref:System.Linq.Expressions.BlockExpression> object differs from the type of the last expression in the block, the type is displayed in the `DebugInfo` property in angle brackets (\< and >).</span></span> <span data-ttu-id="cdf3d-128">Caso contrário, o tipo do objeto <xref:System.Linq.Expressions.BlockExpression> não é exibido.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-128">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>
+<span data-ttu-id="2326f-127">Se o tipo de um objeto <xref:System.Linq.Expressions.BlockExpression> difere do tipo da última expressão no bloco, o tipo é exibido na propriedade `DebugInfo` entre colchetes angulares (\< e >).</span><span class="sxs-lookup"><span data-stu-id="2326f-127">If the type of a <xref:System.Linq.Expressions.BlockExpression> object differs from the type of the last expression in the block, the type is displayed in the `DebugInfo` property in angle brackets (\< and >).</span></span> <span data-ttu-id="2326f-128">Caso contrário, o tipo do objeto <xref:System.Linq.Expressions.BlockExpression> não é exibido.</span><span class="sxs-lookup"><span data-stu-id="2326f-128">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cdf3d-129">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cdf3d-129">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2326f-129">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2326f-129">Examples</span></span>
 
 - `Expression`
 
@@ -94,7 +94,7 @@ ms.locfileid: "57364717"
     Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
     ```
 
-    <span data-ttu-id="cdf3d-130">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-130">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-130">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-130">`DebugView` property</span></span>
 
     `.Block() {`
 
@@ -109,7 +109,7 @@ ms.locfileid: "57364717"
     Expression.Block(GetType(Object), Expression.Constant("test"))
     ```
 
-    <span data-ttu-id="cdf3d-131">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-131">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-131">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-131">`DebugView` property</span></span>
 
     `.Block<System.Object>() {`
 
@@ -117,13 +117,13 @@ ms.locfileid: "57364717"
 
     `}`
 
-## <a name="lambdaexpression"></a><span data-ttu-id="cdf3d-132">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="cdf3d-132">LambdaExpression</span></span>
+## <a name="lambdaexpression"></a><span data-ttu-id="2326f-132">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="2326f-132">LambdaExpression</span></span>
 
-<span data-ttu-id="cdf3d-133">Objetos <xref:System.Linq.Expressions.LambdaExpression> são exibidos junto com seus tipos delegados.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-133"><xref:System.Linq.Expressions.LambdaExpression> objects are displayed together with their delegate types.</span></span>
+<span data-ttu-id="2326f-133">Objetos <xref:System.Linq.Expressions.LambdaExpression> são exibidos junto com seus tipos delegados.</span><span class="sxs-lookup"><span data-stu-id="2326f-133"><xref:System.Linq.Expressions.LambdaExpression> objects are displayed together with their delegate types.</span></span>
 
-<span data-ttu-id="cdf3d-134">Se uma expressão lambda não tiver um nome, será atribuído um nome gerado automaticamente, como `#Lambda1` ou `#Lambda2`.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-134">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>
+<span data-ttu-id="2326f-134">Se uma expressão lambda não tiver um nome, será atribuído um nome gerado automaticamente, como `#Lambda1` ou `#Lambda2`.</span><span class="sxs-lookup"><span data-stu-id="2326f-134">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cdf3d-135">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cdf3d-135">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2326f-135">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2326f-135">Examples</span></span>
 
 - `Expression`
 
@@ -132,7 +132,7 @@ ms.locfileid: "57364717"
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1))
     ```
 
-    <span data-ttu-id="cdf3d-136">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-136">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-136">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-136">`DebugView` property</span></span>
 
     `.Lambda #Lambda1<System.Func'1[System.Int32]>() {`
 
@@ -147,7 +147,7 @@ ms.locfileid: "57364717"
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1), "SampleLambda", Nothing)
     ```
 
-    <span data-ttu-id="cdf3d-137">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-137">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-137">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-137">`DebugView` property</span></span>
 
     `.Lambda SampleLambda<System.Func'1[System.Int32]>() {`
 
@@ -155,15 +155,15 @@ ms.locfileid: "57364717"
 
     `}`
 
-## <a name="labelexpression"></a><span data-ttu-id="cdf3d-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="cdf3d-138">LabelExpression</span></span>
+## <a name="labelexpression"></a><span data-ttu-id="2326f-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="2326f-138">LabelExpression</span></span>
 
-<span data-ttu-id="cdf3d-139">Se você especificar um valor padrão para o objeto <xref:System.Linq.Expressions.LabelExpression>, esse valor será exibido antes do objeto <xref:System.Linq.Expressions.LabelTarget>.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget> object.</span></span>
+<span data-ttu-id="2326f-139">Se você especificar um valor padrão para o objeto <xref:System.Linq.Expressions.LabelExpression>, esse valor será exibido antes do objeto <xref:System.Linq.Expressions.LabelTarget>.</span><span class="sxs-lookup"><span data-stu-id="2326f-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget> object.</span></span>
 
-<span data-ttu-id="cdf3d-140">O token `.Label` indica o início do rótulo.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="cdf3d-141">O token `.LabelTarget` indica o local para o qual o destino deve saltar.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>
+<span data-ttu-id="2326f-140">O token `.Label` indica o início do rótulo.</span><span class="sxs-lookup"><span data-stu-id="2326f-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="2326f-141">O token `.LabelTarget` indica o local para o qual o destino deve saltar.</span><span class="sxs-lookup"><span data-stu-id="2326f-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>
 
-<span data-ttu-id="cdf3d-142">Se um rótulo não tiver um nome, será atribuído um nome gerado automaticamente, como `#Label1` ou `#Label2`.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>
+<span data-ttu-id="2326f-142">Se um rótulo não tiver um nome, será atribuído um nome gerado automaticamente, como `#Label1` ou `#Label2`.</span><span class="sxs-lookup"><span data-stu-id="2326f-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cdf3d-143">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cdf3d-143">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2326f-143">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2326f-143">Examples</span></span>
 
 - `Expression`
 
@@ -174,7 +174,7 @@ ms.locfileid: "57364717"
     Expression.Label(target, Expression.Constant(-1)))
     ```
 
-    <span data-ttu-id="cdf3d-144">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-144">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-144">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-144">`DebugView` property</span></span>
 
     `.Block() {`
 
@@ -196,7 +196,7 @@ ms.locfileid: "57364717"
     Expression.Goto(target), Expression.Label(target))
     ```
 
-    <span data-ttu-id="cdf3d-145">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-145">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-145">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-145">`DebugView` property</span></span>
 
     `.Block() {`
 
@@ -208,11 +208,11 @@ ms.locfileid: "57364717"
 
     `}`
 
-## <a name="checked-operators"></a><span data-ttu-id="cdf3d-146">Operadores verificados</span><span class="sxs-lookup"><span data-stu-id="cdf3d-146">Checked Operators</span></span>
+## <a name="checked-operators"></a><span data-ttu-id="2326f-146">Operadores verificados</span><span class="sxs-lookup"><span data-stu-id="2326f-146">Checked Operators</span></span>
 
-<span data-ttu-id="cdf3d-147">Os operadores verificados são exibidos com o símbolo "#" na frente do operador.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-147">Checked operators are displayed with the "#" symbol in front of the operator.</span></span> <span data-ttu-id="cdf3d-148">Por exemplo, o operador de adição verificado é exibido como `#+`.</span><span class="sxs-lookup"><span data-stu-id="cdf3d-148">For example, the checked addition operator is displayed as `#+`.</span></span>
+<span data-ttu-id="2326f-147">Os operadores verificados são exibidos com o símbolo "#" na frente do operador.</span><span class="sxs-lookup"><span data-stu-id="2326f-147">Checked operators are displayed with the "#" symbol in front of the operator.</span></span> <span data-ttu-id="2326f-148">Por exemplo, o operador de adição verificado é exibido como `#+`.</span><span class="sxs-lookup"><span data-stu-id="2326f-148">For example, the checked addition operator is displayed as `#+`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cdf3d-149">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cdf3d-149">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="2326f-149">Exemplos</span><span class="sxs-lookup"><span data-stu-id="2326f-149">Examples</span></span>
 
 - `Expression`
 
@@ -221,7 +221,7 @@ ms.locfileid: "57364717"
     Expression.Constant(1), Expression.Constant(2))
     ```
 
-    <span data-ttu-id="cdf3d-150">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-150">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-150">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-150">`DebugView` property</span></span>
 
     `1 #+ 2`
 
@@ -232,12 +232,12 @@ ms.locfileid: "57364717"
     Expression.Constant(10.0), GetType(Integer))
     ```
 
-    <span data-ttu-id="cdf3d-151">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="cdf3d-151">`DebugView` property</span></span>
+    <span data-ttu-id="2326f-151">Propriedade `DebugView`</span><span class="sxs-lookup"><span data-stu-id="2326f-151">`DebugView` property</span></span>
 
     `#(System.Int32)10D`
 
-## <a name="see-also"></a><span data-ttu-id="cdf3d-152">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cdf3d-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2326f-152">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2326f-152">See also</span></span>
 
-- [<span data-ttu-id="cdf3d-153">Árvores de expressão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cdf3d-153">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [<span data-ttu-id="cdf3d-154">Depurando no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cdf3d-154">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)
-- [<span data-ttu-id="cdf3d-155">Criar visualizadores personalizados</span><span class="sxs-lookup"><span data-stu-id="cdf3d-155">Create Custom Visualizers</span></span>](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [<span data-ttu-id="2326f-153">Árvores de expressão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2326f-153">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [<span data-ttu-id="2326f-154">Depurando no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2326f-154">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)
+- [<span data-ttu-id="2326f-155">Criar visualizadores personalizados</span><span class="sxs-lookup"><span data-stu-id="2326f-155">Create Custom Visualizers</span></span>](/visualstudio/debugger/create-custom-visualizers-of-data)

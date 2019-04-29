@@ -15,79 +15,79 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
 ms.openlocfilehash: 54de9c91d4e166b8ca1733952dfa9c98ebf11ffe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778483"
 ---
-# <a name="-operator-visual-basic"></a><span data-ttu-id="78981-102">Operador ^ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78981-102">^ Operator (Visual Basic)</span></span>
+# <a name="-operator-visual-basic"></a><span data-ttu-id="451ae-102">Operador ^ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="451ae-102">^ Operator (Visual Basic)</span></span>
 
-<span data-ttu-id="78981-103">Eleva um número à potência de outro número.</span><span class="sxs-lookup"><span data-stu-id="78981-103">Raises a number to the power of another number.</span></span>
+<span data-ttu-id="451ae-103">Eleva um número à potência de outro número.</span><span class="sxs-lookup"><span data-stu-id="451ae-103">Raises a number to the power of another number.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="78981-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="78981-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="451ae-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="451ae-104">Syntax</span></span>
 
 ```
 number ^ exponent
 ```
 
-## <a name="parts"></a><span data-ttu-id="78981-105">Partes</span><span class="sxs-lookup"><span data-stu-id="78981-105">Parts</span></span>
+## <a name="parts"></a><span data-ttu-id="451ae-105">Partes</span><span class="sxs-lookup"><span data-stu-id="451ae-105">Parts</span></span>
 
 `number`\
-<span data-ttu-id="78981-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="78981-106">Required.</span></span> <span data-ttu-id="78981-107">Qualquer expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="78981-107">Any numeric expression.</span></span>
+<span data-ttu-id="451ae-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="451ae-106">Required.</span></span> <span data-ttu-id="451ae-107">Qualquer expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="451ae-107">Any numeric expression.</span></span>
 
 `exponent`\
-<span data-ttu-id="78981-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="78981-108">Required.</span></span> <span data-ttu-id="78981-109">Qualquer expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="78981-109">Any numeric expression.</span></span>
+<span data-ttu-id="451ae-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="451ae-108">Required.</span></span> <span data-ttu-id="451ae-109">Qualquer expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="451ae-109">Any numeric expression.</span></span>
 
-## <a name="result"></a><span data-ttu-id="78981-110">Resultado</span><span class="sxs-lookup"><span data-stu-id="78981-110">Result</span></span>
+## <a name="result"></a><span data-ttu-id="451ae-110">Resultado</span><span class="sxs-lookup"><span data-stu-id="451ae-110">Result</span></span>
 
-<span data-ttu-id="78981-111">O resultado será `number` elevado à potência de `exponent`, sempre como um `Double` valor.</span><span class="sxs-lookup"><span data-stu-id="78981-111">The result is `number` raised to the power of `exponent`, always as a `Double` value.</span></span>
+<span data-ttu-id="451ae-111">O resultado será `number` elevado à potência de `exponent`, sempre como um `Double` valor.</span><span class="sxs-lookup"><span data-stu-id="451ae-111">The result is `number` raised to the power of `exponent`, always as a `Double` value.</span></span>
 
-## <a name="supported-types"></a><span data-ttu-id="78981-112">Tipos com suporte</span><span class="sxs-lookup"><span data-stu-id="78981-112">Supported Types</span></span>
+## <a name="supported-types"></a><span data-ttu-id="451ae-112">Tipos com suporte</span><span class="sxs-lookup"><span data-stu-id="451ae-112">Supported Types</span></span>
 
-<span data-ttu-id="78981-113">`Double`.</span><span class="sxs-lookup"><span data-stu-id="78981-113">`Double`.</span></span> <span data-ttu-id="78981-114">Operandos de qualquer outro tipo são convertidos em `Double`.</span><span class="sxs-lookup"><span data-stu-id="78981-114">Operands of any different type are converted to `Double`.</span></span>
+<span data-ttu-id="451ae-113">`Double`.</span><span class="sxs-lookup"><span data-stu-id="451ae-113">`Double`.</span></span> <span data-ttu-id="451ae-114">Operandos de qualquer outro tipo são convertidos em `Double`.</span><span class="sxs-lookup"><span data-stu-id="451ae-114">Operands of any different type are converted to `Double`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="78981-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="78981-115">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="451ae-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="451ae-115">Remarks</span></span>
 
-<span data-ttu-id="78981-116">Visual Basic sempre executa exponenciação na [tipo de dados Double](../../../visual-basic/language-reference/data-types/double-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="78981-116">Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).</span></span>
+<span data-ttu-id="451ae-116">Visual Basic sempre executa exponenciação na [tipo de dados Double](../../../visual-basic/language-reference/data-types/double-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="451ae-116">Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).</span></span>
 
-<span data-ttu-id="78981-117">O valor de `exponent` pode ser fracionário, negativo, ou ambos.</span><span class="sxs-lookup"><span data-stu-id="78981-117">The value of `exponent` can be fractional, negative, or both.</span></span>
+<span data-ttu-id="451ae-117">O valor de `exponent` pode ser fracionário, negativo, ou ambos.</span><span class="sxs-lookup"><span data-stu-id="451ae-117">The value of `exponent` can be fractional, negative, or both.</span></span>
 
-<span data-ttu-id="78981-118">Quando mais de um expoente é executada em uma única expressão, o `^` operador é avaliado como ele é encontrado da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="78981-118">When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.</span></span>
+<span data-ttu-id="451ae-118">Quando mais de um expoente é executada em uma única expressão, o `^` operador é avaliado como ele é encontrado da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="451ae-118">When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="78981-119">O `^` operador pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo de classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="78981-119">The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="78981-120">Se seu código usa esse operador em uma classe ou estrutura, certifique-se de que você entende seu comportamento redefinido.</span><span class="sxs-lookup"><span data-stu-id="78981-120">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="78981-121">Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="78981-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>
+> <span data-ttu-id="451ae-119">O `^` operador pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo de classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="451ae-119">The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="451ae-120">Se seu código usa esse operador em uma classe ou estrutura, certifique-se de que você entende seu comportamento redefinido.</span><span class="sxs-lookup"><span data-stu-id="451ae-120">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="451ae-121">Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="451ae-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="78981-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="78981-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="451ae-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="451ae-122">Example</span></span>
 
-<span data-ttu-id="78981-123">O exemplo a seguir usa o `^` operador para elevar um número à potência de um expoente.</span><span class="sxs-lookup"><span data-stu-id="78981-123">The following example uses the `^` operator to raise a number to the power of an exponent.</span></span> <span data-ttu-id="78981-124">O resultado é o primeiro operando elevado à potência do segundo.</span><span class="sxs-lookup"><span data-stu-id="78981-124">The result is the first operand raised to the power of the second.</span></span>
+<span data-ttu-id="451ae-123">O exemplo a seguir usa o `^` operador para elevar um número à potência de um expoente.</span><span class="sxs-lookup"><span data-stu-id="451ae-123">The following example uses the `^` operator to raise a number to the power of an exponent.</span></span> <span data-ttu-id="451ae-124">O resultado é o primeiro operando elevado à potência do segundo.</span><span class="sxs-lookup"><span data-stu-id="451ae-124">The result is the first operand raised to the power of the second.</span></span>
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-<span data-ttu-id="78981-125">O exemplo anterior produz os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="78981-125">The preceding example produces the following results:</span></span>
+<span data-ttu-id="451ae-125">O exemplo anterior produz os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="451ae-125">The preceding example produces the following results:</span></span>
 
-<span data-ttu-id="78981-126">`exp1` é definido como 4 (2 ao quadrado).</span><span class="sxs-lookup"><span data-stu-id="78981-126">`exp1` is set to 4 (2 squared).</span></span>
+<span data-ttu-id="451ae-126">`exp1` é definido como 4 (2 ao quadrado).</span><span class="sxs-lookup"><span data-stu-id="451ae-126">`exp1` is set to 4 (2 squared).</span></span>
 
-<span data-ttu-id="78981-127">`exp2` é definido como 19683 (3 ao cubo, em seguida, esse valor ao cubo).</span><span class="sxs-lookup"><span data-stu-id="78981-127">`exp2` is set to 19683 (3 cubed, then that value cubed).</span></span>
+<span data-ttu-id="451ae-127">`exp2` é definido como 19683 (3 ao cubo, em seguida, esse valor ao cubo).</span><span class="sxs-lookup"><span data-stu-id="451ae-127">`exp2` is set to 19683 (3 cubed, then that value cubed).</span></span>
 
-<span data-ttu-id="78981-128">`exp3` é definido como -125 (-5 cúbico).</span><span class="sxs-lookup"><span data-stu-id="78981-128">`exp3` is set to -125 (-5 cubed).</span></span>
+<span data-ttu-id="451ae-128">`exp3` é definido como -125 (-5 cúbico).</span><span class="sxs-lookup"><span data-stu-id="451ae-128">`exp3` is set to -125 (-5 cubed).</span></span>
 
-<span data-ttu-id="78981-129">`exp4` é definido como 625 (-5 à quarta potência).</span><span class="sxs-lookup"><span data-stu-id="78981-129">`exp4` is set to 625 (-5 to the fourth power).</span></span>
+<span data-ttu-id="451ae-129">`exp4` é definido como 625 (-5 à quarta potência).</span><span class="sxs-lookup"><span data-stu-id="451ae-129">`exp4` is set to 625 (-5 to the fourth power).</span></span>
 
-<span data-ttu-id="78981-130">`exp5` é definido como 2 (raiz cúbica de 8).</span><span class="sxs-lookup"><span data-stu-id="78981-130">`exp5` is set to 2 (cube root of 8).</span></span>
+<span data-ttu-id="451ae-130">`exp5` é definido como 2 (raiz cúbica de 8).</span><span class="sxs-lookup"><span data-stu-id="451ae-130">`exp5` is set to 2 (cube root of 8).</span></span>
 
-<span data-ttu-id="78981-131">`exp6` é definido como 0,5 (1.0 dividido pela raiz cúbica de 8).</span><span class="sxs-lookup"><span data-stu-id="78981-131">`exp6` is set to 0.5 (1.0 divided by the cube root of 8).</span></span>
+<span data-ttu-id="451ae-131">`exp6` é definido como 0,5 (1.0 dividido pela raiz cúbica de 8).</span><span class="sxs-lookup"><span data-stu-id="451ae-131">`exp6` is set to 0.5 (1.0 divided by the cube root of 8).</span></span>
 
-<span data-ttu-id="78981-132">Observe a importância dos parênteses nas expressões no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="78981-132">Note the importance of the parentheses in the expressions in the preceding example.</span></span> <span data-ttu-id="78981-133">Por causa da *precedência do operador*, Visual Basic normalmente executa o `^` operador antes de qualquer outro, até mesmo o operador unário `–` operador.</span><span class="sxs-lookup"><span data-stu-id="78981-133">Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator.</span></span> <span data-ttu-id="78981-134">Se `exp4` e `exp6` tinha sido calculada sem parênteses, deve ter produzido os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="78981-134">If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:</span></span>
+<span data-ttu-id="451ae-132">Observe a importância dos parênteses nas expressões no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="451ae-132">Note the importance of the parentheses in the expressions in the preceding example.</span></span> <span data-ttu-id="451ae-133">Por causa da *precedência do operador*, Visual Basic normalmente executa o `^` operador antes de qualquer outro, até mesmo o operador unário `–` operador.</span><span class="sxs-lookup"><span data-stu-id="451ae-133">Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator.</span></span> <span data-ttu-id="451ae-134">Se `exp4` e `exp6` tinha sido calculada sem parênteses, deve ter produzido os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="451ae-134">If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:</span></span>
 
-<span data-ttu-id="78981-135">`exp4 = -5 ^ 4` será calculado como – (5 à quarta potência), que resultaria em-625.</span><span class="sxs-lookup"><span data-stu-id="78981-135">`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.</span></span>
+<span data-ttu-id="451ae-135">`exp4 = -5 ^ 4` será calculado como – (5 à quarta potência), que resultaria em-625.</span><span class="sxs-lookup"><span data-stu-id="451ae-135">`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.</span></span>
 
-<span data-ttu-id="78981-136">`exp6 = 8 ^ -1.0 / 3.0` será calculado como (8 para a potência de-1 ou 0,125) dividido por 3.0, o que resultaria em 0.041666666666666666666666666666667.</span><span class="sxs-lookup"><span data-stu-id="78981-136">`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.</span></span>
+<span data-ttu-id="451ae-136">`exp6 = 8 ^ -1.0 / 3.0` será calculado como (8 para a potência de-1 ou 0,125) dividido por 3.0, o que resultaria em 0.041666666666666666666666666666667.</span><span class="sxs-lookup"><span data-stu-id="451ae-136">`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="78981-137">Consulte também</span><span class="sxs-lookup"><span data-stu-id="78981-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="451ae-137">Consulte também</span><span class="sxs-lookup"><span data-stu-id="451ae-137">See also</span></span>
 
-- [<span data-ttu-id="78981-138">Operador ^=</span><span class="sxs-lookup"><span data-stu-id="78981-138">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
-- [<span data-ttu-id="78981-139">Operadores Aritméticos</span><span class="sxs-lookup"><span data-stu-id="78981-139">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="78981-140">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78981-140">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="78981-141">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="78981-141">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="78981-142">Operadores aritméticos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78981-142">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="451ae-138">Operador ^=</span><span class="sxs-lookup"><span data-stu-id="451ae-138">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
+- [<span data-ttu-id="451ae-139">Operadores Aritméticos</span><span class="sxs-lookup"><span data-stu-id="451ae-139">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="451ae-140">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="451ae-140">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="451ae-141">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="451ae-141">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="451ae-142">Operadores aritméticos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="451ae-142">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -14,40 +14,40 @@ helpviewer_keywords:
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
 ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783924"
 ---
-# <a name="rem-statement-visual-basic"></a><span data-ttu-id="4a6d5-102">Instrução REM (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4a6d5-102">REM Statement (Visual Basic)</span></span>
-<span data-ttu-id="4a6d5-103">Usado para incluir comentários explicativos no código-fonte de um programa.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-103">Used to include explanatory remarks in the source code of a program.</span></span>  
+# <a name="rem-statement-visual-basic"></a><span data-ttu-id="23997-102">Instrução REM (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="23997-102">REM Statement (Visual Basic)</span></span>
+<span data-ttu-id="23997-103">Usado para incluir comentários explicativos no código-fonte de um programa.</span><span class="sxs-lookup"><span data-stu-id="23997-103">Used to include explanatory remarks in the source code of a program.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a6d5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4a6d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23997-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="23997-104">Syntax</span></span>  
   
 ```  
 REM comment  
 ' comment  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="4a6d5-105">Partes</span><span class="sxs-lookup"><span data-stu-id="4a6d5-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="23997-105">Partes</span><span class="sxs-lookup"><span data-stu-id="23997-105">Parts</span></span>  
  `comment`  
- <span data-ttu-id="4a6d5-106">Opcional.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-106">Optional.</span></span> <span data-ttu-id="4a6d5-107">O texto de qualquer comentário que você deseja incluir.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-107">The text of any comment you want to include.</span></span> <span data-ttu-id="4a6d5-108">Um espaço é necessário entre o `REM` palavra-chave e `comment`.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-108">A space is required between the `REM` keyword and `comment`.</span></span>  
+ <span data-ttu-id="23997-106">Opcional.</span><span class="sxs-lookup"><span data-stu-id="23997-106">Optional.</span></span> <span data-ttu-id="23997-107">O texto de qualquer comentário que você deseja incluir.</span><span class="sxs-lookup"><span data-stu-id="23997-107">The text of any comment you want to include.</span></span> <span data-ttu-id="23997-108">Um espaço é necessário entre o `REM` palavra-chave e `comment`.</span><span class="sxs-lookup"><span data-stu-id="23997-108">A space is required between the `REM` keyword and `comment`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4a6d5-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="4a6d5-109">Remarks</span></span>  
- <span data-ttu-id="4a6d5-110">Você pode colocar um `REM` instrução sozinha em uma linha, ou você pode colocá-lo em uma linha após outra instrução.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-110">You can put a `REM` statement alone on a line, or you can put it on a line following another statement.</span></span> <span data-ttu-id="4a6d5-111">O `REM` instrução deve ser a última instrução na linha.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-111">The `REM` statement must be the last statement on the line.</span></span> <span data-ttu-id="4a6d5-112">Se ela segue outra instrução, o `REM` deve ser separada dessa instrução por um espaço.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-112">If it follows another statement, the `REM` must be separated from that statement by a space.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23997-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="23997-109">Remarks</span></span>  
+ <span data-ttu-id="23997-110">Você pode colocar um `REM` instrução sozinha em uma linha, ou você pode colocá-lo em uma linha após outra instrução.</span><span class="sxs-lookup"><span data-stu-id="23997-110">You can put a `REM` statement alone on a line, or you can put it on a line following another statement.</span></span> <span data-ttu-id="23997-111">O `REM` instrução deve ser a última instrução na linha.</span><span class="sxs-lookup"><span data-stu-id="23997-111">The `REM` statement must be the last statement on the line.</span></span> <span data-ttu-id="23997-112">Se ela segue outra instrução, o `REM` deve ser separada dessa instrução por um espaço.</span><span class="sxs-lookup"><span data-stu-id="23997-112">If it follows another statement, the `REM` must be separated from that statement by a space.</span></span>  
   
- <span data-ttu-id="4a6d5-113">Você pode usar aspas simples (`'`) em vez de `REM`.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-113">You can use a single quotation mark (`'`) instead of `REM`.</span></span> <span data-ttu-id="4a6d5-114">Isso é verdadeiro se o seu comentário segue outra instrução na mesma linha ou fica sozinho em uma linha.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-114">This is true whether your comment follows another statement on the same line or sits alone on a line.</span></span>  
+ <span data-ttu-id="23997-113">Você pode usar aspas simples (`'`) em vez de `REM`.</span><span class="sxs-lookup"><span data-stu-id="23997-113">You can use a single quotation mark (`'`) instead of `REM`.</span></span> <span data-ttu-id="23997-114">Isso é verdadeiro se o seu comentário segue outra instrução na mesma linha ou fica sozinho em uma linha.</span><span class="sxs-lookup"><span data-stu-id="23997-114">This is true whether your comment follows another statement on the same line or sits alone on a line.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4a6d5-115">Você não pode continuar uma `REM` instrução usando uma sequência de continuação de linha (`_`).</span><span class="sxs-lookup"><span data-stu-id="4a6d5-115">You cannot continue a `REM` statement by using a line-continuation sequence (`_`).</span></span> <span data-ttu-id="4a6d5-116">Quando um comentário é iniciado, o compilador não examina os caracteres para um significado especial.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-116">Once a comment begins, the compiler does not examine the characters for special meaning.</span></span> <span data-ttu-id="4a6d5-117">Para um comentário de várias linhas, use outra `REM` instrução ou um símbolo de comentário (`'`) em cada linha.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-117">For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.</span></span>  
+>  <span data-ttu-id="23997-115">Você não pode continuar uma `REM` instrução usando uma sequência de continuação de linha (`_`).</span><span class="sxs-lookup"><span data-stu-id="23997-115">You cannot continue a `REM` statement by using a line-continuation sequence (`_`).</span></span> <span data-ttu-id="23997-116">Quando um comentário é iniciado, o compilador não examina os caracteres para um significado especial.</span><span class="sxs-lookup"><span data-stu-id="23997-116">Once a comment begins, the compiler does not examine the characters for special meaning.</span></span> <span data-ttu-id="23997-117">Para um comentário de várias linhas, use outra `REM` instrução ou um símbolo de comentário (`'`) em cada linha.</span><span class="sxs-lookup"><span data-stu-id="23997-117">For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4a6d5-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4a6d5-118">Example</span></span>  
- <span data-ttu-id="4a6d5-119">O exemplo a seguir ilustra o `REM` instrução, que é usada para incluir comentários explicativos em um programa.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-119">The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program.</span></span> <span data-ttu-id="4a6d5-120">Ele também mostra a alternativa de usar o caractere de aspa simples (`'`) em vez de `REM`.</span><span class="sxs-lookup"><span data-stu-id="4a6d5-120">It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.</span></span>  
+## <a name="example"></a><span data-ttu-id="23997-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="23997-118">Example</span></span>  
+ <span data-ttu-id="23997-119">O exemplo a seguir ilustra o `REM` instrução, que é usada para incluir comentários explicativos em um programa.</span><span class="sxs-lookup"><span data-stu-id="23997-119">The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program.</span></span> <span data-ttu-id="23997-120">Ele também mostra a alternativa de usar o caractere de aspa simples (`'`) em vez de `REM`.</span><span class="sxs-lookup"><span data-stu-id="23997-120">It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.</span></span>  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="4a6d5-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4a6d5-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23997-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23997-121">See also</span></span>
 
-- [<span data-ttu-id="4a6d5-122">Comentários no Código</span><span class="sxs-lookup"><span data-stu-id="4a6d5-122">Comments in Code</span></span>](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
-- [<span data-ttu-id="4a6d5-123">Como: quebrar e combinar instruções no código</span><span class="sxs-lookup"><span data-stu-id="4a6d5-123">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [<span data-ttu-id="23997-122">Comentários no Código</span><span class="sxs-lookup"><span data-stu-id="23997-122">Comments in Code</span></span>](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+- [<span data-ttu-id="23997-123">Como: quebrar e combinar instruções no código</span><span class="sxs-lookup"><span data-stu-id="23997-123">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 99aea385cf5e3c8bcf7cf39b7cc5618f99f8a631
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777579"
 ---
-# <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="40f2b-102">Método IMetaDataImport::GetPinvokeMap</span><span class="sxs-lookup"><span data-stu-id="40f2b-102">IMetaDataImport::GetPinvokeMap Method</span></span>
-<span data-ttu-id="40f2b-103">Obtém um ModuleRef token para representar o assembly de destino de uma chamada de PInvoke.</span><span class="sxs-lookup"><span data-stu-id="40f2b-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  
+# <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="76dab-102">Método IMetaDataImport::GetPinvokeMap</span><span class="sxs-lookup"><span data-stu-id="76dab-102">IMetaDataImport::GetPinvokeMap Method</span></span>
+<span data-ttu-id="76dab-103">Obtém um ModuleRef token para representar o assembly de destino de uma chamada de PInvoke.</span><span class="sxs-lookup"><span data-stu-id="76dab-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40f2b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="40f2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76dab-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="76dab-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPinvokeMap (  
@@ -40,35 +40,35 @@ HRESULT GetPinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40f2b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="40f2b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="76dab-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="76dab-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="40f2b-106">[in] Um token para obter os metadados de mapeamento de PInvoke para FieldDef ou MethodDef.</span><span class="sxs-lookup"><span data-stu-id="40f2b-106">[in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.</span></span>  
+ <span data-ttu-id="76dab-106">[in] Um token para obter os metadados de mapeamento de PInvoke para FieldDef ou MethodDef.</span><span class="sxs-lookup"><span data-stu-id="76dab-106">[in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.</span></span>  
   
  `pdwMappingFlags`  
- <span data-ttu-id="40f2b-107">[out] Um ponteiro para os sinalizadores usados para mapeamento.</span><span class="sxs-lookup"><span data-stu-id="40f2b-107">[out] A pointer to flags used for mapping.</span></span> <span data-ttu-id="40f2b-108">Esse valor é um bitmask do [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="40f2b-108">This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="76dab-107">[out] Um ponteiro para os sinalizadores usados para mapeamento.</span><span class="sxs-lookup"><span data-stu-id="76dab-107">[out] A pointer to flags used for mapping.</span></span> <span data-ttu-id="76dab-108">Esse valor é um bitmask do [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeração.</span><span class="sxs-lookup"><span data-stu-id="76dab-108">This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="40f2b-109">[out] O nome da DLL de destino não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="40f2b-109">[out] The name of the unmanaged target DLL.</span></span>  
+ <span data-ttu-id="76dab-109">[out] O nome da DLL de destino não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="76dab-109">[out] The name of the unmanaged target DLL.</span></span>  
   
  `cchImportName`  
- <span data-ttu-id="40f2b-110">[in] O tamanho em caracteres largos da `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="40f2b-110">[in] The size in wide characters of `szImportName`.</span></span>  
+ <span data-ttu-id="76dab-110">[in] O tamanho em caracteres largos da `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="76dab-110">[in] The size in wide characters of `szImportName`.</span></span>  
   
  `pchImportName`  
- <span data-ttu-id="40f2b-111">[out] O número de caracteres largos retornado no `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="40f2b-111">[out] The number of wide characters returned in `szImportName`.</span></span>  
+ <span data-ttu-id="76dab-111">[out] O número de caracteres largos retornado no `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="76dab-111">[out] The number of wide characters returned in `szImportName`.</span></span>  
   
  `pmrImportDLL`  
- <span data-ttu-id="40f2b-112">[out] Um ponteiro para um token de ModuleRef que representa a biblioteca de objeto de destino não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="40f2b-112">[out] A pointer to a ModuleRef token that represents the unmanaged target object library.</span></span>  
+ <span data-ttu-id="76dab-112">[out] Um ponteiro para um token de ModuleRef que representa a biblioteca de objeto de destino não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="76dab-112">[out] A pointer to a ModuleRef token that represents the unmanaged target object library.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40f2b-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="40f2b-113">Requirements</span></span>  
- <span data-ttu-id="40f2b-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40f2b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76dab-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="76dab-113">Requirements</span></span>  
+ <span data-ttu-id="76dab-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76dab-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40f2b-115">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="40f2b-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="76dab-115">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="76dab-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="40f2b-116">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="40f2b-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="76dab-116">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="76dab-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="40f2b-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40f2b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="76dab-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76dab-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40f2b-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40f2b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76dab-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="76dab-118">See also</span></span>
 
-- [<span data-ttu-id="40f2b-119">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="40f2b-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="40f2b-120">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="40f2b-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="76dab-119">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="76dab-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="76dab-120">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="76dab-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

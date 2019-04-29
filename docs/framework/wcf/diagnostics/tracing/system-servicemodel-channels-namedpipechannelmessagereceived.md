@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.NamedPipeChannelMessageReceived
 ms.date: 03/30/2017
 ms.assetid: 060b0623-3c0f-4e08-a0d1-2369c35d2c5c
 ms.openlocfilehash: 124e59937a67df05697f950a0014ec9cd68cd803
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779686"
 ---
-# <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="6cb21-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="6cb21-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
-<span data-ttu-id="6cb21-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="6cb21-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  
+# <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="abb00-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="abb00-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
+<span data-ttu-id="abb00-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="abb00-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6cb21-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="6cb21-104">Description</span></span>  
- <span data-ttu-id="6cb21-105">Mensagem recebida por um canal de pipe nomeado.</span><span class="sxs-lookup"><span data-stu-id="6cb21-105">Received a message over a named pipe channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="abb00-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="abb00-104">Description</span></span>  
+ <span data-ttu-id="abb00-105">Mensagem recebida por um canal de pipe nomeado.</span><span class="sxs-lookup"><span data-stu-id="abb00-105">Received a message over a named pipe channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6cb21-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6cb21-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abb00-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="abb00-106">See also</span></span>
 
-- [<span data-ttu-id="6cb21-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="6cb21-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="6cb21-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="6cb21-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="6cb21-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="6cb21-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="abb00-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="abb00-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="abb00-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="abb00-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="abb00-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="abb00-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

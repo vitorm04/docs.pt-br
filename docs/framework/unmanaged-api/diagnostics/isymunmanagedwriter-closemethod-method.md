@@ -18,28 +18,28 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 591279a80b7d6a770127fb98eb71c056c48bdffd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934141"
 ---
-# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="61d8c-102">Método ISymUnmanagedWriter::CloseMethod</span><span class="sxs-lookup"><span data-stu-id="61d8c-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
-<span data-ttu-id="61d8c-103">Fecha o método atual.</span><span class="sxs-lookup"><span data-stu-id="61d8c-103">Closes the current method.</span></span> <span data-ttu-id="61d8c-104">Quando um método é fechado, nenhuma mais símbolos podem ser definidos dentro dele.</span><span class="sxs-lookup"><span data-stu-id="61d8c-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
+# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="efeee-102">Método ISymUnmanagedWriter::CloseMethod</span><span class="sxs-lookup"><span data-stu-id="efeee-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
+<span data-ttu-id="efeee-103">Fecha o método atual.</span><span class="sxs-lookup"><span data-stu-id="efeee-103">Closes the current method.</span></span> <span data-ttu-id="efeee-104">Quando um método é fechado, nenhuma mais símbolos podem ser definidos dentro dele.</span><span class="sxs-lookup"><span data-stu-id="efeee-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61d8c-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="61d8c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efeee-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="efeee-105">Syntax</span></span>  
   
 ```  
 HRESULT CloseMethod();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="61d8c-106">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="61d8c-106">Return Value</span></span>  
- <span data-ttu-id="61d8c-107">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="61d8c-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="efeee-106">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="efeee-106">Return Value</span></span>  
+ <span data-ttu-id="efeee-107">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="efeee-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61d8c-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="61d8c-108">Requirements</span></span>  
- <span data-ttu-id="61d8c-109">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="61d8c-109">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efeee-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="efeee-108">Requirements</span></span>  
+ <span data-ttu-id="efeee-109">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="efeee-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61d8c-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="61d8c-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efeee-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="efeee-110">See also</span></span>
 
-- [<span data-ttu-id="61d8c-111">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="61d8c-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="61d8c-112">Método OpenMethod</span><span class="sxs-lookup"><span data-stu-id="61d8c-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [<span data-ttu-id="efeee-111">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="efeee-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="efeee-112">Método OpenMethod</span><span class="sxs-lookup"><span data-stu-id="efeee-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

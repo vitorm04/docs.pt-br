@@ -1,5 +1,5 @@
 ---
-title: 'Como: Gravar configurações do usuário em tempo de execução comC#'
+title: 'Como: gravar configurações do usuário em tempo de execução com C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], run time
@@ -7,34 +7,34 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 9d061c7d-b33b-470f-a36d-edccb1d6f9a3
 ms.openlocfilehash: 264fa9706f9255d7324cad6d02c36cc424e28995
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778827"
 ---
-# <a name="how-to-write-user-settings-at-run-time-with-c"></a><span data-ttu-id="c9efa-102">Como: Gravar configurações do usuário em tempo de execução c\#</span><span class="sxs-lookup"><span data-stu-id="c9efa-102">How To: Write User Settings at Run Time with C\#</span></span>
+# <a name="how-to-write-user-settings-at-run-time-with-c"></a><span data-ttu-id="55e68-102">Como: Gravar configurações do usuário em tempo de execução c\#</span><span class="sxs-lookup"><span data-stu-id="55e68-102">How To: Write User Settings at Run Time with C\#</span></span>
 
-<span data-ttu-id="c9efa-103">As configurações que estão no escopo do aplicativo são somente leitura e só podem ser alteradas em tempo de design ou alterando o arquivo. config entre sessões do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c9efa-103">Settings that are application-scoped are read-only, and can only be changed at design time or by altering the .config file in between application sessions.</span></span> <span data-ttu-id="c9efa-104">Configurações que estão no escopo do usuário, no entanto, podem ser gravadas em tempo de execução assim como você alteraria qualquer valor de propriedade.</span><span class="sxs-lookup"><span data-stu-id="c9efa-104">Settings that are user-scoped, however, can be written at run time just as you would change any property value.</span></span> <span data-ttu-id="c9efa-105">O novo valor será mantido enquanto durar a sessão do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c9efa-105">The new value persists for the duration of the application session.</span></span> <span data-ttu-id="c9efa-106">Você pode persistir as alterações das configurações entre sessões do aplicativo chamando o método Save.</span><span class="sxs-lookup"><span data-stu-id="c9efa-106">You can persist the changes to the settings between application sessions by calling the Save method.</span></span>  
+<span data-ttu-id="55e68-103">As configurações que estão no escopo do aplicativo são somente leitura e só podem ser alteradas em tempo de design ou alterando o arquivo. config entre sessões do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="55e68-103">Settings that are application-scoped are read-only, and can only be changed at design time or by altering the .config file in between application sessions.</span></span> <span data-ttu-id="55e68-104">Configurações que estão no escopo do usuário, no entanto, podem ser gravadas em tempo de execução assim como você alteraria qualquer valor de propriedade.</span><span class="sxs-lookup"><span data-stu-id="55e68-104">Settings that are user-scoped, however, can be written at run time just as you would change any property value.</span></span> <span data-ttu-id="55e68-105">O novo valor será mantido enquanto durar a sessão do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="55e68-105">The new value persists for the duration of the application session.</span></span> <span data-ttu-id="55e68-106">Você pode persistir as alterações das configurações entre sessões do aplicativo chamando o método Save.</span><span class="sxs-lookup"><span data-stu-id="55e68-106">You can persist the changes to the settings between application sessions by calling the Save method.</span></span>  
   
-## <a name="how-to-write-and-persist-user-settings-at-run-time-with-c"></a><span data-ttu-id="c9efa-107">Como: Gravar e manter as configurações do usuário em tempo de execução c\#</span><span class="sxs-lookup"><span data-stu-id="c9efa-107">How To: Write and Persist User Settings at Run Time with C\#</span></span>
+## <a name="how-to-write-and-persist-user-settings-at-run-time-with-c"></a><span data-ttu-id="55e68-107">Como: Gravar e manter as configurações do usuário em tempo de execução c\#</span><span class="sxs-lookup"><span data-stu-id="55e68-107">How To: Write and Persist User Settings at Run Time with C\#</span></span>
   
-1. <span data-ttu-id="c9efa-108">Acesse a configuração e atribuir um novo valor conforme mostrado neste exemplo:</span><span class="sxs-lookup"><span data-stu-id="c9efa-108">Access the setting and assign it a new value as shown in this example:</span></span>  
+1. <span data-ttu-id="55e68-108">Acesse a configuração e atribuir um novo valor conforme mostrado neste exemplo:</span><span class="sxs-lookup"><span data-stu-id="55e68-108">Access the setting and assign it a new value as shown in this example:</span></span>  
   
    ```csharp
    Properties.Settings.Default.myColor = Color.AliceBlue;  
    ```  
   
-2. <span data-ttu-id="c9efa-109">Se você quiser manter as alterações das configurações entre sessões do aplicativo, chame o método Save conforme mostrado neste exemplo:</span><span class="sxs-lookup"><span data-stu-id="c9efa-109">If you want to persist the changes to the settings between application sessions, call the Save method as shown in this example:</span></span>  
+2. <span data-ttu-id="55e68-109">Se você quiser manter as alterações das configurações entre sessões do aplicativo, chame o método Save conforme mostrado neste exemplo:</span><span class="sxs-lookup"><span data-stu-id="55e68-109">If you want to persist the changes to the settings between application sessions, call the Save method as shown in this example:</span></span>  
   
     ```csharp
     Properties.Settings.Default.Save();  
     ```  
   
-<span data-ttu-id="c9efa-110">Configurações de usuário são salvas em um arquivo em uma subpasta da pasta de dados do aplicativo oculto local do usuário.</span><span class="sxs-lookup"><span data-stu-id="c9efa-110">User settings are saved in a file within a subfolder of the user’s local hidden application data folder.</span></span>  
+<span data-ttu-id="55e68-110">Configurações de usuário são salvas em um arquivo em uma subpasta da pasta de dados do aplicativo oculto local do usuário.</span><span class="sxs-lookup"><span data-stu-id="55e68-110">User settings are saved in a file within a subfolder of the user’s local hidden application data folder.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9efa-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9efa-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55e68-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="55e68-111">See also</span></span>
 
-- [<span data-ttu-id="c9efa-112">Usando configurações do aplicativo e configurações do usuário</span><span class="sxs-lookup"><span data-stu-id="c9efa-112">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
-- [<span data-ttu-id="c9efa-113">Como: Ler configurações em tempo de execução comC#</span><span class="sxs-lookup"><span data-stu-id="c9efa-113">How To: Read Settings at Run Time With C#</span></span>](how-to-read-settings-at-run-time-with-csharp.md)
-- [<span data-ttu-id="c9efa-114">Visão Geral das Configurações do Aplicativo</span><span class="sxs-lookup"><span data-stu-id="c9efa-114">Application Settings Overview</span></span>](application-settings-overview.md)
+- [<span data-ttu-id="55e68-112">Usando configurações do aplicativo e configurações do usuário</span><span class="sxs-lookup"><span data-stu-id="55e68-112">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
+- [<span data-ttu-id="55e68-113">Como: Ler configurações em tempo de execução comC#</span><span class="sxs-lookup"><span data-stu-id="55e68-113">How To: Read Settings at Run Time With C#</span></span>](how-to-read-settings-at-run-time-with-csharp.md)
+- [<span data-ttu-id="55e68-114">Visão Geral das Configurações do Aplicativo</span><span class="sxs-lookup"><span data-stu-id="55e68-114">Application Settings Overview</span></span>](application-settings-overview.md)

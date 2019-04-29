@@ -8,17 +8,17 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
 ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771066"
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="aacb0-102">Visões gerais de tinta digital</span><span class="sxs-lookup"><span data-stu-id="aacb0-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="aacb0-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="aacb0-103">In This Section</span></span>  
- [<span data-ttu-id="aacb0-104">Introdução à tinta</span><span class="sxs-lookup"><span data-stu-id="aacb0-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
-  [<span data-ttu-id="aacb0-105">Coletando tinta</span><span class="sxs-lookup"><span data-stu-id="aacb0-105">Collecting Ink</span></span>](collecting-ink.md)  
-  [<span data-ttu-id="aacb0-106">Reconhecimento de manuscrito</span><span class="sxs-lookup"><span data-stu-id="aacb0-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
-  [<span data-ttu-id="aacb0-107">Armazenando a tinta</span><span class="sxs-lookup"><span data-stu-id="aacb0-107">Storing Ink</span></span>](storing-ink.md)  
-  [<span data-ttu-id="aacb0-108">O modelo de objeto Ink: Windows Forms e COM versus WPF</span><span class="sxs-lookup"><span data-stu-id="aacb0-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="aacb0-109">Tratamento avançado de tinta</span><span class="sxs-lookup"><span data-stu-id="aacb0-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="73ca0-102">Visões gerais de tinta digital</span><span class="sxs-lookup"><span data-stu-id="73ca0-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="73ca0-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="73ca0-103">In This Section</span></span>  
+ [<span data-ttu-id="73ca0-104">Introdução à tinta</span><span class="sxs-lookup"><span data-stu-id="73ca0-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
+  [<span data-ttu-id="73ca0-105">Coletando tinta</span><span class="sxs-lookup"><span data-stu-id="73ca0-105">Collecting Ink</span></span>](collecting-ink.md)  
+  [<span data-ttu-id="73ca0-106">Reconhecimento de manuscrito</span><span class="sxs-lookup"><span data-stu-id="73ca0-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
+  [<span data-ttu-id="73ca0-107">Armazenando a tinta</span><span class="sxs-lookup"><span data-stu-id="73ca0-107">Storing Ink</span></span>](storing-ink.md)  
+  [<span data-ttu-id="73ca0-108">O modelo de objeto Ink: Windows Forms e COM versus WPF</span><span class="sxs-lookup"><span data-stu-id="73ca0-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="73ca0-109">Tratamento avançado de tinta</span><span class="sxs-lookup"><span data-stu-id="73ca0-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)
