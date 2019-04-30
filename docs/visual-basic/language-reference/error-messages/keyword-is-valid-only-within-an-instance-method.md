@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946634"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<palavra-chave >' é válido somente dentro de um método de instância
 O `Me`, `MyClass`, e `MyBase` palavras-chave se referem a instâncias de classe específica. Você não pode usá-los dentro de um compartilhamento `Function` ou `Sub` procedimento.  
@@ -21,7 +21,7 @@ O `Me`, `MyClass`, e `MyBase` palavras-chave se referem a instâncias de classe 
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova a palavra-chave do procedimento, ou remova o `Shared` palavra-chave da declaração de procedimento.  
+- Remova a palavra-chave do procedimento, ou remova o `Shared` palavra-chave da declaração de procedimento.  
   
 ## <a name="see-also"></a>Consulte também
 

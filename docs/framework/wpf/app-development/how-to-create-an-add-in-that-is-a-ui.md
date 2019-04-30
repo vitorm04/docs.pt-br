@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947882"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Como: Criar um suplemento que seja uma interface do usuário
 Este exemplo mostra como criar um suplemento que é um Windows Presentation Foundation (WPF) que é hospedado por um aplicativo autônomo do WPF.  
@@ -25,9 +25,9 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
   
  Este exemplo realça as extensões WPF para o modelo de suplemento do .NET Framework que habilitar esse cenário e pressupõe o seguinte:  
   
--   Conhecimento do .NET Framework suplemento do modelo, incluindo o pipeline, suplemento e desenvolvimento de host. Se você estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstra a implementação de um pipeline, um suplemento e um aplicativo host, consulte [passo a passo: Criando um aplicativo extensível](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Conhecimento do .NET Framework suplemento do modelo, incluindo o pipeline, suplemento e desenvolvimento de host. Se você estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstra a implementação de um pipeline, um suplemento e um aplicativo host, consulte [passo a passo: Criando um aplicativo extensível](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Conhecimento das extensões do WPF para o modelo de suplemento do .NET Framework. Ver [visão geral dos suplementos do WPF](wpf-add-ins-overview.md).  
+- Conhecimento das extensões do WPF para o modelo de suplemento do .NET Framework. Ver [visão geral dos suplementos do WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Exemplo  
  Para criar um suplemento é uma UI do WPF requer código específico para cada segmento de pipeline, o suplemento e o aplicativo host.  
@@ -87,9 +87,9 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
   
  O código para processar interações com o suplemento da interface do usuário é executado no domínio de aplicativo do suplemento. Essas ações incluem o seguinte:  
   
--   Manipulando o <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+- Manipulando o <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
--   Mostrando o <xref:System.Windows.MessageBox>.  
+- Mostrando o <xref:System.Windows.MessageBox>.  
   
  Esta atividade é completamente isolada do aplicativo host.  
   

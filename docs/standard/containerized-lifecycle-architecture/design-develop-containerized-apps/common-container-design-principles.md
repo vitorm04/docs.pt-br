@@ -1,17 +1,17 @@
 ---
-title: Princípios de design comuns do contêiner
+title: Noções básicas de criação de contêiner comum
 description: Aprenda a um princípio fundamental do design de contêiner BOM, é que um contêiner deve hospedar apenas um processo.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 206963d63cf8e6ab4fc61b9176f1ba095868c6fc
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969111"
 ---
-# <a name="common-container-design-principles"></a>Princípios de design comuns do contêiner
+# <a name="common-container-design-principles"></a>Noções básicas de criação de contêiner comum
 
 Em frente de Introdução ao processo de desenvolvimento, há alguns conceitos básicos, vale a pena mencionar em relação a como você pode usar contêineres.
 

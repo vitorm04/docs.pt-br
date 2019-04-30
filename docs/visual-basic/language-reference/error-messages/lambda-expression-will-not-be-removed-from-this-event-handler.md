@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946621"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>A expressão lambda não será removida deste manipulador de eventos
 Expressão lambda não será removida deste manipulador de eventos. Atribuir a expressão lambda a uma variável e use a variável para adicionar e remover o evento.  
@@ -60,7 +60,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Para evitar o aviso e remova a expressão lambda, atribuir a expressão lambda a uma variável e use a variável em ambos os `AddHandler` e `RemoveHandler` instruções, conforme mostrado no exemplo a seguir.  
+- Para evitar o aviso e remova a expressão lambda, atribuir a expressão lambda a uma variável e use a variável em ambos os `AddHandler` e `RemoveHandler` instruções, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Module Module1  

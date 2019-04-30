@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945074"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
 Especifica os atributos a ser aplicado a um elemento de programação declarado. Vários atributos são separados por vírgulas. Esta é a sintaxe para um atributo.  
@@ -36,15 +36,15 @@ Especifica os atributos a ser aplicado a um elemento de programação declarado.
   
 ## <a name="rules"></a>Regras  
   
--   **Posicionamento.** Você pode aplicar atributos para elementos de programação declarados mais. Para aplicar um ou mais atributos, você coloca um *bloco de atributo* no início da declaração do elemento. Cada entrada na lista de atributos especifica um atributo que você deseja aplicar, e o modificador e os argumentos que você está usando para essa invocação do atributo.  
+- **Posicionamento.** Você pode aplicar atributos para elementos de programação declarados mais. Para aplicar um ou mais atributos, você coloca um *bloco de atributo* no início da declaração do elemento. Cada entrada na lista de atributos especifica um atributo que você deseja aplicar, e o modificador e os argumentos que você está usando para essa invocação do atributo.  
   
--   **Colchetes angulares.** Se você fornecer uma lista de atributos, você deve colocá-lo entre colchetes ("`<`"e"`>`").  
+- **Colchetes angulares.** Se você fornecer uma lista de atributos, você deve colocá-lo entre colchetes ("`<`"e"`>`").  
   
--   **Parte da declaração.** O atributo deve ser parte da declaração do elemento, não uma instrução separada. Você pode usar a sequência de continuação de linha (" `_`") para estender a instrução de declaração em várias linhas de código-fonte.  
+- **Parte da declaração.** O atributo deve ser parte da declaração do elemento, não uma instrução separada. Você pode usar a sequência de continuação de linha (" `_`") para estender a instrução de declaração em várias linhas de código-fonte.  
   
--   **Modificadores.** Um modificador de atributo (`Assembly` ou `Module`) é necessário em cada atributo aplicado a um elemento de programação no início de um arquivo de origem. Modificadores de atributo não são permitidos em atributos aplicados aos elementos que não estão no início de um arquivo de origem.  
+- **Modificadores.** Um modificador de atributo (`Assembly` ou `Module`) é necessário em cada atributo aplicado a um elemento de programação no início de um arquivo de origem. Modificadores de atributo não são permitidos em atributos aplicados aos elementos que não estão no início de um arquivo de origem.  
   
--   **Argumentos.** Todos os argumentos posicionais para um atributo devem preceder qualquer variável ou inicializadores de propriedade.  
+- **Argumentos.** Todos os argumentos posicionais para um atributo devem preceder qualquer variável ou inicializadores de propriedade.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir aplica-se a <xref:System.Runtime.InteropServices.DllImportAttribute> atributo a uma definição de esqueleto de um `Function` procedimento.  

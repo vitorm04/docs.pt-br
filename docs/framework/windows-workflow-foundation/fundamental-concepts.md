@@ -3,11 +3,11 @@ title: Conceitos fundamentais de fluxo de trabalho do Windows
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945659"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Conceitos fundamentais de fluxo de trabalho do Windows
 Desenvolvimento de fluxo de trabalho nos conceitos dos usos de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que podem ser novos a alguns desenvolvedores. Este tópico descreve alguns dos conceitos e como eles são implementados.  
@@ -27,27 +27,27 @@ Desenvolvimento de fluxo de trabalho nos conceitos dos usos de [!INCLUDE[netfx_c
 ## <a name="workflow-runtime"></a>Tempo de Execução do Fluxo de Trabalho  
  O tempo de execução de fluxo de trabalho é o ambiente no qual os fluxos de trabalho são executadas. <xref:System.Activities.WorkflowInvoker> é a maneira mais simples para executar um fluxo de trabalho. O host usa <xref:System.Activities.WorkflowInvoker> para o seguinte:  
   
--   Para chamar sincronamente um fluxo de trabalho.  
+- Para chamar sincronamente um fluxo de trabalho.  
   
--   Para fornecer a entrada, ou recupere saída de um fluxo de trabalho.  
+- Para fornecer a entrada, ou recupere saída de um fluxo de trabalho.  
   
--   Para adicionar as extensões a ser usadas por atividades.  
+- Para adicionar as extensões a ser usadas por atividades.  
   
  <xref:System.Activities.ActivityInstance> é o proxy thread-safe que hospeda pode usar para interagir com o tempo de execução. O host usa <xref:System.Activities.ActivityInstance> para o seguinte:  
   
--   Para obter uma instância ou criando o carregar o de um armazenamento de instância.  
+- Para obter uma instância ou criando o carregar o de um armazenamento de instância.  
   
--   Para ser notificado de eventos de ciclo de vida da instância.  
+- Para ser notificado de eventos de ciclo de vida da instância.  
   
--   Para controlar a execução de fluxo de trabalho.  
+- Para controlar a execução de fluxo de trabalho.  
   
--   Para fornecer a entrada, ou recupere saída de um fluxo de trabalho.  
+- Para fornecer a entrada, ou recupere saída de um fluxo de trabalho.  
   
--   Para sinalizar uma continuação de fluxo de trabalho e passar valores no fluxo de trabalho.  
+- Para sinalizar uma continuação de fluxo de trabalho e passar valores no fluxo de trabalho.  
   
--   Para persistir dados de fluxo de trabalho.  
+- Para persistir dados de fluxo de trabalho.  
   
--   Para adicionar as extensões a ser usadas por atividades.  
+- Para adicionar as extensões a ser usadas por atividades.  
   
  As atividades acedem para o ambiente de tempo de execução de fluxo de trabalho usando a classe derivada apropriada de <xref:System.Activities.ActivityContext> , como <xref:System.Activities.NativeActivityContext> ou <xref:System.Activities.CodeActivityContext>. Usam essa resolvendo argumentos e variáveis, agendando atividades filhos, e muitas outras para fins.  
   
@@ -57,10 +57,10 @@ Desenvolvimento de fluxo de trabalho nos conceitos dos usos de [!INCLUDE[netfx_c
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistência, descarga, e fluxos de trabalho longos  
  O fluxo de trabalho do Windows simplifica a criação de programas reativos longos fornecendo:  
   
--   Atividades que acessam a entrada externo.  
+- Atividades que acessam a entrada externo.  
   
--   A capacidade de criar os objetos de <xref:System.Activities.Bookmark> que podem ser continuados por um ouvinte host.  
+- A capacidade de criar os objetos de <xref:System.Activities.Bookmark> que podem ser continuados por um ouvinte host.  
   
--   A capacidade de persistir os dados de um fluxo de trabalho e de descarregar o fluxo de trabalho, e recarregar e reativar no fluxo de trabalho em resposta a ressunção de objetos <xref:System.Activities.Bookmark> em um fluxo de trabalho específico.  
+- A capacidade de persistir os dados de um fluxo de trabalho e de descarregar o fluxo de trabalho, e recarregar e reativar no fluxo de trabalho em resposta a ressunção de objetos <xref:System.Activities.Bookmark> em um fluxo de trabalho específico.  
   
  Um fluxo de trabalho executar continuamente atividades até que não haja mais atividade a executar ou até que todas as atividades atualmente em execução esperem entrada. Nesse último estado, o fluxo de trabalho estiver ocioso. É comum para um host descarregar fluxos de trabalho que tenham a ociosa ida e para os recarregar para continuar a execução quando uma mensagem chega. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornece a funcionalidade para este recurso e fornece um extensível descarrega a política. Para os blocos de execução que usam os dados voláteis de estado ou outros dados que não podem ser mantidos, uma atividade pode indicar a um host que não deve ser mantidas usando <xref:System.Activities.NoPersistHandle>. Um fluxo de trabalho também pode explicitamente persistir os dados a um meio de armazenamento durável usando a atividade de <xref:System.Activities.Statements.Persist> .

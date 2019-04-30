@@ -3,11 +3,11 @@ title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964483"
 ---
 # <a name="transfer"></a>Transferir
 Este tópico descreve a transferência no modelo de rastreamento de atividade do Windows Communication Foundation (WCF).  
@@ -35,9 +35,9 @@ Este tópico descreve a transferência no modelo de rastreamento de atividade do
 ## <a name="example-of-transfers"></a>Exemplo de transferências  
  Listas de dois exemplos a seguir transferência.  
   
--   Quando você cria um host de serviço, o construtor assume o controle do código de chamada ou transfere o código de chamada para o construtor. Quando o construtor finalizou a execução, ele retorna o controle para o código de chamada ou o construtor transfere para o código de chamada. Esse é o caso de uma relação aninhada.  
+- Quando você cria um host de serviço, o construtor assume o controle do código de chamada ou transfere o código de chamada para o construtor. Quando o construtor finalizou a execução, ele retorna o controle para o código de chamada ou o construtor transfere para o código de chamada. Esse é o caso de uma relação aninhada.  
   
--   Quando um ouvinte começa a processar dados de transporte, ele cria um novo thread e passa para a atividade receber Bytes o contexto apropriado para processamento, passando o controle e dados. Quando esse thread terminou de processar a solicitação, a atividade receber Bytes passa nada volta para o ouvinte. Nesse caso, temos uma transferência em mas nenhuma transferência de fora da nova atividade de thread. As duas atividades estão relacionadas, mas não aninhadas.  
+- Quando um ouvinte começa a processar dados de transporte, ele cria um novo thread e passa para a atividade receber Bytes o contexto apropriado para processamento, passando o controle e dados. Quando esse thread terminou de processar a solicitação, a atividade receber Bytes passa nada volta para o ouvinte. Nesse caso, temos uma transferência em mas nenhuma transferência de fora da nova atividade de thread. As duas atividades estão relacionadas, mas não aninhadas.  
   
 ## <a name="activity-transfer-sequence"></a>Sequência de transferência de atividade  
  Uma sequência de transferência bem formado de atividade inclui as seguintes etapas.  

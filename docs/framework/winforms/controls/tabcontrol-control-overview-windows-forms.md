@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971932"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Visão geral do controle TabControl (Windows Forms)
 Os formulários do Windows <xref:System.Windows.Forms.TabControl> exibe várias guias, como divisores em um bloco de anotações ou rótulos em um conjunto de pastas em um gabinete de arquivamento. As guias podem conter imagens e outros controles. Você pode usar o controle de guia para produzir o tipo de várias páginas da caixa de diálogo que aparece muitos lugares no sistema operacional Windows, como as propriedades de exibição de painel de controle. Além disso, o <xref:System.Windows.Forms.TabControl> pode ser usado para criar páginas de propriedade, que são usadas para definir um grupo de propriedades relacionadas.  

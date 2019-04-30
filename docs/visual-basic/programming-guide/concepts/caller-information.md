@@ -3,11 +3,11 @@ title: Informações do chamador (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
 ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951938"
 ---
 # <a name="caller-information-visual-basic"></a>Informações do chamador (Visual Basic)
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.  
@@ -58,9 +58,9 @@ End Sub
 ### <a name="MEMBERNAMES"></a> Nomes dos membros  
  Você pode usar o atributo `CallerMemberName` para evitar especificar o nome do membro como um argumento `String` ao método chamado. Ao usar essa técnica, você evita o problema de que a **Refatoração de Renomeação** não altera os valores de `String`. Esse benefício é especialmente útil para as seguintes tarefas:  
   
--   Usar rotinas de rastreamento e diagnóstico.  
+- Usar rotinas de rastreamento e diagnóstico.  
   
--   Implementando a interface <xref:System.ComponentModel.INotifyPropertyChanged> ao associar dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o atributo `CallerMemberName`, você deve especificar o nome da propriedade como um literal.  
+- Implementando a interface <xref:System.ComponentModel.INotifyPropertyChanged> ao associar dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o atributo `CallerMemberName`, você deve especificar o nome da propriedade como um literal.  
   
  O gráfico a seguir mostra os nomes de membros que são retornados quando você usa o atributo `CallerMemberName`.  
   

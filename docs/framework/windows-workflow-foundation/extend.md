@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
 ms.openlocfilehash: 8449c1f229ffb993036dbb909d6f4c98c47498af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945685"
 ---
 # <a name="extending-windows-workflow-foundation"></a>Estendendo Windows Workflow Foundation
 A seção a seguir descreve como estender o Windows Workflow Foundation (WF) com as atividades personalizados e designers em ambientes rehosted fora do Visual Studio 2010.

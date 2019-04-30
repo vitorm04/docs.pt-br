@@ -3,11 +3,11 @@ title: 3829 - RoutingServiceFilterTableMatchStop
 ms.date: 03/30/2017
 ms.assetid: 3355b8c2-2d5b-4c1b-8981-0cda08dee519
 ms.openlocfilehash: e7a7273e3975681bb30209415e68a8c1e84272b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33466607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945997"
 ---
 # <a name="3829---routingservicefiltertablematchstop"></a>3829 - RoutingServiceFilterTableMatchStop
 ## <a name="properties"></a>Propriedades  
@@ -23,6 +23,6 @@ ms.locfileid: "33466607"
  Esse evento é emitido quando a correspondência de MessageFilterTable do serviço de roteamento foi interrompido.  
   
 ## <a name="message"></a>Mensagem  
- Parada de correspondência de MessageFilterTable do serviço de roteamento.  
+ Parar de correspondência MessageFilterTable do serviço de roteamento.  
   
 ## <a name="details"></a>Detalhes

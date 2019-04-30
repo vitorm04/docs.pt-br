@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
 ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962429"
 ---
 # <a name="element-tree-and-serialization"></a>Árvore de elementos e serialização
 Elementos de programação do WPF geralmente existe em alguma forma de relação de árvore entre si. Por exemplo, um aplicativo de que interface do usuário criada em XAML pode ser conceitualizado como uma árvore de objetos. A árvore de elementos pode ser dividida em duas árvores discretos ainda, às vezes, paralelas: a árvore lógica e a árvore visual. Serialização no WPF envolve salvar o estado dessas duas árvores, bem como o estado do aplicativo e gravá-los em um arquivo, potencialmente, como XAML.  

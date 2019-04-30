@@ -1,5 +1,5 @@
 ---
-title: Nomes dos Assemblies e DLLs
+title: Nomes de Assemblies e DLLs
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: KrzysztofCwalina
 ms.openlocfilehash: 1aeef9e1be6e5fe747f440a8cb7f21095cb22f49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945490"
 ---
-# <a name="names-of-assemblies-and-dlls"></a>Nomes dos Assemblies e DLLs
+# <a name="names-of-assemblies-and-dlls"></a>Nomes de Assemblies e DLLs
 Um assembly é a unidade de implantação e identidade para programas de código gerenciado. Embora os assemblies podem abranger um ou mais arquivos, normalmente um assembly mapeia um para um com uma DLL. Portanto, esta seção descreve somente DLL convenções de nomenclatura, que, em seguida, podem ser mapeadas para as convenções de nomenclatura do assembly.  
   
  **✓ DO** Escolha nomes do seu conjunto de DLLs que sugerem grandes blocos de funcionalidade, como System. Data.  

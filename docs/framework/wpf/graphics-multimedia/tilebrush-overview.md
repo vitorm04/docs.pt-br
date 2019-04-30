@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973704"
 ---
 # <a name="tilebrush-overview"></a>Visão geral de TileBrush
 <xref:System.Windows.Media.TileBrush> objetos oferecem uma grande quantidade de controle sobre como uma área é pintada com uma imagem <xref:System.Windows.Media.Drawing>, ou <xref:System.Windows.Media.Visual>. Este tópico descreve como usar <xref:System.Windows.Media.TileBrush> recursos para obter mais controle sobre como uma <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> pinta uma área.  
@@ -40,11 +40,11 @@ Componentes de um TileBrush com um TileMode de bloco
 ## <a name="brush-content"></a>Conteúdo do pincel  
  Há três tipos diferentes de <xref:System.Windows.Media.TileBrush> e cada um pinta com um tipo diferente de conteúdo.  
   
--   Se o pincel for um <xref:System.Windows.Media.ImageBrush>, esse conteúdo é uma imagem do <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propriedade especifica os conteúdos do <xref:System.Windows.Media.ImageBrush>.  
+- Se o pincel for um <xref:System.Windows.Media.ImageBrush>, esse conteúdo é uma imagem do <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propriedade especifica os conteúdos do <xref:System.Windows.Media.ImageBrush>.  
   
--   Se o pincel for um <xref:System.Windows.Media.DrawingBrush>, esse conteúdo é um desenho. O <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propriedade especifica os conteúdos do <xref:System.Windows.Media.DrawingBrush>.  
+- Se o pincel for um <xref:System.Windows.Media.DrawingBrush>, esse conteúdo é um desenho. O <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propriedade especifica os conteúdos do <xref:System.Windows.Media.DrawingBrush>.  
   
--   Se o pincel for um <xref:System.Windows.Media.VisualBrush>, esse conteúdo é um visual. O <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade especifica o conteúdo do <xref:System.Windows.Media.VisualBrush>.  
+- Se o pincel for um <xref:System.Windows.Media.VisualBrush>, esse conteúdo é um visual. O <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade especifica o conteúdo do <xref:System.Windows.Media.VisualBrush>.  
   
  Você pode especificar a posição e dimensões da <xref:System.Windows.Media.TileBrush> conteúdo usando o <xref:System.Windows.Media.TileBrush.Viewbox%2A> propriedade, embora seja comum deixar o <xref:System.Windows.Media.TileBrush.Viewbox%2A> definido como seu valor padrão. Por padrão, o <xref:System.Windows.Media.TileBrush.Viewbox%2A> está configurado para conter completamente o conteúdo do pincel. Para obter mais informações sobre como configurar o <xref:System.Windows.Controls.Viewbox>, consulte o <xref:System.Windows.Controls.Viewbox> página de propriedades.  
   
@@ -52,13 +52,13 @@ Componentes de um TileBrush com um TileMode de bloco
 ## <a name="the-base-tile"></a>O bloco de base  
  Um <xref:System.Windows.Media.TileBrush> projeta seu conteúdo em um bloco de base. O <xref:System.Windows.Media.TileBrush.Stretch%2A> controles de propriedade como <xref:System.Windows.Media.TileBrush> conteúdo é alongado para preencher o bloco de base. O <xref:System.Windows.Media.TileBrush.Stretch%2A> propriedade aceita os seguintes valores, definidos pela <xref:System.Windows.Media.Stretch> enumeração:  
   
--   <xref:System.Windows.Media.Stretch.None>: O conteúdo do pincel não é alongado para preencher o bloco.  
+- <xref:System.Windows.Media.Stretch.None>: O conteúdo do pincel não é alongado para preencher o bloco.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: O conteúdo do pincel é dimensionado para preencher o bloco. Como a altura e a largura do conteúdo são dimensionadas de forma independente, a taxa de proporção original do conteúdo pode não ser preservada. Ou seja, o conteúdo do pincel pode ser distorcido para preencher completamente o bloco de saída.  
+- <xref:System.Windows.Media.Stretch.Fill>: O conteúdo do pincel é dimensionado para preencher o bloco. Como a altura e a largura do conteúdo são dimensionadas de forma independente, a taxa de proporção original do conteúdo pode não ser preservada. Ou seja, o conteúdo do pincel pode ser distorcido para preencher completamente o bloco de saída.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: O conteúdo do pincel é dimensionado para que ele caiba completamente dentro do bloco. A taxa de proporção do conteúdo é preservada.  
+- <xref:System.Windows.Media.Stretch.Uniform>: O conteúdo do pincel é dimensionado para que ele caiba completamente dentro do bloco. A taxa de proporção do conteúdo é preservada.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: O conteúdo do pincel é dimensionado para que ele preencha completamente a área de saída enquanto preserva a taxa de proporção original do conteúdo.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: O conteúdo do pincel é dimensionado para que ele preencha completamente a área de saída enquanto preserva a taxa de proporção original do conteúdo.  
   
  A imagem a seguir ilustra as diferentes <xref:System.Windows.Media.TileBrush.Stretch%2A> configurações.  
   
@@ -99,15 +99,15 @@ Componentes de um TileBrush com um TileMode de bloco
 ### <a name="tiling-behavior"></a>Comportamento de agrupamento lado a lado  
  Um <xref:System.Windows.Media.TileBrush> produz um padrão lado a lado quando seu bloco base não preenche completamente a área de saída e um modo de preenchimento diferente <xref:System.Windows.Media.TileMode.None> for especificado. Quando bloco um bloco do pincel de não preenche completamente a área de saída, seus <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedade especifica se o bloco de base deve ser duplicado para preencher a área de saída e, em caso afirmativo, como o bloco de base deve ser duplicado. O <xref:System.Windows.Media.TileBrush.TileMode%2A> propriedade aceita os seguintes valores, definidos pela <xref:System.Windows.Media.TileMode> enumeração:  
   
--   <xref:System.Windows.Media.TileMode.None>: Somente o bloco de base é desenhado.  
+- <xref:System.Windows.Media.TileMode.None>: Somente o bloco de base é desenhado.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: O bloco de base é desenhado e a área restante é preenchida repetindo o bloco de base, de modo que a borda direita de um bloco é adjacente à borda esquerda do próximo e da mesma forma para a parte inferior e superior.  
+- <xref:System.Windows.Media.TileMode.Tile>: O bloco de base é desenhado e a área restante é preenchida repetindo o bloco de base, de modo que a borda direita de um bloco é adjacente à borda esquerda do próximo e da mesma forma para a parte inferior e superior.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: O mesmo que <xref:System.Windows.Media.TileMode.Tile>, mas colunas alternadas de blocos são invertidas horizontalmente.  
+- <xref:System.Windows.Media.TileMode.FlipX>: O mesmo que <xref:System.Windows.Media.TileMode.Tile>, mas colunas alternadas de blocos são invertidas horizontalmente.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: O mesmo que <xref:System.Windows.Media.TileMode.Tile>, mas linhas alternadas de blocos são invertidas verticalmente.  
+- <xref:System.Windows.Media.TileMode.FlipY>: O mesmo que <xref:System.Windows.Media.TileMode.Tile>, mas linhas alternadas de blocos são invertidas verticalmente.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Uma combinação de <xref:System.Windows.Media.TileMode.FlipX> e <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Uma combinação de <xref:System.Windows.Media.TileMode.FlipX> e <xref:System.Windows.Media.TileMode.FlipY>.  
   
  A imagem a seguir ilustra os modos diferentes de preenchimento lado a lado.  
   

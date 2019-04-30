@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944643"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Método ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Recupera um mapa de dicionário genérico.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  O mapa consiste em duas seções de nível superior:  
   
--   Um [directory](#Directory) que contém os endereços de virtuais relativos (RVA) de todos os dicionários incluídos neste mapa.  
+- Um [directory](#Directory) que contém os endereços de virtuais relativos (RVA) de todos os dicionários incluídos neste mapa.  
   
--   Um byte alinhado [heap](#Heap) que contém informações de instanciação do objeto. Ele começa imediatamente após a última entrada de diretório.  
+- Um byte alinhado [heap](#Heap) que contém informações de instanciação do objeto. Ele começa imediatamente após a última entrada de diretório.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>O diretório  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  A parte do diretório do mapa do dicionário genérico tem a seguinte estrutura:  
   
--   Os primeiros 4 bytes contém o número de entradas de dicionário (ou seja, o número de endereços virtuais no dicionário). Vamos nos referir a esse valor como *N*. Se o bit alto for definido, as entradas são classificadas pelo endereço virtual relativo em ordem crescente.  
+- Os primeiros 4 bytes contém o número de entradas de dicionário (ou seja, o número de endereços virtuais no dicionário). Vamos nos referir a esse valor como *N*. Se o bit alto for definido, as entradas são classificadas pelo endereço virtual relativo em ordem crescente.  
   
--   O *N* execute as entradas de diretório. Cada entrada consiste em 8 bytes, de dois segmentos de 4 bytes:  
+- O *N* execute as entradas de diretório. Cada entrada consiste em 8 bytes, de dois segmentos de 4 bytes:  
   
-    -   Bytes de 0 a 3: RVA; endereço virtual relativo do dicionário.  
+    - Bytes de 0 a 3: RVA; endereço virtual relativo do dicionário.  
   
-    -   Bytes de 4 a 7: Deslocamento; um deslocamento relativo para o início do heap.  
+    - Bytes de 4 a 7: Deslocamento; um deslocamento relativo para o início do heap.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>O Heap  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  O formato para cada item de informações de instanciação no heap é:  
   
--   O comprimento deste item de informações de instanciação em bytes, no formato compactado de metadados ECMA. O valor exclui essas informações de comprimento.  
+- O comprimento deste item de informações de instanciação em bytes, no formato compactado de metadados ECMA. O valor exclui essas informações de comprimento.  
   
--   O número de tipos de instanciação genérica, ou *T*, em formato compactado de metadados ECMA.  
+- O número de tipos de instanciação genérica, ou *T*, em formato compactado de metadados ECMA.  
   
--   *T* tipos, cada uma representada em formato de assinatura de tipo ECMA.  
+- *T* tipos, cada uma representada em formato de assinatura de tipo ECMA.  
   
  A inclusão do comprimento de cada elemento de heap ativa a classificação simples da seção de diretório sem afetar o heap.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945178"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membros da biblioteca em tempo de execução do Visual Basic
 O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e enumerações que constituem a biblioteca de tempo de execução do Visual Basic. Esses membros da biblioteca fornecem procedimentos, propriedades e valores constantes que você pode usar em seu código. Cada módulo e a classe representam uma categoria específica de funcionalidade.  

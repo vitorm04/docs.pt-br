@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
 ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960947"
 ---
 # <a name="about-gdi-managed-code"></a>Sobre código gerenciado no GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] é a parte do sistema operacional Windows que fornece gráficos vetoriais bidimensionais, imagens e tipografia. O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] melhora a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (a Graphics Device Interface incluída em versões anteriores do Windows) adicionando novos recursos e otimizando os recursos existentes.  

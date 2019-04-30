@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951704"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Diretrizes de codificação segura para código não gerenciado
 Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, APIs de código nativo, assim como Win32). Visto que isso significa que sair do perímetro de segurança para código gerenciado, o devido cuidado é necessário. Se seu código é neutro em termos de segurança, seu código e qualquer outro código que o chama devem ter permissão de código não gerenciado (<xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificado).  
@@ -25,9 +25,9 @@ Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, 
   
  Já que qualquer código gerenciado que fornece um caminho de código para código nativo é um destino potencial para código mal-intencionado, determinar qual código não gerenciado pode ser usado com segurança e como ele deve ser usado requer muito cuidado. Em geral, o código não gerenciado nunca deve ser diretamente exposto a chamadores parcialmente confiáveis. Há duas considerações principais ao avaliar a segurança do uso de código não gerenciado em bibliotecas que podem ser chamadas por código parcialmente confiável:  
   
--   **Funcionalidade**. A API não gerenciada fornece funcionalidade que não permite a chamadores executar operações potencialmente perigosas? A segurança de acesso ao código usa as permissões para impor o acesso aos recursos, portanto, considere se a API usa uma interface do usuário, arquivos ou threading ou se ela expõe informações protegidas. Em caso afirmativo, o código gerenciado que a encapsula deve exigir as permissões necessárias antes de permitir que ela seja inserida. Além disso, embora não protegido por uma permissão, o acesso à memória deve ser restrito à segurança de tipo estrito.  
+- **Funcionalidade**. A API não gerenciada fornece funcionalidade que não permite a chamadores executar operações potencialmente perigosas? A segurança de acesso ao código usa as permissões para impor o acesso aos recursos, portanto, considere se a API usa uma interface do usuário, arquivos ou threading ou se ela expõe informações protegidas. Em caso afirmativo, o código gerenciado que a encapsula deve exigir as permissões necessárias antes de permitir que ela seja inserida. Além disso, embora não protegido por uma permissão, o acesso à memória deve ser restrito à segurança de tipo estrito.  
   
--   **Verificação de parâmetros**. Um ataque comum passa parâmetros inesperados para métodos da API de código não gerenciado expostos em uma tentativa de fazer com que eles operem fora das especificações. Estouros de buffer usando um índice fora do intervalo ou valores de deslocamento são um exemplo comum desse tipo de ataque, assim como o são todos os parâmetros que podem explorar um bug no código subjacente. Portanto, mesmo que a API de código não gerenciado seja funcionalmente segura (após as demandas necessárias) para chamadores parcialmente confiáveis, o código gerenciado também deverá verificar a validade de parâmetros exaustivamente para garantir que nenhuma chamada indesejada seja possível por meio de um código mal-intencionado usando a camada de wrapper de código gerenciado.  
+- **Verificação de parâmetros**. Um ataque comum passa parâmetros inesperados para métodos da API de código não gerenciado expostos em uma tentativa de fazer com que eles operem fora das especificações. Estouros de buffer usando um índice fora do intervalo ou valores de deslocamento são um exemplo comum desse tipo de ataque, assim como o são todos os parâmetros que podem explorar um bug no código subjacente. Portanto, mesmo que a API de código não gerenciado seja funcionalmente segura (após as demandas necessárias) para chamadores parcialmente confiáveis, o código gerenciado também deverá verificar a validade de parâmetros exaustivamente para garantir que nenhuma chamada indesejada seja possível por meio de um código mal-intencionado usando a camada de wrapper de código gerenciado.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>Usando SuppressUnmanagedCodeSecurityAttribute  
  Há um aspecto do desempenho para declarar e, em seguida, chamar código não gerenciado. Para cada uma dessas chamadas, o sistema de segurança automaticamente exige permissão de código não gerenciado, resultando em uma movimentação da pilha a cada vez. Se você declara e imediatamente chama código não gerenciado, a movimentação da pilha pode ser insignificante: ele consiste em sua declaração e chamada de código não gerenciado.  
@@ -36,11 +36,11 @@ Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, 
   
  Se você usar o **SuppressUnmanagedCodeSecurityAttribute**, verifique os seguintes pontos:  
   
--   Verifique o ponto de entrada de código não gerenciado interno ou inacessível fora de seu código.  
+- Verifique o ponto de entrada de código não gerenciado interno ou inacessível fora de seu código.  
   
--   Qualquer chamada para código não gerenciado é uma potencial falha de segurança. Verifique se seu código não é um portal para que código malicioso chame indiretamente código não gerenciado e evite uma verificação de segurança. Solicitar permissões, se apropriado.  
+- Qualquer chamada para código não gerenciado é uma potencial falha de segurança. Verifique se seu código não é um portal para que código malicioso chame indiretamente código não gerenciado e evite uma verificação de segurança. Solicitar permissões, se apropriado.  
   
--   Use uma convenção de nomenclatura para identificar explicitamente quando você estiver criando um caminho perigoso em código não gerenciado, conforme descrito na seção abaixo.  
+- Use uma convenção de nomenclatura para identificar explicitamente quando você estiver criando um caminho perigoso em código não gerenciado, conforme descrito na seção abaixo.  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Convenção de nomenclatura para métodos de código não gerenciado  
  Foi estabelecida uma convenção útil e altamente recomendada para nomear os métodos de código não gerenciado. Todos os métodos de código não gerenciado são separados em três categorias: **seguro**, **nativo** e **não seguro**. Essas palavras-chave podem ser usadas como nomes de classe dentro dos quais os vários tipos de pontos de entrada de código não gerenciado são definidos. No código-fonte, essas palavras-chave devem ser adicionadas ao nome de classe, como em `Safe.GetTimeOfDay`, `Native.Xyz` ou `Unsafe.DangerousAPI`, por exemplo. Cada uma dessas palavras-chave fornece informações de segurança úteis para desenvolvedores que usam essa classe, conforme descrito na tabela a seguir.  

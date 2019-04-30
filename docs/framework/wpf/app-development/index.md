@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951587"
 ---
 # <a name="application-development"></a>Desenvolvimento do aplicativo
 <a name="introduction"></a> Windows Presentation Foundation (WPF) é uma estrutura de apresentação que pode ser usada para desenvolver os seguintes tipos de aplicativos:  
   
--   Aplicativos autônomos (aplicativos [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] de estilo tradicional criados como assemblies executáveis que são instalados e executados do computador cliente).  
+- Aplicativos autônomos (aplicativos [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] de estilo tradicional criados como assemblies executáveis que são instalados e executados do computador cliente).  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplicativos compostos de páginas de navegação que são criados como assemblies executáveis e hospedados por navegadores da Web, como o [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] ou o Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplicativos compostos de páginas de navegação que são criados como assemblies executáveis e hospedados por navegadores da Web, como o [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] ou o Mozilla Firefox).  
   
--   Bibliotecas de controles personalizados (assemblies não executáveis contendo controles reutilizáveis).  
+- Bibliotecas de controles personalizados (assemblies não executáveis contendo controles reutilizáveis).  
   
--   Bibliotecas de classes (assemblies não executáveis que contêm classes reutilizáveis).  
+- Bibliotecas de classes (assemblies não executáveis que contêm classes reutilizáveis).  
   
 > [!NOTE]
 >  Não é recomendável usar tipos do WPF em um serviço Windows. Se você tentar usar esses recursos em um serviço Windows, será possível que eles não funcionem conforme o esperado.  
@@ -32,21 +32,21 @@ ms.locfileid: "59211056"
 ## <a name="application-management"></a>Gerenciamento de aplicativos  
  Aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] executáveis frequentemente requerem um conjunto principal de funcionalidades que inclui o seguinte:  
   
--   Criar e gerenciar a infraestrutura de aplicativo comum (incluindo criar um método de ponto de entrada e um loop de mensagem do Windows para receber mensagens de entrada e do sistema).  
+- Criar e gerenciar a infraestrutura de aplicativo comum (incluindo criar um método de ponto de entrada e um loop de mensagem do Windows para receber mensagens de entrada e do sistema).  
   
--   Acompanhar o tempo de vida de um aplicativo e interagir com ele.  
+- Acompanhar o tempo de vida de um aplicativo e interagir com ele.  
   
--   Recuperar e processar parâmetros de linha de comando.  
+- Recuperar e processar parâmetros de linha de comando.  
   
--   Compartilhar recursos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e propriedades no escopo do aplicativo.  
+- Compartilhar recursos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e propriedades no escopo do aplicativo.  
   
--   Detectar e processar exceções sem tratamento.  
+- Detectar e processar exceções sem tratamento.  
   
--   Retornar códigos de saída.  
+- Retornar códigos de saída.  
   
--   Gerenciar janelas de aplicativos autônomas.  
+- Gerenciar janelas de aplicativos autônomas.  
   
--   Acompanhar a navegação em [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e aplicativos autônomos com quadros e janelas de navegação.  
+- Acompanhar a navegação em [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e aplicativos autônomos com quadros e janelas de navegação.  
   
  Esses recursos são implementados pela classe <xref:System.Windows.Application>, que você adiciona a seus aplicativos usando uma *definição de aplicativo*.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211056"
 ## <a name="windows-and-dialog-boxes"></a>Janelas e caixas de diálogo  
  Os usuários interagem com aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autônomos por meio de janelas. A finalidade de uma janela é hospedar conteúdo do aplicativo e expor a funcionalidade do aplicativo que normalmente permite aos usuários interagir com o conteúdo. No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], as janelas são encapsuladas pela classe <xref:System.Windows.Window>, que permite:  
   
--   Criar e exibir janelas.  
+- Criar e exibir janelas.  
   
--   Estabelecer relações de janela de proprietário/propriedade.  
+- Estabelecer relações de janela de proprietário/propriedade.  
   
--   Configurar a aparência da janela (por exemplo, tamanho, localização, ícones, texto da barra de título, borda).  
+- Configurar a aparência da janela (por exemplo, tamanho, localização, ícones, texto da barra de título, borda).  
   
--   Acompanhar o tempo de vida de uma janela e interagir com ele.  
+- Acompanhar o tempo de vida de uma janela e interagir com ele.  
   
  Para obter mais informações, consulte [Visão geral do WPF do Windows](wpf-windows-overview.md).  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211056"
 ## <a name="navigation"></a>Navegação  
  O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oferece suporte à navegação no estilo da Web por meio de páginas (<xref:System.Windows.Controls.Page>) e hiperlinks (<xref:System.Windows.Documents.Hyperlink>). A navegação pode ser implementada de uma variedade de formas, que incluem o seguinte:  
   
--   Páginas autônomas que são hospedadas em um navegador da Web.  
+- Páginas autônomas que são hospedadas em um navegador da Web.  
   
--   Páginas compiladas em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que é hospedado em um navegador da Web.  
+- Páginas compiladas em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que é hospedado em um navegador da Web.  
   
--   Páginas compiladas em um aplicativo autônomo e hospedadas por uma janela de navegação (<xref:System.Windows.Navigation.NavigationWindow>).  
+- Páginas compiladas em um aplicativo autônomo e hospedadas por uma janela de navegação (<xref:System.Windows.Navigation.NavigationWindow>).  
   
--   Páginas hospedadas por um quadro (<xref:System.Windows.Controls.Frame>), que pode ser hospedado em uma página autônoma, ou uma página compilada em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ou um aplicativo autônomo.  
+- Páginas hospedadas por um quadro (<xref:System.Windows.Controls.Frame>), que pode ser hospedado em uma página autônoma, ou uma página compilada em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ou um aplicativo autônomo.  
   
  Para facilitar a navegação, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa o seguinte:  
   
--   <xref:System.Windows.Navigation.NavigationService>, o mecanismo de navegação compartilhada para processar solicitações de navegação que é usado por <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para oferecer suporte à navegação intra-aplicativo.  
+- <xref:System.Windows.Navigation.NavigationService>, o mecanismo de navegação compartilhada para processar solicitações de navegação que é usado por <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para oferecer suporte à navegação intra-aplicativo.  
   
--   Métodos de navegação para iniciar a navegação.  
+- Métodos de navegação para iniciar a navegação.  
   
--   Eventos de navegação para monitorar e interagir com o tempo de vida de navegação.  
+- Eventos de navegação para monitorar e interagir com o tempo de vida de navegação.  
   
--   Lembrar-se da navegação progressiva e regressiva usando um diário, que também pode ser inspecionado e manipulado.  
+- Lembrar-se da navegação progressiva e regressiva usando um diário, que também pode ser inspecionado e manipulado.  
   
  Para obter informações, consulte [Visão geral de navegação](navigation-overview.md).  
   

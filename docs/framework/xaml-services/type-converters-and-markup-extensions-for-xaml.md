@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954252"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Conversores de tipo e extensões de marcação para XAML
 Conversores de tipo e extensões de marcação são duas técnicas que os sistemas de tipos XAML e gravadores XAML usam para gerar os componentes do grafo de objeto. Embora eles compartilham algumas características, conversores de tipo e extensões de marcação são representadas de forma diferente em um fluxo de nó XAML. Nesta documentação conjunto, conversores de tipo, extensões de marcação e construções semelhantes são, às vezes, coletivamente denominadas conversores de valor.  
@@ -22,13 +22,13 @@ Conversores de tipo e extensões de marcação são duas técnicas que os sistem
 ## <a name="value-converters"></a>Conversores de valor  
  No XAML, conversores de valor são usadas para vários cenários. A lista a seguir mostra os diferentes tipos de conversores de valor em XAML:  
   
--   Conversor de tipo  
+- Conversor de tipo  
   
--   Extensão de marcação  
+- Extensão de marcação  
   
--   Serializador de valor  
+- Serializador de valor  
   
--   Classe relacionada ou classe de suporte que fornece a lógica para uma sintaxe de texto XAML  
+- Classe relacionada ou classe de suporte que fornece a lógica para uma sintaxe de texto XAML  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Conversores de tipo  

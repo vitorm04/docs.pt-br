@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959972"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Declaração de variável do objeto (Visual Basic)
 Você pode usar uma instrução de declaração normal para declarar uma variável de objeto. Para o tipo de dados, você especificar `Object` (ou seja, o [tipo de dados de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md)) ou uma classe mais específica do qual o objeto deve ser criado.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Vantagens da associação inicial  
  Declarar uma variável de objeto como uma classe específica oferece várias vantagens:  
   
--   Verificação de tipo automática  
+- Verificação de tipo automática  
   
--   A garantia de acesso a todos os membros da classe específica  
+- A garantia de acesso a todos os membros da classe específica  
   
--   Suporte do Microsoft IntelliSense no Editor de códigos  
+- Suporte do Microsoft IntelliSense no Editor de códigos  
   
--   Melhor legibilidade do código  
+- Melhor legibilidade do código  
   
--   Menos erros em seu código  
+- Menos erros em seu código  
   
--   Os erros detectados em tempo de compilação, em vez de tempo de execução  
+- Os erros detectados em tempo de compilação, em vez de tempo de execução  
   
--   Execução de código mais rápida  
+- Execução de código mais rápida  
   
 ## <a name="access-to-object-variable-members"></a>Acesso a membros de variável de objeto  
  Quando `Option Strict` estiver desativado `On`, uma variável de objeto pode acessar somente os métodos e propriedades da classe com a qual você declará-la. O exemplo a seguir ilustra essa situação.  

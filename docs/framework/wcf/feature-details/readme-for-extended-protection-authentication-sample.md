@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946660"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>LeiaMe para exemplo de autenticação de proteção estendida
 Proteção estendida é uma iniciativa de segurança para proteger contra ataques (MITM) de man-in-the-middle, em que um invasor (o "man-in-the-middle") intercepta as credenciais de um cliente e os utiliza para acessar recursos protegidos no servidor pretendido do cliente.  
@@ -27,9 +27,9 @@ Proteção estendida é uma iniciativa de segurança para proteger contra ataque
   
 4. Este exemplo requer que o cliente estabelecer um canal seguro com o servidor e, assim, ele exige a presença de um certificado de servidor que pode ser instalado do Gerenciador de serviços de informações da Internet (IIS).  
   
-    1.  Abra o Gerenciador do IIS -> certificados de servidor (da guia de exibição de recurso).  
+    1. Abra o Gerenciador do IIS -> certificados de servidor (da guia de exibição de recurso).  
   
-    2.  Para fins de teste neste exemplo, você pode criar um certificado autoassinado. (Se você não quiser o Internet Explorer para avisá-lo sobre o certificado não ser seguro, você pode instalá-lo no repositório raiz confiável do certificado da autoridade).  
+    2. Para fins de teste neste exemplo, você pode criar um certificado autoassinado. (Se você não quiser o Internet Explorer para avisá-lo sobre o certificado não ser seguro, você pode instalá-lo no repositório raiz confiável do certificado da autoridade).  
   
 5. Vá para o painel de ações para o site da Web padrão. Clique em Editar Site -> associações. Adicione HTTPS como um tipo se ele não ainda estiver presente, com o número da porta 443 e atribuir o certificado SSL criado na etapa anterior.  
   

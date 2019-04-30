@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961354"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Como: Criar listas mestre e de detalhes com o controle DataGrid do Windows Forms usando o Designer
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332073"
   
 6. Configurar o <xref:System.Windows.Forms.DataGrid> controle que você deseja designar como a grade mestre da seguinte maneira:  
   
-    1.  Selecione o <xref:System.Data.DataSet> na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade.  
+    1. Selecione o <xref:System.Data.DataSet> na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade.  
   
-    2.  Selecione a tabela mestre (por exemplo, "clientes") na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade.  
+    2. Selecione a tabela mestre (por exemplo, "clientes") na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade.  
   
 7. Configurar o <xref:System.Windows.Forms.DataGrid> controle que você deseja designar como a grade de detalhes, da seguinte maneira:  
   
-    1.  Selecione o <xref:System.Data.DataSet> na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade.  
+    1. Selecione o <xref:System.Data.DataSet> na lista suspensa no <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade.  
   
-    2.  Selecione a relação (por exemplo, "custord") entre as tabelas mestre e de detalhes da lista suspensa no <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade. Para ver a relação, expanda o nó clicando no sinal de mais (**+**) ao lado da tabela mestre na lista suspensa.  
+    2. Selecione a relação (por exemplo, "custord") entre as tabelas mestre e de detalhes da lista suspensa no <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade. Para ver a relação, expanda o nó clicando no sinal de mais (**+**) ao lado da tabela mestre na lista suspensa.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
 ms.openlocfilehash: 9b6a6b572bafc3a13c5c15e29527644b1c1a16ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945854"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Modelo de dados do Windows Workflow Foundation
 O modelo de dados do Windows Foundation Workflow é composto de três conceitos: variáveis, argumentos e expressões. As variáveis representam o armazenamento de dados e os argumentos representam o fluxo de dados dentro e fora de uma atividade. Os argumentos são associados (atribuídos um valor) usando expressões que podem fazer referência a variáveis.  

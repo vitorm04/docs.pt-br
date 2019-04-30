@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949260"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de carregador
 <a name="top"></a> Esses eventos coletam informações relacionadas ao carregamento e descarregamento de domínios do aplicativo, assemblies e módulos.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141525"
   
  Eventos de carregador são subdivididos no seguintes:  
   
--   [Eventos de domínio do aplicativo](#application_domain_events)  
+- [Eventos de domínio do aplicativo](#application_domain_events)  
   
--   [Eventos de assembly do carregador CLR](#clr_loader_assembly_events)  
+- [Eventos de assembly do carregador CLR](#clr_loader_assembly_events)  
   
--   [Eventos de módulo](#module_events)  
+- [Eventos de módulo](#module_events)  
   
--   [Eventos de módulo de domínio CLR](#clr_domain_module_events)  
+- [Eventos de módulo de domínio CLR](#clr_domain_module_events)  
   
--   [Eventos de intervalo de módulo](#module_range_events)  
+- [Eventos de intervalo de módulo](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Eventos de domínio do aplicativo  
@@ -134,11 +134,11 @@ ms.locfileid: "59141525"
   
 ### <a name="remarks"></a>Comentários  
   
--   Os campos que têm "Pdb" em seus nomes podem ser usados por ferramentas de criação de perfil para localizar PDBs que correspondem os módulos que foram carregados durante a sessão de criação de perfil. Os valores desses campos correspondem aos dados gravados nas seções IMAGE_DIRECTORY_ENTRY_DEBUG do módulo normalmente usado por depuradores para ajudar a localizar PDBs que correspondem aos módulos carregados.  
+- Os campos que têm "Pdb" em seus nomes podem ser usados por ferramentas de criação de perfil para localizar PDBs que correspondem os módulos que foram carregados durante a sessão de criação de perfil. Os valores desses campos correspondem aos dados gravados nas seções IMAGE_DIRECTORY_ENTRY_DEBUG do módulo normalmente usado por depuradores para ajudar a localizar PDBs que correspondem aos módulos carregados.  
   
--   Os nomes de campo que começam com "ManagedPdb" referem-se ao PDB gerenciado correspondente ao módulo MSIL que foi gerado pelo compilador gerenciado (por exemplo, o compilador de C# ou de Visual Basic). Esse PDB usa o formato de PDB gerenciado e descreve como os elementos do código-fonte gerenciado original, tais como arquivos, números de linha e nomes de símbolo, são mapeados para elementos MSIL que são compilados no módulo MSIL.  
+- Os nomes de campo que começam com "ManagedPdb" referem-se ao PDB gerenciado correspondente ao módulo MSIL que foi gerado pelo compilador gerenciado (por exemplo, o compilador de C# ou de Visual Basic). Esse PDB usa o formato de PDB gerenciado e descreve como os elementos do código-fonte gerenciado original, tais como arquivos, números de linha e nomes de símbolo, são mapeados para elementos MSIL que são compilados no módulo MSIL.  
   
--   Os nomes de campo que começam com "NativePdb" se referem ao PDB NGen gerado chamando `NGEN createPDB`. Esse PDB usa o formato de PDB nativo e descreve como os elementos do código-fonte gerenciado original, tais como arquivos, números de linha e nomes de símbolo, são mapeados para elementos nativos que são compilados no módulo NGen.  
+- Os nomes de campo que começam com "NativePdb" se referem ao PDB NGen gerado chamando `NGEN createPDB`. Esse PDB usa o formato de PDB nativo e descreve como os elementos do código-fonte gerenciado original, tais como arquivos, números de linha e nomes de símbolo, são mapeados para elementos nativos que são compilados no módulo NGen.  
   
  [Voltar ao início](#top)  
   

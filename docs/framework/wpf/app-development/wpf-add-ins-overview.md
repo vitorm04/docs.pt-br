@@ -13,11 +13,11 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971308"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  
@@ -30,33 +30,33 @@ ms.locfileid: "59304799"
 ## <a name="add-ins-overview"></a>Visão geral dos suplementos  
  Para evitar as complexidades da recompilação do aplicativo e de sua reimplantação para incorporação de uma nova funcionalidade, os aplicativos implementam mecanismos de extensibilidade que permitem aos desenvolvedores (fornecedores principais e terceiros) criar outros aplicativos que se integrem a eles. A maneira mais comum para dar suporte a esse tipo de extensibilidade é através do uso de suplementos (também conhecidos como "complementos" e "plug-ins"). Exemplos de aplicativos reais que expõem extensibilidade com suplementos incluem:  
   
--   Complementos do Internet Explorer.  
+- Complementos do Internet Explorer.  
   
--   Plug-ins do Windows Media Player.  
+- Plug-ins do Windows Media Player.  
   
--   Suplementos do Visual Studio.  
+- Suplementos do Visual Studio.  
   
  Por exemplo, o modelo de suplemento do Windows Media Player permite que desenvolvedores de terceiros implementem "plug-ins" que estendam o Windows Media Player de várias maneiras, incluindo a criação de decodificadores e codificadores para formatos de mídia que não têm suporte nativo pelo Windows Media Player (por exemplo, DVD, MP3), efeitos de áudio e capas. Cada modelo de suplemento é desenvolvido para expor a funcionalidade que é exclusiva de um aplicativo, embora haja várias entidades e comportamentos que são comuns a todos os modelos de suplemento.  
   
  As três principais entidades das soluções típicas de extensibilidade de suplementos são *contratos*, *suplementos* e *aplicativos host*. Contratos definem como os suplementos se integram a aplicativos host de duas maneiras:  
   
--   Suplementos se integram à funcionalidade que é implementada por aplicativos host.  
+- Suplementos se integram à funcionalidade que é implementada por aplicativos host.  
   
--   Aplicativos host expõem a funcionalidade que os suplementos se integrem a ela.  
+- Aplicativos host expõem a funcionalidade que os suplementos se integrem a ela.  
   
  Para que suplementos possam ser usados, é necessário que eles sejam localizados e carregados em tempo de execução pelos aplicativos host. Consequentemente, os aplicativos que dão suporte a suplementos têm as seguintes responsabilidades adicionais:  
   
--   **Descoberta**: Localizando suplementos que aderem a contratos suportados por aplicativos host.  
+- **Descoberta**: Localizando suplementos que aderem a contratos suportados por aplicativos host.  
   
--   **Ativação**: Carregando, executando e estabelecer comunicação com suplementos.  
+- **Ativação**: Carregando, executando e estabelecer comunicação com suplementos.  
   
--   **Isolamento**: Usando domínios de aplicativo ou processos para estabelecer limites de isolamento que protegem aplicativos de possíveis problemas de segurança e execução com suplementos.  
+- **Isolamento**: Usando domínios de aplicativo ou processos para estabelecer limites de isolamento que protegem aplicativos de possíveis problemas de segurança e execução com suplementos.  
   
--   **Comunicação**: Permitindo que os suplementos e aplicativos host se comuniquem entre si por limites de isolamento pela chamada de métodos e transmissão de dados.  
+- **Comunicação**: Permitindo que os suplementos e aplicativos host se comuniquem entre si por limites de isolamento pela chamada de métodos e transmissão de dados.  
   
--   **Gerenciamento de tempo de vida**: Carregar e descarregar domínios de aplicativos e processos de uma maneira limpa e previsível (consulte [domínios de aplicativo](../../app-domains/application-domains.md)).  
+- **Gerenciamento de tempo de vida**: Carregar e descarregar domínios de aplicativos e processos de uma maneira limpa e previsível (consulte [domínios de aplicativo](../../app-domains/application-domains.md)).  
   
--   **Controle de versão**: Garantindo que os aplicativos host e suplementos podem se comunicar quando novas versões de ambos são criadas.  
+- **Controle de versão**: Garantindo que os aplicativos host e suplementos podem se comunicar quando novas versões de ambos são criadas.  
   
  Por fim, desenvolver um modelo de suplemento robusto é uma tarefa não trivial. Por esse motivo, o .NET Framework fornece uma infra-estrutura para a criação de modelos de suplementos.  
   
@@ -75,27 +75,27 @@ ms.locfileid: "59304799"
   
 1. **O suplemento retorna uma interface do usuário**. Um suplemento retorna uma interface do usuário para o aplicativo host via uma chamada de método, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
   
-    -   A aparência de uma interface do usuário que é retornado por um suplemento é dependente de dados ou condições que existem somente em tempo de execução, tais como dinamicamente relatórios gerados.  
+    - A aparência de uma interface do usuário que é retornado por um suplemento é dependente de dados ou condições que existem somente em tempo de execução, tais como dinamicamente relatórios gerados.  
   
-    -   A interface do usuário para serviços fornecidos por um suplemento difere da interface do usuário dos aplicativos host que pode usar o suplemento.  
+    - A interface do usuário para serviços fornecidos por um suplemento difere da interface do usuário dos aplicativos host que pode usar o suplemento.  
   
-    -   O suplemento principalmente executa um serviço para o aplicativo host e relata o status para o aplicativo host com uma interface do usuário.  
+    - O suplemento principalmente executa um serviço para o aplicativo host e relata o status para o aplicativo host com uma interface do usuário.  
   
 2. **O suplemento é uma interface do usuário**. Um suplemento é uma interface do usuário, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
   
-    -   Um suplemento não fornece nenhum serviço além de ser exibido, por exemplo, um anúncio.  
+    - Um suplemento não fornece nenhum serviço além de ser exibido, por exemplo, um anúncio.  
   
-    -   A interface do usuário para serviços fornecidos por um suplemento é comum a todos os aplicativos host que podem usar esse suplemento, como uma calculadora ou um seletor de cores.  
+    - A interface do usuário para serviços fornecidos por um suplemento é comum a todos os aplicativos host que podem usar esse suplemento, como uma calculadora ou um seletor de cores.  
   
  Esses cenários exigem que os objetos de interface do usuário podem ser passados entre aplicativos host e domínios de aplicativo do suplemento. Desde o modelo de suplemento depende da comunicação remota para se comunicar entre domínios de aplicativos do .NET Framework, os objetos que são passados entre eles devem ser remotos.  
   
  Um objeto remoto é uma instância de uma classe que satisfaz uma ou mais das condições a seguir:  
   
--   Deriva o <xref:System.MarshalByRefObject> classe.  
+- Deriva o <xref:System.MarshalByRefObject> classe.  
   
--   Implementa a interface <xref:System.Runtime.Serialization.ISerializable>.  
+- Implementa a interface <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Tem o <xref:System.SerializableAttribute> atributo aplicado.  
+- Tem o <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
 >  Para obter mais informações sobre a criação de objetos do .NET Framework que devem ser remotos, consulte [tornando os objetos em remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
@@ -156,11 +156,11 @@ ms.locfileid: "59304799"
 ## <a name="add-ins-and-xaml-browser-applications"></a>Suplementos e aplicativos de navegação XAML  
  Nos exemplos até agora, o aplicativo host tem sido um aplicativo autônomo instalado. Mas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] também podem hospedar suplementos, embora com os seguintes requisitos adicionais de build e implementação:  
   
--   O manifesto do aplicativo [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve ser configurado especialmente para baixar o pipeline (pastas e assemblies) e o assembly do suplemento para o cache do aplicativo [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] no computador cliente, na mesma pasta que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
+- O manifesto do aplicativo [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve ser configurado especialmente para baixar o pipeline (pastas e assemblies) e o assembly do suplemento para o cache do aplicativo [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] no computador cliente, na mesma pasta que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
--   O código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] para descobrir e carregar suplementos deve usar o cache de aplicativo [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] para o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] como o local do pipeline e do suplemento.  
+- O código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] para descobrir e carregar suplementos deve usar o cache de aplicativo [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] para o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] como o local do pipeline e do suplemento.  
   
--   O [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deverá carregar o suplemento em um contexto de segurança especial se o suplemento fizer referência a arquivos flexíveis localizados no site de origem; quando hospedados por [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], suplementos poderão referenciar apenas arquivos flexíveis localizados no site de origem do aplicativo host.  
+- O [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deverá carregar o suplemento em um contexto de segurança especial se o suplemento fizer referência a arquivos flexíveis localizados no site de origem; quando hospedados por [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], suplementos poderão referenciar apenas arquivos flexíveis localizados no site de origem do aplicativo host.  
   
  Essas tarefas são descritas detalhadamente nas subseções a seguir.  
   
@@ -194,13 +194,13 @@ ms.locfileid: "59304799"
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Usando o pipeline e o suplemento da base de aplicativo  
  Quando o pipeline e o suplemento são configurados para a implantação do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], eles são baixados para a mesma pasta de cache do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar o pipeline e o suplemento por meio do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], o código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve obtê-los da base de aplicativo. Os diversos tipos e membros do modelo do .NET Framework suplemento para usar pipelines e suplementos fornecem suporte especial para esse cenário. Em primeiro lugar, o caminho é identificado pelo <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeração. Você pode usar esse valor com sobrecargas de membros de suplemento pertinentes para usar pipelines que incluem o seguinte:  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
 ### <a name="accessing-the-hosts-site-of-origin"></a>Acessar o site de origem do host  
  Para garantir que um suplemento possa referenciar arquivos do site de origem, o suplemento deve ser carregado com isolamento de segurança que é equivalente ao do aplicativo host. Esse nível de segurança é identificado pelo <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> valor de enumeração e passado para o <xref:System.AddIn.Hosting.AddInToken.Activate%2A> método quando um suplemento é ativado.  
@@ -213,9 +213,9 @@ ms.locfileid: "59304799"
   
  Fundamentalmente, WPF não passa uma interface do usuário de um suplemento para um aplicativo host; em vez disso, o WPF passa o identificador de janela Win32 para a interface do usuário por meio da interoperabilidade do WPF. Assim, quando uma interface do usuário de um suplemento é passado para um aplicativo host, ocorre o seguinte:  
   
--   No lado do suplemento, o WPF adquire um identificador de janela para a interface do usuário que será exibido pelo aplicativo host. O identificador de janela é encapsulado por uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e é empacotada do domínio de aplicativo do suplemento ao domínio de aplicativo do aplicativo host.  
+- No lado do suplemento, o WPF adquire um identificador de janela para a interface do usuário que será exibido pelo aplicativo host. O identificador de janela é encapsulado por uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e é empacotada do domínio de aplicativo do suplemento ao domínio de aplicativo do aplicativo host.  
   
--   No lado do aplicativo host, o WPF reempacota os <xref:System.Windows.Interop.HwndSource> como uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndHost> e consome <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para o aplicativo host.  
+- No lado do aplicativo host, o WPF reempacota os <xref:System.Windows.Interop.HwndSource> como uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndHost> e consome <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para o aplicativo host.  
   
  <xref:System.Windows.Interop.HwndHost> existe para exibir as interfaces do usuário, identificados por identificadores de janela WPF de interfaces do usuário. Para obter mais informações, consulte [Interoperação Win32 e WPF](../advanced/wpf-and-win32-interoperation.md).  
   
@@ -230,51 +230,51 @@ ms.locfileid: "59304799"
 ## <a name="wpf-add-in-benefits"></a>Benefícios de suplementos do WPF  
  Como interfaces de usuário em suplementos do WPF são exibidos em aplicativos host usando uma classe interna que deriva de <xref:System.Windows.Interop.HwndHost>, essas interfaces de usuário são limitadas pelas funcionalidades de <xref:System.Windows.Interop.HwndHost> em relação aos serviços de UI WPF, como o layout, renderização, vinculação de dados, estilos, modelos e recursos. No entanto, o WPF aumenta sua interno <xref:System.Windows.Interop.HwndHost> subclasse com recursos adicionais que incluem o seguinte:  
   
--   Uso da tecla TAB entre a interface do usuário de um aplicativo host e interface do usuário de um suplemento. Observe que o modelo de programação "suplemento é uma interface do usuário" requer que o adaptador do lado do suplemento substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar tabulações, seja o suplemento é totalmente confiável ou parcialmente confiável.  
+- Uso da tecla TAB entre a interface do usuário de um aplicativo host e interface do usuário de um suplemento. Observe que o modelo de programação "suplemento é uma interface do usuário" requer que o adaptador do lado do suplemento substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar tabulações, seja o suplemento é totalmente confiável ou parcialmente confiável.  
   
--   Respeitar requisitos de acessibilidade para interfaces do usuário do suplemento que são exibidos a partir de interfaces de usuário do aplicativo host.  
+- Respeitar requisitos de acessibilidade para interfaces do usuário do suplemento que são exibidos a partir de interfaces de usuário do aplicativo host.  
   
--   Permitindo que os aplicativos do WPF executar com segurança em vários cenários de domínio de aplicativo.  
+- Permitindo que os aplicativos do WPF executar com segurança em vários cenários de domínio de aplicativo.  
   
--   Impedir o acesso para interface do usuário do suplemento identificadores de janela ao executar os suplementos com isolamento de segurança (ou seja, uma proteção de segurança de confiança parcial). Chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garante essa segurança:  
+- Impedir o acesso para interface do usuário do suplemento identificadores de janela ao executar os suplementos com isolamento de segurança (ou seja, uma proteção de segurança de confiança parcial). Chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garante essa segurança:  
   
-    -   Para o modelo de programação "suplemento retorna uma interface do usuário", a única maneira de passar o identificador de janela para uma interface de usuário além do limite de isolamento é chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    - Para o modelo de programação "suplemento retorna uma interface do usuário", a única maneira de passar o identificador de janela para uma interface de usuário além do limite de isolamento é chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Para o modelo de programação "suplemento é uma interface do usuário", substituindo <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> no adaptador do lado do suplemento e chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (conforme mostrado nos exemplos anteriores) é necessária, como é chamar o adaptador lado do suplemento `QueryContract` implementação desde o adaptador do lado do host.  
+    - Para o modelo de programação "suplemento é uma interface do usuário", substituindo <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> no adaptador do lado do suplemento e chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (conforme mostrado nos exemplos anteriores) é necessária, como é chamar o adaptador lado do suplemento `QueryContract` implementação desde o adaptador do lado do host.  
   
--   Fornecer proteção contra múltiplas execuções de domínio do aplicativo. Devido a limitações com domínios do aplicativo, as exceções sem tratamento que forem lançadas em domínios do aplicativo do suplemento fazem com que todo o aplicativo falhe, mesmo com a existência do limite de isolamento. No entanto, o WPF e o modelo de suplemento do .NET Framework fornecem uma maneira simples de contornar esse problema e melhorar a estabilidade do aplicativo. Um suplemento do WPF que exibe uma interface do usuário cria um <xref:System.Windows.Threading.Dispatcher> para o thread que o domínio de aplicativo é executado, se o aplicativo host é um aplicativo WPF. Você pode detectar exceções sem tratamento que ocorrem no domínio do aplicativo manipulando o <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventos do WPF adicionar-in <xref:System.Windows.Threading.Dispatcher>. Você pode obter o <xref:System.Windows.Threading.Dispatcher> do <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> propriedade.  
+- Fornecer proteção contra múltiplas execuções de domínio do aplicativo. Devido a limitações com domínios do aplicativo, as exceções sem tratamento que forem lançadas em domínios do aplicativo do suplemento fazem com que todo o aplicativo falhe, mesmo com a existência do limite de isolamento. No entanto, o WPF e o modelo de suplemento do .NET Framework fornecem uma maneira simples de contornar esse problema e melhorar a estabilidade do aplicativo. Um suplemento do WPF que exibe uma interface do usuário cria um <xref:System.Windows.Threading.Dispatcher> para o thread que o domínio de aplicativo é executado, se o aplicativo host é um aplicativo WPF. Você pode detectar exceções sem tratamento que ocorrem no domínio do aplicativo manipulando o <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventos do WPF adicionar-in <xref:System.Windows.Threading.Dispatcher>. Você pode obter o <xref:System.Windows.Threading.Dispatcher> do <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> propriedade.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Limitações de suplementos WPF  
  Além dos benefícios que o WPF adiciona os comportamentos padrão fornecidos pelo <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>e identificadores de janela, também há limitações para interfaces do usuário do suplemento que são exibidas em aplicativos host:  
   
--   Interfaces de usuário em suplementos exibidos a partir de um aplicativo host não respeitam o comportamento de recorte do aplicativo host.  
+- Interfaces de usuário em suplementos exibidos a partir de um aplicativo host não respeitam o comportamento de recorte do aplicativo host.  
   
--   O conceito de *espaço aéreo* em cenários de interoperabilidade também se aplica a suplementos (consulte [Visão geral das regiões de tecnologia](../advanced/technology-regions-overview.md)).  
+- O conceito de *espaço aéreo* em cenários de interoperabilidade também se aplica a suplementos (consulte [Visão geral das regiões de tecnologia](../advanced/technology-regions-overview.md)).  
   
--   Serviços de interface do usuário de um aplicativo host, como herança de recursos, associação de dados e comandos, não estão automaticamente disponíveis para o suplemento interfaces do usuário. Para fornecer esses serviços para o suplemento, você precisa atualizar o pipeline.  
+- Serviços de interface do usuário de um aplicativo host, como herança de recursos, associação de dados e comandos, não estão automaticamente disponíveis para o suplemento interfaces do usuário. Para fornecer esses serviços para o suplemento, você precisa atualizar o pipeline.  
   
--   Uma interface de usuário não pode ser girada, dimensionada, distorcida ou contrário é afetado por uma transformação (consulte [visão geral de transformações](../graphics-multimedia/transforms-overview.md)).  
+- Uma interface de usuário não pode ser girada, dimensionada, distorcida ou contrário é afetado por uma transformação (consulte [visão geral de transformações](../graphics-multimedia/transforms-overview.md)).  
   
--   Conteúdo dentro de interfaces do usuário do suplemento que é renderizado por operações de desenho a <xref:System.Drawing> namespace pode incluir combinação alfa. No entanto, uma interface de usuário e o aplicativo de host da interface do usuário que o contém devem ser 100% opaco; em outras palavras, o `Opacity` propriedade nos dois deve ser definida como 1.  
+- Conteúdo dentro de interfaces do usuário do suplemento que é renderizado por operações de desenho a <xref:System.Drawing> namespace pode incluir combinação alfa. No entanto, uma interface de usuário e o aplicativo de host da interface do usuário que o contém devem ser 100% opaco; em outras palavras, o `Opacity` propriedade nos dois deve ser definida como 1.  
   
--   Se o <xref:System.Windows.Window.AllowsTransparency%2A> de uma janela no aplicativo host que contém uma interface de usuário estiver definida como `true`, o suplemento é invisível. Isso é verdadeiro mesmo se a interface do usuário suplemento for 100% opaco (ou seja, o `Opacity` propriedade tem um valor de 1).  
+- Se o <xref:System.Windows.Window.AllowsTransparency%2A> de uma janela no aplicativo host que contém uma interface de usuário estiver definida como `true`, o suplemento é invisível. Isso é verdadeiro mesmo se a interface do usuário suplemento for 100% opaco (ou seja, o `Opacity` propriedade tem um valor de 1).  
   
--   Uma interface de usuário deve aparecer sobre outros elementos do WPF na mesma janela de nível superior.  
+- Uma interface de usuário deve aparecer sobre outros elementos do WPF na mesma janela de nível superior.  
   
--   Nenhuma parte de interface do usuário de um suplemento pode ser renderizado usando um <xref:System.Windows.Media.VisualBrush>. Em vez disso, o suplemento pode tirar um instantâneo da interface do usuário gerada para criar um bitmap que pode ser passado para o aplicativo host usando métodos definidos pelo contrato.  
+- Nenhuma parte de interface do usuário de um suplemento pode ser renderizado usando um <xref:System.Windows.Media.VisualBrush>. Em vez disso, o suplemento pode tirar um instantâneo da interface do usuário gerada para criar um bitmap que pode ser passado para o aplicativo host usando métodos definidos pelo contrato.  
   
--   Arquivos de mídia não podem ser executados de um <xref:System.Windows.Controls.MediaElement> em uma interface de usuário.  
+- Arquivos de mídia não podem ser executados de um <xref:System.Windows.Controls.MediaElement> em uma interface de usuário.  
   
--   Eventos de mouse gerados para o suplemento da interface do usuário não são recebidos nem gerados pelo aplicativo host e o `IsMouseOver` propriedade para a interface do usuário do aplicativo host tem um valor de `false`.  
+- Eventos de mouse gerados para o suplemento da interface do usuário não são recebidos nem gerados pelo aplicativo host e o `IsMouseOver` propriedade para a interface do usuário do aplicativo host tem um valor de `false`.  
   
--   Quando o foco alterna entre os controles em um suplemento da interface do usuário, o `GotFocus` e `LostFocus` eventos não são recebidos nem gerados pelo aplicativo host.  
+- Quando o foco alterna entre os controles em um suplemento da interface do usuário, o `GotFocus` e `LostFocus` eventos não são recebidos nem gerados pelo aplicativo host.  
   
--   A parte de um aplicativo host que contém uma interface de usuário é exibida em branco quando impressa.  
+- A parte de um aplicativo host que contém uma interface de usuário é exibida em branco quando impressa.  
   
--   Todos os dispatchers (consulte <xref:System.Windows.Threading.Dispatcher>) criado pelo suplemento interface do usuário deve ser desligado manualmente antes que o suplemento proprietário seja descarregado se o aplicativo host continua a execução. O contrato pode implementar métodos que permitem que o aplicativo host sinalize o suplemento antes que o suplemento seja descarregado, permitindo assim que a interface do suplemento desligue seus dispatchers.  
+- Todos os dispatchers (consulte <xref:System.Windows.Threading.Dispatcher>) criado pelo suplemento interface do usuário deve ser desligado manualmente antes que o suplemento proprietário seja descarregado se o aplicativo host continua a execução. O contrato pode implementar métodos que permitem que o aplicativo host sinalize o suplemento antes que o suplemento seja descarregado, permitindo assim que a interface do suplemento desligue seus dispatchers.  
   
--   Se uma interface de usuário é um <xref:System.Windows.Controls.InkCanvas> ou contém um <xref:System.Windows.Controls.InkCanvas>, é possível descarregar o suplemento.  
+- Se uma interface de usuário é um <xref:System.Windows.Controls.InkCanvas> ou contém um <xref:System.Windows.Controls.InkCanvas>, é possível descarregar o suplemento.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Otimização do desempenho  

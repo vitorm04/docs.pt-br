@@ -3,11 +3,11 @@ title: Atividades de coleção em WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945971"
 ---
 # <a name="collection-activities-in-wf"></a>Atividades de coleção em WF
 As atividades de coleção são usadas para trabalhar com objetos de coleção em um fluxo de trabalho. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tem sistema forneceu atividades adicionando e removendo itens de uma coleção, testando a existência de um item em uma coleção, e desmarcando uma coleção. `ExistsInCollection` e `RemoveFromCollection` tem um <xref:System.Activities.OutArgument%601> do tipo <xref:System.Boolean>, que indica o resultado.  

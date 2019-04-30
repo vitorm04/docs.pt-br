@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981806"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Passo a passo: associar a dados em aplicativos híbridos
 Associando uma fonte de dados a um controle é essencial para fornecer aos usuários acesso a dados subjacentes, se você estiver usando [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este passo a passo mostra como você pode usar a vinculação de dados em aplicativos híbridos que incluam [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
   
  As tarefas ilustradas neste passo a passo incluem:  
   
--   Criar o projeto.  
+- Criar o projeto.  
   
--   Definir o modelo de dados.  
+- Definir o modelo de dados.  
   
--   Especificar o layout do formulário.  
+- Especificar o layout do formulário.  
   
--   Especificar associações de dados.  
+- Especificar associações de dados.  
   
--   Exibir dados usando interoperação.  
+- Exibir dados usando interoperação.  
   
--   Adicionar a fonte de dados ao projeto.  
+- Adicionar a fonte de dados ao projeto.  
   
--   Criar uma associação à fonte de dados.  
+- Criar uma associação à fonte de dados.  
   
  Para obter uma listagem de código completa das tarefas ilustradas neste passo a passo, consulte [vinculação de dados em aplicativos de amostra híbrida do](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Acesso ao banco de dados de exemplo Northwind em execução no Microsoft SQL Server.  
+- Acesso ao banco de dados de exemplo Northwind em execução no Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
   
@@ -53,9 +53,9 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 2. No Gerenciador de Soluções, adicione referências aos assemblies a seguir.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Abra MainWindow.xaml no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 #### <a name="to-define-the-data-template"></a>Para definir o modelo de dados  
   
--   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
+- Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 #### <a name="to-set-up-the-grid-layout"></a>Para configurar o layout de grade  
   
--   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
+- Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Para configurar os controles de Rótulo  
   
--   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
+- Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 #### <a name="to-specify-data-bindings"></a>Para especificar associações de dados  
   
--   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
+- Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
      O <xref:System.Windows.Data.Binding> classe associa o <xref:System.Windows.Controls.TextBox> controles para os campos apropriados no banco de dados.  
   
@@ -111,7 +111,7 @@ Associando uma fonte de dados a um controle é essencial para fornecer aos usuá
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Para exibir dados no controle DataGridView  
   
--   Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
+- Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> declaração do elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

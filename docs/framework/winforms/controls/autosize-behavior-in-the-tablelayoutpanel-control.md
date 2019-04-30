@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
 ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954343"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Comportamento de AutoSize no controle TableLayoutPanel
 ## <a name="distinct-autosize-behaviors"></a>Comportamentos distintos de AutoSize  
  O <xref:System.Windows.Forms.TableLayoutPanel> controle dá suporte ao comportamento de dimensionamento automático das seguintes maneiras:  
   
--   Por meio de <xref:System.Windows.Forms.Control.AutoSize%2A> propriedade;  
+- Por meio de <xref:System.Windows.Forms.Control.AutoSize%2A> propriedade;  
   
--   Por meio de <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propriedade no <xref:System.Windows.Forms.TableLayoutPanel> estilos de coluna e linha do controle.  
+- Por meio de <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propriedade no <xref:System.Windows.Forms.TableLayoutPanel> estilos de coluna e linha do controle.  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>A propriedade AutoSize com estilos de coluna e linha  
  A tabela a seguir descreve a interação entre o <xref:System.Windows.Forms.Control.AutoSize%2A> propriedade e o <xref:System.Windows.Forms.TableLayoutPanel> estilos de coluna e linha do controle.  

@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943930"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 Este exemplo demonstra como configurar a segurança por meio de uma associação personalizada. Ele mostra como usar uma ligação personalizada para habilitar a segurança em nível de mensagem junto com um transporte seguro. Isso é útil quando um transporte seguro é necessária para transmitir as mensagens entre o cliente e o serviço e ao mesmo tempo as mensagens devem ser seguras no nível da mensagem. Essa configuração não é suportada por associações fornecidas pelo sistema.
@@ -19,9 +19,9 @@ Este exemplo demonstra como configurar a segurança por meio de uma associação
 
  A configuração de serviço define uma associação personalizada que dá suporte ao seguinte:
 
--   Comunicação TCP protegida usando o protocolo TLS/SSL.
+- Comunicação TCP protegida usando o protocolo TLS/SSL.
 
--   Segurança de mensagem do Windows.
+- Segurança de mensagem do Windows.
 
  A configuração de associação personalizado permite que o transporte seguro, permitindo simultaneamente a segurança de nível de mensagem. A ordenação dos elementos de associação é importante definir uma ligação personalizada, porque cada um representa uma camada da pilha de canal (consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). A associação personalizada é definida nos arquivos de configuração de cliente e o serviço, conforme mostrado no seguinte exemplo de configuração.
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote que se aplicam a este exemplo, para que eles podem ser modificados para executar a configuração apropriada:
 
--   Criando o certificado do servidor.
+- Criando o certificado do servidor.
 
      As seguintes linhas do arquivo Setup. bat de criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. Esse arquivo em lotes padrão é o nome do servidor ao localhost.
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
+- Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
 
      As seguintes linhas na cópia do arquivo Setup. bat o certificado do servidor as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. No computador do serviço:  
   
-    1.  Crie um diretório virtual chamado servicemodelsamples no computador do serviço.  
+    1. Crie um diretório virtual chamado servicemodelsamples no computador do serviço.  
   
-    2.  Copie os arquivos de programa do serviço de \inetpub\wwwroot\servicemodelsamples para o diretório virtual no computador do serviço. Certifique-se de que você copiar os arquivos no subdiretório \bin.  
+    2. Copie os arquivos de programa do serviço de \inetpub\wwwroot\servicemodelsamples para o diretório virtual no computador do serviço. Certifique-se de que você copiar os arquivos no subdiretório \bin.  
   
-    3.  Copie os arquivos Setup. bat e Cleanup no computador de serviço.  
+    3. Copie os arquivos Setup. bat e Cleanup no computador de serviço.  
   
-    4.  Execute o seguinte comando em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador: `Setup.bat service`. Isso cria o certificado de serviço com o nome da entidade que corresponde ao nome do computador em que o arquivo em lotes foi executado em.  
+    4. Execute o seguinte comando em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador: `Setup.bat service`. Isso cria o certificado de serviço com o nome da entidade que corresponde ao nome do computador em que o arquivo em lotes foi executado em.  
   
         > [!NOTE]
         >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2010 Prompt de comando. Ele requer que a variável de ambiente path apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Visual Studio 2010 Prompt de comando.
 
-    5.  Alterar o [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dentro do arquivo Service.exe.config para refletir o nome da entidade do certificado gerado na etapa anterior.
+    5. Alterar o [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dentro do arquivo Service.exe.config para refletir o nome da entidade do certificado gerado na etapa anterior.
 
-    6.  Execute Service.exe em um prompt de comando.
+    6. Execute Service.exe em um prompt de comando.
 
 2. No computador cliente:
 
-    1.  Copie os arquivos de programa do cliente da pasta \client\bin\ no computador cliente. Copie também o arquivo de CleanUp.
+    1. Copie os arquivos de programa do cliente da pasta \client\bin\ no computador cliente. Copie também o arquivo de CleanUp.
 
-    2.  Execute CleanUp para remover todos os certificados antigos de amostras anteriores.
+    2. Execute CleanUp para remover todos os certificados antigos de amostras anteriores.
 
-    3.  Exportar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` com o nome totalmente qualificado do computador em que o serviço está em execução):
+    3. Exportar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` com o nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  Copie %SERVER_NAME%.cer para o computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador onde o serviço está em execução).
+    4. Copie %SERVER_NAME%.cer para o computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador onde o serviço está em execução).
 
-    5.  Importar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador em que o serviço está em execução):
+    5. Importar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          Etapas de c, d e e não são necessárias se o certificado é emitido por um emissor confiável.
 
-    6.  Modifique o arquivo do cliente App. config da seguinte maneira:
+    6. Modifique o arquivo do cliente App. config da seguinte maneira:
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  Se o serviço for executado sob uma conta que não seja o NetworkService ou LocalSystem em um ambiente de domínio, você talvez precise modificar a identidade do ponto de extremidade para o ponto de extremidade de serviço dentro do arquivo de App. config do cliente para definir o UPN ou o SPN com base em apropriado na conta que é usado para executar o serviço. Para obter mais informações sobre a identidade do ponto de extremidade, consulte a [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tópico.
+    7. Se o serviço for executado sob uma conta que não seja o NetworkService ou LocalSystem em um ambiente de domínio, você talvez precise modificar a identidade do ponto de extremidade para o ponto de extremidade de serviço dentro do arquivo de App. config do cliente para definir o UPN ou o SPN com base em apropriado na conta que é usado para executar o serviço. Para obter mais informações sobre a identidade do ponto de extremidade, consulte a [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tópico.
 
-    8.  Execute Client.exe em um prompt de comando.
+    8. Execute Client.exe em um prompt de comando.
 
 ### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra
 
--   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.
+- Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947947"
 ---
 # <a name="user-drawn-controls"></a>Controles desenhados pelo usuário
 O .NET Framework possibilita que você desenvolva facilmente seus próprios controles. Você pode criar um controle de usuário, que é um conjunto de controles padrão vinculados por código ou pode criar seu próprio controle desde o início. Você pode até mesmo usar herança para criar um controle que herde de um controle existente e adicionar à sua funcionalidade inerente. Independentemente da abordagem utilizada, o .NET Framework oferece a funcionalidade de desenhar uma interface gráfica personalizada para qualquer controle que você criar.  
   
  Pintura de um controle é feita pela execução de código do controle <xref:System.Windows.Forms.Control.OnPaint%2A> método. O único argumento de <xref:System.Windows.Forms.Control.OnPaint%2A> método é um <xref:System.Windows.Forms.PaintEventArgs> objeto que fornece todas as informações e a funcionalidade necessária para renderizar o controle. O <xref:System.Windows.Forms.PaintEventArgs> fornece como propriedades dois objetos de entidade de segurança que serão usados no processamento de seu controle:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> objeto - o retângulo que representa a parte do controle que será desenhada. Pode ser todo o controle ou parte do controle, dependendo de como o controle é desenhado.  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> objeto - o retângulo que representa a parte do controle que será desenhada. Pode ser todo o controle ou parte do controle, dependendo de como o controle é desenhado.  
   
--   <xref:System.Drawing.Graphics> objeto - encapsula vários gráficos e orientada a objetos e métodos que fornecem a funcionalidade necessária para desenhar o controle.  
+- <xref:System.Drawing.Graphics> objeto - encapsula vários gráficos e orientada a objetos e métodos que fornecem a funcionalidade necessária para desenhar o controle.  
   
  Para obter mais informações sobre o <xref:System.Drawing.Graphics> objeto e como usá-lo, consulte [como: Criar objetos gráficos para desenho](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   

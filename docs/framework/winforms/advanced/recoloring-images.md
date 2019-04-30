@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948064"
 ---
 # <a name="recoloring-images"></a>Recolorindo imagens
 Recolorir é o processo de ajustar as cores da imagem. Alguns exemplos são alterar de uma cor para outra, ajustar a intensidade da cor em relação a outra cor, ajustar o brilho ou o contraste de todas as cores e converter cores em tons de cinza.  

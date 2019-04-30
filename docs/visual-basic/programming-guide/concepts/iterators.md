@@ -3,11 +3,11 @@ title: Iteradores (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966155"
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 Um *iterador* pode ser usado para percorrer coleções, como listas e matrizes.  
@@ -44,21 +44,21 @@ End Function
   
  **Neste tópico**  
   
--   [Iterador simples](#BKMK_SimpleIterator)  
+- [Iterador simples](#BKMK_SimpleIterator)  
   
--   [Criando uma classe de coleção](#BKMK_CollectionClass)  
+- [Criando uma classe de coleção](#BKMK_CollectionClass)  
   
--   [Blocos try](#BKMK_TryBlocks)  
+- [Blocos try](#BKMK_TryBlocks)  
   
--   [Métodos anônimos](#BKMK_AnonymousMethods)  
+- [Métodos anônimos](#BKMK_AnonymousMethods)  
   
--   [Usando iteradores com uma lista genérica](#BKMK_GenericList)  
+- [Usando iteradores com uma lista genérica](#BKMK_GenericList)  
   
--   [Informações de sintaxe](#BKMK_SyntaxInformation)  
+- [Informações de sintaxe](#BKMK_SyntaxInformation)  
   
--   [Implementação técnica](#BKMK_Technical)  
+- [Implementação técnica](#BKMK_Technical)  
   
--   [Uso de iteradores](#BKMK_UseOfIterators)  
+- [Uso de iteradores](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Para todos os exemplos no tópico, exceto o exemplo iterador simples, inclua [importações](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instruções para o `System.Collections` e `System.Collections.Generic` namespaces.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Uso de iteradores  
  Os iteradores permitem que você mantenha a simplicidade de um loop `For Each` quando for necessário usar um código complexo para preencher uma sequência de lista. Isso pode ser útil quando você quiser fazer o seguinte:  
   
--   Modificar a sequência de lista após a primeira iteração de loop `For Each`.  
+- Modificar a sequência de lista após a primeira iteração de loop `For Each`.  
   
--   Evitar o carregamento completo de uma grande lista antes da primeira iteração de um loop `For Each`. Um exemplo é uma busca paginada para carregar um lote de linhas da tabela. Outro exemplo é o método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, que implementa os iteradores dentro do .NET Framework.  
+- Evitar o carregamento completo de uma grande lista antes da primeira iteração de um loop `For Each`. Um exemplo é uma busca paginada para carregar um lote de linhas da tabela. Outro exemplo é o método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, que implementa os iteradores dentro do .NET Framework.  
   
--   Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.  
+- Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.  
   
 ## <a name="see-also"></a>Consulte também
 

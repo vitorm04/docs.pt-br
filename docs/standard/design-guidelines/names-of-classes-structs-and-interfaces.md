@@ -1,5 +1,5 @@
 ---
-title: Nomes de Classes, Structs e Interfaces
+title: Nomes de classes, structs e interfaces
 ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
 ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945503"
 ---
-# <a name="names-of-classes-structs-and-interfaces"></a>Nomes de Classes, Structs e Interfaces
+# <a name="names-of-classes-structs-and-interfaces"></a>Nomes de classes, structs e interfaces
 As diretrizes de nomenclatura que seguem se aplicam a nomenclatura de tipo geral.  
   
  **✓ DO** nome classes e estruturas com substantivos e frases nominais, usando PascalCasing.  
@@ -76,7 +76,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.Attribute`|**✓ DO** adicionar o sufixo "Atributo" em nomes de classes de atributos personalizados.|  
 |`System.Delegate`|**✓ DO** adicionar o sufixo "EventHandler" em nomes de representantes que são usados em eventos.<br /><br /> **✓ DO** adicionar o sufixo "Retorno de chamada" para nomes de representantes de diferentes dos usados como manipuladores de eventos.<br /><br /> **X DO NOT** adicionar o sufixo "Representante" a um delegado.|  
 |`System.EventArgs`|**✓ DO** adicionar o sufixo "EventArgs".|  
-|`System.Enum`|**X DO NOT** derivar desta classe; use a palavra-chave com suporte em vez disso, o idioma; por exemplo, no c#, use o `enum` palavra-chave.<br /><br /> **X DO NOT** adicionar o sufixo "Enum" ou "Sinalizador".|  
+|`System.Enum`|**X DO NOT** derivar desta classe; use a palavra-chave com suporte em vez disso, o idioma; por exemplo, no C#, use o `enum` palavra-chave.<br /><br /> **X DO NOT** adicionar o sufixo "Enum" ou "Sinalizador".|  
 |`System.Exception`|**✓ DO** adicionar o sufixo "Exception".|  
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** adicionar o sufixo "Dicionário". Observe que `IDictionary` é um tipo específico da coleção, mas essa diretriz tem precedência sobre a orientação mais geral de coleções que segue.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** adicionar o sufixo "Coleção".|  

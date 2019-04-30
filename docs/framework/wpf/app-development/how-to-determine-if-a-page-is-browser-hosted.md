@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
 ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947804"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Como: Determinar se uma página está hospedada no navegador
 Este exemplo demonstra como determinar se um <xref:System.Windows.Controls.Page> está hospedado em um navegador.  

@@ -3,11 +3,11 @@ title: Segurança de comportamento
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
 ms.openlocfilehash: f5fd9cdb5fa0a84a151bc00ba63f1f5e89530629
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955097"
 ---
 # <a name="behavior-security"></a>Segurança de comportamento
 Esta seção inclui exemplos que demonstram a configuração da segurança para comportamentos de serviço.  

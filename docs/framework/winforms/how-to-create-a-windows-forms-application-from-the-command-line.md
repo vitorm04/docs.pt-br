@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966852"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Como: Criar um aplicativo do Windows Forms a partir da linha de comando
 Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas para criar e executar um aplicativo do Windows Forms na linha de comando. Há um suporte abrangente para esses procedimentos no Visual Studio.  Consulte também [passo a passo: Controle hospeda um Windows Forms no WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -44,11 +44,11 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
 4. Adicione o método `Main` à classe.  
   
-    1.  Aplicar a <xref:System.STAThreadAttribute> para o c# `Main` método para especificar o aplicativo Windows Forms é um single-threaded apartment. (O atributo não é necessário no Visual Basic, uma vez que o Windows forms aplicativos desenvolvidos com o uso do Visual Basic um modelo de single-threaded apartment por padrão.)  
+    1. Aplicar a <xref:System.STAThreadAttribute> para o c# `Main` método para especificar o aplicativo Windows Forms é um single-threaded apartment. (O atributo não é necessário no Visual Basic, uma vez que o Windows forms aplicativos desenvolvidos com o uso do Visual Basic um modelo de single-threaded apartment por padrão.)  
   
-    2.  Chamar <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> para aplicar estilos de sistema operacional para seu aplicativo.  
+    2. Chamar <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> para aplicar estilos de sistema operacional para seu aplicativo.  
   
-    3.  Crie uma instância do formulário e execute-o.  
+    3. Crie uma instância do formulário e execute-o.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
 2. Compile o formulário.  
   
-    -   Se você estiver usando o C#, digite: `csc form1.cs`  
+    - Se você estiver usando o C#, digite: `csc form1.cs`  
   
          `-or-`  
   
-    -   Se estiver usando Visual Basic, digite: `vbc form1.vb`  
+    - Se estiver usando Visual Basic, digite: `vbc form1.vb`  
   
 3. No prompt de comando, digite: `Form1.exe`  
   
@@ -111,7 +111,7 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Para compilar o código, siga as instruções no procedimento a seguir que descrevem como compilar e executar o aplicativo.  
+- Para compilar o código, siga as instruções no procedimento a seguir que descrevem como compilar e executar o aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
 

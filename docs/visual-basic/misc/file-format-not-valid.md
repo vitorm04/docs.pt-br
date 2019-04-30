@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID321
 ms.assetid: d41e6286-6e4a-463b-87fa-e140723e5c7e
 ms.openlocfilehash: b21ef68e514bec7ac644adcddbd25574e18098cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971607"
 ---
 # <a name="file-format-not-valid"></a>Formato de arquivo não é válido
 Seja você tentou carregar um arquivo em um componente, mas o formato dos dados no arquivo era incompatível com o componente, ou você tentou salvar dados do componente em um arquivo, mas o formato dos dados era incompatível com o formato do arquivo.  

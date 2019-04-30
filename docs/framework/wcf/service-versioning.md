@@ -3,11 +3,11 @@ title: Controle de versão de serviço
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949780"
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e possivelmente várias vezes durante a vida, serviços (e os pontos de extremidade que expõem) podem precisar ser alterada para uma variedade de motivos, como a alteração de requisitos de tecnologia da informação, as necessidades de negócio ou aborda outros problemas. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no Windows Communication Foundation (WCF).  
@@ -15,13 +15,13 @@ Após a implantação inicial e possivelmente várias vezes durante a vida, serv
 ## <a name="four-categories-of-service-changes"></a>Quatro categorias das alterações de serviço  
  As alterações aos serviços que podem ser necessárias podem ser classificadas em quatro categorias:  
   
--   Alterações de contrato: Por exemplo, uma operação pode ser adicionada ou um elemento de dados em uma mensagem pode ser adicionado ou alterado.  
+- Alterações de contrato: Por exemplo, uma operação pode ser adicionada ou um elemento de dados em uma mensagem pode ser adicionado ou alterado.  
   
--   Alterações de endereço: Por exemplo, um serviço se move para um local diferente em que os pontos de extremidade têm novos endereços.  
+- Alterações de endereço: Por exemplo, um serviço se move para um local diferente em que os pontos de extremidade têm novos endereços.  
   
--   Alterações de associação: Por exemplo, alterações de um mecanismo de segurança ou alterarem suas configurações.  
+- Alterações de associação: Por exemplo, alterações de um mecanismo de segurança ou alterarem suas configurações.  
   
--   Alterações de implementação: Por exemplo, quando uma implementação de método interno é alterado.  
+- Alterações de implementação: Por exemplo, quando uma implementação de método interno é alterado.  
   
  Algumas dessas alterações são chamadas de "quebra" e outros são "incondicional". É uma alteração *incondicional* se todas as mensagens que seriam foram processadas com êxito na versão anterior são processadas com êxito na nova versão. Qualquer alteração que não atenda a esse critério é um *significativas* alterar.  
   
@@ -43,9 +43,9 @@ Após a implantação inicial e possivelmente várias vezes durante a vida, serv
 ### <a name="strict-versioning"></a>Controle de versão estrito  
  Em muitos cenários quando alterar as versões é um problema, o desenvolvedor de serviço não tem controle sobre os clientes e, portanto, não é possível fazer suposições sobre como eles seriam reagir às alterações na mensagem XML ou esquema. Nesses casos, você deve garantir que as novas mensagens irá validar no esquema antigo, por dois motivos:  
   
--   Os clientes antigos foram desenvolvidos com a suposição de que o esquema não será alterado. Eles podem falhar ao processar as mensagens que nunca foram projetados para.  
+- Os clientes antigos foram desenvolvidos com a suposição de que o esquema não será alterado. Eles podem falhar ao processar as mensagens que nunca foram projetados para.  
   
--   Os clientes antigos podem executar a validação de esquema real no esquema antigo antes de tentar até mesmo processar as mensagens.  
+- Os clientes antigos podem executar a validação de esquema real no esquema antigo antes de tentar até mesmo processar as mensagens.  
   
  A abordagem recomendada em tais cenários é tratar os contratos de dados existente como imutável e criar novos com XML exclusivo nomes qualificados. O desenvolvedor de serviço seria, em seguida, adicione novos métodos para um contrato de serviço existente ou criar um novo contrato de serviço com métodos que usam o novo contrato de dados.  
   
@@ -63,9 +63,9 @@ Após a implantação inicial e possivelmente várias vezes durante a vida, serv
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Fazer a distinção entre tipos .NET e o contrato de dados  
  Uma classe ou estrutura .NET pode ser projetada como um contrato de dados, aplicando o <xref:System.Runtime.Serialization.DataContractAttribute> à classe de atributo. O tipo .NET e suas projeções de contrato de dados são dois assuntos distintos. É possível ter vários tipos de .NET com a mesma projeção de contrato de dados. Essa distinção é especialmente útil ao permitir que você altere o tipo .NET, mantendo o contrato de dados projetados, mantendo a compatibilidade com clientes existentes até mesmo no sentido estrito da palavra. Há duas coisas que você sempre deve fazer para manter essa distinção entre o contrato de dados e o tipo de .NET:  
   
--   Especifique um <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Você sempre deve especificar o nome e o namespace do seu contrato de dados para impedir que o nome do tipo de .NET e o namespace sejam expostas no contrato. Dessa forma, se você decidir posteriormente alterar o namespace do .NET ou digite o nome, seu contrato de dados permanece o mesmo.  
+- Especifique um <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Você sempre deve especificar o nome e o namespace do seu contrato de dados para impedir que o nome do tipo de .NET e o namespace sejam expostas no contrato. Dessa forma, se você decidir posteriormente alterar o namespace do .NET ou digite o nome, seu contrato de dados permanece o mesmo.  
   
--   Especifique <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Você sempre deve especificar o nome de seus membros de dados para impedir que seu nome de membro do .NET que está sendo exposto no contrato. Dessa forma, se você decidir posteriormente alterar o nome do .NET do membro, seu contrato de dados permanece o mesmo.  
+- Especifique <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Você sempre deve especificar o nome de seus membros de dados para impedir que seu nome de membro do .NET que está sendo exposto no contrato. Dessa forma, se você decidir posteriormente alterar o nome do .NET do membro, seu contrato de dados permanece o mesmo.  
   
 ### <a name="changing-or-removing-members"></a>A alteração ou remoção de membros  
  Alterando o nome ou tipo de dados de um membro ou removendo membros de dados é uma alteração significativa, mesmo se o controle de versão incerta é permitida. Se isso for necessário, crie um novo contrato de dados.  

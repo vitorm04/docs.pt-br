@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946673"
 ---
 # <a name="programming-wcf-security"></a>Programação de segurança do WCF
 Este tópico descreve as tarefas de programação fundamentais usadas para criar um aplicativo seguro do Windows Communication Foundation (WCF). Este tópico aborda apenas a autenticação, confidencialidade e integridade, coletivamente conhecido como *transferir segurança*. Este tópico não abrange a autorização (o controle de acesso aos recursos ou serviços); Para obter informações sobre autorização, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -33,17 +33,17 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
   
      Você tem três opções:  
   
-    1.  `Transport`  
+    1. `Transport`  
   
          Segurança de transporte depende do mecanismo que usa a associação que você selecionou. Por exemplo, se você estiver usando `WSHttpBinding` e em seguida, o mecanismo de segurança é o protocolo (SSL) (também o mecanismo para o protocolo HTTPS). Em termos gerais, a principal vantagem de segurança de transporte é que ele oferece boa taxa de transferência, não importa qual transporte você está usando. No entanto, ela tem duas limitações: A primeira é que o mecanismo de transporte determina o tipo de credencial usado para autenticar um usuário. Isso é uma desvantagem somente se um serviço precisa interoperar com outros serviços que exigem tipos diferentes de credenciais. A segunda é que, como a segurança não é aplicada no nível da mensagem, a segurança é implementada em uma maneira de salto a salto em vez de ponta a ponta. Essa última limitação é um problema apenas se o caminho de mensagem entre cliente e serviço inclui intermediários. Para obter mais informações sobre qual transporte deve ser usado, consulte [escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obter mais informações sobre como usar a segurança de transporte, consulte [visão geral da segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
-    2.  `Message`  
+    2. `Message`  
   
          Segurança de mensagem significa que cada mensagem inclui os cabeçalhos necessários e seguro de dados para manter a mensagem. Como a composição dos cabeçalhos varia, você pode incluir qualquer número de credenciais. Isso se torna um fator se você está interoperando com outros serviços que exigem um tipo de credencial específica que um mecanismo de transporte não pode fornecer, ou se a mensagem deve ser usada com mais de um serviço, em que cada serviço exige um tipo de credencial diferente.  
   
          Para obter mais informações, consulte [segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
-    3.  `TransportWithMessageCredential`  
+    3. `TransportWithMessageCredential`  
   
          Essa opção usa a camada de transporte para proteger a transferência de mensagem, enquanto cada mensagem inclui as credenciais avançadas precisam de outros serviços. Ele combina a vantagem de desempenho de segurança de transporte com a vantagem de credenciais avançados de segurança de mensagem. Isso está disponível com as seguintes associações: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, e <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -56,19 +56,19 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
 ## <a name="setting-the-client-credential-type"></a>Definindo o tipo de credencial de cliente  
  Selecione um tipo de credencial de cliente conforme apropriado. Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Os seguintes tipos de credencial de cliente estão disponíveis:  
   
--   `Windows`  
+- `Windows`  
   
--   `Certificate`  
+- `Certificate`  
   
--   `Digest`  
+- `Digest`  
   
--   `Basic`  
+- `Basic`  
   
--   `UserName`  
+- `UserName`  
   
--   `NTLM`  
+- `NTLM`  
   
--   `IssuedToken`  
+- `IssuedToken`  
   
  Dependendo de como você define o modo, você deve definir o tipo de credencial. Por exemplo, se você tiver selecionado a `wsHttpBinding`e tiver definido o modo de "Message", em seguida, você também pode definir o `clientCredentialType` atributo do elemento de mensagem para um dos seguintes valores: `None`, `Windows`, `UserName`, `Certificate` , e `IssuedToken`, conforme mostrado no exemplo de configuração a seguir.  
   

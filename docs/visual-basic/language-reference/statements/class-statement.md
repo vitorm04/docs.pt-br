@@ -14,11 +14,11 @@ helpviewer_keywords:
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
 ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945035"
 ---
 # <a name="class-statement-visual-basic"></a>Instrução Class (Visual Basic)
 Declara o nome de uma classe e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a classe.  
@@ -65,23 +65,23 @@ End Class
   
 ## <a name="rules"></a>Regras  
   
--   **Aninhamento.** Você pode definir uma classe dentro de outra. A classe externa é chamada a *que contém a classe*, e a classe interna é chamada uma *classes aninhadas*.  
+- **Aninhamento.** Você pode definir uma classe dentro de outra. A classe externa é chamada a *que contém a classe*, e a classe interna é chamada uma *classes aninhadas*.  
   
--   **Herança.** Se a classe usa o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar apenas uma classe base ou interface. Uma classe não pode herdar de mais de um elemento.  
+- **Herança.** Se a classe usa o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar apenas uma classe base ou interface. Uma classe não pode herdar de mais de um elemento.  
   
      Uma classe não pode herdar de outra classe com um nível de acesso mais restritivo. Por exemplo, uma `Public` classe não pode herdar de um `Friend` classe.  
   
      Uma classe não pode herdar de uma classe aninhada dentro dele.  
   
--   **Implementação.** Se a classe usa o [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar todos os membros definidos em cada interface que você especificar no `interfacenames`. Uma exceção a isso é Reimplementação de um membro de classe base. Para obter mais informações, consulte "Reimplementação" na [implementa](../../../visual-basic/language-reference/statements/implements-clause.md).  
+- **Implementação.** Se a classe usa o [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar todos os membros definidos em cada interface que você especificar no `interfacenames`. Uma exceção a isso é Reimplementação de um membro de classe base. Para obter mais informações, consulte "Reimplementação" na [implementa](../../../visual-basic/language-reference/statements/implements-clause.md).  
   
--   **Propriedade padrão.** Uma classe pode especificar no máximo uma propriedade como seu *propriedade padrão*. Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Propriedade padrão.** Uma classe pode especificar no máximo uma propriedade como seu *propriedade padrão*. Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Nível de acesso.** Dentro de uma classe, você pode declarar cada membro com seu próprio nível de acesso. Membros de classe padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acessar, exceto as variáveis e constantes, que usam como padrão [privada](../../../visual-basic/language-reference/modifiers/private.md) acesso. Quando uma classe tem mais acesso restrito que um de seus membros, o nível de acesso de classe tem precedência.  
+- **Nível de acesso.** Dentro de uma classe, você pode declarar cada membro com seu próprio nível de acesso. Membros de classe padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acessar, exceto as variáveis e constantes, que usam como padrão [privada](../../../visual-basic/language-reference/modifiers/private.md) acesso. Quando uma classe tem mais acesso restrito que um de seus membros, o nível de acesso de classe tem precedência.  
   
--   **Escopo.** Uma classe está no escopo em todo o seu namespace, classe, estrutura ou módulo recipiente.  
+- **Escopo.** Uma classe está no escopo em todo o seu namespace, classe, estrutura ou módulo recipiente.  
   
      O escopo de cada membro da classe é a classe inteira.  
   
@@ -89,18 +89,18 @@ End Class
   
      Os membros de classe têm tempos de vida, dependendo de como e onde eles são declarados. Para obter mais informações, consulte [tempo de vida no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   **Qualificação.** Código fora de uma classe deve qualificar o nome do membro com o nome dessa classe.  
+- **Qualificação.** Código fora de uma classe deve qualificar o nome do membro com o nome dessa classe.  
   
      Se o código dentro de uma classe aninhada faz uma referência não qualificada a um elemento de programação, Visual Basic procura esse elemento primeiramente na classe aninhada, em seguida, em sua classe recipiente, e assim por diante para o elemento contido mais externo.  
   
 ## <a name="classes-and-modules"></a>Classes e módulos  
  Esses elementos têm muitas semelhanças, mas há algumas diferenças importantes também.  
   
--   **Terminologia.** As versões anteriores do Visual Basic reconhecem os dois tipos de módulos: *módulos de classe* (CLS arquivos) e *módulos padrão* (arquivos. bas). A versão atual chama esses *classes* e *módulos*, respectivamente.  
+- **Terminologia.** As versões anteriores do Visual Basic reconhecem os dois tipos de módulos: *módulos de classe* (CLS arquivos) e *módulos padrão* (arquivos. bas). A versão atual chama esses *classes* e *módulos*, respectivamente.  
   
--   **Membros compartilhados.** Você pode controlar se um membro de uma classe pode ser compartilhado ou membro de instância.  
+- **Membros compartilhados.** Você pode controlar se um membro de uma classe pode ser compartilhado ou membro de instância.  
   
--   **Orientação a objeto.** As classes são orientada a objeto, mas os módulos não são. Você pode criar uma ou mais instâncias de uma classe. Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Orientação a objeto.** As classes são orientada a objeto, mas os módulos não são. Você pode criar uma ou mais instâncias de uma classe. Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa um `Class` instrução para definir uma classe e vários membros.  

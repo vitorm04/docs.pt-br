@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947830"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Como: Criar um suplemento que retorne uma interface do usuário
 Este exemplo mostra como criar um suplemento que retorna um Windows Presentation Foundation (WPF) para um host de aplicativo autônomo do WPF.  
@@ -25,9 +25,9 @@ Este exemplo mostra como criar um suplemento que retorna um Windows Presentation
   
  Este exemplo realça as extensões WPF para o modelo de suplemento do .NET Framework que habilitar esse cenário e pressupõe o seguinte:  
   
--   Conhecimento do .NET Framework suplemento do modelo, incluindo o pipeline, suplemento e desenvolvimento de host. Se você estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstra a implementação de um pipeline, um suplemento e um aplicativo host, consulte [passo a passo: Criando um aplicativo extensível](../../add-ins/walkthrough-create-extensible-app.md).  
+- Conhecimento do .NET Framework suplemento do modelo, incluindo o pipeline, suplemento e desenvolvimento de host. Se você estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstra a implementação de um pipeline, um suplemento e um aplicativo host, consulte [passo a passo: Criando um aplicativo extensível](../../add-ins/walkthrough-create-extensible-app.md).  
   
--   Conhecimento das extensões do WPF para o modelo de adicionar do .NET Framework, o que pode ser encontrado aqui: [Visão geral dos suplementos do WPF](wpf-add-ins-overview.md).  
+- Conhecimento das extensões do WPF para o modelo de adicionar do .NET Framework, o que pode ser encontrado aqui: [Visão geral dos suplementos do WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Exemplo  
  Para criar um suplemento que retorna uma UI do WPF requer código específico para cada segmento de pipeline, o suplemento e o aplicativo host.  

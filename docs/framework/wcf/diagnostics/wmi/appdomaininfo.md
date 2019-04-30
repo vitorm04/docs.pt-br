@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964249"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Informações de domínio de aplicativo  
@@ -66,7 +66,7 @@ class AppDomainInfo
   
  Um valor que especifica se as mensagens são rastreadas no nível de serviço (antes da criptografia e transformações de transporte).  
   
-### <a name="logmessagesattransportlevel"></a>Logmessagesattransportlevel como  
+### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Tipo de dados: boolean  
   
  Tipo de acesso: Leitura/gravação  

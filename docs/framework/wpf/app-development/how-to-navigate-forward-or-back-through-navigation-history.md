@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947752"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Como: Navegar para frente ou para trás por meio do histórico de navegação
 Este exemplo ilustra como navegar para frente ou para trás nas entradas no histórico de navegação.  
@@ -21,11 +21,11 @@ Este exemplo ilustra como navegar para frente ou para trás nas entradas no hist
 ## <a name="example"></a>Exemplo  
  Código executado do conteúdo dos seguintes hosts pode navegar para frente ou para trás no histórico de navegação, uma entrada de cada vez.  
   
--   <xref:System.Windows.Navigation.NavigationWindow> Usando o <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> Usando o <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> Usando o <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> Usando o <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  Para poder navegar para frente em uma entrada, primeiro verifique se existem entradas no histórico de navegação progressiva inspecionando a propriedade **CanGoForward**. Para navegar para frente em uma entrada, chame o método **GoForward**. Isso é ilustrado no exemplo a seguir:  
   

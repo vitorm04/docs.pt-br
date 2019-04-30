@@ -3,11 +3,11 @@ title: Contexto de instância durável
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990251"
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 Este exemplo demonstra como personalizar o tempo de execução do Windows Communication Foundation (WCF) para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  
@@ -233,11 +233,11 @@ else
   
  O WCF permite que estender seu componente de tempo de execução InstanceContext adicionando um novo estado e comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado no WCF para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
   
--   O IExtensibleObject\<T > interface é implementada por objetos que permitem que as extensões que personalizar sua funcionalidade.  
+- O IExtensibleObject\<T > interface é implementada por objetos que permitem que as extensões que personalizar sua funcionalidade.  
   
--   O IExtension\<T > interface é implementada por objetos que são extensões de classes do tipo T.  
+- O IExtension\<T > interface é implementada por objetos que são extensões de classes do tipo T.  
   
--   O IExtensionCollection\<T > interface é uma coleção de IExtensions que permite recuperar IExtensions por tipo.  
+- O IExtensionCollection\<T > interface é uma coleção de IExtensions que permite recuperar IExtensions por tipo.  
   
  Portanto, uma classe InstanceContextExtension deve ser criada que implementa a interface de IExtension e define o estado necessário para salvar a ID de contexto. Essa classe também fornece o estado para manter o armazenamento manager que está sendo usado. Depois que o novo estado é salvo, ele não deve ser possível modificá-lo. Portanto, o estado é fornecido e salvo na instância no momento em que ele está sendo construído e, em seguida, só pode ser acessado usando propriedades somente leitura.  
   

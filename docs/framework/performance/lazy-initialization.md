@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949936"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
   
--   Quando você tem um objeto de criação dispendiosa e o programa pode não vir a usá-lo. Por exemplo, suponha que você tenha na memória um objeto `Customer` que tem uma propriedade `Orders` contendo uma grande variedade de objetos `Order` que, ao serem inicializados, requerem uma conexão de banco de dados. Se o usuário nunca solicita a exibição das Ordens nem usa os dados em uma computação, não há motivo para usar a memória do sistema ou ciclos de computação para criá-lo. Ao usar `Lazy<Orders>` para declarar o objeto `Orders` para inicialização lenta, você pode evitar desperdício de recursos de sistema quando o objeto não é usado.  
+- Quando você tem um objeto de criação dispendiosa e o programa pode não vir a usá-lo. Por exemplo, suponha que você tenha na memória um objeto `Customer` que tem uma propriedade `Orders` contendo uma grande variedade de objetos `Order` que, ao serem inicializados, requerem uma conexão de banco de dados. Se o usuário nunca solicita a exibição das Ordens nem usa os dados em uma computação, não há motivo para usar a memória do sistema ou ciclos de computação para criá-lo. Ao usar `Lazy<Orders>` para declarar o objeto `Orders` para inicialização lenta, você pode evitar desperdício de recursos de sistema quando o objeto não é usado.  
   
--   Quando você tem um objeto cuja criação é dispendiosa e você deseja adiar a criação até após a conclusão de outras operações dispendiosas. Por exemplo, suponha que seu programa carrega várias instâncias de objeto quando ele é iniciado, mas apenas algumas delas são necessárias imediatamente. Você pode melhorar o desempenho de inicialização do programa, adiando a inicialização dos objetos que não são necessários até que os objetos necessários tenham sido criados.  
+- Quando você tem um objeto cuja criação é dispendiosa e você deseja adiar a criação até após a conclusão de outras operações dispendiosas. Por exemplo, suponha que seu programa carrega várias instâncias de objeto quando ele é iniciado, mas apenas algumas delas são necessárias imediatamente. Você pode melhorar o desempenho de inicialização do programa, adiando a inicialização dos objetos que não são necessários até que os objetos necessários tenham sido criados.  
   
  Embora você possa escrever seu próprio código para executar a inicialização lenta, recomendamos que você use <xref:System.Lazy%601> em vez disso. <xref:System.Lazy%601> e seus tipos relacionados também dão suporte a segurança do thread e fornecem uma política de propagação de exceção consistente.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182293"
   
  <xref:System.Threading.ThreadLocal%601> encapsula seu objeto da mesma maneira que <xref:System.Lazy%601>, com estas diferenças essenciais:  
   
--   Cada thread inicializa a variável local de thread usando seus próprios dados privados que não são acessíveis de outros threads.  
+- Cada thread inicializa a variável local de thread usando seus próprios dados privados que não são acessíveis de outros threads.  
   
--   A propriedade <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> é de leitura-gravação e pode ser modificada qualquer número de vezes. Isso pode afetar a propagação de exceção, por exemplo, uma operação `get` pode gerar uma exceção, mas a próxima pode inicializar o valor com êxito.  
+- A propriedade <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> é de leitura-gravação e pode ser modificada qualquer número de vezes. Isso pode afetar a propagação de exceção, por exemplo, uma operação `get` pode gerar uma exceção, mas a próxima pode inicializar o valor com êxito.  
   
--   Se nenhum delegado de inicialização for fornecido, <xref:System.Threading.ThreadLocal%601> inicializará seu tipo encapsulado usando o valor padrão do tipo. Nesse sentido, <xref:System.Threading.ThreadLocal%601> é consistente com o atributo <xref:System.ThreadStaticAttribute>.  
+- Se nenhum delegado de inicialização for fornecido, <xref:System.Threading.ThreadLocal%601> inicializará seu tipo encapsulado usando o valor padrão do tipo. Nesse sentido, <xref:System.Threading.ThreadLocal%601> é consistente com o atributo <xref:System.ThreadStaticAttribute>.  
   
  O exemplo a seguir demonstra que cada thread que acessa a instância de `ThreadLocal<int>` obtém sua própria cópia exclusiva dos dados.  
   

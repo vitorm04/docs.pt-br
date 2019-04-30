@@ -3,11 +3,11 @@ title: Instalando o Enfileiramento de Mensagens (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954941"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalando o Enfileiramento de Mensagens (MSMQ)
 Os procedimentos a seguir mostram como instalar o Enfileiramento de Mensagens 4.0 e o Enfileiramento de Mensagens 3.0.  
@@ -37,9 +37,9 @@ Os procedimentos a seguir mostram como instalar o Enfileiramento de Mensagens 4.
   
 3. Expanda o Servidor Fila MSMQ, expanda o Server Core Fila MSMQ e marque as caixas de seleção dos seguintes recursos do Enfileiramento de Mensagens a serem instalados:  
   
-    -   Integração de MSMQ com os Serviços de Domínio Active Directory (para computadores ingressos em um Domínio).  
+    - Integração de MSMQ com os Serviços de Domínio Active Directory (para computadores ingressos em um Domínio).  
   
-    -   Suporte a HTTP do MSMQ.  
+    - Suporte a HTTP do MSMQ.  
   
 4. Clique em **OK**.  
   

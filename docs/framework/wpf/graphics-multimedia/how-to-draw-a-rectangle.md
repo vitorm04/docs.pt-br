@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
 ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947622"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Como: Desenhar um retângulo
 Este exemplo mostra como desenhar um retângulo usando o <xref:System.Windows.Shapes.Rectangle> elemento.  

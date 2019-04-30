@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954083"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 
@@ -45,13 +45,13 @@ Um básico lendo o loop de nó para examinar um fluxo do nó XAML consiste em co
 
 - Com base no qual <xref:System.Xaml.XamlNodeType> é relatada como o nó atual ou o registro atual, chame um dos procedimentos a seguir para obter informações sobre o conteúdo do nó:
 
-    - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.StartMember> ou <xref:System.Xaml.XamlNodeType.EndMember>, chame <xref:System.Xaml.XamlXmlReader.Member%2A> obter <xref:System.Xaml.XamlMember> informações sobre um membro. Observe que o membro pode ser um <xref:System.Xaml.XamlDirective>, e, portanto, pode não ser necessariamente um membro de tipo definido convencional do objeto anterior. Por exemplo, `x:Name` aplicado a um objeto aparece como um membro XAML em que <xref:System.Xaml.XamlMember.IsDirective%2A> é verdadeiro e o <xref:System.Xaml.XamlMember.Name%2A> do membro é `Name`, com outras propriedades que indica que essa diretiva está sob o namespace XAML de linguagem XAML.
+  - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.StartMember> ou <xref:System.Xaml.XamlNodeType.EndMember>, chame <xref:System.Xaml.XamlXmlReader.Member%2A> obter <xref:System.Xaml.XamlMember> informações sobre um membro. Observe que o membro pode ser um <xref:System.Xaml.XamlDirective>, e, portanto, pode não ser necessariamente um membro de tipo definido convencional do objeto anterior. Por exemplo, `x:Name` aplicado a um objeto aparece como um membro XAML em que <xref:System.Xaml.XamlMember.IsDirective%2A> é verdadeiro e o <xref:System.Xaml.XamlMember.Name%2A> do membro é `Name`, com outras propriedades que indica que essa diretiva está sob o namespace XAML de linguagem XAML.
 
-    - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.StartObject> ou <xref:System.Xaml.XamlNodeType.EndObject>, chame <xref:System.Xaml.XamlXmlReader.Type%2A> obter <xref:System.Xaml.XamlType> informações sobre um objeto.
+  - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.StartObject> ou <xref:System.Xaml.XamlNodeType.EndObject>, chame <xref:System.Xaml.XamlXmlReader.Type%2A> obter <xref:System.Xaml.XamlType> informações sobre um objeto.
 
-    - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.Value>, chame <xref:System.Xaml.XamlXmlReader.Value%2A>. Um nó é um valor somente se ele é a expressão mais simples de um valor para um membro ou o texto de inicialização para um objeto (no entanto, você deve estar ciente do comportamento de conversão de tipo, conforme documentado em uma seção posterior deste tópico).
+  - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.Value>, chame <xref:System.Xaml.XamlXmlReader.Value%2A>. Um nó é um valor somente se ele é a expressão mais simples de um valor para um membro ou o texto de inicialização para um objeto (no entanto, você deve estar ciente do comportamento de conversão de tipo, conforme documentado em uma seção posterior deste tópico).
 
-    - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, chame <xref:System.Xaml.XamlXmlReader.Namespace%2A> para obter informações de namespace para um nó de namespace.
+  - Para um <xref:System.Xaml.XamlXmlReader.NodeType%2A> dos <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, chame <xref:System.Xaml.XamlXmlReader.Namespace%2A> para obter informações de namespace para um nó de namespace.
 
 - Chamar <xref:System.Xaml.XamlXmlReader.Read%2A> para avança o leitor XAML para o próximo nó no fluxo de nó XAML e repita as etapas novamente.
 
@@ -140,15 +140,15 @@ O fluxo do nó XAML, você pode contar o seguinte comportamento:
 
 - Um `Value` nó representa o valor em si; não há nenhum "EndValue". Ele pode ser seguido apenas por um `EndMember`.
 
-    - Texto de inicialização do XAML do objeto, como pode ser usado pela construção não resulta em uma estrutura de valor do objeto. Em vez disso, um nó de membro dedicado para um membro chamado `_Initialization` é criado. e esse nó de membro contém a cadeia de caracteres do valor de inicialização. Se ele existir, `_Initialization` sempre é a primeira `StartMember`. `_Initialization` pode ser qualificado em algumas representações de serviços XAML com o namescope XAML de linguagem XAML, para esclarecer que `_Initialization` não é uma propriedade definida em tipos de suporte.
+  - Texto de inicialização do XAML do objeto, como pode ser usado pela construção não resulta em uma estrutura de valor do objeto. Em vez disso, um nó de membro dedicado para um membro chamado `_Initialization` é criado. e esse nó de membro contém a cadeia de caracteres do valor de inicialização. Se ele existir, `_Initialization` sempre é a primeira `StartMember`. `_Initialization` pode ser qualificado em algumas representações de serviços XAML com o namescope XAML de linguagem XAML, para esclarecer que `_Initialization` não é uma propriedade definida em tipos de suporte.
 
-    - Uma combinação do valor do membro representa uma definição de atributo do valor. Eventualmente, talvez existam um conversor de valor envolvidos no processamento esse valor e o valor é uma cadeia de caracteres simples. No entanto, que não é avaliada até que um gravador de objeto XAML processa esse fluxo do nó. O gravador de objeto XAML possui o contexto de esquema XAML necessário, mapeamento de tipo de sistema e outros tipos de suporte necessários para conversões de valor.
+  - Uma combinação do valor do membro representa uma definição de atributo do valor. Eventualmente, talvez existam um conversor de valor envolvidos no processamento esse valor e o valor é uma cadeia de caracteres simples. No entanto, que não é avaliada até que um gravador de objeto XAML processa esse fluxo do nó. O gravador de objeto XAML possui o contexto de esquema XAML necessário, mapeamento de tipo de sistema e outros tipos de suporte necessários para conversões de valor.
 
 - Uma `EndMember` nó pode ser seguido por um `StartMember` nó para um membro subsequente, ou por um `EndObject` nó do proprietário do membro.
 
 - Uma `EndObject` nó pode ser seguido por um `EndMember` nó. Ele também pode ser seguido por um `StartObject` nó para casos em que os objetos são correspondentes nos itens da coleção. Ou ele pode ser seguido por um `Namespace` nó, que se aplica a uma futura `StartObject`.
 
-    - Para o caso exclusivo de fechar o fluxo de todo o nó, o `EndObject` de raiz não é seguida por nada; o leitor agora é o fim do arquivo, e <xref:System.Xaml.XamlReader.Read%2A> retorna `false`.
+  - Para o caso exclusivo de fechar o fluxo de todo o nó, o `EndObject` de raiz não é seguida por nada; o leitor agora é o fim do arquivo, e <xref:System.Xaml.XamlReader.Read%2A> retorna `false`.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

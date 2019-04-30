@@ -3,11 +3,11 @@ title: 5403 - TokenValidationSuccess
 ms.date: 03/30/2017
 ms.assetid: 322efeb2-8081-4d3c-ab92-31d5b236f4d3
 ms.openlocfilehash: bdb95333483a0e749b1546cacae5cacd649ce6e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955266"
 ---
 # <a name="5403---tokenvalidationsuccess"></a>5403 - TokenValidationSuccess
 ## <a name="properties"></a>Propriedades  
@@ -23,6 +23,6 @@ ms.locfileid: "33469288"
  Esse evento é emitido quando a validação SecurityToken concluído com êxito.  
   
 ## <a name="message"></a>Mensagem  
- Êxito na validação SecurityToken (tipo '%1' e id '%2').  
+ Êxito na validação SecurityToken (o tipo '%1' e id '%2').  
   
 ## <a name="details"></a>Detalhes

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
 ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944762"
 ---
 # <a name="path-pathname-not-found"></a>Caminho '\<pathname >' não encontrado
 O sistema operacional não conseguir encontrar o caminho especificado durante uma operação de acesso a arquivos ou o acesso ao disco. O caminho para um arquivo deve incluir a especificação da unidade e os diretórios e subdiretórios que devem ser percorridos para localizar o arquivo. Um caminho pode ser relativo ou absoluto.  

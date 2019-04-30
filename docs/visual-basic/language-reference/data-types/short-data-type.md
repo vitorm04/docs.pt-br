@@ -17,11 +17,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971789"
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de dados curto (Visual Basic)
 Armazena inteiros de 16 bits (2 bytes) que variam de -32.768 a 32.767.  
@@ -62,11 +62,11 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Dicas de programação
 
--   **Ampliação.** O `Short` tipo de dados amplia a `Integer`, `Long`, `Decimal`, `Single`, ou `Double`. Isso significa que você pode converter `Short` em qualquer um desses tipos sem a ocorrência de um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Ampliação.** O `Short` tipo de dados amplia a `Integer`, `Long`, `Decimal`, `Single`, ou `Double`. Isso significa que você pode converter `Short` em qualquer um desses tipos sem a ocorrência de um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `S` a um literal o força ao tipo de dados `Short`. `Short` não tem nenhum caractere de tipo de identificador.  
+- **Caracteres de tipo.** Acrescentar o caractere de tipo literal `S` a um literal o força ao tipo de dados `Short`. `Short` não tem nenhum caractere de tipo de identificador.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Int16?displayProperty=nameWithType>.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Int16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

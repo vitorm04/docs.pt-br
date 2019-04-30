@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 ms.openlocfilehash: cd14a20920b11cb198cfc91fd9be6ef83ca05c17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957515"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementando o padrão de controle Toggle de automação de interface de usuário
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59182135"
 ## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de alternância, observe as seguintes diretrizes e convenções:  
   
--   Controles que não mantêm o estado quando ativado, como botões, botões de barra de ferramentas e hiperlinks, devem implementar <xref:System.Windows.Automation.Provider.IInvokeProvider> em vez disso.  
+- Controles que não mantêm o estado quando ativado, como botões, botões de barra de ferramentas e hiperlinks, devem implementar <xref:System.Windows.Automation.Provider.IInvokeProvider> em vez disso.  
   
--   Um controle deve percorrer seu <xref:System.Windows.Automation.ToggleState> na seguinte ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> e, se houver suporte, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+- Um controle deve percorrer seu <xref:System.Windows.Automation.ToggleState> na seguinte ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> e, se houver suporte, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
--   <xref:System.Windows.Automation.TogglePattern> não fornece um método SetState devido a problemas que envolvem a configuração direta de uma caixa de seleção de três estados sem percorrendo seu apropriado <xref:System.Windows.Automation.ToggleState> sequência.  
+- <xref:System.Windows.Automation.TogglePattern> não fornece um método SetState devido a problemas que envolvem a configuração direta de uma caixa de seleção de três estados sem percorrendo seu apropriado <xref:System.Windows.Automation.ToggleState> sequência.  
   
--   O controle RadioButton não implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, que não é capaz de percorrendo seus estados válidos.  
+- O controle RadioButton não implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, que não é capaz de percorrendo seus estados válidos.  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
 ## <a name="required-members-for-itoggleprovider"></a>Membros necessários para IToggleProvider  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
 ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972088"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como: Habilitar a reorganização da coluna no controle DataGridView do Windows Forms usando o designer
 Ao exibir os dados exibidos em um Windows Forms <xref:System.Windows.Forms.DataGridView> controle, os usuários desejam, às vezes comparar os valores em colunas específicas. Isso pode ser inconveniente se as colunas são separadas amplamente no controle, especialmente se os usuários devem rolar horizontalmente e voltar para ver todas as colunas que estão interessados. Você pode tornar a tarefa de comparar valores de coluna mais fácil, habilitando os usuários reordenar as colunas. Quando você habilita a reordenação de coluna, os usuários podem mover uma coluna para uma nova posição, arrastando o cabeçalho de coluna com o mouse.  
@@ -24,7 +24,7 @@ Ao exibir os dados exibidos em um Windows Forms <xref:System.Windows.Forms.DataG
   
 ### <a name="to-enable-column-reordering"></a>Para habilitar a reorganização de colunas  
   
--   Clique no glifo de marca inteligente (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no canto superior direito dos <xref:System.Windows.Forms.DataGridView> controle e, em seguida, selecione **habilitar reorganização de colunas**.  
+- Clique no glifo de marca inteligente (![glifo de Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) no canto superior direito dos <xref:System.Windows.Forms.DataGridView> controle e, em seguida, selecione **habilitar reorganização de colunas**.  
   
 ## <a name="see-also"></a>Consulte também
 

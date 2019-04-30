@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954304"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Como: Gerar automaticamente colunas em um controle DataGridView associado a dados do Windows Forms
 O exemplo de código a seguir demonstra como exibir as colunas da fonte de dados associados em um <xref:System.Windows.Forms.DataGridView> controle. Quando o <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> é o valor da propriedade `true` (o padrão), um <xref:System.Windows.Forms.DataGridViewColumn> é criado para cada coluna na tabela de fonte de dados.  
@@ -28,11 +28,11 @@ O exemplo de código a seguir demonstra como exibir as colunas da fonte de dados
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um controle <xref:System.Windows.Forms.DataGridView> chamado `customersDataGridView`.  
+- Um controle <xref:System.Windows.Forms.DataGridView> chamado `customersDataGridView`.  
   
--   Um <xref:System.Data.DataSet> objeto nomeado `customersDataSet` que tem uma tabela chamada `Customers`.  
+- Um <xref:System.Data.DataSet> objeto nomeado `customersDataSet` que tem uma tabela chamada `Customers`.  
   
--   Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
+- Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
   
 ## <a name="see-also"></a>Consulte também
 

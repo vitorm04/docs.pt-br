@@ -3,11 +3,11 @@ title: Transformação funcional de XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 62edd7adf425f8a36128497a6dae445a3e9cbfc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968474"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Transformação funcional de XML (Visual Basic)
 Este tópico descreve a abordagem funcional pura de transformação aos documentos XML de alteração, e ele contrastes com uma abordagem procedural.  
@@ -15,16 +15,16 @@ Este tópico descreve a abordagem funcional pura de transformação aos document
 ## <a name="modifying-an-xml-document"></a>Alterando um documento XML  
  Uma das tarefas mais comuns para um programador XML está transformando XML de uma forma para outra. A forma de um documento XML é a estrutura do documento, que inclui o seguinte:  
   
--   A hierarquia expressa pelo documento.  
+- A hierarquia expressa pelo documento.  
   
--   Nomes de elementos e atributos.  
+- Nomes de elementos e atributos.  
   
--   Os tipos de dados de elementos e atributos.  
+- Os tipos de dados de elementos e atributos.  
   
  Em geral, a abordagem mais eficiente para transformar XML de uma forma para outra é a de transformação funcional pura. Nessa abordagem, a tarefa principal do programador é criar uma transformação que é aplicada ao documento XML inteiro (ou a um ou mais nós estritamente definido). A transformação funcional é teoricamente a mais fácil de código (após um programador estiver familiarizado com a abordagem), produz o código o mais sustentável, e é geralmente mais compacta de abordagens alternativas.  
   
 ### <a name="xml-functional-transformational-technologies"></a>Tecnologias transformacionais funcionais XML  
- A Microsoft oferece duas tecnologias funcionais de transformação para uso em documentos XML: LINQ to XML e XSLT. XSLT é suportado no namespace gerenciada <xref:System.Xml.Xsl> e na implementação nativo COM de MSXML. Embora XSLT é uma tecnologia robusta para documentos XML de tratamento, requer a experiência em um domínio especializado, como o idioma XSLT e seus APIs de suporte.  
+ A Microsoft oferece duas tecnologias funcionais de transformação para uso em documentos XML: XSLT e LINQ to XML. XSLT é suportado no namespace gerenciada <xref:System.Xml.Xsl> e na implementação nativo COM de MSXML. Embora XSLT é uma tecnologia robusta para documentos XML de tratamento, requer a experiência em um domínio especializado, como o idioma XSLT e seus APIs de suporte.  
   
  LINQ to XML fornece as ferramentas necessárias codificação transformações e puras de uma maneira poderosa completo expressive e, em C# ou de código Visual Basic. Por exemplo, muitos dos exemplos o uso da documentação LINQ to XML uma abordagem funcional pura. Além disso, no [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial, usamos LINQ to XML em uma abordagem funcional para manipular informações em um documento do Microsoft Word.  
   

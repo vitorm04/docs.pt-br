@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943345"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Como: Controlar a disponibilidade de uma variável (Visual Basic)
 Controlar a disponibilidade de uma variável especificando seu *nível de acesso*. O nível de acesso determina qual código tem permissão para ler ou gravar na variável.  
   
--   *Variáveis de membro* (definida no nível de módulo e fora de qualquer procedimento) padrão de acesso público, o que significa que qualquer código que pode vê-los pode acessá-los. Você pode alterar isso especificando um modificador de acesso.  
+- *Variáveis de membro* (definida no nível de módulo e fora de qualquer procedimento) padrão de acesso público, o que significa que qualquer código que pode vê-los pode acessá-los. Você pode alterar isso especificando um modificador de acesso.  
   
--   *Variáveis locais* (definido dentro de um procedimento) nominalmente têm acesso público, embora somente o código dentro de seu procedimento pode acessá-los. Você não pode alterar o nível de acesso de uma variável local, mas você pode alterar o nível de acesso do procedimento que o contém.  
+- *Variáveis locais* (definido dentro de um procedimento) nominalmente têm acesso público, embora somente o código dentro de seu procedimento pode acessá-los. Você não pode alterar o nível de acesso de uma variável local, mas você pode alterar o nível de acesso do procedimento que o contém.  
   
  Para obter mais informações, consulte [acessar níveis no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   

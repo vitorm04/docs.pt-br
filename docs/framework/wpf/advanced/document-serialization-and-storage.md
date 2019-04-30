@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962728"
 ---
 # <a name="document-serialization-and-storage"></a>Serialização e armazenamento do documento
 Microsoft .NET Framework fornece um ambiente potente para criar e exibir documentos de alta qualidade.  Recursos aprimorados que dão suporte a documentos fixos e documentos de fluxo, advanced exibindo controles, combinado com 2D poderosos e recursos gráficos 3D levar os aplicativos do .NET Framework para um novo nível de qualidade e experiência do usuário.  Ser capaz de gerenciar com flexibilidade uma representação na memória de um documento é um recurso fundamental do .NET Framework e ser capaz de salvar e carregar documentos de um armazenamento de dados de forma eficiente é uma necessidade de quase todos os aplicativos.  O processo de conversão de um documento de uma representação na memória interna em um armazenamento de dados externo é chamado de serialização.  O processo inverso de ler um armazenamento de dados e recriar a instância original na memória é chamado desserialização.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework fornece um ambiente potente para criar e exibir documen
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>Recursos dos serializadores de documento do .NET Framework 3.0  
   
--   O acesso direto aos objetos de documento de alto nível (árvore lógica e elementos visuais) permite um armazenamento eficiente de conteúdo paginado, elementos 2D/3D, imagens, mídia, hiperlinks, anotações e outros conteúdos de suporte.  
+- O acesso direto aos objetos de documento de alto nível (árvore lógica e elementos visuais) permite um armazenamento eficiente de conteúdo paginado, elementos 2D/3D, imagens, mídia, hiperlinks, anotações e outros conteúdos de suporte.  
   
--   Operações síncronas e assíncronas.  
+- Operações síncronas e assíncronas.  
   
--   Suporte para serializadores de plug-ins com recursos aprimorados:  
+- Suporte para serializadores de plug-ins com recursos aprimorados:  
   
-    -   Acesso de todo o sistema para uso por todos os aplicativos do .NET Framework.  
+    - Acesso de todo o sistema para uso por todos os aplicativos do .NET Framework.  
   
-    -   Descoberta de plug-in de aplicativo simples.  
+    - Descoberta de plug-in de aplicativo simples.  
   
-    -   Implantação simples, instalação e atualização para plug-ins personalizados de terceiros.  
+    - Implantação simples, instalação e atualização para plug-ins personalizados de terceiros.  
   
-    -   Suporte à interface do usuário para opções e configurações personalizadas de tempo de execução.  
+    - Suporte à interface do usuário para opções e configurações personalizadas de tempo de execução.  
   
 ### <a name="xps-print-path"></a>Caminho de impressão XPS  
  O Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão também fornece um mecanismo extensível para gravar documentos por meio de saída de impressão.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] serve como formato de arquivo de documento e é o formato de spool de impressão nativo para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Os documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] podem ser enviados diretamente para impressoras compatíveis com [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sem a necessidade de conversão para um formato intermediário.  Consulte a [Visão geral sobre impressão](printing-overview.md) para obter informações adicionais sobre as opções de saída de caminho de impressão e recursos.  

@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949156"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de pool de threads
 <a name="top"></a> Esses eventos coletam informações sobre a função de trabalho e os threads de E/S.  
   
  Há dois grupos de eventos de pool de threads:  
   
--   [Eventos de pool de threads de trabalho](#worker), que fornecem informações sobre como um aplicativo usa o pool de threads e o efeito das cargas de trabalho no controle de simultaneidade.  
+- [Eventos de pool de threads de trabalho](#worker), que fornecem informações sobre como um aplicativo usa o pool de threads e o efeito das cargas de trabalho no controle de simultaneidade.  
   
--   [Eventos de pool de threads de E/S](#io), que fornecem informações sobre os threads de E/S que são criados, desativados, ativados novamente ou terminados no pool de threads.  
+- [Eventos de pool de threads de E/S](#io), que fornecem informações sobre os threads de E/S que são criados, desativados, ativados novamente ou terminados no pool de threads.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>Eventos de pool de threads de trabalho  
