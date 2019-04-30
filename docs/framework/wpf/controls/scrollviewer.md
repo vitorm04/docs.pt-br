@@ -10,25 +10,25 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
 ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970996"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="12170-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="12170-102">ScrollViewer</span></span>
-<span data-ttu-id="12170-103">O <xref:System.Windows.Controls.ScrollViewer> controle cria uma região rolável na qual o conteúdo pode ser rolado horizontalmente ou verticalmente.</span><span class="sxs-lookup"><span data-stu-id="12170-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="03c24-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="03c24-102">ScrollViewer</span></span>
+<span data-ttu-id="03c24-103">O <xref:System.Windows.Controls.ScrollViewer> controle cria uma região rolável na qual o conteúdo pode ser rolado horizontalmente ou verticalmente.</span><span class="sxs-lookup"><span data-stu-id="03c24-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="12170-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="12170-104">In This Section</span></span>  
- [<span data-ttu-id="12170-105">Visão geral de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="12170-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="12170-106">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="12170-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="03c24-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="03c24-104">In This Section</span></span>  
+ [<span data-ttu-id="03c24-105">Visão geral de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="03c24-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="03c24-106">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="03c24-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="12170-107">Referência</span><span class="sxs-lookup"><span data-stu-id="12170-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="03c24-107">Referência</span><span class="sxs-lookup"><span data-stu-id="03c24-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="12170-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="12170-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03c24-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="03c24-108">See also</span></span>
 
-- [<span data-ttu-id="12170-109">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="12170-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="12170-110">Layout</span><span class="sxs-lookup"><span data-stu-id="12170-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="03c24-109">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="03c24-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="03c24-110">Layout</span><span class="sxs-lookup"><span data-stu-id="03c24-110">Layout</span></span>](../advanced/layout.md)

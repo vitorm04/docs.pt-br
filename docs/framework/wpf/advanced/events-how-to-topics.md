@@ -7,27 +7,27 @@ helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
 ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962430"
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="8c286-102">Tópicos explicativos de eventos</span><span class="sxs-lookup"><span data-stu-id="8c286-102">Events How-to Topics</span></span>
-<span data-ttu-id="8c286-103">Os tópicos nesta seção descrevem como usar eventos no WPF.</span><span class="sxs-lookup"><span data-stu-id="8c286-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="8f0f2-102">Tópicos explicativos de eventos</span><span class="sxs-lookup"><span data-stu-id="8f0f2-102">Events How-to Topics</span></span>
+<span data-ttu-id="8f0f2-103">Os tópicos nesta seção descrevem como usar eventos no WPF.</span><span class="sxs-lookup"><span data-stu-id="8f0f2-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8c286-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8c286-104">In This Section</span></span>  
- [<span data-ttu-id="8c286-105">Adicionar um manipulador de eventos usando código</span><span class="sxs-lookup"><span data-stu-id="8c286-105">Add an Event Handler Using Code</span></span>](how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="8c286-106">Manipular um evento roteado</span><span class="sxs-lookup"><span data-stu-id="8c286-106">Handle a Routed Event</span></span>](how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="8c286-107">Criar um evento roteado personalizado</span><span class="sxs-lookup"><span data-stu-id="8c286-107">Create a Custom Routed Event</span></span>](how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="8c286-108">Localizar o elemento de origem em um manipulador de eventos</span><span class="sxs-lookup"><span data-stu-id="8c286-108">Find the Source Element in an Event Handler</span></span>](how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="8c286-109">Adicionar tratamento de classes para um evento roteado</span><span class="sxs-lookup"><span data-stu-id="8c286-109">Add Class Handling for a Routed Event</span></span>](how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8f0f2-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8f0f2-104">In This Section</span></span>  
+ [<span data-ttu-id="8f0f2-105">Adicionar um manipulador de eventos usando código</span><span class="sxs-lookup"><span data-stu-id="8f0f2-105">Add an Event Handler Using Code</span></span>](how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="8f0f2-106">Manipular um evento roteado</span><span class="sxs-lookup"><span data-stu-id="8f0f2-106">Handle a Routed Event</span></span>](how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="8f0f2-107">Criar um evento roteado personalizado</span><span class="sxs-lookup"><span data-stu-id="8f0f2-107">Create a Custom Routed Event</span></span>](how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="8f0f2-108">Localizar o elemento de origem em um manipulador de eventos</span><span class="sxs-lookup"><span data-stu-id="8f0f2-108">Find the Source Element in an Event Handler</span></span>](how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="8f0f2-109">Adicionar tratamento de classes para um evento roteado</span><span class="sxs-lookup"><span data-stu-id="8f0f2-109">Add Class Handling for a Routed Event</span></span>](how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="8c286-110">Referência</span><span class="sxs-lookup"><span data-stu-id="8c286-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8f0f2-110">Referência</span><span class="sxs-lookup"><span data-stu-id="8f0f2-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="8c286-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="8c286-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8f0f2-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="8f0f2-111">Related Sections</span></span>
