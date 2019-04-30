@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ef9a5896c2ecc54b7fd48670f751d193ac74554
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992713"
 ---
-# <a name="ihostsyncmanagercreatesemaphore-method"></a><span data-ttu-id="e028a-102">Método IHostSyncManager::CreateSemaphore</span><span class="sxs-lookup"><span data-stu-id="e028a-102">IHostSyncManager::CreateSemaphore Method</span></span>
-<span data-ttu-id="e028a-103">Cria uma [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) objeto para o common language runtime (CLR) usar como um semáforo para eventos de espera.</span><span class="sxs-lookup"><span data-stu-id="e028a-103">Creates an [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) object for the common language runtime (CLR) to use as a semaphore for wait events.</span></span>  
+# <a name="ihostsyncmanagercreatesemaphore-method"></a><span data-ttu-id="358b4-102">Método IHostSyncManager::CreateSemaphore</span><span class="sxs-lookup"><span data-stu-id="358b4-102">IHostSyncManager::CreateSemaphore Method</span></span>
+<span data-ttu-id="358b4-103">Cria uma [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) objeto para o common language runtime (CLR) usar como um semáforo para eventos de espera.</span><span class="sxs-lookup"><span data-stu-id="358b4-103">Creates an [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) object for the common language runtime (CLR) to use as a semaphore for wait events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e028a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e028a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="358b4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="358b4-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateSemaphore (  
@@ -37,42 +37,42 @@ HRESULT CreateSemaphore (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e028a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e028a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="358b4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="358b4-105">Parameters</span></span>  
  `dwInitial`  
- <span data-ttu-id="e028a-106">[in] A contagem inicial de `ppSemaphore`.</span><span class="sxs-lookup"><span data-stu-id="e028a-106">[in] The initial count for `ppSemaphore`.</span></span>  
+ <span data-ttu-id="358b4-106">[in] A contagem inicial de `ppSemaphore`.</span><span class="sxs-lookup"><span data-stu-id="358b4-106">[in] The initial count for `ppSemaphore`.</span></span>  
   
  `dwMax`  
- <span data-ttu-id="e028a-107">[in] A contagem máxima de `ppSemaphore`.</span><span class="sxs-lookup"><span data-stu-id="e028a-107">[in] The maximum count for `ppSemaphore`.</span></span>  
+ <span data-ttu-id="358b4-107">[in] A contagem máxima de `ppSemaphore`.</span><span class="sxs-lookup"><span data-stu-id="358b4-107">[in] The maximum count for `ppSemaphore`.</span></span>  
   
  `ppSemaphore`  
- <span data-ttu-id="e028a-108">[out] Um ponteiro para o endereço de um `IHostSemaphore` da instância ou nulo se o semáforo não pôde ser criado.</span><span class="sxs-lookup"><span data-stu-id="e028a-108">[out] A pointer to the address of an `IHostSemaphore` instance, or null if the semaphore could not be created.</span></span>  
+ <span data-ttu-id="358b4-108">[out] Um ponteiro para o endereço de um `IHostSemaphore` da instância ou nulo se o semáforo não pôde ser criado.</span><span class="sxs-lookup"><span data-stu-id="358b4-108">[out] A pointer to the address of an `IHostSemaphore` instance, or null if the semaphore could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e028a-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="e028a-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="358b4-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="358b4-109">Return Value</span></span>  
   
-|<span data-ttu-id="e028a-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e028a-110">HRESULT</span></span>|<span data-ttu-id="e028a-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="e028a-111">Description</span></span>|  
+|<span data-ttu-id="358b4-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="358b4-110">HRESULT</span></span>|<span data-ttu-id="358b4-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="358b4-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e028a-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="e028a-112">S_OK</span></span>|<span data-ttu-id="e028a-113">`CreateSemaphore` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="e028a-113">`CreateSemaphore` returned successfully.</span></span>|  
-|<span data-ttu-id="e028a-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e028a-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e028a-115">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="e028a-115">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e028a-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e028a-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e028a-117">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="e028a-117">The call timed out.</span></span>|  
-|<span data-ttu-id="e028a-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e028a-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e028a-119">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="e028a-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e028a-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e028a-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e028a-121">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="e028a-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e028a-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e028a-122">E_FAIL</span></span>|<span data-ttu-id="e028a-123">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="e028a-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e028a-124">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="e028a-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e028a-125">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e028a-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="e028a-126">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="e028a-126">E_OUTOFMEMORY</span></span>|<span data-ttu-id="e028a-127">Não havia memória suficiente disponível para criar o objeto de evento solicitado.</span><span class="sxs-lookup"><span data-stu-id="e028a-127">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="358b4-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="358b4-112">S_OK</span></span>|<span data-ttu-id="358b4-113">`CreateSemaphore` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="358b4-113">`CreateSemaphore` returned successfully.</span></span>|  
+|<span data-ttu-id="358b4-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="358b4-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="358b4-115">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="358b4-115">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="358b4-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="358b4-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="358b4-117">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="358b4-117">The call timed out.</span></span>|  
+|<span data-ttu-id="358b4-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="358b4-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="358b4-119">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="358b4-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="358b4-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="358b4-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="358b4-121">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="358b4-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="358b4-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="358b4-122">E_FAIL</span></span>|<span data-ttu-id="358b4-123">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="358b4-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="358b4-124">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="358b4-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="358b4-125">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="358b4-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="358b4-126">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="358b4-126">E_OUTOFMEMORY</span></span>|<span data-ttu-id="358b4-127">Não havia memória suficiente disponível para criar o objeto de evento solicitado.</span><span class="sxs-lookup"><span data-stu-id="358b4-127">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e028a-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="e028a-128">Remarks</span></span>  
- <span data-ttu-id="e028a-129">`CreateSemaphore` espelha a função do Win32 que tem o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="e028a-129">`CreateSemaphore` mirrors the Win32 function that has the same name.</span></span> <span data-ttu-id="e028a-130">O `dwInitial` e `dwMax` parâmetros usam a mesma semântica para a contagem do semáforo como Win32 `lInitialCount` e `lMaximumCount` parâmetros, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="e028a-130">The `dwInitial` and `dwMax` parameters use the same semantics for the semaphore count as the Win32 `lInitialCount` and `lMaximumCount` parameters, respectively.</span></span> <span data-ttu-id="e028a-131">`dwInitial` deve estar entre zero e `dwMax`, inclusive.</span><span class="sxs-lookup"><span data-stu-id="e028a-131">`dwInitial` must be between zero and `dwMax`, inclusive.</span></span> <span data-ttu-id="e028a-132">`dwMax` Deve ser maior que zero.</span><span class="sxs-lookup"><span data-stu-id="e028a-132">`dwMax` must be greater than zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="358b4-128">Comentários</span><span class="sxs-lookup"><span data-stu-id="358b4-128">Remarks</span></span>  
+ <span data-ttu-id="358b4-129">`CreateSemaphore` espelha a função do Win32 que tem o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="358b4-129">`CreateSemaphore` mirrors the Win32 function that has the same name.</span></span> <span data-ttu-id="358b4-130">O `dwInitial` e `dwMax` parâmetros usam a mesma semântica para a contagem do semáforo como Win32 `lInitialCount` e `lMaximumCount` parâmetros, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="358b4-130">The `dwInitial` and `dwMax` parameters use the same semantics for the semaphore count as the Win32 `lInitialCount` and `lMaximumCount` parameters, respectively.</span></span> <span data-ttu-id="358b4-131">`dwInitial` deve estar entre zero e `dwMax`, inclusive.</span><span class="sxs-lookup"><span data-stu-id="358b4-131">`dwInitial` must be between zero and `dwMax`, inclusive.</span></span> <span data-ttu-id="358b4-132">`dwMax` Deve ser maior que zero.</span><span class="sxs-lookup"><span data-stu-id="358b4-132">`dwMax` must be greater than zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e028a-133">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e028a-133">Requirements</span></span>  
- <span data-ttu-id="e028a-134">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e028a-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="358b4-133">Requisitos</span><span class="sxs-lookup"><span data-stu-id="358b4-133">Requirements</span></span>  
+ <span data-ttu-id="358b4-134">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="358b4-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e028a-135">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e028a-135">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="358b4-135">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="358b4-135">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e028a-136">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e028a-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="358b4-136">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="358b4-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e028a-137">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e028a-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="358b4-137">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="358b4-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e028a-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e028a-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="358b4-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="358b4-138">See also</span></span>
 
-- [<span data-ttu-id="e028a-139">Interface ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="e028a-139">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="e028a-140">Interface IHostSemaphore</span><span class="sxs-lookup"><span data-stu-id="e028a-140">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="e028a-141">Interface IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="e028a-141">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="358b4-139">Interface ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="358b4-139">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="358b4-140">Interface IHostSemaphore</span><span class="sxs-lookup"><span data-stu-id="358b4-140">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="358b4-141">Interface IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="358b4-141">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

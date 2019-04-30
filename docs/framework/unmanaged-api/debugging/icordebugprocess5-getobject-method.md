@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 35fdcd4bc3c9dbf6408f501256ce0df0174f9374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948727"
 ---
-# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="8866a-102">Método ICorDebugProcess5::GetObject</span><span class="sxs-lookup"><span data-stu-id="8866a-102">ICorDebugProcess5::GetObject Method</span></span>
-<span data-ttu-id="8866a-103">Converte um endereço de objeto em um objeto de "ICorDebugObjectValue".</span><span class="sxs-lookup"><span data-stu-id="8866a-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
+# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="c948c-102">Método ICorDebugProcess5::GetObject</span><span class="sxs-lookup"><span data-stu-id="c948c-102">ICorDebugProcess5::GetObject Method</span></span>
+<span data-ttu-id="c948c-103">Converte um endereço de objeto em um objeto de "ICorDebugObjectValue".</span><span class="sxs-lookup"><span data-stu-id="c948c-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8866a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8866a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c948c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c948c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject(  
@@ -36,26 +36,26 @@ HRESULT GetObject(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8866a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8866a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c948c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c948c-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="8866a-106">[in] O endereço do objeto.</span><span class="sxs-lookup"><span data-stu-id="8866a-106">[in] The object address.</span></span>  
+ <span data-ttu-id="c948c-106">[in] O endereço do objeto.</span><span class="sxs-lookup"><span data-stu-id="c948c-106">[in] The object address.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="8866a-107">[out] Um ponteiro para o endereço de um objeto de "ICorDebugObjectValue".</span><span class="sxs-lookup"><span data-stu-id="8866a-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
+ <span data-ttu-id="c948c-107">[out] Um ponteiro para o endereço de um objeto de "ICorDebugObjectValue".</span><span class="sxs-lookup"><span data-stu-id="c948c-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8866a-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="8866a-108">Remarks</span></span>  
- <span data-ttu-id="8866a-109">Se `addr` não aponta para um objeto gerenciado válido, o `GetObject` retorno do método `E_FAIL`.</span><span class="sxs-lookup"><span data-stu-id="8866a-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c948c-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="c948c-108">Remarks</span></span>  
+ <span data-ttu-id="c948c-109">Se `addr` não aponta para um objeto gerenciado válido, o `GetObject` retorno do método `E_FAIL`.</span><span class="sxs-lookup"><span data-stu-id="c948c-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8866a-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8866a-110">Requirements</span></span>  
- <span data-ttu-id="8866a-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8866a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c948c-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c948c-110">Requirements</span></span>  
+ <span data-ttu-id="c948c-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c948c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8866a-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8866a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c948c-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c948c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8866a-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8866a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c948c-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c948c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8866a-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8866a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c948c-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c948c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8866a-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8866a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c948c-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c948c-115">See also</span></span>
 
-- [<span data-ttu-id="8866a-116">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="8866a-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="8866a-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="8866a-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c948c-116">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="c948c-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="c948c-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="c948c-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe3cbc4bad83496bcc58aaea60e6724b1d1f06c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988891"
 ---
-# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="4574a-102">Método ICorDebugFrame::CreateStepper</span><span class="sxs-lookup"><span data-stu-id="4574a-102">ICorDebugFrame::CreateStepper Method</span></span>
-<span data-ttu-id="4574a-103">Obtém um seletor que permite que o depurador executar operações de passo a passo em relação a esse ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="4574a-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
+# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="135ff-102">Método ICorDebugFrame::CreateStepper</span><span class="sxs-lookup"><span data-stu-id="135ff-102">ICorDebugFrame::CreateStepper Method</span></span>
+<span data-ttu-id="135ff-103">Obtém um seletor que permite que o depurador executar operações de passo a passo em relação a esse ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="135ff-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4574a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4574a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="135ff-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="135ff-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStepper (  
@@ -35,18 +35,18 @@ HRESULT CreateStepper (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4574a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4574a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="135ff-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="135ff-105">Parameters</span></span>  
  `ppStepper`  
- <span data-ttu-id="4574a-106">[out] Um ponteiro para o endereço de um objeto de ICorDebugStepper que permite que o depurador executar operações de passo a passo em relação ao quadro atual.</span><span class="sxs-lookup"><span data-stu-id="4574a-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
+ <span data-ttu-id="135ff-106">[out] Um ponteiro para o endereço de um objeto de ICorDebugStepper que permite que o depurador executar operações de passo a passo em relação ao quadro atual.</span><span class="sxs-lookup"><span data-stu-id="135ff-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4574a-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="4574a-107">Remarks</span></span>  
- <span data-ttu-id="4574a-108">Se o quadro não estiver ativo, o objeto escalonador normalmente terá que retornar para o quadro antes que a etapa for concluída.</span><span class="sxs-lookup"><span data-stu-id="4574a-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="135ff-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="135ff-107">Remarks</span></span>  
+ <span data-ttu-id="135ff-108">Se o quadro não estiver ativo, o objeto escalonador normalmente terá que retornar para o quadro antes que a etapa for concluída.</span><span class="sxs-lookup"><span data-stu-id="135ff-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4574a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4574a-109">Requirements</span></span>  
- <span data-ttu-id="4574a-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4574a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="135ff-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="135ff-109">Requirements</span></span>  
+ <span data-ttu-id="135ff-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="135ff-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4574a-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4574a-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="135ff-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="135ff-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4574a-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4574a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="135ff-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="135ff-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4574a-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4574a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="135ff-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="135ff-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

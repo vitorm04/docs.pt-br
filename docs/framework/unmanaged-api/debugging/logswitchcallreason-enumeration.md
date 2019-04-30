@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7eadb595eb62b4f1a9dcc888225cbb7454119c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986538"
 ---
-# <a name="logswitchcallreason-enumeration"></a><span data-ttu-id="6fc93-102">Enumeração LogSwitchCallReason</span><span class="sxs-lookup"><span data-stu-id="6fc93-102">LogSwitchCallReason Enumeration</span></span>
-<span data-ttu-id="6fc93-103">Indica a operação que foi realizada em uma alternação entre depuração/rastreamento.</span><span class="sxs-lookup"><span data-stu-id="6fc93-103">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
+# <a name="logswitchcallreason-enumeration"></a><span data-ttu-id="44796-102">Enumeração LogSwitchCallReason</span><span class="sxs-lookup"><span data-stu-id="44796-102">LogSwitchCallReason Enumeration</span></span>
+<span data-ttu-id="44796-103">Indica a operação que foi realizada em uma alternação entre depuração/rastreamento.</span><span class="sxs-lookup"><span data-stu-id="44796-103">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fc93-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6fc93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44796-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="44796-104">Syntax</span></span>  
   
 ```  
 typedef enum LogSwitchCallReason {  
@@ -36,23 +36,23 @@ typedef enum LogSwitchCallReason {
 } LogSwitchCallReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6fc93-105">Membros</span><span class="sxs-lookup"><span data-stu-id="6fc93-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="44796-105">Membros</span><span class="sxs-lookup"><span data-stu-id="44796-105">Members</span></span>  
   
-|<span data-ttu-id="6fc93-106">Membro</span><span class="sxs-lookup"><span data-stu-id="6fc93-106">Member</span></span>|<span data-ttu-id="6fc93-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="6fc93-107">Description</span></span>|  
+|<span data-ttu-id="44796-106">Membro</span><span class="sxs-lookup"><span data-stu-id="44796-106">Member</span></span>|<span data-ttu-id="44796-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="44796-107">Description</span></span>|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|<span data-ttu-id="6fc93-108">Uma opção de depuração/rastreamento foi criada.</span><span class="sxs-lookup"><span data-stu-id="6fc93-108">A debugging/tracing switch was created.</span></span>|  
-|`SWITCH_MODIFY`|<span data-ttu-id="6fc93-109">Uma opção de depuração/rastreamento foi modificada.</span><span class="sxs-lookup"><span data-stu-id="6fc93-109">A debugging/tracing switch was modified.</span></span>|  
-|`SWITCH_DELETE`|<span data-ttu-id="6fc93-110">Uma opção de depuração/rastreamento foi excluída.</span><span class="sxs-lookup"><span data-stu-id="6fc93-110">A debugging/tracing switch was deleted.</span></span>|  
+|`SWITCH_CREATE`|<span data-ttu-id="44796-108">Uma opção de depuração/rastreamento foi criada.</span><span class="sxs-lookup"><span data-stu-id="44796-108">A debugging/tracing switch was created.</span></span>|  
+|`SWITCH_MODIFY`|<span data-ttu-id="44796-109">Uma opção de depuração/rastreamento foi modificada.</span><span class="sxs-lookup"><span data-stu-id="44796-109">A debugging/tracing switch was modified.</span></span>|  
+|`SWITCH_DELETE`|<span data-ttu-id="44796-110">Uma opção de depuração/rastreamento foi excluída.</span><span class="sxs-lookup"><span data-stu-id="44796-110">A debugging/tracing switch was deleted.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6fc93-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6fc93-111">Requirements</span></span>  
- <span data-ttu-id="6fc93-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6fc93-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44796-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="44796-111">Requirements</span></span>  
+ <span data-ttu-id="44796-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44796-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6fc93-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6fc93-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="44796-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="44796-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6fc93-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6fc93-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="44796-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44796-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6fc93-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fc93-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="44796-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44796-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fc93-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6fc93-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44796-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="44796-116">See also</span></span>
 
-- [<span data-ttu-id="6fc93-117">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="6fc93-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="44796-117">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="44796-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
