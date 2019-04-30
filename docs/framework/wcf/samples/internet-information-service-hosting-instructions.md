@@ -3,11 +3,11 @@ title: Instruções de hospedagem de serviço de informação de internet
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954850"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instruções de hospedagem de serviço de informação de internet
 Para executar os exemplos que são hospedados por serviços de informações da Internet (IIS), certifique-se de que o IIS está instalado corretamente e está em execução.  
@@ -46,13 +46,13 @@ Para executar os exemplos que são hospedados por serviços de informações da 
   
 8. Verifique se que os seguintes itens estão selecionados:  
   
-    1.  **Extensibilidade .NET**  
+    1. **Extensibilidade .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Extensões ISAPI**  
+    3. **Extensões ISAPI**  
   
-    4.  **Filtros ISAPI**  
+    4. **Filtros ISAPI**  
   
 9. Sob o item rotulado **serviços da World Wide Web**, expanda **recursos Http comuns**.  
   
@@ -104,13 +104,13 @@ Para executar os exemplos que são hospedados por serviços de informações da 
   
 8. Verifique se que os seguintes itens estão selecionados:  
   
-    1.  **Extensibilidade .NET**  
+    1. **Extensibilidade .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Extensões ISAPI**  
+    3. **Extensões ISAPI**  
   
-    4.  **Filtros ISAPI**  
+    4. **Filtros ISAPI**  
   
 9. Expanda o item rotulado **as ferramentas de gerenciamento da Web**e, em seguida, selecione **Console de gerenciamento IIS**.  
   
